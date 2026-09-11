@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 2 · Modul A · Mein Sommer, meine Ziele</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+<style>
+  /* Локальний стиль лише для емоджі-піккера Üb.1 цього уроку */
+  .emoji-chip{transition:transform .12s ease, box-shadow .12s ease;}
+  .emoji-chip:hover{transform:translateY(-2px);}
+  .emoji-chip.picked{background:var(--forest-soft); border-color:var(--forest); box-shadow:0 0 0 2px var(--forest) inset; transform:scale(1.08);}
+  .emoji-chip.disabled-choice{opacity:.35; cursor:not-allowed;}
+</style>
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 7'},
+    {label: 'Урок 2: Mein Sommer, meine Ziele'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 2 · MODUL A</span>
+        <h1>Mein Sommer, meine Ziele</h1>
+        <p class="sub">Ми згадуємо літні враження та ставимо цілі на новий навчальний рік — активуємо лексику канікул, тренуємо Perfekt і модальне дієслово wollen.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Sommer-Emojis</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Sommerkoffer</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Meine Ziele</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== START ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen zurück</p>
+      <h2 class="panel-title">Der Sommer ist vorbei — ein neues Schuljahr beginnt!</h2>
+      <div class="card">
+        <p>Die Sommerferien sind zu Ende, und es ist Zeit, an das neue Schuljahr zu denken. Heute sprechen wir über unseren Sommer — was wir erlebt haben — und über unsere Ziele für die nächsten Monate.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Літні канікули закінчились, час подумати про новий навчальний рік. Сьогодні ми поговоримо про наше літо — що ми пережили — і про наші цілі на найближчі місяці.
+        </div>
+      </div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Wie war dein Sommer? Erzähl mir davon — und lass uns neue Ziele setzen!</p>
+      </div>
+    </section>
+
+    <!-- ===== HAUSAUFGABE ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: написати короткий <strong>Steckbrief</strong> про себе
+        (5 речень) — ім'я, вік, місто проживання, країна/місто походження.
+      </div>
+      <p class="lead">Перевіримо, чи пам'ятаєш ти, яке німецьке питання відповідає якій інформації в Steckbrief:</p>
+      <div id="dz-check"></div>
+    </section>
+
+    <!-- ===== ÜB. 1 — Sommer-Emojis / Perfekt ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Mein Sommer in drei Emojis</h2>
+      <p class="lead">Schritt 1: Trainiere zuerst das Perfekt. Schritt 2: Wähle 3 Emojis, die deinen Sommer am besten beschreiben, und erkläre deine Wahl — im Perfekt!</p>
+
+      <div class="card tinted-teal">
+        <p><strong>Grammatik: das Perfekt</strong> — wir bilden es mit <em>haben</em> oder <em>sein</em> + Partizip II (am Satzende).</p>
+        <p>Ich <strong>bin</strong> ans Meer <strong>gefahren</strong>. · Ich <strong>habe</strong> viel Eis <strong>gegessen</strong>. · Wir <strong>haben</strong> viel <strong>gelacht</strong>.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Perfekt (доконаний минулий час) утворюємо за допомогою допоміжного дієслова <em>haben</em> або <em>sein</em> + Partizip II, яке стоїть у кінці речення.
+          Дієслова руху/стану (sein, fahren, gehen...) беруть <em>sein</em>, більшість інших — <em>haben</em>.
+        </div>
+      </div>
+
+      <p class="section-label" style="margin-top:22px;">Schritt 1 · Grammatik-Training</p>
+      <div class="card" id="ub1-list">
+        <div class="fill-item"><span class="num">1)</span> Ich <input type="text" class="blank-input" style="width:90px;display:inline-block;" data-ans="bin"> ans Meer <strong>gefahren</strong>.</div>
+        <div class="fill-item"><span class="num">2)</span> Ich habe viel Eis <input type="text" class="blank-input" style="width:120px;display:inline-block;" data-ans="gegessen">.</div>
+        <div class="fill-item"><span class="num">3)</span> Wir <input type="text" class="blank-input" style="width:90px;display:inline-block;" data-ans="haben"> viel <strong>gelacht</strong>.</div>
+        <div class="fill-item"><span class="num">4)</span> Ich habe ein interessantes Buch <input type="text" class="blank-input" style="width:120px;display:inline-block;" data-ans="gelesen">.</div>
+        <div class="fill-item"><span class="num">5)</span> Meine Familie und ich <input type="text" class="blank-input" style="width:90px;display:inline-block;" data-ans="sind"> nach Deutschland <strong>gefahren</strong>.</div>
+        <div class="fill-item"><span class="num">6)</span> Ich habe viele Fotos <input type="text" class="blank-input" style="width:120px;display:inline-block;" data-ans="gemacht">.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub1-check">Prüfen</button>
+        <button class="btn secondary" id="ub1-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub1-score"></span>
+      </div>
+
+      <div class="airmail-rule"></div>
+
+      <p class="section-label">Schritt 2 · Die eigentliche Aufgabe</p>
+      <div class="card">
+        <p>Klicke genau <strong>3 Emojis</strong> an, die deinen Sommer am besten beschreiben.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Обери рівно 3 емоджі, які найкраще описують твоє літо. Після цього з'являться поля — поясни свій вибір німецькою (у Perfekt), за зразком у граматичній картці вище.
+        </div>
+        <div style="background:#fff; border:1px dashed var(--teal); border-radius:10px; padding:12px 16px; margin-top:14px; font-size:14px;">
+          <strong>Beispiel:</strong> ☀️ 🏖️ 🍦 → <em>Ich bin an den Strand gefahren. Ich habe in der Sonne gelegen. Ich habe ein Eis gegessen.</em>
+        </div>
+        <p class="score-pill" id="emoji-counter" style="margin-top:14px;display:inline-block;">Ausgewählt: 0 / 3</p>
+        <div class="mm-bubbles" id="emoji-picker" style="margin-top:14px;">
+          <span class="chip emoji-chip" style="font-size:22px;" data-emoji="☀️" title="Sonne">☀️</span>
+          <span class="chip emoji-chip" style="font-size:22px;" data-emoji="🏖️" title="Strand">🏖️</span>
+          <span class="chip emoji-chip" style="font-size:22px;" data-emoji="🍦" title="Eis">🍦</span>
+          <span class="chip emoji-chip" style="font-size:22px;" data-emoji="🏊" title="Schwimmen">🏊</span>
+          <span class="chip emoji-chip" style="font-size:22px;" data-emoji="⛺" title="Camping">⛺</span>
+          <span class="chip emoji-chip" style="font-size:22px;" data-emoji="🚲" title="Fahrrad">🚲</span>
+          <span class="chip emoji-chip" style="font-size:22px;" data-emoji="⚽" title="Sport">⚽</span>
+          <span class="chip emoji-chip" style="font-size:22px;" data-emoji="📚" title="Lesen">📚</span>
+          <span class="chip emoji-chip" style="font-size:22px;" data-emoji="📸" title="Fotos">📸</span>
+          <span class="chip emoji-chip" style="font-size:22px;" data-emoji="✈️" title="Reise">✈️</span>
+          <span class="chip emoji-chip" style="font-size:22px;" data-emoji="🎉" title="Fest">🎉</span>
+          <span class="chip emoji-chip" style="font-size:22px;" data-emoji="😂" title="Lachen">😂</span>
+        </div>
+
+        <div id="emoji-sentences" style="display:none; margin-top:20px;">
+          <p class="lead" style="margin-bottom:10px;">Erkläre deine Wahl (im Perfekt):</p>
+          <div id="emoji-sentence-list"></div>
+          <div class="check-bar">
+            <button class="btn" id="emoji-done-btn">Fertig</button>
+            <span class="score-pill" id="emoji-done-msg"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ÜB. 2 — Sommerkoffer ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Mein Sommerkoffer</h2>
+      <p class="lead">Клікни на слова в тексті, які точно варто покласти в літню валізу (не всі слова підходять!).</p>
+
+      <div class="mail-window">
+        <div class="mail-titlebar">Meine Packliste für den Sommer</div>
+        <div class="mail-body" id="ub2-text">
+          Für meinen Sommerurlaub packe ich:
+          <span class="tok" data-correct="true">die Sonnencreme</span>,
+          <span class="tok" data-correct="true">den Badeanzug</span>,
+          <span class="tok" data-correct="false">den Regenschirm</span>,
+          <span class="tok" data-correct="true">die Sonnenbrille</span>,
+          <span class="tok" data-correct="false">die Handschuhe</span>,
+          <span class="tok" data-correct="false">den Wintermantel</span>,
+          <span class="tok" data-correct="true">das Handtuch</span>
+          und natürlich gute Laune!
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+
+      <div class="ua-note" style="margin-top:16px;">
+        <span class="ua-label">🇺🇦 Українською</span>
+        Тепер спробуй усно (або письмово, якщо хочеш) описати свою власну "валізу літа": що ти взяв би з собою, куди поїхав і чому. Використай слова вище як приклад.
+      </div>
+    </section>
+
+    <!-- ===== ÜB. 3 — Meine Ziele / wollen ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Meine Ziele für dieses Schuljahr</h2>
+      <p class="lead">Граматика: модальне дієслово <strong>wollen</strong> (хотіти) — ставимо цілі на навчальний рік.</p>
+
+      <div class="card tinted-mustard">
+        <table class="gtable">
+          <tr><th>Person</th><th>wollen</th></tr>
+          <tr><td>ich</td><td><strong>will</strong></td></tr>
+          <tr><td>du</td><td><strong>willst</strong></td></tr>
+          <tr><td>er / sie / es</td><td><strong>will</strong></td></tr>
+          <tr><td>wir</td><td><strong>wollen</strong></td></tr>
+          <tr><td>ihr</td><td><strong>wollt</strong></td></tr>
+          <tr><td>sie / Sie</td><td><strong>wollen</strong></td></tr>
+        </table>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          wollen — модальне дієслово "хотіти". Другий (смисловий) дієслово стоїть у кінці речення в інфінітиві: <em>Ich will 100 neue Wörter lernen.</em>
+        </div>
+      </div>
+
+      <div class="card" id="ub3-list">
+        <div class="fill-item"><span class="num">1)</span> Ich <input type="text" class="blank-input" style="width:90px;display:inline-block;" data-ans="will"> 100 neue Wörter lernen.</div>
+        <div class="fill-item"><span class="num">2)</span> Wir <input type="text" class="blank-input" style="width:90px;display:inline-block;" data-ans="wollen"> ein Video auf Deutsch drehen.</div>
+        <div class="fill-item"><span class="num">3)</span> Sie (sie, Pl.) <input type="text" class="blank-input" style="width:90px;display:inline-block;" data-ans="wollen"> ein deutsches Lied auswendig lernen.</div>
+        <div class="fill-item"><span class="num">4)</span> Was <input type="text" class="blank-input" style="width:90px;display:inline-block;" data-ans="willst"> du in diesem Schuljahr erreichen?</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+
+      <div class="qa" style="margin-top:20px;">
+        <label>Schreibe jetzt deine eigenen 3 Ziele für dieses Schuljahr (mit "Ich will..."):</label>
+        <textarea placeholder="Ich will..."></textarea>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Schreib eine kurze Postkarte (5–6 Sätze) an einen Freund / eine Freundin: Erzähl im Perfekt, was du im Sommer erlebt hast (z. B. "Ich bin ... gefahren", "Ich habe ... gemacht"), und schreib am Ende einen Satz, worauf du dich in diesem Schuljahr am meisten freust (z. B. "Ich freue mich auf ...").</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Напиши коротку листівку (5–6 речень) другові/подрузі: розкажи у Perfekt, що ти пережив(-ла) влітку (напр. "Ich bin ... gefahren" — я поїхав(-ла)..., "Ich habe ... gemacht" — я зробив(-ла)...), а наприкінці додай одне речення про те, чого ти найбільше очікуєш від цього навчального року (напр. "Ich freue mich auf ..." — я радію/чекаю на...).
+        </div>
+      </div>
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  // Hausaufgabe: перевірка розуміння питальних слів для Steckbrief
+  const dzData = [
+    {q: "Яке питання відповідає реченню 'Ich komme aus der Ukraine.'?", opts: ["Wie heißt du?", "Woher kommst du?", "Wie alt bist du?"], correct: "Woher kommst du?"},
+    {q: "Яке питання відповідає реченню 'Ich bin dreizehn Jahre alt.'?", opts: ["Wo wohnst du?", "Wie alt bist du?", "Wie heißt du?"], correct: "Wie alt bist du?"},
+    {q: "Яке питання відповідає реченню 'Ich heiße Anna.'?", opts: ["Wie heißt du?", "Woher kommst du?", "Wo wohnst du?"], correct: "Wie heißt du?"},
+    {q: "Яке питання відповідає реченню 'Ich wohne in Lwiw.'?", opts: ["Wie alt bist du?", "Wo wohnst du?", "Wie heißt du?"], correct: "Wo wohnst du?"},
+  ];
+  buildQuiz('dz-check', dzData);
+
+  // Üb. 1: Perfekt-Lücken
+  setTotal(document.querySelectorAll('#ub1-list .blank-input').length);
+  document.getElementById('ub1-check').addEventListener('click', () => {
+    checkBlanks('ub1-list', 'ub1-score', 'ub1');
+  });
+  document.getElementById('ub1-reset').addEventListener('click', () => {
+    resetBlanks('ub1-list', 'ub1-score', 'ub1');
+  });
+
+  // Üb. 1 / Schritt 2: емоджі-піккер (вибір рівно 3, потім поля-пояснення)
+  (function initEmojiPicker(){
+    const MAX = 3;
+    const chips = document.querySelectorAll('#emoji-picker .emoji-chip');
+    const counter = document.getElementById('emoji-counter');
+    const sentencesWrap = document.getElementById('emoji-sentences');
+    const sentenceList = document.getElementById('emoji-sentence-list');
+    const doneBtn = document.getElementById('emoji-done-btn');
+    const doneMsg = document.getElementById('emoji-done-msg');
+    let selected = [];
+    let emojiTaskDone = false;
+
+    setTotal(1); // цей крок дає 1 бал у загальному прогресі — за виконання завдання
+
+    function renderCounter(){
+      counter.textContent = 'Ausgewählt: ' + selected.length + ' / ' + MAX;
+    }
+
+    function updateDisabledLook(){
+      chips.forEach(c => {
+        if (selected.length >= MAX && !c.classList.contains('picked')) {
+          c.classList.add('disabled-choice');
+        } else {
+          c.classList.remove('disabled-choice');
+        }
+      });
+    }
+
+    function renderSentenceFields(){
+      if (selected.length === MAX) {
+        sentenceList.innerHTML = '';
+        selected.forEach((emoji, i) => {
+          const div = document.createElement('div');
+          div.className = 'fill-item';
+          div.innerHTML = '<span class="num">' + emoji + '</span> ' +
+            '<input type="text" class="blank-input emoji-sentence-input" style="width:min(420px,80%);display:inline-block;" placeholder="z.B. Ich war am Meer / Ich habe ... gemacht">';
+          sentenceList.appendChild(div);
+        });
+        sentencesWrap.style.display = 'block';
+      } else {
+        sentencesWrap.style.display = 'none';
+        doneMsg.textContent = '';
+      }
+    }
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        const emoji = chip.dataset.emoji;
+        if (chip.classList.contains('picked')) {
+          chip.classList.remove('picked');
+          selected = selected.filter(e => e !== emoji);
+        } else {
+          if (selected.length >= MAX) return; // вже обрано 3 — ігноруємо клік
+          chip.classList.add('picked');
+          selected.push(emoji);
+        }
+        renderCounter();
+        updateDisabledLook();
+        renderSentenceFields();
+      });
+    });
+
+    doneBtn.addEventListener('click', () => {
+      const inputs = document.querySelectorAll('.emoji-sentence-input');
+      const allFilled = inputs.length === MAX && [...inputs].every(i => i.value.trim().length > 0);
+      if (!allFilled) {
+        doneMsg.textContent = 'Schreib bitte zu jedem Emoji einen Satz.';
+        doneMsg.style.color = 'var(--brick)';
+        return;
+      }
+      doneMsg.textContent = 'Super gemacht! ✓';
+      doneMsg.style.color = 'var(--forest)';
+      if (!emojiTaskDone) { markDone(1); emojiTaskDone = true; }
+    });
+
+    renderCounter();
+  })();
+
+  // Üb. 2: Sommerkoffer-Tokens
+  initTokenClicks('ub2-text');
+  setTotal(document.querySelectorAll('#ub2-text .tok[data-correct="true"]').length);
+  document.getElementById('ub2-check').addEventListener('click', () => {
+    checkTokens('ub2-text', 'ub2-score', 'ub2');
+  });
+  document.getElementById('ub2-reset').addEventListener('click', () => {
+    resetTokens('ub2-text', 'ub2-score', 'ub2');
+  });
+
+  // Üb. 3: wollen-Lücken
+  setTotal(document.querySelectorAll('#ub3-list .blank-input').length);
+  document.getElementById('ub3-check').addEventListener('click', () => {
+    checkBlanks('ub3-list', 'ub3-score', 'ub3');
+  });
+  document.getElementById('ub3-reset').addEventListener('click', () => {
+    resetBlanks('ub3-list', 'ub3-score', 'ub3');
+  });
+
+  // Fertig: штампи
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['☀️', '🧳', '🎯', '✏️']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
