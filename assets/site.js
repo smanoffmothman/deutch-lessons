@@ -33,7 +33,8 @@ function renderClassCatalog(klasList, lessonFileBase){
   }
 
   function matchesQuery(l, q){
-    const hay = (l.nazva + ' ' + l.opys + ' ' + l.tema).toLowerCase();
+    const modTema = (typeof MODULE_THEMES !== 'undefined' && MODULE_THEMES[l.klas]) ? (MODULE_THEMES[l.klas][l.modul] || '') : '';
+    const hay = (l.nazva + ' ' + l.opys + ' ' + modTema).toLowerCase();
     return hay.includes(q.toLowerCase());
   }
 
@@ -61,7 +62,8 @@ function renderClassCatalog(klasList, lessonFileBase){
         const items = pool.filter(l => l.klas === k && l.modul === mod)
                            .sort((a, b) => a.lektion - b.lektion);
         if(q && items.length === 0) return;
-        const tema = items[0] ? items[0].tema : null;
+        const temaFromTable = (typeof MODULE_THEMES !== 'undefined' && MODULE_THEMES[k]) ? MODULE_THEMES[k][mod] : '';
+        const tema = temaFromTable || null;
         const section = document.createElement('section');
         section.className = 'module-block';
         section.style.setProperty('--module-color', moduleColor(idx));
