@@ -14,7 +14,7 @@
 //   dz      — що задано додому ПІСЛЯ цього уроку. Наступний урок цього ж
 //             модуля бере цей текст для своєї вкладки "Hausaufgabe"
 //             (перевірка ДЗ). Для першого уроку модуля залиш "" —
-//             перевіряти після нього ще нема чого.
+//             перевіряти ще нема чого.
 //
 // Тема МОДУЛЯ (напр. "Familienferien") сюди більше не входить —
 // вона живе окремо в data/modules-data.js (MODULE_THEMES), незалежно
@@ -26,10 +26,20 @@ const LESSONS = [
     klas: "7",
     modul: "A",
     lektion: 1,
-    nazva: "Вступний урок: вікторина про Німеччину",
-    opys: "Знайомство з Німеччиною через квіз — географія, столиця, символи, цікаві факти; вправа на пропуски.",
+    nazva: "Вступний урок. Вікторина про Німеччину",
+    opys: "Знайомство з фактами про Німеччину: розташування, гори, річки, свята — квіз і вправа на закріплення.",
     file: "klas-7/modul-a/lektion-1.html",
     nove: true,
-    dz: "Написати короткий Steckbrief про себе (5 речень): ім'я, вік, місто, звідки родом."
+    dz: "Написати короткий Steckbrief про себе (5 речень): ім'я, вік, місто проживання, країна/місто походження."
+  },
+  {
+    klas: "7",
+    modul: "A",
+    lektion: 2,
+    nazva: "Mein Sommer, meine Ziele",
+    opys: "Згадуємо літо (Perfekt) і пакуємо 'валізу літа', обираємо емоджі-символи літа зі своєю історією та ставимо цілі на навчальний рік (wollen).",
+    file: "klas-7/modul-a/lektion-2.html",
+    nove: true,
+    dz: 'Schreib eine kurze Postkarte (5–6 Sätze) an einen Freund / eine Freundin: Erzähl im Perfekt, was du im Sommer erlebt hast (z. B. "Ich bin ... gefahren", "Ich habe ... gemacht"), und schreib am Ende einen Satz, worauf du dich in diesem Schuljahr am meisten freust (z. B. "Ich freue mich auf ...").'
   }
 ];
