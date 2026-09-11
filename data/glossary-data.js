@@ -11,16 +11,13 @@
 // -------------------------------------------------------------
 
 const GLOSSARY = [
-  {de: "das Nachbarland (die Nachbarstaaten)", uk: "сусідня країна", klas: "7", modul: "A", lektion: 1},
   {de: "die Hauptstadt", uk: "столиця", klas: "7", modul: "A", lektion: 1},
-  {de: "das Bundesland", uk: "федеральна земля", klas: "7", modul: "A", lektion: 1},
-  {de: "der Fluss", uk: "річка", klas: "7", modul: "A", lektion: 1},
-  {de: "der Berg", uk: "гора", klas: "7", modul: "A", lektion: 1},
-  {de: "die Flagge", uk: "прапор", klas: "7", modul: "A", lektion: 1},
-  {de: "feiern", uk: "святкувати", klas: "7", modul: "A", lektion: 1},
-  {de: "das Fest", uk: "свято", klas: "7", modul: "A", lektion: 1},
-  {de: "die Amtssprache", uk: "офіційна мова", klas: "7", modul: "A", lektion: 1},
-  {de: "ursprünglich", uk: "спочатку / родом (звідки)", klas: "7", modul: "A", lektion: 1},
-  {de: "berühmt", uk: "відомий, знаменитий", klas: "7", modul: "A", lektion: 1},
-  {de: "gleichzeitig", uk: "одночасно", klas: "7", modul: "A", lektion: 1}
+  {de: "der Berg (die Zugspitze)", uk: "гора (Цугшпітце — найвища в Німеччині)", klas: "7", modul: "A", lektion: 1},
+  {de: "der Fluss (der Rhein)", uk: "річка (Рейн — найдовша в Німеччині)", klas: "7", modul: "A", lektion: 1},
+  {de: "der Nachbarstaat", uk: "сусідня держава", klas: "7", modul: "A", lektion: 1},
+  {de: "der Karneval", uk: "карнавал", klas: "7", modul: "A", lektion: 1},
+  {de: "das Oktoberfest", uk: "Октоберфест (пивний фестиваль у Мюнхені)", klas: "7", modul: "A", lektion: 1},
+  {de: "die Amtssprache", uk: "офіційна (державна) мова", klas: "7", modul: "A", lektion: 1},
+  {de: "liegen", uk: "розташовуватися, лежати", klas: "7", modul: "A", lektion: 1},
+  {de: "der Steckbrief", uk: "коротка розповідь про себе (анкета)", klas: "7", modul: "A", lektion: 1}
 ];
