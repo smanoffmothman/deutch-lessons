@@ -4,13 +4,28 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lektion ... · Modul ... · ТЕМА</title>
-<!-- Цей файл-шаблон лежить у lessons/ (для прикладу), тому тут "../assets/".
-     Коли скопіюєш його в lessons/klas-X/modul-Y/файл.html (справжнє місце
-     для готового уроку), заміни шлях на "../../../assets/" — на 2 рівні
-     глибше. -->
+<!-- Цей файл-шаблон лежить у lessons/ (для прикладу), тому тут "../assets/"
+     і root: '../'. Коли скопіюєш його в lessons/klas-X/modul-Y/файл.html
+     (справжнє місце для готового уроку) — заміни ОБИДВА на "../../../"
+     (і в href, і в парамертрі root нижче в скриптах). -->
 <link rel="stylesheet" href="../assets/lesson-style.css">
+<link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../index.html'},
+    {label: 'Уроки', href: '../klasy/index.html'},
+    {label: 'Клас ...'},                 // без href — просто крок шляху
+    {label: 'Урок ...: [Тема уроку]'}    // останній крок — поточна сторінка
+  ]);
+</script>
+
 <!-- =================================================================
      ЦЕ ШАБЛОН для "зошитового" стилю (файл 1). Копіюй для кожного
      нового уроку, міняй тільки контент і дані вправ — класи й
