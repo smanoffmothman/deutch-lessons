@@ -32,5 +32,17 @@ const GLOSSARY = [
   {de: "erreichen", uk: "досягати (мети)", klas: "7", modul: "A", lektion: 2},
   {de: "die Ferien", uk: "канікули", klas: "7", modul: "A", lektion: 2},
   {de: "die Postkarte", uk: "листівка", klas: "7", modul: "A", lektion: 2},
-  {de: "sich freuen auf (+Akk.)", uk: "радіти (чомусь наперед), чекати на щось із задоволенням", klas: "7", modul: "A", lektion: 2}
+  {de: "sich freuen auf (+Akk.)", uk: "радіти (чомусь наперед), чекати на щось із задоволенням", klas: "7", modul: "A", lektion: 2},
+  {de: "das Lieblingsfach", uk: "улюблений шкільний предмет", klas: "7", modul: "A", lektion: 3},
+  {de: "die Sportkleidung", uk: "спортивний одяг", klas: "7", modul: "A", lektion: 3},
+  {de: "das Möbelgeschäft", uk: "меблевий магазин", klas: "7", modul: "A", lektion: 3},
+  {de: "das Reiseziel", uk: "мета подорожі, пункт призначення", klas: "7", modul: "A", lektion: 3},
+  {de: "treffen", uk: "зустрічати(ся)", klas: "7", modul: "A", lektion: 3},
+  {de: "wählen", uk: "обирати, вибирати", klas: "7", modul: "A", lektion: 3},
+  {de: "der Reiterhof", uk: "кінна ферма, кінноспортивна база", klas: "7", modul: "A", lektion: 3},
+  {de: "das Pony (Islandpony)", uk: "поні (ісландський поні)", klas: "7", modul: "A", lektion: 3},
+  {de: "die Übernachtung", uk: "ночівля", klas: "7", modul: "A", lektion: 3},
+  {de: "die Geschwister (Pl.)", uk: "брати і сестри", klas: "7", modul: "A", lektion: 3},
+  {de: "sich streiten", uk: "сваритися", klas: "7", modul: "A", lektion: 3},
+  {de: "gestern", uk: "вчора", klas: "7", modul: "A", lektion: 3}
 ];

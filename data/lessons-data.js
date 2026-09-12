@@ -41,5 +41,15 @@ const LESSONS = [
     file: "klas-7/modul-a/lektion-2.html",
     nove: true,
     dz: 'Schreib eine kurze Postkarte (5–6 Sätze) an einen Freund / eine Freundin: Erzähl im Perfekt, was du im Sommer erlebt hast (z. B. "Ich bin ... gefahren", "Ich habe ... gemacht"), und schreib am Ende einen Satz, worauf du dich in diesem Schuljahr am meisten freust (z. B. "Ich freue mich auf ...").'
+  },
+  {
+    klas: "7",
+    modul: "A",
+    lektion: 3,
+    nazva: "Вхідна діагностувальна робота №1",
+    opys: "Перевірка знань і вмінь на початку навчального року: складні слова, Perfekt/Präteritum, читання (Falko, оголошення про кінноспортивну базу) і лист-відповідь.",
+    file: "klas-7/modul-a/lektion-3.html",
+    nove: true,
+    dz: "Опрацювати помилки в діагностувальній роботі та написати 3 речення у Perfekt про минулі вихідні (напр. „Ich habe ... gespielt“, „Ich bin ... gegangen“)."
   }
 ];
