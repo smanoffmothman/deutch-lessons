@@ -9,6 +9,12 @@ const MODULE_IDS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
 const MODULE_COLORS = ['#1F5C56', '#B14E3E', '#DE9E3B', '#48713F', '#123E3A', '#8a5a11', '#2E726F', '#5B5346'];
 function moduleColor(idx){ return MODULE_COLORS[idx % MODULE_COLORS.length]; }
 
+function getNewestPerKlas(lessons){
+  const newest = {};
+  lessons.forEach(l => { newest[l.klas] = l; }); // останній за порядком у масиві "виграє"
+  return newest;
+}
+
 /* ---------- Каталог уроків (сторінка klasy/) ---------- */
 // klasList: напр. ['7','8','9']; lessonFileBase: шлях від сторінки каталогу до папки lessons/
 function renderClassCatalog(klasList, lessonFileBase){
@@ -44,6 +50,7 @@ function renderClassCatalog(klasList, lessonFileBase){
     const pool = q
       ? LESSONS.filter(l => matchesQuery(l, q))
       : LESSONS.filter(l => l.klas === state.klas);
+    const newestPerKlas = getNewestPerKlas(LESSONS); // завжди від повного списку, не від відфільтрованого
 
     if(pool.length === 0 && q){
       contentEl.innerHTML = '<p class="empty-note">Нічого не знайдено — спробуй інше слово.</p>';
@@ -85,7 +92,7 @@ function renderClassCatalog(klasList, lessonFileBase){
               + '<h4>' + l.nazva + '</h4>'
               + '<p>' + l.opys + '</p>'
               + '<a class="open-link" href="' + lessonFileBase + l.file + '" target="_blank" rel="noopener">Відкрити</a>'
-              + (l.nove ? '<span class="new-badge">нове</span>' : '');
+              + (l === newestPerKlas[l.klas] ? '<span class="new-badge">нове</span>' : '');
             grid.appendChild(card);
           });
         }
