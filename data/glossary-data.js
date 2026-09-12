@@ -56,5 +56,17 @@ const GLOSSARY = [
   {de: "die Bergtour", uk: "гірський похід, гірська прогулянка", klas: "7", modul: "A", lektion: 4},
   {de: "das Matratzenlager", uk: "нічліг на матрацах (спальня зі спальними матрацами)", klas: "7", modul: "A", lektion: 4},
   {de: "die Tante", uk: "тітка", klas: "7", modul: "A", lektion: 4},
-  {de: "zusammengesetzte Wörter", uk: "складні слова (граматичний термін)", klas: "7", modul: "A", lektion: 4}
+  {de: "zusammengesetzte Wörter", uk: "складні слова (граматичний термін)", klas: "7", modul: "A", lektion: 4},
+  {de: "das Meer", uk: "море", klas: "7", modul: "A", lektion: 5},
+  {de: "der See", uk: "озеро", klas: "7", modul: "A", lektion: 5},
+  {de: "das Gebirge", uk: "гірський масив, гори", klas: "7", modul: "A", lektion: 5},
+  {de: "das Ferienlager", uk: "табір відпочинку", klas: "7", modul: "A", lektion: 5},
+  {de: "der Wald", uk: "ліс", klas: "7", modul: "A", lektion: 5},
+  {de: "die Insel", uk: "острів", klas: "7", modul: "A", lektion: 5},
+  {de: "das Ausland", uk: "закордон", klas: "7", modul: "A", lektion: 5},
+  {de: "verbringen", uk: "проводити (час)", klas: "7", modul: "A", lektion: 5},
+  {de: "sich entspannen", uk: "розслаблятися, відпочивати", klas: "7", modul: "A", lektion: 5},
+  {de: "das Interview", uk: "інтерв'ю", klas: "7", modul: "A", lektion: 5},
+  {de: "verbinden", uk: "з'єднувати, поєднувати (тут: співвіднести)", klas: "7", modul: "A", lektion: 5},
+  {de: "die Wüste", uk: "пустеля", klas: "7", modul: "A", lektion: 5}
 ];

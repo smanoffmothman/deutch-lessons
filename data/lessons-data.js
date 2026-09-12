@@ -61,5 +61,15 @@ const LESSONS = [
     file: "klas-7/modul-a/lektion-4.html",
     nove: true,
     dz: "Написати 5 речень німецькою про свій типовий шкільний день, використавши щонайменше 2 складні іменники (напр. Lieblingsfach, Sportkleidung, Möbelgeschäft) і 1 запитання однокласнику в Perfekt (напр. „Was hast du gestern gemacht?“)."
+  },
+  {
+    klas: "7",
+    modul: "A",
+    lektion: 5,
+    nazva: "Familienferien: wo und wohin?",
+    opys: "Прийменники місця Wo?/Wohin? (Dativ/Akkusativ) на матеріалі вірша й двох інтерв'ю про літні канікули; мозковий штурм ідей для родинної відпустки.",
+    file: "klas-7/modul-a/lektion-5.html",
+    nove: true,
+    dz: "Schreib einen kurzen Text (6–8 Sätze): Wo verbringt deine Familie am liebsten die Ferien? Nutze mindestens drei Präpositionen mit Dativ oder Akkusativ (z. B. „Wir fahren an die Ostsee.“, „Im Sommer sind wir im Ferienlager.“) und einen Satz mit „Ich finde das …, weil …“."
   }
 ];
