@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 4 · Modul A · Аналіз діагностувальної роботи</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 7'},
+    {label: 'Урок 4: Аналіз діагностувальної роботи'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 4 · MODUL A</span>
+        <h1>Fehlerdetektive</h1>
+        <p class="sub">Розбираємо типові помилки в діагностувальній роботі №1 — граємо в детективів мови й виправляємо "чужі" помилки, перш ніж вони стануть звичкою.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Perfekt/Präteritum</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Lesen: Falko</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Lesen: Reiterhof</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Schreiben</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== START ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Wir werden zu Fehlerdetektiven!</h2>
+      <div class="card">
+        <p>Ihr habt die Diagnosearbeit Nr. 1 geschrieben — super! Heute schauen wir uns keine neue Grammatik an, sondern werden zu <strong>Sprachdetektiven</strong>: Wir untersuchen typische Fehler, die Siebtklässler in genau so einer Arbeit oft machen, finden sie, korrigieren sie — und merken uns die richtige Lösung fürs nächste Mal.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Цей урок — трохи інший, ніж зазвичай. Ми не вчимо нову тему, а "розслідуємо" типові помилки, які часто трапляються в такій роботі: складні слова, дієслова з іменниками, Perfekt і Präteritum, читання тексту й лист-відповідь. Кожна вправа побудована як завдання детектива: "хтось написав так — а як правильно?".
+        </div>
+      </div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Ich habe meine Lupe dabei — auf geht's, Fehler jagen!</p>
+      </div>
+    </section>
+
+    <!-- ===== HAUSAUFGABE ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: <em>опрацювати помилки в діагностувальній роботі та написати 3 речення у Perfekt про минулі вихідні</em> (напр. „Ich habe … gespielt", „Ich bin … gegangen").
+      </div>
+      <div class="card">
+        <p class="lead">Тут не буде автоматичної перевірки — трьома реченнями кожен займався по-своєму. Натомість звір себе за чеклистом-детектива: запиши свої речення нижче, а тоді відкрий підказку і перевір кожен пункт сам.</p>
+        <div class="qa">
+          <label>1) Моє перше речення (Perfekt):</label>
+          <textarea rows="2" placeholder="напр. Ich habe am Samstag Fußball gespielt."></textarea>
+        </div>
+        <div class="qa">
+          <label>2) Моє друге речення (Perfekt):</label>
+          <textarea rows="2" placeholder="напр. Ich bin ins Kino gegangen."></textarea>
+        </div>
+        <div class="qa">
+          <label>3) Моє третє речення (Perfekt):</label>
+          <textarea rows="2"></textarea>
+          <button class="btn small reveal-btn" type="button">Checkliste zeigen</button>
+          <div class="reveal">
+            <strong>Перевір кожне речення:</strong>
+            <ul style="margin:6px 0 0; padding-left:18px;">
+              <li>Чи є на другому місці <strong>haben</strong> або <strong>sein</strong>?</li>
+              <li>Чи дієслово в кінці має форму Partizip II (переважно з <strong>ge-</strong> на початку: <em>gespielt, gemacht, gesehen</em>)?</li>
+              <li>Дієслова руху / зміни стану (<em>gehen, fahren, fliegen, kommen</em>) — з <strong>sein</strong>, решта — з <strong>haben</strong>.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ÜB. 1: Wortschatz ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1 · Detektivfall Nr. 1</p>
+      <h2 class="panel-title">Складні слова та дієслова-партнери</h2>
+      <p class="lead">Це саме ті два завдання, де сьомачки найчастіше помиляються. Нижче — приклади того, як (вигадані) учні вже написали відповіді в своїх роботах. Кожна відповідь містить помилку — знайди, як правильно.</p>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Правило</span>
+        У німецькому складному слові (<em>Kompositum</em>) частини пишуться <strong>разом, без пробілу</strong>, велика літера — тільки на самому початку. Рід усього слова визначає <strong>останнє</strong> слово: <em>das Fach</em> → <em>das Lieblingsfach</em>.
+      </div>
+      <div id="ub1-quiz"></div>
+    </section>
+
+    <!-- ===== ÜB. 2: Perfekt/Präteritum ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2 · Detektivfall Nr. 2</p>
+      <h2 class="panel-title">Perfekt чи Präteritum? Знайди помилку!</h2>
+      <p class="lead">Це вже "готові" речення з учнівського зошита — у кожному одне слово написано неправильно. Клікни на слово, яке вважаєш помилковим, а тоді натисни «Prüfen».</p>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 На що звертати увагу</span>
+        <dl>
+          <dt>Не те допоміжне дієслово</dt><dd>дієслова руху (fahren, fliegen) — завжди з <strong>sein</strong>, а не <strong>haben</strong>.</dd>
+          <dt>Невідповідне закінчення</dt><dd>"ich hattet" замість "ich hatte", "war wir" замість "waren wir" — дієслово не узгоджене з підметом.</dd>
+          <dt>Не той час</dt><dd>у розповіді про минуле — Perfekt/Präteritum, а не теперішній час.</dd>
+          <dt>Дієслово не в тій формі</dt><dd>для Perfekt потрібен Partizip II (напр. <em>gemacht</em>), а не інфінітив (<em>machen</em>).</dd>
+        </dl>
+      </div>
+      <div class="mail-window">
+        <div class="mail-titlebar">Зошит однокласника · знайди 7 помилок</div>
+        <div class="mail-body" id="ub2-text">
+          1) Ich habe am Wochenende Yoga <span class="tok" data-correct="true">machen</span>.<br><br>
+          2) In den Ferien <span class="tok" data-correct="true">habe</span> ich Rad gefahren.<br><br>
+          3) Diesen Sommer <span class="tok" data-correct="true">war</span> wir auf einer Insel.<br><br>
+          4) Ich <span class="tok" data-correct="true">hattet</span> gestern viele Hausaufgaben.<br><br>
+          5) Wir <span class="tok" data-correct="true">haben</span> zuerst nach Spanien geflogen.<br><br>
+          6) Dann <span class="tok" data-correct="true">hatte</span> ich mit meinem Sportverein am Bodensee.<br><br>
+          7) Gestern <span class="tok" data-correct="true">regnet</span> es den ganzen Tag.
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+      <div class="qa">
+        <button class="btn small reveal-btn" type="button">Richtige Version zeigen</button>
+        <div class="reveal">
+          <p style="margin:0;">1) … Yoga <strong>gemacht</strong>. &nbsp; 2) … <strong>bin</strong> ich Rad gefahren. &nbsp; 3) … <strong>waren</strong> wir auf einer Insel. &nbsp; 4) Ich <strong>hatte</strong> gestern … &nbsp; 5) Wir <strong>sind</strong> … geflogen. &nbsp; 6) Dann <strong>war</strong> ich … &nbsp; 7) Gestern <strong>regnete</strong> es den ganzen Tag.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ÜB. 3: Lesen — Falko ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3 · Detektivfall Nr. 3</p>
+      <h2 class="panel-title">Перевір відповіді однокласниці Лени</h2>
+      <p class="lead">Лена вже прочитала текст і оцінила твердження як richtig/falsch. Твоя робота детектива — не читати текст заново "з нуля", а перевірити, чи Лена мала рацію.</p>
+      <div class="mail-window">
+        <div class="mail-titlebar">Steckbrief · Falko</div>
+        <div class="mail-body">
+          Hi! Ich bin Falko und komme aus Frankfurt. Wir wohnen nicht weit vom Zentrum. Unser Haus ist groß und hat einen Garten. Das ist gut für meine zwei Brüder. Sie gehen noch nicht zur Schule und können dort spielen. Ich und meine Schwester Milli besuchen das Goethegymnasium. Wir verstehen uns gut. Wir sind beide sportlich. Im Sommer fahren wir Rad, Skateboard oder Inliner, im Winter dann Schi und Snowboard. Deshalb ist Sportmode für uns wichtig.
+        </div>
+      </div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Типова пастка</span>
+        У цьому тексті легко переплутати "два брати" з "усіма братами й сестрами" — уважно рахуй усіх, кого згадано (брати + сестра).
+      </div>
+      <div id="ub3-quiz" style="margin-top:14px;"></div>
+      <div class="qa">
+        <button class="btn small reveal-btn" type="button">Правильні відповіді показати</button>
+        <div class="reveal">
+          <p style="margin:0;">1) richtig &nbsp; 2) falsch &nbsp; 3) falsch</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ÜB. 4: Lesen — Reiterhof ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4 · Detektivfall Nr. 4</p>
+      <h2 class="panel-title">Перевір відповіді однокласника Макса</h2>
+      <p class="lead">Макс уже відповів на всі три запитання до оголошення. Перевір кожну його відповідь — і виправ, якщо треба.</p>
+      <div class="card tinted-forest">
+        <p><em>Ferien auf dem Reiterhof</em> — von April bis September</p>
+        <p><em>Jungen und Mädchen, ab 12 Jahren, auch ohne Eltern.</em></p>
+        <p><em>Du magst Pferde? 35 Islandponys warten auf dich.</em></p>
+        <ul>
+          <li><em>ruhige und liebe Ponys für Anfänger</em></li>
+          <li><em>coole Bergtouren mit Pferden</em></li>
+          <li><em>Übernachtung im Haus, im Matratzenlager</em></li>
+        </ul>
+      </div>
+      <div id="ub4-quiz"></div>
+      <div class="qa">
+        <button class="btn small reveal-btn" type="button">Правильні відповіді показати</button>
+        <div class="reveal">
+          <p style="margin:0;">1) reiten lernen &nbsp; 2) im Sommer &nbsp; 3) Jungen und Mädchen</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ÜB. 5: Schreiben ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5 · Detektivfall Nr. 5</p>
+      <h2 class="panel-title">Знайди помилки у відповіді Андрія</h2>
+      <p class="lead">Андрій (вигаданий однокласник) уже написав відповідь на лист Сільке. У ній є <strong>4 типові помилки</strong>. Клікни на слова, які написані неправильно, а тоді натисни «Prüfen».</p>
+      <div class="mail-window">
+        <div class="mail-titlebar">Neue Nachricht · von Silke</div>
+        <div class="mail-fields">An: dich · Betreff: Grüße aus Bremen</div>
+        <div class="mail-body">
+          Hallo,<br><br>
+          viele Grüße aus Bremen. Ich bin hier bei meiner Tante. Bis jetzt war das Wetter super. Aber heute regnet es. Darum sitze ich am Computer und schreibe E-Mails. Wir sind zuerst nach Spanien geflogen. Dann war ich mit meinem Sportverein am Bodensee. Wie ist das Wetter bei euch in der Ukraine? Was hast du alles in den Ferien gemacht? Schreib, bitte, bald.<br><br>
+          Tschüss!<br>Silke
+        </div>
+      </div>
+      <div class="mail-window" style="margin-top:16px;">
+        <div class="mail-titlebar">Antwort von Andrij</div>
+        <div class="mail-body" id="ub5-text">
+          Hallo Silke,<br><br>
+          danke für deine E-Mail! Bei uns in der Ukraine war das <span class="tok" data-correct="true">wetter</span> auch schön. Ich habe viel Zeit mit <span class="tok" data-correct="true">meine Freunde</span> verbracht. Wir sind ans Meer gefahren und haben dort Volleyball gespielt. Ich habe auch ein Buch <span class="tok" data-correct="true">lesen</span>. Das Wetter war meistens sonnig, nur einmal <span class="tok" data-correct="true">haben</span> es geregnet.<br><br>
+          Tschüss, Andrij
+        </div>
+      </div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Типи помилок тут</span>
+        Велика/мала літера в іменнику · відмінок після прийменника <em>mit</em> (Dativ) · Partizip II замість інфінітива · узгодження дієслова з підметом (<em>es hat</em>, не <em>es haben</em>).
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub5-check">Prüfen</button>
+        <button class="btn secondary" id="ub5-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub5-score"></span>
+      </div>
+      <div class="qa">
+        <button class="btn small reveal-btn" type="button">Richtige Version zeigen</button>
+        <div class="reveal">
+          <p style="margin:0;">Hallo Silke, danke für deine E-Mail! Bei uns in der Ukraine war das <strong>Wetter</strong> auch schön. Ich habe viel Zeit mit <strong>meinen Freunden</strong> verbracht. Wir sind ans Meer gefahren und haben dort Volleyball gespielt. Ich habe auch ein Buch <strong>gelesen</strong>. Das Wetter war meistens sonnig, nur einmal <strong>hat</strong> es geregnet. Tschüss, Andrij</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Напиши <strong>німецькою</strong> 5 речень про свій типовий шкільний день. Використай щонайменше <strong>2 складні іменники</strong> (напр. <em>Lieblingsfach, Sportkleidung, Möbelgeschäft</em>) і додай наприкінці <strong>1 запитання</strong> для однокласника в Perfekt (напр. „Was hast du gestern gemacht?").</p>
+      </div>
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  // Üb. 1: Wortschatz-Quiz (складні слова + дієслова-партнери)
+  const ub1Data = [
+    {q: "Один семикласник написав окремо: «Lieblings Fach». Як правильно одним словом?", opts: ["Lieblingsfach", "Fachlieblings", "Lieblingfach"], correct: "Lieblingsfach"},
+    {q: "А як буде «спортивний одяг» одним словом?", opts: ["Kleidungsport", "Sportkleidung", "Sportskleidung"], correct: "Sportkleidung"},
+    {q: "І «меблевий магазин»?", opts: ["Geschäftmöbel", "Möbelsgeschäft", "Möbelgeschäft"], correct: "Möbelgeschäft"},
+    {q: "Freunde ___ (зустрічатися з друзями)", opts: ["treffen", "kaufen", "wählen"], correct: "treffen"},
+    {q: "Lebensmittel ___ (купувати продукти)", opts: ["essen", "kaufen", "gehen"], correct: "kaufen"},
+    {q: "zu Mittag ___ (обідати)", opts: ["essen", "gehen", "wählen"], correct: "essen"},
+    {q: "das Reiseziel ___ (обирати мету подорожі)", opts: ["wählen", "treffen", "essen"], correct: "wählen"},
+    {q: "in die Bäckerei ___ (йти в пекарню)", opts: ["gehen", "fahren", "kaufen"], correct: "gehen"}
+  ];
+  buildQuiz('ub1-quiz', ub1Data);
+
+  // Üb. 2: знайди неправильне слово в уже написаних реченнях (checkTokens)
+  initTokenClicks('ub2-text');
+  setTotal(document.querySelectorAll('#ub2-text .tok[data-correct="true"]').length);
+  document.getElementById('ub2-check').addEventListener('click', () => {
+    checkTokens('ub2-text', 'ub2-score', 'ub2');
+  });
+  document.getElementById('ub2-reset').addEventListener('click', () => {
+    resetTokens('ub2-text', 'ub2-score', 'ub2');
+  });
+
+  // Üb. 3: перевір відповіді Лени про Falko
+  const ub3Data = [
+    {q: "Лена оцінила твердження «Falko hat drei Geschwister» як richtig. Це вірно?", opts: ["Так, Lena права", "Ні, Lena помилилась"], correct: "Так, Lena права"},
+    {q: "Твердження «Er hat mit seiner Schwester viel Streit» Lena теж позначила як richtig. Це вірно?", opts: ["Так, Lena права", "Ні, Lena помилилась"], correct: "Ні, Lena помилилась"},
+    {q: "«Mode interessiert Falko überhaupt nicht» — Lena написала falsch. Це вірно?", opts: ["Так, Lena права", "Ні, Lena помилилась"], correct: "Так, Lena права"}
+  ];
+  buildQuiz('ub3-quiz', ub3Data);
+
+  // Üb. 4: перевір відповіді Макса про Reiterhof
+  const ub4Data = [
+    {q: "На «Hier kann man in den Ferien …» Макс обрав «Sprachen lernen». Він правий?", opts: ["Так", "Ні, правильно — reiten lernen"], correct: "Ні, правильно — reiten lernen"},
+    {q: "На «Wann?» Макс відповів «im Sommer». Правильно?", opts: ["Так", "Ні, правильна відповідь інша"], correct: "Так"},
+    {q: "На «Wer?» Макс обрав «nur Mädchen». Правильно?", opts: ["Так", "Ні, правильно — Jungen und Mädchen"], correct: "Ні, правильно — Jungen und Mädchen"}
+  ];
+  buildQuiz('ub4-quiz', ub4Data);
+
+  // Üb. 5: знайди помилки у відповіді Андрія (checkTokens)
+  initTokenClicks('ub5-text');
+  setTotal(document.querySelectorAll('#ub5-text .tok[data-correct="true"]').length);
+  document.getElementById('ub5-check').addEventListener('click', () => {
+    checkTokens('ub5-text', 'ub5-score', 'ub5');
+  });
+  document.getElementById('ub5-reset').addEventListener('click', () => {
+    resetTokens('ub5-text', 'ub5-score', 'ub5');
+  });
+
+  // Кнопки "показати підказку/приклад" у .qa-блоках (Hausaufgabe, Üb.2/3/4/5)
+  document.querySelectorAll('.reveal-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const rev = btn.parentElement.querySelector('.reveal');
+      if(rev) rev.classList.toggle('show');
+    });
+  });
+
+  // Фінальна панель зі штампами (тема модуля A: подорожі/канікули)
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🔍','🧩','✅','🎯']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
