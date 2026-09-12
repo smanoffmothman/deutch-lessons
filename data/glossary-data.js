@@ -44,5 +44,17 @@ const GLOSSARY = [
   {de: "die Übernachtung", uk: "ночівля", klas: "7", modul: "A", lektion: 3},
   {de: "die Geschwister (Pl.)", uk: "брати і сестри", klas: "7", modul: "A", lektion: 3},
   {de: "sich streiten", uk: "сваритися", klas: "7", modul: "A", lektion: 3},
-  {de: "gestern", uk: "вчора", klas: "7", modul: "A", lektion: 3}
+  {de: "gestern", uk: "вчора", klas: "7", modul: "A", lektion: 3},
+  {de: "der Fehler", uk: "помилка", klas: "7", modul: "A", lektion: 4},
+  {de: "korrigieren", uk: "виправляти", klas: "7", modul: "A", lektion: 4},
+  {de: "die Übung", uk: "вправа", klas: "7", modul: "A", lektion: 4},
+  {de: "der Sportverein", uk: "спортивний клуб, спортивне товариство", klas: "7", modul: "A", lektion: 4},
+  {de: "regnen", uk: "йти (про дощ)", klas: "7", modul: "A", lektion: 4},
+  {de: "fliegen", uk: "летіти", klas: "7", modul: "A", lektion: 4},
+  {de: "das Wetter", uk: "погода", klas: "7", modul: "A", lektion: 4},
+  {de: "der Anfänger", uk: "початківець", klas: "7", modul: "A", lektion: 4},
+  {de: "die Bergtour", uk: "гірський похід, гірська прогулянка", klas: "7", modul: "A", lektion: 4},
+  {de: "das Matratzenlager", uk: "нічліг на матрацах (спальня зі спальними матрацами)", klas: "7", modul: "A", lektion: 4},
+  {de: "die Tante", uk: "тітка", klas: "7", modul: "A", lektion: 4},
+  {de: "zusammengesetzte Wörter", uk: "складні слова (граматичний термін)", klas: "7", modul: "A", lektion: 4}
 ];
