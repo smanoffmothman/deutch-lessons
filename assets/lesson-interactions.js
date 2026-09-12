@@ -67,18 +67,31 @@ function buildQuiz(containerId, data){
 
 /* ---------- Текстові пропуски (input.blank-input[data-ans]) ----------
    HTML: <input type="text" class="blank-input" data-ans="правильно">
-   Перевірка регістронезалежна, зараховує лише перше проходження. */
+   Перевірка регістронезалежна, зараховує лише перше проходження.
+   Якщо відповідь неправильна (поле не порожнє), одразу після інпута
+   з'являється маленька підказка "→ правильна відповідь". */
 function checkBlanks(containerId, scoreId, stateKey){
   const state = checkBlanks._state || (checkBlanks._state = {});
   if(!(stateKey in state)) state[stateKey] = 0;
   let correct = 0, total = 0;
   document.querySelectorAll('#' + containerId + ' .blank-input').forEach(inp => {
     total++;
-    const ans = (inp.dataset.ans || '').toLowerCase();
+    const ans = inp.dataset.ans || '';
     const val = inp.value.trim().toLowerCase();
     inp.classList.remove('correct', 'wrong');
-    if(val === ans){ inp.classList.add('correct'); correct++; }
-    else if(val !== ''){ inp.classList.add('wrong'); }
+    if(inp.nextElementSibling && inp.nextElementSibling.classList.contains('blank-hint')){
+      inp.nextElementSibling.remove();
+    }
+    if(val === ans.toLowerCase()){
+      inp.classList.add('correct'); correct++;
+    } else if(val !== ''){
+      inp.classList.add('wrong');
+      const hint = document.createElement('span');
+      hint.className = 'blank-hint';
+      hint.textContent = '→ ' + ans;
+      hint.style.cssText = 'color:#B14E3E;font-weight:700;font-size:13px;margin-left:6px;white-space:nowrap;';
+      inp.insertAdjacentElement('afterend', hint);
+    }
   });
   const scoreEl = document.getElementById(scoreId);
   if(scoreEl) scoreEl.textContent = correct + ' / ' + total + ' richtig';
@@ -89,6 +102,9 @@ function checkBlanks(containerId, scoreId, stateKey){
 function resetBlanks(containerId, scoreId, stateKey){
   document.querySelectorAll('#' + containerId + ' .blank-input').forEach(inp => {
     inp.value = ''; inp.classList.remove('correct', 'wrong');
+    if(inp.nextElementSibling && inp.nextElementSibling.classList.contains('blank-hint')){
+      inp.nextElementSibling.remove();
+    }
   });
   const scoreEl = document.getElementById(scoreId);
   if(scoreEl) scoreEl.textContent = '';
