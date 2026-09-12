@@ -71,5 +71,15 @@ const LESSONS = [
     file: "klas-7/modul-a/lektion-5.html",
     nove: true,
     dz: "Schreib einen kurzen Text (6–8 Sätze): Wo verbringt deine Familie am liebsten die Ferien? Nutze mindestens drei Präpositionen mit Dativ oder Akkusativ (z. B. „Wir fahren an die Ostsee.“, „Im Sommer sind wir im Ferienlager.“) und einen Satz mit „Ich finde das …, weil …“."
+  },
+  {
+    klas: "7",
+    modul: "A",
+    lektion: 6,
+    nazva: "Канікули в колі сім'ї",
+    opys: "SMS-листування і лист про сімейні канікули; закріплюємо прийменники з Dativ (ab, aus, bei, mit, nach, seit, von, zu) через читання, пропуски і клікабельні токени.",
+    file: "klas-7/modul-a/lektion-6.html",
+    nove: true,
+    dz: "Schreib eine E-Mail (8–10 Sätze) an eine Freundin / einen Freund: Erzähl, wie deine Familie die Ferien meistens verbringt und bei wem ihr manchmal zu Besuch seid. Nutze mindestens vier Präpositionen mit Dativ (ab, aus, bei, mit, nach, seit, von, zu) und beschreib eine schöne Erinnerung aus den Ferien."
   }
 ];

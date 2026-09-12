@@ -68,5 +68,17 @@ const GLOSSARY = [
   {de: "sich entspannen", uk: "розслаблятися, відпочивати", klas: "7", modul: "A", lektion: 5},
   {de: "das Interview", uk: "інтерв'ю", klas: "7", modul: "A", lektion: 5},
   {de: "verbinden", uk: "з'єднувати, поєднувати (тут: співвіднести)", klas: "7", modul: "A", lektion: 5},
-  {de: "die Wüste", uk: "пустеля", klas: "7", modul: "A", lektion: 5}
+  {de: "die Wüste", uk: "пустеля", klas: "7", modul: "A", lektion: 5},
+  {de: "erben", uk: "успадковувати", klas: "7", modul: "A", lektion: 6},
+  {de: "einfach toll", uk: "справді чудово (ідіома)", klas: "7", modul: "A", lektion: 6},
+  {de: "todlangweilig", uk: "смертельно нудно", klas: "7", modul: "A", lektion: 6},
+  {de: "Ach, Quatsch!", uk: "Та ну, дурниці! (вигук незгоди)", klas: "7", modul: "A", lektion: 6},
+  {de: "malerisch", uk: "мальовничий", klas: "7", modul: "A", lektion: 6},
+  {de: "die Berglandschaft", uk: "гірський краєвид", klas: "7", modul: "A", lektion: 6},
+  {de: "das Heimatland", uk: "батьківщина, рідна країна", klas: "7", modul: "A", lektion: 6},
+  {de: "sich vorstellen", uk: "уявляти собі", klas: "7", modul: "A", lektion: 6},
+  {de: "der Tagesausflug", uk: "одноденна поїздка, екскурсія", klas: "7", modul: "A", lektion: 6},
+  {de: "der Naturpark", uk: "природний парк", klas: "7", modul: "A", lektion: 6},
+  {de: "die Fahrkarte", uk: "квиток (проїзний)", klas: "7", modul: "A", lektion: 6},
+  {de: "der Schulabschluss", uk: "закінчення школи", klas: "7", modul: "A", lektion: 6}
 ];
