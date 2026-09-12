@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 3 · Modul A · Вхідна діагностувальна робота №1</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 7'},
+    {label: 'Урок 3: Вхідна діагностувальна робота №1'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 3 · MODUL A</span>
+        <h1>Вхідна діагностувальна робота №1</h1>
+        <p class="sub">Перевіряємо, що вже добре виходить: слова, Perfekt і Präteritum, читання та коротке письмо німецькою.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Sprachbausteine</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Kommunikation</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Leseverstehen</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Schreiben</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== START ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Worum geht es in dieser Lektion?</h2>
+      <div class="card">
+        <p>Heute schreibst du deine erste Diagnostikarbeit in diesem Schuljahr. Sie zeigt dir und deiner Lehrkraft, was du schon gut kannst und woran ihr noch zusammen arbeiten könnt. Es gibt vier Teile: Wortschatz &amp; Grammatik, Kommunikation, Leseverstehen und Schreiben.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Сьогодні — вхідна діагностувальна робота. Вона показує тобі й твоєму вчителю/вчительці, що вже добре виходить, а над чим варто попрацювати цього року. Оцінка тут не головне — головне чесно спробувати виконати кожне завдання самостійно. Робота має чотири частини: мова (лексика й граматика), комунікація, читання і письмо.
+        </div>
+      </div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Keine Sorge — das ist nur ein Check, keine Prüfung fürs Leben. Wir schaffen das zusammen!</p>
+      </div>
+    </section>
+
+    <!-- ===== HAUSAUFGABE ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: Schreib eine kurze Postkarte (5–6 Sätze) an einen Freund / eine Freundin: Erzähl im Perfekt, was du im Sommer erlebt hast (z. B. „Ich bin ... gefahren“, „Ich habe ... gemacht“), und schreib am Ende einen Satz, worauf du dich in diesem Schuljahr am meisten freust (z. B. „Ich freue mich auf ...“).
+      </div>
+      <div class="card">
+        <p class="lead">Перш ніж рухатись далі — швидко звір свою листівку з цим списком:</p>
+        <ul>
+          <li>✅ 5–6 речень, звернення на початку (Liebe/r ...)</li>
+          <li>✅ Мінімум 2 дії у Perfekt (ist/hat + Partizip II, напр. <em>bin gefahren</em>, <em>habe gemacht</em>)</li>
+          <li>✅ Останнє речення — про очікування від нового навчального року (<em>Ich freue mich auf ...</em>)</li>
+        </ul>
+      </div>
+      <div class="qa">
+        <label>✍️ Хочеш звірити зі зразком?</label>
+        <button class="btn secondary small" onclick="toggleReveal('dzReveal')">Показати приклад листівки</button>
+        <div class="reveal" id="dzReveal">
+          Liebe Anna,<br>
+          viele Grüße aus der Ukraine! Ich bin im Sommer ans Meer gefahren und habe dort viel Volleyball gespielt. Ich habe auch ein Buch auf Deutsch gelesen. Das Wetter war super. Wir haben jeden Tag Eis gegessen. Ich freue mich auf das neue Schuljahr und auf die Deutschstunden. Bis bald!<br>
+          Deine Marta
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ÜB. 1: SPRACHBAUSTEINE ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1 · I. Sprachbausteine</p>
+      <h2 class="panel-title">Wortschatz und Grammatik</h2>
+      <p class="lead">Чотири короткі завдання: складні слова, дієслова, Perfekt і Präteritum.</p>
+
+      <h3 style="font-family:var(--serif);color:var(--teal);">1. Wie heißt das zusammengesetzte Wort?</h3>
+      <div class="ua-note">
+        Складні іменники в німецькій пишуться РАЗОМ, а рід визначає ОСТАННЄ слово. Напр. <em>die Klasse</em> + <em>das Zimmer</em> → <strong>das Klassenzimmer</strong> (класна кімната).
+      </div>
+      <div class="card" id="ub1a-list">
+        <div class="fill-item">
+          <span class="num">1)</span> Lieblings + Fach = <input type="text" class="blank-input" style="width:170px;display:inline-block;" data-ans="Lieblingsfach">
+        </div>
+        <div class="fill-item">
+          <span class="num">2)</span> Sport + Kleidung = <input type="text" class="blank-input" style="width:170px;display:inline-block;" data-ans="Sportkleidung">
+        </div>
+        <div class="fill-item">
+          <span class="num">3)</span> Möbel + Geschäft = <input type="text" class="blank-input" style="width:170px;display:inline-block;" data-ans="Möbelgeschäft">
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub1a-check">Prüfen</button>
+        <button class="btn secondary" id="ub1a-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub1a-score"></span>
+      </div>
+
+      <div class="airmail-rule"></div>
+
+      <h3 style="font-family:var(--serif);color:var(--teal);">2. Wähle das passende Verb</h3>
+      <p class="lead">Обери дієслово, яке найкраще пасує до кожного слова.</p>
+      <div class="card" id="ub1b-list">
+        <div class="match-row"><span class="name">1) Freunde</span>
+          <select class="blank blank-input" data-ans="treffen">
+            <option value="">— вибери —</option>
+            <option value="kaufen">kaufen</option>
+            <option value="wählen">wählen</option>
+            <option value="treffen">treffen</option>
+            <option value="gehen">gehen</option>
+            <option value="essen">essen</option>
+          </select>
+        </div>
+        <div class="match-row"><span class="name">2) Lebensmittel</span>
+          <select class="blank blank-input" data-ans="kaufen">
+            <option value="">— вибери —</option>
+            <option value="kaufen">kaufen</option>
+            <option value="wählen">wählen</option>
+            <option value="treffen">treffen</option>
+            <option value="gehen">gehen</option>
+            <option value="essen">essen</option>
+          </select>
+        </div>
+        <div class="match-row"><span class="name">3) zu Mittag</span>
+          <select class="blank blank-input" data-ans="essen">
+            <option value="">— вибери —</option>
+            <option value="kaufen">kaufen</option>
+            <option value="wählen">wählen</option>
+            <option value="treffen">treffen</option>
+            <option value="gehen">gehen</option>
+            <option value="essen">essen</option>
+          </select>
+        </div>
+        <div class="match-row"><span class="name">4) das Reiseziel</span>
+          <select class="blank blank-input" data-ans="wählen">
+            <option value="">— вибери —</option>
+            <option value="kaufen">kaufen</option>
+            <option value="wählen">wählen</option>
+            <option value="treffen">treffen</option>
+            <option value="gehen">gehen</option>
+            <option value="essen">essen</option>
+          </select>
+        </div>
+        <div class="match-row"><span class="name">5) in die Bäckerei</span>
+          <select class="blank blank-input" data-ans="gehen">
+            <option value="">— вибери —</option>
+            <option value="kaufen">kaufen</option>
+            <option value="wählen">wählen</option>
+            <option value="treffen">treffen</option>
+            <option value="gehen">gehen</option>
+            <option value="essen">essen</option>
+          </select>
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub1b-check">Prüfen</button>
+        <button class="btn secondary" id="ub1b-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub1b-score"></span>
+      </div>
+
+      <div class="airmail-rule"></div>
+
+      <h3 style="font-family:var(--serif);color:var(--teal);">3. Schreibe die Sätze im Perfekt</h3>
+      <div class="ua-note">
+        Perfekt = <strong>haben/sein</strong> (у теперішньому часі, друга особа однини — <em>du</em> тут не потрібне, бо йдеться про <em>ich</em>) + <strong>Partizip II</strong> в кінці речення. Дієслова руху (fahren, gehen...) використовують <strong>sein</strong>.
+      </div>
+      <div class="card" id="ub1c-list">
+        <div class="fill-item">
+          <span class="num">1)</span> Ich <input type="text" class="blank-input" style="width:80px;display:inline-block;" data-ans="habe"> am Wochenende Yoga <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="gemacht">. <em>(Yoga machen)</em>
+        </div>
+        <div class="fill-item">
+          <span class="num">2)</span> In den Ferien <input type="text" class="blank-input" style="width:80px;display:inline-block;" data-ans="bin"> ich Rad <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="gefahren">. <em>(Rad fahren)</em>
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub1c-check">Prüfen</button>
+        <button class="btn secondary" id="ub1c-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub1c-score"></span>
+      </div>
+
+      <div class="airmail-rule"></div>
+
+      <h3 style="font-family:var(--serif);color:var(--teal);">4. Schreibe die Sätze im Präteritum</h3>
+      <div class="ua-note">
+        Präteritum дієслів <strong>sein</strong> і <strong>haben</strong> вживається навіть в усному мовленні (на відміну від інших дієслів, де усно частіше Perfekt): <em>ich war / du warst</em>, <em>ich hatte / du hattest</em> тощо.
+      </div>
+      <div class="card" id="ub1d-list">
+        <div class="fill-item">
+          <span class="num">1)</span> Diesen Sommer <input type="text" class="blank-input" style="width:90px;display:inline-block;" data-ans="waren"> wir auf einer Insel. <em>(sein)</em>
+        </div>
+        <div class="fill-item">
+          <span class="num">2)</span> Ich <input type="text" class="blank-input" style="width:90px;display:inline-block;" data-ans="hatte"> gestern viele Hausaufgaben. <em>(haben)</em>
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub1d-check">Prüfen</button>
+        <button class="btn secondary" id="ub1d-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub1d-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== ÜB. 2: KOMMUNIKATION ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2 · II. Kommunikation</p>
+      <h2 class="panel-title">Was passt? Ordne zu und bilde die Fragen</h2>
+      <p class="lead">З'єднай початок і кінець, щоб утворити правильне запитання.</p>
+      <div class="card" id="ub2-list">
+        <div class="match-row"><span class="name">1) Was trinkst du morgens</span>
+          <select class="blank blank-input" data-ans="zum Frühstück?">
+            <option value="">— вибери —</option>
+            <option value="nicht?">nicht?</option>
+            <option value="in die Schule?">in die Schule?</option>
+            <option value="gut Fußball spielen?">gut Fußball spielen?</option>
+            <option value="zum Frühstück?">zum Frühstück?</option>
+            <option value="fahren?">fahren?</option>
+            <option value="im Sommer?">im Sommer?</option>
+          </select>
+        </div>
+        <div class="match-row"><span class="name">2) Kannst du</span>
+          <select class="blank blank-input" data-ans="gut Fußball spielen?">
+            <option value="">— вибери —</option>
+            <option value="nicht?">nicht?</option>
+            <option value="in die Schule?">in die Schule?</option>
+            <option value="gut Fußball spielen?">gut Fußball spielen?</option>
+            <option value="zum Frühstück?">zum Frühstück?</option>
+            <option value="fahren?">fahren?</option>
+            <option value="im Sommer?">im Sommer?</option>
+          </select>
+        </div>
+        <div class="match-row"><span class="name">3) Was magst du</span>
+          <select class="blank blank-input" data-ans="nicht?">
+            <option value="">— вибери —</option>
+            <option value="nicht?">nicht?</option>
+            <option value="in die Schule?">in die Schule?</option>
+            <option value="gut Fußball spielen?">gut Fußball spielen?</option>
+            <option value="zum Frühstück?">zum Frühstück?</option>
+            <option value="fahren?">fahren?</option>
+            <option value="im Sommer?">im Sommer?</option>
+          </select>
+        </div>
+        <div class="match-row"><span class="name">4) Welchen Sport machst du gern</span>
+          <select class="blank blank-input" data-ans="im Sommer?">
+            <option value="">— вибери —</option>
+            <option value="nicht?">nicht?</option>
+            <option value="in die Schule?">in die Schule?</option>
+            <option value="gut Fußball spielen?">gut Fußball spielen?</option>
+            <option value="zum Frühstück?">zum Frühstück?</option>
+            <option value="fahren?">fahren?</option>
+            <option value="im Sommer?">im Sommer?</option>
+          </select>
+        </div>
+        <div class="match-row"><span class="name">5) Warum gehst du</span>
+          <select class="blank blank-input" data-ans="in die Schule?">
+            <option value="">— вибери —</option>
+            <option value="nicht?">nicht?</option>
+            <option value="in die Schule?">in die Schule?</option>
+            <option value="gut Fußball spielen?">gut Fußball spielen?</option>
+            <option value="zum Frühstück?">zum Frühstück?</option>
+            <option value="fahren?">fahren?</option>
+            <option value="im Sommer?">im Sommer?</option>
+          </select>
+        </div>
+        <div class="match-row"><span class="name">6) Wohin möchtest du</span>
+          <select class="blank blank-input" data-ans="fahren?">
+            <option value="">— вибери —</option>
+            <option value="nicht?">nicht?</option>
+            <option value="in die Schule?">in die Schule?</option>
+            <option value="gut Fußball spielen?">gut Fußball spielen?</option>
+            <option value="zum Frühstück?">zum Frühstück?</option>
+            <option value="fahren?">fahren?</option>
+            <option value="im Sommer?">im Sommer?</option>
+          </select>
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== ÜB. 3: LESEVERSTEHEN ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3 · III. Leseverstehen</p>
+      <h2 class="panel-title">6. Lies den Text — richtig oder falsch?</h2>
+      <div class="card">
+        <div style="display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap;">
+          <svg width="70" height="70" viewBox="0 0 70 70" style="flex:none;border-radius:50%;background:var(--teal-soft);">
+            <circle cx="35" cy="27" r="14" fill="var(--mustard)"/>
+            <path d="M12 62 Q35 38 58 62 Z" fill="var(--teal)"/>
+          </svg>
+          <p style="margin:0;">Hi! Ich bin Falko und komme aus Frankfurt. Wir wohnen nicht weit vom Zentrum. Unser Haus ist groß und hat einen Garten. Das ist gut für meine zwei Brüder. Sie gehen noch nicht zur Schule und können dort spielen. Ich und meine Schwester Milli besuchen das Goethegymnasium. Wir verstehen uns gut. Wir sind beide sportlich. Im Sommer fahren wir Rad, Skateboard oder Inliner, im Winter dann Ski und Snowboard. Deshalb ist Sportmode für uns wichtig.</p>
+        </div>
+      </div>
+      <div id="ub3a-quiz"></div>
+
+      <div class="airmail-rule"></div>
+
+      <h2 class="panel-title" style="font-size:22px;">7. Lies die Anzeige</h2>
+      <div class="card tinted-forest">
+        <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap;">
+          <svg width="80" height="60" viewBox="0 0 80 60" style="flex:none;">
+            <rect x="4" y="30" width="72" height="26" rx="4" fill="var(--paper-2)" stroke="var(--forest)"/>
+            <circle cx="24" cy="46" r="8" fill="var(--ink)"/>
+            <circle cx="56" cy="46" r="8" fill="var(--ink)"/>
+            <path d="M10 30 L20 10 L60 10 L70 30 Z" fill="var(--forest)"/>
+          </svg>
+          <div>
+            <p style="margin:0;font-family:var(--serif);font-weight:700;font-size:17px;color:var(--forest);">Ferien auf dem Reiterhof</p>
+            <p style="margin:4px 0 0;font-size:14px;">von April bis September · Jungen und Mädchen, ab 12 Jahren, auch ohne Eltern · Du magst Pferde? 35 Islandponys warten auf dich.</p>
+            <ul style="margin:8px 0 0;padding-left:18px;font-size:14px;">
+              <li>ruhige und liebe Ponys für Anfänger</li>
+              <li>coole Bergtouren mit Pferden</li>
+              <li>Übernachtung im Haus, im Matratzenlager</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="ub3b-quiz"></div>
+    </section>
+
+    <!-- ===== ÜB. 4: SCHREIBEN ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4 · IV. Schreiben</p>
+      <h2 class="panel-title">Du hast diese E-Mail bekommen</h2>
+      <p class="lead">Прочитай лист і дай відповідь мінімум 30 словами німецькою.</p>
+      <div class="mail-window">
+        <div class="mail-titlebar">Neue Nachricht — von Silke</div>
+        <div class="mail-body">
+          Hallo,<br><br>
+          viele Grüße aus Bremen. Ich bin hier bei meiner Tante. Bis jetzt war das Wetter super. Aber heute regnet es. Darum sitze ich am Computer und schreibe E-Mails. Wir sind zuerst nach Spanien geflogen. Dann war ich mit meinem Sportverein am Bodensee. Wie ist das Wetter bei euch in der Ukraine? Was hast du alles in den Ferien gemacht? Schreib, bitte, bald.<br><br>
+          Tschüss!<br>
+          Silke
+        </div>
+      </div>
+      <div class="ua-note">
+        Порада: відповідай на обидва питання Сільке (про погоду і про канікули), використай Perfekt і напиши хоча б 30 слів.
+      </div>
+      <div class="qa">
+        <label>Deine Antwort an Silke:</label>
+        <textarea id="ub4-answer" rows="5" placeholder="Liebe Silke, ..."></textarea>
+        <button class="btn secondary small" style="margin-top:8px;" onclick="toggleReveal('ub4Reveal')">Показати приклад відповіді</button>
+        <div class="reveal" id="ub4Reveal">
+          Liebe Silke,<br>
+          danke für deine E-Mail! Bei uns in der Ukraine ist das Wetter im Moment warm und sonnig. In den Ferien bin ich mit meiner Familie ans Meer gefahren. Wir haben dort viel geschwommen und Volleyball gespielt. Ich habe auch neue Freunde kennengelernt. Es war ein toller Sommer! Schreib mir bald wieder.<br>
+          Deine ...
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Schau dir deine Diagnostikarbeit noch einmal an und verbessere deine Fehler. Schreib außerdem 3 Sätze im Perfekt darüber, was du letztes Wochenende gemacht hast (z. B. „Ich habe ... gespielt“, „Ich bin ... gegangen“).</p>
+      </div>
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  // локальна допоміжна функція лише для цього уроку (показати/сховати приклад)
+  function toggleReveal(id){
+    const el = document.getElementById(id);
+    if(el) el.classList.toggle('show');
+  }
+
+  // Üb. 1a: складні слова
+  setTotal(document.querySelectorAll('#ub1a-list .blank-input').length);
+  document.getElementById('ub1a-check').addEventListener('click', () => checkBlanks('ub1a-list','ub1a-score','ub1a'));
+  document.getElementById('ub1a-reset').addEventListener('click', () => resetBlanks('ub1a-list','ub1a-score','ub1a'));
+
+  // Üb. 1b: дієслова (select)
+  setTotal(document.querySelectorAll('#ub1b-list .blank-input').length);
+  document.getElementById('ub1b-check').addEventListener('click', () => checkBlanks('ub1b-list','ub1b-score','ub1b'));
+  document.getElementById('ub1b-reset').addEventListener('click', () => resetBlanks('ub1b-list','ub1b-score','ub1b'));
+
+  // Üb. 1c: Perfekt
+  setTotal(document.querySelectorAll('#ub1c-list .blank-input').length);
+  document.getElementById('ub1c-check').addEventListener('click', () => checkBlanks('ub1c-list','ub1c-score','ub1c'));
+  document.getElementById('ub1c-reset').addEventListener('click', () => resetBlanks('ub1c-list','ub1c-score','ub1c'));
+
+  // Üb. 1d: Präteritum
+  setTotal(document.querySelectorAll('#ub1d-list .blank-input').length);
+  document.getElementById('ub1d-check').addEventListener('click', () => checkBlanks('ub1d-list','ub1d-score','ub1d'));
+  document.getElementById('ub1d-reset').addEventListener('click', () => resetBlanks('ub1d-list','ub1d-score','ub1d'));
+
+  // Üb. 2: Kommunikation (select)
+  setTotal(document.querySelectorAll('#ub2-list .blank-input').length);
+  document.getElementById('ub2-check').addEventListener('click', () => checkBlanks('ub2-list','ub2-score','ub2'));
+  document.getElementById('ub2-reset').addEventListener('click', () => resetBlanks('ub2-list','ub2-score','ub2'));
+
+  // Üb. 3a: richtig/falsch (Falko)
+  const ub3aData = [
+    {q: 'Falko hat drei Geschwister.', opts: ['richtig','falsch'], correct: 'richtig'},
+    {q: 'Er hat mit seiner Schwester viel Streit.', opts: ['richtig','falsch'], correct: 'falsch'},
+    {q: 'Mode interessiert Falko überhaupt nicht.', opts: ['richtig','falsch'], correct: 'falsch'}
+  ];
+  buildQuiz('ub3a-quiz', ub3aData);
+
+  // Üb. 3b: Anzeige — Multiple Choice
+  const ub3bData = [
+    {q: 'Hier kann man in den Ferien...', opts: ['reiten lernen','Sprachen lernen','schwimmen'], correct: 'reiten lernen'},
+    {q: 'Wann?', opts: ['im Sommer','im Winter','im Sommer und im Winter'], correct: 'im Sommer'},
+    {q: 'Wer?', opts: ['nur Familien','nur Mädchen','Jungen und Mädchen'], correct: 'Jungen und Mädchen'}
+  ];
+  buildQuiz('ub3b-quiz', ub3bData);
+
+  // Фінальна панель зі штампами
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📝','🗂️','📖','✉️']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
