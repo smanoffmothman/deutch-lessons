@@ -32,9 +32,26 @@ function renderProgress(){
   if(text) text.textContent = progress.done + ' / ' + progress.total + ' Aufgaben gemeistert';
 }
 
+/* ---------- Допоміжне: перемішати масив (Fisher–Yates) ----------
+   ВАЖЛИВО: правильна відповідь у даних квізу (item.correct) НЕ повинна
+   систематично збігатися з першим елементом item.opts — інакше учні
+   просто клікають "перша кнопка" й проходять квіз, не читаючи питання.
+   Тому buildQuiz завжди перемішує opts тут, під час рендеру, а не
+   покладається на те, що масив вручну написали у випадковому порядку. */
+function shuffleArray(arr){
+  const a = arr.slice();
+  for(let i = a.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
 /* ---------- Міні-квіз з варіантами-кнопками ---------- */
 // data: [{ q: "текст питання", opts: ["a","b"], correct: "b" }, ...]
 // Кожне правильно вибрана відповідь додає +1 до прогресу.
+// opts перемішується автоматично при кожному рендері (див. shuffleArray) —
+// порядок варіантів у даних не має значення для того, де опиниться правильна.
 function buildQuiz(containerId, data){
   const wrap = document.getElementById(containerId);
   setTotal(data.length);
@@ -43,7 +60,7 @@ function buildQuiz(containerId, data){
     div.className = 'quiz-q';
     div.innerHTML = `<p class="q-text">${qi+1}. ${item.q}</p><div class="quiz-opts"></div><p class="feedback"></p>`;
     const optsWrap = div.querySelector('.quiz-opts');
-    item.opts.forEach(o => {
+    shuffleArray(item.opts).forEach(o => {
       const b = document.createElement('button');
       b.className = 'opt-btn'; b.textContent = o;
       b.addEventListener('click', () => {
@@ -68,28 +85,26 @@ function buildQuiz(containerId, data){
 /* ---------- Текстові пропуски (input.blank-input[data-ans]) ----------
    HTML: <input type="text" class="blank-input" data-ans="правильно">
    Перевірка регістронезалежна, зараховує лише перше проходження.
-   Якщо відповідь неправильна (поле не порожнє), одразу після інпута
-   з'являється маленька підказка "→ правильна відповідь". */
+   Якщо відповідь неправильна (і поле не порожнє) — одразу після поля
+   з'являється маленька підказка з правильною відповіддю (.blank-hint). */
 function checkBlanks(containerId, scoreId, stateKey){
   const state = checkBlanks._state || (checkBlanks._state = {});
   if(!(stateKey in state)) state[stateKey] = 0;
   let correct = 0, total = 0;
   document.querySelectorAll('#' + containerId + ' .blank-input').forEach(inp => {
     total++;
-    const ans = inp.dataset.ans || '';
+    const ans = (inp.dataset.ans || '').toLowerCase();
     const val = inp.value.trim().toLowerCase();
     inp.classList.remove('correct', 'wrong');
-    if(inp.nextElementSibling && inp.nextElementSibling.classList.contains('blank-hint')){
-      inp.nextElementSibling.remove();
-    }
-    if(val === ans.toLowerCase()){
+    const oldHint = inp.nextElementSibling;
+    if(oldHint && oldHint.classList && oldHint.classList.contains('blank-hint')) oldHint.remove();
+    if(val === ans){
       inp.classList.add('correct'); correct++;
     } else if(val !== ''){
       inp.classList.add('wrong');
       const hint = document.createElement('span');
       hint.className = 'blank-hint';
-      hint.textContent = '→ ' + ans;
-      hint.style.cssText = 'color:#B14E3E;font-weight:700;font-size:13px;margin-left:6px;white-space:nowrap;';
+      hint.textContent = 'правильно: ' + inp.dataset.ans;
       inp.insertAdjacentElement('afterend', hint);
     }
   });
@@ -102,9 +117,8 @@ function checkBlanks(containerId, scoreId, stateKey){
 function resetBlanks(containerId, scoreId, stateKey){
   document.querySelectorAll('#' + containerId + ' .blank-input').forEach(inp => {
     inp.value = ''; inp.classList.remove('correct', 'wrong');
-    if(inp.nextElementSibling && inp.nextElementSibling.classList.contains('blank-hint')){
-      inp.nextElementSibling.remove();
-    }
+    const hint = inp.nextElementSibling;
+    if(hint && hint.classList && hint.classList.contains('blank-hint')) hint.remove();
   });
   const scoreEl = document.getElementById(scoreId);
   if(scoreEl) scoreEl.textContent = '';
