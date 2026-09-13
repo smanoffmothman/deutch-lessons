@@ -158,5 +158,17 @@ const GLOSSARY = [
   {de: "genießen", uk: "насолоджуватися", klas: "8", modul: "A", lektion: 5},
   {de: "sich orientieren", uk: "орієнтуватися", klas: "8", modul: "A", lektion: 5},
   {de: "die Klassenfahrt", uk: "шкільна (класна) поїздка", klas: "8", modul: "A", lektion: 5},
-  {de: "der Ausflug", uk: "екскурсія, поїздка", klas: "8", modul: "A", lektion: 5}
+  {de: "der Ausflug", uk: "екскурсія, поїздка", klas: "8", modul: "A", lektion: 5},
+  {de: "die Sportart", uk: "вид спорту", klas: "8", modul: "A", lektion: 6},
+  {de: "der Mannschaftssport", uk: "командний вид спорту", klas: "8", modul: "A", lektion: 6},
+  {de: "die Leichtathletik", uk: "легка атлетика", klas: "8", modul: "A", lektion: 6},
+  {de: "der Extremsport", uk: "екстремальний спорт", klas: "8", modul: "A", lektion: 6},
+  {de: "das Tischtennis", uk: "настільний теніс", klas: "8", modul: "A", lektion: 6},
+  {de: "der Hochsprung", uk: "стрибки у висоту", klas: "8", modul: "A", lektion: 6},
+  {de: "der Weitsprung", uk: "стрибки в довжину", klas: "8", modul: "A", lektion: 6},
+  {de: "Sport treiben", uk: "займатися спортом", klas: "8", modul: "A", lektion: 6},
+  {de: "die aktive Erholung", uk: "активний відпочинок", klas: "8", modul: "A", lektion: 6},
+  {de: "rudern", uk: "веслувати", klas: "8", modul: "A", lektion: 6},
+  {de: "das Turnen", uk: "гімнастика (спортивна)", klas: "8", modul: "A", lektion: 6},
+  {de: "regelmäßig", uk: "регулярно", klas: "8", modul: "A", lektion: 6}
 ];

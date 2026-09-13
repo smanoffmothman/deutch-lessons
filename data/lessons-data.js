@@ -151,5 +151,15 @@ const LESSONS = [
     file: "klas-8/modul-a/lektion-5.html",
     nove: true,
     dz: "Schreib ein kurzes SMS-Gespräch (6–8 Nachrichten) zwischen dir und einem Freund / einer Freundin über eure Sommerferien. Nutzt zusammen mindestens vier Verben im Perfekt (z. B. sein, fahren, machen, fotografieren, genießen) und erwähnt am Ende, welche drei Sachen ihr für den Urlaub gepackt habt."
+  },
+  {
+    klas: "8",
+    modul: "A",
+    lektion: 6,
+    nazva: "Aktive Erholung: Sportarten",
+    opys: "Лексика активного дозвілля: будуємо складні іменники-назви видів спорту, розподіляємо їх за групами (Leichtathletik, Wassersport, Mannschaftssport, Skisport, Fitness) і тренуємо аудіювання за діалогом про улюблені заняття спортом.",
+    file: "klas-8/modul-a/lektion-6.html",
+    nove: true,
+    dz: "Schreib ein kurzes Interview (5–6 Fragen und Antworten) mit dir selbst oder einem Familienmitglied über aktive Erholung: Welche Sportarten treibst du? Wie oft? Erwähne mindestens einen Mannschaftssport und benutze das Verb „Sport treiben“ mindestens einmal."
   }
 ];
