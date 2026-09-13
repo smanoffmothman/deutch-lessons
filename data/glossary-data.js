@@ -102,5 +102,15 @@ const GLOSSARY = [
   {de: "Staub saugen", uk: "пилососити", klas: "7", modul: "A", lektion: 8},
   {de: "der Müll", uk: "сміття", klas: "7", modul: "A", lektion: 8},
   {de: "gießen (die Blumen gießen)", uk: "поливати (квіти)", klas: "7", modul: "A", lektion: 8},
-  {de: "fegen", uk: "підмітати", klas: "7", modul: "A", lektion: 8}
+  {de: "fegen", uk: "підмітати", klas: "7", modul: "A", lektion: 8},
+  {de: "der Superlativ", uk: "найвищий ступінь порівняння (граматичний термін)", klas: "8", modul: "A", lektion: 1},
+  {de: "vergleichen", uk: "порівнювати", klas: "8", modul: "A", lektion: 1},
+  {de: "das Bundesland (die Bundesländer)", uk: "федеральна земля (Німеччини)", klas: "8", modul: "A", lektion: 1},
+  {de: "die Grenze", uk: "кордон", klas: "8", modul: "A", lektion: 1},
+  {de: "die Berliner Mauer", uk: "Берлінська стіна", klas: "8", modul: "A", lektion: 1},
+  {de: "fallen (die Mauer fiel)", uk: "падати (стіна впала — про історичну подію 1989 р.)", klas: "8", modul: "A", lektion: 1},
+  {de: "die Nationalflagge", uk: "державний прапор", klas: "8", modul: "A", lektion: 1},
+  {de: "der Bundeskanzler / die Bundeskanzlerin", uk: "федеральний канцлер / канцлерка", klas: "8", modul: "A", lektion: 1},
+  {de: "die Einwohnerzahl", uk: "кількість населення", klas: "8", modul: "A", lektion: 1},
+  {de: "die Vielfalt", uk: "різноманітність", klas: "8", modul: "A", lektion: 1}
 ];

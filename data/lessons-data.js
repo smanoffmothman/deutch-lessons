@@ -101,5 +101,15 @@ const LESSONS = [
     file: "klas-7/modul-a/lektion-8.html",
     nove: true,
     dz: "Schreib 5–6 Sätze über die Hausarbeit in deiner Familie: Wer macht was zu Hause mit? Benutze mindestens zwei trennbare Verben (z. B. aufräumen, einkaufen, wegbringen) im Präsens."
+  },
+  {
+    klas: "8",
+    modul: "A",
+    lektion: 1,
+    nazva: "Вступний урок. Вікторина про Німеччину",
+    opys: "Складніша вікторина про факти Німеччини (сусідні країни, гори, річки, Берлінська стіна) та граматична тема Superlativ (найвищий ступінь порівняння прикметників).",
+    file: "klas-8/modul-a/lektion-1.html",
+    nove: true,
+    dz: "Schreib einen kurzen Text (6–8 Sätze) über Deutschland. Benutze dabei mindestens drei Superlativformen (z. B. der größte, der längste, der bekannteste ...). Du kannst Fakten aus dem Unterricht oder aus dem Internet nutzen."
   }
 ];
