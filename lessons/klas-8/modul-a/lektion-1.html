@@ -17,10 +17,11 @@
   renderCrumbs('crumbs', [
     {label: 'Головна', href: '../../../index.html'},
     {label: 'Уроки', href: '../../../klasy/index.html'},
-    {label: 'Клас 7'},
+    {label: 'Клас 8'},
     {label: 'Урок 1: Was weißt du über Deutschland?'}
   ]);
 </script>
+
 <div class="app">
 
   <header class="hero">
@@ -28,7 +29,7 @@
       <div>
         <span class="hero-badge">LEKTION 1 · MODUL A</span>
         <h1>Was weißt du über Deutschland?</h1>
-        <p class="sub">Вступний урок модуля — знайомимось із Німеччиною: де вона лежить, які там гори, річки, свята і традиції.</p>
+        <p class="sub">Вступний урок: перевіряємо і поглиблюємо знання про Німеччину, а заразом вивчаємо найвищий ступінь порівняння прикметників (Superlativ).</p>
       </div>
       <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
     </div>
@@ -42,7 +43,7 @@
     <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
     <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
     <button class="tab-btn" data-tab="ub1">Üb. 1 · Quiz</button>
-    <button class="tab-btn" data-tab="ub2">Üb. 2 · Ergänze</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Superlativ</button>
     <button class="tab-btn" data-tab="ende">Fertig!</button>
   </nav>
 
@@ -52,10 +53,10 @@
       <p class="section-label">Willkommen an Bord</p>
       <h2 class="panel-title">Worum geht es in diesem Modul?</h2>
       <div class="card">
-        <p>Herzlich willkommen zu unserem neuen Deutschkurs! In diesem Modul sprechen wir über dich, deine Familie und deine Freunde. Aber zuerst machen wir eine kleine Reise: Wie gut kennst du Deutschland schon? In diesem Quiz entdeckst du wichtige Fakten über das Land, dessen Sprache du jetzt lernst — seine Lage, Berge, Flüsse und Feste.</p>
+        <p>Herzlich willkommen im 8. Schuljahr! In diesem ersten Modul geht es um euren Lebensstil, aber wir starten mit einer Wiederholung: Was wisst ihr eigentlich über Deutschland — das Land, dessen Sprache ihr lernt? Diesmal wird das Quiz etwas kniffliger als letztes Jahr, und wir lernen dabei eine wichtige Grammatik: den Superlativ (die höchste, die längste, die größte ...).</p>
         <div class="ua-note">
           <span class="ua-label">🇺🇦 Українською</span>
-          Ласкаво просимо до нового курсу німецької! У цьому модулі ми говоритимемо про тебе, твою родину і друзів. Але спершу — маленька подорож: наскільки добре ти вже знаєш Німеччину? У цій вікторині дізнаєшся важливі факти про країну, мову якої зараз вивчаєш — про її розташування, гори, річки та свята.
+          Ласкаво просимо до 8 класу! У цьому першому модулі йтиметься про стиль життя, але починаємо з повторення: що ви насправді знаєте про Німеччину? Цього разу вікторина складніша, ніж торік, і ми заразом вивчимо найвищий ступінь порівняння прикметників (найвищий, найдовший, найбільший тощо).
         </div>
       </div>
       <div class="dog-tip">
@@ -69,46 +70,66 @@
       <p class="section-label">Hausaufgabenkontrolle</p>
       <h2 class="panel-title">Перевірка домашнього завдання</h2>
       <div class="ua-note">
-        Це перший урок модуля — домашнього завдання ще не було. Тому ця вкладка сьогодні порожня: наступного уроку тут з'явиться перевірка того, що буде задано в кінці цього уроку (дивись вкладку "Fertig!").
+        Це перший урок модуля A у 8 класі — домашнього завдання з попереднього уроку цього модуля ще немає, тож перевіряти поки нічого. Нове ДЗ з'явиться наприкінці цього уроку (вкладка «Fertig!»), і саме його перевірятимемо на наступному занятті.
       </div>
     </section>
 
-    <!-- ===== ÜB.1: QUIZ ===== -->
+    <!-- ===== ÜB. 1: QUIZ ===== -->
     <section class="panel" id="panel-ub1">
       <p class="section-label">Üb. 1</p>
-      <h2 class="panel-title">Quiz: Was weißt du über Deutschland?</h2>
-      <p class="lead">Обери правильну відповідь на кожне запитання. Не хвилюйся, якщо чогось не знаєш — після кожної відповіді побачиш правильний варіант.</p>
+      <h2 class="panel-title">Deutschland-Quiz</h2>
+      <p class="lead">Оберіть правильну відповідь. Деякі питання складніші, ніж торік — уважно читайте варіанти!</p>
       <div id="ub1-quiz"></div>
     </section>
 
-    <!-- ===== ÜB.2: ERGÄNZE ===== -->
+    <!-- ===== ÜB. 2: SUPERLATIV ===== -->
     <section class="panel" id="panel-ub2">
-      <p class="section-label">Üb. 2</p>
-      <h2 class="panel-title">Ergänze die Sätze</h2>
-      <p class="lead">Впиши пропущене слово в кожне речення (українською підказки немає навмисно — спробуй пригадати з попередньої вправи!).</p>
+      <p class="section-label">Üb. 2 · Grammatik</p>
+      <h2 class="panel-title">Der Superlativ</h2>
+      <div class="card">
+        <p>Виявляється, у попередній вікторині ми вже користувались найвищим ступенем порівняння: <strong>der höchste</strong> Berg, <strong>der längste</strong> Fluss. Це називається <strong>Superlativ</strong> — форма прикметника, яка показує, що щось «найбільш-...» серед усіх.</p>
+        <p><strong>Утворення:</strong> прикметник + <strong>-st</strong> (або <strong>-est</strong>, якщо основа закінчується на -d, -t, -s, -z, -ß) + відмінкове закінчення. З означеним артиклем (der/die/das) у називному відмінку однини закінчення завжди <strong>-e</strong>, у множині — завжди <strong>-en</strong>.</p>
+        <table class="gtable">
+          <tr><th>Grundform</th><th>Komparativ</th><th>Superlativ (der/die/das ...)</th></tr>
+          <tr><td>hoch</td><td>höher</td><td>der/die/das höchste</td></tr>
+          <tr><td>lang</td><td>länger</td><td>der/die/das längste</td></tr>
+          <tr><td>groß</td><td>größer</td><td>der/die/das größte</td></tr>
+          <tr><td>bekannt</td><td>bekannter</td><td>der/die/das bekannteste</td></tr>
+          <tr><td>gut</td><td>besser</td><td>der/die/das <strong>beste</strong></td></tr>
+          <tr><td>viel</td><td>mehr</td><td>der/die/das <strong>meiste</strong> (Pl.: die meisten)</td></tr>
+        </table>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          <dl>
+            <dt>Утворення:</dt><dd>прикметник + -st/-est + закінчення (-e в однині, -en у множині після означеного артикля).</dd>
+            <dt>hoch → höher → der höchste:</dt><dd>увага, у Superlativ і Komparativ випадає "c" (hoch, але höher, höchste)!</dd>
+            <dt>gut, viel:</dt><dd>неправильні форми, які треба просто запам'ятати напам'ять — best-, meist-.</dd>
+          </dl>
+        </div>
+      </div>
+
+      <p class="lead">Встав правильну форму Superlativ у речення:</p>
       <div class="card" id="ub2-list">
-        <div class="fill-item"><span class="num">1)</span> Deutschland liegt in der <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="Mitte"> Europas.</div>
-        <div class="fill-item"><span class="num">2)</span> Der höchste Berg Deutschlands heißt die <input type="text" class="blank-input" style="width:130px;display:inline-block;" data-ans="Zugspitze">.</div>
-        <div class="fill-item"><span class="num">3)</span> Der längste Fluss in Deutschland ist der <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="Rhein">.</div>
-        <div class="fill-item"><span class="num">4)</span> In Köln feiert man jedes Jahr den <input type="text" class="blank-input" style="width:120px;display:inline-block;" data-ans="Karneval">.</div>
-        <div class="fill-item"><span class="num">5)</span> Die Hauptstadt von Deutschland heißt <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="Berlin">.</div>
-        <div class="fill-item"><span class="num">6)</span> Deutschland hat <input type="text" class="blank-input" style="width:90px;display:inline-block;" data-ans="neun"> Nachbarstaaten.</div>
+        <div class="fill-item">
+          <span class="num">1)</span> Die Zugspitze ist der <input type="text" class="blank-input" style="width:150px;display:inline-block;" data-ans="höchste"> Berg Deutschlands. <em>(hoch)</em>
+        </div>
+        <div class="fill-item">
+          <span class="num">2)</span> Der Rhein ist der <input type="text" class="blank-input" style="width:150px;display:inline-block;" data-ans="längste"> Fluss Deutschlands. <em>(lang)</em>
+        </div>
+        <div class="fill-item">
+          <span class="num">3)</span> Berlin ist die <input type="text" class="blank-input" style="width:150px;display:inline-block;" data-ans="größte"> Stadt Deutschlands. <em>(groß)</em>
+        </div>
+        <div class="fill-item">
+          <span class="num">4)</span> Deutschland hat die <input type="text" class="blank-input" style="width:150px;display:inline-block;" data-ans="meisten"> Nachbarstaaten in Europa — neun! <em>(viel)</em>
+        </div>
+        <div class="fill-item">
+          <span class="num">5)</span> München ist eine der <input type="text" class="blank-input" style="width:170px;display:inline-block;" data-ans="bekanntesten"> Städte für Feste in Deutschland. <em>(bekannt)</em>
+        </div>
       </div>
       <div class="check-bar">
         <button class="btn" id="ub2-check">Prüfen</button>
         <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
         <span class="score-pill" id="ub2-score"></span>
-      </div>
-
-      <div class="card tinted-forest" style="margin-top:22px;">
-        <p class="section-label" style="margin:0 0 6px;">Zusatzaufgabe (bonus)</p>
-        <div class="qa">
-          <label>Schreib 2–3 Sätze auf Deutsch: Was hast du heute Neues über Deutschland gelernt?</label>
-          <textarea placeholder="Ich habe gelernt, dass ..."></textarea>
-        </div>
-        <div class="ua-note">
-          Це завдання не має "правильної" відповіді і не рахується в прогрес — просто потренуйся формулювати думку німецькою. Покажи вчителю, коли будеш готовий(-а).
-        </div>
       </div>
     </section>
 
@@ -117,7 +138,11 @@
       <h2 class="panel-title">Fertig!</h2>
       <div class="card tinted-mustard">
         <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
-        <p>Schreib einen kurzen Steckbrief über dich selbst (5 Sätze): Name, Alter, Wohnort, Herkunftsland/-stadt. Zum Beispiel: „Ich heiße ... Ich bin ... Jahre alt. Ich komme aus ... Ich wohne in ...“</p>
+        <p>Schreib einen kurzen Text (6–8 Sätze) über Deutschland. Benutze dabei mindestens drei Superlativformen (z. B. der größte, der längste, der bekannteste ...). Du kannst Fakten aus dem Unterricht oder aus dem Internet nutzen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Напиши короткий текст (6–8 речень) про Німеччину. Використай щонайменше три форми Superlativ (наприклад, найбільший, найдовший, найвідоміший тощо). Можеш скористатися фактами з уроку або з інтернету.
+        </div>
       </div>
       <footer class="end-card">
         <div class="stamps" id="stampRow"></div>
@@ -130,43 +155,35 @@
 
 <script src="../../../assets/lesson-interactions.js"></script>
 <script>
-  // Üb. 1: квіз про Німеччину
+  // Üb. 1: Quiz — складніший за 7 клас
   const ub1Data = [
-    {q: "Wo liegt Deutschland?", opts: ["im Süden Europas", "im Norden Europas", "in der Mitte Europas"], correct: "in der Mitte Europas"},
+    {q: "Wo liegt Deutschland?", opts: ["Im Süden Europas", "Im Norden Europas", "In der Mitte Europas"], correct: "In der Mitte Europas"},
     {q: "Wie viele Nachbarstaaten hat Deutschland?", opts: ["6", "9", "12"], correct: "9"},
     {q: "Wie heißt der höchste Berg Deutschlands?", opts: ["der Feldberg", "die Zugspitze", "der Brocken"], correct: "die Zugspitze"},
-    {q: "Welche Städte sind gleichzeitig Bundesländer?", opts: ["München, Köln, Frankfurt", "Berlin, Hamburg, Bremen", "Dresden, Leipzig, Stuttgart"], correct: "Berlin, Hamburg, Bremen"},
+    {q: "Welche Städte sind gleichzeitig Bundesländer?", opts: ["Berlin, Hamburg, Bremen", "München, Köln, Frankfurt", "Bonn, Bremen, München"], correct: "Berlin, Hamburg, Bremen"},
     {q: "Welcher Fluss ist der längste in Deutschland?", opts: ["die Donau", "der Main", "der Rhein"], correct: "der Rhein"},
     {q: "Welches Auto kommt ursprünglich aus Deutschland?", opts: ["BMW", "Volvo", "Toyota"], correct: "BMW"},
     {q: "Welche deutsche Speise isst man oft mit Sauerkraut?", opts: ["Spaghetti", "Bratwurst", "Sushi"], correct: "Bratwurst"},
     {q: "Welche deutsche Stadt ist für den Karneval berühmt?", opts: ["München", "Dresden", "Köln"], correct: "Köln"},
-    {q: "Welches Fest wird in München jedes Jahr gefeiert?", opts: ["Karneval", "Oktoberfest", "Weihnachtsmarkt"], correct: "Oktoberfest"},
-    {q: "Wo spricht man Deutsch als Amtssprache?", opts: ["in der Schweiz", "in Spanien", "in Norwegen"], correct: "in der Schweiz"}
+    {q: "Welches Fest wird in München jedes Jahr gefeiert?", opts: ["Karneval", "Oktoberfest", "Silvester"], correct: "Oktoberfest"},
+    {q: "Wo spricht man Deutsch außerdem als Amtssprache?", opts: ["in der Schweiz", "in Spanien", "in Norwegen"], correct: "in der Schweiz"},
+    {q: "Welche Farben hat die deutsche Nationalflagge?", opts: ["Schwarz-Rot-Gold", "Rot-Weiß-Blau", "Grün-Weiß-Rot"], correct: "Schwarz-Rot-Gold"},
+    {q: "In welchem Jahr fiel die Berliner Mauer?", opts: ["1985", "1989", "1991"], correct: "1989"}
   ];
   buildQuiz('ub1-quiz', ub1Data);
 
-  // Üb. 2: пропуски
+  // Üb. 2: Superlativ-Lücken
   setTotal(document.querySelectorAll('#ub2-list .blank-input').length);
   document.getElementById('ub2-check').addEventListener('click', () => {
-    // Пропуск №6 ("neun") приймає і слово, і цифру — на мить підміняємо
-    // значення поля перед звіркою спільною функцією checkBlanks, а тоді
-    // повертаємо назад те, що людина реально ввела.
-    const numInput = document.querySelector('#ub2-list .blank-input[data-ans="neun"]');
-    let restoreValue = null;
-    if (numInput && numInput.value.trim() === '9') {
-      restoreValue = numInput.value;
-      numInput.value = 'neun';
-    }
     checkBlanks('ub2-list', 'ub2-score', 'ub2');
-    if (restoreValue !== null) numInput.value = restoreValue;
   });
   document.getElementById('ub2-reset').addEventListener('click', () => {
     resetBlanks('ub2-list', 'ub2-score', 'ub2');
   });
 
-  // Fertig: штампи
+  // Fertig! — штампи на тему "Deutschland entdecken"
   document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
-    renderEndStamps('stampRow', 'finalScoreText', ['🇩🇪','🏔️','🎉','🚗']);
+    renderEndStamps('stampRow', 'finalScoreText', ['🏰','🗺️','🚗','🥨']);
   });
   document.getElementById('restart-all').addEventListener('click', () => location.reload());
 </script>
