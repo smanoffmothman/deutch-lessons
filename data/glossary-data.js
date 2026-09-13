@@ -146,5 +146,17 @@ const GLOSSARY = [
   {de: "das Zeltlager aufschlagen", uk: "розбити табір (наметовий)", klas: "8", modul: "A", lektion: 4},
   {de: "übernachten", uk: "ночувати", klas: "8", modul: "A", lektion: 4},
   {de: "die Stimmung verderben", uk: "псувати настрій", klas: "8", modul: "A", lektion: 4},
-  {de: "sich amüsieren", uk: "розважатися, весело проводити час", klas: "8", modul: "A", lektion: 4}
+  {de: "sich amüsieren", uk: "розважатися, весело проводити час", klas: "8", modul: "A", lektion: 4},
+  {de: "die Anzeige", uk: "оголошення, реклама (у пресі)", klas: "8", modul: "A", lektion: 5},
+  {de: "die Wanderkarte", uk: "туристична (похідна) карта", klas: "8", modul: "A", lektion: 5},
+  {de: "die Streichhölzer (Pl.)", uk: "сірники", klas: "8", modul: "A", lektion: 5},
+  {de: "die Küste", uk: "узбережжя, берег моря", klas: "8", modul: "A", lektion: 5},
+  {de: "die Radtour", uk: "велосипедна подорож", klas: "8", modul: "A", lektion: 5},
+  {de: "die Metropole", uk: "мегаполіс, велике місто", klas: "8", modul: "A", lektion: 5},
+  {de: "die Vollpension", uk: "повний пансіон (харчування 3 рази на день)", klas: "8", modul: "A", lektion: 5},
+  {de: "der Strand", uk: "пляж", klas: "8", modul: "A", lektion: 5},
+  {de: "genießen", uk: "насолоджуватися", klas: "8", modul: "A", lektion: 5},
+  {de: "sich orientieren", uk: "орієнтуватися", klas: "8", modul: "A", lektion: 5},
+  {de: "die Klassenfahrt", uk: "шкільна (класна) поїздка", klas: "8", modul: "A", lektion: 5},
+  {de: "der Ausflug", uk: "екскурсія, поїздка", klas: "8", modul: "A", lektion: 5}
 ];
