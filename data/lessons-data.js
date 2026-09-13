@@ -131,5 +131,15 @@ const LESSONS = [
     file: "klas-8/modul-a/lektion-3.html",
     nove: true,
     dz: "Schreib einen kurzen Text (6–8 Sätze) über deinen Alltag: Wie erholst du dich meistens? Benutze mindestens drei Sätze mit der Konstruktion „man kann ... + Infinitiv“ (z. B. „Man kann im Park spazieren gehen.“) und erwähne auch ein Hobby, das du besonders gern hast."
+  },
+  {
+    klas: "8",
+    modul: "A",
+    lektion: 4,
+    nazva: "Nach den Sommerferien",
+    opys: "СМС-листування Яна і Петрика про літні пригоди (Perfekt, читання з правильно/неправильно), нова граматика — прийменники з Genitiv (außerhalb, innerhalb, während, wegen, trotz, unweit, infolge).",
+    file: "klas-8/modul-a/lektion-4.html",
+    nove: true,
+    dz: "Schreib einen kurzen Text (6–8 Sätze) darüber, wie du die ersten Schulwochen nach den Sommerferien erlebst. Benutze dabei mindestens drei Genitiv-Präpositionen (außerhalb, innerhalb, während, wegen, trotz, unweit oder infolge) und erzähl auch, worauf du dich in diesem Schuljahr am meisten freust."
   }
 ];

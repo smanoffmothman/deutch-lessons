@@ -134,5 +134,17 @@ const GLOSSARY = [
   {de: "Schach spielen", uk: "грати в шахи", klas: "8", modul: "A", lektion: 3},
   {de: "das Lagerfeuer", uk: "багаття", klas: "8", modul: "A", lektion: 3},
   {de: "der Alltag", uk: "повсякденне життя, буденність", klas: "8", modul: "A", lektion: 3},
-  {de: "der Lebensstil", uk: "спосіб життя, стиль життя", klas: "8", modul: "A", lektion: 3}
+  {de: "der Lebensstil", uk: "спосіб життя, стиль життя", klas: "8", modul: "A", lektion: 3},
+  {de: "außerhalb (+Gen.)", uk: "поза межами", klas: "8", modul: "A", lektion: 4},
+  {de: "innerhalb (+Gen.)", uk: "у межах, впродовж (певного часу)", klas: "8", modul: "A", lektion: 4},
+  {de: "unweit (+Gen.)", uk: "неподалік від", klas: "8", modul: "A", lektion: 4},
+  {de: "während (+Gen.)", uk: "під час, впродовж", klas: "8", modul: "A", lektion: 4},
+  {de: "wegen (+Gen.)", uk: "через, з причини", klas: "8", modul: "A", lektion: 4},
+  {de: "trotz (+Gen.)", uk: "незважаючи на", klas: "8", modul: "A", lektion: 4},
+  {de: "infolge (+Gen.)", uk: "внаслідок", klas: "8", modul: "A", lektion: 4},
+  {de: "die Umgebung erkunden", uk: "досліджувати околиці", klas: "8", modul: "A", lektion: 4},
+  {de: "das Zeltlager aufschlagen", uk: "розбити табір (наметовий)", klas: "8", modul: "A", lektion: 4},
+  {de: "übernachten", uk: "ночувати", klas: "8", modul: "A", lektion: 4},
+  {de: "die Stimmung verderben", uk: "псувати настрій", klas: "8", modul: "A", lektion: 4},
+  {de: "sich amüsieren", uk: "розважатися, весело проводити час", klas: "8", modul: "A", lektion: 4}
 ];
