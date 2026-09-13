@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 2 · Modul A · Mein Sommer</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 9'},
+    {label: 'Урок 2: Mein Sommer'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 2 · MODUL A</span>
+        <h1>Mein Sommer</h1>
+        <p class="sub">Ми повторюємо Perfekt на матеріалі літніх спогадів і вчимося описувати характер прикметниками — через ігри-знайомства "Wer bin ich?" і "Welches Tier bist du?".</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Stimmt das?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Mein Sommer</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wer bin ich?</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== START ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen zurück</p>
+      <h2 class="panel-title">Worum geht es in dieser Lektion?</h2>
+      <div class="card">
+        <p>Die Sommerferien sind vorbei, und wir treffen uns alle wieder! In dieser Stunde erzählen wir von unserem Sommer (Perfekt), spielen Kennenlern-Spiele auf Deutsch und lernen Adjektive, die unseren Charakter beschreiben.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Літні канікули позаду, і ми знову зустрічаємось у класі! На цьому уроці розповідаємо про своє літо (повторюємо Perfekt), граємо в німецькомовні ігри-знайомства і вивчаємо прикметники характеру.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">🎲 Aufwärmspiel: "Der Zauberhut"</p>
+        <p>Bevor wir mit den Übungen beginnen, spielt in Gruppen: Jede Person zieht eine Frage aus der Liste unten und beantwortet sie auf Deutsch. Die Klasse darf eine Zusatzfrage stellen: <em>Warum? Seit wann? Mit wem? Wie oft?</em></p>
+        <div class="wordbank">
+          <span>Was ist dein Traumreiseziel?</span>
+          <span>Welche Superkraft hättest du gern?</span>
+          <span>Was war dein schönstes Ferienerlebnis?</span>
+          <span>Welches Tier passt am besten zu dir?</span>
+          <span>Was möchtest du in diesem Schuljahr lernen?</span>
+          <span>Joker! Stell selbst eine Frage.</span>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Це усна розминка (не оцінюється в цій вкладці): по колу тягнете "запитання з капелюха" й відповідаєте німецькою, інші можуть ставити уточнення.
+        </div>
+      </div>
+
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Hallo! Ich begleite dich durch diese Lektion. Los geht's!</p>
+      </div>
+    </section>
+
+    <!-- ===== HAUSAUFGABE ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: дослідити і записати 4–5 нових фактів про Німеччину (яких не обговорювали на уроці), використавши щонайменше дві форми Superlativ (напр. „die bekannteste Universität ist ...“, „der berühmteste deutsche Autor ist ...“) і принести факти на урок для порівняння у форматі квізу.
+      </div>
+      <div class="card">
+        <p>Обміняйтеся фактами з сусідом за партою: чи використали ви правильну форму атрибутивного Superlativ? Перевірте себе коротким квізом на граматику — саме цю форму ви мали застосувати вдома.</p>
+      </div>
+      <div id="dz-check"></div>
+    </section>
+
+    <!-- ===== ÜB.1: Stimmt das? ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Quiz "Stimmt das?"</h2>
+      <p class="lead">✔️ = stimmt, ❌ = stimmt nicht. Wähle für jede Aussage die richtige Antwort.</p>
+      <div id="ub1-quiz"></div>
+    </section>
+
+    <!-- ===== ÜB.2: Mein Sommer (Perfekt, blanks) ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Mein Sommer — ergänze das Partizip II</h2>
+      <p class="lead">Ergänze die Sätze über den Sommer im Perfekt. Das Hilfsverb (haben/sein) steht schon im Satz — schreib nur das Partizip II.</p>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Українською</span>
+        Допоміжне дієслово (haben/sein) уже стоїть у реченні — впиши лише Partizip II (третю форму дієслова).
+      </div>
+      <div class="card" id="ub2-list">
+        <div class="fill-item">
+          <span class="num">1)</span> Ich bin im Sommer ans Meer <input type="text" class="blank-input" style="width:130px;display:inline-block;" data-ans="gefahren">.
+        </div>
+        <div class="fill-item">
+          <span class="num">2)</span> Ich habe im Urlaub viele Fotos <input type="text" class="blank-input" style="width:130px;display:inline-block;" data-ans="gemacht">.
+        </div>
+        <div class="fill-item">
+          <span class="num">3)</span> Wir sind jeden Morgen im See <input type="text" class="blank-input" style="width:130px;display:inline-block;" data-ans="geschwommen">.
+        </div>
+        <div class="fill-item">
+          <span class="num">4)</span> Ich habe ein neues Hobby <input type="text" class="blank-input" style="width:130px;display:inline-block;" data-ans="angefangen">.
+        </div>
+        <div class="fill-item">
+          <span class="num">5)</span> Meine Familie und ich haben ein Konzert <input type="text" class="blank-input" style="width:130px;display:inline-block;" data-ans="besucht">.
+        </div>
+        <div class="fill-item">
+          <span class="num">6)</span> Ich habe im Ferienlager viele neue Leute <input type="text" class="blank-input" style="width:130px;display:inline-block;" data-ans="kennengelernt">.
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== ÜB.3: Wer bin ich? (tokens) ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wer bin ich? — Charaktereigenschaften</h2>
+      <p class="lead">Klicke alle Adjektive an, die zu den Tier-Charakteren aus "Welches Tier bist du heute?" passen (z. B. neugierig, klug, kreativ, gelassen). Die anderen Wörter sind keine passenden Charaktereigenschaften.</p>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Українською</span>
+        Клікни лише на ті прикметники, що описують риси характеру (як у грі з тваринками) — а не на слова, що просто описують стан чи гучність.
+      </div>
+      <div class="mail-window">
+        <div class="mail-titlebar">Steckbrief einer Mitschülerin</div>
+        <div class="mail-body" id="ub3-text">
+          Meine Freundin ist immer <span class="tok" data-correct="true">neugierig</span> und <span class="tok" data-correct="true">klug</span>, genau wie der Rote Panda. Sie ist auch sehr <span class="tok" data-correct="true">kreativ</span>, wie der Oktopus — sie zeichnet und bastelt gern. Manchmal ist sie nach der Schule etwas <span class="tok" data-correct="false">müde</span>, aber am Wochenende ist sie meistens <span class="tok" data-correct="true">gelassen</span>, wie das Wasserschwein. Ihr kleiner Bruder ist dagegen eher <span class="tok" data-correct="false">laut</span> und <span class="tok" data-correct="false">chaotisch</span>. Beim Lernen ist sie sehr <span class="tok" data-correct="true">aufmerksam</span>, wie die Eule.
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Schreib einen kurzen Steckbrief über deine Persönlichkeit (5–6 Sätze). Benutze mindestens drei Adjektive aus dieser Stunde (z. B. neugierig, klug, kreativ, gelassen, aufmerksam) und einen Satz im Perfekt über ein besonderes Erlebnis in diesem Sommer.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Напиши короткий "Steckbrief" про свою особистість (5–6 речень). Використай щонайменше три прикметники з цього уроку (напр. neugierig, klug, kreativ, gelassen, aufmerksam) і одне речення в Perfekt про особливу подію цього літа.
+        </div>
+      </div>
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  // Hausaufgabe: перевірка граматики Superlativ (атрибутив)
+  const dzData = [
+    {q: "Der Rhein ist ___ Fluss in Deutschland.", opts: ["der längste", "am längsten", "länger"], correct: "der längste"},
+    {q: "Die Zugspitze ist ___ Berg Deutschlands.", opts: ["höher", "der höchste", "am höchsten"], correct: "der höchste"},
+    {q: "Berlin ist ___ Stadt Deutschlands.", opts: ["die größte", "am größten", "größer"], correct: "die größte"},
+  ];
+  buildQuiz('dz-check', dzData);
+
+  // Üb. 1: Stimmt das?
+  const ub1Data = [
+    {q: "In Deutschland gibt es 12 Bundesländer.", opts: ["Stimmt", "Stimmt nicht"], correct: "Stimmt nicht"},
+    {q: "Berlin liegt im Süden Deutschlands.", opts: ["Stimmt", "Stimmt nicht"], correct: "Stimmt nicht"},
+    {q: "Deutsch ist die Amtssprache in Deutschland, Österreich und der Schweiz.", opts: ["Stimmt", "Stimmt nicht"], correct: "Stimmt"},
+    {q: "Das längste deutsche Wort hat mehr als 40 Buchstaben.", opts: ["Stimmt", "Stimmt nicht"], correct: "Stimmt"},
+    {q: "Im Deutschen werden alle Nomen großgeschrieben.", opts: ["Stimmt", "Stimmt nicht"], correct: "Stimmt"},
+    {q: "Das Verb fahren ist regelmäßig.", opts: ["Stimmt", "Stimmt nicht"], correct: "Stimmt nicht"},
+    {q: "Nach ich endet das Verb (im Präsens, regelmäßig) auf -e.", opts: ["Stimmt", "Stimmt nicht"], correct: "Stimmt"},
+    {q: "Die Aussagen mit möchten sind höflicher als mit wollen.", opts: ["Stimmt", "Stimmt nicht"], correct: "Stimmt"},
+  ];
+  buildQuiz('ub1-quiz', ub1Data);
+
+  // Üb. 2: пропуски
+  setTotal(document.querySelectorAll('#ub2-list .blank-input').length);
+  document.getElementById('ub2-check').addEventListener('click', () => {
+    checkBlanks('ub2-list', 'ub2-score', 'ub2');
+  });
+  document.getElementById('ub2-reset').addEventListener('click', () => {
+    resetBlanks('ub2-list', 'ub2-score', 'ub2');
+  });
+
+  // Üb. 3: токени
+  initTokenClicks('ub3-text');
+  setTotal(document.querySelectorAll('#ub3-text .tok[data-correct="true"]').length);
+  document.getElementById('ub3-check').addEventListener('click', () => checkTokens('ub3-text', 'ub3-score', 'ub3'));
+  document.getElementById('ub3-reset').addEventListener('click', () => resetTokens('ub3-text', 'ub3-score', 'ub3'));
+
+  // Фінальна панель зі штампами
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🏖️','🎣','📸','🎸']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
