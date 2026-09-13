@@ -203,5 +203,17 @@ const GLOSSARY = [
   {de: "gelassen", uk: "спокійний, врівноважений", klas: "9", modul: "A", lektion: 2},
   {de: "aufmerksam", uk: "уважний", klas: "9", modul: "A", lektion: 2},
   {de: "kennenlernen (trennbar)", uk: "знайомитися (з кимось)", klas: "9", modul: "A", lektion: 2},
-  {de: "die Zusatzfrage", uk: "додаткове (уточнювальне) запитання", klas: "9", modul: "A", lektion: 2}
+  {de: "die Zusatzfrage", uk: "додаткове (уточнювальне) запитання", klas: "9", modul: "A", lektion: 2},
+  {de: "der Sprachkurs", uk: "мовний курс", klas: "9", modul: "A", lektion: 3},
+  {de: "die Gastfamilie", uk: "приймаюча (гостьова) сім'я", klas: "9", modul: "A", lektion: 3},
+  {de: "der Vorort", uk: "передмістя", klas: "9", modul: "A", lektion: 3},
+  {de: "sich unterhalten", uk: "розмовляти, спілкуватися", klas: "9", modul: "A", lektion: 3},
+  {de: "die Muttersprache", uk: "рідна мова", klas: "9", modul: "A", lektion: 3},
+  {de: "der Beruf", uk: "професія", klas: "9", modul: "A", lektion: 3},
+  {de: "der Informatiker", uk: "фахівець з інформатики, програміст", klas: "9", modul: "A", lektion: 3},
+  {de: "die Mülltrennung", uk: "сортування сміття", klas: "9", modul: "A", lektion: 3},
+  {de: "der Umweltschutz", uk: "охорона довкілля", klas: "9", modul: "A", lektion: 3},
+  {de: "das Auslandssemester", uk: "семестр навчання за кордоном", klas: "9", modul: "A", lektion: 3},
+  {de: "die Sehenswürdigkeit", uk: "визначна пам'ятка", klas: "9", modul: "A", lektion: 3},
+  {de: "die Bibliothek", uk: "бібліотека", klas: "9", modul: "A", lektion: 3}
 ];

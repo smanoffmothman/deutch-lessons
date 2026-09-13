@@ -191,5 +191,15 @@ const LESSONS = [
     file: "klas-9/modul-a/lektion-2.html",
     nove: true,
     dz: "Schreib einen kurzen Steckbrief über deine Persönlichkeit (5–6 Sätze). Benutze mindestens drei Adjektive aus dieser Stunde (z. B. neugierig, klug, kreativ, gelassen, aufmerksam) und einen Satz im Perfekt über ein besonderes Erlebnis in diesem Sommer."
+  },
+  {
+    klas: "9",
+    modul: "A",
+    lektion: 3,
+    nazva: "Вхідна діагностувальна робота №1",
+    opys: "Виконуємо вхідну діагностувальну роботу №1: граматика/лексика (Konjunktionen, Komparativ, Artikel, Präteritum, Modalverben, Futur I, Imperativ), діалог на встановлення відповідності, читання про мовний курс у Мюнхені та лист-відповідь Феліксу.",
+    file: "klas-9/modul-a/lektion-3.html",
+    nove: true,
+    dz: "Schau dir noch einmal deine Antworten aus der Diagnose an und markiere, wo du dir unsicher warst. Schreib außerdem 4–5 Sätze: Was möchtest du in Zukunft beruflich machen, und was kannst du persönlich für den Umweltschutz tun? Benutze dabei mindestens ein Modalverb (z. B. möchten, wollen, müssen, können)."
   }
 ];
