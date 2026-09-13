@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 1 · Modul A · Was weißt du über Deutschland?</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 9'},
+    {label: 'Урок 1: Was weißt du über Deutschland?'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 1 · MODUL A</span>
+        <h1>Was weißt du über Deutschland?</h1>
+        <p class="sub">Ein Wiederholungs-Quiz zum Schuljahresbeginn — dieses Mal auf einem höheren Niveau: Fakten, Zahlen, Geschichte und der attributive Superlativ.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Quiz</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Grammatik</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Fakten-Check</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== START ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Worum geht es in diesem Modul?</h2>
+      <div class="card">
+        <p>Willkommen im neuen Schuljahr! Wir beginnen wie immer mit einer Wiederholung — aber dieses Mal ist das Deutschland-Quiz deutlich anspruchsvoller als in der 7. und 8. Klasse. Es geht nicht nur um einfache Fakten, sondern auch um Zahlen, Geschichte und Zusammenhänge. Außerdem wiederholen und vertiefen wir eine wichtige grammatische Struktur: den attributiven Superlativ (der höchste, die längste, das schönste ...).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Ласкаво просимо до нового навчального року! Як завжди, починаємо з повторення — але цього разу вікторина про Німеччину значно складніша, ніж у 7 і 8 класах. Йдеться не лише про прості факти, а й про цифри, історію та причинно-наслідкові зв'язки. Крім того, ми повторимо і поглибимо важливу граматичну тему: атрибутивний найвищий ступінь порівняння (der höchste, die längste, das schönste ...).
+        </div>
+      </div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Na, bereit für die Herausforderung? Diesmal wird's kniffliger!</p>
+      </div>
+    </section>
+
+    <!-- ===== HAUSAUFGABE ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Українською</span>
+        Це перший урок модуля A у 9 класі — домашнього завдання з попереднього уроку цього модуля ще немає, тож перевіряти поки нічого. Одразу переходимо до вікторини!
+      </div>
+    </section>
+
+    <!-- ===== ÜB. 1: QUIZ ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Deutschland-Quiz (schwieriges Niveau)</h2>
+      <p class="lead">Wähle die richtige Antwort. Bei einigen Fragen brauchst du mehr als nur Basiswissen!</p>
+      <div id="ub1-quiz"></div>
+    </section>
+
+    <!-- ===== ÜB. 2: GRAMMATIK + BLANKS ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Grammatik: der attributive Superlativ</h2>
+      <div class="card">
+        <p>Wiederholung: Steht der Superlativ direkt VOR einem Nomen (mit Artikel), bekommt er eine Adjektivendung — genau wie jedes andere attributive Adjektiv. Im Nominativ Singular ist die Endung meistens <strong>-e</strong>, im Plural und in den meisten anderen Fällen <strong>-en</strong>.</p>
+        <table class="gtable">
+          <tr><th>maskulin</th><th>feminin</th><th>neutrum</th><th>Plural</th></tr>
+          <tr>
+            <td class="gender">der</td>
+            <td class="gender">die</td>
+            <td class="gender">das</td>
+            <td class="gender">die</td>
+          </tr>
+          <tr>
+            <td><strong>höchste</strong> Berg</td>
+            <td><strong>längste</strong> Straße</td>
+            <td><strong>schönste</strong> Museum</td>
+            <td><strong>interessantesten</strong> Städte</td>
+          </tr>
+        </table>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Коли найвищий ступінь порівняння стоїть безпосередньо ПЕРЕД іменником (з артиклем), він отримує закінчення прикметника — так само, як і будь-який інший прикметник перед іменником. У називному відмінку однини закінчення зазвичай <strong>-e</strong> (der höchste, die längste, das schönste), а в множині та у більшості інших відмінків — <strong>-en</strong> (die interessantesten Städte).
+        </div>
+      </div>
+      <p class="lead">Ergänze die Sätze mit der richtigen Superlativform.</p>
+      <div class="card" id="ub2-list">
+        <div class="fill-item">
+          <span class="num">1)</span> Die Zugspitze ist der <input type="text" class="blank-input" style="width:150px;display:inline-block;" data-ans="höchste"> Berg Deutschlands.
+        </div>
+        <div class="fill-item">
+          <span class="num">2)</span> Der Rhein ist der <input type="text" class="blank-input" style="width:150px;display:inline-block;" data-ans="längste"> Fluss Deutschlands.
+        </div>
+        <div class="fill-item">
+          <span class="num">3)</span> Nordrhein-Westfalen ist das <input type="text" class="blank-input" style="width:220px;display:inline-block;" data-ans="bevölkerungsreichste"> Bundesland Deutschlands.
+        </div>
+        <div class="fill-item">
+          <span class="num">4)</span> Berlin ist die <input type="text" class="blank-input" style="width:150px;display:inline-block;" data-ans="größte"> Stadt Deutschlands.
+        </div>
+        <div class="fill-item">
+          <span class="num">5)</span> Der Bodensee gehört zu einer der <input type="text" class="blank-input" style="width:150px;display:inline-block;" data-ans="größten"> Seen Deutschlands.
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== ÜB. 3: FAKTEN-CHECK (TOKENS) ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Fakten-Check: richtig oder ein Irrtum?</h2>
+      <p class="lead">Lies den Text und klicke NUR auf die richtigen Fakten (nicht auf die falschen!).</p>
+      <div class="card" id="ub3-text">
+        <p>Deutschland liegt <span class="tok" data-correct="true">in der Mitte Europas</span> und grenzt an <span class="tok" data-correct="true">neun Nachbarstaaten</span> — mehr als jedes andere Land der EU. Der höchste Berg des Landes ist <span class="tok" data-correct="true">die Zugspitze</span> in den Alpen, nicht <span class="tok" data-correct="false">der Brocken</span> im Harz, wie viele zuerst denken. Der längste Fluss ist <span class="tok" data-correct="true">der Rhein</span>, auch wenn viele zuerst an <span class="tok" data-correct="false">die Donau</span> denken. Drei deutsche Städte — Berlin, Hamburg und Bremen — sind <span class="tok" data-correct="true">gleichzeitig eigene Bundesländer</span> (Stadtstaaten). Am 9. November <span class="tok" data-correct="true">1989</span> fiel die Berliner Mauer — ein Ereignis, das oft fälschlich auf <span class="tok" data-correct="false">1991</span> datiert wird.</p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG! ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Recherchiere und schreib 4–5 neue Fakten über Deutschland, die wir im Unterricht NICHT besprochen haben. Benutze dabei mindestens zwei Superlativformen (z. B. „die bekannteste Universität ist ...", „der berühmteste deutsche Autor ist ..."). Bring deine Fakten zur nächsten Stunde mit — wir vergleichen sie im Quiz-Stil!</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Знайди й запиши 4–5 нових фактів про Німеччину, які ми НЕ обговорювали на уроці. Використай щонайменше дві форми найвищого ступеня порівняння (напр. „найвідоміший університет — ...", „найвідоміший німецький письменник — ..."). Принеси свої факти на наступний урок — порівняємо їх у форматі вікторини!
+        </div>
+      </div>
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  // Üb. 1: квіз — ускладнений рівень для 9 класу
+  const ub1Data = [
+    {q: "Wo liegt Deutschland?", opts: ["Im Süden Europas", "Im Osten Europas", "In der Mitte Europas"], correct: "In der Mitte Europas"},
+    {q: "Wie viele Nachbarstaaten hat Deutschland?", opts: ["6", "9", "12"], correct: "9"},
+    {q: "Wie heißt der höchste Berg Deutschlands?", opts: ["der Feldberg", "die Zugspitze", "der Brocken"], correct: "die Zugspitze"},
+    {q: "Welche drei Städte sind gleichzeitig eigene Bundesländer?", opts: ["Berlin, Hamburg, Bremen", "München, Köln, Frankfurt", "Dresden, Leipzig, Bonn"], correct: "Berlin, Hamburg, Bremen"},
+    {q: "Welcher Fluss ist der längste in Deutschland?", opts: ["die Donau", "der Main", "der Rhein"], correct: "der Rhein"},
+    {q: "Welche deutsche Automarke wurde 1937 in Wolfsburg gegründet?", opts: ["BMW", "Volkswagen", "Audi"], correct: "Volkswagen"},
+    {q: "Welche deutsche Speise isst man traditionell mit Sauerkraut?", opts: ["Spaghetti", "Bratwurst", "Sushi"], correct: "Bratwurst"},
+    {q: "Welche deutsche Stadt ist besonders für ihren Karneval berühmt?", opts: ["München", "Dresden", "Köln"], correct: "Köln"},
+    {q: "Welches Fest wird jährlich in München gefeiert und lockt Millionen Besucher an?", opts: ["das Oktoberfest", "der Karneval", "das Silvesterfest"], correct: "das Oktoberfest"},
+    {q: "In welchen Ländern ist Deutsch (unter anderem) Amtssprache?", opts: ["in der Schweiz und Österreich", "in Spanien und Portugal", "in Norwegen und Schweden"], correct: "in der Schweiz und Österreich"},
+    {q: "Wann fiel die Berliner Mauer?", opts: ["1989", "1991", "1985"], correct: "1989"},
+    {q: "Welches ist das bevölkerungsreichste Bundesland Deutschlands?", opts: ["Bayern", "Nordrhein-Westfalen", "Berlin"], correct: "Nordrhein-Westfalen"}
+  ];
+  buildQuiz('ub1-quiz', ub1Data);
+
+  // Üb. 2: пропуски (граматика — Superlativ)
+  setTotal(document.querySelectorAll('#ub2-list .blank-input').length);
+  document.getElementById('ub2-check').addEventListener('click', () => {
+    checkBlanks('ub2-list', 'ub2-score', 'ub2');
+  });
+  document.getElementById('ub2-reset').addEventListener('click', () => {
+    resetBlanks('ub2-list', 'ub2-score', 'ub2');
+  });
+
+  // Üb. 3: клікабельні токени (факти vs поширені помилки)
+  initTokenClicks('ub3-text');
+  setTotal(document.querySelectorAll('#ub3-text .tok[data-correct="true"]').length);
+  document.getElementById('ub3-check').addEventListener('click', () => checkTokens('ub3-text', 'ub3-score', 'ub3'));
+  document.getElementById('ub3-reset').addEventListener('click', () => resetTokens('ub3-text', 'ub3-score', 'ub3'));
+
+  // Фінальна панель зі штампами
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🇩🇪', '🏔️', '📜', '✈️']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
