@@ -179,7 +179,17 @@ const LESSONS = [
     nazva: "Вступний урок. Вікторина про Німеччину",
     opys: "Ускладнена вікторина про факти Німеччини (сусідні держави, річки, гори, Bundesländer-міста, історичні дати) з поглибленим граматичним фокусом на атрибутивний Superlativ.",
     file: "klas-9/modul-a/lektion-1.html",
-    nove: true,
+    nove: false,
     dz: "Recherchiere und schreib 4–5 neue Fakten über Deutschland, die wir im Unterricht NICHT besprochen haben. Benutze dabei mindestens zwei Superlativformen (z. B. „die bekannteste Universität ist ...“, „der berühmteste deutsche Autor ist ...“). Bring deine Fakten zur nächsten Stunde mit – wir vergleichen sie im Quiz-Stil!"
+  },
+  {
+    klas: "9",
+    modul: "A",
+    lektion: 2,
+    nazva: "Mein Sommer",
+    opys: "Повторення Perfekt на матеріалі літніх спогадів, квіз 'Stimmt das?' про факти Німеччини та вивчення прикметників характеру через ігри-знайомства.",
+    file: "klas-9/modul-a/lektion-2.html",
+    nove: true,
+    dz: "Schreib einen kurzen Steckbrief über deine Persönlichkeit (5–6 Sätze). Benutze mindestens drei Adjektive aus dieser Stunde (z. B. neugierig, klug, kreativ, gelassen, aufmerksam) und einen Satz im Perfekt über ein besonderes Erlebnis in diesem Sommer."
   }
 ];

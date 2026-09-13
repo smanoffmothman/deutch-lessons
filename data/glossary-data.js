@@ -192,5 +192,16 @@ const GLOSSARY = [
   {de: "die Tatsache", uk: "факт", klas: "9", modul: "A", lektion: 1},
   {de: "sich irren", uk: "помилятися", klas: "9", modul: "A", lektion: 1},
   {de: "die Fläche", uk: "площа (територія)", klas: "9", modul: "A", lektion: 1},
-  {de: "die Quelle (des Flusses)", uk: "джерело (річки)", klas: "9", modul: "A", lektion: 1}
+  {de: "die Quelle (des Flusses)", uk: "джерело (річки)", klas: "9", modul: "A", lektion: 1},
+  {de: "der Icebreaker", uk: "гра-криголам (для знайомства/розминки)", klas: "9", modul: "A", lektion: 2},
+  {de: "raten", uk: "вгадувати", klas: "9", modul: "A", lektion: 2},
+  {de: "die Eigenschaft", uk: "риса, властивість (характеру)", klas: "9", modul: "A", lektion: 2},
+  {de: "empfehlen", uk: "рекомендувати", klas: "9", modul: "A", lektion: 2},
+  {de: "das Erlebnis", uk: "враження, пережита подія", klas: "9", modul: "A", lektion: 2},
+  {de: "unternehmen (etwas unternehmen)", uk: "робити щось разом, влаштовувати захід", klas: "9", modul: "A", lektion: 2},
+  {de: "neugierig", uk: "допитливий", klas: "9", modul: "A", lektion: 2},
+  {de: "gelassen", uk: "спокійний, врівноважений", klas: "9", modul: "A", lektion: 2},
+  {de: "aufmerksam", uk: "уважний", klas: "9", modul: "A", lektion: 2},
+  {de: "kennenlernen (trennbar)", uk: "знайомитися (з кимось)", klas: "9", modul: "A", lektion: 2},
+  {de: "die Zusatzfrage", uk: "додаткове (уточнювальне) запитання", klas: "9", modul: "A", lektion: 2}
 ];
