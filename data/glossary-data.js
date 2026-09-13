@@ -80,5 +80,15 @@ const GLOSSARY = [
   {de: "der Tagesausflug", uk: "одноденна поїздка, екскурсія", klas: "7", modul: "A", lektion: 6},
   {de: "der Naturpark", uk: "природний парк", klas: "7", modul: "A", lektion: 6},
   {de: "die Fahrkarte", uk: "квиток (проїзний)", klas: "7", modul: "A", lektion: 6},
-  {de: "der Schulabschluss", uk: "закінчення школи", klas: "7", modul: "A", lektion: 6}
+  {de: "der Schulabschluss", uk: "закінчення школи", klas: "7", modul: "A", lektion: 6},
+  {de: "die Reise (eine Reise unternehmen)", uk: "подорож (здійснити подорож)", klas: "7", modul: "A", lektion: 7},
+  {de: "der Flug", uk: "політ, рейс", klas: "7", modul: "A", lektion: 7},
+  {de: "verreist sein", uk: "бути у подорожі, від'їхати", klas: "7", modul: "A", lektion: 7},
+  {de: "der/die Verwandte (Pl. die Verwandten)", uk: "родич(ка)", klas: "7", modul: "A", lektion: 7},
+  {de: "zu Besuch sein", uk: "бути в гостях", klas: "7", modul: "A", lektion: 7},
+  {de: "der Cousin", uk: "двоюрідний брат", klas: "7", modul: "A", lektion: 7},
+  {de: "das Geschenk", uk: "подарунок", klas: "7", modul: "A", lektion: 7},
+  {de: "klingen", uk: "звучати, здаватися (за описом)", klas: "7", modul: "A", lektion: 7},
+  {de: "ursprünglich", uk: "спочатку, родом", klas: "7", modul: "A", lektion: 7},
+  {de: "gefallen (+Dativ)", uk: "подобатися", klas: "7", modul: "A", lektion: 7}
 ];

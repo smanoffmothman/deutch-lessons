@@ -81,5 +81,15 @@ const LESSONS = [
     file: "klas-7/modul-a/lektion-6.html",
     nove: true,
     dz: "Schreib eine E-Mail (8–10 Sätze) an eine Freundin / einen Freund: Erzähl, wie deine Familie die Ferien meistens verbringt und bei wem ihr manchmal zu Besuch seid. Nutze mindestens vier Präpositionen mit Dativ (ab, aus, bei, mit, nach, seit, von, zu) und beschreib eine schöne Erinnerung aus den Ferien."
+  },
+  {
+    klas: "7",
+    modul: "A",
+    lektion: 7,
+    nazva: "Familienferien: Jans Reise nach Brasilien",
+    opys: "Читаємо про подорож Яна до Бразилії, повторюємо прийменники з Dativ і пишемо йому лист-відповідь; додатково — усна гра «Unsere Ferien» в групах.",
+    file: "klas-7/modul-a/lektion-7.html",
+    nove: true,
+    dz: "Schreib eine Antwort-E-Mail an Jan (8–10 Sätze): Bedank dich für seinen Brief, erzähl, wie deine Familie die letzten Ferien verbracht hat, und nutze dabei mindestens vier verschiedene Präpositionen mit Dativ (ab, aus, bei, mit, nach, seit, von, zu). Beschreib auch, was dir am besten gefallen hat (gefallen + Dativ)."
   }
 ];
