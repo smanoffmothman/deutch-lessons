@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 3 · Modul A · Вхідна діагностувальна робота №1</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 9'},
+    {label: 'Урок 3: Вхідна діагностувальна робота №1'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 3 · MODUL A</span>
+        <h1>Вхідна діагностувальна робота №1</h1>
+        <p class="sub">Перевіряємо, з чим ти приходиш у 9 клас: граматика, діалог, читання і лист-відповідь — усе за реальним форматом діагностувальної роботи.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Teil I · Grammatik</button>
+    <button class="tab-btn" data-tab="ub2">Teil II · Dialog</button>
+    <button class="tab-btn" data-tab="ub3">Teil III · Lesen</button>
+    <button class="tab-btn" data-tab="ub4">Teil IV · Schreiben</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== Start ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Worum geht es in diesem Modul?</h2>
+      <div class="card">
+        <p>Heute schreibst du deine <strong>Eingangsdiagnose</strong> — keine neue Grammatik, sondern eine Standortbestimmung: Was kannst du schon richtig gut, und woran lohnt es sich in diesem Schuljahr noch zu arbeiten? Die Arbeit hat vier Teile: Grammatik &amp; Wortschatz, ein Dialog zum Zuordnen, ein Lesetext mit Fragen und ein kurzer Antwortbrief.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Сьогодні ти пишеш <strong>вхідну діагностувальну роботу №1</strong> — це не новий матеріал, а перевірка того, з чим ти прийшов(-ла) у 9 клас. Робота складається з 4 частин: граматика й лексика, діалог на встановлення відповідності, читання з текстом і лист-відповідь.
+        </div>
+      </div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Ruhig bleiben, genau lesen, und los geht's!</p>
+      </div>
+    </section>
+
+    <!-- ===== Hausaufgabe ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: написати короткий Steckbrief про свою особистість (5–6 речень), використавши щонайменше три прикметники характеру (напр. <em>neugierig, klug, kreativ, gelassen, aufmerksam</em>) і одне речення в Perfekt про особливу подію цього літа.
+      </div>
+      <div class="card">
+        <p>Bevor wir mit der Diagnose starten, ein kurzer Aufwärm-Check: Kennst du noch die Charaktereigenschaften aus der letzten Stunde?</p>
+      </div>
+      <div id="dz-check"></div>
+    </section>
+
+    <!-- ===== Teil I: Grammatik ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Teil I</p>
+      <h2 class="panel-title">Wähle die richtige Antwort</h2>
+      <p class="lead">Kreuze die Antwort an, die den Satz richtig ergänzt. Jede richtige Antwort zählt.</p>
+      <div class="ua-note">
+        Українською: обери варіант (a, b або c), який правильно доповнює речення. Це той самий формат, що й у паперовій діагностувальній роботі — 12 речень на різні граматичні теми (Konjunktion, Komparativ, Artikel im Akkusativ/Dativ, Präteritum, Modalverben, Futur I, Imperativ).
+      </div>
+      <div id="ub1-quiz"></div>
+    </section>
+
+    <!-- ===== Teil II: Dialog ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Teil II</p>
+      <h2 class="panel-title">Ordne die passenden Antworten zu</h2>
+      <p class="lead">Zwei Personen sprechen miteinander. Ordne zu jeder Aussage (1–6) die passende Antwort (A–F) zu.</p>
+      <div class="ua-note">
+        Українською: два персонажі розмовляють. До кожної репліки (1–6) добери відповідну відповідь (A–F) зі списку. Обери правильну літеру у випадаючому списку біля кожного речення.
+      </div>
+      <div class="card" id="ub2-list">
+
+        <div class="match-row">
+          <span class="name">1.</span>
+          <span style="flex:2;">Hallo Lukas! Freust du dich auf das neue Schuljahr?</span>
+          <select class="blank-input" data-ans="C" style="width:60px;flex:none;">
+            <option value="">?</option>
+            <option value="A">A</option><option value="B">B</option><option value="C">C</option>
+            <option value="D">D</option><option value="E">E</option><option value="F">F</option>
+          </select>
+        </div>
+        <div class="match-row">
+          <span class="name">2.</span>
+          <span style="flex:2;">Ja, schon. Aber in der 9. Klasse haben wir viele Prüfungen.</span>
+          <select class="blank-input" data-ans="E" style="width:60px;flex:none;">
+            <option value="">?</option>
+            <option value="A">A</option><option value="B">B</option><option value="C">C</option>
+            <option value="D">D</option><option value="E">E</option><option value="F">F</option>
+          </select>
+        </div>
+        <div class="match-row">
+          <span class="name">3.</span>
+          <span style="flex:2;">Weißt du schon, welchen Beruf du in der Zukunft wählen willst?</span>
+          <select class="blank-input" data-ans="F" style="width:60px;flex:none;">
+            <option value="">?</option>
+            <option value="A">A</option><option value="B">B</option><option value="C">C</option>
+            <option value="D">D</option><option value="E">E</option><option value="F">F</option>
+          </select>
+        </div>
+        <div class="match-row">
+          <span class="name">4.</span>
+          <span style="flex:2;">Tolle Wahl! Hast du schon ein Thema für unser Ökologie-Projekt?</span>
+          <select class="blank-input" data-ans="B" style="width:60px;flex:none;">
+            <option value="">?</option>
+            <option value="A">A</option><option value="B">B</option><option value="C">C</option>
+            <option value="D">D</option><option value="E">E</option><option value="F">F</option>
+          </select>
+        </div>
+        <div class="match-row">
+          <span class="name">5.</span>
+          <span style="flex:2;">Ich denke, wir könnten über Mülltrennung und Recycling berichten.</span>
+          <select class="blank-input" data-ans="A" style="width:60px;flex:none;">
+            <option value="">?</option>
+            <option value="A">A</option><option value="B">B</option><option value="C">C</option>
+            <option value="D">D</option><option value="E">E</option><option value="F">F</option>
+          </select>
+        </div>
+        <div class="match-row">
+          <span class="name">6.</span>
+          <span style="flex:2;">Super. Wann und wo treffen wir uns?</span>
+          <select class="blank-input" data-ans="D" style="width:60px;flex:none;">
+            <option value="">?</option>
+            <option value="A">A</option><option value="B">B</option><option value="C">C</option>
+            <option value="D">D</option><option value="E">E</option><option value="F">F</option>
+          </select>
+        </div>
+
+        <div class="airmail-rule"></div>
+        <p class="lead" style="margin-bottom:6px;">Варіанти відповідей (A–F):</p>
+        <p style="font-size:14.5px;">
+          <strong>A</strong> Gute Idee! Lass uns heute Nachmittag in der Bibliothek recherchieren.<br>
+          <strong>B</strong> Ich möchte Informatiker werden, deshalb lerne ich intensiv Mathe und Englisch.<br>
+          <strong>C</strong> Ja, total! Endlich sehe ich alle Freunde nach den langen Ferien wieder.<br>
+          <strong>D</strong> Um 15 Uhr passt es mir am besten. Bis später!<br>
+          <strong>E</strong> Keine Sorge, wenn wir regelmäßig lernen, schaffen wir das schon!<br>
+          <strong>F</strong> Noch nicht genau, aber ich interessiere mich für Umweltschutz.
+        </p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Teil III: Lesen ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Teil III</p>
+      <h2 class="panel-title">Lies den Text und beantworte die Fragen</h2>
+      <div class="card">
+        <p style="font-style:italic;">Ein unvergesslicher Sprachkurs in München</p>
+        <p>In den Sommerferien hat die fünfzehnjährige Sofiia aus Lwiw an einem dreiwöchigen Sprachkurs in München teilgenommen. Sie wohnte bei einer netten Gastfamilie in einem Vorort der Stadt. Zur Sprachschule fuhr sie jeden Morgen mit der U-Bahn, was für sie neu und sehr spannend war.</p>
+        <p>Der Unterricht dauerte täglich von 9:00 bis 13:00 Uhr. In ihrer Gruppe waren Jugendliche aus verschiedenen Ländern: aus Polen, Spanien, Italien und Frankreich. Obwohl alle unterschiedliche Muttersprachen sprachen, unterhielten sie sich immer auf Deutsch. Nachmittags organisierte die Schule tolle Aktivitäten: Museumsbesuche, Ausflüge zum Schloss Neuschwanstein und Sportturniere im Olympiapark.</p>
+        <p>Besonders gut gefiel Sofiia das gemeinsame Kochen am Wochenende. Zusammen mit der Gastfamilie hat sie traditionelle bayerische Brezeln gebacken und ukrainischen Borschtsch zubereitet. Sofiia meint, dass sich ihre Sprachkenntnisse stark verbessert haben. In Zukunft möchte sie unbedingt ein Auslandssemester in Deutschland verbringen.</p>
+      </div>
+      <div id="ub3-quiz"></div>
+    </section>
+
+    <!-- ===== Teil IV: Schreiben ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Teil IV</p>
+      <h2 class="panel-title">Lies den Brief und schreibe eine Antwort</h2>
+      <div class="mail-window">
+        <div class="mail-titlebar">Neue Nachricht von Felix</div>
+        <div class="mail-body">
+          Hi!<br><br>
+          Wie geht es dir? Das neue Schuljahr in der 9. Klasse hat gerade begonnen, und wir müssen bald über unsere Zukunftspläne und Lieblingsfächer nachdenken.<br>
+          Welche Schulfächer magst du dieses Jahr am liebsten und warum? Was machst du nach der Schule in deiner Freizeit, um dich zu erholen? Und weißt du schon, was du nach der 9. Klasse machen möchtest?<br>
+          Ich freue mich auf deine Antwort!<br><br>
+          Liebe Grüße<br>Dein Felix
+        </div>
+      </div>
+      <div class="qa" style="margin-top:18px;">
+        <label for="ub4-text">Schreib einen Brief (ca. 45–60 Wörter). Beantworte alle drei Fragen von Felix und achte auf die Form eines privaten Briefes (Anrede, Grüße am Ende).</label>
+        <textarea id="ub4-text" rows="6" placeholder="Lieber Felix, ..."></textarea>
+        <div class="check-bar">
+          <button class="btn" id="ub4-done">Ich bin fertig ✓</button>
+          <button class="btn secondary" id="ub4-reveal-btn">Musterbrief zeigen</button>
+        </div>
+        <div class="reveal" id="ub4-reveal">
+          <strong>Musterbrief (приклад однієї з можливих відповідей):</strong><br><br>
+          Lieber Felix,<br><br>
+          danke für deine Nachricht! Mir geht es gut. Dieses Jahr mag ich am liebsten Englisch und Biologie, weil die Themen sehr interessant sind. Nach der Schule spiele ich oft Fußball oder treffe mich mit Freunden, um mich zu erholen. Nach der 9. Klasse möchte ich vielleicht in ein Lyzeum mit Fremdsprachenschwerpunkt wechseln.<br><br>
+          Liebe Grüße<br>Dein/e ...
+          <div class="ua-note" style="margin-top:12px;">
+            Це лише один можливий варіант — головне: звертання на початку, відповіді на всі три запитання Фелікса, і прощання наприкінці.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Fertig! ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Schau dir noch einmal deine Antworten aus der Diagnose an und markiere, wo du dir unsicher warst. Schreib außerdem 4–5 Sätze: Was möchtest du in Zukunft beruflich machen, und was kannst du persönlich für den Umweltschutz tun? Benutze dabei mindestens ein Modalverb (z. B. möchten, wollen, müssen, können).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Перегляньте ще раз свої відповіді з діагностувальної роботи й позначте, де були невпевнені. Додатково напишіть 4–5 речень: ким ви хочете стати в майбутньому і що особисто можете зробити для охорони довкілля. Використайте щонайменше одне модальне дієслово (напр. möchten, wollen, müssen, können).
+        </div>
+      </div>
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  // Hausaufgabenkontrolle: повторення прикметників характеру з минулого уроку
+  const dzData = [
+    {q: "Як буде німецькою «допитливий»?", opts: ["neugierig", "gelassen", "aufmerksam"], correct: "neugierig"},
+    {q: "Як буде німецькою «спокійний, врівноважений»?", opts: ["klug", "gelassen", "kreativ"], correct: "gelassen"},
+    {q: "Як буде німецькою «уважний»?", opts: ["aufmerksam", "neugierig", "klug"], correct: "aufmerksam"},
+    {q: "Як буде німецькою «розумний»?", opts: ["kreativ", "klug", "gelassen"], correct: "klug"},
+    {q: "Як буде німецькою «творчий»?", opts: ["kreativ", "aufmerksam", "neugierig"], correct: "kreativ"}
+  ];
+  buildQuiz('dz-check', dzData);
+
+  // Teil I: Grammatik & Wortschatz (12 Aufgaben)
+  const ub1Data = [
+    {q: "1. Ich lerne fleißig Deutsch, ... ich im Sommer nach Berlin fahren möchte.", opts: ["denn", "weil", "deshalb"], correct: "weil"},
+    {q: "2. Weißt du, ... unser neuer Mitschüler aus Kyjiw kommt?", opts: ["dass", "was", "wer"], correct: "dass"},
+    {q: "3. Der Zug ist viel ... als der Bus.", opts: ["schnell", "schneller", "am schnellsten"], correct: "schneller"},
+    {q: "4. Max hat das Buch auf ... Tisch gelegt.", opts: ["den", "dem", "der"], correct: "den"},
+    {q: "5. Gestern ... wir leider keine Zeit, um ins Kino zu gehen.", opts: ["haben", "hatten", "hattet"], correct: "hatten"},
+    {q: "6. Um fit zu bleiben, ... man sich gesund ernähren und Sport treiben.", opts: ["will", "muss", "darf"], correct: "muss"},
+    {q: "7. Ein tragbarer Computer, den man überallhin mitnehmen kann, heißt ... .", opts: ["der Bildschirm", "das Smartphone", "das Laptop"], correct: "das Laptop"},
+    {q: "8. Ein Beruf, bei dem man kranke Menschen behandelt, ist ... .", opts: ["der Arzt", "der Verkäufer", "der Koch"], correct: "der Arzt"},
+    {q: "9. Wenn man die Natur schützen will, muss man Müll ... .", opts: ["werfen", "trennen", "kaufen"], correct: "trennen"},
+    {q: "10. Wir treffen uns heute Abend an ... Haltestelle.", opts: ["der", "die", "den"], correct: "der"},
+    {q: "11. Am Wochenende ... mein Freund eine Radtour durch die Stadt machen.", opts: ["wird", "werdet", "werden"], correct: "wird"},
+    {q: "12. ... bitte das Fenster, hier ist es sehr laut!", opts: ["Schließt", "Schließ", "Schließe"], correct: "Schließ"}
+  ];
+  buildQuiz('ub1-quiz', ub1Data);
+
+  // Teil II: Dialog (select-based Zuordnung)
+  setTotal(document.querySelectorAll('#ub2-list .blank-input').length);
+  document.getElementById('ub2-check').addEventListener('click', () => {
+    checkBlanks('ub2-list', 'ub2-score', 'ub2');
+  });
+  document.getElementById('ub2-reset').addEventListener('click', () => {
+    resetBlanks('ub2-list', 'ub2-score', 'ub2');
+  });
+
+  // Teil III: Lesen (6 Fragen)
+  const ub3Data = [
+    {q: "1. Wie lange dauerte der Sprachkurs von Sofiia?", opts: ["Zwei Wochen", "Drei Wochen", "Einen Monat"], correct: "Drei Wochen"},
+    {q: "2. Wo hat Sofiia während des Kurses gewohnt?", opts: ["In einem Jugendhotel", "Im Schülerwohnheim", "Bei einer Gastfamilie"], correct: "Bei einer Gastfamilie"},
+    {q: "3. Wie verständigten sich die Jugendlichen aus verschiedenen Ländern untereinander?", opts: ["Auf Englisch", "Auf Deutsch", "Mit Hilfe von Übersetzungs-Apps"], correct: "Auf Deutsch"},
+    {q: "4. Welche Sehenswürdigkeit hat die Gruppe nachmittags besucht?", opts: ["Das Brandenburger Tor", "Das Schloss Neuschwanstein", "Den Kölner Dom"], correct: "Das Schloss Neuschwanstein"},
+    {q: "5. Was hat Sofiia am Wochenende mit der Familie gemacht?", opts: ["Sie haben Spezialitäten zusammen gekocht und gebacken.", "Sie sind an den See gefahren.", "Sie haben ein Sportturnier organisiert."], correct: "Sie haben Spezialitäten zusammen gekocht und gebacken."},
+    {q: "6. Welchen Plan hat Sofiia für die Zukunft?", opts: ["Eine Sprachschule in Lwiw zu eröffnen.", "Ein Semester in Deutschland zu verbringen.", "Nur noch online Deutsch zu lernen."], correct: "Ein Semester in Deutschland zu verbringen."}
+  ];
+  buildQuiz('ub3-quiz', ub3Data);
+
+  // Teil IV: Schreiben (вручну позначається як виконано + модельна відповідь)
+  setTotal(1);
+  document.getElementById('ub4-done').addEventListener('click', (e) => {
+    if(!e.target.dataset.done){
+      markDone(1);
+      e.target.dataset.done = '1';
+      e.target.disabled = true;
+      e.target.textContent = 'Erledigt ✓';
+    }
+  });
+  document.getElementById('ub4-reveal-btn').addEventListener('click', () => {
+    document.getElementById('ub4-reveal').classList.toggle('show');
+  });
+
+  // Fertig!: штампи на тему подорожі/мовного курсу
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📝','🎓','🧳','✈️']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
