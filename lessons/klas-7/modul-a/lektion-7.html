@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 7 · Modul A · Сімейний відпочинок</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 7'},
+    {label: 'Урок 7: Сімейний відпочинок'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 7 · MODUL A</span>
+        <h1>Familienferien: Jans Reise nach Brasilien</h1>
+        <p class="sub">Читаємо про подорож Яна до Бразилії, повторюємо прийменники з Dativ і пишемо йому лист-відповідь.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Jans Brief</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Antwort an Jan</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Unsere Ferien</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== Start ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Worum geht es in diesem Modul?</h2>
+      <div class="card">
+        <p>Wir bleiben beim Thema Familienferien. Diesmal lesen wir, wie Jan seine Sommerferien mit seiner Familie in Brasilien verbracht hat, wiederholen die Präpositionen mit Dativ (ab, aus, bei, mit, nach, seit, von, zu) und schreiben ihm eine Antwort-E-Mail.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Ми продовжуємо тему "Сімейний відпочинок". Сьогодні читаємо про те, як Ян зі своєю родиною провів літні канікули в Бразилії, повторюємо прийменники з Dativ (ab, aus, bei, mit, nach, seit, von, zu) і пишемо йому лист-відповідь.
+        </div>
+      </div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Hallo! Jan hat dir aus Brasilien geschrieben. Lies seinen Brief und antworte ihm!</p>
+      </div>
+    </section>
+
+    <!-- ===== Hausaufgabe ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: "Schreib eine E-Mail (8–10 Sätze) an eine Freundin / einen Freund: Erzähl, wie deine Familie die Ferien meistens verbringt und bei wem ihr manchmal zu Besuch seid. Nutze mindestens vier Präpositionen mit Dativ (ab, aus, bei, mit, nach, seit, von, zu) und beschreib eine schöne Erinnerung aus den Ferien."
+        <br><br>
+        Тобто: написати листа другові/подрузі про те, як твоя родина зазвичай проводить канікули і в кого буваєте в гостях, використавши щонайменше 4 прийменники з Dativ і описавши гарний спогад.
+      </div>
+      <div class="card">
+        <p class="lead">Перш ніж перевіряти свій лист, повтори прийменники з Dativ у короткому міні-квізі. Обери правильний прийменник для кожного речення.</p>
+      </div>
+      <div id="dz-check"></div>
+    </section>
+
+    <!-- ===== Üb.1: квіз за листом Яна ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Was passt zusammen? Verbinde.</h2>
+      <p class="lead">Ти вже читав/ла лист Яна про подорож його родини до Бразилії (Ex. 9 у підручнику). Обери правильне закінчення для кожного речення.</p>
+      <div id="ub1-quiz"></div>
+    </section>
+
+    <!-- ===== Üb.2: лист-відповідь Яну (Dativ-прийменники) ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Schreibe eine Antwort an Jan.</h2>
+      <p class="lead">Заповни пропуски в чернетці листа правильними прийменниками з Dativ (кожен використовується один раз): ab, aus, bei, mit, nach, seit, von, zu.</p>
+      <div class="mail-window">
+        <div class="mail-titlebar">Neue Nachricht</div>
+        <div class="mail-fields">An: Jan &nbsp;·&nbsp; Betreff: Re: Meine Reise nach Brasilien</div>
+        <div class="mail-body" id="ub2-list">
+          <p>Lieber Jan,</p>
+          <p>vielen Dank für deinen Brief! Deine Reise <input type="text" class="blank-input" style="width:70px;display:inline-block;" data-ans="nach"> Brasilien klingt fantastisch.</p>
+          <p>Meine Familie und ich waren auch verreist: wir sind <input type="text" class="blank-input" style="width:70px;display:inline-block;" data-ans="mit"> unserem Auto zu unseren Großeltern gefahren.</p>
+          <p>Wir sind <input type="text" class="blank-input" style="width:70px;display:inline-block;" data-ans="ab"> Ende Juni dort geblieben.</p>
+          <p><input type="text" class="blank-input" style="width:70px;display:inline-block;" data-ans="von"> der Reise haben wir viele Fotos gemacht.</p>
+          <p>Ich komme ursprünglich <input type="text" class="blank-input" style="width:70px;display:inline-block;" data-ans="aus"> der Ukraine.</p>
+          <p>Meine Großeltern wohnen schon <input type="text" class="blank-input" style="width:70px;display:inline-block;" data-ans="seit"> vielen Jahren auf dem Land.</p>
+          <p>Wir waren dort auch <input type="text" class="blank-input" style="width:70px;display:inline-block;" data-ans="bei"> meiner Tante zu Besuch.</p>
+          <p>Am Wochenende fahren wir noch <input type="text" class="blank-input" style="width:70px;display:inline-block;" data-ans="zu"> meinen Cousins.</p>
+          <p>Liebe Grüße,<br>Dein/e ...</p>
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb.3: додаткове завдання — усна гра "Unsere Ferien" ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3 · Zusatzaufgabe</p>
+      <h2 class="panel-title">Spiel „Unsere Ferien“</h2>
+      <p class="lead">Робота в групах по 4. Запитуйте одне одного, де ви провели це літо і куди хотіли б поїхати наступного літа. Заповніть таблицю.</p>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Українською</span>
+        Це усна вправа для роботи в групах — автоматичної перевірки тут немає. Запитуйте одне одного за зразком нижче й занотовуйте відповіді у таблицю.
+      </div>
+      <div class="card">
+        <table class="gtable">
+          <tr><th>Person</th><th>Diesen Sommer: im Juni</th><th>im Juli</th><th>im August</th><th>Nächsten Sommer</th></tr>
+          <tr><td>1. …</td><td>…</td><td>…</td><td>…</td><td>…</td></tr>
+          <tr><td>2. …</td><td>…</td><td>…</td><td>…</td><td>…</td></tr>
+          <tr><td>3. …</td><td>…</td><td>…</td><td>…</td><td>…</td></tr>
+          <tr><td>4. …</td><td>…</td><td>…</td><td>…</td><td>…</td></tr>
+        </table>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Приклад діалогу</span>
+          A: Olena, wo warst du diesen Sommer? — B: Im Juni war ich mit meiner Familie am Meer. — A: Und im Juli? — B: Im Juli war ich zu Hause. — A: Sag bitte, wohin du nächsten Sommer fahren möchtest? — B: Ich träume von einer Reise nach Spanien.
+        </div>
+      </div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Wo waren die meisten Personen in den Ferien? Mit wem habt ihr die Ferien verbracht? Von welchen Ferien träumen die meisten?</p>
+      </div>
+    </section>
+
+    <!-- ===== Fertig! ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Schreib eine Antwort-E-Mail an Jan (8–10 Sätze): Bedank dich für seinen Brief, erzähl, wie deine Familie die letzten Ferien verbracht hat, und nutze dabei mindestens vier verschiedene Präpositionen mit Dativ (ab, aus, bei, mit, nach, seit, von, zu). Beschreib auch, was dir am besten gefallen hat (gefallen + Dativ).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Напиши лист-відповідь Яну (8–10 речень): подякуй за його лист, розкажи, як твоя родина провела останні канікули, і використай щонайменше чотири різні прийменники з Dativ (ab, aus, bei, mit, nach, seit, von, zu). Опиши також, що тобі сподобалося найбільше (gefallen + Dativ).
+        </div>
+      </div>
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  // Hausaufgabe: міні-квіз на повторення Dativ-прийменників
+  const dzData = [
+    {q: "Ich komme ___ der Ukraine.", opts: ["aus", "zu", "nach"], correct: "aus"},
+    {q: "Wir fahren oft ___ unseren Verwandten zu Besuch.", opts: ["zu", "bei", "von"], correct: "zu"},
+    {q: "Im Sommer sind wir ___ unserer Tante geblieben.", opts: ["bei", "mit", "nach"], correct: "bei"},
+    {q: "Meine Familie verbringt die Ferien meistens ___ meinen Großeltern.", opts: ["mit", "von", "seit"], correct: "mit"},
+    {q: "___ dem Urlaub schicken wir immer Postkarten.", opts: ["nach", "ab", "von"], correct: "nach"}
+  ];
+  buildQuiz('dz-check', dzData);
+
+  // Üb.1: квіз за "листом Яна"
+  const ub1Data = [
+    {q: "1) Die Familie von Jan hat", opts: ["eine Reise unternommen.", "Musik gehört.", "einige Orte besucht.", "nach Brasilien geflogen."], correct: "eine Reise unternommen."},
+    {q: "2) Sie sind Ende Juni", opts: ["nach Brasilien geflogen.", "den Ozean gefahren.", "Jan sehr gut gefallen.", "eine Reise unternommen."], correct: "nach Brasilien geflogen."},
+    {q: "3) Beim Flug hat Jan", opts: ["Musik gehört.", "für seinen Freund gekauft.", "einige Orte besucht.", "den Ozean gefahren."], correct: "Musik gehört."},
+    {q: "4) In Brasilien hat Jans Familie", opts: ["einige Orte besucht.", "Musik gehört.", "nach Brasilien geflogen.", "Jan sehr gut gefallen."], correct: "einige Orte besucht."},
+    {q: "5) Die Familie ist auch an", opts: ["den Ozean gefahren.", "eine Reise unternommen.", "für seinen Freund gekauft.", "Musik gehört."], correct: "den Ozean gefahren."},
+    {q: "6) Der Ozean hat", opts: ["Jan sehr gut gefallen.", "einige Orte besucht.", "den Ozean gefahren.", "nach Brasilien geflogen."], correct: "Jan sehr gut gefallen."},
+    {q: "7) Jan hat Geschenke", opts: ["für seinen Freund gekauft.", "eine Reise unternommen.", "Musik gehört.", "Jan sehr gut gefallen."], correct: "für seinen Freund gekauft."}
+  ];
+  buildQuiz('ub1-quiz', ub1Data);
+
+  // Üb.2: пропуски (Dativ-прийменники в листі-відповіді)
+  setTotal(document.querySelectorAll('#ub2-list .blank-input').length);
+  document.getElementById('ub2-check').addEventListener('click', () => {
+    checkBlanks('ub2-list', 'ub2-score', 'ub2');
+  });
+  document.getElementById('ub2-reset').addEventListener('click', () => {
+    resetBlanks('ub2-list', 'ub2-score', 'ub2');
+  });
+
+  // Фінальна панель зі штампами
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['✈️','🏖️','👨‍👩‍👧','💌']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
