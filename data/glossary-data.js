@@ -182,5 +182,15 @@ const GLOSSARY = [
   {de: "regelmäßig", uk: "регулярно", klas: "7", modul: "A", lektion: 9},
   {de: "nicht sehr oft", uk: "не дуже часто", klas: "7", modul: "A", lektion: 9},
   {de: "zweimal am Tage", uk: "двічі на день", klas: "7", modul: "A", lektion: 9},
-  {de: "bei gutem Wetter", uk: "за гарної погоди", klas: "7", modul: "A", lektion: 9}
+  {de: "bei gutem Wetter", uk: "за гарної погоди", klas: "7", modul: "A", lektion: 9},
+  {de: "grenzen an (+Akk.)", uk: "межувати з", klas: "9", modul: "A", lektion: 1},
+  {de: "der Stadtstaat", uk: "місто-держава (місто, що водночас є федеральною землею)", klas: "9", modul: "A", lektion: 1},
+  {de: "die Bevölkerungsdichte", uk: "густота населення", klas: "9", modul: "A", lektion: 1},
+  {de: "bevölkerungsreich", uk: "густонаселений (тут: найбільш заселений)", klas: "9", modul: "A", lektion: 1},
+  {de: "die Millionenstadt", uk: "місто-мільйонник", klas: "9", modul: "A", lektion: 1},
+  {de: "das Wahrzeichen", uk: "візитівка, символ (міста чи країни)", klas: "9", modul: "A", lektion: 1},
+  {de: "die Tatsache", uk: "факт", klas: "9", modul: "A", lektion: 1},
+  {de: "sich irren", uk: "помилятися", klas: "9", modul: "A", lektion: 1},
+  {de: "die Fläche", uk: "площа (територія)", klas: "9", modul: "A", lektion: 1},
+  {de: "die Quelle (des Flusses)", uk: "джерело (річки)", klas: "9", modul: "A", lektion: 1}
 ];

@@ -171,5 +171,15 @@ const LESSONS = [
     file: "klas-7/modul-a/lektion-9.html",
     nove: true,
     dz: "Schreib einen kurzen Dialog (6–8 Repliken) zwischen zwei Familienmitgliedern über die Hausarbeit für morgen: Wer macht was, wann und wie oft? Benutze mindestens drei trennbare Verben (z. B. aufräumen, abholen, mitmachen, zubereiten, wegräumen) im Präsens und mindestens zwei Häufigkeitsangaben (z. B. regelmäßig, nicht sehr oft, zweimal am Tage)."
+  },
+  {
+    klas: "9",
+    modul: "A",
+    lektion: 1,
+    nazva: "Вступний урок. Вікторина про Німеччину",
+    opys: "Ускладнена вікторина про факти Німеччини (сусідні держави, річки, гори, Bundesländer-міста, історичні дати) з поглибленим граматичним фокусом на атрибутивний Superlativ.",
+    file: "klas-9/modul-a/lektion-1.html",
+    nove: true,
+    dz: "Recherchiere und schreib 4–5 neue Fakten über Deutschland, die wir im Unterricht NICHT besprochen haben. Benutze dabei mindestens zwei Superlativformen (z. B. „die bekannteste Universität ist ...“, „der berühmteste deutsche Autor ist ...“). Bring deine Fakten zur nächsten Stunde mit – wir vergleichen sie im Quiz-Stil!"
   }
 ];
