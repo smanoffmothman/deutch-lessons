@@ -121,5 +121,15 @@ const LESSONS = [
     file: "klas-8/modul-a/lektion-2.html",
     nove: true,
     dz: "Schau dir noch einmal deine Antworten aus der Diagnose an und überlege, wo du dir unsicher warst. Schreib außerdem 3 Sätze im Perfekt über dein letztes Wochenende."
+  },
+  {
+    klas: "8",
+    modul: "A",
+    lektion: 3,
+    nazva: "Wie erholst du dich?",
+    opys: "Стиль життя і відпочинок: слухання (вірш Th. Fontane «Guter Rat» і діалог про літні канікули), асоціограма й сортування видів відпочинку, граматика «man kann ... machen».",
+    file: "klas-8/modul-a/lektion-3.html",
+    nove: true,
+    dz: "Schreib einen kurzen Text (6–8 Sätze) über deinen Alltag: Wie erholst du dich meistens? Benutze mindestens drei Sätze mit der Konstruktion „man kann ... + Infinitiv“ (z. B. „Man kann im Park spazieren gehen.“) und erwähne auch ein Hobby, das du besonders gern hast."
   }
 ];

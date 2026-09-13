@@ -122,5 +122,17 @@ const GLOSSARY = [
   {de: "der Vogel", uk: "птах", klas: "8", modul: "A", lektion: 2},
   {de: "die Ferienwohnung", uk: "орендована квартира для відпочинку", klas: "8", modul: "A", lektion: 2},
   {de: "der Hafen", uk: "порт, гавань", klas: "8", modul: "A", lektion: 2},
-  {de: "gespannt sein (auf +Akk.)", uk: "з нетерпінням чекати (чогось), бути заінтригованим", klas: "8", modul: "A", lektion: 2}
+  {de: "gespannt sein (auf +Akk.)", uk: "з нетерпінням чекати (чогось), бути заінтригованим", klas: "8", modul: "A", lektion: 2},
+  {de: "sich erholen", uk: "відпочивати, відновлювати сили", klas: "8", modul: "A", lektion: 3},
+  {de: "die Erholung", uk: "відпочинок, відновлення сил", klas: "8", modul: "A", lektion: 3},
+  {de: "die Freizeitaktivität (die Freizeitaktivitäten)", uk: "заняття у вільний час", klas: "8", modul: "A", lektion: 3},
+  {de: "angeln", uk: "рибалити", klas: "8", modul: "A", lektion: 3},
+  {de: "basteln", uk: "майструвати, займатися рукоділлям", klas: "8", modul: "A", lektion: 3},
+  {de: "der Wanderweg", uk: "туристична стежка, маршрут для походів", klas: "8", modul: "A", lektion: 3},
+  {de: "das Denkmal (die Denkmäler)", uk: "пам'ятник", klas: "8", modul: "A", lektion: 3},
+  {de: "fotografieren", uk: "фотографувати", klas: "8", modul: "A", lektion: 3},
+  {de: "Schach spielen", uk: "грати в шахи", klas: "8", modul: "A", lektion: 3},
+  {de: "das Lagerfeuer", uk: "багаття", klas: "8", modul: "A", lektion: 3},
+  {de: "der Alltag", uk: "повсякденне життя, буденність", klas: "8", modul: "A", lektion: 3},
+  {de: "der Lebensstil", uk: "спосіб життя, стиль життя", klas: "8", modul: "A", lektion: 3}
 ];
