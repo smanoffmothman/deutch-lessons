@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 4 · Modul A · Nach den Sommerferien</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 8'},
+    {label: 'Урок 4: Nach den Sommerferien'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 4 · MODUL A</span>
+        <h1>Nach den Sommerferien</h1>
+        <p class="sub">Ми читаємо СМС-листування про літні пригоди Яна, повторюємо Perfekt і вивчаємо нову граматичну тему — прийменники з Genitiv (außerhalb, während, wegen, trotz, unweit, innerhalb, infolge).</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Sommerorte</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Dialog</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Jans SMS</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Richtig/Falsch</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Präpositionen</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== ПАНЕЛЬ: вступ ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Worum geht es in diesem Modul?</h2>
+      <div class="card">
+        <p>Der Sommer ist vorbei, aber die Erinnerungen bleiben! Heute lesen wir eine SMS-Konversation zwischen Jan und Petryk über Jans Sommerferien, wiederholen den Perfekt und lernen eine neue Gruppe von Präpositionen kennen, die immer mit dem Genitiv stehen: <strong>außerhalb, innerhalb, unweit, während, wegen, trotz, infolge</strong>.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Літо позаду, але спогади залишились! Сьогодні ми читаємо СМС-переписку Яна й Петрика про літні канікули Яна, повторюємо Perfekt і знайомимось із новою групою прийменників, які завжди вимагають Genitiv: <em>außerhalb</em> (поза межами), <em>innerhalb</em> (у межах, впродовж), <em>unweit</em> (неподалік), <em>während</em> (під час), <em>wegen</em> (через), <em>trotz</em> (незважаючи на), <em>infolge</em> (внаслідок).
+        </div>
+      </div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Hallo! Ich begleite dich durch diese Lektion. Los geht's!</p>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: перевірка ДЗ ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: написати короткий текст (6–8 речень) про свій побут — як ти зазвичай відпочиваєш, — використавши щонайменше три речення з конструкцією «man kann ... + Infinitiv» (напр. „Man kann im Park spazieren gehen.“) і згадати одне улюблене хобі. Перевіримо, чи добре засвоєна ця конструкція та лексика з минулого уроку.
+      </div>
+      <div id="dz-check"></div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: Üb. 1 — Sommerorte (квіз) ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Wählt Situationen: was passt wohin?</h2>
+      <p class="lead">Оберіть, яка діяльність підходить до кожного місця відпочинку (пригадуємо лексику з минулого модуля про способи відпочинку).</p>
+      <div id="ub1-quiz"></div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: Üb. 2 — Dialog (пропуски) ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Wie war eure Sommererholung?</h2>
+      <p class="lead">Заповни пропуски правильною формою Perfekt (дієслово в дужках підказує, яке слово потрібне).</p>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Українською</span>
+        У Perfekt допоміжне дієслово (haben/sein) стоїть одразу після підмета, а Partizip II (gemacht, gesehen, gefahren...) — у самому кінці речення. Тому в кожному реченні тепер <strong>два</strong> пропуски: перший — для haben/sein, другий — для Partizip II.
+      </div>
+      <div class="card" id="ub2-list">
+        <div class="fill-item">
+          <span class="num">1)</span> Ich <input type="text" class="blank-input" style="width:80px;display:inline-block;" data-ans="bin"> letzten Sommer nach Polen <input type="text" class="blank-input" style="width:130px;display:inline-block;" data-ans="gefahren"> <span style="color:var(--ink-soft);font-size:13px;">(fahren)</span>.
+        </div>
+        <div class="fill-item">
+          <span class="num">2)</span> Wir <input type="text" class="blank-input" style="width:80px;display:inline-block;" data-ans="haben"> unsere Verwandten in Krakau <input type="text" class="blank-input" style="width:130px;display:inline-block;" data-ans="besucht"> <span style="color:var(--ink-soft);font-size:13px;">(besuchen)</span>.
+        </div>
+        <div class="fill-item">
+          <span class="num">3)</span> Ich <input type="text" class="blank-input" style="width:80px;display:inline-block;" data-ans="habe"> viele Ausflüge mit meinen Freunden <input type="text" class="blank-input" style="width:130px;display:inline-block;" data-ans="gemacht"> <span style="color:var(--ink-soft);font-size:13px;">(machen)</span>.
+        </div>
+        <div class="fill-item">
+          <span class="num">4)</span> Meine Familie <input type="text" class="blank-input" style="width:80px;display:inline-block;" data-ans="ist"> drei Wochen am Meer <input type="text" class="blank-input" style="width:130px;display:inline-block;" data-ans="gewesen"> <span style="color:var(--ink-soft);font-size:13px;">(sein)</span>.
+        </div>
+        <div class="fill-item">
+          <span class="num">5)</span> Wir <input type="text" class="blank-input" style="width:80px;display:inline-block;" data-ans="haben"> viele interessante Sehenswürdigkeiten <input type="text" class="blank-input" style="width:130px;display:inline-block;" data-ans="gesehen"> <span style="color:var(--ink-soft);font-size:13px;">(sehen)</span>.
+        </div>
+        <div class="fill-item">
+          <span class="num">6)</span> Ich <input type="text" class="blank-input" style="width:80px;display:inline-block;" data-ans="bin"> fast jeden Tag im Meer <input type="text" class="blank-input" style="width:130px;display:inline-block;" data-ans="geschwommen"> <span style="color:var(--ink-soft);font-size:13px;">(schwimmen)</span>.
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: Üb. 3 — Jans SMS + Genitiv-Präpositionen (токени) ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Präpositionen mit Genitiv</h2>
+
+      <div class="card tinted-teal">
+        <p><strong>Neue Grammatik:</strong> Ці прийменники завжди керують відмінком Genitiv:</p>
+        <table class="gtable">
+          <tr><th>Präposition</th><th>Beispiel</th><th>Bedeutung</th></tr>
+          <tr><td>außerhalb</td><td>außerhalb <strong>der</strong> Stadt</td><td>поза межами</td></tr>
+          <tr><td>innerhalb</td><td>innerhalb <strong>einer</strong> Woche</td><td>у межах, впродовж</td></tr>
+          <tr><td>unweit</td><td>unweit <strong>des</strong> Waldes</td><td>неподалік</td></tr>
+          <tr><td>während</td><td>während <strong>der</strong> Ferien</td><td>під час</td></tr>
+          <tr><td>wegen</td><td>wegen <strong>des</strong> Regens</td><td>через, з причини</td></tr>
+          <tr><td>trotz</td><td>trotz <strong>des</strong> Wetters</td><td>незважаючи на</td></tr>
+          <tr><td>infolge</td><td>infolge <strong>der</strong> Krankheit</td><td>внаслідок</td></tr>
+        </table>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Genitiv-закінчення артикля: der/das → <strong>des</strong> (+ у іменника часто додається -s/-es), die → <strong>der</strong>, множина → <strong>der</strong>. Приклад: der Regen → wegen <strong>des</strong> Regen<strong>s</strong>. У розмовній мові іноді чуєш ці прийменники з Dativ, але в письмових текстах і в школі — завжди Genitiv.
+        </div>
+      </div>
+
+      <p class="lead">Lies die SMS zwischen Jan und Petryk. Klicke auf alle Wortgruppen, die eine Genitiv-Präposition enthalten (achtung: nicht jede markierte Stelle ist richtig!).</p>
+
+      <div class="mail-window">
+        <div class="mail-titlebar">SMS · Jan &amp; Petryk</div>
+        <div class="mail-body" id="ub3-text">
+          <p><em>Petryk:</em> Hi, Jan! Wie geht's? Wie waren deine Sommerferien?</p>
+          <p><em>Jan:</em> Hi, Petryk! Danke, prima. Ich habe viele Ausflüge und Wanderungen mit meinen Freunden und Verwandten gemacht. Vorige Woche waren wir wieder <span class="tok" data-correct="true">außerhalb der Stadt</span>. <span class="tok" data-correct="true">Während dieses letzten Ausfluges</span> haben wir die Umgebung erkundet.</p>
+          <p><em>Petryk:</em> War das ein Tagesausflug?</p>
+          <p><em>Jan:</em> Nein, wir sind <span class="tok" data-correct="false">vier Tage</span> gewandert. <span class="tok" data-correct="true">Innerhalb dieser Tage</span> haben wir uns köstlich amüsiert: Wir haben <span class="tok" data-correct="false">im Fluss</span> gebadet und viel gespielt.</p>
+          <p><em>Petryk:</em> Wo habt ihr übernachtet?</p>
+          <p><em>Jan:</em> Wir haben ein Zeltlager <span class="tok" data-correct="true">unweit des Waldrandes</span> aufgeschlagen und dort gezeltet.</p>
+          <p><em>Petryk:</em> Wie war das Wetter?</p>
+          <p><em>Jan:</em> Wir hatten Glück! Fast die ganze Zeit war das Wetter schön. Nur <span class="tok" data-correct="false">am ersten Tag</span> hat es geregnet. <span class="tok" data-correct="true">Wegen des Regens</span> hatten wir nasse Schuhe und mussten sie trocknen. Aber das hat uns die Stimmung nicht verdorben.</p>
+        </div>
+      </div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Українською</span>
+        <strong>Glück haben</strong> = мати щастя, поталанити. Зверни увагу: не всі позначені фрази — прийменники з Genitiv! Деякі (напр. „vier Tage“, „im Fluss“, „am ersten Tag“) — це просто позначення часу чи місця з іншими відмінками.
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: Üb. 4 — Richtig/Falsch (квіз) ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Richtig oder falsch?</h2>
+      <p class="lead">Bestimme, ob die Sätze dem Inhalt der SMS-Konversation entsprechen (zurück zu Üb. 3, wenn du unsicher bist).</p>
+      <div id="ub4-quiz"></div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: Üb. 5 — Ergänze passende Präpositionen ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Ergänze passende Präpositionen</h2>
+      <p class="lead">Обери потрібний прийменник зі списку для кожного речення (außerhalb, infolge, innerhalb, trotz, unweit, während, wegen).</p>
+      <div class="card" id="ub5-list">
+        <div class="fill-item"><span class="num">1)</span> <select class="blank-input" data-ans="während"><option value="">-- wähle --</option><option value="außerhalb">außerhalb</option><option value="infolge">infolge</option><option value="innerhalb">innerhalb</option><option value="trotz">trotz</option><option value="unweit">unweit</option><option value="während">während</option><option value="wegen">wegen</option></select> der Ferien kann man wandern und tolle Ausflüge machen.</div>
+        <div class="fill-item"><span class="num">2)</span> <select class="blank-input" data-ans="infolge"><option value="">-- wähle --</option><option value="außerhalb">außerhalb</option><option value="infolge">infolge</option><option value="innerhalb">innerhalb</option><option value="trotz">trotz</option><option value="unweit">unweit</option><option value="während">während</option><option value="wegen">wegen</option></select> der Krankheit hat Anna den Ausflug in die Nachbarstadt nicht mitgemacht.</div>
+        <div class="fill-item"><span class="num">3)</span> Die Wanderer haben ihre Zelte <select class="blank-input" data-ans="unweit"><option value="">-- wähle --</option><option value="außerhalb">außerhalb</option><option value="infolge">infolge</option><option value="innerhalb">innerhalb</option><option value="trotz">trotz</option><option value="unweit">unweit</option><option value="während">während</option><option value="wegen">wegen</option></select> eines Dorfes aufgeschlagen.</div>
+        <div class="fill-item"><span class="num">4)</span> <select class="blank-input" data-ans="während"><option value="">-- wähle --</option><option value="außerhalb">außerhalb</option><option value="infolge">infolge</option><option value="innerhalb">innerhalb</option><option value="trotz">trotz</option><option value="unweit">unweit</option><option value="während">während</option><option value="wegen">wegen</option></select> dieses Jahres haben wir viele Ausflüge und Klassenfahrten unternommen.</div>
+        <div class="fill-item"><span class="num">5)</span> <select class="blank-input" data-ans="während"><option value="">-- wähle --</option><option value="außerhalb">außerhalb</option><option value="infolge">infolge</option><option value="innerhalb">innerhalb</option><option value="trotz">trotz</option><option value="unweit">unweit</option><option value="während">während</option><option value="wegen">wegen</option></select> der Reise in die Schweiz habe ich viele fantastische Fotos gemacht.</div>
+        <div class="fill-item"><span class="num">6)</span> Man darf Feuer nur <select class="blank-input" data-ans="außerhalb"><option value="">-- wähle --</option><option value="außerhalb">außerhalb</option><option value="infolge">infolge</option><option value="innerhalb">innerhalb</option><option value="trotz">trotz</option><option value="unweit">unweit</option><option value="während">während</option><option value="wegen">wegen</option></select> des Waldes (mindestens 100 Meter vom Waldrand) machen.</div>
+        <div class="fill-item"><span class="num">7)</span> <select class="blank-input" data-ans="wegen"><option value="">-- wähle --</option><option value="außerhalb">außerhalb</option><option value="infolge">infolge</option><option value="innerhalb">innerhalb</option><option value="trotz">trotz</option><option value="unweit">unweit</option><option value="während">während</option><option value="wegen">wegen</option></select> des Gewitters blieben die Touristen im Hotel.</div>
+        <div class="fill-item"><span class="num">8)</span> Der Bahnhof liegt <select class="blank-input" data-ans="unweit"><option value="">-- wähle --</option><option value="außerhalb">außerhalb</option><option value="infolge">infolge</option><option value="innerhalb">innerhalb</option><option value="trotz">trotz</option><option value="unweit">unweit</option><option value="während">während</option><option value="wegen">wegen</option></select> meines Hauses.</div>
+        <div class="fill-item"><span class="num">9)</span> <select class="blank-input" data-ans="trotz"><option value="">-- wähle --</option><option value="außerhalb">außerhalb</option><option value="infolge">infolge</option><option value="innerhalb">innerhalb</option><option value="trotz">trotz</option><option value="unweit">unweit</option><option value="während">während</option><option value="wegen">wegen</option></select> eines langen Urlaubs fühlt sich Herr Meier nicht entspannt.</div>
+        <div class="fill-item"><span class="num">10)</span> <select class="blank-input" data-ans="wegen"><option value="">-- wähle --</option><option value="außerhalb">außerhalb</option><option value="infolge">infolge</option><option value="innerhalb">innerhalb</option><option value="trotz">trotz</option><option value="unweit">unweit</option><option value="während">während</option><option value="wegen">wegen</option></select> der hohen Preise konnten wir uns diese Reise nicht leisten.</div>
+        <div class="fill-item"><span class="num">11)</span> <select class="blank-input" data-ans="während"><option value="">-- wähle --</option><option value="außerhalb">außerhalb</option><option value="infolge">infolge</option><option value="innerhalb">innerhalb</option><option value="trotz">trotz</option><option value="unweit">unweit</option><option value="während">während</option><option value="wegen">wegen</option></select> des Sommerurlaubs hat man viele tolle Möglichkeiten zur Erholung.</div>
+        <div class="fill-item"><span class="num">12)</span> Musstest du <select class="blank-input" data-ans="wegen"><option value="">-- wähle --</option><option value="außerhalb">außerhalb</option><option value="infolge">infolge</option><option value="innerhalb">innerhalb</option><option value="trotz">trotz</option><option value="unweit">unweit</option><option value="während">während</option><option value="wegen">wegen</option></select> der Gesundheitsprobleme zu Hause bleiben?</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub5-check">Prüfen</button>
+        <button class="btn secondary" id="ub5-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub5-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== ПРИКІНЦЕВА ПАНЕЛЬ ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Schreib einen kurzen Text (6–8 Sätze) darüber, wie du die ersten Schulwochen nach den Sommerferien erlebst. Benutze dabei mindestens drei Genitiv-Präpositionen (außerhalb, innerhalb, während, wegen, trotz, unweit oder infolge) und erzähl auch, worauf du dich in diesem Schuljahr am meisten freust.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Напиши короткий текст (6–8 речень) про те, як минають перші шкільні тижні після літніх канікул. Використай щонайменше три прийменники з Genitiv (außerhalb, innerhalb, während, wegen, trotz, unweit або infolge) і розкажи, чого ти найбільше очікуєш у цьому навчальному році.
+        </div>
+      </div>
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  // ---- Hausaufgabenkontrolle (перевірка ДЗ попереднього уроку) ----
+  const dzData = [
+    {q: "Welcher Satz mit „man kann“ ist richtig gebildet?", opts: ["Man kann im Park spazieren gehen.", "Man im Park spazieren gehen kann.", "Man kann im Park spaziert gehen.", "Man kann im Park gehen spazieren."], correct: "Man kann im Park spazieren gehen."},
+    {q: "Was bedeutet „sich erholen“?", opts: ["відпочивати, відновлювати сили", "хвилюватися", "готувати їжу", "мандрувати без мети"], correct: "відпочивати, відновлювати сили"},
+    {q: "Am Wochenende kann man ... . (wähle das passende Verb im Infinitiv)", opts: ["angeln", "geangelt", "anzuangeln", "hat geangelt"], correct: "angeln"},
+    {q: "Was ist „das Lagerfeuer“?", opts: ["багаття", "намет", "рюкзак", "гірський похід"], correct: "багаття"}
+  ];
+  buildQuiz('dz-check', dzData);
+
+  // ---- Üb. 1: Sommerorte (квіз) ----
+  const ub1Data = [
+    {q: "Was kann man an der Ostsee machen?", opts: ["viel schwimmen und Boot fahren", "in einem Zeltlager wohnen", "ein Konzert besuchen", "nach Deutschland reisen"], correct: "viel schwimmen und Boot fahren"},
+    {q: "Was kann man im Gebirge machen?", opts: ["in den Bergen wandern und am Feuer sitzen", "tauchen und Wassersport machen", "Videos sehen", "viele Sehenswürdigkeiten im Ausland besuchen"], correct: "in den Bergen wandern und am Feuer sitzen"},
+    {q: "Was kann man zu Hause machen?", opts: ["sich mit Freunden treffen und Rad fahren", "im Zeltlager übernachten", "im Meer schwimmen", "ins Ausland fliegen"], correct: "sich mit Freunden treffen und Rad fahren"},
+    {q: "Was kann man im Ausland machen?", opts: ["viele Orte und Museen besuchen", "zu Hause Videos sehen", "an der Ostsee tauchen", "im Park spazieren gehen"], correct: "viele Orte und Museen besuchen"}
+  ];
+  buildQuiz('ub1-quiz', ub1Data);
+
+  // ---- Üb. 2: пропуски (Perfekt) ----
+  setTotal(document.querySelectorAll('#ub2-list .blank-input').length);
+  document.getElementById('ub2-check').addEventListener('click', () => {
+    checkBlanks('ub2-list', 'ub2-score', 'ub2');
+  });
+  document.getElementById('ub2-reset').addEventListener('click', () => {
+    resetBlanks('ub2-list', 'ub2-score', 'ub2');
+  });
+
+  // ---- Üb. 3: клікабельні токени (Genitiv-Präpositionen у SMS) ----
+  initTokenClicks('ub3-text');
+  setTotal(document.querySelectorAll('#ub3-text .tok[data-correct="true"]').length);
+  document.getElementById('ub3-check').addEventListener('click', () => checkTokens('ub3-text', 'ub3-score', 'ub3'));
+  document.getElementById('ub3-reset').addEventListener('click', () => resetTokens('ub3-text', 'ub3-score', 'ub3'));
+
+  // ---- Üb. 4: Richtig/Falsch (квіз) ----
+  const ub4Data = [
+    {q: "Jan findet seine Sommerferien langweilig.", opts: ["Richtig", "Falsch"], correct: "Falsch"},
+    {q: "Im Sommer ist Jan viel gewandert.", opts: ["Richtig", "Falsch"], correct: "Richtig"},
+    {q: "Diese Woche hat Jan einen Tagesausflug gemacht.", opts: ["Richtig", "Falsch"], correct: "Falsch"},
+    {q: "Der Ausflug hat vier Tage gedauert.", opts: ["Richtig", "Falsch"], correct: "Richtig"},
+    {q: "Jan hat im Fluss gebadet und mit Freunden gespielt.", opts: ["Richtig", "Falsch"], correct: "Richtig"},
+    {q: "Jan, seine Verwandten und Freunde haben in einem kleinen Hotel übernachtet.", opts: ["Richtig", "Falsch"], correct: "Falsch"},
+    {q: "Während des Ausfluges war das Wetter immer schön.", opts: ["Richtig", "Falsch"], correct: "Falsch"},
+    {q: "Es hat nur einmal geregnet.", opts: ["Richtig", "Falsch"], correct: "Richtig"},
+    {q: "Trotz des Regens waren alle guter Laune.", opts: ["Richtig", "Falsch"], correct: "Richtig"}
+  ];
+  buildQuiz('ub4-quiz', ub4Data);
+
+  // ---- Üb. 5: пропуски (select — Genitiv-Präpositionen) ----
+  setTotal(document.querySelectorAll('#ub5-list .blank-input').length);
+  document.getElementById('ub5-check').addEventListener('click', () => {
+    checkBlanks('ub5-list', 'ub5-score', 'ub5');
+  });
+  document.getElementById('ub5-reset').addEventListener('click', () => {
+    resetBlanks('ub5-list', 'ub5-score', 'ub5');
+  });
+
+  // Фінальна панель зі штампами
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🎒','🌞','🗺️','✉️']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
