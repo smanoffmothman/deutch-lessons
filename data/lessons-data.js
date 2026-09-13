@@ -91,5 +91,15 @@ const LESSONS = [
     file: "klas-7/modul-a/lektion-7.html",
     nove: true,
     dz: "Schreib eine Antwort-E-Mail an Jan (8–10 Sätze): Bedank dich für seinen Brief, erzähl, wie deine Familie die letzten Ferien verbracht hat, und nutze dabei mindestens vier verschiedene Präpositionen mit Dativ (ab, aus, bei, mit, nach, seit, von, zu). Beschreib auch, was dir am besten gefallen hat (gefallen + Dativ)."
+  },
+  {
+    klas: "7",
+    modul: "A",
+    lektion: 8,
+    nazva: "Ich mache im Haushalt mit",
+    opys: "Домашні обов'язки: слухаємо і повторюємо вирази про хатні справи (аудіо), тренуємо рими та вивчаємо trennbare Verben (aufräumen, einkaufen, wegbringen).",
+    file: "klas-7/modul-a/lektion-8.html",
+    nove: true,
+    dz: "Schreib 5–6 Sätze über die Hausarbeit in deiner Familie: Wer macht was zu Hause mit? Benutze mindestens zwei trennbare Verben (z. B. aufräumen, einkaufen, wegbringen) im Präsens."
   }
 ];

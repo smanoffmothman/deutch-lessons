@@ -90,5 +90,17 @@ const GLOSSARY = [
   {de: "das Geschenk", uk: "подарунок", klas: "7", modul: "A", lektion: 7},
   {de: "klingen", uk: "звучати, здаватися (за описом)", klas: "7", modul: "A", lektion: 7},
   {de: "ursprünglich", uk: "спочатку, родом", klas: "7", modul: "A", lektion: 7},
-  {de: "gefallen (+Dativ)", uk: "подобатися", klas: "7", modul: "A", lektion: 7}
+  {de: "gefallen (+Dativ)", uk: "подобатися", klas: "7", modul: "A", lektion: 7},
+  {de: "die Hausarbeit", uk: "домашня робота, хатні справи", klas: "7", modul: "A", lektion: 8},
+  {de: "mithelfen (trennbar)", uk: "допомагати (по господарству)", klas: "7", modul: "A", lektion: 8},
+  {de: "aufräumen (trennbar)", uk: "прибирати", klas: "7", modul: "A", lektion: 8},
+  {de: "einkaufen (trennbar)", uk: "робити покупки, закуповуватись", klas: "7", modul: "A", lektion: 8},
+  {de: "wegbringen (trennbar)", uk: "виносити, відносити геть (напр. сміття)", klas: "7", modul: "A", lektion: 8},
+  {de: "die Wäsche waschen", uk: "прати білизну", klas: "7", modul: "A", lektion: 8},
+  {de: "das Geschirr spülen", uk: "мити посуд", klas: "7", modul: "A", lektion: 8},
+  {de: "bügeln", uk: "прасувати", klas: "7", modul: "A", lektion: 8},
+  {de: "Staub saugen", uk: "пилососити", klas: "7", modul: "A", lektion: 8},
+  {de: "der Müll", uk: "сміття", klas: "7", modul: "A", lektion: 8},
+  {de: "gießen (die Blumen gießen)", uk: "поливати (квіти)", klas: "7", modul: "A", lektion: 8},
+  {de: "fegen", uk: "підмітати", klas: "7", modul: "A", lektion: 8}
 ];
