@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 5 · Modul A · Wie war dein Sommerurlaub?</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 8'},
+    {label: 'Урок 5: Як ви відпочивали?'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 5 · MODUL A</span>
+        <h1>Wie war dein Sommerurlaub?</h1>
+        <p class="sub">Reiseanzeigen lesen, raten wer wohin gefahren ist, und das Perfekt beim Erzählen über die Ferien üben.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Wer war wo?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Perfekt-Lücken</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Feriengeschichte</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== START ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Worum geht es in diesem Modul?</h2>
+      <div class="card">
+        <p>Der Sommer ist vorbei, aber die Erinnerungen bleiben! In diesem Modul sprechen wir über Erholung und Freizeit. Heute geht es um eine ganz praktische Frage: Wie war eigentlich dein Sommerurlaub – und wie planst du deinen nächsten? Wir lesen Urlaubsanzeigen, raten, wer wohin gefahren ist, und üben das Perfekt, wenn wir über die Ferien erzählen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Літо позаду, але спогади залишаються! У цьому модулі ми говоримо про відпочинок і вільний час. Сьогодні дуже практичне питання: яким був твій літній відпочинок — і як плануєш наступний? Читаємо оголошення про подорожі, вгадуємо, хто куди їздив, і тренуємо Perfekt (минулий доконаний час), розповідаючи про канікули.
+        </div>
+      </div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Hallo! Packen wir zusammen den Koffer für unser Ratespiel „Sommerurlaub“? Los geht's!</p>
+      </div>
+    </section>
+
+    <!-- ===== HAUSAUFGABE ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: „Schreib einen kurzen Text (6–8 Sätze) darüber, wie du die ersten Schulwochen nach den Sommerferien erlebst. Benutze dabei mindestens drei Genitiv-Präpositionen (außerhalb, innerhalb, während, wegen, trotz, unweit oder infolge) und erzähl auch, worauf du dich in diesem Schuljahr am meisten freust.“
+        <br><br>
+        Перш ніж рухатись далі, згадаймо, які прийменники з Genitiv ти мав(-ла) використати — обери правильний варіант у кожному реченні.
+      </div>
+      <div id="dz-check"></div>
+    </section>
+
+    <!-- ===== ÜB.1: Wer war wo? (Anzeigen + Quiz) ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Wer war wo? Lies die Anzeigen und ordne zu.</h2>
+      <p class="lead">Lies zuerst die fünf Urlaubsanzeigen. Dann lies, was Luisa, Carla und Jans Familie im Sommer gemacht haben, und finde die passende Anzeige.</p>
+
+      <div class="card">
+        <p><strong>A</strong> — Radtour durch Dänemark: 7 Tage an der Nordseeküste, eine flache und familienfreundliche Strecke, ideal für die ganze Familie.</p>
+        <p><strong>B</strong> — Wanderurlaub im Erzgebirge: malerische Berge, gut markierte Wanderwege, günstige Übernachtungsmöglichkeiten.</p>
+        <p><strong>C</strong> — Städtereise zu europäischen Metropolen: Flussreise mit Vollpension, Besuch mehrerer Hauptstädte, Stadtrundfahrten inklusive.</p>
+        <p><strong>D</strong> — Klassenfahrt nach Liechtenstein: viertägiger Ausflug für Schulklassen, Busreise, Unterkunft und Museumsbesuche im Preis enthalten.</p>
+        <p style="margin:0;"><strong>E</strong> — Sommerurlaub auf einer griechischen Insel: eine Woche mit Halbpension, direkt am Strand, freundliches Personal.</p>
+      </div>
+
+      <div class="card tinted-teal">
+        <p><strong>Luisa:</strong> Luisas Familie hat einen Urlaub im Gebirge gemacht. Während der Wanderungen hat Luisa viele schöne Landschaften fotografiert.</p>
+        <p><strong>Carla:</strong> Carla ist mit ihrer Oma nach Griechenland geflogen. Sie haben einen entspannten Strandurlaub genossen.</p>
+        <p style="margin:0;"><strong>Jans Familie:</strong> Jans Familie hat eine Radtour gemacht. Sie waren sehr aktiv und haben die schöne Natur an der Küste genossen.</p>
+      </div>
+
+      <div id="ub1-quiz"></div>
+    </section>
+
+    <!-- ===== ÜB.2: Perfekt-Lücken ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Ergänze das Perfekt (Partizip II)</h2>
+      <p class="lead">Ergänze die Lücken mit der richtigen Partizip-II-Form. Das Hilfsverb (haben/sein) steht schon im Satz.</p>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> Carla ist mit ihrer Oma nach Griechenland <input type="text" class="blank-input" style="width:130px;display:inline-block;" data-ans="geflogen">. (fliegen)</div>
+        <div class="fill-item"><span class="num">2)</span> Sie haben den Strandurlaub sehr <input type="text" class="blank-input" style="width:130px;display:inline-block;" data-ans="genossen">. (genießen)</div>
+        <div class="fill-item"><span class="num">3)</span> Jans Familie hat eine lange Radtour <input type="text" class="blank-input" style="width:130px;display:inline-block;" data-ans="gemacht">. (machen)</div>
+        <div class="fill-item"><span class="num">4)</span> Luisa hat die Berglandschaft <input type="text" class="blank-input" style="width:130px;display:inline-block;" data-ans="fotografiert">. (fotografieren)</div>
+        <div class="fill-item"><span class="num">5)</span> Wir sind am Urlaubsort früh am Morgen <input type="text" class="blank-input" style="width:130px;display:inline-block;" data-ans="aufgestanden">. (aufstehen)</div>
+        <div class="fill-item" style="margin-bottom:0;"><span class="num">6)</span> Ich habe meinen Koffer schon am Vortag <input type="text" class="blank-input" style="width:130px;display:inline-block;" data-ans="gepackt">. (packen)</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== ÜB.3: Feriengeschichte (Tokens) ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Feriengeschichte: sein oder haben?</h2>
+      <p class="lead">Lies den Brief. Klicke NUR auf die Verbformen im Perfekt, die grammatisch korrekt sind (richtiges Hilfsverb + Partizip II).</p>
+      <div class="mail-window">
+        <div class="mail-titlebar">Neue Nachricht — Urlaubsgrüße</div>
+        <div class="mail-body" id="ub3-text">
+          Liebe Anna, ich schreibe dir aus dem Urlaub! Wir <span class="tok" data-correct="true">sind ans Meer gefahren</span> und ich <span class="tok" data-correct="true">habe jeden Tag geschwommen</span>. Mein Bruder <span class="tok" data-correct="false">hat sehr müde gefahren</span>, weil er die ganze Nacht wach war, aber ich <span class="tok" data-correct="true">habe viele Fotos gemacht</span>. Am Abend <span class="tok" data-correct="false">bin wir spazieren gegangen</span>, und dann <span class="tok" data-correct="true">haben wir ein Lagerfeuer gemacht</span>. Morgen <span class="tok" data-correct="false">habe ich früh aufgestanden</span>, um den Sonnenaufgang zu sehen!
+        </div>
+      </div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Українською</span>
+        Підказка: дієслова руху (fahren, gehen, aufstehen) утворюють Perfekt із <em>sein</em>, а не з <em>haben</em>. Знайди речення, де це порушено.
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Schreib ein kurzes SMS-Gespräch (6–8 Nachrichten) zwischen dir und einem Freund / einer Freundin über eure Sommerferien. Nutzt zusammen mindestens vier Verben im Perfekt (z. B. sein, fahren, machen, fotografieren, genießen) und erwähnt am Ende, welche drei Sachen ihr für den Urlaub gepackt habt.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Напиши коротке СМС-листування (6–8 повідомлень) між тобою і другом/подругою про літні канікули. Використайте разом щонайменше чотири дієслова у Perfekt (напр. sein, fahren, machen, fotografieren, genießen) і наприкінці згадайте, які три речі ви взяли з собою у відпустку.
+        </div>
+      </div>
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  // Hausaufgabenkontrolle — Genitiv-Präpositionen
+  const dzData = [
+    {q: "___ des schlechten Wetters sind wir zu Hause geblieben.", opts: ["wegen", "trotz", "unweit", "außerhalb"], correct: "wegen"},
+    {q: "___ unserer Klassenfahrt haben wir viele Museen besucht.", opts: ["während", "wegen", "innerhalb", "infolge"], correct: "während"},
+    {q: "Das Hotel liegt ___ des Stadtzentrums – wir mussten mit dem Bus fahren.", opts: ["außerhalb", "innerhalb", "unweit", "trotz"], correct: "außerhalb"},
+    {q: "___ des Stadtzentrums gibt es einen kleinen See – man kann in 10 Minuten zu Fuß hingehen.", opts: ["unweit", "außerhalb", "wegen", "trotz"], correct: "unweit"}
+  ];
+  buildQuiz('dz-check', dzData);
+
+  // Üb. 1: Quiz — welche Anzeige passt?
+  const ub1Data = [
+    {q: "Welche Anzeige passt zu Luisas Urlaub?", opts: ["Anzeige A", "Anzeige B", "Anzeige C", "Anzeige D", "Anzeige E"], correct: "Anzeige B"},
+    {q: "Welche Anzeige passt zu Carlas Urlaub?", opts: ["Anzeige A", "Anzeige B", "Anzeige C", "Anzeige D", "Anzeige E"], correct: "Anzeige E"},
+    {q: "Welche Anzeige passt zu Jans Familie?", opts: ["Anzeige A", "Anzeige B", "Anzeige C", "Anzeige D", "Anzeige E"], correct: "Anzeige A"}
+  ];
+  buildQuiz('ub1-quiz', ub1Data);
+
+  // Üb. 2: Lücken
+  setTotal(document.querySelectorAll('#ub2-list .blank-input').length);
+  document.getElementById('ub2-check').addEventListener('click', () => {
+    checkBlanks('ub2-list', 'ub2-score', 'ub2');
+  });
+  document.getElementById('ub2-reset').addEventListener('click', () => {
+    resetBlanks('ub2-list', 'ub2-score', 'ub2');
+  });
+
+  // Üb. 3: Tokens
+  initTokenClicks('ub3-text');
+  setTotal(document.querySelectorAll('#ub3-text .tok[data-correct="true"]').length);
+  document.getElementById('ub3-check').addEventListener('click', () => checkTokens('ub3-text', 'ub3-score', 'ub3'));
+  document.getElementById('ub3-reset').addEventListener('click', () => resetTokens('ub3-text', 'ub3-score', 'ub3'));
+
+  // Fertig — Штампи на тему подорожей
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🏖️','🚲','🏔️','🎒']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
