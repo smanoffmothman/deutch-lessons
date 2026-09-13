@@ -161,5 +161,15 @@ const LESSONS = [
     file: "klas-8/modul-a/lektion-6.html",
     nove: true,
     dz: "Schreib ein kurzes Interview (5–6 Fragen und Antworten) mit dir selbst oder einem Familienmitglied über aktive Erholung: Welche Sportarten treibst du? Wie oft? Erwähne mindestens einen Mannschaftssport und benutze das Verb „Sport treiben“ mindestens einmal."
+  },
+  {
+    klas: "7",
+    modul: "A",
+    lektion: 9,
+    nazva: "Ich mache im Haushalt mit (Teil 2)",
+    opys: "Продовжуємо тему хатніх обов'язків: сортуємо справи за часом доби, тренуємо нові відокремлювані дієслова (abholen, mitmachen, zubereiten, fernsehen) і перевіряємо себе аудіозаписом.",
+    file: "klas-7/modul-a/lektion-9.html",
+    nove: true,
+    dz: "Schreib einen kurzen Dialog (6–8 Repliken) zwischen zwei Familienmitgliedern über die Hausarbeit für morgen: Wer macht was, wann und wie oft? Benutze mindestens drei trennbare Verben (z. B. aufräumen, abholen, mitmachen, zubereiten, wegräumen) im Präsens und mindestens zwei Häufigkeitsangaben (z. B. regelmäßig, nicht sehr oft, zweimal am Tage)."
   }
 ];

@@ -170,5 +170,17 @@ const GLOSSARY = [
   {de: "die aktive Erholung", uk: "активний відпочинок", klas: "8", modul: "A", lektion: 6},
   {de: "rudern", uk: "веслувати", klas: "8", modul: "A", lektion: 6},
   {de: "das Turnen", uk: "гімнастика (спортивна)", klas: "8", modul: "A", lektion: 6},
-  {de: "regelmäßig", uk: "регулярно", klas: "8", modul: "A", lektion: 6}
+  {de: "regelmäßig", uk: "регулярно", klas: "8", modul: "A", lektion: 6},
+  {de: "abholen (trennbar)", uk: "забирати, зустрічати (когось, напр. зі школи)", klas: "7", modul: "A", lektion: 9},
+  {de: "mitmachen (trennbar)", uk: "брати участь, допомагати (у чомусь)", klas: "7", modul: "A", lektion: 9},
+  {de: "zubereiten (trennbar)", uk: "готувати (їжу до подання)", klas: "7", modul: "A", lektion: 9},
+  {de: "fernsehen (trennbar)", uk: "дивитися телевізор", klas: "7", modul: "A", lektion: 9},
+  {de: "mit dem Hund Gassi gehen", uk: "вигулювати собаку", klas: "7", modul: "A", lektion: 9},
+  {de: "der Fußboden", uk: "підлога", klas: "7", modul: "A", lektion: 9},
+  {de: "die Wohnung", uk: "квартира, помешкання", klas: "7", modul: "A", lektion: 9},
+  {de: "im Garten arbeiten", uk: "працювати в саду/на городі", klas: "7", modul: "A", lektion: 9},
+  {de: "regelmäßig", uk: "регулярно", klas: "7", modul: "A", lektion: 9},
+  {de: "nicht sehr oft", uk: "не дуже часто", klas: "7", modul: "A", lektion: 9},
+  {de: "zweimal am Tage", uk: "двічі на день", klas: "7", modul: "A", lektion: 9},
+  {de: "bei gutem Wetter", uk: "за гарної погоди", klas: "7", modul: "A", lektion: 9}
 ];
