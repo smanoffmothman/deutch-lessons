@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 6 · Modul A · Активне дозвілля</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 8'},
+    {label: 'Урок 6: Активне дозвілля'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 6 · MODUL A</span>
+        <h1>Активне дозвілля</h1>
+        <p class="sub">Слова про спорт і активний відпочинок, будуємо складні іменники та тренуємо аудіювання.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Wortbildung</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Sportarten</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Hören</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== START ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Worum geht es in diesem Modul?</h2>
+      <div class="card">
+        <p>In diesem Modul geht es um den Lebensstil und die Freizeit. Heute lernen wir viele
+        Wörter für Sportarten und aktive Erholung. Wir bilden zusammengesetzte Substantive,
+        sortieren Sportarten in Gruppen und üben das Hörverstehen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Цей модуль — про стиль життя і дозвілля. Сьогодні вивчаємо лексику на тему спорту й
+          активного відпочинку: будуємо складні іменники (напр. Basket + ball = Basketball),
+          розподіляємо види спорту за групами і тренуємо аудіювання.
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Grammatik-Tipp: Sport treiben</p>
+        <p>Зверни увагу на дієслова, якими описують заняття спортом німецькою — вони не завжди
+        перекладаються дослівно:</p>
+        <div class="ua-note">
+          <dl>
+            <dt>Sport treiben (+ Akk.)</dt><dd>займатися спортом взагалі — „Ich treibe Sport.“</dd>
+            <dt>Fußball / Basketball / Volleyball spielen</dt><dd>з м'ячем зазвичай „spielen“ — „Er spielt Fußball.“</dd>
+            <dt>Ski / Schlittschuh laufen (або fahren)</dt><dd>з рухом на чомусь — „Wir laufen Ski.“</dd>
+            <dt>schwimmen, rudern, turnen, boxen</dt><dd>окремі дієслова без додаткового слова — „Sie schwimmt jeden Tag.“</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Hallo! Heute bauen wir Sportwörter wie Lego-Steine. Los geht's!</p>
+      </div>
+    </section>
+
+    <!-- ===== HAUSAUFGABE ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: написати коротке СМС-листування (6–8 повідомлень) про літні
+        канікули, використавши щонайменше чотири дієслова у Perfekt (sein, fahren, machen,
+        fotografieren, genießen) і згадати три речі, які спакували у відпустку.
+      </div>
+      <p class="lead">Повтори форми Partizip II з того листування — впиши пропущені слова.</p>
+      <div class="card" id="dz-check">
+        <div class="fill-item"><span class="num">1)</span> Wir sind ans Meer <input type="text" class="blank-input" style="width:140px;display:inline-block;" data-ans="gefahren"> .</div>
+        <div class="fill-item"><span class="num">2)</span> Ich habe viele Fotos <input type="text" class="blank-input" style="width:140px;display:inline-block;" data-ans="gemacht"> .</div>
+        <div class="fill-item"><span class="num">3)</span> Wir haben den Strand <input type="text" class="blank-input" style="width:140px;display:inline-block;" data-ans="fotografiert"> .</div>
+        <div class="fill-item"><span class="num">4)</span> Sie hat die Ferien sehr <input type="text" class="blank-input" style="width:140px;display:inline-block;" data-ans="genossen"> .</div>
+        <div class="fill-item"><span class="num">5)</span> Ich bin im Ferienlager <input type="text" class="blank-input" style="width:140px;display:inline-block;" data-ans="gewesen"> .</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="dz-check-btn">Prüfen</button>
+        <button class="btn secondary" id="dz-reset-btn">Zurücksetzen</button>
+        <span class="score-pill" id="dz-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== ÜB. 1: WORTBILDUNG + AUDIO ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Bilde Wörter: Sportarten</h2>
+      <p class="lead">Утвори складні слова зі стовпчиків нижче, впиши другу частину слова, а потім
+      прослухай аудіо, щоб перевірити вимову, і повтори за диктором.</p>
+      <div class="card">
+        <div class="wordbank">
+          <span>Basket-</span><span>Eis-</span><span>Extrem-</span><span>Fitness-</span>
+          <span>Fuß-</span><span>Hand-</span><span>Inline-</span><span>Leicht-</span>
+          <span>Rücken-</span><span>Ski-</span><span>Sport-</span><span>Thai-</span>
+          <span>Tisch-</span><span>Volley-</span><span>Wasser-</span>
+        </div>
+      </div>
+      <div class="card tinted-forest">
+        <div class="wordbank">
+          <span>-art</span><span>-athletik</span><span>-ball</span><span>-boxen</span>
+          <span>-gymnastik</span><span>-hockey</span><span>-skaten</span><span>-sport</span>
+          <span>-Studio</span><span>-tennis</span>
+        </div>
+        <div class="ua-note">
+          Друга частина слова (закінчення) не завжди дублюється по одному разу — деякі
+          закінчення (напр. <em>-ball</em>) підходять одразу до кількох слів. Пиши так, як
+          звучить справжнє німецьке слово. Увага: в одних завданнях нижче дано початок слова
+          (допиши закінчення), а в інших — навпаки, дано закінчення (допиши початок).
+        </div>
+      </div>
+      <div class="card" id="ub1-list">
+        <div class="fill-item"><span class="num">1)</span> der Basket<input type="text" class="blank-input" style="width:120px;display:inline-block;" data-ans="ball"></div>
+        <div class="fill-item"><span class="num">2)</span> das <input type="text" class="blank-input" style="width:100px;display:inline-block;" data-ans="Eis">hockey</div>
+        <div class="fill-item"><span class="num">3)</span> der Extrem<input type="text" class="blank-input" style="width:120px;display:inline-block;" data-ans="sport"></div>
+        <div class="fill-item"><span class="num">4)</span> das Fitness-<input type="text" class="blank-input" style="width:120px;display:inline-block;" data-ans="Studio"></div>
+        <div class="fill-item"><span class="num">5)</span> der <input type="text" class="blank-input" style="width:100px;display:inline-block;" data-ans="Fuß">ball</div>
+        <div class="fill-item"><span class="num">6)</span> der Hand<input type="text" class="blank-input" style="width:120px;display:inline-block;" data-ans="ball"></div>
+        <div class="fill-item"><span class="num">7)</span> das <input type="text" class="blank-input" style="width:100px;display:inline-block;" data-ans="Inline">skaten</div>
+        <div class="fill-item"><span class="num">8)</span> die Leicht<input type="text" class="blank-input" style="width:120px;display:inline-block;" data-ans="athletik"></div>
+        <div class="fill-item"><span class="num">9)</span> die <input type="text" class="blank-input" style="width:100px;display:inline-block;" data-ans="Rücken">gymnastik</div>
+        <div class="fill-item"><span class="num">10)</span> der Ski<input type="text" class="blank-input" style="width:120px;display:inline-block;" data-ans="sport"></div>
+        <div class="fill-item"><span class="num">11)</span> die <input type="text" class="blank-input" style="width:100px;display:inline-block;" data-ans="Sport">art</div>
+        <div class="fill-item"><span class="num">12)</span> das Thai<input type="text" class="blank-input" style="width:120px;display:inline-block;" data-ans="boxen"></div>
+        <div class="fill-item"><span class="num">13)</span> das <input type="text" class="blank-input" style="width:100px;display:inline-block;" data-ans="Tisch">tennis</div>
+        <div class="fill-item"><span class="num">14)</span> der Volley<input type="text" class="blank-input" style="width:120px;display:inline-block;" data-ans="ball"></div>
+        <div class="fill-item"><span class="num">15)</span> der <input type="text" class="blank-input" style="width:100px;display:inline-block;" data-ans="Wasser">ball</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub1-check">Prüfen</button>
+        <button class="btn secondary" id="ub1-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub1-score"></span>
+      </div>
+
+      <div class="airmail-rule"></div>
+      <p class="lead">🎧 Höre das Audio zur Kontrolle und sprich nach:</p>
+      <div class="player">
+        <button class="play" id="play1">▶</button>
+        <span class="label">Üb. 1 · Sportwörter</span>
+        <input type="range" id="seek1" value="0">
+        <span id="time1">0:00</span>
+      </div>
+      <audio id="audio1" src="../../../assets/audio/klas-8/modul-a/lektion-6-ub1.mp3" preload="none"></audio>
+      <div class="audio-fallback" id="err1" style="display:none;"><span class="audio-error-msg">Аудіо не вдалося завантажити.</span></div>
+    </section>
+
+    <!-- ===== ÜB. 2: SORTIER-QUIZ ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Sortiere die Sportarten</h2>
+      <p class="lead">До якої групи належить кожен вид спорту — Leichtathletik, Wassersport,
+      Mannschaftssport, Skisport чи Fitness? Обери правильну відповідь.</p>
+      <div id="ub2-quiz"></div>
+    </section>
+
+    <!-- ===== ÜB. 3: HÖREN + FRAGEN-ANTWORTEN ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Fragen und Antworten zur aktiven Erholung</h2>
+      <p class="lead">Höre zuerst die Fragen und dann das ganze Gespräch. Ordne danach jeder Antwort
+      die passende Frage zu.</p>
+      <div class="player">
+        <button class="play" id="play2">▶</button>
+        <span class="label">Üb. 4a · Fragen</span>
+        <input type="range" id="seek2" value="0">
+        <span id="time2">0:00</span>
+      </div>
+      <audio id="audio2" src="../../../assets/audio/klas-8/modul-a/lektion-6-ub4a.mp3" preload="none"></audio>
+      <div class="audio-fallback" id="err2" style="display:none;"><span class="audio-error-msg">Аудіо не вдалося завантажити.</span></div>
+
+      <div class="player" style="margin-top:10px;">
+        <button class="play" id="play3">▶</button>
+        <span class="label">Üb. 4b · Ganzes Gespräch</span>
+        <input type="range" id="seek3" value="0">
+        <span id="time3">0:00</span>
+      </div>
+      <audio id="audio3" src="../../../assets/audio/klas-8/modul-a/lektion-6-ub4b.mp3" preload="none"></audio>
+      <div class="audio-fallback" id="err3" style="display:none;"><span class="audio-error-msg">Аудіо не вдалося завантажити.</span></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Fragen (Üb. 4a)</p>
+        <ol style="margin:0; padding-left:20px;">
+          <li>Luisa, wie erholst du dich meistens?</li>
+          <li>Treibst du irgendwelchen Sport?</li>
+          <li>Wie oft gehst du zum Training?</li>
+          <li>Was machst du im Training besonders gern?</li>
+          <li>Was kannst du noch über deine Erholung erzählen? Gehst du manchmal tanzen?</li>
+          <li>Machst du auch Wintersport?</li>
+          <li>Bist du auch in den Sommerferien aktiv?</li>
+        </ol>
+        <div class="ua-note">
+          Прочитай запитання і прослухай аудіо 4a. Потім упиши біля кожної відповіді номер
+          питання, на яке вона відповідає (1–7). Перевір себе аудіо 4b — там усе інтерв'ю
+          цілком.
+        </div>
+      </div>
+      <div class="card" id="ub3-list">
+        <div class="fill-item"><span class="num">a)</span> Ja, ich treibe Leichtathletik. — <input type="text" class="blank-input" style="width:50px;display:inline-block;" data-ans="2"></div>
+        <div class="fill-item"><span class="num">b)</span> Na klar, ich laufe manchmal Ski. — <input type="text" class="blank-input" style="width:50px;display:inline-block;" data-ans="6"></div>
+        <div class="fill-item"><span class="num">c)</span> Zweimal in der Woche. — <input type="text" class="blank-input" style="width:50px;display:inline-block;" data-ans="3"></div>
+        <div class="fill-item"><span class="num">d)</span> Ja, stimmt. Im Sommer wandert meine Familie gern. — <input type="text" class="blank-input" style="width:50px;display:inline-block;" data-ans="7"></div>
+        <div class="fill-item"><span class="num">e)</span> Oh nein, Tanzen ist nicht mein Fall, aber ich gehe regelmäßig schwimmen. — <input type="text" class="blank-input" style="width:50px;display:inline-block;" data-ans="5"></div>
+        <div class="fill-item"><span class="num">f)</span> Ich habe eher eine aktive Erholung. — <input type="text" class="blank-input" style="width:50px;display:inline-block;" data-ans="1"></div>
+        <div class="fill-item"><span class="num">g)</span> Ich laufe und springe sehr gern. Der Hochsprung ist meine Lieblingsaktivität. — <input type="text" class="blank-input" style="width:50px;display:inline-block;" data-ans="4"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Schreib ein kurzes Interview (5–6 Fragen und Antworten) mit dir selbst oder einem
+        Familienmitglied über aktive Erholung: Welche Sportarten treibst du? Wie oft? Erwähne
+        mindestens einen Mannschaftssport und benutze das Verb „Sport treiben“ mindestens einmal.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Напиши коротке інтерв'ю (5–6 запитань і відповідей) із собою або членом родини про
+          активний відпочинок: якими видами спорту ти займаєшся? Як часто? Згадай щонайменше
+          один командний вид спорту і використай дієслово „Sport treiben“ хоча б один раз.
+        </div>
+      </div>
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  // Hausaufgabenkontrolle
+  setTotal(document.querySelectorAll('#dz-check .blank-input').length);
+  document.getElementById('dz-check-btn').addEventListener('click', () => checkBlanks('dz-check', 'dz-score', 'dz'));
+  document.getElementById('dz-reset-btn').addEventListener('click', () => resetBlanks('dz-check', 'dz-score', 'dz'));
+
+  // Üb. 1: Wortbildung
+  setTotal(document.querySelectorAll('#ub1-list .blank-input').length);
+  document.getElementById('ub1-check').addEventListener('click', () => checkBlanks('ub1-list', 'ub1-score', 'ub1'));
+  document.getElementById('ub1-reset').addEventListener('click', () => resetBlanks('ub1-list', 'ub1-score', 'ub1'));
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+
+  // Üb. 2: Sortier-Quiz
+  const ub2Data = [
+    {q: "Basketball", opts: ["Leichtathletik", "Wassersport", "Mannschaftssport", "Skisport", "Fitness"], correct: "Mannschaftssport"},
+    {q: "Eishockey", opts: ["Leichtathletik", "Wassersport", "Mannschaftssport", "Skisport", "Fitness"], correct: "Mannschaftssport"},
+    {q: "Fußball", opts: ["Leichtathletik", "Wassersport", "Mannschaftssport", "Skisport", "Fitness"], correct: "Mannschaftssport"},
+    {q: "Handball", opts: ["Leichtathletik", "Wassersport", "Mannschaftssport", "Skisport", "Fitness"], correct: "Mannschaftssport"},
+    {q: "Volleyball", opts: ["Leichtathletik", "Wassersport", "Mannschaftssport", "Skisport", "Fitness"], correct: "Mannschaftssport"},
+    {q: "Hochsprung", opts: ["Leichtathletik", "Wassersport", "Mannschaftssport", "Skisport", "Fitness"], correct: "Leichtathletik"},
+    {q: "Weitsprung", opts: ["Leichtathletik", "Wassersport", "Mannschaftssport", "Skisport", "Fitness"], correct: "Leichtathletik"},
+    {q: "100-Meter-Lauf", opts: ["Leichtathletik", "Wassersport", "Mannschaftssport", "Skisport", "Fitness"], correct: "Leichtathletik"},
+    {q: "Staffellauf", opts: ["Leichtathletik", "Wassersport", "Mannschaftssport", "Skisport", "Fitness"], correct: "Leichtathletik"},
+    {q: "Kanusport", opts: ["Leichtathletik", "Wassersport", "Mannschaftssport", "Skisport", "Fitness"], correct: "Wassersport"},
+    {q: "Rudern", opts: ["Leichtathletik", "Wassersport", "Mannschaftssport", "Skisport", "Fitness"], correct: "Wassersport"},
+    {q: "Schwimmen", opts: ["Leichtathletik", "Wassersport", "Mannschaftssport", "Skisport", "Fitness"], correct: "Wassersport"},
+    {q: "Segeln", opts: ["Leichtathletik", "Wassersport", "Mannschaftssport", "Skisport", "Fitness"], correct: "Wassersport"},
+    {q: "Windsurfing", opts: ["Leichtathletik", "Wassersport", "Mannschaftssport", "Skisport", "Fitness"], correct: "Wassersport"},
+    {q: "Langlauf", opts: ["Leichtathletik", "Wassersport", "Mannschaftssport", "Skisport", "Fitness"], correct: "Skisport"},
+    {q: "Skimarathon", opts: ["Leichtathletik", "Wassersport", "Mannschaftssport", "Skisport", "Fitness"], correct: "Skisport"},
+    {q: "Skispringen", opts: ["Leichtathletik", "Wassersport", "Mannschaftssport", "Skisport", "Fitness"], correct: "Skisport"},
+    {q: "Rückengymnastik", opts: ["Leichtathletik", "Wassersport", "Mannschaftssport", "Skisport", "Fitness"], correct: "Fitness"},
+    {q: "Turnen", opts: ["Leichtathletik", "Wassersport", "Mannschaftssport", "Skisport", "Fitness"], correct: "Fitness"},
+    {q: "Yoga", opts: ["Leichtathletik", "Wassersport", "Mannschaftssport", "Skisport", "Fitness"], correct: "Fitness"},
+    {q: "Zumba", opts: ["Leichtathletik", "Wassersport", "Mannschaftssport", "Skisport", "Fitness"], correct: "Fitness",
+     note: "Zumba ist ein Fitness-Tanzprogramm mit lateinamerikanischen Rhythmen (Salsa, Merengue, Reggaeton) — man tanzt dabei in der Gruppe zur Musik. Es ist also kein Mannschaftssport, sondern eine Art Fitness.<br><em>Zumba — фітнес-програма з латиноамериканськими танцювальними ритмами (сальса, меренге, реггетон): танцюють у групі під музику, тому це вид фітнесу, а не командний спорт.</em>"}
+  ];
+  buildQuiz('ub2-quiz', ub2Data);
+
+  // Додаткове пояснення (напр. для Zumba) — з'являється після відповіді на конкретне питання,
+  // не чіпаючи спільну функцію buildQuiz у lesson-interactions.js
+  document.querySelectorAll('#ub2-quiz .quiz-q').forEach((div, i) => {
+    const item = ub2Data[i];
+    if (item && item.note) {
+      const note = document.createElement('div');
+      note.className = 'ua-note';
+      note.style.display = 'none';
+      note.style.marginTop = '10px';
+      note.innerHTML = '<span class="ua-label">🇺🇦 Довідка</span>' + item.note;
+      div.appendChild(note);
+      div.querySelectorAll('.opt-btn').forEach(btn => {
+        btn.addEventListener('click', () => { note.style.display = 'block'; });
+      });
+    }
+  });
+
+  // Üb. 3: Hören + Nummerierung der Antworten
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+  wirePlayer('audio3', 'play3', 'seek3', 'time3');
+  setTotal(document.querySelectorAll('#ub3-list .blank-input').length);
+  document.getElementById('ub3-check').addEventListener('click', () => checkBlanks('ub3-list', 'ub3-score', 'ub3'));
+  document.getElementById('ub3-reset').addEventListener('click', () => resetBlanks('ub3-list', 'ub3-score', 'ub3'));
+
+  // Fertig
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['⚽','🏀','🏐','⛷️']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
