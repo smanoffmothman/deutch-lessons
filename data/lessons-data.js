@@ -111,5 +111,15 @@ const LESSONS = [
     file: "klas-8/modul-a/lektion-1.html",
     nove: true,
     dz: "Schreib einen kurzen Text (6–8 Sätze) über Deutschland. Benutze dabei mindestens drei Superlativformen (z. B. der größte, der längste, der bekannteste ...). Du kannst Fakten aus dem Unterricht oder aus dem Internet nutzen."
+  },
+  {
+    klas: "8",
+    modul: "A",
+    lektion: 2,
+    nazva: "Вхідна діагностувальна робота №1",
+    opys: "Виконуємо вхідну діагностувальну роботу №1 в інтерактивному форматі: граматика/лексика (Futur, Imperativ, заперечення, Perfekt), діалог, читання про Bodensee і лист-відповідь Marcus.",
+    file: "klas-8/modul-a/lektion-2.html",
+    nove: true,
+    dz: "Schau dir noch einmal deine Antworten aus der Diagnose an und überlege, wo du dir unsicher warst. Schreib außerdem 3 Sätze im Perfekt über dein letztes Wochenende."
   }
 ];

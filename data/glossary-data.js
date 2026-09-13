@@ -112,5 +112,15 @@ const GLOSSARY = [
   {de: "die Nationalflagge", uk: "державний прапор", klas: "8", modul: "A", lektion: 1},
   {de: "der Bundeskanzler / die Bundeskanzlerin", uk: "федеральний канцлер / канцлерка", klas: "8", modul: "A", lektion: 1},
   {de: "die Einwohnerzahl", uk: "кількість населення", klas: "8", modul: "A", lektion: 1},
-  {de: "die Vielfalt", uk: "різноманітність", klas: "8", modul: "A", lektion: 1}
+  {de: "die Vielfalt", uk: "різноманітність", klas: "8", modul: "A", lektion: 1},
+  {de: "das Fahrzeug", uk: "транспортний засіб", klas: "8", modul: "A", lektion: 2},
+  {de: "das Schlafzimmer", uk: "спальня", klas: "8", modul: "A", lektion: 2},
+  {de: "das Boot", uk: "човен", klas: "8", modul: "A", lektion: 2},
+  {de: "der Nikolaustag", uk: "день Святого Миколая (6 грудня)", klas: "8", modul: "A", lektion: 2},
+  {de: "der Schnee", uk: "сніг", klas: "8", modul: "A", lektion: 2},
+  {de: "der Wald", uk: "ліс", klas: "8", modul: "A", lektion: 2},
+  {de: "der Vogel", uk: "птах", klas: "8", modul: "A", lektion: 2},
+  {de: "die Ferienwohnung", uk: "орендована квартира для відпочинку", klas: "8", modul: "A", lektion: 2},
+  {de: "der Hafen", uk: "порт, гавань", klas: "8", modul: "A", lektion: 2},
+  {de: "gespannt sein (auf +Akk.)", uk: "з нетерпінням чекати (чогось), бути заінтригованим", klas: "8", modul: "A", lektion: 2}
 ];
