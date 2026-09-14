@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 12 · Modul A · Familienfeste</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 7'},
+    {label: 'Урок 12: Familienfeste'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 12 · MODUL A</span>
+        <h1>Familienfeste</h1>
+        <p class="sub">Як святкує твоя родина? Тренуємо Futur I, знайомимось зі словами про свята (Ostern, Weihnachten, Geburtstag) і читаємо про традиції родини König.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Feste</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Lesetext</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Richtig/Falsch</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== Start ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Worum geht es in diesem Modul?</h2>
+      <div class="card">
+        <p>Jede Familie feiert Feste ein bisschen anders: Ostern, Weihnachten, Geburtstage. Heute lernen wir Wörter rund um Familienfeste, wiederholen Futur I und lesen, wie Familie König ihre Feste feiert.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Кожна родина святкує трохи по-своєму: Великдень, Різдво, дні народження. Сьогодні ми вивчимо слова про сімейні свята, повторимо Futur I (майбутній час) і почитаємо, як святкує родина Кеніг.
+        </div>
+      </div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Frohes Fest! Feiern wir zusammen ein bisschen Deutsch?</p>
+      </div>
+    </section>
+
+    <!-- ===== Hausaufgabe ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: написати 6–8 речень у Futur I про те,
+        що родина робитиме разом наступних вихідних (наприклад:
+        <em>„Dieses Wochenende werde ich …“, „Am Samstag werden wir …“</em>).
+        Перш ніж перевіряти власні речення одне в одного, освіжимо в
+        пам'яті форми <strong>werden</strong> у квізі нижче — саме ці
+        форми потрібні для домашніх речень.
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Довідка: Futur I = werden + Infinitiv</p>
+        <table class="gtable">
+          <tr><th>ich</th><th>du</th><th>er/sie/es</th><th>wir</th><th>ihr</th><th>sie/Sie</th></tr>
+          <tr><td>werde</td><td>wirst</td><td>wird</td><td>werden</td><td>werdet</td><td>werden</td></tr>
+        </table>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Futur I утворюється так само, як і в минулих уроках: особова
+          форма дієслова <strong>werden</strong> + інфінітив у кінці
+          речення (напр. „Ich werde … besuchen.“).
+        </div>
+      </div>
+      <div id="dz-quiz"></div>
+    </section>
+
+<!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Wie heißen die Familienfeste?</h2>
+      <p class="lead">Was passt zusammen? Wähle das richtige Fest.</p>
+      <div id="ub1-quiz"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Frau König erzählt von ihren Familienfesten</h2>
+      <p class="lead">Lies die drei Texte (A, B, C) und ergänze die Adjektivendungen.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Grammatik: Adjektivendungen nach der/die/das/den/diese</p>
+        <table class="gtable">
+          <tr><th>Fall / Zahl</th><th>Beispiel</th><th>Endung</th></tr>
+          <tr><td>Nominativ, Einzahl (der/die/das)</td><td>die ganz<strong>e</strong> Familie, das schön<strong>e</strong> Fest</td><td>-e</td></tr>
+          <tr><td>Akkusativ Maskulin (den), Plural/Dativ (die/mit ...), diese</td><td>den schön<strong>en</strong> Tannenbaum, die lecker<strong>en</strong> Plätzchen, mit bunt<strong>en</strong> Kerzen</td><td>-en</td></tr>
+        </table>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Якщо прикметник стоїть у <strong>називному відмінку однини</strong>
+          після означеного артикля (der/die/das) — закінчення
+          <strong>-e</strong> (напр. „die ganze Familie“). У решті
+          випадків — знахідний відмінок чоловічого роду (den), давальний,
+          множина — закінчення <strong>-en</strong> (напр. „den schönen
+          Tannenbaum“, „mit bunten Kerzen“). Прикметник ПІСЛЯ дієслова
+          <em>sein</em> (напр. „Das Fest war lustig.“) закінчення взагалі
+          не отримує.
+        </div>
+      </div>
+
+      <div class="card" id="ub2-list">
+        <p class="section-label" style="margin:0 0 6px;">A. Ostern</p>
+        <p class="fill-item">Als Kind haben wir immer ein schönes Osterfest gefeiert. Wir haben die bunt<input type="text" class="blank-input" style="width:55px;display:inline-block;" data-ans="en"> Ostereier bemalt und im Garten versteckt. Die Mutter hat den klein<input type="text" class="blank-input" style="width:55px;display:inline-block;" data-ans="en"> Baum im Garten mit Ostereiern geschmückt. Am Ostersonntag hat die ganz<input type="text" class="blank-input" style="width:55px;display:inline-block;" data-ans="e"> Familie im Garten nach den Eiern gesucht. Die Ostereiersuche war immer sehr lustig!</p>
+
+        <p class="section-label" style="margin:18px 0 6px;">B. Weihnachten</p>
+        <p class="fill-item">Zu Weihnachten haben wir immer den schön<input type="text" class="blank-input" style="width:55px;display:inline-block;" data-ans="en"> Tannenbaum geschmückt. Die Mutter hat die lecker<input type="text" class="blank-input" style="width:55px;display:inline-block;" data-ans="en"> Plätzchen gebacken. Am Heiligabend hat die ganz<input type="text" class="blank-input" style="width:55px;display:inline-block;" data-ans="e"> Familie zusammen Weihnachtslieder gesungen. Das Fest war immer sehr festlich! Am Ende kam die Bescherung, und alle waren glücklich.</p>
+
+        <p class="section-label" style="margin:18px 0 6px;">C. Geburtstag</p>
+        <p class="fill-item">Geburtstage hat unsere Familie auch immer gemeinsam gefeiert. Der Opa hat immer den groß<input type="text" class="blank-input" style="width:55px;display:inline-block;" data-ans="en"> Geburtstagskuchen gebacken. Man hat ihn mit bunt<input type="text" class="blank-input" style="width:55px;display:inline-block;" data-ans="en"> Kerzen geschmückt, und das Geburtstagskind musste sie ausblasen. Es gab viel Musik und Toben im Garten mit lustig<input type="text" class="blank-input" style="width:55px;display:inline-block;" data-ans="en"> Spielen und Wettbewerben. Die Party war immer sehr lustig! Noch heute denke ich gern an diese schön<input type="text" class="blank-input" style="width:55px;display:inline-block;" data-ans="en"> Feste zurück.</p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Richtig oder falsch?</h2>
+      <p class="lead">Bestimme, ob die Sätze dem Inhalt der Texte aus Üb. 2 entsprechen.</p>
+      <div id="ub3-quiz"></div>
+    </section>
+
+    <!-- ===== Fertig! ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Schreib einen kurzen Text (6–8 Sätze) über ein Familienfest, das du besonders gut in Erinnerung hast (z. B. Geburtstag, Weihnachten, ein anderes Fest). Erzähl im Perfekt, was passiert ist, und benutze mindestens zwei Adjektive mit richtiger Endung (z. B. ein schönes Fest, eine lustige Party) sowie eine Häufigkeitsangabe (z. B. jedes Jahr, einmal im Jahr).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Напиши короткий текст (6–8 речень) про сімейне свято, яке
+          тобі найбільше запам'яталося (напр. день народження, Різдво,
+          інше свято). Розкажи в Perfekt, що відбувалося, і використай
+          щонайменше два прикметники з правильним закінченням (напр.
+          „чудове свято", „весела вечірка"), а також один вираз
+          частотності (напр. „щороку", „раз на рік").
+        </div>
+      </div>
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  // Hausaufgabenkontrolle: Futur I — welche Form passt?
+  const dzData = [
+    {q: "Was ___ du am Wochenende machen?", opts: ["wirst", "wird"], correct: "wirst"},
+    {q: "Wir ___ Weihnachten im Familienkreis feiern.", opts: ["werden", "werdet"], correct: "werden"},
+    {q: "Im Sommer ___ ich Tante Eva besuchen.", opts: ["werde", "werden"], correct: "werde"},
+    {q: "Frau König, ___ Sie den Ausflug an den See mitmachen?", opts: ["wird", "werden"], correct: "werden"},
+    {q: "Luisa ___ den Samstag mit ihrer Familie verbringen.", opts: ["wird", "werde"], correct: "wird"},
+    {q: "Luisas Freunde ___ ins Kino gehen.", opts: ["werden", "werdet"], correct: "werden"},
+    {q: "Was ___ ihr am Sonntag machen?", opts: ["werden", "werdet"], correct: "werdet"},
+    {q: "Wann ___ du uns besuchen?", opts: ["wirst", "wird"], correct: "wirst"},
+  ];
+  buildQuiz('dz-quiz', dzData);
+
+  // Üb. 1: зіставлення картинки й свята
+  const ub1Data = [
+    {q: "🥚 Man bemalt Eier und sucht sie im Garten. Welches Fest ist das?", opts: ["Ostern", "Weihnachten", "Geburtstag"], correct: "Ostern"},
+    {q: "🎄 Man schmückt einen Tannenbaum und backt Plätzchen. Welches Fest ist das?", opts: ["Geburtstag", "Weihnachten", "Ostern"], correct: "Weihnachten"},
+    {q: "🎂 Die Oma backt einen großen Kuchen, und es gibt Spiele. Welches Fest ist das?", opts: ["Weihnachten", "Ostern", "Geburtstag"], correct: "Geburtstag"},
+    {q: "🕯️ Am Heiligabend singt man Lieder, und danach gibt es die Bescherung. Welches Fest ist das?", opts: ["Ostern", "Weihnachten", "Geburtstag"], correct: "Weihnachten"},
+  ];
+  buildQuiz('ub1-quiz', ub1Data);
+
+  // Üb. 2: пропуски (закінчення прикметників)
+  setTotal(document.querySelectorAll('#ub2-list .blank-input').length);
+  document.getElementById('ub2-check').addEventListener('click', () => {
+    checkBlanks('ub2-list', 'ub2-score', 'ub2');
+  });
+  document.getElementById('ub2-reset').addEventListener('click', () => {
+    resetBlanks('ub2-list', 'ub2-score', 'ub2');
+  });
+
+  // Üb. 3: Richtig/Falsch
+  const ub3Data = [
+    {q: "Die Kinder haben die Ostereier bemalt und im Garten versteckt.", opts: ["Richtig", "Falsch"], correct: "Richtig"},
+    {q: "Der Vater hat den Baum im Garten mit Ostereiern geschmückt.", opts: ["Richtig", "Falsch"], correct: "Falsch"},
+    {q: "Am Ostersonntag hat die ganze Familie nach den Eiern gesucht.", opts: ["Richtig", "Falsch"], correct: "Richtig"},
+    {q: "Zu Weihnachten hat die Familie keinen Tannenbaum geschmückt.", opts: ["Richtig", "Falsch"], correct: "Falsch"},
+    {q: "Die Mutter hat zu Weihnachten leckere Plätzchen gebacken.", opts: ["Richtig", "Falsch"], correct: "Richtig"},
+    {q: "Am Heiligabend hat niemand Weihnachtslieder gesungen.", opts: ["Richtig", "Falsch"], correct: "Falsch"},
+    {q: "Der Opa hat den Geburtstagskuchen gebacken.", opts: ["Richtig", "Falsch"], correct: "Richtig"},
+    {q: "Man hat den Geburtstagskuchen mit bunten Kerzen geschmückt.", opts: ["Richtig", "Falsch"], correct: "Richtig"},
+    {q: "Die Geburtstagspartys waren laut dem Text langweilig.", opts: ["Richtig", "Falsch"], correct: "Falsch"},
+  ];
+  buildQuiz('ub3-quiz', ub3Data);
+
+  // Fertig! — штампи на тему свят
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🎄','🥚','🎂','🎉']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
