@@ -211,5 +211,15 @@ const LESSONS = [
     file: "klas-9/modul-a/lektion-4.html",
     nove: true,
     dz: "Schreib 5–6 Sätze über deine Zukunftspläne: Was möchtest du nach der Schule machen? Benutze dabei mindestens ein Modalverb (z. B. möchten, wollen, können), eine Futur-I-Form (werde ... + Infinitiv), einen Komparativ (z. B. interessanter, besser) und einen Satz mit „weil“ (mit dem Verb am Satzende)."
+  },
+  {
+    klas: "9",
+    modul: "A",
+    lektion: 5,
+    nazva: "Meine Familie, meine Freunde",
+    opys: "Читаємо вірш про дітей і мир у родині, будуємо асоціограму зі словом „Familie“ та вчимося описувати стосунки в родині (einander verstehen, engen Kontakt haben, sich streiten тощо).",
+    file: "klas-9/modul-a/lektion-5.html",
+    nove: true,
+    dz: "Schreib einen kurzen Text (6–8 Sätze) über die Beziehungen in deiner Familie oder in der Familie eines Freundes / einer Freundin. Benutze dabei mindestens vier Ausdrücke aus dem Wortmaterial von Üb. 3 (z. B. einander gut verstehen, engen Kontakt haben, Respekt haben, sich streiten) und einen Satz mit „weil“."
   }
 ];

@@ -225,5 +225,17 @@ const GLOSSARY = [
   {de: "die Erfahrung", uk: "досвід, враження", klas: "9", modul: "A", lektion: 4},
   {de: "verbessern", uk: "покращувати, вдосконалювати", klas: "9", modul: "A", lektion: 4},
   {de: "der Abschluss", uk: "завершення (школи), випуск", klas: "9", modul: "A", lektion: 4},
-  {de: "schützen", uk: "захищати, охороняти", klas: "9", modul: "A", lektion: 4}
+  {de: "schützen", uk: "захищати, охороняти", klas: "9", modul: "A", lektion: 4},
+  {de: "die Beziehung", uk: "стосунки, взаємини", klas: "9", modul: "A", lektion: 5},
+  {de: "das Verhältnis (ein schlechtes Verhältnis haben)", uk: "стосунки, взаємини (мати погані стосунки)", klas: "9", modul: "A", lektion: 5},
+  {de: "einander verstehen", uk: "розуміти одне одного, порозумітися", klas: "9", modul: "A", lektion: 5},
+  {de: "der Krach (Krach machen)", uk: "сварка, скандал (сваритися, скандалити)", klas: "9", modul: "A", lektion: 5},
+  {de: "engen Kontakt haben", uk: "підтримувати тісний контакт", klas: "9", modul: "A", lektion: 5},
+  {de: "achten (Familienmitglieder achten)", uk: "поважати (поважати членів родини)", klas: "9", modul: "A", lektion: 5},
+  {de: "unterstützen", uk: "підтримувати", klas: "9", modul: "A", lektion: 5},
+  {de: "der Hass", uk: "ненависть", klas: "9", modul: "A", lektion: 5},
+  {de: "der Respekt", uk: "повага", klas: "9", modul: "A", lektion: 5},
+  {de: "der Verlass (klare Regeln mit Verlass)", uk: "надійність, певність (чіткі й надійні правила)", klas: "9", modul: "A", lektion: 5},
+  {de: "der Reisepass", uk: "закордонний паспорт", klas: "9", modul: "A", lektion: 5},
+  {de: "die Chance", uk: "шанс, можливість", klas: "9", modul: "A", lektion: 5}
 ];
