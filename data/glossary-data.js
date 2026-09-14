@@ -331,6 +331,16 @@ const GLOSSARY = [
   {de: "loben", uk: "хвалити", klas: "9", modul: "A", lektion: 8},
   {de: "die Unterstützung", uk: "підтримка", klas: "9", modul: "A", lektion: 8},
   {de: "das Familienklima", uk: "клімат (атмосфера) у родині", klas: "9", modul: "A", lektion: 8},
-  {de: "diskutieren", uk: "обговорювати", klas: "9", modul: "A", lektion: 8}
+  {de: "diskutieren", uk: "обговорювати", klas: "9", modul: "A", lektion: 8},
+  {de: "das Sprichwort (die Sprichwörter)", uk: "прислів'я", klas: "9", modul: "A", lektion: 9},
+  {de: "wert sein", uk: "бути вартим", klas: "9", modul: "A", lektion: 9},
+  {de: "das Geschenk des Himmels", uk: "подарунок небес (ідіома)", klas: "9", modul: "A", lektion: 9},
+  {de: "der Spiegel", uk: "дзеркало", klas: "9", modul: "A", lektion: 9},
+  {de: "geflickt", uk: "заштопаний, залатаний", klas: "9", modul: "A", lektion: 9},
+  {de: "fehlerlos", uk: "бездоганний, без вад", klas: "9", modul: "A", lektion: 9},
+  {de: "die Figur", uk: "статура, фігура", klas: "9", modul: "A", lektion: 9},
+  {de: "der Charakter", uk: "характер", klas: "9", modul: "A", lektion: 9},
+  {de: "das Lächeln", uk: "усмішка", klas: "9", modul: "A", lektion: 9},
+  {de: "treu", uk: "вірний, відданий", klas: "9", modul: "A", lektion: 9}
 ];
 

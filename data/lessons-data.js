@@ -301,5 +301,15 @@ const LESSONS = [
     file: "klas-9/modul-a/lektion-8.html",
     nove: true,
     dz: "Wähle eine der drei Personen aus Üb. 1 (Eddy, Marianna oder Miriam) und schreib ihr/ihm eine kurze Antwort (6–8 Sätze): Gib konkrete Ratschläge zu genau ihrer/seiner Familiensituation. Benutze dabei mindestens zwei Sätze mit „man“ + Modalverb (man muss, man soll, man kann) und mindestens ein Redemittel zum Diskutieren (z. B. „Ich denke, dass ...“, „Meiner Meinung nach ...“)."
+  },
+  {
+    klas: "9",
+    modul: "A",
+    lektion: 9,
+    nazva: "Meine Freunde sind mir wichtig",
+    opys: "Німецькі прислів'я про дружбу з аудіоконтролем, закінчення прикметників після 'ein' (Nominativ/Akkusativ) та опис зовнішності й характеру друзів.",
+    file: "klas-9/modul-a/lektion-9.html",
+    nove: true,
+    dz: "Schreib eine kurze Beschreibung (6–8 Sätze) von deinem besten Freund / deiner besten Freundin: Aussehen und Charakter. Benutze dabei mindestens vier Adjektive mit richtiger Endung (z. B. „ein lustiger Junge“, „lange Haare“, „eine nette Freundin“) und mindestens ein Sprichwort über Freundschaft aus dem heutigen Unterricht."
   }
 ];
