@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 4 · Modul A · Fehlerdetektive</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 9'},
+    {label: 'Урок 4: Аналіз діагностувальної роботи'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 4 · MODUL A</span>
+        <h1>Fehlerdetektive: Grammatik unter der Lupe</h1>
+        <p class="sub">Wir spielen Sprachdetektive und finden Fehler in einem fiktiven Brief — und wiederholen dabei die wichtigsten Grammatikthemen aus der Diagnosearbeit.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Fehlersuche im Brief</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Was ist richtig?</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Grammatik ergänzen</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== START ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Worum geht es in dieser Stunde?</h2>
+      <div class="card">
+        <p>Herzlich willkommen in unserem Detektiv-Büro! Heute schlüpfst du in die Rolle eines Sprachdetektivs bzw. einer Sprachdetektivin. Ein Schüler namens Nazar hat einen Brief an Felix geschrieben — aber dabei ein paar typische Fehler gemacht. Deine Aufgabe: die Fehler finden und verstehen, warum sie falsch sind.</p>
+        <p>Dabei wiederholen wir sieben wichtige Grammatikthemen: Nebensätze mit <em>weil/dass</em>, den Komparativ, Artikel, das Präteritum, Modalverben, das Futur I und den Imperativ.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Сьогодні ми не знаємо напевно, які саме помилки учні зробили у вхідній діагностувальній роботі — тож ми пограємось у детективів із вигаданим листом персонажа (Назар), який припустився типових помилок на теми з тієї роботи: підрядні речення (weil/dass), другий ступінь порівняння прикметників (Komparativ), артиклі, минулий час (Präteritum), модальні дієслова, майбутній час (Futur I) та наказовий спосіб (Imperativ). Знаходячи й пояснюючи ці помилки, ми одночасно повторюємо граматику.
+        </div>
+      </div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Ich liebe Detektivspiele! Lass uns die Fehler zusammen finden. 🕵️‍♂️</p>
+      </div>
+    </section>
+
+    <!-- ===== HAUSAUFGABE ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: подивитись відповіді з діагностувальної роботи ще раз і позначити, де були невпевненими. А також написати 4–5 речень про те, що хочеш робити у майбутньому професійно, і що особисто можеш зробити для захисту довкілля (з використанням модального дієслова).
+      </div>
+      <p class="lead">Перш ніж перейти до нового матеріалу, перевіримо, чи добре засвоєні модальні дієслова та лексика з теми довкілля/професій.</p>
+      <div id="dz-check"></div>
+    </section>
+
+    <!-- ===== ÜB. 1: FEHLERSUCHE (TOKENS) ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Der Brief von Nazar an Felix</h2>
+      <p class="lead">Прочитай лист Назара до Фелікса. Клікни на ті слова чи фрази, де є граматична помилка (усього 6 помилок у листі).</p>
+      <div class="mail-window">
+        <div class="mail-titlebar">Neue Nachricht</div>
+        <div class="mail-body" id="ub1-text">
+          Lieber Felix,<br><br>
+          vielen Dank für deine Nachricht über den Sprachkurs in München! Das klingt total interessant.<br><br>
+          Ich <span class="tok" data-correct="true">möchte gerne auch machen so einen Kurs</span>, <span class="tok" data-correct="true">weil ich lerne Deutsch schon seit vier Jahren</span> und <span class="tok" data-correct="false">ich will meine Sprache verbessern</span>.<br><br>
+          Meine Freundin hat mir erzählt, dass <span class="tok" data-correct="true">eine Gastfamilie oft billiger wie ein Hotel</span> ist. Letzten Sommer <span class="tok" data-correct="true">ich fahrte mit meiner Klasse nach Polen</span> — <span class="tok" data-correct="false">das war eine tolle Erfahrung</span>!<br><br>
+          Übrigens, gestern habe ich <span class="tok" data-correct="true">der Auto von meinem Onkel</span> gesehen — ein ganz neues Modell!<br><br>
+          Nächstes Jahr <span class="tok" data-correct="false">werde ich nach Deutschland fahren</span> und hoffentlich auch neue Freunde finden.<br><br>
+          <span class="tok" data-correct="true">Schreib du mir bald zurück</span>!<br><br>
+          Viele Grüße,<br>
+          Nazar
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub1-check">Prüfen</button>
+        <button class="btn secondary" id="ub1-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub1-score"></span>
+      </div>
+      <div class="card" style="margin-top:20px;">
+        <p class="section-label" style="margin:0 0 6px;">Warum sind das Fehler?</p>
+        <div class="ua-note" style="margin-top:0;">
+          <span class="ua-label">🇺🇦 Пояснення для кожної категорії</span>
+          <dl>
+            <dt>Nebensatz (weil/dass):</dt><dd>дієслово переноситься в самий кінець підрядного речення — не "weil ich lerne", а "weil ich ... lerne".</dd>
+            <dt>Komparativ:</dt><dd>порівняння прикметників утворюється додаванням "-er" + слово "als" (не "wie"): billiger als, größer als.</dd>
+            <dt>Artikel:</dt><dd>рід іменника в німецькій не завжди збігається з українським — "das Auto" середнього роду, а не "der Auto".</dd>
+            <dt>Präteritum:</dt><dd>сильні дієслова змінюють корінь (fahren → fuhr), а не додають закінчення "-te" як слабкі дієслова.</dd>
+            <dt>Imperativ:</dt><dd>у наказовому способі (du-форма) займенник "du" зазвичай опускається: "Schreib mir!", а не "Schreib du mir!".</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ÜB. 2: QUIZ ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Was ist richtig?</h2>
+      <p class="lead">Обери правильний варіант виправлення для кожного речення.</p>
+      <div id="ub2-quiz"></div>
+    </section>
+
+    <!-- ===== ÜB. 3: BLANKS ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Grammatik ergänzen</h2>
+      <p class="lead">Встав правильну форму слова в кожне речення.</p>
+      <div class="card" id="ub3-list">
+        <div class="fill-item"><span class="num">1)</span> Nach dem Abschluss <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="werde"> ich wahrscheinlich an der Universität studieren.</div>
+        <div class="fill-item"><span class="num">2)</span> Letztes Jahr <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="fuhr"> meine Familie nach Deutschland in den Urlaub.</div>
+        <div class="fill-item"><span class="num">3)</span> Ich <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="kann"> schon ziemlich gut Deutsch sprechen.</div>
+        <div class="fill-item"><span class="num">4)</span> Berlin ist <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="größer"> als München.</div>
+        <div class="fill-item"><span class="num">5)</span> Wir sollen den Müll trennen, <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="weil"> das gut für die Umwelt ist.</div>
+        <div class="fill-item"><span class="num">6)</span> <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="Mach"> die Tür zu, bitte!</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Schreib 5–6 Sätze über deine Zukunftspläne: Was möchtest du nach der Schule machen? Benutze dabei mindestens ein Modalverb (z. B. möchten, wollen, können), eine Futur-I-Form (werde ... + Infinitiv), einen Komparativ (z. B. interessanter, besser) und einen Satz mit „weil“ (mit dem Verb am Satzende).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Напиши 5–6 речень про свої плани на майбутнє: що хочеш робити після школи? Використай щонайменше одне модальне дієслово (напр. möchten, wollen, können), форму майбутнього часу Futur I (werde ... + інфінітив), один ступінь порівняння (напр. interessanter, besser) і одне речення зі сполучником „weil“ (з дієсловом в кінці речення).
+        </div>
+      </div>
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  // Hausaufgabenkontrolle: коротка вікторина за темою минулого ДЗ
+  const dzData = [
+    {q: "Яке речення правильно вживає модальне дієслово?", opts: ["Ich möchte Informatiker werden.", "Ich möchte werden Informatiker.", "Ich möchte Informatiker zu werden."], correct: "Ich möchte Informatiker werden."},
+    {q: "Що означає слово 'der Umweltschutz'?", opts: ["охорона довкілля", "забруднення довкілля", "охорона тварин"], correct: "охорона довкілля"},
+    {q: "Яке дієслово підходить: 'Ich ___ Müll trennen, um die Umwelt zu schützen.'", opts: ["kann", "bin", "hat"], correct: "kann"}
+  ];
+  buildQuiz('dz-check', dzData);
+
+  // Üb. 1: клікабельні токени в листі
+  initTokenClicks('ub1-text');
+  setTotal(document.querySelectorAll('#ub1-text .tok[data-correct="true"]').length);
+  document.getElementById('ub1-check').addEventListener('click', () => {
+    checkTokens('ub1-text', 'ub1-score', 'ub1');
+  });
+  document.getElementById('ub1-reset').addEventListener('click', () => {
+    resetTokens('ub1-text', 'ub1-score', 'ub1');
+  });
+
+  // Üb. 2: квіз
+  const ub2Data = [
+    {q: "„München ist interessant als Berlin.“ — Welche Form ist richtig?", opts: ["interessanter als Berlin", "interessant wie Berlin", "mehr interessant als Berlin"], correct: "interessanter als Berlin"},
+    {q: "„___ Auto von meinem Onkel ist neu.“ — Welcher Artikel passt?", opts: ["Der", "Die", "Das"], correct: "Das"},
+    {q: "„Ich kann sprechen gut Deutsch.“ — Was ist die richtige Wortstellung?", opts: ["Ich kann gut Deutsch sprechen.", "Ich kann Deutsch sprechen gut.", "Ich kann sprechen Deutsch gut."], correct: "Ich kann gut Deutsch sprechen."},
+    {q: "„Ich ___ nächstes Jahr nach Berlin fahren.“ — Futur I: welche Form passt zu „ich“?", opts: ["werde", "wird", "werden"], correct: "werde"},
+    {q: "Wie lautet die richtige Imperativform (du-Form) von „sein“ im Satz „___ leise!“?", opts: ["Sei", "Bist", "Seid"], correct: "Sei"},
+    {q: "„Ich bin froh, dass ich habe eine gute Note bekommen.“ — Welcher Nebensatz ist richtig?", opts: ["dass ich eine gute Note bekommen habe", "dass habe ich eine gute Note bekommen", "dass ich habe bekommen eine gute Note"], correct: "dass ich eine gute Note bekommen habe"}
+  ];
+  buildQuiz('ub2-quiz', ub2Data);
+
+  // Üb. 3: пропуски
+  setTotal(document.querySelectorAll('#ub3-list .blank-input').length);
+  document.getElementById('ub3-check').addEventListener('click', () => {
+    checkBlanks('ub3-list', 'ub3-score', 'ub3');
+  });
+  document.getElementById('ub3-reset').addEventListener('click', () => {
+    resetBlanks('ub3-list', 'ub3-score', 'ub3');
+  });
+
+  // Fertig!
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🕵️','🔍','📚','🎯']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
