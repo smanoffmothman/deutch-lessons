@@ -271,5 +271,15 @@ const LESSONS = [
     file: "klas-7/modul-a/lektion-12.html",
     nove: true,
     dz: "Schreib einen kurzen Text (6–8 Sätze) über ein Familienfest, das du besonders gut in Erinnerung hast (z. B. Geburtstag, Weihnachten, ein anderes Fest). Erzähl im Perfekt, was passiert ist, und benutze mindestens zwei Adjektive mit richtiger Endung (z. B. ein schönes Fest, eine lustige Party) sowie eine Häufigkeitsangabe (z. B. jedes Jahr, einmal im Jahr)."
+  },
+  {
+    klas: "8",
+    modul: "A",
+    lektion: 7,
+    nazva: "Extreme Sportarten und aktive Erholung",
+    opys: "Форумні дописи підлітків про спорт (Fitness-Studio, Handball, Eishockey, Tanzen), повторення прийменників з Genitiv на автентичному тексті та два аудіювання.",
+    file: "klas-8/modul-a/lektion-7.html",
+    nove: true,
+    dz: "Schreib einen kurzen Forumsbeitrag (6–8 Sätze) über deine eigene aktive Erholung, ähnlich wie Sabine, Paul, Lukas oder Maria. Benutze dabei mindestens drei Präpositionen mit Genitiv (innerhalb, außerhalb, während, wegen, unweit, infolge, trotz) und erzähl auch, was dich an deiner Sportart am meisten fasziniert."
   }
 ];

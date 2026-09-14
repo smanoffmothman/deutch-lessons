@@ -296,6 +296,18 @@ const GLOSSARY = [
   {de: "Eier bemalen", uk: "розписувати (фарбувати) яйця", klas: "7", modul: "A", lektion: 12},
   {de: "der Wettbewerb", uk: "змагання", klas: "7", modul: "A", lektion: 12},
   {de: "toben", uk: "пустувати, галасувати весело", klas: "7", modul: "A", lektion: 12},
-  {de: "festlich", uk: "святковий, урочистий", klas: "7", modul: "A", lektion: 12}
+  {de: "festlich", uk: "святковий, урочистий", klas: "7", modul: "A", lektion: 12},
+  {de: "das Fitness-Studio", uk: "фітнес-клуб, тренажерна зала", klas: "8", modul: "A", lektion: 7},
+  {de: "die Rückengymnastik", uk: "гімнастика для спини", klas: "8", modul: "A", lektion: 7},
+  {de: "der/die Yogalehrer(in)", uk: "вчитель(-ка) йоги", klas: "8", modul: "A", lektion: 7},
+  {de: "inlineskaten", uk: "кататися на роликах", klas: "8", modul: "A", lektion: 7},
+  {de: "das Handballtraining", uk: "тренування з гандболу", klas: "8", modul: "A", lektion: 7},
+  {de: "das Eishockey", uk: "хокей на льоду", klas: "8", modul: "A", lektion: 7},
+  {de: "das Thaiboxen", uk: "тайський бокс", klas: "8", modul: "A", lektion: 7},
+  {de: "der Teamgeist", uk: "командний дух", klas: "8", modul: "A", lektion: 7},
+  {de: "das Federball", uk: "бадмінтон", klas: "8", modul: "A", lektion: 7},
+  {de: "die Tanzschule", uk: "школа танців", klas: "8", modul: "A", lektion: 7},
+  {de: "grenzenloses Vergnügen", uk: "безмежне задоволення", klas: "8", modul: "A", lektion: 7},
+  {de: "kaum vergleichbar sein (mit +Dat.)", uk: "бути майже непорівнянним (з чимось)", klas: "8", modul: "A", lektion: 7}
 ];
 
