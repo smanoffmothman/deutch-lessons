@@ -283,6 +283,19 @@ const GLOSSARY = [
   {de: "Grimassen machen", uk: "корчити гримаси", klas: "7", modul: "A", lektion: 11},
   {de: "das Fähnchen", uk: "прапорець", klas: "7", modul: "A", lektion: 11},
   {de: "der Ausflug (die Ausflüge)", uk: "прогулянка, екскурсія (тут: виїзд компанією)", klas: "7", modul: "A", lektion: 11},
-  {de: "gemeinsam", uk: "спільний, спільно, разом", klas: "7", modul: "A", lektion: 11}
+  {de: "gemeinsam", uk: "спільний, спільно, разом", klas: "7", modul: "A", lektion: 11},
+  {de: "Ostern", uk: "Великдень", klas: "7", modul: "A", lektion: 12},
+  {de: "Weihnachten", uk: "Різдво", klas: "7", modul: "A", lektion: 12},
+  {de: "der Tannenbaum", uk: "ялинка", klas: "7", modul: "A", lektion: 12},
+  {de: "schmücken", uk: "прикрашати", klas: "7", modul: "A", lektion: 12},
+  {de: "backen", uk: "пекти", klas: "7", modul: "A", lektion: 12},
+  {de: "das Plätzchen", uk: "печиво (різдвяне)", klas: "7", modul: "A", lektion: 12},
+  {de: "die Bescherung", uk: "роздача подарунків (на Різдво)", klas: "7", modul: "A", lektion: 12},
+  {de: "die Kerze", uk: "свічка", klas: "7", modul: "A", lektion: 12},
+  {de: "ausblasen (trennbar)", uk: "задувати (свічки)", klas: "7", modul: "A", lektion: 12},
+  {de: "Eier bemalen", uk: "розписувати (фарбувати) яйця", klas: "7", modul: "A", lektion: 12},
+  {de: "der Wettbewerb", uk: "змагання", klas: "7", modul: "A", lektion: 12},
+  {de: "toben", uk: "пустувати, галасувати весело", klas: "7", modul: "A", lektion: 12},
+  {de: "festlich", uk: "святковий, урочистий", klas: "7", modul: "A", lektion: 12}
 ];
 

@@ -261,5 +261,15 @@ const LESSONS = [
     file: "klas-7/modul-a/lektion-11.html",
     nove: true,
     dz: "Schreib 6–8 Sätze im Futur I darüber, was deine Familie am nächsten Wochenende gemeinsam unternehmen wird. Benutze mindestens vier Verben mit „werden + Infinitiv“ und nenne mindestens zwei Familientraditionen (z. B. gemeinsames Essen, ein Ausflug, ein Spaziergang, Verwandte besuchen)."
+  },
+  {
+    klas: "7",
+    modul: "A",
+    lektion: 12,
+    nazva: "Familienfeste: wie feiert deine Familie?",
+    opys: "Тренуємо Futur I (перевірка ДЗ), зіставляємо картинки зі святами, читаємо три тексти про традиції родини König (Ostern, Weihnachten, Geburtstag) з прикметниковими закінченнями і перевіряємо розуміння в Richtig/Falsch.",
+    file: "klas-7/modul-a/lektion-12.html",
+    nove: true,
+    dz: "Schreib einen kurzen Text (6–8 Sätze) über ein Familienfest, das du besonders gut in Erinnerung hast (z. B. Geburtstag, Weihnachten, ein anderes Fest). Erzähl im Perfekt, was passiert ist, und benutze mindestens zwei Adjektive mit richtiger Endung (z. B. ein schönes Fest, eine lustige Party) sowie eine Häufigkeitsangabe (z. B. jedes Jahr, einmal im Jahr)."
   }
 ];
