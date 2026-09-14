@@ -215,5 +215,15 @@ const GLOSSARY = [
   {de: "der Umweltschutz", uk: "охорона довкілля", klas: "9", modul: "A", lektion: 3},
   {de: "das Auslandssemester", uk: "семестр навчання за кордоном", klas: "9", modul: "A", lektion: 3},
   {de: "die Sehenswürdigkeit", uk: "визначна пам'ятка", klas: "9", modul: "A", lektion: 3},
-  {de: "die Bibliothek", uk: "бібліотека", klas: "9", modul: "A", lektion: 3}
+  {de: "die Bibliothek", uk: "бібліотека", klas: "9", modul: "A", lektion: 3},
+  {de: "der Nebensatz", uk: "підрядне речення", klas: "9", modul: "A", lektion: 4},
+  {de: "der Komparativ", uk: "другий (порівняльний) ступінь порівняння прикметників", klas: "9", modul: "A", lektion: 4},
+  {de: "das Modalverb (die Modalverben)", uk: "модальне дієслово", klas: "9", modul: "A", lektion: 4},
+  {de: "das Präteritum", uk: "минулий час (наративний, для розповіді)", klas: "9", modul: "A", lektion: 4},
+  {de: "der Imperativ", uk: "наказовий спосіб", klas: "9", modul: "A", lektion: 4},
+  {de: "die Wortstellung", uk: "порядок слів (у реченні)", klas: "9", modul: "A", lektion: 4},
+  {de: "die Erfahrung", uk: "досвід, враження", klas: "9", modul: "A", lektion: 4},
+  {de: "verbessern", uk: "покращувати, вдосконалювати", klas: "9", modul: "A", lektion: 4},
+  {de: "der Abschluss", uk: "завершення (школи), випуск", klas: "9", modul: "A", lektion: 4},
+  {de: "schützen", uk: "захищати, охороняти", klas: "9", modul: "A", lektion: 4}
 ];

@@ -201,5 +201,15 @@ const LESSONS = [
     file: "klas-9/modul-a/lektion-3.html",
     nove: true,
     dz: "Schau dir noch einmal deine Antworten aus der Diagnose an und markiere, wo du dir unsicher warst. Schreib außerdem 4–5 Sätze: Was möchtest du in Zukunft beruflich machen, und was kannst du persönlich für den Umweltschutz tun? Benutze dabei mindestens ein Modalverb (z. B. möchten, wollen, müssen, können)."
+  },
+  {
+    klas: "9",
+    modul: "A",
+    lektion: 4,
+    nazva: "Fehlerdetektive: Grammatik unter der Lupe",
+    opys: "Аналіз типових помилок вхідної діагностувальної роботи у форматі гри-розслідування: знаходимо помилки у вигаданому листі (Nebensätze, Komparativ, Artikel, Präteritum, Modalverben, Futur I, Imperativ) і закріплюємо теми у квізі й вправі на пропуски.",
+    file: "klas-9/modul-a/lektion-4.html",
+    nove: true,
+    dz: "Schreib 5–6 Sätze über deine Zukunftspläne: Was möchtest du nach der Schule machen? Benutze dabei mindestens ein Modalverb (z. B. möchten, wollen, können), eine Futur-I-Form (werde ... + Infinitiv), einen Komparativ (z. B. interessanter, besser) und einen Satz mit „weil“ (mit dem Verb am Satzende)."
   }
 ];
