@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 6 · Modul A · Wenn alle zusammen sind</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 9'},
+    {label: 'Урок 6: Коли всі разом…'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 6 · MODUL A</span>
+        <h1>Wenn alle zusammen sind…</h1>
+        <p class="sub">Стосунки в родині: хто про кого дбає, хто з ким конфліктує — і речення з wenn, які пояснюють, коли саме це стається.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Verben + Präpositionen</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Personalpronomen</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · wenn-Sätze</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Und du?</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== START ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Worum geht es in dieser Stunde?</h2>
+      <div class="card">
+        <p>In dieser Stunde sprechen wir darüber, wie Familienmitglieder miteinander umgehen: wer sich um wen kümmert, wer mit wem engen Kontakt hat und was passiert, wenn es in der Familie Streit oder Harmonie gibt. Wir wiederholen feste Verb-Präposition-Verbindungen (z. B. <em>sorgen für</em>, <em>Angst haben vor</em>), üben Personalpronomen im Dativ und Akkusativ und bauen wenn-Sätze mit der richtigen Wortfolge.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Сьогодні говоримо про стосунки в родині: хто про кого піклується, хто з ким має тісний контакт і що відбувається, коли в родині сварка чи, навпаки, гармонія. Повторюємо дієслова зі сталими прийменниками (напр. <em>sorgen für</em> — піклуватися про, <em>Angst haben vor</em> — боятися когось), тренуємо особові займенники у Dativ і Akkusativ та вчимося будувати речення з <em>wenn</em> (коли/якщо) з правильним порядком слів.
+        </div>
+      </div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Hallo! Heute geht's um Familie — und um kleine Wörtchen wie "ihr", "ihm", "sie", die viel verändern können!</p>
+      </div>
+    </section>
+
+    <!-- ===== HAUSAUFGABE ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: написати короткий текст (6–8 речень) про стосунки у своїй родині чи родині друга/подруги, використавши щонайменше чотири вирази з Üb. 3 (напр. <em>einander gut verstehen</em>, <em>engen Kontakt haben</em>, <em>Respekt haben</em>, <em>sich streiten</em>) і одне речення з <em>weil</em>.
+      </div>
+      <p class="lead">Перш ніж читати свої тексти в парах, перевір, чи пам'ятаєш ці вирази з минулого уроку — обери правильний переклад.</p>
+      <div id="dz-check"></div>
+    </section>
+
+    <!-- ===== ÜB. 1: Verben mit Präpositionen ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Welche Präposition passt?</h2>
+      <p class="lead">Багато дієслів, які описують стосунки в родині, вимагають конкретного прийменника з конкретним відмінком — це потрібно просто запам'ятати. Обери правильний прийменник для кожного виразу.</p>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Українською</span>
+        <dl>
+          <dt>sorgen für (+Akk.)</dt><dd>піклуватися про когось</dd>
+          <dt>Angst haben vor (+Dat.)</dt><dd>боятися когось/чогось</dd>
+          <dt>böse sein auf (+Akk.)</dt><dd>сердитися на когось</dd>
+          <dt>schimpfen mit (+Dat.)</dt><dd>сварити, лаяти когось</dd>
+          <dt>Respekt haben vor (+Dat.)</dt><dd>поважати когось</dd>
+          <dt>ein gutes Verhältnis haben zu (+Dat.)</dt><dd>мати добрі стосунки з кимось</dd>
+          <dt>engen Kontakt haben zu (+Dat.)</dt><dd>мати тісний контакт з кимось</dd>
+        </dl>
+      </div>
+      <div id="ub1-quiz"></div>
+    </section>
+
+    <!-- ===== ÜB. 2: Personalpronomen ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Ergänze die Personalpronomen</h2>
+      <p class="lead">Встав займенник у правильній формі (Dativ або Akkusativ — залежно від дієслова з Üb. 1).</p>
+      <!-- ПРИМІТКА для наступного разу: у підручнику ця вправа супроводжується
+           аудіозаписом для самоперевірки ("höre das Audio zur Kontrolle").
+           Аудіофайл для цього уроку поки не надіслано, тому плеєр (wirePlayer,
+           id="audio1"/"play1"/"seek1"/"time1") тут навмисно не вставлений —
+           щойно матимеш base64/файл, допишемо його сюди тим самим патерном,
+           що й в інших уроках. -->
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> Die Geschwister streiten sich oft. Mia meint, der ältere Bruder liebt sie gar nicht und versteht <input type="text" class="blank-input" style="width:80px;display:inline-block;" data-ans="sie"> nicht.</div>
+        <div class="fill-item"><span class="num">2)</span> Tante Petra ist sehr streng. Die Neffen haben Angst vor <input type="text" class="blank-input" style="width:80px;display:inline-block;" data-ans="ihr">.</div>
+        <div class="fill-item"><span class="num">3)</span> Florian ist faul und hilft zu Hause nicht. Seine Mutter schimpft oft mit <input type="text" class="blank-input" style="width:80px;display:inline-block;" data-ans="ihm">.</div>
+        <div class="fill-item"><span class="num">4)</span> Die Eltern sorgen für ihre Kinder und unterstützen <input type="text" class="blank-input" style="width:80px;display:inline-block;" data-ans="sie"> immer.</div>
+        <div class="fill-item"><span class="num">5)</span> Felix nimmt immer meine Sachen. Ich bin böse auf <input type="text" class="blank-input" style="width:80px;display:inline-block;" data-ans="ihn">.</div>
+        <div class="fill-item"><span class="num">6)</span> Sarah ist sehr nett. Alle Verwandten mögen <input type="text" class="blank-input" style="width:80px;display:inline-block;" data-ans="sie">.</div>
+        <div class="fill-item"><span class="num">7)</span> Warum hast du Angst vor <input type="text" class="blank-input" style="width:70px;display:inline-block;" data-ans="mir">? Ich habe <input type="text" class="blank-input" style="width:70px;display:inline-block;" data-ans="dir"> nichts getan.</div>
+        <div class="fill-item"><span class="num">8)</span> Wir haben ein gutes Verhältnis zu unseren Großeltern und helfen <input type="text" class="blank-input" style="width:80px;display:inline-block;" data-ans="ihnen"> gern.</div>
+        <div class="fill-item"><span class="num">9)</span> Ihr solltet euch keine Sorgen darum machen. Die ganze Familie will <input type="text" class="blank-input" style="width:80px;display:inline-block;" data-ans="euch"> helfen.</div>
+        <div class="fill-item"><span class="num">10)</span> Nun kann ich <input type="text" class="blank-input" style="width:70px;display:inline-block;" data-ans="dir"> nicht helfen. Du musstest <input type="text" class="blank-input" style="width:70px;display:inline-block;" data-ans="mich"> früher um Hilfe bitten.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== ÜB. 3: wenn-Sätze ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Kombiniere die wenn-Sätze</h2>
+      <p class="lead">Обери правильне продовження кожного речення. Пам'ятай про порядок слів: у Nebensatz (частина з wenn) дієслово стоїть в кінці; якщо речення починається з wenn-частини, у Hauptsatz дієслово одразу після коми.</p>
+      <div class="card tinted-teal">
+        <p style="margin:0;"><strong>Wortfolge im wenn-Satz:</strong> Ich fühle mich glücklich, <u>wenn</u> die ganze Familie zusammen<u>kommt</u>. &nbsp;|&nbsp; <u>Wenn</u> Leas Bruder ihr Smartphone <u>nimmt</u>, gibt es Krach.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          У підрядному реченні з wenn дієслово завжди стоїть в самому кінці. Якщо все речення починається з такої підрядної частини — головне речення після коми починається одразу з дієслова.
+        </div>
+      </div>
+      <div id="ub3-quiz"></div>
+    </section>
+
+    <!-- ===== ÜB. 4: Und du? (відкриті відповіді) ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Und du? Ergänze die Sätze</h2>
+      <p class="lead">Допиши речення про себе. Потім натисни "Beispiel zeigen", щоб порівняти зі зразком (це не єдина правильна відповідь!).</p>
+      <div id="ub4-list"></div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Schreib einen kurzen Text (6–8 Sätze) über deine Familie: Wann fühlst du dich glücklich, gestresst oder stolz in deiner Familie? Benutze mindestens drei wenn-Sätze (z. B. „Ich bin glücklich, wenn …") und mindestens zwei Personalpronomen im Dativ oder Akkusativ (z. B. ihm, ihr, ihnen).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Напиши короткий текст (6–8 речень) про свою родину: коли ти почуваєшся щасливим/ою, у стресі чи гордим/ою за родину? Використай щонайменше три речення з wenn (напр. „Ich bin glücklich, wenn …") і щонайменше два особові займенники у Dativ або Akkusativ (напр. ihm, ihr, ihnen).
+        </div>
+      </div>
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  // ---- Hausaufgabenkontrolle: quiz на повторення виразів минулого уроку
+  const dzData = [
+    {q: "einander gut verstehen", opts: ["розуміти одне одного", "сваритися", "боятися когось"], correct: "розуміти одне одного"},
+    {q: "engen Kontakt haben zu", opts: ["мати тісний контакт з", "мати добрі стосунки з", "поважати"], correct: "мати тісний контакт з"},
+    {q: "Respekt haben vor", opts: ["піклуватися про", "поважати", "підтримувати"], correct: "поважати"},
+    {q: "sich streiten", opts: ["сваритися", "радіти", "підтримувати"], correct: "сваритися"}
+  ];
+  buildQuiz('dz-check', dzData);
+
+  // ---- Üb. 1: Verben + Präpositionen
+  const ub1Data = [
+    {q: "sorgen ___ (die Kinder)", opts: ["für", "zu", "vor"], correct: "für"},
+    {q: "Angst haben ___ (+Dativ)", opts: ["mit", "vor", "auf"], correct: "vor"},
+    {q: "böse sein ___ (+Akkusativ)", opts: ["mit", "vor", "auf"], correct: "auf"},
+    {q: "schimpfen ___ (+Dativ)", opts: ["mit", "für", "zu"], correct: "mit"},
+    {q: "Respekt haben ___ (+Dativ)", opts: ["zu", "vor", "für"], correct: "vor"},
+    {q: "ein gutes Verhältnis haben ___ (+Dativ)", opts: ["mit", "vor", "zu"], correct: "zu"},
+    {q: "engen Kontakt haben ___ (+Dativ)", opts: ["zu", "auf", "für"], correct: "zu"}
+  ];
+  buildQuiz('ub1-quiz', ub1Data);
+
+  // ---- Üb. 2: пропуски
+  setTotal(document.querySelectorAll('#ub2-list .blank-input').length);
+  document.getElementById('ub2-check').addEventListener('click', () => {
+    checkBlanks('ub2-list', 'ub2-score', 'ub2');
+  });
+  document.getElementById('ub2-reset').addEventListener('click', () => {
+    resetBlanks('ub2-list', 'ub2-score', 'ub2');
+  });
+
+  // ---- Üb. 3: wenn-Sätze
+  const ub3Data = [
+    {q: "Manuel ist gestresst, …", opts: ["wenn seine Eltern Krach machen und sich heftig streiten.", "wenn unsere Verwandten aus dem Ausland kommen.", "wenn ihre Schwester ihre Kleidung trägt.", "wenn der Vater mit ihnen schimpft."], correct: "wenn seine Eltern Krach machen und sich heftig streiten."},
+    {q: "Karin ist sauer, …", opts: ["wenn der Vater mit ihnen schimpft.", "wenn ihre Schwester ihre Kleidung trägt.", "wenn seine Eltern Krach machen.", "wenn unsere Verwandten kommen."], correct: "wenn ihre Schwester ihre Kleidung trägt."},
+    {q: "Ich finde es super, …", opts: ["wenn ihre Schwester ihre Kleidung trägt.", "wenn der Vater mit ihnen schimpft.", "wenn unsere Verwandten aus dem Ausland kommen.", "wenn seine Eltern Krach machen."], correct: "wenn unsere Verwandten aus dem Ausland kommen."},
+    {q: "Die Kinder haben Angst, …", opts: ["wenn unsere Verwandten kommen.", "wenn seine Eltern Krach machen.", "wenn ihre Schwester ihre Kleidung trägt.", "wenn der Vater mit ihnen schimpft."], correct: "wenn der Vater mit ihnen schimpft."},
+    {q: "Wenn es keinen Krach in der Familie gibt, …", opts: ["ist Viktor glücklich.", "ist Beate böse auf sie.", "sind wir stolz auf sie.", "macht sich die Oma Sorgen."], correct: "ist Viktor glücklich."},
+    {q: "Wenn die Geschwister nicht beim Aufräumen helfen wollen, …", opts: ["macht sich die Oma Sorgen.", "ist Beate böse auf sie.", "ist Viktor glücklich.", "sind wir stolz auf sie."], correct: "ist Beate böse auf sie."},
+    {q: "Wenn unsere Verwandten bestimmte Erfolge haben, …", opts: ["ist Beate böse auf sie.", "macht sich die Oma Sorgen.", "sind wir stolz auf sie.", "ist Viktor glücklich."], correct: "sind wir stolz auf sie."},
+    {q: "Wenn jemand aus der Familie Probleme hat, …", opts: ["ist Viktor glücklich.", "sind wir stolz auf sie.", "ist Beate böse auf sie.", "macht sich die Oma Sorgen."], correct: "macht sich die Oma Sorgen."}
+  ];
+  buildQuiz('ub3-quiz', ub3Data);
+
+  // ---- Üb. 4: відкриті відповіді з розкриттям зразка
+  const ub4Data = [
+    {label: "Ich bin glücklich, wenn …", sample: "Ich bin glücklich, wenn meine ganze Familie am Wochenende zusammen isst."},
+    {label: "Ich bin sauer, wenn …", sample: "Ich bin sauer, wenn jemand meine Sachen ohne zu fragen nimmt."},
+    {label: "Ich freue mich immer, wenn …", sample: "Ich freue mich immer, wenn wir alle zusammen einen Ausflug machen."},
+    {label: "Ich habe Angst, wenn …", sample: "Ich habe Angst, wenn meine Eltern sich laut streiten."},
+    {label: "Wenn …, bin ich gestresst.", sample: "Wenn ich zu viele Hausaufgaben habe, bin ich gestresst."},
+    {label: "Wenn …, mache ich mir Sorgen.", sample: "Wenn jemand aus meiner Familie krank ist, mache ich mir Sorgen."},
+    {label: "Wenn …, bin ich traurig.", sample: "Wenn meine Freunde keine Zeit für mich haben, bin ich traurig."},
+    {label: "Wenn …, können wir uns streiten.", sample: "Wenn wir unterschiedlicher Meinung sind, können wir uns streiten."}
+  ];
+  const ub4Wrap = document.getElementById('ub4-list');
+  ub4Data.forEach((item, i) => {
+    const div = document.createElement('div');
+    div.className = 'qa';
+    div.innerHTML = `<label>${i+1}. ${item.label}</label>
+      <textarea rows="2" placeholder="Schreib deinen Satz hier..."></textarea>
+      <button class="btn small secondary" style="margin-top:8px;">Beispiel zeigen</button>
+      <div class="reveal">${item.sample}</div>`;
+    div.querySelector('button').addEventListener('click', (e) => {
+      div.querySelector('.reveal').classList.toggle('show');
+    });
+    ub4Wrap.appendChild(div);
+  });
+
+  // ---- Fertig!
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['👨‍👩‍👧‍👦','❤️','🤝','🏡']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
