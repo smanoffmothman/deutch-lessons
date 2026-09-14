@@ -126,6 +126,36 @@ body{ margin:0; }
   border:1.5px solid var(--line); background:#fff; color:var(--ink);
 }
 .glossary-count{ font-size:13px; color:var(--ink-soft); margin:0 0 14px; }
+
+/* Буквений покажчик — швидкий перехід до групи слів на цю літеру */
+.letter-index{
+  display:flex; flex-wrap:wrap; gap:5px;
+  margin:16px 0 6px;
+  font-family:var(--sans);
+}
+.letter-index a.letter-btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:26px; height:26px;
+  border-radius:6px;
+  background:var(--card); border:1px solid var(--line);
+  color:var(--teal-deep); font-size:12.5px; font-weight:700;
+  text-decoration:none;
+  transition:background .12s ease, border-color .12s ease;
+}
+.letter-index a.letter-btn:hover{
+  background:var(--teal-soft); border-color:var(--teal);
+}
+
+/* Заголовок-літера над групою слів — "прилипає" зверху при скролі */
+.glossary-letter{
+  position:sticky; top:0; z-index:2;
+  background:var(--paper);
+  font-family:var(--serif); font-weight:700; font-size:15px;
+  color:var(--teal-deep);
+  padding:9px 14px 5px;
+  margin-top:8px;
+  border-bottom:1px solid var(--line);
+}
 .glossary-list{ display:flex; flex-direction:column; gap:1px; }
 .glossary-row{
   display:flex; gap:16px;
