@@ -320,6 +320,17 @@ const GLOSSARY = [
   {de: "der Nervenkitzel", uk: "гострі відчуття, адреналін", klas: "8", modul: "A", lektion: 8},
   {de: "die Ausrüstung", uk: "спорядження, екіпіровка", klas: "8", modul: "A", lektion: 8},
   {de: "überwinden", uk: "долати (перешкоду, страх)", klas: "8", modul: "A", lektion: 8},
-  {de: "wagen", uk: "наважуватися, ризикувати", klas: "8", modul: "A", lektion: 8}
+  {de: "wagen", uk: "наважуватися, ризикувати", klas: "8", modul: "A", lektion: 8},
+  {de: "die Meinung (meiner Meinung nach)", uk: "думка (на мою думку)", klas: "9", modul: "A", lektion: 8},
+  {de: "der Tipp (die Tipps)", uk: "порада", klas: "9", modul: "A", lektion: 8},
+  {de: "ratsam sein", uk: "бути доцільним, вартим поради", klas: "9", modul: "A", lektion: 8},
+  {de: "das Gefühl (die Gefühle)", uk: "почуття", klas: "9", modul: "A", lektion: 8},
+  {de: "bevorzugen", uk: "надавати перевагу (комусь)", klas: "9", modul: "A", lektion: 8},
+  {de: "ungerecht", uk: "несправедливий", klas: "9", modul: "A", lektion: 8},
+  {de: "das Lob", uk: "похвала", klas: "9", modul: "A", lektion: 8},
+  {de: "loben", uk: "хвалити", klas: "9", modul: "A", lektion: 8},
+  {de: "die Unterstützung", uk: "підтримка", klas: "9", modul: "A", lektion: 8},
+  {de: "das Familienklima", uk: "клімат (атмосфера) у родині", klas: "9", modul: "A", lektion: 8},
+  {de: "diskutieren", uk: "обговорювати", klas: "9", modul: "A", lektion: 8}
 ];
 

@@ -291,5 +291,15 @@ const LESSONS = [
     file: "klas-8/modul-a/lektion-8.html",
     nove: true,
     dz: "Schreib einen kurzen Text (6–8 Sätze) über eine Extremsportart, die dich am meisten interessiert. Benutze dabei mindestens drei Sätze mit „man“ und einem Modalverb (man muss, man kann, man darf, man braucht) und erkläre, warum genau diese Sportart für dich einen echten Nervenkitzel bedeutet."
+  },
+  {
+    klas: "9",
+    modul: "A",
+    lektion: 8,
+    nazva: "Zwischenmenschliche Beziehungen in der Familie",
+    opys: "Читаємо про родинні ситуації трьох підлітків (Eddy, Marianna, Miriam), вчимось давати поради за допомогою модальних дієслів з 'man' і мовних кліше для дискусії, пишемо власні поради для доброго клімату в родині.",
+    file: "klas-9/modul-a/lektion-8.html",
+    nove: true,
+    dz: "Wähle eine der drei Personen aus Üb. 1 (Eddy, Marianna oder Miriam) und schreib ihr/ihm eine kurze Antwort (6–8 Sätze): Gib konkrete Ratschläge zu genau ihrer/seiner Familiensituation. Benutze dabei mindestens zwei Sätze mit „man“ + Modalverb (man muss, man soll, man kann) und mindestens ein Redemittel zum Diskutieren (z. B. „Ich denke, dass ...“, „Meiner Meinung nach ...“)."
   }
 ];
