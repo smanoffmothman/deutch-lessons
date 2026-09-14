@@ -308,6 +308,18 @@ const GLOSSARY = [
   {de: "das Federball", uk: "бадмінтон", klas: "8", modul: "A", lektion: 7},
   {de: "die Tanzschule", uk: "школа танців", klas: "8", modul: "A", lektion: 7},
   {de: "grenzenloses Vergnügen", uk: "безмежне задоволення", klas: "8", modul: "A", lektion: 7},
-  {de: "kaum vergleichbar sein (mit +Dat.)", uk: "бути майже непорівнянним (з чимось)", klas: "8", modul: "A", lektion: 7}
+  {de: "kaum vergleichbar sein (mit +Dat.)", uk: "бути майже непорівнянним (з чимось)", klas: "8", modul: "A", lektion: 7},
+  {de: "das Freiklettern", uk: "вільне скелелазіння (без страхувального спорядження)", klas: "8", modul: "A", lektion: 8},
+  {de: "das Fallschirmspringen", uk: "стрибки з парашутом", klas: "8", modul: "A", lektion: 8},
+  {de: "das Mountainbiking", uk: "гірський велоспорт", klas: "8", modul: "A", lektion: 8},
+  {de: "das Bungeejumping", uk: "банджі-джампінг (стрибки на еластичному тросі)", klas: "8", modul: "A", lektion: 8},
+  {de: "das Rafting", uk: "рафтинг (сплав на надувному човні)", klas: "8", modul: "A", lektion: 8},
+  {de: "der Parkour", uk: "паркур", klas: "8", modul: "A", lektion: 8},
+  {de: "das Canyoning", uk: "каньйонінг", klas: "8", modul: "A", lektion: 8},
+  {de: "das Klettern in der Halle", uk: "скелелазіння в залі (на штучному скеледромі)", klas: "8", modul: "A", lektion: 8},
+  {de: "der Nervenkitzel", uk: "гострі відчуття, адреналін", klas: "8", modul: "A", lektion: 8},
+  {de: "die Ausrüstung", uk: "спорядження, екіпіровка", klas: "8", modul: "A", lektion: 8},
+  {de: "überwinden", uk: "долати (перешкоду, страх)", klas: "8", modul: "A", lektion: 8},
+  {de: "wagen", uk: "наважуватися, ризикувати", klas: "8", modul: "A", lektion: 8}
 ];
 

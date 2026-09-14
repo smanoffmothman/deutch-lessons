@@ -281,5 +281,15 @@ const LESSONS = [
     file: "klas-8/modul-a/lektion-7.html",
     nove: true,
     dz: "Schreib einen kurzen Forumsbeitrag (6–8 Sätze) über deine eigene aktive Erholung, ähnlich wie Sabine, Paul, Lukas oder Maria. Benutze dabei mindestens drei Präpositionen mit Genitiv (innerhalb, außerhalb, während, wegen, unweit, infolge, trotz) und erzähl auch, was dich an deiner Sportart am meisten fasziniert."
+  },
+  {
+    klas: "8",
+    modul: "A",
+    lektion: 8,
+    nazva: "Wir treiben Sport",
+    opys: "Інтерв'ю про спортивні звички, назви екстремальних видів спорту (Freiklettern, Fallschirmspringen, Mountainbiking, Bungeejumping, Rafting, Parkour, Canyoning) з аудіюванням та граматика 'man + Modalverb'.",
+    file: "klas-8/modul-a/lektion-8.html",
+    nove: true,
+    dz: "Schreib einen kurzen Text (6–8 Sätze) über eine Extremsportart, die dich am meisten interessiert. Benutze dabei mindestens drei Sätze mit „man“ und einem Modalverb (man muss, man kann, man darf, man braucht) und erkläre, warum genau diese Sportart für dich einen echten Nervenkitzel bedeutet."
   }
 ];
