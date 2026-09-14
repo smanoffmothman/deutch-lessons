@@ -108,12 +108,29 @@ function renderClassCatalog(klasList, lessonFileBase){
 }
 
 /* ---------- Глосарій ---------- */
+
+// Ключ для алфавітного сортування: те саме слово, що й у "de",
+// але без початкового артикля (der/die/das) і без "sich" — інакше
+// майже всі іменники (переважна більшість слів у глосарії) стояли б
+// під однією літерою "D", а зворотні дієслова — під "S". Сам текст
+// w.de при цьому НЕ змінюється, ключ рахується лише для сортування
+// й для визначення літери-заголовка групи.
+function glossarySortKey(de){
+  let s = (de || '').trim();
+  s = s.replace(/^(der|die|das)\s+/i, '');
+  s = s.replace(/^sich\s+/i, '');
+  s = s.toUpperCase();
+  s = s.replace(/Ä/g, 'A').replace(/Ö/g, 'O').replace(/Ü/g, 'U');
+  return s;
+}
+
 function renderGlossary(){
   const wordsEl = document.getElementById('glossaryList');
   const countEl = document.getElementById('glossaryCount');
   const klasSel = document.getElementById('filterKlas');
   const modSel = document.getElementById('filterModul');
   const searchEl = document.getElementById('glossarySearch');
+  const indexEl = document.getElementById('letterIndex');
 
   const klasy = [...new Set(GLOSSARY.map(w => w.klas))].sort();
   klasy.forEach(k => {
@@ -133,13 +150,32 @@ function renderGlossary(){
       if(q && !(w.de.toLowerCase().includes(q) || w.uk.toLowerCase().includes(q))) return false;
       return true;
     });
+    // Завжди за абеткою (за ключем без артикля/sich), а не за порядком
+    // додавання в масиві — саме це й вирішує проблему "як щось знайти".
+    filtered.sort((a, b) => glossarySortKey(a.de).localeCompare(glossarySortKey(b.de), 'de'));
+
     countEl.textContent = filtered.length + ' слів' + (filtered.length === 1 ? 'о' : filtered.length < 5 ? 'а' : '');
     wordsEl.innerHTML = '';
+    if(indexEl) indexEl.innerHTML = '';
+
     if(filtered.length === 0){
       wordsEl.innerHTML = '<p class="empty-note">Нічого не знайдено.</p>';
       return;
     }
+
+    let currentLetter = null;
+    const lettersPresent = [];
     filtered.forEach(w => {
+      const letter = glossarySortKey(w.de).charAt(0) || '#';
+      if(letter !== currentLetter){
+        currentLetter = letter;
+        lettersPresent.push(letter);
+        const header = document.createElement('div');
+        header.className = 'glossary-letter';
+        header.id = 'letter-' + letter;
+        header.textContent = letter;
+        wordsEl.appendChild(header);
+      }
       const row = document.createElement('div');
       row.className = 'glossary-row';
       row.innerHTML = '<span class="de">' + w.de + '</span>'
@@ -148,6 +184,16 @@ function renderGlossary(){
         + '<span class="tag">Модуль ' + w.modul + '</span>';
       wordsEl.appendChild(row);
     });
+
+    if(indexEl){
+      lettersPresent.forEach(l => {
+        const btn = document.createElement('a');
+        btn.className = 'letter-btn';
+        btn.href = '#letter-' + l;
+        btn.textContent = l;
+        indexEl.appendChild(btn);
+      });
+    }
   }
   [klasSel, modSel, searchEl].forEach(el => el.addEventListener('input', render));
   render();
