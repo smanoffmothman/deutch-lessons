@@ -237,5 +237,17 @@ const GLOSSARY = [
   {de: "der Respekt", uk: "повага", klas: "9", modul: "A", lektion: 5},
   {de: "der Verlass (klare Regeln mit Verlass)", uk: "надійність, певність (чіткі й надійні правила)", klas: "9", modul: "A", lektion: 5},
   {de: "der Reisepass", uk: "закордонний паспорт", klas: "9", modul: "A", lektion: 5},
-  {de: "die Chance", uk: "шанс, можливість", klas: "9", modul: "A", lektion: 5}
+  {de: "die Chance", uk: "шанс, можливість", klas: "9", modul: "A", lektion: 5},
+  {de: "sorgen für (+Akk.)", uk: "піклуватися про когось", klas: "9", modul: "A", lektion: 6},
+  {de: "Angst haben vor (+Dat.)", uk: "боятися когось/чогось", klas: "9", modul: "A", lektion: 6},
+  {de: "böse sein auf (+Akk.)", uk: "сердитися на когось", klas: "9", modul: "A", lektion: 6},
+  {de: "schimpfen mit (+Dat.)", uk: "сварити, лаяти когось", klas: "9", modul: "A", lektion: 6},
+  {de: "die Enkelkinder (Pl.)", uk: "онуки", klas: "9", modul: "A", lektion: 6},
+  {de: "die Nichte", uk: "племінниця", klas: "9", modul: "A", lektion: 6},
+  {de: "der Neffe", uk: "племінник", klas: "9", modul: "A", lektion: 6},
+  {de: "die Großeltern (Pl.)", uk: "бабуся й дідусь", klas: "9", modul: "A", lektion: 6},
+  {de: "streng", uk: "суворий", klas: "9", modul: "A", lektion: 6},
+  {de: "dankbar", uk: "вдячний", klas: "9", modul: "A", lektion: 6},
+  {de: "gestresst sein", uk: "бути в стресі, напруженим", klas: "9", modul: "A", lektion: 6},
+  {de: "stolz sein auf (+Akk.)", uk: "пишатися кимось/чимось", klas: "9", modul: "A", lektion: 6}
 ];

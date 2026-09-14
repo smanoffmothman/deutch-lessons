@@ -221,5 +221,15 @@ const LESSONS = [
     file: "klas-9/modul-a/lektion-5.html",
     nove: true,
     dz: "Schreib einen kurzen Text (6–8 Sätze) über die Beziehungen in deiner Familie oder in der Familie eines Freundes / einer Freundin. Benutze dabei mindestens vier Ausdrücke aus dem Wortmaterial von Üb. 3 (z. B. einander gut verstehen, engen Kontakt haben, Respekt haben, sich streiten) und einen Satz mit „weil“."
+  },
+  {
+    klas: "9",
+    modul: "A",
+    lektion: 6,
+    nazva: "Коли всі разом…",
+    opys: "Стосунки в родині: дієслова зі сталими прийменниками (sorgen für, Angst haben vor, böse sein auf...), особові займенники у Dativ/Akkusativ і речення з wenn (порядок слів).",
+    file: "klas-9/modul-a/lektion-6.html",
+    nove: true,
+    dz: "Schreib einen kurzen Text (6–8 Sätze) über deine Familie: Wann fühlst du dich glücklich, gestresst oder stolz in deiner Familie? Benutze mindestens drei wenn-Sätze (z. B. „Ich bin glücklich, wenn …“) und mindestens zwei Personalpronomen im Dativ oder Akkusativ (z. B. ihm, ihr, ihnen)."
   }
 ];
