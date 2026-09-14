@@ -273,6 +273,16 @@ const GLOSSARY = [
   {de: "den Tisch decken", uk: "накривати на стіл", klas: "7", modul: "A", lektion: 10},
   {de: "das Fenster putzen", uk: "мити вікна", klas: "7", modul: "A", lektion: 10},
   {de: "kein Problem sein", uk: "не бути проблемою, не складати труднощів", klas: "7", modul: "A", lektion: 10},
-  {de: "besonders (nicht besonders gern)", uk: "особливо (не особливо охоче)", klas: "7", modul: "A", lektion: 10}
+  {de: "besonders (nicht besonders gern)", uk: "особливо (не особливо охоче)", klas: "7", modul: "A", lektion: 10},
+  {de: "die Familientradition (die Familientraditionen)", uk: "сімейна традиція", klas: "7", modul: "A", lektion: 11},
+  {de: "das Familienfest", uk: "сімейне свято", klas: "7", modul: "A", lektion: 11},
+  {de: "der Gast (die Gäste)", uk: "гість (гості)", klas: "7", modul: "A", lektion: 11},
+  {de: "das Gebäck", uk: "випічка, солодка випічка", klas: "7", modul: "A", lektion: 11},
+  {de: "schmecken", uk: "бути смачним, смакувати", klas: "7", modul: "A", lektion: 11},
+  {de: "der Clown", uk: "клоун", klas: "7", modul: "A", lektion: 11},
+  {de: "Grimassen machen", uk: "корчити гримаси", klas: "7", modul: "A", lektion: 11},
+  {de: "das Fähnchen", uk: "прапорець", klas: "7", modul: "A", lektion: 11},
+  {de: "der Ausflug (die Ausflüge)", uk: "прогулянка, екскурсія (тут: виїзд компанією)", klas: "7", modul: "A", lektion: 11},
+  {de: "gemeinsam", uk: "спільний, спільно, разом", klas: "7", modul: "A", lektion: 11}
 ];
 

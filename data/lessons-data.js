@@ -251,5 +251,15 @@ const LESSONS = [
     file: "klas-7/modul-a/lektion-10.html",
     nove: true,
     dz: "Mach eine kleine Umfrage in deiner Familie: Frage mindestens drei Personen, welche Hausarbeit sie gern und welche sie nicht gern machen. Schreib die Ergebnisse auf (6–8 Sätze) und benutze dabei mindestens zwei Ausdrücke mit „gern“/„nicht gern“ und eine Häufigkeitsangabe (z. B. regelmäßig, zweimal am Tage)."
+  },
+  {
+    klas: "7",
+    modul: "A",
+    lektion: 11,
+    nazva: "Familientraditionen",
+    opys: "Вірш про вечірку в дідуся Мартіна (аудіювання), лексика сімейних традицій та нова граматична тема Futur I (werden + Infinitiv) на матеріалі діалогу Felix und Luisa.",
+    file: "klas-7/modul-a/lektion-11.html",
+    nove: true,
+    dz: "Schreib 6–8 Sätze im Futur I darüber, was deine Familie am nächsten Wochenende gemeinsam unternehmen wird. Benutze mindestens vier Verben mit „werden + Infinitiv“ und nenne mindestens zwei Familientraditionen (z. B. gemeinsames Essen, ein Ausflug, ein Spaziergang, Verwandte besuchen)."
   }
 ];
