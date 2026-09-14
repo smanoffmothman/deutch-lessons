@@ -231,5 +231,15 @@ const LESSONS = [
     file: "klas-9/modul-a/lektion-6.html",
     nove: true,
     dz: "Schreib einen kurzen Text (6–8 Sätze) über deine Familie: Wann fühlst du dich glücklich, gestresst oder stolz in deiner Familie? Benutze mindestens drei wenn-Sätze (z. B. „Ich bin glücklich, wenn …“) und mindestens zwei Personalpronomen im Dativ oder Akkusativ (z. B. ihm, ihr, ihnen)."
+  },
+  {
+    klas: "9",
+    modul: "A",
+    lektion: 7,
+    nazva: "Сімейні стосунки: Wortfolge im wenn-Satz",
+    opys: "Розбираємо два порядки слів у wenn-реченнях (Hauptsatz+Nebensatz і навпаки), тренуємось на комбінуванні речень, читаємо три форумні дописи підлітків про сімейні проблеми і шукаємо в одному з них усі wenn-речення.",
+    file: "klas-9/modul-a/lektion-7.html",
+    nove: true,
+    dz: "Schreib eine Antwort auf einen der Forumsbeiträge (6–8 Sätze): Gib der Person einen Rat, wie sie ihr Familienproblem lösen kann. Benutze mindestens drei wenn-Sätze (probiere beide Wortfolgen: Hauptsatz + wenn ... und Wenn ..., + Hauptsatz) und mindestens einen Satz mit einem Dativ-Verb (z. B. helfen, zuhören, raten)."
   }
 ];

@@ -249,5 +249,18 @@ const GLOSSARY = [
   {de: "streng", uk: "суворий", klas: "9", modul: "A", lektion: 6},
   {de: "dankbar", uk: "вдячний", klas: "9", modul: "A", lektion: 6},
   {de: "gestresst sein", uk: "бути в стресі, напруженим", klas: "9", modul: "A", lektion: 6},
-  {de: "stolz sein auf (+Akk.)", uk: "пишатися кимось/чимось", klas: "9", modul: "A", lektion: 6}
+  {de: "stolz sein auf (+Akk.)", uk: "пишатися кимось/чимось", klas: "9", modul: "A", lektion: 6},
+  {de: "der Hauptsatz", uk: "головне речення", klas: "9", modul: "A", lektion: 7},
+  {de: "die Endposition", uk: "кінцева позиція (місце дієслова в кінці підрядного речення)", klas: "9", modul: "A", lektion: 7},
+  {de: "sich Sorgen machen (um +Akk.)", uk: "турбуватися, хвилюватися (за когось/щось)", klas: "9", modul: "A", lektion: 7},
+  {de: "ungeduldig", uk: "нетерплячий", klas: "9", modul: "A", lektion: 7},
+  {de: "der Streit", uk: "сварка, конфлікт", klas: "9", modul: "A", lektion: 7},
+  {de: "helfen (+Dat.)", uk: "допомагати", klas: "9", modul: "A", lektion: 7},
+  {de: "zuhören (+Dat.)", uk: "слухати (когось), прислухатися", klas: "9", modul: "A", lektion: 7},
+  {de: "es tut mir leid", uk: "мені шкода, я співчуваю", klas: "9", modul: "A", lektion: 7},
+  {de: "die Kleinigkeit", uk: "дрібниця", klas: "9", modul: "A", lektion: 7},
+  {de: "erziehen", uk: "виховувати", klas: "9", modul: "A", lektion: 7},
+  {de: "fliehen (zu jemandem)", uk: "тікати, рятуватися втечею (до когось)", klas: "9", modul: "A", lektion: 7},
+  {de: "belasten", uk: "обтяжувати, напружувати (психологічно)", klas: "9", modul: "A", lektion: 7}
 ];
+
