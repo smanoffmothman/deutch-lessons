@@ -241,5 +241,15 @@ const LESSONS = [
     file: "klas-9/modul-a/lektion-7.html",
     nove: true,
     dz: "Schreib eine Antwort auf einen der Forumsbeiträge (6–8 Sätze): Gib der Person einen Rat, wie sie ihr Familienproblem lösen kann. Benutze mindestens drei wenn-Sätze (probiere beide Wortfolgen: Hauptsatz + wenn ... und Wenn ..., + Hauptsatz) und mindestens einen Satz mit einem Dativ-Verb (z. B. helfen, zuhören, raten)."
+  },
+  {
+    klas: "7",
+    modul: "A",
+    lektion: 10,
+    nazva: "Ich helfe zu Hause",
+    opys: "Слухаємо розповідь Лукаса про те, що він любить і не любить робити вдома, читаємо допис-опитування в соцмережі про хатні справи та пишемо власний коментар до нього.",
+    file: "klas-7/modul-a/lektion-10.html",
+    nove: true,
+    dz: "Mach eine kleine Umfrage in deiner Familie: Frage mindestens drei Personen, welche Hausarbeit sie gern und welche sie nicht gern machen. Schreib die Ergebnisse auf (6–8 Sätze) und benutze dabei mindestens zwei Ausdrücke mit „gern“/„nicht gern“ und eine Häufigkeitsangabe (z. B. regelmäßig, zweimal am Tage)."
   }
 ];

@@ -261,6 +261,18 @@ const GLOSSARY = [
   {de: "die Kleinigkeit", uk: "дрібниця", klas: "9", modul: "A", lektion: 7},
   {de: "erziehen", uk: "виховувати", klas: "9", modul: "A", lektion: 7},
   {de: "fliehen (zu jemandem)", uk: "тікати, рятуватися втечею (до когось)", klas: "9", modul: "A", lektion: 7},
-  {de: "belasten", uk: "обтяжувати, напружувати (психологічно)", klas: "9", modul: "A", lektion: 7}
+  {de: "belasten", uk: "обтяжувати, напружувати (психологічно)", klas: "9", modul: "A", lektion: 7},
+  {de: "die Pflicht (die Pflichten)", uk: "обов'язок", klas: "7", modul: "A", lektion: 10},
+  {de: "Staub wischen", uk: "витирати пил", klas: "7", modul: "A", lektion: 10},
+  {de: "langweilig", uk: "нудний", klas: "7", modul: "A", lektion: 10},
+  {de: "die Umfrage", uk: "опитування", klas: "7", modul: "A", lektion: 10},
+  {de: "abstimmen (für etwas abstimmen)", uk: "голосувати (за щось)", klas: "7", modul: "A", lektion: 10},
+  {de: "der Beitrag", uk: "допис (у соцмережі)", klas: "7", modul: "A", lektion: 10},
+  {de: "kommentieren", uk: "коментувати", klas: "7", modul: "A", lektion: 10},
+  {de: "der Kommentar", uk: "коментар", klas: "7", modul: "A", lektion: 10},
+  {de: "den Tisch decken", uk: "накривати на стіл", klas: "7", modul: "A", lektion: 10},
+  {de: "das Fenster putzen", uk: "мити вікна", klas: "7", modul: "A", lektion: 10},
+  {de: "kein Problem sein", uk: "не бути проблемою, не складати труднощів", klas: "7", modul: "A", lektion: 10},
+  {de: "besonders (nicht besonders gern)", uk: "особливо (не особливо охоче)", klas: "7", modul: "A", lektion: 10}
 ];
 
