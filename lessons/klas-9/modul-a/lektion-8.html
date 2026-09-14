@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 8 · Modul A · Zwischenmenschliche Beziehungen in der Familie</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 9'},
+    {label: 'Урок 8: Взаємини в сім\u2019ї'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 8 · MODUL A</span>
+        <h1>Zwischenmenschliche Beziehungen in der Familie</h1>
+        <p class="sub">Wir lesen, wie Eddy, Marianna und Miriam mit ihren Familien zurechtkommen, und lernen, wie man klug und einfühlsam Ratschläge gibt.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Wer hat das gemeint?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Ratschläge geben</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Deine Tipps</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== ПАНЕЛЬ: вступ ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Worum geht es in diesem Modul?</h2>
+      <div class="card">
+        <p>In diesem Modul geht es um Familie und zwischenmenschliche Beziehungen. Heute lernst du drei Jugendliche kennen — Eddy, Marianna und Miriam — und ihre ganz unterschiedlichen Familiensituationen. Danach übst du, wie man auf Deutsch Ratschläge gibt und über Probleme diskutiert: mit Modalverben wie „man muss“, „man kann“, „man soll“ und mit Redemitteln wie „Ich denke, dass ...“ oder „Meiner Meinung nach ...“. Am Ende schreibst du deine eigenen Tipps für ein gutes Familienklima.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Сьогодні ми знайомимось із трьома підлітками — Едді, Маріанною і Міріам — і їхніми різними родинними ситуаціями. Потім тренуємось давати поради німецькою за допомогою модальних дієслів (man muss, man kann, man soll) і спеціальних мовних кліше для обговорення (Ich denke, dass ...; Meiner Meinung nach ...). Наприкінці — пишемо власні поради для доброго клімату в родині.
+        </div>
+      </div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Drei Jugendliche, drei Familien — schauen wir mal, wer wen meint!</p>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: перевірка ДЗ ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: Schreib eine Antwort auf einen der Forumsbeiträge (6–8 Sätze): Gib der Person einen Rat, wie sie ihr Familienproblem lösen kann. Benutze mindestens drei wenn-Sätze (probiere beide Wortfolgen: Hauptsatz + wenn ... und Wenn ..., + Hauptsatz) und mindestens einen Satz mit einem Dativ-Verb (z. B. helfen, zuhören, raten).
+      </div>
+      <p class="lead">Перш ніж перейти до нового матеріалу — швидко перевіримо, чи пам'ятаєш ти порядок слів у wenn-реченнях і дієслова з Dativ.</p>
+      <div id="dz-check"></div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: Üb. 1 — Wer hat das gemeint? ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Wer hat das gemeint?</h2>
+      <p class="lead">Прочитай короткі розповіді про трьох підлітків, а потім визнач у квізі нижче, хто з них міг сказати кожне речення.</p>
+      <div class="card">
+        <p><strong>Eddy (14):</strong> Eddys Vater arbeitet oft im Ausland, deshalb streiten sich seine Eltern häufig über die Familienpläne. Wenn seine Eltern sich streiten, kann Eddy sich kaum auf die Schule konzentrieren. Sein jüngerer Bruder Tom bekommt oft mehr Aufmerksamkeit: Wenn Tom etwas gut macht, bekommt er sofort Geschenke und Lob. Wenn seine Eltern tagelang nicht miteinander sprechen, macht das Eddy sehr traurig. Zum Glück unterstützt ihn sein Opa immer und hört ihm geduldig zu.</p>
+        <p><strong>Marianna (15):</strong> Mariannas Eltern arbeiten beide Vollzeit und haben selten Zeit für die Familie. Wenn Marianna ihre Eltern um Hilfe bittet, haben sie leider keine Zeit. Sie ist die Jüngste von drei Geschwistern und fühlt sich oft ungerecht behandelt. Wenn sie etwas gut macht, bekommt sie von ihren Eltern meistens nur ein „Aha“ zu hören, statt richtiges Lob.</p>
+        <p><strong>Miriam (16):</strong> Miriams Vater ist sehr streng: Sie muss immer pünktlich nach Hause kommen. Wenn sie bei einer Freundin länger bleiben will, muss sie selbst nach Hause laufen, weil ihr Vater sie nicht abholt. Ihre Mutter dagegen ist sehr verständnisvoll. Miriam hatte einmal einen Streit mit ihren Eltern — sie hat mit ihnen noch einmal gesprochen und ihnen alles erklärt, und danach wurde es besser. Weil ihre Eltern oft arbeiten, bringt sie meistens ihre Oma zum Boxtraining.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Едді: батько часто працює за кордоном, батьки часто сваряться, молодшого брата хвалять більше. Маріанна: батьки завжди зайняті, вона наймолодша з трьох дітей і почувається несправедливо ображеною. Міріам: суворий батько, вимога повертатись вчасно, але дуже підтримуюча мама; після відвертої розмови стало краще.
+        </div>
+      </div>
+      <div id="ub1-quiz"></div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: Üb. 2 — Ratschläge geben ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Wie gibt man Ratschläge?</h2>
+      <p class="lead">Ось поради, як зробити стосунки в родині кращими, і мовні кліше для їх обговорення. Прочитай таблицю, потім заповни пропуски в реченнях нижче.</p>
+      <div class="card">
+        <table class="gtable">
+          <tr><th>Tipps</th><th>Redemittel zum Diskutieren</th></tr>
+          <tr><td>Man muss miteinander alle Probleme besprechen.</td><td>Ich denke, dass der Tipp gut (nicht so gut) ist, denn ...</td></tr>
+          <tr><td>Man muss über seine Gefühle offen sprechen und auf die Gefühle der anderen achten.</td><td>Wir glauben, es ist wirklich wichtig, dass die Familienmitglieder ...</td></tr>
+          <tr><td>Man kann nach der Unterstützung bei Verwandten / Freunden / Lehrkräften suchen.</td><td>Meiner Meinung nach kann das Kind ...</td></tr>
+          <tr><td>Man kann sich an einen psychologischen Fachdienst wenden und um Hilfe bitten.</td><td>Wir denken, es ist ratsam, ... zu ...</td></tr>
+        </table>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Ліва колонка — самі поради (модальне дієслово + інфінітив: man muss/kann + Infinitiv). Права — стандартні фрази-кліше, якими зручно почати обговорення чужої думки німецькою (я думаю, що ...; на мою думку ...).
+        </div>
+      </div>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> Ich denke, <input type="text" class="blank-input" style="width:90px;display:inline-block;" data-ans="dass"> der Tipp gut ist, denn er hilft wirklich weiter.</div>
+        <div class="fill-item"><span class="num">2)</span> Wir glauben, es ist wichtig, <input type="text" class="blank-input" style="width:90px;display:inline-block;" data-ans="dass"> die Familienmitglieder offen miteinander sprechen.</div>
+        <div class="fill-item"><span class="num">3)</span> <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="Meiner"> Meinung nach kann das Kind mit einem Erwachsenen darüber reden.</div>
+        <div class="fill-item"><span class="num">4)</span> Wir <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="meinen">, dass die Familienmitglieder einander mehr Zeit schenken sollten.</div>
+        <div class="fill-item"><span class="num">5)</span> Man <input type="text" class="blank-input" style="width:90px;display:inline-block;" data-ans="muss"> miteinander alle Probleme besprechen.</div>
+        <div class="fill-item"><span class="num">6)</span> Man kann sich an einen psychologischen Fachdienst wenden und <input type="text" class="blank-input" style="width:70px;display:inline-block;" data-ans="um"> Hilfe bitten.</div>
+        <div class="fill-item"><span class="num">7)</span> Man <input type="text" class="blank-input" style="width:90px;display:inline-block;" data-ans="muss"> über seine Gefühle offen sprechen und auf die Gefühle der anderen achten.</div>
+        <div class="fill-item"><span class="num">8)</span> Es ist ratsam, bei Verwandten oder Freunden <input type="text" class="blank-input" style="width:80px;display:inline-block;" data-ans="nach"> Unterstützung zu suchen.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: Üb. 3 — Deine Tipps ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Deine eigenen Tipps</h2>
+      <p class="lead">А тепер твоя черга — сформулюй власні поради.</p>
+      <div class="card">
+        <div class="qa">
+          <label>Was würdest du einer Familie raten, damit sich alle zu Hause wohlfühlen? Schreib mindestens 3 eigene Tipps mit „man muss / kann / soll ...“.</label>
+          <textarea rows="4" placeholder="Schreib hier deine Tipps auf Deutsch..."></textarea>
+          <button class="btn small" id="ub3-reveal">Zeig ein Beispiel</button>
+          <div class="reveal" id="ub3-example">
+            Beispiel: Man muss einander zuhören und die Gefühle der anderen respektieren. Man kann jeden Tag ein bisschen Zeit füreinander finden, zum Beispiel beim gemeinsamen Abendessen. Man soll Konflikte ruhig besprechen, statt zu schreien.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ПРИКІНЦЕВА ПАНЕЛЬ ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Wähle eine der drei Personen aus Üb. 1 (Eddy, Marianna oder Miriam) und schreib ihr/ihm eine kurze Antwort (6–8 Sätze): Gib konkrete Ratschläge zu genau ihrer/seiner Familiensituation. Benutze dabei mindestens zwei Sätze mit „man“ + Modalverb (man muss, man soll, man kann) und mindestens ein Redemittel zum Diskutieren (z. B. „Ich denke, dass ...“, „Meiner Meinung nach ...“).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Обери одного з трьох підлітків з Üb. 1 (Едді, Маріанну або Міріам) і напиши йому/їй коротку відповідь (6–8 речень) із конкретними порадами саме щодо його/її родинної ситуації. Використай щонайменше два речення з "man" + модальне дієслово (man muss, man soll, man kann) і хоча б одне кліше для обговорення (напр. „Ich denke, dass ...“, „Meiner Meinung nach ...“).
+        </div>
+      </div>
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  // Hausaufgabenkontrolle: повторення wenn-Wortfolge і Dativ-Verben
+  const dzData = [
+    {q: "Was ist grammatisch richtig?", opts: ["Ich bin traurig, wenn meine Eltern streitet.", "Ich bin traurig, wenn meine Eltern streiten."], correct: "Ich bin traurig, wenn meine Eltern streiten."},
+    {q: "Wähle den Satz mit richtiger Endstellung im wenn-Satz:", opts: ["Wenn ich Probleme habe, rede ich mit meiner Oma.", "Wenn ich Probleme habe, ich rede mit meiner Oma."], correct: "Wenn ich Probleme habe, rede ich mit meiner Oma."},
+    {q: "Welches Verb passt: Ich möchte meiner Freundin ___.", opts: ["hilft", "helfen"], correct: "helfen"},
+    {q: "Welches Verb braucht den Dativ?", opts: ["hören", "zuhören"], correct: "zuhören"}
+  ];
+  buildQuiz('dz-check', dzData);
+
+  // Üb. 1: Wer hat das gemeint?
+  const ub1Data = [
+    {q: "Wenn ich meine Eltern um Hilfe bitte, haben sie leider keine Zeit.", opts: ["Marianna","Eddy","Miriam"], correct: "Marianna"},
+    {q: "Wenn sich meine Eltern streiten, kann ich mich kaum auf die Schule konzentrieren.", opts: ["Marianna","Eddy","Miriam"], correct: "Eddy"},
+    {q: "Wenn mein Bruder etwas gut macht, bekommt er Geschenke und Lob.", opts: ["Marianna","Miriam","Eddy"], correct: "Eddy"},
+    {q: "Ich habe mit meinen Eltern noch einmal gesprochen und ihnen alles erklärt.", opts: ["Miriam","Eddy","Marianna"], correct: "Miriam"},
+    {q: "Wenn ich etwas gut mache, bekomme ich nur ein „Aha“ zu hören.", opts: ["Eddy","Marianna","Miriam"], correct: "Marianna"},
+    {q: "Wenn meine Eltern tagelang nicht miteinander sprechen, macht mich das sehr traurig.", opts: ["Eddy","Marianna","Miriam"], correct: "Eddy"},
+    {q: "Ich bin die Jüngste in meiner Familie und fühle mich oft ungerecht behandelt.", opts: ["Eddy","Miriam","Marianna"], correct: "Marianna"},
+    {q: "Meine Oma bringt mich zum Boxtraining.", opts: ["Eddy","Miriam","Marianna"], correct: "Miriam"},
+    {q: "Ich muss selbst nach Hause laufen, wenn ich bei einer Freundin länger bleiben will.", opts: ["Eddy","Marianna","Miriam"], correct: "Miriam"},
+    {q: "Mein Opa unterstützt mich immer.", opts: ["Eddy","Marianna","Miriam"], correct: "Eddy"}
+  ];
+  buildQuiz('ub1-quiz', ub1Data);
+
+  // Üb. 2: пропуски
+  setTotal(document.querySelectorAll('#ub2-list .blank-input').length);
+  document.getElementById('ub2-check').addEventListener('click', () => {
+    checkBlanks('ub2-list', 'ub2-score', 'ub2');
+  });
+  document.getElementById('ub2-reset').addEventListener('click', () => {
+    resetBlanks('ub2-list', 'ub2-score', 'ub2');
+  });
+
+  // Üb. 3: власні поради (без автоперевірки — лише приклад для порівняння)
+  document.getElementById('ub3-reveal').addEventListener('click', () => {
+    document.getElementById('ub3-example').classList.toggle('show');
+  });
+
+  // Фінальна панель зі штампами
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['👪','💬','🤝','❤️']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
