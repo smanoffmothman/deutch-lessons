@@ -144,6 +144,19 @@
         в поле "dz" ЦЬОГО уроку в lessons-data.js, щоб наступний урок
         міг звірити його у своїй вкладці "Hausaufgabe"]</p>
       </div>
+
+      <!-- =================================================================
+           КАРТКА: слова цього уроку на вивчення.
+           Дані НЕ дублюються — це фільтр над тим самим GLOSSARY, що й на
+           сторінці /glosariy/, за klas/modul/lektion ЦЬОГО уроку. Правила
+           наповнення глосарію не змінюються, лишається один спільний
+           масив у data/glossary-data.js.
+           ================================================================= -->
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Wörter zum Lernen</p>
+        <div class="chip-row" id="vocabChips"></div>
+      </div>
+
       <footer class="end-card">
         <div class="stamps" id="stampRow"></div>
         <p id="finalScoreText"></p>
@@ -153,8 +166,31 @@
   </main>
 </div>
 
+<!-- Той самий масив, що й на сторінці /glosariy/ — шлях так само зміниться
+     на "../../../data/glossary-data.js" при копіюванні шаблону в реальне
+     місце уроку (як і шляхи до assets/ вище). -->
+<script src="../data/glossary-data.js"></script>
 <script src="../assets/lesson-interactions.js"></script>
 <script>
+  // ===== Слова цього уроку у вкладці Fertig =====
+  // Ті самі klas/modul/lektion, що й у рядку цього уроку в lessons-data.js.
+  const LEKTION_KLAS = "...", LEKTION_MODUL = "...", LEKTION_LEKTION = 0; // TODO: виставити під конкретний урок
+
+  (function renderLessonVocab(){
+    const box = document.getElementById('vocabChips');
+    if (!box || typeof GLOSSARY === 'undefined') return;
+    const words = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_LEKTION
+    );
+    if (words.length === 0){
+      box.innerHTML = '<p class="empty-note">Слова для цього уроку ще не додані в глосарій.</p>';
+      return;
+    }
+    box.innerHTML = words.map(w =>
+      '<span class="chip static">' + w.de + ' — ' + w.uk + '</span>'
+    ).join('');
+  })();
+
   // Üb. 1: квіз (генерується спільною функцією buildQuiz)
   const ub1Data = [
     {q: "[питання німецькою]", opts: ["варіант А", "варіант Б"], correct: "варіант А"},
