@@ -381,6 +381,10 @@ select.blank:focus, input.blank-input:focus{outline:2px solid var(--mustard); bo
 .chip-row{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px;}
 .chip{background:var(--mustard-soft); border:1px solid var(--mustard); border-radius:100px; padding:5px 12px; font-size:13px; cursor:pointer;}
 .chip.used{opacity:.4; cursor:default;}
+/* .chip.static — той самий вигляд чіпа, але не клікабельний: для списку
+   слів "на вивчення" у вкладці Fertig (не плутати зі словобанком вправ). */
+.chip.static{cursor:default;}
+.chip.static:hover{background:var(--mustard-soft);}
 
 .fill-item{margin-bottom:16px; font-size:15px;}
 .fill-item .num{font-family:var(--serif); font-weight:700; color:var(--brick); margin-right:6px;}
