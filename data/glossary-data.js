@@ -351,6 +351,16 @@ const GLOSSARY = [
   {de: "riskant", uk: "ризикований", klas: "8", modul: "A", lektion: 9},
   {de: "der Funsport", uk: "фан-спорт, спорт для розваги", klas: "8", modul: "A", lektion: 9},
   {de: "meistern", uk: "досконало опановувати, майстерно виконувати", klas: "8", modul: "A", lektion: 9},
-  {de: "stürzen (in die Tiefe stürzen)", uk: "падати, кидатися (вниз)", klas: "8", modul: "A", lektion: 9}
+  {de: "stürzen (in die Tiefe stürzen)", uk: "падати, кидатися (вниз)", klas: "8", modul: "A", lektion: 9},
+  {de: "die Mahlzeit", uk: "прийом їжі", klas: "7", modul: "A", lektion: 13},
+  {de: "das Frühstück", uk: "снідання, завтрак", klas: "7", modul: "A", lektion: 13},
+  {de: "das Mittagessen", uk: "обід", klas: "7", modul: "A", lektion: 13},
+  {de: "das Abendbrot", uk: "вечеря", klas: "7", modul: "A", lektion: 13},
+  {de: "der Fragebogen", uk: "анкета, опитувальник", klas: "7", modul: "A", lektion: 13},
+  {de: "ausfüllen (trennbar)", uk: "заповнювати (анкету)", klas: "7", modul: "A", lektion: 13},
+  {de: "unterstreichen", uk: "підкреслювати", klas: "7", modul: "A", lektion: 13},
+  {de: "das Ritual (die Rituale)", uk: "ритуал, звична дія", klas: "7", modul: "A", lektion: 13},
+  {de: "sich vorbereiten auf (+Akk.)", uk: "готуватися до чогось", klas: "7", modul: "A", lektion: 13},
+  {de: "der Urlaubsort", uk: "місце відпочинку, курорт", klas: "7", modul: "A", lektion: 13}
 ];
 

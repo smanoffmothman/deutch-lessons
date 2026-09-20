@@ -321,5 +321,15 @@ const LESSONS = [
     file: "klas-8/modul-a/lektion-9.html",
     nove: true,
     dz: "Schreib einen Forumsbeitrag (8–10 Sätze) über deine sportlichen Gewohnheiten: Welche Sportart(en) treibst du? Wann und wie oft trainierst du? Warum genau dieser Sport (z. B. Teamgeist, Fitness, Nervenkitzel)? Hast du Pläne, eine neue Sportart oder sogar eine Extremsportart auszuprobieren? Benutze mindestens drei Ausdrücke aus dem heutigen Unterricht (z. B. Teamgeist, die Höhenangst überwinden, sich glücklich fühlen, gefährlich/riskant finden) und mindestens einen Satz mit „man + Modalverb“."
+  },
+  {
+    klas: "7",
+    modul: "A",
+    lektion: 13,
+    nazva: "Familienfeste und -traditionen",
+    opys: "Анкета про сімейні традиції та прийоми їжі, гра-інтерв'ю „Familienfeste“, нова лексика (Fragebogen, Ritual, Mahlzeit) і повторення Perfekt/прикметникових закінчень.",
+    file: "klas-7/modul-a/lektion-13.html",
+    nove: true,
+    dz: "Führe zu Hause ein kurzes Interview mit einem Familienmitglied über eure Familientraditionen (mindestens 6 Fragen aus unserem Fragebogen im Unterricht, z. B. über Mahlzeiten, Feste, Rituale, Urlaub, Hobbys). Schreib die Antworten auf (6–8 Sätze) und benutze dabei mindestens vier Wörter aus dem heutigen Wortschatz (z. B. Mahlzeit, Ritual, Fragebogen, Urlaubsort)."
   }
 ];
