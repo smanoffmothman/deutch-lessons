@@ -311,5 +311,15 @@ const LESSONS = [
     file: "klas-9/modul-a/lektion-9.html",
     nove: true,
     dz: "Schreib eine kurze Beschreibung (6–8 Sätze) von deinem besten Freund / deiner besten Freundin: Aussehen und Charakter. Benutze dabei mindestens vier Adjektive mit richtiger Endung (z. B. „ein lustiger Junge“, „lange Haare“, „eine nette Freundin“) und mindestens ein Sprichwort über Freundschaft aus dem heutigen Unterricht."
+  },
+  {
+    klas: "8",
+    modul: "A",
+    lektion: 9,
+    nazva: "Aktive Erholung: Extremsport oder lieber sicher?",
+    opys: "Читаємо про молодь і екстремальний спорт (Naturerlebnis, Nervenkitzel, Stolz- und Glücksgefühl), повторюємо 'man + Modalverb' і тренуємо лексику через опитування й діалог про улюблені та екстремальні види спорту.",
+    file: "klas-8/modul-a/lektion-9.html",
+    nove: true,
+    dz: "Schreib einen Forumsbeitrag (8–10 Sätze) über deine sportlichen Gewohnheiten: Welche Sportart(en) treibst du? Wann und wie oft trainierst du? Warum genau dieser Sport (z. B. Teamgeist, Fitness, Nervenkitzel)? Hast du Pläne, eine neue Sportart oder sogar eine Extremsportart auszuprobieren? Benutze mindestens drei Ausdrücke aus dem heutigen Unterricht (z. B. Teamgeist, die Höhenangst überwinden, sich glücklich fühlen, gefährlich/riskant finden) und mindestens einen Satz mit „man + Modalverb“."
   }
 ];

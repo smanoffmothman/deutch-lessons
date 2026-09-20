@@ -341,6 +341,16 @@ const GLOSSARY = [
   {de: "die Figur", uk: "статура, фігура", klas: "9", modul: "A", lektion: 9},
   {de: "der Charakter", uk: "характер", klas: "9", modul: "A", lektion: 9},
   {de: "das Lächeln", uk: "усмішка", klas: "9", modul: "A", lektion: 9},
-  {de: "treu", uk: "вірний, відданий", klas: "9", modul: "A", lektion: 9}
+  {de: "treu", uk: "вірний, відданий", klas: "9", modul: "A", lektion: 9},
+  {de: "das Naturerlebnis", uk: "переживання (враження) від природи", klas: "8", modul: "A", lektion: 9},
+  {de: "die Langeweile", uk: "нудьга", klas: "8", modul: "A", lektion: 9},
+  {de: "das Glücksgefühl", uk: "відчуття щастя", klas: "8", modul: "A", lektion: 9},
+  {de: "das Stolzgefühl", uk: "відчуття гордості", klas: "8", modul: "A", lektion: 9},
+  {de: "begeistert sein (von +Dat.)", uk: "бути в захопленні (від чогось)", klas: "8", modul: "A", lektion: 9},
+  {de: "die Höhenangst", uk: "страх висоти", klas: "8", modul: "A", lektion: 9},
+  {de: "riskant", uk: "ризикований", klas: "8", modul: "A", lektion: 9},
+  {de: "der Funsport", uk: "фан-спорт, спорт для розваги", klas: "8", modul: "A", lektion: 9},
+  {de: "meistern", uk: "досконало опановувати, майстерно виконувати", klas: "8", modul: "A", lektion: 9},
+  {de: "stürzen (in die Tiefe stürzen)", uk: "падати, кидатися (вниз)", klas: "8", modul: "A", lektion: 9}
 ];
 
