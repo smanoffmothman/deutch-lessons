@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 13 · Modul A · Familienfeste und -traditionen</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 7'},
+    {label: 'Урок 13: Сімейні свята'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 13 · MODUL A</span>
+        <h1>Familienfeste und -traditionen</h1>
+        <p class="sub">Свята та традиції в родині: анкета про сімейні звички, лексика прийомів їжі та повторення прикметникових закінчень і Perfekt.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Lücken</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Familienalltag</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== START ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Worum geht es heute?</h2>
+      <div class="card">
+        <p>Jede Familie feiert Feste ein bisschen anders. Heute sprechen wir darüber, welche Familienfeste und Rituale es bei uns gibt: Wer feiert was? Wann isst die Familie gemeinsam? Gibt es feste Rituale vor dem Schlafengehen? Wir stellen einander Fragen, füllen einen kleinen Fragebogen aus und lernen neue Wörter rund um Mahlzeiten und Familientraditionen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Кожна родина святкує свята трохи по-своєму. Сьогодні ми говоримо про сімейні свята й ритуали: хто що святкує, коли родина їсть разом, чи є ритуали перед сном. Ми ставимо одне одному запитання, заповнюємо коротку анкету і вивчаємо нові слова про прийоми їжі та сімейні традиції.
+        </div>
+      </div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Wir feiern sehr gern Ostern. Am liebsten mag ich die Eiersuche! Und deine Familie?</p>
+      </div>
+    </section>
+
+    <!-- ===== HAUSAUFGABE ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано написати короткий текст (6–8 речень) про сімейне свято, яке добре запам'яталося: розповісти в Perfekt, що відбувалося, вжити принаймні два прикметники з правильним закінченням (напр. <em>ein schönes Fest</em>, <em>eine lustige Party</em>) і одну вказівку частоти (напр. <em>jedes Jahr</em>, <em>einmal im Jahr</em>).
+        Перш ніж переходити далі, пригадай свій текст і перевір себе в короткому квізі на ті самі граматичні теми.
+      </div>
+      <div id="dz-check"></div>
+    </section>
+
+    <!-- ===== ÜB.1: WORTSCHATZ (QUIZ) ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Neue Wörter: was bedeutet das?</h2>
+      <p class="lead">Оберіть правильний переклад кожного нового слова.</p>
+      <div id="ub1-quiz"></div>
+    </section>
+
+    <!-- ===== ÜB.2: LÜCKEN (BLANKS) ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Unser Fragebogen: ergänze die Wörter</h2>
+      <p class="lead">Заповни пропуски словами з нової лексики (Ritual, Abendbrot, unterstreichen, Frühstück, Urlaubsort, Mahlzeit, Fragebogen, Mittagessen).</p>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> Am Morgen isst meine Familie gern zusammen <input type="text" class="blank-input" style="width:150px;display:inline-block;" data-ans="frühstück">.</div>
+        <div class="fill-item"><span class="num">2)</span> Mittags essen wir oft ein warmes <input type="text" class="blank-input" style="width:150px;display:inline-block;" data-ans="mittagessen">.</div>
+        <div class="fill-item"><span class="num">3)</span> Abends gibt es bei uns meistens nur ein einfaches <input type="text" class="blank-input" style="width:150px;display:inline-block;" data-ans="abendbrot">.</div>
+        <div class="fill-item"><span class="num">4)</span> Frühstück, Mittagessen und Abendbrot sind alle Beispiele für eine <input type="text" class="blank-input" style="width:150px;display:inline-block;" data-ans="mahlzeit">.</div>
+        <div class="fill-item"><span class="num">5)</span> Bevor wir über unsere Familientraditionen sprechen, füllen wir einen kleinen <input type="text" class="blank-input" style="width:150px;display:inline-block;" data-ans="fragebogen"> aus.</div>
+        <div class="fill-item"><span class="num">6)</span> In meiner Familie gibt es ein festes <input type="text" class="blank-input" style="width:150px;display:inline-block;" data-ans="ritual"> vor dem Schlafengehen — eine Gute-Nacht-Geschichte.</div>
+        <div class="fill-item"><span class="num">7)</span> Jedes Jahr fahren wir zum gleichen <input type="text" class="blank-input" style="width:150px;display:inline-block;" data-ans="urlaubsort"> in den Urlaub.</div>
+        <div class="fill-item"><span class="num">8)</span> Man muss im Fragebogen die passende Antwort <input type="text" class="blank-input" style="width:150px;display:inline-block;" data-ans="unterstreichen">.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== ÜB.3: FAMILIENALLTAG (TOKENS) ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Was ist eine Familientradition?</h2>
+      <p class="lead">Клікни на частини тексту, які описують сімейну традицію або спільний ритуал.</p>
+      <div class="card" id="ub3-text">
+        <p>Bei uns zu Hause ist der Sonntag etwas Besonderes. Morgens machen wir <span class="tok" data-correct="true">gemeinsam ein großes Frühstück</span>. Danach gehen wir manchmal <span class="tok" data-correct="true">zusammen im Park spazieren</span>. Am Nachmittag <span class="tok" data-correct="true">besuchen wir unsere Großeltern</span>. Mein Bruder mag es, <span class="tok" data-correct="false">allein im Zimmer zu sitzen</span>. Abends <span class="tok" data-correct="true">sehen wir zusammen einen Film</span>. Manchmal muss ich auch <span class="tok" data-correct="false">meine Matheaufgaben machen</span>, aber das ist natürlich keine Familientradition.</p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Führe zu Hause ein kurzes Interview mit einem Familienmitglied über eure Familientraditionen (mindestens 6 Fragen aus unserem Fragebogen im Unterricht, z. B. über Mahlzeiten, Feste, Rituale, Urlaub, Hobbys). Schreib die Antworten auf (6–8 Sätze) und benutze dabei mindestens vier Wörter aus dem heutigen Wortschatz (z. B. Mahlzeit, Ritual, Fragebogen, Urlaubsort).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Проведи вдома коротке інтерв'ю з одним із членів родини про ваші сімейні традиції (принаймні 6 запитань з нашої анкети на уроці, напр. про прийоми їжі, свята, ритуали, відпустку, хобі). Запиши відповіді (6–8 речень) і вживи щонайменше чотири слова з сьогоднішньої лексики (напр. Mahlzeit, Ritual, Fragebogen, Urlaubsort).
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Wörter zum Lernen</p>
+        <div class="chip-row" id="vocabChips"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../data/glossary-data.js"></script>
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  const LEKTION_KLAS = "7", LEKTION_MODUL = "A", LEKTION_LEKTION = 13;
+
+  (function renderLessonVocab(){
+    const box = document.getElementById('vocabChips');
+    if (!box || typeof GLOSSARY === 'undefined') return;
+    const words = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_LEKTION
+    );
+    if (words.length === 0){
+      box.innerHTML = '<p class="empty-note">Слова для цього уроку ще не додані в глосарій.</p>';
+      return;
+    }
+    box.innerHTML = words.map(w =>
+      '<span class="chip static">' + w.de + ' — ' + w.uk + '</span>'
+    ).join('');
+  })();
+
+  // ---- Hausaufgabe-check: quiz на Perfekt + прикметникові закінчення ----
+  const dzCheckData = [
+    {q: "Wähle die richtige Partizip-II-Form: Wir haben ein tolles Fest ___.", opts: ["gefeiert", "feiern", "feiert"], correct: "gefeiert"},
+    {q: "Ergänze das Adjektiv richtig: Das war ein sehr schön___ Fest.", opts: ["schöner", "schönes", "schöne"], correct: "schönes"},
+    {q: "Welche Häufigkeitsangabe passt: Wir feiern Weihnachten ___.", opts: ["gestern", "morgen", "jedes Jahr"], correct: "jedes Jahr"},
+    {q: "Wähle die richtige Partizip-II-Form von 'backen':", opts: ["backte", "gebacken", "gebackt"], correct: "gebacken"},
+    {q: "Ergänze das Adjektiv richtig: Das war eine lustig___ Party.", opts: ["lustige", "lustiger", "lustiges"], correct: "lustige"}
+  ];
+  buildQuiz('dz-check', dzCheckData);
+
+  // ---- Üb. 1: квіз на нову лексику ----
+  const ub1Data = [
+    {q: "der Fragebogen — це...", opts: ["анкета, опитувальник", "розклад дня", "подарунок"], correct: "анкета, опитувальник"},
+    {q: "das Ritual (die Rituale) — це...", opts: ["сварка чи конфлікт", "звична повторювана дія, ритуал", "поїздка на екскурсію"], correct: "звична повторювана дія, ритуал"},
+    {q: "sich vorbereiten auf (+Akk.) означає...", opts: ["сваритися з кимось", "готуватися до чогось", "забувати про щось"], correct: "готуватися до чогось"},
+    {q: "der Urlaubsort — це...", opts: ["домашня робота", "сімейне свято", "місце відпочинку, курорт"], correct: "місце відпочинку, курорт"},
+    {q: "ausfüllen означає...", opts: ["підкреслювати", "збирати (колекцію)", "заповнювати (анкету)"], correct: "заповнювати (анкету)"}
+  ];
+  buildQuiz('ub1-quiz', ub1Data);
+
+  // ---- Üb. 2: пропуски ----
+  setTotal(document.querySelectorAll('#ub2-list .blank-input').length);
+  document.getElementById('ub2-check').addEventListener('click', () => {
+    checkBlanks('ub2-list', 'ub2-score', 'ub2');
+  });
+  document.getElementById('ub2-reset').addEventListener('click', () => {
+    resetBlanks('ub2-list', 'ub2-score', 'ub2');
+  });
+
+  // ---- Üb. 3: токени ----
+  initTokenClicks('ub3-text');
+  setTotal(document.querySelectorAll('#ub3-text .tok[data-correct="true"]').length);
+  document.getElementById('ub3-check').addEventListener('click', () => checkTokens('ub3-text', 'ub3-score', 'ub3'));
+  document.getElementById('ub3-reset').addEventListener('click', () => resetTokens('ub3-text', 'ub3-score', 'ub3'));
+
+  // ---- Fertig: штампи ----
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🎄', '🎂', '🍽️', '📋']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
