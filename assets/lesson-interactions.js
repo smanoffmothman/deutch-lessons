@@ -93,32 +93,51 @@ function buildQuiz(containerId, data){
 
 /* ---------- Текстові пропуски (input.blank-input[data-ans]) ----------
    HTML: <input type="text" class="blank-input" data-ans="правильно">
-   Перевірка регістронезалежна, зараховує лише перше проходження.
-   Якщо відповідь неправильна (і поле не порожнє) — одразу після поля
-   з'являється маленька підказка з правильною відповіддю (.blank-hint). */
+   Перевірка регістронезалежна.
+
+   АНТИ-ЧІТ (2026-09): раніше при неправильній відповіді функція сама
+   дописувала текст "правильно: ..." одразу біля поля — учень міг просто
+   скопіювати цей текст назад у поле й одразу отримати залік. Текстову
+   підказку прибрано повністю (лишився тільки колір рамки — correct/wrong,
+   без розкриття самої відповіді).
+
+   Додатково: бал і прогрес фіксуються по ПЕРШІЙ реальній спробі кожного
+   поля (перше НЕпорожнє значення, яке учень перевірив). Подальші зміни
+   поля після цього так само підсвічуються (колір оновлюється живо), але
+   вже не впливають на рахунок і на прогрес-смугу — це прибирає сенс
+   гадати/підбирати відповідь по колу заради накрутки балів. Поле, яке
+   ще жодного разу не перевірялось непорожнім, лишається "вільним" —
+   перша непорожня перевірка стає для нього залікованою назавжди. */
 function checkBlanks(containerId, scoreId, stateKey){
   const state = checkBlanks._state || (checkBlanks._state = {});
   if(!(stateKey in state)) state[stateKey] = 0;
+  const locked = checkBlanks._locked || (checkBlanks._locked = {});
+  if(!(stateKey in locked)) locked[stateKey] = [];
+  const lockedArr = locked[stateKey];
+
   let correct = 0, total = 0;
-  document.querySelectorAll('#' + containerId + ' .blank-input').forEach(inp => {
+  document.querySelectorAll('#' + containerId + ' .blank-input').forEach((inp, idx) => {
     total++;
     const ans = (inp.dataset.ans || '').toLowerCase();
     const val = inp.value.trim().toLowerCase();
     inp.classList.remove('correct', 'wrong');
-    const oldHint = inp.nextElementSibling;
-    if(oldHint && oldHint.classList && oldHint.classList.contains('blank-hint')) oldHint.remove();
+
+    // живий колір-фідбек на КОЖНУ перевірку (без тексту з відповіддю)
     if(val === ans){
-      inp.classList.add('correct'); correct++;
+      inp.classList.add('correct');
     } else if(val !== ''){
       inp.classList.add('wrong');
-      const hint = document.createElement('span');
-      hint.className = 'blank-hint';
-      hint.textContent = 'правильно: ' + inp.dataset.ans;
-      inp.insertAdjacentElement('afterend', hint);
     }
+
+    // залік лише по першій непорожній спробі цього поля
+    if(!lockedArr[idx] && val !== ''){
+      lockedArr[idx] = { correct: val === ans };
+    }
+    if(lockedArr[idx] && lockedArr[idx].correct) correct++;
   });
+
   const scoreEl = document.getElementById(scoreId);
-  if(scoreEl) scoreEl.textContent = correct + ' / ' + total + ' richtig';
+  if(scoreEl) scoreEl.textContent = correct + ' / ' + total + ' richtig (1. Versuch zählt)';
   const newly = correct - state[stateKey];
   if(newly > 0){ markDone(newly); state[stateKey] = correct; }
   return {correct, total};
@@ -126,13 +145,13 @@ function checkBlanks(containerId, scoreId, stateKey){
 function resetBlanks(containerId, scoreId, stateKey){
   document.querySelectorAll('#' + containerId + ' .blank-input').forEach(inp => {
     inp.value = ''; inp.classList.remove('correct', 'wrong');
-    const hint = inp.nextElementSibling;
-    if(hint && hint.classList && hint.classList.contains('blank-hint')) hint.remove();
   });
   const scoreEl = document.getElementById(scoreId);
   if(scoreEl) scoreEl.textContent = '';
   const state = checkBlanks._state || (checkBlanks._state = {});
   if(state[stateKey] > 0){ progress.done -= state[stateKey]; state[stateKey] = 0; renderProgress(); }
+  const locked = checkBlanks._locked || (checkBlanks._locked = {});
+  locked[stateKey] = []; // повний ресет знімає й "заморозку" — чесний новий старт
 }
 
 /* ---------- Клікабельні токени в тексті (span.tok[data-correct]) ----------
