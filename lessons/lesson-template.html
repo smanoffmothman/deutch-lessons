@@ -90,6 +90,22 @@
       <!-- Сама перевірка — вибери тип вправи під конкретне ДЗ:
            buildQuiz(...) / checkBlanks(...) / checkTokens(...), як у Üb.1/2 -->
       <div id="dz-check"></div>
+
+      <!-- =================================================================
+           WÖRTER-CHECK: коротка перевірка слів ПОПЕРЕДНЬОГО уроку (5–6 слів),
+           одразу під перевіркою самого ДЗ, у тій самій вкладці Hausaufgabe.
+           Дані НЕ дублюються і не пишуться вручну — це той самий GLOSSARY,
+           відфільтрований за klas/modul/LEKTION_PREV_LEKTION (див. скрипт
+           внизу файлу, renderDzVocabCheck). Вправа генерується стандартним
+           buildQuiz(), нічого нового в lesson-interactions.js не додається.
+           Якщо це урок №1 модуля (LEKTION_PREV_LEKTION = 0) або слів
+           попереднього уроку в глосарії ще < 3 — блок сам ховається.
+           ================================================================= -->
+      <div class="card" id="dz-vocab-wrap" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">Wörter-Check</p>
+        <p class="lead">Перевір слова з минулого уроку.</p>
+        <div id="dz-vocab"></div>
+      </div>
     </section>
 
     <!-- ===== ПАНЕЛЬ: квіз-вправа (кнопки-варіанти) ===== -->
@@ -175,6 +191,7 @@
   // ===== Слова цього уроку у вкладці Fertig =====
   // Ті самі klas/modul/lektion, що й у рядку цього уроку в lessons-data.js.
   const LEKTION_KLAS = "...", LEKTION_MODUL = "...", LEKTION_LEKTION = 0; // TODO: виставити під конкретний урок
+  const LEKTION_PREV_LEKTION = 0; // TODO: номер ПОПЕРЕДНЬОГО уроку цього ж модуля; 0, якщо це урок №1 модуля (блок Wörter-Check тоді сам ховається)
 
   (function renderLessonVocab(){
     const box = document.getElementById('vocabChips');
@@ -189,6 +206,28 @@
     box.innerHTML = words.map(w =>
       '<span class="chip static">' + w.de + ' — ' + w.uk + '</span>'
     ).join('');
+  })();
+
+  // ===== Wörter-Check у вкладці Hausaufgabe (слова ПОПЕРЕДНЬОГО уроку) =====
+  // Використовує ті самі спільні функції, що й Üb.1 (buildQuiz) та
+  // Fertig! (shuffleArray) — нового коду в lesson-interactions.js не було.
+  (function renderDzVocabCheck(){
+    const wrap = document.getElementById('dz-vocab-wrap');
+    const box = document.getElementById('dz-vocab');
+    if (!wrap || !box || typeof GLOSSARY === 'undefined') return;
+    if (!LEKTION_PREV_LEKTION){ wrap.style.display = 'none'; return; }
+
+    const prevWords = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_PREV_LEKTION
+    );
+    if (prevWords.length < 3){ wrap.style.display = 'none'; return; }
+
+    const pool = shuffleArray(prevWords).slice(0, 6); // 5–6 слів на перевірку
+    const quizData = pool.map(w => {
+      const distractors = shuffleArray(GLOSSARY.filter(g => g.uk !== w.uk)).slice(0, 2).map(g => g.uk);
+      return { q: w.de, opts: [w.uk, ...distractors], correct: w.uk };
+    });
+    buildQuiz('dz-vocab', quizData);
   })();
 
   // Üb. 1: квіз (генерується спільною функцією buildQuiz)
