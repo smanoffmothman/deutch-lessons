@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 14 · Modul A · У колі сім'ї</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 7'},
+    {label: 'Урок 14: У колі сім\'ї'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 14 · MODUL A</span>
+        <h1>Zu Hause: Pflichten und Feste</h1>
+        <p class="sub">Повторювальний урок: хатні обов'язки та сімейні свята — все, що ми вивчили в цьому модулі, зустрічається знову.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Passt zusammen</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Lesen</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Das ist aber falsch!</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== START ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Worum geht es heute?</h2>
+      <div class="card">
+        <p>Wir sind fast am Ende des Moduls "Ich, meine Familie, meine Freunde" angekommen. Heute wiederholen wir zwei große Themen zusammen: die Hausarbeit (das Geschirr spülen, Staub saugen, den Müll wegbringen ...) und die Familienfeste und -traditionen. Wir spielen, hören zu und decken sogar ein paar lustige Fehler auf!</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Ми майже дійшли до кінця модуля "Я, моя родина, мої друзі". Сьогодні повторюємо разом дві великі теми: хатню роботу (мити посуд, пилососити, виносити сміття...) і сімейні свята та традиції. Ми гратимемо, слухатимемо аудіо і навіть шукатимемо кумедні помилки!
+        </div>
+      </div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Hallo! Heute wiederholen wir zusammen. Bereit? Los geht's!</p>
+      </div>
+    </section>
+
+    <!-- ===== HAUSAUFGABE ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: провести вдома коротке інтерв'ю з членом родини про сімейні традиції (мінімум 6 запитань з анкети на уроці — про прийоми їжі, свята, ритуали, відпочинок, хобі) і записати відповіді (6–8 речень), використавши щонайменше чотири слова з тодішньої лексики (Mahlzeit, Ritual, Fragebogen, Urlaubsort).
+      </div>
+      <p class="lead">Спочатку — швидкий квіз на слова з минулого уроку, а потім у парах усно поділіться відповідями зі свого інтерв'ю.</p>
+      <div id="dz-check"></div>
+    </section>
+
+    <!-- ===== ÜB. 1: Was passt zusammen? ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Was passt zusammen?</h2>
+      <p class="lead">Обери правильне дієслово з випадаючого списку для кожного іменника/виразу — так, щоб вийшов правильний стійкий вираз.</p>
+      <div class="card wo-table" id="ub1-list">
+        <div class="wo-row"><span class="noun">das Geschirr</span><span class="arrow">→</span>
+          <select class="blank blank-input" data-ans="spülen">
+            <option value="">— wähle —</option>
+            <option>spülen</option><option>aufräumen</option><option>feiern</option><option>spielen</option><option>träumen</option><option>saugen</option><option>wegbringen</option><option>bügeln</option><option>picknicken</option>
+          </select>
+        </div>
+        <div class="wo-row"><span class="noun">das Haus</span><span class="arrow">→</span>
+          <select class="blank blank-input" data-ans="aufräumen">
+            <option value="">— wähle —</option>
+            <option>spülen</option><option>aufräumen</option><option>feiern</option><option>spielen</option><option>träumen</option><option>saugen</option><option>wegbringen</option><option>bügeln</option><option>picknicken</option>
+          </select>
+        </div>
+        <div class="wo-row"><span class="noun">Familienfeste</span><span class="arrow">→</span>
+          <select class="blank blank-input" data-ans="feiern">
+            <option value="">— wähle —</option>
+            <option>spülen</option><option>aufräumen</option><option>feiern</option><option>spielen</option><option>träumen</option><option>saugen</option><option>wegbringen</option><option>bügeln</option><option>picknicken</option>
+          </select>
+        </div>
+        <div class="wo-row"><span class="noun">mit dem Bruder</span><span class="arrow">→</span>
+          <select class="blank blank-input" data-ans="spielen">
+            <option value="">— wähle —</option>
+            <option>spülen</option><option>aufräumen</option><option>feiern</option><option>spielen</option><option>träumen</option><option>saugen</option><option>wegbringen</option><option>bügeln</option><option>picknicken</option>
+          </select>
+        </div>
+        <div class="wo-row"><span class="noun">von einer Familienreise</span><span class="arrow">→</span>
+          <select class="blank blank-input" data-ans="träumen">
+            <option value="">— wähle —</option>
+            <option>spülen</option><option>aufräumen</option><option>feiern</option><option>spielen</option><option>träumen</option><option>saugen</option><option>wegbringen</option><option>bügeln</option><option>picknicken</option>
+          </select>
+        </div>
+        <div class="wo-row"><span class="noun">Staub</span><span class="arrow">→</span>
+          <select class="blank blank-input" data-ans="saugen">
+            <option value="">— wähle —</option>
+            <option>spülen</option><option>aufräumen</option><option>feiern</option><option>spielen</option><option>träumen</option><option>saugen</option><option>wegbringen</option><option>bügeln</option><option>picknicken</option>
+          </select>
+        </div>
+        <div class="wo-row"><span class="noun">den Müll</span><span class="arrow">→</span>
+          <select class="blank blank-input" data-ans="wegbringen">
+            <option value="">— wähle —</option>
+            <option>spülen</option><option>aufräumen</option><option>feiern</option><option>spielen</option><option>träumen</option><option>saugen</option><option>wegbringen</option><option>bügeln</option><option>picknicken</option>
+          </select>
+        </div>
+        <div class="wo-row"><span class="noun">die Wäsche</span><span class="arrow">→</span>
+          <select class="blank blank-input" data-ans="bügeln">
+            <option value="">— wähle —</option>
+            <option>spülen</option><option>aufräumen</option><option>feiern</option><option>spielen</option><option>träumen</option><option>saugen</option><option>wegbringen</option><option>bügeln</option><option>picknicken</option>
+          </select>
+        </div>
+        <div class="wo-row"><span class="noun">im Garten</span><span class="arrow">→</span>
+          <select class="blank blank-input" data-ans="picknicken">
+            <option value="">— wähle —</option>
+            <option>spülen</option><option>aufräumen</option><option>feiern</option><option>spielen</option><option>träumen</option><option>saugen</option><option>wegbringen</option><option>bügeln</option><option>picknicken</option>
+          </select>
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub1-check">Prüfen</button>
+        <button class="btn secondary" id="ub1-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub1-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== ÜB. 2: Lies und klicke ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Wer macht was? Lies und klicke!</h2>
+      <p class="lead">Lies die Nachricht von Mia an ihre Mutter. Klicke NUR auf die Ausdrücke, die Hausarbeit bezeichnen (nicht auf andere Aktivitäten!).</p>
+      <div class="ua-note">
+        Клікни лише на фрази, що позначають ХАТНЮ РОБОТУ. Інші заняття (гра з собакою, сімейне свято тощо) клікати не треба — це "пастки".
+      </div>
+
+      <div class="mail-window">
+        <div class="mail-titlebar">Neue Nachricht</div>
+        <div class="mail-fields">An: Mama &nbsp;·&nbsp; Betreff: Mein Nachmittag</div>
+        <div class="mail-body" id="ub2-text">
+          Hallo Mama, heute war ich zu Hause total fleißig! Zuerst habe ich <span class="tok" data-correct="true">das Geschirr gespült</span>, dann habe ich <span class="tok" data-correct="true">den Müll weggebracht</span> und sogar <span class="tok" data-correct="true">die Wäsche gebügelt</span>. Mein Bruder hat <span class="tok" data-correct="true">Staub gesaugt</span>, und zusammen haben wir <span class="tok" data-correct="true">das Haus aufgeräumt</span>. Am Nachmittag haben wir im Garten <span class="tok" data-correct="false">mit unserem Hund gespielt</span> — das war zwar keine Hausarbeit, aber sehr schön! Übrigens, nächste Woche feiern wir <span class="tok" data-correct="false">ein großes Familienfest</span> bei Oma, und ich freue mich schon riesig darauf. Bis später!
+        </div>
+      </div>
+
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== ÜB. 3: Das ist aber falsch! ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Spiel "Das ist aber falsch!"</h2>
+      <p class="lead">У класі це гра в групах: хтось каже неправильне речення, інші виправляють. Тут — цифрова версія: обери, що насправді правильно.</p>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Spieler/in A: Ich koche die Wäsche! Spieler/in B: Das stimmt nicht...</p>
+      </div>
+      <div id="ub3-quiz"></div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Schreib einen kurzen SMS-Dialog (6–8 Nachrichten) zwischen dir und deinem Bruder / deiner Schwester (oder einem Freund / einer Freundin): Wer macht heute welche Hausarbeit zu Hause? Benutze dabei mindestens vier Ausdrücke aus dem heutigen Wortschatz (z. B. das Geschirr spülen, die Wäsche bügeln, den Müll wegbringen, Staub saugen, das Haus aufräumen) und erwähne am Ende ein Familienfest, auf das ihr euch freut.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Напиши коротке СМС-листування (6–8 повідомлень) між тобою і братом/сестрою (або другом/подругою): хто сьогодні виконує яку хатню роботу? Використай щонайменше чотири вирази з сьогоднішньої лексики (напр. мити посуд, прасувати білизну, виносити сміття, пилососити, прибирати в домі) і згадай наприкінці сімейне свято, на яке ви чекаєте.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Wörter zum Lernen</p>
+        <div class="chip-row" id="vocabChips"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../data/glossary-data.js"></script>
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  const LEKTION_KLAS = "7", LEKTION_MODUL = "A", LEKTION_LEKTION = 14;
+
+  (function renderLessonVocab(){
+    const box = document.getElementById('vocabChips');
+    if (!box || typeof GLOSSARY === 'undefined') return;
+    const words = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_LEKTION
+    );
+    if (words.length === 0){
+      box.innerHTML = '<p class="empty-note">Слова для цього уроку ще не додані в глосарій.</p>';
+      return;
+    }
+    box.innerHTML = words.map(w =>
+      '<span class="chip static">' + w.de + ' — ' + w.uk + '</span>'
+    ).join('');
+  })();
+
+  // ===== Hausaufgabe: перевірка слів з попереднього уроку =====
+  const dzData = [
+    {q: "Що означає німецьке слово „die Mahlzeit“?", opts: ["анкета, опитувальник", "прийом їжі", "ритуал, звична дія", "місце відпочинку, курорт"], correct: "прийом їжі"},
+    {q: "Що означає німецьке слово „das Ritual“?", opts: ["анкета, опитувальник", "прийом їжі", "ритуал, звична дія", "місце відпочинку, курорт"], correct: "ритуал, звична дія"},
+    {q: "Що означає німецьке слово „der Fragebogen“?", opts: ["анкета, опитувальник", "прийом їжі", "ритуал, звична дія", "місце відпочинку, курорт"], correct: "анкета, опитувальник"},
+    {q: "Що означає німецьке слово „der Urlaubsort“?", opts: ["анкета, опитувальник", "прийом їжі", "ритуал, звична дія", "місце відпочинку, курорт"], correct: "місце відпочинку, курорт"}
+  ];
+  buildQuiz('dz-check', dzData);
+
+  // ===== Üb. 1: matching (select) =====
+  setTotal(document.querySelectorAll('#ub1-list .blank-input').length);
+  document.getElementById('ub1-check').addEventListener('click', () => {
+    checkBlanks('ub1-list', 'ub1-score', 'ub1');
+  });
+  document.getElementById('ub1-reset').addEventListener('click', () => {
+    resetBlanks('ub1-list', 'ub1-score', 'ub1');
+  });
+
+  // ===== Üb. 2: клікабельні токени (Hausarbeit finden) =====
+  initTokenClicks('ub2-text');
+  setTotal(document.querySelectorAll('#ub2-text .tok[data-correct="true"]').length);
+  document.getElementById('ub2-check').addEventListener('click', () => {
+    checkTokens('ub2-text', 'ub2-score', 'ub2');
+  });
+  document.getElementById('ub2-reset').addEventListener('click', () => {
+    resetTokens('ub2-text', 'ub2-score', 'ub2');
+  });
+
+  // ===== Üb. 3: quiz "Das ist aber falsch!" =====
+  const ub3Data = [
+    {q: "Tom sagt: „Ich sauge das Geschirr.“ Was ist eigentlich richtig?", opts: ["Tom spült das Geschirr.", "Tom bügelt das Geschirr.", "Tom kauft das Geschirr ein."], correct: "Tom spült das Geschirr."},
+    {q: "Lisa sagt: „Ich bügle den Müll.“ Was ist eigentlich richtig?", opts: ["Lisa saugt den Müll.", "Lisa bringt den Müll weg.", "Lisa spielt mit dem Müll."], correct: "Lisa bringt den Müll weg."},
+    {q: "Jan sagt: „Ich spüle das Haus.“ Was ist eigentlich richtig?", opts: ["Jan bügelt das Haus.", "Jan feiert das Haus.", "Jan räumt das Haus auf."], correct: "Jan räumt das Haus auf."},
+    {q: "Emma sagt: „Ich räume die Wäsche auf.“ Was ist eigentlich richtig?", opts: ["Emma bügelt die Wäsche.", "Emma saugt die Wäsche.", "Emma bringt die Wäsche weg."], correct: "Emma bügelt die Wäsche."},
+    {q: "Paul sagt: „Ich träume den Müll.“ Was ist eigentlich richtig?", opts: ["Paul spült den Müll.", "Paul bringt den Müll weg.", "Paul bügelt den Müll."], correct: "Paul bringt den Müll weg."}
+  ];
+  buildQuiz('ub3-quiz', ub3Data);
+
+  // ===== Fertig =====
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🧹','🧺','🍽️','🌻']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
