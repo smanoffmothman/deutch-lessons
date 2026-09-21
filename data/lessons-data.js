@@ -401,5 +401,15 @@ const LESSONS = [
     file: "klas-8/modul-a/lektion-10.html",
     nove: true,
     dz: "Lies den Text über Jonas' Tag und finde 5 Fehler — Aussagen, die einem gesunden Leben widersprechen. Schreib den Text richtig ab (korrigiere die 5 Stellen): „Jonas steht jeden Tag erst um elf Uhr vormittags auf und isst dann sofort viele Süßigkeiten zum Frühstück, weil das seiner Meinung nach sehr gesund ist. Nach der Schule liegt er drei Stunden lang in der Sonne und trinkt dabei kein Wasser. Am Abend isst er sehr spät, um Mitternacht, und geht dann sofort schlafen. Jonas findet, man muss sich nicht bewegen, um fit zu bleiben.\u201c Schreib danach noch 2 eigene Sätze mit „man sollte“, was Jonas stattdessen tun sollte."
+  },
+  {
+    klas: "8",
+    modul: "A",
+    lektion: 11,
+    nazva: "Sport das ganze Jahr",
+    opys: "Форумні дописи чотирьох підлітків (Jan, Maria, Michael, Petra) про спортивні звички і спосіб життя в різні пори року; граматика gern – lieber – am liebsten.",
+    file: "klas-8/modul-a/lektion-11.html",
+    nove: true,
+    dz: "Zeichne (oder gestalte digital) deinen persönlichen „Sportkalender“ für ein Jahr: vier Felder für vier Jahreszeiten (Frühling, Sommer, Herbst, Winter). Schreib zu jeder Jahreszeit mindestens eine Sportart, die du in dieser Zeit gern treibst, und einen kurzen Satz dazu (z. B. „Im Winter laufe ich gern Ski.“ oder „Am liebsten fahre ich im Sommer Rad.“). Benutze insgesamt mindestens zweimal gern/lieber/am liebsten."
   }
 ];

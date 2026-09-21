@@ -441,5 +441,17 @@ const GLOSSARY = [
   {de: "die Gewohnheit", uk: "звичка", klas: "8", modul: "A", lektion: 10},
   {de: "ausreichend", uk: "достатній, достатньо", klas: "8", modul: "A", lektion: 10},
   {de: "allzu", uk: "занадто, надміру", klas: "8", modul: "A", lektion: 10},
-  {de: "sich ernähren", uk: "харчуватися", klas: "8", modul: "A", lektion: 10}
+  {de: "sich ernähren", uk: "харчуватися", klas: "8", modul: "A", lektion: 10},
+  {de: "die Jahreszeit (die Jahreszeiten)", uk: "пора року", klas: "8", modul: "A", lektion: 11},
+  {de: "der Winter", uk: "зима", klas: "8", modul: "A", lektion: 11},
+  {de: "der Frühling", uk: "весна", klas: "8", modul: "A", lektion: 11},
+  {de: "der Herbst", uk: "осінь", klas: "8", modul: "A", lektion: 11},
+  {de: "Ski laufen", uk: "кататися на лижах", klas: "8", modul: "A", lektion: 11},
+  {de: "Schlittschuh laufen", uk: "кататися на ковзанах", klas: "8", modul: "A", lektion: 11},
+  {de: "wandern", uk: "здійснювати піші походи, мандрувати пішки", klas: "8", modul: "A", lektion: 11},
+  {de: "Rad fahren", uk: "їздити на велосипеді", klas: "8", modul: "A", lektion: 11},
+  {de: "lieber (Komparativ von gern)", uk: "охочіше, радше", klas: "8", modul: "A", lektion: 11},
+  {de: "am liebsten (Superlativ von gern)", uk: "найбільше з усього, найохочіше", klas: "8", modul: "A", lektion: 11},
+  {de: "frische Luft", uk: "свіже повітря", klas: "8", modul: "A", lektion: 11},
+  {de: "aufs Land fahren", uk: "виїжджати за місто, на природу", klas: "8", modul: "A", lektion: 11}
 ];
