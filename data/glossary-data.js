@@ -429,5 +429,17 @@ const GLOSSARY = [
   {de: "die Verabredung", uk: "домовленість про зустріч", klas: "9", modul: "A", lektion: 12},
   {de: "skaten", uk: "кататися на скейті", klas: "9", modul: "A", lektion: 12},
   {de: "chillen", uk: "розслаблятися, проводити час без напруги (розм.)", klas: "9", modul: "A", lektion: 12},
-  {de: "loyal", uk: "лояльний, відданий", klas: "9", modul: "A", lektion: 12}
+  {de: "loyal", uk: "лояльний, відданий", klas: "9", modul: "A", lektion: 12},
+  {de: "gesund", uk: "здоровий, корисний для здоров'я", klas: "8", modul: "A", lektion: 10},
+  {de: "schädlich", uk: "шкідливий", klas: "8", modul: "A", lektion: 10},
+  {de: "der Körper", uk: "тіло", klas: "8", modul: "A", lektion: 10},
+  {de: "der Geist", uk: "дух, розум", klas: "8", modul: "A", lektion: 10},
+  {de: "sich bewegen", uk: "рухатися", klas: "8", modul: "A", lektion: 10},
+  {de: "die Süßigkeit (die Süßigkeiten)", uk: "солодощі", klas: "8", modul: "A", lektion: 10},
+  {de: "das Medikament (die Medikamente)", uk: "ліки, медикамент", klas: "8", modul: "A", lektion: 10},
+  {de: "man sollte (+Infinitiv)", uk: "слід, варто (робити щось) — порада", klas: "8", modul: "A", lektion: 10},
+  {de: "die Gewohnheit", uk: "звичка", klas: "8", modul: "A", lektion: 10},
+  {de: "ausreichend", uk: "достатній, достатньо", klas: "8", modul: "A", lektion: 10},
+  {de: "allzu", uk: "занадто, надміру", klas: "8", modul: "A", lektion: 10},
+  {de: "sich ernähren", uk: "харчуватися", klas: "8", modul: "A", lektion: 10}
 ];

@@ -391,5 +391,15 @@ const LESSONS = [
     file: "klas-9/modul-a/lektion-12.html",
     nove: true,
     dz: "Schreib einen Forumsbeitrag (6–10 Sätze) zum Thema „Wahre Freundschaft“. Gehe dabei auf folgende Punkte ein: Gibt es wahre Freunde? Wer kann als echte(r) Freund(in) gelten? Woran erkennt man echte Freunde? Was kann man zusammen mit Freunden unternehmen? Benutze dabei mindestens zwei Sätze mit „wenn ..., dann ...“ (z. B. „Wenn ich jemanden Freund nenne, dann vertraue ich ihm/ihr voll und ganz.“)."
+  },
+  {
+    klas: "8",
+    modul: "A",
+    lektion: 10,
+    nazva: "Gesunde Lebensweise: Sprichwörter und gute Ratschläge",
+    opys: "Німецькі прислів'я про здоров'я з аудіюванням, сортуємо корисні й шкідливі звички за принципом gesund/schädlich та вчимося радити конструкцією „man sollte + Infinitiv“.",
+    file: "klas-8/modul-a/lektion-10.html",
+    nove: true,
+    dz: "Lies den Text über Jonas' Tag und finde 5 Fehler — Aussagen, die einem gesunden Leben widersprechen. Schreib den Text richtig ab (korrigiere die 5 Stellen): „Jonas steht jeden Tag erst um elf Uhr vormittags auf und isst dann sofort viele Süßigkeiten zum Frühstück, weil das seiner Meinung nach sehr gesund ist. Nach der Schule liegt er drei Stunden lang in der Sonne und trinkt dabei kein Wasser. Am Abend isst er sehr spät, um Mitternacht, und geht dann sofort schlafen. Jonas findet, man muss sich nicht bewegen, um fit zu bleiben.\u201c Schreib danach noch 2 eigene Sätze mit „man sollte“, was Jonas stattdessen tun sollte."
   }
 ];
