@@ -381,6 +381,18 @@ const GLOSSARY = [
   {de: "die Traumreise", uk: "омріяна подорож", klas: "7", modul: "A", lektion: 15},
   {de: "an die Reihe kommen", uk: "діставатися своєї черги (в грі)", klas: "7", modul: "A", lektion: 15},
   {de: "gewinnen", uk: "перемагати", klas: "7", modul: "A", lektion: 15},
-  {de: "finden (etwas gut/okay/nicht besonders gut finden)", uk: "вважати, оцінювати (щось як добре/непогано/не дуже добре)", klas: "7", modul: "A", lektion: 15}
+  {de: "finden (etwas gut/okay/nicht besonders gut finden)", uk: "вважати, оцінювати (щось як добре/непогано/не дуже добре)", klas: "7", modul: "A", lektion: 15},
+  {de: "der Schulrucksack", uk: "шкільний рюкзак", klas: "7", modul: "A", lektion: 16},
+  {de: "verlassen (das Haus verlassen)", uk: "залишати (виходити з дому)", klas: "7", modul: "A", lektion: 16},
+  {de: "sich ausruhen", uk: "відпочивати, розслаблятися", klas: "7", modul: "A", lektion: 16},
+  {de: "einschlafen (trennbar)", uk: "засинати", klas: "7", modul: "A", lektion: 16},
+  {de: "chatten", uk: "спілкуватися в чаті, листуватися онлайн", klas: "7", modul: "A", lektion: 16},
+  {de: "spannend", uk: "захопливий, цікавий", klas: "7", modul: "A", lektion: 16},
+  {de: "die Zeitschrift", uk: "журнал", klas: "7", modul: "A", lektion: 16},
+  {de: "normalerweise", uk: "зазвичай, як правило", klas: "7", modul: "A", lektion: 16},
+  {de: "die Uhrzeit", uk: "час (за годинником)", klas: "7", modul: "A", lektion: 16},
+  {de: "Viertel vor / Viertel nach", uk: "за чверть (до) / чверть на (після)", klas: "7", modul: "A", lektion: 16},
+  {de: "halb (halb acht)", uk: "пів (пів на восьму)", klas: "7", modul: "A", lektion: 16},
+  {de: "einen riesengroßen Spaß machen", uk: "приносити величезне задоволення", klas: "7", modul: "A", lektion: 16}
 ];
 

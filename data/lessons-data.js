@@ -351,5 +351,15 @@ const LESSONS = [
     file: "klas-7/modul-a/lektion-15.html",
     nove: true,
     dz: "Schreib einen kurzen Beitrag für deinen eigenen „Familienblog“ (6–8 Sätze): Was werdet ihr am nächsten Wochenende zu Hause machen? Benutze mindestens vier Sätze im Futur I mit verschiedenen Subjekten (ich, du/er/sie, wir) und nenne dabei mindestens zwei Hausarbeiten (z. B. Staub saugen, die Kleidung waschen, das Haus aufräumen). Schreib am Ende einen Satz mit deiner Meinung, z. B. „Das finde ich nicht besonders gut, weil …“ oder „Das finde ich ganz gut, weil …“."
+  },
+  {
+    klas: "7",
+    modul: "A",
+    lektion: 16,
+    nazva: "Mein Tagesablauf",
+    opys: "Uhrzeiten у побутовій формі (Viertel vor/nach, halb) на матеріалі аудіозапису про розпорядок дня Luisa; повторення й розширення теми домашніх обов'язків через слухання з пропусками, квіз на розуміння і вправу 'хатні справи чи дозвілля?'.",
+    file: "klas-7/modul-a/lektion-16.html",
+    nove: true,
+    dz: "Schreib einen kurzen Text (6–8 Sätze) über deinen typischen Schultag. Nutze mindestens vier Uhrzeiten in der Alltagsform (z. B. Viertel vor acht, halb neun, zwanzig nach fünf) und erwähne mindestens drei Hausarbeiten, die du an diesem Tag machst (z. B. das Bett machen, die Blumen gießen, das Geschirr spülen). Benutze dabei mindestens zwei trennbare Verben im Präsens."
   }
 ];
