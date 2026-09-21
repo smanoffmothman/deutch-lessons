@@ -361,5 +361,15 @@ const LESSONS = [
     file: "klas-7/modul-a/lektion-16.html",
     nove: true,
     dz: "Schreib einen kurzen Text (6–8 Sätze) über deinen typischen Schultag. Nutze mindestens vier Uhrzeiten in der Alltagsform (z. B. Viertel vor acht, halb neun, zwanzig nach fünf) und erwähne mindestens drei Hausarbeiten, die du an diesem Tag machst (z. B. das Bett machen, die Blumen gießen, das Geschirr spülen). Benutze dabei mindestens zwei trennbare Verben im Präsens."
+  },
+  {
+    klas: "9",
+    modul: "A",
+    lektion: 10,
+    nazva: "Charaktereigenschaften: Wie sind wahre Freunde?",
+    opys: "Нові прикметники характеру (ehrlich, hilfsbereit, taktvoll, tolerant, zuverlässig), закінчення прикметників (attributiv/prädikativ) та читання форумних дописів підлітків про справжню дружбу.",
+    file: "klas-9/modul-a/lektion-10.html",
+    nove: true,
+    dz: "Interviewt euch gegenseitig (zu zweit oder mit einem Familienmitglied) über den besten Freund / die beste Freundin: Name, Alter, Aussehen, Lieblingskleidung, Charakter. Schreibt die Antworten eurer Partnerin / eures Partners auf (6–8 Sätze). Benutzt dabei mindestens vier Adjektive aus dem heutigen Wortschatz (z. B. ehrlich, hilfsbereit, taktvoll, zuverlässig) — davon mindestens zwei mit richtiger Endung vor einem Nomen (z. B. „ein hilfsbereiter Junge“) und mindestens eins nach „sein“ ohne Endung (z. B. „Sie ist sehr ehrlich.“)."
   }
 ];

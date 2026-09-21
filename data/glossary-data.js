@@ -393,6 +393,18 @@ const GLOSSARY = [
   {de: "die Uhrzeit", uk: "час (за годинником)", klas: "7", modul: "A", lektion: 16},
   {de: "Viertel vor / Viertel nach", uk: "за чверть (до) / чверть на (після)", klas: "7", modul: "A", lektion: 16},
   {de: "halb (halb acht)", uk: "пів (пів на восьму)", klas: "7", modul: "A", lektion: 16},
-  {de: "einen riesengroßen Spaß machen", uk: "приносити величезне задоволення", klas: "7", modul: "A", lektion: 16}
+  {de: "einen riesengroßen Spaß machen", uk: "приносити величезне задоволення", klas: "7", modul: "A", lektion: 16},
+  {de: "ehrlich", uk: "чесний", klas: "9", modul: "A", lektion: 10},
+  {de: "freundlich", uk: "привітний, доброзичливий", klas: "9", modul: "A", lektion: 10},
+  {de: "hilfsbereit", uk: "готовий допомогти, чуйний", klas: "9", modul: "A", lektion: 10},
+  {de: "taktvoll", uk: "тактовний", klas: "9", modul: "A", lektion: 10},
+  {de: "tolerant", uk: "толерантний, терпимий", klas: "9", modul: "A", lektion: 10},
+  {de: "zuverlässig", uk: "надійний", klas: "9", modul: "A", lektion: 10},
+  {de: "verraten", uk: "зраджувати, видавати (таємницю)", klas: "9", modul: "A", lektion: 10},
+  {de: "verzeihen", uk: "прощати, вибачати", klas: "9", modul: "A", lektion: 10},
+  {de: "sich verlassen auf (+Akk.)", uk: "покладатися на когось", klas: "9", modul: "A", lektion: 10},
+  {de: "kostbar", uk: "цінний, дорогоцінний", klas: "9", modul: "A", lektion: 10},
+  {de: "der Makel (die Makel)", uk: "вада, недолік", klas: "9", modul: "A", lektion: 10},
+  {de: "ins Gesicht sagen", uk: "казати прямо в очі (ідіома)", klas: "9", modul: "A", lektion: 10}
 ];
 
