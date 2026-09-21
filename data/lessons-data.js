@@ -331,5 +331,15 @@ const LESSONS = [
     file: "klas-7/modul-a/lektion-13.html",
     nove: true,
     dz: "Führe zu Hause ein kurzes Interview mit einem Familienmitglied über eure Familientraditionen (mindestens 6 Fragen aus unserem Fragebogen im Unterricht, z. B. über Mahlzeiten, Feste, Rituale, Urlaub, Hobbys). Schreib die Antworten auf (6–8 Sätze) und benutze dabei mindestens vier Wörter aus dem heutigen Wortschatz (z. B. Mahlzeit, Ritual, Fragebogen, Urlaubsort)."
+  },
+  {
+    klas: "7",
+    modul: "A",
+    lektion: 14,
+    nazva: "У колі сім'ї: повторення (Hausarbeit & Familienfeste)",
+    opys: "Повторювальний урок модуля: зіставляємо стійкі вирази про хатні справи, слухаємо аудіо й нумеруємо картинки, шукаємо навмисні помилки в грі «Das ist aber falsch!».",
+    file: "klas-7/modul-a/lektion-14.html",
+    nove: true,
+    dz: "Schreib einen kurzen SMS-Dialog (6–8 Nachrichten) zwischen dir und deinem Bruder / deiner Schwester (oder einem Freund / einer Freundin): Wer macht heute welche Hausarbeit zu Hause? Benutze dabei mindestens vier Ausdrücke aus dem heutigen Wortschatz (z. B. das Geschirr spülen, die Wäsche bügeln, den Müll wegbringen, Staub saugen, das Haus aufräumen) und erwähne am Ende ein Familienfest, auf das ihr euch freut."
   }
 ];

@@ -361,6 +361,16 @@ const GLOSSARY = [
   {de: "unterstreichen", uk: "підкреслювати", klas: "7", modul: "A", lektion: 13},
   {de: "das Ritual (die Rituale)", uk: "ритуал, звична дія", klas: "7", modul: "A", lektion: 13},
   {de: "sich vorbereiten auf (+Akk.)", uk: "готуватися до чогось", klas: "7", modul: "A", lektion: 13},
-  {de: "der Urlaubsort", uk: "місце відпочинку, курорт", klas: "7", modul: "A", lektion: 13}
+  {de: "der Urlaubsort", uk: "місце відпочинку, курорт", klas: "7", modul: "A", lektion: 13},
+  {de: "die Reihenfolge", uk: "послідовність, порядок", klas: "7", modul: "A", lektion: 14},
+  {de: "zusammenpassen (trennbar)", uk: "пасувати одне до одного, збігатися", klas: "7", modul: "A", lektion: 14},
+  {de: "nummerieren", uk: "нумерувати", klas: "7", modul: "A", lektion: 14},
+  {de: "stimmen (das stimmt / das stimmt nicht)", uk: "бути правильним (це правда / це не так)", klas: "7", modul: "A", lektion: 14},
+  {de: "falsch", uk: "неправильний, хибний", klas: "7", modul: "A", lektion: 14},
+  {de: "die Aufgabe", uk: "завдання", klas: "7", modul: "A", lektion: 14},
+  {de: "das Spiel", uk: "гра", klas: "7", modul: "A", lektion: 14},
+  {de: "der Mitspieler / die Mitspielerin", uk: "партнер(-ка) по грі", klas: "7", modul: "A", lektion: 14},
+  {de: "die Familienreise", uk: "сімейна подорож", klas: "7", modul: "A", lektion: 14},
+  {de: "picknicken", uk: "влаштовувати пікнік, пікнікувати", klas: "7", modul: "A", lektion: 14}
 ];
 
