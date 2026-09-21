@@ -381,5 +381,15 @@ const LESSONS = [
     file: "klas-9/modul-a/lektion-11.html",
     nove: true,
     dz: "Schreib einen kurzen Forumsbeitrag (6–8 Sätze) über dein eigenes Hobby — ähnlich wie Lars, Anna oder Ines aus dem heutigen Hörtext. Benutze dabei mindestens zwei Ausdrücke aus dem heutigen Unterricht (z. B. „sich interessieren für“, „sich beschäftigen mit“) und erzähl, wie oft und mit wem du das machst."
+  },
+  {
+    klas: "9",
+    modul: "A",
+    lektion: 12,
+    nazva: "Freunde und Freizeit",
+    opys: "Продовжуємо тему дружби: що підлітки роблять разом у вільний час, як розпізнати справжнього друга (читання форум-посту) і граматика речень з «wenn ..., dann ...».",
+    file: "klas-9/modul-a/lektion-12.html",
+    nove: true,
+    dz: "Schreib einen Forumsbeitrag (6–10 Sätze) zum Thema „Wahre Freundschaft“. Gehe dabei auf folgende Punkte ein: Gibt es wahre Freunde? Wer kann als echte(r) Freund(in) gelten? Woran erkennt man echte Freunde? Was kann man zusammen mit Freunden unternehmen? Benutze dabei mindestens zwei Sätze mit „wenn ..., dann ...“ (z. B. „Wenn ich jemanden Freund nenne, dann vertraue ich ihm/ihr voll und ganz.“)."
   }
 ];

@@ -417,6 +417,17 @@ const GLOSSARY = [
   {de: "sich vorbereiten auf (+Akk.)", uk: "готуватися до чогось", klas: "9", modul: "A", lektion: 11},
   {de: "der Wettbewerb", uk: "змагання, конкурс", klas: "9", modul: "A", lektion: 11},
   {de: "zurzeit", uk: "наразі, на цей час", klas: "9", modul: "A", lektion: 11},
-  {de: "die Freizeitaktivität", uk: "активність у вільний час", klas: "9", modul: "A", lektion: 11}
+  {de: "die Freizeitaktivität", uk: "активність у вільний час", klas: "9", modul: "A", lektion: 11},
+  {de: "der Forumsbeitrag", uk: "допис на форумі", klas: "9", modul: "A", lektion: 12},
+  {de: "wahr", uk: "справжній, правдивий", klas: "9", modul: "A", lektion: 12},
+  {de: "das Vertrauen", uk: "довіра", klas: "9", modul: "A", lektion: 12},
+  {de: "vertrauen (+Dativ)", uk: "довіряти (комусь)", klas: "9", modul: "A", lektion: 12},
+  {de: "die Wahrheit", uk: "правда", klas: "9", modul: "A", lektion: 12},
+  {de: "erkennen", uk: "розпізнавати, впізнавати", klas: "9", modul: "A", lektion: 12},
+  {de: "gelten als", uk: "вважатися (кимось/чимось)", klas: "9", modul: "A", lektion: 12},
+  {de: "sich verabreden (mit +Dativ)", uk: "домовлятися про зустріч (з кимось)", klas: "9", modul: "A", lektion: 12},
+  {de: "die Verabredung", uk: "домовленість про зустріч", klas: "9", modul: "A", lektion: 12},
+  {de: "skaten", uk: "кататися на скейті", klas: "9", modul: "A", lektion: 12},
+  {de: "chillen", uk: "розслаблятися, проводити час без напруги (розм.)", klas: "9", modul: "A", lektion: 12},
+  {de: "loyal", uk: "лояльний, відданий", klas: "9", modul: "A", lektion: 12}
 ];
-
