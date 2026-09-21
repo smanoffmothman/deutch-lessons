@@ -61,6 +61,21 @@ function shuffleArray(arr){
 // Кожне правильно вибрана відповідь додає +1 до прогресу.
 // opts перемішується автоматично при кожному рендері (див. shuffleArray) —
 // порядок варіантів у даних не має значення для того, де опиниться правильна.
+//
+// АНТИ-ЧІТ (2026-09): раніше при неправильному кліку функція сама одразу
+// називала правильну відповідь текстом ("richtig wäre: ...") і підсвічувала
+// потрібну кнопку зеленим, а всі кнопки одразу блокувалися. Учень міг
+// навмисно клікати навмання, "виписати" собі всі правильні відповіді
+// квізу, а тоді натиснути "Von vorn beginnen" (повне перезавантаження
+// сторінки) і пройти вже з готовими відповідями — чистий бал без жодного
+// реального знання. Тепер: (1) правильна відповідь ніколи не називається
+// і не підсвічується текстом/кольором, поки учень сам її не знайде;
+// (2) кнопки не блокуються після неправильного кліку — можна пробувати
+// далі, це нормальне навчання методом виключення варіантів; (3) бал і
+// прогрес фіксуються лише по ПЕРШІЙ реальній спробі кожного питання
+// (як і в checkBlanks нижче) — подальші спроби так само дають живий
+// колір-фідбек, але вже не впливають на рахунок. Питання блокується
+// (кнопки вимикаються) лише тоді, коли учень сам натиснув правильну.
 function buildQuiz(containerId, data){
   const wrap = document.getElementById(containerId);
   setTotal(data.length);
@@ -69,21 +84,28 @@ function buildQuiz(containerId, data){
     div.className = 'quiz-q';
     div.innerHTML = `<p class="q-text">${qi+1}. ${item.q}</p><div class="quiz-opts"></div><p class="feedback"></p>`;
     const optsWrap = div.querySelector('.quiz-opts');
+    let firstTryDone = false;
     shuffleArray(item.opts).forEach(o => {
       const b = document.createElement('button');
       b.className = 'opt-btn'; b.textContent = o;
       b.addEventListener('click', () => {
-        if(div.dataset.answered) return;
+        if(div.dataset.solved) return;
         const fb = div.querySelector('.feedback');
-        optsWrap.querySelectorAll('.opt-btn').forEach(x => x.disabled = true);
-        if(o === item.correct){
-          b.classList.add('correct'); fb.textContent = 'Richtig! ✓'; fb.className = 'feedback ok';
-          markDone(1);
+        const isCorrect = (o === item.correct);
+        optsWrap.querySelectorAll('.opt-btn').forEach(x => x.classList.remove('wrong'));
+        if(isCorrect){
+          b.classList.add('correct');
+          fb.textContent = 'Richtig! ✓'; fb.className = 'feedback ok';
+          optsWrap.querySelectorAll('.opt-btn').forEach(x => x.disabled = true);
+          div.dataset.solved = '1';
         } else {
-          b.classList.add('wrong'); fb.textContent = 'Nicht ganz — richtig wäre: ' + item.correct; fb.className = 'feedback bad';
-          optsWrap.querySelectorAll('.opt-btn').forEach(x => { if(x.textContent === item.correct) x.classList.add('correct'); });
+          b.classList.add('wrong');
+          fb.textContent = 'Nicht ganz — versuch es noch mal.'; fb.className = 'feedback bad';
         }
-        div.dataset.answered = '1';
+        if(!firstTryDone){
+          firstTryDone = true;
+          if(isCorrect) markDone(1);
+        }
       });
       optsWrap.appendChild(b);
     });
