@@ -371,6 +371,16 @@ const GLOSSARY = [
   {de: "das Spiel", uk: "гра", klas: "7", modul: "A", lektion: 14},
   {de: "der Mitspieler / die Mitspielerin", uk: "партнер(-ка) по грі", klas: "7", modul: "A", lektion: 14},
   {de: "die Familienreise", uk: "сімейна подорож", klas: "7", modul: "A", lektion: 14},
-  {de: "picknicken", uk: "влаштовувати пікнік, пікнікувати", klas: "7", modul: "A", lektion: 14}
+  {de: "picknicken", uk: "влаштовувати пікнік, пікнікувати", klas: "7", modul: "A", lektion: 14},
+  {de: "würfeln", uk: "кидати кубик", klas: "7", modul: "A", lektion: 15},
+  {de: "das Würfelspiel", uk: "настільна гра з кубиком", klas: "7", modul: "A", lektion: 15},
+  {de: "der Schreibwettbewerb", uk: "конкурс творчих (письмових) робіт", klas: "7", modul: "A", lektion: 15},
+  {de: "die Traumfamilienferien (Pl.)", uk: "омріяні сімейні канікули", klas: "7", modul: "A", lektion: 15},
+  {de: "erstellen (einen Blog erstellen)", uk: "створювати (напр. блог)", klas: "7", modul: "A", lektion: 15},
+  {de: "der Familienblog", uk: "сімейний блог", klas: "7", modul: "A", lektion: 15},
+  {de: "die Traumreise", uk: "омріяна подорож", klas: "7", modul: "A", lektion: 15},
+  {de: "an die Reihe kommen", uk: "діставатися своєї черги (в грі)", klas: "7", modul: "A", lektion: 15},
+  {de: "gewinnen", uk: "перемагати", klas: "7", modul: "A", lektion: 15},
+  {de: "finden (etwas gut/okay/nicht besonders gut finden)", uk: "вважати, оцінювати (щось як добре/непогано/не дуже добре)", klas: "7", modul: "A", lektion: 15}
 ];
 

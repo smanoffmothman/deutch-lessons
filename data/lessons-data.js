@@ -341,5 +341,15 @@ const LESSONS = [
     file: "klas-7/modul-a/lektion-14.html",
     nove: true,
     dz: "Schreib einen kurzen SMS-Dialog (6–8 Nachrichten) zwischen dir und deinem Bruder / deiner Schwester (oder einem Freund / einer Freundin): Wer macht heute welche Hausarbeit zu Hause? Benutze dabei mindestens vier Ausdrücke aus dem heutigen Wortschatz (z. B. das Geschirr spülen, die Wäsche bügeln, den Müll wegbringen, Staub saugen, das Haus aufräumen) und erwähne am Ende ein Familienfest, auf das ihr euch freut."
+  },
+  {
+    klas: "7",
+    modul: "A",
+    lektion: 15,
+    nazva: "Haushalt: gut, okay oder nicht besonders gut?",
+    opys: "Висловлюємо думку про хатні активності (gut/okay/nicht besonders gut) за зразком діалогу, повторюємо Futur I через сімейний блог і настільну гру про родину.",
+    file: "klas-7/modul-a/lektion-15.html",
+    nove: true,
+    dz: "Schreib einen kurzen Beitrag für deinen eigenen „Familienblog“ (6–8 Sätze): Was werdet ihr am nächsten Wochenende zu Hause machen? Benutze mindestens vier Sätze im Futur I mit verschiedenen Subjekten (ich, du/er/sie, wir) und nenne dabei mindestens zwei Hausarbeiten (z. B. Staub saugen, die Kleidung waschen, das Haus aufräumen). Schreib am Ende einen Satz mit deiner Meinung, z. B. „Das finde ich nicht besonders gut, weil …“ oder „Das finde ich ganz gut, weil …“."
   }
 ];
