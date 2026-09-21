@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 11 · Modul A · Sport das ganze Jahr</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 8'},
+    {label: 'Урок 11: Sport das ganze Jahr'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 11 · MODUL A</span>
+        <h1>Sport das ganze Jahr</h1>
+        <p class="sub">Дізнаємось, як підлітки проводять вільний час — хто активно займається спортом у різні пори року, а хто більше сидить удома, і потренуємось казати про свої вподобання за допомогою gern – lieber – am liebsten.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Wer ist das?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · gern – lieber – am liebsten</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Sport im Jahr</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== START ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Worum geht es in diesem Modul?</h2>
+      <div class="card">
+        <p>Im Modul „Stil des Lebens“ sprechen wir darüber, wie Jugendliche ihre Freizeit verbringen. Manche treiben das ganze Jahr über Sport — im Frühling, im Sommer, im Herbst und sogar im Winter. Andere sitzen lieber vor dem Computer oder chatten mit Freunden. In dieser Stunde lernst du, wie man über sportliche Gewohnheiten in verschiedenen Jahreszeiten spricht, und übst die Wörter <strong>gern, lieber</strong> und <strong>am liebsten</strong>.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          У модулі «Стиль життя» ми говоримо про те, як підлітки проводять вільний час. Дехто займається спортом цілий рік — навесні, влітку, восени і навіть узимку. Інші радше сидять за комп'ютером або спілкуються з друзями. На цьому уроці ти навчишся розповідати про спортивні звички в різні пори року й потренуєш слова gern, lieber, am liebsten (охоче — охочіше — найохочіше).
+        </div>
+      </div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Bist du eher ein Sportmuffel oder ein Bewegungsfan? Mal sehen, was du in dieser Stunde herausfindest!</p>
+      </div>
+    </section>
+
+    <!-- ===== HAUSAUFGABE ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: прочитати текст про Йонаса і знайти в ньому 5 помилок — тверджень, які суперечать здоровому способу життя (пізнє прокидання, солодощі на сніданок, довге лежання на сонці без води, дуже пізня вечеря, переконання, що рухатись не обов'язково), переписати текст правильно, а також скласти 2 власні речення з «man sollte». Перевіримо, чи пам'ятаєш ти правильні варіанти.
+      </div>
+      <div id="dz-check"></div>
+
+      <div class="card" id="dz-vocab-wrap" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">Wörter-Check</p>
+        <p class="lead">Перевір слова з минулого уроку.</p>
+        <div id="dz-vocab"></div>
+      </div>
+    </section>
+
+    <!-- ===== ÜB.1: Lesetext + Zuordnung ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Wer ist das? Lies die Forumsbeiträge</h2>
+      <p class="lead">Прочитай чотири дописи підлітків на форумі про їхнє повсякденне життя, а потім визнач, про кого йдеться в кожному твердженні.</p>
+
+      <div class="mail-window">
+        <div class="mail-titlebar">Forum „Mein Alltag“ — 4 neue Beiträge</div>
+        <div class="mail-body">
+          <p><strong>Jan (15):</strong> Ich spiele zweimal in der Woche Fußball im Verein, das macht mir riesigen Spaß. Außerdem fahre ich sehr gern Rad, am liebsten mit meinen Freunden am Wochenende. Fernsehen oder stundenlang am Computer sitzen — das ist nichts für mich, das finde ich langweilig.</p>
+          <p><strong>Maria (14):</strong> In meiner Freizeit telefoniere oder chatte ich am liebsten mit meinen Freundinnen. Wir gehen oft ins Kino oder essen zusammen etwas — meistens Fastfood, das schmeckt uns allen sehr gut. Abends surfe ich gern im Internet. Sport treibe ich eigentlich fast nie.</p>
+          <p><strong>Michael (16):</strong> Ohne meinen Computer kann ich mir mein Leben kaum vorstellen. Ich brauche ihn für die Schule und für die Kommunikation mit Freunden, aber ich spiele auch sehr gern Computerspiele — manchmal zwei oder drei Stunden am Tag. Musik höre ich dabei natürlich auch.</p>
+          <p><strong>Petra (15):</strong> In der Stadt zu leben ist manchmal schwierig, wenn man sich viel bewegen will. Deshalb fährt meine Familie am Wochenende oft aufs Land. Dort wandern wir stundenlang und atmen frische Luft. Im Winter laufen wir gern Ski oder Schlittschuh — das ist meine Lieblingsjahreszeit für Sport.</p>
+        </div>
+      </div>
+
+      <p class="lead" style="margin-top:18px;">Von wem ist hier die Rede?</p>
+      <div id="ub1-quiz"></div>
+    </section>
+
+    <!-- ===== ÜB.2: gern - lieber - am liebsten ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">gern – lieber – am liebsten</h2>
+      <div class="card">
+        <p>Ці три слова означають ступені уподобання — «охоче», «охочіше», «найохочіше». Це не звичайні прикметники (schnell – schneller – am schnellsten), а особлива, нерегулярна форма — її треба просто запам'ятати.</p>
+        <table class="gtable">
+          <tr><th>Grundform</th><th>Komparativ</th><th>Superlativ</th></tr>
+          <tr><td class="gender">gern</td><td><strong>lieber</strong></td><td><strong>am liebsten</strong></td></tr>
+        </table>
+        <p><em>Ich spiele <strong>gern</strong> Volleyball.</em> — Я охоче граю у волейбол.<br>
+        <em>Ich spiele <strong>lieber</strong> Basketball.</em> — Я охочіше граю в баскетбол (ніж у волейбол).<br>
+        <em>Am liebsten spiele ich Tennis.</em> — Найбільше з усього я граю в теніс.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Ці слова стоять НЕ перед іменником, а біля дієслова (бо це прислівники, не прикметники): «Ich fahre gern Rad» (не «gerner Rad» і не перед fahre). У реченні кількість «зірочок» ⭐ показує ступінь уподобання: одна зірочка = gern, дві = lieber, три = am liebsten.
+        </div>
+      </div>
+
+      <p class="lead">Заповни пропуски правильною формою — орієнтуйся на кількість зірочок ⭐.</p>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> Ich fahre ⭐ Rad. <input type="text" class="blank-input" style="width:130px;display:inline-block;" data-ans="gern"></div>
+        <div class="fill-item"><span class="num">2)</span> Im Sommer schwimme ich ⭐⭐⭐. <input type="text" class="blank-input" style="width:130px;display:inline-block;" data-ans="am liebsten"></div>
+        <div class="fill-item"><span class="num">3)</span> Er spielt ⭐⭐ Handball als Fußball. <input type="text" class="blank-input" style="width:130px;display:inline-block;" data-ans="lieber"></div>
+        <div class="fill-item"><span class="num">4)</span> Wir wandern ⭐ im Wald. <input type="text" class="blank-input" style="width:130px;display:inline-block;" data-ans="gern"></div>
+        <div class="fill-item"><span class="num">5)</span> Sie läuft ⭐⭐⭐ Ski. <input type="text" class="blank-input" style="width:130px;display:inline-block;" data-ans="am liebsten"></div>
+        <div class="fill-item"><span class="num">6)</span> Ich sehe ⭐⭐ fern, als ich lese. <input type="text" class="blank-input" style="width:130px;display:inline-block;" data-ans="lieber"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== ÜB.3: Sport im Jahr (Token) ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Welche Sportarten passen zum Winter?</h2>
+      <p class="lead">Клікни лише на ті активності в тексті, якими зазвичай займаються взимку.</p>
+      <div class="card" id="ub3-text">
+        <p>Im Jahresverlauf treiben die Jugendlichen unterschiedliche Sportarten. Im Frühling machen viele gern einen <span class="tok" data-correct="false">Spaziergang</span> oder <span class="tok" data-correct="false">fahren Rad</span>. Im Sommer <span class="tok" data-correct="false">schwimmen</span> sie im See oder spielen <span class="tok" data-correct="false">Beachvolleyball</span>. Im Herbst <span class="tok" data-correct="false">joggen</span> manche im Park oder spielen <span class="tok" data-correct="false">Fußball</span>. Im Winter dagegen laufen viele <span class="tok" data-correct="true">Ski</span> oder <span class="tok" data-correct="true">Schlittschuh</span>, manche gehen auch <span class="tok" data-correct="true">snowboarden</span>.</p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG! ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Zeichne (oder gestalte digital) deinen persönlichen „Sportkalender“ für ein Jahr: vier Felder für vier Jahreszeiten (Frühling, Sommer, Herbst, Winter). Schreib zu jeder Jahreszeit mindestens eine Sportart, die du in dieser Zeit gern treibst, und einen kurzen Satz dazu (z. B. „Im Winter laufe ich gern Ski.“ oder „Am liebsten fahre ich im Sommer Rad.“). Benutze insgesamt mindestens zweimal gern/lieber/am liebsten.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Намалюй (або оформи в електронному вигляді) свій особистий «спортивний календар» на рік: чотири блоки для чотирьох пір року (весна, літо, осінь, зима). До кожної пори року запиши принаймні один вид спорту, яким ти залюбки займаєшся в цей час, і коротке речення про нього (напр. «Взимку я залюбки катаюсь на лижах.» або «Найбільше з усього влітку я їжджу на велосипеді.»). Використай загалом щонайменше двічі gern/lieber/am liebsten.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Wörter zum Lernen</p>
+        <div class="chip-row" id="vocabChips"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../data/glossary-data.js"></script>
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  // ===== Слова цього уроку у вкладці Fertig =====
+  const LEKTION_KLAS = "8", LEKTION_MODUL = "A", LEKTION_LEKTION = 11;
+  const LEKTION_PREV_LEKTION = 10;
+
+  (function renderLessonVocab(){
+    const box = document.getElementById('vocabChips');
+    if (!box || typeof GLOSSARY === 'undefined') return;
+    const words = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_LEKTION
+    );
+    if (words.length === 0){
+      box.innerHTML = '<p class="empty-note">Слова для цього уроку ще не додані в глосарій.</p>';
+      return;
+    }
+    box.innerHTML = words.map(w =>
+      '<span class="chip static">' + w.de + ' — ' + w.uk + '</span>'
+    ).join('');
+  })();
+
+  // ===== Wörter-Check у вкладці Hausaufgabe (слова ПОПЕРЕДНЬОГО уроку) =====
+
+  // ---------- Груба евристика частини мови за виглядом "de" ----------
+  // Потрібна лише для того, щоб варіанти-пастки у Wörter-Check були тієї
+  // самої частини мови, що й правильна відповідь (інакше учень вгадує за
+  // формою слова — "це іменник чи дієслово?" — а не за значенням). Це
+  // евристика за текстом рядка, а не лінгвістичний аналізатор, і вона не
+  // вимагає жодного нового поля в даних GLOSSARY.
+  function guessPos(de){
+    var base = (de || '').replace(/\([^)]*\)/g, '').trim();
+    if(/^(der|die|das)(\/(der|die|das))?\s/.test(base)) return 'noun';
+    if(/^sich\s/.test(base)) return 'verb';
+    if(/^am\s/.test(base)) return 'other'; // "am liebsten", "am besten" — прислівникова найвища форма, не дієслово
+    if(/\(\+(Gen|Dat|Akk)\.?\)/.test(de)) return 'prep';
+    var words = base.split(/\s+/);
+    var last = words[words.length - 1];
+    if(/(en|ern|eln)$/.test(last) && last === last.toLowerCase()) return 'verb';
+    return 'other'; // прикметники / прислівники / сталі вирази
+  }
+
+  (function renderDzVocabCheck(){
+    const wrap = document.getElementById('dz-vocab-wrap');
+    const box = document.getElementById('dz-vocab');
+    if (!wrap || !box || typeof GLOSSARY === 'undefined') return;
+    if (!LEKTION_PREV_LEKTION){ wrap.style.display = 'none'; return; }
+
+    const prevWords = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_PREV_LEKTION
+    );
+    if (prevWords.length < 3){ wrap.style.display = 'none'; return; }
+
+    const pool = shuffleArray(prevWords).slice(0, 6);
+    const quizData = pool.map(w => {
+      // Пастки — тієї самої частини мови, що й правильне слово (guessPos вище),
+      // інакше учень вгадує за формою відповіді, а не за її значенням.
+      const pos = guessPos(w.de);
+      let sameKind = GLOSSARY.filter(g => g.uk !== w.uk && guessPos(g.de) === pos);
+      if(sameKind.length < 2) sameKind = GLOSSARY.filter(g => g.uk !== w.uk); // запасний варіант, якщо слів цієї частини мови замало
+      const distractors = shuffleArray(sameKind).slice(0, 2).map(g => g.uk);
+      return { q: w.de, opts: [w.uk, ...distractors], correct: w.uk };
+    });
+    buildQuiz('dz-vocab', quizData);
+  })();
+
+  // Перевірка ДЗ: коректні факти з виправленого тексту про Jonas
+  const dzData = [
+    {q: "Коли Йонасу варто вставати, а не о 11-й?", opts: ["früher aufstehen, z. B. um sieben Uhr", "auch erst um elf Uhr aufstehen", "erst am Mittag aufstehen"], correct: "früher aufstehen, z. B. um sieben Uhr"},
+    {q: "Що краще їсти на сніданок замість солодощів?", opts: ["noch mehr Süßigkeiten essen", "etwas Gesundes essen, z. B. Müsli oder Obst", "gar nichts essen"], correct: "etwas Gesundes essen, z. B. Müsli oder Obst"},
+    {q: "Як правильно проводити час на сонці?", opts: ["drei Stunden ohne Wasser in der Sonne liegen", "den ganzen Tag in der Sonne liegen", "nicht zu lange in der Sonne liegen und viel Wasser trinken"], correct: "nicht zu lange in der Sonne liegen und viel Wasser trinken"},
+    {q: "Коли краще вечеряти, а не опівночі?", opts: ["früh am Abend zu Abend essen", "immer um Mitternacht essen", "gar nicht essen"], correct: "früh am Abend zu Abend essen"},
+    {q: "Що варто робити, щоб залишатися у формі?", opts: ["sich nicht bewegen", "nur schlafen", "sich regelmäßig bewegen"], correct: "sich regelmäßig bewegen"}
+  ];
+  buildQuiz('dz-check', dzData);
+
+  // Üb. 1: квіз (хто це?)
+  const ub1Data = [
+    {q: "1) ... spielt zweimal in der Woche Fußball.", opts: ["Jan", "Maria", "Michael", "Petra"], correct: "Jan"},
+    {q: "2) ... telefoniert oder chattet am liebsten mit Freundinnen.", opts: ["Petra", "Maria", "Jan", "Michael"], correct: "Maria"},
+    {q: "3) ... kann sich das Leben ohne Computer kaum vorstellen.", opts: ["Maria", "Jan", "Michael", "Petra"], correct: "Michael"},
+    {q: "4) ... fährt mit der Familie oft aufs Land.", opts: ["Jan", "Michael", "Maria", "Petra"], correct: "Petra"},
+    {q: "5) ... treibt fast nie Sport.", opts: ["Maria", "Petra", "Jan", "Michael"], correct: "Maria"},
+    {q: "6) ... läuft im Winter gern Ski oder Schlittschuh.", opts: ["Jan", "Petra", "Michael", "Maria"], correct: "Petra"},
+    {q: "7) ... spielt sehr gern Computerspiele.", opts: ["Jan", "Maria", "Michael", "Petra"], correct: "Michael"},
+    {q: "8) ... fährt am liebsten mit Freunden Rad.", opts: ["Michael", "Petra", "Maria", "Jan"], correct: "Jan"}
+  ];
+  buildQuiz('ub1-quiz', ub1Data);
+
+  // Üb. 2: пропуски
+  setTotal(document.querySelectorAll('#ub2-list .blank-input').length);
+  document.getElementById('ub2-check').addEventListener('click', () => {
+    checkBlanks('ub2-list', 'ub2-score', 'ub2');
+  });
+  document.getElementById('ub2-reset').addEventListener('click', () => {
+    resetBlanks('ub2-list', 'ub2-score', 'ub2');
+  });
+
+  // Üb. 3: токени
+  initTokenClicks('ub3-text');
+  setTotal(document.querySelectorAll('#ub3-text .tok[data-correct="true"]').length);
+  document.getElementById('ub3-check').addEventListener('click', () => checkTokens('ub3-text','ub3-score','ub3'));
+  document.getElementById('ub3-reset').addEventListener('click', () => resetTokens('ub3-text','ub3-score','ub3'));
+
+  // Фінальна панель зі штампами
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['⚽','🚴','⛷️','🏔️']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
