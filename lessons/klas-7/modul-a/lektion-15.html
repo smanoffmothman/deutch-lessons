@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 15 · Modul A · Haushalt: gut, okay oder nicht besonders gut?</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 7'},
+    {label: 'Урок 15: Турботи по дому'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 15 · MODUL A</span>
+        <h1>Haushalt: gut, okay oder nicht besonders gut?</h1>
+        <p class="sub">Продовжуємо тему хатніх справ: вчимося висловлювати свою думку про них німецькою і повторюємо Futur I через сімейну настільну гру.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Dialoge</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Lücken</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Futur I</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== ПАНЕЛЬ: вступ ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Worum geht es in diesem Modul?</h2>
+      <div class="card">
+        <p>Modul A heißt „Ich, meine Familie, meine Freunde“. Wir bleiben heute beim Thema Haushalt: Wir sagen unsere Meinung zu verschiedenen Haushaltsaktivitäten (gut, okay oder nicht besonders gut) und wiederholen das Futur I – diesmal mit Hilfe eines Würfelspiels über die Familie.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Модуль A має назву «Я, моя родина, мої друзі». Сьогодні ми залишаємось у темі хатніх справ: висловлюємо свою думку про різні хатні активності (добре, непогано чи не дуже добре) і повторюємо Futur I (майбутній час) за допомогою гри в кубики про родину.
+        </div>
+      </div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Heute würfeln wir ein bisschen mit der Grammatik! Los geht's!</p>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: перевірка ДЗ ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: написати короткий СМС-діалог (6–8 повідомлень) із братом/сестрою чи другом про те, хто сьогодні яку хатню роботу виконує вдома, вживши щонайменше 4 вирази з теми (das Geschirr spülen, die Wäsche bügeln, den Müll wegbringen, Staub saugen, das Haus aufräumen) і згадавши наприкінці сімейне свято, на яке ви чекаєте.
+      </div>
+
+      <div class="phone">
+        <div class="phone-bar"><span>Nachrichten</span><span>●●●</span></div>
+        <div class="phone-header">Mia &amp; Ben</div>
+        <div class="phone-body">
+          <div class="msg them">Hey! Machst du heute Hausarbeit? 🙂</div>
+          <div class="msg me">Ja klar. Ich spüle das Geschirr und bringe den Müll weg.</div>
+          <div class="msg them">Und ich sauge Staub und räume mein Zimmer auf.</div>
+          <div class="msg me">Cool! Danach schauen wir zusammen fern, oder?</div>
+          <div class="msg them">Gute Idee! Übrigens – ich freue mich schon auf Omas Geburtstag am Samstag!</div>
+          <div class="msg me">Ich auch! Da gibt's bestimmt leckeren Kuchen. 🎂</div>
+        </div>
+      </div>
+      <p class="lead" style="margin-top:16px;">Das ist ein Beispiel-Dialog (nicht dein eigener Text!). Beantworte dazu drei Fragen und vergleiche danach selbst mit deiner eigenen Hausaufgabe.</p>
+      <div id="dz-check"></div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: Üb. 1 — квіз про діалог "Gut/Okay/Nicht besonders gut" ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Gut, okay oder nicht besonders gut?</h2>
+      <p class="lead">Прочитай зразок діалогу й таблицю, потім дай відповіді на запитання квізу.</p>
+
+      <div class="card">
+        <table class="gtable">
+          <tr><th>GUT</th><th>OKAY</th><th>NICHT BESONDERS GUT</th></tr>
+          <tr><td>kochen, …</td><td>…</td><td>…</td></tr>
+        </table>
+        <p style="margin-top:10px;"><strong>A:</strong> Machst du im Haushalt mit? — <strong>B:</strong> Na klar!<br>
+        <strong>A:</strong> Gefallen dir alle Haushaltsaktivitäten? — <strong>B:</strong> Natürlich nicht.<br>
+        <strong>A:</strong> Sag dann bitte, was dir gefällt und was nicht. — <strong>B:</strong> Ich koche (nicht) gern … . Das finde ich ganz gut/okay/nicht besonders gut.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Заповни таблицю (GUT / OKAY / NICHT BESONDERS GUT) власними хатніми активностями, а потім розіграйте діалог за зразком у парах: A запитує, чи береш ти участь у хатніх справах і чи всі вони тобі подобаються; B відповідає й пояснює, що подобається, а що ні.
+        </div>
+      </div>
+
+      <div id="ub1-quiz"></div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: Üb. 2 — пропуски (текст діалогу) ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Ergänze den Dialog</h2>
+      <p class="lead">Встав пропущені слова в діалог — той самий, що ти вже читав/ла в Üb. 1.</p>
+      <div class="card" id="ub2-list">
+        <div class="fill-item">
+          <span class="num">1)</span> <strong>A:</strong> Machst du im Haushalt <input type="text" class="blank-input" style="width:80px;display:inline-block;" data-ans="mit">?
+        </div>
+        <div class="fill-item">
+          <span class="num">2)</span> <strong>B:</strong> Na <input type="text" class="blank-input" style="width:90px;display:inline-block;" data-ans="klar">!
+        </div>
+        <div class="fill-item">
+          <span class="num">3)</span> <strong>A:</strong> <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="gefallen"> dir alle Haushaltsaktivitäten?
+        </div>
+        <div class="fill-item">
+          <span class="num">4)</span> <strong>B:</strong> Natürlich nicht.
+        </div>
+        <div class="fill-item">
+          <span class="num">5)</span> <strong>A:</strong> Sag dann bitte, was dir <input type="text" class="blank-input" style="width:100px;display:inline-block;" data-ans="gefällt"> und was nicht.
+        </div>
+        <div class="fill-item">
+          <span class="num">6)</span> <strong>B:</strong> Ich koche (nicht) <input type="text" class="blank-input" style="width:80px;display:inline-block;" data-ans="gern"> … . Das <input type="text" class="blank-input" style="width:80px;display:inline-block;" data-ans="finde"> ich ganz gut.
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: Üb. 3 — Futur I: пояснення + токени ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Futur I: Wiederholung</h2>
+
+      <div class="card tinted-teal">
+        <p>Futur I bildet man so: <strong>Subjekt + werden (Position 2) + … + Infinitiv (am Satzende)</strong>.</p>
+        <table class="gtable">
+          <tr><th>ich</th><td>werde</td><th>wir</th><td>werden</td></tr>
+          <tr><th>du</th><td>wirst</td><th>ihr</th><td>werdet</td></tr>
+          <tr><th>er/sie/es</th><td>wird</td><th>sie/Sie</th><td>werden</td></tr>
+        </table>
+        <p>Beispiel: <em>Ich <strong>werde</strong> am Samstag mein Zimmer <strong>aufräumen</strong>.</em></p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Futur I (майбутній час) утворюється з допоміжного дієслова <strong>werden</strong> (стоїть на другому місці в реченні, як і звичайне дієслово) + <strong>інфінітив</strong> смислового дієслова, який іде в самий кінець речення. Цю тему ми вже починали на уроці 11 — тепер закріплюємо.
+        </div>
+      </div>
+
+      <p class="lead">Клікай на всі фрагменти речень, де вжито <strong>Futur I</strong> (werden + Infinitiv). НЕ клікай на речення в теперішньому часі (Präsens), навіть якщо йдеться про звичну дію.</p>
+
+      <div class="mail-window">
+        <div class="mail-titlebar">Familienblog — neuer Beitrag</div>
+        <div class="mail-body" id="ub3-text">
+          Hallo, mein Blog! Dieses Wochenende <span class="tok" data-correct="true">wird bei uns viel los sein</span>. Zuerst <span class="tok" data-correct="true">werde ich mein Zimmer aufräumen</span>. Meine Schwester <span class="tok" data-correct="false">wäscht meistens am Freitag die Kleidung</span>, aber diesmal <span class="tok" data-correct="true">wird sie die Kleidung erst am Samstag waschen</span>. Wir <span class="tok" data-correct="true">werden zusammen Staub saugen und das Haus schmücken</span>, weil wir eine kleine Familienfeier haben. Meine Eltern <span class="tok" data-correct="false">gehen jeden Samstag einkaufen</span>, aber ich <span class="tok" data-correct="true">werde mit unserem Hund Gassi gehen</span>. Am Abend <span class="tok" data-correct="true">werden wir alle zusammen fernsehen</span>.
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== ПРИКІНЦЕВА ПАНЕЛЬ ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Schreib einen kurzen Beitrag für deinen eigenen „Familienblog“ (6–8 Sätze): Was werdet ihr am nächsten Wochenende zu Hause machen? Benutze mindestens vier Sätze im Futur I mit verschiedenen Subjekten (ich, du/er/sie, wir) und nenne dabei mindestens zwei Hausarbeiten (z. B. Staub saugen, die Kleidung waschen, das Haus aufräumen). Schreib am Ende einen Satz mit deiner Meinung, z. B. „Das finde ich nicht besonders gut, weil …“ oder „Das finde ich ganz gut, weil …“.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Напиши короткий допис для свого «сімейного блогу» (6–8 речень): що ви робитимете вдома наступними вихідними? Вживи щонайменше чотири речення у Futur I з різними підметами (ich, du/er/sie, wir) і згадай принаймні дві хатні роботи (напр. Staub saugen, die Kleidung waschen, das Haus aufräumen). Наприкінці додай речення зі своєю думкою, напр. «Das finde ich nicht besonders gut, weil …» або «Das finde ich ganz gut, weil …».
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Wörter zum Lernen</p>
+        <div class="chip-row" id="vocabChips"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../data/glossary-data.js"></script>
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  const LEKTION_KLAS = "7", LEKTION_MODUL = "A", LEKTION_LEKTION = 15;
+
+  (function renderLessonVocab(){
+    const box = document.getElementById('vocabChips');
+    if (!box || typeof GLOSSARY === 'undefined') return;
+    const words = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_LEKTION
+    );
+    if (words.length === 0){
+      box.innerHTML = '<p class="empty-note">Слова для цього уроку ще не додані в глосарій.</p>';
+      return;
+    }
+    box.innerHTML = words.map(w =>
+      '<span class="chip static">' + w.de + ' — ' + w.uk + '</span>'
+    ).join('');
+  })();
+
+  // Перевірка ДЗ (квіз за зразковим діалогом)
+  const dzQuizData = [
+    {q: "Wer bringt in der Beispiel-SMS den Müll weg?", opts: ["Ben", "Mia", "Oma"], correct: "Ben"},
+    {q: "Worauf freuen sich Mia und Ben am Ende?", opts: ["ein Fußballspiel", "Omas Geburtstag", "die Sommerferien"], correct: "Omas Geburtstag"},
+    {q: "Was macht Mia laut dem Dialog?", opts: ["Sie spült das Geschirr.", "Sie geht mit dem Hund Gassi.", "Sie saugt Staub und räumt ihr Zimmer auf."], correct: "Sie saugt Staub und räumt ihr Zimmer auf."}
+  ];
+  buildQuiz('dz-check', dzQuizData);
+
+  // Üb. 1: квіз
+  const ub1Data = [
+    {q: "Was bedeutet „Machst du im Haushalt mit?“", opts: ["Ти допомагаєш по господарству?", "Ти готуєш їжу?", "Ти прибираєш кімнату?"], correct: "Ти допомагаєш по господарству?"},
+    {q: "Як відповісти німецькою «Звісно!»?", opts: ["Natürlich nicht!", "Na klar!", "Nicht besonders."], correct: "Na klar!"},
+    {q: "„Gefallen dir alle Haushaltsaktivitäten?“ — яке тут дієслово?", opts: ["machen", "kochen", "gefallen"], correct: "gefallen"},
+    {q: "З яким відмінком вживається дієслово „gefallen“?", opts: ["Dativ", "Akkusativ", "Genitiv"], correct: "Dativ"},
+    {q: "Як сказати німецькою «не дуже добре» (оцінка діяльності)?", opts: ["ganz gut", "nicht besonders gut", "okay"], correct: "nicht besonders gut"}
+  ];
+  buildQuiz('ub1-quiz', ub1Data);
+
+  // Üb. 2: пропуски
+  setTotal(document.querySelectorAll('#ub2-list .blank-input').length);
+  document.getElementById('ub2-check').addEventListener('click', () => {
+    checkBlanks('ub2-list', 'ub2-score', 'ub2');
+  });
+  document.getElementById('ub2-reset').addEventListener('click', () => {
+    resetBlanks('ub2-list', 'ub2-score', 'ub2');
+  });
+
+  // Üb. 3: токени (Futur I)
+  initTokenClicks('ub3-text');
+  setTotal(document.querySelectorAll('#ub3-text .tok[data-correct="true"]').length);
+  document.getElementById('ub3-check').addEventListener('click', () => checkTokens('ub3-text','ub3-score','ub3'));
+  document.getElementById('ub3-reset').addEventListener('click', () => resetTokens('ub3-text','ub3-score','ub3'));
+
+  // Фінальна панель зі штампами
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🧹','🧺','🐶','🎲']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
