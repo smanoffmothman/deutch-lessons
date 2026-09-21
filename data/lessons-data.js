@@ -371,5 +371,15 @@ const LESSONS = [
     file: "klas-9/modul-a/lektion-10.html",
     nove: true,
     dz: "Interviewt euch gegenseitig (zu zweit oder mit einem Familienmitglied) über den besten Freund / die beste Freundin: Name, Alter, Aussehen, Lieblingskleidung, Charakter. Schreibt die Antworten eurer Partnerin / eures Partners auf (6–8 Sätze). Benutzt dabei mindestens vier Adjektive aus dem heutigen Wortschatz (z. B. ehrlich, hilfsbereit, taktvoll, zuverlässig) — davon mindestens zwei mit richtiger Endung vor einem Nomen (z. B. „ein hilfsbereiter Junge“) und mindestens eins nach „sein“ ohne Endung (z. B. „Sie ist sehr ehrlich.“)."
+  },
+  {
+    klas: "9",
+    modul: "A",
+    lektion: 11,
+    nazva: "Gemeinsame Interessen",
+    opys: "Аудіювання про хобі трьох підлітків (Lars, Anna, Ines: гурт, малювання, волейбол), граматика 'sich interessieren für / sich beschäftigen mit' та мовні кліше для вираження згоди/незгоди.",
+    file: "klas-9/modul-a/lektion-11.html",
+    nove: true,
+    dz: "Schreib einen kurzen Forumsbeitrag (6–8 Sätze) über dein eigenes Hobby — ähnlich wie Lars, Anna oder Ines aus dem heutigen Hörtext. Benutze dabei mindestens zwei Ausdrücke aus dem heutigen Unterricht (z. B. „sich interessieren für“, „sich beschäftigen mit“) und erzähl, wie oft und mit wem du das machst."
   }
 ];

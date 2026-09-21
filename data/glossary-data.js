@@ -405,6 +405,18 @@ const GLOSSARY = [
   {de: "sich verlassen auf (+Akk.)", uk: "покладатися на когось", klas: "9", modul: "A", lektion: 10},
   {de: "kostbar", uk: "цінний, дорогоцінний", klas: "9", modul: "A", lektion: 10},
   {de: "der Makel (die Makel)", uk: "вада, недолік", klas: "9", modul: "A", lektion: 10},
-  {de: "ins Gesicht sagen", uk: "казати прямо в очі (ідіома)", klas: "9", modul: "A", lektion: 10}
+  {de: "ins Gesicht sagen", uk: "казати прямо в очі (ідіома)", klas: "9", modul: "A", lektion: 10},
+  {de: "die Band (die Bands)", uk: "гурт", klas: "9", modul: "A", lektion: 11},
+  {de: "gründen", uk: "засновувати", klas: "9", modul: "A", lektion: 11},
+  {de: "das Schlagzeug", uk: "ударні, барабани (муз. інструмент)", klas: "9", modul: "A", lektion: 11},
+  {de: "zeichnen", uk: "малювати", klas: "9", modul: "A", lektion: 11},
+  {de: "sich interessieren für (+Akk.)", uk: "цікавитися чимось", klas: "9", modul: "A", lektion: 11},
+  {de: "sich beschäftigen mit (+Dat.)", uk: "займатися чимось", klas: "9", modul: "A", lektion: 11},
+  {de: "ausprobieren", uk: "випробувати, спробувати", klas: "9", modul: "A", lektion: 11},
+  {de: "die Mannschaft", uk: "команда", klas: "9", modul: "A", lektion: 11},
+  {de: "sich vorbereiten auf (+Akk.)", uk: "готуватися до чогось", klas: "9", modul: "A", lektion: 11},
+  {de: "der Wettbewerb", uk: "змагання, конкурс", klas: "9", modul: "A", lektion: 11},
+  {de: "zurzeit", uk: "наразі, на цей час", klas: "9", modul: "A", lektion: 11},
+  {de: "die Freizeitaktivität", uk: "активність у вільний час", klas: "9", modul: "A", lektion: 11}
 ];
 
