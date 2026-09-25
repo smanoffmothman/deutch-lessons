@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 18 · Modul A · Schöne Familientraditionen</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 7'},
+    {label: 'Урок 18: Проєкт «Гарні сімейні традиції»'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 18 · MODUL A</span>
+        <h1>Projekt: Schöne Familientraditionen</h1>
+        <p class="sub">Плануємо проєкт про гарні сімейні традиції: етапи роботи, наказовий спосіб для «ihr», тексти до фотоколажу та фрази для презентації й коментарів.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Projektschritte</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Imperativ</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Themen</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Collage-Text</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Präsentation</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== ПАНЕЛЬ: вступ ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Worum geht es in dieser Lektion?</h2>
+      <div class="card">
+        <p>Heute starten wir ein Projekt: <strong>„Schöne Familientraditionen“</strong>. Welche Traditionen findet ihr in euren Familien besonders schön? Ihr diskutiert in Gruppen, schreibt kurze Texte, macht passende Bilder und kleine Videos und fertigt eine Foto-Collage an. Am Ende präsentiert ihr eure Collagen und kommentiert die Arbeiten der anderen Gruppen.</p>
+        <p>Ihr könnt über diese Themen sprechen: nette Familienrituale, Familienfeiertage, Familienreisen und -ausflüge, ungewöhnliche Traditionen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Сьогодні починаємо проєкт <strong>«Гарні сімейні традиції»</strong>. Які традиції у ваших родинах особливо гарні? Ви обговорюєте їх у групах, пишете короткі тексти, робите відповідні фото й невеликі відео та створюєте фотоколаж. Наприкінці ви презентуєте свої колажі й коментуєте роботи інших груп.<br><br>
+          Теми на вибір: милі сімейні ритуали, сімейні свята, сімейні подорожі й поїздки, незвичайні традиції.
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Ziel der Stunde</p>
+        <p>Ich kann ein Projekt planen, Anweisungen für eine Gruppe verstehen und geben (Imperativ mit „ihr“), kurze Texte für eine Collage schreiben und meine Arbeit präsentieren und kommentieren.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Мета уроку</span>
+          Я можу спланувати проєкт, розуміти й давати інструкції групі (наказовий спосіб для «ihr»), писати короткі тексти до колажу, а також презентувати свою роботу й коментувати роботи інших.
+        </div>
+      </div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Hallo! Heute arbeitet ihr wie echte Projektteams. Bildet Gruppen zu dritt oder zu viert — los geht's!</p>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: перевірка домашнього завдання ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: <em>„Schau dir deine Ergebnisse in der Kontrollarbeit an und schreib drei Fehler, die du gemacht hast, richtig in dein Heft – mit einer kurzen Regel auf Ukrainisch. Erstelle danach ein Mini-Quiz für deine Mitschüler: 5 Fragen zum Modul A (z. B. Hausarbeit, Familienfeste, Präpositionen, Perfekt oder Futur I) mit je drei Antwortmöglichkeiten – nur eine ist richtig. In der nächsten Stunde spielen wir eure Quizfragen.“</em>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">So prüfen wir</p>
+        <p>1) Zeigt eurem Partner / eurer Partnerin die drei korrigierten Fehler und erklärt kurz die Regel.<br>
+        2) Tauscht eure Mini-Quizze und spielt sie zu zweit mündlich.<br>
+        3) Zum Aufwärmen: unser Klassen-Quiz zum Modul A — so könnten eure Fragen aussehen!</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          1) Покажіть сусідові по парті три виправлені помилки й коротко поясніть правило.<br>
+          2) Обміняйтеся своїми міні-квізами й пограйте в них у парах усно.<br>
+          3) Розминка: наш спільний квіз за Модулем A — приблизно такими могли бути ваші запитання.
+        </div>
+      </div>
+      <div id="dz-check"></div>
+
+      <div class="card" id="dz-vocab-wrap" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">Wörter-Check</p>
+        <p class="lead">Перевір слова з минулого уроку.</p>
+        <div id="dz-vocab"></div>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: Üb.1 — етапи проєкту (зіставлення) ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Projektschritte: Was passt zu welchem Bild?</h2>
+      <p class="lead">Подивись на 6 картинок — це етапи проєктної роботи. До кожної інструкції обери номер картинки, яка їй відповідає.</p>
+      <div class="pic-grid">
+        <div class="pic-card"><div class="swatch">🗣️👥</div><div class="num">Bild 1</div></div>
+        <div class="pic-card"><div class="swatch">📝✏️</div><div class="num">Bild 2</div></div>
+        <div class="pic-card"><div class="swatch">📷</div><div class="num">Bild 3</div></div>
+        <div class="pic-card"><div class="swatch">🖼️✂️</div><div class="num">Bild 4</div></div>
+        <div class="pic-card"><div class="swatch">📱▶️</div><div class="num">Bild 5</div></div>
+        <div class="pic-card"><div class="swatch">👀💬</div><div class="num">Bild 6</div></div>
+      </div>
+      <div class="card" id="ub1-list">
+        <div class="match-row">
+          <span style="flex:2;">a) Macht auch kleine Videos.</span>
+          <select class="blank blank-input" data-ans="5"><option value="">—</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
+        </div>
+        <div class="match-row">
+          <span style="flex:2;">b) Bestimmt, welche Traditionen ihr präsentieren wollt.</span>
+          <select class="blank blank-input" data-ans="1"><option value="">—</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
+        </div>
+        <div class="match-row">
+          <span style="flex:2;">c) Fertigt eine Collage mit euren Texten und Bildern an.</span>
+          <select class="blank blank-input" data-ans="4"><option value="">—</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
+        </div>
+        <div class="match-row">
+          <span style="flex:2;">d) Zeigt einander eure Videos.</span>
+          <select class="blank blank-input" data-ans="6"><option value="">—</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
+        </div>
+        <div class="match-row">
+          <span style="flex:2;">e) Schreibt kurze Texte über diese Traditionen.</span>
+          <select class="blank blank-input" data-ans="2"><option value="">—</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
+        </div>
+        <div class="match-row">
+          <span style="flex:2;">f) Macht passende Bilder dazu.</span>
+          <select class="blank blank-input" data-ans="3"><option value="">—</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub1-check">Prüfen</button>
+        <button class="btn secondary" id="ub1-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub1-score"></span>
+      </div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Нові слова в інструкціях</span>
+        <dl>
+          <dt>bestimmen</dt><dd>визначати, обирати</dd>
+          <dt>passend</dt><dd>відповідний, доречний</dd>
+          <dt>anfertigen (Fertigt … an!)</dt><dd>виготовляти, робити (відокремлюване дієслово)</dd>
+          <dt>einander</dt><dd>одне одному</dd>
+          <dt>die Collage</dt><dd>колаж</dd>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: Üb.2 — Imperativ (ihr) ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Imperativ: Anweisungen für die Gruppe</h2>
+      <div class="card">
+        <p>Alle Anweisungen in Üb. 1 sind im <strong>Imperativ</strong> — für eine Gruppe (<em>ihr</em>). Die Form ist ganz einfach: Nimm die ihr-Form im Präsens und lass das Wort „ihr“ weg.</p>
+        <div style="overflow-x:auto;">
+          <table class="gtable">
+            <tr><th>Infinitiv</th><th>Präsens (ihr)</th><th>Imperativ (ihr)</th><th>zum Vergleich: du</th></tr>
+            <tr><td>machen</td><td>ihr macht</td><td><strong>Macht!</strong></td><td>Mach!</td></tr>
+            <tr><td>schreiben</td><td>ihr schreibt</td><td><strong>Schreibt!</strong></td><td>Schreib!</td></tr>
+            <tr><td>zeigen</td><td>ihr zeigt</td><td><strong>Zeigt!</strong></td><td>Zeig!</td></tr>
+            <tr><td>diskutieren</td><td>ihr diskutiert</td><td><strong>Diskutiert!</strong></td><td>Diskutier(e)!</td></tr>
+            <tr><td>anfertigen</td><td>ihr fertigt … an</td><td><strong>Fertigt … an!</strong></td><td>Fertige … an!</td></tr>
+            <tr><td>vorbereiten</td><td>ihr bereitet … vor</td><td><strong>Bereitet … vor!</strong></td><td>Bereite … vor!</td></tr>
+            <tr><td>sein</td><td>ihr seid</td><td><strong>Seid!</strong></td><td>Sei!</td></tr>
+          </table>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Пояснення</span>
+          <strong>Наказовий спосіб (Imperativ) для «ihr»</strong> — це звертання до кількох людей, з якими ми на «ти» (однокласники, група, друзі). Утворюється він дуже просто: беремо форму дієслова для <em>ihr</em> у теперішньому часі і <strong>прибираємо займенник «ihr»</strong>: <em>ihr macht → Macht!</em>, <em>ihr schreibt → Schreibt!</em><br><br>
+          <strong>Де стоїть дієслово?</strong> Завжди на першому місці в реченні: <em>Schreibt kurze Texte!</em><br>
+          <strong>Відокремлювані дієслова</strong> (anfertigen, vorbereiten, mitbringen) розпадаються, як і в теперішньому часі: основна частина — на початку, префікс — у самому кінці речення: <em>Fertigt eine Collage <u>an</u>!</em>, <em>Bereitet eure Präsentation <u>vor</u>!</em><br>
+          <strong>Виняток:</strong> <em>sein → Seid!</em> (наприклад, <em>Seid bitte pünktlich!</em> — Будьте, будь ласка, вчасно!).<br><br>
+          Для порівняння: коли звертаємося до однієї людини на «ти», закінчення <em>-st</em> і займенник «du» зникають: <em>du machst → Mach!</em>
+        </div>
+      </div>
+      <p class="lead">Встав дієслово в дужках у формі Imperativ для «ihr». Для відокремлюваних дієслів заповни обидва пропуски.</p>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> (bestimmen) <input type="text" class="blank-input" style="width:120px;display:inline-block;" data-ans="Bestimmt"> zuerst das Thema eures Projekts.</div>
+        <div class="fill-item"><span class="num">2)</span> (schreiben) <input type="text" class="blank-input" style="width:120px;display:inline-block;" data-ans="Schreibt"> zu jedem Foto zwei oder drei Sätze.</div>
+        <div class="fill-item"><span class="num">3)</span> (machen) <input type="text" class="blank-input" style="width:120px;display:inline-block;" data-ans="Macht"> Fotos von eurem Familienfest.</div>
+        <div class="fill-item"><span class="num">4)</span> (anfertigen) <input type="text" class="blank-input" style="width:120px;display:inline-block;" data-ans="Fertigt"> zusammen ein Poster <input type="text" class="blank-input" style="width:70px;display:inline-block;" data-ans="an">.</div>
+        <div class="fill-item"><span class="num">5)</span> (zeigen) <input type="text" class="blank-input" style="width:120px;display:inline-block;" data-ans="Zeigt"> der Klasse eure Collage.</div>
+        <div class="fill-item"><span class="num">6)</span> (diskutieren) <input type="text" class="blank-input" style="width:130px;display:inline-block;" data-ans="Diskutiert"> in der Gruppe über eure Ideen.</div>
+        <div class="fill-item"><span class="num">7)</span> (vorbereiten) <input type="text" class="blank-input" style="width:120px;display:inline-block;" data-ans="Bereitet"> bis Freitag eure Präsentation <input type="text" class="blank-input" style="width:70px;display:inline-block;" data-ans="vor">.</div>
+        <div class="fill-item"><span class="num">8)</span> (mitbringen) <input type="text" class="blank-input" style="width:120px;display:inline-block;" data-ans="Bringt"> morgen Kleber und Scheren <input type="text" class="blank-input" style="width:70px;display:inline-block;" data-ans="mit">.</div>
+        <div class="fill-item"><span class="num">9)</span> (sein) <input type="text" class="blank-input" style="width:120px;display:inline-block;" data-ans="Seid"> bitte pünktlich!</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: Üb.3 — теми проєкту (квіз) ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Welches Thema passt?</h2>
+      <p class="lead">Діти розповідають про традиції своїх родин. До якої теми проєкту належить кожна традиція?</p>
+      <div class="wordbank">
+        <span>nette Familienrituale</span><span>Familienfeiertage</span><span>Familienreisen und -ausflüge</span><span>ungewöhnliche Traditionen</span>
+      </div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Теми проєкту</span>
+        <dl>
+          <dt>nette Familienrituale</dt><dd>милі сімейні ритуали (те, що родина робить регулярно, щодня чи щотижня)</dd>
+          <dt>Familienfeiertage</dt><dd>сімейні свята (Різдво, Великдень, дні народження)</dd>
+          <dt>Familienreisen und -ausflüge</dt><dd>сімейні подорожі й поїздки</dd>
+          <dt>ungewöhnliche Traditionen</dt><dd>незвичайні традиції (те, чого в інших родинах, мабуть, немає)</dd>
+        </dl>
+      </div>
+      <div id="ub3-quiz" style="margin-top:18px;"></div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: Üb.4 — текст до колажу (токени + письмо) ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Mias Collage-Texte</h2>
+      <p class="lead">Мія вже написала тексти для свого колажу. Натисни на всі вирази, що відповідають на питання <strong>Wann? / Wie oft?</strong> (Коли? / Як часто?). Такі вирази роблять опис традиції живим — використай їх потім у своєму тексті.</p>
+      <div class="mail-window">
+        <div class="mail-titlebar">Unsere schönen Familientraditionen — Mia, 7b</div>
+        <div class="mail-body" id="ub4-text">
+          🥞 <span class="tok" data-correct="true">Jeden Sonntag</span> frühstücken wir <span class="tok" data-correct="false">zusammen</span>. Papa macht dann <span class="tok" data-correct="true">immer</span> <span class="tok" data-correct="false">Pfannkuchen</span>.<br><br>
+          🎄 <span class="tok" data-correct="true">Zu Weihnachten</span> besuchen wir <span class="tok" data-correct="false">Oma und Opa</span>. Wir backen Plätzchen und singen Lieder.<br><br>
+          🏕️ <span class="tok" data-correct="true">Im Sommer</span> fahren wir <span class="tok" data-correct="false">mit dem Zelt</span> <span class="tok" data-correct="false">an einen See</span>. Das ist unser Lieblingsausflug.<br><br>
+          🎩 <span class="tok" data-correct="true">Einmal im Jahr</span> machen wir einen „verrückten Tag“: Wir essen das Abendbrot zum Frühstück! Das ist ungewöhnlich, aber <span class="tok" data-correct="false">sehr lustig</span>.
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub4-check">Prüfen</button>
+        <button class="btn secondary" id="ub4-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub4-score"></span>
+      </div>
+
+      <div class="card" style="margin-top:22px;">
+        <p class="section-label" style="margin:0 0 6px;">Jetzt du!</p>
+        <div class="qa">
+          <label for="ub4-own">Schreib 2–3 Sätze über eine Tradition deiner Familie — wie ein Text für deine Collage.</label>
+          <textarea id="ub4-own" rows="4" placeholder="Jedes Jahr zu Ostern ..."></textarea>
+        </div>
+        <div class="wordbank">
+          <span>jeden Sonntag</span><span>jedes Jahr</span><span>einmal im Jahr</span><span>immer</span><span>oft</span><span>zu Weihnachten</span><span>im Sommer</span><span>am Abend</span><span>Das ist ungewöhnlich, aber …</span><span>Das ist unser Lieblings…</span>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Напиши 2–3 речення про одну традицію своєї родини, використай хоча б один вираз «Wann? / Wie oft?» з банку слів. Пам'ятай: після виразу часу на початку речення дієслово стоїть на <strong>другому місці</strong> — <em>Jeden Sonntag <u>frühstücken</u> wir zusammen.</em> Вставляти текст у поле не можна — набирай його сам(а). Цей текст знадобиться для твого колажу вдома.
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: Üb.5 — презентуємо й коментуємо ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Präsentieren und kommentieren</h2>
+      <div class="card">
+        <p>Mit diesen Redemitteln könnt ihr eure Collage präsentieren und die Arbeiten der anderen Gruppen kommentieren:</p>
+        <div style="overflow-x:auto;">
+          <table class="gtable">
+            <tr><th>Präsentieren</th><th>Kommentieren</th></tr>
+            <tr><td>Unser Projekt heißt „…“.</td><td>Eure Collage finde ich super / toll, weil …</td></tr>
+            <tr><td>Auf diesem Foto seht ihr …</td><td>Mir gefällt besonders …</td></tr>
+            <tr><td>Hier ist / sind …</td><td>Ich habe eine Frage: Wie oft / Wann macht ihr das?</td></tr>
+            <tr><td>Uns gefällt diese Tradition, weil …</td><td>Diese Tradition gibt es in meiner Familie auch!</td></tr>
+            <tr><td>Danke für eure Aufmerksamkeit!</td><td>Das ist wirklich ungewöhnlich!</td></tr>
+          </table>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          <dl>
+            <dt>Unser Projekt heißt „…“</dt><dd>Наш проєкт називається «…»</dd>
+            <dt>Auf diesem Foto seht ihr …</dt><dd>На цьому фото ви бачите …</dd>
+            <dt>Uns gefällt diese Tradition, weil …</dt><dd>Нам подобається ця традиція, тому що … (після weil дієслово — в кінці!)</dd>
+            <dt>Danke für eure Aufmerksamkeit!</dt><dd>Дякуємо за увагу!</dd>
+            <dt>Eure Collage finde ich super, weil …</dt><dd>Ваш колаж мені дуже подобається, тому що …</dd>
+            <dt>Ich habe eine Frage: …</dt><dd>У мене є запитання: …</dd>
+          </dl>
+        </div>
+      </div>
+      <p class="lead">Що доречно сказати в кожній ситуації? Обери одну фразу.</p>
+      <div id="ub5-quiz"></div>
+
+      <div class="card" style="margin-top:22px;">
+        <p class="section-label" style="margin:0 0 6px;">Deine Präsentation</p>
+        <div class="qa">
+          <label for="ub5-own">Schreib den Anfang deiner Präsentation: 3 Sätze mit Redemitteln aus der Tabelle.</label>
+          <textarea id="ub5-own" rows="4" placeholder="Unser Projekt heißt ..."></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Напиши початок своєї презентації: 3 речення з фразами з таблиці (назва проєкту, що на фото, чому вам подобається традиція). Вставляти текст у поле не можна — набирай сам(а). Потренуй ці речення вголос — удома вони знадобляться для презентації.
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ПРИКІНЦЕВА ПАНЕЛЬ ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Gestalte (allein oder mit deiner Gruppe) eine Foto-Collage zum Thema „Schöne Familientraditionen“: Wähle 3–4 Traditionen deiner Familie (z. B. ein Familienritual, einen Familienfeiertag, eine Familienreise oder eine ungewöhnliche Tradition), klebe oder zeichne passende Bilder dazu und schreib zu jedem Bild 2–3 Sätze mit einer Zeitangabe (z. B. jeden Sonntag, einmal im Jahr, im Sommer). Bereite außerdem eine kurze Präsentation (ca. 1 Minute) vor und benutze dabei mindestens drei Redemittel aus dem heutigen Unterricht (z. B. „Unser Projekt heißt …“, „Auf diesem Foto seht ihr …“, „Uns gefällt diese Tradition, weil …“). Wer möchte, dreht dazu auch ein kurzes Video (bis 1 Minute).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Створи (сам або з групою) фотоколаж на тему «Гарні сімейні традиції»: обери 3–4 традиції своєї родини (напр. сімейний ритуал, сімейне свято, сімейну подорож чи незвичайну традицію), наклей або намалюй до них відповідні картинки й напиши до кожної 2–3 речення з виразом часу (напр. jeden Sonntag, einmal im Jahr, im Sommer). Також підготуй коротку презентацію (приблизно 1 хвилина) і використай у ній щонайменше три фрази з сьогоднішнього уроку (напр. «Unser Projekt heißt …», «Auf diesem Foto seht ihr …», «Uns gefällt diese Tradition, weil …»). За бажанням можна зняти до цього коротке відео (до 1 хвилини).
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Wörter zum Lernen</p>
+        <div class="chip-row" id="vocabChips"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../data/glossary-data.js"></script>
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  // ===== Слова цього уроку у вкладці Fertig =====
+  const LEKTION_KLAS = "7", LEKTION_MODUL = "A", LEKTION_LEKTION = 18;
+  const LEKTION_PREV_LEKTION = 17;
+
+  (function renderLessonVocab(){
+    const box = document.getElementById('vocabChips');
+    if (!box || typeof GLOSSARY === 'undefined') return;
+    const words = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_LEKTION
+    );
+    if (words.length === 0){
+      box.innerHTML = '<p class="empty-note">Слова для цього уроку ще не додані в глосарій.</p>';
+      return;
+    }
+    box.innerHTML = words.map(w =>
+      '<span class="chip static">' + w.de + ' — ' + w.uk + '</span>'
+    ).join('');
+  })();
+
+  // ===== Wörter-Check у вкладці Hausaufgabe (слова ПОПЕРЕДНЬОГО уроку) =====
+  function guessPos(de){
+    var base = (de || '').replace(/\([^)]*\)/g, '').trim();
+    if(/^(der|die|das)(\/(der|die|das))?\s/.test(base)) return 'noun';
+    if(/^sich\s/.test(base)) return 'verb';
+    if(/^am\s/.test(base)) return 'other';
+    if(/\(\+(Gen|Dat|Akk)\.?\)/.test(de)) return 'prep';
+    var words = base.split(/\s+/);
+    var last = words[words.length - 1];
+    if(/(en|ern|eln)$/.test(last) && last === last.toLowerCase()) return 'verb';
+    return 'other';
+  }
+
+  (function renderDzVocabCheck(){
+    const wrap = document.getElementById('dz-vocab-wrap');
+    const box = document.getElementById('dz-vocab');
+    if (!wrap || !box || typeof GLOSSARY === 'undefined') return;
+    if (!LEKTION_PREV_LEKTION){ wrap.style.display = 'none'; return; }
+
+    const prevWords = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_PREV_LEKTION
+    );
+    if (prevWords.length < 3){ wrap.style.display = 'none'; return; }
+
+    const pool = shuffleArray(prevWords).slice(0, 6);
+    const quizData = pool.map(w => {
+      const pos = guessPos(w.de);
+      let sameKind = GLOSSARY.filter(g => g.uk !== w.uk && guessPos(g.de) === pos);
+      if(sameKind.length < 2) sameKind = GLOSSARY.filter(g => g.uk !== w.uk);
+      const distractors = shuffleArray(sameKind).slice(0, 2).map(g => g.uk);
+      return { q: w.de, opts: [w.uk, ...distractors], correct: w.uk };
+    });
+    buildQuiz('dz-vocab', quizData);
+  })();
+
+  // ===== Hausaufgabe: Klassen-Quiz zum Modul A (зразок міні-квізу з ДЗ) =====
+  const dzData = [
+    {q: "Wohin fahrt ihr im Sommer? — Wir fahren ___ Ostsee.", opts: ["an die", "an der", "in der"], correct: "an die"},
+    {q: "Perfekt: Ich ___ in den Ferien nach Berlin gefahren.", opts: ["habe", "bin", "werde"], correct: "bin"},
+    {q: "Futur I: Wir ___ am Wochenende Oma besuchen.", opts: ["sind", "haben", "werden"], correct: "werden"},
+    {q: "Trennbares Verb: Ich ___ heute mein Zimmer ___.", opts: ["aufräume … —", "räume … auf", "räumt … auf"], correct: "räume … auf"},
+    {q: "Präposition mit Dativ: Ich fahre mit ___ Bus zur Schule.", opts: ["dem", "den", "der"], correct: "dem"},
+    {q: "Welches Fest ist das? Man bemalt Eier und sucht sie im Garten.", opts: ["Weihnachten", "Geburtstag", "Ostern"], correct: "Ostern"}
+  ];
+  buildQuiz('dz-check', dzData);
+
+  // ===== Üb. 1: зіставлення інструкцій з картинками (select.blank-input) =====
+  setTotal(document.querySelectorAll('#ub1-list .blank-input').length);
+  document.getElementById('ub1-check').addEventListener('click', () => {
+    checkBlanks('ub1-list', 'ub1-score', 'ub1');
+  });
+  document.getElementById('ub1-reset').addEventListener('click', () => {
+    resetBlanks('ub1-list', 'ub1-score', 'ub1');
+  });
+
+  // ===== Üb. 2: Imperativ (ihr) — пропуски =====
+  setTotal(document.querySelectorAll('#ub2-list .blank-input').length);
+  document.getElementById('ub2-check').addEventListener('click', () => {
+    checkBlanks('ub2-list', 'ub2-score', 'ub2');
+  });
+  document.getElementById('ub2-reset').addEventListener('click', () => {
+    resetBlanks('ub2-list', 'ub2-score', 'ub2');
+  });
+
+  // ===== Üb. 3: до якої теми належить традиція (квіз) =====
+  const T_RIT = "nette Familienrituale", T_FEST = "Familienfeiertage",
+        T_REISE = "Familienreisen und -ausflüge", T_UNGEW = "ungewöhnliche Traditionen";
+  const ub3Data = [
+    {q: "„Jeden Sonntag frühstücken wir alle zusammen und erzählen von der Woche.“", opts: [T_RIT, T_FEST, T_REISE, T_UNGEW], correct: T_RIT},
+    {q: "„Zu Weihnachten backen wir mit Oma Plätzchen.“", opts: [T_REISE, T_FEST, T_RIT, T_UNGEW], correct: T_FEST},
+    {q: "„Im Sommer fahren wir jedes Jahr an die Ostsee.“", opts: [T_RIT, T_UNGEW, T_REISE, T_FEST], correct: T_REISE},
+    {q: "„An Papas Geburtstag tragen alle lustige Hüte — sogar unser Hund!“", opts: [T_FEST, T_RIT, T_REISE, T_UNGEW], correct: T_UNGEW},
+    {q: "„Am Abend liest Mama uns immer eine Geschichte vor.“", opts: [T_UNGEW, T_RIT, T_REISE, T_FEST], correct: T_RIT},
+    {q: "„Zu Ostern bemalen wir zusammen Eier.“", opts: [T_FEST, T_UNGEW, T_RIT, T_REISE], correct: T_FEST},
+    {q: "„Am 1. Januar springen wir alle zusammen in einen kalten See.“", opts: [T_REISE, T_RIT, T_UNGEW, T_FEST], correct: T_UNGEW},
+    {q: "„Am Wochenende machen wir oft einen Ausflug in die Berge.“", opts: [T_FEST, T_RIT, T_UNGEW, T_REISE], correct: T_REISE}
+  ];
+  buildQuiz('ub3-quiz', ub3Data);
+
+  // ===== Üb. 4: токени (Wann? / Wie oft?) =====
+  initTokenClicks('ub4-text');
+  setTotal(document.querySelectorAll('#ub4-text .tok[data-correct="true"]').length);
+  document.getElementById('ub4-check').addEventListener('click', () => checkTokens('ub4-text', 'ub4-score', 'ub4'));
+  document.getElementById('ub4-reset').addEventListener('click', () => resetTokens('ub4-text', 'ub4-score', 'ub4'));
+
+  // ===== Üb. 5: доречні фрази для презентації (квіз) =====
+  const ub5Data = [
+    {q: "Du beginnst eure Präsentation.", opts: ["Unser Projekt heißt „Schöne Familientraditionen“.", "Danke für eure Aufmerksamkeit!", "Ich habe eine Frage: Wie oft macht ihr das?"], correct: "Unser Projekt heißt „Schöne Familientraditionen“."},
+    {q: "Du zeigst auf ein Foto in eurer Collage.", opts: ["Eure Collage finde ich super!", "Auf diesem Foto seht ihr unser Familienfest.", "Bestimmt ein Thema!"], correct: "Auf diesem Foto seht ihr unser Familienfest."},
+    {q: "Du erklärst, warum ihr diese Tradition mögt.", opts: ["Macht passende Bilder dazu.", "Danke für eure Aufmerksamkeit!", "Uns gefällt diese Tradition, weil wir dann alle zusammen sind."], correct: "Uns gefällt diese Tradition, weil wir dann alle zusammen sind."},
+    {q: "Eure Präsentation ist zu Ende.", opts: ["Unser Projekt heißt „Familie“.", "Danke für eure Aufmerksamkeit!", "Auf diesem Foto seht ihr …"], correct: "Danke für eure Aufmerksamkeit!"},
+    {q: "Du lobst die Collage einer anderen Gruppe.", opts: ["Schreibt kurze Texte!", "Unser Projekt heißt „Reisen“.", "Eure Collage finde ich toll, die Fotos sind sehr schön!"], correct: "Eure Collage finde ich toll, die Fotos sind sehr schön!"},
+    {q: "Du möchtest mehr über eine Tradition der anderen Gruppe wissen.", opts: ["Ich habe eine Frage: Wann macht ihr das?", "Auf diesem Foto seht ihr unseren Hund.", "Zeigt einander eure Videos."], correct: "Ich habe eine Frage: Wann macht ihr das?"}
+  ];
+  buildQuiz('ub5-quiz', ub5Data);
+
+  // ===== Фінальна панель зі штампами =====
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📸','🖼️','🎬','🎉']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
