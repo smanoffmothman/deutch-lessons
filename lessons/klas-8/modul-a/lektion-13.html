@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 13 · Modul A · Elemente einer gesunden Lebensweise</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 8'},
+    {label: 'Урок 13: Elemente einer gesunden Lebensweise'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 13 · MODUL A</span>
+        <h1>Elemente einer gesunden Lebensweise</h1>
+        <p class="sub">Читаємо про опитування «Fünfmal am Tag»: хто в Європі справді їсть досить овочів і фруктів. Відрізняємо корисні звички від шкідливих і вчимося давати поради в Imperativ: du, ihr, Sie.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Lesen</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Textarbeit</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Gesund?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Imperativ</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Deine Tipps</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== ПАНЕЛЬ: вступ ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Worum geht es in diesem Modul?</h2>
+      <div class="card">
+        <p>Unser Modul heißt „Lebensstil“. Wir haben schon über Erholung, Sport und unseren Tagesablauf gesprochen. Heute geht es um die Frage: Was gehört zu einer gesunden Lebensweise? Wir lesen, wie viel Obst und Gemüse die Menschen in Europa wirklich essen, sammeln gesunde und ungesunde Gewohnheiten und geben einander Tipps.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Наш модуль називається «Стиль життя». Ми вже говорили про відпочинок, спорт і розпорядок дня. Сьогодні з'ясовуємо, що належить до здорового способу життя. Прочитаємо, скільки овочів і фруктів насправді їдять люди в Європі, зберемо корисні й шкідливі звички та порадимо одне одному, як жити здоровіше.
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Ziel der Stunde</p>
+        <p>Nach der Stunde kannst du einen Sachtext über Ernährung verstehen, gesunde und ungesunde Gewohnheiten nennen und Tipps im Imperativ geben (du / ihr / Sie).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Мета уроку</span>
+          Після уроку ти зможеш зрозуміти інформаційний текст про харчування й знайти в ньому потрібні факти. Також умітимеш назвати корисні та шкідливі звички і дати пораду у формі Imperativ: другові (du), класу (ihr) чи дорослому (Sie).
+        </div>
+      </div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Hallo! Wie viele Portionen Obst hast du heute schon gegessen? Los geht's!</p>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: перевірка домашнього завдання ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: <em>„Mach ein Interview mit einem Familienmitglied (Mutter, Vater, Bruder, Schwester, Oma …) über seinen / ihren Tagesablauf an einem Werktag. Stell mindestens 6 Fragen … und notiere die Antworten in der 3. Person mit inoffiziellen Uhrzeiten … Benutze mindestens drei reflexive Verben – mindestens eins mit sich im Akkusativ … und eins mit sich im Dativ … Schreib am Ende einen Tipp für diese Person mit „Es ist besser / gesünder, um … aufzustehen / ins Bett zu gehen.““</em>
+        <br><br>Тобто інтерв'ю з кимось із рідних про його робочий день: неофіційний час, зворотні дієслова з <strong>sich</strong> (Akk./Dat.) і порада з «Es ist besser, … zu …». Спершу перевір себе на зразку інтерв'ю нижче, а потім 2–3 учні зачитують свої інтерв'ю вголос.
+      </div>
+
+      <div class="card" style="margin-top:16px;">
+        <p class="section-label" style="margin:0 0 6px;">Interview-Check: Omas Tag</p>
+        <p class="lead">Заповни пропуски. Час пиши словами, неофіційно (напр. <em>Viertel nach sechs</em>), займенники — <em>sich / dich / dir</em>.</p>
+        <div id="dz-list">
+          <div class="fill-item"><span class="num">1)</span> Oma Hanna steht um <input type="text" class="blank-input" style="width:170px;display:inline-block;" data-ans="Viertel nach sechs"> auf. <em>(6:15)</em></div>
+          <div class="fill-item"><span class="num">2)</span> Dann wäscht sie <input type="text" class="blank-input" style="width:80px;display:inline-block;" data-ans="sich"> und zieht sich an.</div>
+          <div class="fill-item"><span class="num">3)</span> — „Wann putzt du <input type="text" class="blank-input" style="width:80px;display:inline-block;" data-ans="dir"> die Zähne?“ — „Nach dem Frühstück.“</div>
+          <div class="fill-item"><span class="num">4)</span> Sie frühstückt um <input type="text" class="blank-input" style="width:140px;display:inline-block;" data-ans="halb sieben">. <em>(6:30)</em></div>
+          <div class="fill-item"><span class="num">5)</span> — „Ziehst du <input type="text" class="blank-input" style="width:80px;display:inline-block;" data-ans="dich"> im Herbst warm an?“ — „Ja, immer.“</div>
+          <div class="fill-item"><span class="num">6)</span> Sie isst um <input type="text" class="blank-input" style="width:170px;display:inline-block;" data-ans="Viertel vor sieben"> zu Abend. <em>(18:45)</em></div>
+          <div class="fill-item"><span class="num">7)</span> — „Siehst du <input type="text" class="blank-input" style="width:80px;display:inline-block;" data-ans="dir"> abends einen Film an?“ — „Ja, gern.“</div>
+          <div class="fill-item"><span class="num">8)</span> Mein Tipp: „Es ist gesünder, um zehn Uhr ins Bett zu <input type="text" class="blank-input" style="width:100px;display:inline-block;" data-ans="gehen">.“</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="dz-check">Prüfen</button>
+          <button class="btn secondary" id="dz-reset">Zurücksetzen</button>
+          <span class="score-pill" id="dz-score"></span>
+        </div>
+      </div>
+
+      <div class="card" id="dz-vocab-wrap" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">Wörter-Check</p>
+        <p class="lead">Перевір слова з минулого уроку.</p>
+        <div id="dz-vocab"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: читання + вибір заголовка (квіз) ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Lies den Text und finde die passende Überschrift</h2>
+      <p class="lead">Уважно прочитай текст, потім дай відповіді на питання під ним. Перше питання: який заголовок пасує до тексту.</p>
+
+      <div class="card">
+        <p><strong>A.</strong> Die besten Obstsorten für den Winter<br>
+           <strong>B.</strong> Richtig essen in Europa – wer hält sich an die Regeln?<br>
+           <strong>C.</strong> Mit dem Rad zur Schule – Tipps für Jugendliche<br>
+           <strong>D.</strong> Warum Fastfood so billig ist</p>
+      </div>
+
+      <div class="mail-window">
+        <div class="mail-titlebar">📰 Schülerzeitung · Gesundheit</div>
+        <div class="mail-body">
+          <p>Fünf Portionen frisches Obst und Gemüse pro Tag – diese Regel kennt fast jedes Kind. Die Weltgesundheitsorganisation (WHO) rät unter dem Motto „Fünfmal am Tag“ dazu, jeden Tag genug Obst und Gemüse zu essen. Aber halten sich die Europäer daran? Das wollte eine Umfrage wissen: Mehr als 5.000 Menschen aus fünf Ländern Europas haben daran teilgenommen.</p>
+          <p>Das Ergebnis für Deutschland ist nicht gut: Etwa jeder sechste Deutsche isst nie fünf Portionen am Tag. Die Hälfte der Deutschen schafft das höchstens dreimal pro Woche. Nur jeder achte Deutsche isst wirklich jeden Tag fünf Portionen Obst und Gemüse.</p>
+          <p>Im Vergleich mit den anderen Ländern nehmen die Niederländer die Tipps der Experten am ernstesten. Die Spanier dagegen <strong>schneiden</strong> fast genauso <strong>schlecht ab</strong> wie die Deutschen: Viele von ihnen essen nie fünf Portionen pro Tag.</p>
+          <p style="margin:0;">Warum essen so viele Menschen ungesund? Die Antwort ist in allen Ländern fast gleich: Die Lebensweise und der Job lassen oft zu wenig Zeit für eine gesunde Ernährung.</p>
+        </div>
+      </div>
+
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Корисно знати</span>
+        <dl>
+          <dt>schlecht abschneiden</dt><dd>мати поганий результат, не досягти успіху (= keinen Erfolg haben)</dd>
+          <dt>etwas ernst nehmen</dt><dd>сприймати щось серйозно</dd>
+          <dt>jeder sechste / jeder achte</dt><dd>кожен шостий / кожен восьмий (≈ 17 % / ≈ 12 %)</dd>
+          <dt>die Hälfte</dt><dd>половина (50 %)</dd>
+          <dt>höchstens</dt><dd>щонайбільше, не більше ніж</dd>
+        </dl>
+        Текст — адаптований переказ матеріалу з підручника (с. 20) з тими самими фактами.
+      </div>
+
+      <div class="card" style="margin-top:18px;">
+        <div id="ub1-quiz"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 2: доповни речення за текстом (пропуски) ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Ergänze die Sätze dem Text gemäß</h2>
+      <p class="lead">Доповни речення за змістом тексту з Üb. 1. Слова й вирази бери з банку нижче, але будь уважний: три з них зайві.</p>
+      <div class="wordbank">
+        <span>Fünfmal am Tag</span><span>Spanier</span><span>zweimal pro Woche</span><span>Menschen</span>
+        <span>achte</span><span>Job</span><span>Italiener</span><span>dreimal pro Woche</span>
+        <span>Niederländer</span><span>Schule</span><span>sechste</span>
+      </div>
+      <div class="card" id="ub2-list" style="margin-top:14px;">
+        <div class="fill-item"><span class="num">1)</span> Man soll jeden Tag fünf Portionen <em>frisches Obst und Gemüse</em> essen. <em>(Beispiel)</em></div>
+        <div class="fill-item"><span class="num">2)</span> Das Motto der WHO heißt „<input type="text" class="blank-input" style="width:170px;display:inline-block;" data-ans="Fünfmal am Tag">“.</div>
+        <div class="fill-item"><span class="num">3)</span> Mehr als 5.000 <input type="text" class="blank-input" style="width:130px;display:inline-block;" data-ans="Menschen"> aus fünf Ländern haben an der Umfrage teilgenommen.</div>
+        <div class="fill-item"><span class="num">4)</span> Die Hälfte der Deutschen isst fünf Portionen höchstens <input type="text" class="blank-input" style="width:180px;display:inline-block;" data-ans="dreimal pro Woche">.</div>
+        <div class="fill-item"><span class="num">5)</span> Etwa jeder <input type="text" class="blank-input" style="width:100px;display:inline-block;" data-ans="sechste"> Deutsche isst nie fünf Portionen am Tag.</div>
+        <div class="fill-item"><span class="num">6)</span> Nur jeder <input type="text" class="blank-input" style="width:100px;display:inline-block;" data-ans="achte"> Deutsche isst jeden Tag fünf Portionen.</div>
+        <div class="fill-item"><span class="num">7)</span> Die <input type="text" class="blank-input" style="width:140px;display:inline-block;" data-ans="Niederländer"> nehmen die Tipps der Experten am ernstesten.</div>
+        <div class="fill-item"><span class="num">8)</span> Die <input type="text" class="blank-input" style="width:120px;display:inline-block;" data-ans="Spanier"> schneiden fast genauso schlecht ab wie die Deutschen.</div>
+        <div class="fill-item"><span class="num">9)</span> Viele Menschen essen ungesund, weil die Lebensweise und der <input type="text" class="blank-input" style="width:100px;display:inline-block;" data-ans="Job"> zu wenig Zeit lassen.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: токени — корисні звички ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Gesund oder ungesund?</h2>
+      <p class="lead">Леон написав у шкільному форумі про свій тиждень. Клікни на всі <strong>корисні</strong> звички, а шкідливі залиш. Потім натисни «Prüfen».</p>
+      <div class="mail-window">
+        <div class="mail-titlebar">💬 Forum · „Wie gesund lebst du?“</div>
+        <div class="mail-fields">Von: Leon, 14</div>
+        <div class="mail-body" id="ub3-text">
+          Hallo! Das ist meine Woche. Morgens <span class="tok" data-correct="true">mache ich zehn Minuten Morgengymnastik</span>, aber dann <span class="tok" data-correct="false">esse ich zum Frühstück nur Chips</span>. In der Schule <span class="tok" data-correct="true">trinke ich eine große Flasche Wasser</span>. Nach der Schule <span class="tok" data-correct="false">sitze ich vier Stunden am Computer</span> oder <span class="tok" data-correct="true">ich gehe mit meinem Hund im Park spazieren</span>. Zweimal pro Woche <span class="tok" data-correct="true">gehe ich schwimmen</span>. Abends <span class="tok" data-correct="false">esse ich oft Fastfood</span> und <span class="tok" data-correct="false">trinke zwei Dosen Cola</span>. Am Wochenende <span class="tok" data-correct="false">gehe ich erst um Mitternacht schlafen</span>, aber <span class="tok" data-correct="true">ich esse viel Obst und Gemüse</span>.
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+      <div class="card tinted-forest" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">Man muss …</p>
+        <p>genug Wasser trinken · Fastfood meiden · fünf Portionen Obst und Gemüse am Tag essen · Sport treiben · regelmäßig Morgengymnastik machen · joggen · schwimmen gehen · rechtzeitig schlafen gehen · sich viel bewegen · an der frischen Luft genug Zeit verbringen · sich richtig ernähren · keinen Alkohol trinken · nicht rauchen</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Говоримо в парах</span>
+          Це поради з підручника (впр. 13). По черзі запитайте одне одного, чи ви це робите, наприклад: <em>Treibst du Sport? – Ja, ich gehe zweimal pro Woche schwimmen.</em> Конструкція <strong>man muss + Infinitiv</strong> означає загальне правило: «треба (кожному) …». Інфінітив стоїть у кінці речення.
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4: граматика Imperativ + пропуски ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Vom „Man muss …“ zum Tipp: der Imperativ</h2>
+      <div class="card">
+        <p><strong>Man muss genug Wasser trinken.</strong> — це загальне правило для всіх. Якщо хочемо порадити <em>конкретній</em> людині чи групі, вживаємо наказовий спосіб (Imperativ):</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Infinitiv</th><th>du (другу)</th><th>ihr (класу, друзям)</th><th>Sie (дорослому, ввічливо)</th></tr>
+          <tr><td>trinken</td><td>Trink!</td><td>Trinkt!</td><td>Trinken Sie!</td></tr>
+          <tr><td>gehen</td><td>Geh!</td><td>Geht!</td><td>Gehen Sie!</td></tr>
+          <tr><td>essen</td><td><strong>Iss!</strong></td><td>Esst!</td><td>Essen Sie!</td></tr>
+          <tr><td>schlafen</td><td><strong>Schlaf!</strong></td><td>Schlaft!</td><td>Schlafen Sie!</td></tr>
+          <tr><td>sich bewegen</td><td>Beweg <strong>dich</strong>!</td><td>Bewegt <strong>euch</strong>!</td><td>Bewegen Sie <strong>sich</strong>!</td></tr>
+          <tr><td>sein</td><td><strong>Sei</strong> aktiv!</td><td><strong>Seid</strong> aktiv!</td><td><strong>Seien</strong> Sie aktiv!</td></tr>
+        </table>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Як утворити</span>
+          <strong>du:</strong> беремо форму «du trinkst», відкидаємо <em>du</em> і закінчення <em>-st</em> → <strong>Trink!</strong> Зміна <em>e → i/ie</em> зберігається (du isst → <strong>Iss!</strong>, du liest → <strong>Lies!</strong>). А от умлаут <em>a → ä</em> зникає (du schläfst → <strong>Schlaf!</strong>, du fährst → <strong>Fahr!</strong>). У підручниках трапляється й форма з <em>-e</em> (Trinke!), але в цій вправі пиши <strong>без -e</strong>.<br>
+          <strong>ihr:</strong> звичайна форма для ihr, лише без займенника (ihr esst → <strong>Esst!</strong>).<br>
+          <strong>Sie:</strong> інфінітив + Sie (<strong>Essen Sie!</strong>).<br>
+          <strong>Зворотні дієслова</strong> (як на минулому уроці): du → <em>dich</em>, ihr → <em>euch</em>, Sie → <em>sich</em>.<br>
+          Дієслово стоїть на <strong>першому місці</strong>, у кінці речення — знак оклику.
+        </div>
+      </div>
+
+      <p class="lead">Перетвори правило «Man muss …» на пораду для вказаної особи. Дієслово пиши з великої літери (воно ж на початку речення).</p>
+      <div class="card" id="ub4-list">
+        <div class="fill-item"><span class="num">1)</span> Man muss genug Wasser trinken. → <em>(du)</em> <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="Trink"> genug Wasser!</div>
+        <div class="fill-item"><span class="num">2)</span> Man muss Fastfood meiden. → <em>(ihr)</em> <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="Meidet"> Fastfood!</div>
+        <div class="fill-item"><span class="num">3)</span> Man muss mehr Obst essen. → <em>(du)</em> <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="Iss"> mehr Obst!</div>
+        <div class="fill-item"><span class="num">4)</span> Man muss regelmäßig Sport treiben. → <em>(Sie)</em> <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="Treiben"> Sie regelmäßig Sport!</div>
+        <div class="fill-item"><span class="num">5)</span> Man muss rechtzeitig schlafen gehen. → <em>(ihr)</em> <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="Geht"> rechtzeitig schlafen!</div>
+        <div class="fill-item"><span class="num">6)</span> Man muss sich viel bewegen. → <em>(ihr)</em> <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="Bewegt"> <input type="text" class="blank-input" style="width:80px;display:inline-block;" data-ans="euch"> viel!</div>
+        <div class="fill-item"><span class="num">7)</span> Man muss nicht rauchen. → <em>(du)</em> <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="Rauch"> nicht!</div>
+        <div class="fill-item"><span class="num">8)</span> Man muss sich richtig ernähren. → <em>(du)</em> <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="Ernähr"> <input type="text" class="blank-input" style="width:80px;display:inline-block;" data-ans="dich"> richtig!</div>
+        <div class="fill-item"><span class="num">9)</span> Man muss an der frischen Luft Zeit verbringen. → <em>(Sie)</em> <input type="text" class="blank-input" style="width:130px;display:inline-block;" data-ans="Verbringen"> Sie Zeit an der frischen Luft!</div>
+        <div class="fill-item"><span class="num">10)</span> Man muss jeden Morgen joggen. → <em>(ihr)</em> <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="Joggt"> jeden Morgen!</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub4-check">Prüfen</button>
+        <button class="btn secondary" id="ub4-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub4-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5: діалог-зразок + три власні поради ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Lebt ihr gesund? Diskutiert und gebt Tipps</h2>
+      <p class="lead">Прочитайте діалог-зразок, а потім складіть у групах по троє власний діалог за порадами «Man muss …» з Üb. 3.</p>
+      <div class="phone">
+        <div class="phone-bar"><span>09:41</span><span>📶 🔋</span></div>
+        <div class="phone-header">Klasse 8b 🍏</div>
+        <div class="phone-body">
+          <div class="msg them"><strong>Mia:</strong> Esst ihr jeden Tag Obst?</div>
+          <div class="msg me"><strong>Tom:</strong> Klar! Obst hat viele Vitamine. Ich esse jeden Morgen einen Apfel.</div>
+          <div class="msg them"><strong>Lena:</strong> Ich leider nicht. Ich mag Obst nicht so gern, lieber Chips.</div>
+          <div class="msg me"><strong>Tom:</strong> Aber das ist ganz ungesund! Du musst dich bemühen und mehr Obst essen. Probier mal einen Smoothie!</div>
+        </div>
+      </div>
+      <div class="card" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">Redemittel</p>
+        <p>Trinkst / Isst / Schläfst du genug …? · Klar. … ist für den Körper wichtig. · Leider … · Aber das ist ganz ungesund! · Du musst dich bemühen und … · Probier mal …!</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Зверни увагу</span>
+          <strong>sich bemühen</strong> — старатися, докладати зусиль. Це зворотне дієслово, тож з модальним дієсловом займенник стоїть одразу після нього: <em>Du musst <strong>dich</strong> bemühen.</em>
+        </div>
+      </div>
+
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Schreib deine drei Tipps für eine gesunde Lebensweise</p>
+        <p class="lead">Напиши три поради в Imperativ, по одній для кожної форми: du, ihr, Sie.</p>
+        <div class="qa"><label for="tipp1">Tipp 1 — für einen Freund (du)</label><textarea id="tipp1" placeholder="z. B. Iss jeden Tag einen Apfel!"></textarea></div>
+        <div class="qa"><label for="tipp2">Tipp 2 — für die Klasse (ihr)</label><textarea id="tipp2" placeholder="z. B. Geht jeden Tag im Park spazieren!"></textarea></div>
+        <div class="qa"><label for="tipp3">Tipp 3 — für einen Erwachsenen (Sie)</label><textarea id="tipp3" placeholder="z. B. Trinken Sie mehr Wasser!"></textarea></div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Увага</span>
+          Вставка тексту в ці поля вимкнена, тож набирай поради сам(а). Перевіряє їх учитель: зачитайте свої поради класу.
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ПРИКІНЦЕВА ПАНЕЛЬ ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Mach den „Fünfmal-am-Tag“-Test: Notiere drei Tage lang (z. B. Freitag, Samstag, Sonntag), wie viele Portionen Obst und Gemüse du isst und wie viele Gläser Wasser du trinkst. Schreib danach einen kurzen Post für die Schülerzeitung (5–6 Sätze): Wie gut schneidest du beim Test ab? (z. B. „Am Samstag habe ich nur zwei Portionen gegessen – da schneide ich schlecht ab.“) Gib am Ende drei Tipps für eine gesunde Lebensweise im Imperativ – einen für einen Freund (du), einen für die Klasse (ihr) und einen für einen Erwachsenen (Sie), z. B. „Trink mehr Wasser!“, „Esst weniger Fastfood!“, „Gehen Sie jeden Tag spazieren!“.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Пройди тест «П'ять разів на день». Протягом трьох днів (напр. у п'ятницю, суботу й неділю) записуй, скільки порцій овочів і фруктів ти з'їдаєш і скільки склянок води випиваєш. Потім напиши короткий допис для шкільної газети (5–6 речень) про те, наскільки добре ти пройшов (пройшла) тест. Наприклад: «У суботу я з'їв(ла) лише дві порції — тут у мене поганий результат». Наприкінці дай три поради щодо здорового способу життя в Imperativ: одну другові (du), одну класу (ihr) і одну дорослому (Sie). Наприклад: «Trink mehr Wasser!», «Esst weniger Fastfood!», «Gehen Sie jeden Tag spazieren!».
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Wörter zum Lernen</p>
+        <div class="chip-row" id="vocabChips"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../data/glossary-data.js"></script>
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  // ===== Слова цього уроку у вкладці Fertig =====
+  const LEKTION_KLAS = "8", LEKTION_MODUL = "A", LEKTION_LEKTION = 13;
+  const LEKTION_PREV_LEKTION = 12; // попередній урок цього модуля: 8-A-12 «Mein Tagesablauf»
+
+  (function renderLessonVocab(){
+    const box = document.getElementById('vocabChips');
+    if (!box || typeof GLOSSARY === 'undefined') return;
+    const words = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_LEKTION
+    );
+    if (words.length === 0){
+      box.innerHTML = '<p class="empty-note">Слова для цього уроку ще не додані в глосарій.</p>';
+      return;
+    }
+    box.innerHTML = words.map(w =>
+      '<span class="chip static">' + w.de + ' — ' + w.uk + '</span>'
+    ).join('');
+  })();
+
+  // ===== Wörter-Check у вкладці Hausaufgabe (слова ПОПЕРЕДНЬОГО уроку) =====
+  function guessPos(de){
+    var base = (de || '').replace(/\([^)]*\)/g, '').trim();
+    if(/^(der|die|das)(\/(der|die|das))?\s/.test(base)) return 'noun';
+    if(/^sich\s/.test(base)) return 'verb';
+    if(/^am\s/.test(base)) return 'other'; // "am liebsten", "am besten" — прислівникова найвища форма, не дієслово
+    if(/\(\+(Gen|Dat|Akk)\.?\)/.test(de)) return 'prep';
+    var words = base.split(/\s+/);
+    var last = words[words.length - 1];
+    if(/(en|ern|eln)$/.test(last) && last === last.toLowerCase()) return 'verb';
+    return 'other'; // прикметники / прислівники / сталі вирази
+  }
+
+  (function renderDzVocabCheck(){
+    const wrap = document.getElementById('dz-vocab-wrap');
+    const box = document.getElementById('dz-vocab');
+    if (!wrap || !box || typeof GLOSSARY === 'undefined') return;
+    if (!LEKTION_PREV_LEKTION){ wrap.style.display = 'none'; return; }
+
+    const prevWords = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_PREV_LEKTION
+    );
+    if (prevWords.length < 3){ wrap.style.display = 'none'; return; }
+
+    const pool = shuffleArray(prevWords).slice(0, 6);
+    const quizData = pool.map(w => {
+      const pos = guessPos(w.de);
+      let sameKind = GLOSSARY.filter(g => g.uk !== w.uk && guessPos(g.de) === pos);
+      if(sameKind.length < 2) sameKind = GLOSSARY.filter(g => g.uk !== w.uk);
+      const distractors = shuffleArray(sameKind).slice(0, 2).map(g => g.uk);
+      return { q: w.de, opts: [w.uk, ...distractors], correct: w.uk };
+    });
+    buildQuiz('dz-vocab', quizData);
+  })();
+
+  // Hausaufgabe: Interview-Check (пропуски)
+  setTotal(document.querySelectorAll('#dz-list .blank-input').length);
+  document.getElementById('dz-check').addEventListener('click', () => checkBlanks('dz-list', 'dz-score', 'dz'));
+  document.getElementById('dz-reset').addEventListener('click', () => resetBlanks('dz-list', 'dz-score', 'dz'));
+
+  // Üb. 1: заголовок + розуміння тексту (позиції correct: 2,1,2,3,1,3)
+  const ub1Data = [
+    {q: "Welche Überschrift passt zum Text?",
+     opts: ["A. Die besten Obstsorten für den Winter", "B. Richtig essen in Europa – wer hält sich an die Regeln?", "C. Mit dem Rad zur Schule – Tipps für Jugendliche", "D. Warum Fastfood so billig ist"],
+     correct: "B. Richtig essen in Europa – wer hält sich an die Regeln?"},
+    {q: "„Die Niederländer nehmen die Tipps der Experten am ernstesten.“ Das bedeutet:",
+     opts: ["Sie folgen den Tipps am meisten.", "Sie lachen über die Tipps.", "Sie kennen die Tipps nicht."],
+     correct: "Sie folgen den Tipps am meisten."},
+    {q: "„Die Spanier schneiden schlecht ab.“ Das bedeutet:",
+     opts: ["Sie schneiden Gemüse nicht gut.", "Sie haben kein gutes Ergebnis.", "Sie essen am meisten Obst."],
+     correct: "Sie haben kein gutes Ergebnis."},
+    {q: "„Etwa jeder sechste Deutsche isst nie fünf Portionen am Tag.“ Wie viel Prozent ist das ungefähr?",
+     opts: ["50 %", "6 %", "17 %"],
+     correct: "17 %"},
+    {q: "Was sind laut Text die Hauptgründe für ungesunde Ernährung?",
+     opts: ["die Lebensweise und der Job", "das Wetter und die Preise", "die Schule und der Sport"],
+     correct: "die Lebensweise und der Job"},
+    {q: "Wer empfiehlt „Fünfmal am Tag“?",
+     opts: ["die Eltern", "die Lehrer", "die Weltgesundheitsorganisation"],
+     correct: "die Weltgesundheitsorganisation"}
+  ];
+  buildQuiz('ub1-quiz', ub1Data);
+
+  // Üb. 2: пропуски за текстом
+  setTotal(document.querySelectorAll('#ub2-list .blank-input').length);
+  document.getElementById('ub2-check').addEventListener('click', () => checkBlanks('ub2-list', 'ub2-score', 'ub2'));
+  document.getElementById('ub2-reset').addEventListener('click', () => resetBlanks('ub2-list', 'ub2-score', 'ub2'));
+
+  // Üb. 3: токени — корисні звички
+  initTokenClicks('ub3-text');
+  setTotal(document.querySelectorAll('#ub3-text .tok[data-correct="true"]').length);
+  document.getElementById('ub3-check').addEventListener('click', () => checkTokens('ub3-text', 'ub3-score', 'ub3'));
+  document.getElementById('ub3-reset').addEventListener('click', () => resetTokens('ub3-text', 'ub3-score', 'ub3'));
+
+  // Üb. 4: Imperativ — пропуски
+  setTotal(document.querySelectorAll('#ub4-list .blank-input').length);
+  document.getElementById('ub4-check').addEventListener('click', () => checkBlanks('ub4-list', 'ub4-score', 'ub4'));
+  document.getElementById('ub4-reset').addEventListener('click', () => resetBlanks('ub4-list', 'ub4-score', 'ub4'));
+
+  // Фінальна панель зі штампами
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🥦','🍎','💧','🏃','😴']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
