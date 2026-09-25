@@ -275,4 +275,71 @@ function renderEndStamps(wrapId, textId, icons){
   if(textEl) textEl.textContent = progress.done + ' von ' + progress.total + ' lösbaren Aufgaben richtig gelöst.';
 }
 
+/* ---------- Заборона вставки тексту в поля для письма (2026-09) ----------
+   Проблема: у вправах на вільне письмо (textarea) учні копіювали готовий текст
+   з інтернету / перекладача / чату з ШІ і вставляли його в поле.
+
+   Рішення: УСІ textarea в уроці автоматично захищені від вставки — нічого
+   в розмітці уроку дописувати не треба. Блокується:
+   - Ctrl+V / Cmd+V і "Вставити" з контекстного меню (подія paste);
+   - перетягування тексту мишкою в поле (подія drop);
+   - вставка через beforeinput (inputType insertFromPaste / insertFromDrop /
+     insertFromYank / insertFromPasteAsQuotation), зокрема на мобільних;
+   - запасний варіант для телефонних клавіатур, де вставку з буфера не
+     можна скасувати заздалегідь (напр. "чіп" буфера обміну в Gboard): якщо
+     за ОДНУ подію input у поле додалося більше NO_PASTE_MAX_JUMP символів,
+     зміна відкочується. Звичайний набір додає 1 символ, автовиправлення —
+     кілька, тож учневі, який друкує сам, це не заважає.
+   Копіювати СВІЙ текст З поля (щоб переписати в зошит) можна, як і раніше.
+
+   Якщо в якомусь уроці вставка в конкретне поле потрібна (напр. поле для
+   нотаток), додай до textarea атрибут data-allow-paste — його не чіпаємо.
+
+   Обмеження (чесно): це "лежачий поліцейський", а не повний захист. Учень
+   може передрукувати текст вручну з іншого пристрою, вимкнути JavaScript або
+   скористатися інструментами розробника. Голосовий набір на телефоні, який
+   вставляє одразу довге речення, теж буде відкочено. */
+const NO_PASTE_MAX_JUMP = 30;
+function guardNoPaste(el){
+  if(!el || el.dataset.noPasteReady) return;
+  el.dataset.noPasteReady = '1';
+
+  let warnEl = null, warnTimer = null;
+  function warn(){
+    if(!warnEl){
+      warnEl = document.createElement('p');
+      warnEl.className = 'feedback bad';
+      warnEl.setAttribute('role', 'status');
+      el.insertAdjacentElement('afterend', warnEl);
+    }
+    warnEl.textContent = 'Einfügen ist hier nicht erlaubt ✗ Вставляти текст не можна — пиши сам(а).';
+    clearTimeout(warnTimer);
+    warnTimer = setTimeout(() => { if(warnEl) warnEl.textContent = ''; }, 4000);
+  }
+
+  ['paste', 'drop'].forEach(type => el.addEventListener(type, e => { e.preventDefault(); warn(); }));
+  el.addEventListener('beforeinput', e => {
+    if(/^insertFrom(Paste|Drop|Yank|PasteAsQuotation)/.test(e.inputType || '')){
+      e.preventDefault(); warn();
+    }
+  });
+
+  // запасний варіант: відкотити "стрибок" довжини тексту за одну подію
+  let lastVal = el.value, lastStart = el.selectionStart, lastEnd = el.selectionEnd;
+  const remember = () => { lastVal = el.value; lastStart = el.selectionStart; lastEnd = el.selectionEnd; };
+  ['keydown', 'mouseup', 'focus', 'select'].forEach(type => el.addEventListener(type, remember));
+  el.addEventListener('input', () => {
+    if(el.value.length - lastVal.length > NO_PASTE_MAX_JUMP){
+      el.value = lastVal;
+      try { el.setSelectionRange(lastStart, lastEnd); } catch(_) {}
+      warn();
+    }
+    remember();
+  });
+}
+function initNoPaste(){
+  document.querySelectorAll('textarea:not([data-allow-paste])').forEach(guardNoPaste);
+}
+
 document.addEventListener('DOMContentLoaded', initTabs);
+document.addEventListener('DOMContentLoaded', initNoPaste);
