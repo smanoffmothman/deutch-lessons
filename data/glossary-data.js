@@ -465,5 +465,17 @@ const GLOSSARY = [
   {de: "lieber (Komparativ von gern)", uk: "охочіше, радше", klas: "8", modul: "A", lektion: 11},
   {de: "am liebsten (Superlativ von gern)", uk: "найбільше з усього, найохочіше", klas: "8", modul: "A", lektion: 11},
   {de: "frische Luft", uk: "свіже повітря", klas: "8", modul: "A", lektion: 11},
-  {de: "aufs Land fahren", uk: "виїжджати за місто, на природу", klas: "8", modul: "A", lektion: 11}
+  {de: "aufs Land fahren", uk: "виїжджати за місто, на природу", klas: "8", modul: "A", lektion: 11},
+  {de: "das Projekt (die Projekte)", uk: "проєкт", klas: "7", modul: "A", lektion: 18},
+  {de: "die Projektarbeit", uk: "проєктна робота", klas: "7", modul: "A", lektion: 18},
+  {de: "die Präsentation (die Präsentationen)", uk: "презентація", klas: "7", modul: "A", lektion: 18},
+  {de: "präsentieren", uk: "презентувати, представляти", klas: "7", modul: "A", lektion: 18},
+  {de: "die Collage (die Collagen)", uk: "колаж", klas: "7", modul: "A", lektion: 18},
+  {de: "anfertigen (trennbar)", uk: "виготовляти, робити (напр. колаж)", klas: "7", modul: "A", lektion: 18},
+  {de: "bestimmen", uk: "визначати, обирати", klas: "7", modul: "A", lektion: 18},
+  {de: "passend", uk: "відповідний, доречний", klas: "7", modul: "A", lektion: 18},
+  {de: "der Familienfeiertag (die Familienfeiertage)", uk: "сімейний святковий день, свято в родині", klas: "7", modul: "A", lektion: 18},
+  {de: "ungewöhnlich", uk: "незвичайний", klas: "7", modul: "A", lektion: 18},
+  {de: "das Video (die Videos)", uk: "відео", klas: "7", modul: "A", lektion: 18},
+  {de: "die Aufmerksamkeit (Danke für eure Aufmerksamkeit!)", uk: "увага (Дякуємо за увагу!)", klas: "7", modul: "A", lektion: 18}
 ];

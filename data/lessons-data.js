@@ -421,5 +421,15 @@ const LESSONS = [
     file: "klas-7/modul-a/lektion-17.html",
     nove: true,
     dz: "Schau dir deine Ergebnisse in der Kontrollarbeit an und schreib drei Fehler, die du gemacht hast, richtig in dein Heft – mit einer kurzen Regel auf Ukrainisch. Erstelle danach ein Mini-Quiz für deine Mitschüler: 5 Fragen zum Modul A (z. B. Hausarbeit, Familienfeste, Präpositionen, Perfekt oder Futur I) mit je drei Antwortmöglichkeiten – nur eine ist richtig. In der nächsten Stunde spielen wir eure Quizfragen."
+    },
+  {
+    klas: "7",
+    modul: "A",
+    lektion: 18,
+    nazva: "Projekt: Schöne Familientraditionen",
+    opys: "Проєктний урок: плануємо фотоколаж і презентацію про сімейні традиції — етапи проєкту, Imperativ для «ihr», теми (ритуали, свята, подорожі, незвичайні традиції), тексти до колажу та фрази для презентації й коментарів.",
+    file: "klas-7/modul-a/lektion-18.html",
+    nove: true,
+    dz: "Gestalte (allein oder mit deiner Gruppe) eine Foto-Collage zum Thema „Schöne Familientraditionen“: Wähle 3–4 Traditionen deiner Familie (z. B. ein Familienritual, einen Familienfeiertag, eine Familienreise oder eine ungewöhnliche Tradition), klebe oder zeichne passende Bilder dazu und schreib zu jedem Bild 2–3 Sätze mit einer Zeitangabe (z. B. jeden Sonntag, einmal im Jahr, im Sommer). Bereite außerdem eine kurze Präsentation (ca. 1 Minute) vor und benutze dabei mindestens drei Redemittel aus dem heutigen Unterricht (z. B. „Unser Projekt heißt …“, „Auf diesem Foto seht ihr …“, „Uns gefällt diese Tradition, weil …“). Wer möchte, dreht dazu auch ein kurzes Video (bis 1 Minute)."
   }
 ];
