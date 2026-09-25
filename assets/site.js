@@ -9,6 +9,14 @@ const MODULE_IDS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
 const MODULE_COLORS = ['#1F5C56', '#B14E3E', '#DE9E3B', '#48713F', '#123E3A', '#8a5a11', '#2E726F', '#5B5346'];
 function moduleColor(idx){ return MODULE_COLORS[idx % MODULE_COLORS.length]; }
 
+// 1 урок, 2–4 уроки, 5–20 уроків, 21 урок, 22 уроки…
+function lessonCountLabel(n){
+  const m10 = n % 10, m100 = n % 100;
+  if(m10 === 1 && m100 !== 11) return n + ' урок';
+  if(m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) return n + ' уроки';
+  return n + ' уроків';
+}
+
 function getNewestPerKlas(lessons){
   const newest = {};
   lessons.forEach(l => { newest[l.klas] = l; }); // останній за порядком у масиві "виграє"
@@ -65,39 +73,88 @@ function renderClassCatalog(klasList, lessonFileBase){
         h.textContent = 'Клас ' + k;
         contentEl.appendChild(h);
       }
+
+      // "Актуальний" модуль = модуль уроку з міткою "нове" (останній у
+      // масиві LESSONS для цього класу). Лише він розгорнутий за
+      // замовчуванням; під час пошуку розгорнуто все знайдене.
+      const currentMod = newestPerKlas[k] ? newestPerKlas[k].modul : null;
+
+      // Липка панель швидкого переходу між модулями (лише без пошуку)
+      let jumpBar = null;
+      if(!q){
+        jumpBar = document.createElement('nav');
+        jumpBar.className = 'module-jump';
+        jumpBar.setAttribute('aria-label', 'Модулі класу ' + k);
+        contentEl.appendChild(jumpBar);
+      }
+
       MODULE_IDS.forEach((mod, idx) => {
         const items = pool.filter(l => l.klas === k && l.modul === mod)
                            .sort((a, b) => a.lektion - b.lektion);
         if(q && items.length === 0) return;
         const temaFromTable = (typeof MODULE_THEMES !== 'undefined' && MODULE_THEMES[k]) ? MODULE_THEMES[k][mod] : '';
-        const tema = temaFromTable || null;
-        const section = document.createElement('section');
-        section.className = 'module-block';
-        section.style.setProperty('--module-color', moduleColor(idx));
-        section.innerHTML = '<div class="module-head">'
-          + '<span class="mod-id">Модуль ' + mod + '</span>'
-          + '<h3>' + (tema || 'Тема ще не визначена') + '</h3>'
-          + '<span class="mod-count">' + items.length + (items.length === 1 ? ' урок' : ' уроків') + '</span>'
-          + '</div>';
+        const tema = temaFromTable || 'Тема ще не визначена';
+        const color = moduleColor(idx);
+        const blockId = 'modul-' + k + '-' + mod;
+        const isEmpty = items.length === 0;
+
+        if(jumpBar){
+          const chip = document.createElement(isEmpty ? 'span' : 'a');
+          chip.className = 'jump-chip' + (isEmpty ? ' is-empty' : '') + (mod === currentMod ? ' is-current' : '');
+          chip.style.setProperty('--module-color', color);
+          chip.title = 'Модуль ' + mod + ': ' + tema;
+          chip.innerHTML = '<b>' + mod + '</b><span class="n">' + items.length + '</span>';
+          if(!isEmpty){
+            chip.href = '#' + blockId;
+            chip.addEventListener('click', e => {
+              e.preventDefault();
+              const target = document.getElementById(blockId);
+              if(!target) return;
+              target.open = true;
+              target.scrollIntoView({behavior: 'smooth', block: 'start'});
+            });
+          }
+          jumpBar.appendChild(chip);
+        }
+
+        const headInner = '<span class="mod-id">Модуль ' + mod + '</span>'
+          + '<h3>' + tema + '</h3>'
+          + '<span class="mod-count">' + (isEmpty ? 'ще немає уроків' : lessonCountLabel(items.length)) + '</span>';
+
+        // Порожній модуль — один компактний рядок, розгортати нічого
+        if(isEmpty){
+          const section = document.createElement('section');
+          section.className = 'module-block is-empty';
+          section.id = blockId;
+          section.style.setProperty('--module-color', color);
+          section.innerHTML = '<div class="module-head">' + headInner + '</div>';
+          contentEl.appendChild(section);
+          return;
+        }
+
+        const details = document.createElement('details');
+        details.className = 'module-block';
+        details.id = blockId;
+        details.style.setProperty('--module-color', color);
+        details.open = q ? true : (mod === currentMod);
+        details.innerHTML = '<summary class="module-head">'
+          + '<span class="chev" aria-hidden="true"></span>' + headInner + '</summary>';
+
         const grid = document.createElement('div');
         grid.className = 'lesson-grid';
-        if(items.length === 0){
-          grid.innerHTML = '<p class="empty-note">Ще немає уроків у цьому модулі.</p>';
-        } else {
-          items.forEach(l => {
-            const card = document.createElement('article');
-            card.className = 'lesson-card';
-            card.style.setProperty('--module-color', moduleColor(idx));
-            card.innerHTML = '<div class="lesson-num">Урок ' + l.lektion + '</div>'
-              + '<h4>' + l.nazva + '</h4>'
-              + '<p>' + l.opys + '</p>'
-              + '<a class="open-link" href="' + lessonFileBase + l.file + '" target="_blank" rel="noopener">Відкрити</a>'
-              + (l === newestPerKlas[l.klas] ? '<span class="new-badge">нове</span>' : '');
-            grid.appendChild(card);
-          });
-        }
-        section.appendChild(grid);
-        contentEl.appendChild(section);
+        items.forEach(l => {
+          const card = document.createElement('article');
+          card.className = 'lesson-card';
+          card.style.setProperty('--module-color', color);
+          card.innerHTML = '<div class="lesson-num">Урок ' + l.lektion + '</div>'
+            + '<h4>' + l.nazva + '</h4>'
+            + '<p>' + l.opys + '</p>'
+            + '<a class="open-link" href="' + lessonFileBase + l.file + '" target="_blank" rel="noopener">Відкрити</a>'
+            + (l === newestPerKlas[l.klas] ? '<span class="new-badge">нове</span>' : '');
+          grid.appendChild(card);
+        });
+        details.appendChild(grid);
+        contentEl.appendChild(details);
       });
     });
   }
