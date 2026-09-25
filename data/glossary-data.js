@@ -513,5 +513,17 @@ const GLOSSARY = [
   {de: "zu Abend essen", uk: "вечеряти", klas: "8", modul: "A", lektion: 12},
   {de: "duschen", uk: "приймати душ", klas: "8", modul: "A", lektion: 12},
   {de: "im Haushalt helfen", uk: "допомагати по господарству", klas: "8", modul: "A", lektion: 12},
-  {de: "sich (Dat.) etwas ansehen (trennbar)", uk: "дивитися (фільм, відео) — для себе", klas: "8", modul: "A", lektion: 12}
+  {de: "sich (Dat.) etwas ansehen (trennbar)", uk: "дивитися (фільм, відео) — для себе", klas: "8", modul: "A", lektion: 12},
+  {de: "die Lebensweise", uk: "спосіб життя", klas: "8", modul: "A", lektion: 13},
+  {de: "die Ernährung", uk: "харчування", klas: "8", modul: "A", lektion: 13},
+  {de: "die Portion (die Portionen)", uk: "порція", klas: "8", modul: "A", lektion: 13},
+  {de: "das Obst", uk: "фрукти (збірне)", klas: "8", modul: "A", lektion: 13},
+  {de: "das Gemüse", uk: "овочі (збірне)", klas: "8", modul: "A", lektion: 13},
+  {de: "die Empfehlung (die Empfehlungen)", uk: "рекомендація", klas: "8", modul: "A", lektion: 13},
+  {de: "etwas ernst nehmen", uk: "сприймати щось серйозно", klas: "8", modul: "A", lektion: 13},
+  {de: "schlecht abschneiden", uk: "мати поганий результат (= keinen Erfolg haben)", klas: "8", modul: "A", lektion: 13},
+  {de: "meiden", uk: "уникати (напр. Fastfood meiden)", klas: "8", modul: "A", lektion: 13},
+  {de: "rechtzeitig", uk: "вчасно", klas: "8", modul: "A", lektion: 13},
+  {de: "ungesund", uk: "нездоровий, шкідливий для здоров'я", klas: "8", modul: "A", lektion: 13},
+  {de: "sich bemühen", uk: "старатися, докладати зусиль", klas: "8", modul: "A", lektion: 13}
 ];

@@ -461,5 +461,15 @@ const LESSONS = [
     file: "klas-8/modul-a/lektion-12.html",
     nove: true,
     dz: "Mach ein Interview mit einem Familienmitglied (Mutter, Vater, Bruder, Schwester, Oma …) über seinen / ihren Tagesablauf an einem Werktag. Stell mindestens 6 Fragen (z. B. „Um wie viel Uhr stehst du auf?“, „Wann putzt du dir die Zähne?“, „Wann isst du zu Abend?“) und notiere die Antworten in der 3. Person mit inoffiziellen Uhrzeiten (z. B. „Meine Mutter steht um Viertel nach sechs auf.“). Benutze mindestens drei reflexive Verben – mindestens eins mit sich im Akkusativ (sich waschen, sich anziehen …) und eins mit sich im Dativ (sich die Zähne putzen, sich einen Film ansehen …). Schreib am Ende einen Tipp für diese Person mit „Es ist besser / gesünder, um … aufzustehen / ins Bett zu gehen.“"
+  },
+  {
+    klas: "8",
+    modul: "A",
+    lektion: 13,
+    nazva: "Elemente einer gesunden Lebensweise",
+    opys: "Читаємо про опитування «Fünfmal am Tag» (хто в Європі їсть досить овочів і фруктів), шукаємо корисні звички у форумному дописі, від «man muss + Infinitiv» переходимо до порад в Imperativ (du / ihr / Sie) і пишемо власні поради.",
+    file: "klas-8/modul-a/lektion-13.html",
+    nove: true,
+    dz: "Mach den „Fünfmal-am-Tag“-Test: Notiere drei Tage lang (z. B. Freitag, Samstag, Sonntag), wie viele Portionen Obst und Gemüse du isst und wie viele Gläser Wasser du trinkst. Schreib danach einen kurzen Post für die Schülerzeitung (5–6 Sätze): Wie gut schneidest du beim Test ab? (z. B. „Am Samstag habe ich nur zwei Portionen gegessen – da schneide ich schlecht ab.“) Gib am Ende drei Tipps für eine gesunde Lebensweise im Imperativ – einen für einen Freund (du), einen für die Klasse (ihr) und einen für einen Erwachsenen (Sie), z. B. „Trink mehr Wasser!“, „Esst weniger Fastfood!“, „Gehen Sie jeden Tag spazieren!“."
   }
 ];
