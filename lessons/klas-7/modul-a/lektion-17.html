@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 17 · Modul A · Kontrollarbeit</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 7'},
+    {label: 'Урок 17: Тематична контрольна робота'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 17 · MODUL A</span>
+        <h1>Kontrollarbeit: Ich, meine Familie, meine Freunde</h1>
+        <p class="sub">Тематична контрольна робота за весь Модуль A: лексика, граматика, читання й письмо про родину, хатні справи, свята і розпорядок дня.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Präpositionen</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Grammatik</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Lesen</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Fehlersuche</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Schreiben</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== ПАНЕЛЬ: вступ ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Worum geht es heute?</h2>
+      <div class="card">
+        <p>Heute schreiben wir die Kontrollarbeit zum Modul A „Ich, meine Familie, meine Freunde“. Du zeigst, was du in den letzten Wochen gelernt hast: Wörter zu Hausarbeit, Familienfesten und Mahlzeiten, Präpositionen mit Dativ und Akkusativ, Perfekt, Futur I, trennbare Verben und Adjektivendungen. Am Ende liest du einen Brief und schreibst selbst eine Antwort.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Сьогодні пишемо контрольну роботу за Модуль A «Я, моя родина, мої друзі». Ти покажеш, чого навчився за останні тижні: слова про хатні справи, сімейні свята й прийоми їжі, прийменники з Dativ і Akkusativ, Perfekt, Futur I, відокремлювані дієслова й закінчення прикметників. Наприкінці читаєш лист і пишеш власну відповідь.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Ziel der Stunde</p>
+        <p>Перевірити, наскільки впевнено ти володієш лексикою і граматикою Модуля A та чи вмієш розуміти й писати короткі тексти про свою родину, хатні обов'язки, сімейні свята й плани.</p>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Was wird geprüft?</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Teil</th><th>Thema</th><th>Punkte</th></tr>
+          <tr><td class="gender">Üb. 1</td><td>Wortschatz: Hausarbeit, Familie, Feste, Mahlzeiten</td><td>8</td></tr>
+          <tr><td class="gender">Üb. 2</td><td>Präpositionen: Wo? / Wohin? und Präpositionen mit Dativ</td><td>8</td></tr>
+          <tr><td class="gender">Üb. 3</td><td>Perfekt, Futur I, trennbare Verben, gefallen + Dativ, Adjektivendungen</td><td>8</td></tr>
+          <tr><td class="gender">Üb. 4</td><td>Lesen: Emmas Brief (richtig / falsch)</td><td>6</td></tr>
+          <tr><td class="gender">Üb. 5</td><td>Fehlersuche: 6 Fehler in einem Blogbeitrag finden</td><td>6</td></tr>
+          <tr><td class="gender">Üb. 6</td><td>Schreiben: Antwort an Emma (bewertet die Lehrerin / der Lehrer)</td><td>—</td></tr>
+        </table>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Як це працює</span>
+          У вправах 1–5 разом <strong>36 балів</strong>. Зараховується лише <strong>перша спроба</strong> кожного пункту: у квізах (Üb. 1, 3, 4) після першого кліку варіанти блокуються, тож обирай уважно; у полях можна виправляти написане, але бал від цього вже не зміниться. У Üb. 2 і Üb. 5 немає кнопки «Zurücksetzen». Правильну відповідь сторінка не показує. У Üb. 5 натискай «Prüfen» тільки тоді, коли знайшов усі помилки. Словником і підручником під час роботи не користуйся. Üb. 6 (письмо) перевіряє вчитель окремо.
+        </div>
+      </div>
+
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Keine Panik! Lies jede Aufgabe genau und denk erst, dann klick. Viel Erfolg!</p>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: перевірка ДЗ (dz уроку 16) ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: „Schreib einen kurzen Text (6–8 Sätze) über deinen typischen Schultag. Nutze mindestens vier Uhrzeiten in der Alltagsform (z. B. Viertel vor acht, halb neun, zwanzig nach fünf) und erwähne mindestens drei Hausarbeiten, die du an diesem Tag machst (z. B. das Bett machen, die Blumen gießen, das Geschirr spülen). Benutze dabei mindestens zwei trennbare Verben im Präsens.“
+      </div>
+
+      <div class="card" style="margin-top:18px;">
+        <p class="lead">Ось текст Макса про його шкільний день. Встав пропущені слова: час у побутовій формі (цифри в дужках підказують, котра година) або відокремлювану частину дієслова (дієслово — в дужках). Одне поле — одне слово. Потім порівняйте з вашими текстами вдома: чи всі використали 4 години, 3 хатні справи і 2 відокремлювані дієслова?</p>
+        <div id="dz-list">
+          <div class="fill-item"><span class="num">1)</span> Ich stehe um <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="halb" aria-label="Lücke 1"> sieben auf. <em>(6:30)</em></div>
+          <div class="fill-item"><span class="num">2)</span> Ich mache das Bett, und um Viertel <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="nach" aria-label="Lücke 2"> sieben frühstücke ich. <em>(7:15)</em></div>
+          <div class="fill-item"><span class="num">3)</span> Um Viertel vor <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="acht" aria-label="Lücke 3"> verlasse ich das Haus. <em>(7:45)</em></div>
+          <div class="fill-item"><span class="num">4)</span> Die Schule fängt um acht Uhr <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="an" aria-label="Lücke 4">. <em>(anfangen)</em></div>
+          <div class="fill-item"><span class="num">5)</span> Nach der Schule räume ich mein Zimmer <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="auf" aria-label="Lücke 5">. <em>(aufräumen)</em></div>
+          <div class="fill-item"><span class="num">6)</span> Um zwanzig <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="nach" aria-label="Lücke 6"> vier gieße ich die Blumen. <em>(16:20)</em></div>
+          <div class="fill-item"><span class="num">7)</span> Dann bringe ich den Müll <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="weg" aria-label="Lücke 7">. <em>(wegbringen)</em></div>
+          <div class="fill-item"><span class="num">8)</span> Um halb zehn schlafe ich <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="ein" aria-label="Lücke 8">. <em>(einschlafen)</em></div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="dz-check">Prüfen</button>
+          <button class="btn secondary" id="dz-reset">Zurücksetzen</button>
+          <span class="score-pill" id="dz-score"></span>
+        </div>
+      </div>
+
+      <div class="card" id="dz-vocab-wrap" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">Wörter-Check</p>
+        <p class="lead">Перевір слова з минулого уроку.</p>
+        <div id="dz-vocab"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: Wortschatz (квіз) ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1 · 8 Punkte</p>
+      <h2 class="panel-title">Wortschatz: Was passt?</h2>
+      <p class="lead">Обери слово або вираз, який підходить. Лексика з усього модуля: хатні справи, родина, свята, прийоми їжі, подорожі.</p>
+      <div class="card"><div id="ub1-quiz"></div></div>
+    </section>
+
+    <!-- ===== Üb. 2: Präpositionen (пропуски) ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2 · 8 Punkte</p>
+      <h2 class="panel-title">Präpositionen und Artikel</h2>
+      <p class="lead">Встав одне слово: прийменник або артикль (чи злиту форму, як <em>zum</em>, <em>zur</em>, <em>im</em>). Підказка в дужках: <strong>Wo?</strong> → Dativ, <strong>Wohin?</strong> → Akkusativ.</p>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> Im Sommer fahren wir an <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="die" aria-label="Lücke 1"> Ostsee. <em>(Wohin?)</em></div>
+        <div class="fill-item"><span class="num">2)</span> Dort wohnen wir in <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="einem" aria-label="Lücke 2"> kleinen Ferienhaus. <em>(Wo? · ein Ferienhaus)</em></div>
+        <div class="fill-item"><span class="num">3)</span> Mein Opa kommt <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="aus" aria-label="Lücke 3"> Italien.</div>
+        <div class="fill-item"><span class="num">4)</span> Wir fahren mit <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="dem" aria-label="Lücke 4"> Bus zum Strand. <em>(der Bus)</em></div>
+        <div class="fill-item"><span class="num">5)</span> Am Nachmittag gehe ich <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="zur" aria-label="Lücke 5"> Oma. <em>(zu + die Oma)</em></div>
+        <div class="fill-item"><span class="num">6)</span> Meine Tante ist seit <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="einer" aria-label="Lücke 6"> Woche bei uns zu Besuch. <em>(eine Woche)</em></div>
+        <div class="fill-item"><span class="num">7)</span> Die Katze schläft unter <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="dem" aria-label="Lücke 7"> Tisch. <em>(Wo? · der Tisch)</em></div>
+        <div class="fill-item"><span class="num">8)</span> Ich lege das Geschenk auf <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="den" aria-label="Lücke 8"> Tisch. <em>(Wohin? · der Tisch)</em></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: Grammatik (квіз) ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3 · 8 Punkte</p>
+      <h2 class="panel-title">Grammatik: Perfekt, Futur I und Co.</h2>
+      <p class="lead">Обери правильну форму. Уважно дивись на слова-сигнали часу: <em>gestern, letzten Sonntag</em> → минуле; <em>morgen, nächstes Wochenende</em> → майбутнє.</p>
+      <div class="card"><div id="ub3-quiz"></div></div>
+    </section>
+
+    <!-- ===== Üb. 4: Lesen (лист + квіз richtig/falsch) ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4 · 6 Punkte</p>
+      <h2 class="panel-title">Lesen: Ein Brief von Emma</h2>
+      <p class="lead">Прочитай лист Емми до її подруги з України. Потім визнач, чи твердження правильні (<em>richtig</em>) чи ні (<em>falsch</em>).</p>
+      <div class="mail-window">
+        <div class="mail-titlebar">Posteingang</div>
+        <div class="mail-fields">Von: Emma Becker · An: Sofia · Betreff: Meine Familie</div>
+        <div class="mail-body">
+          <p>Liebe Sofia,</p>
+          <p>vielen Dank für deinen Brief! Jetzt erzähle ich dir ein bisschen von meiner Familie. Wir sind zu fünft: meine Eltern, mein großer Bruder Paul, meine kleine Schwester Lina und ich. Wir wohnen in Hamburg, aber meine Großeltern leben auf dem Land bei Bremen. Wir besuchen sie fast jedes Wochenende.</p>
+          <p>Bei uns hat jeder seine Pflichten im Haushalt. Paul bringt jeden Tag den Müll weg und kauft am Samstag ein. Ich decke den Tisch und gieße die Blumen. Staub saugen finde ich nicht besonders gut, aber ich mache es einmal pro Woche. Lina ist erst sechs, sie räumt nur ihr Spielzeug auf.</p>
+          <p>Unser liebstes Familienfest ist Weihnachten. Letztes Jahr haben wir alle zusammen bei Oma Plätzchen gebacken und den Tannenbaum geschmückt. Das hat mir sehr gut gefallen!</p>
+          <p>Nächsten Monat wird mein Vater 45. Wir werden eine große Party im Garten feiern, und ich werde einen Kuchen backen.</p>
+          <p>Wie feiert ihr in der Ukraine Geburtstage? Schreib mir bald!</p>
+          <p>Viele Grüße<br>deine Emma</p>
+        </div>
+      </div>
+      <div class="card" style="margin-top:20px;"><div id="ub4-quiz"></div></div>
+    </section>
+
+    <!-- ===== Üb. 5: Fehlersuche (токени) ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5 · 6 Punkte</p>
+      <h2 class="panel-title">Fehlersuche: Tims Familienblog</h2>
+      <p class="lead">Тім написав допис у свій сімейний блог, але зробив <strong>6 граматичних помилок</strong>. Кожна помилка — це одне слово. Клікни на всі неправильні слова, а потім натисни «Prüfen».</p>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 На що звернути увагу</span>
+        Допоміжне дієслово в Perfekt (haben чи sein?), закінчення прикметника після <em>einen</em>, відмінок після <em>mit</em>, Partizip II відокремлюваного дієслова, відмінок після <em>gefallen</em>, форма <em>werden</em> у Futur I. Натискай «Prüfen» лише один раз, коли знайдеш усі помилки: після перевірки вибір блокується, а кнопки «Zurücksetzen» у контрольній немає.
+      </div>
+      <div class="mail-window" style="margin-top:16px;">
+        <div class="mail-titlebar">Familienblog · Neuer Beitrag</div>
+        <div class="mail-body" id="ub5-text"><span class="tok">Hallo</span>, <span class="tok">liebe</span> <span class="tok">Leser</span>! <span class="tok">Letztes</span> <span class="tok">Wochenende</span> <span class="tok">hat</span> <span class="tok">meine</span> <span class="tok">Oma</span> <span class="tok">ihren</span> <span class="tok">70.</span> <span class="tok">Geburtstag</span> <span class="tok">gefeiert</span>. <span class="tok">Wir</span> <span class="tok" data-correct="true">haben</span> <span class="tok">mit</span> <span class="tok">dem</span> <span class="tok">Zug</span> <span class="tok">nach</span> <span class="tok">Lwiw</span> <span class="tok">gefahren</span>. <span class="tok">Oma</span> <span class="tok">hat</span> <span class="tok">einen</span> <span class="tok" data-correct="true">schöne</span> <span class="tok">Kuchen</span> <span class="tok">gebacken</span>, <span class="tok">und</span> <span class="tok">alle</span> <span class="tok">Gäste</span> <span class="tok">haben</span> <span class="tok">ihn</span> <span class="tok">sehr</span> <span class="tok">lecker</span> <span class="tok">gefunden</span>. <span class="tok">Am</span> <span class="tok">Abend</span> <span class="tok">habe</span> <span class="tok">ich</span> <span class="tok">lange</span> <span class="tok">mit</span> <span class="tok" data-correct="true">mein</span> <span class="tok">Cousin</span> <span class="tok">gespielt</span>. <span class="tok">Nach</span> <span class="tok">dem</span> <span class="tok">Essen</span> <span class="tok">habe</span> <span class="tok">ich</span> <span class="tok">die</span> <span class="tok">Küche</span> <span class="tok" data-correct="true">geaufräumt</span>. <span class="tok">Das</span> <span class="tok">Fest</span> <span class="tok">hat</span> <span class="tok" data-correct="true">mich</span> <span class="tok">sehr</span> <span class="tok">gut</span> <span class="tok">gefallen</span>! <span class="tok">Nächstes</span> <span class="tok">Jahr</span> <span class="tok" data-correct="true">wird</span> <span class="tok">wir</span> <span class="tok">wieder</span> <span class="tok">alle</span> <span class="tok">zusammen</span> <span class="tok">feiern</span>.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub5-check">Prüfen</button>
+        <span class="score-pill" id="ub5-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 6: Schreiben (оцінює вчитель, без автоперевірки) ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6 · Schreiben</p>
+      <h2 class="panel-title">Deine Antwort an Emma</h2>
+      <p class="lead">Emma fragt dich nach deiner Familie. Schreib ihr eine Antwort (8–10 Sätze).</p>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Schreib über diese Punkte</p>
+        <p>1) Wer gehört zu deiner Familie? · 2) Wer macht was im Haushalt? (mindestens zwei trennbare Verben) · 3) Ein Familienfest vom letzten Jahr — im Perfekt · 4) Was werdet ihr am nächsten Wochenende machen? — im Futur I · 5) Deine Meinung: „Ich finde …, weil …“ · 6) Antworte auf Emmas Frage: Wie feiert ihr Geburtstage?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Напиши відповідь Еммі (8–10 речень): хто є у твоїй родині; хто що робить по дому (щонайменше два відокремлювані дієслова); одне сімейне свято минулого року — у Perfekt; що ви робитимете наступних вихідних — у Futur I; твоя думка з «Ich finde …, weil …»; відповідь на запитання Емми, як у вас святкують дні народження. Не забудь звертання (<em>Liebe Emma,</em>) і завершення (<em>Viele Grüße</em>). Вставляти текст у поле не можна — набирай його сам(а). Сторінка текст не зберігає: пиши в зошиті або скопіюй написане звідси, перш ніж закрити вкладку. Цю частину оцінює вчитель.
+        </div>
+      </div>
+      <div class="qa">
+        <label for="ub6-text">Liebe Emma, …</label>
+        <textarea id="ub6-text" rows="10" placeholder="Liebe Emma,&#10;vielen Dank für deinen Brief! …"></textarea>
+      </div>
+    </section>
+
+    <!-- ===== ПРИКІНЦЕВА ПАНЕЛЬ ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Schau dir deine Ergebnisse in der Kontrollarbeit an und schreib drei Fehler, die du gemacht hast, richtig in dein Heft – mit einer kurzen Regel auf Ukrainisch. Erstelle danach ein Mini-Quiz für deine Mitschüler: 5 Fragen zum Modul A (z. B. Hausarbeit, Familienfeste, Präpositionen, Perfekt oder Futur I) mit je drei Antwortmöglichkeiten – nur eine ist richtig. In der nächsten Stunde spielen wir eure Quizfragen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Переглянь свої результати контрольної роботи й запиши в зошит правильно три помилки, які ти зробив, — із коротким правилом українською. Потім склади міні-квіз для однокласників: 5 запитань за Модулем A (напр. хатні справи, сімейні свята, прийменники, Perfekt або Futur I), до кожного — три варіанти відповіді, з яких лише один правильний. На наступному уроці зіграємо у ваші квізи.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Wörter zum Lernen</p>
+        <div class="chip-row" id="vocabChips"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../data/glossary-data.js"></script>
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  // ===== Слова цього уроку у вкладці Fertig =====
+  const LEKTION_KLAS = "7", LEKTION_MODUL = "A", LEKTION_LEKTION = 17;
+  const LEKTION_PREV_LEKTION = 16;
+
+  (function renderLessonVocab(){
+    const box = document.getElementById('vocabChips');
+    if (!box || typeof GLOSSARY === 'undefined') return;
+    const words = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_LEKTION
+    );
+    if (words.length === 0){
+      box.innerHTML = '<p class="empty-note">Слова для цього уроку ще не додані в глосарій.</p>';
+      return;
+    }
+    box.innerHTML = words.map(w =>
+      '<span class="chip static">' + w.de + ' — ' + w.uk + '</span>'
+    ).join('');
+  })();
+
+  // ===== Wörter-Check у вкладці Hausaufgabe (слова ПОПЕРЕДНЬОГО уроку) =====
+  function guessPos(de){
+    var base = (de || '').replace(/\([^)]*\)/g, '').trim();
+    if(/^(der|die|das)(\/(der|die|das))?\s/.test(base)) return 'noun';
+    if(/^sich\s/.test(base)) return 'verb';
+    if(/^am\s/.test(base)) return 'other'; // "am liebsten", "am besten" — прислівникова найвища форма, не дієслово
+    if(/\(\+(Gen|Dat|Akk)\.?\)/.test(de)) return 'prep';
+    var words = base.split(/\s+/);
+    var last = words[words.length - 1];
+    if(/(en|ern|eln)$/.test(last) && last === last.toLowerCase()) return 'verb';
+    return 'other'; // прикметники / прислівники / сталі вирази
+  }
+
+  (function renderDzVocabCheck(){
+    const wrap = document.getElementById('dz-vocab-wrap');
+    const box = document.getElementById('dz-vocab');
+    if (!wrap || !box || typeof GLOSSARY === 'undefined') return;
+    if (!LEKTION_PREV_LEKTION){ wrap.style.display = 'none'; return; }
+
+    const prevWords = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_PREV_LEKTION
+    );
+    if (prevWords.length < 3){ wrap.style.display = 'none'; return; }
+
+    const pool = shuffleArray(prevWords).slice(0, 6);
+    const quizData = pool.map(w => {
+      const pos = guessPos(w.de);
+      let sameKind = GLOSSARY.filter(g => g.uk !== w.uk && guessPos(g.de) === pos);
+      if(sameKind.length < 2) sameKind = GLOSSARY.filter(g => g.uk !== w.uk);
+      const distractors = shuffleArray(sameKind).slice(0, 2).map(g => g.uk);
+      return { q: w.de, opts: [w.uk, ...distractors], correct: w.uk };
+    });
+    buildQuiz('dz-vocab', quizData);
+  })();
+
+  // Hausaufgabe: пропуски в тексті Макса
+  setTotal(document.querySelectorAll('#dz-list .blank-input').length);
+  document.getElementById('dz-check').addEventListener('click', () => checkBlanks('dz-list', 'dz-score', 'dz'));
+  document.getElementById('dz-reset').addEventListener('click', () => resetBlanks('dz-list', 'dz-score', 'dz'));
+
+  // ===== Контрольна: у квізах Üb. 1, 3, 4 рахується і дозволяється лише ОДНА спроба =====
+  // Спільний buildQuiz дозволяє клікати далі, поки учень не знайде правильну відповідь.
+  // Для контрольної це не підходить, тому тут (лише в цьому уроці, без змін у
+  // lesson-interactions.js) після першого кліку всі варіанти питання блокуються.
+  // Слухач стоїть на контейнері у фазі спливання, тобто спрацьовує ПІСЛЯ обробника
+  // самої кнопки: бал за першу спробу buildQuiz уже зарахував.
+  // Правильна відповідь після помилки не показується (див. анти-чіт у CHANGELOG).
+  function lockQuizAfterFirstTry(containerId){
+    const wrap = document.getElementById(containerId);
+    if(!wrap) return;
+    wrap.addEventListener('click', e => {
+      const btn = e.target.closest('.opt-btn');
+      if(!btn) return;
+      const q = btn.closest('.quiz-q');
+      q.querySelectorAll('.opt-btn').forEach(x => x.disabled = true);
+      if(btn.classList.contains('wrong')){
+        const fb = q.querySelector('.feedback');
+        fb.textContent = 'Leider falsch ✗'; fb.className = 'feedback bad';
+      }
+    });
+  }
+
+  // Üb. 1: Wortschatz (позиції correct у даних: 1-2-3-2-3-1-3-2)
+  const ub1Data = [
+    {q: "Was macht man mit dem schmutzigen Geschirr?", opts: ["spülen", "bügeln", "fegen"], correct: "spülen"},
+    {q: "Mit dem Staubsauger kann man …", opts: ["den Tisch decken", "Staub saugen", "die Blumen gießen"], correct: "Staub saugen"},
+    {q: "Das Frühstück, das Mittagessen und das Abendbrot sind …", opts: ["Familienfeste", "Geschenke", "Mahlzeiten"], correct: "Mahlzeiten"},
+    {q: "Zu Weihnachten schmückt man …", opts: ["die Ostereier", "den Tannenbaum", "den Müll"], correct: "den Tannenbaum"},
+    {q: "Am Geburtstag bläst man die … aus.", opts: ["Fähnchen", "Plätzchen", "Kerzen"], correct: "Kerzen"},
+    {q: "Die Schwester meines Vaters ist meine …", opts: ["Tante", "Cousine", "Oma"], correct: "Tante"},
+    {q: "Eine kurze Reise für nur einen Tag ist …", opts: ["der Urlaubsort", "der Fragebogen", "der Tagesausflug"], correct: "der Tagesausflug"},
+    {q: "Welches Wort ist ein zusammengesetztes Wort (Kompositum)?", opts: ["malerisch", "das Lieblingsfach", "gewinnen"], correct: "das Lieblingsfach"}
+  ];
+  buildQuiz('ub1-quiz', ub1Data);
+  lockQuizAfterFirstTry('ub1-quiz');
+
+  // Üb. 2: Präpositionen
+  setTotal(document.querySelectorAll('#ub2-list .blank-input').length);
+  document.getElementById('ub2-check').addEventListener('click', () => checkBlanks('ub2-list', 'ub2-score', 'ub2'));
+  // Кнопки "Zurücksetzen" в Üb. 2 і Üb. 5 навмисно немає: це контрольна, і скидання
+  // в спільному JS знімає заморозку першої спроби (друга спроба на повний бал).
+
+  // Üb. 3: Grammatik (позиції correct у даних: 2-1-3-2-1-2-3-1)
+  const ub3Data = [
+    {q: "Gestern ___ ich mit meiner Familie ins Kino gegangen.", opts: ["habe", "bin", "werde"], correct: "bin"},
+    {q: "Letzten Sonntag haben wir Plätzchen ___.", opts: ["gebacken", "backen", "gebackt"], correct: "gebacken"},
+    {q: "Nächstes Wochenende ___ wir Oma und Opa besuchen.", opts: ["haben", "sind", "werden"], correct: "werden"},
+    {q: "Welcher Satz ist richtig?", opts: ["Mein Bruder einkauft jeden Samstag.", "Mein Bruder kauft jeden Samstag ein.", "Mein Bruder kauft ein jeden Samstag."], correct: "Mein Bruder kauft jeden Samstag ein."},
+    {q: "Morgen ___ ich den Müll wegbringen.", opts: ["werde", "wirst", "wird"], correct: "werde"},
+    {q: "Die Party ___ mir sehr gut gefallen.", opts: ["ist", "hat", "wird"], correct: "hat"},
+    {q: "Hast du schon dein Zimmer ___?", opts: ["aufräumen", "geaufräumt", "aufgeräumt"], correct: "aufgeräumt"},
+    {q: "Wir wünschen dir ein ___ Fest!", opts: ["schönes", "schöne", "schöner"], correct: "schönes"}
+  ];
+  buildQuiz('ub3-quiz', ub3Data);
+  lockQuizAfterFirstTry('ub3-quiz');
+
+  // Üb. 4: Lesen richtig/falsch (позиції correct у даних: 1-2-2-1-1-2)
+  const ub4Data = [
+    {q: "Emmas Familie hat fünf Personen.", opts: ["richtig", "falsch"], correct: "richtig"},
+    {q: "Emmas Großeltern wohnen auch in Hamburg.", opts: ["richtig", "falsch"], correct: "falsch"},
+    {q: "Paul kauft am Samstag ein.", opts: ["falsch", "richtig"], correct: "richtig"},
+    {q: "Emma saugt jeden Tag Staub.", opts: ["falsch", "richtig"], correct: "falsch"},
+    {q: "Letztes Jahr hat die Familie bei Oma Plätzchen gebacken.", opts: ["richtig", "falsch"], correct: "richtig"},
+    {q: "Emmas Mutter wird nächsten Monat 45 Jahre alt.", opts: ["richtig", "falsch"], correct: "falsch"}
+  ];
+  buildQuiz('ub4-quiz', ub4Data);
+  lockQuizAfterFirstTry('ub4-quiz');
+
+  // Üb. 5: Fehlersuche (токени)
+  initTokenClicks('ub5-text');
+  setTotal(document.querySelectorAll('#ub5-text .tok[data-correct="true"]').length);
+  document.getElementById('ub5-check').addEventListener('click', () => checkTokens('ub5-text', 'ub5-score', 'ub5'));
+
+  // Фінальна панель зі штампами
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🏠','🧹','🎂','🎄','📝','🏆']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
