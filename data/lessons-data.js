@@ -441,5 +441,15 @@ const LESSONS = [
     file: "klas-7/modul-b/lektion-1.html",
     nove: true,
     dz: "Mach zu Hause einen „Küchen-Check“: Schau in den Kühlschrank und in den Küchenschrank und schreib einen Einkaufszettel mit 8 Produkten, die deine Familie diese Woche braucht. Benutze mindestens sechs verschiedene Mengenangaben (z. B. eine Flasche, eine Dose, ein Glas, eine Tüte, eine Packung, ein Kilo, 200 Gramm, ein Pfund) – ohne Artikel vor dem Produkt (Nullartikel!) – und mindestens zwei Mengenangaben im Plural (z. B. drei Flaschen, zwei Tüten). Schreib am Ende einen Satz: „Für … braucht man …“."
+  },
+  {
+    klas: "7",
+    modul: "B",
+    lektion: 2,
+    nazva: "Im Lebensmittelgeschäft",
+    opys: "Діалог у крамниці з аудіо (зіпсована ковбаса), займенники etwas / was / nichts, скарги на неякісні продукти (unreif, verdorben, zerrissen…) і що роблять на кухні з безособовим man.",
+    file: "klas-7/modul-b/lektion-2.html",
+    nove: true,
+    dz: "1) Bring den Dialog in die richtige Reihenfolge und schreib ihn ins Heft: a) Nein, danke. Nichts mehr. b) Guten Tag! Brauchen Sie etwas? c) Aber die Brötchen sind trocken! So was kann ich nicht nehmen. d) Ja, ich brauche vier Brötchen, bitte. e) Oh, Entschuldigung! Hier sind frische Brötchen. Brauchen Sie noch etwas? f) Bitte schön. 2) Schreib dein Lieblingsrezept (5–6 Sätze) mit „man“: Was braucht man und was macht man in der Küche? Benutze mindestens vier Verben aus der Stunde (z. B. schälen, waschen, schneiden, vermischen, umrühren, braten, dazugeben) und einmal „etwas“ oder „nichts“."
   }
 ];

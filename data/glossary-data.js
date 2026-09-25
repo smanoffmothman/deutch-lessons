@@ -489,5 +489,17 @@ const GLOSSARY = [
   {de: "das Pfund (= 500 Gramm)", uk: "фунт (пів кілограма)", klas: "7", modul: "B", lektion: 1},
   {de: "der Einkaufszettel", uk: "список покупок", klas: "7", modul: "B", lektion: 1},
   {de: "die Speise (die Speisen)", uk: "страва", klas: "7", modul: "B", lektion: 1},
-  {de: "kochen", uk: "варити, готувати (їжу)", klas: "7", modul: "B", lektion: 1}
+  {de: "kochen", uk: "варити, готувати (їжу)", klas: "7", modul: "B", lektion: 1},
+  {de: "die Verkäuferin (die Verkäuferinnen)", uk: "продавчиня", klas: "7", modul: "B", lektion: 2},
+  {de: "der Kunde (die Kunden)", uk: "покупець, клієнт", klas: "7", modul: "B", lektion: 2},
+  {de: "etwas (etwas Salz)", uk: "щось; трохи (трохи солі)", klas: "7", modul: "B", lektion: 2},
+  {de: "nichts (Nichts mehr.)", uk: "нічого (Більше нічого.)", klas: "7", modul: "B", lektion: 2},
+  {de: "frisch", uk: "свіжий", klas: "7", modul: "B", lektion: 2},
+  {de: "verdorben", uk: "зіпсований", klas: "7", modul: "B", lektion: 2},
+  {de: "haltbar (bis Ende des Monats)", uk: "придатний (до кінця місяця)", klas: "7", modul: "B", lektion: 2},
+  {de: "riechen (Die Wurst riecht nicht gut.)", uk: "пахнути (Ковбаса погано пахне.)", klas: "7", modul: "B", lektion: 2},
+  {de: "unreif", uk: "незрілий", klas: "7", modul: "B", lektion: 2},
+  {de: "braten (er brät)", uk: "смажити", klas: "7", modul: "B", lektion: 2},
+  {de: "die Pfanne (die Pfannen)", uk: "сковорідка", klas: "7", modul: "B", lektion: 2},
+  {de: "die Schüssel (die Schüsseln)", uk: "миска", klas: "7", modul: "B", lektion: 2}
 ];
