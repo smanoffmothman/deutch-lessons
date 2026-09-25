@@ -451,5 +451,15 @@ const LESSONS = [
     file: "klas-7/modul-b/lektion-2.html",
     nove: true,
     dz: "1) Bring den Dialog in die richtige Reihenfolge und schreib ihn ins Heft: a) Nein, danke. Nichts mehr. b) Guten Tag! Brauchen Sie etwas? c) Aber die Brötchen sind trocken! So was kann ich nicht nehmen. d) Ja, ich brauche vier Brötchen, bitte. e) Oh, Entschuldigung! Hier sind frische Brötchen. Brauchen Sie noch etwas? f) Bitte schön. 2) Schreib dein Lieblingsrezept (5–6 Sätze) mit „man“: Was braucht man und was macht man in der Küche? Benutze mindestens vier Verben aus der Stunde (z. B. schälen, waschen, schneiden, vermischen, umrühren, braten, dazugeben) und einmal „etwas“ oder „nichts“."
+  },
+  {
+    klas: "8",
+    modul: "A",
+    lektion: 12,
+    nazva: "Mein Tagesablauf",
+    opys: "Неофіційний час (Viertel nach, halb, fünf vor halb…) з аудіоконтролем, аудіювання про шкільний день Луїзи, зворотні дієслова з sich в Akkusativ і Dativ (ich kämme mich / ich kämme mir die Haare) та інтерв'ю в парах із порадами.",
+    file: "klas-8/modul-a/lektion-12.html",
+    nove: true,
+    dz: "Mach ein Interview mit einem Familienmitglied (Mutter, Vater, Bruder, Schwester, Oma …) über seinen / ihren Tagesablauf an einem Werktag. Stell mindestens 6 Fragen (z. B. „Um wie viel Uhr stehst du auf?“, „Wann putzt du dir die Zähne?“, „Wann isst du zu Abend?“) und notiere die Antworten in der 3. Person mit inoffiziellen Uhrzeiten (z. B. „Meine Mutter steht um Viertel nach sechs auf.“). Benutze mindestens drei reflexive Verben – mindestens eins mit sich im Akkusativ (sich waschen, sich anziehen …) und eins mit sich im Dativ (sich die Zähne putzen, sich einen Film ansehen …). Schreib am Ende einen Tipp für diese Person mit „Es ist besser / gesünder, um … aufzustehen / ins Bett zu gehen.“"
   }
 ];
