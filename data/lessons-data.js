@@ -411,5 +411,15 @@ const LESSONS = [
     file: "klas-8/modul-a/lektion-11.html",
     nove: true,
     dz: "Zeichne (oder gestalte digital) deinen persönlichen „Sportkalender“ für ein Jahr: vier Felder für vier Jahreszeiten (Frühling, Sommer, Herbst, Winter). Schreib zu jeder Jahreszeit mindestens eine Sportart, die du in dieser Zeit gern treibst, und einen kurzen Satz dazu (z. B. „Im Winter laufe ich gern Ski.“ oder „Am liebsten fahre ich im Sommer Rad.“). Benutze insgesamt mindestens zweimal gern/lieber/am liebsten."
+  },
+  {
+    klas: "7",
+    modul: "A",
+    lektion: 17,
+    nazva: "Тематична контрольна робота за Модуль A",
+    opys: "Контрольна робота за темою «Я, моя родина, мої друзі»: лексика (хатні справи, свята, прийоми їжі), прийменники Wo?/Wohin? і з Dativ, Perfekt, Futur I, відокремлювані дієслова, читання листа Емми, пошук помилок і лист-відповідь.",
+    file: "klas-7/modul-a/lektion-17.html",
+    nove: true,
+    dz: "Schau dir deine Ergebnisse in der Kontrollarbeit an und schreib drei Fehler, die du gemacht hast, richtig in dein Heft – mit einer kurzen Regel auf Ukrainisch. Erstelle danach ein Mini-Quiz für deine Mitschüler: 5 Fragen zum Modul A (z. B. Hausarbeit, Familienfeste, Präpositionen, Perfekt oder Futur I) mit je drei Antwortmöglichkeiten – nur eine ist richtig. In der nächsten Stunde spielen wir eure Quizfragen."
   }
 ];
