@@ -501,5 +501,17 @@ const GLOSSARY = [
   {de: "unreif", uk: "незрілий", klas: "7", modul: "B", lektion: 2},
   {de: "braten (er brät)", uk: "смажити", klas: "7", modul: "B", lektion: 2},
   {de: "die Pfanne (die Pfannen)", uk: "сковорідка", klas: "7", modul: "B", lektion: 2},
-  {de: "die Schüssel (die Schüsseln)", uk: "миска", klas: "7", modul: "B", lektion: 2}
+  {de: "die Schüssel (die Schüsseln)", uk: "миска", klas: "7", modul: "B", lektion: 2},
+    {de: "der Tagesablauf", uk: "розпорядок дня", klas: "8", modul: "A", lektion: 12},
+  {de: "aufstehen (trennbar)", uk: "вставати (з ліжка)", klas: "8", modul: "A", lektion: 12},
+  {de: "sich waschen", uk: "умиватися, митися", klas: "8", modul: "A", lektion: 12},
+  {de: "sich kämmen", uk: "зачісуватися, розчісуватися", klas: "8", modul: "A", lektion: 12},
+  {de: "sich anziehen (trennbar)", uk: "одягатися", klas: "8", modul: "A", lektion: 12},
+  {de: "sich (Dat.) die Zähne putzen", uk: "чистити зуби", klas: "8", modul: "A", lektion: 12},
+  {de: "frühstücken", uk: "снідати", klas: "8", modul: "A", lektion: 12},
+  {de: "zu Mittag essen", uk: "обідати", klas: "8", modul: "A", lektion: 12},
+  {de: "zu Abend essen", uk: "вечеряти", klas: "8", modul: "A", lektion: 12},
+  {de: "duschen", uk: "приймати душ", klas: "8", modul: "A", lektion: 12},
+  {de: "im Haushalt helfen", uk: "допомагати по господарству", klas: "8", modul: "A", lektion: 12},
+  {de: "sich (Dat.) etwas ansehen (trennbar)", uk: "дивитися (фільм, відео) — для себе", klas: "8", modul: "A", lektion: 12}
 ];
