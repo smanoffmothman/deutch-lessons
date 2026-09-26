@@ -481,5 +481,15 @@ const LESSONS = [
     file: "klas-8/modul-a/lektion-14.html",
     nove: true,
     dz: "Schreib 5 Rätsel-Karten für das Spiel „Ich sehe was, was du nicht siehst“ zum Thema Freizeit und Erholung (z. B. Dinge für Camping, Sport oder Urlaub). Auf die Vorderseite schreibst du 2–3 Sätze, ohne das Wort selbst zu nennen: Wie ist es? (Das ist klein / rund / aus Holz …) Und wozu braucht man es? Benutze in jedem Rätsel einen Satz mit „wenn“ (z. B. „Man braucht es, wenn man Feuer machen will.“) und in mindestens zwei Rätseln „damit“ oder „darin“ (z. B. „Damit kann man …“). Auf die Rückseite schreibst du die Lösung mit Artikel (z. B. „die Streichhölzer“). Nächstes Mal spielen wir mit euren Karten!"
+  },
+  {
+    klas: "9",
+    modul: "A",
+    lektion: 13,
+    nazva: "Persönliche Daten",
+    opys: "Персональні дані в анкеті-Steckbrief (зіставлення, гра «Wer ist das?»), утворення іменників від дієслів з аудіо (besuchen → der Besuch, forschen → die Forschung, leben → das Leben), роки на слух і як їх читати та біографія бабусі Міріам із пропусками.",
+    file: "klas-9/modul-a/lektion-13.html",
+    nove: true,
+    dz: "Zeichne einen Lebensstrahl (Zeitstrahl) für ein Familienmitglied (z. B. Oma, Opa, Mutter, Vater) oder für eine bekannte Person aus der Ukraine. Trag mindestens 6 wichtige Daten ein und schreib zu jedem Datum ein Nomen aus dem heutigen Unterricht mit Artikel (z. B. die Geburt, der Abschluss, das Studium, die Heirat, der Umzug, die Arbeit, die Auszeichnung). Schreib bei drei Jahreszahlen auch in Worten, wie man sie liest (z. B. 1978 – neunzehnhundertachtundsiebzig). Mach außerdem einen kurzen Steckbrief zu dieser Person (Vorname, Nachname, Alter, Wohnort, Beruf, Hobbys)."
   }
 ];

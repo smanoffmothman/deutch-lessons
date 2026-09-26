@@ -537,5 +537,17 @@ const GLOSSARY = [
   {de: "unvergesslich", uk: "незабутній", klas: "8", modul: "A", lektion: 14},
   {de: "beliebt (bei Jugendlichen)", uk: "популярний (серед молоді)", klas: "8", modul: "A", lektion: 14},
   {de: "seine Grenzen austesten", uk: "випробовувати межі своїх можливостей", klas: "8", modul: "A", lektion: 14},
-  {de: "die Taschenlampe", uk: "ліхтарик", klas: "8", modul: "A", lektion: 14}
+  {de: "die Taschenlampe", uk: "ліхтарик", klas: "8", modul: "A", lektion: 14},
+  {de: "der Vorname", uk: "ім'я", klas: "9", modul: "A", lektion: 13},
+  {de: "der Nachname", uk: "прізвище", klas: "9", modul: "A", lektion: 13},
+  {de: "der Wohnort", uk: "місце проживання", klas: "9", modul: "A", lektion: 13},
+  {de: "das Haustier (die Haustiere)", uk: "домашня тварина", klas: "9", modul: "A", lektion: 13},
+  {de: "die persönlichen Daten (Pl.)", uk: "персональні (особисті) дані", klas: "9", modul: "A", lektion: 13},
+  {de: "das Studium", uk: "навчання у виші (університеті)", klas: "9", modul: "A", lektion: 13},
+  {de: "der Umzug (umziehen)", uk: "переїзд (переїжджати)", klas: "9", modul: "A", lektion: 13},
+  {de: "die Auszeichnung", uk: "нагорода, відзнака", klas: "9", modul: "A", lektion: 13},
+  {de: "die Forschung", uk: "дослідження, наукова робота", klas: "9", modul: "A", lektion: 13},
+  {de: "die Geburt (gebären)", uk: "народження (народжувати)", klas: "9", modul: "A", lektion: 13},
+  {de: "die Heirat (heiraten)", uk: "одруження (одружуватися)", klas: "9", modul: "A", lektion: 13},
+  {de: "die Jahreszahl", uk: "рік (як число, дата)", klas: "9", modul: "A", lektion: 13}
 ];
