@@ -525,5 +525,17 @@ const GLOSSARY = [
   {de: "meiden", uk: "уникати (напр. Fastfood meiden)", klas: "8", modul: "A", lektion: 13},
   {de: "rechtzeitig", uk: "вчасно", klas: "8", modul: "A", lektion: 13},
   {de: "ungesund", uk: "нездоровий, шкідливий для здоров'я", klas: "8", modul: "A", lektion: 13},
-  {de: "sich bemühen", uk: "старатися, докладати зусиль", klas: "8", modul: "A", lektion: 13}
+  {de: "sich bemühen", uk: "старатися, докладати зусиль", klas: "8", modul: "A", lektion: 13},
+  {de: "das Tipi (die Tipis)", uk: "тіпі (індіанський намет)", klas: "8", modul: "A", lektion: 14},
+  {de: "das Fell (die Felle)", uk: "хутро, шкура тварини", klas: "8", modul: "A", lektion: 14},
+  {de: "reiten", uk: "їздити верхи", klas: "8", modul: "A", lektion: 14},
+  {de: "mit Pfeil und Bogen schießen", uk: "стріляти з лука", klas: "8", modul: "A", lektion: 14},
+  {de: "das Feuerzeug", uk: "запальничка", klas: "8", modul: "A", lektion: 14},
+  {de: "der Verein", uk: "клуб, товариство, об'єднання", klas: "8", modul: "A", lektion: 14},
+  {de: "eintreten (in +Akk.) (trennbar)", uk: "вступати (до клубу, товариства)", klas: "8", modul: "A", lektion: 14},
+  {de: "die Klamotten (Pl., ugs.)", uk: "одяг, «шмотки» (розмовне)", klas: "8", modul: "A", lektion: 14},
+  {de: "unvergesslich", uk: "незабутній", klas: "8", modul: "A", lektion: 14},
+  {de: "beliebt (bei Jugendlichen)", uk: "популярний (серед молоді)", klas: "8", modul: "A", lektion: 14},
+  {de: "seine Grenzen austesten", uk: "випробовувати межі своїх можливостей", klas: "8", modul: "A", lektion: 14},
+  {de: "die Taschenlampe", uk: "ліхтарик", klas: "8", modul: "A", lektion: 14}
 ];

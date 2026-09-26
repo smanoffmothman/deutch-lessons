@@ -471,5 +471,15 @@ const LESSONS = [
     file: "klas-8/modul-a/lektion-13.html",
     nove: true,
     dz: "Mach den „Fünfmal-am-Tag“-Test: Notiere drei Tage lang (z. B. Freitag, Samstag, Sonntag), wie viele Portionen Obst und Gemüse du isst und wie viele Gläser Wasser du trinkst. Schreib danach einen kurzen Post für die Schülerzeitung (5–6 Sätze): Wie gut schneidest du beim Test ab? (z. B. „Am Samstag habe ich nur zwei Portionen gegessen – da schneide ich schlecht ab.“) Gib am Ende drei Tipps für eine gesunde Lebensweise im Imperativ – einen für einen Freund (du), einen für die Klasse (ihr) und einen für einen Erwachsenen (Sie), z. B. „Trink mehr Wasser!“, „Esst weniger Fastfood!“, „Gehen Sie jeden Tag spazieren!“."
+  },
+  {
+    klas: "8",
+    modul: "A",
+    lektion: 14,
+    nazva: "Meine Freizeit",
+    opys: "Повторення лексики модуля (спорт, екстремальний спорт, розпорядок дня, літній відпочинок), аудіювання про канікули в «індіанському таборі», аргументи за і проти екстремального спорту, опитування з während + Genitiv і гра-загадка «Ich sehe was, was du nicht siehst» (wenn-Satz, damit/darin/darauf).",
+    file: "klas-8/modul-a/lektion-14.html",
+    nove: true,
+    dz: "Schreib 5 Rätsel-Karten für das Spiel „Ich sehe was, was du nicht siehst“ zum Thema Freizeit und Erholung (z. B. Dinge für Camping, Sport oder Urlaub). Auf die Vorderseite schreibst du 2–3 Sätze, ohne das Wort selbst zu nennen: Wie ist es? (Das ist klein / rund / aus Holz …) Und wozu braucht man es? Benutze in jedem Rätsel einen Satz mit „wenn“ (z. B. „Man braucht es, wenn man Feuer machen will.“) und in mindestens zwei Rätseln „damit“ oder „darin“ (z. B. „Damit kann man …“). Auf die Rückseite schreibst du die Lösung mit Artikel (z. B. „die Streichhölzer“). Nächstes Mal spielen wir mit euren Karten!"
   }
 ];
