@@ -549,5 +549,17 @@ const GLOSSARY = [
   {de: "die Forschung", uk: "дослідження, наукова робота", klas: "9", modul: "A", lektion: 13},
   {de: "die Geburt (gebären)", uk: "народження (народжувати)", klas: "9", modul: "A", lektion: 13},
   {de: "die Heirat (heiraten)", uk: "одруження (одружуватися)", klas: "9", modul: "A", lektion: 13},
-  {de: "die Jahreszahl", uk: "рік (як число, дата)", klas: "9", modul: "A", lektion: 13}
+  {de: "die Jahreszahl", uk: "рік (як число, дата)", klas: "9", modul: "A", lektion: 13},
+  {de: "der Lebenslauf", uk: "життєпис, біографія; резюме (CV)", klas: "9", modul: "A", lektion: 14},
+  {de: "absolvieren", uk: "(успішно) закінчити (навчання, курс, практику)", klas: "9", modul: "A", lektion: 14},
+  {de: "beschließen", uk: "вирішити, ухвалити рішення", klas: "9", modul: "A", lektion: 14},
+  {de: "sich bewerben (um +Akk.)", uk: "подавати заявку, претендувати (на посаду)", klas: "9", modul: "A", lektion: 14},
+  {de: "leichtfallen (trennbar)", uk: "легко даватися (Mir fällt Deutsch leicht.)", klas: "9", modul: "A", lektion: 14},
+  {de: "wechseln (die Schule wechseln)", uk: "змінювати; переходити (в іншу школу)", klas: "9", modul: "A", lektion: 14},
+  {de: "die Grundschule", uk: "початкова школа", klas: "9", modul: "A", lektion: 14},
+  {de: "die Kunsthochschule", uk: "вищий мистецький навчальний заклад, академія мистецтв", klas: "9", modul: "A", lektion: 14},
+  {de: "das Praktikum", uk: "практика, стажування", klas: "9", modul: "A", lektion: 14},
+  {de: "die Stelle", uk: "посада, робоче місце", klas: "9", modul: "A", lektion: 14},
+  {de: "vor der Wahl stehen", uk: "стояти перед вибором", klas: "9", modul: "A", lektion: 14},
+  {de: "tätig sein (als)", uk: "працювати (ким), займатися діяльністю", klas: "9", modul: "A", lektion: 14}
 ];

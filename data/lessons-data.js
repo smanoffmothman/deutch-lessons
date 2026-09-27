@@ -491,5 +491,15 @@ const LESSONS = [
     file: "klas-9/modul-a/lektion-13.html",
     nove: true,
     dz: "Zeichne einen Lebensstrahl (Zeitstrahl) für ein Familienmitglied (z. B. Oma, Opa, Mutter, Vater) oder für eine bekannte Person aus der Ukraine. Trag mindestens 6 wichtige Daten ein und schreib zu jedem Datum ein Nomen aus dem heutigen Unterricht mit Artikel (z. B. die Geburt, der Abschluss, das Studium, die Heirat, der Umzug, die Arbeit, die Auszeichnung). Schreib bei drei Jahreszahlen auch in Worten, wie man sie liest (z. B. 1978 – neunzehnhundertachtundsiebzig). Mach außerdem einen kurzen Steckbrief zu dieser Person (Vorname, Nachname, Alter, Wohnort, Beruf, Hobbys)."
+  },
+  {
+    klas: "9",
+    modul: "A",
+    lektion: 14,
+    nazva: "Mein Lebenslauf",
+    opys: "Біографія Міхаеля Бауера: Präteritum слабких, сильних і змішаних дієслів (таблиця форм з аудіоконтролем), життєпис із пропусками на слух, відокремлювані дієслова в підрядному реченні (umzog, leichtfielen) і als / wenn / wann.",
+    file: "klas-9/modul-a/lektion-14.html",
+    nove: true,
+    dz: "Das sind Stichpunkte aus dem Leben von Lena Bauer, Michaels Schwester: am 3. März 1985 in Siegburg geboren · 1991 Umzug der Familie nach Bonn, Grundschule in Bonn · 1995 Wechsel aufs Gymnasium · Biologie und Chemie – leichtfallen · 2004 Abitur als die Beste der Klasse · Medizinstudium in Köln, 12 Semester · 2010 Praktikum in einem Krankenhaus in München · 2011 sich um eine Stelle in Bonn bewerben · seit 2011 Ärztin in einer Kinderklinik in Bonn. Schreib Lenas Lebenslauf in der Ich-Form (8–10 Sätze) im Präteritum (z. B. „Ich bin am 3. März 1985 in Siegburg geboren. Als meine Familie 1991 nach Bonn umzog, …“). Benutze mindestens zwei als-Sätze und mindestens zwei trennbare Verben (z. B. umziehen, leichtfallen). Unterstreiche alle Präteritumformen."
   }
 ];
