@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reflexive Verben · Grammatik · Deutsch mit uns</title>
+<!-- =================================================================
+     ШАБЛОН сторінки граматичної теми. Лежить у тій самій папці, де й
+     готові теми (gramatyka/temy/), тож шляхи "../../" уже правильні —
+     при копіюванні їх НЕ міняти. Копію називай точно як id теми в
+     data/grammar-data.js: gramatyka/temy/<id>.html.
+     Правила наповнення — GRAMMAR-BRIEF.md.
+     ================================================================= -->
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'gramatyka' });</script>
+<!-- хлібні крихти малює initGrammarPage() внизу — з даних grammar-data.js -->
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">GRAMMATIK · Дієслово: форми і часи</span>
+        <h1>Reflexive Verben</h1>
+        <p class="sub">Дієслова із займенником <i>sich</i>, який повертає дію на того, хто її виконує: <i>ich wasche mich</i> — я вмиваюся. Форми, Akkusativ і Dativ, місце в реченні та часи.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="regel" aria-selected="true">Regel</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Finden</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Reflexiv?</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Bedeutung</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Formen</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · mich / mir</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Präpositionen</button>
+    <button class="tab-btn" data-tab="ub7">Üb. 7 · Perfekt</button>
+    <button class="tab-btn" data-tab="ub8">Üb. 8 · Satzbau</button>
+    <button class="tab-btn" data-tab="ub9">Üb. 9 · Imperativ & zu</button>
+    <button class="tab-btn" data-tab="ub10">Üb. 10 · Brief</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <section class="panel active" id="panel-regel">
+      <p class="section-label">Regel</p>
+      <h2 class="panel-title">Reflexive Verben</h2>
+      <ul class="regel-toc" id="regelToc"></ul>
+
+      <div class="card">
+        <p>Reflexive Verben haben ein Reflexivpronomen: <b>sich</b> freuen, <b>sich</b> waschen, <b>sich</b> beeilen. Das Pronomen zeigt zurück auf das Subjekt: Ich wasche <b>mich</b>. (= Ich wasche mich selbst.) Manche Verben gibt es nur mit <i>sich</i>, andere mit oder ohne <i>sich</i>. Hat der Satz schon ein Akkusativobjekt, steht das Pronomen im Dativ: Ich wasche <b>mir</b> die Hände.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Зворотне дієслово — це дієслово із зворотним займенником, який «повертає» дію на підмет: хто робить, той і отримує дію. В українській мові це зазвичай частка <b>-ся</b> (вмиватися) або займенники <b>себе / собі</b> (купити собі). У німецькій це окреме слово, яке змінюється за особою: я вмиваюся — ich wasche <b>mich</b>, ти вмиваєшся — du wäschst <b>dich</b>, він вмивається — er wäscht <b>sich</b>. Слово <i>sich</i> — лише для 3-ї особи та ввічливого <i>Sie</i>. Обережно: не кожне дієслово на -ся в німецькій зворотне (вчитися — <i>lernen</i>), і навпаки (<i>sich erinnern</i> — пам'ятати).
+        </div>
+      </div>
+
+      <section class="card regel-block" id="formen">
+        <h3>Formen des Reflexivpronomens</h3>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Person</th><th>Akkusativ</th><th>Dativ</th><th>Beispiel</th></tr>
+          <tr><td class="gender">ich</td><td>mich</td><td>mir</td><td>Ich freue <b>mich</b>.</td></tr>
+          <tr><td class="gender">du</td><td>dich</td><td>dir</td><td>Du freust <b>dich</b>.</td></tr>
+          <tr><td class="gender">er / sie / es</td><td>sich</td><td>sich</td><td>Sie freut <b>sich</b>.</td></tr>
+          <tr><td class="gender">wir</td><td>uns</td><td>uns</td><td>Wir freuen <b>uns</b>.</td></tr>
+          <tr><td class="gender">ihr</td><td>euch</td><td>euch</td><td>Ihr freut <b>euch</b>.</td></tr>
+          <tr><td class="gender">sie / Sie</td><td>sich</td><td>sich</td><td>Freuen Sie <b>sich</b>?</td></tr>
+        </table>
+        </div>
+        <p>Die Formen sind wie beim Personalpronomen – nur in der 3. Person Singular und Plural und bei <i>Sie</i> steht immer <b>sich</b>.</p>
+        <p class="beispiel">Er ärgert <b>sich</b>. – Die Kinder ärgern <b>sich</b>. – Ärgern Sie <b>sich</b> nicht!</p>
+        <p class="merke">Nur bei <b>ich</b> und <b>du</b> sind Akkusativ und Dativ verschieden: mich – mir, dich – dir. <b>sich</b> schreibt man immer klein, auch bei <i>Sie</i>.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Форми зворотного займенника збігаються з особовими займенниками (mich, dich, uns, euch), крім 3-ї особи однини й множини та ввічливої форми — там завжди <b>sich</b>. Порівняй: <i>Er sieht ihn</i> (він бачить його — іншу людину) і <i>Er sieht sich</i> (він бачить себе). Ввічливе <i>Sie</i> пишеться з великої, але <i>sich</i> — завжди з маленької: <i>Setzen Sie sich!</i> Різні форми для Akkusativ і Dativ є лише в <i>ich</i> (mich/mir) і <i>du</i> (dich/dir).
+        </div>
+      </section>
+
+      <section class="card regel-block" id="bedeutung">
+        <h3>Zurück zum Subjekt: die Bedeutung</h3>
+        <p>Das Reflexivpronomen zeigt: Subjekt und Objekt sind dieselbe Person oder Sache.</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>reflexiv (= selbst)</th><th>nicht reflexiv (= eine andere Person / Sache)</th></tr>
+          <tr><td>Ich wasche <b>mich</b>.</td><td>Ich wasche <b>den Hund</b>.</td></tr>
+          <tr><td>Tim sieht <b>sich</b> im Spiegel. (= Tim)</td><td>Tim sieht <b>ihn</b> im Spiegel. (= einen anderen Jungen)</td></tr>
+          <tr><td>Lena stellt <b>sich</b> vor.</td><td>Lena stellt <b>ihre Freundin</b> vor.</td></tr>
+        </table>
+        </div>
+        <p>Im Plural kann das Pronomen auch „einander“ bedeuten:</p>
+        <p class="beispiel">Anna und Paul treffen <b>sich</b> nach der Schule. (= Anna trifft Paul, Paul trifft Anna.)</p>
+        <p class="beispiel">Wir schreiben <b>uns</b> jeden Tag. (= einander)</p>
+        <p>Auch Sachen können das Subjekt sein:</p>
+        <p class="beispiel">Die Tür öffnet <b>sich</b>. – Das Wetter ändert <b>sich</b>.</p>
+        <p>Oft hat ein reflexives Verb noch ein Objekt mit Präposition (siehe unten): Ich freue <b>mich</b> <i>auf die Ferien</i>.</p>
+        <p class="merke">Ob ein Verb reflexiv ist, sagt keine Regel. Lerne jedes Verb gleich mit <b>sich</b>: sich freuen, sich beeilen, sich erinnern.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Зворотний займенник означає «себе»: дія йде від підмета й повертається до нього ж. У множині він часто означає «один одного»: <i>Wir treffen uns</i> — ми зустрічаємося (один з одним). Правила, яке дієслово зворотне, немає — і українська тут не підказка: <i>lernen</i> (вчитися), <i>lachen</i> (сміятися), <i>bleiben</i> (залишатися) у німецькій БЕЗ sich, а <i>sich erinnern</i> (пам'ятати), <i>sich setzen</i> (сідати), <i>sich entscheiden</i> (вирішувати) — із sich. Тому вчи дієслово одразу разом із <i>sich</i>, як слово з артиклем.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="immer">
+        <h3>Verben, die immer reflexiv sind</h3>
+        <p>Diese Verben gibt es nur mit Reflexivpronomen im Akkusativ.</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Verb</th><th>Beispiel</th><th>Українською</th></tr>
+          <tr><td>sich beeilen</td><td>Beeil <b>dich</b>, der Bus kommt!</td><td>поспішати</td></tr>
+          <tr><td>sich erkälten</td><td>Ich habe <b>mich</b> im Winter erkältet.</td><td>застудитися</td></tr>
+          <tr><td>sich verspäten</td><td>Der Zug verspätet <b>sich</b> heute.</td><td>запізнюватися</td></tr>
+          <tr><td>sich irren</td><td>Du irrst <b>dich</b>, der Test ist erst morgen.</td><td>помилятися</td></tr>
+          <tr><td>sich erholen</td><td>In den Ferien erholen wir <b>uns</b> am Meer.</td><td>відпочити, набратися сил</td></tr>
+          <tr><td>sich ausruhen</td><td>Nach dem Training ruhe ich <b>mich</b> aus.</td><td>відпочивати</td></tr>
+          <tr><td>sich schämen</td><td>Er schämt <b>sich</b> für seinen Fehler.</td><td>соромитися</td></tr>
+          <tr><td>sich beschweren</td><td>Die Nachbarn beschweren <b>sich</b> über die Musik.</td><td>скаржитися</td></tr>
+          <tr><td>sich erkundigen</td><td>Ich erkundige <b>mich</b> nach dem Weg.</td><td>розпитувати, довідуватися</td></tr>
+          <tr><td>sich bedanken</td><td>Wir bedanken <b>uns</b> bei der Lehrerin.</td><td>дякувати</td></tr>
+          <tr><td>sich verlieben</td><td>Paul hat <b>sich</b> in Mia verliebt.</td><td>закохатися</td></tr>
+          <tr><td>sich verabreden</td><td>Wir verabreden <b>uns</b> fürs Kino.</td><td>домовлятися про зустріч</td></tr>
+          <tr><td>sich entschließen</td><td>Sie hat <b>sich</b> entschlossen, Ärztin zu werden.</td><td>зважитися, вирішити</td></tr>
+          <tr><td>sich befinden</td><td>Die Bibliothek befindet <b>sich</b> im ersten Stock.</td><td>знаходитися</td></tr>
+          <tr><td>sich ereignen</td><td>Der Unfall hat <b>sich</b> am Morgen ereignet.</td><td>траплятися, ставатися</td></tr>
+        </table>
+        </div>
+        <p class="merke">Ohne <b>sich</b> geht es hier nicht: Ich beeile <b>mich</b>. – nicht: <s>Ich beeile.</s></p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Ці дієслова без зворотного займенника не вживаються — як українське «сміятися» без -ся. <i>sich befinden</i> і <i>sich ereignen</i> майже завжди стоять у 3-й особі, бо підмет у них — місце чи подія: <i>Die Mensa befindet sich im Erdgeschoss</i> (їдальня знаходиться на першому поверсі).
+        </div>
+      </section>
+
+      <section class="card regel-block" id="oder-objekt">
+        <h3>Reflexiv oder mit Akkusativobjekt</h3>
+        <p>Viele Verben können reflexiv sein, aber auch ein „normales“ Akkusativobjekt haben. Dann geht die Handlung zu einer anderen Person oder Sache.</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Verb</th><th>reflexiv</th><th>mit Akkusativobjekt</th></tr>
+          <tr><td>(sich) anziehen</td><td>Ich ziehe <b>mich</b> schnell an.</td><td>Die Mutter zieht <b>das Baby</b> an.</td></tr>
+          <tr><td>(sich) waschen</td><td>Wir waschen <b>uns</b>.</td><td>Wir waschen <b>das Auto</b>.</td></tr>
+          <tr><td>(sich) ärgern</td><td>Ich ärgere <b>mich</b> über den Regen.</td><td>Mein Bruder ärgert <b>mich</b>.</td></tr>
+          <tr><td>(sich) langweilen</td><td>Ich langweile <b>mich</b> im Museum.</td><td>Der Film langweilt <b>die Kinder</b>.</td></tr>
+          <tr><td>(sich) treffen</td><td>Wir treffen <b>uns</b> im Park.</td><td>Ich treffe <b>Lisa</b> im Park.</td></tr>
+          <tr><td>(sich) verletzen</td><td>Er hat <b>sich</b> beim Fußball verletzt.</td><td>Er hat <b>den Torwart</b> verletzt.</td></tr>
+          <tr><td>(sich) beruhigen</td><td>Beruhige <b>dich</b>!</td><td>Die Lehrerin beruhigt <b>die Klasse</b>.</td></tr>
+          <tr><td>(sich) anmelden</td><td>Ich melde <b>mich</b> für den Kurs an.</td><td>Die Eltern melden <b>ihr Kind</b> in der Schule an.</td></tr>
+          <tr><td>(sich) bewegen</td><td>Du musst <b>dich</b> mehr bewegen.</td><td>Der Wind bewegt <b>die Blätter</b>.</td></tr>
+          <tr><td>(sich) entschuldigen</td><td>Er entschuldigt <b>sich</b> bei mir.</td><td>Entschuldigen Sie <b>die Verspätung</b>!</td></tr>
+        </table>
+        </div>
+        <p class="merke">Das Reflexivpronomen steht nur, wenn die Handlung zum Subjekt zurückgeht. Geht sie zu jemand anderem, steht ein normales Objekt: Ich ziehe <b>mich</b> an. – Ich ziehe <b>das Baby</b> an.</p>
+        <p>Bei manchen Verben ändert sich mit <i>sich</i> die Bedeutung:</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Verb</th><th>reflexiv</th><th>mit Akkusativobjekt</th></tr>
+          <tr><td>unterhalten</td><td>Wir unterhalten <b>uns</b> über Musik. (= sprechen)</td><td>Der Clown unterhält die Kinder. (= macht ihnen Spaß)</td></tr>
+          <tr><td>verabschieden</td><td>Ich verabschiede <b>mich</b> von allen. (= „Tschüs“ sagen)</td><td>Das Parlament verabschiedet ein Gesetz. (= beschließt es)</td></tr>
+          <tr><td>beherrschen</td><td>Bleib ruhig, du musst <b>dich</b> beherrschen! (= ruhig bleiben)</td><td>Sie beherrscht drei Sprachen. (= kann sie sehr gut)</td></tr>
+          <tr><td>beschäftigen</td><td>Ich beschäftige <b>mich</b> mit Fotografie. (= mache das oft)</td><td>Die Firma beschäftigt 50 Leute. (= gibt ihnen Arbeit)</td></tr>
+        </table>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Багато дієслів бувають і зворотними, і звичайними — як в українській «вдягатися» і «вдягати дитину». Якщо дія повертається на підмет — ставимо займенник (<i>Ich ziehe mich an</i>), якщо переходить на когось іншого — звичайний додаток (<i>Ich ziehe das Baby an</i>). У деяких дієслів зі <i>sich</i> змінюється значення: <i>sich unterhalten</i> — розмовляти, а <i>jemanden unterhalten</i> — розважати; <i>sich verabschieden</i> — прощатися, а <i>ein Gesetz verabschieden</i> — ухвалити закон; <i>sich beherrschen</i> — стримуватися, а <i>eine Sprache beherrschen</i> — володіти мовою.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="dativ">
+        <h3>Reflexivpronomen im Dativ: mir, dir</h3>
+        <p>Hat der Satz schon ein Akkusativobjekt, steht das Reflexivpronomen im <b>Dativ</b>.</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>nur Reflexivpronomen → Akkusativ</th><th>+ Akkusativobjekt → Dativ</th></tr>
+          <tr><td>Ich wasche <b>mich</b>.</td><td>Ich wasche <b>mir</b> die Hände.</td></tr>
+          <tr><td>Du ziehst <b>dich</b> an.</td><td>Du ziehst <b>dir</b> die Jacke an.</td></tr>
+          <tr><td>Ich kämme <b>mich</b>.</td><td>Ich kämme <b>mir</b> die Haare.</td></tr>
+          <tr><td>Ich stelle <b>mich</b> vor. (= sage meinen Namen)</td><td>Ich stelle <b>mir</b> die Reise vor. (= sehe sie im Kopf)</td></tr>
+          <tr><td>Er wäscht <b>sich</b>.</td><td>Er wäscht <b>sich</b> die Hände. (gleiche Form!)</td></tr>
+        </table>
+        </div>
+        <p>Diese Verben haben fast immer ein Reflexivpronomen im Dativ + ein Akkusativobjekt:</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Verb</th><th>Beispiel</th><th>Українською</th></tr>
+          <tr><td>sich etwas ansehen</td><td>Hast du <b>dir</b> den Film schon angesehen?</td><td>подивитися щось</td></tr>
+          <tr><td>sich etwas merken</td><td>Ich kann <b>mir</b> keine Zahlen merken.</td><td>запам'ятати щось</td></tr>
+          <tr><td>sich etwas vorstellen</td><td>Kannst du <b>dir</b> das vorstellen?</td><td>уявити собі щось</td></tr>
+          <tr><td>sich etwas wünschen</td><td>Was wünschst du <b>dir</b> zum Geburtstag?</td><td>бажати собі щось</td></tr>
+          <tr><td>sich etwas kaufen / bestellen</td><td>Ich kaufe <b>mir</b> ein Eis.</td><td>купити / замовити собі щось</td></tr>
+          <tr><td>sich etwas ausdenken</td><td>Du denkst <b>dir</b> immer neue Spiele aus.</td><td>вигадати щось</td></tr>
+          <tr><td>sich etwas leihen</td><td>Ich leihe <b>mir</b> ein Buch aus der Bibliothek.</td><td>позичити собі щось</td></tr>
+          <tr><td>sich die Zähne putzen</td><td>Putz <b>dir</b> die Zähne!</td><td>чистити зуби</td></tr>
+          <tr><td>sich Sorgen machen</td><td>Mach <b>dir</b> keine Sorgen!</td><td>хвилюватися</td></tr>
+        </table>
+        </div>
+        <p class="merke">Reflexivpronomen + Akkusativobjekt → Dativ. Hören kann man das nur bei <b>ich</b> (mich → mir) und <b>du</b> (dich → dir).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Коли в реченні вже є додаток у знахідному (Akkusativ) — <i>die Hände, die Jacke, ein Eis</i> — зворотний займенник переходить у Dativ. Часто його можна перекласти як «собі»: <i>Ich kaufe mir ein Eis</i> — я купую собі морозиво; <i>Ich stelle mir das vor</i> — я уявляю собі це. З частинами тіла й одягом німці кажуть <i>Ich wasche mir die Hände</i>, а не «meine Hände» — займенник у Dativ уже показує, чиї руки. Відмінність чути лише в <i>ich</i> і <i>du</i>: mich → mir, dich → dir; усі інші форми однакові.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="praeposition">
+        <h3>Reflexive Verben mit Präposition</h3>
+        <p>Viele reflexive Verben haben eine feste Präposition. Lerne Verb, Präposition und Kasus zusammen.</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Verb + Präposition</th><th>Kasus</th><th>Beispiel</th></tr>
+          <tr><td>sich freuen <b>auf</b></td><td>Akk.</td><td>Ich freue mich auf die Ferien. (Sie kommen noch.)</td></tr>
+          <tr><td>sich freuen <b>über</b></td><td>Akk.</td><td>Ich freue mich über das Geschenk. (Es ist schon da.)</td></tr>
+          <tr><td>sich interessieren <b>für</b></td><td>Akk.</td><td>Interessierst du dich für Kunst?</td></tr>
+          <tr><td>sich erinnern <b>an</b></td><td>Akk.</td><td>Ich erinnere mich gern an den Urlaub.</td></tr>
+          <tr><td>sich gewöhnen <b>an</b></td><td>Akk.</td><td>Ich habe mich an die neue Schule gewöhnt.</td></tr>
+          <tr><td>sich ärgern <b>über</b></td><td>Akk.</td><td>Er ärgert sich über die schlechte Note.</td></tr>
+          <tr><td>sich kümmern <b>um</b></td><td>Akk.</td><td>Wer kümmert sich um die Katze?</td></tr>
+          <tr><td>sich bewerben <b>um</b></td><td>Akk.</td><td>Sie bewirbt sich um ein Praktikum.</td></tr>
+          <tr><td>sich vorbereiten <b>auf</b></td><td>Akk.</td><td>Wir bereiten uns auf den Test vor.</td></tr>
+          <tr><td>sich verlieben <b>in</b></td><td>Akk.</td><td>Er hat sich in seine Nachbarin verliebt.</td></tr>
+          <tr><td>sich beschäftigen <b>mit</b></td><td>Dat.</td><td>Ich beschäftige mich mit Robotern.</td></tr>
+          <tr><td>sich treffen <b>mit</b></td><td>Dat.</td><td>Am Samstag treffe ich mich mit Freunden.</td></tr>
+          <tr><td>sich erkundigen <b>nach</b></td><td>Dat.</td><td>Sie erkundigt sich nach dem Weg.</td></tr>
+          <tr><td>sich fürchten <b>vor</b></td><td>Dat.</td><td>Mein Bruder fürchtet sich vor Spinnen.</td></tr>
+          <tr><td>sich bedanken <b>bei</b> … <b>für</b></td><td>Dat. + Akk.</td><td>Ich bedanke mich bei dir für die Hilfe.</td></tr>
+          <tr><td>sich entschuldigen <b>bei</b> … <b>für</b></td><td>Dat. + Akk.</td><td>Er entschuldigt sich bei mir für den Fehler.</td></tr>
+        </table>
+        </div>
+        <p class="beispiel">Worauf freust du dich? – Ich freue mich <b>auf</b> das Konzert.</p>
+        <p class="merke">Lerne immer den ganzen Block: <b>sich freuen auf + Akk.</b>, <b>sich fürchten vor + Dat.</b></p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Прийменник у німецькій часто не збігається з українським, тому вчи його разом із дієсловом: <i>sich interessieren für</i> — цікавитися чимось (без прийменника), <i>sich erinnern an</i> — пам'ятати про щось, <i>sich fürchten vor</i> — боятися чогось. Особливо важлива пара з <i>freuen</i>: <b>auf</b> — радіти тому, що ще буде (чекати з радістю), <b>über</b> — радіти тому, що вже є. Детальніше про дієслова з прийменниками — в окремій темі.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="zeiten">
+        <h3>Zeitformen: immer mit haben</h3>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Zeitform</th><th>sich anziehen</th><th>sich die Haare kämmen</th></tr>
+          <tr><td class="gender">Präsens</td><td>Ich ziehe <b>mich</b> an.</td><td>Ich kämme <b>mir</b> die Haare.</td></tr>
+          <tr><td class="gender">Präteritum</td><td>Ich zog <b>mich</b> an.</td><td>Ich kämmte <b>mir</b> die Haare.</td></tr>
+          <tr><td class="gender">Perfekt</td><td>Ich <b>habe mich</b> angezogen.</td><td>Ich <b>habe mir</b> die Haare gekämmt.</td></tr>
+          <tr><td class="gender">Plusquamperfekt</td><td>Ich <b>hatte mich</b> angezogen.</td><td>Ich <b>hatte mir</b> die Haare gekämmt.</td></tr>
+          <tr><td class="gender">Futur I</td><td>Ich <b>werde mich</b> anziehen.</td><td>Ich <b>werde mir</b> die Haare kämmen.</td></tr>
+        </table>
+        </div>
+        <p>Das gilt auch für Verben der Bewegung, die sonst mit <i>sein</i> stehen:</p>
+        <p class="beispiel">Er <b>ist</b> nach Hause gelaufen. – aber: Er <b>hat sich</b> in der Stadt verlaufen.</p>
+        <p class="beispiel">Wir <b>sind</b> mit dem Auto gefahren. – aber: Wir <b>haben uns</b> verfahren.</p>
+        <p class="merke">Reflexive Verben bilden Perfekt und Plusquamperfekt immer mit <b>haben</b>.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Зворотні дієслова утворюють Perfekt і Plusquamperfekt лише з <b>haben</b> — навіть якщо це рух: <i>sich verlaufen</i> (заблукати пішки), <i>sich verfahren</i> (заблукати транспортом) → <i>Ich habe mich verlaufen</i>. Займенник стоїть одразу після допоміжного дієслова, а Partizip — у кінці речення: <i>Wir haben uns gestern getroffen</i>.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="stellung">
+        <h3>Die Stellung im Satz</h3>
+        <p>Das Reflexivpronomen steht möglichst weit vorn – direkt nach dem konjugierten Verb.</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Position I</th><th>Verb</th><th>Mitte</th><th>Satzende</th></tr>
+          <tr><td>Ich</td><td>habe</td><td><b>mich</b> gestern</td><td>erkältet.</td></tr>
+          <tr><td>Gestern</td><td>habe</td><td>ich <b>mich</b></td><td>erkältet.</td></tr>
+          <tr><td>Gestern</td><td>hat</td><td><b>sich</b> mein Bruder</td><td>erkältet.</td></tr>
+          <tr><td>Du</td><td>musst</td><td><b>dich</b></td><td>beeilen.</td></tr>
+        </table>
+        </div>
+        <p>Ist das Subjekt ein Personalpronomen, steht es vor <i>sich</i>: Morgen treffen <b>wir uns</b>. Ist das Subjekt ein Nomen, steht <i>sich</i> meistens davor: Morgen trifft <b>sich</b> meine Klasse im Park. (Auch möglich: Morgen trifft meine Klasse <b>sich</b> im Park.)</p>
+        <p>Im Nebensatz steht das Verb am Ende, das Reflexivpronomen bleibt vorn:</p>
+        <p class="beispiel">Ich komme zu spät, weil ich <b>mich</b> verlaufen habe.</p>
+        <p class="beispiel">Wir warten, weil <b>sich</b> der Bus verspätet. / weil der Bus <b>sich</b> verspätet.</p>
+        <p class="merke">Personalpronomen als Subjekt + Reflexivpronomen stehen zusammen: <b>ich mich</b>, <b>du dich</b>, <b>wir uns</b>.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          В українській «-ся» приклеюється до дієслова, а в німецькій займенник — окреме слово з власним місцем: зразу після змінюваного дієслова. Якщо після дієслова стоїть підмет-займенник (<i>ich, du, wir…</i>), <i>sich</i> іде за ним: <i>Heute freue ich mich</i>. Якщо підмет — іменник, <i>sich</i> зазвичай стає перед ним: <i>Heute freut sich mein Bruder</i>. У підрядному реченні дієслово йде в кінець, а займенник лишається на початку середини речення. Докладніше — у темі про порядок слів.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="frage-imperativ">
+        <h3>Frage, Imperativ, Infinitiv mit zu</h3>
+        <p><b>Frage:</b> Das Subjekt steht nach dem Verb, das Reflexivpronomen folgt direkt danach.</p>
+        <p class="beispiel">Freust <b>du dich</b>? – Habt <b>ihr euch</b> gut erholt? – Haben <b>Sie sich</b> schon angemeldet?</p>
+        <p><b>Imperativ:</b></p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Person</th><th>sich beeilen</th><th>sich die Jacke anziehen</th></tr>
+          <tr><td class="gender">du</td><td>Beeil <b>dich</b>!</td><td>Zieh <b>dir</b> die Jacke an!</td></tr>
+          <tr><td class="gender">ihr</td><td>Beeilt <b>euch</b>!</td><td>Zieht <b>euch</b> die Jacken an!</td></tr>
+          <tr><td class="gender">Sie</td><td>Beeilen Sie <b>sich</b>!</td><td>Ziehen Sie <b>sich</b> die Jacke an!</td></tr>
+          <tr><td class="gender">wir</td><td>Beeilen wir <b>uns</b>!</td><td>Ziehen wir <b>uns</b> die Jacken an!</td></tr>
+        </table>
+        </div>
+        <p><b>Infinitiv mit zu:</b> Das Reflexivpronomen steht am Anfang der Infinitivgruppe, <i>zu</i> + Verb am Ende. Die Form passt zu der Person, die es macht.</p>
+        <p class="beispiel">Ich habe vergessen, <b>mich</b> anzumelden.</p>
+        <p class="beispiel">Hast du keine Lust, <b>dich</b> zu beeilen?</p>
+        <p class="beispiel">Es ist wichtig, <b>sich</b> gut vorzubereiten. (= für alle)</p>
+        <p class="merke">Im Imperativ und im Infinitiv mit zu bleibt das Reflexivpronomen: <b>Beeil dich!</b> – <b>… sich zu beeilen</b>.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Зворотний займенник не зникає ні в питанні, ні в наказі, ні в інфінітиві з <i>zu</i>. У наказовому способі для <i>du</i> — <i>dich/dir</i>, для <i>ihr</i> — <i>euch</i>, для ввічливого <i>Sie</i> — маленьке <i>sich</i>: <i>Setzen Sie sich!</i> (Сідайте!). В інфінітивній групі займенник узгоджується з тим, хто виконує дію: <i>Ich habe vergessen, mich anzumelden</i>; якщо мова про всіх загалом — <i>sich</i>: <i>Es ist wichtig, sich zu bewegen</i>.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="lassen">
+        <h3>sich lassen + Infinitiv</h3>
+        <p><b>etwas lässt sich + Infinitiv</b> bedeutet: Man kann das machen.</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>mit sich lassen</th><th>= mit man + können</th></tr>
+          <tr><td>Das Fenster <b>lässt sich</b> nicht öffnen.</td><td>Man kann das Fenster nicht öffnen.</td></tr>
+          <tr><td>Das Problem <b>lässt sich</b> leicht lösen.</td><td>Man kann das Problem leicht lösen.</td></tr>
+          <tr><td>Die Fahrräder <b>lassen sich</b> reparieren.</td><td>Man kann die Fahrräder reparieren.</td></tr>
+        </table>
+        </div>
+        <p><b>sich (Dativ) etwas machen lassen</b> bedeutet: Jemand anderes macht es für mich.</p>
+        <p class="beispiel">Ich lasse <b>mir</b> die Haare schneiden. (= Der Friseur schneidet sie.)</p>
+        <p class="beispiel">Wir lassen <b>uns</b> eine Pizza bringen.</p>
+        <p class="merke">Das lässt sich machen. = Das kann man machen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          <i>lässt sich + інфінітив</i> — це «можна зробити», часто українською передаємо через -ся: <i>Das Fenster lässt sich nicht öffnen</i> — вікно не відчиняється (його неможливо відчинити); <i>Das lässt sich leicht erklären</i> — це легко пояснити. Інше значення — «доручити комусь зробити щось для себе»: <i>Ich lasse mir die Haare schneiden</i> — я підстригаюся (у перукаря). Тут займенник у Dativ, бо є ще додаток <i>die Haare</i>.
+        </div>
+      </section>
+
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Finde die Reflexivpronomen</h2>
+      <p class="lead">Натисни всі <b>зворотні</b> займенники — ті, що стосуються підмета (або означають «один одного»). Обережно: у тексті є й звичайні особові займенники. Потім натисни «Prüfen».</p>
+      <div class="card" id="ub1-list">
+        <p style="line-height:1.9;">Um sieben Uhr klingelt der Wecker. Tim dreht <span class="tok" data-correct="true">sich</span> noch einmal um. Seine Mutter ruft <span class="tok" data-correct="false">ihn</span>: „Tim, beeil <span class="tok" data-correct="true">dich</span>! Der Bus wartet nicht auf <span class="tok" data-correct="false">dich</span>!“ Tim steht auf, wäscht <span class="tok" data-correct="true">sich</span> schnell und putzt <span class="tok" data-correct="true">sich</span> die Zähne. In der Küche sitzt seine Schwester Lena. „Kannst du <span class="tok" data-correct="false">mir</span> die Butter geben?“, fragt sie. „Ich habe <span class="tok" data-correct="true">mir</span> gestern eine neue Jacke gekauft. Gefällt sie <span class="tok" data-correct="false">dir</span>?“ Der Vater lacht: „Wir unterhalten <span class="tok" data-correct="true">uns</span> später über Mode. Jetzt zieht <span class="tok" data-correct="true">euch</span> an, sonst kommt ihr zu spät!“ Tim zieht <span class="tok" data-correct="true">sich</span> die neue Jacke von Lena an. „Hey! Die gehört <span class="tok" data-correct="false">mir</span>!“, ruft Lena. „Ich ärgere <span class="tok" data-correct="true">mich</span> jeden Morgen über <span class="tok" data-correct="false">dich</span>!“ Die Mutter sagt: „Tim, entschuldige <span class="tok" data-correct="true">dich</span> bei deiner Schwester!“ – „Sorry, Lena“, sagt Tim. „Ich freue <span class="tok" data-correct="true">mich</span> schon auf heute Abend. Dann sehen wir <span class="tok" data-correct="true">uns</span> wieder. Holst du <span class="tok" data-correct="false">mich</span> vom Training ab?“</p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub1-check">Prüfen</button>
+        <button class="btn secondary" id="ub1-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub1-score"></span>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Reflexiv oder nicht?</h2>
+      <p class="lead">Розсортуй речення: де займенник чи додаток повертає дію на підмет (reflexiv), а де дія йде на іншу особу чи річ (nicht reflexiv).</p>
+      <div class="card" id="ub2-sort"></div>
+    </section>
+
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Was bedeutet das?</h2>
+      <p class="lead">Обери правильну відповідь. Зараховується перша спроба.</p>
+      <div class="card" id="ub3-quiz"></div>
+    </section>
+
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Akkusativ und Dativ</h2>
+      <p class="lead">Впиши зворотний займенник. Ліворуч — лише займенник (Akkusativ), праворуч — займенник + додаток <i>das Wort</i> (Dativ). Пиши маленькими літерами.</p>
+      <div class="card" id="ub4-list" style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Person</th><th>sich beeilen</th><th>sich etwas merken</th></tr>
+          <tr><td class="gender">ich</td><td>ich beeile <input type="text" class="blank-input" data-ans="mich" data-case style="width:5em;"></td><td>ich merke <input type="text" class="blank-input" data-ans="mir" data-case style="width:5em;"> das Wort</td></tr>
+          <tr><td class="gender">du</td><td>du beeilst <input type="text" class="blank-input" data-ans="dich" data-case style="width:5em;"></td><td>du merkst <input type="text" class="blank-input" data-ans="dir" data-case style="width:5em;"> das Wort</td></tr>
+          <tr><td class="gender">er / sie / es</td><td>er beeilt <input type="text" class="blank-input" data-ans="sich" data-case style="width:5em;"></td><td>er merkt <input type="text" class="blank-input" data-ans="sich" data-case style="width:5em;"> das Wort</td></tr>
+          <tr><td class="gender">wir</td><td>wir beeilen <input type="text" class="blank-input" data-ans="uns" data-case style="width:5em;"></td><td>wir merken <input type="text" class="blank-input" data-ans="uns" data-case style="width:5em;"> das Wort</td></tr>
+          <tr><td class="gender">ihr</td><td>ihr beeilt <input type="text" class="blank-input" data-ans="euch" data-case style="width:5em;"></td><td>ihr merkt <input type="text" class="blank-input" data-ans="euch" data-case style="width:5em;"> das Wort</td></tr>
+          <tr><td class="gender">sie / Sie</td><td>sie beeilen <input type="text" class="blank-input" data-ans="sich" data-case style="width:5em;"></td><td>Sie merken <input type="text" class="blank-input" data-ans="sich" data-case style="width:5em;"> das Wort</td></tr>
+        </table>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub4-check">Prüfen</button>
+        <button class="btn secondary" id="ub4-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub4-score"></span>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">mich oder mir? dich oder dir?</h2>
+      <p class="lead">Обери форму. Підказка: якщо в реченні вже є інший додаток в Akkusativ (<i>das Gesicht, den Film…</i>), потрібен Dativ.</p>
+      <div class="card" id="ub5-list">
+        <div class="fill-item"><span class="num">1)</span> Ich wasche <select class="blank inline" data-ans="mir"><option value="">—</option><option>mich</option><option>mir</option></select> jeden Morgen das Gesicht.</div>
+        <div class="fill-item"><span class="num">2)</span> Nach dem Sport wasche ich <select class="blank inline" data-ans="mich"><option value="">—</option><option>mich</option><option>mir</option></select> sofort.</div>
+        <div class="fill-item"><span class="num">3)</span> Hast du <select class="blank inline" data-ans="dir"><option value="">—</option><option>dich</option><option>dir</option></select> den Film schon angesehen?</div>
+        <div class="fill-item"><span class="num">4)</span> Du hast <select class="blank inline" data-ans="dich"><option value="">—</option><option>dich</option><option>dir</option></select> in den Ferien sehr verändert.</div>
+        <div class="fill-item"><span class="num">5)</span> Ich kann <select class="blank inline" data-ans="mir"><option value="">—</option><option>mich</option><option>mir</option></select> deine Telefonnummer nicht merken.</div>
+        <div class="fill-item"><span class="num">6)</span> Ich interessiere <select class="blank inline" data-ans="mich"><option value="">—</option><option>mich</option><option>mir</option></select> sehr für Musik.</div>
+        <div class="fill-item"><span class="num">7)</span> Es ist kalt. Zieh <select class="blank inline" data-ans="dir"><option value="">—</option><option>dich</option><option>dir</option></select> eine warme Jacke an!</div>
+        <div class="fill-item"><span class="num">8)</span> Zieh <select class="blank inline" data-ans="dich"><option value="">—</option><option>dich</option><option>dir</option></select> schnell an, wir müssen los!</div>
+        <div class="fill-item"><span class="num">9)</span> Ich stelle <select class="blank inline" data-ans="mich"><option value="">—</option><option>mich</option><option>mir</option></select> kurz vor: Ich heiße Max.</div>
+        <div class="fill-item"><span class="num">10)</span> Ich stelle <select class="blank inline" data-ans="mir"><option value="">—</option><option>mich</option><option>mir</option></select> meine Zukunft oft vor.</div>
+        <div class="fill-item"><span class="num">11)</span> Wünschst du <select class="blank inline" data-ans="dir"><option value="">—</option><option>dich</option><option>dir</option></select> einen Hund zum Geburtstag?</div>
+        <div class="fill-item"><span class="num">12)</span> Ich habe <select class="blank inline" data-ans="mich"><option value="">—</option><option>mich</option><option>mir</option></select> beim Radfahren verletzt.</div>
+        <div class="fill-item"><span class="num">13)</span> Ich habe <select class="blank inline" data-ans="mir"><option value="">—</option><option>mich</option><option>mir</option></select> beim Radfahren das Knie verletzt.</div>
+        <div class="fill-item"><span class="num">14)</span> Kämm <select class="blank inline" data-ans="dir"><option value="">—</option><option>dich</option><option>dir</option></select> bitte die Haare!</div>
+        <div class="fill-item"><span class="num">15)</span> In der Pause kaufe ich <select class="blank inline" data-ans="mir"><option value="">—</option><option>mich</option><option>mir</option></select> ein Brötchen.</div>
+        <div class="fill-item"><span class="num">16)</span> Freust du <select class="blank inline" data-ans="dich"><option value="">—</option><option>dich</option><option>dir</option></select> auf die Ferien?</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub5-check">Prüfen</button>
+        <button class="btn secondary" id="ub5-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub5-score"></span>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">Verben mit Präposition</h2>
+      <p class="lead">Впиши зворотний займенник і обери прийменник.</p>
+      <div class="card" id="ub6-list">
+        <div class="fill-item"><span class="num">1)</span> Ich freue <input type="text" class="blank-input inline" data-ans="mich"> schon <select class="blank inline" data-ans="auf"><option value="">—</option><option>auf</option><option>über</option><option>für</option></select> das Wochenende. (Es kommt noch.)</div>
+        <div class="fill-item"><span class="num">2)</span> Wir freuen <input type="text" class="blank-input inline" data-ans="uns"> sehr <select class="blank inline" data-ans="über"><option value="">—</option><option>auf</option><option>über</option><option>an</option></select> dein Geschenk. (Es ist schon da.)</div>
+        <div class="fill-item"><span class="num">3)</span> Interessierst du <input type="text" class="blank-input inline" data-ans="dich"> <select class="blank inline" data-ans="für"><option value="">—</option><option>für</option><option>an</option><option>über</option></select> Fußball?</div>
+        <div class="fill-item"><span class="num">4)</span> Erinnerst du <input type="text" class="blank-input inline" data-ans="dich"> noch <select class="blank inline" data-ans="an"><option value="">—</option><option>an</option><option>auf</option><option>von</option></select> unseren Ausflug?</div>
+        <div class="fill-item"><span class="num">5)</span> Meine Eltern ärgern <input type="text" class="blank-input inline" data-ans="sich"> <select class="blank inline" data-ans="über"><option value="">—</option><option>über</option><option>auf</option><option>vor</option></select> den Lärm.</div>
+        <div class="fill-item"><span class="num">6)</span> Ihr müsst <input type="text" class="blank-input inline" data-ans="euch"> heute <select class="blank inline" data-ans="um"><option value="">—</option><option>um</option><option>für</option><option>mit</option></select> den Hund kümmern.</div>
+        <div class="fill-item"><span class="num">7)</span> Ich bedanke <input type="text" class="blank-input inline" data-ans="mich"> <select class="blank inline" data-ans="bei"><option value="">—</option><option>bei</option><option>mit</option><option>zu</option></select> meiner Oma <select class="blank inline" data-ans="für"><option value="">—</option><option>für</option><option>über</option><option>um</option></select> das Geschenk.</div>
+        <div class="fill-item"><span class="num">8)</span> Er hat <input type="text" class="blank-input inline" data-ans="sich"> <select class="blank inline" data-ans="in"><option value="">—</option><option>in</option><option>an</option><option>mit</option></select> seine Nachbarin verliebt.</div>
+        <div class="fill-item"><span class="num">9)</span> Wir bereiten <input type="text" class="blank-input inline" data-ans="uns"> <select class="blank inline" data-ans="auf"><option value="">—</option><option>auf</option><option>für</option><option>an</option></select> den Test vor.</div>
+        <div class="fill-item"><span class="num">10)</span> Lena fürchtet <input type="text" class="blank-input inline" data-ans="sich"> <select class="blank inline" data-ans="vor"><option value="">—</option><option>vor</option><option>von</option><option>über</option></select> großen Hunden.</div>
+        <div class="fill-item"><span class="num">11)</span> Ich erkundige <input type="text" class="blank-input inline" data-ans="mich"> <select class="blank inline" data-ans="nach"><option value="">—</option><option>nach</option><option>um</option><option>über</option></select> der Abfahrtszeit.</div>
+        <div class="fill-item"><span class="num">12)</span> Hast du <input type="text" class="blank-input inline" data-ans="dich"> schon <select class="blank inline" data-ans="an"><option value="">—</option><option>an</option><option>auf</option><option>mit</option></select> die neue Schule gewöhnt?</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub6-check">Prüfen</button>
+        <button class="btn secondary" id="ub6-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub6-score"></span>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub7">
+      <p class="section-label">Üb. 7</p>
+      <h2 class="panel-title">Ins Perfekt</h2>
+      <p class="lead">Перепиши речення в Perfekt. Пам'ятай: зворотні дієслова — завжди з <i>haben</i>.</p>
+      <div class="card" id="ub7-list">
+        <div class="fill-item"><span class="num">1)</span> Ich beeile mich.<br><input type="text" class="blank-input inline full" data-ans="Ich habe mich beeilt"></div>
+        <div class="fill-item"><span class="num">2)</span> Wir treffen uns vor dem Kino.<br><input type="text" class="blank-input inline full" data-ans="Wir haben uns vor dem Kino getroffen"></div>
+        <div class="fill-item"><span class="num">3)</span> Lena erkältet sich.<br><input type="text" class="blank-input inline full" data-ans="Lena hat sich erkältet"></div>
+        <div class="fill-item"><span class="num">4)</span> Ziehst du dich warm an?<br><input type="text" class="blank-input inline full" data-ans="Hast du dich warm angezogen"></div>
+        <div class="fill-item"><span class="num">5)</span> Ihr verspätet euch.<br><input type="text" class="blank-input inline full" data-ans="Ihr habt euch verspätet"></div>
+        <div class="fill-item"><span class="num">6)</span> Die Kinder langweilen sich im Museum.<br><input type="text" class="blank-input inline full" data-ans="Die Kinder haben sich im Museum gelangweilt"></div>
+        <div class="fill-item"><span class="num">7)</span> Ich putze mir die Zähne.<br><input type="text" class="blank-input inline full" data-ans="Ich habe mir die Zähne geputzt"></div>
+        <div class="fill-item"><span class="num">8)</span> Er verläuft sich in der Stadt.<br><input type="text" class="blank-input inline full" data-ans="Er hat sich in der Stadt verlaufen"></div>
+        <div class="fill-item"><span class="num">9)</span> Wir unterhalten uns lange.<br><input type="text" class="blank-input inline full" data-ans="Wir haben uns lange unterhalten"></div>
+        <div class="fill-item"><span class="num">10)</span> Paul verliebt sich in Mia.<br><input type="text" class="blank-input inline full" data-ans="Paul hat sich in Mia verliebt"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub7-check">Prüfen</button>
+        <button class="btn secondary" id="ub7-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub7-score"></span>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub8">
+      <p class="section-label">Üb. 8</p>
+      <h2 class="panel-title">Wohin kommt sich?</h2>
+      <p class="lead">Склади речення: натискай слова по черзі; натиснеш на вже поставлене — воно повернеться.</p>
+      <div class="card" id="ub8-order"></div>
+    </section>
+
+    <section class="panel" id="panel-ub9">
+      <p class="section-label">Üb. 9</p>
+      <h2 class="panel-title">Imperativ, zu, lassen</h2>
+      <p class="lead">A — утвори наказ (з великої літери, особливо уважно з <i>Sie / sich</i>). B — доповни інфінітивом із <i>zu</i>. C — перепиши речення з <i>lässt sich</i>.</p>
+      <div class="card" id="ub9-list">
+        <p><b>A. Imperativ</b></p>
+        <div class="fill-item"><span class="num">1)</span> du / sich beeilen<br><input type="text" class="blank-input inline full" data-ans="Beeil dich|Beeile dich"></div>
+        <div class="fill-item"><span class="num">2)</span> ihr / sich warm anziehen<br><input type="text" class="blank-input inline full" data-ans="Zieht euch warm an"></div>
+        <div class="fill-item"><span class="num">3)</span> Sie / sich setzen<br><input type="text" class="blank-input inline full" data-ans="Setzen Sie sich" data-case></div>
+        <div class="fill-item"><span class="num">4)</span> du / sich keine Sorgen machen<br><input type="text" class="blank-input inline full" data-ans="Mach dir keine Sorgen|Mache dir keine Sorgen"></div>
+        <div class="fill-item"><span class="num">5)</span> wir / sich beeilen<br><input type="text" class="blank-input inline full" data-ans="Beeilen wir uns"></div>
+        <div class="fill-item"><span class="num">6)</span> du / sich die Hände waschen<br><input type="text" class="blank-input inline full" data-ans="Wasch dir die Hände|Wasche dir die Hände"></div>
+        <p><b>B. Infinitiv mit zu</b></p>
+        <div class="fill-item"><span class="num">7)</span> Ich habe vergessen, <input type="text" class="blank-input inline wide" data-ans="mich anzumelden">. (sich anmelden)</div>
+        <div class="fill-item"><span class="num">8)</span> Du hast versprochen, <input type="text" class="blank-input inline wide" data-ans="dich zu beeilen">. (sich beeilen)</div>
+        <div class="fill-item"><span class="num">9)</span> Es ist gesund, <input type="text" class="blank-input inline wide" data-ans="sich viel zu bewegen">. (sich viel bewegen)</div>
+        <div class="fill-item"><span class="num">10)</span> Wir haben beschlossen, <input type="text" class="blank-input inline wide" data-ans="uns am Bahnhof zu treffen">. (sich am Bahnhof treffen)</div>
+        <p><b>C. sich lassen</b></p>
+        <div class="fill-item"><span class="num">11)</span> Man kann das Fahrrad leicht reparieren.<br><input type="text" class="blank-input inline full" data-ans="Das Fahrrad lässt sich leicht reparieren"></div>
+        <div class="fill-item"><span class="num">12)</span> Man kann die Tür nicht schließen.<br><input type="text" class="blank-input inline full" data-ans="Die Tür lässt sich nicht schließen"></div>
+        <div class="fill-item"><span class="num">13)</span> Man kann diese Aufgabe schnell lösen.<br><input type="text" class="blank-input inline full" data-ans="Diese Aufgabe lässt sich schnell lösen"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub9-check">Prüfen</button>
+        <button class="btn secondary" id="ub9-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub9-score"></span>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub10">
+      <p class="section-label">Üb. 10</p>
+      <h2 class="panel-title">Ein Brief von der Klassenfahrt</h2>
+      <p class="lead">Софія пише подрузі про шкільну поїздку. Впиши в кожен пропуск зворотний займенник.</p>
+      <div class="card" id="ub10-list" style="line-height:1.9;">
+<p>Liebe Mia,</p>
+<p>unsere Klassenfahrt nach Hamburg war super! Am Montag haben wir <input type="text" class="blank-input inline" data-ans="uns"> um sieben Uhr am Bahnhof getroffen. Jonas hat <input type="text" class="blank-input inline" data-ans="sich"> natürlich verspätet, und wir mussten <input type="text" class="blank-input inline" data-ans="uns"> beeilen. Im Zug habe ich <input type="text" class="blank-input inline" data-ans="mich"> lange mit Emma unterhalten. In Hamburg haben wir <input type="text" class="blank-input inline" data-ans="uns"> zuerst den Hafen angesehen, und ich habe <input type="text" class="blank-input inline" data-ans="mir"> ein T-Shirt mit einem Anker gekauft. Am Abend hat <input type="text" class="blank-input inline" data-ans="sich"> unsere Lehrerin über den Lärm in den Zimmern beschwert.</p>
+<p>Am Dienstag war es kalt und nass, und ich habe <input type="text" class="blank-input inline" data-ans="mich"> leider erkältet. Emma hat <input type="text" class="blank-input inline" data-ans="sich"> um mich gekümmert, und ich habe <input type="text" class="blank-input inline" data-ans="mich"> schnell erholt. Am Mittwoch waren wir im Museum. Leon hat <input type="text" class="blank-input inline" data-ans="sich"> gelangweilt, aber ich interessiere <input type="text" class="blank-input inline" data-ans="mich"> sehr für Geschichte. Am letzten Abend haben wir <input type="text" class="blank-input inline" data-ans="uns"> bei unserer Lehrerin für die tolle Reise bedankt. Und kannst du <input type="text" class="blank-input inline" data-ans="dir"> das vorstellen? Jonas hat <input type="text" class="blank-input inline" data-ans="sich"> in ein Mädchen aus der Parallelklasse verliebt!</p>
+<p>Ich freue <input type="text" class="blank-input inline" data-ans="mich"> schon auf die nächste Fahrt. Und du? Hast du <input type="text" class="blank-input inline" data-ans="dich"> schon für den Sprachkurs angemeldet? Melde <input type="text" class="blank-input inline" data-ans="dich"> bald!</p>
+<p>Deine Sofia</p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub10-check">Prüfen</button>
+        <button class="btn secondary" id="ub10-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub10-score"></span>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das Wichtigste</p>
+        <p>Das Reflexivpronomen zeigt zurück auf das Subjekt: mich, dich, sich, uns, euch, sich. Gibt es schon ein Akkusativobjekt, steht es im Dativ – anders klingen nur <b>mir</b> und <b>dir</b>. Reflexive Verben bilden das Perfekt immer mit <b>haben</b>, und <i>sich</i> steht direkt nach dem konjugierten Verb. Lerne jedes Verb mit <i>sich</i> und seiner Präposition: sich freuen auf.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Зворотний займенник повертає дію на підмет (або означає «один одного») і змінюється за особою: mich, dich, sich, uns, euch, sich. Якщо в реченні вже є додаток в Akkusativ, займенник стоїть у Dativ — інакше звучать лише <b>mir</b> і <b>dir</b>. Perfekt — завжди з <b>haben</b>; займенник стоїть одразу після змінюваного дієслова. Вчи кожне дієслово разом із <i>sich</i> і його прийменником: <i>sich freuen auf</i>.
+        </div>
+      </div>
+
+      <!-- "Де це ще трапляється": уроки (поле gram у lessons-data.js) і
+           пов'язані теми (поле dyv у grammar-data.js). Заповнюється
+           автоматично; якщо нічого немає — картка ховається сама. -->
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Де це ще трапляється</p>
+        <div class="gram-related" id="gramRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <p class="lead" id="gramBest" style="font-size:14px;"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/grammar-data.js"></script>
+<script src="../../data/lessons-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/site.js"></script>
+<script>
+  const GRAM_ID = "reflexive-verben";
+
+  // Üb. 1: знайди зворотні займенники (токени)
+  initTokenClicks('ub1-list');
+  setTotal(document.querySelectorAll('#ub1-list .tok[data-correct="true"]').length);
+  document.getElementById('ub1-check').addEventListener('click', () => checkTokens('ub1-list', 'ub1-score', 'ub1'));
+  document.getElementById('ub1-reset').addEventListener('click', () => resetTokens('ub1-list', 'ub1-score', 'ub1'));
+
+  // Üb. 2: reflexiv чи ні
+  buildSort('ub2-sort', {
+    buckets: ["reflexiv", "nicht reflexiv"],
+    items: [
+      {t: "Ich ziehe mich an.", b: "reflexiv"},
+      {t: "Ich ziehe das Baby an.", b: "nicht reflexiv"},
+      {t: "Wir treffen uns am Kino.", b: "reflexiv"},
+      {t: "Wir treffen Lisa am Kino.", b: "nicht reflexiv"},
+      {t: "Lena ärgert sich über die Note.", b: "reflexiv"},
+      {t: "Der Lärm ärgert mich.", b: "nicht reflexiv"},
+      {t: "Er hat sich beim Sport verletzt.", b: "reflexiv"},
+      {t: "Er hat den Torwart verletzt.", b: "nicht reflexiv"},
+      {t: "Ich wasche mir die Hände.", b: "reflexiv"},
+      {t: "Ich wasche den Hund.", b: "nicht reflexiv"},
+      {t: "Die Tür öffnet sich.", b: "reflexiv"},
+      {t: "Die Lehrerin hilft uns.", b: "nicht reflexiv"},
+      {t: "Ihr müsst euch beeilen.", b: "reflexiv"},
+      {t: "Kannst du mich morgen anrufen?", b: "nicht reflexiv"}
+    ]
+  });
+
+  // Üb. 3: квіз про значення
+  buildQuiz('ub3-quiz', [
+    {q: "«Anna und Paul schreiben sich jeden Tag.» Was bedeutet das?",
+     opts: ["Jeder schreibt an sich selbst.", "Sie schreiben einander.", "Sie schreiben an andere Freunde."], correct: "Sie schreiben einander."},
+    {q: "«Tim sieht ihn im Spiegel.» Wen sieht Tim?",
+     opts: ["eine andere Person", "sich selbst", "niemanden"], correct: "eine andere Person"},
+    {q: "Welches Verb gibt es nur mit «sich»?",
+     opts: ["waschen", "ärgern", "sich beeilen"], correct: "sich beeilen"},
+    {q: "«Der Clown unterhält die Kinder.» Was macht der Clown?",
+     opts: ["Er spricht mit ihnen.", "Er wartet auf sie.", "Er macht ihnen Spaß."], correct: "Er macht ihnen Spaß."},
+    {q: "«Mein Opa beherrscht drei Sprachen.» Das heißt:",
+     opts: ["Er spricht sie sehr gut.", "Er bleibt ruhig.", "Er lernt sie gerade."], correct: "Er spricht sie sehr gut."},
+    {q: "Welcher Satz ist richtig?",
+     opts: ["Wir sind uns gestern getroffen.", "Wir haben getroffen uns gestern.", "Wir haben uns gestern getroffen."], correct: "Wir haben uns gestern getroffen."},
+    {q: "Warum steht «mir» in «Ich putze mir die Zähne»?",
+     opts: ["Weil «putzen» immer Dativ hat.", "Weil es schon ein Akkusativobjekt gibt: die Zähne.", "Weil «ich» immer mit mir steht."], correct: "Weil es schon ein Akkusativobjekt gibt: die Zähne."},
+    {q: "«Ich stelle mir die Ferien am Meer vor.» Das heißt:",
+     opts: ["Ich sehe die Ferien in meinem Kopf.", "Ich sage meinen Namen.", "Ich erzähle von den Ferien."], correct: "Ich sehe die Ferien in meinem Kopf."},
+    {q: "«Das Problem lässt sich leicht lösen.» =",
+     opts: ["Das Problem löst sich allein.", "Man kann das Problem leicht lösen.", "Jemand lässt das Problem liegen."], correct: "Man kann das Problem leicht lösen."},
+    {q: "«Ich lasse mir die Haare schneiden.» Wer schneidet die Haare?",
+     opts: ["ich selbst", "meine Haare allein", "jemand anderes, z. B. ein Friseur"], correct: "jemand anderes, z. B. ein Friseur"},
+    {q: "Höflich (Sie): Welche Form ist richtig?",
+     opts: ["Setzen Sie Sich!", "Setzen Sie sich!", "Setzen Sie Sie!"], correct: "Setzen Sie sich!"},
+    {q: "«вчитися» auf Deutsch:",
+     opts: ["lernen", "sich lernen", "sich lehren"], correct: "lernen"}
+  ]);
+
+  // Üb. 4–7, 9, 10: пропуски й таблиця
+  wireBlanks('ub4');
+  wireBlanks('ub5');
+  wireBlanks('ub6');
+  wireBlanks('ub7');
+  wireBlanks('ub9');
+  wireBlanks('ub10');
+
+  // Üb. 8: склади речення
+  buildOrder('ub8-order', [
+    {words: ["Heute", "freut", "sich", "mein Bruder", "auf das Spiel"], end: ".", hint: "Почни з «Heute».",
+     alt: ["Heute freut mein Bruder sich auf das Spiel", "Mein Bruder freut sich heute auf das Spiel", "Auf das Spiel freut sich mein Bruder heute", "Auf das Spiel freut sich heute mein Bruder"]},
+    {words: ["Morgen", "treffen", "wir", "uns", "im Park"], end: ".", hint: "Почни з «Morgen».",
+     alt: ["Wir treffen uns morgen im Park", "Im Park treffen wir uns morgen"]},
+    {words: ["Hast", "du", "dich", "schon", "angemeldet"], end: "?"},
+    {words: ["Du", "musst", "dich", "beeilen"], end: "."},
+    {words: ["Zieht", "euch", "warm", "an"], end: "!"},
+    {words: ["Ich komme zu spät,", "weil", "ich", "mich", "verlaufen", "habe"], end: "."},
+    {words: ["Ich weiß nicht,", "ob", "sich", "Lena", "die Adresse", "gemerkt", "hat"], end: ".",
+     alt: ["Ich weiß nicht, ob Lena sich die Adresse gemerkt hat"]},
+    {words: ["Gestern", "hat", "sich", "Paul", "ein neues Fahrrad", "gekauft"], end: ".", hint: "Почни з «Gestern».",
+     alt: ["Gestern hat Paul sich ein neues Fahrrad gekauft", "Paul hat sich gestern ein neues Fahrrad gekauft"]},
+    {words: ["Vergiss", "nicht,", "dich", "für den Kurs", "anzumelden"], end: "!"},
+    {words: ["Das Fenster", "lässt", "sich", "nicht", "öffnen"], end: "."}
+  ]);
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🪞','✏️','📘','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  // ЗАВЖДИ останнім рядком: крихти, зміст Regel, "Де це ще трапляється", збереження прогресу
+  initGrammarPage(GRAM_ID);
+</script>
+</body>
+</html>
