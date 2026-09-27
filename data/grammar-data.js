@@ -60,8 +60,8 @@ const GRAMMAR = [
   // ===== Іменник, артикль, займенник =====
   { id: "deklination-nomen", rozdil: "nomen", knyha: 1,
     tema: "Deklination des Nomens", uk: "Відмінювання іменників",
-    pidrozdily: ["Mit dem bestimmten Artikel im Singular", "Mit dem bestimmten Artikel im Plural", "Mit dem unbestimmten Artikel"],
-    opublikovano: 1, dyv: ["n-deklination"] },
+    pidrozdily: ["Mit dem bestimmten Artikel im Singular", "Genitiv Singular: -s oder -es", "Mit dem bestimmten Artikel im Plural", "Dativ Plural: -n", "Pluralbildung", "Besondere Pluralformen und Komposita", "Mit dem unbestimmten Artikel"],
+    opublikovano: 1, dyv: ["n-deklination", "artikel-gebrauch", "possessivartikel", "adjektivdeklination"] },
   { id: "n-deklination", rozdil: "nomen", knyha: 2,
     tema: "Die n-Deklination", uk: "n-відміна іменників",
     pidrozdily: ["Mit dem bestimmten und unbestimmten Artikel", "Nomen auf -(e)n", "Einwohner von Ländern und Erdteilen"] },
