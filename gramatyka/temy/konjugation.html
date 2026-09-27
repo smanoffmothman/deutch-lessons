@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Konjugation der Verben · Grammatik · Deutsch mit uns</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'gramatyka' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">GRAMMATIK · Дієслово: форми і часи</span>
+        <h1>Konjugation der Verben</h1>
+        <p class="sub">Як дієслово змінюється за особами й часами: слабкі, сильні та змішані дієслова, три основні форми, Partizip Perfekt і особливі випадки на кшталт <i>du arbeitest</i> чи <i>ich sammle</i>.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="regel" aria-selected="true">Regel</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Gruppen</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Zeitformen</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Partizip</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · schwach</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · stark: Präsens</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Stammformen</button>
+    <button class="tab-btn" data-tab="ub7">Üb. 7 · Hilfs-e, Sonderregeln</button>
+    <button class="tab-btn" data-tab="ub8">Üb. 8 · Mischverben</button>
+    <button class="tab-btn" data-tab="ub9">Üb. 9 · Perfekt</button>
+    <button class="tab-btn" data-tab="ub10">Üb. 10 · Präteritum</button>
+    <button class="tab-btn" data-tab="ub11">Üb. 11 · Satzbau</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== REGEL ===== -->
+    <section class="panel active" id="panel-regel">
+      <p class="section-label">Regel</p>
+      <h2 class="panel-title">Konjugation der Verben</h2>
+      <ul class="regel-toc" id="regelToc"></ul>
+
+      <div class="card">
+        <p>Ein Verb verändert seine Form: <b>ich spiele</b>, <b>du spielst</b>, <b>wir spielten</b>, <b>ihr habt gespielt</b>. Die Form zeigt, <b>wer</b> etwas macht (die Person) und <b>wann</b> (die Zeitform). Das nennt man <b>Konjugation</b>. Im Deutschen gibt es schwache, starke und gemischte Verben. Sie bilden ihre Formen ein bisschen anders.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Konjugation — це дієвідмінювання: зміна дієслова за особами (ich, du, er…) і часами. В українській теж є особові закінчення (я гра<b>ю</b>, ти гра<b>єш</b>, ми гра<b>ємо</b>), тож сам принцип знайомий. Різниця в тому, що в німецькій особа майже завжди стоїть поруч окремим займенником, а минулі й майбутній час часто утворюються з допоміжним дієсловом (<i>haben, sein, werden</i>). Найважливіше — знати, до якої групи належить дієслово: слабкі змінюються за правилом, а сильні й змішані треба вчити разом з їхніми основними формами.
+        </div>
+      </div>
+
+      <!-- 1. Allgemeine Regeln -->
+      <section class="card regel-block" id="allgemein">
+        <h3>Allgemeine Regeln</h3>
+        <p>Jedes Verb hat einen <b>Stamm</b> und eine <b>Endung</b>. Im Infinitiv ist die Endung meistens <b>-en</b>, manchmal nur <b>-n</b>.</p>
+        <table class="gtable">
+          <tr><th>Infinitiv</th><th>Stamm</th><th>Endung</th></tr>
+          <tr><td>spielen</td><td><b>spiel</b></td><td>-en</td></tr>
+          <tr><td>schreiben</td><td><b>schreib</b></td><td>-en</td></tr>
+          <tr><td>arbeiten</td><td><b>arbeit</b></td><td>-en</td></tr>
+          <tr><td>sammeln</td><td><b>sammel</b></td><td>-n</td></tr>
+        </table>
+        <p>Es gibt drei Gruppen:</p>
+        <table class="gtable">
+          <tr><th>Gruppe</th><th>Was passiert?</th><th>Beispiel</th></tr>
+          <tr><td class="gender">schwache Verben</td><td>regelmäßig, der Stamm bleibt gleich</td><td>machen – mach<b>te</b> – ge<b>macht</b></td></tr>
+          <tr><td class="gender">starke Verben</td><td>unregelmäßig, der Stammvokal ändert sich</td><td>trinken – tr<b>a</b>nk – getr<b>u</b>nk<b>en</b></td></tr>
+          <tr><td class="gender">Mischverben</td><td>Endungen wie schwach, Vokal ändert sich wie stark</td><td>bringen – br<b>achte</b> – gebr<b>acht</b></td></tr>
+        </table>
+        <p>Die meisten Verben sind schwach. Die starken und gemischten Verben sind weniger, aber viele davon brauchen wir jeden Tag (gehen, kommen, sehen, wissen …).</p>
+        <p>Man lernt ein Verb am besten mit seinen drei <b>Stammformen</b>. Aus ihnen kann man alle anderen Formen bilden.</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Infinitiv</th><th>Präteritum</th><th>Partizip Perfekt</th></tr>
+          <tr><td>lernen</td><td>er lern<b>te</b></td><td><b>ge</b>lern<b>t</b></td></tr>
+          <tr><td>fahren</td><td>er f<b>u</b>hr</td><td><b>ge</b>fahr<b>en</b></td></tr>
+          <tr><td>denken</td><td>er d<b>achte</b></td><td><b>ge</b>d<b>acht</b></td></tr>
+        </table>
+        </div>
+        <p class="merke">Ein neues Verb lernt man immer mit drei Formen: Infinitiv – Präteritum – Partizip Perfekt.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Щоб знайти основу (Stamm), відкинь від інфінітива <b>-en</b> або <b>-n</b>: spiel-en → <b>spiel</b>, sammel-n → <b>sammel</b>. До основи додаються всі особові закінчення. Слабкі дієслова — «правильні»: знаєш інфінітив — знаєш усі форми. Сильні змінюють голосний в основі (як наше «брати — беру»), а змішані поєднують обидві риси. Тому сильні й змішані дієслова завжди вчимо трійкою: <i>fahren – fuhr – gefahren</i>. Повний список — у довідковій темі про сильні дієслова.
+        </div>
+      </section>
+
+      <!-- 2. Zeitformen -->
+      <section class="card regel-block" id="zeitformen">
+        <h3>Die Zeitformen im Überblick</h3>
+        <p>Das Deutsche hat sechs Zeitformen. Zwei sind <b>einfach</b> (nur ein Verb), vier sind <b>zusammengesetzt</b> (Hilfsverb + Partizip oder Infinitiv).</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Zeitform</th><th>Bildung</th><th>Beispiel</th></tr>
+          <tr><td class="gender">Präsens</td><td>Stamm + Endung</td><td>Ich <b>spiele</b> Fußball.</td></tr>
+          <tr><td class="gender">Präteritum</td><td>Präteritumform</td><td>Ich <b>spielte</b> Fußball.</td></tr>
+          <tr><td class="gender">Perfekt</td><td><i>haben / sein</i> (Präsens) + Partizip</td><td>Ich <b>habe</b> Fußball <b>gespielt</b>.</td></tr>
+          <tr><td class="gender">Plusquamperfekt</td><td><i>hatte / war</i> + Partizip</td><td>Ich <b>hatte</b> Fußball <b>gespielt</b>.</td></tr>
+          <tr><td class="gender">Futur I</td><td><i>werden</i> + Infinitiv</td><td>Ich <b>werde</b> Fußball <b>spielen</b>.</td></tr>
+          <tr><td class="gender">Futur II</td><td><i>werden</i> + Partizip + <i>haben / sein</i></td><td>Ich <b>werde</b> Fußball <b>gespielt haben</b>.</td></tr>
+        </table>
+        </div>
+        <p>Die meisten Verben bilden das Perfekt mit <b>haben</b>. Verben der Bewegung und der Veränderung nehmen <b>sein</b>:</p>
+        <p class="beispiel">Wir <b>haben</b> Pizza gegessen. – Wir <b>sind</b> nach Hause gegangen.</p>
+        <p><b>Wann benutzt man welche Zeitform?</b></p>
+        <p class="beispiel"><b>Perfekt</b> – im Gespräch: „<b>Hast</b> du den Film schon <b>gesehen</b>?“</p>
+        <p class="beispiel"><b>Präteritum</b> – in Texten, Geschichten, Zeitungen: Das Mädchen <b>öffnete</b> die Tür und <b>sah</b> einen Hund.</p>
+        <p class="beispiel"><b>Plusquamperfekt</b> – etwas passierte noch früher: Als ich ankam, <b>war</b> der Bus schon <b>abgefahren</b>.</p>
+        <p class="beispiel"><b>Futur I</b> – Pläne und Zukunft: Nächstes Jahr <b>werde</b> ich Spanisch <b>lernen</b>.</p>
+        <p class="merke">Im Gespräch erzählt man meistens im Perfekt. Nur <i>sein, haben</i> und die Modalverben benutzt man auch mündlich oft im Präteritum: Ich <b>war</b> krank.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          В українській мові минулий час один («я грав»), а в німецькій для минулого є три форми. Perfekt і Präteritum означають одне й те саме — різниця лише в стилі: <b>Perfekt</b> — розмовний (розповідаєш другові), <b>Präteritum</b> — письмовий (книжки, казки, новини). <b>Plusquamperfekt</b> — «передминулий»: дія сталася ще раніше за іншу минулу дію. <b>Futur I</b> — майбутній час, хоча в розмові німці часто кажуть просто Präsens + слово часу: <i>Morgen fahre ich nach Berlin</i>. <b>Futur II</b> означає, що дія буде завершена до певного моменту в майбутньому (і ще вживається для припущень — про це окрема тема). Коли <i>haben</i>, а коли <i>sein</i> — детально в темі «Perfekt і Plusquamperfekt: haben чи sein». Питальну форму (<i>Spielst du?</i>) і наказовий спосіб (<i>Spiel!</i>) теж розібрано в окремих темах.
+        </div>
+      </section>
+
+      <!-- 3. Partizip Perfekt -->
+      <section class="card regel-block" id="partizip">
+        <h3>Das Partizip Perfekt</h3>
+        <p>Das Partizip Perfekt braucht man für Perfekt, Plusquamperfekt und Futur II. Meistens bekommt es die Vorsilbe <b>ge-</b>. Die Endung ist bei schwachen Verben <b>-t</b>, bei starken Verben <b>-en</b>.</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Verbtyp</th><th>Regel</th><th>Beispiele</th></tr>
+          <tr><td class="gender">einfache Verben</td><td><b>ge-</b> … <b>-t</b> / <b>-en</b></td><td>kaufen → <b>ge</b>kauf<b>t</b><br>finden → <b>ge</b>fund<b>en</b></td></tr>
+          <tr><td class="gender">trennbare Verben<br>(ein-, auf-, an-, mit- …)</td><td><b>-ge-</b> steht in der Mitte</td><td>einkaufen → ein<b>ge</b>kauft<br>anrufen → an<b>ge</b>rufen</td></tr>
+          <tr><td class="gender">untrennbare Verben<br>(be-, er-, ver-, ent-, emp-, ge-, zer-, miss-)</td><td><b>ohne ge-</b></td><td>besuchen → besuch<b>t</b><br>verstehen → verstand<b>en</b></td></tr>
+          <tr><td class="gender">Verben auf <i>-ieren</i></td><td><b>ohne ge-</b>, Endung <b>-t</b></td><td>telefonieren → telefonier<b>t</b><br>fotografieren → fotografier<b>t</b></td></tr>
+        </table>
+        </div>
+        <p class="beispiel">Wir haben im Supermarkt <b>eingekauft</b>.</p>
+        <p class="beispiel">Hast du deine Oma <b>besucht</b>?</p>
+        <p class="beispiel">Ich habe mit Lena <b>telefoniert</b>.</p>
+        <p class="merke">ge- kommt nicht bei be-, er-, ver- … und nicht bei -ieren. Bei trennbaren Verben steht -ge- in der Mitte.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Partizip Perfekt (його ще називають Partizip II) — це «третя форма» дієслова, яка в минулих часах стоїть у кінці речення: <i>Ich habe das Buch <b>gelesen</b></i>. Схема проста: <b>ge-</b> + основа + <b>-t</b> (слабкі) або <b>-en</b> (сильні, часто ще й зі зміненим голосним). Три винятки щодо <b>ge-</b>: у відокремлюваних дієсловах воно «вклинюється» між префіксом і основою (<i>auf<b>ge</b>räumt</i>); у невідокремлюваних (з префіксами be-, er-, ver-, ent-, emp-, ge-, zer-, miss-) його немає зовсім (<i>erzählt</i>, <i>bekommen</i>); у дієсловах на <b>-ieren</b> його теж немає (<i>studiert</i>). Докладніше — у темах «Відокремлювані дієслова» і «Невідокремлювані дієслова».
+        </div>
+      </section>
+
+      <!-- 4. Schwache Verben -->
+      <section class="card regel-block" id="schwach">
+        <h3>Schwache Verben</h3>
+        <p>Schwache Verben ändern den Stamm <b>nicht</b>. Im Präteritum kommt <b>-te</b> an den Stamm, im Partizip Perfekt die Endung <b>-t</b>.</p>
+        <p class="beispiel">spielen – er spiel<b>te</b> – er hat <b>ge</b>spiel<b>t</b></p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th colspan="2">spielen (mit <i>haben</i>)</th><th>Präsens</th><th>Präteritum</th><th>Perfekt</th><th>Plusquamperfekt</th></tr>
+          <tr><td class="gender" rowspan="3">Singular</td><td>ich</td><td>spiel<b>e</b></td><td>spiel<b>te</b></td><td>habe gespielt</td><td>hatte gespielt</td></tr>
+          <tr><td>du</td><td>spiel<b>st</b></td><td>spiel<b>test</b></td><td>hast gespielt</td><td>hattest gespielt</td></tr>
+          <tr><td>er/sie/es</td><td>spiel<b>t</b></td><td>spiel<b>te</b></td><td>hat gespielt</td><td>hatte gespielt</td></tr>
+          <tr><td class="gender" rowspan="3">Plural</td><td>wir</td><td>spiel<b>en</b></td><td>spiel<b>ten</b></td><td>haben gespielt</td><td>hatten gespielt</td></tr>
+          <tr><td>ihr</td><td>spiel<b>t</b></td><td>spiel<b>tet</b></td><td>habt gespielt</td><td>hattet gespielt</td></tr>
+          <tr><td>sie/Sie</td><td>spiel<b>en</b></td><td>spiel<b>ten</b></td><td>haben gespielt</td><td>hatten gespielt</td></tr>
+        </table>
+        </div>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th colspan="2">spielen</th><th>Futur I</th><th>Futur II</th></tr>
+          <tr><td class="gender" rowspan="3">Singular</td><td>ich</td><td>werde spielen</td><td>werde gespielt haben</td></tr>
+          <tr><td>du</td><td>wirst spielen</td><td>wirst gespielt haben</td></tr>
+          <tr><td>er/sie/es</td><td>wird spielen</td><td>wird gespielt haben</td></tr>
+          <tr><td class="gender" rowspan="3">Plural</td><td>wir</td><td>werden spielen</td><td>werden gespielt haben</td></tr>
+          <tr><td>ihr</td><td>werdet spielen</td><td>werdet gespielt haben</td></tr>
+          <tr><td>sie/Sie</td><td>werden spielen</td><td>werden gespielt haben</td></tr>
+        </table>
+        </div>
+        <p>Mit <b>sein</b> ist es genauso, nur das Hilfsverb ist anders:</p>
+        <p class="beispiel">reisen: ich <b>bin</b> gereist · ich <b>war</b> gereist · ich werde gereist <b>sein</b></p>
+        <p class="merke">Schwache Verben: Präteritum = Stamm + -te, Partizip = ge- + Stamm + -t.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Закінчення теперішнього часу однакові для всіх дієслів: <b>-e, -st, -t, -en, -t, -en</b>. У Präteritum слабкі дієслова отримують <b>-te</b> плюс ті самі особові закінчення (ich spielte, du spieltest, wir spielten). Зверни увагу: у Präteritum форми <i>ich</i> та <i>er/sie/es</i> збігаються, і форми <i>wir</i> та <i>sie/Sie</i> теж. У Perfekt, Plusquamperfekt і Futur змінюється лише допоміжне дієслово (<i>haben, sein, werden</i>), а Partizip чи інфінітив у кінці речення лишається незмінним.
+        </div>
+      </section>
+
+      <!-- 5. Starke Verben -->
+      <section class="card regel-block" id="stark">
+        <h3>Starke Verben</h3>
+        <p>Starke Verben ändern den <b>Stammvokal</b> im Präteritum und oft auch im Partizip Perfekt. Das Partizip endet auf <b>-en</b>.</p>
+        <p class="beispiel">tr<b>i</b>nken – tr<b>a</b>nk – getr<b>u</b>nk<b>en</b> &nbsp;·&nbsp; schr<b>ei</b>ben – schr<b>ie</b>b – geschr<b>ie</b>b<b>en</b> &nbsp;·&nbsp; k<b>o</b>mmen – k<b>a</b>m – gek<b>o</b>mm<b>en</b></p>
+        <p>Bei manchen Verben ändert sich fast der ganze Stamm:</p>
+        <p class="beispiel"><b>geh</b>en – <b>ging</b> – ge<b>gang</b>en &nbsp;·&nbsp; <b>sein</b> – <b>war</b> – ge<b>wes</b>en</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th colspan="2"></th><th>sprechen (haben)</th><th>Präteritum</th><th>fahren (sein)</th><th>Präteritum</th></tr>
+          <tr><td class="gender" rowspan="3">Singular</td><td>ich</td><td>spreche</td><td>sprach</td><td>fahre</td><td>fuhr</td></tr>
+          <tr><td>du</td><td>spr<b>i</b>chst</td><td>sprach<b>st</b></td><td>f<b>ä</b>hrst</td><td>fuhr<b>st</b></td></tr>
+          <tr><td>er/sie/es</td><td>spr<b>i</b>cht</td><td>sprach</td><td>f<b>ä</b>hrt</td><td>fuhr</td></tr>
+          <tr><td class="gender" rowspan="3">Plural</td><td>wir</td><td>sprechen</td><td>sprach<b>en</b></td><td>fahren</td><td>fuhr<b>en</b></td></tr>
+          <tr><td>ihr</td><td>sprecht</td><td>sprach<b>t</b></td><td>fahrt</td><td>fuhr<b>t</b></td></tr>
+          <tr><td>sie/Sie</td><td>sprechen</td><td>sprach<b>en</b></td><td>fahren</td><td>fuhr<b>en</b></td></tr>
+          <tr><td colspan="2" class="gender">Perfekt</td><td colspan="2">ich habe gesprochen</td><td colspan="2">ich bin gefahren</td></tr>
+          <tr><td colspan="2" class="gender">Plusquamperfekt</td><td colspan="2">ich hatte gesprochen</td><td colspan="2">ich war gefahren</td></tr>
+          <tr><td colspan="2" class="gender">Futur I / II</td><td colspan="2">ich werde sprechen / gesprochen haben</td><td colspan="2">ich werde fahren / gefahren sein</td></tr>
+        </table>
+        </div>
+        <p>Im Präteritum haben <b>ich</b> und <b>er/sie/es</b> <b>keine Endung</b>: ich sprach, er sprach, ich fuhr, sie fuhr.</p>
+        <p>Viele starke Verben ändern den Vokal schon im <b>Präsens</b> – aber nur bei <b>du</b> und <b>er/sie/es</b>:</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Wechsel</th><th>ich</th><th>du</th><th>er/sie/es</th></tr>
+          <tr><td class="gender">a → ä</td><td>fahre, schlafe, trage</td><td>f<b>ä</b>hrst, schl<b>ä</b>fst, tr<b>ä</b>gst</td><td>f<b>ä</b>hrt, schl<b>ä</b>ft, tr<b>ä</b>gt</td></tr>
+          <tr><td class="gender">au → äu</td><td>laufe</td><td>l<b>äu</b>fst</td><td>l<b>äu</b>ft</td></tr>
+          <tr><td class="gender">e → i</td><td>gebe, helfe, spreche, nehme</td><td>g<b>i</b>bst, h<b>i</b>lfst, spr<b>i</b>chst, n<b>imm</b>st</td><td>g<b>i</b>bt, h<b>i</b>lft, spr<b>i</b>cht, n<b>imm</b>t</td></tr>
+          <tr><td class="gender">e → ie</td><td>lese, sehe</td><td>l<b>ie</b>st, s<b>ie</b>hst</td><td>l<b>ie</b>st, s<b>ie</b>ht</td></tr>
+        </table>
+        </div>
+        <p class="merke">Starke Verben: neuer Vokal im Präteritum, Partizip auf -en. Präteritum ich/er: ohne Endung.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Сильні дієслова не мають суфікса <b>-te</b> в Präteritum — замість нього змінюється голосний основи (<i>trinken → trank</i>). Правила, який голосний буде, немає, тому ці форми треба вчити напам'ять (є групи-підказки: <i>schreiben – schrieb, bleiben – blieb</i>; <i>trinken – trank, finden – fand</i>). Форми <i>ich</i> і <i>er/sie/es</i> у Präteritum — це «чиста» основа без закінчення: <i>ich kam, er kam</i>. Окремо запам'ятай зміну голосного в теперішньому часі: вона буває <b>лише</b> в <i>du</i> та <i>er/sie/es</i>. Для <i>ich, wir, ihr, sie</i> форма звичайна: <i>ich fahre, ihr fahrt</i>. Зверни увагу на <i>nehmen → du nimmst, er nimmt</i> — тут змінюються навіть приголосні. А в <i>halten → er hält</i>, <i>raten → er rät</i> після зміни голосного немає закінчення -t: воно «зливається» з основою.
+        </div>
+      </section>
+
+      <!-- 6. Hilfs-e -->
+      <section class="card regel-block" id="hilfs-e">
+        <h3>Verben mit Hilfs-e</h3>
+        <p>Endet der Stamm auf <b>-d</b> oder <b>-t</b>, kommt vor den Endungen <b>-st, -t, -te</b> ein <b>e</b>. So kann man das Wort besser sprechen.</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th colspan="2">arbeiten</th><th>Präsens</th><th>Präteritum</th><th>Perfekt</th></tr>
+          <tr><td class="gender" rowspan="3">Singular</td><td>ich</td><td>arbeite</td><td>arbeit<b>e</b>te</td><td>habe gearbeit<b>e</b>t</td></tr>
+          <tr><td>du</td><td>arbeit<b>e</b>st</td><td>arbeit<b>e</b>test</td><td>hast gearbeitet</td></tr>
+          <tr><td>er/sie/es</td><td>arbeit<b>e</b>t</td><td>arbeit<b>e</b>te</td><td>hat gearbeitet</td></tr>
+          <tr><td class="gender" rowspan="3">Plural</td><td>wir</td><td>arbeiten</td><td>arbeit<b>e</b>ten</td><td>haben gearbeitet</td></tr>
+          <tr><td>ihr</td><td>arbeit<b>e</b>t</td><td>arbeit<b>e</b>tet</td><td>habt gearbeitet</td></tr>
+          <tr><td>sie/Sie</td><td>arbeiten</td><td>arbeit<b>e</b>ten</td><td>haben gearbeitet</td></tr>
+        </table>
+        </div>
+        <p>Das gilt auch für starke Verben: finden – du find<b>e</b>st, er find<b>e</b>t, ihr find<b>e</b>t.</p>
+        <p>Dieselbe Regel gilt, wenn der Stamm auf <b>-m</b> oder <b>-n</b> endet und davor ein anderer Konsonant steht:</p>
+        <p class="beispiel">atmen: du atm<b>e</b>st, er atm<b>e</b>t · rechnen: du rechn<b>e</b>st · öffnen: er öffn<b>e</b>t · regnen: es regn<b>e</b>t</p>
+        <p>Aber: Steht davor <b>r</b> oder <b>l</b> oder ein Vokal, gibt es kein Hilfs-e:</p>
+        <p class="beispiel">lernen: du <b>lernst</b> · filmen: er <b>filmt</b> · wohnen: du <b>wohnst</b> · kommen: er <b>kommt</b></p>
+        <p class="merke">Stamm auf -d / -t oder Konsonant + -m / -n → e vor -st, -t, -te: du arbeitest, er öffnet.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Hilfs-e — «допоміжне е» для зручної вимови: сказати <i>du arbeitst</i> чи <i>er wartt</i> майже неможливо, тому з'являється <i>du arbeit<b>e</b>st</i>, <i>er wart<b>e</b>t</i>. Воно потрібне, коли основа закінчується на <b>d</b> або <b>t</b>, а також на <b>m / n</b>, перед якими стоїть інша приголосна (<i>atm-en, rechn-en, öffn-en</i>). Якщо перед m/n голосний (<i>wohn-en</i>) або <b>r, l</b> (<i>lern-en, film-en</i>), вимовляти легко — і е не потрібне. У сильних дієсловах, де голосний змінюється в du/er, Hilfs-e зазвичай немає: <i>halten → du hältst, er hält</i>.
+        </div>
+      </section>
+
+      <!-- 7. Mischverben -->
+      <section class="card regel-block" id="misch">
+        <h3>Mischverben</h3>
+        <p>Mischverben haben die <b>Endungen</b> der schwachen Verben (<b>-te</b>, <b>-t</b>), aber sie ändern den <b>Stammvokal</b> wie starke Verben.</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th colspan="2">bringen</th><th>Präsens</th><th>Präteritum</th><th>Perfekt</th></tr>
+          <tr><td class="gender" rowspan="3">Singular</td><td>ich</td><td>bringe</td><td>br<b>achte</b></td><td>habe gebr<b>acht</b></td></tr>
+          <tr><td>du</td><td>bringst</td><td>br<b>achtest</b></td><td>hast gebracht</td></tr>
+          <tr><td>er/sie/es</td><td>bringt</td><td>br<b>achte</b></td><td>hat gebracht</td></tr>
+          <tr><td class="gender" rowspan="3">Plural</td><td>wir</td><td>bringen</td><td>br<b>achten</b></td><td>haben gebracht</td></tr>
+          <tr><td>ihr</td><td>bringt</td><td>br<b>achtet</b></td><td>habt gebracht</td></tr>
+          <tr><td>sie/Sie</td><td>bringen</td><td>br<b>achten</b></td><td>haben gebracht</td></tr>
+        </table>
+        </div>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Infinitiv</th><th>Präteritum</th><th>Partizip Perfekt</th></tr>
+          <tr><td>brennen</td><td>br<b>a</b>nnte</td><td>gebr<b>a</b>nnt</td></tr>
+          <tr><td>bringen</td><td>br<b>ach</b>te</td><td>gebr<b>ach</b>t</td></tr>
+          <tr><td>denken</td><td>d<b>ach</b>te</td><td>ged<b>ach</b>t</td></tr>
+          <tr><td>kennen</td><td>k<b>a</b>nnte</td><td>gek<b>a</b>nnt</td></tr>
+          <tr><td>nennen</td><td>n<b>a</b>nnte</td><td>gen<b>a</b>nnt</td></tr>
+          <tr><td>rennen</td><td>r<b>a</b>nnte</td><td>(ist) ger<b>a</b>nnt</td></tr>
+          <tr><td>senden</td><td>s<b>a</b>ndte / sendete</td><td>ges<b>a</b>ndt / gesendet</td></tr>
+          <tr><td>wenden</td><td>w<b>a</b>ndte / wendete</td><td>gew<b>a</b>ndt / gewendet</td></tr>
+          <tr><td>wissen</td><td>w<b>u</b>sste</td><td>gew<b>u</b>sst</td></tr>
+        </table>
+        </div>
+        <p>Auch die Modalverben sind Mischverben: können – k<b>o</b>nnte, müssen – m<b>u</b>sste, dürfen – d<b>u</b>rfte, mögen – m<b>och</b>te.</p>
+        <p><b>wissen</b> hat im Singular Präsens besondere Formen:</p>
+        <table class="gtable">
+          <tr><th>ich</th><th>du</th><th>er/sie/es</th><th>wir</th><th>ihr</th><th>sie/Sie</th></tr>
+          <tr><td><b>weiß</b></td><td><b>weißt</b></td><td><b>weiß</b></td><td>wissen</td><td>wisst</td><td>wissen</td></tr>
+        </table>
+        <p class="merke">Mischverben: -te und -t wie schwach, neuer Vokal wie stark. Lernen wie starke Verben!</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Змішаних дієслів небагато, але вони дуже вживані. Їх легко впізнати: у Präteritum є <b>-te</b>, як у слабких, але голосний змінюється, як у сильних (<i>kennen → k<b>a</b>nnte</i>). У <i>bringen</i> і <i>denken</i> змінюється ще й приголосна: <i>br<b>ach</b>te, d<b>ach</b>te</i>. Для <i>senden</i> і <i>wenden</i> допустимі обидві форми — «змішана» і звичайна слабка. Дієслово <i>wissen</i> («знати якийсь факт») у однині теперішнього часу має особливі форми: <i>ich weiß, du weißt, er weiß</i> — без закінчення в <i>ich</i> та <i>er</i>, як у модальних дієслів. Модальні дієслова детально розібрані в окремій темі.
+        </div>
+      </section>
+
+      <!-- 8. Sonderregeln -->
+      <section class="card regel-block" id="sonder">
+        <h3>Sonderregeln</h3>
+        <p><b>1. Stamm auf -s, -ss, -ß, -z (-tz, -x):</b> Bei <b>du</b> im Präsens nur <b>-t</b> statt <b>-st</b>. Die du-Form ist dann gleich wie die er-Form.</p>
+        <table class="gtable">
+          <tr><th>Infinitiv</th><th>du</th><th>er/sie/es</th></tr>
+          <tr><td>reisen</td><td>du reis<b>t</b></td><td>er reist</td></tr>
+          <tr><td>heißen</td><td>du heiß<b>t</b></td><td>er heißt</td></tr>
+          <tr><td>tanzen</td><td>du tanz<b>t</b></td><td>er tanzt</td></tr>
+          <tr><td>sitzen</td><td>du sitz<b>t</b></td><td>er sitzt</td></tr>
+          <tr><td>lesen</td><td>du lies<b>t</b></td><td>er liest</td></tr>
+          <tr><td>vergessen</td><td>du vergiss<b>t</b></td><td>er vergisst</td></tr>
+        </table>
+        <p><b>2. Verben auf -eln und -ern:</b> Bei <b>wir</b> und <b>sie/Sie</b> ist die Endung nur <b>-n</b>. Die Form ist also gleich wie der Infinitiv.</p>
+        <p class="beispiel">sammeln: wir sammel<b>n</b>, sie sammel<b>n</b> · wandern: wir wander<b>n</b>, sie wander<b>n</b></p>
+        <p><b>3. -eln:</b> Bei <b>ich</b> im Präsens und im Imperativ fällt das <b>e</b> vor dem <b>l</b> weg.</p>
+        <p class="beispiel">ich samm<b>le</b>, ich lä<b>chle</b>, ich klin<b>gle</b> · Imperativ: Lä<b>chle</b> mal! Klin<b>gle</b> noch einmal!</p>
+        <p><b>4. -ern:</b> Bei <b>ich</b> und im Imperativ bleibt alles regelmäßig.</p>
+        <p class="beispiel">ich wand<b>ere</b>, ich änd<b>ere</b> · Imperativ: Änd<b>ere</b> das bitte!</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th></th><th>ich</th><th>du</th><th>er/sie/es</th><th>wir</th><th>ihr</th><th>sie/Sie</th></tr>
+          <tr><td class="gender">sammeln</td><td><b>sammle</b></td><td>sammelst</td><td>sammelt</td><td><b>sammeln</b></td><td>sammelt</td><td><b>sammeln</b></td></tr>
+          <tr><td class="gender">wandern</td><td><b>wandere</b></td><td>wanderst</td><td>wandert</td><td><b>wandern</b></td><td>wandert</td><td><b>wandern</b></td></tr>
+        </table>
+        </div>
+        <p class="merke">du reist, du tanzt, du heißt (nur -t). Ich sammle, aber ich wandere. Wir sammeln, wir wandern (nur -n).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Якщо основа вже закінчується на свистячий звук (<b>s, ss, ß, z, tz, x</b>), то в <i>du</i> додається лише <b>-t</b>: «s» уже є, друге не потрібне. Тому <i>du tanzt</i> і <i>er tanzt</i> звучать однаково. Зате <b>sch</b> — звичайна приголосна: <i>du wäschst</i>. Дієслова на <b>-eln / -ern</b> в інфінітиві мають лише <b>-n</b>, і так само в <i>wir</i> та <i>sie/Sie</i>: <i>wir sammeln</i> (а не «sammelen»). У формі <i>ich</i> дієслова на <b>-eln</b> втрачають <b>e</b> перед <b>l</b>: <i>ich sammle</i>, <i>ich klingle</i>. Дієслова на <b>-ern</b> у сучасній мові лишаються повними: <i>ich wandere</i>, <i>ich ändere</i>.
+        </div>
+      </section>
+
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: Gruppen (buildSort) ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Schwach, stark oder gemischt?</h2>
+      <p class="lead">Розклади дієслова за групами. Підказка: згадай Präteritum. <i>-te</i> і той самий голосний → слабке; новий голосний без <i>-te</i> → сильне; <i>-te</i> і новий голосний → змішане.</p>
+      <div class="card" id="ub1-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 2: Zeitformen (buildQuiz) ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Welche Zeitform ist das?</h2>
+      <p class="lead">Обери правильну відповідь: визнач часову форму або правило.</p>
+      <div class="card" id="ub2-quiz"></div>
+    </section>
+
+    <!-- ===== Üb. 3: Partizip (Tabelle) ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Das Partizip Perfekt</h2>
+      <p class="lead">Утвори Partizip Perfekt. Не забудь про відокремлювані префікси (<i>-ge-</i> усередині), невідокремлювані префікси й дієслова на <i>-ieren</i> (без <i>ge-</i>).</p>
+      <div class="card" id="ub3-list" style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Infinitiv</th><th>Partizip Perfekt</th></tr>
+          <tr><td>machen</td><td><input type="text" class="blank-input" data-ans="gemacht"></td></tr>
+          <tr><td>kaufen</td><td><input type="text" class="blank-input" data-ans="gekauft"></td></tr>
+          <tr><td>lernen</td><td><input type="text" class="blank-input" data-ans="gelernt"></td></tr>
+          <tr><td>schreiben</td><td><input type="text" class="blank-input" data-ans="geschrieben"></td></tr>
+          <tr><td>trinken</td><td><input type="text" class="blank-input" data-ans="getrunken"></td></tr>
+          <tr><td>einkaufen</td><td><input type="text" class="blank-input" data-ans="eingekauft"></td></tr>
+          <tr><td>aufräumen</td><td><input type="text" class="blank-input" data-ans="aufgeräumt"></td></tr>
+          <tr><td>anrufen</td><td><input type="text" class="blank-input" data-ans="angerufen"></td></tr>
+          <tr><td>aufstehen</td><td><input type="text" class="blank-input" data-ans="aufgestanden"></td></tr>
+          <tr><td>besuchen</td><td><input type="text" class="blank-input" data-ans="besucht"></td></tr>
+          <tr><td>erzählen</td><td><input type="text" class="blank-input" data-ans="erzählt"></td></tr>
+          <tr><td>verstehen</td><td><input type="text" class="blank-input" data-ans="verstanden"></td></tr>
+          <tr><td>bekommen</td><td><input type="text" class="blank-input" data-ans="bekommen"></td></tr>
+          <tr><td>telefonieren</td><td><input type="text" class="blank-input" data-ans="telefoniert"></td></tr>
+          <tr><td>fotografieren</td><td><input type="text" class="blank-input" data-ans="fotografiert"></td></tr>
+        </table>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4: schwache Verben (Tabelle) ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Ein schwaches Verb: machen</h2>
+      <p class="lead">Заповни таблицю дієслова <i>machen</i>. Рядок <i>ich</i> — зразок. У стовпці Perfekt пиши допоміжне дієслово й Partizip (напр. <i>hast gemacht</i>).</p>
+      <div class="card" id="ub4-list" style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th></th><th>Präsens</th><th>Präteritum</th><th>Perfekt</th></tr>
+          <tr><td class="gender">ich</td><td>mache</td><td>machte</td><td>habe gemacht</td></tr>
+          <tr><td class="gender">du</td>
+            <td><input type="text" class="blank-input" data-ans="machst"></td>
+            <td><input type="text" class="blank-input" data-ans="machtest"></td>
+            <td><input type="text" class="blank-input" data-ans="hast gemacht"></td></tr>
+          <tr><td class="gender">er/sie/es</td>
+            <td><input type="text" class="blank-input" data-ans="macht"></td>
+            <td><input type="text" class="blank-input" data-ans="machte"></td>
+            <td><input type="text" class="blank-input" data-ans="hat gemacht"></td></tr>
+          <tr><td class="gender">wir</td>
+            <td><input type="text" class="blank-input" data-ans="machen"></td>
+            <td><input type="text" class="blank-input" data-ans="machten"></td>
+            <td><input type="text" class="blank-input" data-ans="haben gemacht"></td></tr>
+          <tr><td class="gender">ihr</td>
+            <td><input type="text" class="blank-input" data-ans="macht"></td>
+            <td><input type="text" class="blank-input" data-ans="machtet"></td>
+            <td><input type="text" class="blank-input" data-ans="habt gemacht"></td></tr>
+          <tr><td class="gender">sie/Sie</td>
+            <td><input type="text" class="blank-input" data-ans="machen"></td>
+            <td><input type="text" class="blank-input" data-ans="machten"></td>
+            <td><input type="text" class="blank-input" data-ans="haben gemacht"></td></tr>
+        </table>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub4-check">Prüfen</button>
+        <button class="btn secondary" id="ub4-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub4-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5: starke Verben im Präsens ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Starke Verben im Präsens</h2>
+      <p class="lead">Встав дієслово в теперішньому часі (Präsens). Пам'ятай: голосний змінюється лише в <i>du</i> та <i>er/sie/es</i>.</p>
+      <div class="card" id="ub5-list">
+        <div class="fill-item"><span class="num">1)</span> Was <input type="text" class="blank-input inline" data-ans="liest"> du am liebsten? (lesen)</div>
+        <div class="fill-item"><span class="num">2)</span> Mein Bruder <input type="text" class="blank-input inline" data-ans="fährt"> jeden Tag mit dem Bus zur Schule. (fahren)</div>
+        <div class="fill-item"><span class="num">3)</span> <input type="text" class="blank-input inline" data-ans="sprichst"> du Englisch? (sprechen)</div>
+        <div class="fill-item"><span class="num">4)</span> Am Sonntag <input type="text" class="blank-input inline" data-ans="schläft"> Lena bis neun Uhr. (schlafen)</div>
+        <div class="fill-item"><span class="num">5)</span> Wann <input type="text" class="blank-input inline" data-ans="triffst"> du deine Freunde? (treffen)</div>
+        <div class="fill-item"><span class="num">6)</span> Der Lehrer <input type="text" class="blank-input inline" data-ans="gibt"> uns heute keine Hausaufgaben. (geben)</div>
+        <div class="fill-item"><span class="num">7)</span> <input type="text" class="blank-input inline" data-ans="siehst"> du den Bahnhof dort? (sehen)</div>
+        <div class="fill-item"><span class="num">8)</span> Mein Vater <input type="text" class="blank-input inline" data-ans="läuft"> jeden Morgen im Park. (laufen)</div>
+        <div class="fill-item"><span class="num">9)</span> Du <input type="text" class="blank-input inline" data-ans="vergisst"> immer deinen Schlüssel! (vergessen)</div>
+        <div class="fill-item"><span class="num">10)</span> Anna <input type="text" class="blank-input inline" data-ans="hilft"> ihrer Mutter in der Küche. (helfen)</div>
+        <div class="fill-item"><span class="num">11)</span> Was <input type="text" class="blank-input inline" data-ans="nimmst"> du mit auf die Klassenfahrt? (nehmen)</div>
+        <div class="fill-item"><span class="num">12)</span> Er <input type="text" class="blank-input inline" data-ans="trägt"> heute eine neue Jacke. (tragen)</div>
+        <div class="fill-item"><span class="num">13)</span> Wir <input type="text" class="blank-input inline" data-ans="lesen"> zusammen ein Buch. (lesen)</div>
+        <div class="fill-item"><span class="num">14)</span> <input type="text" class="blank-input inline" data-ans="fahrt"> ihr morgen ans Meer? (fahren)</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub5-check">Prüfen</button>
+        <button class="btn secondary" id="ub5-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub5-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 6: Stammformen starker Verben ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">Stammformen der starken Verben</h2>
+      <p class="lead">Допиши основні форми: Präteritum (форма <i>er/sie/es</i>) і Partizip Perfekt. Перший рядок — зразок.</p>
+      <div class="card" id="ub6-list" style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Infinitiv</th><th>Präteritum (er)</th><th>Partizip Perfekt</th></tr>
+          <tr><td>gehen</td><td>ging</td><td>gegangen</td></tr>
+          <tr><td>kommen</td><td><input type="text" class="blank-input" data-ans="kam"></td><td><input type="text" class="blank-input" data-ans="gekommen"></td></tr>
+          <tr><td>fahren</td><td><input type="text" class="blank-input" data-ans="fuhr"></td><td><input type="text" class="blank-input" data-ans="gefahren"></td></tr>
+          <tr><td>schreiben</td><td><input type="text" class="blank-input" data-ans="schrieb"></td><td><input type="text" class="blank-input" data-ans="geschrieben"></td></tr>
+          <tr><td>bleiben</td><td><input type="text" class="blank-input" data-ans="blieb"></td><td><input type="text" class="blank-input" data-ans="geblieben"></td></tr>
+          <tr><td>lesen</td><td><input type="text" class="blank-input" data-ans="las"></td><td><input type="text" class="blank-input" data-ans="gelesen"></td></tr>
+          <tr><td>sehen</td><td><input type="text" class="blank-input" data-ans="sah"></td><td><input type="text" class="blank-input" data-ans="gesehen"></td></tr>
+          <tr><td>trinken</td><td><input type="text" class="blank-input" data-ans="trank"></td><td><input type="text" class="blank-input" data-ans="getrunken"></td></tr>
+          <tr><td>finden</td><td><input type="text" class="blank-input" data-ans="fand"></td><td><input type="text" class="blank-input" data-ans="gefunden"></td></tr>
+          <tr><td>sprechen</td><td><input type="text" class="blank-input" data-ans="sprach"></td><td><input type="text" class="blank-input" data-ans="gesprochen"></td></tr>
+          <tr><td>nehmen</td><td><input type="text" class="blank-input" data-ans="nahm"></td><td><input type="text" class="blank-input" data-ans="genommen"></td></tr>
+          <tr><td>schlafen</td><td><input type="text" class="blank-input" data-ans="schlief"></td><td><input type="text" class="blank-input" data-ans="geschlafen"></td></tr>
+          <tr><td>sein</td><td><input type="text" class="blank-input" data-ans="war"></td><td><input type="text" class="blank-input" data-ans="gewesen"></td></tr>
+        </table>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub6-check">Prüfen</button>
+        <button class="btn secondary" id="ub6-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub6-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 7: Hilfs-e und Sonderregeln ===== -->
+    <section class="panel" id="panel-ub7">
+      <p class="section-label">Üb. 7</p>
+      <h2 class="panel-title">Hilfs-e und Sonderregeln</h2>
+      <p class="lead">Встав дієслово в Präsens (у реченні 4 — у Präteritum). Подумай: чи потрібне допоміжне <i>e</i>? Чи закінчується основа на <i>s / ß / z</i>? Дієслово на <i>-eln</i> чи <i>-ern</i>?</p>
+      <div class="card" id="ub7-list">
+        <div class="fill-item"><span class="num">1)</span> Du <input type="text" class="blank-input inline" data-ans="arbeitest"> wirklich viel. (arbeiten)</div>
+        <div class="fill-item"><span class="num">2)</span> Er <input type="text" class="blank-input inline" data-ans="wartet"> schon an der Haltestelle. (warten)</div>
+        <div class="fill-item"><span class="num">3)</span> Ihr <input type="text" class="blank-input inline" data-ans="findet"> den Weg bestimmt. (finden)</div>
+        <div class="fill-item"><span class="num">4)</span> Gestern <input type="text" class="blank-input inline" data-ans="redeten"> wir lange über den Film. (reden, Präteritum)</div>
+        <div class="fill-item"><span class="num">5)</span> Du <input type="text" class="blank-input inline" data-ans="rechnest"> sehr schnell. (rechnen)</div>
+        <div class="fill-item"><span class="num">6)</span> Es <input type="text" class="blank-input inline" data-ans="regnet"> schon den ganzen Tag. (regnen)</div>
+        <div class="fill-item"><span class="num">7)</span> Wer <input type="text" class="blank-input inline" data-ans="öffnet"> bitte das Fenster? (öffnen)</div>
+        <div class="fill-item"><span class="num">8)</span> Du <input type="text" class="blank-input inline" data-ans="lernst"> schon sehr gut Deutsch. (lernen)</div>
+        <div class="fill-item"><span class="num">9)</span> Du <input type="text" class="blank-input inline" data-ans="wohnst"> in der Nähe der Schule, oder? (wohnen)</div>
+        <div class="fill-item"><span class="num">10)</span> Du <input type="text" class="blank-input inline" data-ans="tanzt"> super! (tanzen)</div>
+        <div class="fill-item"><span class="num">11)</span> Wie <input type="text" class="blank-input inline" data-ans="heißt|heisst"> du? (heißen)</div>
+        <div class="fill-item"><span class="num">12)</span> Du <input type="text" class="blank-input inline" data-ans="sitzt"> heute neben mir. (sitzen)</div>
+        <div class="fill-item"><span class="num">13)</span> Wohin <input type="text" class="blank-input inline" data-ans="reist"> du im Sommer? (reisen)</div>
+        <div class="fill-item"><span class="num">14)</span> Ich <input type="text" class="blank-input inline" data-ans="sammle"> Briefmarken. (sammeln)</div>
+        <div class="fill-item"><span class="num">15)</span> Ich <input type="text" class="blank-input inline" data-ans="klingle"> zweimal an der Tür. (klingeln)</div>
+        <div class="fill-item"><span class="num">16)</span> Wir <input type="text" class="blank-input inline" data-ans="wandern"> gern in den Bergen. (wandern)</div>
+        <div class="fill-item"><span class="num">17)</span> Ich <input type="text" class="blank-input inline" data-ans="ändere"> meine Meinung nicht. (ändern)</div>
+        <div class="fill-item"><span class="num">18)</span> Meine Freunde <input type="text" class="blank-input inline" data-ans="sammeln"> Geld für die Party. (sammeln)</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub7-check">Prüfen</button>
+        <button class="btn secondary" id="ub7-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub7-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 8: Mischverben ===== -->
+    <section class="panel" id="panel-ub8">
+      <p class="section-label">Üb. 8</p>
+      <h2 class="panel-title">Mischverben und wissen</h2>
+      <p class="lead">Встав потрібну форму. У дужках — інфінітив і часова форма. Якщо в реченні вже є <i>habe / hast / haben</i>, пиши лише Partizip.</p>
+      <div class="card" id="ub8-list">
+        <div class="fill-item"><span class="num">1)</span> Ich <input type="text" class="blank-input inline" data-ans="kenne"> meinen Nachbarn schon lange. (kennen, Präsens)</div>
+        <div class="fill-item"><span class="num">2)</span> <input type="text" class="blank-input inline" data-ans="weißt|weisst"> du die Antwort? (wissen, Präsens)</div>
+        <div class="fill-item"><span class="num">3)</span> Mein Opa <input type="text" class="blank-input inline" data-ans="weiß|weiss"> sehr viel über Geschichte. (wissen, Präsens)</div>
+        <div class="fill-item"><span class="num">4)</span> Ihr <input type="text" class="blank-input inline" data-ans="wisst"> das doch schon! (wissen, Präsens)</div>
+        <div class="fill-item"><span class="num">5)</span> Wie <input type="text" class="blank-input inline" data-ans="nennt"> ihr euren Hund? (nennen, Präsens)</div>
+        <div class="fill-item"><span class="num">6)</span> Wir <input type="text" class="blank-input inline" data-ans="brachten"> Kuchen zur Party. (bringen, Präteritum)</div>
+        <div class="fill-item"><span class="num">7)</span> Er <input type="text" class="blank-input inline" data-ans="dachte"> die ganze Zeit an den Urlaub. (denken, Präteritum)</div>
+        <div class="fill-item"><span class="num">8)</span> Die Kinder <input type="text" class="blank-input inline" data-ans="rannten"> zum Spielplatz. (rennen, Präteritum)</div>
+        <div class="fill-item"><span class="num">9)</span> Im Wohnzimmer <input type="text" class="blank-input inline" data-ans="brannte"> eine Kerze. (brennen, Präteritum)</div>
+        <div class="fill-item"><span class="num">10)</span> Niemand <input type="text" class="blank-input inline" data-ans="wusste"> die Lösung. (wissen, Präteritum)</div>
+        <div class="fill-item"><span class="num">11)</span> Ich habe dir eine Nachricht <input type="text" class="blank-input inline" data-ans="gesendet|gesandt">. (senden)</div>
+        <div class="fill-item"><span class="num">12)</span> Hast du an meinen Geburtstag <input type="text" class="blank-input inline" data-ans="gedacht">? (denken)</div>
+        <div class="fill-item"><span class="num">13)</span> Wir haben das nicht <input type="text" class="blank-input inline" data-ans="gewusst">. (wissen)</div>
+        <div class="fill-item"><span class="num">14)</span> Hast du mir mein Buch <input type="text" class="blank-input inline" data-ans="gebracht">? (bringen)</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub8-check">Prüfen</button>
+        <button class="btn secondary" id="ub8-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub8-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 9: Präsens → Perfekt ===== -->
+    <section class="panel" id="panel-ub9">
+      <p class="section-label">Üb. 9</p>
+      <h2 class="panel-title">Erzähl im Perfekt!</h2>
+      <p class="lead">Перепиши речення в Perfekt. Допоміжне дієслово (<i>haben</i> чи <i>sein</i>) — на другому місці, Partizip — у кінці. Порядок решти слів не змінюй.</p>
+      <div class="card" id="ub9-list">
+        <div class="fill-item"><span class="num">1)</span> Ich kaufe ein neues Heft.
+          <input type="text" class="blank-input inline full" data-ans="Ich habe ein neues Heft gekauft"></div>
+        <div class="fill-item"><span class="num">2)</span> Wir fahren mit dem Zug nach Berlin.
+          <input type="text" class="blank-input inline full" data-ans="Wir sind mit dem Zug nach Berlin gefahren"></div>
+        <div class="fill-item"><span class="num">3)</span> Tom ruft seine Oma an.
+          <input type="text" class="blank-input inline full" data-ans="Tom hat seine Oma angerufen"></div>
+        <div class="fill-item"><span class="num">4)</span> Die Kinder spielen im Garten.
+          <input type="text" class="blank-input inline full" data-ans="Die Kinder haben im Garten gespielt"></div>
+        <div class="fill-item"><span class="num">5)</span> Du vergisst dein Buch.
+          <input type="text" class="blank-input inline full" data-ans="Du hast dein Buch vergessen"></div>
+        <div class="fill-item"><span class="num">6)</span> Ich telefoniere mit meiner Freundin.
+          <input type="text" class="blank-input inline full" data-ans="Ich habe mit meiner Freundin telefoniert"></div>
+        <div class="fill-item"><span class="num">7)</span> Anna bringt einen Kuchen mit.
+          <input type="text" class="blank-input inline full" data-ans="Anna hat einen Kuchen mitgebracht"></div>
+        <div class="fill-item"><span class="num">8)</span> Er bleibt am Wochenende zu Hause.
+          <input type="text" class="blank-input inline full" data-ans="Er ist am Wochenende zu Hause geblieben"></div>
+        <div class="fill-item"><span class="num">9)</span> Wir lesen einen spannenden Roman.
+          <input type="text" class="blank-input inline full" data-ans="Wir haben einen spannenden Roman gelesen"></div>
+        <div class="fill-item"><span class="num">10)</span> Sie steht um sieben Uhr auf.
+          <input type="text" class="blank-input inline full" data-ans="Sie ist um sieben Uhr aufgestanden"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub9-check">Prüfen</button>
+        <button class="btn secondary" id="ub9-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub9-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 10: Präteritum im Text ===== -->
+    <section class="panel" id="panel-ub10">
+      <p class="section-label">Üb. 10</p>
+      <h2 class="panel-title">Eine Geschichte im Präteritum</h2>
+      <p class="lead">Це розповідь, тож вона в Präteritum. Постав дієслова з дужок у Präteritum. Тут є слабкі, сильні, змішані дієслова й дієслова з допоміжним <i>e</i>.</p>
+      <div class="card" id="ub10-list">
+        <p style="line-height:2.2;">
+          <b>Sommer am Meer</b><br>
+          Letzten Sommer <input type="text" class="blank-input inline" data-ans="fuhr"> (fahren) Mia mit ihrer Familie ans Meer.
+          Die Familie <input type="text" class="blank-input inline" data-ans="wohnte"> (wohnen) in einem kleinen Hotel.
+          Jeden Morgen <input type="text" class="blank-input inline" data-ans="ging"> (gehen) Mia an den Strand.
+          Dort <input type="text" class="blank-input inline" data-ans="lernte"> (lernen) sie Paul kennen.
+          Die beiden <input type="text" class="blank-input inline" data-ans="spielten"> (spielen) Volleyball und
+          <input type="text" class="blank-input inline" data-ans="schwammen"> (schwimmen) im Meer.
+          Paul <input type="text" class="blank-input inline" data-ans="kannte"> (kennen) viele schöne Orte.
+          Einmal <input type="text" class="blank-input inline" data-ans="brachte"> (bringen) er ein Picknick mit.
+          Am Abend <input type="text" class="blank-input inline" data-ans="warteten"> (warten) sie zusammen auf den Sonnenuntergang.
+          Mia <input type="text" class="blank-input inline" data-ans="fand"> (finden) das wunderschön.
+          Am letzten Tag <input type="text" class="blank-input inline" data-ans="regnete"> (regnen) es leider.
+          Mia <input type="text" class="blank-input inline" data-ans="war"> (sein) traurig und
+          <input type="text" class="blank-input inline" data-ans="dachte"> (denken) noch lange an Paul.
+          Zu Hause <input type="text" class="blank-input inline" data-ans="schrieb"> (schreiben) sie ihm sofort eine Nachricht.
+          Er <input type="text" class="blank-input inline" data-ans="antwortete"> (antworten) am selben Abend.
+        </p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub10-check">Prüfen</button>
+        <button class="btn secondary" id="ub10-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub10-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 11: Satzbau (buildOrder) ===== -->
+    <section class="panel" id="panel-ub11">
+      <p class="section-label">Üb. 11</p>
+      <h2 class="panel-title">Zusammengesetzte Zeitformen im Satz</h2>
+      <p class="lead">Склади речення. Натискай слова по черзі; натиснеш на вже поставлене — воно повернеться. Пам'ятай: допоміжне дієслово — на другому місці, Partizip чи інфінітив — у кінці.</p>
+      <div class="card" id="ub11-order"></div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das Wichtigste</p>
+        <p>Verben haben einen Stamm und eine Endung. Schwache Verben sind regelmäßig: spielen – spielte – gespielt. Starke Verben ändern den Vokal: fahren – fuhr – gefahren, Mischverben haben -te und einen neuen Vokal: bringen – brachte – gebracht. Achte auf das Hilfs-e (du arbeitest), auf du reist und auf ich sammle – ich wandere.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Дієслово = основа + закінчення. Слабкі дієслова змінюються за правилом (Präteritum на <b>-te</b>, Partizip на <b>-t</b>), сильні змінюють голосний (Partizip на <b>-en</b>), змішані мають і <b>-te</b>, і новий голосний. Сильні й змішані вчимо трійкою форм. Partizip Perfekt зазвичай має <b>ge-</b>, крім невідокремлюваних префіксів і дієслів на <b>-ieren</b>. І не забувай про особливі випадки: <i>du arbeitest, du reist, ich sammle, ich wandere</i>.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Де це ще трапляється</p>
+        <div class="gram-related" id="gramRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <p class="lead" id="gramBest" style="font-size:14px;"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/grammar-data.js"></script>
+<script src="../../data/lessons-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/site.js"></script>
+<script>
+  const GRAM_ID = "konjugation";
+
+  // Üb. 1: schwach / stark / Mischverb
+  buildSort('ub1-sort', {
+    buckets: ["schwach", "stark", "Mischverb"],
+    items: [
+      {t: "spielen", b: "schwach"}, {t: "lernen", b: "schwach"}, {t: "kaufen", b: "schwach"},
+      {t: "wohnen", b: "schwach"}, {t: "fragen", b: "schwach"}, {t: "arbeiten", b: "schwach"},
+      {t: "fahren", b: "stark"}, {t: "lesen", b: "stark"}, {t: "schreiben", b: "stark"},
+      {t: "trinken", b: "stark"}, {t: "gehen", b: "stark"}, {t: "schlafen", b: "stark"},
+      {t: "bringen", b: "Mischverb"}, {t: "denken", b: "Mischverb"}, {t: "kennen", b: "Mischverb"},
+      {t: "wissen", b: "Mischverb"}, {t: "rennen", b: "Mischverb"}, {t: "nennen", b: "Mischverb"}
+    ]
+  });
+
+  // Üb. 2: Zeitformen erkennen
+  buildQuiz('ub2-quiz', [
+    {q: "wir <b>hatten gespielt</b>", opts: ["Perfekt", "Präteritum", "Plusquamperfekt", "Futur II"], correct: "Plusquamperfekt"},
+    {q: "du <b>wirst lesen</b>", opts: ["Futur I", "Präsens", "Futur II", "Perfekt"], correct: "Futur I"},
+    {q: "sie <b>las</b>", opts: ["Präsens", "Präteritum", "Perfekt"], correct: "Präteritum"},
+    {q: "ihr <b>seid gekommen</b>", opts: ["Plusquamperfekt", "Präsens", "Perfekt"], correct: "Perfekt"},
+    {q: "er <b>wird gegessen haben</b>", opts: ["Futur I", "Perfekt", "Plusquamperfekt", "Futur II"], correct: "Futur II"},
+    {q: "ich <b>lerne</b>", opts: ["Präteritum", "Präsens", "Futur I"], correct: "Präsens"},
+    {q: "Welche Endung haben schwache Verben im Präteritum?", opts: ["-en", "keine Endung", "-te"], correct: "-te"},
+    {q: "Was ist der Stamm von <i>arbeiten</i>?", opts: ["arbeite", "arbeit", "arbeiten"], correct: "arbeit"},
+    {q: "Welche drei Formen sind die Stammformen?", opts: ["Präsens – Perfekt – Futur", "Infinitiv – Präteritum – Partizip Perfekt", "ich – du – er"], correct: "Infinitiv – Präteritum – Partizip Perfekt"},
+    {q: "Du erzählst deinem Freund von gestern. Welche Zeitform benutzt du meistens?", opts: ["Perfekt", "Präteritum", "Futur I"], correct: "Perfekt"},
+    {q: "In welcher Zeitform stehen Märchen und Romane meistens?", opts: ["Perfekt", "Futur I", "Präteritum"], correct: "Präteritum"},
+    {q: "Als wir ins Kino kamen, ___ der Film schon ___.", opts: ["ist … begonnen", "hatte … begonnen", "wird … beginnen"], correct: "hatte … begonnen"}
+  ]);
+
+  // Üb. 3–10: Tabellen und Lücken
+  wireBlanks('ub3');
+  wireBlanks('ub4');
+  wireBlanks('ub5');
+  wireBlanks('ub6');
+  wireBlanks('ub7');
+  wireBlanks('ub8');
+  wireBlanks('ub9');
+  wireBlanks('ub10');
+
+  // Üb. 11: Sätze bauen
+  buildOrder('ub11-order', [
+    {words: ["Ich", "habe", "am Wochenende", "meine Oma", "besucht"], end: ".",
+     alt: ["Am Wochenende habe ich meine Oma besucht", "Meine Oma habe ich am Wochenende besucht"]},
+    {words: ["Gestern", "sind", "wir", "ins Kino", "gegangen"], end: ".",
+     alt: ["Wir sind gestern ins Kino gegangen"]},
+    {words: ["Morgen", "werde", "ich", "mein Zimmer", "aufräumen"], end: ".",
+     alt: ["Ich werde morgen mein Zimmer aufräumen", "Ich werde mein Zimmer morgen aufräumen", "Mein Zimmer werde ich morgen aufräumen"]},
+    {words: ["Hast", "du", "die Hausaufgaben", "schon", "gemacht"], end: "?",
+     alt: ["Hast du schon die Hausaufgaben gemacht"]},
+    {words: ["Anna", "hatte", "ihren Schlüssel", "vergessen"], end: ".", gross: true,
+     alt: ["Ihren Schlüssel hatte Anna vergessen"]},
+    {words: ["Der Zug", "war", "schon", "abgefahren"], end: ".",
+     alt: ["Schon war der Zug abgefahren"]},
+    {words: ["Bis Montag", "wird", "Tim", "das Buch", "gelesen", "haben"], end: ".",
+     alt: ["Tim wird das Buch bis Montag gelesen haben", "Tim wird bis Montag das Buch gelesen haben", "Das Buch wird Tim bis Montag gelesen haben"]}
+  ]);
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🔤','⏳','📘','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  // ЗАВЖДИ останнім рядком
+  initGrammarPage(GRAM_ID);
+</script>
+</body>
+</html>
