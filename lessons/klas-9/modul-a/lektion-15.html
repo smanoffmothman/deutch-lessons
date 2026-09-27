@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 15 · Modul A · Wendepunkte im Leben</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 9'},
+    {label: 'Урок 15: Wendepunkte im Leben'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 15 · MODUL A</span>
+        <h1>Wendepunkte im Leben</h1>
+        <p class="sub">Ключові моменти життя: розповідаємо про одноразові події в минулому за допомогою підрядних речень з als, складаємо Steckbrief за життєписом і готуємо інтерв'ю у ввічливій формі Sie.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · als oder wenn?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · als-Sätze finden</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Sätze ergänzen</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Steckbrief</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Interview</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== ПАНЕЛЬ: вступ ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Worum geht es in dieser Lektion?</h2>
+      <div class="card">
+        <p>Im Modul „Ich, meine Familie, meine Freunde“ sprechen wir jetzt über das Leben: Geburt, erster Schultag, Umzug, Abitur, Studium, die erste Arbeitsstelle. Solche Ereignisse passieren meistens nur einmal – sie sind Wendepunkte im Leben. Wenn wir über ein einmaliges Ereignis in der Vergangenheit erzählen, brauchen wir die Konjunktion <strong>als</strong>: „Als ich sechs war, kam ich in die Schule.“</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          У модулі «Я, моя родина, мої друзі» ми тепер говоримо про життя: народження, перший шкільний день, переїзд, атестат, навчання в університеті, перше місце роботи. Такі події зазвичай стаються лише один раз — це поворотні моменти життя. Коли ми розповідаємо про одноразову подію в минулому, нам потрібен сполучник <strong>als</strong> («коли»): «Коли мені було шість, я пішов/пішла до школи».
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Lernziel</p>
+        <p>Heute lernst du:</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Мета уроку</span>
+          1) розрізняти <strong>als</strong> і <strong>wenn</strong> (і не плутати їх з питальним <strong>wann</strong>);<br>
+          2) правильно будувати порядок слів у підрядному реченні часу з als — і тоді, коли воно стоїть <em>після</em> головного, і тоді, коли <em>перед</em> ним;<br>
+          3) знаходити потрібну інформацію в життєписі та заповнювати за нею анкету (Steckbrief);<br>
+          4) ставити запитання дорослому співрозмовнику у ввічливій формі <strong>Sie / Ihr / Ihnen</strong> для інтерв'ю.
+        </div>
+      </div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Hallo! Als ich klein war, konnte ich noch kein Deutsch. Und heute lernen wir zusammen die als-Sätze. Los geht's!</p>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: перевірка домашнього завдання ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: за опорними пунктами з життя Лени Бауер, сестри Міхаеля, написати її життєпис від першої особи (8–10 речень) у Präteritum, використати щонайменше два речення з als і два відокремлювані дієслова (umziehen, leichtfallen) і підкреслити всі форми Präteritum.
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Stichpunkte (zur Erinnerung)</p>
+        <p style="font-size:14.5px;">am 3. März 1985 in Siegburg geboren · 1991 Umzug der Familie nach Bonn, Grundschule in Bonn · 1995 Wechsel aufs Gymnasium · Biologie und Chemie – leichtfallen · 2004 Abitur als die Beste der Klasse · Medizinstudium in Köln, 12 Semester · 2010 Praktikum in einem Krankenhaus in München · 2011 sich um eine Stelle in Bonn bewerben · seit 2011 Ärztin in einer Kinderklinik in Bonn</p>
+      </div>
+
+      <p class="lead">Це зразок, яким міг би бути твій текст. Встав дієслова в правильній формі (інфінітив — у дужках) і порівняй зі своїм зошитом: чи всі форми Präteritum ти підкреслив(ла) і чи правильно стоїть дієслово в als-реченнях?</p>
+
+      <div class="mail-window">
+        <div class="mail-titlebar">Mein Lebenslauf — Lena Bauer (Musterlösung)</div>
+        <div class="mail-body" id="dz-list">
+          <div class="fill-item"><span class="num">1)</span> Ich bin am 3. März 1985 in Siegburg geboren.</div>
+          <div class="fill-item"><span class="num">2)</span> Als meine Familie 1991 nach Bonn <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="umzog"> (umziehen), <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="besuchte"> (besuchen) ich dort die Grundschule.</div>
+          <div class="fill-item"><span class="num">3)</span> 1995 <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="wechselte"> (wechseln) ich aufs Gymnasium.</div>
+          <div class="fill-item"><span class="num">4)</span> Biologie und Chemie <input type="text" class="blank-input" style="width:90px;display:inline-block;" data-ans="fielen"> mir immer <input type="text" class="blank-input" style="width:80px;display:inline-block;" data-ans="leicht"> (leichtfallen).</div>
+          <div class="fill-item"><span class="num">5)</span> Als ich 2004 das Abitur <input type="text" class="blank-input" style="width:100px;display:inline-block;" data-ans="machte"> (machen), <input type="text" class="blank-input" style="width:80px;display:inline-block;" data-ans="war"> (sein) ich die Beste der Klasse.</div>
+          <div class="fill-item"><span class="num">6)</span> Danach <input type="text" class="blank-input" style="width:110px;display:inline-block;" data-ans="studierte"> (studieren) ich 12 Semester Medizin in Köln.</div>
+          <div class="fill-item"><span class="num">7)</span> 2010 <input type="text" class="blank-input" style="width:120px;display:inline-block;" data-ans="absolvierte"> (absolvieren) ich ein Praktikum in einem Krankenhaus in München.</div>
+          <div class="fill-item"><span class="num">8)</span> 2011 <input type="text" class="blank-input" style="width:100px;display:inline-block;" data-ans="bewarb"> (sich bewerben) ich mich um eine Stelle in Bonn.</div>
+          <div class="fill-item"><span class="num">9)</span> Seit 2011 <input type="text" class="blank-input" style="width:100px;display:inline-block;" data-ans="arbeite"> (arbeiten) ich als Ärztin in einer Kinderklinik in Bonn.</div>
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="dz-check-btn">Prüfen</button>
+        <button class="btn secondary" id="dz-reset-btn">Zurücksetzen</button>
+        <span class="score-pill" id="dz-score"></span>
+      </div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Зверни увагу</span>
+        Речення 9 — пастка: з <strong>seit</strong> («з … і досі») німці вживають <strong>Präsens</strong>, бо Лена працює там і зараз. У реченні 2 відокремлюване дієслово в підрядному реченні знову «зливається»: als meine Familie … <strong>umzog</strong>. У реченні 4 — навпаки, це головне речення, тож префікс іде в кінець: fielen … <strong>leicht</strong>. Про порядок слів після als-речення (<em>Als …, besuchte ich …</em>) детально — в Üb. 1.
+      </div>
+
+      <div id="dz-check"></div>
+
+      <div class="card" id="dz-vocab-wrap" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">Wörter-Check</p>
+        <p class="lead">Перевір слова з минулого уроку.</p>
+        <div id="dz-vocab"></div>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ Üb. 1: граматика + квіз ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Wortfolge im als-Satz · als oder wenn?</h2>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Grammatik · Einmalige Handlung in der Vergangenheit</p>
+        <p><strong>1) Hauptsatz + Nebensatz (Temporalsatz)</strong></p>
+        <div style="overflow-x:auto;">
+          <table class="gtable">
+            <tr><th>Hauptsatz</th><th>1</th><th>2</th><th>Endposition</th></tr>
+            <tr><td>Ich war zufrieden,</td><td><strong>als</strong></td><td>ich das</td><td><strong>geschafft habe</strong>.</td></tr>
+            <tr><td>Wir wohnten in Siegburg,</td><td><strong>als</strong></td><td>Lena</td><td><strong>geboren wurde</strong>.</td></tr>
+          </table>
+        </div>
+        <p><strong>2) Nebensatz (Temporalsatz) + Hauptsatz</strong></p>
+        <div style="overflow-x:auto;">
+          <table class="gtable">
+            <tr><th>1</th><th>2</th><th>Endposition</th><th>Hauptsatz</th></tr>
+            <tr><td><strong>Als</strong></td><td>Leon die Arbeitsstelle</td><td><strong>bekam</strong>,</td><td><strong>konnte</strong> er daran nicht glauben.</td></tr>
+            <tr><td><strong>Als</strong></td><td>die Familie nach Bonn</td><td><strong>umzog</strong>,</td><td><strong>war</strong> Lena sechs Jahre alt.</td></tr>
+          </table>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Пояснення</span>
+          <strong>Als</strong> («коли») вводить підрядне речення часу (Temporalsatz). Як і в усіх підрядних реченнях (weil, dass, wenn), змінне дієслово стоїть <strong>у самому кінці</strong>. Відокремлюване дієслово в кінці знову пишеться разом: als wir nach Bonn <strong>umzogen</strong> (не <s>zogen … um</s>). Якщо в реченні Perfekt, то в кінці стоїть спершу дієприкметник, а потім допоміжне дієслово: als ich das <strong>geschafft habe</strong>.<br><br>
+          Якщо als-речення стоїть <strong>на початку</strong>, воно займає перше місце всього речення. Тоді головне речення після коми починається <strong>відразу з дієслова</strong>, а підмет іде після нього: Als Leon die Stelle bekam, <strong>konnte er</strong> … (не <s>er konnte</s>).
+        </div>
+        <p style="margin-top:16px;"><strong>als, wenn oder wann?</strong></p>
+        <div style="overflow-x:auto;">
+          <table class="gtable">
+            <tr><th></th><th>Wann?</th><th>Beispiel</th></tr>
+            <tr><td class="gender">als</td><td>einmal in der Vergangenheit (oder ein Zeitraum: als ich klein war)</td><td>Als ich 2020 nach Kyjiw kam, …</td></tr>
+            <tr><td class="gender">wenn</td><td>mehrmals in der Vergangenheit (immer wenn, jedes Mal wenn) · Gegenwart · Zukunft</td><td>Immer wenn Oma kam, backte sie Kuchen. · Wenn ich Ferien habe, …</td></tr>
+            <tr><td class="gender">wann</td><td>Fragewort (auch in der indirekten Frage)</td><td>Wann bist du geboren? · Ich weiß nicht, wann er kommt.</td></tr>
+          </table>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Коротко</span>
+          Одна подія в минулому (або один період: «коли я був малим») → <strong>als</strong>. Подія, що повторювалася в минулому («щоразу, коли») або відбувається тепер чи в майбутньому → <strong>wenn</strong>. Запитання «коли?» (пряме чи непряме) → <strong>wann</strong>.
+        </div>
+      </div>
+
+      <p class="lead">Вибери правильний варіант. Регістр великої літери не важливий — дивись на зміст і порядок слів.</p>
+      <div id="ub1-quiz"></div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ Üb. 2: токени — знайти als-Sätze ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Finde die als-Sätze im Text</h2>
+      <p class="lead">Оксана написала допис про найважливіші моменти свого життя. Клікни на всі підрядні речення з <strong>als</strong> (одноразова подія в минулому). Обережно: у тексті є й речення з wenn та weil — їх не обирай. Потім натисни «Prüfen».</p>
+      <div class="mail-window">
+        <div class="mail-titlebar">Blog · Die wichtigsten Momente in meinem Leben</div>
+        <div class="mail-fields">Von: Oksana, 15 Jahre</div>
+        <div class="mail-body" id="ub2-text">
+          Ich heiße Oksana und bin 15 Jahre alt.
+          <span class="tok" data-correct="true">Als ich sechs Jahre alt war,</span>
+          <span class="tok" data-correct="false">kam ich in die Schule.</span>
+          <span class="tok" data-correct="false">Ich war sehr aufgeregt,</span>
+          <span class="tok" data-correct="true">als ich meine Lehrerin zum ersten Mal sah.</span>
+          <span class="tok" data-correct="false">Wenn wir im Sommer Ferien hatten,</span>
+          <span class="tok" data-correct="false">fuhren wir immer zu Oma aufs Land.</span>
+          <span class="tok" data-correct="true">Als mein kleiner Bruder zur Welt kam,</span>
+          <span class="tok" data-correct="false">war ich acht.</span>
+          <span class="tok" data-correct="false">Ich freute mich sehr,</span>
+          <span class="tok" data-correct="false">weil ich nicht mehr allein war.</span>
+          <span class="tok" data-correct="true">Als wir 2022 nach Lwiw umzogen,</span>
+          <span class="tok" data-correct="false">musste ich die Schule wechseln.</span>
+          Das war schwer, aber ich fand schnell neue Freunde.
+          <span class="tok" data-correct="false">Wenn ich heute daran denke,</span>
+          <span class="tok" data-correct="false">bin ich stolz auf mich.</span>
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Після перевірки — усно</span>
+        Подивись на знайдені als-речення: де вони стоять — перед головним чи після нього? Прочитай уголос речення, у яких als-речення стоїть <strong>першим</strong>, і назви дієслово, з якого починається головне речення (kam, war, musste). Чому «Wenn wir im Sommer Ferien hatten» — це саме wenn, хоча йдеться про минуле?
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ Üb. 3: доповнити als-Sätze (квіз + письмо) ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Ergänze die als-Sätze</h2>
+      <p class="lead">а) Вибери частину, яка правильно доповнює als-речення. Усі три варіанти мають зміст — важливий <strong>порядок слів</strong>. Пам'ятай: після als-речення на початку головне речення починається з дієслова.</p>
+      <div id="ub3-quiz"></div>
+
+      <div class="card" style="margin-top:10px;">
+        <p class="section-label" style="margin:0 0 6px;">b) Und du?</p>
+        <p class="lead">Доповни речення про своє життя (можна вигадати). Потім перепиши їх у зошит.</p>
+        <div class="qa">
+          <label for="ub3-free1">1. Als ich klein war, …</label>
+          <textarea id="ub3-free1" rows="2"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub3-free2">2. Als ich in die erste Klasse kam, …</label>
+          <textarea id="ub3-free2" rows="2"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub3-free3">3. … , als ich zum ersten Mal …</label>
+          <textarea id="ub3-free3" rows="2"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Зауваж</span>
+          Вставляти текст у ці поля не можна — набирай сам(а). Перевір себе: у реченнях 1 і 2 головне речення має починатися з дієслова (…, <strong>spielte</strong> ich …), а в реченні 3 дієслово має стояти в самому кінці als-речення.
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ Üb. 4: Steckbrief (пропуски) ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Steckbrief: Lena Bauer</h2>
+      <p class="lead">Заповни анкету Лени Бауер за її життєписом (опорні пункти й зразок тексту — у вкладці «Hausaufgabe»). У кожне поле — одне слово або число.</p>
+      <div class="card" id="ub4-list">
+        <div style="overflow-x:auto;">
+          <table class="gtable">
+            <tr><th style="width:32%;">Vorname:</th><td>Lena</td></tr>
+            <tr><th>Nachname:</th><td><input type="text" class="blank-input" style="width:140px;display:inline-block;" data-ans="Bauer"></td></tr>
+            <tr><th>Geburtsdatum:</th><td>3. <input type="text" class="blank-input" style="width:100px;display:inline-block;" data-ans="März"> <input type="text" class="blank-input" style="width:80px;display:inline-block;" data-ans="1985"></td></tr>
+            <tr><th>Geburtsort:</th><td><input type="text" class="blank-input" style="width:140px;display:inline-block;" data-ans="Siegburg"></td></tr>
+            <tr><th>Familie:</th><td>Bruder: <input type="text" class="blank-input" style="width:120px;display:inline-block;" data-ans="Michael"></td></tr>
+            <tr><th>Schule:</th><td>Grundschule in <input type="text" class="blank-input" style="width:100px;display:inline-block;" data-ans="Bonn">, ab 1995 das <input type="text" class="blank-input" style="width:130px;display:inline-block;" data-ans="Gymnasium">, 2004 das <input type="text" class="blank-input" style="width:100px;display:inline-block;" data-ans="Abitur"></td></tr>
+            <tr><th>Studium:</th><td><input type="text" class="blank-input" style="width:120px;display:inline-block;" data-ans="Medizin"> in <input type="text" class="blank-input" style="width:100px;display:inline-block;" data-ans="Köln">, 12 Semester</td></tr>
+            <tr><th>Arbeit:</th><td>seit 2011 <input type="text" class="blank-input" style="width:100px;display:inline-block;" data-ans="Ärztin"> in einer <input type="text" class="blank-input" style="width:130px;display:inline-block;" data-ans="Kinderklinik"> in Bonn</td></tr>
+          </table>
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub4-check">Prüfen</button>
+        <button class="btn secondary" id="ub4-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub4-score"></span>
+      </div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Порада</span>
+        Пиши з умлаутами (<strong>ä, ö</strong>): März, Köln, Ärztin. Якщо на твоїй клавіатурі їх немає — на телефоні затисни літеру a / o, на комп'ютері скористайся німецькою розкладкою. Написання «ae» чи «oe» система не зарахує.
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ Üb. 5: Interview (Sie-Form) ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Interview mit Herrn Bauer</h2>
+      <p class="lead">Ви берете інтерв'ю в Міхаеля Бауера. Однокласникові ти сказав(ла) б «du», а дорослому незнайомому співрозмовникові кажуть <strong>Sie</strong>. Перетвори запитання на ввічливу форму: встав дієслово або займенник.</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Grammatik · Höflichkeitsform</p>
+        <div style="overflow-x:auto;">
+          <table class="gtable">
+            <tr><th>du-Form</th><th>Sie-Form</th></tr>
+            <tr><td>du <strong>bist</strong> / du <strong>hast</strong></td><td>Sie <strong>sind</strong> / Sie <strong>haben</strong></td></tr>
+            <tr><td>dein, deine, deinem …</td><td><strong>Ihr, Ihre, Ihrem</strong> …</td></tr>
+            <tr><td>dir (Dativ) / dich (Akkusativ)</td><td><strong>Ihnen</strong> / <strong>Sie</strong></td></tr>
+            <tr><td>du bewirbst <strong>dich</strong></td><td>Sie bewerben <strong>sich</strong></td></tr>
+          </table>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Пояснення</span>
+          Ввічливе <strong>Sie</strong> граматично — це 3-тя особа множини, тому дієслово стоїть у формі «вони»: Sie <strong>sind</strong>, Sie <strong>haben</strong>, Sie <strong>bekamen</strong>. Займенники ввічливої форми завжди пишуться з великої літери: Sie, Ihr, Ihnen. Лише зворотний займенник <strong>sich</strong> пишеться з малої. (Тут перевірка не зважає на регістр, але в зошиті пиши правильно!)
+        </div>
+      </div>
+
+      <p class="lead" style="margin-top:6px;">Herr Bauer, sagen Sie bitte:</p>
+      <div class="card" id="ub5-list">
+        <div class="fill-item"><span class="num">1)</span> <em>Wann und wo bist du geboren?</em><br>→ Wann und wo <input type="text" class="blank-input" style="width:90px;display:inline-block;" data-ans="sind"> <input type="text" class="blank-input" style="width:80px;display:inline-block;" data-ans="Sie"> geboren?</div>
+        <div class="fill-item"><span class="num">2)</span> <em>Was waren deine Eltern von Beruf?</em><br>→ Was waren <input type="text" class="blank-input" style="width:90px;display:inline-block;" data-ans="Ihre"> Eltern von Beruf?</div>
+        <div class="fill-item"><span class="num">3)</span> <em>Wo hast du die Schule besucht?</em><br>→ Wo <input type="text" class="blank-input" style="width:90px;display:inline-block;" data-ans="haben"> Sie die Schule besucht?</div>
+        <div class="fill-item"><span class="num">4)</span> <em>Welche Fächer sind dir leichtgefallen?</em><br>→ Welche Fächer sind <input type="text" class="blank-input" style="width:90px;display:inline-block;" data-ans="Ihnen"> leichtgefallen?</div>
+        <div class="fill-item"><span class="num">5)</span> <em>Wann hast du dich um deine erste Stelle beworben?</em><br>→ Wann haben Sie <input type="text" class="blank-input" style="width:80px;display:inline-block;" data-ans="sich"> um Ihre erste Stelle beworben?</div>
+        <div class="fill-item"><span class="num">6)</span> <em>Wo hast du dein Praktikum gemacht?</em><br>→ Wo haben Sie <input type="text" class="blank-input" style="width:90px;display:inline-block;" data-ans="Ihr"> Praktikum gemacht?</div>
+        <div class="fill-item"><span class="num">7)</span> <em>Wie hast du dich gefühlt, als du die Stelle bekamst?</em><br>→ Wie haben Sie sich gefühlt, als <input type="text" class="blank-input" style="width:80px;display:inline-block;" data-ans="Sie"> die Stelle <input type="text" class="blank-input" style="width:100px;display:inline-block;" data-ans="bekamen">?</div>
+        <div class="fill-item"><span class="num">8)</span> <em>Was war der wichtigste Moment in deinem Leben?</em><br>→ Was war der wichtigste Moment in <input type="text" class="blank-input" style="width:100px;display:inline-block;" data-ans="Ihrem"> Leben?</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub5-check">Prüfen</button>
+        <button class="btn secondary" id="ub5-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub5-score"></span>
+      </div>
+
+      <div class="card tinted-forest" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">Spielt das Interview! (zu zweit)</p>
+        <p>A ist Reporter(in), B ist Herr Bauer. A stellt 5–6 Fragen in der Sie-Form, B antwortet frei (ihr dürft euch die Antworten ausdenken). Danach tauscht ihr die Rollen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Працюйте в парах: A — журналіст(ка), B — пан Бауер. A ставить 5–6 запитань у формі Sie, B відповідає довільно (відповіді можна вигадати). Потім поміняйтеся ролями. У відповідях намагайтеся вжити хоча б одне речення з als, напр.: «Als ich die Stelle bekam, war ich sehr glücklich».
+        </div>
+        <div class="qa" style="margin-top:14px;">
+          <label for="ub5-free">Deine eigene Frage an Herrn Bauer (in der Sie-Form):</label>
+          <textarea id="ub5-free" rows="2"></textarea>
+        </div>
+        <div class="ua-note">Вставка тексту в поле вимкнена — набирай запитання сам(а).</div>
+      </div>
+    </section>
+
+    <!-- ===== ПРИКІНЦЕВА ПАНЕЛЬ ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Gestalte eine Seite „Mein Lebensalbum“: Wähle 5 wichtige Momente (Wendepunkte) aus deinem Leben (z. B. die Geburt deiner Schwester, der erste Schultag, ein Umzug, ein besonderes Ereignis in den Ferien). Klebe zu jedem Moment ein Foto ein oder zeichne ein Bild und schreib darunter eine Bildunterschrift mit einem als-Satz im Präteritum. Mindestens zwei Sätze beginnen mit „Als …“ (z. B. „Als ich sechs war, kam ich in die Schule.“), und in mindestens einem Satz steht ein trennbares Verb (z. B. „…, als wir nach Lwiw umzogen.“). Schreib außerdem drei Interviewfragen in der Sie-Form an eine bekannte Person, deren Lebenslauf dich interessiert (z. B. „Wann haben Sie Ihre erste Stelle bekommen?“).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Оформи сторінку «Мій життєвий альбом»: вибери 5 важливих моментів (поворотних точок) свого життя (напр. народження сестри, перший шкільний день, переїзд, особлива подія на канікулах). До кожного моменту вклей фото або намалюй малюнок і напиши під ним підпис — речення з als у Präteritum. Щонайменше два речення мають починатися з «Als …» (напр. «Als ich sechs war, kam ich in die Schule.»), а щонайменше в одному реченні має бути відокремлюване дієслово (напр. «…, als wir nach Lwiw umzogen.»). Крім того, напиши три запитання для інтерв'ю у ввічливій формі Sie до відомої людини, чий життєпис тебе цікавить (напр. «Wann haben Sie Ihre erste Stelle bekommen?»).
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Wörter zum Lernen</p>
+        <div class="chip-row" id="vocabChips"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../data/glossary-data.js"></script>
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  // ===== Слова цього уроку у вкладці Fertig =====
+  const LEKTION_KLAS = "9", LEKTION_MODUL = "A", LEKTION_LEKTION = 15;
+  const LEKTION_PREV_LEKTION = 14;
+
+  (function renderLessonVocab(){
+    const box = document.getElementById('vocabChips');
+    if (!box || typeof GLOSSARY === 'undefined') return;
+    const words = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_LEKTION
+    );
+    if (words.length === 0){
+      box.innerHTML = '<p class="empty-note">Слова для цього уроку ще не додані в глосарій.</p>';
+      return;
+    }
+    box.innerHTML = words.map(w =>
+      '<span class="chip static">' + w.de + ' — ' + w.uk + '</span>'
+    ).join('');
+  })();
+
+  // ===== Wörter-Check у вкладці Hausaufgabe (слова ПОПЕРЕДНЬОГО уроку) =====
+  function guessPos(de){
+    var base = (de || '').replace(/\([^)]*\)/g, '').trim();
+    if(/^(der|die|das)(\/(der|die|das))?\s/.test(base)) return 'noun';
+    if(/^sich\s/.test(base)) return 'verb';
+    if(/^am\s/.test(base)) return 'other'; // "am liebsten", "am besten" — прислівникова найвища форма, не дієслово
+    if(/\(\+(Gen|Dat|Akk)\.?\)/.test(de)) return 'prep';
+    var words = base.split(/\s+/);
+    var last = words[words.length - 1];
+    if(/(en|ern|eln)$/.test(last) && last === last.toLowerCase()) return 'verb';
+    return 'other'; // прикметники / прислівники / сталі вирази
+  }
+
+  (function renderDzVocabCheck(){
+    const wrap = document.getElementById('dz-vocab-wrap');
+    const box = document.getElementById('dz-vocab');
+    if (!wrap || !box || typeof GLOSSARY === 'undefined') return;
+    if (!LEKTION_PREV_LEKTION){ wrap.style.display = 'none'; return; }
+
+    const prevWords = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_PREV_LEKTION
+    );
+    if (prevWords.length < 3){ wrap.style.display = 'none'; return; }
+
+    const pool = shuffleArray(prevWords).slice(0, 6);
+    const quizData = pool.map(w => {
+      const pos = guessPos(w.de);
+      let sameKind = GLOSSARY.filter(g => g.uk !== w.uk && guessPos(g.de) === pos);
+      if(sameKind.length < 2) sameKind = GLOSSARY.filter(g => g.uk !== w.uk);
+      const distractors = shuffleArray(sameKind).slice(0, 2).map(g => g.uk);
+      return { q: w.de, opts: [w.uk, ...distractors], correct: w.uk };
+    });
+    buildQuiz('dz-vocab', quizData);
+  })();
+
+  // ===== Hausaufgabe: зразок життєпису Лени (пропуски) =====
+  setTotal(document.querySelectorAll('#dz-list .blank-input').length);
+  document.getElementById('dz-check-btn').addEventListener('click', () => {
+    checkBlanks('dz-list', 'dz-score', 'dz');
+  });
+  document.getElementById('dz-reset-btn').addEventListener('click', () => {
+    resetBlanks('dz-list', 'dz-score', 'dz');
+  });
+
+  // ===== Üb. 1: als / wenn / wann + порядок слів =====
+  const ub1Data = [
+    {q: "___ ich klein war, wohnten wir in Kyjiw.", opts: ["wenn", "als"], correct: "als"},
+    {q: "Immer ___ Oma zu Besuch kam, backte sie einen Kuchen.", opts: ["wenn", "als"], correct: "wenn"},
+    {q: "___ ich im Sommer Ferien habe, fahre ich zu meinen Großeltern.", opts: ["als", "wann", "wenn"], correct: "wenn"},
+    {q: "Weißt du, ___ Lena ihr Abitur gemacht hat?", opts: ["wann", "als", "wenn"], correct: "wann"},
+    {q: "___ Lena 2004 das Abitur machte, war sie die Beste der Klasse.", opts: ["wenn", "als", "wann"], correct: "als"},
+    {q: "Als die Familie 1991 nach Bonn ___, war Lena sechs Jahre alt.", opts: ["zog um", "umzog", "umgezogen"], correct: "umzog"},
+    {q: "Als Leon die Arbeitsstelle bekam, …", opts: ["er konnte daran nicht glauben.", "er daran nicht glauben konnte.", "konnte er daran nicht glauben."], correct: "konnte er daran nicht glauben."},
+    {q: "Ich war sehr stolz, als ich die Prüfung …", opts: ["bestanden habe.", "habe bestanden.", "bestehen habe."], correct: "bestanden habe."}
+  ];
+  buildQuiz('ub1-quiz', ub1Data);
+
+  // ===== Üb. 2: токени — als-Sätze =====
+  initTokenClicks('ub2-text');
+  setTotal(document.querySelectorAll('#ub2-text .tok[data-correct="true"]').length);
+  document.getElementById('ub2-check').addEventListener('click', () => checkTokens('ub2-text', 'ub2-score', 'ub2'));
+  document.getElementById('ub2-reset').addEventListener('click', () => resetTokens('ub2-text', 'ub2-score', 'ub2'));
+
+  // ===== Üb. 3: доповнення als-Sätze (порядок слів) =====
+  const ub3Data = [
+    {q: "Als Luisas Großeltern einander kennen lernten, …", opts: ["sie waren noch Studenten.", "waren sie noch Studenten.", "sie noch Studenten waren."], correct: "waren sie noch Studenten."},
+    {q: "Als Jan die Grundschule besuchte, …", opts: ["spielte er jeden Tag Fußball.", "er spielte jeden Tag Fußball.", "er jeden Tag Fußball spielte."], correct: "spielte er jeden Tag Fußball."},
+    {q: "Als ich klein war, …", opts: ["ich hatte Angst vor Hunden.", "ich Angst vor Hunden hatte.", "hatte ich Angst vor Hunden."], correct: "hatte ich Angst vor Hunden."},
+    {q: "Als die Familie nach Hamburg umzog, …", opts: ["Anna die Schule wechseln musste.", "musste Anna die Schule wechseln.", "Anna musste die Schule wechseln."], correct: "musste Anna die Schule wechseln."},
+    {q: "…, als er ein Praktikum im Ausland machte.", opts: ["Er viele neue Leute kennenlernte", "Kennenlernte er viele neue Leute", "Er lernte viele neue Leute kennen"], correct: "Er lernte viele neue Leute kennen"},
+    {q: "…, als sie die Leitung des Projektes übernahm.", opts: ["Sie war sehr stolz", "War sie sehr stolz", "Sie sehr stolz war"], correct: "Sie war sehr stolz"},
+    {q: "…, als er an der Universität studierte.", opts: ["Er in einem Café jobbte", "Er jobbte in einem Café", "Jobbte er in einem Café"], correct: "Er jobbte in einem Café"},
+    {q: "…, als sie 2020 ihre eigene Firma gründete.", opts: ["Sie hatte viel Mut", "Sie viel Mut hatte", "Hatte sie viel Mut"], correct: "Sie hatte viel Mut"}
+  ];
+  buildQuiz('ub3-quiz', ub3Data);
+
+  // ===== Üb. 4: Steckbrief =====
+  setTotal(document.querySelectorAll('#ub4-list .blank-input').length);
+  document.getElementById('ub4-check').addEventListener('click', () => {
+    checkBlanks('ub4-list', 'ub4-score', 'ub4');
+  });
+  document.getElementById('ub4-reset').addEventListener('click', () => {
+    resetBlanks('ub4-list', 'ub4-score', 'ub4');
+  });
+
+  // ===== Üb. 5: Interview (Sie-Form) =====
+  setTotal(document.querySelectorAll('#ub5-list .blank-input').length);
+  document.getElementById('ub5-check').addEventListener('click', () => {
+    checkBlanks('ub5-list', 'ub5-score', 'ub5');
+  });
+  document.getElementById('ub5-reset').addEventListener('click', () => {
+    resetBlanks('ub5-list', 'ub5-score', 'ub5');
+  });
+
+  // ===== Фінальна панель =====
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🎂','🎒','🎓','💼','📸']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
