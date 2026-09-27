@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[Tema] · Grammatik · Deutsch mit uns</title>
+<!-- =================================================================
+     ШАБЛОН сторінки граматичної теми. Лежить у тій самій папці, де й
+     готові теми (gramatyka/temy/), тож шляхи "../../" уже правильні —
+     при копіюванні їх НЕ міняти. Копію називай точно як id теми в
+     data/grammar-data.js: gramatyka/temy/<id>.html.
+     Правила наповнення — GRAMMAR-BRIEF.md.
+     ================================================================= -->
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'gramatyka' });</script>
+<!-- хлібні крихти малює initGrammarPage() внизу — з даних grammar-data.js -->
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">GRAMMATIK · [назва розділу]</span>
+        <h1>[Тема німецькою]</h1>
+        <p class="sub">[1–2 речення українською: що це за явище і навіщо воно]</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="regel" aria-selected="true">Regel</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · [назва]</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · [назва]</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · [назва]</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · [назва]</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · [назва]</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== REGEL: довідкова частина — ЗАВЖДИ перша вкладка =====
+         Кожен підрозділ теми (pidrozdily у grammar-data.js) = окремий
+         <section class="card regel-block" id="..."> з <h3>. id — латиницею,
+         коротко: на нього можна дати пряме посилання (temy/<id>.html#dativ).
+         Зміст-посилання в #regelToc будується автоматично. -->
+    <section class="panel active" id="panel-regel">
+      <p class="section-label">Regel</p>
+      <h2 class="panel-title">[Тема німецькою]</h2>
+      <ul class="regel-toc" id="regelToc"></ul>
+
+      <div class="card">
+        <p>[Коротко німецькою, простими реченнями: що це і коли вживається]</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          [Те саме пояснення українською — повніше, з порівнянням з українською, де це допомагає]
+        </div>
+      </div>
+
+      <!-- приклад підрозділу: таблиця + приклади + Merke -->
+      <section class="card regel-block" id="dativ">
+        <h3>[Verben mit Dativ]</h3>
+        <table class="gtable">
+          <tr><th>Verb</th><th>Beispiel</th></tr>
+          <tr><td>helfen</td><td>Ich helfe <b>dem</b> Kind.</td></tr>
+          <tr><td>danken</td><td>Wir danken <b>der</b> Lehrerin.</td></tr>
+        </table>
+        <p class="beispiel">Das Buch gehört <b>mir</b>.</p>
+        <p class="merke">[Коротке правило, яке варто запам'ятати дослівно]</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          [Пояснення підрозділу українською]
+        </div>
+      </section>
+
+      <section class="card regel-block" id="akkusativ">
+        <h3>[Verben mit Akkusativ]</h3>
+        <p>[…]</p>
+      </section>
+
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: квіз (buildQuiz) ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">[Назва вправи]</h2>
+      <p class="lead">[Інструкція українською]</p>
+      <div class="card" id="ub1-quiz"></div>
+    </section>
+
+    <!-- ===== Üb. 2: пропуски в тексті — поля й випадні списки разом (wireBlanks) =====
+         input.blank-input.inline — вписати; select.blank.inline — обрати.
+         Кілька правильних відповідей: data-ans="weil|da". Регістр важливий: data-case. -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">[Назва вправи]</h2>
+      <p class="lead">[Інструкція українською]</p>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> Ich helfe
+          <select class="blank inline" data-ans="dem"><option value="">—</option><option>der</option><option>dem</option><option>den</option></select>
+          Mann.</div>
+        <div class="fill-item"><span class="num">2)</span> Das Fahrrad gehört
+          <input type="text" class="blank-input inline" data-ans="mir"> (ich).</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: таблиця-відмінювання (та сама wireBlanks, поля в .gtable) ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">[Назва вправи]</h2>
+      <p class="lead">[Інструкція українською]</p>
+      <div class="card" id="ub3-list" style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th></th><th>maskulin</th><th>feminin</th><th>neutral</th></tr>
+          <tr><td class="gender">Nom.</td><td>der</td><td>die</td><td>das</td></tr>
+          <tr><td class="gender">Dat.</td>
+            <td><input type="text" class="blank-input" data-ans="dem"></td>
+            <td><input type="text" class="blank-input" data-ans="der"></td>
+            <td><input type="text" class="blank-input" data-ans="dem"></td></tr>
+        </table>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4: склади речення (buildOrder) — кнопки й лічильник малює сама функція ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">[Назва вправи]</h2>
+      <p class="lead">[Інструкція українською: натискай слова по черзі; натиснеш на вже поставлене — воно повернеться]</p>
+      <div class="card" id="ub4-order"></div>
+    </section>
+
+    <!-- ===== Üb. 5: розсортуй по кошиках (buildSort) — усе малює сама функція ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">[Назва вправи]</h2>
+      <p class="lead">[Інструкція українською]</p>
+      <div class="card" id="ub5-sort"></div>
+    </section>
+
+    <!-- ===== FERTIG: підсумок (без ДЗ і без глосарію — у граматиці їх немає) ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das Wichtigste</p>
+        <p>[2–4 короткі речення німецькою: головне з теми]</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          [Те саме українською]
+        </div>
+      </div>
+
+      <!-- "Де це ще трапляється": уроки (поле gram у lessons-data.js) і
+           пов'язані теми (поле dyv у grammar-data.js). Заповнюється
+           автоматично; якщо нічого немає — картка ховається сама. -->
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Де це ще трапляється</p>
+        <div class="gram-related" id="gramRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <p class="lead" id="gramBest" style="font-size:14px;"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/grammar-data.js"></script>
+<script src="../../data/lessons-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/site.js"></script>
+<script>
+  const GRAM_ID = "..."; // TODO: id цієї теми з grammar-data.js = назва цього файлу без .html
+
+  // Üb. 1: квіз
+  buildQuiz('ub1-quiz', [
+    {q: "Ich danke ___ Lehrerin.", opts: ["die", "der", "den"], correct: "der"},
+  ]);
+
+  // Üb. 2 і Üb. 3: пропуски (id за домовленістю: <key>-list / -check / -reset / -score)
+  wireBlanks('ub2');
+  wireBlanks('ub3');
+
+  // Üb. 4: склади речення (words — у ПРАВИЛЬНОМУ порядку, перемішаються самі)
+  buildOrder('ub4-order', [
+    {words: ["Ich", "helfe", "meinem Bruder"], end: "."},
+    {words: ["Gestern", "hat", "mir", "die Oma", "geholfen"], end: ".",
+     alt: ["Die Oma hat mir gestern geholfen"]},
+  ]);
+
+  // Üb. 5: розсортуй по кошиках
+  buildSort('ub5-sort', {
+    buckets: ["+ Dativ", "+ Akkusativ"],
+    items: [{t: "helfen", b: "+ Dativ"}, {t: "sehen", b: "+ Akkusativ"}, {t: "danken", b: "+ Dativ"}, {t: "fragen", b: "+ Akkusativ"}]
+  });
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📐','✏️','📘','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  // ЗАВЖДИ останнім рядком: крихти, зміст Regel, "Де це ще трапляється", збереження прогресу
+  initGrammarPage(GRAM_ID);
+</script>
+</body>
+</html>

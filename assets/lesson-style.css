@@ -404,6 +404,114 @@ footer.end-card{text-align:center; padding:30px 10px 10px;}
 }
 .stamp.earned{opacity:1; transform:rotate(-4deg); background:var(--mustard-soft);}
 
+/* ---------- Пропуски в рядку тексту й у таблицях (з 2026-09) ----------
+   .inline — поле/список прямо в реченні, замість style="width:…;display:inline-block".
+   У клітинках .gtable поля автоматично компактні. */
+input.blank-input.inline, select.blank.inline{
+  display:inline-block; width:auto; min-width:4.5em; max-width:100%;
+  padding:4px 7px; margin:0 2px; vertical-align:baseline;
+}
+input.blank-input.inline{ width:7.5em; }
+input.blank-input.inline.wide{ width:12em; }
+input.blank-input.inline.full{ display:block; width:100%; margin:6px 0 0; }
+.gtable td input.blank-input, .gtable td select.blank{ padding:5px 7px; font-size:14px; }
+
+/* ---------- Картки-слова: спільні для buildOrder і buildSort ---------- */
+.word-chip{
+  font-family:var(--serif); font-size:15px; color:var(--teal-deep);
+  background:#fff; border:1.5px solid var(--teal); border-radius:8px;
+  padding:6px 12px; cursor:pointer; line-height:1.2;
+  box-shadow:0 2px 0 rgba(18,62,58,.18);
+  transition:transform .1s ease, background .1s ease;
+}
+.word-chip:hover{ background:var(--teal-soft); }
+.word-chip:active{ transform:translateY(1px); box-shadow:none; }
+.word-chip:focus-visible{ outline:2px solid var(--mustard); outline-offset:2px; }
+.word-chip:disabled{ cursor:default; }
+.word-chip.picked{ background:var(--mustard-soft); border-color:var(--mustard); transform:translateY(-2px); }
+.word-chip.correct{ background:var(--forest-soft); border-color:var(--forest); color:var(--forest); }
+.word-chip.wrong{ background:var(--brick-soft); border-color:var(--brick); color:var(--brick); }
+
+/* ---------- Склади речення (buildOrder) ---------- */
+.order-item{ padding:14px 0 12px; border-bottom:1px dashed var(--line); }
+.order-item:last-of-type{ border-bottom:none; }
+.order-hint{ font-size:13.5px; color:var(--ink-soft); margin:0 0 6px; }
+.order-line{
+  display:flex; align-items:center; flex-wrap:wrap; gap:6px;
+  min-height:46px; padding:6px 10px;
+  background:#fff; border-radius:10px;
+  /* лінійка зошита: на ній "пишеться" речення */
+  border:1.5px dashed var(--line);
+  background-image:linear-gradient(transparent calc(100% - 9px), rgba(31,92,86,.14) calc(100% - 9px), rgba(31,92,86,.14) calc(100% - 8px), transparent calc(100% - 8px));
+}
+.order-line .num{ font-family:var(--serif); font-weight:700; color:var(--brick); margin-right:2px; }
+.order-slots{ display:contents; }
+.order-end{ font-family:var(--serif); font-size:17px; color:var(--teal-deep); margin-left:-3px; }
+.order-bank{ display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; min-height:8px; }
+.order-item.is-solved .order-line{ border-style:solid; border-color:var(--forest); background-color:var(--forest-soft); }
+.order-item.is-solved .order-line .word-chip{ border-color:var(--forest); color:var(--forest); box-shadow:none; }
+.order-item.is-wrong .order-line{ border-color:var(--brick); }
+.order-item .feedback{ margin:6px 0 0; min-height:1em; }
+
+/* ---------- Розсортуй по кошиках (buildSort) ---------- */
+.sort-tip{ font-size:13.5px; color:var(--ink-soft); margin:0 0 10px; }
+.sort-pool{
+  display:flex; flex-wrap:wrap; gap:8px; min-height:48px;
+  padding:10px; border-radius:10px; background:var(--paper-2);
+}
+.sort-buckets{
+  display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
+  gap:12px; margin-top:14px;
+}
+.sort-bucket{
+  background:#fff; border:1.5px solid var(--line); border-radius:12px;
+  display:flex; flex-direction:column; overflow:hidden;
+}
+.sort-bucket-head{
+  font-family:var(--serif); font-weight:700; font-size:16px;
+  background:var(--teal); color:#fff; border:none; padding:9px 12px;
+  cursor:pointer; text-align:center;
+}
+.sort-bucket-head:focus-visible{ outline:2px solid var(--mustard); outline-offset:-3px; }
+.sort-bucket-body{
+  display:flex; flex-wrap:wrap; gap:6px; align-content:flex-start;
+  min-height:90px; padding:10px; cursor:pointer;
+}
+.sort-ex.has-pick .sort-bucket{ border-color:var(--mustard); border-style:dashed; }
+.sort-ex.has-pick .sort-bucket-head{ background:var(--teal-deep); }
+
+/* ---------- Вкладка Regel на сторінках граматики (з 2026-09) ----------
+   Кожен підрозділ теми = <section class="regel-block" id="...">; зміст над
+   блоками (.regel-toc) будується автоматично (site.js → initGrammarPage). */
+.regel-toc{
+  display:flex; flex-wrap:wrap; gap:6px; margin:0 0 20px; padding:0; list-style:none;
+}
+.regel-toc a{
+  display:inline-block; font-size:13px; font-weight:600; color:var(--teal-deep);
+  text-decoration:none; background:var(--card); border:1px solid var(--line);
+  border-radius:100px; padding:4px 12px;
+}
+.regel-toc a:hover{ border-color:var(--teal); background:var(--teal-soft); }
+.regel-block{ scroll-margin-top:16px; }
+.regel-block > h3{
+  font-family:var(--serif); font-size:20px; margin:0 0 10px; color:var(--teal-deep);
+}
+/* "Merke" — коротке правило, яке варто запам'ятати дослівно */
+.merke{
+  position:relative; background:var(--mustard-soft); border-radius:10px;
+  padding:12px 16px 12px 46px; margin:14px 0; font-size:15px;
+}
+.merke::before{
+  content:"!"; position:absolute; left:14px; top:10px;
+  font-family:var(--serif); font-weight:700; font-size:22px; color:var(--brick);
+}
+.beispiel{ font-family:var(--serif); font-size:16px; color:var(--teal-deep); margin:4px 0; }
+.beispiel b, .gtable td b{ color:var(--brick); }
+
+@media (prefers-reduced-motion: reduce){
+  .word-chip{ transition:none; }
+}
+
 @media (max-width:560px){
   .pic-grid{grid-template-columns:1fr 1fr;}
   .wo-row{grid-template-columns:1fr 30px 1fr; font-size:13px;}

@@ -23,6 +23,16 @@ function getNewestPerKlas(lessons){
   return newest;
 }
 
+// Посилання з картки уроку на граматичні теми (поле gram у lessons-data.js).
+// Показуються лише вже готові теми; якщо grammar-data.js не підключено — нічого.
+function lessonGramChips(l, lessonFileBase){
+  if(!Array.isArray(l.gram) || typeof GRAMMAR === 'undefined') return '';
+  const base = lessonFileBase.replace(/lessons\/$/, '') + 'gramatyka/temy/';
+  const chips = l.gram.map(id => GRAMMAR.find(t => t.id === id)).filter(t => t && t.opublikovano > 0)
+    .map(t => '<a class="gram-chip" href="' + base + t.id + '.html" title="' + t.tema.replace(/"/g, '&quot;') + '">' + t.uk + '</a>');
+  return chips.length ? '<div class="gram-chips">' + chips.join('') + '</div>' : '';
+}
+
 /* ---------- Каталог уроків (сторінка klasy/) ---------- */
 // klasList: напр. ['7','8','9']; lessonFileBase: шлях від сторінки каталогу до папки lessons/
 function renderClassCatalog(klasList, lessonFileBase){
@@ -149,6 +159,7 @@ function renderClassCatalog(klasList, lessonFileBase){
           card.innerHTML = '<div class="lesson-num">Урок ' + l.lektion + '</div>'
             + '<h4>' + l.nazva + '</h4>'
             + '<p>' + l.opys + '</p>'
+            + lessonGramChips(l, lessonFileBase)
             + '<a class="open-link" href="' + lessonFileBase + l.file + '" target="_blank" rel="noopener">Відкрити</a>'
             + (l === newestPerKlas[l.klas] ? '<span class="new-badge">нове</span>' : '');
           grid.appendChild(card);
@@ -273,19 +284,236 @@ function renderMaterials(){
   });
 }
 
-/* ---------- Граматика (плоский список тем) ---------- */
+/* =================================================================
+   Граматика (з 2026-09)
+   Дані: data/grammar-data.js (GRAMMAR_ROZDILY + GRAMMAR).
+   Зв'язок з уроками: необов'язкове поле gram: ["id-теми", ...] у рядку
+   уроку в data/lessons-data.js.
+   Прогрес учня: localStorage, ключ 'dmu:progress:gram:<id>' — пише
+   lesson-interactions.js (trackProgress), тут лише читаємо. Префікс
+   має збігатися з PROGRESS_PREFIX у lesson-interactions.js.
+   ================================================================= */
+const GRAM_PROGRESS_PREFIX = 'dmu:progress:';
+const GRAM_COLORS = ['#1F5C56', '#B14E3E', '#8a5a11', '#48713F', '#123E3A', '#2E726F', '#B14E3E', '#5B5346', '#1F5C56', '#48713F', '#5B5346'];
+
+function loadStoredProgress(key){
+  try {
+    const v = JSON.parse(localStorage.getItem(GRAM_PROGRESS_PREFIX + key));
+    return (v && v.total) ? v : null;
+  } catch(_) { return null; }
+}
+function gramIsReady(t){ return !!(t && t.opublikovano > 0); }
+function gramNewest(){
+  let best = null;
+  (typeof GRAMMAR !== 'undefined' ? GRAMMAR : []).forEach(t => {
+    if(gramIsReady(t) && (!best || t.opublikovano > best.opublikovano)) best = t;
+  });
+  return best;
+}
+function escHtml(s){
+  return String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+}
+
+/* ---------- Сторінка gramatyka/: увесь план тем, як зміст підручника ---------- */
 function renderGrammar(){
-  const wrap = document.getElementById('grammarGrid');
-  if(typeof GRAMMAR === 'undefined' || GRAMMAR.length === 0){
-    wrap.innerHTML = '<p class="empty-note">Зведення граматичних тем поки не готове — додаси, коли назбирається кілька тем.</p>';
+  const wrap = document.getElementById('grammarToc');
+  const summaryEl = document.getElementById('grammarSummary');
+  const searchEl = document.getElementById('grammarSearch');
+  const readyOnlyEl = document.getElementById('grammarReadyOnly');
+  if(!wrap) return;
+  if(typeof GRAMMAR === 'undefined' || typeof GRAMMAR_ROZDILY === 'undefined'){
+    wrap.innerHTML = '<p class="empty-note">Не вдалося завантажити план тем (data/grammar-data.js).</p>';
     return;
   }
-  wrap.innerHTML = '';
-  GRAMMAR.forEach(g => {
-    const card = document.createElement('div');
-    card.className = 'material-card';
-    card.innerHTML = '<h4>' + g.tema + '</h4><p>' + (g.opys || '') + '</p>'
-      + '<a href="' + g.file + '" target="_blank" rel="noopener">Відкрити</a>';
-    wrap.appendChild(card);
-  });
+  const newest = gramNewest();
+
+  function renderSummary(){
+    if(!summaryEl) return;
+    const ready = GRAMMAR.filter(gramIsReady);
+    let started = 0, finished = 0;
+    ready.forEach(t => {
+      const p = loadStoredProgress('gram:' + t.id);
+      if(p){ started++; if(p.best >= p.total) finished++; }
+    });
+    let html = '<span><b>' + ready.length + '</b> з ' + GRAMMAR.length + ' тем уже готові.</span>';
+    if(started){
+      html += ' <span>Відкрито тем: ' + started + ', пройдено повністю: ' + finished + '.</span>'
+        + ' <button type="button" class="link-btn" id="grammarResetProgress">Скинути мій прогрес</button>';
+    } else if(ready.length){
+      html += ' <span>Твій прогрес зберігатиметься в цьому браузері.</span>';
+    }
+    summaryEl.innerHTML = html;
+    const rb = document.getElementById('grammarResetProgress');
+    if(rb) rb.addEventListener('click', () => {
+      if(!confirm('Стерти збережені результати з усіх тем граматики на цьому пристрої?')) return;
+      try {
+        Object.keys(localStorage).filter(k => k.indexOf(GRAM_PROGRESS_PREFIX + 'gram:') === 0).forEach(k => localStorage.removeItem(k));
+      } catch(_) {}
+      renderSummary(); render();
+    });
+  }
+
+  function matches(t, q){
+    if(!q) return true;
+    const hay = (t.tema + ' ' + t.uk + ' ' + (t.pidrozdily || []).join(' ')).toLowerCase();
+    return hay.includes(q);
+  }
+
+  function stateOf(t){
+    if(!gramIsReady(t)) return {cls: 'is-planned', label: 'готується', pct: 0};
+    const p = loadStoredProgress('gram:' + t.id);
+    if(!p) return {cls: 'is-new', label: '', pct: 0};
+    const pct = Math.round(Math.min(1, p.best / p.total) * 100);
+    if(pct >= 100) return {cls: 'is-done', label: p.best + ' / ' + p.total, pct: 100};
+    return {cls: 'is-started', label: p.best + ' / ' + p.total, pct: pct};
+  }
+
+  function render(){
+    const q = (searchEl ? searchEl.value : '').trim().toLowerCase();
+    const readyOnly = readyOnlyEl ? readyOnlyEl.checked : false;
+    wrap.innerHTML = '';
+
+    const jump = document.createElement('nav');
+    jump.className = 'module-jump gram-jump';
+    jump.setAttribute('aria-label', 'Розділи граматики');
+    if(!q) wrap.appendChild(jump);
+
+    let shown = 0;
+    GRAMMAR_ROZDILY.forEach((r, idx) => {
+      const all = GRAMMAR.filter(t => t.rozdil === r.id);
+      const items = all.filter(t => matches(t, q) && (!readyOnly || gramIsReady(t)));
+      const readyCount = all.filter(gramIsReady).length;
+      const color = GRAM_COLORS[idx % GRAM_COLORS.length];
+      const blockId = 'rozdil-' + r.id;
+
+      if(!q){
+        const chip = document.createElement(items.length ? 'a' : 'span');
+        chip.className = 'jump-chip' + (readyCount ? '' : ' is-empty');
+        chip.style.setProperty('--module-color', color);
+        chip.title = readyCount + ' з ' + all.length + ' тем готові';
+        chip.innerHTML = '<b>' + escHtml(r.nazva) + '</b><span class="n">' + readyCount + '/' + all.length + '</span>';
+        if(items.length){
+          chip.href = '#' + blockId;
+          chip.addEventListener('click', e => {
+            e.preventDefault();
+            const target = document.getElementById(blockId);
+            if(target) target.scrollIntoView({behavior: 'smooth', block: 'start'});
+          });
+        }
+        jump.appendChild(chip);
+      }
+      if(items.length === 0) return;
+      shown += items.length;
+
+      const sec = document.createElement('section');
+      sec.className = 'gram-part';
+      sec.id = blockId;
+      sec.style.setProperty('--module-color', color);
+      sec.innerHTML = '<div class="gram-part-head"><h2>' + escHtml(r.nazva) + '</h2>'
+        + '<span class="mod-count">' + (readyCount ? readyCount + ' з ' + all.length + ' готові' : 'готується') + '</span></div>';
+
+      const list = document.createElement('ul');
+      list.className = 'gram-toc';
+      items.forEach(t => {
+        const st = stateOf(t);
+        const li = document.createElement('li');
+        const row = document.createElement(gramIsReady(t) ? 'a' : 'div');
+        row.className = 'gram-row ' + st.cls;
+        if(gramIsReady(t)) row.href = 'temy/' + t.id + '.html';
+        const subs = (t.pidrozdily || []).length;
+        row.innerHTML = '<span class="gram-state" style="--pct:' + st.pct + '" aria-hidden="true"></span>'
+          + '<span class="gram-title"><span class="de">' + escHtml(t.tema) + '</span>'
+          + '<span class="uk">' + escHtml(t.uk) + (subs > 1 ? ' <span class="subs">(' + subs + ' підрозділ' + (subs < 5 ? 'и' : 'ів') + ')</span>' : '') + '</span></span>'
+          + '<span class="gram-meta">'
+          + (t === newest ? '<span class="new-badge">нове</span>' : '')
+          + (st.cls === 'is-planned' ? '<span class="gram-soon">готується</span>'
+             : st.label ? '<span class="gram-score">' + st.label + '</span>' : '')
+          + '</span>';
+        li.appendChild(row);
+        list.appendChild(li);
+      });
+      sec.appendChild(list);
+      wrap.appendChild(sec);
+    });
+
+    if(shown === 0){
+      const p = document.createElement('p');
+      p.className = 'empty-note';
+      p.textContent = q ? 'Нічого не знайдено — спробуй інше слово (німецькою чи українською).'
+                        : 'Готових тем поки немає — зніми позначку «Лише готові», щоб побачити весь план.';
+      wrap.appendChild(p);
+    }
+  }
+
+  if(searchEl) searchEl.addEventListener('input', render);
+  if(readyOnlyEl) readyOnlyEl.addEventListener('change', render);
+  renderSummary();
+  render();
+}
+
+/* ---------- Сторінка окремої теми: gramatyka/temy/<id>.html ----------
+   Викликається ОСТАННІМ рядком скрипту теми, після всіх buildQuiz /
+   wireBlanks / buildOrder / buildSort:   initGrammarPage('rektion-verben');
+   Що робить:
+   - хлібні крихти Головна › Граматика › розділ › тема (з grammar-data.js);
+   - зміст-посилання над підрозділами у вкладці Regel (#regelToc) — з усіх
+     <section class="regel-block" id="..."> і їхніх <h3>; якщо підрозділ
+     один, змісту немає;
+   - у вкладці Fertig!: попередній найкращий результат (#gramBest) і
+     картка "Де це ще трапляється" (#gramRelated) — уроки, у яких у
+     lessons-data.js є gram з цим id, і готові теми з поля dyv. Якщо
+     нічого немає, картка ховається;
+   - вмикає збереження прогресу: trackProgress('gram:' + id). */
+function initGrammarPage(id, opts){
+  opts = opts || {};
+  const root = opts.root || '../../';
+  const t = (typeof GRAMMAR !== 'undefined') ? GRAMMAR.find(x => x.id === id) : null;
+  const r = (t && typeof GRAMMAR_ROZDILY !== 'undefined') ? GRAMMAR_ROZDILY.find(x => x.id === t.rozdil) : null;
+
+  if(typeof renderCrumbs === 'function'){
+    const steps = [{label: 'Головна', href: root + 'index.html'}, {label: 'Граматика', href: root + 'gramatyka/index.html'}];
+    if(r) steps.push({label: r.nazva, href: root + 'gramatyka/index.html#rozdil-' + r.id});
+    steps.push({label: t ? t.tema : id});
+    renderCrumbs('crumbs', steps);
+  }
+
+  const toc = document.getElementById('regelToc');
+  if(toc){
+    const blocks = Array.from(document.querySelectorAll('.regel-block[id]'));
+    if(blocks.length < 2) toc.remove();
+    else toc.innerHTML = blocks.map(b => {
+      const h = b.querySelector('h3');
+      return '<li><a href="#' + b.id + '">' + escHtml(h ? h.textContent : b.id) + '</a></li>';
+    }).join('');
+  }
+
+  // найкращий результат ДО цього відкриття сторінки
+  const bestEl = document.getElementById('gramBest');
+  const prev = loadStoredProgress('gram:' + id);
+  if(bestEl){
+    bestEl.textContent = prev
+      ? 'Твій найкращий результат у цій темі досі: ' + prev.best + ' з ' + prev.total + '.'
+      : 'Результат цієї теми збережеться в цьому браузері — наступного разу побачиш його тут і на сторінці «Граматика».';
+  }
+
+  const rel = document.getElementById('gramRelated');
+  if(rel){
+    const links = [];
+    if(typeof LESSONS !== 'undefined'){
+      LESSONS.filter(l => Array.isArray(l.gram) && l.gram.includes(id)).forEach(l => {
+        links.push('<a class="gram-link" href="' + root + 'lessons/' + l.file + '">'
+          + '<span class="k">' + l.klas + ' клас, модуль ' + l.modul + ', урок ' + l.lektion + '</span>'
+          + escHtml(l.nazva) + '</a>');
+      });
+    }
+    ((t && t.dyv) || []).forEach(did => {
+      const d = GRAMMAR.find(x => x.id === did);
+      if(gramIsReady(d)) links.push('<a class="gram-link" href="' + d.id + '.html"><span class="k">Граматика</span>' + escHtml(d.tema) + '</a>');
+    });
+    const card = rel.closest('.card') || rel;
+    if(links.length) rel.innerHTML = links.join('');
+    else card.style.display = 'none';
+  }
+
+  if(typeof trackProgress === 'function') trackProgress('gram:' + id);
 }

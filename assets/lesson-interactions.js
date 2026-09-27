@@ -30,7 +30,7 @@ function showTab(name, tabs, panels){
 }
 
 /* ---------- Прогрес-смуга (літак вгорі) ---------- */
-const progress = {total: 0, done: 0};
+const progress = {total: 0, done: 0, key: null, ready: false};
 function setTotal(n){ progress.total += n; renderProgress(); }
 function markDone(n){ progress.done += n; renderProgress(); }
 function renderProgress(){
@@ -39,6 +39,41 @@ function renderProgress(){
   const text = document.getElementById('progressText');
   if(plane) plane.style.left = pct + '%';
   if(text) text.textContent = progress.done + ' / ' + progress.total + ' Aufgaben gemeistert';
+  if(progress.ready) persistProgress();
+}
+
+/* ---------- Збереження прогресу в браузері учня (2026-09) ----------
+   Сторінка, яка хоче пам'ятати результат, викликає В КІНЦІ свого скрипту
+   (після всіх buildQuiz/setTotal):   trackProgress('gram:perfekt-plusquamperfekt');
+   Далі все автоматично: після кожної зміни прогресу в localStorage під
+   ключем 'dmu:progress:<key>' лежить {total, done, best, at}.
+   - best — найкращий результат за весь час (перезавантаження сторінки
+     чи "Von vorn beginnen" його не зменшують);
+   - якщо сторінку оновили й кількість завдань (total) змінилася, best
+     обнуляється — старий результат уже не відповідає новому набору вправ.
+   Зберігається лише ПІСЛЯ DOMContentLoaded: під час ініціалізації total
+   росте поступово (кожен setTotal), і проміжні значення записувати не
+   можна — інакше best обнулявся б на кожному кроці.
+   Логіну немає: прогрес живе лише в цьому браузері на цьому пристрої.
+   Читає ці дані сторінка gramatyka/ (site.js → loadStoredProgress, той
+   самий префікс PROGRESS_PREFIX). Без localStorage (приватний режим,
+   file://) усе мовчки працює як раніше, просто нічого не зберігається. */
+const PROGRESS_PREFIX = 'dmu:progress:';
+function trackProgress(key){
+  progress.key = key;
+  const start = () => { progress.ready = true; persistProgress(); };
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
+  else start();
+}
+function persistProgress(){
+  if(!progress.key || !progress.total) return;
+  try {
+    const k = PROGRESS_PREFIX + progress.key;
+    let old = null;
+    try { old = JSON.parse(localStorage.getItem(k)); } catch(_) {}
+    const best = (old && old.total === progress.total) ? Math.max(old.best || 0, progress.done) : progress.done;
+    localStorage.setItem(k, JSON.stringify({total: progress.total, done: progress.done, best: best, at: Date.now()}));
+  } catch(_) { /* localStorage недоступний — нічого не зберігаємо */ }
 }
 
 /* ---------- Допоміжне: перемішати масив (Fisher–Yates) ----------
@@ -113,9 +148,24 @@ function buildQuiz(containerId, data){
   });
 }
 
-/* ---------- Текстові пропуски (input.blank-input[data-ans]) ----------
-   HTML: <input type="text" class="blank-input" data-ans="правильно">
-   Перевірка регістронезалежна.
+/* ---------- Текстові пропуски й випадні списки ----------
+   Поле вводу:   <input type="text" class="blank-input" data-ans="komme">
+   Випадний список (з 2026-09):
+                 <select class="blank" data-ans="dem">
+                   <option value="">—</option><option>der</option><option>dem</option><option>den</option>
+                 </select>
+   Обидва типи перевіряються однаково — тією самою checkBlanks, у тому
+   самому контейнері, можна змішувати в одній вправі.
+
+   Кілька правильних відповідей (з 2026-09): data-ans="weil|da" — через "|".
+   Потрібно, коли порядок слів чи синонім допускає варіанти.
+   Порівняння (normAns): без пробілів по краях, кілька пробілів = один,
+   ’ = ', кінцеві . ! ? ігноруються, регістр НЕ важливий. Якщо регістр
+   важливий (іменник з великої літери — частина завдання), додай до поля
+   атрибут data-case: тоді "tisch" вже не зарахується замість "Tisch".
+
+   Таблиця-відмінювання = звичайна .gtable, у клітинках якої стоять
+   input.blank-input / select.blank. Окремої функції не треба.
 
    АНТИ-ЧІТ (2026-09): раніше при неправильній відповіді функція сама
    дописувала текст "правильно: ..." одразу біля поля — учень міг просто
@@ -130,6 +180,21 @@ function buildQuiz(containerId, data){
    гадати/підбирати відповідь по колу заради накрутки балів. Поле, яке
    ще жодного разу не перевірялось непорожнім, лишається "вільним" —
    перша непорожня перевірка стає для нього залікованою назавжди. */
+// усі поля-пропуски контейнера в порядку документа (індекс = номер поля)
+function blanksIn(containerId){
+  const box = document.getElementById(containerId);
+  return box ? box.querySelectorAll('.blank-input, select.blank') : [];
+}
+function normAns(s, keepCase){
+  let v = String(s || '').replace(/[\u2018\u2019]/g, "'").replace(/\s+/g, ' ').trim().replace(/[.!?]+$/, '').trim();
+  return keepCase ? v : v.toLowerCase();
+}
+function blankIsCorrect(el){
+  const keepCase = el.hasAttribute('data-case');
+  const val = normAns(el.value, keepCase);
+  if(val === '') return null; // порожньо — ще не відповідав
+  return (el.dataset.ans || '').split('|').some(a => normAns(a, keepCase) === val);
+}
 function checkBlanks(containerId, scoreId, stateKey){
   const state = checkBlanks._state || (checkBlanks._state = {});
   if(!(stateKey in state)) state[stateKey] = 0;
@@ -138,22 +203,18 @@ function checkBlanks(containerId, scoreId, stateKey){
   const lockedArr = locked[stateKey];
 
   let correct = 0, total = 0;
-  document.querySelectorAll('#' + containerId + ' .blank-input').forEach((inp, idx) => {
+  blanksIn(containerId).forEach((inp, idx) => {
     total++;
-    const ans = (inp.dataset.ans || '').toLowerCase();
-    const val = inp.value.trim().toLowerCase();
+    const res = blankIsCorrect(inp);
     inp.classList.remove('correct', 'wrong');
 
     // живий колір-фідбек на КОЖНУ перевірку (без тексту з відповіддю)
-    if(val === ans){
-      inp.classList.add('correct');
-    } else if(val !== ''){
-      inp.classList.add('wrong');
-    }
+    if(res === true) inp.classList.add('correct');
+    else if(res === false) inp.classList.add('wrong');
 
     // залік лише по першій непорожній спробі цього поля
-    if(!lockedArr[idx] && val !== ''){
-      lockedArr[idx] = { correct: val === ans };
+    if(!lockedArr[idx] && res !== null){
+      lockedArr[idx] = { correct: res };
     }
     if(lockedArr[idx] && lockedArr[idx].correct) correct++;
   });
@@ -165,8 +226,9 @@ function checkBlanks(containerId, scoreId, stateKey){
   return {correct, total};
 }
 function resetBlanks(containerId, scoreId, stateKey){
-  document.querySelectorAll('#' + containerId + ' .blank-input').forEach(inp => {
-    inp.value = ''; inp.classList.remove('correct', 'wrong');
+  blanksIn(containerId).forEach(inp => {
+    if(inp.tagName === 'SELECT') inp.selectedIndex = 0; else inp.value = '';
+    inp.classList.remove('correct', 'wrong');
   });
   const scoreEl = document.getElementById(scoreId);
   if(scoreEl) scoreEl.textContent = '';
@@ -174,6 +236,19 @@ function resetBlanks(containerId, scoreId, stateKey){
   if(state[stateKey] > 0){ progress.done -= state[stateKey]; state[stateKey] = 0; renderProgress(); }
   const locked = checkBlanks._locked || (checkBlanks._locked = {});
   locked[stateKey] = []; // повний ресет знімає й "заморозку" — чесний новий старт
+}
+
+/* Скорочення для типової вправи з пропусками (з 2026-09). Замість чотирьох
+   рядків (setTotal + два addEventListener) — один виклик:
+     wireBlanks('ub2');
+   за домовленістю про id: контейнер #ub2-list, кнопки #ub2-check і
+   #ub2-reset, лічильник #ub2-score. Старий спосіб теж працює. */
+function wireBlanks(key){
+  const list = key + '-list', score = key + '-score';
+  setTotal(blanksIn(list).length);
+  const c = document.getElementById(key + '-check'), r = document.getElementById(key + '-reset');
+  if(c) c.addEventListener('click', () => checkBlanks(list, score, key));
+  if(r) r.addEventListener('click', () => resetBlanks(list, score, key));
 }
 
 /* ---------- Клікабельні токени в тексті (span.tok[data-correct]) ----------
@@ -219,6 +294,194 @@ function resetTokens(containerId, scoreId, stateKey){
   if(scoreEl) scoreEl.textContent = '';
   const state = checkBlanks._state || (checkBlanks._state = {});
   if(state[stateKey] > 0){ progress.done -= state[stateKey]; state[stateKey] = 0; renderProgress(); }
+}
+
+/* ---------- Склади речення (з 2026-09) ----------
+   Учень клацає слова-картки в правильному порядку; клік по вже
+   поставленій картці повертає її назад. Мишка й палець однаково — без
+   перетягування, тож працює на телефоні.
+     buildOrder('ub3-order', [
+       { words: ["Ich", "habe", "gestern", "Fußball", "gespielt"], end: "." },
+       { words: ["Gestern", "habe", "ich", "Fußball", "gespielt"], end: ".",
+         alt: ["Ich habe gestern Fußball gespielt"], hint: "Почни з «Gestern»" }
+     ]);
+   - words — слова (чи групи слів) У ПРАВИЛЬНОМУ порядку; на екрані
+     перемішуються автоматично. Групу, яку не можна розривати, пиши одним
+     елементом: "am Wochenende".
+   - alt — (необов'язково) інші правильні порядки цілим рядком.
+   - end — (необов'язково) розділовий знак у кінці, показується поза картками.
+   - hint — (необов'язково) підказка українською над реченням.
+   - gross — (необов'язково) true, якщо перше слово ЗАВЖДИ пишеться з
+     великої (ім'я, іменник без артикля: "Anna", "Berlin"). Див. нижче.
+   Велика літера на початку речення (з 2026-09): у наборі карток перше
+   слово правильного порядку показується з МАЛОЇ ("ich", "gestern"), щоб
+   велика літера не підказувала, з чого починати; а та картка, що стоїть
+   першою в реченні учня, сама показується з великої. Тому альтернативні
+   порядки (alt) теж виглядають правильно: "Die Oma hat mir gestern …".
+   Якщо перше слово — ім'я чи іменник, постав gross: true, інакше
+   "Anna" в наборі стане "anna".
+   Регістр при порівнянні не важливий, важливий лише порядок.
+   Перевірка — автоматично, щойно всі картки поставлені. Зараховується
+   ПЕРША повна спроба (той самий анти-чіт, що й у квізі); правильну
+   відповідь функція не показує. Після правильної відповіді речення
+   блокується. Кожне речення = +1 до прогресу. */
+function buildOrder(containerId, items){
+  const wrap = document.getElementById(containerId);
+  if(!wrap) return;
+  setTotal(items.length);
+  let solvedFirst = 0;
+  const scoreEl = document.createElement('span');
+  scoreEl.className = 'score-pill';
+  const updScore = () => { scoreEl.textContent = solvedFirst + ' / ' + items.length + ' richtig (1. Versuch zählt)'; };
+
+  items.forEach((item, qi) => {
+    const answers = [item.words.join(' ')].concat(item.alt || []).map(a => normAns(a));
+    let order = shuffleArray(item.words.map((w, i) => i));
+    // не віддавати одразу правильний порядок
+    for(let t = 0; t < 5 && item.words.length > 1 && order.every((v, i) => v === i); t++) order = shuffleArray(order);
+
+    const div = document.createElement('div');
+    div.className = 'order-item';
+    div.innerHTML = (item.hint ? '<p class="order-hint">' + item.hint + '</p>' : '')
+      + '<div class="order-line"><span class="num">' + (qi + 1) + ')</span><span class="order-slots" aria-live="polite"></span>'
+      + (item.end ? '<span class="order-end">' + item.end + '</span>' : '') + '</div>'
+      + '<div class="order-bank"></div><p class="feedback"></p>';
+    const slots = div.querySelector('.order-slots'), bank = div.querySelector('.order-bank'), fb = div.querySelector('.feedback');
+    let firstTryDone = false;
+
+    function check(){
+      if(bank.children.length) { fb.textContent = ''; fb.className = 'feedback'; div.classList.remove('is-wrong'); return; }
+      const built = normAns(Array.from(slots.children).map(b => b.textContent).join(' '));
+      const ok = answers.includes(built);
+      if(ok){
+        fb.textContent = 'Richtig! ✓'; fb.className = 'feedback ok';
+        div.classList.remove('is-wrong'); div.classList.add('is-solved');
+        slots.querySelectorAll('button').forEach(b => b.disabled = true);
+      } else {
+        fb.textContent = 'Noch nicht — ändere die Reihenfolge.'; fb.className = 'feedback bad';
+        div.classList.add('is-wrong');
+      }
+      if(!firstTryDone){
+        firstTryDone = true;
+        if(ok){ markDone(1); solvedFirst++; updScore(); }
+      }
+    }
+    // базова форма картки: перше слово — з малої (якщо не gross)
+    const baseOf = i => (i === 0 && !item.gross) ? item.words[0].charAt(0).toLowerCase() + item.words[0].slice(1) : item.words[i];
+    const capFirst = w => w.charAt(0).toUpperCase() + w.slice(1);
+    function refreshCase(){
+      Array.from(bank.children).forEach(b => { b.textContent = b.dataset.w; });
+      Array.from(slots.children).forEach((b, pos) => { b.textContent = pos === 0 ? capFirst(b.dataset.w) : b.dataset.w; });
+    }
+    order.forEach(i => {
+      const b = document.createElement('button');
+      b.type = 'button'; b.className = 'word-chip';
+      b.dataset.w = baseOf(i); b.textContent = b.dataset.w;
+      b.addEventListener('click', () => {
+        if(div.classList.contains('is-solved')) return;
+        (b.parentNode === bank ? slots : bank).appendChild(b);
+        refreshCase();
+        check();
+      });
+      bank.appendChild(b);
+    });
+    wrap.appendChild(div);
+  });
+  const bar = document.createElement('div');
+  bar.className = 'check-bar';
+  bar.appendChild(scoreEl); updScore();
+  wrap.appendChild(bar);
+}
+
+/* ---------- Розсортуй по кошиках (з 2026-09) ----------
+   Учень клацає картку, потім кошик — картка переїжджає туди. Клік по
+   картці в кошику повертає її в загальний набір. Для der/die/das,
+   Akkusativ/Dativ, haben/sein, trennbar/untrennbar тощо.
+     buildSort('ub4-sort', {
+       buckets: ["haben", "sein"],
+       items: [ {t: "fahren", b: "sein"}, {t: "spielen", b: "haben"} ]
+     });
+   - buckets — назви кошиків (показуються як є);
+   - items — картки, b = назва правильного кошика. Порядок карток
+     перемішується автоматично.
+   Під кошиками — кнопки Prüfen / Zurücksetzen, як у пропусках. Колір
+   показує лише "правильно/неправильно" для розкладених карток (правильний
+   кошик не називається). Зараховується ПЕРША перевірка кожної картки, що
+   вже лежала в кошику, — той самий анти-чіт, що й у checkBlanks. */
+function buildSort(containerId, data){
+  const wrap = document.getElementById(containerId);
+  if(!wrap) return;
+  setTotal(data.items.length);
+  const locked = [];
+  let counted = 0, selected = null;
+
+  wrap.classList.add('sort-ex');
+  wrap.innerHTML = '<p class="sort-tip">Натисни картку, а потім кошик, куди вона належить.</p><div class="sort-pool"></div><div class="sort-buckets"></div>'
+    + '<div class="check-bar"><button class="btn" type="button">Prüfen</button><button class="btn secondary" type="button">Zurücksetzen</button><span class="score-pill"></span></div>';
+  const pool = wrap.querySelector('.sort-pool'), bucketsEl = wrap.querySelector('.sort-buckets');
+  const [checkBtn, resetBtn] = wrap.querySelectorAll('.check-bar .btn');
+  const scoreEl = wrap.querySelector('.score-pill');
+
+  const buckets = data.buckets.map(name => {
+    const box = document.createElement('div');
+    box.className = 'sort-bucket';
+    box.innerHTML = '<button type="button" class="sort-bucket-head"></button><div class="sort-bucket-body"></div>';
+    box.querySelector('.sort-bucket-head').textContent = name;
+    box.dataset.name = name;
+    const drop = () => {
+      if(!selected) return;
+      box.querySelector('.sort-bucket-body').appendChild(selected);
+      selected.classList.remove('picked', 'correct', 'wrong');
+      selected = null;
+      wrap.classList.remove('has-pick');
+    };
+    box.querySelector('.sort-bucket-head').addEventListener('click', drop);
+    box.querySelector('.sort-bucket-body').addEventListener('click', e => { if(e.target === e.currentTarget) drop(); });
+    bucketsEl.appendChild(box);
+    return box;
+  });
+
+  const cards = shuffleArray(data.items.map((it, i) => i)).map(i => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'word-chip'; b.textContent = data.items[i].t;
+    b.dataset.idx = i;
+    b.addEventListener('click', () => {
+      if(b.parentNode !== pool){ // у кошику → назад у набір
+        pool.appendChild(b); b.classList.remove('correct', 'wrong', 'picked');
+        if(selected === b){ selected = null; wrap.classList.remove('has-pick'); }
+        return;
+      }
+      if(selected) selected.classList.remove('picked');
+      selected = (selected === b) ? null : b;
+      if(selected) selected.classList.add('picked');
+      wrap.classList.toggle('has-pick', !!selected);
+    });
+    pool.appendChild(b);
+    return b;
+  });
+
+  checkBtn.addEventListener('click', () => {
+    let correct = 0;
+    cards.forEach(b => {
+      b.classList.remove('correct', 'wrong');
+      const box = b.closest('.sort-bucket');
+      const i = +b.dataset.idx;
+      if(!box) return;
+      const ok = box.dataset.name === data.items[i].b;
+      b.classList.add(ok ? 'correct' : 'wrong');
+      if(!locked[i]) locked[i] = {correct: ok};
+    });
+    locked.forEach(l => { if(l && l.correct) correct++; });
+    scoreEl.textContent = correct + ' / ' + data.items.length + ' richtig (1. Versuch zählt)';
+    if(correct > counted){ markDone(correct - counted); counted = correct; }
+  });
+  resetBtn.addEventListener('click', () => {
+    cards.forEach(b => { b.classList.remove('correct', 'wrong', 'picked'); pool.appendChild(b); });
+    selected = null; wrap.classList.remove('has-pick');
+    scoreEl.textContent = '';
+    if(counted > 0){ progress.done -= counted; counted = 0; renderProgress(); }
+    locked.length = 0; // чесний новий старт, як у resetBlanks
+  });
 }
 
 /* ---------- Аудіоплеєр (Üb. Hören) ---------- */

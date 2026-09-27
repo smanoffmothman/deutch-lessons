@@ -173,6 +173,18 @@
         <div class="chip-row" id="vocabChips"></div>
       </div>
 
+      <!-- =================================================================
+           КАРТКА: граматика до цього уроку (з 2026-09).
+           Дані НЕ пишуться тут — це поле gram: ["id-теми", ...] у рядку
+           ЦЬОГО уроку в data/lessons-data.js (id — з data/grammar-data.js).
+           Показуються лише вже готові теми; якщо поля gram немає або жодна
+           тема ще не готова — картка ховається сама.
+           ================================================================= -->
+      <div class="card" id="lessonGramWrap">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="lessonGram"></div>
+      </div>
+
       <footer class="end-card">
         <div class="stamps" id="stampRow"></div>
         <p id="finalScoreText"></p>
@@ -186,6 +198,10 @@
      на "../../../data/glossary-data.js" при копіюванні шаблону в реальне
      місце уроку (як і шляхи до assets/ вище). -->
 <script src="../data/glossary-data.js"></script>
+<!-- lessons-data.js і grammar-data.js — для картки "Grammatik zum Nachschlagen"
+     (шлях так само міняється на "../../../data/..." при копіюванні) -->
+<script src="../data/lessons-data.js"></script>
+<script src="../data/grammar-data.js"></script>
 <script src="../assets/lesson-interactions.js"></script>
 <script>
   // ===== Слова цього уроку у вкладці Fertig =====
@@ -205,6 +221,26 @@
     }
     box.innerHTML = words.map(w =>
       '<span class="chip static">' + w.de + ' — ' + w.uk + '</span>'
+    ).join('');
+  })();
+
+  // ===== Граматика до цього уроку у вкладці Fertig (поле gram у lessons-data.js) =====
+  (function renderLessonGrammar(){
+    const wrap = document.getElementById('lessonGramWrap');
+    const box = document.getElementById('lessonGram');
+    if (!wrap || !box) return;
+    const hide = () => { wrap.style.display = 'none'; };
+    if (typeof LESSONS === 'undefined' || typeof GRAMMAR === 'undefined') return hide();
+    const me = LESSONS.find(l => l.klas === LEKTION_KLAS && l.modul === LEKTION_MODUL && l.lektion === LEKTION_LEKTION);
+    const topics = ((me && me.gram) || []).map(id => GRAMMAR.find(t => t.id === id)).filter(t => t && t.opublikovano > 0);
+    if (topics.length === 0) return hide();
+    // корінь сайту беремо з того самого шляху, яким підключено grammar-data.js —
+    // тож окремо міняти шлях тут при копіюванні шаблону не треба
+    const src = document.querySelector('script[src$="data/grammar-data.js"]').getAttribute('src');
+    const root = src.slice(0, src.length - 'data/grammar-data.js'.length);
+    box.innerHTML = topics.map(t =>
+      '<a class="gram-link" href="' + root + 'gramatyka/temy/' + t.id + '.html">'
+      + '<span class="k">' + t.uk + '</span>' + t.tema + '</a>'
     ).join('');
   })();
 

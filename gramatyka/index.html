@@ -17,17 +17,24 @@
   <div class="hero-top">
     <div>
       <span class="hero-badge">ГРАМАТИКА</span>
-      <h1>Зведення граматичних тем</h1>
-      <p class="sub">Окремі сторінки-довідники на кшталт "Dativ vs Akkusativ" — коли набереться, що зводити.</p>
+      <h1>Граматика німецької</h1>
+      <p class="sub">Правила з таблицями й прикладами та вправи на кожну тему. Спільний розділ для всіх класів: заглядай, коли щось забулося, або відпрацьовуй тему до кінця.</p>
     </div>
   </div>
 </header>
 
 <div class="site-main">
-  <div class="materials-grid" id="grammarGrid"></div>
+  <div class="grammar-toolbar">
+    <div class="search-row">
+      <input type="text" id="grammarSearch" placeholder="Пошук: Dativ, Perfekt, weil, прийменники…" autocomplete="off">
+    </div>
+    <label><input type="checkbox" id="grammarReadyOnly"> Лише готові теми</label>
+  </div>
+  <p class="grammar-summary" id="grammarSummary"></p>
+  <div id="grammarToc"></div>
 </div>
 
-<footer class="site-footer">Необов'язковий розділ — заповнюй, коли буде зручно.</footer>
+<footer class="site-footer">Нова тема з'являється тут одразу після того, як у data/grammar-data.js їй проставлено opublikovano.</footer>
 
 <script src="../data/grammar-data.js"></script>
 <script src="../assets/site.js"></script>
