@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trennbar und untrennbar gebrauchte Verben · Grammatik · Deutsch mit uns</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'gramatyka' });</script>
+<!-- хлібні крихти малює initGrammarPage() внизу — з даних grammar-data.js -->
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">GRAMMATIK · Дієслово: форми і часи</span>
+        <h1>Trennbar und untrennbar gebrauchte Verben</h1>
+        <p class="sub">Префікси durch-, über-, um-, unter-, wider- і wieder- бувають і відокремлюваними, і невідокремлюваними. Навчимося розпізнавати їх за наголосом і значенням — і правильно утворювати форми.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="regel" aria-selected="true">Regel</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Erkennen</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Sortieren</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Bedeutung</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Präsens</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Perfekt</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Satzbau</button>
+    <button class="tab-btn" data-tab="ub7">Üb. 7 · Umformen</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== REGEL ===== -->
+    <section class="panel active" id="panel-regel">
+      <p class="section-label">Regel</p>
+      <h2 class="panel-title">Trennbar und untrennbar gebrauchte Verben</h2>
+      <ul class="regel-toc" id="regelToc"></ul>
+
+      <div class="card">
+        <p>Viele Präfixe sind immer trennbar (<b>an</b>-, <b>auf</b>-, <b>mit</b>- …) oder immer untrennbar (<b>be</b>-, <b>ver</b>-, <b>er</b>- …). Sechs Präfixe sind anders: <b>durch-, über-, um-, unter-, wider-</b> und <b>wieder-</b>. Mit ihnen gibt es trennbare <i>und</i> untrennbare Verben. Manche Verben sind sogar beides – dann haben sie zwei verschiedene Bedeutungen.</p>
+        <p class="beispiel">Wir <b>steigen</b> in Köln <b>um</b>. — Ich <b>übersetze</b> den Text.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          В українській мові префікс завжди «приклеєний» до дієслова: <i>переписати, обійняти, перекласти</i>. У німецькій більшість префіксів поводяться передбачувано: одні завжди відокремлюються (<i>anrufen → ich rufe an</i>), інші — ніколи (<i>verstehen → ich verstehe</i>). Але шість префіксів — <b>durch-, über-, um-, unter-, wider-, wieder-</b> — можуть бути і такими, і такими. Від цього залежить усе: де стоїть префікс у реченні, чи є <i>ge-</i> у Partizip II, куди ставити <i>zu</i>. Підказок дві: <b>наголос</b> (на префіксі чи на корені) і <b>значення</b> (буквальне чи нове, переносне). Нижче — спершу загальні правила, потім кожен префікс окремо зі списком найважливіших дієслів.
+        </div>
+      </div>
+
+      <section class="card regel-block" id="formen">
+        <h3>Ein Präfix – zwei Wege: die Formen</h3>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Form</th><th>trennbar: umsteigen</th><th>untrennbar: übersetzen</th></tr>
+          <tr><td class="gender">Präsens</td><td>Ich <b>steige</b> in Köln <b>um</b>.</td><td>Ich <b>übersetze</b> den Text.</td></tr>
+          <tr><td class="gender">Präteritum</td><td>Ich <b>stieg</b> in Köln <b>um</b>.</td><td>Ich <b>übersetzte</b> den Text.</td></tr>
+          <tr><td class="gender">Perfekt</td><td>Ich bin in Köln <b>umgestiegen</b>.</td><td>Ich habe den Text <b>übersetzt</b>.</td></tr>
+          <tr><td class="gender">Imperativ</td><td><b>Steig</b> in Köln <b>um</b>!</td><td><b>Übersetz</b> den Text!</td></tr>
+          <tr><td class="gender">mit Modalverb</td><td>Ich muss in Köln <b>umsteigen</b>.</td><td>Ich muss den Text <b>übersetzen</b>.</td></tr>
+          <tr><td class="gender">Nebensatz</td><td>…, weil ich in Köln <b>umsteige</b>.</td><td>…, weil ich den Text <b>übersetze</b>.</td></tr>
+          <tr><td class="gender">Infinitiv mit zu</td><td>Vergiss nicht <b>umzusteigen</b>!</td><td>Es ist schwer, den Text <b>zu übersetzen</b>.</td></tr>
+        </table>
+        </div>
+        <p class="merke">Trennbar: Präfix am Satzende, <b>-ge-</b> und <b>zu</b> in der Mitte (um<b>ge</b>stiegen, um<b>zu</b>steigen). Untrennbar: Präfix bleibt am Verb, Partizip <b>ohne ge-</b> (übersetzt), <b>zu</b> vor dem Verb (zu übersetzen).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Відокремлюване дієслово поводиться, як усі дієслова з <i>an-, auf-, mit-</i>: у Präsens, Präteritum і наказовому способі префікс іде в кінець речення, у Partizip II між префіксом і коренем стає <i>-ge-</i>, у інфінітиві — <i>zu</i> (разом, одним словом: <i>umzusteigen</i>). Невідокремлюване поводиться, як дієслова з <i>be-, ver-</i>: префікс завжди на місці, Partizip II без <i>ge-</i>, <i>zu</i> стоїть окремо перед дієсловом. З модальним дієсловом і в підрядному реченні обидва типи пишуться разом — різницю там не видно, але вона є у вимові.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="betonung">
+        <h3>Die Betonung entscheidet</h3>
+        <p>Hör genau hin: Wo liegt der Akzent? (Die betonte Silbe steht hier in GROSSBUCHSTABEN.)</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>trennbar – Akzent auf dem Präfix</th><th>untrennbar – Akzent auf dem Verbstamm</th></tr>
+          <tr><td><b>DURCH</b>lesen → er liest durch</td><td>durch<b>SU</b>chen → er durchsucht</td></tr>
+          <tr><td><b>Ü</b>berkochen → sie kocht über</td><td>über<b>RA</b>schen → sie überrascht</td></tr>
+          <tr><td><b>UM</b>steigen → wir steigen um</td><td>um<b>AR</b>men → wir umarmen</td></tr>
+          <tr><td><b>UN</b>tergehen → sie geht unter</td><td>unter<b>SCHREI</b>ben → sie unterschreibt</td></tr>
+          <tr><td><b>WI</b>derspiegeln → er spiegelt wider</td><td>wider<b>SPRE</b>chen → er widerspricht</td></tr>
+          <tr><td><b>WIE</b>derkommen → ich komme wieder</td><td>wieder<b>HO</b>len → ich wiederhole</td></tr>
+        </table>
+        </div>
+        <p class="merke">Betonung auf dem Präfix → trennbar. Betonung auf dem Verbstamm → untrennbar.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Це найнадійніше правило. Якщо наголос падає на префікс (<i>UMsteigen</i>), дієслово відокремлюване; якщо на корінь (<i>umARmen</i>) — невідокремлюване. У словниках це позначають наголосом або рискою (<i>um|steigen</i>). Корисна звичка — вчити такі дієслова вголос, з правильним наголосом, і одразу з формою Perfekt: <i>UMsteigen – ist UMgestiegen</i>, <i>umARmen – hat umARmt</i>.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="bedeutung">
+        <h3>Wörtliche oder neue Bedeutung</h3>
+        <p>Bei trennbaren Verben bleibt die Bedeutung der Präposition meistens erhalten: <i>um</i> = herum/zur Seite, <i>unter</i> = nach unten, <i>durch</i> = von einer Seite zur anderen. Untrennbare Verben haben oft eine neue, übertragene Bedeutung. Die meisten haben ein Akkusativobjekt.</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th></th><th>trennbar: wörtlich, konkret</th><th>untrennbar: neue Bedeutung</th></tr>
+          <tr><td class="gender">durch</td><td>Ich <b>lese</b> das Buch bis zum Ende <b>durch</b>.</td><td>Die Polizei <b>durchsucht</b> das Haus.</td></tr>
+          <tr><td class="gender">über</td><td>Die Milch <b>kocht über</b>.</td><td>Ich <b>überlege</b> mir eine Antwort.</td></tr>
+          <tr><td class="gender">um</td><td>Das Glas <b>fällt um</b>.</td><td>Das Kind <b>umarmt</b> die Mutter.</td></tr>
+          <tr><td class="gender">unter</td><td>Die Sonne <b>geht unter</b>.</td><td>Der Arzt <b>untersucht</b> den Jungen.</td></tr>
+          <tr><td class="gender">wider</td><td>Der See <b>spiegelt</b> die Berge <b>wider</b>.</td><td>Du <b>widersprichst</b> mir immer!</td></tr>
+          <tr><td class="gender">wieder</td><td>Ich <b>komme</b> morgen <b>wieder</b>.</td><td>Wir <b>wiederholen</b> die Wörter.</td></tr>
+        </table>
+        </div>
+        <p class="merke">Untrennbare Verben dieser Gruppe haben meist ein Akkusativobjekt: <b>den</b> Text übersetzen, <b>das</b> Zimmer durchsuchen, <b>die</b> Oma umarmen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Коли префікс відокремлюваний, він зберігає своє «прийменникове» значення, і дієслово зазвичай описує конкретний рух чи дію: <i>umfallen</i> — впасти набік, <i>untergehen</i> — зайти (про сонце), піти під воду. Невідокремлюване дієслово частіше має нове, переносне значення, і його вже не зрозумієш, просто склавши префікс і корінь: <i>unterschreiben</i> — підписати, <i>überlegen</i> — обдумати. Більшість таких дієслів вимагають знахідного відмінка (Akkusativ); винятки — <i>widersprechen, widerstehen</i> з давальним (<i>Ich widerspreche <b>dir</b></i>). Через це частіше виходить Perfekt з <i>haben</i>, а відокремлювані дієслова руху — з <i>sein</i> (<i>ist umgestiegen, ist untergegangen</i>).
+        </div>
+      </section>
+
+      <section class="card regel-block" id="doppelt">
+        <h3>Ein Verb, zwei Bedeutungen</h3>
+        <p>Einige Verben gibt es in beiden Formen. Die Betonung ändert die Bedeutung – und alle Formen.</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Verb</th><th>trennbar</th><th>untrennbar</th></tr>
+          <tr><td class="gender">wiederholen</td>
+            <td><b>WIE</b>derholen = zurückholen<br>Der Hund <b>holt</b> den Ball <b>wieder</b>.<br>Er hat den Ball <b>wiedergeholt</b>.</td>
+            <td>wieder<b>HO</b>len = noch einmal sagen/machen<br>Kannst du die Frage <b>wiederholen</b>?<br>Sie hat die Frage <b>wiederholt</b>.</td></tr>
+          <tr><td class="gender">umfahren</td>
+            <td><b>UM</b>fahren = mit dem Auto umwerfen<br>Pass auf, sonst <b>fährst</b> du das Schild <b>um</b>!<br>Er hat das Schild <b>umgefahren</b>.</td>
+            <td>um<b>FAH</b>ren = um etwas herum fahren<br>Wir <b>umfahren</b> den Stau.<br>Wir haben den Stau <b>umfahren</b>.</td></tr>
+          <tr><td class="gender">übersetzen</td>
+            <td><b>Ü</b>bersetzen = ans andere Ufer bringen<br>Die Fähre <b>setzt</b> uns ans andere Ufer <b>über</b>.</td>
+            <td>über<b>SET</b>zen = in eine andere Sprache<br>Ich <b>übersetze</b> den Brief ins Deutsche.<br>Ich habe den Brief <b>übersetzt</b>.</td></tr>
+          <tr><td class="gender">umgehen</td>
+            <td><b>UM</b>gehen mit = behandeln<br>Sie <b>geht</b> gut mit Tieren <b>um</b>.<br>Sie ist gut mit Tieren <b>umgegangen</b>.</td>
+            <td>um<b>GE</b>hen = vermeiden<br>Wir <b>umgehen</b> das Problem.<br>Wir haben das Problem <b>umgangen</b>.</td></tr>
+          <tr><td class="gender">umschreiben</td>
+            <td><b>UM</b>schreiben = neu schreiben<br>Ich <b>schreibe</b> meinen Aufsatz <b>um</b>.<br>Ich habe ihn <b>umgeschrieben</b>.</td>
+            <td>um<b>SCHREI</b>ben = mit anderen Worten erklären<br>Kannst du das Wort <b>umschreiben</b>?<br>Er hat das Wort gut <b>umschrieben</b>.</td></tr>
+          <tr><td class="gender">durchbrechen</td>
+            <td><b>DURCH</b>brechen = in zwei Teile brechen<br>Er <b>bricht</b> die Schokolade <b>durch</b>.<br>Er hat sie <b>durchgebrochen</b>.</td>
+            <td>durch<b>BRE</b>chen = durch etwas hindurch kommen<br>Die Läuferin <b>durchbricht</b> das Zielband.<br>Sie hat das Zielband <b>durchbrochen</b>.</td></tr>
+        </table>
+        </div>
+        <p class="merke">Gleiches Verb, andere Betonung = andere Bedeutung: Er hat das Schild <b>umgefahren</b>. ≠ Er hat den Stau <b>umfahren</b>.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Тут одне й те саме написання ховає два різні слова. <i>WIEderholen</i> — «забрати назад», <i>wiederHOlen</i> — «повторити». <i>UMfahren</i> — «збити (машиною)», <i>umFAHren</i> — «об'їхати». Зверни увагу, що Partizip II цих пар може збігатися на письмі без <i>ge-</i> і відрізнятися з <i>ge-</i>: <i>umgefahren</i> (збив) і <i>umfahren</i> (об'їхав). Тому, коли бачиш таке дієслово, спершу зрозумій зміст речення, а тоді обирай форму.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="durch">
+        <h3>durch-: meist trennbar</h3>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th colspan="3">trennbar</th></tr>
+          <tr><td>durchfallen</td><td>er fällt durch – ist durchgefallen</td><td>Zum Glück <b>fällt</b> in der Prüfung niemand <b>durch</b>.</td></tr>
+          <tr><td>durchlesen</td><td>er liest durch – hat durchgelesen</td><td><b>Lies</b> die Aufgabe zuerst ganz <b>durch</b>!</td></tr>
+          <tr><td>durchstreichen</td><td>er streicht durch – hat durchgestrichen</td><td>Ich habe das falsche Wort <b>durchgestrichen</b>.</td></tr>
+          <tr><td>durchhalten</td><td>er hält durch – hat durchgehalten</td><td>Mia <b>hält</b> beim Lauf bis zum Ende <b>durch</b>.</td></tr>
+          <tr><td>durchschlafen</td><td>er schläft durch – hat durchgeschlafen</td><td>Nach der Wanderung habe ich zehn Stunden <b>durchgeschlafen</b>.</td></tr>
+          <tr><td>durchkommen</td><td>er kommt durch – ist durchgekommen</td><td>Mit dem Fahrrad <b>kommst</b> du hier nicht <b>durch</b>.</td></tr>
+          <tr><th colspan="3">untrennbar</th></tr>
+          <tr><td>durchqueren</td><td>er durchquert – hat durchquert</td><td>Wir <b>durchqueren</b> den Park in zehn Minuten.</td></tr>
+          <tr><td>durchsuchen</td><td>er durchsucht – hat durchsucht</td><td>Ich habe mein Zimmer nach dem Handy <b>durchsucht</b>.</td></tr>
+          <tr><td>durchschauen</td><td>er durchschaut – hat durchschaut</td><td>Mama <b>durchschaut</b> meinen Trick sofort.</td></tr>
+        </table>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Більшість дієслів з <i>durch-</i> відокремлювані й означають «наскрізь, до кінця»: <i>durchlesen</i> — прочитати від початку до кінця, <i>durchhalten</i> — витримати до кінця. Невідокремлюваних небагато, і вони майже завжди мають додаток в Akkusativ: <i>den Park durchqueren</i> — перетнути парк, <i>jemanden durchschauen</i> — розкусити когось.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="ueber">
+        <h3>über-: meist untrennbar</h3>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th colspan="3">trennbar</th></tr>
+          <tr><td>überkochen</td><td>es kocht über – ist übergekocht</td><td>Pass auf, die Milch <b>kocht über</b>!</td></tr>
+          <tr><td>überlaufen</td><td>es läuft über – ist übergelaufen</td><td>Die Badewanne ist <b>übergelaufen</b>.</td></tr>
+          <tr><td>(sich) etw. überziehen</td><td>er zieht über – hat übergezogen</td><td><b>Zieh</b> dir eine Jacke <b>über</b>, es ist kalt!</td></tr>
+          <tr><th colspan="3">untrennbar</th></tr>
+          <tr><td>übernachten</td><td>er übernachtet – hat übernachtet</td><td>Wir <b>übernachten</b> in einer Jugendherberge.</td></tr>
+          <tr><td>überraschen</td><td>er überrascht – hat überrascht</td><td>Wir <b>überraschen</b> Oma zum Geburtstag.</td></tr>
+          <tr><td>überholen</td><td>er überholt – hat überholt</td><td>Das Motorrad <b>überholt</b> den Bus.</td></tr>
+          <tr><td>übersetzen</td><td>er übersetzt – hat übersetzt</td><td><b>Übersetzt</b> den Satz ins Deutsche!</td></tr>
+          <tr><td>sich (Dat.) etw. überlegen</td><td>er überlegt – hat überlegt</td><td>Ich habe mir die Antwort gut <b>überlegt</b>.</td></tr>
+          <tr><td>überqueren</td><td>er überquert – hat überquert</td><td>Wir <b>überqueren</b> die Straße an der Ampel.</td></tr>
+          <tr><td>übernehmen</td><td>er übernimmt – hat übernommen</td><td>Tim <b>übernimmt</b> im Theaterstück die Rolle des Königs.</td></tr>
+          <tr><td>übertreiben</td><td>er übertreibt – hat übertrieben</td><td>Jetzt <b>übertreibst</b> du aber!</td></tr>
+        </table>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          З <i>über-</i> навпаки: більшість дієслів невідокремлювані. Відокремлюваних мало, і вони описують буквальний рух «через край, зверху»: молоко збігає (<i>kocht über</i>), ванна переливається (<i>läuft über</i>), накинути щось на себе (<i>sich etwas überziehen</i>). Якщо значення переносне — <i>здивувати, перекласти, переночувати, обдумати</i> — префікс лишається на місці.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="um">
+        <h3>um-: meist trennbar</h3>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th colspan="3">trennbar</th></tr>
+          <tr><td>umsteigen</td><td>er steigt um – ist umgestiegen</td><td>In Köln müssen wir <b>umsteigen</b>.</td></tr>
+          <tr><td>umziehen</td><td>er zieht um – ist umgezogen</td><td>Meine Freundin ist nach Berlin <b>umgezogen</b>.</td></tr>
+          <tr><td>sich umziehen</td><td>er zieht sich um – hat sich umgezogen</td><td>Nach dem Sport <b>ziehe</b> ich mich <b>um</b>.</td></tr>
+          <tr><td>umfallen</td><td>es fällt um – ist umgefallen</td><td>Die Vase ist <b>umgefallen</b>.</td></tr>
+          <tr><td>umdrehen</td><td>er dreht um – hat umgedreht</td><td><b>Dreh</b> das Blatt <b>um</b>!</td></tr>
+          <tr><td>umtauschen</td><td>er tauscht um – hat umgetauscht</td><td>Ich <b>tausche</b> die zu kleinen Schuhe <b>um</b>.</td></tr>
+          <tr><td>umkehren</td><td>er kehrt um – ist umgekehrt</td><td>Es regnete stark, deshalb sind wir <b>umgekehrt</b>.</td></tr>
+          <tr><th colspan="3">untrennbar</th></tr>
+          <tr><td>umarmen</td><td>er umarmt – hat umarmt</td><td>Lena <b>umarmt</b> ihre beste Freundin.</td></tr>
+          <tr><td>umgeben</td><td>er umgibt – hat umgeben</td><td>Viele Bäume <b>umgeben</b> unser Haus.</td></tr>
+          <tr><td>umkreisen</td><td>er umkreist – hat umkreist</td><td>Der Mond <b>umkreist</b> die Erde.</td></tr>
+        </table>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Більшість дієслів з <i>um-</i> відокремлювані й означають зміну: перейти в інший транспорт (<i>umsteigen</i>), переїхати (<i>umziehen</i>), перевернути (<i>umdrehen</i>), обміняти (<i>umtauschen</i>), упасти набік (<i>umfallen</i>). Невідокремлювані означають «довкола, з усіх боків»: <i>umarmen</i> — обійняти, <i>umgeben</i> — оточувати, <i>umkreisen</i> — кружляти довкола.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="unter">
+        <h3>unter-: meist untrennbar</h3>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th colspan="3">trennbar</th></tr>
+          <tr><td>untergehen</td><td>sie geht unter – ist untergegangen</td><td>Im Winter <b>geht</b> die Sonne früh <b>unter</b>.</td></tr>
+          <tr><td>unterbringen</td><td>er bringt unter – hat untergebracht</td><td>Die Gäste <b>bringen</b> wir im Gästezimmer <b>unter</b>.</td></tr>
+          <tr><td>untertauchen</td><td>er taucht unter – ist untergetaucht</td><td>Im Schwimmbad bin ich ganz <b>untergetaucht</b>.</td></tr>
+          <tr><th colspan="3">untrennbar</th></tr>
+          <tr><td>unterschreiben</td><td>er unterschreibt – hat unterschrieben</td><td>Meine Eltern haben den Brief <b>unterschrieben</b>.</td></tr>
+          <tr><td>unterbrechen</td><td>er unterbricht – hat unterbrochen</td><td>Bitte <b>unterbrich</b> mich nicht!</td></tr>
+          <tr><td>sich unterhalten</td><td>er unterhält sich – hat sich unterhalten</td><td>Wir haben uns lange über Musik <b>unterhalten</b>.</td></tr>
+          <tr><td>unterrichten</td><td>er unterrichtet – hat unterrichtet</td><td>Frau Klein <b>unterrichtet</b> Deutsch und Musik.</td></tr>
+          <tr><td>unterscheiden</td><td>er unterscheidet – hat unterschieden</td><td>Ich kann die Zwillinge nicht <b>unterscheiden</b>.</td></tr>
+          <tr><td>unterstützen</td><td>er unterstützt – hat unterstützt</td><td>Meine Eltern <b>unterstützen</b> mich immer.</td></tr>
+          <tr><td>untersuchen</td><td>er untersucht – hat untersucht</td><td>Die Ärztin <b>untersucht</b> mein Knie.</td></tr>
+          <tr><td>unternehmen</td><td>er unternimmt – hat unternommen</td><td>Was <b>unternehmen</b> wir am Wochenende?</td></tr>
+        </table>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          З <i>unter-</i> більшість дієслів невідокремлювані, і серед них багато дуже вживаних шкільних слів: <i>unterschreiben</i> (підписати), <i>unterbrechen</i> (перебити), <i>sich unterhalten</i> (розмовляти), <i>unterrichten</i> (викладати), <i>untersuchen</i> (обстежити), <i>unternehmen</i> (зробити щось, влаштувати). Відокремлювані — ті, де справді є рух «униз, під»: сонце заходить, хтось пірнає під воду, когось «влаштовують» на ночівлю.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="wider">
+        <h3>wider-: fast immer untrennbar</h3>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th colspan="3">trennbar – nur diese zwei</th></tr>
+          <tr><td>widerspiegeln</td><td>er spiegelt wider – hat widergespiegelt</td><td>Der See <b>spiegelt</b> die Berge <b>wider</b>.</td></tr>
+          <tr><td>widerhallen</td><td>es hallt wider – hat widergehallt</td><td>Unsere Stimmen <b>hallen</b> in der Turnhalle <b>wider</b>.</td></tr>
+          <tr><th colspan="3">untrennbar – alle anderen</th></tr>
+          <tr><td>widersprechen + Dat.</td><td>er widerspricht – hat widersprochen</td><td>Mein Bruder <b>widerspricht</b> mir immer.</td></tr>
+          <tr><td>widerstehen + Dat.</td><td>er widersteht – hat widerstanden</td><td>Ich kann der Schokolade nicht <b>widerstehen</b>.</td></tr>
+          <tr><td>widerlegen</td><td>er widerlegt – hat widerlegt</td><td>Das Experiment hat deine Idee <b>widerlegt</b>.</td></tr>
+        </table>
+        </div>
+        <p class="merke"><b>wider</b> = gegen (ohne e!) – <b>wieder</b> = noch einmal (mit ie).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          <i>wider-</i> означає «проти»: <i>widersprechen</i> — заперечувати, суперечити; <i>widerstehen</i> — встояти, опиратися. Відокремлюваних лише два, обидва — про відображення: <i>widerspiegeln</i> (віддзеркалювати) і <i>widerhallen</i> (відлунювати). Не плутай написання: <i>wider</i> (проти) пишеться з <i>i</i>, <i>wieder</i> (знову) — з <i>ie</i>.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="wieder">
+        <h3>wieder-: fast immer trennbar</h3>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th colspan="3">trennbar</th></tr>
+          <tr><td>wiederkommen</td><td>er kommt wieder – ist wiedergekommen</td><td><b>Komm</b> bald <b>wieder</b>!</td></tr>
+          <tr><td>wiedersehen</td><td>er sieht wieder – hat wiedergesehen</td><td>Nach den Ferien <b>sehen</b> wir uns <b>wieder</b>.</td></tr>
+          <tr><td>wiederfinden</td><td>er findet wieder – hat wiedergefunden</td><td>Ich habe meinen Schlüssel <b>wiedergefunden</b>.</td></tr>
+          <tr><td>wiedergeben</td><td>er gibt wieder – hat wiedergegeben</td><td><b>Gib</b> den Text mit eigenen Worten <b>wieder</b>.</td></tr>
+          <tr><td>wiedererkennen</td><td>er erkennt wieder – hat wiedererkannt</td><td>Ich habe dich fast nicht <b>wiedererkannt</b>!</td></tr>
+          <tr><th colspan="3">untrennbar – das wichtigste Verb</th></tr>
+          <tr><td>wiederholen</td><td>er wiederholt – hat wiederholt</td><td>Vor dem Test <b>wiederholen</b> wir alle Regeln.</td></tr>
+        </table>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          <i>wieder-</i> означає «знову, назад», і майже всі такі дієслова відокремлювані: <i>wiederkommen</i> — повернутися, <i>wiedersehen</i> — побачити знову (звідси <i>Auf Wiedersehen!</i>), <i>wiedergeben</i> — віддати назад або переказати. Головний виняток — <i>wiederHOlen</i> у значенні «повторити»: <i>Ich wiederhole, ich habe wiederholt</i>. Якщо ж <i>wieder</i> просто означає «знову» як окреме слово, воно й пишеться окремо: <i>Er ist wieder krank.</i>
+        </div>
+      </section>
+
+      <section class="card regel-block" id="hinter">
+        <h3>Anmerkung: hinter- ist immer untrennbar</h3>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Verb</th><th>Formen</th><th>Beispiel</th></tr>
+          <tr><td>hinterlassen</td><td>er hinterlässt – hat hinterlassen</td><td>Ich habe dir eine Nachricht auf dem Handy <b>hinterlassen</b>.</td></tr>
+          <tr><td>hinterfragen</td><td>er hinterfragt – hat hinterfragt</td><td>Wir <b>hinterfragen</b> Werbung im Unterricht kritisch.</td></tr>
+          <tr><td>hintergehen</td><td>er hintergeht – hat hintergangen</td><td>Ein echter Freund <b>hintergeht</b> dich nicht. (= betrügen)</td></tr>
+        </table>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Префікс <i>hinter-</i> схожий на наші шість, бо теж походить від прийменника, але він завжди невідокремлюваний: наголос на корені, Partizip II без <i>ge-</i> (<i>hinterlassen</i> — залишити по собі, <i>hinterfragen</i> — ставити під сумнів, <i>hintergehen</i> — обманювати).
+        </div>
+      </section>
+
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: квіз ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Trennbar oder untrennbar?</h2>
+      <p class="lead">Обери правильний варіант. Велика літера в слові показує наголошений склад.</p>
+      <div class="card" id="ub1-quiz"></div>
+    </section>
+
+    <!-- ===== Üb. 2: сортування ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Zwei Körbe</h2>
+      <p class="lead">Розклади дієслова по кошиках: у цьому значенні префікс відокремлюється чи ні? Підказка: вимов слово вголос і прислухайся до наголосу.</p>
+      <div class="card" id="ub2-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 3: значення ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Was bedeutet das?</h2>
+      <p class="lead">Одне дієслово — два значення. Прочитай речення й обери, що воно означає або яка форма підходить.</p>
+      <div class="card" id="ub3-quiz"></div>
+    </section>
+
+    <!-- ===== Üb. 4: Präsens ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Klassenfahrt nach Hamburg</h2>
+      <p class="lead">Встав дієслово в Präsens. Якщо префікс відокремлюється — впиши в поле лише дієслово, а префікс обери в кінці речення. Якщо не відокремлюється — впиши все дієслово разом із префіксом, а в кінці обери «(nichts)».</p>
+      <div class="card" id="ub4-list">
+        <div class="fill-item"><span class="num">1)</span> Wir <input type="text" class="blank-input inline" data-ans="steigen" autocomplete="off"> <i>(umsteigen)</i> in Hannover <select class="blank inline" data-ans="um"><option value="">—</option><option>(nichts)</option><option>durch</option><option>über</option><option>um</option><option>unter</option><option>wider</option><option>wieder</option></select>.</div>
+        <div class="fill-item"><span class="num">2)</span> In Hamburg <input type="text" class="blank-input inline" data-ans="übernachten" autocomplete="off"> <i>(übernachten)</i> wir in einer Jugendherberge <select class="blank inline" data-ans="(nichts)"><option value="">—</option><option>(nichts)</option><option>durch</option><option>über</option><option>um</option><option>unter</option><option>wider</option><option>wieder</option></select>.</div>
+        <div class="fill-item"><span class="num">3)</span> Am ersten Abend <input type="text" class="blank-input inline" data-ans="unternehmen" autocomplete="off"> <i>(unternehmen)</i> wir eine Hafenrundfahrt <select class="blank inline" data-ans="(nichts)"><option value="">—</option><option>(nichts)</option><option>durch</option><option>über</option><option>um</option><option>unter</option><option>wider</option><option>wieder</option></select>.</div>
+        <div class="fill-item"><span class="num">4)</span> Die Sonne <input type="text" class="blank-input inline" data-ans="geht" autocomplete="off"> <i>(untergehen)</i> schon um sieben Uhr <select class="blank inline" data-ans="unter"><option value="">—</option><option>(nichts)</option><option>durch</option><option>über</option><option>um</option><option>unter</option><option>wider</option><option>wieder</option></select>.</div>
+        <div class="fill-item"><span class="num">5)</span> Unser Lehrer <input type="text" class="blank-input inline" data-ans="wiederholt" autocomplete="off"> <i>(wiederholen)</i> die Regeln für die Fahrt noch einmal <select class="blank inline" data-ans="(nichts)"><option value="">—</option><option>(nichts)</option><option>durch</option><option>über</option><option>um</option><option>unter</option><option>wider</option><option>wieder</option></select>.</div>
+        <div class="fill-item"><span class="num">6)</span> Leon <input type="text" class="blank-input inline" data-ans="liest" autocomplete="off"> <i>(durchlesen)</i> den Stadtplan ganz genau <select class="blank inline" data-ans="durch"><option value="">—</option><option>(nichts)</option><option>durch</option><option>über</option><option>um</option><option>unter</option><option>wider</option><option>wieder</option></select>.</div>
+        <div class="fill-item"><span class="num">7)</span> Das Wasser der Elbe <input type="text" class="blank-input inline" data-ans="spiegelt" autocomplete="off"> <i>(widerspiegeln)</i> die Lichter der Stadt <select class="blank inline" data-ans="wider"><option value="">—</option><option>(nichts)</option><option>durch</option><option>über</option><option>um</option><option>unter</option><option>wider</option><option>wieder</option></select>.</div>
+        <div class="fill-item"><span class="num">8)</span> Ich <input type="text" class="blank-input inline" data-ans="überquere" autocomplete="off"> <i>(überqueren)</i> mit Mia die große Brücke <select class="blank inline" data-ans="(nichts)"><option value="">—</option><option>(nichts)</option><option>durch</option><option>über</option><option>um</option><option>unter</option><option>wider</option><option>wieder</option></select>.</div>
+        <div class="fill-item"><span class="num">9)</span> Im Hafen <input type="text" class="blank-input inline" data-ans="überrascht" autocomplete="off"> <i>(überraschen)</i> uns ein Seehund <select class="blank inline" data-ans="(nichts)"><option value="">—</option><option>(nichts)</option><option>durch</option><option>über</option><option>um</option><option>unter</option><option>wider</option><option>wieder</option></select>.</div>
+        <div class="fill-item"><span class="num">10)</span> Jonas <input type="text" class="blank-input inline" data-ans="tauscht" autocomplete="off"> <i>(umtauschen)</i> im Laden seine zu kleine Mütze <select class="blank inline" data-ans="um"><option value="">—</option><option>(nichts)</option><option>durch</option><option>über</option><option>um</option><option>unter</option><option>wider</option><option>wieder</option></select>.</div>
+        <div class="fill-item"><span class="num">11)</span> Wir alle <input type="text" class="blank-input inline" data-ans="unterschreiben" autocomplete="off"> <i>(unterschreiben)</i> eine Postkarte für unsere Klassenlehrerin <select class="blank inline" data-ans="(nichts)"><option value="">—</option><option>(nichts)</option><option>durch</option><option>über</option><option>um</option><option>unter</option><option>wider</option><option>wieder</option></select>.</div>
+        <div class="fill-item"><span class="num">12)</span> Nächstes Jahr <input type="text" class="blank-input inline" data-ans="kommen" autocomplete="off"> <i>(wiederkommen)</i> wir bestimmt <select class="blank inline" data-ans="wieder"><option value="">—</option><option>(nichts)</option><option>durch</option><option>über</option><option>um</option><option>unter</option><option>wider</option><option>wieder</option></select>!</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub4-check">Prüfen</button>
+        <button class="btn secondary" id="ub4-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub4-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5: Perfekt ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Was ist passiert?</h2>
+      <p class="lead">Утвори Perfekt: обери допоміжне дієслово (haben чи sein) і впиши Partizip II. Пам'ятай: у відокремлюваних є -ge-, у невідокремлюваних — немає. У реченнях 10 і 11 велика літера показує наголос.</p>
+      <div class="card" id="ub5-list">
+        <div class="fill-item"><span class="num">1)</span> Der Zug fuhr nicht bis Hamburg, deshalb <select class="blank inline" data-ans="sind"><option value="">—</option><option>haben</option><option>sind</option></select> wir in Hannover <input type="text" class="blank-input inline wide" data-ans="umgestiegen" autocomplete="off">. <i>(umsteigen)</i></div>
+        <div class="fill-item"><span class="num">2)</span> Ich <select class="blank inline" data-ans="habe"><option value="">—</option><option>habe</option><option>bin</option></select> meinen Bruder zum Geburtstag <input type="text" class="blank-input inline wide" data-ans="überrascht" autocomplete="off">. <i>(überraschen)</i></div>
+        <div class="fill-item"><span class="num">3)</span> Die Milch <select class="blank inline" data-ans="ist"><option value="">—</option><option>hat</option><option>ist</option></select> auf dem Herd <input type="text" class="blank-input inline wide" data-ans="übergekocht" autocomplete="off">. <i>(überkochen)</i></div>
+        <div class="fill-item"><span class="num">4)</span> Lara <select class="blank inline" data-ans="ist"><option value="">—</option><option>hat</option><option>ist</option></select> im Schwimmtest leider <input type="text" class="blank-input inline wide" data-ans="durchgefallen" autocomplete="off">. <i>(durchfallen)</i></div>
+        <div class="fill-item"><span class="num">5)</span> Die Ärztin <select class="blank inline" data-ans="hat"><option value="">—</option><option>hat</option><option>ist</option></select> mein Knie genau <input type="text" class="blank-input inline wide" data-ans="untersucht" autocomplete="off">. <i>(untersuchen)</i></div>
+        <div class="fill-item"><span class="num">6)</span> Meine Freundin <select class="blank inline" data-ans="ist"><option value="">—</option><option>hat</option><option>ist</option></select> nach München <input type="text" class="blank-input inline wide" data-ans="umgezogen" autocomplete="off">. <i>(umziehen)</i></div>
+        <div class="fill-item"><span class="num">7)</span> Tom <select class="blank inline" data-ans="hat"><option value="">—</option><option>hat</option><option>ist</option></select> mir schon wieder <input type="text" class="blank-input inline wide" data-ans="widersprochen" autocomplete="off">. <i>(widersprechen)</i></div>
+        <div class="fill-item"><span class="num">8)</span> Ich <select class="blank inline" data-ans="habe"><option value="">—</option><option>habe</option><option>bin</option></select> meinen Schlüssel endlich <input type="text" class="blank-input inline wide" data-ans="wiedergefunden" autocomplete="off">. <i>(wiederfinden)</i></div>
+        <div class="fill-item"><span class="num">9)</span> Die Lehrerin <select class="blank inline" data-ans="hat"><option value="">—</option><option>hat</option><option>ist</option></select> die Aufgabe noch einmal <input type="text" class="blank-input inline wide" data-ans="wiederholt" autocomplete="off">. <i>(wiederholen)</i></div>
+        <div class="fill-item"><span class="num">10)</span> Vorsicht! Der Autofahrer <select class="blank inline" data-ans="hat"><option value="">—</option><option>hat</option><option>ist</option></select> fast ein Schild <input type="text" class="blank-input inline wide" data-ans="umgefahren" autocomplete="off">. <i>(UMfahren)</i></div>
+        <div class="fill-item"><span class="num">11)</span> Wir <select class="blank inline" data-ans="haben"><option value="">—</option><option>haben</option><option>sind</option></select> den Stau zum Glück <input type="text" class="blank-input inline wide" data-ans="umfahren" autocomplete="off">. <i>(umFAHren)</i></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub5-check">Prüfen</button>
+        <button class="btn secondary" id="ub5-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub5-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 6: склади речення ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">Sätze bauen</h2>
+      <p class="lead">Склади речення: натискай слова по черзі; натиснеш на вже поставлене — воно повернеться. Стеж, куди йде префікс.</p>
+      <div class="card" id="ub6-order"></div>
+    </section>
+
+    <!-- ===== Üb. 7: перетворення ===== -->
+    <section class="panel" id="panel-ub7">
+      <p class="section-label">Üb. 7</p>
+      <h2 class="panel-title">Präsens → Perfekt</h2>
+      <p class="lead">Перепиши речення в Perfekt повністю. Крапку в кінці можна не ставити.</p>
+      <div class="card" id="ub7-list">
+        <div class="fill-item"><span class="num">1)</span> Die Sonne geht unter.
+          <input type="text" class="blank-input inline full" data-ans="Die Sonne ist untergegangen" autocomplete="off"></div>
+        <div class="fill-item"><span class="num">2)</span> Ich unterschreibe den Brief.
+          <input type="text" class="blank-input inline full" data-ans="Ich habe den Brief unterschrieben" autocomplete="off"></div>
+        <div class="fill-item"><span class="num">3)</span> Wir steigen in Köln um.
+          <input type="text" class="blank-input inline full" data-ans="Wir sind in Köln umgestiegen" autocomplete="off"></div>
+        <div class="fill-item"><span class="num">4)</span> Der Lehrer wiederholt die Frage.
+          <input type="text" class="blank-input inline full" data-ans="Der Lehrer hat die Frage wiederholt" autocomplete="off"></div>
+        <div class="fill-item"><span class="num">5)</span> Mia liest das Buch durch.
+          <input type="text" class="blank-input inline full" data-ans="Mia hat das Buch durchgelesen" autocomplete="off"></div>
+        <div class="fill-item"><span class="num">6)</span> Oma umarmt mich.
+          <input type="text" class="blank-input inline full" data-ans="Oma hat mich umarmt" autocomplete="off"></div>
+        <div class="fill-item"><span class="num">7)</span> Wir übernachten im Zelt.
+          <input type="text" class="blank-input inline full" data-ans="Wir haben im Zelt übernachtet" autocomplete="off"></div>
+        <div class="fill-item"><span class="num">8)</span> Die Vase fällt um.
+          <input type="text" class="blank-input inline full" data-ans="Die Vase ist umgefallen" autocomplete="off"></div>
+        <div class="fill-item"><span class="num">9)</span> Du übertreibst.
+          <input type="text" class="blank-input inline full" data-ans="Du hast übertrieben" autocomplete="off"></div>
+        <div class="fill-item"><span class="num">10)</span> Der See spiegelt die Berge wider.
+          <input type="text" class="blank-input inline full" data-ans="Der See hat die Berge widergespiegelt" autocomplete="off"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub7-check">Prüfen</button>
+        <button class="btn secondary" id="ub7-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub7-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das Wichtigste</p>
+        <p>Die Präfixe durch-, über-, um-, unter-, wider- und wieder- können trennbar oder untrennbar sein. Ist das Präfix betont, ist das Verb trennbar: Wir <b>steigen</b> in Köln <b>um</b> – wir sind <b>umgestiegen</b>. Ist der Verbstamm betont, bleibt das Präfix am Verb und das Partizip hat kein ge-: Ich <b>übersetze</b> – ich habe <b>übersetzt</b>. Manche Verben sind beides und haben dann zwei Bedeutungen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Шість префіксів — durch-, über-, um-, unter-, wider-, wieder- — бувають і відокремлюваними, і невідокремлюваними. Наголос на префіксі → префікс іде в кінець речення, у Partizip II є <i>-ge-</i>. Наголос на корені → префікс лишається на місці, Partizip II без <i>ge-</i>. Орієнтири: <i>durch-, um-, wieder-</i> — здебільшого відокремлювані; <i>über-, unter-, wider-</i> — здебільшого ні; <i>hinter-</i> — ніколи. А пари на кшталт <i>UMfahren / umFAHren</i> розрізняй за змістом.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Де це ще трапляється</p>
+        <div class="gram-related" id="gramRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <p class="lead" id="gramBest" style="font-size:14px;"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/grammar-data.js"></script>
+<script src="../../data/lessons-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/site.js"></script>
+<script>
+  const GRAM_ID = "trennbar-untrennbar";
+
+  // Üb. 1: впізнавання
+  buildQuiz('ub1-quiz', [
+    {q: "Welcher Satz ist richtig?", opts: ["Wir setzen den Text ins Deutsche über.", "Wir übersetzen den Text ins Deutsche.", "Wir übergesetzt den Text ins Deutsche."], correct: "Wir übersetzen den Text ins Deutsche."},
+    {q: "Lena umarmt ihre Oma. — Wo liegt der Akzent?", opts: ["UMarmen", "umARmen"], correct: "umARmen"},
+    {q: "In Köln müssen wir umsteigen. — Wo liegt der Akzent?", opts: ["umSTEIgen", "UMsteigen"], correct: "UMsteigen"},
+    {q: "Partizip II von <i>unterschreiben</i>:", opts: ["untergeschrieben", "geunterschrieben", "unterschrieben"], correct: "unterschrieben"},
+    {q: "Partizip II von <i>durchfallen</i> (in der Prüfung):", opts: ["durchfallen", "durchgefallen", "gedurchfallen"], correct: "durchgefallen"},
+    {q: "Welcher Satz ist richtig?", opts: ["Die Sonne untergeht um acht Uhr.", "Die Sonne unter geht um acht Uhr.", "Die Sonne geht um acht Uhr unter."], correct: "Die Sonne geht um acht Uhr unter."},
+    {q: "Es ist nicht leicht, diesen Text ___.", opts: ["zu übersetzen", "überzusetzen", "übersetzen zu"], correct: "zu übersetzen"},
+    {q: "Vergiss nicht, in Köln ___!", opts: ["zu umsteigen", "umsteigen zu", "umzusteigen"], correct: "umzusteigen"},
+    {q: "Welcher Imperativ ist richtig?", opts: ["Brich mich nicht unter!", "Unterbrich mich nicht!", "Unterbrechst mich nicht!"], correct: "Unterbrich mich nicht!"},
+    {q: "Welches Verb ist <b>untrennbar</b>?", opts: ["überkochen", "umfallen", "überraschen"], correct: "überraschen"},
+    {q: "Welches Verb ist <b>trennbar</b>?", opts: ["widersprechen", "wiederkommen", "unterrichten"], correct: "wiederkommen"},
+    {q: "Welches Präfix ist <b>immer</b> untrennbar?", opts: ["hinter-", "um-", "durch-"], correct: "hinter-"},
+  ]);
+
+  // Üb. 2: сортування
+  buildSort('ub2-sort', {
+    buckets: ["trennbar", "untrennbar"],
+    items: [
+      {t: "umsteigen (in den Bus)", b: "trennbar"},
+      {t: "durchlesen (das Buch)", b: "trennbar"},
+      {t: "untergehen (die Sonne)", b: "trennbar"},
+      {t: "wiederkommen (morgen)", b: "trennbar"},
+      {t: "überkochen (die Milch)", b: "trennbar"},
+      {t: "umfallen (die Vase)", b: "trennbar"},
+      {t: "widerspiegeln (der See)", b: "trennbar"},
+      {t: "durchfallen (im Test)", b: "trennbar"},
+      {t: "umziehen (nach Berlin)", b: "trennbar"},
+      {t: "überraschen (die Oma)", b: "untrennbar"},
+      {t: "unterschreiben (den Brief)", b: "untrennbar"},
+      {t: "umarmen (die Mutter)", b: "untrennbar"},
+      {t: "durchsuchen (das Zimmer)", b: "untrennbar"},
+      {t: "widersprechen (dem Lehrer)", b: "untrennbar"},
+      {t: "wiederholen (die Frage)", b: "untrennbar"},
+      {t: "hinterlassen (eine Nachricht)", b: "untrennbar"},
+      {t: "übernachten (im Zelt)", b: "untrennbar"},
+      {t: "untersuchen (das Knie)", b: "untrennbar"},
+    ]
+  });
+
+  // Üb. 3: значення пар
+  buildQuiz('ub3-quiz', [
+    {q: "Der Autofahrer <b>fährt</b> das Schild <b>um</b>. Was ist passiert?", opts: ["Er fährt um das Schild herum.", "Das Schild liegt jetzt auf dem Boden.", "Er fährt zum Schild zurück."], correct: "Das Schild liegt jetzt auf dem Boden."},
+    {q: "Wir <b>umfahren</b> den Stau. Was bedeutet das?", opts: ["Wir warten im Stau.", "Wir fahren direkt in den Stau.", "Wir fahren um den Stau herum."], correct: "Wir fahren um den Stau herum."},
+    {q: "Die Fähre <b>setzt</b> die Touristen ans andere Ufer <b>über</b>. Was macht die Fähre?", opts: ["Sie bringt die Touristen über den Fluss.", "Sie übersetzt, was die Touristen sagen.", "Sie setzt die Touristen auf Stühle."], correct: "Sie bringt die Touristen über den Fluss."},
+    {q: "Kannst du die Frage bitte <b>wiederholen</b>? Ich habe sie nicht gehört. — Wo liegt der Akzent?", opts: ["WIEderholen", "wiederHOlen"], correct: "wiederHOlen"},
+    {q: "Der Hund hat den Ball ___. (= zurückgeholt)", opts: ["wiederholt", "gewiederholt", "wiedergeholt"], correct: "wiedergeholt"},
+    {q: "Sie <b>geht</b> sehr gut mit Tieren <b>um</b>. Das heißt:", opts: ["Sie geht um die Tiere herum.", "Sie behandelt Tiere gut.", "Sie vermeidet Tiere."], correct: "Sie behandelt Tiere gut."},
+    {q: "Er hat das Problem geschickt ___. (= vermieden)", opts: ["umgangen", "umgegangen", "umgeht"], correct: "umgangen"},
+    {q: "Ich <b>schreibe</b> meinen Aufsatz <b>um</b>. Was mache ich?", opts: ["Ich erkläre ein Wort mit anderen Wörtern.", "Ich schreibe ihn ab.", "Ich schreibe ihn neu und anders."], correct: "Ich schreibe ihn neu und anders."},
+    {q: "Beim Spiel darf man das Wort nicht sagen. Tim hat es gut ___. (= mit anderen Worten erklärt)", opts: ["umgeschrieben", "umschrieben"], correct: "umschrieben"},
+    {q: "Der Junge <b>bricht</b> den Stock <b>durch</b>. Das heißt:", opts: ["Der Stock ist jetzt in zwei Teilen.", "Der Junge läuft durch den Wald.", "Der Junge findet einen Stock."], correct: "Der Stock ist jetzt in zwei Teilen."},
+  ]);
+
+  // Üb. 4, 5, 7: пропуски
+  wireBlanks('ub4');
+  wireBlanks('ub5');
+  wireBlanks('ub7');
+
+  // Üb. 6: склади речення
+  buildOrder('ub6-order', [
+    {words: ["Wir", "steigen", "in Köln", "um"], end: ".",
+     alt: ["In Köln steigen wir um"]},
+    {words: ["Ich", "übersetze", "den Brief", "ins Deutsche"], end: ".",
+     alt: ["Den Brief übersetze ich ins Deutsche", "Ins Deutsche übersetze ich den Brief"]},
+    {words: ["Du", "musst", "in Hamburg", "umsteigen"], end: ".",
+     alt: ["In Hamburg musst du umsteigen"]},
+    {words: ["Wann", "kommst", "du", "wieder"], end: "?"},
+    {words: ["Unterbrich", "mich", "bitte", "nicht"], end: "!",
+     alt: ["Bitte unterbrich mich nicht"]},
+    {words: ["Die Kinder", "haben", "die Oma", "umarmt"], end: ".",
+     alt: ["Die Oma haben die Kinder umarmt"]},
+    {words: ["Ich", "weiß", ", dass", "du", "morgen", "wiederkommst"], end: "."},
+    {words: ["Wir", "haben", "vergessen", "in Köln", "umzusteigen"], end: ".",
+     hint: "Інфінітив з zu: куди стає zu у відокремлюваному дієслові?"},
+  ]);
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🔀','🎯','📘','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  // ЗАВЖДИ останнім рядком
+  initGrammarPage(GRAM_ID);
+</script>
+</body>
+</html>
