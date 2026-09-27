@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Possessivartikel · Grammatik · Deutsch mit uns</title>
+<!-- =================================================================
+     Сторінка граматичної теми (копія grammar-template.html).
+     id теми: possessivartikel. Правила наповнення — GRAMMAR-BRIEF.md.
+     ================================================================= -->
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'gramatyka' });</script>
+<!-- хлібні крихти малює initGrammarPage() внизу — з даних grammar-data.js -->
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">GRAMMATIK · Іменник, артикль, займенник</span>
+        <h1>Possessivartikel</h1>
+        <p class="sub">Мій, твій, його, її, наш, ваш, їхній: як німецькою сказати, кому щось належить, і яке закінчення поставити після mein-, dein-, sein-…</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="regel" aria-selected="true">Regel</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Wem gehört's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Kasus</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Tabelle</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Endungen</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · sein / ihr</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Ihr, meiner</button>
+    <button class="tab-btn" data-tab="ub7">Üb. 7 · Umformen</button>
+    <button class="tab-btn" data-tab="ub8">Üb. 8 · Brief</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== REGEL ===== -->
+    <section class="panel active" id="panel-regel">
+      <p class="section-label">Regel</p>
+      <h2 class="panel-title">Possessivartikel</h2>
+      <ul class="regel-toc" id="regelToc"></ul>
+
+      <div class="card">
+        <p>Possessivartikel zeigen, wem etwas gehört: <b>mein</b> Buch, <b>deine</b> Tasche, <b>unser</b> Haus. Sie stehen vor dem Nomen – genau dort, wo sonst ein Artikel steht. Jeder Possessivartikel hat zwei Teile: Der <b>Anfang</b> (mein-, dein-, sein-, ihr- …) zeigt den Besitzer. Die <b>Endung</b> (-e, -en, -em …) zeigt Kasus, Genus und Numerus des Nomens.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Присвійний артикль (його ще називають присвійним займенником) відповідає українським словам <i>мій, твій, його, її, наш, ваш, їхній</i>. Він стоїть перед іменником замість der/die/das чи ein/eine. У кожної форми дві частини, і кожна відповідає на своє питання: <b>початок</b> — хто власник (я → mein-, ти → dein-, він → sein-…), <b>закінчення</b> — у якому відмінку, роді й числі стоїть іменник після нього. Українською «мій/моя/моє/мої» теж змінюється за іменником, тож принцип знайомий. Але <i>його, її, їхній</i> в українській не змінюються, а німецькі sein-, ihr- отримують закінчення так само, як mein-: <i>з його сестрою</i> = mit <b>seiner</b> Schwester.
+        </div>
+      </div>
+
+      <!-- 1 -->
+      <section class="card regel-block" id="formen">
+        <h3>Formen im Nominativ</h3>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Besitzer</th><th>maskulin<br>(der Hund)</th><th>feminin<br>(die Katze)</th><th>neutral<br>(das Pferd)</th><th>Plural<br>(die Tiere)</th></tr>
+          <tr><td class="gender">ich</td><td>mein</td><td>mein<b>e</b></td><td>mein</td><td>mein<b>e</b></td></tr>
+          <tr><td class="gender">du</td><td>dein</td><td>dein<b>e</b></td><td>dein</td><td>dein<b>e</b></td></tr>
+          <tr><td class="gender">er</td><td>sein</td><td>sein<b>e</b></td><td>sein</td><td>sein<b>e</b></td></tr>
+          <tr><td class="gender">sie</td><td>ihr</td><td>ihr<b>e</b></td><td>ihr</td><td>ihr<b>e</b></td></tr>
+          <tr><td class="gender">es</td><td>sein</td><td>sein<b>e</b></td><td>sein</td><td>sein<b>e</b></td></tr>
+          <tr><td class="gender">wir</td><td>unser</td><td>unser<b>e</b></td><td>unser</td><td>unser<b>e</b></td></tr>
+          <tr><td class="gender">ihr</td><td>euer</td><td>eur<b>e</b></td><td>euer</td><td>eur<b>e</b></td></tr>
+          <tr><td class="gender">sie (Pl.)</td><td>ihr</td><td>ihr<b>e</b></td><td>ihr</td><td>ihr<b>e</b></td></tr>
+          <tr><td class="gender">Sie</td><td>Ihr</td><td>Ihr<b>e</b></td><td>Ihr</td><td>Ihr<b>e</b></td></tr>
+        </table>
+        </div>
+        <p class="beispiel">Das ist <b>mein</b> Hund. Und das ist <b>meine</b> Katze.</p>
+        <p class="beispiel">Wo ist <b>dein</b> Heft? – <b>Mein</b> Heft liegt auf dem Tisch.</p>
+        <p class="beispiel">Wir lieben <b>unsere</b> Schule. <b>Unser</b> Lehrer ist super.</p>
+        <p class="merke">Im Nominativ: Maskulinum und Neutrum ohne Endung (<b>mein</b> Hund, <b>mein</b> Pferd), Femininum und Plural mit <b>-e</b> (<b>meine</b> Katze, <b>meine</b> Tiere). Genau wie bei ein und kein.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          У називному відмінку все просто: чоловічий і середній рід — без закінчення, жіночий рід і множина — <b>-e</b>. Це ті самі закінчення, що в <i>ein/eine</i> і <i>kein/keine</i>, тож якщо знаєш «ein Hund, eine Katze», то знаєш і «mein Hund, meine Katze». Порада: вчи присвійні артиклі в парах з особовими займенниками — ich → mein, du → dein, er → sein, sie → ihr, es → sein, wir → unser, ihr → euer, sie → ihr, Sie → Ihr.
+        </div>
+      </section>
+
+      <!-- 2 -->
+      <section class="card regel-block" id="besitzer">
+        <h3>Wer ist der Besitzer? sein oder ihr</h3>
+        <table class="gtable">
+          <tr><th>Besitzer</th><th>Anfang</th><th>Beispiel</th></tr>
+          <tr><td>ein Mann, ein Junge (er)</td><td><b>sein-</b></td><td>Das ist Paul. Das ist <b>sein</b> Fahrrad.</td></tr>
+          <tr><td>ein Kind, ein Baby (es)</td><td><b>sein-</b></td><td>Das Kind sucht <b>seine</b> Mama.</td></tr>
+          <tr><td>eine Frau, eine Katze (sie)</td><td><b>ihr-</b></td><td>Das ist Lena. Das ist <b>ihr</b> Fahrrad.</td></tr>
+          <tr><td>mehrere Personen (sie)</td><td><b>ihr-</b></td><td>Paul und Lena zeigen <b>ihr</b> Projekt.</td></tr>
+        </table>
+        <p class="beispiel">Max besucht <b>seine</b> Oma. – Anna besucht <b>ihren</b> Opa.</p>
+        <p class="beispiel">Die Katze spielt mit <b>ihrem</b> Ball. – Der Hund spielt mit <b>seinem</b> Ball.</p>
+        <p class="merke">Der <b>Besitzer</b> bestimmt den Anfang: er / es → <b>sein-</b>, sie → <b>ihr-</b>. Das <b>Nomen danach</b> bestimmt die Endung: sein<b>e</b> Oma, ihr<b>en</b> Opa.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Найчастіша помилка — обирати sein чи ihr за родом іменника, який стоїть після артикля. Так не можна: <b>початок</b> залежить лише від власника. «Його бабуся» — <i>seine Oma</i> (власник він → sein-, бабуся жіночого роду → -e). «Її дідусь» — <i>ihr Opa</i> (власниця вона → ihr-). Власник середнього роду (das Kind, das Baby, das Mädchen) граматично — <i>es</i>, тому <b>sein-</b>: <i>Das Mädchen sucht seine Tasche</i>; у розмовній мові часто кажуть і <i>ihre</i>, бо думають про дівчинку. Слово <i>ihr-</i> має три значення: <i>її</i>, <i>їхній</i> і (з великої) <i>ваш</i> — це розрізняють за контекстом. Ще одна відмінність: в українській є <i>свій</i> («Він бере свою сумку»), а в німецькій окремого слова немає — ставиш той самий присвійний артикль: <i>Er nimmt <b>seine</b> Tasche. Sie nimmt <b>ihre</b> Tasche. Wir nehmen <b>unsere</b> Taschen.</i>
+        </div>
+      </section>
+
+      <!-- 3 -->
+      <section class="card regel-block" id="unser-euer">
+        <h3>unser und euer</h3>
+        <p class="beispiel"><b>unser</b> Lehrer – <b>unser</b>e Lehrerin – mit <b>unser</b>em Lehrer</p>
+        <p class="beispiel"><b>euer</b> Garten – <b>eur</b>e Wohnung – in <b>eur</b>em Garten</p>
+        <p class="beispiel">Habt ihr <b>eure</b> Hausaufgaben gemacht? – Ja, <b>unsere</b> Hausaufgaben sind fertig.</p>
+        <p class="merke">Das <b>-er</b> in unser und euer gehört zum Wort, es ist keine Endung: <b>unser</b> Lehrer, <b>euer</b> Hund. Bei <b>euer</b> fällt das e vor einer Endung weg: <b>eure</b>, <b>euren</b>, <b>eurem</b>, <b>eurer</b>, <b>eures</b>.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          <i>unser</i> (наш) і <i>euer</i> (ваш — коли звертаєшся до кількох людей на «ви», але неофіційно: друзі, однокласники) закінчуються на <b>-er</b>, і це частина самого слова, а не закінчення. Тому «unser Lehrer» — це повна форма без закінчення, як «mein Lehrer». Справжнє закінчення додається вже після -er: unser<b>e</b>, unser<b>em</b>. У слові <i>euer</i> перед закінченням випадає <b>e</b>: не «euere», а <b>eure</b>, не «eueren», а <b>euren</b> (форми з e інколи трапляються, але звучать застаріло). У <i>unser</i> зазвичай нічого не випадає: <b>unsere</b>, <b>unseren</b>; скорочене «unsre» буває в розмовній мові й у віршах — у школі пиши повну форму.
+        </div>
+      </section>
+
+      <!-- 4 -->
+      <section class="card regel-block" id="hoeflich">
+        <h3>Die Höflichkeitsform: Ihr, Ihre</h3>
+        <p class="beispiel">Frau Weber, ist das <b>Ihr</b> Schlüssel? – Ja, das ist <b>mein</b> Schlüssel.</p>
+        <p class="beispiel">Herr und Frau Weber, ist das <b>Ihr</b> Auto? – Ja, das ist <b>unser</b> Auto.</p>
+        <p class="beispiel">Entschuldigung, darf ich <b>Ihren</b> Ausweis sehen?</p>
+        <p class="merke"><b>Ihr-</b> mit großem I = die höfliche Form (Sie). Sie passt für eine Person und für mehrere Personen. <b>ihr-</b> mit kleinem i = der Besitzer ist sie (Singular oder Plural).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Коли звертаєшся до дорослого на «Ви» (Sie), присвійний артикль — <b>Ihr-</b> з великої літери: <i>Ihr Schlüssel</i> — Ваш ключ. Ця сама форма годиться і для однієї людини (Frau Weber), і для кількох (Herr und Frau Weber). Відповідати треба «від себе»: одна людина скаже <i>mein</i>, пара — <i>unser</i>. Велика літера тут змінює зміст: <i>Ist das <b>Ihr</b> Hund?</i> — Це Ваш собака? <i>Ist das <b>ihr</b> Hund?</i> — Це її (їхній) собака? А от <i>dein</i> і <i>euer</i> пишемо з малої; лише в листах і повідомленнях їх можна писати з великої з пошани: <i>Wie geht es Dir und Deiner Familie? … Dein Tim.</i> (див. тему «Deklination der Personalpronomen»).
+        </div>
+      </section>
+
+      <!-- 5 -->
+      <section class="card regel-block" id="deklination">
+        <h3>Deklination: die Endungen</h3>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th></th><th>maskulin</th><th>feminin</th><th>neutral</th><th>Plural</th></tr>
+          <tr><td class="gender">Nom.</td><td>mein Lehrer</td><td>mein<b>e</b> Schule</td><td>mein Heft</td><td>mein<b>e</b> Bücher</td></tr>
+          <tr><td class="gender">Akk.</td><td>mein<b>en</b> Lehrer</td><td>mein<b>e</b> Schule</td><td>mein Heft</td><td>mein<b>e</b> Bücher</td></tr>
+          <tr><td class="gender">Dat.</td><td>mein<b>em</b> Lehrer</td><td>mein<b>er</b> Schule</td><td>mein<b>em</b> Heft</td><td>mein<b>en</b> Bücher<b>n</b></td></tr>
+          <tr><td class="gender">Gen.</td><td>mein<b>es</b> Lehrer<b>s</b></td><td>mein<b>er</b> Schule</td><td>mein<b>es</b> Heft<b>es</b></td><td>mein<b>er</b> Bücher</td></tr>
+        </table>
+        </div>
+        <p class="beispiel">Ich rufe <b>meinen</b> Lehrer an. <i>(Akk. m)</i></p>
+        <p class="beispiel">Wir sprechen mit <b>unserer</b> Lehrerin. <i>(Dat. f)</i></p>
+        <p class="beispiel">Das ist das Heft <b>meines</b> Freundes. <i>(Gen. m)</i></p>
+        <p class="beispiel">Lukas spielt mit <b>seinen</b> Freunde<b>n</b> Fußball. <i>(Dat. Pl.)</i></p>
+        <p class="merke">Possessivartikel haben dieselben Endungen wie <b>ein</b> und <b>kein</b>: m. Akk. <b>-en</b>, m./n. Dat. <b>-em</b>, f. Dat./Gen. <b>-er</b>, m./n. Gen. <b>-es</b>. Im Plural wie kein: meine – meine – meinen – meiner.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Таблицю можна не вчити як нову: це закінчення <i>ein/kein</i>, приставлені до mein-, dein-, sein-… Для множини, де <i>ein</i> немає, дивись на <i>kein</i>: keine Bücher → meine Bücher, mit keinen Büchern → mit meinen Büchern. Корисні «гачки» для пам'яті: у знахідному відмінку змінюється лише чоловічий рід (<b>-en</b>); давальний — це <b>-em</b> (ч. і с. рід), <b>-er</b> (ж. рід), <b>-en</b> (множина); у давальному множини і сам іменник отримує <b>-n</b> (mit meinen Freunde<b>n</b>). Родовий відмінок (meines Lehrers) частіше трапляється в письмовій мові; у розмові замість нього кажуть <i>von + Dativ</i>: das Heft von meinem Freund.
+        </div>
+      </section>
+
+      <!-- 6 -->
+      <section class="card regel-block" id="zwei-fragen">
+        <h3>Zwei Fragen: Wer besitzt? Welcher Kasus?</h3>
+        <table class="gtable">
+          <tr><th>Satz</th><th>1. Wer ist der Besitzer?</th><th>2. Kasus, Genus, Numerus?</th><th>Ergebnis</th></tr>
+          <tr><td>Anna ruft ___ Vater an.</td><td>Anna → <b>ihr-</b></td><td>anrufen + Akk., der Vater (m)</td><td><b>ihren</b> Vater</td></tr>
+          <tr><td>Tom hilft ___ Schwester.</td><td>Tom → <b>sein-</b></td><td>helfen + Dat., die Schwester (f)</td><td><b>seiner</b> Schwester</td></tr>
+          <tr><td>Wir fahren mit ___ Auto.</td><td>wir → <b>unser-</b></td><td>mit + Dat., das Auto (n)</td><td><b>unserem</b> Auto</td></tr>
+          <tr><td>Die Kinder danken ___ Eltern.</td><td>die Kinder → <b>ihr-</b></td><td>danken + Dat., Plural</td><td><b>ihren</b> Eltern</td></tr>
+        </table>
+        <p class="merke">Zuerst der Besitzer → der Anfang (mein-, sein-, ihr- …). Dann das Nomen und sein Kasus → die Endung (-e, -en, -em, -er, -es).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Щоб не помилитися, щоразу став собі два питання й відповідай на них по черзі. <b>Перше: хто власник?</b> Від цього залежить початок слова. <b>Друге: у якому відмінку стоїть іменник і якого він роду та числа?</b> Відмінок підказує дієслово (anrufen, sehen + Akkusativ; helfen, danken + Dativ) або прийменник (mit, bei, zu + Dativ; für, ohne + Akkusativ). Лише після цього додавай закінчення з таблиці. Найважливіше: ці два питання незалежні. У «Tom hilft seiner Schwester» власник — хлопець (sein-), а закінчення <b>-er</b> — через сестру (жіночий рід) у давальному відмінку.
+        </div>
+      </section>
+
+      <!-- 7 -->
+      <section class="card regel-block" id="ohne-nomen">
+        <h3>Ohne Nomen: meiner, meine, meins</h3>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th></th><th>maskulin</th><th>feminin</th><th>neutral</th><th>Plural</th></tr>
+          <tr><td class="gender">Nom.</td><td>mein<b>er</b></td><td>meine</td><td>mein<b>s</b> / mein<b>es</b></td><td>meine</td></tr>
+          <tr><td class="gender">Akk.</td><td>meinen</td><td>meine</td><td>mein<b>s</b> / mein<b>es</b></td><td>meine</td></tr>
+          <tr><td class="gender">Dat.</td><td>meinem</td><td>meiner</td><td>meinem</td><td>meinen</td></tr>
+        </table>
+        </div>
+        <p class="beispiel">Ist das dein Rucksack? – Ja, das ist <b>meiner</b>.</p>
+        <p class="beispiel">Ist das dein Handy? – Nein, das ist nicht <b>meins</b>. Das ist <b>seins</b>.</p>
+        <p class="beispiel">Mein Stift schreibt nicht. Gibst du mir <b>deinen</b>?</p>
+        <p class="beispiel">Unser Haus ist neu, <b>eures</b> ist alt.</p>
+        <p class="merke">Steht der Possessivartikel <b>ohne Nomen</b>, bekommt er im Nominativ Maskulinum <b>-er</b> (meiner) und im Nominativ/Akkusativ Neutrum <b>-(e)s</b> (meins, meines). Alle anderen Formen sind wie mit Nomen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Коли іменник уже прозвучав і його не хочеться повторювати, присвійне слово стоїть саме: «Це твій рюкзак? — Так, <i>мій</i>». Тоді воно працює як займенник, і в трьох клітинках таблиці, де з іменником закінчення немає, з'являється закінчення, яке показує рід: чоловічий рід називного відмінка — <b>-er</b> (<i>meiner, deiner, seiner, unserer, eurer</i>), середній рід у називному і знахідному — <b>-s</b> або <b>-es</b> (<i>meins / meines, seins, eures</i>). У розмові частіше кажуть коротке <i>meins</i>. Решта форм така сама, як з іменником. Так само поводиться <i>kein</i>: Hast du einen Stift? – Nein, ich habe <i>keinen</i>. Ist hier ein Heft? – Nein, hier ist <i>keins</i>.
+        </div>
+      </section>
+
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: квіз ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Wem gehört's?</h2>
+      <p class="lead">Хто власник? Обери правильний присвійний артикль. Усі іменники тут стоять у називному відмінку (Nominativ).</p>
+      <div class="card" id="ub1-quiz"></div>
+    </section>
+
+    <!-- ===== Üb. 2: сортування за відмінком ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Welcher Kasus?</h2>
+      <p class="lead">У якому відмінку стоїть кожне словосполучення? Подивись на закінчення присвійного артикля (а в Genitiv — ще й на закінчення іменника) і розклади картки по кошиках.</p>
+      <div class="card" id="ub2-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 3: таблиця euer ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Die Formen von euer</h2>
+      <p class="lead">Заповни таблицю формами <b>euer</b> (ваш — ви, друзі). Перша клітинка — приклад. Пам'ятай, що буде з e перед закінченням.</p>
+      <div class="card" id="ub3-list" style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th></th><th>maskulin<br>(der Garten)</th><th>feminin<br>(die Schule)</th><th>neutral<br>(das Haus)</th><th>Plural<br>(die Kinder)</th></tr>
+          <tr><td class="gender">Nom.</td>
+            <td>euer</td>
+            <td><input type="text" class="blank-input" data-ans="eure|euere"></td>
+            <td><input type="text" class="blank-input" data-ans="euer"></td>
+            <td><input type="text" class="blank-input" data-ans="eure|euere"></td></tr>
+          <tr><td class="gender">Akk.</td>
+            <td><input type="text" class="blank-input" data-ans="euren|eueren"></td>
+            <td><input type="text" class="blank-input" data-ans="eure|euere"></td>
+            <td><input type="text" class="blank-input" data-ans="euer"></td>
+            <td><input type="text" class="blank-input" data-ans="eure|euere"></td></tr>
+          <tr><td class="gender">Dat.</td>
+            <td><input type="text" class="blank-input" data-ans="eurem|euerem"></td>
+            <td><input type="text" class="blank-input" data-ans="eurer|euerer"></td>
+            <td><input type="text" class="blank-input" data-ans="eurem|euerem"></td>
+            <td><input type="text" class="blank-input" data-ans="euren|eueren"></td></tr>
+          <tr><td class="gender">Gen.</td>
+            <td><input type="text" class="blank-input" data-ans="eures|eueres"></td>
+            <td><input type="text" class="blank-input" data-ans="eurer|euerer"></td>
+            <td><input type="text" class="blank-input" data-ans="eures|eueres"></td>
+            <td><input type="text" class="blank-input" data-ans="eurer|euerer"></td></tr>
+        </table>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4: випадні списки, Akk./Dat./Gen. ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Die richtige Endung</h2>
+      <p class="lead">Обери правильну форму. Спершу визнач відмінок: що вимагає дієслово чи прийменник? Потім подумай про рід і число іменника.</p>
+      <div class="card" id="ub4-list">
+        <div class="fill-item"><span class="num">1.</span> Am Wochenende besuche ich <select class="blank inline" data-ans="meine"><option value="">—</option><option>meiner</option><option>meine</option><option>meinen</option></select> Oma.</div>
+        <div class="fill-item"><span class="num">2.</span> Nach der Schule helfe ich <select class="blank inline" data-ans="meinem"><option value="">—</option><option>meinen</option><option>meinem</option><option>meiner</option></select> Bruder.</div>
+        <div class="fill-item"><span class="num">3.</span> Kannst du mir bitte <select class="blank inline" data-ans="deinen"><option value="">—</option><option>deinem</option><option>dein</option><option>deinen</option></select> Stift leihen?</div>
+        <div class="fill-item"><span class="num">4.</span> Wir fahren mit <select class="blank inline" data-ans="unserem"><option value="">—</option><option>unseren</option><option>unser</option><option>unserem</option></select> Auto nach Berlin.</div>
+        <div class="fill-item"><span class="num">5.</span> Lisa schreibt <select class="blank inline" data-ans="ihrer"><option value="">—</option><option>ihrer</option><option>ihre</option><option>ihren</option></select> Freundin eine Nachricht.</div>
+        <div class="fill-item"><span class="num">6.</span> Max sucht schon wieder <select class="blank inline" data-ans="sein"><option value="">—</option><option>seinen</option><option>sein</option><option>seinem</option></select> Handy.</div>
+        <div class="fill-item"><span class="num">7.</span> Die Kinder danken <select class="blank inline" data-ans="ihren"><option value="">—</option><option>ihrem</option><option>ihre</option><option>ihren</option></select> Eltern für das Geschenk.</div>
+        <div class="fill-item"><span class="num">8.</span> Habt ihr <select class="blank inline" data-ans="eure"><option value="">—</option><option>euren</option><option>eure</option><option>eurem</option></select> Hausaufgaben schon gemacht?</div>
+        <div class="fill-item"><span class="num">9.</span> In den Ferien wohne ich bei <select class="blank inline" data-ans="meiner"><option value="">—</option><option>meine</option><option>meinem</option><option>meiner</option></select> Tante.</div>
+        <div class="fill-item"><span class="num">10.</span> Tom ruft heute Abend <select class="blank inline" data-ans="seinen"><option value="">—</option><option>seinem</option><option>seine</option><option>seinen</option></select> Freund an.</div>
+        <div class="fill-item"><span class="num">11.</span> Wir gratulieren <select class="blank inline" data-ans="unserem"><option value="">—</option><option>unser</option><option>unserem</option><option>unseren</option></select> Lehrer zum Geburtstag.</div>
+        <div class="fill-item"><span class="num">12.</span> Das ist das Zimmer <select class="blank inline" data-ans="meines"><option value="">—</option><option>meinem</option><option>meines</option><option>meiner</option></select> Bruders.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub4-check">Prüfen</button>
+        <button class="btn secondary" id="ub4-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub4-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5: вписати, власник + закінчення ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Wer besitzt? Welcher Kasus?</h2>
+      <p class="lead">Впиши присвійний артикль з правильним закінченням. Постав собі два питання: хто власник (підмет речення) і в якому відмінку стоїть іменник. Рід іменника — у дужках.</p>
+      <div class="card" id="ub5-list">
+        <div class="fill-item"><span class="num">1.</span> Anna telefoniert mit <input type="text" class="blank-input inline" data-ans="ihrem"> Vater (m).</div>
+        <div class="fill-item"><span class="num">2.</span> Paul hat <input type="text" class="blank-input inline" data-ans="seinen"> Schlüssel (m) zu Hause vergessen.</div>
+        <div class="fill-item"><span class="num">3.</span> Die Kinder spielen im Garten <input type="text" class="blank-input inline" data-ans="ihrer"> Großeltern (Pl.).</div>
+        <div class="fill-item"><span class="num">4.</span> Wir zeigen <input type="text" class="blank-input inline" data-ans="unseren|unsren|unsern"> Gästen (Pl.) die Stadt.</div>
+        <div class="fill-item"><span class="num">5.</span> Frau Berg sucht <input type="text" class="blank-input inline" data-ans="ihre"> Brille (f).</div>
+        <div class="fill-item"><span class="num">6.</span> Das Baby hält <input type="text" class="blank-input inline" data-ans="seinen"> Teddy (m) ganz fest.</div>
+        <div class="fill-item"><span class="num">7.</span> Ich schenke <input type="text" class="blank-input inline" data-ans="meiner"> Schwester (f) ein Buch.</div>
+        <div class="fill-item"><span class="num">8.</span> Jonas und Lea besuchen <input type="text" class="blank-input inline" data-ans="ihren"> Onkel (m) in Hamburg.</div>
+        <div class="fill-item"><span class="num">9.</span> Kommst du mit <input type="text" class="blank-input inline" data-ans="deinem"> Hund (m) in den Park?</div>
+        <div class="fill-item"><span class="num">10.</span> Leute, habt ihr <input type="text" class="blank-input inline" data-ans="eure|euere"> Tickets (Pl.) dabei?</div>
+        <div class="fill-item"><span class="num">11.</span> Die Lehrerin korrigiert die Tests <input type="text" class="blank-input inline" data-ans="ihrer"> Schüler (Pl.).</div>
+        <div class="fill-item"><span class="num">12.</span> Mia übernachtet heute bei <input type="text" class="blank-input inline" data-ans="ihrer"> Cousine (f).</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub5-check">Prüfen</button>
+        <button class="btn secondary" id="ub5-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub5-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 6: Höflichkeitsform + ohne Nomen ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">Ihr – und meiner, meins</h2>
+      <p class="lead">а) Звертання на «Ви»: впиши форму Ihr- — тут важлива велика літера. б) Присвійне слово без іменника: впиши meiner, meins, deinen… Рід іменника — у дужках або в попередньому реченні.</p>
+      <div class="card" id="ub6-list">
+        <p class="section-label" style="margin:0 0 8px;">a) Die Höflichkeitsform</p>
+        <div class="fill-item"><span class="num">1.</span> Frau Schulz, ist das <input type="text" class="blank-input inline" data-ans="Ihr" data-case> Regenschirm (m)?</div>
+        <div class="fill-item"><span class="num">2.</span> Herr Lang, wir haben <input type="text" class="blank-input inline" data-ans="Ihr" data-case> Handy (n) im Bus gefunden.</div>
+        <div class="fill-item"><span class="num">3.</span> Herr und Frau Roth, hier ist <input type="text" class="blank-input inline" data-ans="Ihr" data-case> Schlüssel (m).</div>
+        <div class="fill-item"><span class="num">4.</span> Der Kontrolleur (Sie): „Kann ich bitte <input type="text" class="blank-input inline" data-ans="Ihre" data-case> Fahrkarte (f) sehen?“</div>
+        <p class="section-label" style="margin:18px 0 8px;">b) Ohne Nomen</p>
+        <div class="fill-item"><span class="num">5.</span> Ist das dein Rucksack? – Ja, das ist <input type="text" class="blank-input inline" data-ans="meiner">.</div>
+        <div class="fill-item"><span class="num">6.</span> Ist das euer Ball? – Nein, das ist nicht <input type="text" class="blank-input inline" data-ans="unserer|unsrer">.</div>
+        <div class="fill-item"><span class="num">7.</span> Gehört dir das Handy? – Ja, das ist <input type="text" class="blank-input inline" data-ans="meins|meines">.</div>
+        <div class="fill-item"><span class="num">8.</span> Mein Stift ist kaputt. Kannst du mir <input type="text" class="blank-input inline" data-ans="deinen"> geben?</div>
+        <div class="fill-item"><span class="num">9.</span> Wessen Jacke ist das? Ist das <input type="text" class="blank-input inline" data-ans="deine">, Lena?</div>
+        <div class="fill-item"><span class="num">10.</span> Ist das Ihr Auto, Herr Braun? – Ja, das ist <input type="text" class="blank-input inline" data-ans="meins|meines">.</div>
+        <div class="fill-item"><span class="num">11.</span> Unsere Wohnung ist klein, <input type="text" class="blank-input inline" data-ans="eure|euere"> ist groß. (ihr)</div>
+        <div class="fill-item"><span class="num">12.</span> Wir fahren mit unserem Auto. Fahrt ihr mit <input type="text" class="blank-input inline" data-ans="eurem|euerem">?</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub6-check">Prüfen</button>
+        <button class="btn secondary" id="ub6-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub6-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 7: перетворення речень ===== -->
+    <section class="panel" id="panel-ub7">
+      <p class="section-label">Üb. 7</p>
+      <h2 class="panel-title">Umformen: von … → sein, ihr</h2>
+      <p class="lead">Перепиши речення повністю: заміни «von + людина» (і артикль перед іменником) присвійним артиклем з правильним закінченням. Приклад: Das ist die Tasche von Oma. → Das ist ihre Tasche.</p>
+      <div class="card" id="ub7-list">
+        <div class="fill-item"><span class="num">1.</span> Das ist das Fahrrad von Tim.<br><input type="text" class="blank-input inline full" data-ans="Das ist sein Fahrrad"></div>
+        <div class="fill-item"><span class="num">2.</span> Ich finde die Idee von Laura super.<br><input type="text" class="blank-input inline full" data-ans="Ich finde ihre Idee super"></div>
+        <div class="fill-item"><span class="num">3.</span> Wir besuchen die Großeltern von Max.<br><input type="text" class="blank-input inline full" data-ans="Wir besuchen seine Großeltern"></div>
+        <div class="fill-item"><span class="num">4.</span> Ich spiele mit dem Hund von Anna.<br><input type="text" class="blank-input inline full" data-ans="Ich spiele mit ihrem Hund"></div>
+        <div class="fill-item"><span class="num">5.</span> Kennst du den Bruder von Jonas?<br><input type="text" class="blank-input inline full" data-ans="Kennst du seinen Bruder"></div>
+        <div class="fill-item"><span class="num">6.</span> Wir helfen der Lehrerin von Emma.<br><input type="text" class="blank-input inline full" data-ans="Wir helfen ihrer Lehrerin"></div>
+        <div class="fill-item"><span class="num">7.</span> Ich schreibe den Freunden von Lukas eine Karte.<br><input type="text" class="blank-input inline full" data-ans="Ich schreibe seinen Freunden eine Karte"></div>
+        <div class="fill-item"><span class="num">8.</span> Das Haus von Ben und Mia ist alt.<br><input type="text" class="blank-input inline full" data-ans="Ihr Haus ist alt"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub7-check">Prüfen</button>
+        <button class="btn secondary" id="ub7-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub7-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 8: лист, закінчення там, де потрібно ===== -->
+    <section class="panel" id="panel-ub8">
+      <p class="section-label">Üb. 8</p>
+      <h2 class="panel-title">Ein Brief an Nina</h2>
+      <p class="lead">Софі пише подрузі про нову школу. Обери закінчення після кожного присвійного артикля. Знак <b>∅</b> означає, що закінчення не потрібне. Рід і число іменника — у дужках.</p>
+      <div class="card" id="ub8-list">
+        <div class="mail-window">
+          <div class="mail-titlebar">Neue Nachricht</div>
+          <div class="mail-fields">An: nina.k@mail.de &nbsp;·&nbsp; Betreff: Meine neue Schule</div>
+          <div class="mail-body" style="line-height:2.2;">
+          <p>Liebe Nina,</p>
+          <p>seit zwei Wochen gehe ich jetzt auf <span style="white-space:nowrap">mein<select class="blank inline" data-ans="e"><option value="">?</option><option>∅</option><option>e</option><option>en</option><option>em</option><option>er</option><option>es</option></select></span> neue Schule (f). <span style="white-space:nowrap">Mein<select class="blank inline" data-ans="∅"><option value="">?</option><option>∅</option><option>e</option><option>en</option><option>em</option><option>er</option><option>es</option></select></span> Klassenlehrer (m) heißt Herr Wolf. Er ist sehr nett, und <span style="white-space:nowrap">sein<select class="blank inline" data-ans="∅"><option value="">?</option><option>∅</option><option>e</option><option>en</option><option>em</option><option>er</option><option>es</option></select></span> Unterricht (m) macht wirklich Spaß. In <span style="white-space:nowrap">unser<select class="blank inline" data-ans="er"><option value="">?</option><option>∅</option><option>e</option><option>en</option><option>em</option><option>er</option><option>es</option></select></span> Klasse (f) sind 24 Schüler.</p>
+          <p>Neben mir sitzt Emma. <span style="white-space:nowrap">Ihr<select class="blank inline" data-ans="e"><option value="">?</option><option>∅</option><option>e</option><option>en</option><option>em</option><option>er</option><option>es</option></select></span> Eltern (Pl.) kommen aus Italien, und in <span style="white-space:nowrap">ihr<select class="blank inline" data-ans="em"><option value="">?</option><option>∅</option><option>e</option><option>en</option><option>em</option><option>er</option><option>es</option></select></span> Garten (m) wachsen Tomaten und Zitronen! Gestern hat sie mir <span style="white-space:nowrap">ihr<select class="blank inline" data-ans="∅"><option value="">?</option><option>∅</option><option>e</option><option>en</option><option>em</option><option>er</option><option>es</option></select></span> Lieblingsbuch (n) geliehen.</p>
+          <p>Nach der Schule fahre ich mit <span style="white-space:nowrap">mein<select class="blank inline" data-ans="em"><option value="">?</option><option>∅</option><option>e</option><option>en</option><option>em</option><option>er</option><option>es</option></select></span> Fahrrad (n) nach Hause. <span style="white-space:nowrap">Mein<select class="blank inline" data-ans="e"><option value="">?</option><option>∅</option><option>e</option><option>en</option><option>em</option><option>er</option><option>es</option></select></span> Schwester (f) Lisa geht auch auf diese Schule, aber in die 5b. <span style="white-space:nowrap">Ihr<select class="blank inline" data-ans="e"><option value="">?</option><option>∅</option><option>e</option><option>en</option><option>em</option><option>er</option><option>es</option></select></span> Freundinnen (Pl.) sind ganz verrückt nach <span style="white-space:nowrap">unser<select class="blank inline" data-ans="em"><option value="">?</option><option>∅</option><option>e</option><option>en</option><option>em</option><option>er</option><option>es</option></select></span> Hund (m) Bruno.</p>
+          <p>Und wie geht es dir und <span style="white-space:nowrap">dein<select class="blank inline" data-ans="er"><option value="">?</option><option>∅</option><option>e</option><option>en</option><option>em</option><option>er</option><option>es</option></select></span> Familie (f)? Grüß bitte <span style="white-space:nowrap">dein<select class="blank inline" data-ans="en"><option value="">?</option><option>∅</option><option>e</option><option>en</option><option>em</option><option>er</option><option>es</option></select></span> Bruder (m) von mir! Habt ihr schon <span style="white-space:nowrap">eur<select class="blank inline" data-ans="e"><option value="">?</option><option>∅</option><option>e</option><option>en</option><option>em</option><option>er</option><option>es</option></select></span> Sommerferien (Pl.) geplant? Vielleicht könnt ihr uns in <span style="white-space:nowrap">unser<select class="blank inline" data-ans="er"><option value="">?</option><option>∅</option><option>e</option><option>en</option><option>em</option><option>er</option><option>es</option></select></span> neuen Wohnung (f) besuchen. Das Zimmer <span style="white-space:nowrap">mein<select class="blank inline" data-ans="es"><option value="">?</option><option>∅</option><option>e</option><option>en</option><option>em</option><option>er</option><option>es</option></select></span> Bruders (m) ist riesig – da ist genug Platz für alle.</p>
+          <p>Schreib mir bald!<br><span style="white-space:nowrap">Dein<select class="blank inline" data-ans="e"><option value="">?</option><option>∅</option><option>e</option><option>en</option><option>em</option><option>er</option><option>es</option></select></span> Sophie</p>
+        </div>
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub8-check">Prüfen</button>
+        <button class="btn secondary" id="ub8-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub8-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das Wichtigste</p>
+        <p>Der Anfang des Possessivartikels zeigt den Besitzer: mein, dein, sein, ihr, unser, euer, Ihr. Die Endung zeigt Kasus, Genus und Numerus des Nomens – es sind dieselben Endungen wie bei ein und kein. Bei euer fällt das e vor der Endung weg: eure, euren. Ohne Nomen sagt man meiner, meine, meins.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Початок присвійного артикля показує власника (я → mein-, він/воно → sein-, вона/вони → ihr-, Ви → Ihr-), а закінчення — відмінок, рід і число іменника після нього; це ті самі закінчення, що в ein і kein. У euer перед закінченням випадає e: eure, euren. Без іменника кажемо meiner (ч. р.), meine (ж. р. і множина), meins (с. р.).
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Де це ще трапляється</p>
+        <div class="gram-related" id="gramRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <p class="lead" id="gramBest" style="font-size:14px;"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/grammar-data.js"></script>
+<script src="../../data/lessons-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/site.js"></script>
+<script>
+  const GRAM_ID = "possessivartikel";
+
+  // Üb. 1: квіз — хто власник (Nominativ)
+  buildQuiz('ub1-quiz', [
+    {q: "Das ist Paul. Das ist ___ Fahrrad.", opts: ["ihr", "sein", "dein"], correct: "sein"},
+    {q: "Das ist Oma Helga. Das ist ___ Garten.", opts: ["sein", "ihre", "ihr"], correct: "ihr"},
+    {q: "Ich heiße Mia. Das ist ___ Schwester.", opts: ["meine", "mein", "meiner"], correct: "meine"},
+    {q: "Wir sind die Klasse 8b. Das ist ___ Klassenzimmer.", opts: ["euer", "unsere", "unser"], correct: "unser"},
+    {q: "Ben und Tim, ist das ___ Ball?", opts: ["euer", "eure", "ihr"], correct: "euer"},
+    {q: "Lena und Jonas haben einen Hund. ___ Hund heißt Rex.", opts: ["Sein", "Euer", "Ihr"], correct: "Ihr"},
+    {q: "Herr Klein, ist das ___ Tasche?", opts: ["ihre", "deine", "Ihre"], correct: "Ihre"},
+    {q: "Das Baby weint. Wo ist denn ___ Mama?", opts: ["seine", "ihre", "deine"], correct: "seine"},
+    {q: "Du, sind das ___ Schuhe?", opts: ["dein", "deine", "deiner"], correct: "deine"},
+    {q: "Kinder, wo sind ___ Hefte?", opts: ["ihre", "unsere", "eure"], correct: "eure"},
+  ]);
+
+  // Üb. 2: розсортуй за відмінком (лише однозначні форми)
+  buildSort('ub2-sort', {
+    buckets: ["Nominativ", "Akkusativ", "Dativ", "Genitiv"],
+    items: [
+      {t: "mein Bruder", b: "Nominativ"}, {t: "sein Vater", b: "Nominativ"},
+      {t: "unser Lehrer", b: "Nominativ"}, {t: "euer Opa", b: "Nominativ"},
+      {t: "meinen Bruder", b: "Akkusativ"}, {t: "seinen Vater", b: "Akkusativ"},
+      {t: "ihren Freund", b: "Akkusativ"}, {t: "euren Hund", b: "Akkusativ"},
+      {t: "meinem Onkel", b: "Dativ"}, {t: "ihrem Kind", b: "Dativ"},
+      {t: "unseren Freunden", b: "Dativ"}, {t: "deinem Lehrer", b: "Dativ"},
+      {t: "meines Bruders", b: "Genitiv"}, {t: "seines Vaters", b: "Genitiv"},
+      {t: "ihres Kindes", b: "Genitiv"}, {t: "eures Hundes", b: "Genitiv"}
+    ]
+  });
+
+  // Üb. 3–8: пропуски, таблиця, випадні списки, перетворення
+  wireBlanks('ub3');
+  wireBlanks('ub4');
+  wireBlanks('ub5');
+  wireBlanks('ub6');
+  wireBlanks('ub7');
+  wireBlanks('ub8');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🔑','🎒','🏠','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  // ЗАВЖДИ останнім рядком: крихти, зміст Regel, "Де це ще трапляється", збереження прогресу
+  initGrammarPage(GRAM_ID);
+</script>
+</body>
+</html>
