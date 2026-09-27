@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deklination des Nomens · Grammatik · Deutsch mit uns</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'gramatyka' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">GRAMMATIK · Іменник, артикль, займенник</span>
+        <h1>Deklination des Nomens</h1>
+        <p class="sub">Чотири відмінки німецької мови: як змінюються артикль та іменник і як знайти потрібний відмінок за питанням.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="regel" aria-selected="true">Regel</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Kasus</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Fragen</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Tabelle</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · -s / -es</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Genitiv</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Dat. + Akk.</button>
+    <button class="tab-btn" data-tab="ub7">Üb. 7 · Gemischt</button>
+    <button class="tab-btn" data-tab="ub8">Üb. 8 · Sätze</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== REGEL ===== -->
+    <section class="panel active" id="panel-regel">
+      <p class="section-label">Regel</p>
+      <h2 class="panel-title">Deklination des Nomens</h2>
+      <ul class="regel-toc" id="regelToc"></ul>
+
+      <div class="card">
+        <p>Im Deutschen gibt es vier Fälle (Kasus): <b>Nominativ</b>, <b>Akkusativ</b>, <b>Dativ</b> und <b>Genitiv</b>. Der Kasus zeigt, welche Rolle ein Nomen im Satz spielt: Wer macht etwas? Wen oder was? Wem? Wessen? Man sieht den Kasus vor allem am Artikel: <b>der</b> Lehrer, <b>den</b> Lehrer, <b>dem</b> Lehrer, <b>des</b> Lehrers.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          В українській мові сім відмінків, і відмінок видно насамперед із закінчення іменника: <i>вчитель — вчителя — вчителеві</i>. У німецькій відмінків чотири, а головну «роботу» виконує артикль: сам іменник в однині майже не змінюється. Приблизна відповідність: Nominativ ≈ називний (хто? що?), Akkusativ ≈ знахідний (кого? що?), Dativ ≈ давальний (кому?), Genitiv ≈ родовий у значенні «чий?». Але це лише орієнтир — відмінок у німецькій визначає дієслово чи прийменник, і він не завжди збігається з українським: <i>дзвоню <b>другові</b></i> (кому?), але <i>ich rufe <b>den Freund</b> an</i> (Akkusativ).
+        </div>
+      </div>
+
+      <section class="card regel-block" id="singular">
+        <h3>Mit dem bestimmten Artikel im Singular</h3>
+
+        <p class="section-label">Die Formen</p>
+        <div style="overflow-x:auto;">
+          <table class="gtable">
+            <tr><th>Kasus</th><th>maskulin</th><th>feminin</th><th>neutral</th><th>Frage</th></tr>
+            <tr><td class="gender">Nominativ</td><td>der Lehrer</td><td>die Schwester</td><td>das Mädchen</td><td>Wer? / Was?</td></tr>
+            <tr><td class="gender">Akkusativ</td><td><b>den</b> Lehrer</td><td>die Schwester</td><td>das Mädchen</td><td>Wen? / Was?</td></tr>
+            <tr><td class="gender">Dativ</td><td><b>dem</b> Lehrer</td><td><b>der</b> Schwester</td><td><b>dem</b> Mädchen</td><td>Wem?</td></tr>
+            <tr><td class="gender">Genitiv</td><td><b>des</b> Lehrer<b>s</b></td><td><b>der</b> Schwester</td><td><b>des</b> Mädchen<b>s</b></td><td>Wessen?</td></tr>
+          </table>
+        </div>
+        <p class="merke">Im Akkusativ ändert sich nur der Artikel maskulin: der → den. Feminine Nomen haben nur zwei Artikel: die (Nom., Akk.) und der (Dat., Gen.). Eine Endung bekommt das Nomen im Singular nur im Genitiv maskulin und neutral: -s oder -es.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Запам'ятовуй таблицю «рядками артиклів»: чоловічий рід <b>der — den — dem — des</b>, жіночий <b>die — die — der — der</b>, середній <b>das — das — dem — des</b>. Зверни увагу на дві пастки. Перша: <b>der</b> буває і чоловічим родом у Nominativ, і жіночим у Dativ чи Genitiv — тому дивись на рід іменника. Друга: у середньому й жіночому роді Nominativ і Akkusativ однакові, тож відмінок видно лише зі змісту речення. А от у Dativ і Genitiv чоловічий і середній рід мають однакові артиклі: <b>dem</b> і <b>des</b>.
+        </div>
+
+        <p class="section-label" style="margin-top:22px;">Nach dem Kasus fragen</p>
+        <p><b>Nominativ</b> — das Subjekt. Personen: <b>Wer?</b> Sachen: <b>Was?</b></p>
+        <p class="beispiel"><b>Der Hund</b> schläft auf dem Sofa. → Wer schläft?</p>
+        <p class="beispiel"><b>Das Kino</b> ist heute voll. → Was ist voll?</p>
+        <p><b>Akkusativ</b> — das Akkusativobjekt. Personen: <b>Wen?</b> Sachen: <b>Was?</b></p>
+        <p class="beispiel">Am Sonntag besuche ich <b>den Opa</b>. → Wen besuche ich?</p>
+        <p class="beispiel">Mia kauft <b>das Brot</b>. → Was kauft Mia?</p>
+        <p><b>Dativ</b> — das Dativobjekt, meistens eine Person: <b>Wem?</b></p>
+        <p class="beispiel">Der Ball gehört <b>dem Nachbarskind</b>. → Wem gehört der Ball?</p>
+        <p class="beispiel">Lena hilft <b>der Oma</b> im Garten. → Wem hilft Lena?</p>
+        <p><b>Genitiv</b> — zeigt, wem etwas gehört: <b>Wessen?</b></p>
+        <p class="beispiel">Das ist das Zimmer <b>des Bruders</b>. → Wessen Zimmer ist das?</p>
+        <p>Viele Verben haben zwei Objekte: eine Person im Dativ und eine Sache im Akkusativ. Stehen beide als Nomen im Satz, kommt der Dativ meistens zuerst.</p>
+        <p class="beispiel">Die Lehrerin gibt <b>dem Schüler</b> (Wem?) <b>das Heft</b> (Was?).</p>
+        <p class="beispiel">Tom zeigt <b>der Freundin</b> (Wem?) <b>den Park</b> (Was?).</p>
+        <p class="merke">Wer? / Was? → Nominativ. Wen? / Was? → Akkusativ. Wem? → Dativ. Wessen? → Genitiv. Die Frage stellt man immer mit dem Verb aus dem Satz.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Щоб визначити відмінок, постав питання від дієслова — так само, як на уроках української: <i>Wen besuche ich?</i> (кого відвідую?) → <i>den Opa</i> → Akkusativ. Питання <b>Was?</b> однакове для Nominativ і Akkusativ, тому з неживими предметами дивись, чи це підмет (хто/що діє) чи додаток (на що спрямована дія). У реченнях на кшталт «дати <u>кому</u> <u>що</u>» (geben, schenken, zeigen, bringen, erklären) особа стоїть у Dativ, а річ — в Akkusativ, і зазвичай спершу йде Dativ. Коли замість іменників з'являються займенники, порядок інший — це окрема тема.
+        </div>
+
+        <p class="section-label" style="margin-top:22px;">Genitiv: -s oder -es?</p>
+        <div style="overflow-x:auto;">
+          <table class="gtable">
+            <tr><th>Nomen (m / n)</th><th>Endung</th><th>Beispiele</th></tr>
+            <tr><td>mehrsilbig</td><td><b>-s</b></td><td>des Lehrer<b>s</b>, des Computer<b>s</b>, des Zimmer<b>s</b>, des Onkel<b>s</b>, des Auto<b>s</b></td></tr>
+            <tr><td>einsilbig</td><td>meist <b>-es</b> (auch -s)</td><td>des Tag<b>es</b>, des Buch<b>es</b>, des Freund<b>es</b>, des Kind<b>es</b></td></tr>
+            <tr><td>auf -s, -ss, -ß, -x, -z, -tz</td><td>immer <b>-es</b></td><td>des Glas<b>es</b>, des Bus<b>ses</b>, des Fuß<b>es</b>, des Reflex<b>es</b>, des Pilz<b>es</b>, des Platz<b>es</b></td></tr>
+            <tr><td>feminin</td><td>keine Endung</td><td>der Schule, der Stadt, der Freundin</td></tr>
+          </table>
+        </div>
+        <p class="beispiel">Die Tür <b>des Hauses</b> ist rot. Das Ende <b>des Films</b> war traurig.</p>
+        <p class="beispiel">Das Handy <b>der Lehrerin</b> klingelt.</p>
+        <p class="merke">Nur maskuline und neutrale Nomen bekommen im Genitiv Singular -s oder -es. Nach -s, -ss, -ß, -x, -z, -tz steht immer -es.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Закінчення в родовому відмінку однини отримують лише іменники чоловічого й середнього роду. Багатоскладові (Lehrer, Computer, Mädchen) — просто <b>-s</b>. Односкладові (Tag, Buch, Kind) — переважно <b>-es</b>; форма з <b>-s</b> (des Tags, des Buchs) теж правильна, але звучить розмовніше. Якщо ж слово закінчується на шиплячий чи свистячий звук (-s, -ss, -ß, -x, -z, -tz), без <b>-e-</b> його просто неможливо вимовити, тому там <b>-es</b> обов'язкове: <i>des Glases</i>. Слово <i>Bus</i> подвоює s: <i>des Busses</i>. Жіночий рід закінчень не має ніколи: <i>das Auto <b>der</b> Mutter</i>. Окремо живе група чоловічих іменників на кшталт <i>der Junge — des Jungen</i> (n-Deklination) — це наступна тема. У Dativ однини іменник закінчення не отримує; старе <b>-e</b> лишилось лише в сталих виразах: <i>zu Hause, nach Hause</i>.
+        </div>
+      </section>
+
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: Kasus erkennen (quiz) ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Welcher Kasus?</h2>
+      <p class="lead">У якому відмінку стоїть виділений іменник? Постав питання від дієслова.</p>
+      <div class="card" id="ub1-quiz"></div>
+    </section>
+
+    <!-- ===== Üb. 2: Fragewörter (selects) ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Wer, wen, wem, wessen?</h2>
+      <p class="lead">Обери питальне слово, яке питає саме про виділену частину речення.</p>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> <b>Der Lehrer</b> erklärt die Regel. →
+          <select class="blank inline" data-ans="Wer"><option value="">—</option><option>Wer</option><option>Was</option><option>Wen</option><option>Wem</option><option>Wessen</option></select> erklärt die Regel?</div>
+        <div class="fill-item"><span class="num">2)</span> Der Lehrer erklärt <b>die Regel</b>. →
+          <select class="blank inline" data-ans="Was"><option value="">—</option><option>Wer</option><option>Was</option><option>Wen</option><option>Wem</option><option>Wessen</option></select> erklärt der Lehrer?</div>
+        <div class="fill-item"><span class="num">3)</span> Ich besuche <b>den Freund</b>. →
+          <select class="blank inline" data-ans="Wen"><option value="">—</option><option>Wer</option><option>Was</option><option>Wen</option><option>Wem</option><option>Wessen</option></select> besuchst du?</div>
+        <div class="fill-item"><span class="num">4)</span> Das Handy gehört <b>der Schwester</b>. →
+          <select class="blank inline" data-ans="Wem"><option value="">—</option><option>Wer</option><option>Was</option><option>Wen</option><option>Wem</option><option>Wessen</option></select> gehört das Handy?</div>
+        <div class="fill-item"><span class="num">5)</span> Das ist das Heft <b>des Schülers</b>. →
+          <select class="blank inline" data-ans="Wessen"><option value="">—</option><option>Wer</option><option>Was</option><option>Wen</option><option>Wem</option><option>Wessen</option></select> Heft ist das?</div>
+        <div class="fill-item"><span class="num">6)</span> <b>Das Fenster</b> ist offen. →
+          <select class="blank inline" data-ans="Was"><option value="">—</option><option>Wer</option><option>Was</option><option>Wen</option><option>Wem</option><option>Wessen</option></select> ist offen?</div>
+        <div class="fill-item"><span class="num">7)</span> Tom schreibt <b>dem Onkel</b> eine E-Mail. →
+          <select class="blank inline" data-ans="Wem"><option value="">—</option><option>Wer</option><option>Was</option><option>Wen</option><option>Wem</option><option>Wessen</option></select> schreibt Tom eine E-Mail?</div>
+        <div class="fill-item"><span class="num">8)</span> Wir fragen <b>die Lehrerin</b>. →
+          <select class="blank inline" data-ans="Wen"><option value="">—</option><option>Wer</option><option>Was</option><option>Wen</option><option>Wem</option><option>Wessen</option></select> fragt ihr?</div>
+        <div class="fill-item"><span class="num">9)</span> Der Ball <b>des Kindes</b> liegt im Garten. →
+          <select class="blank inline" data-ans="Wessen"><option value="">—</option><option>Wer</option><option>Was</option><option>Wen</option><option>Wem</option><option>Wessen</option></select> Ball liegt im Garten?</div>
+        <div class="fill-item"><span class="num">10)</span> <b>Die Oma</b> kocht heute Suppe. →
+          <select class="blank inline" data-ans="Wer"><option value="">—</option><option>Wer</option><option>Was</option><option>Wen</option><option>Wem</option><option>Wessen</option></select> kocht heute Suppe?</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: Tabelle ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Die Tabelle ausfüllen</h2>
+      <p class="lead">Впиши артикль та іменник у потрібному відмінку (наприклад: <i>den Onkel</i>). Не забудь про закінчення в Genitiv.</p>
+      <div class="card" id="ub3-list" style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th></th><th>maskulin</th><th>feminin</th><th>neutral</th></tr>
+          <tr><td class="gender">Nom.</td><td>der Onkel</td><td>die Tante</td><td>das Fenster</td></tr>
+          <tr><td class="gender">Akk.</td>
+            <td><input type="text" class="blank-input" data-ans="den Onkel"></td>
+            <td><input type="text" class="blank-input" data-ans="die Tante"></td>
+            <td><input type="text" class="blank-input" data-ans="das Fenster"></td></tr>
+          <tr><td class="gender">Dat.</td>
+            <td><input type="text" class="blank-input" data-ans="dem Onkel"></td>
+            <td><input type="text" class="blank-input" data-ans="der Tante"></td>
+            <td><input type="text" class="blank-input" data-ans="dem Fenster"></td></tr>
+          <tr><td class="gender">Gen.</td>
+            <td><input type="text" class="blank-input" data-ans="des Onkels"></td>
+            <td><input type="text" class="blank-input" data-ans="der Tante"></td>
+            <td><input type="text" class="blank-input" data-ans="des Fensters"></td></tr>
+        </table>
+        <table class="gtable">
+          <tr><th></th><th>maskulin</th><th>feminin</th><th>neutral</th></tr>
+          <tr><td class="gender">Nom.</td><td>der Hund</td><td>die Katze</td><td>das Haus</td></tr>
+          <tr><td class="gender">Akk.</td>
+            <td><input type="text" class="blank-input" data-ans="den Hund"></td>
+            <td><input type="text" class="blank-input" data-ans="die Katze"></td>
+            <td><input type="text" class="blank-input" data-ans="das Haus"></td></tr>
+          <tr><td class="gender">Dat.</td>
+            <td><input type="text" class="blank-input" data-ans="dem Hund|dem Hunde"></td>
+            <td><input type="text" class="blank-input" data-ans="der Katze"></td>
+            <td><input type="text" class="blank-input" data-ans="dem Haus|dem Hause"></td></tr>
+          <tr><td class="gender">Gen.</td>
+            <td><input type="text" class="blank-input" data-ans="des Hundes|des Hunds"></td>
+            <td><input type="text" class="blank-input" data-ans="der Katze"></td>
+            <td><input type="text" class="blank-input" data-ans="des Hauses"></td></tr>
+        </table>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4: Genitiv-Endung sortieren ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Welche Endung im Genitiv?</h2>
+      <p class="lead">Яке закінчення отримає іменник у Genitiv однини? Розклади картки по кошиках.</p>
+      <div class="card" id="ub4-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 5: Genitiv bilden ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Wessen ist das?</h2>
+      <p class="lead">Утвори Genitiv від слова в дужках: впиши артикль та іменник з потрібним закінченням.</p>
+      <div class="card" id="ub5-list">
+        <div class="fill-item"><span class="num">1)</span> Das ist das Zimmer <input type="text" class="blank-input inline wide" data-ans="des Bruders"> (der Bruder).</div>
+        <div class="fill-item"><span class="num">2)</span> Das ist die Tasche <input type="text" class="blank-input inline wide" data-ans="der Lehrerin"> (die Lehrerin).</div>
+        <div class="fill-item"><span class="num">3)</span> Das ist der Garten <input type="text" class="blank-input inline wide" data-ans="des Hauses"> (das Haus).</div>
+        <div class="fill-item"><span class="num">4)</span> Das ist das Ende <input type="text" class="blank-input inline wide" data-ans="des Films|des Filmes"> (der Film).</div>
+        <div class="fill-item"><span class="num">5)</span> Das ist die Farbe <input type="text" class="blank-input inline wide" data-ans="des Autos"> (das Auto).</div>
+        <div class="fill-item"><span class="num">6)</span> Das ist der Name <input type="text" class="blank-input inline wide" data-ans="des Hundes|des Hunds"> (der Hund).</div>
+        <div class="fill-item"><span class="num">7)</span> Das ist das Fenster <input type="text" class="blank-input inline wide" data-ans="der Küche"> (die Küche).</div>
+        <div class="fill-item"><span class="num">8)</span> Das ist der Preis <input type="text" class="blank-input inline wide" data-ans="des Fahrrads|des Fahrrades"> (das Fahrrad).</div>
+        <div class="fill-item"><span class="num">9)</span> Das ist die Tür <input type="text" class="blank-input inline wide" data-ans="des Busses"> (der Bus).</div>
+        <div class="fill-item"><span class="num">10)</span> Das ist das Spielzeug <input type="text" class="blank-input inline wide" data-ans="des Kindes|des Kinds"> (das Kind).</div>
+        <div class="fill-item"><span class="num">11)</span> Das ist der Anfang <input type="text" class="blank-input inline wide" data-ans="des Satzes"> (der Satz).</div>
+        <div class="fill-item"><span class="num">12)</span> Das ist die Adresse <input type="text" class="blank-input inline wide" data-ans="des Lehrers"> (der Lehrer).</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub5-check">Prüfen</button>
+        <button class="btn secondary" id="ub5-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub5-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 6: Dativ + Akkusativ (selects) ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">Wem? Was?</h2>
+      <p class="lead">Обери артиклі. Спершу запитай «Wem?» (особа, Dativ), потім «Was?» (річ, Akkusativ).</p>
+      <div class="card" id="ub6-list">
+        <div class="fill-item"><span class="num">1)</span> Der Kellner bringt
+          <select class="blank inline" data-ans="dem"><option value="">—</option><option>der</option><option>die</option><option>das</option><option>den</option><option>dem</option><option>des</option></select> Gast
+          <select class="blank inline" data-ans="die"><option value="">—</option><option>der</option><option>die</option><option>das</option><option>den</option><option>dem</option><option>des</option></select> Suppe.</div>
+        <div class="fill-item"><span class="num">2)</span> Die Oma schenkt
+          <select class="blank inline" data-ans="dem"><option value="">—</option><option>der</option><option>die</option><option>das</option><option>den</option><option>dem</option><option>des</option></select> Enkel
+          <select class="blank inline" data-ans="das"><option value="">—</option><option>der</option><option>die</option><option>das</option><option>den</option><option>dem</option><option>des</option></select> Buch.</div>
+        <div class="fill-item"><span class="num">3)</span> Ich zeige
+          <select class="blank inline" data-ans="der"><option value="">—</option><option>der</option><option>die</option><option>das</option><option>den</option><option>dem</option><option>des</option></select> Freundin
+          <select class="blank inline" data-ans="den"><option value="">—</option><option>der</option><option>die</option><option>das</option><option>den</option><option>dem</option><option>des</option></select> Weg.</div>
+        <div class="fill-item"><span class="num">4)</span> Der Lehrer erklärt
+          <select class="blank inline" data-ans="der"><option value="">—</option><option>der</option><option>die</option><option>das</option><option>den</option><option>dem</option><option>des</option></select> Klasse
+          <select class="blank inline" data-ans="die"><option value="">—</option><option>der</option><option>die</option><option>das</option><option>den</option><option>dem</option><option>des</option></select> Aufgabe.</div>
+        <div class="fill-item"><span class="num">5)</span> Wir geben
+          <select class="blank inline" data-ans="dem"><option value="">—</option><option>der</option><option>die</option><option>das</option><option>den</option><option>dem</option><option>des</option></select> Hund
+          <select class="blank inline" data-ans="den"><option value="">—</option><option>der</option><option>die</option><option>das</option><option>den</option><option>dem</option><option>des</option></select> Ball.</div>
+        <div class="fill-item"><span class="num">6)</span> Anna schreibt
+          <select class="blank inline" data-ans="dem"><option value="">—</option><option>der</option><option>die</option><option>das</option><option>den</option><option>dem</option><option>des</option></select> Opa
+          <select class="blank inline" data-ans="den"><option value="">—</option><option>der</option><option>die</option><option>das</option><option>den</option><option>dem</option><option>des</option></select> Brief.</div>
+        <div class="fill-item"><span class="num">7)</span> Die Verkäuferin empfiehlt
+          <select class="blank inline" data-ans="dem"><option value="">—</option><option>der</option><option>die</option><option>das</option><option>den</option><option>dem</option><option>des</option></select> Mädchen
+          <select class="blank inline" data-ans="die"><option value="">—</option><option>der</option><option>die</option><option>das</option><option>den</option><option>dem</option><option>des</option></select> Jacke.</div>
+        <div class="fill-item"><span class="num">8)</span> Ich leihe
+          <select class="blank inline" data-ans="dem"><option value="">—</option><option>der</option><option>die</option><option>das</option><option>den</option><option>dem</option><option>des</option></select> Bruder
+          <select class="blank inline" data-ans="das"><option value="">—</option><option>der</option><option>die</option><option>das</option><option>den</option><option>dem</option><option>des</option></select> Fahrrad.</div>
+        <div class="fill-item"><span class="num">9)</span> Papa kauft
+          <select class="blank inline" data-ans="dem"><option value="">—</option><option>der</option><option>die</option><option>das</option><option>den</option><option>dem</option><option>des</option></select> Kind
+          <select class="blank inline" data-ans="das"><option value="">—</option><option>der</option><option>die</option><option>das</option><option>den</option><option>dem</option><option>des</option></select> Eis.</div>
+        <div class="fill-item"><span class="num">10)</span> Tom erzählt
+          <select class="blank inline" data-ans="der"><option value="">—</option><option>der</option><option>die</option><option>das</option><option>den</option><option>dem</option><option>des</option></select> Lehrerin
+          <select class="blank inline" data-ans="die"><option value="">—</option><option>der</option><option>die</option><option>das</option><option>den</option><option>dem</option><option>des</option></select> Geschichte.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub6-check">Prüfen</button>
+        <button class="btn secondary" id="ub6-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub6-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 7: Gemischt (inputs) ===== -->
+    <section class="panel" id="panel-ub7">
+      <p class="section-label">Üb. 7</p>
+      <h2 class="panel-title">Alle vier Fälle</h2>
+      <p class="lead">Постав слово з дужок у потрібний відмінок і впиши його разом з артиклем.</p>
+      <div class="card" id="ub7-list">
+        <div class="fill-item"><span class="num">1)</span> Ich rufe <input type="text" class="blank-input inline wide" data-ans="den Freund"> (der Freund) an.</div>
+        <div class="fill-item"><span class="num">2)</span> Die Jacke gehört <input type="text" class="blank-input inline wide" data-ans="der Schwester"> (die Schwester).</div>
+        <div class="fill-item"><span class="num">3)</span> <input type="text" class="blank-input inline wide" data-ans="der Bus"> (der Bus) kommt um acht Uhr.</div>
+        <div class="fill-item"><span class="num">4)</span> Am Samstag besuchen wir <input type="text" class="blank-input inline wide" data-ans="das Museum"> (das Museum).</div>
+        <div class="fill-item"><span class="num">5)</span> Das ist das Büro <input type="text" class="blank-input inline wide" data-ans="des Direktors"> (der Direktor).</div>
+        <div class="fill-item"><span class="num">6)</span> Die Ärztin hilft <input type="text" class="blank-input inline wide" data-ans="dem Kind|dem Kinde"> (das Kind).</div>
+        <div class="fill-item"><span class="num">7)</span> Hast du <input type="text" class="blank-input inline wide" data-ans="die Nachricht"> (die Nachricht) schon gelesen?</div>
+        <div class="fill-item"><span class="num">8)</span> Die Farbe <input type="text" class="blank-input inline wide" data-ans="des Kleides|des Kleids"> (das Kleid) ist sehr schön.</div>
+        <div class="fill-item"><span class="num">9)</span> Wir danken <input type="text" class="blank-input inline wide" data-ans="dem Lehrer"> (der Lehrer) für die Hilfe.</div>
+        <div class="fill-item"><span class="num">10)</span> Der Vater kauft <input type="text" class="blank-input inline wide" data-ans="dem Sohn|dem Sohne"> (der Sohn) <input type="text" class="blank-input inline wide" data-ans="den Rucksack"> (der Rucksack).</div>
+        <div class="fill-item"><span class="num">11)</span> Die Fenster <input type="text" class="blank-input inline wide" data-ans="der Wohnung"> (die Wohnung) sind groß.</div>
+        <div class="fill-item"><span class="num">12)</span> Wir suchen <input type="text" class="blank-input inline wide" data-ans="den Schlüssel"> (der Schlüssel) <input type="text" class="blank-input inline wide" data-ans="der Oma"> (die Oma).</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub7-check">Prüfen</button>
+        <button class="btn secondary" id="ub7-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub7-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 8: Sätze bauen (buildOrder) ===== -->
+    <section class="panel" id="panel-ub8">
+      <p class="section-label">Üb. 8</p>
+      <h2 class="panel-title">Sätze bauen</h2>
+      <p class="lead">Склади речення: натискай слова по черзі. Натиснеш на вже поставлене слово — воно повернеться назад.</p>
+      <div class="card" id="ub8-order"></div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das Wichtigste</p>
+        <p>Den Kasus erkennt man an der Frage: Wer? — Nominativ, Wen? — Akkusativ, Wem? — Dativ, Wessen? — Genitiv. Die Artikel im Singular: der – den – dem – des, die – die – der – der, das – das – dem – des. Im Genitiv bekommen maskuline und neutrale Nomen -s oder -es; feminine Nomen bleiben ohne Endung.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Відмінок визначай питанням від дієслова: хто? — Nominativ, кого? — Akkusativ, кому? — Dativ, чий? — Genitiv. В однині змінюється передусім артикль. Закінчення -s / -es у Genitiv отримують лише чоловічий і середній рід: багатоскладові слова — -s, односкладові — переважно -es, слова на -s, -ß, -x, -z, -tz — завжди -es.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Де це ще трапляється</p>
+        <div class="gram-related" id="gramRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <p class="lead" id="gramBest" style="font-size:14px;"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/grammar-data.js"></script>
+<script src="../../data/lessons-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/site.js"></script>
+<script>
+  const GRAM_ID = "deklination-nomen";
+
+  const KASUS = ["Nominativ", "Akkusativ", "Dativ", "Genitiv"];
+
+  // Üb. 1: Kasus erkennen
+  buildQuiz('ub1-quiz', [
+    {q: "<b>Der Hund</b> spielt im Garten.", opts: KASUS, correct: "Nominativ"},
+    {q: "Ich sehe <b>den Bus</b> schon.", opts: KASUS, correct: "Akkusativ"},
+    {q: "Wir helfen <b>dem Opa</b>.", opts: KASUS, correct: "Dativ"},
+    {q: "Das ist die Tasche <b>der Lehrerin</b>.", opts: KASUS, correct: "Genitiv"},
+    {q: "Paul schenkt <b>der Mutter</b> Blumen.", opts: KASUS, correct: "Dativ"},
+    {q: "Mia liest <b>das Buch</b>.", opts: KASUS, correct: "Akkusativ"},
+    {q: "<b>Die Schule</b> beginnt um acht.", opts: KASUS, correct: "Nominativ"},
+    {q: "Das Fahrrad <b>des Bruders</b> ist neu.", opts: KASUS, correct: "Genitiv"},
+    {q: "Kennst du <b>die Stadt</b>?", opts: KASUS, correct: "Akkusativ"},
+    {q: "Der Lehrer antwortet <b>dem Mädchen</b>.", opts: KASUS, correct: "Dativ"},
+    {q: "Die Farbe <b>des Autos</b> gefällt mir.", opts: KASUS, correct: "Genitiv"},
+    {q: "<b>Das Kind</b> gibt dem Hund Wasser.", opts: KASUS, correct: "Nominativ"},
+  ]);
+
+  // Üb. 2, 3, 5, 6, 7: пропуски й випадні списки
+  wireBlanks('ub2');
+  wireBlanks('ub3');
+  wireBlanks('ub5');
+  wireBlanks('ub6');
+  wireBlanks('ub7');
+
+  // Üb. 4: Genitiv-Endung
+  buildSort('ub4-sort', {
+    buckets: ["nur -s", "meist -es (auch -s)", "immer -es", "keine Endung"],
+    items: [
+      {t: "der Lehrer", b: "nur -s"}, {t: "der Computer", b: "nur -s"}, {t: "das Zimmer", b: "nur -s"},
+      {t: "das Mädchen", b: "nur -s"}, {t: "der Onkel", b: "nur -s"}, {t: "das Auto", b: "nur -s"},
+      {t: "der Tag", b: "meist -es (auch -s)"}, {t: "das Buch", b: "meist -es (auch -s)"},
+      {t: "der Freund", b: "meist -es (auch -s)"}, {t: "das Brot", b: "meist -es (auch -s)"},
+      {t: "das Glas", b: "immer -es"}, {t: "der Bus", b: "immer -es"}, {t: "der Fuß", b: "immer -es"},
+      {t: "der Platz", b: "immer -es"}, {t: "das Haus", b: "immer -es"}, {t: "der Preis", b: "immer -es"},
+      {t: "die Schule", b: "keine Endung"}, {t: "die Stadt", b: "keine Endung"},
+      {t: "die Freundin", b: "keine Endung"}, {t: "die Tasche", b: "keine Endung"}
+    ]
+  });
+
+  // Üb. 8: склади речення
+  buildOrder('ub8-order', [
+    {words: ["Die Lehrerin", "gibt", "dem Schüler", "das Heft"], end: ".",
+     alt: ["Dem Schüler gibt die Lehrerin das Heft", "Das Heft gibt die Lehrerin dem Schüler"]},
+    {words: ["Das Zimmer", "der Schwester", "ist", "sehr groß"], end: ".",
+     alt: ["Sehr groß ist das Zimmer der Schwester"]},
+    {words: ["Anna", "zeigt", "der Freundin", "die Stadt"], end: ".", gross: true,
+     alt: ["Der Freundin zeigt Anna die Stadt", "Die Stadt zeigt Anna der Freundin"]},
+    {words: ["Der Opa", "erzählt", "dem Kind", "ein Märchen"], end: ".",
+     alt: ["Dem Kind erzählt der Opa ein Märchen", "Ein Märchen erzählt der Opa dem Kind"]},
+    {words: ["Wir", "kennen", "den Bruder", "des Lehrers"], end: ".",
+     alt: ["Den Bruder des Lehrers kennen wir"]},
+    {words: ["Wem", "gehört", "der Rucksack"], end: "?"},
+    {words: ["Wessen", "Handy", "liegt", "auf dem Tisch"], end: "?"},
+    {words: ["Der Hund", "des Mädchens", "spielt", "im Garten"], end: ".",
+     alt: ["Im Garten spielt der Hund des Mädchens"]},
+  ]);
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📘','🔎','✏️','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initGrammarPage(GRAM_ID);
+</script>
+</body>
+</html>
