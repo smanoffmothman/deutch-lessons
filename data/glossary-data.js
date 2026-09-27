@@ -561,5 +561,17 @@ const GLOSSARY = [
   {de: "das Praktikum", uk: "практика, стажування", klas: "9", modul: "A", lektion: 14},
   {de: "die Stelle", uk: "посада, робоче місце", klas: "9", modul: "A", lektion: 14},
   {de: "vor der Wahl stehen", uk: "стояти перед вибором", klas: "9", modul: "A", lektion: 14},
-  {de: "tätig sein (als)", uk: "працювати (ким), займатися діяльністю", klas: "9", modul: "A", lektion: 14}
+  {de: "tätig sein (als)", uk: "працювати (ким), займатися діяльністю", klas: "9", modul: "A", lektion: 14},
+  {de: "das Geburtsdatum", uk: "дата народження", klas: "9", modul: "A", lektion: 15},
+  {de: "der Geburtsort", uk: "місце народження", klas: "9", modul: "A", lektion: 15},
+  {de: "die Arbeitsstelle", uk: "місце роботи, робоче місце", klas: "9", modul: "A", lektion: 15},
+  {de: "die Leitung (die Leitung übernehmen)", uk: "керівництво (очолити, взяти на себе керівництво)", klas: "9", modul: "A", lektion: 15},
+  {de: "die Firma (die Firmen)", uk: "фірма, компанія", klas: "9", modul: "A", lektion: 15},
+  {de: "das Gymnasium", uk: "гімназія", klas: "9", modul: "A", lektion: 15},
+  {de: "das Abitur", uk: "випускні іспити в гімназії; атестат про повну загальну середню освіту", klas: "9", modul: "A", lektion: 15},
+  {de: "der Wendepunkt", uk: "поворотний момент", klas: "9", modul: "A", lektion: 15},
+  {de: "das Ereignis (die Ereignisse)", uk: "подія", klas: "9", modul: "A", lektion: 15},
+  {de: "einmalig", uk: "одноразовий; неповторний", klas: "9", modul: "A", lektion: 15},
+  {de: "die Vergangenheit", uk: "минуле; минулий час (граматика)", klas: "9", modul: "A", lektion: 15},
+  {de: "der Temporalsatz", uk: "підрядне речення часу", klas: "9", modul: "A", lektion: 15}
 ];

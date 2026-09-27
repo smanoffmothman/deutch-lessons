@@ -501,5 +501,15 @@ const LESSONS = [
     file: "klas-9/modul-a/lektion-14.html",
     nove: true,
     dz: "Das sind Stichpunkte aus dem Leben von Lena Bauer, Michaels Schwester: am 3. März 1985 in Siegburg geboren · 1991 Umzug der Familie nach Bonn, Grundschule in Bonn · 1995 Wechsel aufs Gymnasium · Biologie und Chemie – leichtfallen · 2004 Abitur als die Beste der Klasse · Medizinstudium in Köln, 12 Semester · 2010 Praktikum in einem Krankenhaus in München · 2011 sich um eine Stelle in Bonn bewerben · seit 2011 Ärztin in einer Kinderklinik in Bonn. Schreib Lenas Lebenslauf in der Ich-Form (8–10 Sätze) im Präteritum (z. B. „Ich bin am 3. März 1985 in Siegburg geboren. Als meine Familie 1991 nach Bonn umzog, …“). Benutze mindestens zwei als-Sätze und mindestens zwei trennbare Verben (z. B. umziehen, leichtfallen). Unterstreiche alle Präteritumformen."
+    },
+  {
+    klas: "9",
+    modul: "A",
+    lektion: 15,
+    nazva: "Wendepunkte im Leben",
+    opys: "Ключові моменти життя: порядок слів у підрядних реченнях часу з als (Hauptsatz + Nebensatz і навпаки), als / wenn / wann, пошук als-речень у блозі, Steckbrief Лени Бауер за життєписом та інтерв'ю з паном Бауером у ввічливій формі Sie.",
+    file: "klas-9/modul-a/lektion-15.html",
+    nove: true,
+    dz: "Gestalte eine Seite „Mein Lebensalbum“: Wähle 5 wichtige Momente (Wendepunkte) aus deinem Leben (z. B. die Geburt deiner Schwester, der erste Schultag, ein Umzug, ein besonderes Ereignis in den Ferien). Klebe zu jedem Moment ein Foto ein oder zeichne ein Bild und schreib darunter eine Bildunterschrift mit einem als-Satz im Präteritum. Mindestens zwei Sätze beginnen mit „Als …“ (z. B. „Als ich sechs war, kam ich in die Schule.“), und in mindestens einem Satz steht ein trennbares Verb (z. B. „…, als wir nach Lwiw umzogen.“). Schreib außerdem drei Interviewfragen in der Sie-Form an eine bekannte Person, deren Lebenslauf dich interessiert (z. B. „Wann haben Sie Ihre erste Stelle bekommen?“)."
   }
 ];
