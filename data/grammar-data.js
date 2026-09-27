@@ -91,7 +91,8 @@ const GRAMMAR = [
   // ===== Дієслово: форми і часи =====
   { id: "konjugation", rozdil: "verb", knyha: 6,
     tema: "Konjugation der Verben", uk: "Дієвідмінювання",
-    pidrozdily: ["Schwache Verben", "Starke Verben", "Verben mit Hilfs-e", "Mischverben", "Sonderregeln"] },
+    pidrozdily: ["Allgemeine Regeln", "Die Zeitformen im Überblick", "Das Partizip Perfekt", "Schwache Verben", "Starke Verben", "Verben mit Hilfs-e", "Mischverben", "Sonderregeln"],
+    opublikovano: 6, dyv: ["trennbare-verben", "untrennbare-verben", "perfekt-plusquamperfekt", "modalverben", "imperativ", "fragen", "futur", "tempusformen", "starke-verben"] },
   { id: "trennbare-verben", rozdil: "verb", knyha: 7,
     tema: "Trennbare Verben", uk: "Відокремлювані дієслова",
     pidrozdily: [] },
