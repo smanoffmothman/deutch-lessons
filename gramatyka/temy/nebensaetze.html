@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nebensätze · Grammatik · Deutsch mit uns</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'gramatyka' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">GRAMMATIK · Підрядні речення</span>
+        <h1>Nebensätze</h1>
+        <p class="sub">Підрядне речення не живе саме — воно доповнює головне. Тут усі загальні правила: сполучник, дієслово в кінці, порядок слів, коли підрядне стоїть першим, займенники й «ланцюжки» речень.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="regel" aria-selected="true">Regel</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Haupt oder Neben?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Verb finden</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wo steht was?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Verb am Ende</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Nebensatz vorn</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Pronomen</button>
+    <button class="tab-btn" data-tab="ub7">Üb. 7 · Satzketten</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== REGEL ===== -->
+    <section class="panel active" id="panel-regel">
+      <p class="section-label">Regel</p>
+      <h2 class="panel-title">Nebensätze</h2>
+      <ul class="regel-toc" id="regelToc"></ul>
+
+      <div class="card">
+        <p>Ein Nebensatz ist ein Teil von einem größeren Satz. Er beginnt meistens mit einer Konjunktion: <b>weil</b>, <b>dass</b>, <b>wenn</b>, <b>obwohl</b> … Er sagt zum Beispiel, <i>warum</i>, <i>wann</i> oder <i>trotz was</i> etwas passiert. Allein steht er normalerweise nicht – er braucht einen Hauptsatz. Das Wichtigste: Im Nebensatz steht das konjugierte Verb <b>am Ende</b>.</p>
+        <p class="beispiel">Ich bleibe heute zu Hause, <b>weil</b> ich krank <b>bin</b>.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Підрядне речення (Nebensatz) — це частина складнопідрядного речення, яка залежить від головного (Hauptsatz). Як і в українській, воно починається зі сполучника (<i>бо, що, коли, хоча…</i>) і відокремлюється комою. Велика різниця — порядок слів: в українській він вільний, а в німецькій жорсткий. Відмінюване дієслово в підрядному реченні завжди йде <b>в самий кінець</b>: <i>…, weil ich krank <b>bin</b></i> — дослівно «…, бо я хворий <b>є</b>». Це правило працює для всіх підрядних речень — часу, причини, умови, мети, означальних тощо, тому його варто вивчити одразу й назавжди.
+        </div>
+      </div>
+
+      <!-- 1 -->
+      <section class="card regel-block" id="was-ist">
+        <h3>Ein Satz, der nicht allein steht</h3>
+        <p>Inhaltlich ist ein Nebensatz <b>unvollständig</b>: Man fragt sofort „Und?“. Er ergänzt einen Hauptsatz. Grammatisch ist er aber <b>vollständig</b>: Er hat immer ein eigenes Subjekt und ein eigenes konjugiertes Verb.</p>
+        <table class="gtable">
+          <tr><th>Hauptsatz</th><th>Nebensatz</th></tr>
+          <tr><td>Wir gehen ins Kino,</td><td><b>weil</b> der neue Film heute <b>läuft</b>.</td></tr>
+          <tr><td>Mein Opa erzählt oft,</td><td><b>dass</b> er früher Lehrer <b>war</b>.</td></tr>
+          <tr><td>Ich mache das Fenster zu,</td><td><b>wenn</b> es dir kalt <b>ist</b>.</td></tr>
+        </table>
+        <p>Auch wenn das Subjekt im Haupt- und im Nebensatz gleich ist, muss man es <b>wiederholen</b>:</p>
+        <p class="beispiel"><b>Lena</b> lacht, wenn <b>sie</b> den Film sieht. <span style="color:var(--brick)">(nicht: wenn den Film sieht)</span></p>
+        <p class="beispiel"><b>Ich</b> bin müde, weil <b>ich</b> lange gelernt habe.</p>
+        <p class="merke">Jeder Nebensatz hat ein eigenes Subjekt und ein eigenes konjugiertes Verb – auch wenn das Subjekt dasselbe ist wie im Hauptsatz.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          За змістом підрядне речення неповне: «…бо я довго вчився» — і що? Тому зазвичай воно стоїть поруч із головним. Лише в розмові як коротка відповідь воно може звучати саме: <i>Warum bist du müde? – Weil ich lange gelernt habe.</i><br>
+          За граматикою ж воно повне: у ньому <b>обов'язково</b> є свій підмет і своє відмінюване дієслово. В українській підмет часто пропускаємо: «Я втомився, бо довго вчив». У німецькій так не можна — <i>ich</i> треба повторити: <i>Ich bin müde, weil <b>ich</b> lange gelernt habe.</i> Звороти без власного підмета (<i>um … zu</i>, <i>ohne … zu</i>) — це вже не підрядні речення, а інфінітивні конструкції, для них є окрема тема.
+        </div>
+      </section>
+
+      <!-- 2 -->
+      <section class="card regel-block" id="konjunktion">
+        <h3>Die Konjunktion gibt die Richtung</h3>
+        <p>Die Konjunktion am Anfang zeigt, welche Bedeutung der Nebensatz hat: Zeit, Grund, Bedingung, Gegengrund, Ziel …</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Frage</th><th>Konjunktionen</th><th>Beispiel</th></tr>
+          <tr><td>Wann?</td><td>als, wenn, bevor, nachdem, während, bis, seit, sobald</td><td>Ich rufe dich an, <b>bevor</b> ich losfahre.</td></tr>
+          <tr><td>Warum?</td><td>weil, da</td><td>Wir bleiben drinnen, <b>weil</b> es regnet.</td></tr>
+          <tr><td>Unter welcher Bedingung?</td><td>wenn, falls</td><td><b>Falls</b> du Hilfe brauchst, schreib mir.</td></tr>
+          <tr><td>Trotz was?</td><td>obwohl</td><td>Max spielt Fußball, <b>obwohl</b> er müde ist.</td></tr>
+          <tr><td>Wozu?</td><td>damit</td><td>Ich spreche langsam, <b>damit</b> alle mich verstehen.</td></tr>
+          <tr><td>Mit welcher Folge?</td><td>sodass</td><td>Es regnete stark, <b>sodass</b> das Spiel ausfiel.</td></tr>
+          <tr><td>Wie?</td><td>indem</td><td>Man lernt Wörter, <b>indem</b> man sie oft wiederholt.</td></tr>
+          <tr><td>Was?</td><td>dass, ob</td><td>Ich hoffe, <b>dass</b> du kommst. Ich weiß nicht, <b>ob</b> Tom kommt.</td></tr>
+        </table>
+        </div>
+        <p>Auch Fragewörter und Relativpronomen leiten Nebensätze ein – die Regeln sind dieselben:</p>
+        <p class="beispiel">Ich weiß nicht, <b>wo</b> Paul <b>wohnt</b>.</p>
+        <p class="beispiel">Das ist der Junge, <b>der</b> neben mir <b>sitzt</b>.</p>
+        <p class="merke"><b>und, aber, oder, denn, sondern</b> leiten keinen Nebensatz ein: Nach ihnen bleibt das Verb auf Position II.<br>…, <b>weil</b> ich müde <b>bin</b>. – …, <b>denn</b> ich <b>bin</b> müde.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Сполучник задає «напрям» підрядного речення: час (<i>als, wenn, bevor…</i>), причину (<i>weil, da</i>), умову (<i>wenn, falls</i>), допуст — «хоча» (<i>obwohl</i>), мету (<i>damit</i>), наслідок (<i>sodass</i>), спосіб (<i>indem</i>) або зміст (<i>dass</i> — «що», <i>ob</i> — «чи»). Кожен тип детально розібрано в окремих темах цього розділу. Підрядні також починаються з питальних слів (<i>wo, wann, warum…</i> — непрямі питання) і відносних займенників (<i>der, die, das</i> — означальні речення); дієслово там теж у кінці.<br>
+          Пастка: <i>weil</i> і <i>denn</i> обидва означають «бо», але <i>denn</i> з'єднує два головні речення, тож після нього порядок звичайний: <i>…, denn ich <b>bin</b> müde</i>. Так само <i>deshalb, trotzdem, dann</i> — це не сполучники підрядного речення.
+        </div>
+      </section>
+
+      <!-- 3 -->
+      <section class="card regel-block" id="verb-ende">
+        <h3>Subjekt vorn, Verb am Ende</h3>
+        <p>Im Nebensatz steht das Subjekt meistens direkt hinter der Konjunktion. Das konjugierte Verb steht ganz am Ende. Andere Verbteile (Infinitiv, Partizip) stehen direkt <b>davor</b>.</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Konjunktion</th><th>Subjekt</th><th>…</th><th>Verb (Ende)</th></tr>
+          <tr><td>…, weil</td><td>ich</td><td>heute keine Zeit</td><td><b>habe</b>.</td></tr>
+          <tr><td>…, dass</td><td>Max</td><td>morgen</td><td><b>kommt</b>.</td></tr>
+          <tr><td>…, obwohl</td><td>wir</td><td>lange</td><td>gewartet <b>haben</b>.</td></tr>
+          <tr><td>…, ob</td><td>du</td><td>am Samstag</td><td>mitkommen <b>kannst</b>.</td></tr>
+          <tr><td>…, als</td><td>der Zug</td><td>endlich</td><td><b>ankam</b>.</td></tr>
+          <tr><td>…, dass</td><td>unsere Schule</td><td>bald</td><td>renoviert <b>wird</b>.</td></tr>
+        </table>
+        </div>
+        <p class="beispiel">Perfekt: Ich bin traurig, weil ich den Bus verpasst <b>habe</b>.</p>
+        <p class="beispiel">Modalverb: Ich hoffe, dass du mitkommen <b>kannst</b>.</p>
+        <p class="beispiel">Trennbares Verb: Wir essen, bevor der Film <b>anfängt</b>.</p>
+        <p class="merke">Das konjugierte Verb steht ganz am Ende. Ein Nebensatz wird immer mit Komma abgetrennt.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Схема: <b>сполучник → підмет → усе інше → відмінюване дієслово</b>. Якщо дієслівна форма складена (Perfekt, модальне дієслово, пасив, майбутній час), то в самому кінці стоїть саме відмінювана частина, а інфінітив чи Partizip — перед нею: <i>verpasst <b>habe</b>, mitkommen <b>kannst</b>, renoviert <b>wird</b></i>. Відокремлювані дієслова в підрядному реченні знову «зростаються»: <i>der Film fängt an</i> → <i>…, bevor der Film <b>anfängt</b></i>.<br>
+          Підрядне речення завжди відділяється комою — з обох боків, якщо стоїть усередині.<br>
+          Рідкісний виняток: модальне дієслово в Perfekt — <i>…, weil er nicht <b>hat</b> kommen können</i> (див. тему «Modalverben»).
+        </div>
+      </section>
+
+      <!-- 4 -->
+      <section class="card regel-block" id="nach-hauptsatz">
+        <h3>Der Nebensatz steht nach dem Hauptsatz</h3>
+        <p>Das ist die einfachste Reihenfolge: Der Hauptsatz hat seine normale Wortstellung (Verb auf Position II), dann kommen ein Komma und der Nebensatz.</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>I</th><th>II</th><th>III …</th><th>Nebensatz</th></tr>
+          <tr><td>Lisa</td><td><b>ruft</b></td><td>ihre Mutter an,</td><td>weil sie Hilfe <b>braucht</b>.</td></tr>
+          <tr><td>Heute</td><td><b>ruft</b></td><td>Lisa ihre Mutter an,</td><td>weil sie Hilfe <b>braucht</b>.</td></tr>
+        </table>
+        </div>
+        <p>Der Hauptsatz kann auch eine Frage oder eine Aufforderung sein:</p>
+        <p class="beispiel"><b>Weißt</b> du, ob Anna heute <b>kommt</b>?</p>
+        <p class="beispiel"><b>Ruf</b> mich an, wenn du Zeit <b>hast</b>!</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Коли підрядне стоїть після головного, в головному нічого не змінюється: дієслово на другому місці, як завжди (у тому числі після інверсії — <i>Heute ruft Lisa …</i>). Головне речення може бути й питанням або проханням (<i>Weißt du, ob …? Ruf mich an, wenn …!</i>) — підрядне від цього не змінюється, дієслово в ньому все одно в кінці.
+        </div>
+      </section>
+
+      <!-- 5 -->
+      <section class="card regel-block" id="vor-hauptsatz">
+        <h3>Der Nebensatz steht vor dem Hauptsatz</h3>
+        <p>Steht der Nebensatz vorn, ist er als Ganzes die <b>Position I</b>. Dann kommt direkt nach dem Komma das konjugierte Verb des Hauptsatzes (Position II) und danach das Subjekt (Position III).</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>I (Nebensatz)</th><th>II</th><th>III</th><th>…</th></tr>
+          <tr><td>Weil sie Hilfe braucht,</td><td><b>ruft</b></td><td>Lisa</td><td>ihre Mutter an.</td></tr>
+          <tr><td>Wenn es morgen regnet,</td><td><b>bleiben</b></td><td>wir</td><td>zu Hause.</td></tr>
+          <tr><td>Nachdem wir gegessen hatten,</td><td><b>spielten</b></td><td>wir</td><td>Karten.</td></tr>
+        </table>
+        </div>
+        <p>Steht ein Pronomen vor dem Subjekt, rutscht das Subjekt auf Position IV:</p>
+        <p class="beispiel">Als ich nach Hause kam, <b>gab</b> mir meine Mutter einen Brief.</p>
+        <p class="merke">Nebensatz vorn → Verb, Komma, Verb: Wenn es regnet, <b>bleiben wir</b> zu Hause.</p>
+        <p class="beispiel" style="color:var(--brick)">✗ Wenn es regnet, wir bleiben zu Hause.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Це найчастіша помилка. Підрядне речення, що стоїть на початку, німецька граматика вважає <b>одним членом речення</b> на першій позиції — так само, як <i>Heute</i> чи <i>Am Wochenende</i>. Тому головне речення після коми починається одразу з дієслова, а підмет іде за ним: <i>Wenn es regnet, <b>bleiben wir</b> …</i> Звідси зручна «формула»: два дієслова стоять поруч, між ними лише кома — <i>regnet, bleiben</i>.<br>
+          Якщо в головному реченні є займенник-додаток, він може стати перед підметом-іменником, і тоді підмет опиняється на четвертому місці: <i>…, gab <b>mir</b> meine Mutter einen Brief</i>.
+        </div>
+      </section>
+
+      <!-- 6 -->
+      <section class="card regel-block" id="pronomen">
+        <h3>Pronomen im Nebensatz</h3>
+        <p><b>a)</b> Ist das Subjekt ein Nomen, stehen Personal- und Reflexivpronomen meistens direkt hinter der Konjunktion – noch vor dem Subjekt:</p>
+        <p class="beispiel">Obwohl <b>mir</b> der Lehrer alles erklärt hat, verstehe ich die Aufgabe nicht.</p>
+        <p class="beispiel">Weil <b>sich</b> die Kinder auf die Ferien freuen, sind sie ganz unruhig.</p>
+        <p class="beispiel">Wenn <b>dir</b> das Buch nicht gefällt, musst du es nicht lesen.</p>
+        <p><b>b)</b> Ist das Subjekt selbst ein Pronomen, steht es zuerst. Die anderen Pronomen folgen: <b>Akkusativ vor Dativ</b>.</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Konjunktion</th><th>Subjekt</th><th>Akk.</th><th>Dat.</th><th>…</th></tr>
+          <tr><td>Wenn</td><td>du</td><td><b>dich</b></td><td></td><td>beeilst, …</td></tr>
+          <tr><td>…, ob</td><td>er</td><td><b>es</b></td><td><b>ihr</b></td><td>schon gesagt hat.</td></tr>
+          <tr><td>Bevor</td><td>ich</td><td><b>es</b></td><td><b>dir</b></td><td>gebe, …</td></tr>
+        </table>
+        </div>
+        <p class="merke">Pronomen stehen im Nebensatz möglichst weit vorn. Subjekt-Pronomen zuerst, dann Akkusativ, dann Dativ.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Короткі займенники в німецькому реченні «тягнуться» вперед. У підрядному реченні це означає: одразу після сполучника.<br>
+          а) Якщо підмет — іменник, займенник-додаток чи <i>sich</i> зазвичай стає ще перед ним: <i>Obwohl <b>mir</b> der Lehrer alles erklärt hat …</i> Порядок <i>obwohl der Lehrer mir …</i> теж правильний, але звучить менш природно.<br>
+          б) Якщо підмет теж займенник, він іде першим, а за ним інші займенники — спершу знахідний (Akkusativ), потім давальний (Dativ): <i>…, ob er <b>es ihr</b> gesagt hat</i> («чи він <b>це їй</b> сказав»). Ті самі правила діють і в головному реченні — див. тему «Die Satzstellung im Hauptsatz».
+        </div>
+      </section>
+
+      <!-- 7 -->
+      <section class="card regel-block" id="ketten">
+        <h3>Nebensätze hängen voneinander ab</h3>
+        <p>Ein Nebensatz kann nicht nur von einem Hauptsatz abhängen, sondern auch von einem anderen Nebensatz, von einer Infinitivkonstruktion oder von einem Relativsatz. So entstehen Satzketten. In jedem Nebensatz steht das Verb am Ende, zwischen allen Teilen steht ein Komma.</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>abhängig von …</th><th>Beispiel</th></tr>
+          <tr><td>einem Nebensatz</td><td>Ich war sauer, <i>weil meine Freunde nicht <b>kamen</b></i>, <b>als</b> ich Geburtstag <b>hatte</b>.</td></tr>
+          <tr><td>einer Infinitivkonstruktion</td><td>Mein Bruder hat versprochen, <i>mir zu helfen</i>, <b>wenn</b> ich nicht fertig <b>werde</b>.</td></tr>
+          <tr><td>einem Relativsatz</td><td>Das ist ein Film, <i>der mir sehr gefällt</i>, <b>obwohl</b> er drei Stunden <b>dauert</b>.</td></tr>
+        </table>
+        </div>
+        <p class="merke">Jeder Nebensatz in der Kette hat seine eigene Konjunktion, sein eigenes Subjekt und sein Verb am Ende.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Підрядні речення можуть «чіплятися» одне за одне, як вагончики: головне → підрядне 1 → підрядне 2. Друге підрядне пояснює вже не головне речення, а перше підрядне (<i>als ich Geburtstag hatte</i> пояснює, <i>коли</i> друзі не прийшли). Так само підрядне може залежати від звороту з <i>zu</i> або від означального речення з <i>der, die, das</i>. Хоч яким довгим буде ланцюжок, у кожній ланці діє те саме правило: сполучник на початку, дієслово в кінці, кома між ланками.
+        </div>
+      </section>
+
+      <!-- 8 -->
+      <section class="card regel-block" id="vermutung">
+        <h3>Nach glauben, meinen …: ein Hauptsatz mit Konjunktiv II</h3>
+        <p>Nach einem Nebensatz mit <b>glauben, meinen, annehmen, denken, sich vorstellen</b> (Verben der Vermutung) kann statt eines dass-Satzes auch ein Hauptsatz folgen: Subjekt auf Position I, dann ein Verb im <b>Konjunktiv II</b>. Danach kommt wie immer das Verb des Hauptsatzes.</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>mit dass</th><th>ohne dass: Hauptsatz + Konjunktiv II</th></tr>
+          <tr><td>Als Tim glaubte, dass er den Test bestanden hatte, freute er sich.</td><td>Als Tim glaubte, <b>er hätte</b> den Test bestanden, freute er sich.</td></tr>
+          <tr><td>Weil Mia meinte, dass sie zu spät war, rannte sie los.</td><td>Weil Mia meinte, <b>sie wäre</b> zu spät, rannte sie los.</td></tr>
+        </table>
+        </div>
+        <p class="beispiel">Obwohl ich annahm, <b>ich hätte</b> alles eingepackt, fehlte mein Sportzeug.</p>
+        <p class="beispiel">Wenn du dir vorstellst, <b>du wärst</b> am Meer, wirst du ganz ruhig.</p>
+        <p class="merke">glauben / meinen / annehmen … , + Subjekt + Konjunktiv II (hätte, wäre, könnte, würde …)</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Після дієслів припущення (<i>glauben</i> — вважати, <i>meinen</i> — думати, <i>annehmen</i> — припускати, <i>sich vorstellen</i> — уявляти) можна не ставити <i>dass</i>. Тоді далі йде коротке речення з <b>прямим</b> порядком слів (підмет на першому місці, дієслово на другому), а дієслово стоїть у Konjunktiv II: <i>er <b>hätte</b>, sie <b>wäre</b></i>. Konjunktiv тут показує, що це лише чиясь думка, яка може бути хибною. Після всієї цієї «вставки» головне речення, як завжди, починається з дієслова: <i>…, <b>freute</b> er sich</i>. Форми Konjunktiv II — в окремій темі «Der Konjunktiv II».
+        </div>
+      </section>
+
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: сортування ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Hauptsatz oder Nebensatz?</h2>
+      <p class="lead">Розсортуй частини речень: це головне речення чи підрядне? Дивися на сполучник і на місце дієслова. Обережно з <i>denn, aber, deshalb, trotzdem</i>!</p>
+      <div class="card" id="ub1-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 2: токени ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Das Verb am Ende finden</h2>
+      <p class="lead">Натисни на всі <b>відмінювані дієслова в підрядних реченнях</b>. Дієслова головних речень, інфінітиви й Partizip не чіпай. Потім натисни «Prüfen».</p>
+      <div class="card" id="ub2-text" style="line-height:1.9;">
+        <p><b>Unsere Klassenfahrt</b></p>
+        <p>Als wir letzte Woche nach Hamburg <span class="tok" data-correct="true">fuhren</span>, <span class="tok" data-correct="false">war</span> das Wetter super. Weil unser Zug sehr früh <span class="tok" data-correct="true">abfuhr</span>, <span class="tok" data-correct="false">mussten</span> wir schon um fünf Uhr <span class="tok" data-correct="false">aufstehen</span>. Unsere Lehrerin <span class="tok" data-correct="false">sagte</span>, dass wir im Zug leise <span class="tok" data-correct="false">sein</span> <span class="tok" data-correct="true">sollten</span>. Obwohl alle müde <span class="tok" data-correct="true">waren</span>, <span class="tok" data-correct="false">haben</span> wir viel <span class="tok" data-correct="false">gelacht</span>. In Hamburg <span class="tok" data-correct="false">besuchten</span> wir den Hafen, den ich schon lange <span class="tok" data-correct="false">sehen</span> <span class="tok" data-correct="true">wollte</span>. Wenn ich an die Reise <span class="tok" data-correct="true">denke</span>, <span class="tok" data-correct="false">freue</span> ich mich immer noch. Ich <span class="tok" data-correct="false">hoffe</span>, dass wir bald wieder zusammen <span class="tok" data-correct="true">wegfahren</span>.</p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: квіз ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wo steht was?</h2>
+      <p class="lead">Обери правильний варіант. Зважай на місце дієслова в підрядному реченні й у головному, якщо підрядне стоїть першим.</p>
+      <div class="card" id="ub3-quiz"></div>
+    </section>
+
+    <!-- ===== Üb. 4: пропуски ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Das Verb kommt ans Ende</h2>
+      <p class="lead">Встав дієслово в правильній формі. У дужках — інфінітив і, за потреби, час або модальне дієслово: <i>(mitkommen · können)</i> → <i>mitkommen kann</i>. Якщо форма складається з двох слів, пиши обидва. У реченнях 13–15 обери сполучник за змістом.</p>
+      <div class="card" id="ub4-list">
+        <div class="fill-item"><span class="num">1)</span> Ich lerne heute viel, weil ich morgen einen Test
+          <input type="text" class="blank-input inline" data-ans="habe"> <i>(haben)</i>.</div>
+        <div class="fill-item"><span class="num">2)</span> Mama sagt, dass das Essen gleich fertig
+          <input type="text" class="blank-input inline" data-ans="ist"> <i>(sein)</i>.</div>
+        <div class="fill-item"><span class="num">3)</span> Wir warten an der Haltestelle, bis der Bus
+          <input type="text" class="blank-input inline" data-ans="ankommt"> <i>(ankommen)</i>.</div>
+        <div class="fill-item"><span class="num">4)</span> Ich weiß noch nicht, ob ich am Samstag
+          <input type="text" class="blank-input inline" data-ans="mitkommen kann"> <i>(mitkommen · können)</i>.</div>
+        <div class="fill-item"><span class="num">5)</span> Lena ist traurig, weil sie ihr Handy
+          <input type="text" class="blank-input inline" data-ans="verloren hat"> <i>(verlieren · Perfekt)</i>.</div>
+        <div class="fill-item"><span class="num">6)</span> Als ich klein
+          <input type="text" class="blank-input inline" data-ans="war"> <i>(sein · Präteritum)</i>, hatte ich einen Hund.</div>
+        <div class="fill-item"><span class="num">7)</span> Obwohl Jonas jeden Tag
+          <input type="text" class="blank-input inline" data-ans="trainiert hat"> <i>(trainieren · Perfekt)</i>, hat er das Spiel verloren.</div>
+        <div class="fill-item"><span class="num">8)</span> Ruf mich bitte an, wenn du zu Hause
+          <input type="text" class="blank-input inline" data-ans="bist"> <i>(sein)</i>!</div>
+        <div class="fill-item"><span class="num">9)</span> Ich hoffe, dass wir im Sommer ans Meer
+          <input type="text" class="blank-input inline" data-ans="fahren dürfen"> <i>(fahren · dürfen)</i>.</div>
+        <div class="fill-item"><span class="num">10)</span> Der Lehrer erklärt es noch einmal, damit alle es
+          <input type="text" class="blank-input inline" data-ans="verstehen"> <i>(verstehen)</i>.</div>
+        <div class="fill-item"><span class="num">11)</span> Tim fragt, wann der Film
+          <input type="text" class="blank-input inline" data-ans="anfängt"> <i>(anfangen)</i>.</div>
+        <div class="fill-item"><span class="num">12)</span> Nachdem wir die Hausaufgaben
+          <input type="text" class="blank-input inline" data-ans="gemacht hatten"> <i>(machen · Plusquamperfekt)</i>, gingen wir in den Park.</div>
+        <div class="fill-item"><span class="num">13)</span> Ich trage eine Mütze,
+          <select class="blank inline" data-ans="damit"><option value="">—</option><option>weil</option><option>obwohl</option><option>damit</option></select>
+          mir nicht kalt wird.</div>
+        <div class="fill-item"><span class="num">14)</span> Wir gehen spazieren,
+          <select class="blank inline" data-ans="obwohl"><option value="">—</option><option>obwohl</option><option>damit</option><option>weil</option></select>
+          es ein bisschen regnet.</div>
+        <div class="fill-item"><span class="num">15)</span>
+          <select class="blank inline" data-ans="Wenn"><option value="">—</option><option>Obwohl</option><option>Wenn</option><option>Damit</option></select>
+          du Hunger hast, nimm dir einen Apfel!</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub4-check">Prüfen</button>
+        <button class="btn secondary" id="ub4-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub4-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5: перетворення ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Der Nebensatz kommt nach vorn</h2>
+      <p class="lead">Перепиши речення так, щоб підрядне стояло <b>першим</b>. Не забудь кому між частинами; крапку в кінці можна не ставити. Пам'ятай: після коми — одразу дієслово.</p>
+      <div class="card" id="ub5-list">
+        <div class="fill-item"><span class="num">1)</span> Wir bleiben zu Hause, wenn es morgen regnet.<br>
+          <input type="text" class="blank-input inline full" data-ans="Wenn es morgen regnet, bleiben wir zu Hause"></div>
+        <div class="fill-item"><span class="num">2)</span> Ich rufe dich an, sobald ich zu Hause bin.<br>
+          <input type="text" class="blank-input inline full" data-ans="Sobald ich zu Hause bin, rufe ich dich an"></div>
+        <div class="fill-item"><span class="num">3)</span> Anna lernt Spanisch, weil sie nach Madrid fahren will.<br>
+          <input type="text" class="blank-input inline full" data-ans="Weil sie nach Madrid fahren will, lernt Anna Spanisch|Weil Anna nach Madrid fahren will, lernt sie Spanisch"></div>
+        <div class="fill-item"><span class="num">4)</span> Wir spielten draußen, obwohl es sehr kalt war.<br>
+          <input type="text" class="blank-input inline full" data-ans="Obwohl es sehr kalt war, spielten wir draußen"></div>
+        <div class="fill-item"><span class="num">5)</span> Mein Vater kocht das Abendessen, wenn er von der Arbeit kommt.<br>
+          <input type="text" class="blank-input inline full" data-ans="Wenn er von der Arbeit kommt, kocht mein Vater das Abendessen|Wenn mein Vater von der Arbeit kommt, kocht er das Abendessen"></div>
+        <div class="fill-item"><span class="num">6)</span> Ich war sehr glücklich, als ich die Nachricht las.<br>
+          <input type="text" class="blank-input inline full" data-ans="Als ich die Nachricht las, war ich sehr glücklich"></div>
+        <div class="fill-item"><span class="num">7)</span> Die Kinder gehen ins Bett, nachdem sie die Zähne geputzt haben.<br>
+          <input type="text" class="blank-input inline full" data-ans="Nachdem sie die Zähne geputzt haben, gehen die Kinder ins Bett|Nachdem die Kinder die Zähne geputzt haben, gehen sie ins Bett|Nachdem sie sich die Zähne geputzt haben, gehen die Kinder ins Bett|Nachdem sich die Kinder die Zähne geputzt haben, gehen sie ins Bett|Nachdem die Kinder sich die Zähne geputzt haben, gehen sie ins Bett"></div>
+        <div class="fill-item"><span class="num">8)</span> Du bekommst eine gute Note, wenn du fleißig lernst.<br>
+          <input type="text" class="blank-input inline full" data-ans="Wenn du fleißig lernst, bekommst du eine gute Note"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub5-check">Prüfen</button>
+        <button class="btn secondary" id="ub5-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub5-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 6: склади речення ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">Pronomen im Nebensatz</h2>
+      <p class="lead">Склади речення: натискай картки по черзі; натиснеш на вже поставлену — вона повернеться. Головне речення зі сполучником — одна картка, вона йде першою. Стеж, де стоять займенники.</p>
+      <div class="card" id="ub6-order"></div>
+    </section>
+
+    <!-- ===== Üb. 7: ланцюжки й glauben ===== -->
+    <section class="panel" id="panel-ub7">
+      <p class="section-label">Üb. 7</p>
+      <h2 class="panel-title">Satzketten und glauben, meinen …</h2>
+      <p class="lead">У реченнях 1–5 встав дієслова в правильній формі (час — у дужках). У 6–8 обери правильні варіанти. У 9–10 перепиши речення <b>без dass</b>, з Konjunktiv II.</p>
+      <div class="card" id="ub7-list">
+        <p class="section-label" style="margin:0 0 10px;">Satzketten</p>
+        <div class="fill-item"><span class="num">1)</span> Ich war sauer, weil meine Freunde nicht
+          <input type="text" class="blank-input inline" data-ans="anriefen"> <i>(anrufen · Präteritum)</i>, als ich Geburtstag
+          <input type="text" class="blank-input inline" data-ans="hatte"> <i>(haben · Präteritum)</i>.</div>
+        <div class="fill-item"><span class="num">2)</span> Mein Bruder hat versprochen, mir zu helfen, wenn ich mit dem Referat nicht fertig
+          <input type="text" class="blank-input inline" data-ans="werde"> <i>(werden)</i>.</div>
+        <div class="fill-item"><span class="num">3)</span> Das ist ein Film, der mir sehr
+          <input type="text" class="blank-input inline" data-ans="gefällt"> <i>(gefallen)</i>, obwohl er drei Stunden
+          <input type="text" class="blank-input inline" data-ans="dauert"> <i>(dauern)</i>.</div>
+        <div class="fill-item"><span class="num">4)</span> Sarah glaubt, dass sie den Bus noch schafft, wenn sie schnell
+          <input type="text" class="blank-input inline" data-ans="läuft"> <i>(laufen)</i>.</div>
+        <div class="fill-item"><span class="num">5)</span> Wir haben beschlossen, ein Picknick zu machen, sobald das Wetter besser
+          <input type="text" class="blank-input inline" data-ans="wird"> <i>(werden)</i>.</div>
+
+        <p class="section-label" style="margin:18px 0 10px;">glauben, meinen, annehmen …</p>
+        <div class="fill-item"><span class="num">6)</span> Als Tim glaubte, er
+          <select class="blank inline" data-ans="hätte"><option value="">—</option><option>hat</option><option>hätte</option><option>ist</option></select>
+          den Test bestanden,
+          <select class="blank inline" data-ans="freute er sich"><option value="">—</option><option>er freute sich</option><option>freute er sich</option><option>sich er freute</option></select>
+          riesig.</div>
+        <div class="fill-item"><span class="num">7)</span> Weil Mia meinte,
+          <select class="blank inline" data-ans="sie wäre"><option value="">—</option><option>wäre sie</option><option>sie wäre</option><option>sie ist</option></select>
+          zu spät, rannte sie zum Bus.</div>
+        <div class="fill-item"><span class="num">8)</span> Obwohl ich annahm, ich hätte alles eingepackt,
+          <select class="blank inline" data-ans="fehlte mein Sportzeug"><option value="">—</option><option>mein Sportzeug fehlte</option><option>fehlte mein Sportzeug</option><option>fehlte es mein Sportzeug</option></select>.</div>
+        <div class="fill-item"><span class="num">9)</span> Als Jan glaubte, dass er seinen Schlüssel verloren hatte, suchte er überall.<br>
+          <input type="text" class="blank-input inline full" data-ans="Als Jan glaubte, er hätte seinen Schlüssel verloren, suchte er überall"></div>
+        <div class="fill-item"><span class="num">10)</span> Weil Nina meinte, dass sie krank war, blieb sie im Bett.<br>
+          <input type="text" class="blank-input inline full" data-ans="Weil Nina meinte, sie wäre krank, blieb sie im Bett"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub7-check">Prüfen</button>
+        <button class="btn secondary" id="ub7-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub7-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das Wichtigste</p>
+        <p>Ein Nebensatz beginnt mit einer Konjunktion und hat ein eigenes Subjekt und ein eigenes Verb. Das konjugierte Verb steht am Ende, Infinitiv oder Partizip direkt davor. Steht der Nebensatz vorn, kommt nach dem Komma sofort das Verb des Hauptsatzes: Verb, Komma, Verb. Pronomen stehen im Nebensatz weit vorn – direkt nach der Konjunktion.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Підрядне речення починається зі сполучника й має власний підмет і власне дієслово. Відмінюване дієслово — у самому кінці, інфінітив чи Partizip — перед ним. Якщо підрядне стоїть першим, головне починається одразу з дієслова: «дієслово, кома, дієслово». Займенники в підрядному реченні стоять якомога ближче до сполучника; після <i>glauben, meinen</i> замість <i>dass</i> можна вжити пряме речення з Konjunktiv II.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Де це ще трапляється</p>
+        <div class="gram-related" id="gramRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <p class="lead" id="gramBest" style="font-size:14px;"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/grammar-data.js"></script>
+<script src="../../data/lessons-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/site.js"></script>
+<script>
+  const GRAM_ID = "nebensaetze";
+
+  // Üb. 1: Hauptsatz oder Nebensatz?
+  buildSort('ub1-sort', {
+    buckets: ["Hauptsatz", "Nebensatz"],
+    items: [
+      {t: "weil ich keine Zeit habe", b: "Nebensatz"},
+      {t: "denn ich habe keine Zeit", b: "Hauptsatz"},
+      {t: "ich habe keine Zeit", b: "Hauptsatz"},
+      {t: "dass du heute kommst", b: "Nebensatz"},
+      {t: "obwohl es sehr kalt ist", b: "Nebensatz"},
+      {t: "trotzdem gehen wir raus", b: "Hauptsatz"},
+      {t: "als wir in Wien waren", b: "Nebensatz"},
+      {t: "deshalb bleibe ich zu Hause", b: "Hauptsatz"},
+      {t: "wenn der Unterricht endet", b: "Nebensatz"},
+      {t: "aber Mia kommt nicht mit", b: "Hauptsatz"},
+      {t: "ob Mia mitkommt", b: "Nebensatz"},
+      {t: "damit alle es hören", b: "Nebensatz"},
+      {t: "dann essen wir zusammen", b: "Hauptsatz"}
+    ]
+  });
+
+  // Üb. 2: токени (setTotal вручну — за кількістю правильних токенів)
+  initTokenClicks('ub2-text');
+  setTotal(document.querySelectorAll('#ub2-text .tok[data-correct="true"]').length);
+  document.getElementById('ub2-check').addEventListener('click', () => checkTokens('ub2-text', 'ub2-score', 'ub2'));
+  document.getElementById('ub2-reset').addEventListener('click', () => resetTokens('ub2-text', 'ub2-score', 'ub2'));
+
+  // Üb. 3: квіз
+  buildQuiz('ub3-quiz', [
+    {q: "Ich weiß, dass ___.", opts: ["du morgen Geburtstag hast", "du hast morgen Geburtstag", "hast du morgen Geburtstag"], correct: "du morgen Geburtstag hast"},
+    {q: "Wir gehen nicht raus, weil ___.", opts: ["es regnet stark", "regnet es stark", "es stark regnet"], correct: "es stark regnet"},
+    {q: "Wenn es morgen warm ist, ___ ins Schwimmbad.", opts: ["wir fahren", "fahren wir", "wir fahren dann"], correct: "fahren wir"},
+    {q: "Sie ist glücklich, weil sie die Prüfung ___.", opts: ["hat bestanden", "bestanden", "bestanden hat"], correct: "bestanden hat"},
+    {q: "Ruf mich an, bevor du ___!", opts: ["fährst los", "losfährst", "los fährst du"], correct: "losfährst"},
+    {q: "Ich hoffe, dass Tom zur Party ___.", opts: ["kann kommen", "kommen können", "kommen kann"], correct: "kommen kann"},
+    {q: "Welcher Satz ist richtig?", opts: ["Als ich nach Hause kam, niemand war da.", "Als ich nach Hause kam, war niemand da.", "Als ich kam nach Hause, war niemand da."], correct: "Als ich nach Hause kam, war niemand da."},
+    {q: "Ich bin müde, ___ ich schlecht geschlafen habe.", opts: ["denn", "deshalb", "weil"], correct: "weil"},
+    {q: "___ ich krank war, bin ich zur Schule gegangen.", opts: ["Obwohl", "Weil", "Damit"], correct: "Obwohl"},
+    {q: "Nachdem wir gegessen hatten, ___.", opts: ["wir spielten Karten", "spielten wir Karten", "wir Karten spielten"], correct: "spielten wir Karten"},
+    {q: "Ich weiß nicht, ___.", opts: ["wo wohnt Paul", "Paul wo wohnt", "wo Paul wohnt"], correct: "wo Paul wohnt"},
+    {q: "Als ich nach Hause kam, ___ einen Brief.", opts: ["gab mir meine Mutter", "meine Mutter gab mir", "mir gab meine Mutter"], correct: "gab mir meine Mutter"}
+  ]);
+
+  // Üb. 4, 5, 7: пропуски
+  wireBlanks('ub4');
+  wireBlanks('ub5');
+  wireBlanks('ub7');
+
+  // Üb. 6: склади речення (перша картка — головне речення + сполучник)
+  buildOrder('ub6-order', [
+    {words: ["Ich verstehe die Aufgabe nicht, obwohl", "mir", "der Lehrer", "alles", "erklärt hat"], end: ".",
+     alt: ["Ich verstehe die Aufgabe nicht, obwohl der Lehrer mir alles erklärt hat"]},
+    {words: ["Wir schaffen den Bus noch, wenn", "du", "dich", "beeilst"], end: "."},
+    {words: ["Meine Schwester weiß noch nichts, weil", "ich", "es", "ihr", "noch nicht", "gesagt habe"], end: "."},
+    {words: ["Paul fragt, ob", "ich", "ihm", "mein Fahrrad", "leihe"], end: ".", gross: true},
+    {words: ["Oma freut sich, wenn", "sich", "die Kinder", "für ihr Geschenk", "bedanken"], end: ".", gross: true,
+     alt: ["Oma freut sich, wenn die Kinder sich für ihr Geschenk bedanken"]},
+    {words: ["Ruf mich an, bevor", "du", "dich", "mit Tim", "triffst"], end: "!"},
+    {words: ["Ich sage dir die Wahrheit, obwohl", "sie", "dir", "vielleicht nicht", "gefällt"], end: "."},
+    {words: ["Frag Lisa, wenn", "dir", "die Hausaufgabe", "nicht klar", "ist"], end: ".",
+     alt: ["Frag Lisa, wenn die Hausaufgabe dir nicht klar ist"]}
+  ]);
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🧩','🔗','✏️','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initGrammarPage(GRAM_ID);
+</script>
+</body>
+</html>
