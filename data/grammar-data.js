@@ -169,7 +169,8 @@ const GRAMMAR = [
     opublikovano: 23, dyv: ["satzstellung-hauptsatz", "konjunktionen-position-eins", "personalpronomen", "fragen", "modalverben", "nebensaetze", "kausalsaetze", "kommaregeln"] },
   { id: "konjunktionen-position-eins", rozdil: "satzbau", knyha: 24,
     tema: "Satzverbindungen: Konjunktionen in der Position I", uk: "Сполучники на першій позиції: deshalb, trotzdem, dann…",
-    pidrozdily: ["Satzstellung", "Erläuterungen zu den Konjunktionen"] },
+    pidrozdily: ["Position I oder Position III", "Mit Pronomen: die Konjunktion in Position IV", "Grund: darum, deshalb, deswegen, daher", "Folge: also, folglich, infolgedessen, demnach, insofern", "Gegensatz: trotzdem, dennoch, allerdings, indessen", "Stärker betont: zwar … aber (doch)", "Zeit: dann, danach, da, daraufhin, inzwischen", "Zweiteilig: entweder … oder", "Zweiteilig: nicht nur … sondern auch", "Zweiteilig: weder … noch", "Zweiteilig: einerseits – andererseits, mal – mal, bald – bald", "Betontes Subjekt: Weder der Lehrer …, noch …", "sonst, andernfalls: Folge, Bitte, Drohung", "sonst + Konjunktiv II: eine unsichere Möglichkeit", "sonst als Adverb: früher, gewöhnlich"],
+    opublikovano: 24, dyv: ["satzstellung-hauptsatz", "konjunktionen-position-null", "personalpronomen", "nebensaetze", "kausalsaetze", "konsekutivsaetze", "konzessivsaetze", "temporalsaetze", "konditionalsaetze", "konjunktiv-2-gebrauch", "adverbien", "kommaregeln"] },
 
   // ===== Підрядні речення =====
   { id: "nebensaetze", rozdil: "nebensaetze", knyha: 25,
