@@ -137,7 +137,8 @@ const GRAMMAR = [
   // ===== Керування дієслів =====
   { id: "rektion-verben", rozdil: "rektion", knyha: 14,
     tema: "Rektion der Verben", uk: "Керування дієслів: відмінки",
-    pidrozdily: ["Verben mit Akkusativ", "Verben mit Dativ", "Verben mit Dativ und Akkusativ", "Verben mit zwei Akkusativen", "Verben mit Akkusativ und Genitiv", "Verben mit Genitiv", "Verben mit Prädikatsnominativ", "Akkusativobjekt in festen Verbindungen"] },
+    pidrozdily: ["Verben mit Akkusativ", "Verben mit Dativ", "Verben mit Dativ und Akkusativ", "Verben mit zwei Akkusativen", "Verben mit Akkusativ und Genitiv", "Verben mit Genitiv", "Verben mit Prädikatsnominativ", "Akkusativobjekt in festen Verbindungen"],
+    opublikovano: 14, dyv: ["personalpronomen", "deklination-nomen", "possessivartikel", "untrennbare-verben", "reflexive-verben", "perfekt-plusquamperfekt", "verben-praepositionalobjekt", "verben-dass-infinitiv", "funktionsverbgefuege", "satzstellung-hauptsatz"] },
   { id: "verben-praepositionalobjekt", rozdil: "rektion", knyha: 15,
     tema: "Verben mit präpositionalem Objekt", uk: "Дієслова з прийменниками",
     pidrozdily: ["Gebrauch", "In Fragen, dass-Sätzen und Infinitivkonstruktionen", "Die gebräuchlichsten Verben mit Präposition", "Feste Verb-Akkusativ-Verbindungen mit präpositionalem Objekt"] },
