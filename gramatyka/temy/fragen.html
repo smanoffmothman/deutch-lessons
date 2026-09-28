@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fragen · Grammatik · Deutsch mit uns</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'gramatyka' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">GRAMMATIK · Порядок слів і сполучники</span>
+        <h1>Fragen</h1>
+        <p class="sub">Як поставити питання німецькою: без питального слова (Ja/Nein-Fragen) і з ним (W-Fragen). Відповіді ja, nein, doch, уточнення schon, noch, erst і питання з прийменниками.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="regel" aria-selected="true">Regel</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · ja, nein, doch</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Ja/Nein-Fragen</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · schon, noch, erst</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · W-Wörter</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · wie viel, welch-</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · wie alt, wie oft</button>
+    <button class="tab-btn" data-tab="ub7">Üb. 7 · womit? mit wem?</button>
+    <button class="tab-btn" data-tab="ub8">Üb. 8 · W-Fragen bauen</button>
+    <button class="tab-btn" data-tab="ub9">Üb. 9 · Frage zur Antwort</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== REGEL ===== -->
+    <section class="panel active" id="panel-regel">
+      <p class="section-label">Regel</p>
+      <h2 class="panel-title">Fragen</h2>
+      <ul class="regel-toc" id="regelToc"></ul>
+
+      <div class="card">
+        <p>Es gibt zwei Arten von Fragen. <b>Ja/Nein-Fragen</b> haben kein Fragewort: Das Verb steht ganz am Anfang. Die Antwort ist <i>ja</i>, <i>nein</i> oder <i>doch</i>. <b>W-Fragen</b> beginnen mit einem Fragewort (<i>wer, was, wann, wo …</i>), danach kommt das Verb. Die Antwort ist eine Information.</p>
+        <p class="beispiel"><b>Spielst</b> du Gitarre? — Ja. / Nein.</p>
+        <p class="beispiel"><b>Wann</b> <b>spielst</b> du Gitarre? — Am Abend.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Питання бувають двох видів. <b>Без питального слова</b> (Ja/Nein-Fragen, у підручниках ще Entscheidungsfragen) — відповідь «так» чи «ні». <b>З питальним словом</b> (W-Fragen, Ergänzungsfragen) — відповідь дає нову інформацію: час, місце, причину, людину.<br><br>
+          В українській питання часто відрізняється від розповіді лише інтонацією («Ти граєш на гітарі?») або часткою «чи». У німецькій обов'язково змінюється <b>порядок слів</b>: у Ja/Nein-питанні відмінюване дієслово стає на <b>перше</b> місце, у W-питанні — на <b>друге</b>, одразу після питального слова. Питання лише інтонацією («Du spielst Gitarre?») буває тільки в розмові, коли дивуються чи перепитують.
+        </div>
+      </div>
+
+      <!-- 1 -->
+      <section class="card regel-block" id="ja-nein">
+        <h3>Ja/Nein-Fragen: das Verb am Anfang</h3>
+        <table class="gtable">
+          <tr><th>Aussage</th><th>Frage</th></tr>
+          <tr><td>Du spielst Gitarre.</td><td><b>Spielst</b> du Gitarre?</td></tr>
+          <tr><td>Ihr habt die Hausaufgaben gemacht.</td><td><b>Habt</b> ihr die Hausaufgaben gemacht?</td></tr>
+          <tr><td>Anna kann gut schwimmen.</td><td><b>Kann</b> Anna gut schwimmen?</td></tr>
+          <tr><td>Der Film fängt um acht an.</td><td><b>Fängt</b> der Film um acht an?</td></tr>
+        </table>
+        <p class="merke">In der Ja/Nein-Frage steht das konjugierte Verb auf Position I, das Subjekt direkt danach. Partizip, Infinitiv und trennbares Präfix bleiben am Ende.</p>
+        <p class="beispiel"><b>Kennst</b> du den neuen Lehrer? — <b>Ja</b>, ich kenne ihn. / <b>Nein</b>, ich kenne ihn nicht.</p>
+        <p class="beispiel"><b>Hast</b> du heute Zeit? — <b>Ja</b>, ich habe Zeit. / <b>Nein</b>, ich habe keine Zeit.</p>
+        <p>In Fragen hört man oft <i>denn</i> oder <i>wirklich</i>. Sie machen die Frage freundlicher oder zeigen Interesse:</p>
+        <p class="beispiel">Kommst du <b>denn</b> mit? · Ist das <b>wirklich</b> dein Hund?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Щоб зробити з розповідного речення питання, переставляємо <b>відмінюване дієслово на початок</b>, підмет — одразу після нього, решта лишається як була. Друга частина присудка (Partizip II, інфінітив після модального дієслова, відокремлюваний префікс) так і стоїть у кінці: рамка речення зберігається (<i>Hast</i> du … <i>gemacht</i>?).<br><br>
+          Відповідь: <b>Ja</b> + ствердне речення або <b>Nein</b> + заперечення з <i>nicht</i> чи <i>kein</i>.<br><br>
+          <b>denn</b> у питанні — це не «бо», а частка зацікавленості, приблизно «а», «ж»: «А ти підеш з нами?». <b>wirklich</b> — «справді».
+        </div>
+      </section>
+
+      <!-- 2 -->
+      <section class="card regel-block" id="doch">
+        <h3>Verneinte Fragen: ja wird zu doch</h3>
+        <table class="gtable">
+          <tr><th>Frage mit nicht / kein</th><th>positive Antwort</th><th>negative Antwort</th></tr>
+          <tr><td>Hast du <b>keinen</b> Hunger?</td><td><b>Doch</b>, ich habe Hunger.</td><td><b>Nein</b>, ich habe keinen Hunger.</td></tr>
+          <tr><td>Kommst du <b>nicht</b> mit?</td><td><b>Doch</b>, ich komme mit.</td><td><b>Nein</b>, ich komme nicht mit.</td></tr>
+          <tr><td>Hast du das Buch <b>nicht</b> gelesen?</td><td><b>Doch</b>, ich habe es gelesen.</td><td><b>Nein</b>, ich habe es nicht gelesen.</td></tr>
+        </table>
+        <table class="gtable">
+          <tr><th>Frage</th><th>Antwort positiv</th><th>Antwort negativ</th></tr>
+          <tr><td>ohne Verneinung: Hast du Zeit?</td><td>ja</td><td>nein</td></tr>
+          <tr><td>mit Verneinung: Hast du keine Zeit?</td><td>doch</td><td>nein</td></tr>
+        </table>
+        <p class="merke">Auf eine Frage mit nicht oder kein antwortet man positiv mit doch und negativ mit nein. Ja passt hier nicht.</p>
+        <p class="beispiel">Du hast das Fenster nicht zugemacht! — <b>Doch</b>, ich habe es zugemacht.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          На питання із запереченням («Ти не голодний?») українською відповідають по-різному: «Та ні, голодний», «Чому ж, голодний» — і часто незрозуміло, що мали на увазі. У німецькій є окреме слово <b>doch</b>: воно <b>заперечує заперечення</b> — «ні, неправда, що не голодний: я голодний».<br><br>
+          <b>Nein</b> на таке питання означає, що ти погоджуєшся із запереченням: «Hast du keinen Hunger? — Nein» = «справді не голодний».<br>
+          <b>Ja</b> на заперечне питання звучить неприродно й збиває з пантелику — краще не вживати.<br><br>
+          doch так само працює у відповідь на заперечне твердження: «Du kannst das nicht! — Doch!» (Та можу!).
+        </div>
+      </section>
+
+      <!-- 3 -->
+      <section class="card regel-block" id="schon-noch">
+        <h3>Genauer fragen: schon, noch, erst, nur</h3>
+        <table class="gtable">
+          <tr><th>Frage</th><th>Ja …</th><th>Nein …</th></tr>
+          <tr><td>Bist du <b>schon</b> fertig?</td><td>Ja, ich bin <b>schon</b> fertig.</td><td>Nein, ich bin <b>noch nicht</b> fertig.</td></tr>
+          <tr><td>Hast du <b>schon etwas</b> gegessen?</td><td>Ja, ich habe <b>schon etwas</b> gegessen.</td><td>Nein, ich habe <b>noch nichts</b> gegessen.</td></tr>
+          <tr><td>Hast du <b>schon eine</b> Fahrkarte?</td><td>Ja, ich habe <b>schon eine</b>.</td><td>Nein, ich habe <b>noch keine</b>.</td></tr>
+          <tr><td>Wohnst du <b>noch</b> in Kyjiw?</td><td>Ja, ich wohne <b>noch</b> in Kyjiw.</td><td>Nein, ich wohne <b>nicht mehr</b> in Kyjiw.</td></tr>
+          <tr><td>Möchtest du <b>noch etwas</b> trinken?</td><td>Ja, gern <b>noch etwas</b> Saft.</td><td>Nein, danke, ich möchte <b>nichts mehr</b>.</td></tr>
+          <tr><td>Hast du <b>noch</b> Fragen?</td><td>Ja, ich habe <b>noch</b> eine Frage.</td><td>Nein, ich habe <b>keine</b> Fragen <b>mehr</b>.</td></tr>
+        </table>
+        <table class="gtable">
+          <tr><th>Frage mit …</th><th>negative Antwort mit …</th></tr>
+          <tr><td>schon</td><td>noch nicht</td></tr>
+          <tr><td>schon etwas</td><td>noch nichts</td></tr>
+          <tr><td>schon ein / eine</td><td>noch kein / keine</td></tr>
+          <tr><td>noch</td><td>nicht mehr</td></tr>
+          <tr><td>noch etwas</td><td>nichts mehr</td></tr>
+          <tr><td>noch ein / noch + Nomen</td><td>kein … mehr</td></tr>
+        </table>
+        <p><b>erst</b> und <b>schon</b> bei Zeit und Zahlen, <b>nur</b> bei einer kleinen Menge:</p>
+        <p class="beispiel">Ist Lea <b>erst</b> zehn? — Nein, sie ist <b>schon</b> zwölf.</p>
+        <p class="beispiel">Kommst du <b>erst</b> morgen? — Nein, ich komme <b>schon</b> heute.</p>
+        <p class="beispiel">Hast du <b>erst</b> zwei Seiten gelesen? — Ja, <b>erst</b> zwei. Das Buch ist schwer.</p>
+        <p class="beispiel">Bleibt ihr <b>nur</b> drei Tage in Wien? — Ja, <b>nur</b> drei Tage. / Nein, wir bleiben länger.</p>
+        <p class="merke">schon = früher oder mehr als erwartet; erst = später oder weniger als erwartet. Nein auf schon → noch nicht / noch nichts / noch kein. Nein auf noch → nicht mehr / nichts mehr / kein … mehr.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          <b>schon</b> — вже; <b>noch</b> — ще; <b>noch nicht</b> — ще не; <b>noch nichts</b> — ще нічого; <b>noch kein</b> — ще жодного / ще немає.<br>
+          <b>nicht mehr</b> — вже не, більше не; <b>nichts mehr</b> — більше нічого; <b>kein … mehr</b> — більше немає.<br><br>
+          Типова помилка — перекладати «вже не» дослівно: <s>Ich wohne schon nicht dort</s> → <b>Ich wohne nicht mehr dort</b>. «Я вже не дитина» → <b>Ich bin kein Kind mehr</b>.<br><br>
+          <b>erst</b> — «лише, тільки», коли менше чи пізніше, ніж очікували, і це ще зміниться: «Er ist erst zwölf» (йому лише 12, ще подорослішає), «Der Zug kommt erst um zehn» (аж о десятій). <b>nur</b> — просто «лише», без очікування змін: «Ich habe nur fünf Euro».
+        </div>
+      </section>
+
+      <!-- 4 -->
+      <section class="card regel-block" id="w-woerter">
+        <h3>W-Fragewörter: wer, was, wann, wo …</h3>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Fragewort</th><th>Man fragt nach …</th><th>Beispiel</th><th>Antwort</th></tr>
+          <tr><td>wann?</td><td>Zeit</td><td><b>Wann</b> beginnt die Schule?</td><td>Um acht Uhr.</td></tr>
+          <tr><td>warum? (wieso? weshalb?)</td><td>Grund</td><td><b>Warum</b> lernst du Deutsch?</td><td>Weil ich nach Berlin fahren will.</td></tr>
+          <tr><td>wie?</td><td>Art und Weise</td><td><b>Wie</b> kommst du zur Schule?</td><td>Mit dem Fahrrad.</td></tr>
+          <tr><td>wo?</td><td>Ort</td><td><b>Wo</b> wohnst du?</td><td>In Lwiw.</td></tr>
+          <tr><td>wohin?</td><td>Richtung, Ziel</td><td><b>Wohin</b> fahrt ihr im Sommer?</td><td>Ans Meer.</td></tr>
+          <tr><td>woher?</td><td>Herkunft</td><td><b>Woher</b> kommt deine Freundin?</td><td>Aus Polen.</td></tr>
+        </table>
+        </div>
+        <table class="gtable">
+          <tr><th>Kasus</th><th>Person</th><th>Sache</th><th>Beispiel</th></tr>
+          <tr><td class="gender">Nom.</td><td>wer?</td><td>was?</td><td><b>Wer</b> hat angerufen? — Mein Onkel.<br><b>Was</b> ist passiert? — Nichts.</td></tr>
+          <tr><td class="gender">Akk.</td><td>wen?</td><td>was?</td><td><b>Wen</b> hast du gesehen? — Meinen Lehrer.<br><b>Was</b> hast du gekauft? — Ein Heft.</td></tr>
+          <tr><td class="gender">Dat.</td><td>wem?</td><td>— (→ womit? wovon? …)</td><td><b>Wem</b> hilfst du? — Meiner Schwester.</td></tr>
+          <tr><td class="gender">Gen.</td><td>wessen?</td><td>—</td><td><b>Wessen</b> Jacke ist das? — Die Jacke von Max.</td></tr>
+        </table>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Position I</th><th>II: Verb</th><th>III: Subjekt</th><th>Mitte</th><th>Ende</th></tr>
+          <tr><td><b>Wann</b></td><td>kommst</td><td>du</td><td>nach Hause</td><td>?</td></tr>
+          <tr><td><b>Was</b></td><td>hast</td><td>du</td><td>am Wochenende</td><td>gemacht?</td></tr>
+          <tr><td><b>Wohin</b></td><td>möchtet</td><td>ihr</td><td>im Sommer</td><td>fahren?</td></tr>
+          <tr><td><b>Wann</b></td><td>stehst</td><td>du</td><td>morgens</td><td>auf?</td></tr>
+        </table>
+        </div>
+        <p class="merke">W-Frage: Fragewort auf Position I, konjugiertes Verb auf Position II, dann das Subjekt. Nach wer? und was? als Subjekt steht das Verb im Singular: Wer kommt mit? — Wir kommen mit.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Порядок: <b>питальне слово — дієслово — підмет</b>. Українською «Коли ти прийдеш?» дієслово може стояти де завгодно, у німецькій воно завжди <b>друге</b>.<br><br>
+          <b>wo</b> — де, <b>wohin</b> — куди, <b>woher</b> — звідки: відповідають українським словам точно, тож не плутай: <s>Wo gehst du?</s> → <b>Wohin</b> gehst du? У розмові wohin/woher часто розривають: «<b>Wo</b> fährst du <b>hin</b>?», «<b>Wo</b> kommst du <b>her</b>?».<br><br>
+          <b>wer / wen / wem</b> ≈ хто / кого / кому; <b>wessen</b> ≈ чий, чия, чиє (не змінюється, іменник після нього — без артикля: Wessen Buch?). <b>was</b> ≈ що — у Nominativ і Akkusativ однакове. Окремого слова «чим / з чим» для речей немає — див. підрозділ про прийменники (womit, worüber).<br><br>
+          Навіть якщо відповідь у множині, після <b>wer / was</b> дієслово в однині: «Wer <b>kommt</b> mit?»
+        </div>
+      </section>
+
+      <!-- 5 -->
+      <section class="card regel-block" id="welcher">
+        <h3>Fragewort + Nomen: wie viel, welcher, was für ein</h3>
+        <table class="gtable">
+          <tr><th>Fragewort</th><th>+ Nomen</th><th>Beispiel</th></tr>
+          <tr><td>wie viele?</td><td>Plural, ohne Artikel (zählbar)</td><td><b>Wie viele</b> Geschwister hast du? — Zwei.</td></tr>
+          <tr><td>wie viel?</td><td>Singular, ohne Artikel (nicht zählbar)</td><td><b>Wie viel</b> Zeit hast du? — Eine Stunde.</td></tr>
+        </table>
+        <p class="beispiel"><b>Wie viel</b> kostet das Ticket? — Zwölf Euro. (ohne Nomen)</p>
+
+        <p><b>welcher, welche, welches</b> — Endungen wie beim bestimmten Artikel (der, die, das):</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th></th><th>maskulin</th><th>feminin</th><th>neutral</th><th>Plural</th></tr>
+          <tr><td class="gender">Nom.</td><td>welch<b>er</b></td><td>welch<b>e</b></td><td>welch<b>es</b></td><td>welch<b>e</b></td></tr>
+          <tr><td class="gender">Akk.</td><td>welch<b>en</b></td><td>welch<b>e</b></td><td>welch<b>es</b></td><td>welch<b>e</b></td></tr>
+          <tr><td class="gender">Dat.</td><td>welch<b>em</b></td><td>welch<b>er</b></td><td>welch<b>em</b></td><td>welch<b>en</b></td></tr>
+        </table>
+        </div>
+        <p class="beispiel"><b>Welcher</b> Film läuft heute? · <b>Welche</b> Farbe magst du? · Mit <b>welchem</b> Bus fährst du?</p>
+
+        <p><b>was für ein, was für eine</b> — nur <i>ein</i> bekommt die Endung; im Plural und bei nicht zählbaren Nomen ohne Artikel:</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th></th><th>maskulin</th><th>feminin</th><th>neutral</th><th>Plural</th></tr>
+          <tr><td class="gender">Nom.</td><td>was für ein</td><td>was für ein<b>e</b></td><td>was für ein</td><td>was für</td></tr>
+          <tr><td class="gender">Akk.</td><td>was für ein<b>en</b></td><td>was für ein<b>e</b></td><td>was für ein</td><td>was für</td></tr>
+          <tr><td class="gender">Dat.</td><td>was für ein<b>em</b></td><td>was für ein<b>er</b></td><td>was für ein<b>em</b></td><td>was für</td></tr>
+        </table>
+        </div>
+        <p class="beispiel"><b>Was für ein</b> Auto hat dein Vater? — Ein kleines rotes Auto.</p>
+        <p class="beispiel">In <b>was für einem</b> Haus wohnt ihr? — In einem alten Haus.</p>
+        <p class="beispiel"><b>Was für</b> Musik hörst du? — Rock und Pop.</p>
+        <p class="merke">welcher? — man wählt aus einer bekannten Gruppe: Welcher Pulli? — Der blaue. Was für ein? — man fragt nach der Art: Was für ein Pulli? — Ein warmer Wollpulli.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          <b>wie viele</b> / <b>wie viel</b> — обидва «скільки». wie viele — для того, що можна порахувати, з іменником у множині: Kinder, Stunden, Bücher. wie viel — для незлічуваного, з іменником в однині: Zeit, Geld, Wasser. Порівняй: «скільки годин» — wie viele Stunden, «скільки часу» — wie viel Zeit.<br><br>
+          <b>welcher</b> ≈ «який саме, котрий»: вибираємо з відомого (із двох светрів на полиці). Відповідь часто з означеним артиклем: der blaue. Закінчення — як у der / die / das.<br>
+          <b>was für ein</b> ≈ «що за, який (на вигляд, за якістю)»: питаємо про вид чи властивість. Відповідь — з неозначеним артиклем: ein warmer. Відмінок визначає лише <i>ein</i>, а не <i>für</i>: «Mit was für <b>einem</b> Bus?» — Dativ, бо mit.
+        </div>
+      </section>
+
+      <!-- 6 -->
+      <section class="card regel-block" id="wie-adjektiv">
+        <h3>wie + Adjektiv: wie alt, wie oft, wie lange</h3>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Frage</th><th>Man fragt nach …</th><th>Antwort</th></tr>
+          <tr><td><b>Wie alt</b> ist dein Bruder?</td><td>Alter</td><td>Er ist fünfzehn (Jahre alt).</td></tr>
+          <tr><td><b>Wie groß</b> bist du?</td><td>Größe</td><td>1,65 Meter.</td></tr>
+          <tr><td><b>Wie lange</b> dauert die Pause?</td><td>Dauer (Zeit)</td><td>Zwanzig Minuten.</td></tr>
+          <tr><td><b>Wie oft</b> hast du Deutsch?</td><td>Häufigkeit</td><td>Dreimal pro Woche.</td></tr>
+          <tr><td><b>Wie weit</b> ist es bis zum Bahnhof?</td><td>Entfernung</td><td>Etwa zwei Kilometer.</td></tr>
+          <tr><td><b>Wie hoch</b> ist die Howerla?</td><td>Höhe</td><td>Etwa 2 061 Meter.</td></tr>
+          <tr><td><b>Wie lang</b> ist der Dnipro?</td><td>Länge</td><td>Etwa 2 200 Kilometer.</td></tr>
+          <tr><td><b>Wie schwer</b> ist deine Schultasche?</td><td>Gewicht</td><td>Fünf Kilo.</td></tr>
+          <tr><td><b>Wie spät</b> ist es?</td><td>Uhrzeit</td><td>Halb neun.</td></tr>
+        </table>
+        </div>
+        <p>Maße in der Antwort stehen im Akkusativ:</p>
+        <p class="beispiel">Der Tisch ist <b>einen Meter</b> lang. · Wir warten schon <b>einen Monat</b>.</p>
+        <p class="merke">wie lange = Dauer (Minuten, Tage). wie lang = Länge (Meter, Kilometer). wie oft = wie viele Male.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Українське «скільки тобі років?» → <b>Wie alt bist du?</b> (не <s>Wie viele Jahre …</s>). «Який у тебе зріст?» → <b>Wie groß bist du?</b> «Як часто?» → wie oft, «як довго, скільки часу?» → wie lange, «як далеко?» → wie weit, «котра година?» → Wie spät ist es?<br><br>
+          Не плутай <b>wie lange</b> (про час) і <b>wie lang</b> (про довжину). Міра у відповіді — у знахідному відмінку: <i>einen</i> Meter, <i>einen</i> Monat.
+        </div>
+      </section>
+
+      <!-- 7 -->
+      <section class="card regel-block" id="praeposition">
+        <h3>Fragen mit Präposition: mit wem? – womit?</h3>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Verb + Präposition</th><th>Person</th><th>Sache</th></tr>
+          <tr><td>warten auf</td><td><b>Auf wen</b> wartest du? — Auf meinen Freund.</td><td><b>Worauf</b> wartest du? — Auf den Bus.</td></tr>
+          <tr><td>denken an</td><td><b>An wen</b> denkst du? — An meine Oma.</td><td><b>Woran</b> denkst du? — An die Ferien.</td></tr>
+          <tr><td>sprechen über</td><td><b>Über wen</b> sprecht ihr? — Über den neuen Schüler.</td><td><b>Worüber</b> sprecht ihr? — Über den Film.</td></tr>
+          <tr><td>sich interessieren für</td><td><b>Für wen</b> interessierst du dich? — Für diese Sängerin.</td><td><b>Wofür</b> interessierst du dich? — Für Sport.</td></tr>
+          <tr><td>spielen mit</td><td><b>Mit wem</b> spielst du? — Mit meinem Bruder.</td><td><b>Womit</b> spielst du? — Mit dem Ball.</td></tr>
+        </table>
+        </div>
+        <table class="gtable">
+          <tr><th>wo- + Konsonant</th><th>wor- + Vokal</th></tr>
+          <tr><td>wofür, womit, wovon, wozu, wobei, wonach, wodurch</td><td>woran, worauf, worüber, worum, worin</td></tr>
+        </table>
+        <p>Auch vor Fragen nach Zeit und Ort steht oft eine Präposition:</p>
+        <p class="beispiel"><b>Seit wann</b> lernst du Deutsch? — Seit drei Jahren.</p>
+        <p class="beispiel"><b>Bis wann</b> bleibst du? — Bis Sonntag.</p>
+        <p class="beispiel"><b>Um wie viel Uhr</b> fährt der Zug? — Um 7.15 Uhr.</p>
+        <p class="beispiel"><b>In welcher</b> Stadt wohnt deine Tante? — In Odesa.</p>
+        <p class="merke">Person: Präposition + wen / wem (Mit wem? Auf wen?). Sache: wo(r) + Präposition (Womit? Worauf?). Die Präposition steht immer am Anfang der Frage.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Як і в українській («з ким?», «на кого?»), прийменник стоїть <b>на самому початку</b> питання. Для <b>людей</b> — прийменник + <i>wen</i> (Akk.) або <i>wem</i> (Dat.), залежно від прийменника: <i>auf wen</i>, <i>mit wem</i>.<br><br>
+          Для <b>речей і ситуацій</b> — одне злите слово <b>wo(r) + прийменник</b>: womit — чим, з чим; worauf — на що; worüber — про що; woran — про що (думати). Буква <b>-r-</b> вставляється, якщо прийменник починається з голосної: auf → wo<b>r</b>auf, an → wo<b>r</b>an.<br><br>
+          У розмові можна почути «Mit was?», «Über was?», але правильно й у письмі — womit, worüber. Який прийменник потрібен, залежить від дієслова (warten <i>auf</i>, denken <i>an</i>) — див. тему «Verben mit präpositionalem Objekt».
+        </div>
+      </section>
+
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: квіз ja / nein / doch ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Ja, nein oder doch?</h2>
+      <p class="lead">Обери правильний початок відповіді або правильне речення. Уважно дивись, чи є в питанні nicht або kein.</p>
+      <div class="card" id="ub1-quiz"></div>
+    </section>
+
+    <!-- ===== Üb. 2: склади Ja/Nein-питання ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Ja/Nein-Fragen bauen</h2>
+      <p class="lead">Склади питання без питального слова. Натискай слова по черзі; натиснеш на вже поставлене — воно повернеться назад.</p>
+      <div class="card" id="ub2-order"></div>
+    </section>
+
+    <!-- ===== Üb. 3: schon / noch / erst ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">schon, noch, erst</h2>
+      <p class="lead">Обери слово, яке логічно доповнює відповідь.</p>
+      <div class="card" id="ub3-list">
+        <div class="fill-item"><span class="num">1)</span> Bist du schon fertig? — Nein, ich bin
+          <select class="blank inline" data-ans="noch nicht"><option value="">—</option><option>schon nicht</option><option>noch nicht</option><option>nicht mehr</option></select> fertig.</div>
+        <div class="fill-item"><span class="num">2)</span> Wohnt Oleh noch in Charkiw? — Nein, er wohnt
+          <select class="blank inline" data-ans="nicht mehr"><option value="">—</option><option>noch nicht</option><option>schon nicht</option><option>nicht mehr</option></select> dort.</div>
+        <div class="fill-item"><span class="num">3)</span> Hast du schon etwas gegessen? — Nein, ich habe
+          <select class="blank inline" data-ans="noch nichts"><option value="">—</option><option>nichts mehr</option><option>noch nichts</option><option>schon nichts</option></select> gegessen.</div>
+        <div class="fill-item"><span class="num">4)</span> Möchtest du noch etwas Tee? — Nein, danke, ich möchte
+          <select class="blank inline" data-ans="nichts mehr"><option value="">—</option><option>noch nichts</option><option>nichts mehr</option><option>noch nicht</option></select>.</div>
+        <div class="fill-item"><span class="num">5)</span> Hat deine Schwester schon ein Handy? — Nein, sie hat
+          <select class="blank inline" data-ans="noch keins"><option value="">—</option><option>keins mehr</option><option>schon keins</option><option>noch keins</option></select>.</div>
+        <div class="fill-item"><span class="num">6)</span> Hast du noch Geld? — Nein, ich habe kein Geld
+          <select class="blank inline" data-ans="mehr"><option value="">—</option><option>noch</option><option>mehr</option><option>schon</option></select>.</div>
+        <div class="fill-item"><span class="num">7)</span> Ist dein Bruder schon 18? — Nein, er ist
+          <select class="blank inline" data-ans="erst"><option value="">—</option><option>schon</option><option>erst</option><option>noch</option></select> 16.</div>
+        <div class="fill-item"><span class="num">8)</span> Ist deine Oma erst 60? — Nein, sie ist
+          <select class="blank inline" data-ans="schon"><option value="">—</option><option>erst</option><option>noch</option><option>schon</option></select> 70.</div>
+        <div class="fill-item"><span class="num">9)</span> Kommt der Zug schon um neun? — Nein, er kommt
+          <select class="blank inline" data-ans="erst"><option value="">—</option><option>erst</option><option>schon</option><option>nicht mehr</option></select> um zehn.</div>
+        <div class="fill-item"><span class="num">10)</span> Ist es schon spät? — Nein, es ist
+          <select class="blank inline" data-ans="erst"><option value="">—</option><option>schon</option><option>noch</option><option>erst</option></select> halb acht.</div>
+        <div class="fill-item"><span class="num">11)</span> Hast du noch Fragen? — Ja, ich habe
+          <select class="blank inline" data-ans="noch"><option value="">—</option><option>noch</option><option>erst</option><option>mehr</option></select> eine Frage.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4: W-Fragewörter ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Welches Fragewort passt?</h2>
+      <p class="lead">Подивись на відповідь і обери питальне слово.</p>
+      <div class="card" id="ub4-list">
+        <div class="fill-item"><span class="num">1)</span>
+          <select class="blank inline" data-ans="Wohin"><option value="">—</option><option>Wo</option><option>Wohin</option><option>Woher</option></select> fahrt ihr in den Ferien? — Nach Spanien.</div>
+        <div class="fill-item"><span class="num">2)</span>
+          <select class="blank inline" data-ans="Woher"><option value="">—</option><option>Wohin</option><option>Wo</option><option>Woher</option></select> kommt dein Brieffreund? — Aus Österreich.</div>
+        <div class="fill-item"><span class="num">3)</span>
+          <select class="blank inline" data-ans="Wo"><option value="">—</option><option>Woher</option><option>Wo</option><option>Wohin</option></select> ist mein Handy? — Auf dem Tisch.</div>
+        <div class="fill-item"><span class="num">4)</span>
+          <select class="blank inline" data-ans="Wann"><option value="">—</option><option>Wie</option><option>Wo</option><option>Wann</option></select> beginnt das Konzert? — Um 19 Uhr.</div>
+        <div class="fill-item"><span class="num">5)</span>
+          <select class="blank inline" data-ans="Warum"><option value="">—</option><option>Warum</option><option>Wann</option><option>Wie</option></select> kommst du so spät? — Weil der Bus Verspätung hatte.</div>
+        <div class="fill-item"><span class="num">6)</span>
+          <select class="blank inline" data-ans="Wie"><option value="">—</option><option>Was</option><option>Wie</option><option>Wo</option></select> kommst du zur Schule? — Zu Fuß.</div>
+        <div class="fill-item"><span class="num">7)</span>
+          <select class="blank inline" data-ans="Wer"><option value="">—</option><option>Wen</option><option>Wem</option><option>Wer</option></select> hat das Fenster geöffnet? — Der Hausmeister.</div>
+        <div class="fill-item"><span class="num">8)</span>
+          <select class="blank inline" data-ans="Wen"><option value="">—</option><option>Wer</option><option>Wen</option><option>Wem</option></select> hast du im Kino getroffen? — Meinen Cousin.</div>
+        <div class="fill-item"><span class="num">9)</span>
+          <select class="blank inline" data-ans="Wem"><option value="">—</option><option>Wem</option><option>Wer</option><option>Wen</option></select> schenkst du die Blumen? — Meiner Mutter.</div>
+        <div class="fill-item"><span class="num">10)</span>
+          <select class="blank inline" data-ans="Wessen"><option value="">—</option><option>Wem</option><option>Wer</option><option>Wessen</option></select> Rucksack ist das? — Das ist der Rucksack von Taras.</div>
+        <div class="fill-item"><span class="num">11)</span>
+          <select class="blank inline" data-ans="Was"><option value="">—</option><option>Wen</option><option>Was</option><option>Wer</option></select> hast du zum Geburtstag bekommen? — Ein Fahrrad.</div>
+        <div class="fill-item"><span class="num">12)</span>
+          <select class="blank inline" data-ans="Wen"><option value="">—</option><option>Wem</option><option>Wen</option><option>Wer</option></select> fragst du? — Die Lehrerin.</div>
+        <div class="fill-item"><span class="num">13)</span>
+          <select class="blank inline" data-ans="Wem"><option value="">—</option><option>Wer</option><option>Wen</option><option>Wem</option></select> gehört der Hund? — Unseren Nachbarn.</div>
+        <div class="fill-item"><span class="num">14)</span>
+          <select class="blank inline" data-ans="Was"><option value="">—</option><option>Was</option><option>Wer</option><option>Wie</option></select> ist passiert? — Ich habe mein Heft vergessen.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub4-check">Prüfen</button>
+        <button class="btn secondary" id="ub4-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub4-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5: wie viel(e) — сортування; welch- / was für ein — пропуски ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">wie viel, welch-, was für ein</h2>
+      <p class="lead">А) Розклади іменники: з яким словом про них питають — wie viel чи wie viele?</p>
+      <div class="card" id="ub5-sort"></div>
+      <p class="lead">Б) Впиши welch- або ein у правильній формі (у дужках — яке слово потрібне).</p>
+      <div class="card" id="ub5-list">
+        <div class="fill-item"><span class="num">1)</span>
+          <input type="text" class="blank-input inline" data-ans="Welches"> Buch liest du gerade? (welch-) — Das Buch über Vulkane.</div>
+        <div class="fill-item"><span class="num">2)</span> Mit
+          <input type="text" class="blank-input inline" data-ans="welchem"> Bus fährst du nach Hause? (welch-) — Mit dem Bus Nummer 5.</div>
+        <div class="fill-item"><span class="num">3)</span>
+          <input type="text" class="blank-input inline" data-ans="Welche"> Farbe gefällt dir besser: Blau oder Grün? (welch-)</div>
+        <div class="fill-item"><span class="num">4)</span>
+          <input type="text" class="blank-input inline" data-ans="Welcher"> Lehrer unterrichtet euch in Mathe? (welch-) — Herr Bondar.</div>
+        <div class="fill-item"><span class="num">5)</span> In
+          <input type="text" class="blank-input inline" data-ans="welcher"> Klasse bist du? (welch-) — In der 8b.</div>
+        <div class="fill-item"><span class="num">6)</span> Was für
+          <input type="text" class="blank-input inline" data-ans="einen"> Hund hat deine Tante? (ein) — Einen kleinen Dackel.</div>
+        <div class="fill-item"><span class="num">7)</span> Was für
+          <input type="text" class="blank-input inline" data-ans="eine"> Jacke suchst du? (ein) — Eine warme Winterjacke.</div>
+        <div class="fill-item"><span class="num">8)</span> In was für
+          <input type="text" class="blank-input inline" data-ans="einem"> Haus wohnt ihr? (ein) — In einem alten Haus.</div>
+        <div class="fill-item"><span class="num">9)</span> Was für
+          <input type="text" class="blank-input inline" data-ans="ein"> Geschenk hast du bekommen? (ein) — Ein Brettspiel.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub5-check">Prüfen</button>
+        <button class="btn secondary" id="ub5-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub5-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 6: wie + Adjektiv ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">wie alt, wie oft, wie lange …</h2>
+      <p class="lead">Впиши одне слово після wie так, щоб питання пасувало до відповіді.</p>
+      <div class="card" id="ub6-list">
+        <div class="fill-item"><span class="num">1)</span> Wie <input type="text" class="blank-input inline" data-ans="alt"> ist deine Schwester? — Sie ist zwölf.</div>
+        <div class="fill-item"><span class="num">2)</span> Wie <input type="text" class="blank-input inline" data-ans="oft"> gehst du ins Kino? — Etwa zweimal im Monat.</div>
+        <div class="fill-item"><span class="num">3)</span> Wie <input type="text" class="blank-input inline" data-ans="lange"> dauert der Film? — Zwei Stunden.</div>
+        <div class="fill-item"><span class="num">4)</span> Wie <input type="text" class="blank-input inline" data-ans="groß|gross"> bist du? — 1,60 Meter.</div>
+        <div class="fill-item"><span class="num">5)</span> Wie <input type="text" class="blank-input inline" data-ans="weit"> ist es bis zum Stadion? — Nur 500 Meter.</div>
+        <div class="fill-item"><span class="num">6)</span> Wie <input type="text" class="blank-input inline" data-ans="spät"> ist es? — Viertel nach drei.</div>
+        <div class="fill-item"><span class="num">7)</span> Wie <input type="text" class="blank-input inline" data-ans="hoch"> ist der Fernsehturm? — 368 Meter.</div>
+        <div class="fill-item"><span class="num">8)</span> Wie <input type="text" class="blank-input inline" data-ans="schwer"> ist dein Koffer? — 20 Kilo.</div>
+        <div class="fill-item"><span class="num">9)</span> Wie <input type="text" class="blank-input inline" data-ans="lang"> ist der Dnipro? — Etwa 2 200 Kilometer.</div>
+        <div class="fill-item"><span class="num">10)</span> Wie <input type="text" class="blank-input inline" data-ans="viele"> Schüler sind in deiner Klasse? — 26.</div>
+        <div class="fill-item"><span class="num">11)</span> Wie <input type="text" class="blank-input inline" data-ans="viel"> Zucker nimmst du in den Tee? — Zwei Löffel.</div>
+        <div class="fill-item"><span class="num">12)</span> Wie <input type="text" class="blank-input inline" data-ans="teuer"> sind die Tickets? — 12 Euro pro Person.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub6-check">Prüfen</button>
+        <button class="btn secondary" id="ub6-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub6-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 7: питання з прийменником ===== -->
+    <section class="panel" id="panel-ub7">
+      <p class="section-label">Üb. 7</p>
+      <h2 class="panel-title">Womit? Mit wem? Seit wann?</h2>
+      <p class="lead">Впиши питальне слово разом із прийменником (одне чи кілька слів). Людина — прийменник + wen/wem, річ — wo(r) + прийменник.</p>
+      <div class="card" id="ub7-list">
+        <div class="fill-item"><span class="num">1)</span> <input type="text" class="blank-input inline wide" data-ans="Worauf"> wartest du? — Auf den Bus.</div>
+        <div class="fill-item"><span class="num">2)</span> <input type="text" class="blank-input inline wide" data-ans="Auf wen"> wartest du? — Auf meine Freundin Sofia.</div>
+        <div class="fill-item"><span class="num">3)</span> <input type="text" class="blank-input inline wide" data-ans="Mit wem"> telefonierst du so lange? — Mit meiner Oma.</div>
+        <div class="fill-item"><span class="num">4)</span> <input type="text" class="blank-input inline wide" data-ans="Womit"> schreibst du? — Mit einem Bleistift.</div>
+        <div class="fill-item"><span class="num">5)</span> <input type="text" class="blank-input inline wide" data-ans="Wofür"> interessierst du dich? — Für Computerspiele.</div>
+        <div class="fill-item"><span class="num">6)</span> <input type="text" class="blank-input inline wide" data-ans="Worüber"> sprecht ihr? — Über den neuen Film.</div>
+        <div class="fill-item"><span class="num">7)</span> <input type="text" class="blank-input inline wide" data-ans="An wen"> denkst du? — An meinen Opa.</div>
+        <div class="fill-item"><span class="num">8)</span> <input type="text" class="blank-input inline wide" data-ans="Worauf"> freust du dich? — Auf die Sommerferien.</div>
+        <div class="fill-item"><span class="num">9)</span> <input type="text" class="blank-input inline wide" data-ans="Für wen"> hast du das Geschenk gekauft? — Für meinen Bruder.</div>
+        <div class="fill-item"><span class="num">10)</span> <input type="text" class="blank-input inline wide" data-ans="Wovon"> träumst du? — Von einer Reise nach Japan.</div>
+        <div class="fill-item"><span class="num">11)</span> <input type="text" class="blank-input inline wide" data-ans="Seit wann"> lernst du Deutsch? — Seit drei Jahren.</div>
+        <div class="fill-item"><span class="num">12)</span> <input type="text" class="blank-input inline wide" data-ans="Bis wann"> bleibt ihr in Berlin? — Bis Freitag.</div>
+        <div class="fill-item"><span class="num">13)</span> <input type="text" class="blank-input inline wide" data-ans="Um wie viel Uhr|Um wieviel Uhr"> fährt der Zug ab? — Um 7.40 Uhr.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub7-check">Prüfen</button>
+        <button class="btn secondary" id="ub7-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub7-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 8: склади W-питання ===== -->
+    <section class="panel" id="panel-ub8">
+      <p class="section-label">Üb. 8</p>
+      <h2 class="panel-title">W-Fragen bauen</h2>
+      <p class="lead">Склади питання з питальним словом. Пам'ятай: питальне слово — дієслово — підмет. Натискай слова по черзі; натиснеш на вже поставлене — воно повернеться.</p>
+      <div class="card" id="ub8-order"></div>
+    </section>
+
+    <!-- ===== Üb. 9: питання до відповіді ===== -->
+    <section class="panel" id="panel-ub9">
+      <p class="section-label">Üb. 9</p>
+      <h2 class="panel-title">Die Frage zur Antwort</h2>
+      <p class="lead">Марко відповідає на твої питання. Напиши питання (на «du») до виділеної частини відповіді.</p>
+      <div class="card" id="ub9-list">
+        <div class="fill-item"><span class="num">1)</span> — Ich wohne <b>in Poltawa</b>.
+          <input type="text" class="blank-input inline full" data-ans="Wo wohnst du"></div>
+        <div class="fill-item"><span class="num">2)</span> — Ich komme <b>aus der Ukraine</b>.
+          <input type="text" class="blank-input inline full" data-ans="Woher kommst du|Wo kommst du her"></div>
+        <div class="fill-item"><span class="num">3)</span> — Ich gehe <b>morgen</b> zum Arzt.
+          <input type="text" class="blank-input inline full" data-ans="Wann gehst du zum Arzt"></div>
+        <div class="fill-item"><span class="num">4)</span> — Ich habe <b>zwei</b> Geschwister.
+          <input type="text" class="blank-input inline full" data-ans="Wie viele Geschwister hast du"></div>
+        <div class="fill-item"><span class="num">5)</span> — Ich helfe <b>meinem Vater</b>.
+          <input type="text" class="blank-input inline full" data-ans="Wem hilfst du"></div>
+        <div class="fill-item"><span class="num">6)</span> — Ich habe <b>Oksana</b> eingeladen.
+          <input type="text" class="blank-input inline full" data-ans="Wen hast du eingeladen"></div>
+        <div class="fill-item"><span class="num">7)</span> — Ich spiele <b>mit meinem Cousin</b> Schach.
+          <input type="text" class="blank-input inline full" data-ans="Mit wem spielst du Schach"></div>
+        <div class="fill-item"><span class="num">8)</span> — Ich interessiere mich <b>für Geschichte</b>.
+          <input type="text" class="blank-input inline full" data-ans="Wofür interessierst du dich"></div>
+        <div class="fill-item"><span class="num">9)</span> — Ich lerne Deutsch, <b>weil ich in Deutschland studieren möchte</b>.
+          <input type="text" class="blank-input inline full" data-ans="Warum lernst du Deutsch|Wieso lernst du Deutsch|Weshalb lernst du Deutsch"></div>
+        <div class="fill-item"><span class="num">10)</span> — Ich bin <b>vierzehn Jahre alt</b>.
+          <input type="text" class="blank-input inline full" data-ans="Wie alt bist du"></div>
+        <div class="fill-item"><span class="num">11)</span> — Ich möchte <b>den roten</b> Pullover.
+          <input type="text" class="blank-input inline full" data-ans="Welchen Pullover möchtest du"></div>
+        <div class="fill-item"><span class="num">12)</span> — Ich fahre <b>zweimal pro Woche</b> zum Training.
+          <input type="text" class="blank-input inline full" data-ans="Wie oft fährst du zum Training"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub9-check">Prüfen</button>
+        <button class="btn secondary" id="ub9-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub9-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das Wichtigste</p>
+        <p>In der Ja/Nein-Frage steht das Verb auf Position I. Auf eine Frage mit nicht oder kein antwortet man mit doch oder nein. In der W-Frage steht das Fragewort auf Position I und das Verb auf Position II. Für Personen fragt man mit wer, wen, wem, mit wem …, für Sachen mit was, womit, worauf …</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          У питанні без питального слова дієслово стоїть першим, у питанні з питальним словом — другим. На заперечне питання «так» — це <b>doch</b>, «ні» — <b>nein</b>. Уточнюй питання словами schon / noch / erst і пам'ятай пари: schon ↔ noch nicht, noch ↔ nicht mehr. Про людей питаємо прийменник + wen/wem, про речі — wo(r) + прийменник.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Де це ще трапляється</p>
+        <div class="gram-related" id="gramRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <p class="lead" id="gramBest" style="font-size:14px;"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/grammar-data.js"></script>
+<script src="../../data/lessons-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/site.js"></script>
+<script>
+  const GRAM_ID = "fragen";
+
+  // Üb. 1: квіз (варіанти перемішуються автоматично)
+  buildQuiz('ub1-quiz', [
+    {q: "Hast du keine Geschwister? — ___, ich habe einen Bruder.", opts: ["Ja", "Doch", "Nein"], correct: "Doch"},
+    {q: "Spielst du Basketball? — ___, jeden Dienstag.", opts: ["Doch", "Nein", "Ja"], correct: "Ja"},
+    {q: "Kommt Tom nicht zur Party? — ___, er ist krank.", opts: ["Nein", "Doch", "Ja"], correct: "Nein"},
+    {q: "Hast du die Hausaufgaben nicht gemacht? — ___, natürlich habe ich sie gemacht!", opts: ["Nein", "Ja", "Doch"], correct: "Doch"},
+    {q: "Magst du Pizza? — ___, ich mag keine Pizza.", opts: ["Ja", "Nein", "Doch"], correct: "Nein"},
+    {q: "Ist die Bibliothek heute nicht offen? — ___, sie ist bis 18 Uhr offen.", opts: ["Doch", "Ja", "Nein"], correct: "Doch"},
+    {q: "Hast du heute keine Zeit? — ___, ich muss für den Test lernen.", opts: ["Ja", "Doch", "Nein"], correct: "Nein"},
+    {q: "Welcher Satz ist eine Ja/Nein-Frage?", opts: ["Wann kommst du morgen?", "Kommst du morgen?", "Du kommst morgen."], correct: "Kommst du morgen?"},
+    {q: "Welche Frage ist richtig?", opts: ["Hast gestern du Fußball gespielt?", "Gespielt hast du gestern Fußball?", "Hast du gestern Fußball gespielt?"], correct: "Hast du gestern Fußball gespielt?"},
+    {q: "Ist Oma schon da? — Nein, sie ist ___ da.", opts: ["noch nicht", "schon nicht", "nicht mehr"], correct: "noch nicht"}
+  ]);
+
+  // Üb. 2: Ja/Nein-питання
+  buildOrder('ub2-order', [
+    {words: ["Spielst", "du", "am Wochenende", "Tennis"], end: "?",
+     alt: ["Spielst du Tennis am Wochenende"]},
+    {words: ["Hast", "du", "gestern", "deine Oma", "besucht"], end: "?",
+     alt: ["Hast du deine Oma gestern besucht"]},
+    {words: ["Kann", "dein Bruder", "gut", "schwimmen"], end: "?"},
+    {words: ["Fährt", "der Bus", "um acht Uhr", "ab"], end: "?"},
+    {words: ["Habt", "ihr", "heute", "keine", "Hausaufgaben"], end: "?",
+     alt: ["Habt ihr keine Hausaufgaben heute"], hint: "Заперечне питання з kein"},
+    {words: ["Kommst", "du", "heute", "nicht", "mit"], end: "?",
+     alt: ["Kommst du nicht heute mit"], hint: "Заперечне питання з nicht"},
+    {words: ["Möchtest", "du", "noch", "ein Stück Kuchen"], end: "?"},
+    {words: ["Hat", "Anna", "dich", "angerufen"], end: "?",
+     alt: ["Hat dich Anna angerufen"]}
+  ]);
+
+  wireBlanks('ub3');
+  wireBlanks('ub4');
+
+  // Üb. 5 А: wie viel / wie viele
+  buildSort('ub5-sort', {
+    buckets: ["wie viel …?", "wie viele …?"],
+    items: [
+      {t: "Zeit", b: "wie viel …?"}, {t: "Geld", b: "wie viel …?"}, {t: "Wasser", b: "wie viel …?"},
+      {t: "Milch", b: "wie viel …?"}, {t: "Zucker", b: "wie viel …?"},
+      {t: "Geschwister", b: "wie viele …?"}, {t: "Stunden", b: "wie viele …?"}, {t: "Freunde", b: "wie viele …?"},
+      {t: "Bücher", b: "wie viele …?"}, {t: "Schüler", b: "wie viele …?"}
+    ]
+  });
+  // Üb. 5 Б: welch- / was für ein
+  wireBlanks('ub5');
+
+  wireBlanks('ub6');
+  wireBlanks('ub7');
+
+  // Üb. 8: W-питання
+  buildOrder('ub8-order', [
+    {words: ["Wann", "stehst", "du", "am Sonntag", "auf"], end: "?"},
+    {words: ["Wohin", "fahrt", "ihr", "in den Ferien"], end: "?"},
+    {words: ["Was", "hast", "du", "gestern", "gekocht"], end: "?"},
+    {words: ["Mit wem", "möchtest", "du", "ins Kino", "gehen"], end: "?"},
+    {words: ["Wie viele", "Stunden", "schläfst", "du", "pro Nacht"], end: "?"},
+    {words: ["Warum", "hast", "du", "mich", "nicht", "angerufen"], end: "?"},
+    {words: ["Welchen", "Film", "habt", "ihr", "gesehen"], end: "?"},
+    {words: ["Worüber", "ärgerst", "du", "dich"], end: "?"}
+  ]);
+
+  wireBlanks('ub9');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['❓','💬','🔍','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initGrammarPage(GRAM_ID);
+</script>
+</body>
+</html>
