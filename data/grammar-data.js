@@ -175,7 +175,8 @@ const GRAMMAR = [
   // ===== Підрядні речення =====
   { id: "nebensaetze", rozdil: "nebensaetze", knyha: 25,
     tema: "Nebensätze", uk: "Підрядні речення: загальні правила",
-    pidrozdily: [] },
+    pidrozdily: ["Ein Satz, der nicht allein steht", "Die Konjunktion gibt die Richtung", "Subjekt vorn, Verb am Ende", "Der Nebensatz steht nach dem Hauptsatz", "Der Nebensatz steht vor dem Hauptsatz", "Pronomen im Nebensatz", "Nebensätze hängen voneinander ab", "Nach glauben, meinen …: ein Hauptsatz mit Konjunktiv II"],
+    opublikovano: 25, dyv: ["satzstellung-hauptsatz", "konjunktionen-position-null", "konjunktionen-position-eins", "trennbare-verben", "modalverben", "personalpronomen", "reflexive-verben", "verben-dass-infinitiv", "infinitiv-um-zu", "temporalsaetze", "kausalsaetze", "konditionalsaetze", "konzessivsaetze", "finalsaetze", "indirekte-fragesaetze", "relativsaetze", "konjunktiv-2-gebrauch", "kommaregeln"] },
   { id: "temporalsaetze", rozdil: "nebensaetze", knyha: 26,
     tema: "Temporale Nebensätze", uk: "Підрядні речення часу",
     pidrozdily: ["wenn, als", "während, solange, bevor", "nachdem, sobald", "bis, seit, seitdem"] },
