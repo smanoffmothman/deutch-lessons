@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Die Satzstellung im Hauptsatz · Grammatik · Deutsch mit uns</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'gramatyka' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">GRAMMATIK · Порядок слів і сполучники</span>
+        <h1>Die Satzstellung im Hauptsatz</h1>
+        <p class="sub">Де в німецькому головному реченні стоять дієслово, підмет, додатки й обставини: що можна переставляти, а що завжди на своєму місці.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="regel" aria-selected="true">Regel</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Position II</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · nicht</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Umstellung</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Pronomen</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Pronomen vorn</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · te-ka-mo-lo</button>
+    <button class="tab-btn" data-tab="ub7">Üb. 7 · Position I</button>
+    <button class="tab-btn" data-tab="ub8">Üb. 8 · Fehler</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== REGEL ===== -->
+    <section class="panel active" id="panel-regel">
+      <p class="section-label">Regel</p>
+      <h2 class="panel-title">Die Satzstellung im Hauptsatz</h2>
+      <ul class="regel-toc" id="regelToc"></ul>
+
+      <div class="card">
+        <p>Ein Satz besteht aus Satzgliedern: Subjekt, Verb, Objekte und Angaben (wann? warum? wie? wo?). Im Hauptsatz steht das konjugierte Verb <b>immer auf Position II</b>. Auf Position I steht oft das Subjekt – es kann aber auch ein anderes Satzglied dort stehen. Für die anderen Satzglieder gibt es eine typische Reihenfolge.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          В українській мові порядок слів дуже вільний: «Я завтра йду в кіно», «Завтра я йду в кіно», «В кіно я йду завтра» — усе правильно. У німецькій свобода теж є, але з одним жорстким правилом: <b>змінене (особове) дієслово в головному реченні завжди стоїть на другому місці</b>. Решту членів речення можна переставляти, але тоді дієслово «тримається» на своєму місці, а все інше рухається навколо нього, як навколо осі. У цій темі — лише головне речення (Hauptsatz). У підрядному (після weil, dass, wenn…) дієслово стоїть в кінці — це окрема тема.
+        </div>
+      </div>
+
+      <!-- 1 -->
+      <section class="card regel-block" id="verb-position">
+        <h3>Das Verb auf Position II</h3>
+        <p>Position bedeutet: ein <b>Satzglied</b>, nicht ein Wort. „Mein bester Freund aus der Klasse“ ist ein Satzglied – also nur Position I.</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Zeitform</th><th>I</th><th>II (konjugiertes Verb)</th><th>Mitte</th><th>Satzende</th></tr>
+          <tr><td class="gender">Präsens</td><td>Mia</td><td><b>spielt</b></td><td>heute Tennis.</td><td></td></tr>
+          <tr><td class="gender">Präteritum</td><td>Mia</td><td><b>spielte</b></td><td>gestern Tennis.</td><td></td></tr>
+          <tr><td class="gender">Zukunft (Präsens + Zeit)</td><td>Mia</td><td><b>spielt</b></td><td>morgen Tennis.</td><td></td></tr>
+          <tr><td class="gender">Perfekt</td><td>Mia</td><td><b>hat</b></td><td>gestern Tennis</td><td><b>gespielt</b>.</td></tr>
+          <tr><td class="gender">Plusquamperfekt</td><td>Mia</td><td><b>hatte</b></td><td>vorher Tennis</td><td><b>gespielt</b>.</td></tr>
+          <tr><td class="gender">Modalverb</td><td>Mia</td><td><b>will</b></td><td>morgen Tennis</td><td><b>spielen</b>.</td></tr>
+          <tr><td class="gender">trennbares Verb</td><td>Der Zug</td><td><b>kommt</b></td><td>um acht Uhr</td><td><b>an</b>.</td></tr>
+          <tr><td class="gender">Passiv</td><td>Die Turnhalle</td><td><b>wird</b></td><td>gerade</td><td><b>renoviert</b>.</td></tr>
+        </table>
+        </div>
+        <p class="beispiel">Mein bester Freund aus der Klasse <b>wohnt</b> neben mir.</p>
+        <p class="beispiel">Wir <b>sind</b> am Wochenende ins Schwimmbad <b>gegangen</b>.</p>
+        <p class="merke">Das konjugierte Verb steht im Hauptsatz immer auf Position II. Partizip, Infinitiv und das trennbare Präfix stehen am Satzende.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          На другій позиції стоїть <b>змінена форма</b> дієслова — та, що має закінчення особи: <i>spielt, hat, will, wird</i>. Якщо присудок складається з двох частин (Perfekt, модальне дієслово, відокремлюваний префікс, пасив), друга частина йде в самий кінець речення. Між ними, як у «рамці», стоять усі інші члени речення. «Позиція» — це не одне слово, а цілий член речення: група «mein bester Freund aus der Klasse» займає лише одне місце.
+        </div>
+      </section>
+
+      <!-- 2 -->
+      <section class="card regel-block" id="nicht">
+        <h3>Die Verneinung mit nicht</h3>
+        <p><b>Der ganze Satz</b> ist verneint: <i>nicht</i> steht möglichst weit hinten – am Satzende oder vor dem zweiten Teil des Prädikats (Partizip, Infinitiv, Präfix).</p>
+        <table class="gtable">
+          <tr><th>Zeitform</th><th>Beispiel</th></tr>
+          <tr><td class="gender">Präsens</td><td>Der Bus kommt heute <b>nicht</b>.</td></tr>
+          <tr><td class="gender">Perfekt</td><td>Ich habe die Hausaufgaben <b>nicht</b> gemacht.</td></tr>
+          <tr><td class="gender">Modalverb</td><td>Lena kann am Samstag <b>nicht</b> kommen.</td></tr>
+          <tr><td class="gender">trennbares Verb</td><td>Mein Opa ruft uns heute <b>nicht</b> an.</td></tr>
+          <tr><td class="gender">Passiv</td><td>Die Turnhalle wird dieses Jahr <b>nicht</b> renoviert.</td></tr>
+        </table>
+        <p><b>Nur ein Satzglied</b> ist verneint: <i>nicht</i> steht direkt davor. Oft folgt <i>sondern</i> mit der richtigen Information.</p>
+        <p class="beispiel">Wir fahren <b>nicht im Juli</b>, sondern im August ans Meer.</p>
+        <p class="beispiel"><b>Nicht ich</b> habe das Fenster kaputt gemacht, sondern Max.</p>
+        <p class="beispiel">Ich trainiere <b>nicht</b> am Samstag und (<b>nicht</b>) am Sonntag.</p>
+        <p class="merke">Ganzer Satz verneint → nicht hinten (vor Partizip / Infinitiv / Präfix). Ein Satzglied verneint → nicht direkt vor diesem Satzglied.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          В українській «не» майже завжди стоїть перед дієсловом: «я <b>не</b> зробив». У німецькій так не можна: <i>nicht</i> іде в кінець речення або перед другою частиною присудка, бо заперечує дію загалом. Якщо ж ми заперечуємо не дію, а конкретну деталь («не в липні, а в серпні»), <i>nicht</i> стоїть просто перед цією деталлю — і зазвичай далі йде <i>sondern</i> («а»). Коли кілька заперечених членів речення стоять поспіль, друге <i>nicht</i> можна пропустити.
+        </div>
+      </section>
+
+      <!-- 3 -->
+      <section class="card regel-block" id="objekte">
+        <h3>Satzstellung mit Objekten</h3>
+        <p>Viele Verben haben ein Dativobjekt (wem?) und ein Akkusativobjekt (wen? was?): <i>geben, schenken, zeigen, erklären, schicken, leihen</i> … Sind beide Objekte <b>Nomen</b>, steht meistens der Dativ vor dem Akkusativ.</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>I</th><th>II</th><th>Dativobjekt</th><th>Akkusativobjekt</th><th>Satzende</th></tr>
+          <tr><td>Die Oma</td><td>schenkt</td><td><b>ihrem Enkel</b></td><td><b>ein Fahrrad</b>.</td><td></td></tr>
+          <tr><td>Der Lehrer</td><td>hat</td><td><b>den Schülern</b></td><td><b>die Aufgabe</b></td><td>erklärt.</td></tr>
+          <tr><td>Ich</td><td>will</td><td><b>meiner Freundin</b></td><td><b>eine Karte</b></td><td>schreiben.</td></tr>
+          <tr><td>Tim</td><td>leiht</td><td><b>seinem Bruder</b></td><td><b>das Handy</b></td><td>nicht.</td></tr>
+        </table>
+        </div>
+        <p class="merke">Zwei Nomen-Objekte: Dativ vor Akkusativ – „wem?“ vor „was?“.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Запам'ятай просту схему: спершу <b>кому</b>, потім <b>що</b> — «Бабуся дарує онукові велосипед». Так само й у німецькій: <i>ihrem Enkel</i> (Dativ) перед <i>ein Fahrrad</i> (Akkusativ). Яке дієслово якого відмінка вимагає, дивись у темі про керування дієслів. Займенники (<i>es, ihm, mir</i>…) поводяться інакше — про це нижче.
+        </div>
+      </section>
+
+      <!-- 4 -->
+      <section class="card regel-block" id="umstellung">
+        <h3>Umstellung: ein anderes Satzglied auf Position I</h3>
+        <p>Fast jedes Satzglied kann auf Position I stehen. Das Verb bleibt auf Position II, das Subjekt geht direkt hinter das Verb – auf Position III.</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Was steht vorn?</th><th>I</th><th>II</th><th>III (Subjekt)</th><th>Rest</th></tr>
+          <tr><td class="gender">wann?</td><td><b>Morgen</b></td><td>fahren</td><td>wir</td><td>nach Wien.</td></tr>
+          <tr><td class="gender">warum?</td><td><b>Wegen des Regens</b></td><td>bleiben</td><td>die Kinder</td><td>im Haus.</td></tr>
+          <tr><td class="gender">trotz was?</td><td><b>Trotz der Kälte</b></td><td>geht</td><td>mein Opa</td><td>jeden Tag spazieren.</td></tr>
+          <tr><td class="gender">wie?</td><td><b>Langsam</b></td><td>öffnete</td><td>Lisa</td><td>die Tür.</td></tr>
+          <tr><td class="gender">wo?</td><td><b>Im Park</b></td><td>trifft</td><td>Tim</td><td>seine Freunde.</td></tr>
+          <tr><td class="gender">Akkusativobjekt</td><td><b>Diesen Film</b></td><td>kenne</td><td>ich</td><td>schon.</td></tr>
+          <tr><td class="gender">Dativobjekt</td><td><b>Meiner Schwester</b></td><td>gefällt</td><td>das Geschenk</td><td>sehr.</td></tr>
+          <tr><td class="gender">Akkusativpronomen</td><td><b>Mich</b></td><td>hat</td><td>der Trainer</td><td>gestern gelobt.</td></tr>
+          <tr><td class="gender">Dativpronomen</td><td><b>Ihm</b></td><td>hilft</td><td>seine Schwester</td><td>bei den Hausaufgaben.</td></tr>
+        </table>
+        </div>
+        <p>Der Sinn ändert sich kaum. Position I verbindet den Satz oft mit dem Satz davor oder betont etwas:</p>
+        <p class="beispiel">Mein Bruder wohnt in Hamburg. <b>Dort</b> studiert er Informatik.</p>
+        <p class="beispiel">Wir wollten um zehn los. <b>Um halb elf</b> waren wir immer noch zu Hause.</p>
+        <p class="beispiel">Ich habe viele Bücher gelesen. <b>Dieses Buch</b> finde ich am besten.</p>
+        <p class="merke">Umstellung: Satzglied – Verb – Subjekt. Auf Position I steht immer nur EIN Satzglied.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Найчастіша помилка українців: «<i>Heute ich gehe</i> ins Kino» ✗. Українською «Сьогодні я йду» — нормально, але в німецькій після «Heute» на першому місці дієслово мусить іти одразу другим, а підмет «переходить» за нього: <b>Heute gehe ich</b> ins Kino ✓. Навіщо переставляти? Зміст майже не змінюється, але на першому місці ставлять те, що пов'язує речення з попереднім (<i>dort, deshalb, dann</i>) або що хочуть підкреслити. Дві групи на першому місці одночасно бути не можуть: <i>Heute im Park</i> spielen wir ✗.
+        </div>
+      </section>
+
+      <!-- 5 -->
+      <section class="card regel-block" id="pronomen">
+        <h3>Pronomen im Akkusativ und Dativ</h3>
+        <p>Pronomen sind kurz und bekannt – deshalb stehen sie ganz vorn: <b>direkt hinter dem konjugierten Verb</b>.</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>I</th><th>II</th><th>Pronomen</th><th>weitere Objekte, Angaben</th></tr>
+          <tr><td>Die Lehrerin</td><td>gibt</td><td></td><td>dem Schüler das Heft nach der Stunde.</td></tr>
+          <tr><td>Die Lehrerin</td><td>gibt</td><td><b>ihm</b></td><td>das Heft nach der Stunde.</td></tr>
+          <tr><td>Die Lehrerin</td><td>gibt</td><td><b>es</b></td><td>dem Schüler nach der Stunde.</td></tr>
+          <tr><td>Die Lehrerin</td><td>gibt</td><td><b>es ihm</b></td><td>nach der Stunde.</td></tr>
+          <tr><td>Die Lehrerin</td><td>hat</td><td><b>es ihm</b></td><td>nach der Stunde gegeben.</td></tr>
+        </table>
+        </div>
+        <p class="merke">Zwei Nomen: Dativ vor Akkusativ. Zwei Pronomen: Akkusativ vor Dativ (es ihm, sie mir). Pronomen stehen vor Nomen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Займенник (<i>ihn, es, sie, ihm, ihr, mir</i>…) стоїть одразу після дієслова, навіть перед обставинами часу. Коли займенників два, порядок <b>обернений</b> до іменників: спершу Akkusativ, потім Dativ — <i>Ich gebe <b>es ihm</b></i> («я даю це йому»). Корисна зачіпка: «коротке <i>es</i> — завжди першим». Якщо один додаток — займенник, а другий — іменник, займенник іде першим незалежно від відмінка: <i>Ich gebe <b>ihm</b> das Heft</i>, <i>Ich gebe <b>es</b> dem Schüler</i>.
+        </div>
+      </section>
+
+      <!-- 6 -->
+      <section class="card regel-block" id="umstellung-pronomen">
+        <h3>Umstellung mit Pronomen</h3>
+        <p><b>a) Das Subjekt ist ein Nomen.</b> Auch bei der Umstellung stehen die Pronomen meistens direkt hinter dem Verb. Das Subjekt kommt dann erst danach – auf Position IV.</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>I</th><th>II</th><th>III (Pronomen)</th><th>IV (Subjekt: Nomen)</th><th>Rest</th></tr>
+          <tr><td>Gestern</td><td>hat</td><td><b>mir</b></td><td>mein Opa</td><td>geholfen.</td></tr>
+          <tr><td>Nach dem Training</td><td>hat</td><td><b>ihn</b></td><td>der Trainer</td><td>gelobt.</td></tr>
+          <tr><td>Zum Glück</td><td>hat</td><td><b>es ihm</b></td><td>die Lehrerin</td><td>noch einmal erklärt.</td></tr>
+        </table>
+        </div>
+        <p>Auch möglich, aber seltener: <i>Gestern hat mein Opa mir geholfen.</i></p>
+        <p><b>b) Das Subjekt ist ein Pronomen.</b> Dann bleibt es auf Position III – direkt hinter dem Verb, vor allen anderen Pronomen.</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>I</th><th>II</th><th>III (Subjekt: Pronomen)</th><th>Pronomen</th><th>Rest</th></tr>
+          <tr><td>Am Abend</td><td>hat</td><td><b>er</b></td><td>mir</td><td>das Buch gegeben.</td></tr>
+          <tr><td>Am Abend</td><td>hat</td><td><b>er</b></td><td>es</td><td>dem Schüler gegeben.</td></tr>
+          <tr><td>Am Abend</td><td>hat</td><td><b>er</b></td><td>es ihm</td><td>gegeben.</td></tr>
+        </table>
+        </div>
+        <p class="merke">Subjekt als Pronomen → immer direkt hinter dem Verb. Subjekt als Nomen → gern hinter den Pronomen. Reihenfolge der Pronomen: Subjekt – Akkusativ – Dativ (er es ihm).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Коли на першому місці стоїть не підмет, а щось інше, у «хвості» після дієслова виникає питання: хто перший — підмет чи займенник-додаток? Правило: <b>займенники тягнуться якомога ближче до дієслова</b>. Якщо підмет теж займенник (<i>er, sie, wir</i>), він стоїть першим: <i>hat <b>er</b> es ihm</i>. Якщо підмет — іменник (<i>mein Opa, der Trainer</i>), займенник-додаток зазвичай його обганяє: <i>hat <b>mir</b> mein Opa geholfen</i>. Варіант «hat mein Opa mir geholfen» теж правильний, просто звучить менш природно.
+        </div>
+      </section>
+
+      <!-- 7 -->
+      <section class="card regel-block" id="reflexiv">
+        <h3>Stellung der Reflexivpronomen</h3>
+        <p>Das Reflexivpronomen (<i>mich, mir, sich</i> …) ist ein Pronomen – es folgt denselben Regeln.</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>I</th><th>II</th><th>III</th><th colspan="2">Pronomen, Objekte</th><th>Satzende</th></tr>
+          <tr><td>Ich</td><td>habe</td><td><b>mich</b></td><td></td><td></td><td>beeilt.</td></tr>
+          <tr><td>Ich</td><td>habe</td><td><b>mir</b></td><td>die Hände</td><td></td><td>gewaschen.</td></tr>
+          <tr><td>Ich</td><td>habe</td><td>sie</td><td><b>mir</b></td><td></td><td>gewaschen.</td></tr>
+          <tr><td>Nach dem Sport</td><td>hat</td><td>er</td><td><b>sich</b></td><td>die Hände</td><td>gewaschen.</td></tr>
+          <tr><td>Nach dem Sport</td><td>hat</td><td>er</td><td>sie <b>sich</b></td><td></td><td>gewaschen.</td></tr>
+          <tr><td>Heute</td><td>hat</td><td><b>sich</b></td><td>mein Bruder</td><td></td><td>beeilt.</td></tr>
+        </table>
+        </div>
+        <p class="merke">Reflexivpronomen = normales Pronomen: direkt hinter dem Verb (oder hinter dem Subjekt-Pronomen). Akkusativ vor Dativ: sie mir, es sich.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          В українській зворотність часто сидить у самому дієслові (мию<b>ся</b>), а в німецькій це окреме слово — і воно стоїть як звичайний займенник: одразу після дієслова, перед іменниками. «Я помив <b>собі</b> руки» → <i>Ich habe <b>mir</b> die Hände gewaschen</i>; якщо «руки» замінити займенником: <i>Ich habe <b>sie mir</b> gewaschen</i> (знов Akkusativ перед Dativ). Не став <i>sich</i> в кінець: <i>Er hat die Hände gewaschen sich</i> ✗.
+        </div>
+      </section>
+
+      <!-- 8 -->
+      <section class="card regel-block" id="tekamolo">
+        <h3>Adverbiale Angaben: te-ka-mo-lo</h3>
+        <p>Angaben sagen, <b>wann</b>, <b>warum</b>, <b>wie</b> und <b>wo/wohin</b> etwas passiert. Feste Regeln gibt es nicht, aber meistens gilt: temporal – kausal – modal – lokal.</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>I (Subjekt)</th><th>II</th><th>te: wann?</th><th>ka: warum?</th><th>mo: wie?</th><th>lo: wo? wohin?</th></tr>
+          <tr><td>Wir</td><td>fahren</td><td><b>am Samstag</b></td><td><b>wegen des Konzerts</b></td><td><b>mit dem Zug</b></td><td><b>nach Berlin</b>.</td></tr>
+          <tr><td>Lena</td><td>kam</td><td><b>gestern</b></td><td><b>wegen des Staus</b></td><td><b>sehr spät</b></td><td><b>nach Hause</b>.</td></tr>
+          <tr><td>Ich</td><td>lerne</td><td><b>abends</b></td><td></td><td><b>gern</b></td><td><b>in meinem Zimmer</b>.</td></tr>
+        </table>
+        </div>
+        <p class="merke">te – ka – mo – lo: temporal, kausal, modal, lokal.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Скоромовка «те-ка-мо-ло» допомагає запам'ятати звичний порядок обставин: <b>коли</b> → <b>чому</b> → <b>як</b> → <b>де/куди</b>. Це не закон, а «типовий маршрут»: будь-яку обставину можна винести на перше місце (<i>Am Samstag fahren wir …</i>), а решта лишиться в тому ж порядку. Найстійкіше правило — обставина місця «куди?» тримається біля кінця речення.
+        </div>
+      </section>
+
+      <!-- 9 -->
+      <section class="card regel-block" id="mittelfeld">
+        <h3>Objekte und adverbiale Angaben</h3>
+        <p>Kommen Objekte und Angaben zusammen, hilft dieses Schema mit drei Spalten:</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>I</th><th>II</th><th>A: wann?</th><th>A: Dativobjekt</th><th>B: warum?</th><th>B: wie?</th><th>C: Akkusativobjekt</th><th>C: wo? woher? wohin?</th></tr>
+          <tr><td>Er</td><td>hilft</td><td>am Wochenende</td><td>seiner Oma</td><td></td><td>gern</td><td></td><td>im Garten.</td></tr>
+          <tr><td>Ich</td><td>schicke</td><td>gleich</td><td>meiner Mutter</td><td>wegen der Verspätung</td><td></td><td>eine Nachricht.</td><td></td></tr>
+          <tr><td>Der Hund</td><td>nahm</td><td></td><td>dem Kind</td><td></td><td>vorsichtig</td><td>den Ball</td><td>aus der Hand.</td></tr>
+        </table>
+        </div>
+        <p>Spalte A: Das Dativobjekt kann auch vor der Zeitangabe stehen:</p>
+        <p class="beispiel">Er hilft <b>am Wochenende seiner Oma</b>. = Er hilft <b>seiner Oma am Wochenende</b>.</p>
+        <p><b>Lokale Angaben:</b> <i>wo?</i> steht gern auf Position I, <i>wohin?</i> meistens am Ende. <i>woher?</i> steht auch hinten – vor <i>wohin?</i>.</p>
+        <p class="beispiel"><b>Im Park</b> haben wir gestern Volleyball gespielt.</p>
+        <p class="beispiel">Die Kinder liefen <b>aus der Schule</b> (woher?) <b>auf den Hof</b> (wohin?).</p>
+        <p><b>Nachrichten und Berichte</b> beginnen oft mit Ort und Zeit:</p>
+        <p class="beispiel"><b>In unserer Stadt</b> wurde <b>gestern</b> ein neues Kino eröffnet.</p>
+        <p class="merke">A (wann? + Dativ) – B (warum? wie?) – C (Akkusativ + wo?/woher?/wohin?). Woher vor wohin.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Середина речення (між дієсловом і кінцем) заповнюється приблизно так: спершу <b>час</b> і <b>кому</b> (ці двоє можуть мінятися місцями), далі <b>чому</b> і <b>як</b>, наприкінці <b>що</b> (Akkusativ) і <b>де/звідки/куди</b>. Знову ж таки, це орієнтир, а не залізне правило. У новинах люблять починати з місця й часу: «У нашому місті вчора відкрили…» — у німецькій так само. Якщо є і «звідки», і «куди», то спершу «звідки»: <i>aus der Schule auf den Hof</i> — як і логічно: спочатку виходимо, потім приходимо.
+        </div>
+      </section>
+
+      <!-- 10 -->
+      <section class="card regel-block" id="praep-objekte">
+        <h3>Präpositionale Objekte</h3>
+        <p>Manche Verben brauchen eine feste Präposition: <i>warten auf, sich freuen über, denken an, sprechen über</i> … Das präpositionale Objekt steht meistens <b>am Ende</b> des Satzes (vor dem zweiten Teil des Prädikats) – oder <b>auf Position I</b>, wenn es wichtig ist oder an den Satz davor anknüpft.</p>
+        <p class="beispiel">Ich warte schon zwanzig Minuten <b>auf den Bus</b>.</p>
+        <p class="beispiel"><b>Auf diese Nachricht</b> habe ich lange gewartet.</p>
+        <p class="beispiel">Oma denkt oft <b>an ihn</b>. – <b>An ihn</b> denkt sie oft.</p>
+        <p class="beispiel">Du hast mir geschrieben. <b>Darüber</b> habe ich mich sehr gefreut.</p>
+        <p>Dasselbe gilt für „freie“ Angaben mit Präposition, die nicht vom Verb abhängen:</p>
+        <p class="beispiel">Tom fährt jeden Tag <b>mit dem Fahrrad</b> zur Schule. – <b>Mit dem Fahrrad</b> fährt Tom jeden Tag zur Schule.</p>
+        <p class="merke">Präpositionales Objekt: meistens hinten, zur Betonung oder Verbindung auf Position I.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Прийменникові додатки (<i>auf den Bus, über das Geschenk, an ihn</i>) зазвичай ідуть у кінець середини речення — після займенників і звичайних обставин. Але їх часто виносять на перше місце, щоб наголосити або «підхопити» думку з попереднього речення — особливо слова на <i>da-</i>: <i>Darüber, Daran, Darauf</i>. Після такої перестановки, як завжди, дієслово — друге, підмет — одразу за ним. Докладно про самі дієслова з прийменниками — в окремій темі.
+        </div>
+      </section>
+
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: квіз ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Das Verb auf Position II</h2>
+      <p class="lead">Обери правильний варіант. Стеж, де стоїть змінене дієслово і де — друга частина присудка.</p>
+      <div class="card" id="ub1-quiz"></div>
+    </section>
+
+    <!-- ===== Üb. 2: nicht — сортування + склади речення ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Die Verneinung mit nicht</h2>
+      <p class="lead">А) Що заперечено: усе речення чи лише один член речення? Розсортуй.</p>
+      <div class="card" id="ub2-sort"></div>
+      <p class="lead">Б) Склади речення з <i>nicht</i>. Натискай картки по черзі; натиснеш на вже поставлену — вона повернеться.</p>
+      <div class="card" id="ub2-order"></div>
+    </section>
+
+    <!-- ===== Üb. 3: Objekte + Umstellung — склади речення ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Objekte und Umstellung</h2>
+      <p class="lead">Склади речення, почавши з частини з підказки. Пам'ятай: дієслово — друге, підмет — одразу за ним; кому — перед що.</p>
+      <div class="card" id="ub3-order"></div>
+    </section>
+
+    <!-- ===== Üb. 4: Pronomen — пропуски ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Pronomen im Akkusativ und Dativ</h2>
+      <p class="lead">Дай коротку відповідь: заміни іменники з питання займенниками. Якщо пропуск для двох займенників — впиши обидва в правильному порядку (напр. <i>es ihm</i>). У дужках — що саме замінити, якщо не все.</p>
+      <div class="card" id="ub4-list">
+        <div class="fill-item"><span class="num">1)</span> Hast du deinem Freund das Foto geschickt? – Ja, ich habe
+          <input type="text" class="blank-input inline" data-ans="es ihm"> geschickt.</div>
+        <div class="fill-item"><span class="num">2)</span> Hat die Lehrerin den Schülern die Noten gesagt? – Ja, sie hat
+          <input type="text" class="blank-input inline" data-ans="sie ihnen"> gesagt.</div>
+        <div class="fill-item"><span class="num">3)</span> Leihst du mir dein Fahrrad? – Ja, ich leihe
+          <input type="text" class="blank-input inline" data-ans="es dir"> gern.</div>
+        <div class="fill-item"><span class="num">4)</span> Hat Mama der Oma den Kuchen gebracht? – Ja, sie hat
+          <input type="text" class="blank-input inline" data-ans="ihn ihr"> gebracht.</div>
+        <div class="fill-item"><span class="num">5)</span> Erklärst du uns die Aufgabe? – Ja, ich erkläre
+          <input type="text" class="blank-input inline" data-ans="sie euch"> gleich.</div>
+        <div class="fill-item"><span class="num">6)</span> Habt ihr dem Trainer die Wahrheit gesagt? – Ja, wir haben
+          <input type="text" class="blank-input inline" data-ans="sie ihm"> gesagt.</div>
+        <div class="fill-item"><span class="num">7)</span> Hast du Lena die Einladung gegeben? – Ja, ich habe
+          <input type="text" class="blank-input inline" data-ans="ihr"> die Einladung gegeben. <i>(Lena)</i></div>
+        <div class="fill-item"><span class="num">8)</span> Hast du dem Nachbarn den Brief gebracht? – Ja, ich habe
+          <input type="text" class="blank-input inline" data-ans="ihn"> dem Nachbarn gebracht. <i>(den Brief)</i></div>
+        <div class="fill-item"><span class="num">9)</span> Schenkt ihr euren Eltern die Konzertkarten? – Ja, wir schenken
+          <input type="text" class="blank-input inline" data-ans="sie ihnen"> zu Weihnachten.</div>
+        <div class="fill-item"><span class="num">10)</span> Hat Tim dir sein neues Handy gezeigt? – Ja, er hat
+          <input type="text" class="blank-input inline" data-ans="es mir"> gezeigt.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub4-check">Prüfen</button>
+        <button class="btn secondary" id="ub4-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub4-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5: Umstellung mit Pronomen + Reflexiv — склади речення ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Umstellung mit Pronomen und Reflexivpronomen</h2>
+      <p class="lead">Склади речення. Займенники тягнуться до дієслова; підмет-займенник стоїть одразу за дієсловом.</p>
+      <div class="card" id="ub5-order"></div>
+    </section>
+
+    <!-- ===== Üb. 6: te-ka-mo-lo + Objekte — склади речення ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">Objekte und adverbiale Angaben</h2>
+      <p class="lead">Склади речення. Згадай «те-ка-мо-ло» і схему A – B – C: коли/кому → чому/як → що/де/куди.</p>
+      <div class="card" id="ub6-order"></div>
+    </section>
+
+    <!-- ===== Üb. 7: перетворення — виділене на позицію I ===== -->
+    <section class="panel" id="panel-ub7">
+      <p class="section-label">Üb. 7</p>
+      <h2 class="panel-title">Was steht auf Position I?</h2>
+      <p class="lead">Перепиши речення повністю, поставивши виділену частину на перше місце. Решту слів не міняй, лише їхній порядок.</p>
+      <div class="card" id="ub7-list">
+        <div class="fill-item"><span class="num">1)</span> Ich warte schon zwanzig Minuten <b>auf den Bus</b>.
+          <input type="text" class="blank-input inline full" data-ans="Auf den Bus warte ich schon zwanzig Minuten"></div>
+        <div class="fill-item"><span class="num">2)</span> Meine Schwester freut sich <b>über das Geschenk</b>.
+          <input type="text" class="blank-input inline full" data-ans="Über das Geschenk freut sich meine Schwester|Über das Geschenk freut meine Schwester sich"></div>
+        <div class="fill-item"><span class="num">3)</span> Wir haben <b>gestern</b> lange über den Film gesprochen.
+          <input type="text" class="blank-input inline full" data-ans="Gestern haben wir lange über den Film gesprochen"></div>
+        <div class="fill-item"><span class="num">4)</span> Der Trainer hat mir <b>nach dem Spiel</b> gratuliert.
+          <input type="text" class="blank-input inline full" data-ans="Nach dem Spiel hat mir der Trainer gratuliert|Nach dem Spiel hat der Trainer mir gratuliert"></div>
+        <div class="fill-item"><span class="num">5)</span> Er hat es mir <b>leider</b> nicht erzählt.
+          <input type="text" class="blank-input inline full" data-ans="Leider hat er es mir nicht erzählt"></div>
+        <div class="fill-item"><span class="num">6)</span> Paul denkt oft <b>an seine Freundin</b>.
+          <input type="text" class="blank-input inline full" data-ans="An seine Freundin denkt Paul oft"></div>
+        <div class="fill-item"><span class="num">7)</span> Ich habe mich sehr <b>darüber</b> gefreut.
+          <input type="text" class="blank-input inline full" data-ans="Darüber habe ich mich sehr gefreut"></div>
+        <div class="fill-item"><span class="num">8)</span> Tom fährt jeden Tag <b>mit dem Fahrrad</b> zur Schule.
+          <input type="text" class="blank-input inline full" data-ans="Mit dem Fahrrad fährt Tom jeden Tag zur Schule"></div>
+        <div class="fill-item"><span class="num">9)</span> Die Oma hat sich <b>wegen des Gewitters</b> Sorgen gemacht.
+          <input type="text" class="blank-input inline full" data-ans="Wegen des Gewitters hat sich die Oma Sorgen gemacht|Wegen des Gewitters hat die Oma sich Sorgen gemacht"></div>
+        <div class="fill-item"><span class="num">10)</span> Meine Freunde haben sich <b>am Bahnhof</b> von mir verabschiedet.
+          <input type="text" class="blank-input inline full" data-ans="Am Bahnhof haben sich meine Freunde von mir verabschiedet|Am Bahnhof haben meine Freunde sich von mir verabschiedet"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub7-check">Prüfen</button>
+        <button class="btn secondary" id="ub7-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub7-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 8: знайди помилки (токени) ===== -->
+    <section class="panel" id="panel-ub8">
+      <p class="section-label">Üb. 8</p>
+      <h2 class="panel-title">Fehler finden</h2>
+      <p class="lead">Лео написав про шкільну поїздку, але в деяких реченнях переплутав порядок слів. Натисни на ВСІ речення з помилкою, потім — «Prüfen».</p>
+      <div class="card" id="ub8-text">
+        <p style="line-height:2;">
+          <span class="tok" data-correct="false">Letzte Woche ist unsere Klasse nach Dresden gefahren.</span>
+          <span class="tok" data-correct="true">Am ersten Tag wir haben die Altstadt besichtigt.</span>
+          <span class="tok" data-correct="false">Unser Lehrer hat uns viel über die Geschichte der Stadt erzählt.</span>
+          <span class="tok" data-correct="false">Am Abend hat mir meine Freundin ein lustiges Foto gezeigt.</span>
+          <span class="tok" data-correct="true">Später hat sie ihm es auch geschickt.</span>
+          <span class="tok" data-correct="true">Am Mittwoch haben wir gemacht einen Ausflug.</span>
+          <span class="tok" data-correct="false">Leider hat es den ganzen Tag geregnet.</span>
+          <span class="tok" data-correct="true">Trotzdem wir hatten viel Spaß.</span>
+          <span class="tok" data-correct="false">Am letzten Abend haben wir uns lange unterhalten.</span>
+          <span class="tok" data-correct="false">Meine Mutter hat mich am Bahnhof abgeholt.</span>
+          <span class="tok" data-correct="true">Zu Hause habe ich sofort mich ins Bett gelegt.</span>
+          <span class="tok" data-correct="true">Den Koffer habe ich ausgepackt nicht.</span>
+        </p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub8-check">Prüfen</button>
+        <button class="btn secondary" id="ub8-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub8-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das Wichtigste</p>
+        <p>Im Hauptsatz steht das konjugierte Verb immer auf Position II; Partizip, Infinitiv und Präfix stehen am Ende. Steht ein anderes Satzglied auf Position I, kommt das Subjekt direkt hinter das Verb. Pronomen stehen direkt hinter dem Verb (Akkusativ vor Dativ), zwei Nomen-Objekte: Dativ vor Akkusativ. Angaben: meistens te-ka-mo-lo; <i>nicht</i> für den ganzen Satz steht hinten.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Змінене дієслово — завжди друге, друга частина присудка — в кінці. Якщо на першому місці не підмет, підмет стає одразу після дієслова. Займенники йдуть одразу після дієслова (Akkusativ перед Dativ: <i>es ihm</i>), а два іменники-додатки — навпаки: кому перед що. Обставини — зазвичай «коли – чому – як – де/куди». <i>Nicht</i>, що заперечує все речення, стоїть наприкінці або перед другою частиною присудка.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Де це ще трапляється</p>
+        <div class="gram-related" id="gramRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <p class="lead" id="gramBest" style="font-size:14px;"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/grammar-data.js"></script>
+<script src="../../data/lessons-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/site.js"></script>
+<script>
+  const GRAM_ID = "satzstellung-hauptsatz";
+
+  // Üb. 1: квіз
+  buildQuiz('ub1-quiz', [
+    {q: "Welcher Satz ist richtig?",
+     opts: ["Heute ich gehe ins Kino.", "Heute gehe ich ins Kino.", "Heute ins Kino gehe ich."],
+     correct: "Heute gehe ich ins Kino."},
+    {q: "Was steht auf Position II? – «Am Wochenende hat meine Familie einen Ausflug gemacht.»",
+     opts: ["am Wochenende", "hat", "meine Familie", "gemacht"], correct: "hat"},
+    {q: "Was steht auf Position I? – «Mein bester Freund aus der Klasse wohnt neben mir.»",
+     opts: ["Mein", "Mein bester Freund", "Mein bester Freund aus der Klasse"], correct: "Mein bester Freund aus der Klasse"},
+    {q: "Welcher Satz ist richtig?",
+     opts: ["Ich muss aufräumen heute mein Zimmer.", "Ich heute muss mein Zimmer aufräumen.", "Ich muss heute mein Zimmer aufräumen."],
+     correct: "Ich muss heute mein Zimmer aufräumen."},
+    {q: "Welcher Satz ist richtig?",
+     opts: ["Wir sind gestern ins Schwimmbad gegangen.", "Wir sind gegangen gestern ins Schwimmbad.", "Wir gestern sind ins Schwimmbad gegangen."],
+     correct: "Wir sind gestern ins Schwimmbad gegangen."},
+    {q: "Welcher Satz ist richtig? (anfangen)",
+     opts: ["Der Film anfängt um acht Uhr.", "Der Film um acht Uhr fängt an.", "Der Film fängt um acht Uhr an."],
+     correct: "Der Film fängt um acht Uhr an."},
+    {q: "Nach der Schule …",
+     opts: ["ich treffe meine Freunde.", "treffe ich meine Freunde.", "meine Freunde treffe ich."],
+     correct: "treffe ich meine Freunde."},
+    {q: "Welcher Satz klingt am natürlichsten?",
+     opts: ["Tim schenkt einen Blumenstrauß seiner Mutter.", "Tim seiner Mutter schenkt einen Blumenstrauß.", "Tim schenkt seiner Mutter einen Blumenstrauß."],
+     correct: "Tim schenkt seiner Mutter einen Blumenstrauß."},
+    {q: "Hast du Anna das Buch gegeben? – Ja, ich habe …",
+     opts: ["es ihr gegeben.", "ihr es gegeben.", "gegeben es ihr."], correct: "es ihr gegeben."},
+  ]);
+
+  // Üb. 2 A: розсортуй
+  buildSort('ub2-sort', {
+    buckets: ["Der ganze Satz ist verneint", "Nur ein Satzglied ist verneint"],
+    items: [
+      {t: "Ich habe die Hausaufgaben nicht gemacht.", b: "Der ganze Satz ist verneint"},
+      {t: "Nicht ich habe das Fenster kaputt gemacht, sondern Max.", b: "Nur ein Satzglied ist verneint"},
+      {t: "Der Bus kommt heute nicht.", b: "Der ganze Satz ist verneint"},
+      {t: "Wir fahren nicht im Juli, sondern im August ans Meer.", b: "Nur ein Satzglied ist verneint"},
+      {t: "Lena kann morgen nicht kommen.", b: "Der ganze Satz ist verneint"},
+      {t: "Ich habe nicht das rote, sondern das blaue T-Shirt gekauft.", b: "Nur ein Satzglied ist verneint"},
+      {t: "Mein Opa ruft uns am Sonntag nicht an.", b: "Der ganze Satz ist verneint"},
+      {t: "Er hat nicht mit Paul gesprochen, sondern mit Tim.", b: "Nur ein Satzglied ist verneint"},
+    ]
+  });
+
+  // Üb. 2 Б: склади речення з nicht
+  buildOrder('ub2-order', [
+    {words: ["Wir", "haben", "gestern", "nicht", "gewonnen"], end: ".",
+     hint: "Заперечене все речення",
+     alt: ["Gestern haben wir nicht gewonnen"]},
+    {words: ["Mein Bruder", "ruft", "mich", "heute", "nicht", "an"], end: ".",
+     hint: "Заперечене все речення",
+     alt: ["Heute ruft mich mein Bruder nicht an", "Heute ruft mein Bruder mich nicht an", "Mich ruft mein Bruder heute nicht an"]},
+    {words: ["Ich", "kann", "am Samstag", "nicht", "mitkommen"], end: ".",
+     hint: "Заперечене все речення",
+     alt: ["Am Samstag kann ich nicht mitkommen"]},
+    {words: ["Lisa", "hat", "ihrer Freundin", "die Wahrheit", "nicht", "gesagt"], end: ".", gross: true,
+     hint: "Заперечене все речення",
+     alt: ["Ihrer Freundin hat Lisa die Wahrheit nicht gesagt", "Die Wahrheit hat Lisa ihrer Freundin nicht gesagt"]},
+    {words: ["Das Konzert", "beginnt", "nicht", "um sieben,", "sondern um acht"], end: ".",
+     hint: "Заперечений лише час: не о сьомій, а о восьмій"},
+  ]);
+
+  // Üb. 3: Objekte + Umstellung
+  buildOrder('ub3-order', [
+    {words: ["Am Samstag", "besuchen", "wir", "unsere Großeltern"], end: ".",
+     hint: "Почни з «Am Samstag»",
+     alt: ["Wir besuchen am Samstag unsere Großeltern", "Unsere Großeltern besuchen wir am Samstag"]},
+    {words: ["Wegen des Regens", "bleiben", "die Kinder", "im Haus"], end: ".",
+     hint: "Почни з «Wegen des Regens»",
+     alt: ["Die Kinder bleiben wegen des Regens im Haus", "Im Haus bleiben die Kinder wegen des Regens"]},
+    {words: ["Der Lehrer", "erklärt", "den Schülern", "die Regel"], end: ".",
+     hint: "Почни з підмета",
+     alt: ["Den Schülern erklärt der Lehrer die Regel", "Die Regel erklärt der Lehrer den Schülern"]},
+    {words: ["Die Oma", "hat", "ihrer Enkelin", "einen Pullover", "gestrickt"], end: ".",
+     hint: "Почни з підмета",
+     alt: ["Ihrer Enkelin hat die Oma einen Pullover gestrickt", "Einen Pullover hat die Oma ihrer Enkelin gestrickt"]},
+    {words: ["Diesen Film", "habe", "ich", "schon dreimal", "gesehen"], end: ".",
+     hint: "Почни з «Diesen Film»",
+     alt: ["Ich habe diesen Film schon dreimal gesehen", "Schon dreimal habe ich diesen Film gesehen"]},
+    {words: ["Trotz der Kälte", "spielen", "die Jungen", "draußen", "Fußball"], end: ".",
+     hint: "Почни з «Trotz der Kälte»",
+     alt: ["Die Jungen spielen trotz der Kälte draußen Fußball", "Die Jungen spielen draußen trotz der Kälte Fußball", "Draußen spielen die Jungen trotz der Kälte Fußball"]},
+    {words: ["Meinem Bruder", "gefällt", "das neue Spiel", "sehr"], end: ".",
+     hint: "Почни з додатка в Dativ",
+     alt: ["Das neue Spiel gefällt meinem Bruder sehr"]},
+    {words: ["Im Sommer", "fährt", "meine Familie", "ans Meer"], end: ".",
+     hint: "Почни з «Im Sommer»",
+     alt: ["Meine Familie fährt im Sommer ans Meer", "Ans Meer fährt meine Familie im Sommer"]},
+  ]);
+
+  // Üb. 4: пропуски з займенниками
+  wireBlanks('ub4');
+
+  // Üb. 5: Umstellung mit Pronomen + Reflexiv
+  buildOrder('ub5-order', [
+    {words: ["Gestern", "hat", "mir", "mein Opa", "geholfen"], end: ".",
+     hint: "Почни з «Gestern»",
+     alt: ["Gestern hat mein Opa mir geholfen", "Mein Opa hat mir gestern geholfen", "Mir hat mein Opa gestern geholfen"]},
+    {words: ["Zum Glück", "hat", "es", "ihm", "die Lehrerin", "noch einmal", "erklärt"], end: ".",
+     hint: "Почни з «Zum Glück»",
+     alt: ["Zum Glück hat die Lehrerin es ihm noch einmal erklärt", "Die Lehrerin hat es ihm zum Glück noch einmal erklärt"]},
+    {words: ["Am Abend", "hat", "er", "es", "mir", "gegeben"], end: ".",
+     hint: "Почни з «Am Abend»",
+     alt: ["Er hat es mir am Abend gegeben"]},
+    {words: ["Nach dem Training", "hat", "ihn", "der Trainer", "gelobt"], end: ".",
+     hint: "Почни з «Nach dem Training»",
+     alt: ["Nach dem Training hat der Trainer ihn gelobt", "Der Trainer hat ihn nach dem Training gelobt", "Ihn hat der Trainer nach dem Training gelobt"]},
+    {words: ["Ich", "habe", "mir", "die Hände", "gewaschen"], end: "."},
+    {words: ["Nach dem Sport", "hat", "sich", "mein Bruder", "sofort", "umgezogen"], end: ".",
+     hint: "Почни з «Nach dem Sport»",
+     alt: ["Nach dem Sport hat mein Bruder sich sofort umgezogen", "Mein Bruder hat sich nach dem Sport sofort umgezogen"]},
+    {words: ["Ich", "habe", "sie", "mir", "schon", "geputzt"], end: ".",
+     hint: "Відповідь на питання «Hast du dir die Zähne geputzt?»"},
+    {words: ["Heute", "freut", "sich", "unsere Klasse", "auf den Ausflug"], end: ".",
+     hint: "Почни з «Heute»",
+     alt: ["Heute freut unsere Klasse sich auf den Ausflug", "Unsere Klasse freut sich heute auf den Ausflug", "Auf den Ausflug freut sich unsere Klasse heute"]},
+  ]);
+
+  // Üb. 6: te-ka-mo-lo + A-B-C
+  buildOrder('ub6-order', [
+    {words: ["Wir", "fahren", "am Samstag", "mit dem Zug", "nach Berlin"], end: ".",
+     alt: ["Am Samstag fahren wir mit dem Zug nach Berlin", "Mit dem Zug fahren wir am Samstag nach Berlin"]},
+    {words: ["Lena", "kam", "gestern", "wegen des Staus", "sehr spät", "nach Hause"], end: ".", gross: true,
+     alt: ["Gestern kam Lena wegen des Staus sehr spät nach Hause", "Wegen des Staus kam Lena gestern sehr spät nach Hause"]},
+    {words: ["Ich", "lerne", "abends", "gern", "in meinem Zimmer"], end: ".",
+     alt: ["Abends lerne ich gern in meinem Zimmer", "In meinem Zimmer lerne ich abends gern"]},
+    {words: ["Er", "hilft", "am Wochenende", "seiner Oma", "im Garten"], end: ".",
+     alt: ["Er hilft seiner Oma am Wochenende im Garten", "Am Wochenende hilft er seiner Oma im Garten", "Im Garten hilft er seiner Oma am Wochenende", "Im Garten hilft er am Wochenende seiner Oma"]},
+    {words: ["Ich", "schicke", "meiner Mutter", "gleich", "eine Nachricht"], end: ".",
+     alt: ["Ich schicke gleich meiner Mutter eine Nachricht", "Gleich schicke ich meiner Mutter eine Nachricht"]},
+    {words: ["Der Hund", "nahm", "dem Kind", "vorsichtig", "den Ball", "aus der Hand"], end: ".",
+     alt: ["Vorsichtig nahm der Hund dem Kind den Ball aus der Hand", "Der Hund nahm vorsichtig dem Kind den Ball aus der Hand"]},
+    {words: ["Die Kinder", "liefen", "aus der Schule", "auf den Hof"], end: ".",
+     hint: "Спершу «звідки», потім «куди»",
+     alt: ["Aus der Schule liefen die Kinder auf den Hof"]},
+    {words: ["In unserer Stadt", "wurde", "gestern", "ein neues Kino", "eröffnet"], end: ".",
+     hint: "Як у новинах: почни з місця",
+     alt: ["Gestern wurde in unserer Stadt ein neues Kino eröffnet", "Ein neues Kino wurde gestern in unserer Stadt eröffnet"]},
+    {words: ["Tom", "legt", "abends", "sein Handy", "auf den Tisch"], end: ".", gross: true,
+     alt: ["Abends legt Tom sein Handy auf den Tisch"]},
+  ]);
+
+  // Üb. 7: перетворення
+  wireBlanks('ub7');
+
+  // Üb. 8: токени (setTotal вручну — за кількістю правильних токенів)
+  initTokenClicks('ub8-text');
+  setTotal(document.querySelectorAll('#ub8-text .tok[data-correct="true"]').length);
+  document.getElementById('ub8-check').addEventListener('click', () => checkTokens('ub8-text', 'ub8-score', 'ub8'));
+  document.getElementById('ub8-reset').addEventListener('click', () => resetTokens('ub8-text', 'ub8-score', 'ub8'));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🧩','📍','🔁','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initGrammarPage(GRAM_ID);
+</script>
+</body>
+</html>
