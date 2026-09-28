@@ -242,7 +242,8 @@ const GRAMMAR = [
   // ===== Пасив =====
   { id: "passiv", rozdil: "passiv", knyha: 19,
     tema: "Das Passiv", uk: "Пасив",
-    pidrozdily: ["Konjugation", "Gebrauch", "Passiv mit Modalverben", "Passiv in der Infinitivkonstruktion"] },
+    pidrozdily: ["Präsens und Präteritum: wird gemacht – wurde gemacht", "Perfekt und Plusquamperfekt: ist … worden", "worden oder geworden?", "Handlung oder Ergebnis: ist geöffnet worden – ist geöffnet", "Wann Passiv? Die Handlung im Vordergrund", "Aus dem Akkusativ wird der Nominativ", "Wer macht es? von + Dativ", "Passiv ohne Subjekt: Es wird getanzt", "es als Platzhalter: Es wurden viele Fotos gemacht", "Passiv im Nebensatz", "Passiv mit Modalverben: muss gemacht werden", "Modalverb im Perfekt und im Nebensatz", "Statt können + Passiv: ist zu …, -bar, sich lassen", "Passiv mit zu: eingeladen zu werden", "Vorher passiert: gefragt worden zu sein"],
+    opublikovano: 19, dyv: ["konjugation", "perfekt-plusquamperfekt", "modalverben", "rektion-verben", "reflexive-verben", "verben-dass-infinitiv", "nebensaetze", "zustandspassiv", "haben-sein-zu", "modalverben-subjektiv", "konjunktiv-2-formen", "starke-verben"] },
   { id: "zustandspassiv", rozdil: "passiv", knyha: 45,
     tema: "Das Zustandspassiv", uk: "Пасив стану",
     pidrozdily: [] },
