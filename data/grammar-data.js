@@ -154,7 +154,8 @@ const GRAMMAR = [
   // ===== Порядок слів і сполучники =====
   { id: "fragen", rozdil: "satzbau", knyha: 17,
     tema: "Fragen", uk: "Питальні речення",
-    pidrozdily: ["Fragen ohne Fragewort", "Fragen mit Fragewort"] },
+    pidrozdily: ["Ja/Nein-Fragen: das Verb am Anfang", "Verneinte Fragen: ja wird zu doch", "Genauer fragen: schon, noch, erst, nur", "W-Fragewörter: wer, was, wann, wo …", "Fragewort + Nomen: wie viel, welcher, was für ein", "wie + Adjektiv: wie alt, wie oft, wie lange", "Fragen mit Präposition: mit wem? – womit?"],
+    opublikovano: 17, dyv: ["satzstellung-hauptsatz", "konjugation", "trennbare-verben", "modalverben", "rektion-verben", "verben-praepositionalobjekt", "personalpronomen", "artikel-gebrauch", "adverbien-dativ-akkusativ", "indirekte-fragesaetze"] },
   { id: "satzstellung-hauptsatz", rozdil: "satzbau", knyha: 22,
     tema: "Die Satzstellung im Hauptsatz", uk: "Порядок слів у головному реченні",
     pidrozdily: ["Satzstellung mit Objekten", "Umstellung", "Pronomen im Akkusativ und Dativ", "Stellung der Reflexivpronomen", "Adverbiale Angaben", "Objekte und adverbiale Angaben", "Präpositionale Objekte"] },
