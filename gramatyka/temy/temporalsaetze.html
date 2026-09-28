@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temporale Nebensätze · Grammatik · Deutsch mit uns</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'gramatyka' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">GRAMMATIK · Підрядні речення</span>
+        <h1>Temporale Nebensätze</h1>
+        <p class="sub">Підрядні речення часу відповідають на питання «коли?», «як довго?», «відколи?» і «до коли?». Головне — обрати правильний сполучник (wenn чи als, während чи bevor…) і правильний час дієслова.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="regel" aria-selected="true">Regel</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Zeitlogik</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · wenn/als</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · während, solange, bevor</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · nachdem, sobald</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · bis, seit</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Satzbau</button>
+    <button class="tab-btn" data-tab="ub7">Üb. 7 · Zwei Sätze → einer</button>
+    <button class="tab-btn" data-tab="ub8">Üb. 8 · Präposition → Satz</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== REGEL ===== -->
+    <section class="panel active" id="panel-regel">
+      <p class="section-label">Regel</p>
+      <h2 class="panel-title">Temporale Nebensätze</h2>
+      <ul class="regel-toc" id="regelToc"></ul>
+
+      <div class="card">
+        <p>Ein temporaler Nebensatz sagt, <b>wann</b> etwas im Hauptsatz passiert. Die Konjunktion zeigt, wie die zwei Handlungen zeitlich zusammenhängen: Passieren sie gleichzeitig? Passiert der Nebensatz vorher oder nachher? Das konjugierte Verb steht – wie in jedem Nebensatz – am Ende. Steht der Nebensatz vorn, beginnt der Hauptsatz mit dem Verb.</p>
+        <table class="gtable">
+          <tr><th>Zeitbeziehung</th><th>Konjunktionen</th><th>Beispiel</th></tr>
+          <tr><td>gleichzeitig</td><td>wenn, als, während, solange, sobald / sowie</td><td><b>Während</b> ich koche, höre ich Radio.</td></tr>
+          <tr><td>Nebensatz zuerst</td><td>nachdem, sobald</td><td><b>Nachdem</b> ich gegessen habe, spüle ich ab.</td></tr>
+          <tr><td>Nebensatz später</td><td>bevor, ehe</td><td><b>Bevor</b> ich schlafe, lese ich noch.</td></tr>
+          <tr><td>Anfang oder Ende einer Zeit</td><td>seit, seitdem · bis</td><td><b>Seit</b> ich hier wohne, … / Ich warte, <b>bis</b> du kommst.</td></tr>
+        </table>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Підрядне речення часу пояснює, <b>коли</b> відбувається дія головного речення. Порядок слів — як у будь-якому підрядному: сполучник на початку, змінюване дієслово в самому кінці; якщо підрядне стоїть першим, головне починається з дієслова (<i>Bevor ich schlafe, <b>lese</b> ich.</i>).
+          Українською ми часто обходимося одним словом «коли», а в німецькій треба розрізняти: <b>wenn</b> і <b>als</b> — «коли», <b>während</b> — «поки, у той час як», <b>solange</b> — «доки, поки (стільки ж часу)», <b>bevor / ehe</b> — «перш ніж, до того як», <b>nachdem</b> — «після того як», <b>sobald / sowie</b> — «як тільки, щойно», <b>seit / seitdem</b> — «відколи, з того часу як», <b>bis</b> — «доки не, аж поки».
+          Ще одна відмінність: у німецькій після <b>nachdem</b> (і часто після sobald, seit) час дієслова «зсувається» — цього в українській немає. Про загальні правила підрядних речень — у темі «Nebensätze».
+        </div>
+      </div>
+
+      <!-- I wenn, als -->
+      <section class="card regel-block" id="wenn">
+        <h3>wenn: einmal – in Gegenwart und Zukunft</h3>
+        <p>Eine Handlung passiert <b>einmal</b>, und zwar jetzt oder in der Zukunft → <b>wenn</b>. Für die Zukunft reicht meistens das Präsens.</p>
+        <p class="beispiel"><b>Wenn</b> ich morgen nach Hause <b>komme</b>, rufe ich dich an.</p>
+        <p class="beispiel"><b>Wenn</b> die Ferien <b>beginnen</b>, fahren wir zu Oma aufs Land.</p>
+        <p class="beispiel"><b>Wenn</b> du in Berlin <b>bist</b>, musst du unbedingt das Museum besuchen.</p>
+        <p class="merke">Einmal in Gegenwart oder Zukunft → wenn.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          «Коли я завтра прийду додому…» — одноразова дія в теперішньому чи майбутньому: <b>wenn</b>. Майбутній час (Futur) тут майже ніколи не потрібен: вистачає Präsens і слова часу (<i>morgen, im Sommer</i>).
+          Зверни увагу: <b>wenn</b> означає також «якщо» (умова). Часто обидва значення зливаються: <i>Wenn ich Zeit habe, komme ich.</i> — «коли / якщо матиму час». Умовні речення — окрема тема «Konditionale Nebensätze».
+        </div>
+      </section>
+
+      <section class="card regel-block" id="wiederholt">
+        <h3>Immer wieder: wenn, immer wenn, jedes Mal, wenn, sooft</h3>
+        <p>Eine Handlung passiert <b>mehrmals</b> oder regelmäßig → <b>wenn</b>, in der Gegenwart <b>und</b> in der Vergangenheit. Zur Betonung sagt man <b>immer wenn</b> oder <b>jedes Mal, wenn</b>. <b>Sooft</b> bedeutet „jedes Mal, wenn“.</p>
+        <table class="gtable">
+          <tr><th></th><th>Beispiel</th></tr>
+          <tr><td>Gegenwart</td><td><b>Wenn</b> es regnet, fahre ich mit dem Bus.</td></tr>
+          <tr><td>Vergangenheit</td><td><b>Wenn</b> wir Oma besuchten, backte sie Kuchen.</td></tr>
+          <tr><td>betont</td><td><b>Immer wenn</b> ich den Hund sehe, bellt er.<br><b>Jedes Mal, wenn</b> ich anrufe, ist besetzt.</td></tr>
+          <tr><td>im Hauptsatz</td><td>Er lacht <b>immer</b>, <b>wenn</b> er mich sieht.<br>Er lachte <b>jedes Mal</b>, <b>wenn</b> er mich sah.</td></tr>
+          <tr><td>sooft</td><td><b>Sooft</b> wir in Wien waren, aßen wir Sachertorte.</td></tr>
+        </table>
+        <p class="merke">Wiederholt – auch in der Vergangenheit → wenn (nie als).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Якщо дія повторювалася («щоразу, коли…», «завжди, коли…»), навіть у минулому ставимо <b>wenn</b>, а не als: <i>Wenn wir Oma besuchten, backte sie Kuchen</i> — «Коли ми (щоразу) відвідували бабусю, вона пекла пиріг».
+          Слова <b>immer</b> і <b>jedes Mal</b> підсилюють повторюваність; їх можна поставити перед wenn або всередину головного речення. Після <i>jedes Mal</i> зазвичай ставлять кому, між <i>immer</i> і <i>wenn</i> — ні. <b>Sooft</b> пишеться разом і означає «щоразу, коли».
+        </div>
+      </section>
+
+      <section class="card regel-block" id="als">
+        <h3>als: einmal in der Vergangenheit</h3>
+        <p>Eine Handlung oder eine Situation war <b>einmal</b> in der Vergangenheit → <b>als</b>. Das gilt auch für eine längere Zeit, die nur einmal war: <i>als ich klein war</i>, <i>als wir in Kyjiw wohnten</i>.</p>
+        <p class="beispiel"><b>Als</b> ich sieben <b>war</b>, bekam ich mein erstes Fahrrad.</p>
+        <p class="beispiel"><b>Als</b> wir am Bahnhof <b>ankamen</b>, war der Zug schon weg.</p>
+        <p class="beispiel"><b>Als</b> der Film zu Ende <b>war</b>, sind wir nach Hause gegangen.</p>
+        <p class="merke">Einmal in der Vergangenheit → als (auch: Als ich klein war …).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          «Коли мені було сім…», «Коли ми приїхали на вокзал…» — одна подія в минулому: <b>als</b>. Навіть довгий період, якщо він був один раз (дитинство, рік у іншому місті), теж вимагає als: <i>Als ich klein war, …</i> — «Коли я був малим…».
+          Не плутай із порівнянням: <i>größer <b>als</b> ich</i> — «більший, ніж я». Там als не починає підрядне речення часу.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="wenn-als">
+        <h3>wenn oder als? Die Übersicht</h3>
+        <table class="gtable">
+          <tr><th></th><th>Gegenwart / Zukunft</th><th>Vergangenheit</th></tr>
+          <tr><td>einmal</td><td>wenn</td><td><b>als</b></td></tr>
+          <tr><td>wiederholt</td><td>wenn</td><td>wenn</td></tr>
+        </table>
+        <p class="beispiel"><b>Als</b> ich gestern nach Hause kam, schlief mein Bruder. <i>(einmal)</i></p>
+        <p class="beispiel"><b>Wenn</b> ich nach Hause kam, schlief mein Bruder immer. <i>(immer wieder)</i></p>
+        <p class="merke">Nur wenn beides stimmt – Vergangenheit UND nur einmal – steht als. Sonst immer wenn.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Постав собі два запитання: 1) Це минуле? 2) Це сталося лише один раз? Лише якщо обидві відповіді «так» — <b>als</b>. В усіх інших випадках — <b>wenn</b>.
+          Слова-підказки: <i>immer, jedes Mal, oft, jeden Tag, manchmal</i> → повторюваність → wenn; <i>gestern, letztes Jahr, damals, mit zehn Jahren, einmal</i> (одного разу) → одна подія → als (якщо це минуле).
+        </div>
+      </section>
+
+      <!-- II während, solange, bevor -->
+      <section class="card regel-block" id="waehrend">
+        <h3>während: zur gleichen Zeit</h3>
+        <p>Die Handlungen im Haupt- und im Nebensatz laufen <b>zur gleichen Zeit</b> ab. In beiden Satzteilen steht meistens dieselbe Zeitform.</p>
+        <p class="beispiel"><b>Während</b> ich <b>koche</b>, deckt meine Schwester den Tisch.</p>
+        <p class="beispiel"><b>Während</b> wir im Urlaub <b>waren</b>, goss der Nachbar unsere Blumen.</p>
+        <p class="beispiel">Mein Handy klingelte, <b>während</b> ich unter der Dusche <b>stand</b>.</p>
+        <p class="merke">während = zur gleichen Zeit; meist dieselbe Zeitform in beiden Satzteilen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          <b>während</b> — «поки», «у той час як»: дві дії відбуваються одночасно. Час дієслова в обох частинах зазвичай однаковий (обидва Präsens або обидва Präteritum).
+          Не плутай сполучник і прийменник: <i><b>während</b> ich koche</i> (далі речення з дієсловом у кінці) і <i><b>während</b> des Unterrichts</i> (далі іменник у Genitiv) — див. останній блок цієї сторінки.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="waehrend-gegensatz">
+        <h3>während als Gegensatz</h3>
+        <p><b>während</b> kann auch einen <b>Gegensatz</b> zeigen. Dann geht es nicht um die Zeit, sondern um einen Unterschied zwischen zwei Personen oder Dingen. Man kann den Satz mit <b>aber</b> oder <b>dagegen</b> umformen.</p>
+        <p class="beispiel"><b>Während</b> Tom Mathe <b>liebt</b>, findet seine Schwester Mathe langweilig.</p>
+        <p class="beispiel">= Tom liebt Mathe, <b>aber</b> seine Schwester findet Mathe langweilig.</p>
+        <p class="beispiel">= Tom liebt Mathe, seine Schwester <b>dagegen</b> findet Mathe langweilig.</p>
+        <p class="merke">Passt „aber“ statt „während“, ohne dass sich der Sinn ändert? → Gegensatz.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          У такому реченні <b>während</b> перекладаємо «тоді як», «а»: <i>Том любить математику, тоді як його сестра вважає її нудною.</i> Мова не про час, а про протиставлення. Перевірка: заміни während на <b>aber</b> — якщо зміст не змінився, це протиставлення (адверсативне значення).
+        </div>
+      </section>
+
+      <section class="card regel-block" id="solange">
+        <h3>solange: genauso lange</h3>
+        <p>Auch <b>solange</b> zeigt Gleichzeitigkeit. Aber es sagt mehr: Die Handlung im Hauptsatz dauert <b>genauso lange</b> wie die im Nebensatz – sie beginnt und endet zusammen mit ihr.</p>
+        <p class="beispiel"><b>Solange</b> du Fieber <b>hast</b>, bleibst du im Bett.</p>
+        <p class="beispiel"><b>Solange</b> Oma im Krankenhaus <b>lag</b>, besuchten wir sie jeden Tag.</p>
+        <p class="beispiel">Mein Vater half mir, <b>solange</b> ich <b>studierte</b>. Danach musste ich selbst Geld verdienen.</p>
+        <p class="merke">solange = die ganze Zeit, in der …; beide Handlungen enden zusammen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          <b>solange</b> — «доки», «поки», «увесь той час, поки»: <i>Доки в тебе температура, ти лежиш у ліжку.</i> Щойно закінчується дія підрядного речення (температура минула), закінчується й дія головного.
+          Різниця з während: <i>während</i> каже лише «водночас», <i>solange</i> — «рівно стільки ж часу». Пишеться разом (<i>solange</i>), на відміну від <i>so lange</i> «так довго».
+        </div>
+      </section>
+
+      <section class="card regel-block" id="bevor">
+        <h3>bevor, ehe: zuerst der Hauptsatz</h3>
+        <p>Mit <b>bevor</b> passiert die Handlung im Nebensatz <b>später</b> als die im Hauptsatz. <b>ehe</b> bedeutet dasselbe, man hört es aber seltener. Meistens steht in beiden Satzteilen dieselbe Zeitform.</p>
+        <p class="beispiel"><b>Bevor</b> ich aus dem Haus <b>gehe</b>, mache ich das Licht aus. <i>(1. Licht aus, 2. gehen)</i></p>
+        <p class="beispiel"><b>Bevor</b> wir in die Ferien <b>fuhren</b>, packten wir drei Koffer.</p>
+        <p class="beispiel"><b>Ehe</b> du <b>antwortest</b>, denk gut nach!</p>
+        <p class="merke">bevor / ehe: Nebensatz später als der Hauptsatz; meist gleiche Zeitform.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          <b>bevor</b>, <b>ehe</b> — «перш ніж», «до того як». Спершу відбувається дія головного речення, потім — підрядного: <i>Перш ніж вийти з дому, я вимикаю світло.</i>
+          Розрізняй три слова: <b>bevor</b> — сполучник (<i>bevor ich gehe</i>), <b>vor</b> — прийменник з Dativ (<i>vor dem Essen</i>), <b>vorher</b> — прислівник (<i>Vorher esse ich.</i> «Перед тим я їм»).
+        </div>
+      </section>
+
+      <!-- III nachdem, sobald -->
+      <section class="card regel-block" id="nachdem">
+        <h3>nachdem: zuerst der Nebensatz – mit Zeitenwechsel</h3>
+        <p>Mit <b>nachdem</b> ist die Handlung im Nebensatz <b>schon fertig</b>, wenn die im Hauptsatz beginnt. Deshalb ist ein <b>Zeitenwechsel</b> nötig: Der Nebensatz steht eine Zeitstufe „weiter hinten“.</p>
+        <table class="gtable">
+          <tr><th>Nebensatz (nachdem)</th><th></th><th>Hauptsatz</th></tr>
+          <tr><td>Perfekt</td><td>→</td><td>Präsens</td></tr>
+          <tr><td>Plusquamperfekt</td><td>→</td><td>Präteritum</td></tr>
+        </table>
+        <p class="beispiel"><b>Nachdem</b> ich die Hausaufgaben <b>gemacht habe</b>, spiele ich Gitarre.</p>
+        <p class="beispiel"><b>Nachdem</b> ich die Hausaufgaben <b>gemacht hatte</b>, spielte ich Gitarre.</p>
+        <p class="beispiel"><b>Nachdem</b> der Zug <b>angekommen war</b>, stiegen alle aus.</p>
+        <p>✗ <i>Nachdem ich esse, gehe ich.</i> → ✓ <i>Nachdem ich <b>gegessen habe</b>, gehe ich.</i></p>
+        <p class="merke">nachdem: Perfekt + Präsens, Plusquamperfekt + Präteritum. Nie dieselbe Zeitform!</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          <b>nachdem</b> — «після того як». Українською в обох частинах той самий час («Після того як я зроблю уроки, я граю»), а в німецькій підрядне речення обов'язково «на крок у минуле»: якщо головне в Präsens — підрядне в Perfekt; якщо головне в Präteritum — підрядне в Plusquamperfekt (<i>hatte / war</i> + Partizip II).
+          haben чи sein — за тими самими правилами, що й у Perfekt (див. тему «Perfekt und Plusquamperfekt mit haben oder sein»): <i>gemacht hatte</i>, але <i>angekommen war</i>. В усному мовленні головне речення після Plusquamperfekt часто стоїть у Perfekt (<i>…, ist er gegangen</i>); у вправах тут — Präteritum.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="sobald">
+        <h3>sobald, sowie: sofort danach – oder gleichzeitig</h3>
+        <p><b>sobald</b> bedeutet: <b>sofort</b>, wenn … / gleich nachdem … Folgt der Hauptsatz direkt auf eine abgeschlossene Handlung, steht meistens der Zeitenwechsel – wie bei nachdem. Passiert beides zur gleichen Zeit, steht in beiden Satzteilen dieselbe Zeitform. <b>sowie</b> bedeutet hier dasselbe wie sobald.</p>
+        <table class="gtable">
+          <tr><th></th><th>Beispiel</th></tr>
+          <tr><td>sofort danach<br>(Zeitenwechsel)</td><td><b>Sobald</b> ich zu Hause <b>angekommen bin</b>, schreibe ich dir.<br><b>Sobald</b> er die Prüfung <b>bestanden hatte</b>, rief er seine Eltern an.</td></tr>
+          <tr><td>gleichzeitig<br>(gleiche Zeitform)</td><td><b>Sobald</b> es dunkel <b>wird</b>, gehen die Lampen an.<br><b>Sowie</b> die Glocke <b>klingelte</b>, packten alle ihre Sachen.</td></tr>
+        </table>
+        <p class="merke">sobald / sowie = sofort, wenn … Fertig vorher → Zeitenwechsel; gleichzeitig → gleiche Zeitform.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          <b>sobald</b>, <b>sowie</b> — «як тільки», «щойно». Якщо спершу щось завершилося, а одразу потім починається інше (<i>щойно я приїду — напишу</i>), німецькою зазвичай зсуваємо час, як після nachdem: <i>angekommen bin → schreibe</i>. Якщо обидві дії збігаються в часі (<i>щойно темніє — вмикаються ліхтарі</i>), час однаковий.
+          Не плутай <b>sowie</b> «як тільки» із <b>sowie</b> «а також» (<i>Äpfel sowie Birnen</i>).
+        </div>
+      </section>
+
+      <!-- IV bis, seit, seitdem -->
+      <section class="card regel-block" id="bis">
+        <h3>bis: bis zu einem Zeitpunkt</h3>
+        <p>Die Handlung im Hauptsatz dauert an, <b>bis</b> die Handlung im Nebensatz beginnt. Der Nebensatz liegt also <b>später</b>. Für die Zukunft steht meistens das Präsens; oft ist in beiden Satzteilen die gleiche Zeitform. Ein Zeitenwechsel ist möglich, wenn der Nebensatz eine abgeschlossene Handlung beschreibt.</p>
+        <p class="beispiel">Ich warte hier, <b>bis</b> du <b>kommst</b>.</p>
+        <p class="beispiel">Wir spielten Fußball, <b>bis</b> es dunkel <b>wurde</b>.</p>
+        <p class="beispiel">Du bleibst im Zimmer, <b>bis</b> du deine Hausaufgaben <b>gemacht hast</b>. <i>(Zeitenwechsel)</i></p>
+        <p class="beispiel"><b>Bis</b> du zurückkommst, <b>werde</b> ich das Essen sicher <b>gekocht haben</b>. <i>(Futur II = Überzeugung)</i></p>
+        <p class="merke">bis = bis zu dem Moment, in dem … – ohne „nicht“!</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          <b>bis</b> — «доки не», «аж поки»: <i>Я чекаю тут, доки ти не прийдеш.</i> Увага, пастка: в українській у такому реченні є «не», а в німецькій <b>nicht не ставимо</b>: <i>Ich warte, bis du kommst</i> (а не <s>bis du nicht kommst</s>).
+          Майбутнє в реченні з bis зазвичай виражає Präsens. Futur I чи II з'являється лише тоді, коли мовець висловлює впевненість чи припущення (<i>werde … gekocht haben</i> — «до того часу я вже точно зварю») — див. тему «Futur I und II zum Ausdruck der Vermutung».
+        </div>
+      </section>
+
+      <section class="card regel-block" id="seit">
+        <h3>seit, seitdem: von damals bis jetzt</h3>
+        <p><b>seit</b> und <b>seitdem</b> bedeuten dasselbe. Die Handlung hat in der Vergangenheit <b>begonnen</b> und dauert bis jetzt. Für die Zeitform gibt es zwei Fälle:</p>
+        <table class="gtable">
+          <tr><th>Situation</th><th>Zeitform</th><th>Beispiel</th></tr>
+          <tr><td>Beide Handlungen laufen parallel und dauern noch</td><td>gleiche Zeitform</td><td><b>Seit</b> ich in Wien <b>wohne</b>, fahre ich viel Rad.<br><b>Seitdem</b> Anna einen Hund <b>hat</b>, ist sie jeden Tag draußen.</td></tr>
+          <tr><td>Die Nebensatz-Handlung ist vorbei, wirkt aber weiter</td><td>Zeitenwechsel</td><td><b>Seit</b> wir einen neuen Lehrer <b>bekommen haben</b>, macht Mathe Spaß.<br><b>Seitdem</b> sie umgezogen <b>war</b>, sahen wir sie selten.</td></tr>
+        </table>
+        <p class="merke">Dauert es noch? → gleiche Zeitform. Einmal passiert, wirkt aber weiter? → Perfekt + Präsens (Plusquamperfekt + Präteritum).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          <b>seit</b>, <b>seitdem</b> — «відколи», «з того часу як». Головне речення описує те, що триває досі, тому стоїть у Präsens — так само, як в українській: <i>Відколи я живу у Відні, я багато катаюся на велосипеді.</i>
+          Якщо ж подія в підрядному реченні — разова й уже минула (переїхали, отримали нового вчителя), але наслідки тривають, у підрядному ставимо Perfekt: <i>Seit wir einen neuen Lehrer <b>bekommen haben</b>, macht Mathe Spaß.</i>
+        </div>
+      </section>
+
+      <section class="card regel-block" id="praepositionen">
+        <h3>Präposition oder Nebensatz? vor, während, nach, bis zu, seit, bei</h3>
+        <p>Viele Zeitangaben kann man auf zwei Arten sagen: kurz mit einer <b>Präposition + Nomen</b> oder ausführlich mit einer <b>Konjunktion + Nebensatz</b>. Der Nebensatz braucht ein Subjekt und ein Verb am Ende.</p>
+        <table class="gtable">
+          <tr><th>Präposition + Nomen</th><th>Konjunktion + Nebensatz</th></tr>
+          <tr><td><b>vor</b> dem Frühstück (+ Dat.)</td><td><b>bevor</b> ich frühstücke</td></tr>
+          <tr><td><b>während</b> des Films (+ Gen.)</td><td><b>während</b> der Film läuft</td></tr>
+          <tr><td><b>nach</b> dem Training (+ Dat.)</td><td><b>nachdem</b> ich trainiert habe</td></tr>
+          <tr><td><b>bis zum</b> Ende der Ferien (+ Dat.)</td><td><b>bis</b> die Ferien zu Ende sind</td></tr>
+          <tr><td><b>seit</b> seinem Umzug (+ Dat.)</td><td><b>seit(dem)</b> er umgezogen ist</td></tr>
+          <tr><td><b>beim</b> Lesen (+ Dat.)</td><td><b>wenn</b> / <b>während</b> ich lese</td></tr>
+        </table>
+        <p class="beispiel"><b>Nach der Schule</b> geht Lisa zum Training. → <b>Nachdem</b> der Unterricht zu Ende <b>ist</b>, geht Lisa zum Training.</p>
+        <p class="beispiel"><b>Seit seinem Umzug</b> fährt Ben mit dem Rad. → <b>Seit</b> Ben <b>umgezogen ist</b>, fährt er mit dem Rad.</p>
+        <p>✗ <i>nach ich gegessen habe</i> → ✓ <i><b>nachdem</b> ich gegessen habe</i> · ✗ <i>bevor dem Essen</i> → ✓ <i><b>vor</b> dem Essen</i></p>
+        <p class="merke">Nach der Präposition kommt ein Nomen, nach der Konjunktion ein ganzer Satz. nach ≠ nachdem, vor ≠ bevor.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Прийменник (<b>vor, nach, seit, bis zu, bei</b> — з Dativ, <b>während</b> — з Genitiv) стоїть перед іменником і не змінює порядку слів. Сполучник (<b>bevor, nachdem, seit(dem), bis, wenn, während</b>) відкриває ціле речення з підметом і дієсловом у кінці.
+          Українською так само: «після тренування» (прийменник + іменник) ↔ «після того як я потренувався» (сполучник + речення). Коротка форма з іменником звучить офіційніше, у розмові частіше вживають підрядне речення. Пам'ятай про час після <i>nachdem</i> і, за потреби, після <i>seit</i>.
+        </div>
+      </section>
+
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: sortieren ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Gleichzeitig, vorher oder nachher?</h2>
+      <p class="lead">Подумай, коли відбувається дія <b>підрядного</b> речення відносно головного: одночасно, раніше (спершу підрядне) чи пізніше (спершу головне). Розклади речення по кошиках.</p>
+      <div class="card" id="ub1-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 2: wenn / als ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Meine Kindheit am Meer</h2>
+      <p class="lead">Обери <b>wenn</b> чи <b>als</b>. Перевір себе: це минуле? Сталося один раз? Лише тоді — als.</p>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> <select class="blank inline" data-ans="als"><option value="">—</option><option>wenn</option><option>als</option></select> ich klein war, wohnten wir in Odessa.</div>
+        <div class="fill-item"><span class="num">2)</span> <select class="blank inline" data-ans="wenn"><option value="">—</option><option>wenn</option><option>als</option></select> im Sommer die Sonne schien, gingen wir jeden Tag an den Strand.</div>
+        <div class="fill-item"><span class="num">3)</span> <select class="blank inline" data-ans="als"><option value="">—</option><option>wenn</option><option>als</option></select> ich sechs Jahre alt wurde, schenkte mir mein Opa ein kleines Boot.</div>
+        <div class="fill-item"><span class="num">4)</span> Immer <select class="blank inline" data-ans="wenn"><option value="">—</option><option>wenn</option><option>als</option></select> Opa Zeit hatte, fuhren wir zusammen aufs Meer.</div>
+        <div class="fill-item"><span class="num">5)</span> <select class="blank inline" data-ans="als"><option value="">—</option><option>wenn</option><option>als</option></select> wir einmal sehr weit hinausfuhren, kam plötzlich ein Sturm.</div>
+        <div class="fill-item"><span class="num">6)</span> Jedes Mal, <select class="blank inline" data-ans="wenn"><option value="">—</option><option>wenn</option><option>als</option></select> ich heute an diesen Tag denke, bekomme ich Gänsehaut.</div>
+        <div class="fill-item"><span class="num">7)</span> <select class="blank inline" data-ans="wenn"><option value="">—</option><option>wenn</option><option>als</option></select> meine Mutter früher Fisch kaufte, gingen wir immer zusammen auf den Markt.</div>
+        <div class="fill-item"><span class="num">8)</span> <select class="blank inline" data-ans="als"><option value="">—</option><option>wenn</option><option>als</option></select> ich zehn war, zogen wir nach Kyjiw.</div>
+        <div class="fill-item"><span class="num">9)</span> <select class="blank inline" data-ans="wenn"><option value="">—</option><option>wenn</option><option>als</option></select> ich jetzt in den Ferien ans Meer fahre, besuche ich immer unser altes Haus.</div>
+        <div class="fill-item"><span class="num">10)</span> <select class="blank inline" data-ans="als"><option value="">—</option><option>wenn</option><option>als</option></select> ich es letzten Sommer wiedersah, war ich traurig: Es war ganz alt geworden.</div>
+        <div class="fill-item"><span class="num">11)</span> <select class="blank inline" data-ans="wenn"><option value="">—</option><option>wenn</option><option>als</option></select> ich später Kinder habe, zeige ich ihnen unseren Strand.</div>
+        <div class="fill-item"><span class="num">12)</span> Und <select class="blank inline" data-ans="als"><option value="">—</option><option>wenn</option><option>als</option></select> ich gestern ein altes Foto von Opa fand, musste ich lächeln.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: Quiz während, solange, bevor ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">während, solange, bevor</h2>
+      <p class="lead">Обери правильну відповідь. Частина запитань — про значення: одночасно, «стільки ж часу», «перш ніж» чи протиставлення.</p>
+      <div class="card" id="ub3-quiz"></div>
+    </section>
+
+    <!-- ===== Üb. 4: nachdem, sobald ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Auf Klassenfahrt</h2>
+      <p class="lead">Впиши дієслово з дужок у правильному часі. Після <b>nachdem</b> — зсув часу: Perfekt + Präsens, Plusquamperfekt + Präteritum. Після <b>sobald</b> — зсув, якщо дія вже завершилась, або той самий час, якщо дії одночасні (іноді правильні обидва варіанти).</p>
+      <div class="card" id="ub4-list">
+        <p class="section-label" style="margin:0 0 6px;">Heute (Präsens)</p>
+        <div class="fill-item"><span class="num">1)</span> Nachdem wir im Hotel <input type="text" class="blank-input inline wide" data-ans="angekommen sind"> (ankommen), bringen wir die Koffer ins Zimmer.</div>
+        <div class="fill-item"><span class="num">2)</span> Nachdem alle ihre Koffer <input type="text" class="blank-input inline wide" data-ans="ausgepackt haben"> (auspacken), gehen wir zum Abendessen.</div>
+        <div class="fill-item"><span class="num">3)</span> Nachdem wir <input type="text" class="blank-input inline wide" data-ans="gegessen haben"> (essen), <input type="text" class="blank-input inline" data-ans="machen"> (machen) wir noch einen Spaziergang.</div>
+        <p class="section-label" style="margin:14px 0 6px;">Am nächsten Tag (Präteritum)</p>
+        <div class="fill-item"><span class="num">4)</span> Nachdem wir <input type="text" class="blank-input inline wide" data-ans="gefrühstückt hatten|gefruehstueckt hatten"> (frühstücken), fuhren wir mit dem Bus in die Stadt.</div>
+        <div class="fill-item"><span class="num">5)</span> Nachdem der Bus vor dem Museum <input type="text" class="blank-input inline wide" data-ans="gehalten hatte"> (halten), stiegen alle aus.</div>
+        <div class="fill-item"><span class="num">6)</span> Nachdem die Führung <input type="text" class="blank-input inline wide" data-ans="begonnen hatte"> (beginnen), durften wir keine Fotos mehr machen.</div>
+        <div class="fill-item"><span class="num">7)</span> Nachdem wir das Museum <input type="text" class="blank-input inline wide" data-ans="verlassen hatten"> (verlassen), <input type="text" class="blank-input inline" data-ans="kauften"> (kaufen) wir alle ein Eis.</div>
+        <div class="fill-item"><span class="num">8)</span> Sobald der Lehrer am Abend das Licht <input type="text" class="blank-input inline wide" data-ans="ausgemacht hatte|ausmachte"> (ausmachen), wurde es im Zimmer still.</div>
+        <p class="section-label" style="margin:14px 0 6px;">Pläne (Präsens)</p>
+        <div class="fill-item"><span class="num">9)</span> Sobald ich wieder zu Hause <input type="text" class="blank-input inline wide" data-ans="angekommen bin|ankomme"> (ankommen), erzähle ich euch alles.</div>
+        <div class="fill-item"><span class="num">10)</span> Sobald es morgen hell <input type="text" class="blank-input inline wide" data-ans="wird|geworden ist"> (werden), wandern wir los.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub4-check">Prüfen</button>
+        <button class="btn secondary" id="ub4-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub4-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5: bis / seit ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Mias Weg</h2>
+      <p class="lead">Обери <b>bis</b>, <b>seit</b> чи <b>seitdem</b>. Пам'ятай: seitdem — лише сполучник (далі речення з дієсловом у кінці), а перед іменником чи датою стоїть прийменник seit або bis (zu). Де підходять і seit, і seitdem, правильні обидва.</p>
+      <div class="card" id="ub5-list">
+        <div class="fill-item"><span class="num">1)</span> <select class="blank inline" data-ans="bis"><option value="">—</option><option>bis</option><option>seit</option><option>seitdem</option></select> Mia sechs war, lebte sie mit ihrer Familie in Lwiw.</div>
+        <div class="fill-item"><span class="num">2)</span> <select class="blank inline" data-ans="seit"><option value="">—</option><option>bis</option><option>seit</option><option>seitdem</option></select> zwei Jahren wohnt sie jetzt in Wien.</div>
+        <div class="fill-item"><span class="num">3)</span> <select class="blank inline" data-ans="seit|seitdem"><option value="">—</option><option>bis</option><option>seit</option><option>seitdem</option></select> sie in Wien lebt, lernt sie jeden Tag Deutsch.</div>
+        <div class="fill-item"><span class="num">4)</span> Am Anfang musste sie drei Wochen warten, <select class="blank inline" data-ans="bis"><option value="">—</option><option>bis</option><option>seit</option><option>seitdem</option></select> in der Schule ein Platz frei war.</div>
+        <div class="fill-item"><span class="num">5)</span> <select class="blank inline" data-ans="seit|seitdem"><option value="">—</option><option>bis</option><option>seit</option><option>seitdem</option></select> sie in die 7. Klasse geht, hat sie eine beste Freundin: Lena.</div>
+        <div class="fill-item"><span class="num">6)</span> Die beiden sitzen <select class="blank inline" data-ans="seit"><option value="">—</option><option>bis</option><option>seit</option><option>seitdem</option></select> September nebeneinander.</div>
+        <div class="fill-item"><span class="num">7)</span> Nach der Schule lernen sie zusammen, <select class="blank inline" data-ans="bis"><option value="">—</option><option>bis</option><option>seit</option><option>seitdem</option></select> die Hausaufgaben fertig sind.</div>
+        <div class="fill-item"><span class="num">8)</span> <select class="blank inline" data-ans="seit|seitdem"><option value="">—</option><option>bis</option><option>seit</option><option>seitdem</option></select> Mia im Schulchor singt, ist sie viel mutiger geworden.</div>
+        <div class="fill-item"><span class="num">9)</span> <select class="blank inline" data-ans="bis"><option value="">—</option><option>bis</option><option>seit</option><option>seitdem</option></select> zum Konzert im Dezember muss der Chor noch viel üben.</div>
+        <div class="fill-item"><span class="num">10)</span> In den Ferien bleibt Mia bei ihrer Tante, <select class="blank inline" data-ans="bis"><option value="">—</option><option>bis</option><option>seit</option><option>seitdem</option></select> die Schule wieder beginnt.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub5-check">Prüfen</button>
+        <button class="btn secondary" id="ub5-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub5-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 6: buildOrder ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">Satzbau</h2>
+      <p class="lead">Склади речення: натискай слова по черзі; натиснеш на вже поставлене — воно повернеться. Кома вже стоїть біля потрібного слова. Пам'ятай: у підрядному дієслово в кінці, а головне після нього починається з дієслова.</p>
+      <div class="card" id="ub6-order"></div>
+    </section>
+
+    <!-- ===== Üb. 7: zwei Sätze → ein Satz ===== -->
+    <section class="panel" id="panel-ub7">
+      <p class="section-label">Üb. 7</p>
+      <h2 class="panel-title">Aus zwei Sätzen wird einer</h2>
+      <p class="lead">Об'єднай два речення в одне зі сполучником у дужках. <b>Почни з підрядного речення</b> й не забудь кому. Слова <i>dann, danach, vorher, bis dahin, seit dieser Zeit, in diesem Moment</i> у новому реченні вже не потрібні. Для <b>nachdem</b> не забудь зсув часу.</p>
+      <div class="card" id="ub7-list">
+        <div class="fill-item"><span class="num">1)</span> Ich mache die Hausaufgaben. Gleichzeitig höre ich Musik. (während)
+          <input type="text" class="blank-input inline full" data-ans="Während ich die Hausaufgaben mache, höre ich Musik|Während ich Musik höre, mache ich die Hausaufgaben"></div>
+        <div class="fill-item"><span class="num">2)</span> Wir gehen ins Kino. Vorher kaufen wir Popcorn. (bevor)
+          <input type="text" class="blank-input inline full" data-ans="Bevor wir ins Kino gehen, kaufen wir Popcorn|Ehe wir ins Kino gehen, kaufen wir Popcorn|Bevor wir ins Kino gehen, kaufen wir vorher Popcorn"></div>
+        <div class="fill-item"><span class="num">3)</span> Er frühstückt. Danach geht er zur Schule. (nachdem)
+          <input type="text" class="blank-input inline full" data-ans="Nachdem er gefrühstückt hat, geht er zur Schule"></div>
+        <div class="fill-item"><span class="num">4)</span> Sie räumte ihr Zimmer auf. Danach durfte sie rausgehen. (nachdem)
+          <input type="text" class="blank-input inline full" data-ans="Nachdem sie ihr Zimmer aufgeräumt hatte, durfte sie rausgehen"></div>
+        <div class="fill-item"><span class="num">5)</span> Es regnet. So lange bleiben wir zu Hause. (solange)
+          <input type="text" class="blank-input inline full" data-ans="Solange es regnet, bleiben wir zu Hause|Solange es regnet, bleiben wir zuhause"></div>
+        <div class="fill-item"><span class="num">6)</span> Die Lehrerin kam in die Klasse. In diesem Moment wurden alle still. (als)
+          <input type="text" class="blank-input inline full" data-ans="Als die Lehrerin in die Klasse kam, wurden alle still"></div>
+        <div class="fill-item"><span class="num">7)</span> Wir kamen am Bahnhof an. Gleich danach riefen wir Oma an. (sobald)
+          <input type="text" class="blank-input inline full" data-ans="Sobald wir am Bahnhof angekommen waren, riefen wir Oma an|Sobald wir am Bahnhof ankamen, riefen wir Oma an"></div>
+        <div class="fill-item"><span class="num">8)</span> Er wohnt in Hamburg. Seit dieser Zeit spielt er Handball. (seit)
+          <input type="text" class="blank-input inline full" data-ans="Seit er in Hamburg wohnt, spielt er Handball|Seitdem er in Hamburg wohnt, spielt er Handball"></div>
+        <div class="fill-item"><span class="num">9)</span> Die Pause beginnt. Bis dahin lösen wir Aufgaben. (bis)
+          <input type="text" class="blank-input inline full" data-ans="Bis die Pause beginnt, lösen wir Aufgaben|Bis die Pause beginnt, lösen wir noch Aufgaben"></div>
+        <div class="fill-item"><span class="num">10)</span> Meine Schwester liebt Sport. Ich lese dagegen lieber. (während – Gegensatz)
+          <input type="text" class="blank-input inline full" data-ans="Während meine Schwester Sport liebt, lese ich lieber"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub7-check">Prüfen</button>
+        <button class="btn secondary" id="ub7-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub7-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 8: Präposition → Nebensatz ===== -->
+    <section class="panel" id="panel-ub8">
+      <p class="section-label">Üb. 8</p>
+      <h2 class="panel-title">Aus der Präposition wird ein Nebensatz</h2>
+      <p class="lead">Заміни виділений прийменниковий зворот підрядним реченням (підказка — у дужках). Впиши <b>лише підрядне речення</b>, без коми: головне вже написане. Замість імені можна вжити займенник (<i>er, sie</i>).</p>
+      <div class="card" id="ub8-list">
+        <div class="fill-item"><span class="num">1)</span> <i><b>Vor dem Frühstück</b> joggt mein Vater.</i> (frühstücken)<br>
+          → <input type="text" class="blank-input inline wide" data-ans="bevor er frühstückt|ehe er frühstückt|bevor mein Vater frühstückt|ehe mein Vater frühstückt">, joggt mein Vater.</div>
+        <div class="fill-item"><span class="num">2)</span> <i><b>Während des Films</b> isst Max Popcorn.</i> (der Film – laufen)<br>
+          → <input type="text" class="blank-input inline wide" data-ans="während der Film läuft">, isst Max Popcorn.</div>
+        <div class="fill-item"><span class="num">3)</span> <i><b>Nach dem Training</b> duscht Anna.</i> (trainieren)<br>
+          → <input type="text" class="blank-input inline wide" data-ans="nachdem sie trainiert hat|nachdem Anna trainiert hat">, duscht Anna.</div>
+        <div class="fill-item"><span class="num">4)</span> <i><b>Nach dem Essen</b> spielten die Kinder im Garten.</i> (essen)<br>
+          → <input type="text" class="blank-input inline wide" data-ans="nachdem sie gegessen hatten|nachdem die Kinder gegessen hatten">, spielten die Kinder im Garten.</div>
+        <div class="fill-item"><span class="num">5)</span> <i><b>Seit seinem Umzug</b> fährt Ben mit dem Rad zur Schule.</i> (umziehen)<br>
+          → <input type="text" class="blank-input inline wide" data-ans="seit er umgezogen ist|seitdem er umgezogen ist|seit Ben umgezogen ist|seitdem Ben umgezogen ist">, fährt Ben mit dem Rad zur Schule.</div>
+        <div class="fill-item"><span class="num">6)</span> <i><b>Bis zum Ende der Ferien</b> bleibt Oma bei uns.</i> (die Ferien – zu Ende sein)<br>
+          → <input type="text" class="blank-input inline wide" data-ans="bis die Ferien zu Ende sind|bis die Ferien vorbei sind">, bleibt Oma bei uns.</div>
+        <div class="fill-item"><span class="num">7)</span> <i><b>Beim Lesen</b> hört Lisa gern Musik.</i> (lesen)<br>
+          → <input type="text" class="blank-input inline wide" data-ans="wenn sie liest|wenn Lisa liest|während sie liest|während Lisa liest">, hört Lisa gern Musik.</div>
+        <div class="fill-item"><span class="num">8)</span> <i><b>Seit der Geburt ihres Bruders</b> hilft Sofia viel zu Hause.</i> (ihr Bruder – geboren sein)<br>
+          → <input type="text" class="blank-input inline wide" data-ans="seit ihr Bruder geboren ist|seitdem ihr Bruder geboren ist|seit ihr Bruder geboren wurde|seitdem ihr Bruder geboren wurde">, hilft Sofia viel zu Hause.</div>
+        <div class="fill-item"><span class="num">9)</span> <i><b>Vor der Prüfung</b> war ich sehr nervös.</i> (die Prüfung – beginnen)<br>
+          → <input type="text" class="blank-input inline wide" data-ans="bevor die Prüfung begann|ehe die Prüfung begann">, war ich sehr nervös.</div>
+        <div class="fill-item"><span class="num">10)</span> <i><b>Nach der Ankunft in Wien</b> besuchten wir zuerst den Prater.</i> (in Wien ankommen)<br>
+          → <input type="text" class="blank-input inline wide" data-ans="nachdem wir in Wien angekommen waren">, besuchten wir zuerst den Prater.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub8-check">Prüfen</button>
+        <button class="btn secondary" id="ub8-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub8-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das Wichtigste</p>
+        <p>Einmal in der Vergangenheit → <b>als</b>, sonst → <b>wenn</b>. Gleichzeitig: <b>während</b>, <b>solange</b>; der Nebensatz später: <b>bevor</b>, <b>bis</b> (ohne „nicht“!). Mit <b>nachdem</b> immer Zeitenwechsel: Perfekt + Präsens, Plusquamperfekt + Präteritum – oft auch mit <b>sobald</b> und <b>seit</b>. Vor dem Nomen steht eine Präposition (vor, nach, seit), vor dem Satz eine Konjunktion (bevor, nachdem, seitdem).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Одна подія в минулому → <b>als</b>, усе інше (теперішнє, майбутнє, повторюване) → <b>wenn</b>. Одночасність — <b>während</b> і <b>solange</b> («стільки ж часу»); дія підрядного пізніше — <b>bevor/ehe</b> і <b>bis</b> (без nicht, на відміну від «доки не»). Після <b>nachdem</b> обов'язковий зсув часу, після <b>sobald</b> і <b>seit</b> — коли дія підрядного вже завершилась. Перед іменником — прийменник (<i>vor, nach, seit, während</i> + Gen.), перед реченням — сполучник (<i>bevor, nachdem, seit(dem), während</i>).
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Де це ще трапляється</p>
+        <div class="gram-related" id="gramRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <p class="lead" id="gramBest" style="font-size:14px;"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/grammar-data.js"></script>
+<script src="../../data/lessons-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/site.js"></script>
+<script>
+  const GRAM_ID = "temporalsaetze";
+
+  // Üb. 1: розсортуй
+  buildSort('ub1-sort', {
+    buckets: ["gleichzeitig", "Nebensatz zuerst", "Nebensatz später"],
+    items: [
+      {t: "Während ich koche, höre ich Radio.", b: "gleichzeitig"},
+      {t: "Solange es regnet, bleiben wir drin.", b: "gleichzeitig"},
+      {t: "Als das Telefon klingelte, stand ich unter der Dusche.", b: "gleichzeitig"},
+      {t: "Wenn ich Musik höre, kann ich gut lernen.", b: "gleichzeitig"},
+      {t: "Nachdem wir gegessen hatten, spülten wir ab.", b: "Nebensatz zuerst"},
+      {t: "Sobald ich angekommen bin, rufe ich an.", b: "Nebensatz zuerst"},
+      {t: "Nachdem der Film zu Ende war, gingen wir heim.", b: "Nebensatz zuerst"},
+      {t: "Seitdem er umgezogen ist, sehen wir ihn selten.", b: "Nebensatz zuerst"},
+      {t: "Bevor ich schlafe, lese ich noch ein bisschen.", b: "Nebensatz später"},
+      {t: "Ehe du gehst, mach bitte das Fenster zu.", b: "Nebensatz später"},
+      {t: "Ich warte hier, bis du kommst.", b: "Nebensatz später"},
+      {t: "Wir spielten, bis es dunkel wurde.", b: "Nebensatz später"}
+    ]
+  });
+
+  // Üb. 2: wenn / als
+  wireBlanks('ub2');
+
+  // Üb. 3: квіз
+  buildQuiz('ub3-quiz', [
+    {q: "„Solange du Fieber hast, bleibst du zu Hause.“ – Was bedeutet das?",
+     opts: ["Du bleibst genau so lange zu Hause, wie das Fieber dauert.", "Du bleibst zu Hause, bis du Fieber bekommst.", "Du bleibst zu Hause, nachdem das Fieber weg ist."],
+     correct: "Du bleibst genau so lange zu Hause, wie das Fieber dauert."},
+    {q: "Putz dir die Zähne, ___ du ins Bett gehst.",
+     opts: ["nachdem", "seit", "bevor"], correct: "bevor"},
+    {q: "___ ich dusche, singe ich immer laut.",
+     opts: ["Nachdem", "Während", "Bis"], correct: "Während"},
+    {q: "„Während Anna gern Horrorfilme sieht, mag ihre Freundin nur Komödien.“ – Was zeigt „während“ hier?",
+     opts: ["zur gleichen Zeit", "einen Gegensatz (= aber)"], correct: "einen Gegensatz (= aber)"},
+    {q: "„Während Anna den Film sah, schlief ihre Freundin ein.“ – Was zeigt „während“ hier?",
+     opts: ["zur gleichen Zeit", "einen Gegensatz (= aber)"], correct: "zur gleichen Zeit"},
+    {q: "Welcher Satz sagt dasselbe wie: „Zuerst frühstücke ich, dann gehe ich zur Schule.“?",
+     opts: ["Bevor ich zur Schule gehe, frühstücke ich.", "Bevor ich frühstücke, gehe ich zur Schule.", "Während ich zur Schule gehe, frühstücke ich."],
+     correct: "Bevor ich zur Schule gehe, frühstücke ich."},
+    {q: "„Ehe du etwas kaufst, vergleich die Preise.“ – „ehe“ bedeutet hier …",
+     opts: ["während", "nachdem", "bevor"], correct: "bevor"},
+    {q: "___ mein Opa lebte, feierten wir Weihnachten immer bei ihm. Danach nicht mehr.",
+     opts: ["Bevor", "Solange", "Nachdem"], correct: "Solange"},
+    {q: "Welcher Satz ist richtig?",
+     opts: ["Bevor ich gehe, ich rufe dich an.", "Bevor gehe ich, rufe ich dich an.", "Bevor ich gehe, rufe ich dich an."],
+     correct: "Bevor ich gehe, rufe ich dich an."},
+    {q: "Während wir Pause hatten, ___ es draußen.",
+     opts: ["regnete", "regnet", "geregnet hat"], correct: "regnete"}
+  ]);
+
+  // Üb. 4, 5: пропуски
+  wireBlanks('ub4');
+  wireBlanks('ub5');
+
+  // Üb. 6: склади речення
+  buildOrder('ub6-order', [
+    {words: ["Wenn", "ich", "morgen", "Zeit", "habe,", "besuche", "ich", "dich"], end: "."},
+    {words: ["Als", "wir", "in Berlin", "waren,", "regnete", "es", "jeden Tag"], end: "."},
+    {words: ["Sooft", "ich", "bei Oma", "bin,", "backt", "sie", "Pfannkuchen"], end: "."},
+    {words: ["Während", "du", "kochst,", "decke", "ich", "den Tisch"], end: "."},
+    {words: ["Bevor", "wir", "losfahren,", "packen", "wir", "die Koffer"], end: "."},
+    {words: ["Nachdem", "er", "gegessen", "hatte,", "ging", "er", "ins Kino"], end: "."},
+    {words: ["Sobald", "der Film", "zu Ende", "ist,", "rufe", "ich", "dich", "an"], end: "."},
+    {words: ["Seit", "Lena", "einen Hund", "hat,", "geht", "sie", "jeden Tag", "spazieren"], end: "."},
+    {words: ["Ich", "bleibe", "im Park,", "bis", "es", "dunkel", "wird"], end: ".",
+     hint: "Тут головне речення стоїть першим."},
+    {words: ["Mein Handy", "klingelte,", "als", "ich", "unter der Dusche", "stand"], end: ".",
+     hint: "Тут головне речення стоїть першим."}
+  ]);
+
+  // Üb. 7, 8: перетворення
+  wireBlanks('ub7');
+  wireBlanks('ub8');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['⏰','📅','⌛','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initGrammarPage(GRAM_ID);
+</script>
+</body>
+</html>
