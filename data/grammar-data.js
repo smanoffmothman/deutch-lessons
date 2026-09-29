@@ -279,7 +279,8 @@ const GRAMMAR = [
     opublikovano: 48, dyv: ["passiv", "zustandspassiv", "modalverben", "reflexive-verben", "trennbare-verben", "untrennbare-verben", "verben-dass-infinitiv", "infinitiv-um-zu", "indefinitpronomen", "nebensaetze", "gerundivum"] },
   { id: "gerundivum", rozdil: "passiv", knyha: 49,
     tema: "Das Gerundivum", uk: "Gerundivum",
-    pidrozdily: [] },
+    pidrozdily: ["Eine Bedeutung, vier Formen", "Können oder müssen?", "Passive Bedeutung mit Partizip I", "Die Bildung: zu + Partizip I", "Wie ein Adjektiv: Endungen – und nie nach sein", "Erweiterungen und ein zweites Adjektiv", "Umformen: Relativsatz ↔ Gerundivum"],
+    opublikovano: 49, dyv: ["haben-sein-zu", "partizipialkonstruktion", "passiv", "zustandspassiv", "relativsaetze", "adjektivdeklination", "trennbare-verben", "untrennbare-verben", "modalverben", "infinitiv-um-zu", "partizipialsaetze"] },
 
   // ===== Кон'юнктив =====
   { id: "konjunktiv", rozdil: "konjunktiv", knyha: 52,
