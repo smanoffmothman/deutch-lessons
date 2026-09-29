@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zahlwörter · Grammatik · Deutsch mit uns</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'gramatyka' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">GRAMMATIK · Іменник, артикль, займенник</span>
+        <h1>Zahlwörter</h1>
+        <p class="sub">Кількісні й порядкові числівники, дати, час, ціни, дроби, «двічі», «подвійний» і «двох видів» — усе, що в німецькій пов'язане з числами.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="regel" aria-selected="true">Regel</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · ein, eins, einer</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Zahlen schreiben</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Uhr, Geld, Jahr</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · beide, paar, Tausende</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Ordinalzahlen finden</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · der Wievielte?</button>
+    <button class="tab-btn" data-tab="ub7">Üb. 7 · Datum, Endungen</button>
+    <button class="tab-btn" data-tab="ub8">Üb. 8 · Welche Art?</button>
+    <button class="tab-btn" data-tab="ub9">Üb. 9 · halb, -mal, -fach</button>
+    <button class="tab-btn" data-tab="ub10">Üb. 10 · Sätze bauen</button>
+    <button class="tab-btn" data-tab="ub11">Üb. 11 · Römische Zahlen</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== REGEL ===== -->
+    <section class="panel active" id="panel-regel">
+      <p class="section-label">Regel</p>
+      <h2 class="panel-title">Zahlwörter</h2>
+      <ul class="regel-toc" id="regelToc"></ul>
+
+      <div class="card">
+        <p>Zahlwörter sagen, <b>wie viele</b> (drei Freunde), <b>der Wievielte</b> (der dritte Platz), <b>welcher Teil</b> (ein Drittel), <b>wie oft</b> (dreimal), <b>wievielfach</b> (dreifach) und <b>wie viele Arten</b> (dreierlei). Die meisten Kardinalzahlen haben keine Endung. Ordinalzahlen haben Endungen wie Adjektive.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Числівники бувають кількісні (<i>Kardinalzahlen</i>: drei — три), порядкові (<i>Ordinalzahlen</i>: der dritte — третій) і кілька «похідних» груп: дроби (ein Drittel — третина), скільки разів (dreimal — тричі), у скільки разів (dreifach — потрійний), скільки видів (dreierlei — трьох видів). Головна відмінність від української: кількісні числівники в німецькій майже не відмінюються — «з чотирма друзями» = <i>mit vier Freunden</i> (закінчення має іменник, а не число). Зате порядкові змінюються, як прикметники: der dritte, am dritten, mein dritter.
+        </div>
+      </div>
+
+      <p class="section-label">I · Kardinalzahlen</p>
+
+      <section class="card regel-block" id="bilden">
+        <h3>Zahlen bilden: einundzwanzig, hundertzwei</h3>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Zahl</th><th>Wort</th><th>Zahl</th><th>Wort</th></tr>
+          <tr><td>0</td><td>null</td><td>20</td><td>zwanzig</td></tr>
+          <tr><td>1</td><td>eins</td><td>21</td><td><b>ein</b>und<b>zwanzig</b></td></tr>
+          <tr><td>13</td><td>dreizehn</td><td>30</td><td>drei<b>ß</b>ig</td></tr>
+          <tr><td>16</td><td><b>sech</b>zehn</td><td>60</td><td><b>sech</b>zig</td></tr>
+          <tr><td>17</td><td><b>sieb</b>zehn</td><td>70</td><td><b>sieb</b>zig</td></tr>
+          <tr><td>100</td><td>(ein)hundert</td><td>102</td><td>hundertzwei</td></tr>
+          <tr><td>1 000</td><td>(ein)tausend</td><td>2 026</td><td>zweitausendsechsundzwanzig</td></tr>
+          <tr><td>45 300</td><td>fünfundvierzigtausenddreihundert</td><td>999 999</td><td>neunhundertneunundneunzigtausend­neunhundertneunundneunzig</td></tr>
+        </table>
+        </div>
+        <p class="beispiel">In meiner Klasse sind <b>siebenundzwanzig</b> Schüler.</p>
+        <p class="beispiel">Wir fahren mit <b>vier</b> Freunden nach München.</p>
+        <p class="beispiel">Nach <b>zehn</b> Minuten kam der Bus.</p>
+        <p class="merke">Die Einer stehen vor den Zehnern: 21 = einundzwanzig. Alles unter einer Million schreibt man in einem Wort. Kardinalzahlen haben keine Endung: mit vier Freunden.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          У двоцифрових числах німці спершу називають одиниці, а потім десятки: 21 — «один-і-двадцять», 58 — <i>achtundfünfzig</i> «вісім-і-п'ятдесят». Так само і всередині великих чисел: 356 = <i>dreihundertsechsundfünfzig</i>. Усе до мільйона пишеться одним словом, хай яке довге. Зверни увагу на написання: <i>sechzehn, sechzig</i> (без -s), <i>siebzehn, siebzig</i> (без -en), <i>dreißig</i> (з ß, а не -zig). На відміну від української («з чотирма», «після десяти»), число не змінюється — закінчення бере іменник: <i>mit vier Freund<b>en</b></i>.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="ein">
+        <h3>ein als Zahl: nur ein Bruder, nicht zwei</h3>
+        <p><i>ein, eine, ein</i> vor einem Nomen ist meistens der unbestimmte Artikel. Es kann aber auch die Zahl 1 bedeuten. Dann betont man es beim Sprechen stark. Die Endungen sind dieselben wie beim Artikel.</p>
+        <p class="beispiel">Ich habe nur <b>einen</b> Bruder, nicht zwei.</p>
+        <p class="beispiel">In unserer Straße gibt es nur <b>ein</b> Café.</p>
+        <p class="beispiel">Wir hatten heute nur <b>eine</b> Stunde Mathe – zum Glück!</p>
+        <p class="merke">Als Zahl ist ein betont: Ich habe nur EINEN Bruder. Die Endungen sind wie beim unbestimmten Artikel.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Німецьке <i>ein</i> — це водночас і неозначений артикль, і числівник «один». На письмі вони однакові, різниця лише в наголосі: <i>Ich habe ein Fahrrad</i> (просто «маю велосипед») і <i>Ich habe nur EIN Fahrrad</i> («лише один»). Часто на числове значення вказують слова <i>nur</i> (лише), <i>nicht zwei</i>, <i>genau</i>.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="einer">
+        <h3>eins ohne Nomen: einer, eine, eins</h3>
+        <p>Steht die Zahl 1 allein, ohne Nomen, bekommt sie die Endungen des <b>bestimmten</b> Artikels: der → ein<b>er</b>, das → ein<b>s</b>, dem → ein<b>em</b>.</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th></th><th>maskulin</th><th>feminin</th><th>neutral</th></tr>
+          <tr><td class="gender">Nom.</td><td>ein<b>er</b></td><td>ein<b>e</b></td><td>ein<b>s</b> (ein<b>es</b>)</td></tr>
+          <tr><td class="gender">Akk.</td><td>ein<b>en</b></td><td>ein<b>e</b></td><td>ein<b>s</b> (ein<b>es</b>)</td></tr>
+          <tr><td class="gender">Dat.</td><td>ein<b>em</b></td><td>ein<b>er</b></td><td>ein<b>em</b></td></tr>
+          <tr><td class="gender">Gen.</td><td>ein<b>es</b></td><td>ein<b>er</b></td><td>ein<b>es</b></td></tr>
+        </table>
+        </div>
+        <p class="beispiel">Von meinen Freunden hat nur <b>einer</b> einen Hund.</p>
+        <p class="beispiel">Ich habe zwei Kulis. Brauchst du <b>einen</b>?</p>
+        <p class="beispiel">Mit <b>einer</b> von den neuen Schülerinnen habe ich schon gesprochen.</p>
+        <p class="beispiel">Welches Heft gehört dir? – Das hier ist <b>eins</b> von meinen.</p>
+        <p class="merke">Ohne Nomen: einer, eine, eins – die Endungen wie bei der, die, das.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Коли іменника після числа немає, «один» сам показує рід і відмінок — тому бере «сильні» закінчення означеного артикля: <i>einer</i> (як <i>der</i>), <i>eins</i> (як <i>das</i>), <i>einem</i> (як <i>dem</i>). Порівняй: <i>ein Freund</i> → <i>einer</i> (з друзів); <i>ein Buch</i> → <i>eins</i>. Докладніше про <i>einer / keiner</i> як займенники — у темі «Indefinite Pronomen».
+        </div>
+      </section>
+
+      <section class="card regel-block" id="der-eine">
+        <h3>der eine – der andere</h3>
+        <p>Nach dem bestimmten Artikel hat <i>eine</i> die Endungen eines Adjektivs. Oft kommt danach <i>der andere</i>: So unterscheidet man zwei Personen oder Sachen – oder zwei Gruppen.</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th></th><th>maskulin</th><th>feminin</th><th>neutral</th><th>Plural</th></tr>
+          <tr><td class="gender">Nom.</td><td>der ein<b>e</b></td><td>die ein<b>e</b></td><td>das ein<b>e</b></td><td>die ein<b>en</b></td></tr>
+          <tr><td class="gender">Akk.</td><td>den ein<b>en</b></td><td>die ein<b>e</b></td><td>das ein<b>e</b></td><td>die ein<b>en</b></td></tr>
+          <tr><td class="gender">Dat.</td><td>dem ein<b>en</b></td><td>der ein<b>en</b></td><td>dem ein<b>en</b></td><td>den ein<b>en</b></td></tr>
+        </table>
+        </div>
+        <p class="beispiel">Ich habe zwei Brüder: <b>der eine</b> studiert, <b>der andere</b> geht noch zur Schule.</p>
+        <p class="beispiel"><b>Dem einen</b> gefällt Mathe, <b>dem anderen</b> Deutsch.</p>
+        <p class="beispiel">In der Pause spielen <b>die einen</b> Fußball, <b>die anderen</b> sitzen am Handy.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Це пара «один — інший», «одні — інші». Після артикля <i>eine</i> поводиться як прикметник: <i>der eine</i>, але <i>dem einen</i>, <i>die einen</i> (у множині — «одні»). Друга частина — <i>der andere</i> з тими самими закінченнями.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="zweier">
+        <h3>zweier, dreier: Endungen nur bei zwei und drei</h3>
+        <p>Nur <i>zwei</i> und <i>drei</i> haben manchmal eine Endung – wenn kein Artikel den Kasus zeigt: im Genitiv <b>-er</b>, im Dativ <b>-en</b>. Das ist eher Schriftsprache. Alle anderen Zahlen bis 999 999 haben nie eine Endung.</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Kasus</th><th>Form</th><th>Beispiel</th></tr>
+          <tr><td class="gender">Gen.</td><td>zwei<b>er</b>, drei<b>er</b></td><td>die Meinung <b>zweier</b> Lehrer (= von zwei Lehrern)</td></tr>
+          <tr><td class="gender">Dat.</td><td>zwei<b>en</b>, drei<b>en</b></td><td>Von ihren fünf Cousins hat sie nur mit <b>zweien</b> Kontakt.</td></tr>
+          <tr><td class="gender">ab vier</td><td>keine Endung</td><td>die Arbeit <b>von vier</b> Schülern · mit <b>zehn</b> Freunden</td></tr>
+        </table>
+        </div>
+        <p class="beispiel">Das ist das Haus <b>dreier</b> Familien.</p>
+        <p class="beispiel">Im Alltag sagt man meistens: das Haus <b>von drei</b> Familien.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Форми <i>zweier / dreier</i> (родовий) і <i>zweien / dreien</i> (давальний без іменника) трапляються в книжках, новинах, офіційних текстах. У розмові їх замінюють на <i>von zwei …</i>. Від чотирьох і далі числа не мають закінчень узагалі — це і є правило «кількісні числівники не відмінюються».
+        </div>
+      </section>
+
+      <section class="card regel-block" id="nomen">
+        <h3>Zahlen als Nomen: die Null, eine Eins</h3>
+        <p>Man kann eine Zahl auch als Nomen benutzen: für Schulnoten, Buslinien, Spielkarten, Glückszahlen. Dann schreibt man sie <b>groß</b>. Alle diese Nomen sind <b>feminin</b>: die Null, die Eins, die Sieben. Plural: die Einsen, die Zweien, die Achten.</p>
+        <p class="beispiel">Ich habe im Diktat <b>eine Eins</b> bekommen!</p>
+        <p class="beispiel">Wir nehmen <b>die Drei</b> bis zum Bahnhof. (= die Straßenbahn Nummer 3)</p>
+        <p class="beispiel"><b>Die Dreizehn</b> ist für viele eine Unglückszahl.</p>
+        <p class="beispiel">Eine <b>Null</b> vor dem Komma: 0,5 ist kleiner als eins.</p>
+        <p class="beispiel">Sie hat nur <b>Einsen</b> und <b>Zweien</b> im Zeugnis.</p>
+        <p class="merke">Zahl als Nomen = großgeschrieben und immer feminin: die Eins, eine Sechs.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Як в українському «одиниця, двійка, сімка», тільки в німецькій це просто число з великої літери й артиклем <i>die</i>. Важливо: у німецьких школах <i>die Eins</i> — найкраща оцінка, <i>die Sechs</i> — найгірша. Тож <i>eine Eins bekommen</i> — це «отримати відмінно».
+        </div>
+      </section>
+
+      <section class="card regel-block" id="million">
+        <h3>eine Million, zwei Millionen, eine Milliarde</h3>
+        <p>Ab einer Million sind die Zahlen <b>Nomen</b>: groß, feminin, mit Plural. Man schreibt sie getrennt von den anderen Zahlen.</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Zahl</th><th>Singular</th><th>Plural</th></tr>
+          <tr><td>1 000 000</td><td>eine Million</td><td>zwei Million<b>en</b></td></tr>
+          <tr><td>1 000 000 000</td><td>eine Milliarde</td><td>drei Milliarde<b>n</b></td></tr>
+          <tr><td>1 000 000 000 000</td><td>eine Billion</td><td>vier Billion<b>en</b></td></tr>
+        </table>
+        </div>
+        <p class="beispiel">Berlin hat fast <b>vier Millionen</b> Einwohner.</p>
+        <p class="beispiel">Auf der Erde leben über <b>acht Milliarden</b> Menschen.</p>
+        <p class="beispiel">2 500 000 = <b>zwei Millionen</b> fünfhunderttausend</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          <i>Million, Milliarde, Billion</i> — іменники жіночого роду, тому з великої літери й окремим словом: <i>zwei Millionen dreihunderttausend</i>. Обережно, «фальшивий друг»: німецька <i>Milliarde</i> = український мільярд, а німецька <i>Billion</i> = український <b>трильйон</b> (10¹²), а не «більйон».
+        </div>
+      </section>
+
+      <section class="card regel-block" id="beide">
+        <h3>beide und beides</h3>
+        <p><i>beide</i> bedeutet „die zwei“ – aber nur, wenn man die zwei Personen oder Sachen schon kennt oder genannt hat. Die Endungen sind wie beim bestimmten Artikel (im Plural). Nach einem Artikel: <i>die beiden</i>.<br><i>beides</i> (Singular) steht für zwei verschiedene Dinge oder Tätigkeiten zusammen.</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th></th><th>ohne Artikel</th><th>mit Artikel</th></tr>
+          <tr><td class="gender">Nom.</td><td>beid<b>e</b></td><td>die beid<b>en</b></td></tr>
+          <tr><td class="gender">Akk.</td><td>beid<b>e</b></td><td>die beid<b>en</b></td></tr>
+          <tr><td class="gender">Dat.</td><td>beid<b>en</b></td><td>den beid<b>en</b></td></tr>
+          <tr><td class="gender">Gen.</td><td>beid<b>er</b></td><td>der beid<b>en</b></td></tr>
+        </table>
+        </div>
+        <p class="beispiel">Ich habe Tim und Lara eingeladen. <b>Beide</b> kommen.</p>
+        <p class="beispiel"><b>Die beiden</b> sind Zwillinge.</p>
+        <p class="beispiel">Mit <b>beiden</b> habe ich schon telefoniert.</p>
+        <p class="beispiel">Pizza oder Pasta? – <b>Beides</b>, bitte!</p>
+        <p class="beispiel">Sie malt und fotografiert – <b>beides</b> macht ihr großen Spaß.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          <i>beide</i> — «обидва / обидві» (про людей чи речі, про які вже йшлося): <i>beide Hände</i> — обидві руки. <i>beides</i> — «і те, і інше», про дві різні речі чи дії разом: «Чай чи какао? — І те, і те» = <i>Beides</i>.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="paar">
+        <h3>ein Paar oder ein paar?</h3>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Schreibung</th><th>Bedeutung</th><th>Beispiel</th></tr>
+          <tr><td><b>ein Paar</b> (groß)</td><td>zwei, die zusammengehören</td><td>ein Paar Socken · ein Paar Ohrringe · Die beiden sind ein Paar.</td></tr>
+          <tr><td><b>ein paar</b> (klein)</td><td>einige, nicht viele</td><td>ein paar Freunde · in ein paar Tagen · mit ein paar Fotos</td></tr>
+        </table>
+        </div>
+        <p class="beispiel">Ich brauche ein neues <b>Paar</b> Turnschuhe.</p>
+        <p class="beispiel">Kannst du <b>ein paar</b> Minuten warten?</p>
+        <p class="merke">Groß: ein Paar = zwei zusammen. Klein: ein paar = einige. Klein ein paar bleibt immer gleich: mit ein paar Freunden.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Як в українському «пара шкарпеток» і «пара хвилин» — але в німецькій ці значення розрізняє велика літера. <i>Paar</i> з великої — справжня пара (двоє, що належать разом). <i>paar</i> з малої — просто «кілька», і не обов'язково двоє: <i>ein paar Freunde</i> можуть бути й п'ятеро.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="dutzend">
+        <h3>ein Dutzend; Hunderte, Tausende</h3>
+        <p><i>ein Dutzend</i> = zwölf Stück. <i>Hunderte, Tausende, Zehntausende</i> bedeuten „sehr viele“ – ohne genaue Zahl. Sie sind Nomen und bekommen Endungen (Dativ Plural: -n). Man schreibt sie meist groß; klein ist auch erlaubt.</p>
+        <p class="beispiel">Für den Kuchen brauchen wir ein <b>Dutzend</b> Eier.</p>
+        <p class="beispiel">Zum Konzert kamen <b>Tausende</b> (von) Fans.</p>
+        <p class="beispiel"><b>Hunderte</b> von Schülern waren bei der Demo.</p>
+        <p class="beispiel">Die Stadt rechnet mit <b>Zehntausenden</b> von Besuchern.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          <i>Dutzend</i> — дюжина (12). <i>Hunderte / Tausende</i> — «сотні / тисячі» у значенні «дуже багато»: <i>Tausende von Menschen</i> — тисячі людей. Порівняй з точним числом: <i>tausend Menschen</i> — рівно тисяча, без закінчення.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="zehner">
+        <h3>Mit -er: ein Zehner, in den Neunzigern</h3>
+        <p>Zahl + <b>-er</b> ergibt ein Nomen mit Endungen (wie <i>der Lehrer</i>):</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Wort</th><th>Bedeutung</th><th>Beispiel</th></tr>
+          <tr><td>der Zehner, der Fünfziger</td><td>Geldschein</td><td>Kannst du mir einen <b>Zehner</b> leihen? (= 10 Euro)</td></tr>
+          <tr><td>die Neunziger (Plural)</td><td>Jahrzehnt 1990–1999</td><td>Die Musik ist aus den <b>Neunzigern</b>.</td></tr>
+          <tr><td>ein Sechziger, eine Sechzigerin</td><td>Person zwischen 60 und 70</td><td>Meine Oma ist schon in den <b>Siebzigern</b>.</td></tr>
+        </table>
+        </div>
+        <p>Vor einem Nomen ist die Form mit -er ein Adjektiv <b>ohne Endung</b>: in den <b>achtziger</b> Jahren = in den <b>80er</b>-Jahren = in den <b>Achtzigerjahren</b>.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          <i>ein Zehner</i> — «десятка» (купюра), <i>die Neunziger</i> — «дев'яності» (роки), <i>in den Siebzigern sein</i> — «їй за сімдесят». Як іменник форма з -er змінюється: <i>mit einem Zehner, aus den Neunziger<b>n</b></i>. А перед іменником — ні: <i>in den neunziger Jahren</i>, <i>die 80er-Jahre</i>.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="uhrzeit">
+        <h3>Uhrzeiten: offiziell und im Alltag</h3>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Uhrzeit</th><th>offiziell (Radio, Bahn)</th><th>im Alltag</th></tr>
+          <tr><td>7.00</td><td>sieben Uhr</td><td>sieben (Uhr)</td></tr>
+          <tr><td>7.10</td><td>sieben Uhr zehn</td><td>zehn <b>nach</b> sieben</td></tr>
+          <tr><td>7.15</td><td>sieben Uhr fünfzehn</td><td><b>Viertel nach</b> sieben</td></tr>
+          <tr><td>7.30</td><td>sieben Uhr dreißig</td><td><b>halb acht</b></td></tr>
+          <tr><td>7.35</td><td>sieben Uhr fünfunddreißig</td><td>fünf nach halb acht</td></tr>
+          <tr><td>7.45</td><td>sieben Uhr fünfundvierzig</td><td><b>Viertel vor</b> acht</td></tr>
+          <tr><td>19.50</td><td>neunzehn Uhr fünfzig</td><td>zehn <b>vor</b> acht (abends)</td></tr>
+          <tr><td>1.00</td><td>ein Uhr</td><td>eins</td></tr>
+        </table>
+        </div>
+        <p class="beispiel">Der Film beginnt um <b>zwanzig Uhr fünfzehn</b>.</p>
+        <p class="beispiel">Wir treffen uns um <b>halb vier</b>. (= 15.30 Uhr)</p>
+        <p class="beispiel">Es ist <b>ein</b> Uhr. = Es ist <b>eins</b>.</p>
+        <p class="merke">halb acht = 7.30 Uhr! Man denkt schon an die nächste Stunde. Mit „Uhr“: ein Uhr – ohne „Uhr“: eins.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Офіційно (розклад, радіо, вокзал) кажуть 24-годинний формат: <i>vierzehn Uhr zehn</i>. У розмові — 12-годинний з <i>nach</i> (після), <i>vor</i> (до), <i>Viertel</i> (чверть), <i>halb</i>. <i>halb acht</i> — точно як українське «пів на восьму», тобто 7:30, а не 8:30! Хвилини в офіційному форматі йдуть після слова <i>Uhr</i>: <i>sieben Uhr zehn</i>.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="geld">
+        <h3>Geld, Grad und Rechnen: so spricht man</h3>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>geschrieben</th><th>gesprochen</th></tr>
+          <tr><td>3,50 €</td><td>drei Euro fünfzig</td></tr>
+          <tr><td>12,99 €</td><td>zwölf Euro neunundneunzig</td></tr>
+          <tr><td>0,80 €</td><td>achtzig Cent</td></tr>
+          <tr><td>200 €</td><td>zweihundert Euro</td></tr>
+          <tr><td>22 °C</td><td>zweiundzwanzig Grad (Celsius)</td></tr>
+          <tr><td>0 °C · −5 °C</td><td>null Grad · minus fünf Grad / fünf Grad minus</td></tr>
+          <tr><td>36,6 °C</td><td>sechsunddreißig Komma sechs Grad</td></tr>
+          <tr><td>5 + 3 = 8</td><td>fünf plus (und) drei ist (gleich) acht</td></tr>
+          <tr><td>9 − 4 = 5</td><td>neun minus (weniger) vier ist (gleich) fünf</td></tr>
+          <tr><td>6 · 7 = 42</td><td>sechs mal sieben ist (gleich) zweiundvierzig</td></tr>
+          <tr><td>20 : 4 = 5</td><td>zwanzig (geteilt) durch vier ist (gleich) fünf</td></tr>
+        </table>
+        </div>
+        <p class="beispiel">Das T-Shirt kostet <b>zwölf Euro neunundneunzig</b>.</p>
+        <p class="beispiel">Heute Nacht sind es <b>minus drei Grad</b>.</p>
+        <p class="merke">Euro, Cent und Grad haben im Plural keine Endung: zehn Euro, zwei Grad. Dezimalzahlen mit Komma: 2,5 = zwei Komma fünf.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Ціну читають «євро + центи», а слово <i>Cent</i> наприкінці зазвичай пропускають: <i>drei Euro fünfzig</i>. Одиниці виміру не змінюються в множині: <i>zehn Euro</i> (не «Euros»), <i>zwei Grad</i>. Десятковий знак — кома, як і в українській: <i>zwei Komma fünf</i>. Ділення — <i>durch</i>: «двадцять через чотири».
+        </div>
+      </section>
+
+      <section class="card regel-block" id="jahre">
+        <h3>Jahreszahlen: 1989 und 2026</h3>
+        <p>Jahre bis 1999 spricht man in <b>Hunderten</b>, ab 2000 in <b>Tausenden</b>.</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Jahr</th><th>gesprochen</th></tr>
+          <tr><td>1492</td><td><b>vierzehnhundert</b>zweiundneunzig</td></tr>
+          <tr><td>1800</td><td>achtzehnhundert</td></tr>
+          <tr><td>1989</td><td><b>neunzehnhundert</b>neunundachtzig</td></tr>
+          <tr><td>2000</td><td>zweitausend</td></tr>
+          <tr><td>2009</td><td><b>zweitausend</b>(und)neun</td></tr>
+          <tr><td>2026</td><td><b>zweitausend</b>sechsundzwanzig</td></tr>
+          <tr><td>44 v. Chr.</td><td>vierundvierzig vor Christus</td></tr>
+          <tr><td>800 n. Chr.</td><td>achthundert nach Christus</td></tr>
+        </table>
+        </div>
+        <p class="beispiel">Die Berliner Mauer fiel <b>1989</b>.</p>
+        <p class="beispiel">Ich bin <b>im Jahr 2012</b> geboren. = Ich bin <b>2012</b> geboren.</p>
+        <p class="merke">Vor der Jahreszahl steht nichts oder „im Jahr(e)“ – nie nur „in“: 2012 / im Jahr 2012.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          1989 — «дев'ятнадцять сотень вісімдесят дев'ять», а не «тисяча дев'ятсот…». Від 2000 рахують тисячами: <i>zweitausendzwölf</i>. Українське «у 2012 році» німецькою — просто <i>2012</i> або <i>im Jahr 2012</i>; «in 2012» — це англійська звичка, по-німецьки так не кажуть. Закінчення <i>-e</i> в <i>im Jahre</i> — стара форма, її можна не ставити.
+        </div>
+      </section>
+
+      <p class="section-label">II · Ordinalzahlen</p>
+
+      <section class="card regel-block" id="ordinal">
+        <h3>Ordinalzahlen: der 2. = der zweite – der Wievielte?</h3>
+        <p>Ordinalzahlen zeigen die Reihenfolge. Man schreibt sie als Ziffer mit <b>Punkt</b> (der 2.) oder als Wort (der zweite). Man liest sie immer mit der richtigen Adjektivendung: am 2. = am zweit<b>en</b>. Die Frage heißt: <b>der / die / das Wievielte?</b></p>
+        <p class="beispiel">Der <b>Wievielte</b> ist heute? – Heute ist der <b>12.</b> (= der zwölfte).</p>
+        <p class="beispiel">Zum <b>wievielten</b> Mal warst du in Italien? – Zum <b>dritten</b> Mal.</p>
+        <p class="beispiel">Sie wohnt im <b>4.</b> Stock. (gelesen: im vierten Stock)</p>
+        <p class="merke">Punkt nach der Ziffer = Ordinalzahl: 3 Kinder (drei) – das 3. Kind (das dritte).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Крапка після цифри в німецькій — це знак порядкового числівника, як українське «3-й». Тому <i>der 3. Mai</i> читають «der dritte Mai». Питання «котрий?/якого числа?» — <i>der Wievielte?</i>: <i>Der Wievielte ist heute?</i> — «Яке сьогодні число?».
+        </div>
+      </section>
+
+      <section class="card regel-block" id="te-ste">
+        <h3>-te oder -ste? der zweite, der zwanzigste</h3>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Regel</th><th>Beispiele (der, die, das …)</th></tr>
+          <tr><td>2–19: Zahl + <b>-t(e)</b></td><td>zwei<b>te</b>, vier<b>te</b>, fünf<b>te</b>, zehn<b>te</b>, elf<b>te</b>, neunzehn<b>te</b></td></tr>
+          <tr><td>ab 20: Zahl + <b>-st(e)</b></td><td>zwanzig<b>ste</b>, einundzwanzig<b>ste</b>, hundert<b>ste</b>, tausend<b>ste</b></td></tr>
+          <tr><td>Sonderformen</td><td><b>erste</b> (nicht „einte“), <b>dritte</b>, <b>siebte</b> (auch siebente), <b>achte</b> (nur ein t)</td></tr>
+          <tr><td>das letzte Stück entscheidet</td><td>hundert<b>erste</b>, hundertzwei<b>te</b>, hundert<b>dritte</b>, tausendzehn<b>te</b> – aber hundertzwanzig<b>ste</b></td></tr>
+        </table>
+        </div>
+        <p class="beispiel">Heute ist mein <b>vierzehnter</b> Geburtstag.</p>
+        <p class="beispiel">Das ist schon der <b>zwanzigste</b> Anruf heute!</p>
+        <p class="merke">Bis 19: -te. Ab 20: -ste. Merke dir: erste, dritte, siebte, achte.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Правило просте: від 2 до 19 додаємо <i>-t-</i>, від 20 — <i>-st-</i>, а далі йде закінчення прикметника. Лише чотири «неправильні» форми треба вивчити: <i>erste</i> (перший), <i>dritte</i> (третій), <i>siebte</i> (сьомий), <i>achte</i> (восьмий — одна t, бо «acht» уже закінчується на t). У великих числах дивимося на останню частину: 102 → <i>hundertzweite</i>, 120 → <i>hundertzwanzigste</i>.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="endungen">
+        <h3>Endungen wie beim Adjektiv: mein dritter Versuch, Zweiter werden</h3>
+        <p>Ordinalzahlen dekliniert man wie Adjektive – mit Nomen und auch ohne Nomen. Ohne Nomen schreibt man sie groß.</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th></th><th>mit bestimmtem Artikel</th><th>mit ein / mein</th></tr>
+          <tr><td class="gender">Nom.</td><td>der zweit<b>e</b> Platz</td><td>mein zweit<b>er</b> Platz · mein zweit<b>es</b> Eis</td></tr>
+          <tr><td class="gender">Akk.</td><td>den zweit<b>en</b> Platz</td><td>meinen zweit<b>en</b> Platz</td></tr>
+          <tr><td class="gender">Dat.</td><td>auf dem zweit<b>en</b> Platz</td><td>auf meinem zweit<b>en</b> Platz</td></tr>
+        </table>
+        </div>
+        <p class="beispiel">Sie hat heute schon ihren <b>zweiten</b> Wettkampf gewonnen.</p>
+        <p class="beispiel">Das ist schon mein <b>drittes</b> Eis heute.</p>
+        <p class="beispiel">Wir wohnen im <b>fünften</b> Stock.</p>
+        <p class="beispiel">Beim Lauf wurde Paul <b>Zweiter</b>. Mia kam als <b>Erste</b> ins Ziel.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Порядковий числівник — це, по суті, прикметник, тож закінчення ті самі, що в темі «Deklination des Adjektivs»: <i>der dritte</i>, <i>den dritten</i>, <i>ein dritter</i>. Без іменника («став другим», «прийшла першою») пишемо з великої: <i>Er wurde Zweiter. Sie ist die Erste.</i>
+        </div>
+      </section>
+
+      <section class="card regel-block" id="datum">
+        <h3>Das Datum: der 3. Oktober – am 3. Oktober</h3>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Frage / Situation</th><th>Form</th><th>Beispiel</th></tr>
+          <tr><td>Welches Datum ist heute?</td><td>der …<b>te</b> (Nom.)</td><td>Heute ist <b>der 3.</b> Oktober. (der dritte)</td></tr>
+          <tr><td>Wann?</td><td>am …<b>ten</b> (Dat.)</td><td>Ich habe <b>am 7.</b> März Geburtstag. (am siebten)</td></tr>
+          <tr><td>Von wann bis wann?</td><td>vom … bis (zum) …<b>ten</b></td><td>Die Ferien sind <b>vom 20.</b> Juli <b>bis zum 31.</b> August.</td></tr>
+          <tr><td>im Brief, oben rechts</td><td>den …<b>ten</b> (Akk.)</td><td>Kyjiw, <b>den 5.</b> Mai 2026</td></tr>
+          <tr><td>Monat als Zahl</td><td>Ordinalzahl + Ordinalzahl</td><td>am 3.10. = am dritten Zehnten</td></tr>
+        </table>
+        </div>
+        <p class="beispiel">Wir haben heute <b>den 14.</b> (= den vierzehnten).</p>
+        <p class="beispiel">Danke für deine Nachricht <b>vom 28.</b> (= vom achtundzwanzigsten).</p>
+        <p class="beispiel">Er kommt <b>am Freitag, dem 13.</b> (= dem dreizehnten).</p>
+        <p class="beispiel">Der <b>Erste</b> Mai ist ein Feiertag. (Name des Feiertags → groß)</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Дата — завжди порядковий числівник, як в українському «третього жовтня». Запам'ятай три форми: <i>Heute ist <b>der</b> dritt<b>e</b></i> (сьогодні третє), <i>am dritt<b>en</b></i> (третього — коли?), <i>den dritt<b>en</b></i> (у листі й у виразі <i>Wir haben heute den …</i>). Місяць цифрою теж читається порядковим: 3.10. — «третього десятого».
+        </div>
+      </section>
+
+      <section class="card regel-block" id="namen">
+        <h3>Nach Namen: Ludwig II. = Ludwig der Zweite</h3>
+        <p>Bei Königen, Kaisern und Päpsten steht nach dem Namen eine römische Zahl mit Punkt. Man liest sie als Ordinalzahl mit Artikel – großgeschrieben und mit der passenden Endung.</p>
+        <p class="beispiel"><b>Ludwig II.</b> (= Ludwig der Zweite) ließ das Schloss Neuschwanstein bauen.</p>
+        <p class="beispiel">Das Schloss wurde von <b>Ludwig II.</b> (= Ludwig dem Zweiten) gebaut.</p>
+        <p class="beispiel"><b>Heinrich VIII.</b> (= Heinrich der Achte) hatte sechs Frauen.</p>
+        <p class="beispiel">Ich lese ein Buch über <b>Elisabeth II.</b> (= Elisabeth die Zweite).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Як «Людовік Другий», тільки з артиклем, який змінюється за відмінком: <i>der Zweite</i> — <i>dem Zweiten</i> — <i>den Zweiten</i>. Римська цифра на письмі завжди з крапкою: <i>Karl IV.</i>
+        </div>
+      </section>
+
+      <section class="card regel-block" id="zu-dritt">
+        <h3>zu zweit, zu dritt: wie viele Personen?</h3>
+        <p><b>zu</b> + Ordinalzahl <b>ohne Endung</b> sagt, wie viele Personen zusammen etwas machen.</p>
+        <p class="beispiel">Die Aufgabe macht ihr <b>zu zweit</b>.</p>
+        <p class="beispiel">Wir waren nur <b>zu dritt</b> auf der Party.</p>
+        <p class="beispiel">Sie sind <b>zu viert</b> nach Wien gefahren.</p>
+        <p class="beispiel">Wir waren <b>zu zwanzigst</b> im Klassenzimmer.</p>
+        <p class="merke">zu zweit, zu dritt, zu viert, zu fünft – ohne -e!</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Відповідає українським «удвох, утрьох, учотирьох»: <i>zu zweit</i> — удвох, <i>zu dritt</i> — утрьох. Форма коротка, без закінчення: <i>zu viert</i>, не «zu vierte».
+        </div>
+      </section>
+
+      <section class="card regel-block" id="zweitbeste">
+        <h3>zweitbeste, drittgrößte: Ordinalzahl + Superlativ</h3>
+        <p>Die Ordinalzahl ohne Endung + Superlativ = ein Wort. Die Endung bekommt nur der Superlativ.</p>
+        <p class="beispiel">Hamburg ist die <b>zweitgrößte</b> Stadt Deutschlands.</p>
+        <p class="beispiel">Die Donau ist der <b>zweitlängste</b> Fluss Europas.</p>
+        <p class="beispiel">Lea ist die <b>drittschnellste</b> Läuferin in unserer Schule.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Українською кажемо двома словами — «друге за величиною місто», а німецькою одним: <i>die zweitgrößte Stadt</i>. Числівник без закінчення + найвищий ступінь: <i>zweit + größte</i>, <i>dritt + beste</i>. Докладніше про найвищий ступінь — у темі «Komparativ und Superlativ».
+        </div>
+      </section>
+
+      <section class="card regel-block" id="erste-letzte">
+        <h3>der erste – der letzte; Ersterer – Letzterer</h3>
+        <p>Am Anfang einer Reihe steht <i>der erste</i>, am Ende <i>der letzte</i>.<br>Hat man vorher zwei Personen oder Sachen genannt, kann man sie mit <b>der Erstere</b> (= der zuerst genannte) und <b>der Letztere</b> (= der zuletzt genannte) unterscheiden – auch im Plural. Das ist eher Schriftsprache.</p>
+        <p class="beispiel">Die <b>ersten</b> Gäste kamen um sieben, die <b>letzten</b> gingen um Mitternacht.</p>
+        <p class="beispiel">Tom und Ben spielen oft Tennis. <b>Ersterer</b> gewinnt fast immer, <b>Letzterer</b> ist trotzdem gut gelaunt.</p>
+        <p class="beispiel">Ich mag Äpfel und Birnen, <b>die Letzteren</b> aber nur, wenn sie weich sind.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          <i>der Erstere / der Letztere</i> — «перший / останній з двох названих», як українське «перший … другий» чи книжне «останній» у реченні «Том і Бен… останній був у гарному настрої». З артиклем: <i>der Letztere</i>; без артикля — сильне закінчення: <i>Letzterer</i>.
+        </div>
+      </section>
+
+      <p class="section-label">III · Weitere Zahlwörter</p>
+
+      <section class="card regel-block" id="bruch">
+        <h3>Bruchzahlen: halb, ein Drittel, ein Viertel</h3>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Zahl</th><th>Wort</th><th>Beispiel</th></tr>
+          <tr><td>½</td><td><b>halb</b> (Adjektiv) · <b>die Hälfte</b> (Nomen)</td><td>eine <b>halbe</b> Stunde · ein <b>halbes</b> Brot · die <b>Hälfte</b> der Klasse</td></tr>
+          <tr><td>1½ · 2½</td><td><b>anderthalb</b> = eineinhalb · zweieinhalb</td><td><b>anderthalb</b> Stunden (ohne Endung)</td></tr>
+          <tr><td>⅓ · ¼</td><td>ein Dritt<b>el</b> · ein Viert<b>el</b></td><td>ein <b>Drittel</b> der Schüler</td></tr>
+          <tr><td>¾</td><td>drei Viertel</td><td>drei <b>Viertel</b> des Weges</td></tr>
+          <tr><td>⅕ · ¹⁄₁₀</td><td>ein Fünft<b>el</b> · ein Zehnt<b>el</b></td><td>ein <b>Zehntel</b> Sekunde</td></tr>
+          <tr><td>¹⁄₂₀ · ¹⁄₁₀₀</td><td>ein Zwanzig<b>stel</b> · ein Hundert<b>stel</b></td><td>eine <b>Hundertstelsekunde</b></td></tr>
+        </table>
+        </div>
+        <p>Ab ⅓ gilt: Ordinalzahl + <b>-el</b> (ab 20: -stel). Diese Wörter sind Nomen (das Drittel), haben aber keine Kasusendungen. Mit einem Nomen bilden sie oft ein Wort: die <b>Viertelstunde</b>, ein <b>Dreivierteljahr</b>, zwei <b>Zehntelsekunden</b>.</p>
+        <p class="beispiel">Ich esse nur eine <b>halbe</b> Pizza.</p>
+        <p class="beispiel">Ein <b>Drittel</b> der Klasse fährt mit dem Rad zur Schule.</p>
+        <p class="beispiel">Wir warten schon eine <b>Viertelstunde</b>.</p>
+        <p class="beispiel">Die Fahrt dauert <b>eineinhalb</b> Stunden.</p>
+        <p class="beispiel">½ · ½ = ¼ : ein halb mal ein halb ist ein Viertel.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Для ½ є два слова: <i>halb</i> — «пів-, половинний» (прикметник із закінченнями: <i>eine halbe Stunde</i> — півгодини) і <i>die Hälfte</i> — «половина» (іменник: <i>die Hälfte der Kinder</i>). 1½ — <i>anderthalb</i> або <i>eineinhalb</i> («півтора»). Решта дробів — порядковий корінь + <i>-el</i>: <i>Drittel</i> (третина), <i>Viertel</i> (чверть), <i>Zehntel</i> (десята частина). Звідси й <i>Viertel nach sieben</i> у годиннику.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="erstens">
+        <h3>erstens, zweitens, drittens</h3>
+        <p>Ordinalzahl + <b>-ens</b> nummeriert Punkte einer Aufzählung. Diese Wörter haben keine Endung.<br>
+          In einer Liste stehen oft Ziffern <b>vor</b> dem Satz: <i>1. …, 2. …</i>. Im Text sind <i>erstens, zweitens</i> Satzglieder – meistens auf Position I, das Verb folgt direkt.</p>
+        <p class="beispiel">Meine Pläne fürs Wochenende: 1. Ich schlafe lange. 2. Ich treffe Emma. 3. Ich lerne für Bio.</p>
+        <p class="beispiel"><b>Erstens</b> habe ich keine Zeit, <b>zweitens</b> habe ich kein Geld.</p>
+        <p class="beispiel">Ich kann heute nicht kommen: Ich muss <b>erstens</b> lernen und <b>zweitens</b> auf meine Schwester aufpassen.</p>
+        <p class="merke">Erstens habe ich … – nach „erstens“ auf Position I kommt sofort das Verb.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          <i>erstens, zweitens, drittens</i> — «по-перше, по-друге, по-третє». На відміну від української, це повноцінний член речення: якщо він стоїть на першому місці, дієслово йде одразу за ним (<i>Erstens <b>habe</b> ich…</i>), а підмет — після дієслова. Кома після <i>erstens</i> не ставиться.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="mal">
+        <h3>Wie oft? einmal, dreimal – einmalig</h3>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Form</th><th>Wortart</th><th>Beispiel</th></tr>
+          <tr><td>Zahl + <b>-mal</b></td><td>Adverb, keine Endung</td><td>Ich war schon <b>zweimal</b> in Wien. (betont auch: zwei Mal)</td></tr>
+          <tr><td>Zahl + <b>-malig</b></td><td>Adjektiv, mit Endung</td><td>eine <b>einmalige</b> Chance · nach <b>dreimaligem</b> Klingeln</td></tr>
+          <tr><td>Ordinalzahl + <b>Mal</b></td><td>Nomen, groß, getrennt</td><td>zum <b>ersten Mal</b> · beim <b>dritten Mal</b> · jedes <b>Mal</b></td></tr>
+          <tr><td>vielmals, mehrmals, oftmals</td><td>ohne genaue Zahl</td><td>Danke <b>vielmals</b>! · Ich habe <b>mehrmals</b> angerufen.</td></tr>
+        </table>
+        </div>
+        <p class="beispiel">Wir haben <b>einmal</b>, <b>zweimal</b> geklingelt – erst beim <b>dritten Mal</b> hat jemand aufgemacht.</p>
+        <p class="beispiel">Das war eine <b>einmalige</b> Gelegenheit.</p>
+        <p class="beispiel">Entschuldige bitte <b>vielmals</b>!</p>
+        <p class="merke">einmal, dreimal = ein Wort, klein. Aber: das erste Mal, zum dritten Mal, jedes Mal = getrennt, Mal groß.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          <i>-mal</i> — «разів»: <i>einmal</i> — один раз, <i>dreimal</i> — тричі. Прикметник на <i>-malig</i>: <i>einmalig</i> — одноразовий, неповторний. «Уперше, утретє» — <i>zum ersten Mal, zum dritten Mal</i>: тут <i>Mal</i> — іменник, окремо і з великої. <i>mehrmals</i> — кілька разів, <i>vielmals</i> — «дуже» (у ввічливих формулах подяки й вибачення).
+        </div>
+      </section>
+
+      <section class="card regel-block" id="fach">
+        <h3>Wievielfach? einfach, dreifach, doppelt</h3>
+        <p>Zahl + <b>-fach</b> sagt, wie oft etwas gleichzeitig oder in gleicher Weise da ist. Als Adverb ohne Endung, als Adjektiv mit Endung. Statt <i>zweifach</i> sagt man meistens <b>doppelt</b>.</p>
+        <p class="beispiel">Die Tür ist <b>dreifach</b> gesichert. (Adverb)</p>
+        <p class="beispiel">Sie ist <b>dreifache</b> Weltmeisterin. (Adjektiv)</p>
+        <p class="beispiel">Ich habe das Buch <b>doppelt</b> – willst du eins?</p>
+        <p class="beispiel">Unser neues Zimmer ist <b>doppelt</b> so groß wie das alte.</p>
+        <p class="beispiel">Ohne Hilfe hast du die <b>doppelte</b> Arbeit.</p>
+        <p class="beispiel">Diese Flasche kann man <b>mehrfach</b> benutzen. (ohne genaue Zahl: mehrfach, vielfach)</p>
+        <p class="beispiel">Die Stadt hat ein <b>vielfältiges</b> Programm. (vielfältig = mit vielen verschiedenen Möglichkeiten)</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          <i>-fach</i> — «-кратний, у стільки разів»: <i>dreifach</i> — потрійний / утричі, <i>zehnfach</i> — удесятеро. <i>doppelt</i> — подвійний, удвічі (<i>doppelt so groß</i> — удвічі більший). <i>mehrfach</i> — неодноразово, <i>vielfältig</i> — різноманітний. Увага: <i>einfach</i> найчастіше означає «простий, просто» (<i>Das ist ganz einfach</i>), і лише інколи «одинарний».
+        </div>
+      </section>
+
+      <section class="card regel-block" id="erlei">
+        <h3>Wie viele Arten? zweierlei, einerlei</h3>
+        <p>Zahl + <b>-erlei</b> sagt, wie viele verschiedene Arten es gibt. Diese Wörter haben nie eine Endung. Ebenso ohne Zahl: <i>allerlei, vielerlei, keinerlei</i>.</p>
+        <p class="beispiel">Es gibt <b>zweierlei</b> Eis: Vanille und Schokolade.</p>
+        <p class="beispiel">Für dieses Problem gibt es <b>hunderterlei</b> Lösungen.</p>
+        <p class="beispiel">Auf dem Flohmarkt gibt es <b>allerlei</b> alte Sachen.</p>
+        <p class="beispiel">Wir hatten <b>keinerlei</b> Probleme.</p>
+        <p><b>einerlei</b> hat zwei Bedeutungen:</p>
+        <p class="beispiel">Kino oder Café? Das ist mir <b>einerlei</b>. (= egal)</p>
+        <p class="beispiel">Alle trugen <b>einerlei</b> T-Shirts. (= dieselbe Art, gleich)</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          <i>-erlei</i> — «…видів, …роду»: <i>zweierlei</i> — двох видів, <i>allerlei</i> — усілякий, всяка всячина, <i>keinerlei</i> — жодних. <i>Das ist mir einerlei</i> — «мені однаково, байдуже» (синонім <i>egal</i>).
+        </div>
+      </section>
+
+      <p class="section-label">IV · Römische Zahlen</p>
+
+      <section class="card regel-block" id="roemisch">
+        <h3>Römische Zahlen</h3>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Zeichen</th><th>I</th><th>V</th><th>X</th><th>L</th><th>C</th><th>D</th><th>M</th></tr>
+          <tr><td class="gender">Wert</td><td>1</td><td>5</td><td>10</td><td>50</td><td>100</td><td>500</td><td>1000</td></tr>
+        </table>
+        </div>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Regel</th><th>Beispiele</th></tr>
+          <tr><td>gleiche Zeichen: addieren (höchstens drei)</td><td>II = 2 · III = 3 · XX = 20 · CCC = 300</td></tr>
+          <tr><td>kleineres Zeichen <b>rechts</b>: addieren</td><td>VI = 6 · VIII = 8 · XII = 12 · LX = 60</td></tr>
+          <tr><td>kleineres Zeichen <b>links</b>: subtrahieren</td><td>IV = 4 · IX = 9 · XIX = 19 · XL = 40 · XC = 90 · CM = 900</td></tr>
+          <tr><td>lange Zahlen: von links nach rechts</td><td>MMXXVI = 1000 + 1000 + 10 + 10 + 5 + 1 = 2026</td></tr>
+        </table>
+        </div>
+        <p class="beispiel">Lies bitte <b>Kapitel IV</b> (= Kapitel vier).</p>
+        <p class="beispiel">Papst <b>Benedikt XVI.</b> (= Benedikt der Sechzehnte) kam aus Bayern.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Римські цифри в німецькій ті самі, що й в українській. Трапляються в іменах королів і пап (тоді читаються порядковим числівником з крапкою: <i>Benedikt XVI.</i> — «der Sechzehnte»), у номерах розділів, на циферблатах. Проста перевірка: менша цифра <b>праворуч</b> додається (VI = 6), <b>ліворуч</b> — віднімається (IV = 4). Тому 19 = <b>XIX</b> (10 + 9).
+        </div>
+      </section>
+
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: квіз ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">ein, eins, einer – und die anderen Kardinalzahlen</h2>
+      <p class="lead">Обери правильну форму. Подумай: є після числа іменник чи немає? Який рід і відмінок?</p>
+      <div class="card" id="ub1-quiz"></div>
+    </section>
+
+    <!-- ===== Üb. 2: числа словами ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Zahlen schreiben</h2>
+      <p class="lead">Напиши числа словами. Усе до мільйона — одним словом, без пробілів. <i>Million</i> — окремим словом і з великої літери (тут регістр перевіряється).</p>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> 17 → <input type="text" class="blank-input inline wide" data-ans="siebzehn"></div>
+        <div class="fill-item"><span class="num">2)</span> 36 → <input type="text" class="blank-input inline wide" data-ans="sechsunddreißig|sechsunddreissig"></div>
+        <div class="fill-item"><span class="num">3)</span> 60 → <input type="text" class="blank-input inline wide" data-ans="sechzig"></div>
+        <div class="fill-item"><span class="num">4)</span> 71 → <input type="text" class="blank-input inline wide" data-ans="einundsiebzig"></div>
+        <div class="fill-item"><span class="num">5)</span> 102 → <input type="text" class="blank-input inline wide" data-ans="hundertzwei|einhundertzwei"></div>
+        <div class="fill-item"><span class="num">6)</span> 999 → <input type="text" class="blank-input inline full" data-ans="neunhundertneunundneunzig"></div>
+        <div class="fill-item"><span class="num">7)</span> 1 250 → <input type="text" class="blank-input inline full" data-ans="tausendzweihundertfünfzig|eintausendzweihundertfünfzig"></div>
+        <div class="fill-item"><span class="num">8)</span> 16 000 → <input type="text" class="blank-input inline wide" data-ans="sechzehntausend"></div>
+        <div class="fill-item"><span class="num">9)</span> 2 000 000 → <input type="text" class="blank-input inline wide" data-case data-ans="zwei Millionen"></div>
+        <div class="fill-item"><span class="num">10)</span> 3 500 000 → <input type="text" class="blank-input inline full" data-case data-ans="drei Millionen fünfhunderttausend"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: Uhr, Geld, Jahr ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Uhr, Geld, Grad, Jahr</h2>
+      <p class="lead">Як це сказати? Обери варіант або напиши словами. Числа пиши одним словом.</p>
+      <div class="card" id="ub3-list">
+        <div class="fill-item"><span class="num">1)</span> 7.30 Uhr (im Alltag): Es ist
+          <select class="blank inline" data-ans="halb acht"><option value="">—</option><option>halb sieben</option><option>halb acht</option><option>sieben halb</option></select>.</div>
+        <div class="fill-item"><span class="num">2)</span> 8.45 Uhr (im Alltag): Es ist
+          <select class="blank inline" data-ans="Viertel vor neun"><option value="">—</option><option>Viertel nach neun</option><option>Viertel vor acht</option><option>Viertel vor neun</option></select>.</div>
+        <div class="fill-item"><span class="num">3)</span> 14.10 Uhr (im Alltag): Es ist
+          <input type="text" class="blank-input inline wide" data-ans="zehn nach zwei">.</div>
+        <div class="fill-item"><span class="num">4)</span> 20.15 Uhr (offiziell): Der Zug fährt um
+          <input type="text" class="blank-input inline wide" data-ans="zwanzig Uhr fünfzehn"> ab.</div>
+        <div class="fill-item"><span class="num">5)</span> 4,99 €: Das Heft kostet
+          <input type="text" class="blank-input inline wide" data-ans="vier Euro neunundneunzig|vier Euro neunundneunzig Cent|vier Euro und neunundneunzig Cent">.</div>
+        <div class="fill-item"><span class="num">6)</span> 0,50 €: Der Kaugummi kostet
+          <input type="text" class="blank-input inline wide" data-ans="fünfzig Cent">.</div>
+        <div class="fill-item"><span class="num">7)</span> −4 °C: Heute Nacht sind es
+          <select class="blank inline" data-ans="minus vier Grad"><option value="">—</option><option>minus vier Grade</option><option>minus vier Grad</option><option>minus vierte Grad</option></select>.</div>
+        <div class="fill-item"><span class="num">8)</span> 7 · 8 = 56:
+          <input type="text" class="blank-input inline full" data-ans="sieben mal acht ist sechsundfünfzig|sieben mal acht ist gleich sechsundfünfzig|sieben mal acht gleich sechsundfünfzig|sieben mal acht macht sechsundfünfzig"></div>
+        <div class="fill-item"><span class="num">9)</span> 36 : 4 = 9: sechsunddreißig
+          <select class="blank inline" data-ans="geteilt durch"><option value="">—</option><option>geteilt mit</option><option>mal</option><option>geteilt durch</option></select> vier ist neun.</div>
+        <div class="fill-item"><span class="num">10)</span> 1995: Meine Mutter ist
+          <input type="text" class="blank-input inline full" data-ans="neunzehnhundertfünfundneunzig|neunzehnhundertfuenfundneunzig"> in Lwiw geboren. (напиши рік)</div>
+        <div class="fill-item"><span class="num">11)</span> 2011: Mein Bruder ist
+          <input type="text" class="blank-input inline wide" data-ans="zweitausendelf|zweitausendundelf"> geboren.</div>
+        <div class="fill-item"><span class="num">12)</span> Ich bin
+          <select class="blank inline" data-ans="im Jahr"><option value="">—</option><option>in</option><option>am</option><option>im Jahr</option></select> 2012 geboren.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4: beide, paar, Dutzend, Tausende, -er ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">beide, paar, Dutzend, Tausende, Zehner</h2>
+      <p class="lead">Обери або впиши правильне слово. Де слово треба вписати, підказка в дужках; регістр там, де позначено «Aa», перевіряється.</p>
+      <div class="card" id="ub4-list">
+        <div class="fill-item"><span class="num">1)</span> Ich brauche ein neues
+          <select class="blank inline" data-ans="Paar"><option value="">—</option><option>paar</option><option>Paar</option></select> Turnschuhe.</div>
+        <div class="fill-item"><span class="num">2)</span> Ich komme in
+          <select class="blank inline" data-ans="ein paar"><option value="">—</option><option>ein Paar</option><option>ein paar</option><option>einem paar</option></select> Minuten.</div>
+        <div class="fill-item"><span class="num">3)</span> Anna und Lisa sind meine Cousinen.
+          <select class="blank inline" data-ans="Beide"><option value="">—</option><option>Beides</option><option>Beide</option><option>Beiden</option></select> wohnen in Köln.</div>
+        <div class="fill-item"><span class="num">4)</span> Möchtest du Tee oder Kakao? –
+          <select class="blank inline" data-ans="Beides"><option value="">—</option><option>Beide</option><option>Beiden</option><option>Beides</option></select>, bitte!</div>
+        <div class="fill-item"><span class="num">5)</span> Ich habe mit
+          <select class="blank inline" data-ans="beiden"><option value="">—</option><option>beide</option><option>beiden</option><option>beider</option></select> Lehrern gesprochen.</div>
+        <div class="fill-item"><span class="num">6)</span>
+          <select class="blank inline" data-ans="Die beiden"><option value="">—</option><option>Die beide</option><option>Die beiden</option><option>Das beides</option></select> sind seit einem Jahr ein
+          <select class="blank inline" data-ans="Paar"><option value="">—</option><option>Paar</option><option>paar</option></select>.</div>
+        <div class="fill-item"><span class="num">7)</span> Für den Kuchen brauchen wir ein
+          <input type="text" class="blank-input inline" data-case data-ans="Dutzend"> Eier. (12 · Aa)</div>
+        <div class="fill-item"><span class="num">8)</span> Beim Konzert waren
+          <input type="text" class="blank-input inline" data-ans="Tausende"> von Fans. (дуже багато, «тисячі»)</div>
+        <div class="fill-item"><span class="num">9)</span> Kannst du mir einen
+          <input type="text" class="blank-input inline" data-case data-ans="Zehner"> leihen? (купюра 10 € · Aa)</div>
+        <div class="fill-item"><span class="num">10)</span> Meine Eltern haben sich in den
+          <input type="text" class="blank-input inline wide" data-ans="Neunzigern|Neunzigerjahren|90ern|90er-Jahren|90erjahren"> kennengelernt. (1990–1999, одне слово)</div>
+        <div class="fill-item"><span class="num">11)</span> Das Foto ist aus den
+          <select class="blank inline" data-ans="achtziger"><option value="">—</option><option>achtzigsten</option><option>achtziger</option><option>achtzigeren</option></select> Jahren.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub4-check">Prüfen</button>
+        <button class="btn secondary" id="ub4-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub4-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5: токени ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Ordinalzahlen finden</h2>
+      <p class="lead">Натисни на всі <b>порядкові</b> числівники в листі — словом або цифрою з крапкою. Кількісні не познач.</p>
+      <div class="card" id="ub5-text">
+        <div class="mail-body">
+          <p>Liebe Oma,</p>
+          <p>heute ist der <span class="tok" data-correct="true">5.</span> Mai, und ich habe <span class="tok" data-correct="false">zwei</span> tolle Nachrichten! Beim Schwimmwettkampf bin ich <span class="tok" data-correct="true">Zweite</span> geworden. Nur <span class="tok" data-correct="false">ein</span> Mädchen war schneller als ich.</p>
+          <p>Am <span class="tok" data-correct="true">12.</span> Mai fahren wir mit der Klasse nach Hamburg – das ist schon unsere <span class="tok" data-correct="true">dritte</span> Klassenfahrt. Wir bleiben <span class="tok" data-correct="false">vier</span> Tage und schlafen in einer Jugendherberge im <span class="tok" data-correct="true">siebten</span> Stock.</p>
+          <p>Meine Freundin Emma feiert am <span class="tok" data-correct="true">zwanzigsten</span> Mai ihren <span class="tok" data-correct="true">14.</span> Geburtstag. Sie lädt <span class="tok" data-correct="false">dreißig</span> Leute ein, die Party beginnt um <span class="tok" data-correct="false">acht</span>. Ich schenke ihr <span class="tok" data-correct="false">drei</span> Kinokarten für die <span class="tok" data-correct="true">erste</span> Vorstellung am Sonntag.</p>
+          <p>Viele Grüße, deine Sofia</p>
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub5-check">Prüfen</button>
+        <button class="btn secondary" id="ub5-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub5-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 6: таблиця порядкових ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">der Wievielte?</h2>
+      <p class="lead">Напиши порядковий числівник з закінченням <b>-e</b> (як після <i>der</i>): 2 → <i>zweite</i>. Одним словом, без артикля.</p>
+      <div class="card" id="ub6-list" style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Zahl</th><th>der …</th><th>Zahl</th><th>der …</th></tr>
+          <tr><td>1</td><td><input type="text" class="blank-input" data-ans="erste"></td>
+              <td>20</td><td><input type="text" class="blank-input" data-ans="zwanzigste"></td></tr>
+          <tr><td>3</td><td><input type="text" class="blank-input" data-ans="dritte"></td>
+              <td>21</td><td><input type="text" class="blank-input" data-ans="einundzwanzigste"></td></tr>
+          <tr><td>4</td><td><input type="text" class="blank-input" data-ans="vierte"></td>
+              <td>30</td><td><input type="text" class="blank-input" data-ans="dreißigste|dreissigste"></td></tr>
+          <tr><td>7</td><td><input type="text" class="blank-input" data-ans="siebte|siebente"></td>
+              <td>100</td><td><input type="text" class="blank-input" data-ans="hundertste|einhundertste"></td></tr>
+          <tr><td>8</td><td><input type="text" class="blank-input" data-ans="achte"></td>
+              <td>101</td><td><input type="text" class="blank-input" data-ans="hunderterste|hundertunderste|einhunderterste"></td></tr>
+          <tr><td>11</td><td><input type="text" class="blank-input" data-ans="elfte"></td>
+              <td>103</td><td><input type="text" class="blank-input" data-ans="hundertdritte|einhundertdritte"></td></tr>
+          <tr><td>16</td><td><input type="text" class="blank-input" data-ans="sechzehnte"></td>
+              <td>1000</td><td><input type="text" class="blank-input" data-ans="tausendste|eintausendste"></td></tr>
+        </table>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub6-check">Prüfen</button>
+        <button class="btn secondary" id="ub6-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub6-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 7: дати й закінчення ===== -->
+    <section class="panel" id="panel-ub7">
+      <p class="section-label">Üb. 7</p>
+      <h2 class="panel-title">Datum, Endungen, zu dritt</h2>
+      <p class="lead">Напиши число з дужок словом, з правильним закінченням. Там, де позначено «Aa», перевіряється велика літера.</p>
+      <div class="card" id="ub7-list">
+        <div class="fill-item"><span class="num">1)</span> Heute ist der <input type="text" class="blank-input inline" data-ans="dritte"> Oktober. (3.)</div>
+        <div class="fill-item"><span class="num">2)</span> Wir fahren am <input type="text" class="blank-input inline" data-ans="ersten"> August ans Meer. (1.)</div>
+        <div class="fill-item"><span class="num">3)</span> Ich habe am <input type="text" class="blank-input inline" data-ans="siebten|siebenten"> März Geburtstag. (7.)</div>
+        <div class="fill-item"><span class="num">4)</span> Die Ferien dauern vom <input type="text" class="blank-input inline wide" data-ans="zwanzigsten"> Juli bis zum <input type="text" class="blank-input inline wide" data-ans="einunddreißigsten|einunddreissigsten"> August. (20. / 31.)</div>
+        <div class="fill-item"><span class="num">5)</span> Wir haben heute den <input type="text" class="blank-input inline" data-ans="vierzehnten"> . (14.)</div>
+        <div class="fill-item"><span class="num">6)</span> Wir wohnen im <input type="text" class="blank-input inline" data-ans="vierten"> Stock. (4.)</div>
+        <div class="fill-item"><span class="num">7)</span> Das ist schon mein <input type="text" class="blank-input inline" data-ans="zweites"> Eis heute! (2.)</div>
+        <div class="fill-item"><span class="num">8)</span> Beim Lauf wurde Tim <input type="text" class="blank-input inline" data-case data-ans="Dritter"> . (3. · Aa)</div>
+        <div class="fill-item"><span class="num">9)</span> Die Aufgabe macht ihr zu <input type="text" class="blank-input inline" data-ans="zweit"> . (2 особи)</div>
+        <div class="fill-item"><span class="num">10)</span> Hamburg ist die <input type="text" class="blank-input inline wide" data-ans="zweitgrößte|zweitgroesste"> Stadt Deutschlands. (2. + groß)</div>
+        <div class="fill-item"><span class="num">11)</span> Das Schloss Neuschwanstein wurde von Ludwig dem <input type="text" class="blank-input inline" data-case data-ans="Zweiten"> gebaut. (II. · Aa)</div>
+        <div class="fill-item"><span class="num">12)</span> Paul und Max sind Brüder. <input type="text" class="blank-input inline" data-case data-ans="Ersterer"> ist 12, Letzterer ist 15. (= Paul · Aa)</div>
+        <div class="fill-item"><span class="num">13)</span> Der <input type="text" class="blank-input inline" data-case data-ans="Wievielte"> ist heute? – Der fünfte. (питальне слово · Aa)</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub7-check">Prüfen</button>
+        <button class="btn secondary" id="ub7-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub7-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 8: сортування ===== -->
+    <section class="panel" id="panel-ub8">
+      <p class="section-label">Üb. 8</p>
+      <h2 class="panel-title">Welche Art von Zahlwort?</h2>
+      <p class="lead">Розклади слова за групами: частина цілого, порядок у переліку, скільки разів, у скільки разів, скільки видів.</p>
+      <div class="card" id="ub8-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 9: halb, -mal, -fach, -erlei ===== -->
+    <section class="panel" id="panel-ub9">
+      <p class="section-label">Üb. 9</p>
+      <h2 class="panel-title">halb, -mal, -fach, -erlei</h2>
+      <p class="lead">Впиши потрібне слово за підказкою в дужках. «Aa» — регістр перевіряється.</p>
+      <div class="card" id="ub9-list">
+        <div class="fill-item"><span class="num">1)</span> Ich warte schon eine <input type="text" class="blank-input inline" data-ans="halbe"> Stunde. (½)</div>
+        <div class="fill-item"><span class="num">2)</span> Die <input type="text" class="blank-input inline" data-case data-ans="Hälfte"> der Klasse fährt mit dem Bus. (½ як іменник · Aa)</div>
+        <div class="fill-item"><span class="num">3)</span> Der Film dauert <input type="text" class="blank-input inline wide" data-ans="anderthalb|eineinhalb"> Stunden. (1½)</div>
+        <div class="fill-item"><span class="num">4)</span> Ein <input type="text" class="blank-input inline" data-case data-ans="Drittel"> der Schüler kommt mit dem Rad. (⅓ · Aa)</div>
+        <div class="fill-item"><span class="num">5)</span> 15 Minuten sind eine <input type="text" class="blank-input inline wide" data-case data-ans="Viertelstunde"> . (одне слово · Aa)</div>
+        <div class="fill-item"><span class="num">6)</span> <input type="text" class="blank-input inline" data-ans="Erstens"> habe ich keine Zeit, <input type="text" class="blank-input inline" data-ans="zweitens"> keine Lust. (по-перше / по-друге)</div>
+        <div class="fill-item"><span class="num">7)</span> Ich war schon <input type="text" class="blank-input inline" data-ans="dreimal|drei Mal"> in Berlin. (3×)</div>
+        <div class="fill-item"><span class="num">8)</span> Das war eine <input type="text" class="blank-input inline" data-ans="einmalige"> Chance! (буває лише один раз, -malig)</div>
+        <div class="fill-item"><span class="num">9)</span> Erst beim <input type="text" class="blank-input inline" data-ans="dritten"> Mal hat es geklappt. (3.)</div>
+        <div class="fill-item"><span class="num">10)</span> Sie ist <input type="text" class="blank-input inline" data-ans="dreifache"> Weltmeisterin. (-fach, 3)</div>
+        <div class="fill-item"><span class="num">11)</span> Das neue Zimmer ist <input type="text" class="blank-input inline" data-ans="doppelt"> so groß wie das alte. (удвічі)</div>
+        <div class="fill-item"><span class="num">12)</span> Im Laden gibt es <input type="text" class="blank-input inline" data-ans="zweierlei"> Brot: hell und dunkel. (двох видів)</div>
+        <div class="fill-item"><span class="num">13)</span> Kino oder Café? Das ist mir <input type="text" class="blank-input inline" data-ans="einerlei"> . (= egal, слово на -erlei)</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub9-check">Prüfen</button>
+        <button class="btn secondary" id="ub9-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub9-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 10: склади речення ===== -->
+    <section class="panel" id="panel-ub10">
+      <p class="section-label">Üb. 10</p>
+      <h2 class="panel-title">Sätze bauen</h2>
+      <p class="lead">Склади речення: натискай картки по черзі. Натиснеш на вже поставлену — вона повернеться назад.</p>
+      <div class="card" id="ub10-order"></div>
+    </section>
+
+    <!-- ===== Üb. 11: римські цифри ===== -->
+    <section class="panel" id="panel-ub11">
+      <p class="section-label">Üb. 11</p>
+      <h2 class="panel-title">Römische Zahlen</h2>
+      <p class="lead">Перетвори: римські цифри → арабські (цифрами), арабські → римські. В останньому реченні — порядковий числівник словом («Aa»).</p>
+      <div class="card" id="ub11-list">
+        <div class="fill-item"><span class="num">1)</span> III = <input type="text" class="blank-input inline" data-ans="3"></div>
+        <div class="fill-item"><span class="num">2)</span> IX = <input type="text" class="blank-input inline" data-ans="9"></div>
+        <div class="fill-item"><span class="num">3)</span> XIV = <input type="text" class="blank-input inline" data-ans="14"></div>
+        <div class="fill-item"><span class="num">4)</span> XIX = <input type="text" class="blank-input inline" data-ans="19"></div>
+        <div class="fill-item"><span class="num">5)</span> XL = <input type="text" class="blank-input inline" data-ans="40"></div>
+        <div class="fill-item"><span class="num">6)</span> LXX = <input type="text" class="blank-input inline" data-ans="70"></div>
+        <div class="fill-item"><span class="num">7)</span> XC = <input type="text" class="blank-input inline" data-ans="90"></div>
+        <div class="fill-item"><span class="num">8)</span> MMXXVI = <input type="text" class="blank-input inline" data-ans="2026|2 026|2.026"></div>
+        <div class="fill-item"><span class="num">9)</span> 12 = <input type="text" class="blank-input inline" data-ans="XII"></div>
+        <div class="fill-item"><span class="num">10)</span> 49 = <input type="text" class="blank-input inline" data-ans="XLIX"></div>
+        <div class="fill-item"><span class="num">11)</span> 1999 = <input type="text" class="blank-input inline" data-ans="MCMXCIX"></div>
+        <div class="fill-item"><span class="num">12)</span> Heinrich VIII. = Heinrich der <input type="text" class="blank-input inline" data-case data-ans="Achte"> (Aa)</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub11-check">Prüfen</button>
+        <button class="btn secondary" id="ub11-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub11-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das Wichtigste</p>
+        <p>Kardinalzahlen haben fast nie eine Endung: mit vier Freunden. Nur <i>ein</i> ändert sich: einen Bruder, nur einer, der eine. Ab einer Million sind Zahlen Nomen: zwei Millionen. Ordinalzahlen bildet man mit -te (bis 19) und -ste (ab 20) und dekliniert sie wie Adjektive: am dritten Mai, Zweiter werden. Dazu kommen -el (ein Drittel), -ens (erstens), -mal (dreimal), -fach (dreifach) und -erlei (dreierlei).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Кількісні числівники майже не відмінюються — змінюється лише <i>ein</i> (і зрідка <i>zwei, drei</i>). Від мільйона числа — іменники з великої. Порядкові: до 19 — <i>-te</i>, від 20 — <i>-ste</i>, винятки <i>erste, dritte, siebte, achte</i>; закінчення як у прикметників, у датах — <i>der dritte / am dritten</i>. Суфікси похідних: <i>-el</i> (частина), <i>-ens</i> (по-перше), <i>-mal</i> (разів), <i>-fach</i> (-кратний), <i>-erlei</i> (видів).
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Де це ще трапляється</p>
+        <div class="gram-related" id="gramRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <p class="lead" id="gramBest" style="font-size:14px;"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/grammar-data.js"></script>
+<script src="../../data/lessons-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/site.js"></script>
+<script>
+  const GRAM_ID = "zahlwoerter";
+
+  // Üb. 1: квіз
+  buildQuiz('ub1-quiz', [
+    {q: "Ich habe nur ___ Schwester, nicht zwei.", opts: ["einer", "eine", "eins"], correct: "eine"},
+    {q: "Hast du einen Bleistift für mich? – Ja, ich habe zwei, du kannst ___ haben.", opts: ["ein", "eins", "einen"], correct: "einen"},
+    {q: "Von meinen Freunden hat nur ___ ein Handy ohne Internet.", opts: ["einer", "ein", "einen"], correct: "einer"},
+    {q: "Mit ___ von den beiden Mädchen habe ich schon gesprochen.", opts: ["eine", "einem", "einer"], correct: "einer"},
+    {q: "Ich habe zwei Hunde: ___ ist schwarz, der andere ist weiß.", opts: ["Einer der", "Der eine", "Der einer"], correct: "Der eine"},
+    {q: "___ gefällt das Buch, dem anderen nicht.", opts: ["Dem einem", "Einem", "Dem einen"], correct: "Dem einen"},
+    {q: "Das ist die Meinung ___ Lehrer. (= von zwei Lehrern)", opts: ["zweier", "zwei", "zweien"], correct: "zweier"},
+    {q: "Ich habe mit vier ___ gesprochen.", opts: ["Freunde", "Freunden", "Freund"], correct: "Freunden"},
+    {q: "Ich habe im Test ___ bekommen – die beste Note!", opts: ["ein Eins", "eine eins", "eine Eins"], correct: "eine Eins"},
+    {q: "In unserer Stadt leben zwei ___ Menschen.", opts: ["Millionen", "Million", "millionen"], correct: "Millionen"},
+    {q: "Wie spät ist es? – Es ist ___.", opts: ["ein", "eins", "einer"], correct: "eins"},
+    {q: "Das Kino in unserem Dorf hat nur ___ Saal.", opts: ["einen", "ein", "eins"], correct: "einen"},
+  ]);
+
+  // Üb. 2, 3, 4, 6, 7, 9, 11: пропуски
+  wireBlanks('ub2');
+  wireBlanks('ub3');
+  wireBlanks('ub4');
+  wireBlanks('ub6');
+  wireBlanks('ub7');
+  wireBlanks('ub9');
+  wireBlanks('ub11');
+
+  // Üb. 5: токени
+  setTotal(document.querySelectorAll('#ub5-text .tok[data-correct="true"]').length);
+  initTokenClicks('ub5-text');
+  document.getElementById('ub5-check').addEventListener('click', () => checkTokens('ub5-text', 'ub5-score', 'ub5'));
+  document.getElementById('ub5-reset').addEventListener('click', () => resetTokens('ub5-text', 'ub5-score', 'ub5'));
+
+  // Üb. 8: розсортуй
+  buildSort('ub8-sort', {
+    buckets: ["Teil (-el, halb)", "Reihenfolge (-ens)", "Wie oft? (-mal)", "Wievielfach? (-fach)", "Wie viele Arten? (-erlei)"],
+    items: [
+      {t: "ein Drittel", b: "Teil (-el, halb)"},
+      {t: "ein Viertel", b: "Teil (-el, halb)"},
+      {t: "die Hälfte", b: "Teil (-el, halb)"},
+      {t: "erstens", b: "Reihenfolge (-ens)"},
+      {t: "drittens", b: "Reihenfolge (-ens)"},
+      {t: "dreimal", b: "Wie oft? (-mal)"},
+      {t: "einmalig", b: "Wie oft? (-mal)"},
+      {t: "mehrmals", b: "Wie oft? (-mal)"},
+      {t: "zehnfach", b: "Wievielfach? (-fach)"},
+      {t: "doppelt", b: "Wievielfach? (-fach)"},
+      {t: "mehrfach", b: "Wievielfach? (-fach)"},
+      {t: "zweierlei", b: "Wie viele Arten? (-erlei)"},
+      {t: "allerlei", b: "Wie viele Arten? (-erlei)"},
+      {t: "keinerlei", b: "Wie viele Arten? (-erlei)"}
+    ]
+  });
+
+  // Üb. 10: склади речення
+  buildOrder('ub10-order', [
+    {words: ["Erstens", "habe", "ich", "keine Zeit"], end: ".",
+     alt: ["Ich habe erstens keine Zeit"]},
+    {words: ["Am ersten Mai", "fahren", "wir", "zu dritt", "ans Meer"], end: ".",
+     alt: ["Wir fahren am ersten Mai zu dritt ans Meer", "Zu dritt fahren wir am ersten Mai ans Meer"]},
+    {words: ["Ich", "habe", "dich", "schon dreimal", "angerufen"], end: ".",
+     alt: ["Schon dreimal habe ich dich angerufen"]},
+    {words: ["Hamburg", "ist", "die zweitgrößte Stadt", "Deutschlands"], end: ".", gross: true,
+     alt: ["Die zweitgrößte Stadt Deutschlands ist Hamburg"]},
+    {words: ["Die Hälfte der Klasse", "kommt", "mit dem Rad", "zur Schule"], end: ".",
+     alt: ["Mit dem Rad kommt die Hälfte der Klasse zur Schule", "Zur Schule kommt die Hälfte der Klasse mit dem Rad"]},
+    {words: ["Tim", "ist", "beim Lauf", "Zweiter", "geworden"], end: ".", gross: true,
+     alt: ["Beim Lauf ist Tim Zweiter geworden"]},
+    {words: ["Kannst", "du", "mir", "einen Zehner", "leihen"], end: "?"},
+    {words: ["Heute", "ist", "der dritte Oktober"], end: ".",
+     alt: ["Der dritte Oktober ist heute"]},
+  ]);
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🔢','📅','➗','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initGrammarPage(GRAM_ID);
+</script>
+</body>
+</html>
