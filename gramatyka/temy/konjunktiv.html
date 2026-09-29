@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Der Konjunktiv · Grammatik · Deutsch mit uns</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'gramatyka' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">GRAMMATIK · Кон'юнктив</span>
+        <h1>Der Konjunktiv</h1>
+        <p class="sub">Огляд теми: чим кон'юнктив відрізняється від індикатива, навіщо в німецькій два кон'юнктиви і як їх упізнати в тексті.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="regel" aria-selected="true">Regel</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Formen</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Wozu?</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Im Text</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Indirekte Rede</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Irreal</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Sätze bauen</button>
+    <button class="tab-btn" data-tab="ub7">Üb. 7 · Umformen</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== REGEL ===== -->
+    <section class="panel active" id="panel-regel">
+      <p class="section-label">Regel</p>
+      <h2 class="panel-title">Der Konjunktiv</h2>
+      <ul class="regel-toc" id="regelToc"></ul>
+
+      <div class="card">
+        <p>Ein Verb kann im <b>Indikativ</b> oder im <b>Konjunktiv</b> stehen. Der Indikativ zeigt die Wirklichkeit: So ist es. Der Konjunktiv zeigt etwas anderes: Das sagt ein anderer Mensch, oder das ist nur ein Wunsch, eine Idee, eine Fantasie.</p>
+        <p>Im Deutschen gibt es zwei Konjunktive. Den <b>Konjunktiv I</b> braucht man für die indirekte Rede. Den <b>Konjunktiv II</b> braucht man für Dinge, die nicht real sind.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Кон'юнктив — це «спосіб» дієслова, як в українській умовний спосіб. Індикатив (дійсний спосіб) повідомляє факт: <i>er geht</i> — «він іде». Кон'юнктив показує, що це не наш факт: або це <b>чужі слова</b>, які ми переказуємо (Konjunktiv I: <i>er gehe</i> — «він, мовляв, іде»), або це <b>нереальне</b> — бажання, мрія, уявна умова (Konjunktiv II: <i>er ginge / er würde gehen</i> — «він пішов би»). В українській для нереального є частка «б/би», а для переказу чужих слів окремої форми дієслова немає — ми кажемо «він каже, що йде». Німецька ж у газетах, звітах і шкільних творах саме формою дієслова позначає: «це не я стверджую, це сказав він». Ця сторінка — огляд; форми й вживання кожного кон'юнктиву розібрано в окремих темах.
+        </div>
+      </div>
+
+      <section class="card regel-block" id="indikativ">
+        <h3>Indikativ und Konjunktiv: Wirklichkeit oder Möglichkeit</h3>
+        <table class="gtable">
+          <tr><th></th><th>Was zeigt die Form?</th><th>Beispiel</th></tr>
+          <tr><td class="gender">Indikativ</td><td>Wirklichkeit: Das ist so.</td><td>Paul <b>ist</b> krank.</td></tr>
+          <tr><td class="gender">Konjunktiv I</td><td>Ein anderer sagt es.</td><td>Paul sagt, er <b>sei</b> krank.</td></tr>
+          <tr><td class="gender">Konjunktiv II</td><td>Nicht real: Wunsch, Idee, Fantasie.</td><td>Wenn Paul nicht krank <b>wäre</b>, <b>käme</b> er mit.</td></tr>
+        </table>
+        <p class="beispiel">Wir <b>fahren</b> am Samstag ans Meer. <span style="opacity:.7">(Das ist geplant — Indikativ.)</span></p>
+        <p class="beispiel">Wir <b>würden</b> gern jeden Samstag ans Meer <b>fahren</b>. <span style="opacity:.7">(Das ist nur ein Wunsch — Konjunktiv II.)</span></p>
+        <p class="merke">Indikativ = So ist es. Konjunktiv = So sagt es jemand (K I) oder so wäre es (K II).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Спершу завжди питай себе: мовець говорить про реальний факт — чи переказує чужі слова, чи уявляє те, чого немає? Від відповіді залежить форма дієслова. Найчастіша форма з усіх — звісно, індикатив; кон'юнктив з'являється тоді, коли мовець свідомо «відсторонюється» від дійсності.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="k1">
+        <h3>Konjunktiv I: die indirekte Rede</h3>
+        <p>Jemand hat etwas gesagt. Wir erzählen es mit unseren eigenen Worten weiter. Das ist die <b>indirekte Rede</b>. Das Verb steht dann oft im Konjunktiv I.</p>
+        <table class="gtable">
+          <tr><th>direkte Rede</th><th>indirekte Rede</th></tr>
+          <tr><td>Lena sagt: „Ich <b>bin</b> müde.“</td><td>Lena sagt, sie <b>sei</b> müde.</td></tr>
+          <tr><td>Der Trainer sagt: „Das Training <b>beginnt</b> um vier.“</td><td>Der Trainer sagt, das Training <b>beginne</b> um vier.</td></tr>
+          <tr><td>Tim sagt: „Ich <b>habe</b> das Buch gelesen.“</td><td>Tim sagt, er <b>habe</b> das Buch gelesen.</td></tr>
+        </table>
+        <p>Die indirekte Rede hat <b>keine Anführungszeichen</b>. Die Wörter müssen nicht gleich sein, aber der Inhalt muss genau stimmen. Oft ändern sich die Pronomen: <i>ich → er/sie</i>, <i>mein → sein/ihr</i>.</p>
+        <p>Man findet den Konjunktiv I vor allem in Zeitungen, in Nachrichten, in Berichten und in Referaten.</p>
+        <p class="beispiel">Die Schulleiterin erklärt, die Ferien <b>beginnen</b> … → besser: die Ferien <b>begännen</b> / <b>würden</b> am Montag <b>beginnen</b>. <span style="opacity:.7">(siehe unten: Konjunktiv II statt Konjunktiv I)</span></p>
+        <p class="merke">Indirekte Rede: keine Anführungszeichen, Verb im Konjunktiv I — Inhalt genau, Worte frei.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Konjunktiv I — це «газетний» кон'юнктив. Коли журналіст пише <i>Der Minister sagt, die Steuern <b>sinken</b></i>, це звучить так, ніби журналіст сам це стверджує. А <i>die Steuern <b>sänken</b> / er sagt, sie <b>würden sinken</b></i> чи <i>die Lage <b>sei</b> stabil</i> одразу показує: «це слова міністра, не мої». Лапок у непрямій мові немає; займенники міняються, як і в українській (<i>«Я втомилася» → вона каже, що <b>вона</b> втомилася</i>). У розмовній мові німці часто кажуть просто індикативом (<i>Lena sagt, dass sie müde ist</i>) — це не помилка, але в письмовому тексті очікують кон'юнктив. Основна ознака Konjunktiv I у 3-й особі однини — закінчення <b>-e</b>: <i>er komme, sie habe, es gebe, er könne</i>; <i>sein</i> має особливу форму: <i>er sei</i>.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="k2">
+        <h3>Konjunktiv II: das Irreale</h3>
+        <p>Mit dem Konjunktiv II sprechen wir über Dinge, die <b>nicht wirklich</b> sind: Wünsche, Träume, Fantasien und Bedingungen, die nicht erfüllt sind.</p>
+        <table class="gtable">
+          <tr><th>Wirklichkeit (Indikativ)</th><th>nicht real (Konjunktiv II)</th></tr>
+          <tr><td>Ich <b>habe</b> keinen Hund.</td><td><b>Hätte</b> ich doch einen Hund! <span style="opacity:.7">(Wunsch)</span></td></tr>
+          <tr><td>Es <b>ist</b> kalt. Wir <b>gehen</b> nicht schwimmen.</td><td>Wenn es nicht so kalt <b>wäre</b>, <b>würden</b> wir schwimmen <b>gehen</b>. <span style="opacity:.7">(Bedingung)</span></td></tr>
+          <tr><td>Ich <b>kann</b> nicht fliegen.</td><td>Wenn ich fliegen <b>könnte</b>, <b>flöge</b> ich nach Kyjiw. <span style="opacity:.7">(Fantasie)</span></td></tr>
+        </table>
+        <p>Es gibt zwei Arten von Formen:</p>
+        <p class="beispiel">eigene Formen: ich <b>wäre</b>, ich <b>hätte</b>, ich <b>käme</b>, ich <b>könnte</b>, ich <b>müsste</b></p>
+        <p class="beispiel">würde + Infinitiv: ich <b>würde</b> kommen, ich <b>würde</b> spielen, ich <b>würde</b> fahren</p>
+        <p>Auch höfliche Bitten klingen im Konjunktiv II freundlicher: <i><b>Könnten</b> Sie mir bitte helfen?</i></p>
+        <p class="merke">Konjunktiv II = nicht real: Wunsch, Traum, Fantasie, „wenn …, dann …“. Formen: wäre, hätte, käme … oder würde + Infinitiv.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Konjunktiv II відповідає українському умовному способу з «би»: <i>Wenn ich Zeit hätte, würde ich kommen</i> — «Якби я мав час, я б прийшов». Він потрібен для всього, чого насправді немає: мрій, фантазій, нездійсненних умов, а ще для ввічливих прохань («Чи не могли б ви…»). Власні форми утворюються від основи претерита, часто з умлаутом (<i>war → wäre, hatte → hätte, kam → käme</i>); для більшості слабких дієслів замість них уживають <i>würde + інфінітив</i>, бо їхня власна форма збігається з претеритом (<i>ich spielte</i> — це і «я грав», і «я б грав»).
+        </div>
+      </section>
+
+      <section class="card regel-block" id="zeit">
+        <h3>Gegenwart und Vergangenheit im Konjunktiv</h3>
+        <p>Der Indikativ hat viele Zeitformen. Der Konjunktiv hat nur zwei Stufen: <b>Gegenwart</b> und <b>Vergangenheit</b>.</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th></th><th>Indikativ</th><th>Konjunktiv I</th><th>Konjunktiv II</th></tr>
+          <tr><td class="gender">Gegenwart</td><td>er geht<br>er lernt</td><td>er <b>gehe</b><br>er <b>lerne</b></td><td>er <b>ginge</b> / er <b>würde</b> gehen<br>er <b>würde</b> lernen</td></tr>
+          <tr><td class="gender">Vergangenheit<br>mit sein</td><td>er ging<br>er ist gegangen<br>er war gegangen</td><td>er <b>sei</b> gegangen</td><td>er <b>wäre</b> gegangen</td></tr>
+          <tr><td class="gender">Vergangenheit<br>mit haben</td><td>er lernte<br>er hat gelernt<br>er hatte gelernt</td><td>er <b>habe</b> gelernt</td><td>er <b>hätte</b> gelernt</td></tr>
+        </table>
+        </div>
+        <p class="beispiel">Anna sagt, sie <b>sei</b> gestern im Kino <b>gewesen</b>. <span style="opacity:.7">(K I, Vergangenheit)</span></p>
+        <p class="beispiel">Wenn wir früher losgefahren <b>wären</b>, <b>hätten</b> wir den Zug nicht <b>verpasst</b>. <span style="opacity:.7">(K II, Vergangenheit)</span></p>
+        <p class="merke">Vergangenheit im Konjunktiv: sei / habe (K I) oder wäre / hätte (K II) + Partizip II.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Претерит, перфект і плюсквамперфект індикатива в кон'юнктиві «зливаються» в одну форму минулого: допоміжне дієслово в кон'юнктиві + Partizip II. Вибір <i>sein</i> чи <i>haben</i> — той самий, що в перфекті: <i>er ist gegangen → er sei / wäre gegangen</i>; <i>er hat gelernt → er habe / hätte gelernt</i>. Порівняй з українським «він би навчився» — теж одна форма для будь-якого минулого.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="ersatz">
+        <h3>Konjunktiv II statt Konjunktiv I</h3>
+        <p>Manchmal ist der Konjunktiv I genau gleich wie der Indikativ. Dann sieht man nicht, dass es indirekte Rede ist. In diesem Fall nimmt man den <b>Konjunktiv II</b>.</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th></th><th>Indikativ</th><th>Konjunktiv I</th><th>in der indirekten Rede</th></tr>
+          <tr><td class="gender">er / sie</td><td>hat</td><td>habe</td><td>er <b>habe</b> ✓ (anders als Indikativ)</td></tr>
+          <tr><td class="gender">sie (Pl.)</td><td>haben</td><td>haben</td><td>sie <b>hätten</b> (K II, weil K I = Indikativ)</td></tr>
+          <tr><td class="gender">wir</td><td>kommen</td><td>kommen</td><td>wir <b>kämen</b> / wir <b>würden</b> kommen</td></tr>
+          <tr><td class="gender">sie (Pl.)</td><td>sind</td><td>seien</td><td>sie <b>seien</b> ✓ (sein hat immer eigene Formen)</td></tr>
+        </table>
+        </div>
+        <p class="beispiel">Die Schüler sagen, sie <b>hätten</b> keine Hausaufgaben. <span style="opacity:.7">(nicht: sie haben)</span></p>
+        <p class="beispiel">Die Schüler sagen, sie <b>seien</b> müde. <span style="opacity:.7">(sein: Konjunktiv I ist eindeutig)</span></p>
+        <p class="merke">Konjunktiv I = Indikativ? Dann Konjunktiv II nehmen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Форми Konjunktiv I часто збігаються з індикативом — особливо в <i>ich</i>, <i>wir</i>, <i>sie/Sie</i> (<i>wir haben — wir haben</i>). Тоді переказ не видно, і його «рятує» Konjunktiv II: <i>sie hätten, wir kämen</i> або <i>würde + інфінітив</i>. Через це Konjunktiv II у мові трапляється частіше, ніж Konjunktiv I, і тому в розділі його форми вивчаються першими. Дієслово <i>sein</i> — виняток: його Konjunktiv I завжди впізнаваний (<i>ich sei, wir seien, sie seien</i>).
+        </div>
+      </section>
+
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: сортування форм ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Indikativ, Konjunktiv I oder Konjunktiv II?</h2>
+      <p class="lead">Розклади форми дієслів по кошиках: це індикатив (факт), Konjunktiv I (переказ) чи Konjunktiv II (нереальне)?</p>
+      <div class="card" id="ub1-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 2: квіз ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Was drückt der Satz aus?</h2>
+      <p class="lead">Визнач, що виражає речення або яка форма підходить. Обери одну відповідь.</p>
+      <div class="card" id="ub2-quiz"></div>
+    </section>
+
+    <!-- ===== Üb. 3: токени ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Konjunktiv im Text finden</h2>
+      <p class="lead">Натисни на всі дієслова в кон'юнктиві (I або II). Дієслова в індикативі не позначай. Потім натисни «Prüfen».</p>
+      <div class="card" id="ub3-text">
+        <p class="section-label" style="margin:0 0 6px;">Schülerzeitung „Pausenhof“</p>
+        <p style="font-size:16px; line-height:1.8;">
+          Unsere Schule <span class="tok" data-correct="false">bekommt</span> eine neue Sporthalle.
+          Der Direktor <span class="tok" data-correct="false">erklärte</span> gestern, die Halle <span class="tok" data-correct="true">sei</span> fast fertig.
+          Sie <span class="tok" data-correct="true">werde</span> im Mai eröffnet.
+          Viele Schüler <span class="tok" data-correct="false">freuen</span> sich schon.
+          Tim aus der 8b <span class="tok" data-correct="false">sagt</span>: „Am liebsten <span class="tok" data-correct="true">würde</span> ich schon morgen dort trainieren!“
+          Die Schulsprecherin <span class="tok" data-correct="false">meint</span>, man <span class="tok" data-correct="true">habe</span> sehr lange gewartet.
+          Wenn es mehr Geld <span class="tok" data-correct="true">gäbe</span>, <span class="tok" data-correct="true">könnte</span> die Schule auch ein Schwimmbad bauen.
+          Aber das <span class="tok" data-correct="false">bleibt</span> leider ein Traum.
+        </p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4: indirekte Rede, випадні списки ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">In der Schülerzeitung: indirekte Rede</h2>
+      <p class="lead">Ти пишеш статтю для шкільної газети. Обери форму, як у письмовому тексті: Konjunktiv I, а якщо він збігається з індикативом — Konjunktiv II.</p>
+      <div class="card" id="ub4-list">
+        <div class="fill-item"><span class="num">1)</span> Der Trainer sagt, das Spiel
+          <select class="blank inline" data-ans="beginne"><option value="">—</option><option>beginnt</option><option>beginne</option><option>begänne</option></select>
+          um drei Uhr.</div>
+        <div class="fill-item"><span class="num">2)</span> Frau Weber erklärt, sie
+          <select class="blank inline" data-ans="sei"><option value="">—</option><option>wäre</option><option>ist</option><option>sei</option></select>
+          heute nicht in der Schule.</div>
+        <div class="fill-item"><span class="num">3)</span> Die Mädchen sagen, sie
+          <select class="blank inline" data-ans="hätten"><option value="">—</option><option>hätten</option><option>haben</option><option>habe</option></select>
+          das Spiel gewonnen.</div>
+        <div class="fill-item"><span class="num">4)</span> Lukas erzählt, er
+          <select class="blank inline" data-ans="habe"><option value="">—</option><option>hat</option><option>hätte</option><option>habe</option></select>
+          einen neuen Hund.</div>
+        <div class="fill-item"><span class="num">5)</span> Der Direktor meint, jeder Schüler
+          <select class="blank inline" data-ans="könne"><option value="">—</option><option>könne</option><option>kann</option><option>könnte</option></select>
+          beim Fest mitmachen.</div>
+        <div class="fill-item"><span class="num">6)</span> Die Eltern sagen, sie
+          <select class="blank inline" data-ans="kämen"><option value="">—</option><option>kommen</option><option>kämen</option><option>komme</option></select>
+          am Abend zum Konzert.</div>
+        <div class="fill-item"><span class="num">7)</span> Tim berichtet, er
+          <select class="blank inline" data-ans="sei"><option value="">—</option><option>sei</option><option>ist</option><option>habe</option></select>
+          gestern krank gewesen.</div>
+        <div class="fill-item"><span class="num">8)</span> Die Schüler sagen, sie
+          <select class="blank inline" data-ans="seien"><option value="">—</option><option>sind</option><option>wären</option><option>seien</option></select>
+          nach dem Ausflug sehr müde.</div>
+        <div class="fill-item"><span class="num">9)</span> Anna schreibt, sie
+          <select class="blank inline" data-ans="habe"><option value="">—</option><option>habe</option><option>hat</option><option>sei</option></select>
+          das Buch schon gelesen.</div>
+        <div class="fill-item"><span class="num">10)</span> Die Lehrer erklären, sie
+          <select class="blank inline" data-ans="hätten"><option value="">—</option><option>haben</option><option>habe</option><option>hätten</option></select>
+          die Tests schon korrigiert.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub4-check">Prüfen</button>
+        <button class="btn secondary" id="ub4-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub4-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5: Konjunktiv II, пропуски ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Wünsche und Fantasien</h2>
+      <p class="lead">Впиши дієслово з дужок у Konjunktiv II (одним словом: wäre, hätte, würde, könnte …).</p>
+      <div class="card" id="ub5-list">
+        <div class="fill-item"><span class="num">1)</span> Wenn ich mehr Zeit
+          <input type="text" class="blank-input inline" data-ans="hätte"> (haben),
+          <input type="text" class="blank-input inline" data-ans="würde"> (werden) ich öfter lesen.</div>
+        <div class="fill-item"><span class="num">2)</span> Ich
+          <input type="text" class="blank-input inline" data-ans="wäre"> (sein) jetzt gern am Meer.</div>
+        <div class="fill-item"><span class="num">3)</span>
+          <input type="text" class="blank-input inline" data-ans="hätte"> (haben) ich doch ein eigenes Zimmer!</div>
+        <div class="fill-item"><span class="num">4)</span> Wenn es nicht so kalt
+          <input type="text" class="blank-input inline" data-ans="wäre"> (sein),
+          <input type="text" class="blank-input inline" data-ans="könnten"> (können) wir schwimmen gehen.</div>
+        <div class="fill-item"><span class="num">5)</span> An deiner Stelle
+          <input type="text" class="blank-input inline" data-ans="würde"> (werden) ich das nicht machen.</div>
+        <div class="fill-item"><span class="num">6)</span> Mit dem Bus
+          <input type="text" class="blank-input inline" data-ans="wären"> (sein) wir schneller gewesen.</div>
+        <div class="fill-item"><span class="num">7)</span> Wenn ich das gewusst
+          <input type="text" class="blank-input inline" data-ans="hätte"> (haben),
+          <input type="text" class="blank-input inline" data-ans="wäre"> (sein) ich früher gekommen.</div>
+        <div class="fill-item"><span class="num">8)</span> Ich
+          <input type="text" class="blank-input inline" data-ans="könnte"> (können) den ganzen Tag Pizza essen!</div>
+        <div class="fill-item"><span class="num">9)</span> Tom
+          <input type="text" class="blank-input inline" data-ans="hätte"> (haben) gern einen Hund, aber seine Mutter ist allergisch.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub5-check">Prüfen</button>
+        <button class="btn secondary" id="ub5-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub5-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 6: склади речення ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">Sätze bauen</h2>
+      <p class="lead">Склади речення: натискай слова по черзі; натиснеш на вже поставлене — воно повернеться.</p>
+      <div class="card" id="ub6-order"></div>
+    </section>
+
+    <!-- ===== Üb. 7: перетворення ===== -->
+    <section class="panel" id="panel-ub7">
+      <p class="section-label">Üb. 7</p>
+      <h2 class="panel-title">Umformen</h2>
+      <p class="lead">1–5: перекажи слова в непрямій мові (Konjunktiv I, а якщо він збігається з індикативом — Konjunktiv II). Напиши все речення. 6–10: перетвори факт на бажання з Konjunktiv II — допиши кінець речення.</p>
+      <div class="card" id="ub7-list">
+        <div class="fill-item"><span class="num">1)</span> Max sagt: „Ich bin müde.“<br>→
+          <input type="text" class="blank-input inline full" data-ans="Max sagt, er sei müde|Max sagt er sei müde|Max sagt, dass er müde sei|Max sagt dass er müde sei"></div>
+        <div class="fill-item"><span class="num">2)</span> Lena sagt: „Ich habe keinen Hunger.“<br>→
+          <input type="text" class="blank-input inline full" data-ans="Lena sagt, sie habe keinen Hunger|Lena sagt sie habe keinen Hunger|Lena sagt, dass sie keinen Hunger habe|Lena sagt dass sie keinen Hunger habe"></div>
+        <div class="fill-item"><span class="num">3)</span> Tom erzählt: „Ich bin gestern ins Kino gegangen.“<br>→
+          <input type="text" class="blank-input inline full" data-ans="Tom erzählt, er sei gestern ins Kino gegangen|Tom erzählt er sei gestern ins Kino gegangen|Tom erzählt, dass er gestern ins Kino gegangen sei|Tom erzählt dass er gestern ins Kino gegangen sei"></div>
+        <div class="fill-item"><span class="num">4)</span> Die Kinder sagen: „Wir haben keine Zeit.“<br>→
+          <input type="text" class="blank-input inline full" data-ans="Die Kinder sagen, sie hätten keine Zeit|Die Kinder sagen sie hätten keine Zeit|Die Kinder sagen, dass sie keine Zeit hätten|Die Kinder sagen dass sie keine Zeit hätten"></div>
+        <div class="fill-item"><span class="num">5)</span> Die Lehrerin sagt: „Der Test ist leicht.“<br>→
+          <input type="text" class="blank-input inline full" data-ans="Die Lehrerin sagt, der Test sei leicht|Die Lehrerin sagt der Test sei leicht|Die Lehrerin sagt, dass der Test leicht sei|Die Lehrerin sagt dass der Test leicht sei"></div>
+        <div class="fill-item"><span class="num">6)</span> Ich habe kein Fahrrad. → Wenn ich doch
+          <input type="text" class="blank-input inline" data-ans="ein Fahrrad hätte"> !</div>
+        <div class="fill-item"><span class="num">7)</span> Ich bin nicht in Berlin. → Wenn ich doch
+          <input type="text" class="blank-input inline" data-ans="in Berlin wäre"> !</div>
+        <div class="fill-item"><span class="num">8)</span> Ich kann nicht schwimmen. → Wenn ich doch
+          <input type="text" class="blank-input inline" data-ans="schwimmen könnte"> !</div>
+        <div class="fill-item"><span class="num">9)</span> Ich habe den Bus verpasst. → Wenn ich den Bus doch nicht
+          <input type="text" class="blank-input inline" data-ans="verpasst hätte"> !</div>
+        <div class="fill-item"><span class="num">10)</span> Es regnet. → Wenn es doch nicht
+          <input type="text" class="blank-input inline" data-ans="regnen würde|regnete"> !</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub7-check">Prüfen</button>
+        <button class="btn secondary" id="ub7-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub7-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das Wichtigste</p>
+        <p>Der Indikativ zeigt die Wirklichkeit. Der Konjunktiv I steht in der indirekten Rede: Paul sagt, er sei krank. Der Konjunktiv II zeigt, was nicht real ist: Wenn ich Zeit hätte, würde ich kommen. Ist der Konjunktiv I gleich wie der Indikativ, nimmt man den Konjunktiv II.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Індикатив — факти. Konjunktiv I — переказ чужих слів без лапок (<i>er sei, sie habe, es gebe</i>), переважно в письмових текстах. Konjunktiv II — нереальне: бажання, мрії, уявні умови, ввічливі прохання (<i>wäre, hätte, käme, würde + інфінітив</i>). Минуле в обох кон'юнктивах — одна форма: <i>sei/habe</i> або <i>wäre/hätte</i> + Partizip II. Якщо Konjunktiv I не відрізняється від індикатива, його замінює Konjunktiv II.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Де це ще трапляється</p>
+        <div class="gram-related" id="gramRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <p class="lead" id="gramBest" style="font-size:14px;"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/grammar-data.js"></script>
+<script src="../../data/lessons-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/site.js"></script>
+<script>
+  const GRAM_ID = "konjunktiv";
+
+  // Üb. 1: розсортуй форми
+  buildSort('ub1-sort', {
+    buckets: ["Indikativ", "Konjunktiv I", "Konjunktiv II"],
+    items: [
+      {t: "er kommt", b: "Indikativ"}, {t: "er komme", b: "Konjunktiv I"}, {t: "er käme", b: "Konjunktiv II"},
+      {t: "sie hat", b: "Indikativ"}, {t: "sie habe", b: "Konjunktiv I"}, {t: "sie hätte", b: "Konjunktiv II"},
+      {t: "es ist", b: "Indikativ"}, {t: "es sei", b: "Konjunktiv I"}, {t: "es wäre", b: "Konjunktiv II"},
+      {t: "er kann", b: "Indikativ"}, {t: "er könne", b: "Konjunktiv I"}, {t: "er würde fahren", b: "Konjunktiv II"},
+      {t: "sie ist gekommen", b: "Indikativ"}, {t: "sie sei gekommen", b: "Konjunktiv I"}, {t: "sie hätte gelernt", b: "Konjunktiv II"}
+    ]
+  });
+
+  // Üb. 2: квіз
+  const W = "Wirklichkeit (Indikativ)", R = "indirekte Rede (Konjunktiv I)", I = "nicht real (Konjunktiv II)";
+  buildQuiz('ub2-quiz', [
+    {q: "„Morgen fahren wir nach Wien.“", opts: [R, W, I], correct: W},
+    {q: "„Die Zeitung schreibt, das Konzert falle aus.“", opts: [W, I, R], correct: R},
+    {q: "„Wenn ich ein Pferd hätte, würde ich jeden Tag reiten.“", opts: [I, R, W], correct: I},
+    {q: "„Mia behauptet, sie habe die Hausaufgaben gemacht.“", opts: [R, I, W], correct: R},
+    {q: "„Wäre doch schon Sommer!“", opts: [W, R, I], correct: I},
+    {q: "„Gestern ist Paul zu spät gekommen.“", opts: [I, W, R], correct: W},
+    {q: "Welche Form ist Konjunktiv I?", opts: ["er käme", "er kommt", "er komme"], correct: "er komme"},
+    {q: "Welche Form ist Konjunktiv II?", opts: ["sie hätte", "sie habe", "sie hat"], correct: "sie hätte"},
+    {q: "Im Zeitungstext: „Die Schüler sagen, ___.“", opts: ["sie haben keine Zeit", "sie hätten keine Zeit", "sie habe keine Zeit"], correct: "sie hätten keine Zeit"},
+    {q: "Welche Form ist Vergangenheit im Konjunktiv I?", opts: ["er sei gekommen", "er käme", "er würde kommen"], correct: "er sei gekommen"},
+    {q: "Was gibt es in der indirekten Rede nicht?", opts: ["Pronomen", "Anführungszeichen", "Verben"], correct: "Anführungszeichen"},
+    {q: "„würde + Infinitiv“ ist eine Form vom …", opts: ["Indikativ", "Konjunktiv I", "Konjunktiv II"], correct: "Konjunktiv II"}
+  ]);
+
+  // Üb. 3: токени
+  setTotal(document.querySelectorAll('#ub3-text .tok[data-correct="true"]').length);
+  initTokenClicks('ub3-text');
+  document.getElementById('ub3-check').addEventListener('click', () => checkTokens('ub3-text', 'ub3-score', 'ub3'));
+  document.getElementById('ub3-reset').addEventListener('click', () => resetTokens('ub3-text', 'ub3-score', 'ub3'));
+
+  // Üb. 4, 5, 7: пропуски й списки
+  wireBlanks('ub4');
+  wireBlanks('ub5');
+  wireBlanks('ub7');
+
+  // Üb. 6: склади речення
+  buildOrder('ub6-order', [
+    {words: ["Ich", "würde", "gern", "nach Spanien", "fahren"], end: ".",
+     alt: ["Gern würde ich nach Spanien fahren", "Nach Spanien würde ich gern fahren"]},
+    {words: ["Wenn", "ich", "mehr Geld", "hätte,", "würde", "ich", "ein Fahrrad", "kaufen"], end: "."},
+    {words: ["Der Lehrer", "sagt,", "der Test", "sei", "nicht", "schwer"], end: "."},
+    {words: ["Anna", "erzählt,", "sie", "habe", "den Film", "schon", "gesehen"], end: ".", gross: true,
+     alt: ["Anna erzählt, sie habe schon den Film gesehen"]},
+    {words: ["Wenn", "doch", "heute", "Samstag", "wäre"], end: "!",
+     alt: ["Wenn heute doch Samstag wäre"]},
+    {words: ["Ohne dich", "wäre", "die Party", "langweilig", "gewesen"], end: ".",
+     alt: ["Die Party wäre ohne dich langweilig gewesen"]}
+  ]);
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['💭','🗞️','✏️','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initGrammarPage(GRAM_ID);
+</script>
+</body>
+</html>
