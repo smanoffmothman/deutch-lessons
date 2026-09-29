@@ -285,7 +285,8 @@ const GRAMMAR = [
   // ===== Кон'юнктив =====
   { id: "konjunktiv", rozdil: "konjunktiv", knyha: 52,
     tema: "Der Konjunktiv", uk: "Кон'юнктив: огляд",
-    pidrozdily: [] },
+    pidrozdily: ["Indikativ und Konjunktiv: Wirklichkeit oder Möglichkeit", "Konjunktiv I: die indirekte Rede", "Konjunktiv II: das Irreale", "Gegenwart und Vergangenheit im Konjunktiv", "Konjunktiv II statt Konjunktiv I"],
+    opublikovano: 52, dyv: ["konjunktiv-2-formen", "konjunktiv-2-gebrauch", "konjunktiv-1-formen", "indirekte-rede", "konditionalsaetze", "modalverben-subjektiv", "perfekt-plusquamperfekt", "tempusformen", "starke-verben"] },
   { id: "konjunktiv-2-formen", rozdil: "konjunktiv", knyha: 53,
     tema: "Der Konjunktiv II: Verbformen", uk: "Konjunktiv II: форми",
     pidrozdily: ["Gegenwartsformen", "Vergangenheitsformen", "Das Passiv im Konjunktiv II", "Vergangenheitsformen mit Modalverben"] },
