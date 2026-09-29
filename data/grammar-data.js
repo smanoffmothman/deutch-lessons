@@ -300,7 +300,8 @@ const GRAMMAR = [
   // ===== Дієприкметникові звороти й означення =====
   { id: "partizipialkonstruktion", rozdil: "attribute", knyha: 46,
     tema: "Die Partizipialkonstruktion", uk: "Дієприкметникові звороти",
-    pidrozdily: ["Allgemeine Regeln", "Mit transitiven Verben", "Mit intransitiven Verben", "Mit dem Zustandspassiv"] },
+    pidrozdily: ["Partizip I und Partizip II als Attribut", "Reflexive Verben: sich nähernd – verliebt", "Die Erweiterung: mehr Informationen vor dem Partizip", "Zwischen Artikel und Nomen – oder ohne Artikel", "Noch ein Adjektiv: davor oder danach", "Transitive Verben, Partizip I: aktiv und gleichzeitig", "Transitive Verben, Partizip II: passiv", "Intransitive Verben mit sein: ankommend – angekommen", "Intransitive Verben mit haben: nur Partizip I", "Mit dem Zustandspassiv: das seit Wochen geschlossene Bad", "Auch Adjektive: der bei allen beliebte Lehrer", "Umformen: Relativsatz ↔ Partizipialkonstruktion"],
+    opublikovano: 46, dyv: ["relativsaetze", "adjektivdeklination", "konjugation", "reflexive-verben", "legen-liegen", "perfekt-plusquamperfekt", "passiv", "zustandspassiv", "adjektive-als-nomen", "adverbien", "adverbien-praeposition", "adverbien-dativ-akkusativ", "partizipialsaetze", "gerundivum"] },
   { id: "partizipialsaetze", rozdil: "attribute", knyha: 47,
     tema: "Partizipialsätze", uk: "Дієприкметникові речення",
     pidrozdily: [] },
