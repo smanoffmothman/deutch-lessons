@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Das Zustandspassiv · Grammatik · Deutsch mit uns</title>
+<!-- =================================================================
+     ШАБЛОН сторінки граматичної теми. Лежить у тій самій папці, де й
+     готові теми (gramatyka/temy/), тож шляхи "../../" уже правильні —
+     при копіюванні їх НЕ міняти. Копію називай точно як id теми в
+     data/grammar-data.js: gramatyka/temy/<id>.html.
+     Правила наповнення — GRAMMAR-BRIEF.md.
+     ================================================================= -->
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'gramatyka' });</script>
+<!-- хлібні крихти малює initGrammarPage() внизу — з даних grammar-data.js -->
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">GRAMMATIK · Пасив</span>
+        <h1>Das Zustandspassiv</h1>
+        <p class="sub">Пасив стану (sein + Partizip II) показує не саму дію, а її результат: у якому стані щось є зараз або було тоді.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="regel" aria-selected="true">Regel</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Quiz</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Sortieren</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Im Text</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · ist oder war?</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Vorher – nachher</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · attributiv</button>
+    <button class="tab-btn" data-tab="ub7">Üb. 7 · Satzbau</button>
+    <button class="tab-btn" data-tab="ub8">Üb. 8 · Schon erledigt!</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <section class="panel active" id="panel-regel">
+      <p class="section-label">Regel</p>
+      <h2 class="panel-title">Das Zustandspassiv</h2>
+      <ul class="regel-toc" id="regelToc"></ul>
+
+      <div class="card">
+        <p>Zuerst macht jemand etwas: Der Hausmeister schließt die Turnhalle ab. Danach sehen wir das Ergebnis: Die Turnhalle <b>ist abgeschlossen</b>. Das Zustandspassiv beschreibt also keine Handlung, sondern einen <b>Zustand</b> – wie etwas jetzt ist (oder damals war). Man bildet es mit <b>sein</b> und dem <b>Partizip II</b>.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Zustandspassiv — «пасив стану». Звичайний пасив з <b>werden</b> (Vorgangspassiv) розповідає, що <i>відбувається</i>: <i>Die Tür wird geschlossen</i> — «двері зачиняють». Пасив стану з <b>sein</b> показує вже готовий <i>результат</i>: <i>Die Tür ist geschlossen</i> — «двері зачинені». В українській це дуже схоже: «зачинені», «прибрано», «оплачено». Але є різниця: українською в теперішньому часі дієслово «бути» ми пропускаємо («Магазин зачинений»), а німецькою <b>sein</b> обов'язкове: <i>Das Geschäft <b>ist</b> geschlossen.</i>
+        </div>
+      </div>
+
+      <section class="card regel-block" id="vorgang-zustand">
+        <h3>Vorgang oder Zustand? wird geschlossen – ist geschlossen</h3>
+        <table class="gtable">
+          <tr><th>Form</th><th>Was sagt sie?</th><th>Beispiel</th></tr>
+          <tr><td>Aktiv</td><td>Wer macht etwas?</td><td>Um 18 Uhr <b>schließt</b> der Hausmeister die Turnhalle <b>ab</b>.</td></tr>
+          <tr><td>Vorgangspassiv<br>(werden + Partizip II)</td><td>Was passiert gerade?</td><td>Um 18 Uhr <b>wird</b> die Turnhalle <b>abgeschlossen</b>.</td></tr>
+          <tr><td>Zustandspassiv<br>(sein + Partizip II)</td><td>Wie ist es danach?</td><td>Jetzt ist es 19 Uhr: Die Turnhalle <b>ist abgeschlossen</b>.</td></tr>
+        </table>
+        <p class="beispiel">Papa deckt den Tisch. → Der Tisch <b>wird gedeckt</b>. → Der Tisch <b>ist gedeckt</b> – wir können essen!</p>
+        <p class="beispiel">Die Lehrerin korrigiert die Tests. → Die Tests <b>werden korrigiert</b>. → Die Tests <b>sind korrigiert</b>.</p>
+        <p class="merke">werden + Partizip II = Es passiert (Vorgang).<br>sein + Partizip II = Es ist schon passiert, wir sehen das Ergebnis (Zustand).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Порівняй: <i>Der Tisch wird gedeckt</i> — стіл саме зараз накривають, дія триває. <i>Der Tisch ist gedeckt</i> — стіл уже накритий, дія закінчилась, лишився результат. Перед пасивом стану завжди стоїть якась дія (Vorgang), а сам пасив стану — це її «підсумок».
+        </div>
+      </section>
+
+      <section class="card regel-block" id="bildung">
+        <h3>Die Bildung: sein + Partizip II</h3>
+        <table class="gtable">
+          <tr><th>Person</th><th>sein</th><th>Partizip II</th></tr>
+          <tr><td class="gender">ich</td><td>bin</td><td rowspan="6">eingeladen</td></tr>
+          <tr><td class="gender">du</td><td>bist</td></tr>
+          <tr><td class="gender">er / sie / es</td><td>ist</td></tr>
+          <tr><td class="gender">wir</td><td>sind</td></tr>
+          <tr><td class="gender">ihr</td><td>seid</td></tr>
+          <tr><td class="gender">sie / Sie</td><td>sind</td></tr>
+        </table>
+        <table class="gtable">
+          <tr><th>Verbtyp</th><th>Infinitiv → Partizip II</th></tr>
+          <tr><td>schwach</td><td>decken → <b>gedeckt</b>, kochen → <b>gekocht</b>, reparieren → <b>repariert</b></td></tr>
+          <tr><td>stark</td><td>schließen → <b>geschlossen</b>, schreiben → <b>geschrieben</b>, schneiden → <b>geschnitten</b></td></tr>
+          <tr><td>trennbar</td><td>aufräumen → <b>aufgeräumt</b>, abschließen → <b>abgeschlossen</b>, einladen → <b>eingeladen</b></td></tr>
+          <tr><td>untrennbar</td><td>bezahlen → <b>bezahlt</b>, verkaufen → <b>verkauft</b>, besetzen → <b>besetzt</b></td></tr>
+        </table>
+        <p class="beispiel">Das Fahrrad <b>ist</b> endlich <b>repariert</b>.</p>
+        <p class="beispiel">Wir können nicht rein, weil die Bibliothek heute <b>geschlossen ist</b>.</p>
+        <p class="merke">Im Hauptsatz steht das Partizip II am Ende. Im Nebensatz steht sein ganz am Ende: …, weil die Tür <b>abgeschlossen ist</b>.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Дієвідмінюється лише <b>sein</b>, дієприкметник не змінюється. Пасив стану утворюють переважно від дієслів з Akkusativ, дія яких щось <i>змінює</i> і залишає видимий результат: відчинити, прибрати, полагодити, зварити, оплатити. Від дієслів без такого результату (<i>sehen, hören, lieben, fragen</i>) він звучить неприродно: не кажуть <i>Der Film ist gesehen</i>.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="zeiten">
+        <h3>Nur zwei Zeiten: ist geschlossen – war geschlossen</h3>
+        <table class="gtable">
+          <tr><th>Zeit</th><th>Form</th><th>Beispiel</th></tr>
+          <tr><td>Präsens</td><td>ist / sind + Partizip II</td><td>Heute <b>ist</b> das Museum <b>geöffnet</b>.</td></tr>
+          <tr><td>Präteritum</td><td>war / waren + Partizip II</td><td>Gestern <b>war</b> das Museum <b>geschlossen</b>.</td></tr>
+        </table>
+        <p class="beispiel">Als wir ins Kino kamen, <b>waren</b> alle Plätze schon <b>besetzt</b>.</p>
+        <p class="beispiel">Letzte Woche <b>war</b> die Brücke <b>gesperrt</b>, jetzt <b>ist</b> sie wieder frei.</p>
+        <p class="merke">Im Zustandspassiv braucht man fast nur zwei Zeiten: Präsens (ist) und Präteritum (war).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Для розповіді про минуле використовуй <b>war / waren</b>: <i>Das Geschäft war geschlossen</i> — «магазин був зачинений». Форми на кшталт <i>ist geschlossen gewesen</i> теж існують, але трапляються рідко — тобі вистачить двох часів.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="ohne-person">
+        <h3>Keine handelnde Person: Wie ist es jetzt?</h3>
+        <p>Im Vorgangspassiv kann man die Person noch nennen: Die Tests werden <b>von der Lehrerin</b> korrigiert. Im Zustandspassiv ist die Handlung vorbei – die Person ist nicht mehr wichtig. Wichtig ist nur das Ergebnis.</p>
+        <p class="beispiel">Wie ist das Klassenzimmer? – Es <b>ist</b> bunt <b>geschmückt</b>.</p>
+        <p class="beispiel">Ist die Pizza schon <b>bestellt</b>? – Ja, sie <b>ist bestellt</b>.</p>
+        <p class="merke">Im Zustandspassiv fragt man: Wie ist es (jetzt)? – nicht: Wer macht es?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Хто саме прибрав клас чи замовив піцу, у пасиві стану зазвичай не кажуть — важливо лише, що справа зроблена. Тому до такого речення природно ставити питання «Який стан? Як є зараз?», а не «Хто це робить?».
+        </div>
+      </section>
+
+      <section class="card regel-block" id="attributiv">
+        <h3>Adverbial und attributiv: Die Tür ist geschlossen – die geschlossene Tür</h3>
+        <table class="gtable">
+          <tr><th>nach sein (adverbial)</th><th>vor dem Nomen (attributiv)</th></tr>
+          <tr><td>Die Tür ist <b>geschlossen</b>.</td><td>die <b>geschlossene</b> Tür</td></tr>
+          <tr><td>Das Fenster ist <b>geöffnet</b>.</td><td>das <b>geöffnete</b> Fenster</td></tr>
+          <tr><td>Der Kuchen ist <b>gebacken</b>.</td><td>ein frisch <b>gebackener</b> Kuchen</td></tr>
+          <tr><td>Die Fotos sind <b>gedruckt</b>.</td><td>die <b>gedruckten</b> Fotos</td></tr>
+        </table>
+        <p class="beispiel">Mit dem <b>reparierten</b> Fahrrad fahre ich wieder zur Schule.</p>
+        <p class="beispiel">Hier ist dein <b>korrigierter</b> Test.</p>
+        <p class="merke">Vor dem Nomen ist das Partizip II ein Adjektiv – es bekommt die normalen Adjektivendungen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Точно як в українській: «Двері <i>зачинені</i>» (після дієслова) — і «<i>зачинені</i> двері» (перед іменником). Після <b>sein</b> дієприкметник має незмінну форму, а перед іменником відмінюється як звичайний прикметник: <i>der geschlossen<b>e</b></i>, <i>ein geschlossen<b>er</b></i>, <i>mit dem geschlossen<b>en</b></i>… Закінчення — ті самі, що в темі «Відмінювання прикметників».
+        </div>
+      </section>
+
+      <section class="card regel-block" id="schon">
+        <h3>Im Alltag: Das ist schon erledigt!</h3>
+        <p>Sehr oft sagt man mit dem Zustandspassiv: Das muss man nicht mehr machen – es ist schon fertig. Typische Wörter dazu: <b>schon</b>, <b>bereits</b>, <b>längst</b>, <b>noch nicht</b>.</p>
+        <p class="beispiel">Hast du den Wecker gestellt? – Ja, <b>der ist schon gestellt</b>.</p>
+        <p class="beispiel">Vergiss nicht, das Handy aufzuladen! – Keine Sorge, <b>das ist längst aufgeladen</b>.</p>
+        <p class="beispiel">Ist die Präsentation fertig? – Nein, <b>sie ist noch nicht gespeichert</b>.</p>
+        <p class="merke">Frage im Aktiv – Antwort im Zustandspassiv: Hast du … gemacht? – Ja, der / die / das ist schon gemacht.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Це найуживаніша «побутова» ситуація: хтось нагадує про справу, а ти відповідаєш, що вона вже виконана. У відповіді замість іменника в розмові часто стоїть <b>der / die / das</b> (вказівний займенник) на початку речення: <i>Der ist schon gestellt</i>. Можна й <b>er / sie / es</b>: <i>Er ist schon gestellt</i>. <b>längst</b> — «давно вже», <b>noch nicht</b> — «ще не».
+        </div>
+      </section>
+
+      <section class="card regel-block" id="abgrenzung">
+        <h3>Nicht verwechseln: ist gefahren – ist geschlossen – ist geschlossen worden</h3>
+        <table class="gtable">
+          <tr><th>Satz</th><th>Form</th><th>Was ist los?</th></tr>
+          <tr><td>Lisa <b>ist</b> nach Hause <b>gefahren</b>.</td><td>Perfekt Aktiv</td><td>Das Subjekt (Lisa) handelt selbst.</td></tr>
+          <tr><td>Die Tür <b>ist geschlossen</b>.</td><td>Zustandspassiv</td><td>Jemand hat etwas mit der Tür gemacht – jetzt ist sie zu.</td></tr>
+          <tr><td>Die Tür <b>ist</b> um 8 Uhr <b>geschlossen worden</b>.</td><td>Vorgangspassiv (Perfekt)</td><td>Die Handlung ist passiert – mit <b>worden</b>.</td></tr>
+        </table>
+        <p class="merke">Handelt das Subjekt selbst? → Perfekt Aktiv.<br>Hat jemand etwas mit dem Subjekt gemacht, und wir sehen das Ergebnis? → Zustandspassiv.<br>Steht worden am Ende? → Vorgangspassiv.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Усі три речення мають <b>ist</b> + Partizip II, тому їх легко сплутати. Перевір себе питанням: чи підмет сам виконує дію? <i>Lisa ist gefahren</i> — так, Ліза їхала сама → Perfekt. <i>Die Tür ist geschlossen</i> — двері нічого не роблять, їх хтось зачинив → пасив стану. Якщо в кінці є <b>worden</b> — це вже звичайний пасив у Perfekt, і він розповідає про саму дію, а не про стан.
+        </div>
+      </section>
+
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Zustand, Vorgang oder Perfekt?</h2>
+      <p class="lead">Обери правильний варіант. Зараховується перша спроба.</p>
+      <div class="card" id="ub1-quiz"></div>
+    </section>
+
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Drei Formen mit Partizip II</h2>
+      <p class="lead">Розсортуй речення: пасив стану (sein), звичайний пасив (werden / worden) чи Perfekt Aktiv.</p>
+      <div class="card" id="ub2-sort"></div>
+    </section>
+
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Annas Party</h2>
+      <p class="lead">Натисни в тексті всі дієприкметники (Partizip II), які разом із <b>sein</b> показують <b>стан</b> (Zustandspassiv). Обережно: у тексті є й Perfekt Aktiv, і звичайний пасив. Потім натисни «Prüfen».</p>
+      <div class="card" id="ub3-text"><p style="line-height:1.9;"><span class="tok" data-correct="false">Samstag</span>, <span class="tok" data-correct="false">fünf</span> <span class="tok" data-correct="false">Uhr</span>. <span class="tok" data-correct="false">Um</span> <span class="tok" data-correct="false">sechs</span> <span class="tok" data-correct="false">kommen</span> <span class="tok" data-correct="false">Annas</span> <span class="tok" data-correct="false">Gäste</span>. <span class="tok" data-correct="false">Anna</span> <span class="tok" data-correct="false">hat</span> <span class="tok" data-correct="false">den</span> <span class="tok" data-correct="false">ganzen</span> <span class="tok" data-correct="false">Tag</span> <span class="tok" data-correct="false">gearbeitet</span>, <span class="tok" data-correct="false">und</span> <span class="tok" data-correct="false">jetzt</span> <span class="tok" data-correct="false">ist</span> <span class="tok" data-correct="false">fast</span> <span class="tok" data-correct="false">alles</span> <span class="tok" data-correct="false">fertig</span>. <span class="tok" data-correct="false">Die</span> <span class="tok" data-correct="false">Wohnung</span> <span class="tok" data-correct="false">ist</span> <span class="tok" data-correct="true">aufgeräumt</span>, <span class="tok" data-correct="false">der</span> <span class="tok" data-correct="false">Tisch</span> <span class="tok" data-correct="false">ist</span> <span class="tok" data-correct="true">gedeckt</span> <span class="tok" data-correct="false">und</span> <span class="tok" data-correct="false">die</span> <span class="tok" data-correct="false">Getränke</span> <span class="tok" data-correct="false">sind</span> <span class="tok" data-correct="true">gekühlt</span>. <span class="tok" data-correct="false">Das</span> <span class="tok" data-correct="false">Bad</span> <span class="tok" data-correct="false">ist</span> <span class="tok" data-correct="false">heute</span> <span class="tok" data-correct="false">Morgen</span> <span class="tok" data-correct="false">geputzt</span> <span class="tok" data-correct="false">worden</span>. <span class="tok" data-correct="false">Nur</span> <span class="tok" data-correct="false">der</span> <span class="tok" data-correct="false">Kuchen</span> <span class="tok" data-correct="false">wird</span> <span class="tok" data-correct="false">gerade</span> <span class="tok" data-correct="false">noch</span> <span class="tok" data-correct="false">gebacken</span>. <span class="tok" data-correct="false">Annas</span> <span class="tok" data-correct="false">Bruder</span> <span class="tok" data-correct="false">ist</span> <span class="tok" data-correct="false">schnell</span> <span class="tok" data-correct="false">zum</span> <span class="tok" data-correct="false">Supermarkt</span> <span class="tok" data-correct="false">gelaufen</span>, <span class="tok" data-correct="false">denn</span> <span class="tok" data-correct="false">die</span> <span class="tok" data-correct="false">Chips</span> <span class="tok" data-correct="false">sind</span> <span class="tok" data-correct="false">noch</span> <span class="tok" data-correct="false">nicht</span> <span class="tok" data-correct="true">gekauft</span>. <span class="tok" data-correct="false">Die</span> <span class="tok" data-correct="false">Einladungen</span> <span class="tok" data-correct="false">hat</span> <span class="tok" data-correct="false">Anna</span> <span class="tok" data-correct="false">schon</span> <span class="tok" data-correct="false">letzte</span> <span class="tok" data-correct="false">Woche</span> <span class="tok" data-correct="false">verschickt</span>. <span class="tok" data-correct="false">Um</span> <span class="tok" data-correct="false">halb</span> <span class="tok" data-correct="false">sechs</span> <span class="tok" data-correct="false">ist</span> <span class="tok" data-correct="false">der</span> <span class="tok" data-correct="false">Kuchen</span> <span class="tok" data-correct="false">endlich</span> <span class="tok" data-correct="true">gebacken</span>. <span class="tok" data-correct="false">Das</span> <span class="tok" data-correct="false">Wohnzimmer</span> <span class="tok" data-correct="false">ist</span> <span class="tok" data-correct="false">mit</span> <span class="tok" data-correct="false">bunten</span> <span class="tok" data-correct="false">Luftballons</span> <span class="tok" data-correct="true">geschmückt</span>, <span class="tok" data-correct="false">und</span> <span class="tok" data-correct="false">die</span> <span class="tok" data-correct="false">Musik</span> <span class="tok" data-correct="false">ist</span> <span class="tok" data-correct="false">schon</span> <span class="tok" data-correct="true">ausgewählt</span>. <span class="tok" data-correct="false">Um</span> <span class="tok" data-correct="false">sechs</span> <span class="tok" data-correct="false">klingelt</span> <span class="tok" data-correct="false">es</span> – <span class="tok" data-correct="false">die</span> <span class="tok" data-correct="false">Party</span> <span class="tok" data-correct="false">kann</span> <span class="tok" data-correct="false">beginnen</span>!</p></div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Jetzt oder damals?</h2>
+      <p class="lead">Обери форму <b>sein</b>: теперішній час (ist / sind) чи минулий (war / waren). Зверни увагу на слова часу й на число підмета.</p>
+      <div class="card" id="ub4-list">
+        <div class="fill-item"><span class="num">1)</span> Jetzt <select class="blank inline" data-ans="ist"><option value="">—</option><option>ist</option><option>sind</option><option>war</option><option>waren</option></select> die Turnhalle abgeschlossen.</div>
+        <div class="fill-item"><span class="num">2)</span> Gestern <select class="blank inline" data-ans="war"><option value="">—</option><option>ist</option><option>sind</option><option>war</option><option>waren</option></select> das Schwimmbad geschlossen.</div>
+        <div class="fill-item"><span class="num">3)</span> Seit heute Morgen <select class="blank inline" data-ans="sind"><option value="">—</option><option>ist</option><option>sind</option><option>war</option><option>waren</option></select> alle Fenster geputzt.</div>
+        <div class="fill-item"><span class="num">4)</span> Als wir ankamen, <select class="blank inline" data-ans="war"><option value="">—</option><option>ist</option><option>sind</option><option>war</option><option>waren</option></select> die Pizza schon bestellt.</div>
+        <div class="fill-item"><span class="num">5)</span> Keine Sorge, die Tickets <select class="blank inline" data-ans="sind"><option value="">—</option><option>ist</option><option>sind</option><option>war</option><option>waren</option></select> schon bezahlt.</div>
+        <div class="fill-item"><span class="num">6)</span> Letzten Sommer <select class="blank inline" data-ans="war"><option value="">—</option><option>ist</option><option>sind</option><option>war</option><option>waren</option></select> unsere Straße wochenlang gesperrt.</div>
+        <div class="fill-item"><span class="num">7)</span> Als ich aufwachte, <select class="blank inline" data-ans="waren"><option value="">—</option><option>ist</option><option>sind</option><option>war</option><option>waren</option></select> die Geschenke schon ausgepackt.</div>
+        <div class="fill-item"><span class="num">8)</span> Heute <select class="blank inline" data-ans="ist"><option value="">—</option><option>ist</option><option>sind</option><option>war</option><option>waren</option></select> das Museum geöffnet – gehen wir hin!</div>
+        <div class="fill-item"><span class="num">9)</span> Vor einer Stunde <select class="blank inline" data-ans="waren"><option value="">—</option><option>ist</option><option>sind</option><option>war</option><option>waren</option></select> die Stühle noch nicht aufgestellt, jetzt ist alles fertig.</div>
+        <div class="fill-item"><span class="num">10)</span> Wir warten draußen, weil die Schule noch geschlossen <select class="blank inline" data-ans="ist"><option value="">—</option><option>ist</option><option>sind</option><option>war</option><option>waren</option></select>.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub4-check">Prüfen</button>
+        <button class="btn secondary" id="ub4-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub4-score"></span>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Vorher – nachher</h2>
+      <p class="lead">Спершу хтось щось робить (Aktiv), потім лишається результат. Впиши форму <b>sein</b> і Partizip II.</p>
+      <div class="card" id="ub5-list">
+        <div class="fill-item"><span class="num">1)</span> Der Hausmeister schließt die Turnhalle ab. → Jetzt <input type="text" class="blank-input inline" data-ans="ist"> die Turnhalle <input type="text" class="blank-input inline" data-ans="abgeschlossen">.</div>
+        <div class="fill-item"><span class="num">2)</span> Wir schmücken das Klassenzimmer. → Jetzt <input type="text" class="blank-input inline" data-ans="ist"> das Klassenzimmer <input type="text" class="blank-input inline" data-ans="geschmückt">.</div>
+        <div class="fill-item"><span class="num">3)</span> Der Mechaniker repariert mein Fahrrad. → Jetzt <input type="text" class="blank-input inline" data-ans="ist"> mein Fahrrad <input type="text" class="blank-input inline" data-ans="repariert">.</div>
+        <div class="fill-item"><span class="num">4)</span> Oma kocht die Suppe. → Jetzt <input type="text" class="blank-input inline" data-ans="ist"> die Suppe <input type="text" class="blank-input inline" data-ans="gekocht">.</div>
+        <div class="fill-item"><span class="num">5)</span> Ich schreibe die Einladungen. → Jetzt <input type="text" class="blank-input inline" data-ans="sind"> die Einladungen <input type="text" class="blank-input inline" data-ans="geschrieben">.</div>
+        <div class="fill-item"><span class="num">6)</span> Die Lehrerin korrigiert die Tests. → Jetzt <input type="text" class="blank-input inline" data-ans="sind"> die Tests <input type="text" class="blank-input inline" data-ans="korrigiert">.</div>
+        <div class="fill-item"><span class="num">7)</span> Tim bezahlt die Pizza. → Jetzt <input type="text" class="blank-input inline" data-ans="ist"> die Pizza <input type="text" class="blank-input inline" data-ans="bezahlt">.</div>
+        <div class="fill-item"><span class="num">8)</span> Papa schneidet den Kuchen. → Jetzt <input type="text" class="blank-input inline" data-ans="ist"> der Kuchen <input type="text" class="blank-input inline" data-ans="geschnitten">.</div>
+        <div class="fill-item"><span class="num">9)</span> Wir laden alle Freunde ein. → Jetzt <input type="text" class="blank-input inline" data-ans="sind"> alle Freunde <input type="text" class="blank-input inline" data-ans="eingeladen">.</div>
+        <div class="fill-item"><span class="num">10)</span> Lena verkauft ihr altes Handy. → Jetzt <input type="text" class="blank-input inline" data-ans="ist"> das Handy <input type="text" class="blank-input inline" data-ans="verkauft">.</div>
+        <div class="fill-item"><span class="num">11)</span> Der Koch brät die Würstchen. → Jetzt <input type="text" class="blank-input inline" data-ans="sind"> die Würstchen <input type="text" class="blank-input inline" data-ans="gebraten">.</div>
+        <div class="fill-item"><span class="num">12)</span> Die Stadt sperrt die Brücke. → Jetzt <input type="text" class="blank-input inline" data-ans="ist"> die Brücke <input type="text" class="blank-input inline" data-ans="gesperrt">.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub5-check">Prüfen</button>
+        <button class="btn secondary" id="ub5-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub5-score"></span>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">Die geschlossene Tür</h2>
+      <p class="lead">Постав дієприкметник перед іменником і додай правильне закінчення прикметника (подивись на артикль і відмінок).</p>
+      <div class="card" id="ub6-list" style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Zustand</th><th>Partizip vor dem Nomen</th></tr>
+          <tr><td>Die Tür ist geschlossen.</td><td>Wir stehen vor der <input type="text" class="blank-input inline" data-ans="geschlossenen"> Tür.</td></tr>
+          <tr><td>Das Fenster ist geöffnet.</td><td>Es zieht durch das <input type="text" class="blank-input inline" data-ans="geöffnete"> Fenster.</td></tr>
+          <tr><td>Der Kuchen ist gebacken.</td><td>Der <input type="text" class="blank-input inline" data-ans="gebackene"> Kuchen steht auf dem Tisch.</td></tr>
+          <tr><td>Das Auto ist repariert.</td><td>Wir holen das <input type="text" class="blank-input inline" data-ans="reparierte"> Auto ab.</td></tr>
+          <tr><td>Die Hausaufgabe ist korrigiert.</td><td>Hier ist eine <input type="text" class="blank-input inline" data-ans="korrigierte"> Hausaufgabe.</td></tr>
+          <tr><td>Der Brief ist geschrieben.</td><td>Ich bringe den <input type="text" class="blank-input inline" data-ans="geschriebenen"> Brief zur Post.</td></tr>
+          <tr><td>Die Äpfel sind gewaschen.</td><td>Iss nur <input type="text" class="blank-input inline" data-ans="gewaschene"> Äpfel!</td></tr>
+          <tr><td>Das Zimmer ist aufgeräumt.</td><td>In einem <input type="text" class="blank-input inline" data-ans="aufgeräumten"> Zimmer lernt man besser.</td></tr>
+          <tr><td>Der Platz ist besetzt.</td><td>Das ist leider ein <input type="text" class="blank-input inline" data-ans="besetzter"> Platz.</td></tr>
+          <tr><td>Die Fotos sind gedruckt.</td><td>Wo sind die <input type="text" class="blank-input inline" data-ans="gedruckten"> Fotos?</td></tr>
+        </table>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub6-check">Prüfen</button>
+        <button class="btn secondary" id="ub6-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub6-score"></span>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub7">
+      <p class="section-label">Üb. 7</p>
+      <h2 class="panel-title">Sätze bauen</h2>
+      <p class="lead">Склади речення: натискай картки по черзі; натиснеш на вже поставлену — вона повернеться назад.</p>
+      <div class="card" id="ub7-order"></div>
+    </section>
+
+    <section class="panel" id="panel-ub8">
+      <p class="section-label">Üb. 8</p>
+      <h2 class="panel-title">Schon erledigt!</h2>
+      <p class="lead">Завтра шкільна поїздка, і тобі нагадують про справи. Відповідай, що все вже зроблено, за зразком: <i>Hast du die Jacke eingepackt? – Ja, die ist schon eingepackt.</i> Можна <i>der/die/das</i> або <i>er/sie/es</i>, <i>schon</i> або <i>bereits</i>.</p>
+      <div class="card" id="ub8-list">
+        <div class="fill-item"><span class="num">1)</span> Hast du dein Handy aufgeladen?<br><input type="text" class="blank-input inline full" data-ans="Ja, das ist schon aufgeladen|Ja, das ist bereits aufgeladen|Ja, das ist schon längst aufgeladen|Ja, das ist längst aufgeladen|Ja, es ist schon aufgeladen|Ja, es ist bereits aufgeladen|Ja, es ist schon längst aufgeladen|Ja, es ist längst aufgeladen|Ja das ist schon aufgeladen|Ja das ist bereits aufgeladen|Ja das ist schon längst aufgeladen|Ja das ist längst aufgeladen|Ja es ist schon aufgeladen|Ja es ist bereits aufgeladen|Ja es ist schon längst aufgeladen|Ja es ist längst aufgeladen|das ist schon aufgeladen|das ist bereits aufgeladen|das ist schon längst aufgeladen|das ist längst aufgeladen|es ist schon aufgeladen|es ist bereits aufgeladen|es ist schon längst aufgeladen|es ist längst aufgeladen"></div>
+        <div class="fill-item"><span class="num">2)</span> Hat Papa das Formular unterschrieben?<br><input type="text" class="blank-input inline full" data-ans="Ja, das ist schon unterschrieben|Ja, das ist bereits unterschrieben|Ja, das ist schon längst unterschrieben|Ja, das ist längst unterschrieben|Ja, es ist schon unterschrieben|Ja, es ist bereits unterschrieben|Ja, es ist schon längst unterschrieben|Ja, es ist längst unterschrieben|Ja das ist schon unterschrieben|Ja das ist bereits unterschrieben|Ja das ist schon längst unterschrieben|Ja das ist längst unterschrieben|Ja es ist schon unterschrieben|Ja es ist bereits unterschrieben|Ja es ist schon längst unterschrieben|Ja es ist längst unterschrieben|das ist schon unterschrieben|das ist bereits unterschrieben|das ist schon längst unterschrieben|das ist längst unterschrieben|es ist schon unterschrieben|es ist bereits unterschrieben|es ist schon längst unterschrieben|es ist längst unterschrieben"></div>
+        <div class="fill-item"><span class="num">3)</span> Hast du den Wecker gestellt?<br><input type="text" class="blank-input inline full" data-ans="Ja, der ist schon gestellt|Ja, der ist bereits gestellt|Ja, der ist schon längst gestellt|Ja, der ist längst gestellt|Ja, er ist schon gestellt|Ja, er ist bereits gestellt|Ja, er ist schon längst gestellt|Ja, er ist längst gestellt|Ja der ist schon gestellt|Ja der ist bereits gestellt|Ja der ist schon längst gestellt|Ja der ist längst gestellt|Ja er ist schon gestellt|Ja er ist bereits gestellt|Ja er ist schon längst gestellt|Ja er ist längst gestellt|der ist schon gestellt|der ist bereits gestellt|der ist schon längst gestellt|der ist längst gestellt|er ist schon gestellt|er ist bereits gestellt|er ist schon längst gestellt|er ist längst gestellt"></div>
+        <div class="fill-item"><span class="num">4)</span> Hast du die Wasserflasche gefüllt?<br><input type="text" class="blank-input inline full" data-ans="Ja, die ist schon gefüllt|Ja, die ist bereits gefüllt|Ja, die ist schon längst gefüllt|Ja, die ist längst gefüllt|Ja, sie ist schon gefüllt|Ja, sie ist bereits gefüllt|Ja, sie ist schon längst gefüllt|Ja, sie ist längst gefüllt|Ja die ist schon gefüllt|Ja die ist bereits gefüllt|Ja die ist schon längst gefüllt|Ja die ist längst gefüllt|Ja sie ist schon gefüllt|Ja sie ist bereits gefüllt|Ja sie ist schon längst gefüllt|Ja sie ist längst gefüllt|die ist schon gefüllt|die ist bereits gefüllt|die ist schon längst gefüllt|die ist längst gefüllt|sie ist schon gefüllt|sie ist bereits gefüllt|sie ist schon längst gefüllt|sie ist längst gefüllt"></div>
+        <div class="fill-item"><span class="num">5)</span> Hat die Lehrerin die Zimmer verteilt?<br><input type="text" class="blank-input inline full" data-ans="Ja, die sind schon verteilt|Ja, die sind bereits verteilt|Ja, die sind schon längst verteilt|Ja, die sind längst verteilt|Ja, sie sind schon verteilt|Ja, sie sind bereits verteilt|Ja, sie sind schon längst verteilt|Ja, sie sind längst verteilt|Ja die sind schon verteilt|Ja die sind bereits verteilt|Ja die sind schon längst verteilt|Ja die sind längst verteilt|Ja sie sind schon verteilt|Ja sie sind bereits verteilt|Ja sie sind schon längst verteilt|Ja sie sind längst verteilt|die sind schon verteilt|die sind bereits verteilt|die sind schon längst verteilt|die sind längst verteilt|sie sind schon verteilt|sie sind bereits verteilt|sie sind schon längst verteilt|sie sind längst verteilt"></div>
+        <div class="fill-item"><span class="num">6)</span> Habt ihr den Bus reserviert?<br><input type="text" class="blank-input inline full" data-ans="Ja, der ist schon reserviert|Ja, der ist bereits reserviert|Ja, der ist schon längst reserviert|Ja, der ist längst reserviert|Ja, er ist schon reserviert|Ja, er ist bereits reserviert|Ja, er ist schon längst reserviert|Ja, er ist längst reserviert|Ja der ist schon reserviert|Ja der ist bereits reserviert|Ja der ist schon längst reserviert|Ja der ist längst reserviert|Ja er ist schon reserviert|Ja er ist bereits reserviert|Ja er ist schon längst reserviert|Ja er ist längst reserviert|der ist schon reserviert|der ist bereits reserviert|der ist schon längst reserviert|der ist längst reserviert|er ist schon reserviert|er ist bereits reserviert|er ist schon längst reserviert|er ist längst reserviert"></div>
+        <div class="fill-item"><span class="num">7)</span> Hast du die Brote geschmiert?<br><input type="text" class="blank-input inline full" data-ans="Ja, die sind schon geschmiert|Ja, die sind bereits geschmiert|Ja, die sind schon längst geschmiert|Ja, die sind längst geschmiert|Ja, sie sind schon geschmiert|Ja, sie sind bereits geschmiert|Ja, sie sind schon längst geschmiert|Ja, sie sind längst geschmiert|Ja die sind schon geschmiert|Ja die sind bereits geschmiert|Ja die sind schon längst geschmiert|Ja die sind längst geschmiert|Ja sie sind schon geschmiert|Ja sie sind bereits geschmiert|Ja sie sind schon längst geschmiert|Ja sie sind längst geschmiert|die sind schon geschmiert|die sind bereits geschmiert|die sind schon längst geschmiert|die sind längst geschmiert|sie sind schon geschmiert|sie sind bereits geschmiert|sie sind schon längst geschmiert|sie sind längst geschmiert"></div>
+        <div class="fill-item"><span class="num">8)</span> Hast du die Musik für den Bus heruntergeladen?<br><input type="text" class="blank-input inline full" data-ans="Ja, die ist schon heruntergeladen|Ja, die ist bereits heruntergeladen|Ja, die ist schon längst heruntergeladen|Ja, die ist längst heruntergeladen|Ja, sie ist schon heruntergeladen|Ja, sie ist bereits heruntergeladen|Ja, sie ist schon längst heruntergeladen|Ja, sie ist längst heruntergeladen|Ja die ist schon heruntergeladen|Ja die ist bereits heruntergeladen|Ja die ist schon längst heruntergeladen|Ja die ist längst heruntergeladen|Ja sie ist schon heruntergeladen|Ja sie ist bereits heruntergeladen|Ja sie ist schon längst heruntergeladen|Ja sie ist längst heruntergeladen|die ist schon heruntergeladen|die ist bereits heruntergeladen|die ist schon längst heruntergeladen|die ist längst heruntergeladen|sie ist schon heruntergeladen|sie ist bereits heruntergeladen|sie ist schon längst heruntergeladen|sie ist längst heruntergeladen"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub8-check">Prüfen</button>
+        <button class="btn secondary" id="ub8-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub8-score"></span>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das Wichtigste</p>
+        <p>Das Zustandspassiv zeigt das Ergebnis einer Handlung: Die Tür ist geschlossen. Man bildet es mit sein + Partizip II, meistens im Präsens (ist) oder Präteritum (war). Eine handelnde Person nennt man nicht. Vor dem Nomen bekommt das Partizip Adjektivendungen: die geschlossene Tür.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Пасив стану показує результат дії: «двері зачинені». Утворюється з <b>sein</b> + Partizip II, найчастіше в теперішньому (ist) чи минулому (war) часі. Того, хто виконав дію, не називають. Перед іменником дієприкметник відмінюється як прикметник: <i>die geschlossene Tür</i>. Не плутай з <i>ist gefahren</i> (Perfekt) і <i>ist geschlossen worden</i> (звичайний пасив).
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Де це ще трапляється</p>
+        <div class="gram-related" id="gramRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <p class="lead" id="gramBest" style="font-size:14px;"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/grammar-data.js"></script>
+<script src="../../data/lessons-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/site.js"></script>
+<script>
+  const GRAM_ID = "zustandspassiv";
+
+  // Üb. 1: квіз
+  buildQuiz('ub1-quiz', [
+   {
+    "q": "„Die Tür ist geschlossen.“ – Was beschreibt der Satz?",
+    "opts": [
+     "einen Vorgang",
+     "einen Zustand",
+     "eine Handlung im Aktiv"
+    ],
+    "correct": "einen Zustand"
+   },
+   {
+    "q": "„Die Tür wird gerade geschlossen.“ – Was beschreibt der Satz?",
+    "opts": [
+     "einen Vorgang",
+     "einen Zustand",
+     "eine Handlung im Aktiv"
+    ],
+    "correct": "einen Vorgang"
+   },
+   {
+    "q": "Welcher Satz sagt: Das Ergebnis ist schon da?",
+    "opts": [
+     "Das Auto wird repariert.",
+     "Der Mechaniker repariert das Auto.",
+     "Das Auto ist repariert."
+    ],
+    "correct": "Das Auto ist repariert."
+   },
+   {
+    "q": "Welches Hilfsverb braucht das Zustandspassiv?",
+    "opts": [
+     "sein",
+     "werden",
+     "haben"
+    ],
+    "correct": "sein"
+   },
+   {
+    "q": "Jetzt ___ das Fenster geöffnet. (Zustand)",
+    "opts": [
+     "wird",
+     "hat",
+     "ist"
+    ],
+    "correct": "ist"
+   },
+   {
+    "q": "Gestern ___ die Bibliothek geschlossen. (Zustand in der Vergangenheit)",
+    "opts": [
+     "ist",
+     "war",
+     "hat"
+    ],
+    "correct": "war"
+   },
+   {
+    "q": "Die Tests sind schon ___.",
+    "opts": [
+     "korrigieren",
+     "korrigierte",
+     "korrigiert"
+    ],
+    "correct": "korrigiert"
+   },
+   {
+    "q": "Wo ist das ___ Heft?",
+    "opts": [
+     "korrigierte",
+     "korrigiert",
+     "korrigierten"
+    ],
+    "correct": "korrigierte"
+   },
+   {
+    "q": "„Er ist nach Hause gegangen.“ – Welche Form ist das?",
+    "opts": [
+     "Zustandspassiv",
+     "Perfekt Aktiv",
+     "Vorgangspassiv"
+    ],
+    "correct": "Perfekt Aktiv"
+   },
+   {
+    "q": "„Das Fahrrad ist repariert worden.“ – Welche Form ist das?",
+    "opts": [
+     "Zustandspassiv",
+     "Perfekt Aktiv",
+     "Vorgangspassiv"
+    ],
+    "correct": "Vorgangspassiv"
+   },
+   {
+    "q": "Welche Frage passt zum Zustandspassiv?",
+    "opts": [
+     "Wer macht das gerade?",
+     "Wie ist es jetzt?",
+     "Wann macht er das?"
+    ],
+    "correct": "Wie ist es jetzt?"
+   },
+   {
+    "q": "Hast du den Kuchen gebacken? – Ja, der ist schon ___.",
+    "opts": [
+     "backen",
+     "gebackt",
+     "gebacken"
+    ],
+    "correct": "gebacken"
+   }
+  ]);
+
+  // Üb. 2: розсортуй
+  buildSort('ub2-sort', {
+   "buckets": [
+    "sein: Zustand",
+    "werden / worden: Vorgang",
+    "Perfekt Aktiv"
+   ],
+   "items": [
+    {
+     "t": "Das Fenster ist geöffnet.",
+     "b": "sein: Zustand"
+    },
+    {
+     "t": "Die Tickets sind schon bezahlt.",
+     "b": "sein: Zustand"
+    },
+    {
+     "t": "Um zehn war das Kino geschlossen.",
+     "b": "sein: Zustand"
+    },
+    {
+     "t": "Die Hausaufgaben sind gemacht.",
+     "b": "sein: Zustand"
+    },
+    {
+     "t": "Das Fenster wird geöffnet.",
+     "b": "werden / worden: Vorgang"
+    },
+    {
+     "t": "Die Tickets werden bezahlt.",
+     "b": "werden / worden: Vorgang"
+    },
+    {
+     "t": "Das Auto ist repariert worden.",
+     "b": "werden / worden: Vorgang"
+    },
+    {
+     "t": "Das Haus wurde 1990 gebaut.",
+     "b": "werden / worden: Vorgang"
+    },
+    {
+     "t": "Lisa ist nach Berlin gefahren.",
+     "b": "Perfekt Aktiv"
+    },
+    {
+     "t": "Der Zug ist pünktlich angekommen.",
+     "b": "Perfekt Aktiv"
+    },
+    {
+     "t": "Wir sind früh aufgestanden.",
+     "b": "Perfekt Aktiv"
+    },
+    {
+     "t": "Mein Bruder ist fünf Zentimeter gewachsen.",
+     "b": "Perfekt Aktiv"
+    }
+   ]
+  });
+
+  // Üb. 3: знайди в тексті
+  setTotal(document.querySelectorAll('#ub3-text .tok[data-correct="true"]').length);
+  initTokenClicks('ub3-text');
+  document.getElementById('ub3-check').addEventListener('click', () => checkTokens('ub3-text', 'ub3-score', 'ub3'));
+  document.getElementById('ub3-reset').addEventListener('click', () => resetTokens('ub3-text', 'ub3-score', 'ub3'));
+
+  // Üb. 4–6, 8: пропуски
+  wireBlanks('ub4');
+  wireBlanks('ub5');
+  wireBlanks('ub6');
+  wireBlanks('ub8');
+
+  // Üb. 7: склади речення
+  buildOrder('ub7-order', [
+   {
+    "words": [
+     "Die Bäckerei",
+     "ist",
+     "sonntags",
+     "geschlossen"
+    ],
+    "end": ".",
+    "alt": [
+     "Sonntags ist die Bäckerei geschlossen"
+    ]
+   },
+   {
+    "words": [
+     "Als wir kamen,",
+     "war",
+     "der Tisch",
+     "schon",
+     "gedeckt"
+    ],
+    "end": ".",
+    "alt": [
+     "Als wir kamen, war schon der Tisch gedeckt"
+    ]
+   },
+   {
+    "words": [
+     "Sind",
+     "die Fahrräder",
+     "schon",
+     "repariert"
+    ],
+    "end": "?",
+    "alt": [
+     "Sind schon die Fahrräder repariert"
+    ]
+   },
+   {
+    "words": [
+     "Wir können nicht rein,",
+     "weil",
+     "das Museum",
+     "heute",
+     "geschlossen",
+     "ist"
+    ],
+    "end": ".",
+    "alt": [
+     "Wir können nicht rein, weil heute das Museum geschlossen ist"
+    ]
+   },
+   {
+    "words": [
+     "Das",
+     "reparierte",
+     "Fahrrad",
+     "steht",
+     "schon",
+     "im Keller"
+    ],
+    "end": ".",
+    "alt": [
+     "Im Keller steht schon das reparierte Fahrrad"
+    ]
+   },
+   {
+    "words": [
+     "Das Handy",
+     "ist",
+     "leider",
+     "noch nicht",
+     "aufgeladen"
+    ],
+    "end": ".",
+    "alt": [
+     "Leider ist das Handy noch nicht aufgeladen"
+    ]
+   },
+   {
+    "words": [
+     "Keine Sorge,",
+     "die Tür",
+     "ist",
+     "schon",
+     "abgeschlossen"
+    ],
+    "end": ".",
+    "alt": []
+   },
+   {
+    "words": [
+     "Um zehn Uhr abends",
+     "waren",
+     "alle Geschäfte",
+     "schon",
+     "geschlossen"
+    ],
+    "end": ".",
+    "alt": [
+     "Um zehn Uhr abends waren schon alle Geschäfte geschlossen",
+     "Alle Geschäfte waren um zehn Uhr abends schon geschlossen",
+     "Alle Geschäfte waren schon um zehn Uhr abends geschlossen"
+    ]
+   }
+  ]);
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🔒','✅','🎈','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  // ЗАВЖДИ останнім рядком
+  initGrammarPage(GRAM_ID);
+</script>
+</body>
+</html>
