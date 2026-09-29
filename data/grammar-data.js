@@ -314,7 +314,8 @@ const GRAMMAR = [
     opublikovano: 50, dyv: ["partizipialkonstruktion", "partizipialsaetze", "relativsaetze", "deklination-nomen", "n-deklination", "adjektivdeklination", "possessivartikel", "artikel-gebrauch", "komparation", "temporalsaetze", "zahlwoerter", "satzstellung-hauptsatz", "praep-dativ", "praep-akkusativ", "praep-genitiv", "kommaregeln"] },
   { id: "rangattribute", rozdil: "attribute", knyha: 51,
     tema: "Rangattribute", uk: "Підсилювальні означення (Rangattribute)",
-    pidrozdily: [] },
+    pidrozdily: ["Was sind Rangattribute?", "Eine Position im Satz: Sogar ihrem Freund hat sie nichts gesagt", "Vor dem Satzglied – auch vor Artikel und Präposition", "Die Bedeutungen im Überblick", "nicht …, sondern: nur ein Satzglied verneinen", "nur, erst, schon: mit Zahlen und Zeitangaben", "auch Tim – Tim auch: die Stellung ändert den Sinn", "selbst: sogar oder persönlich?", "allein: nur oder ohne andere?", "Rangattribut oder Adverb? gerade, schon, besonders, erst"],
+    opublikovano: 51, dyv: ["satzstellung-hauptsatz", "konjunktionen-position-null", "konjunktionen-position-eins", "fragen", "demonstrativpronomen", "adverbien", "appositionen"] },
 
   // ===== Довідка =====
   { id: "kommaregeln", rozdil: "anhang", knyha: null,
