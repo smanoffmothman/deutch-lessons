@@ -244,7 +244,8 @@ const GRAMMAR = [
     opublikovano: 43, dyv: ["adverbien", "adverbien-praeposition", "rektion-verben", "personalpronomen", "possessivartikel", "n-deklination", "zahlwoerter", "komparation", "satzstellung-hauptsatz"] },
   { id: "adverbien-praeposition", rozdil: "adjektiv", knyha: 44,
     tema: "Adverbien mit Präpositionen", uk: "Прислівники з прийменниками",
-    pidrozdily: [] },
+    pidrozdily: ["Adjektiv + Präposition + Objekt: stolz auf", "Adjektive mit Präposition + Akkusativ", "Adjektive mit Präposition + Dativ", "gegenüber und vor: freundlich gegenüber, rot vor Wut", "Ein Adjektiv – mehrere Präpositionen: bekannt bei / für / mit", "Fragen: Worauf? – Auf wen?", "Ohne Nomen: darauf – auf ihn", "Mit dass-Satz oder Infinitiv: stolz darauf, dass …"],
+    opublikovano: 44, dyv: ["adverbien", "adverbien-dativ-akkusativ", "verben-praepositionalobjekt", "rektion-verben", "personalpronomen", "fragen", "verben-dass-infinitiv", "infinitiv-um-zu", "indirekte-fragesaetze", "praep-akkusativ", "praep-dativ", "wechselpraepositionen", "kommaregeln"] },
 
   // ===== Прийменники =====
   { id: "praepositionen-allgemein", rozdil: "praepositionen", knyha: 57,
