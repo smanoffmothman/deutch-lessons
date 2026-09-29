@@ -88,7 +88,8 @@ const GRAMMAR = [
     opublikovano: 37, dyv: ["demonstrativpronomen", "personalpronomen", "possessivartikel", "artikel-gebrauch", "reflexive-verben", "adjektivdeklination", "adjektive-als-nomen", "komparation", "relativsaetze"] },
   { id: "zahlwoerter", rozdil: "nomen", knyha: 38,
     tema: "Zahlwörter", uk: "Числівники",
-    pidrozdily: ["Kardinalzahlen", "Ordinalzahlen", "Weitere Zahlwörter", "Römische Zahlen"] },
+    pidrozdily: ["Zahlen bilden: einundzwanzig, hundertzwei", "ein als Zahl: nur ein Bruder, nicht zwei", "eins ohne Nomen: einer, eine, eins", "der eine – der andere", "zweier, dreier: Endungen nur bei zwei und drei", "Zahlen als Nomen: die Null, eine Eins", "eine Million, zwei Millionen, eine Milliarde", "beide und beides", "ein Paar oder ein paar?", "ein Dutzend; Hunderte, Tausende", "Mit -er: ein Zehner, in den Neunzigern", "Uhrzeiten: offiziell und im Alltag", "Geld, Grad und Rechnen: so spricht man", "Jahreszahlen: 1989 und 2026", "Ordinalzahlen: der 2. = der zweite – der Wievielte?", "-te oder -ste? der zweite, der zwanzigste", "Endungen wie beim Adjektiv: mein dritter Versuch, Zweiter werden", "Das Datum: der 3. Oktober – am 3. Oktober", "Nach Namen: Ludwig II. = Ludwig der Zweite", "zu zweit, zu dritt: wie viele Personen?", "zweitbeste, drittgrößte: Ordinalzahl + Superlativ", "der erste – der letzte; Ersterer – Letzterer", "Bruchzahlen: halb, ein Drittel, ein Viertel", "erstens, zweitens, drittens", "Wie oft? einmal, dreimal – einmalig", "Wievielfach? einfach, dreifach, doppelt", "Wie viele Arten? zweierlei, einerlei", "Römische Zahlen"],
+    opublikovano: 38, dyv: ["artikel-gebrauch", "indefinitpronomen", "demonstrativpronomen", "deklination-nomen", "adjektivdeklination", "komparation", "adjektive-als-nomen", "satzstellung-hauptsatz", "praep-dativ"] },
 
   // ===== Дієслово: форми і часи =====
   { id: "konjugation", rozdil: "verb", knyha: 6,
