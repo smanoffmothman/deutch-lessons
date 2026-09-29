@@ -215,7 +215,8 @@ const GRAMMAR = [
     opublikovano: 34, dyv: ["nebensaetze", "fragen", "personalpronomen", "verben-praepositionalobjekt", "adverbien-praeposition", "trennbare-verben", "modalverben", "verben-dass-infinitiv", "konditionalsaetze", "relativsaetze", "indirekte-rede", "kommaregeln"] },
   { id: "relativsaetze", rozdil: "nebensaetze", knyha: 35,
     tema: "Relativsätze", uk: "Означальні підрядні речення",
-    pidrozdily: ["Relativpronomen im Nominativ, Akkusativ, Dativ", "Relativpronomen im Genitiv", "Relativsätze mit Präpositionen", "Relativsätze mit wo(-)", "Relativsätze mit wer, wen, wem, wessen", "Relativsätze mit was"] },
+    pidrozdily: ["Der Relativsatz erklärt ein Bezugswort", "Direkt hinter dem Bezugswort – mit Kommas", "Ausnahme: ein Verb, ein Präfix oder ein Adverb dazwischen", "Die Formen: fast wie der bestimmte Artikel", "Genus und Numerus: vom Bezugswort", "Der Kasus: aus dem Relativsatz", "Der Genitiv: dessen und deren", "Nach dessen und deren: Nomen ohne Artikel", "Präposition + Relativpronomen: mit dem, für deren …", "wo und wohin statt in + Relativpronomen", "Städte und Länder: wo, wohin – oder das", "wo bei Zeitangaben: jetzt, wo …", "wo(r) + Präposition: für den ganzen Satz", "wer, wen, wem, wessen: jeder, der …", "was nach alles, nichts, etwas, das und dem Superlativ", "was für den ganzen Satz: …, was mich freut", "was und Präposition: an das, was … – was …, daran", "Der was-Satz vorn: das, dem, dessen"],
+    opublikovano: 35, dyv: ["nebensaetze", "indirekte-fragesaetze", "modalsaetze", "temporalsaetze", "demonstrativpronomen", "indefinitpronomen", "personalpronomen", "possessivartikel", "rektion-verben", "verben-praepositionalobjekt", "fragen", "satzstellung-hauptsatz", "adjektivdeklination", "komparation", "adverbien-praeposition", "kommaregeln"] },
 
   // ===== Прикметник і прислівник =====
   { id: "adjektivdeklination", rozdil: "adjektiv", knyha: 39,
