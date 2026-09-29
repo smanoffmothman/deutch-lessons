@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adverbien · Grammatik · Deutsch mit uns</title>
+<!-- =================================================================
+     ШАБЛОН сторінки граматичної теми. Лежить у тій самій папці, де й
+     готові теми (gramatyka/temy/), тож шляхи "../../" уже правильні —
+     при копіюванні їх НЕ міняти. Копію називай точно як id теми в
+     data/grammar-data.js: gramatyka/temy/<id>.html.
+     Правила наповнення — GRAMMAR-BRIEF.md.
+     ================================================================= -->
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'gramatyka' });</script>
+<!-- хлібні крихти малює initGrammarPage() внизу — з даних grammar-data.js -->
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">GRAMMATIK · Прикметник і прислівник</span>
+        <h1>Adverbien</h1>
+        <p class="sub">Прислівники: слова, що не змінюються й відповідають на питання коли? де? куди? як? Час, місце, спосіб дії, оцінка мовця — і як з прислівника зробити прикметник.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="regel" aria-selected="true">Regel</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Finden</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Arten</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Zeit</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Stärke</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · -weise, -falls</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · als</button>
+    <button class="tab-btn" data-tab="ub7">Üb. 7 · hin, her</button>
+    <button class="tab-btn" data-tab="ub8">Üb. 8 · -ig, äußere</button>
+    <button class="tab-btn" data-tab="ub9">Üb. 9 · Endung?</button>
+    <button class="tab-btn" data-tab="ub10">Üb. 10 · Sätze</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <section class="panel active" id="panel-regel">
+      <p class="section-label">Regel</p>
+      <h2 class="panel-title">Adverbien</h2>
+      <ul class="regel-toc" id="regelToc"></ul>
+
+      <div class="card">
+        <p>Adverbien sind Wörter wie <i>heute, hier, gern, sehr, leider</i>. Sie sagen, wann, wo, wie oder wie oft etwas passiert. Adverbien haben keine Endung. Es gibt vier große Gruppen: allgemeine Regeln, Temporaladverbien (Zeit), Modaladverbien (Art und Weise, Meinung) und Lokaladverbien (Ort und Richtung).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Прислівник (<i>das Adverb</i>) — незмінне слово, яке найчастіше пояснює дієслово: <i>завтра, тут, охоче, дуже, на жаль</i>. Як і в українській, він не має закінчень. Головна відмінність: у німецькій майже кожен прикметник може стояти біля дієслова як прислівник <b>без жодних змін</b> (<i>schön</i> — «гарний» і «гарно»), тоді як українською ми утворюємо окреме слово на <i>-о</i>. Нижче — загальні правила, прислівники часу, способу дії й оцінки, місця й напрямку, а наприкінці — як з прислівника утворити прикметник (<i>heute → heutig</i>).
+        </div>
+      </div>
+
+      <section class="card regel-block" id="undekliniert">
+        <h3>Adverbien werden nicht dekliniert</h3>
+        <p>Ein Adverb hat nie eine Endung. Es sagt meistens etwas über das Verb: <i>wann</i>, <i>wo</i> oder <i>wie</i> etwas passiert.</p>
+        <table class="gtable">
+          <tr><th>Frage</th><th>Adverbien</th><th>Beispiel</th></tr>
+          <tr><td>Wann?</td><td>heute, morgen, jetzt, bald</td><td>Wir schreiben <b>morgen</b> einen Test.</td></tr>
+          <tr><td>Wo? Wohin?</td><td>hier, dort, oben, draußen</td><td>Die Kinder spielen <b>draußen</b>.</td></tr>
+          <tr><td>Wie?</td><td>gern, leider, so, sehr</td><td>Ich lese <b>gern</b> Comics.</td></tr>
+          <tr><td>Wie oft?</td><td>oft, manchmal, nie</td><td>Tom ist <b>nie</b> pünktlich.</td></tr>
+        </table>
+        <p class="beispiel">Das Wetter war <b>gestern</b> schön. – Wir haben <b>dort</b> gewartet.</p>
+        <p class="merke">Adverbien haben keine Endung – weder vor dem Nomen noch beim Verb: <i>heute, hier, gern</i>.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Прислівник не відмінюється — так само, як і в українській (<i>завтра, тут, охоче</i>). Найчастіше він стосується дієслова й відповідає на питання <b>коли? де? як? як часто?</b> У реченні прислівник — окремий член речення і може стояти на першому місці: <i><b>Morgen</b> schreiben wir einen Test.</i> (див. тему про порядок слів).
+        </div>
+      </section>
+
+      <section class="card regel-block" id="bezug">
+        <h3>Adverb vor Adverb und vor Adjektiv: sehr gut, ein sehr gutes Buch</h3>
+        <p>Ein Adverb kann auch ein anderes Adverb oder ein Adjektiv genauer beschreiben. Es steht dann direkt davor.</p>
+        <table class="gtable">
+          <tr><th>Wozu gehört das Adverb?</th><th>Beispiel</th></tr>
+          <tr><td>zum Verb</td><td>Lena tanzt <b>gut</b>.</td></tr>
+          <tr><td>zu einem anderen Adverb</td><td>Lena tanzt <b>ungewöhnlich</b> gut.</td></tr>
+          <tr><td>zu einem Adjektiv beim Verb</td><td>Der Film ist <b>ziemlich</b> lang.</td></tr>
+          <tr><td>zu einem Adjektiv vor dem Nomen</td><td>ein <b>ziemlich</b> langer Film</td></tr>
+        </table>
+        <p class="beispiel">Wir hatten <b>unglaublich</b> schönes Wetter.</p>
+        <p class="beispiel">Das ist eine <b>sehr</b> schwere Aufgabe.</p>
+        <p class="merke">Vor dem Nomen bekommt nur das Adjektiv eine Endung, das Adverb davor nicht: ein <b>ziemlich</b> lang<b>er</b> Film.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Порівняй: <i>ein unglaublich schnell<b>es</b> Auto</i> — «неймовірно швидке авто» (одне прикметникове закінчення, <i>unglaublich</i> — прислівник). А <i>ein unglaublich<b>es</b>, schnell<b>es</b> Auto</i> — це вже два окремі прикметники: «неймовірне, швидке авто». Українською теж: <i>дуже гарний</i> — «дуже» не змінюється, змінюється лише «гарний».
+        </div>
+      </section>
+
+      <section class="card regel-block" id="partizip">
+        <h3>Vor einem Partizip: schnell wachsende Städte, ein gut erzogenes Kind</h3>
+        <p>Ein Partizip kann wie ein Adjektiv vor dem Nomen stehen. Auch davor kann ein Adverb stehen – natürlich ohne Endung.</p>
+        <table class="gtable">
+          <tr><th></th><th>Satz</th><th>vor dem Nomen</th></tr>
+          <tr><td>Partizip I</td><td>Die Stadt wächst schnell.</td><td>eine <b>schnell</b> wachsende Stadt</td></tr>
+          <tr><td>Partizip I</td><td>Die Kinder lachen laut.</td><td>die <b>laut</b> lachenden Kinder</td></tr>
+          <tr><td>Partizip II</td><td>Das Kind ist gut erzogen.</td><td>ein <b>gut</b> erzogenes Kind</td></tr>
+          <tr><td>Partizip II</td><td>Der Kuchen ist frisch gebacken.</td><td>ein <b>frisch</b> gebackener Kuchen</td></tr>
+        </table>
+        <p class="merke">Adverb + Partizip + Nomen: nur das Partizip bekommt die Endung – <i>ein gut organisiert<b>es</b> Fest</i>.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Partizip I (<i>wachsend</i> — «який росте») і Partizip II (<i>erzogen</i> — «вихований») перед іменником відмінюються як прикметники. Прислівник перед ними — без закінчення, як в українському <i>швидко зростаюче місто</i>, <i>добре вихована дитина</i>. Докладніше — у темі про дієприкметникові звороти.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="zu">
+        <h3>zu + Adjektiv oder Adverb: zu spät, zu teuer</h3>
+        <p><b>zu</b> vor einem Adjektiv oder Adverb heißt: mehr, als gut oder möglich ist. Meistens hat das eine negative Folge.</p>
+        <p class="beispiel">Du kommst <b>zu</b> spät – der Film hat schon angefangen.</p>
+        <p class="beispiel">Die Jacke ist <b>zu</b> teuer, ich kann sie nicht kaufen.</p>
+        <p class="beispiel">Er isst <b>zu</b> viel Schokolade.</p>
+        <table class="gtable">
+          <tr><th>sehr</th><th>zu</th></tr>
+          <tr><td>Die Jacke ist <b>sehr</b> teuer. Aber sie gefällt mir, ich kaufe sie.</td><td>Die Jacke ist <b>zu</b> teuer. Ich habe nicht genug Geld.</td></tr>
+        </table>
+        <p class="merke">zu + Adjektiv = eine Grenze ist überschritten: zu spät, zu laut, zu klein.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          <i>zu</i> тут — «<b>занадто</b>»: межу перейдено, і з цього щось не виходить. <i>sehr</i> — просто «дуже», без такого наслідку. Не плутай з прийменником <i>zu</i> (<i>zu Hause, zum Arzt</i>) і з <i>zu</i> перед інфінітивом.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="temporal">
+        <h3>Temporaladverbien: wann? wie oft? wie lange?</h3>
+        <p>Temporaladverbien sagen, <i>wann</i>, <i>seit wann</i>, <i>bis wann</i>, <i>wie lange</i> oder <i>wie oft</i> etwas passiert.</p>
+        <div style="overflow-x:auto;"><table class="gtable">
+          <tr><th>Zeit</th><th>Adverbien</th></tr>
+          <tr><td class="gender">jetzt</td><td>heute, jetzt, nun, gerade, sofort, heutzutage</td></tr>
+          <tr><td class="gender">vorher</td><td>gestern, vorgestern, früher, damals, vorhin, neulich, soeben, schon, bereits, vorher, seitdem, bisher</td></tr>
+          <tr><td class="gender">später</td><td>morgen, übermorgen, bald, später, nachher, danach, demnächst, künftig</td></tr>
+          <tr><td class="gender">wie oft?</td><td>immer, oft, häufig, meistens, manchmal, selten, nie, niemals, wieder; morgens, mittags, abends, nachts, montags …</td></tr>
+          <tr><td class="gender">wie lange?</td><td>lange, immer noch, bisher, seitdem</td></tr>
+        </table></div>
+        <p class="beispiel"><b>Früher</b> hatte ich Angst vor Hunden. <b>Heute</b> habe ich selbst einen.</p>
+        <p class="beispiel">Wir sehen uns <b>nachher</b> in der Pause.</p>
+        <p class="beispiel">Ich gehe <b>morgens</b> zu Fuß zur Schule. (= jeden Morgen)</p>
+        <p class="merke">Die Tabelle zeigt die Bedeutung, nicht die Zeitform: <i><b>Morgen</b> fahren wir</i> – Präsens, aber Zukunft.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Пари, які часто плутають: <b>morgen</b> — «завтра», а <b>morgens</b> — «щоранку, вранці (регулярно)»; <b>vorhin</b> — «щойно, недавно (сьогодні)», <b>nachher</b> — «згодом, потім (сьогодні)»; <b>damals</b> — «тоді, в ті часи», <b>früher</b> — «раніше, колись». Як і в українській, «завтра» можна поєднати з теперішнім часом: <i>Завтра ми їдемо</i> — <i>Morgen fahren wir</i>.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="akkusativ-zeit">
+        <h3>Ohne Präposition: jeden Tag, letzte Woche, nächstes Jahr</h3>
+        <p>Statt eines Adverbs steht oft ein Nomen im <b>Akkusativ</b> – ganz ohne Präposition.</p>
+        <table class="gtable">
+          <tr><th></th><th>maskulin</th><th>feminin</th><th>neutral</th></tr>
+          <tr><td class="gender">jed-</td><td><b>jeden</b> Tag</td><td><b>jede</b> Woche</td><td><b>jedes</b> Jahr</td></tr>
+          <tr><td class="gender">letzt-</td><td><b>letzten</b> Monat</td><td><b>letzte</b> Woche</td><td><b>letztes</b> Wochenende</td></tr>
+          <tr><td class="gender">nächst-</td><td><b>nächsten</b> Sommer</td><td><b>nächste</b> Woche</td><td><b>nächstes</b> Jahr</td></tr>
+          <tr><td class="gender">ganz-</td><td><b>den ganzen</b> Tag</td><td><b>die ganze</b> Nacht</td><td><b>das ganze</b> Jahr</td></tr>
+        </table>
+        <p class="beispiel">Ich trainiere <b>jeden Montag</b>.</p>
+        <p class="beispiel"><b>Letztes Jahr</b> waren wir in Polen.</p>
+        <p class="merke">Zeitangabe ohne Präposition = Akkusativ: <i>jeden</i> Tag, nicht „jedem Tag“.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Ці вирази працюють як прислівники часу (<i>jeden Tag</i> = <i>täglich</i>), але це іменник з артиклевим словом у <b>Akkusativ</b>. Помітно лише в чоловічому роді: <i>jed<b>en</b> Tag, letzt<b>en</b> Monat, nächst<b>en</b> Sommer</i>. Українською теж без прийменника: <i>щодня, минулого тижня</i>. Докладніше — у темі «Modale Adverbien mit Dativ bzw. Akkusativ».
+        </div>
+      </section>
+
+      <section class="card regel-block" id="adjektiv-adverb">
+        <h3>Adjektive als Modaladverbien: Sie singt schön – schöner</h3>
+        <p>Fast jedes Adjektiv kann beim Verb stehen und sagen, <i>wie</i> etwas passiert. Dann hat es keine Endung. Aber man kann es steigern.</p>
+        <table class="gtable">
+          <tr><th>Adjektiv vor dem Nomen</th><th>beim Verb (Wie?)</th><th>gesteigert</th></tr>
+          <tr><td>eine schön<b>e</b> Stimme</td><td>Sie singt <b>schön</b>.</td><td>Sie singt <b>schöner</b> als ich.</td></tr>
+          <tr><td>ein schnell<b>er</b> Läufer</td><td>Er läuft <b>schnell</b>.</td><td>Er läuft <b>am schnellsten</b>.</td></tr>
+          <tr><td>ein gut<b>er</b> Tag</td><td>Es geht mir <b>gut</b>.</td><td>Heute geht es mir <b>besser</b>.</td></tr>
+        </table>
+        <p class="merke">Beim Verb: keine Endung – aber Komparativ und Superlativ sind möglich: schnell – schneller – am schnellsten.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          В українській з прикметника утворюється окреме слово: <i>гарний → гарно</i>, <i>швидкий → швидко</i>. У німецькій форма та сама: <i>schön</i> — і «гарний», і «гарно». Тому головне питання — чи стоїть слово перед іменником (тоді закінчення) чи біля дієслова (тоді без закінчення). Ступені порівняння — як у темі «Komparativ und Superlativ».
+        </div>
+      </section>
+
+      <section class="card regel-block" id="intensitaet">
+        <h3>sehr, fast, vielleicht, sicher, gar nicht: Stärke und Meinung</h3>
+        <p>Diese Modaladverbien machen eine Aussage stärker oder schwächer, unsicher, sicher oder negativ. Meistens stehen sie direkt vor dem Wort, zu dem sie gehören: <i>sehr kalt</i>, <i>sicher richtig</i>.</p>
+        <div style="overflow-x:auto;"><table class="gtable">
+          <tr><th>Wirkung</th><th>Adverbien</th><th>Beispiel</th></tr>
+          <tr><td class="gender">stärker</td><td>sehr, besonders, äußerst, ungewöhnlich, außerordentlich</td><td>Der Test war <b>besonders</b> leicht.</td></tr>
+          <tr><td class="gender">schwächer</td><td>fast, beinahe, kaum, ziemlich, ganz, recht, einigermaßen</td><td>Ich habe den Bus <b>fast</b> verpasst.</td></tr>
+          <tr><td class="gender">unsicher</td><td>vielleicht, wohl, vermutlich, wahrscheinlich, möglicherweise</td><td>Das ist <b>vielleicht</b> falsch.</td></tr>
+          <tr><td class="gender">sicher</td><td>sicher, bestimmt, natürlich, wirklich, tatsächlich, unbedingt, allerdings</td><td>Das ist <b>bestimmt</b> richtig.</td></tr>
+          <tr><td class="gender">negativ</td><td>gar nicht, überhaupt nicht, keineswegs, keinesfalls; umsonst, vergebens (= ohne Erfolg)</td><td>Das ist <b>keinesfalls</b> erlaubt.</td></tr>
+        </table></div>
+        <p class="beispiel">Ich habe <b>kaum</b> geschlafen. (= fast gar nicht)</p>
+        <p class="beispiel">Wir haben <b>umsonst</b> gewartet – der Bus kam nicht.</p>
+        <p class="merke">kaum = fast nicht. umsonst = ohne Erfolg (oder: kostenlos).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Ці слова передають силу ознаки або ставлення мовця: <i>дуже, майже, ледве, мабуть, напевно, зовсім не</i>. Пастки: <b>ganz</b> перед «добрими» словами часто послаблює — <i>ganz gut</i> = «непогано, досить добре»; <b>kaum</b> — «ледве, майже не»; <b>umsonst</b> — «марно» або «безкоштовно» (зрозуміло з контексту).
+        </div>
+      </section>
+
+      <section class="card regel-block" id="erweise">
+        <h3>-erweise: glücklicherweise, dummerweise – eine Meinung</h3>
+        <p>Adjektiv + <b>-erweise</b> zeigt, wie der Sprecher die ganze Handlung findet: gut, dumm, normal, überraschend …</p>
+        <table class="gtable">
+          <tr><th>Adjektiv</th><th>Adverb</th><th>Bedeutung</th></tr>
+          <tr><td>glücklich</td><td><b>glücklicherweise</b></td><td>zum Glück</td></tr>
+          <tr><td>dumm</td><td><b>dummerweise</b></td><td>Das war dumm.</td></tr>
+          <tr><td>normal</td><td><b>normalerweise</b></td><td>Das ist normal so.</td></tr>
+          <tr><td>freundlich, nett</td><td><b>freundlicherweise, netterweise</b></td><td>Das war nett von ihm.</td></tr>
+          <tr><td>möglich</td><td><b>möglicherweise</b></td><td>Das ist möglich.</td></tr>
+          <tr><td>überraschend</td><td><b>überraschenderweise</b></td><td>Das überrascht mich.</td></tr>
+        </table>
+        <p class="beispiel"><b>Glücklicherweise</b> hat es nicht geregnet. = Es war ein Glück, dass es nicht geregnet hat.</p>
+        <p class="beispiel">Ich stehe <b>normalerweise</b> um sieben auf. = Das ist für mich normal.</p>
+        <table class="gtable">
+          <tr><th>Wie hat er geantwortet?</th><th>Wie finde ich das?</th></tr>
+          <tr><td>Er hat <b>freundlich</b> geantwortet. (in einem freundlichen Ton)</td><td>Er hat <b>freundlicherweise</b> geantwortet. (Es war nett, dass er überhaupt geantwortet hat.)</td></tr>
+        </table>
+        <p class="merke">-erweise antwortet nicht auf „Wie?“, sondern auf „Wie finde ich das?“.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Такі слова — це оцінка мовця, як українські вставні слова <i>на щастя, на жаль, як не дивно, на диво</i>, <i>зазвичай</i>. Утворення: прикметник + <b>-er-</b> + <b>weise</b> (<i>dumm-er-weise</i>); після Partizip I на <i>-end</i> так само: <i>überraschend-erweise</i>. Не плутай з простим прикметником-прислівником: <i>freundlich</i> описує спосіб дії, <i>freundlicherweise</i> — наше ставлення до самого факту.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="halber-falls">
+        <h3>-halber und -falls: vorsichtshalber, notfalls, bestenfalls</h3>
+        <p>Mit <b>-halber</b> nennt man einen Grund, mit <b>-falls</b> eine Bedingung.</p>
+        <table class="gtable">
+          <tr><th>Adverb</th><th>Bedeutung</th><th>Beispiel</th></tr>
+          <tr><td><b>vorsichtshalber</b></td><td>weil man vorsichtig sein will</td><td>Ich nehme <b>vorsichtshalber</b> einen Schirm mit.</td></tr>
+          <tr><td><b>sicherheitshalber</b></td><td>damit nichts passiert</td><td>Speicher die Datei <b>sicherheitshalber</b> noch einmal.</td></tr>
+          <tr><td><b>umständehalber</b></td><td>weil die Umstände es verlangen</td><td>Das Konzert fällt <b>umständehalber</b> aus.</td></tr>
+          <tr><td><b>notfalls</b></td><td>wenn es nötig ist</td><td><b>Notfalls</b> fahren wir mit dem Taxi.</td></tr>
+          <tr><td><b>bestenfalls</b></td><td>wenn alles sehr gut geht</td><td>Wir sind <b>bestenfalls</b> um acht zu Hause.</td></tr>
+          <tr><td><b>schlimmstenfalls</b></td><td>wenn es ganz schlecht kommt</td><td><b>Schlimmstenfalls</b> verpassen wir den Zug.</td></tr>
+          <tr><td><b>gegebenenfalls</b> (ggf.)</td><td>wenn es so ist / wenn nötig</td><td>Ruf mich <b>gegebenenfalls</b> an.</td></tr>
+        </table>
+        <p class="merke">-halber = weil … (Grund). -falls = wenn … (Bedingung).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Одне слово замість цілого підрядного речення: <i>vorsichtshalber</i> = «про всяк випадок, з обережності», <i>notfalls</i> = «у разі потреби», <i>bestenfalls</i> = «у кращому разі», <i>schlimmstenfalls</i> = «у гіршому разі». <i>gegebenenfalls</i> часто пишуть скорочено <b>ggf.</b> — особливо в інструкціях і оголошеннях.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="als-adverb">
+        <h3>als + Adjektiv: sich als richtig erweisen</h3>
+        <p>Nach <b>als</b> steht ein Adjektiv ohne Endung. Es zeigt, wie man eine Sache oder eine Person beurteilt. Typische Verben: <i>sich erweisen als, gelten als, bezeichnen als, ansehen als, empfinden als</i>.</p>
+        <p class="beispiel">Die Idee hat sich <b>als richtig</b> erwiesen.</p>
+        <p class="beispiel">Der Film gilt <b>als langweilig</b>.</p>
+        <p class="beispiel">Viele Schüler empfinden den Test <b>als schwer</b>.</p>
+        <p class="merke">als + Adjektiv: keine Endung – <i>als richtig</i>, nicht „als richtiges“.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Українською — «виявитися правильним», «вважатися нудним»: у нас тут орудний відмінок, а в німецькій — <i>als</i> + прикметник без закінчення.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="als-nomen">
+        <h3>als + Nomen: als Kind, als Schüler – im gleichen Kasus</h3>
+        <p>Auch ein Nomen kann nach <b>als</b> stehen – meistens ohne Artikel. Es gehört zu einem anderen Satzglied und steht im <b>gleichen Kasus</b>.</p>
+        <table class="gtable">
+          <tr><th>Bezugswort</th><th>Beispiel</th></tr>
+          <tr><td>ich (Nom.)</td><td><b>Als Kind</b> habe ich in Lwiw gewohnt.</td></tr>
+          <tr><td>meine Mutter (Nom.)</td><td>Meine Mutter arbeitet <b>als Ärztin</b>.</td></tr>
+          <tr><td>ihn (Akk.)</td><td>Ich kenne ihn <b>als einen fairen Spieler</b>.</td></tr>
+          <tr><td>ich (Nom.)</td><td>Ich sage dir das <b>als dein Freund</b>.</td></tr>
+          <tr><td>dir (Dat.)</td><td>Ich vertraue dir <b>als meiner besten Freundin</b>.</td></tr>
+        </table>
+        <p class="merke">Der Kasus nach als = der Kasus des Bezugsworts.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Для професії, ролі, віку — зазвичай <b>без артикля</b>: <i>als Ärztin</i> («лікаркою»), <i>als Kind</i> («у дитинстві, дитиною»). Відмінок береться від слова, до якого стосується вираз: <i>Ich … als dein Freund</i> — «я, як твій друг» (Nom.), але <i>dir als meiner Freundin</i> — «тобі, як моїй подрузі» (Dat.). Див. також тему «Gebrauch des Artikels».
+        </div>
+      </section>
+
+      <section class="card regel-block" id="lokal">
+        <h3>Lokaladverbien: wo? wohin? woher?</h3>
+        <p>Lokaladverbien sagen, <i>wo</i> etwas ist, <i>wohin</i> es sich bewegt oder <i>woher</i> es kommt.</p>
+        <div style="overflow-x:auto;"><table class="gtable">
+          <tr><th>Frage</th><th>Adverbien</th><th>Beispiel</th></tr>
+          <tr><td class="gender">wo?</td><td>hier, da, dort, drüben; oben, unten, vorn, hinten, links, rechts, mitten; innen, außen, drinnen, draußen; überall, irgendwo, nirgends</td><td>Die Toiletten sind <b>unten</b>.</td></tr>
+          <tr><td class="gender">wohin?</td><td>hierher, dahin, dorthin; hinauf, hinunter, hinein, hinaus, hinüber; vorwärts, rückwärts, geradeaus; <i>oder</i> nach oben, nach unten, nach draußen …</td><td>Der Aufzug fährt <b>nach oben</b>.</td></tr>
+          <tr><td class="gender">woher?</td><td>daher, dorther; <i>oder</i> von hier, von dort, von oben, von links, von draußen …</td><td>Der Lärm kommt <b>von draußen</b>.</td></tr>
+        </table></div>
+        <p class="merke">Ort: oben, draußen. Richtung: nach oben, nach draußen. Herkunft: von oben, von draußen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Тут німецька дуже схожа на українську: <b>де?</b> — <i>тут, там, нагорі</i>; <b>куди?</b> — <i>сюди, туди, нагору</i>; <b>звідки?</b> — <i>звідси, звідти, згори</i>. Там, де окремого слова немає, додають <i>nach</i> (куди) або <i>von</i> (звідки): <i>nach draußen</i> — «надвір», <i>von draußen</i> — «знадвору».
+        </div>
+      </section>
+
+      <section class="card regel-block" id="hin-her">
+        <h3>hin und her: weg vom Sprecher – zum Sprecher</h3>
+        <p><b>hin</b> zeigt eine Bewegung weg vom Sprecher, <b>her</b> eine Bewegung zum Sprecher. Das gilt auch für die Fragewörter: <i>wohin?</i> – <i>woher?</i></p>
+        <table class="gtable">
+          <tr><th>hin- (weg von mir)</th><th>her- (zu mir)</th></tr>
+          <tr><td>Ich bin im Flur und gehe <b>hinein</b>.</td><td>Ich bin im Zimmer: „Komm <b>herein</b>!“</td></tr>
+          <tr><td>Ich gehe <b>hinaus</b> in den Garten.</td><td>Der Hund kommt aus dem Haus <b>heraus</b>.</td></tr>
+          <tr><td>Ich steige die Treppe <b>hinauf</b>.</td><td>Ich bin oben: „Komm <b>herauf</b>!“</td></tr>
+          <tr><td>Wir fahren <b>hinunter</b> ins Tal.</td><td>Ich bin unten: „Komm <b>herunter</b>!“</td></tr>
+          <tr><td>Er schwimmt <b>hinüber</b> ans andere Ufer.</td><td>Sie winkt: „Komm <b>herüber</b>!“</td></tr>
+        </table>
+        <p class="beispiel"><b>Woher</b> kommst du? – <b>Wohin</b> fährst du?</p>
+        <p class="merke">hin = von mir weg. her = zu mir her.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Уяви себе в центрі: <b>hin</b> — рух від тебе, <b>her</b> — рух до тебе. Мама з кухні кличе: <i>Komm her!</i> («іди сюди»), а ти, стоячи перед дверима, кажеш: <i>Ich gehe hinein</i> («я заходжу туди»). У розмовній мові часто кажуть коротко <i>rein, raus, rauf, runter</i> — і тоді різниці між hin/her вже не чути. Такі слова часто є частиною відокремлюваних дієслів: <i>hinaufgehen, herunterkommen</i>.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="ig-adjektive">
+        <h3>Adjektive auf -ig: heute → der heutige Tag</h3>
+        <p>Aus manchen Adverbien macht man mit <b>-ig</b> ein Adjektiv. Es steht vor dem Nomen und bekommt die normale Adjektivendung.</p>
+        <table class="gtable">
+          <tr><th>Adverb</th><th>Adjektiv</th><th>Beispiel</th></tr>
+          <tr><td>heute</td><td><b>heutig-</b></td><td>die heutig<b>e</b> Zeitung</td></tr>
+          <tr><td>gestern</td><td><b>gestrig-</b></td><td>das gestrig<b>e</b> Spiel</td></tr>
+          <tr><td>morgen</td><td><b>morgig-</b></td><td>der morgig<b>e</b> Ausflug</td></tr>
+          <tr><td>hier</td><td><b>hiesig-</b></td><td>die hiesig<b>en</b> Geschäfte</td></tr>
+          <tr><td>dort</td><td><b>dortig-</b></td><td>das dortig<b>e</b> Museum</td></tr>
+          <tr><td>jetzt</td><td><b>jetzig-</b></td><td>der jetzig<b>e</b> Direktor</td></tr>
+          <tr><td>bisher</td><td><b>bisherig-</b></td><td>unser bisherig<b>er</b> Trainer</td></tr>
+          <tr><td>damals</td><td><b>damalig-</b></td><td>in der damalig<b>en</b> Zeit</td></tr>
+          <tr><td>oben</td><td><b>obig-</b></td><td>der obig<b>e</b> Text (= der Text oben)</td></tr>
+          <tr><td>vorher</td><td><b>vorherig-</b> / <b>vorig-</b></td><td>in der vorig<b>en</b> Stunde</td></tr>
+        </table>
+        <p class="merke">Achtung: gestern → gest<b>r</b>ig (ohne -e-), hier → hie<b>s</b>ig (mit -s-).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Точнісінько як в українській: <i>сьогодні → сьогоднішній</i>, <i>учора → учорашній</i>, <i>тут → тутешній</i>, <i>тоді → тодішній</i>. Такий прикметник стоїть лише перед іменником і відмінюється за звичайними правилами (див. «Deklination des Adjektivs»): <i>im heutig<b>en</b> Unterricht</i>.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="aeussere">
+        <h3>außen → die äußere Tür, oben → der obere Stock</h3>
+        <p>Auch aus <i>außen, innen, oben, unten, vorn, hinten</i> werden Adjektive – oft mit Umlaut. Es gibt auch einen Superlativ.</p>
+        <table class="gtable">
+          <tr><th>Adverb</th><th>Adjektiv</th><th>Superlativ</th><th>Beispiel</th></tr>
+          <tr><td>außen</td><td><b>äußer-</b></td><td>äußerst-</td><td>die äußer<b>e</b> Tür</td></tr>
+          <tr><td>innen</td><td><b>inner-</b></td><td>innerst-</td><td>die inner<b>e</b> Seite</td></tr>
+          <tr><td>oben</td><td><b>ober-</b></td><td>oberst-</td><td>im oberst<b>en</b> Stock</td></tr>
+          <tr><td>unten</td><td><b>unter-</b></td><td>unterst-</td><td>das unter<b>e</b> Regal</td></tr>
+          <tr><td>vorn</td><td><b>vorder-</b></td><td>vorderst-</td><td>in der vorder<b>en</b> Reihe</td></tr>
+          <tr><td>hinten</td><td><b>hinter-</b></td><td>hinterst-</td><td>die hinter<b>en</b> Plätze</td></tr>
+        </table>
+        <p class="merke">Diese Adjektive stehen nur vor dem Nomen – immer mit Endung: <i>die vordere Reihe</i>. Beim Verb bleibt das Adverb: <i>Wir sitzen vorn.</i></p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Порівняй: <i>Wir sitzen <b>hinten</b></i> — «ми сидимо позаду» (прислівник), але <i>in der <b>hinteren</b> Reihe</i> — «у задньому ряду» (прикметник). Так само <i>нагорі → верхній</i>, <i>зовні → зовнішній</i>. Форми <i>äußerst-</i> і <i>oberst-</i> — «найдальший, найвищий»: <i>im obersten Stock</i> — «на найвищому поверсі». Не плутай: прислівник <i>äußerst</i> (без закінчення) означає «надзвичайно»: <i>äußerst schwierig</i>.
+        </div>
+      </section>
+
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Adverbien im Text finden</h2>
+      <p class="lead">Знайди в тексті всі <b>прислівники</b> (слова без закінчень, що відповідають на питання коли? де? куди? як?) і натисни на них. Потім — «Prüfen».</p>
+      <div class="card" id="ub1-text" style="line-height:2;font-size:16px;">
+        <p><span class="tok" data-correct="true">Gestern</span> <span class="tok" data-correct="false">war</span> <span class="tok" data-correct="false">ich</span> <span class="tok" data-correct="false">mit</span> <span class="tok" data-correct="false">meiner</span> <span class="tok" data-correct="false">Schwester</span> <span class="tok" data-correct="false">im</span> <span class="tok" data-correct="false">Zoo</span>. <span class="tok" data-correct="false">Wir</span> <span class="tok" data-correct="false">waren</span> <span class="tok" data-correct="true">schon</span> <span class="tok" data-correct="false">um</span> <span class="tok" data-correct="false">neun</span> <span class="tok" data-correct="true">dort</span>. <span class="tok" data-correct="true">Leider</span> <span class="tok" data-correct="false">war</span> <span class="tok" data-correct="false">es</span> <span class="tok" data-correct="true">sehr</span> <span class="tok" data-correct="false">kalt</span>. <span class="tok" data-correct="true">Oben</span> <span class="tok" data-correct="false">auf</span> <span class="tok" data-correct="false">dem</span> <span class="tok" data-correct="false">Hügel</span> <span class="tok" data-correct="false">ist</span> <span class="tok" data-correct="false">ein</span> <span class="tok" data-correct="false">Spielplatz</span>, <span class="tok" data-correct="false">und</span> <span class="tok" data-correct="false">meine</span> <span class="tok" data-correct="false">Schwester</span> <span class="tok" data-correct="false">wollte</span> <span class="tok" data-correct="true">sofort</span> <span class="tok" data-correct="true">hinauf</span>. <span class="tok" data-correct="false">Die</span> <span class="tok" data-correct="false">Affen</span> <span class="tok" data-correct="false">fand</span> <span class="tok" data-correct="false">sie</span> <span class="tok" data-correct="true">besonders</span> <span class="tok" data-correct="false">lustig</span>. <span class="tok" data-correct="true">Morgen</span> <span class="tok" data-correct="false">fahren</span> <span class="tok" data-correct="false">wir</span> <span class="tok" data-correct="true">vielleicht</span> <span class="tok" data-correct="true">wieder</span> <span class="tok" data-correct="true">dorthin</span>.</p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub1-check">Prüfen</button>
+        <button class="btn secondary" id="ub1-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub1-score"></span>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Wann? Wie? Wo?</h2>
+      <p class="lead">Розсортуй прислівники: часу (<i>Wann?</i>), способу дії й оцінки (<i>Wie?</i>) чи місця й напрямку (<i>Wo? Wohin?</i>).</p>
+      <div class="card" id="ub2-sort"></div>
+    </section>
+
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Temporaladverbien und Zeitangaben</h2>
+      <p class="lead">Обери слово, яке підходить за змістом або за формою.</p>
+      <div class="card" id="ub3-quiz"></div>
+    </section>
+
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Stärker, schwächer, unsicher …</h2>
+      <p class="lead">Спершу розсортуй модальні прислівники за тим, що вони роблять з висловлюванням. Потім дай відповідь на питання про значення.</p>
+      <div class="card" id="ub4-sort"></div>
+      <div class="card" id="ub4-quiz"></div>
+    </section>
+
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">-erweise, -halber, -falls</h2>
+      <p class="lead"><b>Частина A:</b> обери прислівник, який підходить за змістом. <b>Частина B:</b> перепиши речення одним реченням із прислівником у дужках.</p>
+      <div class="card" id="ub5-list">
+        <div class="fill-item"><span class="num">1)</span> <select class="blank inline" data-ans="Normalerweise"><option value="">—</option><option>Glücklicherweise</option><option>Normalerweise</option><option>Schlimmstenfalls</option></select> stehe ich um sieben auf, aber heute hat mein Wecker nicht geklingelt.</div>
+        <div class="fill-item"><span class="num">2)</span> <select class="blank inline" data-ans="Freundlicherweise"><option value="">—</option><option>Vorsichtshalber</option><option>Dummerweise</option><option>Freundlicherweise</option></select> hat mich mein Freund Max angerufen und geweckt – das war sehr nett von ihm.</div>
+        <div class="fill-item"><span class="num">3)</span> <select class="blank inline" data-ans="Dummerweise"><option value="">—</option><option>Normalerweise</option><option>Bestenfalls</option><option>Dummerweise</option></select> habe ich dann mein Handy zu Hause vergessen. Wie blöd!</div>
+        <div class="fill-item"><span class="num">4)</span> Es sah nach Regen aus, deshalb habe ich <select class="blank inline" data-ans="vorsichtshalber"><option value="">—</option><option>überraschenderweise</option><option>freundlicherweise</option><option>vorsichtshalber</option></select> eine Regenjacke eingepackt.</div>
+        <div class="fill-item"><span class="num">5)</span> Der Bus hatte Verspätung. „<select class="blank inline" data-ans="Schlimmstenfalls"><option value="">—</option><option>Glücklicherweise</option><option>Schlimmstenfalls</option><option>Normalerweise</option></select> kommen wir eine Stunde zu spät“, dachte ich.</div>
+        <div class="fill-item"><span class="num">6)</span> Aber <select class="blank inline" data-ans="glücklicherweise"><option value="">—</option><option>glücklicherweise</option><option>dummerweise</option><option>notfalls</option></select> ist der Bus dann doch schnell gekommen.</div>
+        <div class="fill-item"><span class="num">7)</span> Die Wanderung dauert <select class="blank inline" data-ans="bestenfalls"><option value="">—</option><option>schlimmstenfalls</option><option>dummerweise</option><option>bestenfalls</option></select> drei Stunden – wenn alles gut geht und niemand müde wird.</div>
+        <p class="section-label" style="margin:18px 0 10px;">Teil B</p>
+        <div class="fill-item"><span class="num">8)</span> Es war nett von Oma, dass sie uns abgeholt hat. <i>(netterweise)</i> <input type="text" class="blank-input inline full" data-ans="Oma hat uns netterweise abgeholt|Netterweise hat Oma uns abgeholt|Netterweise hat uns Oma abgeholt"></div>
+        <div class="fill-item"><span class="num">9)</span> Es war ein Glück, dass es nicht geregnet hat. <i>(glücklicherweise)</i> <input type="text" class="blank-input inline full" data-ans="Glücklicherweise hat es nicht geregnet|Es hat glücklicherweise nicht geregnet"></div>
+        <div class="fill-item"><span class="num">10)</span> Ich nehme ein Pflaster mit, weil ich vorsichtig sein will. <i>(vorsichtshalber)</i> <input type="text" class="blank-input inline full" data-ans="Ich nehme vorsichtshalber ein Pflaster mit|Vorsichtshalber nehme ich ein Pflaster mit|Ich nehme ein Pflaster vorsichtshalber mit"></div>
+        <div class="fill-item"><span class="num">11)</span> Wenn es nötig ist, schlafen wir im Zelt. <i>(notfalls)</i> <input type="text" class="blank-input inline full" data-ans="Notfalls schlafen wir im Zelt|Wir schlafen notfalls im Zelt"></div>
+        <div class="fill-item"><span class="num">12)</span> Es ist überraschend, aber der Test war leicht. <i>(überraschenderweise)</i> <input type="text" class="blank-input inline full" data-ans="Überraschenderweise war der Test leicht|Der Test war überraschenderweise leicht"></div>
+        <div class="fill-item"><span class="num">13)</span> Wenn es ganz schlecht kommt, verpassen wir den Zug. <i>(schlimmstenfalls)</i> <input type="text" class="blank-input inline full" data-ans="Schlimmstenfalls verpassen wir den Zug|Wir verpassen schlimmstenfalls den Zug"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub5-check">Prüfen</button>
+        <button class="btn secondary" id="ub5-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub5-score"></span>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">als + Adjektiv, als + Nomen</h2>
+      <p class="lead">Обери правильну форму. Пам'ятай: після <i>als</i> прикметник — без закінчення, а іменник стоїть у тому самому відмінку, що й слово, до якого він стосується.</p>
+      <div class="card" id="ub6-list">
+        <div class="fill-item"><span class="num">1)</span> Die Idee hat sich als <select class="blank inline" data-ans="richtig"><option value="">—</option><option>richtige</option><option>richtiges</option><option>richtig</option></select> erwiesen.</div>
+        <div class="fill-item"><span class="num">2)</span> Der neue Film gilt als <select class="blank inline" data-ans="spannend"><option value="">—</option><option>spannender</option><option>spannenden</option><option>spannend</option></select>.</div>
+        <div class="fill-item"><span class="num">3)</span> Meine Mutter arbeitet als <select class="blank inline" data-ans="Ärztin"><option value="">—</option><option>eine Ärztin</option><option>Ärztin</option><option>die Ärztin</option></select>.</div>
+        <div class="fill-item"><span class="num">4)</span> <select class="blank inline" data-ans="Als"><option value="">—</option><option>Als</option><option>Wie</option><option>Wenn</option></select> Kind hatte ich einen Hamster.</div>
+        <div class="fill-item"><span class="num">5)</span> Ich kenne ihn als <select class="blank inline" data-ans="einen"><option value="">—</option><option>einem</option><option>ein</option><option>einen</option></select> fairen Spieler.</div>
+        <div class="fill-item"><span class="num">6)</span> Als <select class="blank inline" data-ans="dein"><option value="">—</option><option>dein</option><option>deinen</option><option>deinem</option></select> Freund sage ich dir die Wahrheit.</div>
+        <div class="fill-item"><span class="num">7)</span> Ich vertraue dir als <select class="blank inline" data-ans="meiner"><option value="">—</option><option>meine</option><option>meinen</option><option>meiner</option></select> besten Freundin.</div>
+        <div class="fill-item"><span class="num">8)</span> Die Schule hat Lena als <select class="blank inline" data-ans="beste"><option value="">—</option><option>beste</option><option>besten</option><option>bester</option></select> Schülerin des Jahres ausgezeichnet.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub6-check">Prüfen</button>
+        <button class="btn secondary" id="ub6-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub6-score"></span>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub7">
+      <p class="section-label">Üb. 7</p>
+      <h2 class="panel-title">wo? wohin? woher? – hin oder her?</h2>
+      <p class="lead">Обери правильний прислівник. Уяви, де стоїть той, хто говорить.</p>
+      <div class="card" id="ub7-list">
+        <div class="fill-item"><span class="num">1)</span> Mama ist in der Küche und ruft: „Kommt <select class="blank inline" data-ans="herein"><option value="">—</option><option>herein</option><option>hinaus</option><option>hinein</option></select>, das Essen ist fertig!“</div>
+        <div class="fill-item"><span class="num">2)</span> Ich stehe vor dem Kino, mein Freund ist schon drin. Ich gehe jetzt auch <select class="blank inline" data-ans="hinein"><option value="">—</option><option>herein</option><option>heraus</option><option>hinein</option></select>.</div>
+        <div class="fill-item"><span class="num">3)</span> Die Katze sitzt auf dem Baum. Wir stehen unten und rufen: „Komm <select class="blank inline" data-ans="herunter"><option value="">—</option><option>hinauf</option><option>herunter</option><option>hinunter</option></select>!“</div>
+        <div class="fill-item"><span class="num">4)</span> Der Ball liegt im Garten. Ich bin im Haus und sage: „Ich gehe schnell <select class="blank inline" data-ans="hinaus"><option value="">—</option><option>herein</option><option>heraus</option><option>hinaus</option></select> und hole ihn.“</div>
+        <div class="fill-item"><span class="num">5)</span> Oma ist oben und ruft: „Komm bitte <select class="blank inline" data-ans="herauf"><option value="">—</option><option>herunter</option><option>hinauf</option><option>herauf</option></select>, ich brauche Hilfe!“</div>
+        <div class="fill-item"><span class="num">6)</span> „<select class="blank inline" data-ans="Woher"><option value="">—</option><option>Woher</option><option>Wo</option><option>Wohin</option></select> kommst du?“ – „Aus Kyjiw.“</div>
+        <div class="fill-item"><span class="num">7)</span> „<select class="blank inline" data-ans="Wohin"><option value="">—</option><option>Wo</option><option>Woher</option><option>Wohin</option></select> fährst du in den Ferien?“ – „Nach Spanien.“</div>
+        <div class="fill-item"><span class="num">8)</span> Die Toiletten sind <select class="blank inline" data-ans="unten"><option value="">—</option><option>nach unten</option><option>unten</option><option>von unten</option></select> im Keller.</div>
+        <div class="fill-item"><span class="num">9)</span> Der Aufzug fährt jetzt <select class="blank inline" data-ans="nach oben"><option value="">—</option><option>von oben</option><option>nach oben</option><option>oben</option></select> in den fünften Stock.</div>
+        <div class="fill-item"><span class="num">10)</span> Der Lärm kommt <select class="blank inline" data-ans="von draußen"><option value="">—</option><option>von draußen</option><option>nach draußen</option><option>draußen</option></select> – das Fenster ist offen.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub7-check">Prüfen</button>
+        <button class="btn secondary" id="ub7-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub7-score"></span>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub8">
+      <p class="section-label">Üb. 8</p>
+      <h2 class="panel-title">Adjektive aus Adverbien</h2>
+      <p class="lead">Утвори з прислівника прикметник і впиши його з правильним закінченням.</p>
+      <div class="card" id="ub8-list">
+        <div class="fill-item"><span class="num">1)</span> die Zeitung von heute → die <input type="text" class="blank-input inline" data-ans="heutige"> Zeitung</div>
+        <div class="fill-item"><span class="num">2)</span> das Spiel von gestern → das <input type="text" class="blank-input inline" data-ans="gestrige"> Spiel</div>
+        <div class="fill-item"><span class="num">3)</span> der Ausflug morgen → der <input type="text" class="blank-input inline" data-ans="morgige"> Ausflug</div>
+        <div class="fill-item"><span class="num">4)</span> die Geschäfte hier → die <input type="text" class="blank-input inline" data-ans="hiesigen"> Geschäfte</div>
+        <div class="fill-item"><span class="num">5)</span> das Museum dort → das <input type="text" class="blank-input inline" data-ans="dortige"> Museum</div>
+        <div class="fill-item"><span class="num">6)</span> der Direktor jetzt → der <input type="text" class="blank-input inline" data-ans="jetzige"> Direktor</div>
+        <div class="fill-item"><span class="num">7)</span> unser Trainer bisher → unser <input type="text" class="blank-input inline" data-ans="bisheriger"> Trainer</div>
+        <div class="fill-item"><span class="num">8)</span> in der Zeit damals → in der <input type="text" class="blank-input inline" data-ans="damaligen"> Zeit</div>
+        <div class="fill-item"><span class="num">9)</span> die Tür außen → die <input type="text" class="blank-input inline" data-ans="äußere|äussere"> Tür</div>
+        <div class="fill-item"><span class="num">10)</span> das Regal unten → das <input type="text" class="blank-input inline" data-ans="untere"> Regal</div>
+        <div class="fill-item"><span class="num">11)</span> wir sitzen in der Reihe hinten → wir sitzen in der <input type="text" class="blank-input inline" data-ans="hinteren"> Reihe</div>
+        <div class="fill-item"><span class="num">12)</span> wir wohnen ganz oben → wir wohnen im <input type="text" class="blank-input inline" data-ans="obersten"> Stock</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub8-check">Prüfen</button>
+        <button class="btn secondary" id="ub8-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub8-score"></span>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub9">
+      <p class="section-label">Üb. 9</p>
+      <h2 class="panel-title">Mit oder ohne Endung?</h2>
+      <p class="lead">У реченнях 1–4 обери правильну форму. У 5–12 впиши прислівник разом із прикметником чи дієприкметником — з правильним закінченням.</p>
+      <div class="card" id="ub9-list">
+        <div class="fill-item"><span class="num">1)</span> Mia läuft <select class="blank inline" data-ans="schnell"><option value="">—</option><option>schnell</option><option>schnelle</option><option>schnelles</option></select>.</div>
+        <div class="fill-item"><span class="num">2)</span> Heute geht es mir <select class="blank inline" data-ans="besser"><option value="">—</option><option>bessere</option><option>besser</option><option>gut</option></select> als gestern.</div>
+        <div class="fill-item"><span class="num">3)</span> Ein <select class="blank inline" data-ans="freundliches"><option value="">—</option><option>freundlich</option><option>freundliches</option><option>freundlicher</option></select> Mädchen hat mir den Weg gezeigt.</div>
+        <div class="fill-item"><span class="num">4)</span> Das Mädchen hat mir <select class="blank inline" data-ans="freundlich"><option value="">—</option><option>freundliches</option><option>freundliche</option><option>freundlich</option></select> den Weg gezeigt.</div>
+        <div class="fill-item"><span class="num">5)</span> Das Wetter ist ungewöhnlich warm. → Wir haben <input type="text" class="blank-input inline" data-ans="ungewöhnlich warmes"> Wetter.</div>
+        <div class="fill-item"><span class="num">6)</span> Der Weg ist ziemlich lang. → Das ist ein <input type="text" class="blank-input inline" data-ans="ziemlich langer"> Weg.</div>
+        <div class="fill-item"><span class="num">7)</span> Die Aufgabe ist sehr schwer. → Das ist eine <input type="text" class="blank-input inline" data-ans="sehr schwere"> Aufgabe.</div>
+        <div class="fill-item"><span class="num">8)</span> Die Kinder lachen laut. → die <input type="text" class="blank-input inline" data-ans="laut lachenden"> Kinder</div>
+        <div class="fill-item"><span class="num">9)</span> Die Stadt wächst schnell. → eine <input type="text" class="blank-input inline" data-ans="schnell wachsende"> Stadt</div>
+        <div class="fill-item"><span class="num">10)</span> Der Kuchen ist frisch gebacken. → ein <input type="text" class="blank-input inline" data-ans="frisch gebackener"> Kuchen</div>
+        <div class="fill-item"><span class="num">11)</span> Das Fest war gut organisiert. → ein <input type="text" class="blank-input inline" data-ans="gut organisiertes"> Fest</div>
+        <div class="fill-item"><span class="num">12)</span> Die Schüler sind gut vorbereitet. → die <input type="text" class="blank-input inline" data-ans="gut vorbereiteten"> Schüler</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub9-check">Prüfen</button>
+        <button class="btn secondary" id="ub9-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub9-score"></span>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub10">
+      <p class="section-label">Üb. 10</p>
+      <h2 class="panel-title">Sätze mit Adverbien</h2>
+      <p class="lead">Склади речення. Натискай слова по черзі; натиснеш на вже поставлене — воно повернеться. Часто правильних порядків кілька.</p>
+      <div class="card" id="ub10-order"></div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das Wichtigste</p>
+        <p>Adverbien haben nie eine Endung – auch nicht vor einem Adjektiv: <i>ein sehr schönes Bild</i>. Temporaladverbien sagen wann (<i>bald, damals</i>), Lokaladverbien wo, wohin, woher (<i>oben, nach oben, von oben; hinein – herein</i>). Modaladverbien sagen wie (<i>schnell, fast, vielleicht</i>) oder zeigen die Meinung des Sprechers (<i>glücklicherweise, vorsichtshalber, notfalls</i>). Mit <i>-ig</i> und aus <i>außen, oben, vorn …</i> werden Adjektive: <i>der heutige Tag, die äußere Tür</i>.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Прислівник не змінюється. Прислівники часу відповідають на «коли?», місця — на «де? куди? звідки?» (hin — від мене, her — до мене), способу дії — на «як?»; слова на <i>-erweise</i>, <i>-halber</i>, <i>-falls</i> — це оцінка, причина чи умова одним словом. Після <i>als</i> прикметник без закінчення, а іменник — у тому ж відмінку, що й слово, до якого він стосується. З прислівників утворюються прикметники: <i>heute → heutig</i>, <i>hinten → hinter-</i> — вони стоять перед іменником і мають закінчення.
+        </div>
+      </div>
+
+      <!-- "Де це ще трапляється": уроки (поле gram у lessons-data.js) і
+           пов'язані теми (поле dyv у grammar-data.js). Заповнюється
+           автоматично; якщо нічого немає — картка ховається сама. -->
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Де це ще трапляється</p>
+        <div class="gram-related" id="gramRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <p class="lead" id="gramBest" style="font-size:14px;"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/grammar-data.js"></script>
+<script src="../../data/lessons-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/site.js"></script>
+<script>
+  const GRAM_ID = "adverbien";
+
+  // Üb. 1: Adverbien im Text finden (токени)
+  initTokenClicks('ub1-text');
+  setTotal(document.querySelectorAll('#ub1-text .tok[data-correct="true"]').length);
+  document.getElementById('ub1-check').addEventListener('click', () => checkTokens('ub1-text', 'ub1-score', 'ub1'));
+  document.getElementById('ub1-reset').addEventListener('click', () => resetTokens('ub1-text', 'ub1-score', 'ub1'));
+
+  // Üb. 2: Wann? Wie? Wo?
+  buildSort('ub2-sort', {
+    buckets: ["Wann?", "Wie?", "Wo? Wohin?"],
+    items: [
+      {t: "gestern", b: "Wann?"}, {t: "bald", b: "Wann?"}, {t: "damals", b: "Wann?"}, {t: "oft", b: "Wann?"}, {t: "nachts", b: "Wann?"},
+      {t: "gern", b: "Wie?"}, {t: "leider", b: "Wie?"}, {t: "ziemlich", b: "Wie?"}, {t: "vorsichtshalber", b: "Wie?"}, {t: "glücklicherweise", b: "Wie?"},
+      {t: "draußen", b: "Wo? Wohin?"}, {t: "dorthin", b: "Wo? Wohin?"}, {t: "oben", b: "Wo? Wohin?"}, {t: "hinunter", b: "Wo? Wohin?"}, {t: "drüben", b: "Wo? Wohin?"}
+    ]
+  });
+
+  // Üb. 3: Temporaladverbien und Akkusativ der Zeit
+  buildQuiz('ub3-quiz', [
+    {q: "Die Koffer sind schon gepackt – wir fahren ___ nach Wien.", opts: ["damals", "bald", "vorhin"], correct: "bald"},
+    {q: "___ gab es in unserem Dorf noch kein Internet.", opts: ["Demnächst", "Sofort", "Damals"], correct: "Damals"},
+    {q: "Ich habe Lena ___ gesehen – vor etwa einer Stunde, in der Pause.", opts: ["vorhin", "nachher", "künftig"], correct: "vorhin"},
+    {q: "Ich gehe ___ joggen – jeden Tag um sieben Uhr früh.", opts: ["morgen", "übermorgen", "morgens"], correct: "morgens"},
+    {q: "Wir sehen uns ___ – nach dem Unterricht.", opts: ["vorher", "nachher", "früher"], correct: "nachher"},
+    {q: "„Heutzutage“ bedeutet …", opts: ["nur heute", "vor langer Zeit", "in unserer Zeit"], correct: "in unserer Zeit"},
+    {q: "Wir haben ___ Woche einen Ausflug gemacht.", opts: ["letzte", "letzten", "letztes"], correct: "letzte"},
+    {q: "Ich rufe dich ___ Abend an.", opts: ["jedem", "jeden", "jedes"], correct: "jeden"},
+    {q: "___ Jahr fahren wir nach Italien.", opts: ["Nächsten", "Nächster", "Nächstes"], correct: "Nächstes"},
+    {q: "Das Baby hat ___ Nacht geweint.", opts: ["die ganze", "der ganzen", "die ganzen"], correct: "die ganze"},
+    {q: "Er hat ___ Monat Geburtstag gehabt.", opts: ["letzten", "letzte", "letztem"], correct: "letzten"}
+  ]);
+
+  // Üb. 4: Modaladverbien – Stärke und Meinung
+  buildSort('ub4-sort', {
+    buckets: ["stärker", "schwächer", "unsicher", "sicher", "negativ"],
+    items: [
+      {t: "sehr", b: "stärker"}, {t: "besonders", b: "stärker"}, {t: "äußerst", b: "stärker"},
+      {t: "fast", b: "schwächer"}, {t: "kaum", b: "schwächer"}, {t: "ziemlich", b: "schwächer"},
+      {t: "vielleicht", b: "unsicher"}, {t: "vermutlich", b: "unsicher"}, {t: "wahrscheinlich", b: "unsicher"},
+      {t: "bestimmt", b: "sicher"}, {t: "natürlich", b: "sicher"}, {t: "unbedingt", b: "sicher"},
+      {t: "gar nicht", b: "negativ"}, {t: "keineswegs", b: "negativ"}, {t: "überhaupt nicht", b: "negativ"}
+    ]
+  });
+  buildQuiz('ub4-quiz', [
+    {q: "„Die Jacke ist zu teuer.“ Das heißt: …", opts: ["Sie kostet fast nichts.", "Ich kaufe sie nicht – so viel Geld habe ich nicht.", "Sie ist teuer, aber ich kaufe sie gern."], correct: "Ich kaufe sie nicht – so viel Geld habe ich nicht."},
+    {q: "„Ich habe kaum geschlafen.“ Das heißt: …", opts: ["sehr lange", "ganz sicher gut", "fast gar nicht"], correct: "fast gar nicht"},
+    {q: "„Wir haben umsonst gewartet – der Bus kam nicht.“ umsonst heißt hier: …", opts: ["ohne Erfolg", "kostenlos", "sehr lange"], correct: "ohne Erfolg"},
+    {q: "„Du kommst zu spät.“ Das heißt: …", opts: ["Du bist ein bisschen früh.", "Du kommst pünktlich.", "Die richtige Zeit ist schon vorbei."], correct: "Die richtige Zeit ist schon vorbei."},
+    {q: "„Das ist bestimmt richtig.“ Der Sprecher ist …", opts: ["nicht sicher", "ganz sicher", "dagegen"], correct: "ganz sicher"}
+  ]);
+
+  // Üb. 5–9: пропуски й випадні списки
+  wireBlanks('ub5');
+  wireBlanks('ub6');
+  wireBlanks('ub7');
+  wireBlanks('ub8');
+  wireBlanks('ub9');
+
+  // Üb. 10: склади речення
+  buildOrder('ub10-order', [
+    {words: ["Ich", "stehe", "normalerweise", "um sieben", "auf"], end: ".",
+     alt: ["Normalerweise stehe ich um sieben auf", "Um sieben stehe ich normalerweise auf"]},
+    {words: ["Glücklicherweise", "hat", "es", "gestern", "nicht", "geregnet"], end: ".",
+     alt: ["Gestern hat es glücklicherweise nicht geregnet", "Es hat gestern glücklicherweise nicht geregnet", "Es hat glücklicherweise gestern nicht geregnet"]},
+    {words: ["Das", "ist", "ein", "sehr", "spannendes", "Buch"], end: ".",
+     alt: ["Ein sehr spannendes Buch ist das"]},
+    {words: ["Meine Oma", "wohnt", "dort oben", "im dritten Stock"], end: ".",
+     alt: ["Dort oben im dritten Stock wohnt meine Oma", "Meine Oma wohnt im dritten Stock dort oben"]},
+    {words: ["Komm", "bitte", "schnell", "herunter"], end: "!",
+     alt: ["Bitte komm schnell herunter"]},
+    {words: ["Als Kind", "habe", "ich", "oft", "draußen", "gespielt"], end: ".",
+     alt: ["Ich habe als Kind oft draußen gespielt", "Oft habe ich als Kind draußen gespielt", "Draußen habe ich als Kind oft gespielt", "Ich habe oft als Kind draußen gespielt"]},
+    {words: ["Wir", "sind", "umsonst", "zum Bahnhof", "gefahren"], end: ".",
+     alt: ["Umsonst sind wir zum Bahnhof gefahren", "Zum Bahnhof sind wir umsonst gefahren"]},
+    {words: ["Ich", "gehe", "jeden Montag", "zum Training"], end: ".",
+     alt: ["Jeden Montag gehe ich zum Training", "Zum Training gehe ich jeden Montag"]}
+  ]);
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['⏰','📍','💡','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  // ЗАВЖДИ останнім рядком: крихти, зміст Regel, "Де це ще трапляється", збереження прогресу
+  initGrammarPage(GRAM_ID);
+</script>
+</body>
+</html>
