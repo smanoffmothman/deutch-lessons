@@ -301,7 +301,8 @@ const GRAMMAR = [
     opublikovano: 55, dyv: ["konjunktiv", "konjunktiv-2-formen", "indirekte-rede", "konjunktiv-2-gebrauch", "konjugation", "starke-verben", "modalverben", "futur", "perfekt-plusquamperfekt", "passiv", "tempusformen"] },
   { id: "indirekte-rede", rozdil: "konjunktiv", knyha: 56,
     tema: "Gebrauch des Konjunktivs I: indirekte Rede", uk: "Непряма мова",
-    pidrozdily: ["Die indirekte Rede", "Die indirekte Frage", "Der Imperativ in der indirekten Rede"] },
+    pidrozdily: ["Wozu Konjunktiv I? Distanz zur direkten Rede", "Mit oder ohne dass: die Einleitung", "Pronomen: Wer spricht, zu wem, wer berichtet?", "Anreden und Ausrufe fallen weg: bejahen, ablehnen, danken", "Ort und Zeit: aus morgen wird am nächsten Tag", "Welche Form? Konjunktiv I, Konjunktiv II oder würde", "Vergangenheit und Zukunft: habe gemacht, sei gefahren, werde kommen", "Die indirekte Frage: ob oder Fragewort", "Der Imperativ: mögen und sollen", "Konjunktiv I als Aufforderung: Es lebe …, Man nehme …", "Satzzeichen: Doppelpunkt, Anführungszeichen, ? und ! fallen weg"],
+    opublikovano: 56, dyv: ["konjunktiv", "konjunktiv-1-formen", "konjunktiv-2-formen", "konjunktiv-2-gebrauch", "indirekte-fragesaetze", "nebensaetze", "verben-dass-infinitiv", "personalpronomen", "possessivartikel", "imperativ", "modalverben", "perfekt-plusquamperfekt", "futur", "kommaregeln"] },
 
   // ===== Дієприкметникові звороти й означення =====
   { id: "partizipialkonstruktion", rozdil: "attribute", knyha: 46,
