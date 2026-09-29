@@ -20,13 +20,40 @@ function initTabs(){
   const tabs = document.querySelectorAll('.tab-btn');
   const panels = document.querySelectorAll('.panel');
   tabs.forEach(t => t.addEventListener('click', () => showTab(t.dataset.tab, tabs, panels)));
+  const bar = document.querySelector('.tabbar');
+  if(bar){
+    bar.addEventListener('scroll', () => syncTabbar(false), {passive: true});
+    window.addEventListener('resize', () => syncTabbar(false));
+    window.addEventListener('load', () => syncTabbar(true, true)); // шрифти змінюють ширину вкладок
+    syncTabbar(true, true);
+  }
 }
 function showTab(name, tabs, panels){
   tabs = tabs || document.querySelectorAll('.tab-btn');
   panels = panels || document.querySelectorAll('.panel');
   tabs.forEach(t => t.setAttribute('aria-selected', t.dataset.tab === name ? 'true' : 'false'));
   panels.forEach(p => p.classList.toggle('active', p.id === 'panel-' + name));
+  syncTabbar(true);
   window.scrollTo({top: 0, behavior: 'smooth'});
+}
+/* Панель вкладок на телефоні — один рядок з прокруткою (див. lesson-style.css).
+   center=true — прокрутити рядок так, щоб активна вкладка стояла по центру
+   (важливо для кнопок «Weiter»/«Zu den Übungen», які перемикають вкладку не
+   кліком по ній). Клас more-right = праворуч є сховані вкладки (згасання
+   краю). На широкому екрані рядок не переповнений — функція нічого не робить. */
+function syncTabbar(center, instant){
+  const bar = document.querySelector('.tabbar');
+  if(!bar) return;
+  const over = bar.scrollWidth > bar.clientWidth + 1;
+  if(center && over){
+    const btn = bar.querySelector('.tab-btn[aria-selected="true"]');
+    if(btn){
+      const r = bar.getBoundingClientRect(), b = btn.getBoundingClientRect();
+      const left = bar.scrollLeft + (b.left - r.left) - (r.width - b.width) / 2;
+      bar.scrollTo({left: Math.max(0, left), behavior: instant ? 'auto' : 'smooth'});
+    }
+  }
+  bar.classList.toggle('more-right', over && bar.scrollLeft + bar.clientWidth < bar.scrollWidth - 2);
 }
 
 /* ---------- Прогрес-смуга (літак вгорі) ---------- */

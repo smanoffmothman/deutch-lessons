@@ -512,7 +512,22 @@ input.blank-input.inline.full{ display:block; width:100%; margin:6px 0 0; }
   .word-chip{ transition:none; }
 }
 
+/* Вкладки на телефоні (2026-09): один рядок з горизонтальною прокруткою
+   замість переносу — 10+ вкладок у кілька рядків займали весь екран.
+   Клас .more-right ставить lesson-interactions.js (syncTabbar), поки
+   праворуч є сховані вкладки: край рядка тоді плавно згасає — підказка,
+   що рядок гортається. Активна вкладка сама прокручується в центр. */
 @media (max-width:560px){
+  .tabbar{
+    flex-wrap:nowrap; justify-content:flex-start;
+    overflow-x:auto; overscroll-behavior-x:contain; scrollbar-width:thin;
+    padding:18px 16px 2px;
+  }
+  .tabbar .tab-btn{flex:none; white-space:nowrap;}
+  .tabbar.more-right{
+    -webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 40px),transparent);
+            mask-image:linear-gradient(90deg,#000 calc(100% - 40px),transparent);
+  }
   .pic-grid{grid-template-columns:1fr 1fr;}
   .wo-row{grid-template-columns:1fr 30px 1fr; font-size:13px;}
   .hero{padding:26px 18px 22px;}
