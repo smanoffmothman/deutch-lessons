@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deklination des Adjektivs · Grammatik · Deutsch mit uns</title>
+<!-- =================================================================
+     ШАБЛОН сторінки граматичної теми. Лежить у тій самій папці, де й
+     готові теми (gramatyka/temy/), тож шляхи "../../" уже правильні —
+     при копіюванні їх НЕ міняти. Копію називай точно як id теми в
+     data/grammar-data.js: gramatyka/temy/<id>.html.
+     Правила наповнення — GRAMMAR-BRIEF.md.
+     ================================================================= -->
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'gramatyka' });</script>
+<!-- хлібні крихти малює initGrammarPage() внизу — з даних grammar-data.js -->
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">GRAMMATIK · Прикметник і прислівник</span>
+        <h1>Deklination des Adjektivs</h1>
+        <p class="sub">Прикметник перед іменником отримує закінчення. Яке саме — залежить від того, що стоїть перед ним: означений артикль, неозначений чи взагалі нічого.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="regel" aria-selected="true">Regel</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Endung?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · -e / -en</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Tabelle: der</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · dieser, alle</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Tabelle: ein</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · ein, mein, kein</button>
+    <button class="tab-btn" data-tab="ub7">Üb. 7 · Plural</button>
+    <button class="tab-btn" data-tab="ub8">Üb. 8 · ohne Artikel</button>
+    <button class="tab-btn" data-tab="ub9">Üb. 9 · etwas Neues</button>
+    <button class="tab-btn" data-tab="ub10">Üb. 10 · Annas, du armes</button>
+    <button class="tab-btn" data-tab="ub11">Üb. 11 · dunkel, lila</button>
+    <button class="tab-btn" data-tab="ub12">Üb. 12 · Umformen</button>
+    <button class="tab-btn" data-tab="ub13">Üb. 13 · Text</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== REGEL ===== -->
+    <section class="panel active" id="panel-regel">
+      <p class="section-label">Regel</p>
+      <h2 class="panel-title">Deklination des Adjektivs</h2>
+      <ul class="regel-toc" id="regelToc"></ul>
+
+      <div class="card">
+        <p>Ein Adjektiv vor einem Nomen hat eine Endung: <i>der klein<b>e</b> Hund, ein klein<b>er</b> Hund, klein<b>e</b> Hunde</i>. Die Endung hängt vom Wort davor ab. Zeigt der Artikel den Kasus schon deutlich, ist die Endung kurz: -e oder -en. Hat der Artikel keine Endung oder gibt es keinen Artikel, zeigt das Adjektiv den Kasus. Nach <i>sein</i> oder <i>werden</i> hat das Adjektiv keine Endung: <i>Der Hund ist klein.</i></p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          В українській прикметник завжди узгоджується з іменником у роді, числі й відмінку і має «повне» закінчення: <i>маленький пес, маленького пса, маленькому псові</i>. У німецькій закінчення прикметника залежить ще й від того, <b>що стоїть перед ним</b>: означений артикль (<i>der, dieser</i>), неозначений (<i>ein, mein, kein</i>) чи нічого. Є три типи відмінювання, але логіка одна: рід і відмінок показуються <b>один раз</b> — або артиклем, або прикметником. А в ролі присудка (<i>Der Hund ist klein</i>) прикметник узагалі не змінюється — на відміну від української «Пес маленьк<b>ий</b>».
+        </div>
+      </div>
+
+      <section class="card regel-block" id="prinzip">
+        <h3>Das Grundprinzip: Einer zeigt den Kasus</h3>
+        <p>Vor einem Nomen hat das Adjektiv immer eine Endung. Welche Endung, hängt vom Wort davor ab. Es gibt drei Möglichkeiten:</p>
+        <div style="overflow-x:auto;"><table class="gtable">
+          <tr><th>Vor dem Adjektiv</th><th>Beispiel</th><th>Wer zeigt Genus und Kasus?</th></tr>
+          <tr><td class="gender">der, dieser, jeder …</td><td>der klein<b>e</b> Hund</td><td>der Artikel → Adjektiv nur ‑e oder ‑en</td></tr>
+          <tr><td class="gender">ein, mein, kein …</td><td>ein klein<b>er</b> Hund</td><td>wo ein keine Endung hat, das Adjektiv</td></tr>
+          <tr><td class="gender">ohne Artikel</td><td>kalt<b>er</b> Tee</td><td>das Adjektiv</td></tr>
+        </table></div>
+        <p class="merke">Die Information steht nur einmal: Zeigt der Artikel den Kasus schon deutlich, bekommt das Adjektiv nur ‑e oder ‑en. Fehlt diese Information, zeigt sie das Adjektiv.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Головна ідея теми: рід і відмінок у німецькій групі «артикль + прикметник + іменник» показуються <b>один раз</b>. Якщо це вже зробив артикль (<i>der, dem, des</i>), прикметник отримує «слабке» закінчення ‑e або ‑en. Якщо артикль нічого не показує (<i>ein</i> у Nom. m) або його немає взагалі — сигнал бере на себе прикметник: <i>ein kleiner Hund, kalter Tee</i>. В українській прикметник завжди має повне закінчення (<i>маленький, маленького, маленькому</i>) — а в німецькій закінчення прикметника залежить від слова перед ним.
+        </div>
+      </section>
+      <section class="card regel-block" id="praedikativ">
+        <h3>Der Hund ist klein: ohne Endung nach sein, werden, bleiben</h3>
+        <p>Steht das Adjektiv <b>nicht</b> vor einem Nomen, hat es keine Endung – zum Beispiel nach <i>sein, werden, bleiben, finden, aussehen</i>. Auch als Adverb beim Verb bleibt es ohne Endung.</p>
+        <div style="overflow-x:auto;"><table class="gtable">
+          <tr><th>ohne Endung</th><th>mit Endung (vor dem Nomen)</th></tr>
+          <tr><td>Der Hund ist <b>klein</b>.</td><td>Das ist ein klein<b>er</b> Hund.</td></tr>
+          <tr><td>Die Suppe wird <b>kalt</b>.</td><td>Ich mag keine kalt<b>e</b> Suppe.</td></tr>
+          <tr><td>Ich finde das Buch <b>spannend</b>.</td><td>Ich lese ein spannend<b>es</b> Buch.</td></tr>
+          <tr><td>Sie singt <b>schön</b>.</td><td>Sie hat eine schön<b>e</b> Stimme.</td></tr>
+        </table></div>
+        <p class="merke">Nur direkt vor einem Nomen bekommt das Adjektiv eine Endung.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          В українській прикметник має закінчення й у ролі присудка: <i>Собака маленьк<b>ий</b></i>. У німецькій — ні: <i>Der Hund ist klein</i>. Закінчення з'являється тільки тоді, коли прикметник стоїть <b>перед</b> іменником як означення. Тож перше питання в кожній вправі: «Чи є після прикметника іменник?» Якщо ні — закінчення не потрібне.
+        </div>
+      </section>
+      <section class="card regel-block" id="bestimmt">
+        <h3>Mit dem bestimmten Artikel: die Formen</h3>
+        <div style="overflow-x:auto;"><table class="gtable">
+          <tr><th></th><th>maskulin</th><th>feminin</th><th>neutral</th><th>Plural</th></tr>
+          <tr><td class="gender">Nom.</td><td>der <b>neue</b> Film</td><td>die <b>neue</b> Jacke</td><td>das <b>neue</b> Handy</td><td>die neuen Schuhe</td></tr>
+          <tr><td class="gender">Akk.</td><td>den neuen Film</td><td>die <b>neue</b> Jacke</td><td>das <b>neue</b> Handy</td><td>die neuen Schuhe</td></tr>
+          <tr><td class="gender">Dat.</td><td>dem neuen Film</td><td>der neuen Jacke</td><td>dem neuen Handy</td><td>den neuen Schuhen</td></tr>
+          <tr><td class="gender">Gen.</td><td>des neuen Films</td><td>der neuen Jacke</td><td>des neuen Handys</td><td>der neuen Schuhe</td></tr>
+        </table></div>
+        <p class="beispiel"><b>Der neue</b> Film läuft ab Freitag.</p>
+        <p class="beispiel">Ich habe <b>die neue</b> Jacke schon an.</p>
+        <p class="beispiel">Wir sprechen mit <b>dem neuen</b> Lehrer.</p>
+        <p class="beispiel">Wo sind <b>die neuen</b> Schuhe?</p>
+        <p class="merke">Nach der, die, das nur fünfmal ‑e: Nominativ Singular (alle drei) und Akkusativ feminin und neutral. Alle anderen Formen und der ganze Plural: ‑en.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Запам'ятати легко: <b>‑e</b> стоїть лише там, де артикль має форму <i>der/die/das</i> і це Nominativ або Akkusativ однини (в Akk. m артикль уже <i>den</i> → <i>den neuen</i>). Усе інше — Dativ, Genitiv, Akkusativ чоловічого роду й уся множина — <b>‑en</b>. Тобто в таблиці 16 клітинок, і лише 5 з них мають ‑e.
+        </div>
+      </section>
+      <section class="card regel-block" id="wie-der">
+        <h3>Wie der bestimmte Artikel: dieser, jeder, welcher, derselbe …</h3>
+        <p>Diese Wörter haben dieselben Endungen wie <i>der, die, das</i>. Deshalb hat das Adjektiv danach dieselben Endungen wie nach dem bestimmten Artikel.</p>
+        <div style="overflow-x:auto;"><table class="gtable">
+          <tr><th>Wort</th><th>Beispiel</th></tr>
+          <tr><td>dieser, diese, dieses; Pl. diese</td><td>Dies<b>er</b> alt<b>e</b> Film ist super.</td></tr>
+          <tr><td>jener, jene, jenes; Pl. jene</td><td>Jen<b>es</b> alt<b>e</b> Haus gehört meinem Onkel.</td></tr>
+          <tr><td>jeder, jede, jedes; Pl. alle</td><td>Jed<b>er</b> neu<b>e</b> Schüler bekommt einen Ausweis.</td></tr>
+          <tr><td>mancher, manche, manches</td><td>Mit manch<b>em</b> alt<b>en</b> Freund telefoniere ich noch.</td></tr>
+          <tr><td>solcher, solche, solches</td><td>Bei solch<b>em</b> schlecht<b>en</b> Wetter bleiben wir zu Hause.</td></tr>
+          <tr><td>welcher, welche, welches</td><td>Welch<b>es</b> neu<b>e</b> Handy kaufst du dir?</td></tr>
+          <tr><td>derselbe, dieselbe, dasselbe</td><td>Wir wohnen in derselb<b>en</b> klein<b>en</b> Straße.</td></tr>
+          <tr><td>derjenige, diejenige, dasjenige</td><td>Diejenig<b>en</b> neu<b>en</b> Schüler, die noch kein Buch haben, kommen bitte zu mir.</td></tr>
+        </table></div>
+        <p class="merke">dieser, jeder, welcher … = wie der: dieser neue Film, mit jedem neuen Schüler.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Усі ці слова самі мають «сильне» закінчення, як означений артикль (<i>dies<b>er</b>, dies<b>em</b>, dies<b>es</b></i>), тож прикметник після них отримує лише ‑e або ‑en — за тією самою таблицею. У <i>derselbe</i> і <i>derjenige</i> змінюються обидві частини: <i>demselben, derjenigen</i>. <i>jener</i> («той») звучить книжно — у розмові частіше кажуть <i>der da</i> або просто <i>der</i>.
+        </div>
+      </section>
+      <section class="card regel-block" id="plural-woerter">
+        <h3>Nur im Plural: alle, beide, sämtliche, irgendwelche</h3>
+        <p>Nach <i>alle</i> (Plural von <i>jeder</i>), <i>beide</i>, <i>sämtliche</i> (= alle) und <i>irgendwelche</i> hat das Adjektiv wie nach <i>die</i> im Plural die Endung <b>‑en</b>. <i>beide</i> kann auch nach dem Artikel stehen: <i>die beiden</i>.</p>
+        <p class="beispiel"><b>Alle neuen</b> Schüler stellen sich kurz vor.</p>
+        <p class="beispiel"><b>Die beiden alten</b> Freunde treffen sich jeden Sommer.</p>
+        <p class="beispiel"><b>Beide alten</b> Fahrräder sind kaputt.</p>
+        <p class="beispiel">Wir haben <b>sämtliche alten</b> Fenster erneuert.</p>
+        <p class="beispiel">Hast du noch <b>irgendwelche alten</b> Spiele für den Flohmarkt?</p>
+        <p class="merke">alle, beide, sämtliche + Adjektiv + Nomen im Plural: immer ‑en.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          <i>alle</i> — це множина від <i>jeder</i>, тому поводиться як <i>die</i>: <i>alle neu<b>en</b> Schüler</i>. Не плутай з <i>viele</i>, <i>einige</i> (там ‑e, див. блок нижче): <i>alle neuen Freunde</i>, але <i>viele neue Freunde</i>. Після <i>irgendwelche</i> («якісь») у розмовній мові іноді чути й ‑e (<i>irgendwelche alte Spiele</i>), але ‑en — надійний варіант.
+        </div>
+      </section>
+      <section class="card regel-block" id="all-singular">
+        <h3>all- und einig- im Singular: alles Gute, nach einiger Zeit</h3>
+        <p><i>all-</i> und <i>sämtlich-</i> stehen im Singular vor einem Nomen ohne Artikel oder vor einem Adjektiv als Nomen (<i>alles Gute</i>). Sie haben dann die Endungen von <i>der, die, das</i> – das Adjektiv danach hat ‑e oder ‑en.</p>
+        <p class="beispiel"><b>Alles Gute</b> zum Geburtstag!</p>
+        <p class="beispiel">Wir haben <b>alles Neue</b> ausprobiert.</p>
+        <p class="beispiel">Hier ist das Werkzeug mit <b>allem nötigen</b> Zubehör.</p>
+        <p class="beispiel"><b>Aller</b> Anfang ist schwer. <i>(Sprichwort)</i></p>
+        <p>Auch <i>einig-</i> gibt es im Singular: <i>einiges Geld, nach einiger Zeit, mit einigem Glück</i> (= ein bisschen, nicht wenig).</p>
+        <p class="beispiel"><b>Nach einiger</b> Zeit hat er die Antwort gefunden.</p>
+        <p class="beispiel"><b>Mit einigem</b> Glück gewinnen wir das Spiel.</p>
+        <p class="merke">alles Gute, alles Neue, mit allem Guten – nach alles, allem: ‑e oder ‑en.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          <i>Alles Gute!</i> — «усього найкращого!»: після <i>alles</i> (як після <i>das</i>) прикметник-іменник має коротке ‑e і пишеться з великої. <i>einig-</i> в однині означає «певна кількість, чимало»: <i>nach einiger Zeit</i> — «через деякий час», <i>mit einigem Glück</i> — «якщо трохи пощастить». Прикметник після <i>einiges</i> трапляється рідко, і форми там коливаються (<i>einiges Neue / einiges Neues</i>) — у вправах їх немає.
+        </div>
+      </section>
+      <section class="card regel-block" id="unbestimmt">
+        <h3>Mit dem unbestimmten Artikel: die Formen</h3>
+        <div style="overflow-x:auto;"><table class="gtable">
+          <tr><th></th><th>maskulin</th><th>feminin</th><th>neutral</th><th>Plural (ohne Artikel)</th></tr>
+          <tr><td class="gender">Nom.</td><td>ein <b>neuer</b> Film</td><td>eine <b>neue</b> Jacke</td><td>ein <b>neues</b> Handy</td><td>neue Schuhe</td></tr>
+          <tr><td class="gender">Akk.</td><td>einen neuen Film</td><td>eine <b>neue</b> Jacke</td><td>ein <b>neues</b> Handy</td><td>neue Schuhe</td></tr>
+          <tr><td class="gender">Dat.</td><td>einem neuen Film</td><td>einer neuen Jacke</td><td>einem neuen Handy</td><td>neuen Schuhen</td></tr>
+          <tr><td class="gender">Gen.</td><td>eines neuen Films</td><td>einer neuen Jacke</td><td>eines neuen Handys</td><td>neuer Schuhe</td></tr>
+        </table></div>
+        <p class="beispiel">Das ist <b>ein neuer</b> Film von Pixar.</p>
+        <p class="beispiel">Ich wünsche mir <b>ein neues</b> Handy.</p>
+        <p class="beispiel">Wir fahren mit <b>einem neuen</b> Bus.</p>
+        <p class="merke">Wo ein keine Endung hat (Nom. maskulin, Nom. und Akk. neutral), zeigt das Adjektiv das Genus: ein neuer Film, ein neues Handy. Die anderen Formen wie nach der: ‑e oder ‑en.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Порівняй з таблицею для <i>der</i>: відрізняються лише три клітинки. <i>ein</i> не показує, який рід — чоловічий (<i>der</i>) чи середній (<i>das</i>), тож прикметник «позичає» закінчення означеного артикля: <i>d<b>er</b> → ein neu<b>er</b></i>, <i>da<b>s</b> → ein neu<b>es</b></i>. Множини в <i>ein</i> немає — там прикметник стоїть без артикля (див. наступний блок).
+        </div>
+      </section>
+      <section class="card regel-block" id="plural-ohne">
+        <h3>Plural ohne Artikel: neue Schuhe</h3>
+        <p>Im Plural gibt es keinen unbestimmten Artikel. Das Adjektiv steht allein vor dem Nomen und bekommt die Endungen des bestimmten Artikels im Plural.</p>
+        <div style="overflow-x:auto;"><table class="gtable">
+          <tr><th></th><th>Artikel im Plural</th><th>Adjektiv ohne Artikel</th></tr>
+          <tr><td class="gender">Nom.</td><td>di<b>e</b></td><td>neu<b>e</b> Schuhe</td></tr>
+          <tr><td class="gender">Akk.</td><td>di<b>e</b></td><td>neu<b>e</b> Schuhe</td></tr>
+          <tr><td class="gender">Dat.</td><td>de<b>n</b></td><td>neu<b>en</b> Schuhen</td></tr>
+          <tr><td class="gender">Gen.</td><td>de<b>r</b></td><td>neu<b>er</b> Schuhe</td></tr>
+        </table></div>
+        <p class="beispiel">Im Park spielen <b>kleine</b> Kinder.</p>
+        <p class="beispiel">Ich spreche gern mit <b>netten</b> Leuten.</p>
+        <p class="beispiel">Der Preis <b>neuer</b> Handys ist sehr hoch.</p>
+        <p class="merke">Plural ohne Artikel: ‑e, ‑e, ‑en, ‑er – wie die, die, den, der.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Однина: <i>ein kleines Kind</i> → множина: <i>klein<b>e</b> Kinder</i> (артикля немає). Прикметник бере закінчення від <i>die / den / der</i>. Genitiv множини без артикля звучить книжно; у розмові частіше кажуть <i>der Preis von neuen Handys</i>.
+        </div>
+      </section>
+      <section class="card regel-block" id="zahlen-viele">
+        <h3>Nach Zahlen und nach viele, einige, mehrere …</h3>
+        <p>Genauso wie ohne Artikel steht das Adjektiv nach Zahlen (<i>zwei, drei …</i>) und nach diesen Wörtern im Plural: <i>andere, einige, folgende, mehrere, verschiedene, viele, wenige</i> (veraltet: <i>etliche</i>). Diese Wörter haben selbst Adjektiv-Endungen – beide Wörter bekommen dieselbe Endung.</p>
+        <div style="overflow-x:auto;"><table class="gtable">
+          <tr><th></th><th>ohne Artikel</th><th>nach viele, einige …</th><th>Vergleich: nach alle</th></tr>
+          <tr><td class="gender">Nom.</td><td>neue Freunde</td><td>viel<b>e</b> neu<b>e</b> Freunde</td><td>alle neu<b>en</b> Freunde</td></tr>
+          <tr><td class="gender">Akk.</td><td>neue Freunde</td><td>einig<b>e</b> neu<b>e</b> Freunde</td><td>alle neu<b>en</b> Freunde</td></tr>
+          <tr><td class="gender">Dat.</td><td>neuen Freunden</td><td>mit mehrer<b>en</b> neu<b>en</b> Freunden</td><td>mit allen neu<b>en</b> Freunden</td></tr>
+          <tr><td class="gender">Gen.</td><td>neuer Freunde</td><td>die Hilfe viel<b>er</b> neu<b>er</b> Freunde</td><td>die Hilfe aller neu<b>en</b> Freunde</td></tr>
+        </table></div>
+        <p class="beispiel"><b>Zwei kleine</b> Kinder spielen im Hof.</p>
+        <p class="beispiel">Ich habe dir <b>drei neue</b> Comics mitgebracht.</p>
+        <p class="beispiel">Wir haben <b>viele gute</b> Ideen.</p>
+        <p class="beispiel">Die Meinung <b>vieler junger</b> Leute ist anders.</p>
+        <p class="beispiel">Lies bitte <b>folgende kurze</b> Texte.</p>
+        <p class="merke">viele neue Freunde, einige gute Ideen, zwei kleine Kinder – aber: alle neuen Freunde.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          <i>viele, einige, mehrere, wenige, andere, verschiedene, folgende</i> — насправді теж прикметники, тож прикметник після них має те саме закінчення: <i>viel<b>e</b> neu<b>e</b></i>, <i>viel<b>er</b> neu<b>er</b></i>. Числівники (<i>zwei, drei</i>) закінчень не мають, тому прикметник після них — як без артикля. Головна пастка — <i>alle</i>: це не «багато», а «всі» (множина від <i>jeder</i>), тому після нього ‑en.
+        </div>
+      </section>
+      <section class="card regel-block" id="possessiv">
+        <h3>Mit Possessivartikeln und kein</h3>
+        <p><i>mein, dein, sein, ihr, unser, euer, Ihr</i> und <i>kein</i> haben im Singular dieselben Formen wie <i>ein</i> – also auch das Adjektiv danach. Im Plural haben sie Endungen wie <i>die</i> – das Adjektiv hat immer <b>‑en</b>.</p>
+        <div style="overflow-x:auto;"><table class="gtable">
+          <tr><th></th><th>maskulin</th><th>feminin</th><th>neutral</th><th>Plural</th></tr>
+          <tr><td class="gender">Nom.</td><td>mein <b>alter</b> Freund</td><td>meine <b>alte</b> Freundin</td><td>mein <b>altes</b> Fahrrad</td><td>meine alten Freunde</td></tr>
+          <tr><td class="gender">Akk.</td><td>meinen alten Freund</td><td>meine <b>alte</b> Freundin</td><td>mein <b>altes</b> Fahrrad</td><td>meine alten Freunde</td></tr>
+          <tr><td class="gender">Dat.</td><td>meinem alten Freund</td><td>meiner alten Freundin</td><td>meinem alten Fahrrad</td><td>meinen alten Freunden</td></tr>
+          <tr><td class="gender">Gen.</td><td>meines alten Freundes</td><td>meiner alten Freundin</td><td>meines alten Fahrrads</td><td>meiner alten Freunde</td></tr>
+        </table></div>
+        <p class="beispiel">Das ist <b>kein neues</b> Problem.</p>
+        <p class="beispiel">Das sind <b>keine neuen</b> Probleme.</p>
+        <p class="beispiel">Wir brauchen <b>kein neues</b> Auto.</p>
+        <p class="beispiel"><b>Unsere neuen</b> Nachbarn sind sehr nett.</p>
+        <p class="merke">Singular wie nach ein, Plural immer ‑en: neue Schuhe – meine neuen Schuhe – keine neuen Schuhe.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          В однині <i>mein</i> і <i>kein</i> поводяться як <i>ein</i> (у Nom. m і Nom./Akk. n вони без закінчення → прикметник показує рід: <i>mein alt<b>er</b></i>, <i>kein neu<b>es</b></i>). А от множина в них є, і вона має закінчення як <i>die</i>: <i>mein<b>e</b>, kein<b>e</b></i> → прикметник ‑en. Порівняй: <i>neue Schuhe</i> (без артикля), але <i>meine neu<b>en</b> Schuhe</i>. Зверни увагу: <i>euer</i> втрачає e — <i>eure, euren</i>.
+        </div>
+      </section>
+      <section class="card regel-block" id="ohne-singular">
+        <h3>Ohne Artikel im Singular: die Formen</h3>
+        <div style="overflow-x:auto;"><table class="gtable">
+          <tr><th></th><th>maskulin</th><th>feminin</th><th>neutral</th></tr>
+          <tr><td class="gender">Nom.</td><td>kalt<b>er</b> Tee</td><td>frisch<b>e</b> Milch</td><td>kalt<b>es</b> Wasser</td></tr>
+          <tr><td class="gender">Akk.</td><td>kalt<b>en</b> Tee</td><td>frisch<b>e</b> Milch</td><td>kalt<b>es</b> Wasser</td></tr>
+          <tr><td class="gender">Dat.</td><td>kalt<b>em</b> Tee</td><td>frisch<b>er</b> Milch</td><td>kalt<b>em</b> Wasser</td></tr>
+          <tr><td class="gender">Gen.</td><td>kalt<b>en</b> Tees</td><td>frisch<b>er</b> Milch</td><td>kalt<b>en</b> Wassers</td></tr>
+        </table></div>
+        <p class="beispiel">Ich trinke gern <b>kalten</b> Tee.</p>
+        <p class="beispiel">Mit <b>frischer</b> Milch schmeckt der Kaffee besser.</p>
+        <p class="beispiel">Trotz <b>starken</b> Regens spielen wir weiter.</p>
+        <p class="merke">Ohne Artikel hat das Adjektiv die Endung des bestimmten Artikels: der → ‑er, dem → ‑em, das → ‑es. Ausnahme: Genitiv maskulin und neutral hat ‑en (trotz starken Regens), denn das ‑s am Nomen zeigt den Genitiv schon.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Коли артикля немає, прикметник «працює за артикль»: <i>d<b>er</b> Tee → kalt<b>er</b> Tee</i>, <i>d<b>em</b> Tee → kalt<b>em</b> Tee</i>. Єдиний виняток — Genitiv чоловічого й середнього роду: там не <i>‑es</i>, а <b>‑en</b> (<i>trotz stark<b>en</b> Regen<b>s</b></i>), бо відмінок уже видно з ‑s в іменнику.
+        </div>
+      </section>
+      <section class="card regel-block" id="stoffe">
+        <h3>Wann ohne Artikel? Stoffe, Getränke, Gefühle</h3>
+        <p>Ohne Artikel im Singular stehen oft Nomen, die man nicht zählen kann und die deshalb keinen Plural haben:</p>
+        <div style="overflow-x:auto;"><table class="gtable">
+          <tr><th>Gruppe</th><th>Beispiele</th></tr>
+          <tr><td>Stoffe und Materialien</td><td>Holz, Glas, Gold, Papier, Plastik</td></tr>
+          <tr><td>Essen und Getränke</td><td>Milch, Wasser, Saft, Tee, Obst, Brot</td></tr>
+          <tr><td>Eigenschaften und Gefühle</td><td>Mut, Geduld, Glück, Angst, Freude, Hunger</td></tr>
+        </table></div>
+        <p class="beispiel">Der Tisch ist aus <b>hellem</b> Holz.</p>
+        <p class="beispiel"><b>Frisches</b> Obst ist gesund.</p>
+        <p class="beispiel">Mit <b>großer</b> Geduld hat sie mir geholfen.</p>
+        <p class="beispiel">Er hatte <b>großen</b> Hunger.</p>
+        <p class="beispiel"><b>Gute</b> Musik macht <b>gute</b> Laune.</p>
+        <p class="merke">Stoff, Getränk oder Gefühl + Adjektiv ohne Artikel: Das Adjektiv zeigt den Kasus – aus hellem Holz, mit großer Geduld.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Такі іменники (речовини, продукти, почуття) зазвичай уживаються без артикля — див. тему «Gebrauch des Artikels». Часто разом із прийменником: <i>aus echt<b>em</b> Gold</i> («зі справжнього золота»), <i>mit groß<b>er</b> Freude</i> («з великою радістю»). Закінчення — за таблицею попереднього блоку.
+        </div>
+      </section>
+      <section class="card regel-block" id="gruesse">
+        <h3>Guten Tag! Lieber Paul: Wünsche, Grüße und Anreden</h3>
+        <p>Viele feste Wünsche und Grüße stehen im Akkusativ ohne Artikel (<i>Ich wünsche dir …</i>). Auch die Anrede im Brief ist ein Adjektiv ohne Artikel.</p>
+        <div style="overflow-x:auto;"><table class="gtable">
+          <tr><th>Ausdruck</th><th>Warum diese Endung?</th></tr>
+          <tr><td>Guten Morgen! Guten Tag! Guten Appetit!</td><td>der Tag → Akk. m: ‑en</td></tr>
+          <tr><td>Gute Nacht! Gute Reise! Gute Besserung!</td><td>die Nacht → Akk. f: ‑e</td></tr>
+          <tr><td>Schönes Wochenende! Frohes neues Jahr!</td><td>das Wochenende → Akk. n: ‑es</td></tr>
+          <tr><td>Herzlichen Glückwunsch! Vielen Dank!</td><td>der Glückwunsch, der Dank → Akk. m: ‑en</td></tr>
+          <tr><td>Liebe Grüße! Schöne Ferien!</td><td>Plural: ‑e</td></tr>
+          <tr><td>Lieber Paul, … / Liebe Anna, …</td><td>Anrede = Nominativ: ‑er, ‑e</td></tr>
+          <tr><td>Liebe Eltern, … / Sehr geehrte Damen und Herren, …</td><td>Plural Nominativ: ‑e</td></tr>
+        </table></div>
+        <p class="merke">Guten Tag! = (Ich wünsche dir einen) guten Tag – deshalb Akkusativ.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Усі ці побажання — скорочення речення «Ich wünsche dir …», тому стоять в Akkusativ: <i>Guten Tag</i> (<i>der Tag</i> → Akk. ‑en), <i>Gute Nacht</i>, <i>Schönes Wochenende</i>. Звертання в листі — Nominativ: <i>Lieb<b>er</b> Paul</i> (чоловік), <i>Lieb<b>e</b> Anna</i> (жінка), <i>Lieb<b>e</b> Eltern</i> (множина). Тут легко помилитися: <i>Liebe Paul</i> — неправильно.
+        </div>
+      </section>
+      <section class="card regel-block" id="mengen">
+        <h3>Nach viel, wenig, etwas, genug, mehr, allerlei</h3>
+        <p>Die Mengenwörter <i>viel, wenig, etwas, genug, mehr, allerlei, mancherlei</i> haben vor einem Nomen im Singular keine Endung. Das Adjektiv danach steht deshalb wie ohne Artikel.</p>
+        <p class="beispiel">Wir haben <b>viel freie</b> Zeit.</p>
+        <p class="beispiel">Möchtest du noch <b>etwas kaltes</b> Wasser?</p>
+        <p class="beispiel">Er kocht mit <b>viel frischem</b> Gemüse.</p>
+        <p class="beispiel">Hier gibt es <b>genug frische</b> Luft.</p>
+        <p class="beispiel">Auf dem Dachboden liegt <b>allerlei altes</b> Zeug.</p>
+        <p class="beispiel">Heute gibt es <b>wenig gutes</b> Essen in der Mensa.</p>
+        <p class="merke">viel, wenig, etwas, genug, mehr – ohne Endung. Das Adjektiv danach: wie ohne Artikel (viel kaltes Wasser, mit etwas gutem Willen).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Ці слова кількості («багато», «мало», «трохи», «досить», «більше», «усілякий») в однині не змінюються, тож прикметник після них показує відмінок сам: <i>mit viel frisch<b>em</b> Gemüse</i>. Не плутай: <i>viel</i> + однина (<i>viel Zeit</i>), <i>viele</i> + множина (<i>viele Freunde</i>) — у множині <i>viele</i> має закінчення (блок «Nach Zahlen und nach viele …»).
+        </div>
+      </section>
+      <section class="card regel-block" id="etwas-neues">
+        <h3>etwas Neues, nichts Besonderes: das Adjektiv als Nomen</h3>
+        <p>Nach <i>etwas, nichts, viel, wenig, allerlei</i> steht oft ein Adjektiv als Nomen: Es wird <b>großgeschrieben</b> und hat die Endungen wie ohne Artikel im Neutrum.</p>
+        <div style="overflow-x:auto;"><table class="gtable">
+          <tr><th></th><th>etwas, nichts, viel …</th><th>Vergleich: alles</th></tr>
+          <tr><td class="gender">Nom./Akk.</td><td>etwas Neu<b>es</b>, nichts Besonder<b>es</b></td><td>alles Neu<b>e</b></td></tr>
+          <tr><td class="gender">Dat.</td><td>mit etwas Neu<b>em</b>, von nichts Gut<b>em</b></td><td>mit allem Neu<b>en</b></td></tr>
+        </table></div>
+        <p class="beispiel">Gibt es <b>etwas Neues</b>?</p>
+        <p class="beispiel">In den Ferien habe ich <b>nichts Besonderes</b> gemacht.</p>
+        <p class="beispiel">Er hat <b>viel Interessantes</b> erzählt.</p>
+        <p class="beispiel">Wir träumen von <b>etwas Schönem</b>.</p>
+        <p class="beispiel">Aber: Ich wünsche dir <b>alles Gute</b>!</p>
+        <p class="merke">etwas Neues, nichts Neues, viel Neues – aber: alles Neue. Immer großschreiben!</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          «Щось нове» — <i>etwas Neues</i>, «нічого особливого» — <i>nichts Besonderes</i>. Прикметник тут стає іменником середнього роду, тому пишеться з великої. Після <i>etwas / nichts / viel / wenig</i> (без закінчення) — сильне закінчення <b>‑es</b> (у Dativ <b>‑em</b>). Після <i>alles</i> (як після <i>das</i>) — коротке <b>‑e</b>: <i>alles Gute</i>.
+        </div>
+      </section>
+      <section class="card regel-block" id="stoff-plural">
+        <h3>Stoffe im Plural: Säfte, Papiere, Abgase</h3>
+        <p>Nomen, die man nicht zählt, haben manchmal doch einen Plural – mit einer besonderen Bedeutung.</p>
+        <div style="overflow-x:auto;"><table class="gtable">
+          <tr><th>Plural</th><th>Bedeutung</th><th>Beispiel</th></tr>
+          <tr><td>Säfte, Tees, Weine</td><td>verschiedene Sorten</td><td>Im Café gibt es viele verschiedene Tees.</td></tr>
+          <tr><td>Hölzer, Fette, Öle</td><td>verschiedene Arten</td><td>Für Möbel braucht man harte Hölzer.</td></tr>
+          <tr><td>Papiere</td><td>Dokumente (Pass, Ausweis …)</td><td>Die Polizei will unsere Papiere sehen.</td></tr>
+          <tr><td>Gelder</td><td>Geldsummen, meist für ein Ziel</td><td>Die Stadt hat Gelder für den neuen Spielplatz.</td></tr>
+          <tr><td>Abgase</td><td>schädliche Gase (z. B. vom Auto)</td><td>Die Abgase machen die Luft schmutzig.</td></tr>
+          <tr><td>Abwässer</td><td>schmutziges, benutztes Wasser</td><td>Die Abwässer der Fabrik fließen in den Fluss.</td></tr>
+          <tr><td>Brote</td><td>belegte Brotscheiben oder ganze Brote</td><td>Mama macht uns Brote für den Ausflug.</td></tr>
+        </table></div>
+        <p class="merke">Das Adjektiv folgt dann den normalen Plural-Regeln: verschiedene Tees, mit belegten Broten.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Іменники-речовини в множині часто означають <b>сорти</b> (<i>Säfte</i> — різні соки) або набувають окремого значення: <i>Papiere</i> — документи, <i>Abgase</i> — вихлопні гази. Нових закінчень тут немає — прикметник відмінюється як у звичайній множині.
+        </div>
+      </section>
+      <section class="card regel-block" id="nach-genitiv">
+        <h3>Nach dem Genitiv: Annas neues Fahrrad; wessen, dessen, deren</h3>
+        <p>Nach einem Genitiv vor dem Nomen (<i>Annas, Pauls, Omas</i>), nach <i>wessen</i> und nach den Relativpronomen <i>dessen, deren</i> steht das Adjektiv wie ohne Artikel. Diese Wörter zeigen nämlich nicht den Kasus des folgenden Nomens.</p>
+        <div style="overflow-x:auto;"><table class="gtable">
+          <tr><th></th><th>maskulin</th><th>feminin</th><th>neutral</th><th>Plural</th></tr>
+          <tr><td class="gender">Nom.</td><td>Annas neu<b>er</b> Rucksack</td><td>Annas neu<b>e</b> Jacke</td><td>Annas neu<b>es</b> Fahrrad</td><td>Annas neu<b>e</b> Schuhe</td></tr>
+          <tr><td class="gender">Akk.</td><td>Annas neu<b>en</b> Rucksack</td><td>Annas neu<b>e</b> Jacke</td><td>Annas neu<b>es</b> Fahrrad</td><td>Annas neu<b>e</b> Schuhe</td></tr>
+          <tr><td class="gender">Dat.</td><td>Annas neu<b>em</b> Rucksack</td><td>Annas neu<b>er</b> Jacke</td><td>Annas neu<b>em</b> Fahrrad</td><td>Annas neu<b>en</b> Schuhen</td></tr>
+        </table></div>
+        <p class="beispiel">Ich fahre mit <b>Pauls altem</b> Roller.</p>
+        <p class="beispiel"><b>Wessen rotes</b> Fahrrad steht vor der Tür?</p>
+        <p class="beispiel">Mein Freund, <b>dessen großer</b> Bruder bei uns Trainer ist, spielt super.</p>
+        <p class="beispiel">Die Lehrerin, <b>deren kleine</b> Tochter in die erste Klasse geht, heißt Frau Wolf.</p>
+        <p class="merke">Annas, wessen, dessen, deren + Adjektiv: wie ohne Artikel – Annas neues Fahrrad, mit Pauls altem Roller.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          <i>Annas</i> («Аннин») показує власника, а не рід і відмінок іменника після нього, тому прикметник працює, як без артикля: <i>Annas neu<b>es</b> Fahrrad</i>, <i>mit Pauls alt<b>em</b> Roller</i>. Так само після <i>wessen</i> («чий?») і <i>dessen / deren</i> («чий / чия» у підрядних реченнях, див. тему «Relativsätze»). Genitiv після <i>Annas</i> практично не вживається — тому в таблиці його немає.
+        </div>
+      </section>
+      <section class="card regel-block" id="manch-solch">
+        <h3>manch, solch, welch ohne Endung</h3>
+        <p>Selten und eher in Büchern stehen <i>manch, solch, welch</i> ohne Endung. Dann hat das Adjektiv die Endungen wie ohne Artikel. Danach kann auch <i>ein</i> stehen – dann gilt die Tabelle mit <i>ein</i>.</p>
+        <div style="overflow-x:auto;"><table class="gtable">
+          <tr><th>Singular</th><th>Plural</th></tr>
+          <tr><td>manch gut<b>er</b> Freund</td><td>manch gut<b>e</b> Freunde</td></tr>
+          <tr><td>bei solch schön<b>em</b> Wetter</td><td>bei solch schön<b>en</b> Tagen</td></tr>
+          <tr><td>Welch ein schön<b>er</b> Tag!</td><td>Welch schön<b>e</b> Bilder!</td></tr>
+        </table></div>
+        <p class="beispiel"><b>Manch guter</b> Freund ist später weggezogen.</p>
+        <p class="beispiel"><b>Welch ein schöner</b> Tag! = Was für ein schöner Tag!</p>
+        <p class="beispiel"><b>Solch ein</b> Glück! = <b>So ein</b> Glück!</p>
+        <p class="merke">manch, solch, welch ohne Endung → Adjektiv wie ohne Artikel. In der Alltagssprache sagt man lieber: so ein, was für ein.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Це книжні, «поетичні» форми — у житті частіше почуєш <i>so ein schöner Tag</i> або <i>was für ein schöner Tag!</i>. Але впізнавати їх треба: якщо <i>manch / solch / welch</i> без закінчення, прикметник бере сильне закінчення, як без артикля (<i>manch gut<b>er</b> Freund</i>).
+        </div>
+      </section>
+      <section class="card regel-block" id="nach-pronomen">
+        <h3>Nach Personalpronomen: du armes Kind, wir jungen Leute</h3>
+        <p>Manchmal steht ein Adjektiv mit Nomen direkt nach einem Personalpronomen – bei einer Anrede oder wenn man über sich selbst spricht. Im Singular steht das Adjektiv dann wie ohne Artikel, im Plural hat es immer <b>‑en</b>.</p>
+        <div style="overflow-x:auto;"><table class="gtable">
+          <tr><th>Singular: wie ohne Artikel</th><th>Plural: immer ‑en</th></tr>
+          <tr><td>Du arm<b>es</b> Kind!</td><td>Wir jung<b>en</b> Leute haben viele Ideen.</td></tr>
+          <tr><td>Du arm<b>er</b> Kerl!</td><td>Ihr lieb<b>en</b> Kinder, kommt essen!</td></tr>
+          <tr><td>Mir ehrlich<b>em</b> Menschen glaubt keiner.</td><td>Mit uns neu<b>en</b> Schülern spricht niemand.</td></tr>
+        </table></div>
+        <p class="merke">du armes Kind (Singular: wie ohne Artikel) – wir armen Kinder (Plural: ‑en).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Так звертаються з емоцією: <i>Du armes Kind!</i> — «Бідна дитина!». В однині особовий займенник не показує роду іменника, тож прикметник має сильне закінчення. У множині — завжди ‑en: <i>wir jung<b>en</b> Leute</i>, <i>ihr lieb<b>en</b> Kinder</i>.
+        </div>
+      </section>
+      <section class="card regel-block" id="mehrere-adj">
+        <h3>Mehrere Adjektive: dieselbe Endung</h3>
+        <p>Stehen zwei oder mehr Adjektive vor einem Nomen, haben alle dieselbe Endung. Gleichrangige Adjektive trennt man mit Komma oder <i>und</i>.</p>
+        <p class="beispiel">Mein Nachbar hat einen <b>großen, schwarzen</b> Hund.</p>
+        <p class="beispiel">Ich trinke gern <b>kaltes, frisches</b> Wasser.</p>
+        <p class="beispiel">Wir fahren mit dem <b>neuen roten</b> Bus.</p>
+        <p class="beispiel">Das war ein <b>langer und anstrengender</b> Tag.</p>
+        <p class="merke">ein großer, schwarzer Hund – mit einem großen, schwarzen Hund: alle Adjektive gleich.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Друге й третє прикметники не «спрощуються»: якщо перший має ‑er, то й другий ‑er (<i>ein groß<b>er</b>, schwarz<b>er</b> Hund</i>). Кома ставиться, коли прикметники рівноправні (можна вставити <i>und</i>). Якщо ні (<i>der neue rote Bus</i> — «новий червоний автобус» як одне ціле), кома не потрібна.
+        </div>
+      </section>
+      <section class="card regel-block" id="el-er">
+        <h3>Adjektive auf -el und -er: die dunkle Nacht, ein teures Handy</h3>
+        <p>Bei Adjektiven auf <b>‑el</b> fällt das <i>e</i> vor der Endung weg. Bei Adjektiven auf <b>‑er</b> fällt es weg, wenn davor <i>au</i> oder <i>eu</i> steht.</p>
+        <div style="overflow-x:auto;"><table class="gtable">
+          <tr><th>Grundform</th><th>mit Endung</th><th>Regel</th></tr>
+          <tr><td>dunkel</td><td>eine dunk<b>le</b> Nacht</td><td>‑el: e fällt weg</td></tr>
+          <tr><td>sensibel</td><td>ein sensib<b>les</b> Kind</td><td>‑el: e fällt weg</td></tr>
+          <tr><td>flexibel</td><td>flexib<b>le</b> Zeiten</td><td>‑el: e fällt weg</td></tr>
+          <tr><td>teuer</td><td>ein teu<b>res</b> Handy</td><td>eu + ‑er: e fällt weg</td></tr>
+          <tr><td>sauer</td><td>sau<b>re</b> Gurken</td><td>au + ‑er: e fällt weg</td></tr>
+          <tr><td>lecker</td><td>ein lecke<b>rer</b> Kuchen</td><td>sonst bleibt das e</td></tr>
+          <tr><td>bitter</td><td>ein bitte<b>rer</b> Geschmack</td><td>sonst bleibt das e</td></tr>
+        </table></div>
+        <p class="merke">dunkel → dunkle, teuer → teure, sauer → saure. Aber: lecker → leckere, bitter → bittere.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Німецька не любить трьох складів підряд із ненаголошеним e: <i>dunkel + e</i> → <i>dunk<b>le</b></i>, а не «dunkele». Для ‑er це правило діє лише після <i>au / eu</i> (<i>teuer → teure, sauer → saure</i>). В інших словах на ‑er e залишається: <i>ein leckerer Kuchen, ein bitterer Tee</i>. У ролі присудка слово не змінюється: <i>Die Nacht ist dunkel.</i>
+        </div>
+      </section>
+      <section class="card regel-block" id="hoch">
+        <h3>hoch – ein hohes Haus</h3>
+        <p><i>hoch</i> verliert vor einer Endung das <i>c</i>: <b>hoh-</b>. Ohne Endung bleibt <i>hoch</i>.</p>
+        <p class="beispiel">Das Haus ist <b>hoch</b>.</p>
+        <p class="beispiel">Das ist ein <b>hohes</b> Haus.</p>
+        <p class="beispiel">Wir wandern auf einen <b>hohen</b> Berg.</p>
+        <p class="beispiel">Sie hat <b>hohes</b> Fieber.</p>
+        <p class="merke">hoch → hohe, hoher, hohes, hohen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Єдиний такий випадок серед частих прикметників: <i>hoch</i> («високий») перед закінченням стає <i>hoh-</i>: <i>ein hoh<b>es</b> Haus, auf dem hoh<b>en</b> Berg</i>. Вимова теж змінюється: [х] зникає, <i>h</i> у <i>hohe</i> не вимовляється.
+        </div>
+      </section>
+      <section class="card regel-block" id="rosa-lila">
+        <h3>Ohne Endung: rosa, lila, prima, super</h3>
+        <p>Einige Adjektive (meist aus anderen Sprachen) bekommen nie eine Endung: <i>rosa, lila, beige, orange, prima, super, klasse</i>.</p>
+        <p class="beispiel">Sie trägt ein <b>lila</b> Kleid.</p>
+        <p class="beispiel">Ich habe einen <b>rosa</b> Pullover.</p>
+        <p class="beispiel">Das ist eine <b>prima</b> Idee!</p>
+        <p class="beispiel">Wir hatten einen <b>super</b> Tag. <i>(Alltagssprache)</i></p>
+        <p>Wer eine Endung braucht, benutzt <i>-farben</i>: <i>ein rosafarbenes T-Shirt, eine orangefarbene Tasche</i>.</p>
+        <p class="merke">rosa, lila, prima, super bleiben immer gleich: ein lila Kleid, mit einem lila Kleid.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Ці слова не відмінюються взагалі: <i>ein lila Kleid, in einem lila Kleid</i>. У розмові іноді чути «ein orangenes T-Shirt», але граматично правильно <i>ein orange T-Shirt</i> або <i>ein orangefarbenes T-Shirt</i>. <i>super, klasse</i> як прикметники перед іменником — розмовна мова.
+        </div>
+      </section>
+      <section class="card regel-block" id="staedte">
+        <h3>Kölner, Berliner, Schweizer: Adjektive von Städtenamen</h3>
+        <p>Von Städtenamen bildet man Adjektive mit <b>‑er</b>. Sie werden <b>großgeschrieben</b> und nie dekliniert – die Form bleibt in allen Kasus gleich. Ebenso bei einigen Ländern und Regionen: <i>Schweizer</i>.</p>
+        <div style="overflow-x:auto;"><table class="gtable">
+          <tr><th>Stadt / Land</th><th>Adjektiv</th><th>Beispiel</th></tr>
+          <tr><td>Köln</td><td>Kölner</td><td>Wir besuchen den <b>Kölner</b> Dom.</td></tr>
+          <tr><td>Hamburg</td><td>Hamburger</td><td>Im <b>Hamburger</b> Hafen liegen viele Schiffe.</td></tr>
+          <tr><td>Berlin</td><td>Berliner</td><td>Die <b>Berliner</b> Mauer fiel 1989.</td></tr>
+          <tr><td>München</td><td>Münchner</td><td>Wir landen am <b>Münchner</b> Flughafen.</td></tr>
+          <tr><td>Wien</td><td>Wiener</td><td>Ich esse gern <b>Wiener</b> Würstchen.</td></tr>
+          <tr><td>die Schweiz</td><td>Schweizer</td><td><b>Schweizer</b> Käse hat große Löcher.</td></tr>
+        </table></div>
+        <p class="merke">Stadt + ‑er: immer groß, immer gleich – der Kölner Dom, im Kölner Dom.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Українською це звичайний прикметник («кельнський собор»), а німецькою — незмінна форма на ‑er з великої літери: <i>der Kölner Dom, im Kölner Dom, die Kölner Straßen</i>. Інших закінчень не буває. Зверни увагу на написання: <i>München → Münchner</i> (e випадає), <i>Schweiz → Schweizer</i>.
+        </div>
+      </section>
+      <section class="card regel-block" id="uebersicht">
+        <h3>Alles auf einen Blick</h3>
+        <div style="overflow-x:auto;"><table class="gtable">
+          <tr><th></th><th>nach der, dieser, jeder …</th><th>nach ein, mein, kein …</th><th>ohne Artikel</th></tr>
+          <tr><td class="gender">Nom. m</td><td>der neu<b>e</b> Film</td><td>ein neu<b>er</b> Film</td><td>neu<b>er</b> Film</td></tr>
+          <tr><td class="gender">Akk. m</td><td>den neu<b>en</b> Film</td><td>einen neu<b>en</b> Film</td><td>neu<b>en</b> Film</td></tr>
+          <tr><td class="gender">Dat. m</td><td>dem neu<b>en</b> Film</td><td>einem neu<b>en</b> Film</td><td>neu<b>em</b> Film</td></tr>
+          <tr><td class="gender">Gen. m</td><td>des neu<b>en</b> Films</td><td>eines neu<b>en</b> Films</td><td>neu<b>en</b> Films</td></tr>
+          <tr><td class="gender">Nom./Akk. f</td><td>die neu<b>e</b> Jacke</td><td>eine neu<b>e</b> Jacke</td><td>neu<b>e</b> Jacke</td></tr>
+          <tr><td class="gender">Dat./Gen. f</td><td>der neu<b>en</b> Jacke</td><td>einer neu<b>en</b> Jacke</td><td>neu<b>er</b> Jacke</td></tr>
+          <tr><td class="gender">Nom./Akk. n</td><td>das neu<b>e</b> Handy</td><td>ein neu<b>es</b> Handy</td><td>neu<b>es</b> Handy</td></tr>
+          <tr><td class="gender">Dat. n</td><td>dem neu<b>en</b> Handy</td><td>einem neu<b>en</b> Handy</td><td>neu<b>em</b> Handy</td></tr>
+          <tr><td class="gender">Gen. n</td><td>des neu<b>en</b> Handys</td><td>eines neu<b>en</b> Handys</td><td>neu<b>en</b> Handys</td></tr>
+          <tr><td class="gender">Nom./Akk. Pl.</td><td>die neu<b>en</b> Schuhe</td><td>meine neu<b>en</b> Schuhe</td><td>neu<b>e</b> Schuhe</td></tr>
+          <tr><td class="gender">Dat. Pl.</td><td>den neu<b>en</b> Schuhen</td><td>meinen neu<b>en</b> Schuhen</td><td>neu<b>en</b> Schuhen</td></tr>
+          <tr><td class="gender">Gen. Pl.</td><td>der neu<b>en</b> Schuhe</td><td>meiner neu<b>en</b> Schuhe</td><td>neu<b>er</b> Schuhe</td></tr>
+        </table></div>
+        <p class="merke">Drei Fragen: 1. Steht das Adjektiv vor einem Nomen? 2. Welches Wort steht davor? 3. Zeigt dieses Wort den Kasus schon? Wenn ja: ‑e oder ‑en. Wenn nein: das Adjektiv zeigt ihn.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Уся тема в одній таблиці. Ліва колонка — лише ‑e/‑en. Середня відрізняється від лівої трьома клітинками (Nom. m, Nom./Akk. n). Права (без артикля) — майже як закінчення самого <i>der/die/das</i>, крім Genitiv m/n (‑en). Алгоритм: 1) чи є іменник після прикметника? 2) що стоїть перед ним? 3) чи вже видно відмінок?
+        </div>
+      </section>
+
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Mit Endung oder ohne?</h2>
+      <p class="lead">Натисни всі прикметники, які стоять <b>перед іменником</b> і тому мають закінчення. Прикметники без закінчення (після <i>sein</i>, при дієслові) не натискай. Потім — «Prüfen».</p>
+      <div class="card" id="ub1-text" style="line-height:2;">
+        <p>Mein <span class="tok" data-correct="true">kleiner</span> Bruder hat einen <span class="tok" data-correct="true">neuen</span> Hund. Der Hund ist noch <span class="tok" data-correct="false">jung</span> und sehr <span class="tok" data-correct="false">neugierig</span>. Er hat ein <span class="tok" data-correct="true">weiches</span>, <span class="tok" data-correct="true">dickes</span> Fell und <span class="tok" data-correct="true">große</span> Ohren. Am Morgen läuft er <span class="tok" data-correct="false">schnell</span> in den <span class="tok" data-correct="true">kleinen</span> Garten. Dort spielt er mit einem <span class="tok" data-correct="true">alten</span> Ball. Der Ball ist schon <span class="tok" data-correct="false">kaputt</span>, aber der Hund ist <span class="tok" data-correct="false">glücklich</span>. Das finde ich <span class="tok" data-correct="false">lustig</span>. Am Abend ist er <span class="tok" data-correct="false">müde</span> und schläft auf einer <span class="tok" data-correct="true">warmen</span> Decke.</p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub1-check">Prüfen</button>
+        <button class="btn secondary" id="ub1-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub1-score"></span>
+      </div>
+    </section>
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Nach der, die, das: -e oder -en?</h2>
+      <p class="lead">Розклади словосполучення по кошиках: яке закінчення має прикметник після означеного артикля чи <i>dieser, jeder, welcher, alle</i>? Відмінок подано в дужках, де його не видно з речення.</p>
+      <div class="card" id="ub2-sort"></div>
+    </section>
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Die Tabelle nach dem bestimmten Artikel</h2>
+      <p class="lead">Заповни таблицю формами прикметника <b>groß</b>. Пиши все слово: <i>große</i> або <i>großen</i>.</p>
+      <div class="card" id="ub3-list">
+        <div style="overflow-x:auto;"><table class="gtable">
+          <tr><th></th><th>maskulin</th><th>feminin</th><th>neutral</th><th>Plural</th></tr>
+          <tr><td class="gender">Nom.</td><td>der <input type="text" class="blank-input inline" data-ans="große"> Garten</td><td>die <input type="text" class="blank-input inline" data-ans="große"> Stadt</td><td>das <input type="text" class="blank-input inline" data-ans="große"> Haus</td><td>die <input type="text" class="blank-input inline" data-ans="großen"> Häuser</td></tr>
+          <tr><td class="gender">Akk.</td><td>den <input type="text" class="blank-input inline" data-ans="großen"> Garten</td><td>die <input type="text" class="blank-input inline" data-ans="große"> Stadt</td><td>das <input type="text" class="blank-input inline" data-ans="große"> Haus</td><td>die <input type="text" class="blank-input inline" data-ans="großen"> Häuser</td></tr>
+          <tr><td class="gender">Dat.</td><td>dem <input type="text" class="blank-input inline" data-ans="großen"> Garten</td><td>der <input type="text" class="blank-input inline" data-ans="großen"> Stadt</td><td>dem <input type="text" class="blank-input inline" data-ans="großen"> Haus</td><td>den <input type="text" class="blank-input inline" data-ans="großen"> Häusern</td></tr>
+          <tr><td class="gender">Gen.</td><td>des <input type="text" class="blank-input inline" data-ans="großen"> Gartens</td><td>der <input type="text" class="blank-input inline" data-ans="großen"> Stadt</td><td>des <input type="text" class="blank-input inline" data-ans="großen"> Hauses</td><td>der <input type="text" class="blank-input inline" data-ans="großen"> Häuser</td></tr>
+        </table></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">dieser, welcher, alle, derselbe</h2>
+      <p class="lead">Встав прикметник із дужок у правильній формі. В останньому реченні прикметник став іменником — зверни увагу на велику літеру.</p>
+      <div class="card" id="ub4-list">
+        <div class="fill-item"><span class="num">1)</span> Dieser <input type="text" class="blank-input inline" data-ans="neue"> (neu) Film ist wirklich spannend.</div>
+        <div class="fill-item"><span class="num">2)</span> Kennst du diesen <input type="text" class="blank-input inline" data-ans="neuen"> (neu) Schüler?</div>
+        <div class="fill-item"><span class="num">3)</span> Welche <input type="text" class="blank-input inline" data-ans="deutsche"> (deutsch) Stadt gefällt dir am besten?</div>
+        <div class="fill-item"><span class="num">4)</span> Mit welchem <input type="text" class="blank-input inline" data-ans="alten"> (alt) Rucksack fährst du?</div>
+        <div class="fill-item"><span class="num">5)</span> Jedes <input type="text" class="blank-input inline" data-ans="kleine"> (klein) Kind bekommt ein Eis.</div>
+        <div class="fill-item"><span class="num">6)</span> Das ist dasselbe <input type="text" class="blank-input inline" data-ans="rote"> (rot) T-Shirt wie gestern.</div>
+        <div class="fill-item"><span class="num">7)</span> Wegen dieses <input type="text" class="blank-input inline" data-ans="starken"> (stark) Regens bleiben wir zu Hause.</div>
+        <div class="fill-item"><span class="num">8)</span> Wir wohnen in derselben <input type="text" class="blank-input inline" data-ans="kleinen"> (klein) Straße.</div>
+        <div class="fill-item"><span class="num">9)</span> Alle <input type="text" class="blank-input inline" data-ans="neuen"> (neu) Schüler stellen sich kurz vor.</div>
+        <div class="fill-item"><span class="num">10)</span> Die beiden <input type="text" class="blank-input inline" data-ans="jungen"> (jung) Lehrerinnen sind sehr nett.</div>
+        <div class="fill-item"><span class="num">11)</span> Am Samstag feiere ich mit allen <input type="text" class="blank-input inline" data-ans="guten"> (gut) Freunden.</div>
+        <div class="fill-item"><span class="num">12)</span> Diejenigen <input type="text" class="blank-input inline" data-ans="neuen"> (neu) Schüler, die noch kein Buch haben, kommen bitte zu mir.</div>
+        <div class="fill-item"><span class="num">13)</span> Alles <input type="text" class="blank-input inline" data-ans="Gute" data-case> (gut) zum Geburtstag!</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub4-check">Prüfen</button>
+        <button class="btn secondary" id="ub4-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub4-score"></span>
+      </div>
+    </section>
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Die Tabelle nach dem unbestimmten Artikel</h2>
+      <p class="lead">Заповни таблицю формами прикметника <b>jung</b>. У множині артикля немає — прикметник стоїть сам.</p>
+      <div class="card" id="ub5-list">
+        <div style="overflow-x:auto;"><table class="gtable">
+          <tr><th></th><th>maskulin</th><th>feminin</th><th>neutral</th><th>Plural</th></tr>
+          <tr><td class="gender">Nom.</td><td>ein <input type="text" class="blank-input inline" data-ans="junger"> Hund</td><td>eine <input type="text" class="blank-input inline" data-ans="junge"> Katze</td><td>ein <input type="text" class="blank-input inline" data-ans="junges"> Pferd</td><td>— <input type="text" class="blank-input inline" data-ans="junge"> Tiere</td></tr>
+          <tr><td class="gender">Akk.</td><td>einen <input type="text" class="blank-input inline" data-ans="jungen"> Hund</td><td>eine <input type="text" class="blank-input inline" data-ans="junge"> Katze</td><td>ein <input type="text" class="blank-input inline" data-ans="junges"> Pferd</td><td>— <input type="text" class="blank-input inline" data-ans="junge"> Tiere</td></tr>
+          <tr><td class="gender">Dat.</td><td>einem <input type="text" class="blank-input inline" data-ans="jungen"> Hund</td><td>einer <input type="text" class="blank-input inline" data-ans="jungen"> Katze</td><td>einem <input type="text" class="blank-input inline" data-ans="jungen"> Pferd</td><td>— <input type="text" class="blank-input inline" data-ans="jungen"> Tieren</td></tr>
+          <tr><td class="gender">Gen.</td><td>eines <input type="text" class="blank-input inline" data-ans="jungen"> Hundes</td><td>einer <input type="text" class="blank-input inline" data-ans="jungen"> Katze</td><td>eines <input type="text" class="blank-input inline" data-ans="jungen"> Pferdes</td><td>— <input type="text" class="blank-input inline" data-ans="junger"> Tiere</td></tr>
+        </table></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub5-check">Prüfen</button>
+        <button class="btn secondary" id="ub5-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub5-score"></span>
+      </div>
+    </section>
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">ein, mein, kein</h2>
+      <p class="lead">Обери правильну форму прикметника після неозначеного артикля, присвійного артикля чи <i>kein</i>.</p>
+      <div class="card" id="ub6-list">
+        <div class="fill-item"><span class="num">1)</span> Das ist ein <select class="blank inline" data-ans="neuer"><option value="">—</option><option>neue</option><option>neuen</option><option>neuer</option><option>neues</option></select> Computer.</div>
+        <div class="fill-item"><span class="num">2)</span> Ich habe eine <select class="blank inline" data-ans="gute"><option value="">—</option><option>gute</option><option>guten</option><option>guter</option><option>gutes</option></select> Idee.</div>
+        <div class="fill-item"><span class="num">3)</span> Er kauft sich ein <select class="blank inline" data-ans="schnelles"><option value="">—</option><option>schnelle</option><option>schnellen</option><option>schneller</option><option>schnelles</option></select> Fahrrad.</div>
+        <div class="fill-item"><span class="num">4)</span> Wir haben einen <select class="blank inline" data-ans="netten"><option value="">—</option><option>nette</option><option>netten</option><option>netter</option><option>nettes</option></select> Lehrer.</div>
+        <div class="fill-item"><span class="num">5)</span> Sie wohnt in einem <select class="blank inline" data-ans="kleinen"><option value="">—</option><option>kleine</option><option>kleinen</option><option>kleiner</option><option>kleines</option></select> Dorf.</div>
+        <div class="fill-item"><span class="num">6)</span> Mein <select class="blank inline" data-ans="altes"><option value="">—</option><option>alte</option><option>alten</option><option>alter</option><option>altes</option></select> Handy ist kaputt.</div>
+        <div class="fill-item"><span class="num">7)</span> Ich telefoniere mit meiner <select class="blank inline" data-ans="besten"><option value="">—</option><option>beste</option><option>besten</option><option>bester</option><option>bestes</option></select> Freundin.</div>
+        <div class="fill-item"><span class="num">8)</span> Unser <select class="blank inline" data-ans="neuer"><option value="">—</option><option>neue</option><option>neuen</option><option>neuer</option><option>neues</option></select> Nachbar heißt Tom.</div>
+        <div class="fill-item"><span class="num">9)</span> Das ist kein <select class="blank inline" data-ans="guter"><option value="">—</option><option>gute</option><option>guten</option><option>guter</option><option>gutes</option></select> Plan.</div>
+        <div class="fill-item"><span class="num">10)</span> Hast du keine <select class="blank inline" data-ans="warme"><option value="">—</option><option>warme</option><option>warmen</option><option>warmer</option><option>warmes</option></select> Jacke?</div>
+        <div class="fill-item"><span class="num">11)</span> Wo sind meine <select class="blank inline" data-ans="blauen"><option value="">—</option><option>blaue</option><option>blauen</option><option>blauer</option><option>blaues</option></select> Socken?</div>
+        <div class="fill-item"><span class="num">12)</span> Wir haben leider keine <select class="blank inline" data-ans="neuen"><option value="">—</option><option>neue</option><option>neuen</option><option>neuer</option><option>neues</option></select> Informationen.</div>
+        <div class="fill-item"><span class="num">13)</span> Trotz eines <select class="blank inline" data-ans="langen"><option value="">—</option><option>lange</option><option>langen</option><option>langer</option><option>langes</option></select> Staus sind wir pünktlich.</div>
+        <div class="fill-item"><span class="num">14)</span> Ihr <select class="blank inline" data-ans="kleiner"><option value="">—</option><option>kleine</option><option>kleinen</option><option>kleiner</option><option>kleines</option></select> Bruder geht noch in den Kindergarten.</div>
+        <div class="fill-item"><span class="num">15)</span> Wo habt ihr euer <select class="blank inline" data-ans="neues"><option value="">—</option><option>neue</option><option>neuen</option><option>neuer</option><option>neues</option></select> Mathebuch?</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub6-check">Prüfen</button>
+        <button class="btn secondary" id="ub6-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub6-score"></span>
+      </div>
+    </section>
+    <section class="panel" id="panel-ub7">
+      <p class="section-label">Üb. 7</p>
+      <h2 class="panel-title">Plural: viele, zwei, meine, alle</h2>
+      <p class="lead">Постав словосполучення в множину. Впиши лише прикметник у правильній формі.</p>
+      <div class="card" id="ub7-list">
+        <div class="fill-item"><span class="num">1)</span> ein neuer Freund → viele <input type="text" class="blank-input inline" data-ans="neue"> Freunde</div>
+        <div class="fill-item"><span class="num">2)</span> eine gute Note → zwei <input type="text" class="blank-input inline" data-ans="gute"> Noten</div>
+        <div class="fill-item"><span class="num">3)</span> mein bester Freund → meine <input type="text" class="blank-input inline" data-ans="besten"> Freunde</div>
+        <div class="fill-item"><span class="num">4)</span> ein altes Buch → einige <input type="text" class="blank-input inline" data-ans="alte"> Bücher</div>
+        <div class="fill-item"><span class="num">5)</span> mit einem netten Kind → mit drei <input type="text" class="blank-input inline" data-ans="netten"> Kindern</div>
+        <div class="fill-item"><span class="num">6)</span> kein großes Problem → keine <input type="text" class="blank-input inline" data-ans="großen"> Probleme</div>
+        <div class="fill-item"><span class="num">7)</span> ein interessanter Film → mehrere <input type="text" class="blank-input inline" data-ans="interessante"> Filme</div>
+        <div class="fill-item"><span class="num">8)</span> der schöne Tag → alle <input type="text" class="blank-input inline" data-ans="schönen"> Tage</div>
+        <div class="fill-item"><span class="num">9)</span> eine kleine Stadt → <input type="text" class="blank-input inline" data-ans="kleine"> Städte</div>
+        <div class="fill-item"><span class="num">10)</span> die Meinung eines jungen Menschen → die Meinung vieler <input type="text" class="blank-input inline" data-ans="junger"> Menschen</div>
+        <div class="fill-item"><span class="num">11)</span> unser neues Zimmer → unsere <input type="text" class="blank-input inline" data-ans="neuen"> Zimmer</div>
+        <div class="fill-item"><span class="num">12)</span> trotz eines kalten Tages → trotz <input type="text" class="blank-input inline" data-ans="kalter"> Tage</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub7-check">Prüfen</button>
+        <button class="btn secondary" id="ub7-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub7-score"></span>
+      </div>
+    </section>
+    <section class="panel" id="panel-ub8">
+      <p class="section-label">Üb. 8</p>
+      <h2 class="panel-title">Ohne Artikel: Milch, Gold, Guten Tag!</h2>
+      <p class="lead">Встав прикметник у правильній формі. Артикля немає — прикметник сам показує рід і відмінок.</p>
+      <div class="card" id="ub8-list">
+        <div class="fill-item"><span class="num">1)</span> Ich trinke morgens <input type="text" class="blank-input inline" data-ans="warme"> (warm) Milch.</div>
+        <div class="fill-item"><span class="num">2)</span> <input type="text" class="blank-input inline" data-ans="Frisches"> (frisch) Obst ist gesund.</div>
+        <div class="fill-item"><span class="num">3)</span> Der Ring ist aus <input type="text" class="blank-input inline" data-ans="echtem"> (echt) Gold.</div>
+        <div class="fill-item"><span class="num">4)</span> Mit <input type="text" class="blank-input inline" data-ans="großer"> (groß) Freude hat sie „Ja“ gesagt.</div>
+        <div class="fill-item"><span class="num">5)</span> Er trinkt gern <input type="text" class="blank-input inline" data-ans="heißen"> (heiß) Tee mit Zitrone.</div>
+        <div class="fill-item"><span class="num">6)</span> Bei <input type="text" class="blank-input inline" data-ans="schlechtem"> (schlecht) Wetter bleiben wir zu Hause.</div>
+        <div class="fill-item"><span class="num">7)</span> Trotz <input type="text" class="blank-input inline" data-ans="starken"> (stark) Regens spielen wir Fußball.</div>
+        <div class="fill-item"><span class="num">8)</span> <input type="text" class="blank-input inline" data-ans="Guten"> (gut) Morgen, Frau Schneider!</div>
+        <div class="fill-item"><span class="num">9)</span> <input type="text" class="blank-input inline" data-ans="Herzlichen"> (herzlich) Glückwunsch zum Geburtstag!</div>
+        <div class="fill-item"><span class="num">10)</span> Wir wünschen euch <input type="text" class="blank-input inline" data-ans="schöne"> (schön) Ferien!</div>
+        <div class="fill-item"><span class="num">11)</span> <input type="text" class="blank-input inline" data-ans="Lieber"> (lieb) Opa, danke für das Geschenk!</div>
+        <div class="fill-item"><span class="num">12)</span> <input type="text" class="blank-input inline" data-ans="Liebe"> (lieb) Oma, wir besuchen dich am Sonntag.</div>
+        <div class="fill-item"><span class="num">13)</span> Im Kühlschrank ist noch etwas <input type="text" class="blank-input inline" data-ans="kalter"> (kalt) Saft.</div>
+        <div class="fill-item"><span class="num">14)</span> In den Ferien haben wir viel <input type="text" class="blank-input inline" data-ans="freie"> (frei) Zeit.</div>
+        <div class="fill-item"><span class="num">15)</span> Er kocht mit viel <input type="text" class="blank-input inline" data-ans="frischem"> (frisch) Gemüse.</div>
+        <div class="fill-item"><span class="num">16)</span> Auf dem Land gibt es genug <input type="text" class="blank-input inline" data-ans="frische"> (frisch) Luft.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub8-check">Prüfen</button>
+        <button class="btn secondary" id="ub8-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub8-score"></span>
+      </div>
+    </section>
+    <section class="panel" id="panel-ub9">
+      <p class="section-label">Üb. 9</p>
+      <h2 class="panel-title">etwas Neues, alles Gute – und Papiere</h2>
+      <p class="lead">Обери правильну відповідь.</p>
+      <div class="card" id="ub9-quiz"></div>
+    </section>
+    <section class="panel" id="panel-ub10">
+      <p class="section-label">Üb. 10</p>
+      <h2 class="panel-title">Annas neues Fahrrad, du armes Kind</h2>
+      <p class="lead">Обери правильну форму прикметника після імені в Genitiv, <i>wessen, dessen, deren</i>, особового займенника чи <i>manch / welch</i>.</p>
+      <div class="card" id="ub10-list">
+        <div class="fill-item"><span class="num">1)</span> Das ist Annas <select class="blank inline" data-ans="neues"><option value="">—</option><option>neue</option><option>neuen</option><option>neuer</option><option>neues</option></select> Fahrrad.</div>
+        <div class="fill-item"><span class="num">2)</span> Ich fahre heute mit Pauls <select class="blank inline" data-ans="altem"><option value="">—</option><option>alte</option><option>altem</option><option>alten</option><option>alter</option></select> Roller.</div>
+        <div class="fill-item"><span class="num">3)</span> Wessen <select class="blank inline" data-ans="roter"><option value="">—</option><option>rote</option><option>roten</option><option>roter</option><option>rotes</option></select> Schal liegt hier?</div>
+        <div class="fill-item"><span class="num">4)</span> Omas <select class="blank inline" data-ans="leckerer"><option value="">—</option><option>leckere</option><option>leckeren</option><option>leckerer</option><option>leckeres</option></select> Kuchen ist der beste.</div>
+        <div class="fill-item"><span class="num">5)</span> Lisas <select class="blank inline" data-ans="kleine"><option value="">—</option><option>kleine</option><option>kleinen</option><option>kleiner</option><option>kleines</option></select> Katzen schlafen im Korb.</div>
+        <div class="fill-item"><span class="num">6)</span> Mit Tims <select class="blank inline" data-ans="neuem"><option value="">—</option><option>neue</option><option>neuem</option><option>neuen</option><option>neuer</option></select> Handy kann man tolle Fotos machen.</div>
+        <div class="fill-item"><span class="num">7)</span> Das ist Max, dessen <select class="blank inline" data-ans="großer"><option value="">—</option><option>große</option><option>großen</option><option>großer</option><option>großes</option></select> Bruder bei uns Trainer ist.</div>
+        <div class="fill-item"><span class="num">8)</span> Frau Wolf, deren <select class="blank inline" data-ans="kleine"><option value="">—</option><option>kleine</option><option>kleinen</option><option>kleiner</option><option>kleines</option></select> Tochter in die erste Klasse geht, ist unsere Nachbarin.</div>
+        <div class="fill-item"><span class="num">9)</span> Du <select class="blank inline" data-ans="armes"><option value="">—</option><option>arme</option><option>armen</option><option>armer</option><option>armes</option></select> Kind! Hast du dir wehgetan?</div>
+        <div class="fill-item"><span class="num">10)</span> Wir <select class="blank inline" data-ans="jungen"><option value="">—</option><option>junge</option><option>jungen</option><option>junger</option><option>junges</option></select> Leute haben viele Ideen.</div>
+        <div class="fill-item"><span class="num">11)</span> Ihr <select class="blank inline" data-ans="lieben"><option value="">—</option><option>liebe</option><option>lieben</option><option>lieber</option><option>liebes</option></select> Kinder, jetzt wird gegessen!</div>
+        <div class="fill-item"><span class="num">12)</span> Welch ein <select class="blank inline" data-ans="schöner"><option value="">—</option><option>schöne</option><option>schönen</option><option>schöner</option><option>schönes</option></select> Tag!</div>
+        <div class="fill-item"><span class="num">13)</span> Manch <select class="blank inline" data-ans="guter"><option value="">—</option><option>gute</option><option>guten</option><option>guter</option><option>gutes</option></select> Freund hat mir damals nicht geholfen.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub10-check">Prüfen</button>
+        <button class="btn secondary" id="ub10-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub10-score"></span>
+      </div>
+    </section>
+    <section class="panel" id="panel-ub11">
+      <p class="section-label">Üb. 11</p>
+      <h2 class="panel-title">dunkle, teure, hohe, lila, Kölner</h2>
+      <p class="lead">Утвори форму прикметника перед іменником. Стеж за особливими словами: деякі втрачають літеру, а деякі не змінюються зовсім.</p>
+      <div class="card" id="ub11-list">
+        <div class="fill-item"><span class="num">1)</span> Die Nacht ist dunkel. → eine <input type="text" class="blank-input inline" data-ans="dunkle"> Nacht</div>
+        <div class="fill-item"><span class="num">2)</span> Das Handy ist teuer. → ein <input type="text" class="blank-input inline" data-ans="teures"> Handy</div>
+        <div class="fill-item"><span class="num">3)</span> Die Gurken sind sauer. → <input type="text" class="blank-input inline" data-ans="saure"> Gurken</div>
+        <div class="fill-item"><span class="num">4)</span> Das Kind ist sensibel. → ein <input type="text" class="blank-input inline" data-ans="sensibles"> Kind</div>
+        <div class="fill-item"><span class="num">5)</span> Der Kuchen ist lecker. → ein <input type="text" class="blank-input inline" data-ans="leckerer"> Kuchen</div>
+        <div class="fill-item"><span class="num">6)</span> Das Haus ist hoch. → ein <input type="text" class="blank-input inline" data-ans="hohes"> Haus</div>
+        <div class="fill-item"><span class="num">7)</span> Der Berg ist hoch. → auf dem <input type="text" class="blank-input inline" data-ans="hohen"> Berg</div>
+        <div class="fill-item"><span class="num">8)</span> Die Tasche ist lila. → mit einer <input type="text" class="blank-input inline" data-ans="lila"> Tasche</div>
+        <div class="fill-item"><span class="num">9)</span> Der Pullover ist rosa. → ein <input type="text" class="blank-input inline" data-ans="rosa"> Pullover</div>
+        <div class="fill-item"><span class="num">10)</span> Die Idee ist prima. → eine <input type="text" class="blank-input inline" data-ans="prima"> Idee</div>
+        <div class="fill-item"><span class="num">11)</span> der Dom in Köln → der <input type="text" class="blank-input inline" data-ans="Kölner" data-case> Dom</div>
+        <div class="fill-item"><span class="num">12)</span> der Hafen von Hamburg → im <input type="text" class="blank-input inline" data-ans="Hamburger" data-case> Hafen</div>
+        <div class="fill-item"><span class="num">13)</span> Käse aus der Schweiz → <input type="text" class="blank-input inline" data-ans="Schweizer" data-case> Käse</div>
+        <div class="fill-item"><span class="num">14)</span> der Flughafen von München → am <input type="text" class="blank-input inline" data-ans="Münchner|Münchener" data-case> Flughafen</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub11-check">Prüfen</button>
+        <button class="btn secondary" id="ub11-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub11-score"></span>
+      </div>
+    </section>
+    <section class="panel" id="panel-ub12">
+      <p class="section-label">Üb. 12</p>
+      <h2 class="panel-title">Umformen: Der Tee ist heiß. → heißen Tee</h2>
+      <p class="lead">Перетвори: впиши прикметник разом з іменником у правильній формі (напр. <i>warmen Pullover</i>). Кінцеву крапку ставити не треба.</p>
+      <div class="card" id="ub12-list">
+        <div class="fill-item"><span class="num">1)</span> Der Pullover ist warm. → Ich suche einen <input type="text" class="blank-input inline wide" data-ans="warmen Pullover">.</div>
+        <div class="fill-item"><span class="num">2)</span> Die Aufgabe ist schwer. → Das ist eine <input type="text" class="blank-input inline wide" data-ans="schwere Aufgabe">.</div>
+        <div class="fill-item"><span class="num">3)</span> Das Buch ist spannend. → Ich lese gerade ein <input type="text" class="blank-input inline wide" data-ans="spannendes Buch">.</div>
+        <div class="fill-item"><span class="num">4)</span> Die Schuhe sind neu. → Heute trage ich meine <input type="text" class="blank-input inline wide" data-ans="neuen Schuhe">.</div>
+        <div class="fill-item"><span class="num">5)</span> Der Tee ist heiß. → Im Winter trinke ich gern <input type="text" class="blank-input inline wide" data-ans="heißen Tee">.</div>
+        <div class="fill-item"><span class="num">6)</span> Die Freunde sind nett. → Ich gehe mit <input type="text" class="blank-input inline wide" data-ans="netten Freunden"> ins Kino.</div>
+        <div class="fill-item"><span class="num">7)</span> Das Wetter ist schlecht. → Wegen des <input type="text" class="blank-input inline wide" data-ans="schlechten Wetters"> bleiben wir zu Hause.</div>
+        <div class="fill-item"><span class="num">8)</span> Der Film war langweilig. → Das war kein <input type="text" class="blank-input inline wide" data-ans="langweiliger Film">.</div>
+        <div class="fill-item"><span class="num">9)</span> Die Stadt ist klein. → Wir wohnen in einer <input type="text" class="blank-input inline wide" data-ans="kleinen Stadt">.</div>
+        <div class="fill-item"><span class="num">10)</span> Das Wasser ist kalt. → Ich möchte ein Glas <input type="text" class="blank-input inline wide" data-ans="kaltes Wasser">.</div>
+        <div class="fill-item"><span class="num">11)</span> Die Ideen sind gut. → Wir haben viele <input type="text" class="blank-input inline wide" data-ans="gute Ideen">.</div>
+        <div class="fill-item"><span class="num">12)</span> Der Hund ist groß und schwarz. → Mein Nachbar hat einen <input type="text" class="blank-input inline wide" data-ans="großen, schwarzen Hund|großen schwarzen Hund|großen und schwarzen Hund">.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub12-check">Prüfen</button>
+        <button class="btn secondary" id="ub12-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub12-score"></span>
+      </div>
+    </section>
+    <section class="panel" id="panel-ub13">
+      <p class="section-label">Üb. 13</p>
+      <h2 class="panel-title">Text: Klassenfahrt nach Hamburg</h2>
+      <p class="lead">Допиши закінчення прикметників (лише закінчення: <i>e, en, er, es, em</i>).</p>
+      <div class="card" id="ub13-list" style="line-height:2.2;">
+        <p>Letzte Woche war unsere Klasse auf einer <span style="white-space:nowrap;">lang<input type="text" class="blank-input inline" data-ans="en|-en" style="width:4.5em;"></span> Klassenfahrt in Hamburg. Am Montag kamen wir mit dem Zug am <span style="white-space:nowrap;">groß<input type="text" class="blank-input inline" data-ans="en|-en" style="width:4.5em;"></span>, <span style="white-space:nowrap;">hell<input type="text" class="blank-input inline" data-ans="en|-en" style="width:4.5em;"></span> Hauptbahnhof an. Schon am <span style="white-space:nowrap;">erst<input type="text" class="blank-input inline" data-ans="en|-en" style="width:4.5em;"></span> Tag hatten wir <span style="white-space:nowrap;">schön<input type="text" class="blank-input inline" data-ans="es|-es" style="width:4.5em;"></span> Wetter. Unser <span style="white-space:nowrap;">nett<input type="text" class="blank-input inline" data-ans="er|-er" style="width:4.5em;"></span> Lehrer, Herr Braun, zeigte uns zuerst den <span style="white-space:nowrap;">groß<input type="text" class="blank-input inline" data-ans="en|-en" style="width:4.5em;"></span> Hafen. Dort lagen viele <span style="white-space:nowrap;">riesig<input type="text" class="blank-input inline" data-ans="e|-e" style="width:4.5em;"></span> Schiffe. Mit einem <span style="white-space:nowrap;">klein<input type="text" class="blank-input inline" data-ans="en|-en" style="width:4.5em;"></span> Boot machten wir eine <span style="white-space:nowrap;">lustig<input type="text" class="blank-input inline" data-ans="e|-e" style="width:4.5em;"></span> Rundfahrt. Danach aßen wir in einem <span style="white-space:nowrap;">gemütlich<input type="text" class="blank-input inline" data-ans="en|-en" style="width:4.5em;"></span> Restaurant. Ich bestellte <span style="white-space:nowrap;">frisch<input type="text" class="blank-input inline" data-ans="en|-en" style="width:4.5em;"></span> Fisch und ein <span style="white-space:nowrap;">groß<input type="text" class="blank-input inline" data-ans="es|-es" style="width:4.5em;"></span> Glas <span style="white-space:nowrap;">kalt<input type="text" class="blank-input inline" data-ans="es|-es" style="width:4.5em;"></span> Wasser. Meine <span style="white-space:nowrap;">best<input type="text" class="blank-input inline" data-ans="e|-e" style="width:4.5em;"></span> Freundin Lena wollte nur ein <span style="white-space:nowrap;">süß<input type="text" class="blank-input inline" data-ans="es|-es" style="width:4.5em;"></span> Eis. Am Nachmittag besuchten wir ein <span style="white-space:nowrap;">modern<input type="text" class="blank-input inline" data-ans="es|-es" style="width:4.5em;"></span> Museum. Wegen des <span style="white-space:nowrap;">stark<input type="text" class="blank-input inline" data-ans="en|-en" style="width:4.5em;"></span> Regens blieben wir dort drei Stunden. Die <span style="white-space:nowrap;">alt<input type="text" class="blank-input inline" data-ans="en|-en" style="width:4.5em;"></span> Fotos der Stadt fand ich sehr interessant. Am Abend waren alle müde, aber glücklich. In unserer <span style="white-space:nowrap;">klein<input type="text" class="blank-input inline" data-ans="en|-en" style="width:4.5em;"></span> Jugendherberge gab es <span style="white-space:nowrap;">warm<input type="text" class="blank-input inline" data-ans="e|-e" style="width:4.5em;"></span> Suppe und <span style="white-space:nowrap;">lecker<input type="text" class="blank-input inline" data-ans="en|-en" style="width:4.5em;"></span> Kuchen. Das war wirklich ein <span style="white-space:nowrap;">toll<input type="text" class="blank-input inline" data-ans="er|-er" style="width:4.5em;"></span> Tag! Am <span style="white-space:nowrap;">letzt<input type="text" class="blank-input inline" data-ans="en|-en" style="width:4.5em;"></span> Morgen kaufte ich für meine Eltern ein paar <span style="white-space:nowrap;">schön<input type="text" class="blank-input inline" data-ans="e|-e" style="width:4.5em;"></span> Postkarten. Nächstes Jahr fahren wir mit derselben <span style="white-space:nowrap;">toll<input type="text" class="blank-input inline" data-ans="en|-en" style="width:4.5em;"></span> Klasse nach Berlin.</p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub13-check">Prüfen</button>
+        <button class="btn secondary" id="ub13-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub13-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das Wichtigste</p>
+        <p>Vor einem Nomen hat das Adjektiv immer eine Endung, nach <i>sein</i> keine. Nach <i>der, dieser, jeder</i> ist sie kurz: fünfmal ‑e, sonst ‑en. Nach <i>ein, mein, kein</i> zeigt das Adjektiv das Genus dort, wo der Artikel keine Endung hat: <i>ein neuer Film, ein neues Handy</i>. Ohne Artikel übernimmt das Adjektiv die Endungen von <i>der, die, das</i>: <i>kalter Tee, mit frischer Milch</i>.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Перед іменником прикметник завжди має закінчення, після <i>sein</i> — ні. Після <i>der, dieser, jeder</i> закінчення коротке: п'ять разів ‑e, решта ‑en. Після <i>ein, mein, kein</i> прикметник сам показує рід там, де артикль без закінчення: <i>ein neuer Film, ein neues Handy</i>. Без артикля прикметник бере закінчення від <i>der, die, das</i>: <i>kalter Tee, mit frischer Milch</i>. Окремо запам'ятай: <i>etwas Neues</i>, але <i>alles Gute</i>; <i>dunkle, teure, hohe</i>; незмінні <i>lila, rosa, prima</i> і <i>Kölner, Berliner</i>.
+        </div>
+      </div>
+
+      <!-- "Де це ще трапляється": заповнюється автоматично -->
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Де це ще трапляється</p>
+        <div class="gram-related" id="gramRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <p class="lead" id="gramBest" style="font-size:14px;"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/grammar-data.js"></script>
+<script src="../../data/lessons-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/site.js"></script>
+<script>
+  const GRAM_ID = "adjektivdeklination";
+
+  // Üb. 1: знайди в тексті (токени)
+  initTokenClicks('ub1-text');
+  setTotal(document.querySelectorAll('#ub1-text .tok[data-correct="true"]').length);
+  document.getElementById('ub1-check').addEventListener('click', () => checkTokens('ub1-text', 'ub1-score', 'ub1'));
+  document.getElementById('ub1-reset').addEventListener('click', () => resetTokens('ub1-text', 'ub1-score', 'ub1'));
+
+  // Üb. 2: -e чи -en після означеного артикля
+  buildSort('ub2-sort', {
+    buckets: ["-e", "-en"],
+    items: [
+      {"t": "der alt__ Lehrer (Nom.)", "b": "-e"},
+      {"t": "mit der alt__ Lehrerin", "b": "-en"},
+      {"t": "die neu__ Jacke (Akk.)", "b": "-e"},
+      {"t": "den neu__ Rock", "b": "-en"},
+      {"t": "das klein__ Kind (Nom.)", "b": "-e"},
+      {"t": "mit dem klein__ Kind", "b": "-en"},
+      {"t": "die klein__ Kinder (Nom.)", "b": "-en"},
+      {"t": "wegen des schlecht__ Wetters", "b": "-en"},
+      {"t": "das rot__ Auto (Akk.)", "b": "-e"},
+      {"t": "die rot__ Autos (Akk.)", "b": "-en"},
+      {"t": "diese nett__ Frau (Nom.)", "b": "-e"},
+      {"t": "jeder neu__ Schüler (Nom.)", "b": "-e"},
+      {"t": "von jedem neu__ Schüler", "b": "-en"},
+      {"t": "welches deutsch__ Buch (Akk.)", "b": "-e"},
+      {"t": "trotz der kalt__ Nacht", "b": "-en"},
+      {"t": "alle gut__ Freunde", "b": "-en"}
+    ]
+  });
+
+  // Üb. 3–8, 10–13: пропуски й випадні списки
+  wireBlanks('ub3');
+  wireBlanks('ub4');
+  wireBlanks('ub5');
+  wireBlanks('ub6');
+  wireBlanks('ub7');
+  wireBlanks('ub8');
+  wireBlanks('ub10');
+  wireBlanks('ub11');
+  wireBlanks('ub12');
+  wireBlanks('ub13');
+
+  // Üb. 9: квіз
+  buildQuiz('ub9-quiz', [
+    {"q": "Gibt es etwas ___?", "opts": ["Neues", "Neue", "neues", "Neuen"], "correct": "Neues"},
+    {"q": "Ich wünsche dir alles ___!", "opts": ["Gute", "Gutes", "gute", "Guten"], "correct": "Gute"},
+    {"q": "In den Ferien habe ich nichts ___ erlebt.", "opts": ["Besondere", "Besonderes", "besonderes", "Besonderen"], "correct": "Besonderes"},
+    {"q": "Opa hat uns viel ___ erzählt.", "opts": ["Interessante", "interessant", "Interessantes", "Interessanten"], "correct": "Interessantes"},
+    {"q": "Wir träumen von etwas ___.", "opts": ["Schönes", "Schöne", "Schönen", "Schönem"], "correct": "Schönem"},
+    {"q": "Alles ___ im Laden ist schon verkauft.", "opts": ["Neues", "Neue", "Neuem", "neue"], "correct": "Neue"},
+    {"q": "Heute habe ich wenig ___ gelernt.", "opts": ["Neue", "neu", "Neues", "Neuen"], "correct": "Neues"},
+    {"q": "Die Polizistin sagt: „Ihre Papiere, bitte!“ Was möchte sie sehen?", "opts": ["Zeitungen und Hefte", "Pass oder Ausweis", "Briefpapier", "Geld"], "correct": "Pass oder Ausweis"},
+    {"q": "„Im Café gibt es zwanzig Tees.“ Das bedeutet:", "opts": ["zwanzig Tassen Tee", "zwanzig Liter Tee", "zwanzig Teesorten", "zwanzig Teekannen"], "correct": "zwanzig Teesorten"},
+    {"q": "„Die Abgase der Autos sind schlecht für die Luft.“ Abgase sind …", "opts": ["alte Autoreifen", "der Lärm auf der Straße", "schmutziges Wasser", "schädliche Gase aus dem Auto"], "correct": "schädliche Gase aus dem Auto"}
+  ]);
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🎨','📐','✏️','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  // ЗАВЖДИ останнім рядком
+  initGrammarPage(GRAM_ID);
+</script>
+</body>
+</html>
