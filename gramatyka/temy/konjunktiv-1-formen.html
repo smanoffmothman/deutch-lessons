@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Der Konjunktiv I: Verbformen · Grammatik · Deutsch mit uns</title>
+<!-- =================================================================
+     ШАБЛОН сторінки граматичної теми. Лежить у тій самій папці, де й
+     готові теми (gramatyka/temy/), тож шляхи "../../" уже правильні —
+     при копіюванні їх НЕ міняти. Копію називай точно як id теми в
+     data/grammar-data.js: gramatyka/temy/<id>.html.
+     Правила наповнення — GRAMMAR-BRIEF.md.
+     ================================================================= -->
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'gramatyka' });</script>
+<!-- хлібні крихти малює initGrammarPage() внизу — з даних grammar-data.js -->
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">GRAMMATIK · Кон'юнктив</span>
+        <h1>Der Konjunktiv I: Verbformen</h1>
+        <p class="sub">Форми дієслова, якими німці передають чужі слова: «Він каже, що він <i>нібито</i> хворий». Як утворити Konjunktiv I у теперішньому, майбутньому й минулому часі, у пасиві — і що робити, коли форма збігається з індикативом.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="regel" aria-selected="true">Regel</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Erkennen</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Im Text</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Eindeutig?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Formen</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Ersatzformen</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Zeiten</button>
+    <button class="tab-btn" data-tab="ub7">Üb. 7 · Passiv</button>
+    <button class="tab-btn" data-tab="ub8">Üb. 8 · Umformen</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== REGEL ===== -->
+    <section class="panel active" id="panel-regel">
+      <p class="section-label">Regel</p>
+      <h2 class="panel-title">Der Konjunktiv I: Verbformen</h2>
+      <ul class="regel-toc" id="regelToc"></ul>
+
+      <div class="card">
+        <p>Der Konjunktiv I ist die Verbform der <b>indirekten Rede</b>. Man benutzt ihn, wenn man erzählt, was eine andere Person gesagt hat. Man findet ihn oft in Nachrichten, Zeitungen und Berichten.</p>
+        <p class="beispiel">Anna sagt: „Ich bin krank.“ → Anna sagt, sie <b>sei</b> krank.</p>
+        <p class="beispiel">Der Trainer sagt: „Das Team hat gut gespielt.“ → Der Trainer sagt, das Team <b>habe</b> gut gespielt.</p>
+        <p>Mit dem Konjunktiv I zeigt der Sprecher: Das ist nicht meine Meinung, das hat jemand anders gesagt. Auf dieser Seite lernst du die <b>Formen</b>. Wie man die indirekte Rede baut, lernst du im Thema „Gebrauch des Konjunktivs I: indirekte Rede“.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Konjunktiv I — це особлива форма дієслова для <b>непрямої мови</b>: коли ти переказуєш чужі слова. В українській у непрямій мові дієслово не змінюється: «Анна каже, що вона хвора» — форма та сама, що й у звичайному реченні. Німецька ж має окрему форму (<i>sie <b>sei</b> krank</i>), яка сама по собі сигналізує: «це її слова, я лише передаю». Приблизно як українські «нібито», «мовляв», «за його словами», тільки вбудовані в дієслово. Найчастіше Konjunktiv I трапляється в новинах і газетах, а в розмові його часто замінюють інші форми. На цій сторінці — лише <b>форми</b>; як будувати непряму мову, пояснено в окремій темі.
+        </div>
+      </div>
+
+      <section class="card regel-block" id="endungen">
+        <h3>Die Endungen: Infinitivstamm + -e, -est, -e, -en, -et, -en</h3>
+        <p>Man nimmt den Infinitiv, streicht <b>-en</b> und hängt die Endungen an. Die Endungen sind dieselben wie im Konjunktiv II.</p>
+        <table class="gtable">
+          <tr><th>Person</th><th>Endung</th><th>mach-en</th><th>geh-en</th></tr>
+          <tr><td class="gender">ich</td><td>-e</td><td>mach<b>e</b></td><td>geh<b>e</b></td></tr>
+          <tr><td class="gender">du</td><td>-est</td><td>mach<b>est</b></td><td>geh<b>est</b></td></tr>
+          <tr><td class="gender">er/sie/es</td><td>-e</td><td>mach<b>e</b></td><td>geh<b>e</b></td></tr>
+          <tr><td class="gender">wir</td><td>-en</td><td>mach<b>en</b></td><td>geh<b>en</b></td></tr>
+          <tr><td class="gender">ihr</td><td>-et</td><td>mach<b>et</b></td><td>geh<b>et</b></td></tr>
+          <tr><td class="gender">sie/Sie</td><td>-en</td><td>mach<b>en</b></td><td>geh<b>en</b></td></tr>
+        </table>
+        <p class="beispiel">Lukas sagt, er <b>gehe</b> heute nicht ins Training.</p>
+        <p class="beispiel">Die Zeitung schreibt, das Wetter <b>bleibe</b> bis Sonntag schön.</p>
+        <p class="merke">Konjunktiv I = Infinitivstamm + -e, -est, -e, -en, -et, -en. Die er/sie/es-Form endet immer auf -e: er mache, sie gehe, es bleibe.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Основа — це інфінітив без <i>-en</i>: <i>machen → mach-</i>, <i>gehen → geh-</i>. До неї додаються ті самі закінчення, що й у Konjunktiv II: <i>-e, -est, -e, -en, -et, -en</i>. Головна прикмета, за якою Konjunktiv I легко впізнати, — форма 3-ї особи однини: вона закінчується на <b>-e</b>, а не на <i>-t</i>, як у звичайному теперішньому часі (<i>er macht</i> → <i>er mache</i>).
+        </div>
+      </section>
+
+      <section class="card regel-block" id="formen">
+        <h3>Gegenwart: starke und schwache Verben, Modal- und Hilfsverben</h3>
+        <p>Alle Verbtypen bilden den Konjunktiv I auf dieselbe Weise. <b>Fett</b> sind die Formen, die anders sind als der Indikativ Präsens — nur sie erkennt man sofort als Konjunktiv I.</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th></th><th>fahren<br><small>stark</small></th><th>machen<br><small>schwach</small></th><th>arbeiten<br><small>mit Hilfs-e</small></th><th>können<br><small>Modalverb</small></th><th>haben<br><small>Hilfsverb</small></th><th>werden<br><small>Hilfsverb</small></th></tr>
+          <tr><td class="gender">ich</td><td>fahre</td><td>mache</td><td>arbeite</td><td><b>könne</b></td><td>habe</td><td>werde</td></tr>
+          <tr><td class="gender">du</td><td><b>fahrest</b></td><td><b>machest</b></td><td>arbeitest</td><td><b>könnest</b></td><td><b>habest</b></td><td><b>werdest</b></td></tr>
+          <tr><td class="gender">er/sie/es</td><td><b>fahre</b></td><td><b>mache</b></td><td><b>arbeite</b></td><td><b>könne</b></td><td><b>habe</b></td><td><b>werde</b></td></tr>
+          <tr><td class="gender">wir</td><td>fahren</td><td>machen</td><td>arbeiten</td><td>können</td><td>haben</td><td>werden</td></tr>
+          <tr><td class="gender">ihr</td><td><b>fahret</b></td><td><b>machet</b></td><td>arbeitet</td><td><b>könnet</b></td><td><b>habet</b></td><td>werdet</td></tr>
+          <tr><td class="gender">sie/Sie</td><td>fahren</td><td>machen</td><td>arbeiten</td><td>können</td><td>haben</td><td>werden</td></tr>
+        </table>
+        </div>
+        <p class="beispiel">Oma schreibt, sie <b>könne</b> am Samstag nicht kommen.</p>
+        <p class="beispiel">Der Busfahrer sagt, der Bus <b>fahre</b> heute später.</p>
+        <p class="merke">Die er/sie/es-Form ist fast immer eindeutig. Die Formen für ich, wir und sie/Sie sind oft gleich wie der Indikativ.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Порівняй з таблицею звичайного теперішнього часу: <i>ich fahre, wir fahren, sie fahren</i> виглядають однаково в обох способах. Тобто в багатьох особах Konjunktiv I просто не видно — речення <i>Sie sagen, sie <b>fahren</b> nach Wien</i> читач сприйме як звичайне твердження, а не переказ. У модальних дієсловах відмінностей більше, бо в індикативі однина має інший корінь (<i>ich kann</i>), а Konjunktiv I береться з інфінітива (<i>ich könne</i>). У дієсловах з допоміжним <i>-e-</i> (<i>arbeiten, finden, reden</i>) збігається навіть <i>du</i> та <i>ihr</i>: <i>du arbeitest, ihr arbeitet</i>. Що робити з такими «невидимими» формами — у наступних двох блоках.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="ersatz">
+        <h3>Gleich wie der Indikativ? Dann Konjunktiv II</h3>
+        <p>Wenn der Konjunktiv I genauso aussieht wie der Indikativ Präsens, nimmt man den <b>Konjunktiv II</b>. So sieht man sofort: Das ist indirekte Rede. <b>Fett</b> sind die Ersatzformen.</p>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th></th><th>fahren</th><th>machen</th><th>arbeiten</th><th>können</th><th>haben</th><th>werden</th></tr>
+          <tr><td class="gender">ich</td><td><b>führe</b></td><td><b>würde machen</b></td><td><b>würde arbeiten</b></td><td>könne</td><td><b>hätte</b></td><td><b>würde</b></td></tr>
+          <tr><td class="gender">du</td><td>fahrest</td><td>machest</td><td><b>würdest arbeiten</b></td><td>könnest</td><td>habest</td><td>werdest</td></tr>
+          <tr><td class="gender">er/sie/es</td><td>fahre</td><td>mache</td><td>arbeite</td><td>könne</td><td>habe</td><td>werde</td></tr>
+          <tr><td class="gender">wir</td><td><b>führen</b></td><td><b>würden machen</b></td><td><b>würden arbeiten</b></td><td><b>könnten</b></td><td><b>hätten</b></td><td><b>würden</b></td></tr>
+          <tr><td class="gender">ihr</td><td>fahret</td><td>machet</td><td><b>würdet arbeiten</b></td><td>könnet</td><td>habet</td><td><b>würdet</b></td></tr>
+          <tr><td class="gender">sie/Sie</td><td><b>führen</b></td><td><b>würden machen</b></td><td><b>würden arbeiten</b></td><td><b>könnten</b></td><td><b>hätten</b></td><td><b>würden</b></td></tr>
+        </table>
+        </div>
+        <p class="beispiel">Lukas sagt: „Ich habe Hunger.“ → Lukas sagt, er <b>habe</b> Hunger. <i>(eindeutig)</i></p>
+        <p class="beispiel">Die Kinder sagen: „Wir haben Hunger.“ → Die Kinder sagen, sie <b>hätten</b> Hunger. <i>(sie haben = Indikativ)</i></p>
+        <p class="merke">Konjunktiv I = Indikativ Präsens? Dann nimm den Konjunktiv II.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Правило просте: спершу утвори Konjunktiv I і порівняй з індикативом. Якщо форма відрізняється — лишай її (<i>er habe</i>). Якщо збігається — бери Konjunktiv II (<i>sie haben → sie <b>hätten</b></i>). Тому в реальному тексті непряма мова виглядає «змішаною»: в одному реченні <i>er habe</i>, а в сусідньому <i>sie hätten</i> — і це правильно. Konjunktiv II тут означає не «нереальність», а просто «це переказ». Як утворюється Konjunktiv II, дивись у темі «Der Konjunktiv II: Verbformen».
+        </div>
+      </section>
+
+      <section class="card regel-block" id="wuerde">
+        <h3>Konjunktiv II wie das Präteritum? Dann würde + Infinitiv</h3>
+        <p>Manchmal hilft auch der Konjunktiv II nicht: Bei schwachen Verben ist er <b>gleich wie das Präteritum</b> (ich machte, wir machten). Dann nimmt man <b>würde + Infinitiv</b>.</p>
+        <table class="gtable">
+          <tr><th>Konjunktiv I</th><th>Konjunktiv II</th><th>also</th></tr>
+          <tr><td>ich spiele (= Indikativ)</td><td>ich spielte (= Präteritum)</td><td>ich <b>würde spielen</b></td></tr>
+          <tr><td>wir wohnen (= Indikativ)</td><td>wir wohnten (= Präteritum)</td><td>wir <b>würden wohnen</b></td></tr>
+          <tr><td>sie arbeiten (= Indikativ)</td><td>sie arbeiteten (= Präteritum)</td><td>sie <b>würden arbeiten</b></td></tr>
+          <tr><td>wir bleiben (= Indikativ)</td><td>wir blieben (= Präteritum)</td><td>wir <b>würden bleiben</b></td></tr>
+        </table>
+        <p class="beispiel">Die Kinder sagen: „Wir spielen im Park.“ → Die Kinder sagen, sie <b>würden</b> im Park <b>spielen</b>.</p>
+        <p>In der gesprochenen Sprache hält man sich nicht immer streng an diese Regeln. Oft benutzt man auch bei <b>du</b> und <b>ihr</b> den Konjunktiv II, weil die Konjunktiv-I-Formen altmodisch klingen:</p>
+        <p class="beispiel">Er fragt, ob du morgen <b>kommest</b>. → auch: ob du morgen <b>kämest</b>.</p>
+        <p class="beispiel">Sie sagt, ihr <b>habet</b> Glück. → auch: ihr <b>hättet</b> Glück.</p>
+        <p class="merke">Zuerst Konjunktiv I. Gleich wie der Indikativ → Konjunktiv II. Gleich wie das Präteritum → würde + Infinitiv.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Це «сходинки» заміни. У слабких дієсловах Konjunktiv II нічим не відрізняється від звичайного минулого часу: <i>sie spielten</i> можна прочитати як «вони грали». Щоб не заплутати читача, беруть <i>würde + інфінітив</i>: <i>sie würden spielen</i>. Те саме буває в сильних дієсловах без умлауту в множині: <i>wir blieben</i> = Präteritum → <i>wir würden bleiben</i>. А от форми з умлаутом (<i>führen, hätten, könnten</i>) ні з чим не плутаються — їх лишають. У живій мові форми на <i>-est/-et</i> (<i>du kommest, ihr habet</i>) звучать старомодно, тому замість них часто кажуть <i>du kämest, ihr hättet</i>. Це теж правильно.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="vokal">
+        <h3>Kein Vokalwechsel: du gebest, er gebe</h3>
+        <p>Viele starke Verben ändern im Präsens bei <b>du</b> und <b>er/sie/es</b> den Vokal (du gibst, er fährt). Im Konjunktiv I gibt es das <b>nicht</b>: Man nimmt immer den Stamm vom Infinitiv.</p>
+        <table class="gtable">
+          <tr><th>Infinitiv</th><th>Indikativ</th><th>Konjunktiv I</th></tr>
+          <tr><td>geben</td><td>du gibst, er gibt</td><td>du <b>gebest</b>, er <b>gebe</b></td></tr>
+          <tr><td>lesen</td><td>du liest, er liest</td><td>du <b>lesest</b>, er <b>lese</b></td></tr>
+          <tr><td>nehmen</td><td>du nimmst, er nimmt</td><td>du <b>nehmest</b>, er <b>nehme</b></td></tr>
+          <tr><td>laufen</td><td>du läufst, er läuft</td><td>du <b>laufest</b>, er <b>laufe</b></td></tr>
+          <tr><td>schlafen</td><td>du schläfst, er schläft</td><td>du <b>schlafest</b>, er <b>schlafe</b></td></tr>
+        </table>
+        <p class="beispiel">Mia erzählt, ihr Bruder <b>lese</b> jeden Abend Comics.</p>
+        <p class="beispiel">Der Arzt sagt, das Baby <b>schlafe</b> jetzt ruhig.</p>
+        <p class="merke">Konjunktiv I kommt immer vom Infinitiv, nie von der du- oder er-Form: geben → er gebe (nicht: er gibe).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Типова помилка — будувати Konjunktiv I від форми <i>er gibt</i> чи <i>er fährt</i> і отримувати неіснуючі <i>er gibe, er fähre</i>. Зміна кореня (<i>e → i/ie</i>, <i>a → ä</i>, <i>au → äu</i>) буває лише в індикативі. Konjunktiv I завжди бере корінь з інфінітива, без змін: <i>geben → er gebe, fahren → er fahre, laufen → er laufe</i>.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="sein">
+        <h3>Die Ausnahme: sein</h3>
+        <p>Das Verb <b>sein</b> hat eigene Formen. Bei <b>ich</b> und <b>er/sie/es</b> gibt es keine Endung -e. Alle Formen sind anders als der Indikativ — man muss sie also <b>nie</b> ersetzen.</p>
+        <table class="gtable">
+          <tr><th>Person</th><th>Indikativ</th><th>Konjunktiv I</th></tr>
+          <tr><td class="gender">ich</td><td>bin</td><td><b>sei</b></td></tr>
+          <tr><td class="gender">du</td><td>bist</td><td><b>seist</b> / <b>seiest</b></td></tr>
+          <tr><td class="gender">er/sie/es</td><td>ist</td><td><b>sei</b></td></tr>
+          <tr><td class="gender">wir</td><td>sind</td><td><b>seien</b></td></tr>
+          <tr><td class="gender">ihr</td><td>seid</td><td><b>seiet</b></td></tr>
+          <tr><td class="gender">sie/Sie</td><td>sind</td><td><b>seien</b></td></tr>
+        </table>
+        <p class="beispiel">Der Trainer sagt, die Mannschaft <b>sei</b> gut vorbereitet.</p>
+        <p class="beispiel">Die Schüler sagen, sie <b>seien</b> schon müde.</p>
+        <p class="merke">sein: ich sei, du sei(e)st, er sei, wir seien, ihr seiet, sie seien — ohne Ersatzformen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          <i>sein</i> — єдине дієслово, у якого всі шість форм Konjunktiv I відрізняються від індикатива. Тому з ним заміна на Konjunktiv II не потрібна: <i>sie seien</i>, а не <i>sie wären</i> (хоч у розмові <i>wären</i> теж почуєш). Зверни увагу: <i>ich sei, er sei</i> — без <i>-e</i> в кінці. Для <i>du</i> є дві рівноправні форми: <i>du seist</i> і <i>du seiest</i>.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="zukunft">
+        <h3>Zukunft und Vermutung: werde + Infinitiv</h3>
+        <p><b>Futur I</b> im Konjunktiv I: Konjunktiv-I-Form von <b>werden</b> + Infinitiv. Bei ich, wir, ihr und sie/Sie nimmt man <b>würde</b> (siehe oben).</p>
+        <table class="gtable">
+          <tr><th>Person</th><th>Futur I</th><th>Futur II</th></tr>
+          <tr><td class="gender">ich</td><td><b>würde</b> kommen</td><td><b>würde</b> angekommen sein</td></tr>
+          <tr><td class="gender">du</td><td><b>werdest</b> kommen</td><td><b>werdest</b> angekommen sein</td></tr>
+          <tr><td class="gender">er/sie/es</td><td><b>werde</b> kommen</td><td><b>werde</b> angekommen sein</td></tr>
+          <tr><td class="gender">wir</td><td><b>würden</b> kommen</td><td><b>würden</b> angekommen sein</td></tr>
+          <tr><td class="gender">ihr</td><td><b>würdet</b> kommen</td><td><b>würdet</b> angekommen sein</td></tr>
+          <tr><td class="gender">sie/Sie</td><td><b>würden</b> kommen</td><td><b>würden</b> angekommen sein</td></tr>
+        </table>
+        <p><b>Futur II</b>: werde + Infinitiv Perfekt (Partizip II + haben oder sein).</p>
+        <p class="beispiel">Tim sagt: „Ich werde morgen anrufen.“ → Tim sagt, er <b>werde</b> morgen <b>anrufen</b>.</p>
+        <p class="beispiel">Sie sagt: „Bis sechs werde ich die Hausaufgaben gemacht haben.“ → Sie sagt, sie <b>werde</b> bis sechs die Hausaufgaben <b>gemacht haben</b>.</p>
+        <p>Futur drückt auch eine <b>Vermutung</b> aus. Das bleibt in der indirekten Rede gleich:</p>
+        <p class="beispiel">Papa meint: „Oma wird wohl schon schlafen.“ → Papa meint, Oma <b>werde</b> wohl schon <b>schlafen</b>.</p>
+        <p class="merke">Zukunft im Konjunktiv I: werde / werdest / würde(n) + Infinitiv.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Майбутній час у непрямій мові будують з Konjunktiv I від <i>werden</i>: <i>er werde kommen</i>. Там, де <i>werden</i> збігається з індикативом (<i>ich werde, wir werden, ihr werdet, sie werden</i>), ставлять <i>würde</i>. Futur II (дія, що завершиться до певного моменту) — так само, лише з інфінітивом перфекта: <i>er werde angekommen sein</i>, <i>sie werde gemacht haben</i>. Якщо мовець висловлював припущення (<i>wird wohl schlafen</i> — «мабуть, уже спить»), то й у переказі лишається <i>werde</i>: це припущення, передане чужими словами.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="vergangenheit">
+        <h3>Vergangenheit: habe oder sei + Partizip II</h3>
+        <p>Im Indikativ gibt es drei Vergangenheitsformen. Im Konjunktiv I gibt es nur <b>eine</b>: Konjunktiv I von <b>haben</b> oder <b>sein</b> + Partizip II.</p>
+        <table class="gtable">
+          <tr><th></th><th>Indikativ</th><th>Konjunktiv I</th></tr>
+          <tr><td class="gender">Präteritum</td><td>sie lernte · sie fuhr</td><td rowspan="3">sie <b>habe gelernt</b><br>sie <b>sei gefahren</b></td></tr>
+          <tr><td class="gender">Perfekt</td><td>sie hat gelernt · sie ist gefahren</td></tr>
+          <tr><td class="gender">Plusquamperfekt</td><td>sie hatte gelernt · sie war gefahren</td></tr>
+        </table>
+        <table class="gtable">
+          <tr><th>Person</th><th>mit haben</th><th>mit sein</th></tr>
+          <tr><td class="gender">ich</td><td><b>hätte</b> gelernt</td><td><b>sei</b> gefahren</td></tr>
+          <tr><td class="gender">du</td><td><b>habest</b> gelernt</td><td><b>sei(e)st</b> gefahren</td></tr>
+          <tr><td class="gender">er/sie/es</td><td><b>habe</b> gelernt</td><td><b>sei</b> gefahren</td></tr>
+          <tr><td class="gender">wir</td><td><b>hätten</b> gelernt</td><td><b>seien</b> gefahren</td></tr>
+          <tr><td class="gender">ihr</td><td><b>habet</b> gelernt</td><td><b>seiet</b> gefahren</td></tr>
+          <tr><td class="gender">sie/Sie</td><td><b>hätten</b> gelernt</td><td><b>seien</b> gefahren</td></tr>
+        </table>
+        <p class="beispiel">Jana sagt: „Ich war gestern im Kino.“ → Jana sagt, sie <b>sei</b> gestern im Kino <b>gewesen</b>.</p>
+        <p class="beispiel">Die Jungen sagen: „Wir haben das Spiel gewonnen.“ → Die Jungen sagen, sie <b>hätten</b> das Spiel <b>gewonnen</b>.</p>
+        <p class="merke">Vergangenheit im Konjunktiv I: habe / sei + Partizip II. haben oder sein — wie im Perfekt.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          У непрямій мові всі три минулі часи (Präteritum, Perfekt, Plusquamperfekt) зливаються в одну форму: Konjunktiv I від <i>haben</i> або <i>sein</i> + Partizip II. Тобто <i>sie fuhr</i>, <i>sie ist gefahren</i> і <i>sie war gefahren</i> у переказі звучать однаково: <i>sie sei gefahren</i>. Вибір <i>haben</i> чи <i>sein</i> — такий самий, як у перфекті. З <i>haben</i> діє те саме правило заміни: <i>ich/wir/sie haben</i> = індикатив → <i>hätte, hätten</i>. З <i>sein</i> замінювати нічого не треба.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="passiv">
+        <h3>Das Passiv im Konjunktiv I</h3>
+        <p>Für das Passiv nimmt man die Konjunktiv-I-Formen von <b>werden</b> (Gegenwart, Zukunft) und von <b>sein</b> (Vergangenheit). Das Partizip II und <b>worden</b> bleiben wie im Indikativ.</p>
+        <table class="gtable">
+          <tr><th></th><th>Indikativ</th><th>Konjunktiv I</th></tr>
+          <tr><td class="gender">Gegenwart</td><td>er wird eingeladen</td><td>er <b>werde</b> eingeladen · sie <b>würden</b> eingeladen</td></tr>
+          <tr><td class="gender">Zukunft</td><td>er wird eingeladen werden</td><td>er <b>werde</b> eingeladen werden · sie <b>würden</b> eingeladen werden</td></tr>
+          <tr><td class="gender">Vergangenheit</td><td>er wurde eingeladen<br>er ist eingeladen worden<br>er war eingeladen worden</td><td>er <b>sei</b> eingeladen worden · sie <b>seien</b> eingeladen worden</td></tr>
+        </table>
+        <p class="beispiel">Die Direktorin sagt: „Die Turnhalle wird renoviert.“ → Die Direktorin sagt, die Turnhalle <b>werde renoviert</b>.</p>
+        <p class="beispiel">Die Zeitung schreibt: „Der Dieb wurde gefasst.“ → Die Zeitung schreibt, der Dieb <b>sei gefasst worden</b>.</p>
+        <p class="merke">Passiv: werde + Partizip II (Gegenwart), werde + Partizip II + werden (Zukunft), sei + Partizip II + worden (Vergangenheit).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Пасив у Konjunktiv I будується з тих самих «цеглинок», що й в індикативі; змінюється лише допоміжне дієслово на першому місці. Теперішній і майбутній час — <i>werde</i> (там, де воно збігається з індикативом, — <i>würde</i>). Минулий — <i>sei</i> + Partizip II + <i>worden</i>, і знову одна форма замість трьох. Пасив у переказі дуже типовий для новин: «повідомляють, що міст <i>нібито</i> закрито» — <i>die Brücke sei gesperrt worden</i>.
+        </div>
+      </section>
+
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: квіз ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Welche Form passt?</h2>
+      <p class="lead">Обери правильну форму для непрямої мови. Пам'ятай: якщо Konjunktiv I збігається з індикативом, береться Konjunktiv II (або <i>würde</i> + інфінітив).</p>
+      <div class="card" id="ub1-quiz"></div>
+    </section>
+
+    <!-- ===== Üb. 2: токени ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Konjunktiv I im Text</h2>
+      <p class="lead">Статтю зі шкільної газети написано непрямою мовою. Натисни всі форми <b>Konjunktiv I</b>. Обережно: там є й індикатив, і Konjunktiv II — їх не позначай. У складених формах натискай лише допоміжне дієслово.</p>
+      <div class="card" id="ub2-text">
+        <p><b>Die neue Mensa</b></p>
+        <p>Die Direktorin, Frau Keller, <span class="tok" data-correct="false">hat</span> in der Versammlung gesagt, die neue Mensa <span class="tok" data-correct="true">sei</span> fast fertig. Die Schüler <span class="tok" data-correct="false">könnten</span> ab Oktober dort essen. Das Essen <span class="tok" data-correct="true">werde</span> jeden Tag frisch gekocht, und es <span class="tok" data-correct="true">gebe</span> auch vegetarische Gerichte. Der neue Koch <span class="tok" data-correct="true">komme</span> aus Italien.</p>
+        <p>Der Hausmeister <span class="tok" data-correct="false">erzählt</span>, er <span class="tok" data-correct="true">habe</span> schon alle Tische aufgestellt. Man <span class="tok" data-correct="true">müsse</span> aber noch auf die Stühle warten. Frau Keller <span class="tok" data-correct="false">meint</span>, jede Klasse <span class="tok" data-correct="true">dürfe</span> Wünsche für den Speiseplan schicken.</p>
+        <p>Die Schülersprecherin <span class="tok" data-correct="false">findet</span> das toll. Sie <span class="tok" data-correct="false">sagt</span>, viele Schüler <span class="tok" data-correct="false">würden</span> sich schon auf die Pizza freuen.</p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: сортування ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Eindeutig oder nicht?</h2>
+      <p class="lead">Усі ці форми — Konjunktiv I. Розсортуй: які з них одразу видно як Konjunktiv I, а які виглядають так само, як звичайний теперішній час (індикатив)?</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 4: таблиця форм ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Die Formen der Gegenwart</h2>
+      <p class="lead">Заповни таблицю формами Konjunktiv I теперішнього часу — без замін, лише «чисті» форми (займенник не пиши). Для <i>du</i> в дієслова <i>sein</i> підходять обидві форми.</p>
+      <div class="card" id="ub4-list" style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th></th><th>lernen</th><th>laufen</th><th>müssen</th><th>sein</th></tr>
+          <tr><td class="gender">ich</td><td><input type="text" class="blank-input" data-ans="lerne"></td><td><input type="text" class="blank-input" data-ans="laufe"></td><td><input type="text" class="blank-input" data-ans="müsse"></td><td><input type="text" class="blank-input" data-ans="sei"></td></tr>
+          <tr><td class="gender">du</td><td><input type="text" class="blank-input" data-ans="lernest"></td><td><input type="text" class="blank-input" data-ans="laufest"></td><td><input type="text" class="blank-input" data-ans="müssest"></td><td><input type="text" class="blank-input" data-ans="seist|seiest"></td></tr>
+          <tr><td class="gender">er/sie/es</td><td><input type="text" class="blank-input" data-ans="lerne"></td><td><input type="text" class="blank-input" data-ans="laufe"></td><td><input type="text" class="blank-input" data-ans="müsse"></td><td><input type="text" class="blank-input" data-ans="sei"></td></tr>
+          <tr><td class="gender">wir</td><td><input type="text" class="blank-input" data-ans="lernen"></td><td><input type="text" class="blank-input" data-ans="laufen"></td><td><input type="text" class="blank-input" data-ans="müssen"></td><td><input type="text" class="blank-input" data-ans="seien"></td></tr>
+          <tr><td class="gender">ihr</td><td><input type="text" class="blank-input" data-ans="lernet"></td><td><input type="text" class="blank-input" data-ans="laufet"></td><td><input type="text" class="blank-input" data-ans="müsset"></td><td><input type="text" class="blank-input" data-ans="seiet"></td></tr>
+          <tr><td class="gender">sie/Sie</td><td><input type="text" class="blank-input" data-ans="lernen"></td><td><input type="text" class="blank-input" data-ans="laufen"></td><td><input type="text" class="blank-input" data-ans="müssen"></td><td><input type="text" class="blank-input" data-ans="seien"></td></tr>
+        </table>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub4-check">Prüfen</button>
+        <button class="btn secondary" id="ub4-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub4-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5: ряди з замінами ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Mit Ersatzformen</h2>
+      <p class="lead">Тепер ряд, який реально вживається в непрямій мові. Лишай Konjunktiv I, якщо він відрізняється від індикатива. Якщо збігається — пиши Konjunktiv II, а якщо й той збігається з Präteritum — <i>würde</i> + інфінітив (напр. <i>würde wohnen</i>). Займенник не пиши.</p>
+      <div class="card" id="ub5-list" style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th></th><th>wohnen <small>(schwach)</small></th><th>finden <small>(stark, Hilfs-e)</small></th><th>wissen</th></tr>
+          <tr><td class="gender">ich</td><td><input type="text" class="blank-input" data-ans="würde wohnen"></td><td><input type="text" class="blank-input" data-ans="fände"></td><td><input type="text" class="blank-input" data-ans="wisse"></td></tr>
+          <tr><td class="gender">du</td><td><input type="text" class="blank-input" data-ans="wohnest"></td><td><input type="text" class="blank-input" data-ans="fändest"></td><td><input type="text" class="blank-input" data-ans="wissest"></td></tr>
+          <tr><td class="gender">er/sie/es</td><td><input type="text" class="blank-input" data-ans="wohne"></td><td><input type="text" class="blank-input" data-ans="finde"></td><td><input type="text" class="blank-input" data-ans="wisse"></td></tr>
+          <tr><td class="gender">wir</td><td><input type="text" class="blank-input" data-ans="würden wohnen"></td><td><input type="text" class="blank-input" data-ans="fänden"></td><td><input type="text" class="blank-input" data-ans="wüssten"></td></tr>
+          <tr><td class="gender">ihr</td><td><input type="text" class="blank-input" data-ans="wohnet"></td><td><input type="text" class="blank-input" data-ans="fändet"></td><td><input type="text" class="blank-input" data-ans="wisset"></td></tr>
+          <tr><td class="gender">sie/Sie</td><td><input type="text" class="blank-input" data-ans="würden wohnen"></td><td><input type="text" class="blank-input" data-ans="fänden"></td><td><input type="text" class="blank-input" data-ans="wüssten"></td></tr>
+        </table>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub5-check">Prüfen</button>
+        <button class="btn secondary" id="ub5-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub5-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 6: майбутнє й минуле ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">Zukunft und Vergangenheit</h2>
+      <p class="lead">Перекажи слова людей непрямою мовою. Впиши допоміжне дієслово в Konjunktiv I (або його заміну) і в кінці — Partizip II чи інфінітив. Займенники вже змінено.</p>
+      <div class="card" id="ub6-list">
+        <div class="fill-item"><span class="num">1)</span> Lena: „Ich schrieb den Test gestern.“<br>
+          → Lena sagt, sie <input type="text" class="blank-input inline" data-ans="habe"> den Test gestern <input type="text" class="blank-input inline wide" data-ans="geschrieben">.</div>
+        <div class="fill-item"><span class="num">2)</span> Tom: „Ich bin mit dem Rad gekommen.“<br>
+          → Tom sagt, er <input type="text" class="blank-input inline" data-ans="sei"> mit dem Rad <input type="text" class="blank-input inline wide" data-ans="gekommen">.</div>
+        <div class="fill-item"><span class="num">3)</span> Oma und Opa: „Wir hatten den Zug verpasst.“<br>
+          → Oma und Opa erzählen, sie <input type="text" class="blank-input inline" data-ans="hätten"> den Zug <input type="text" class="blank-input inline wide" data-ans="verpasst">.</div>
+        <div class="fill-item"><span class="num">4)</span> Anna: „Mein Bruder war krank.“<br>
+          → Anna sagt, ihr Bruder <input type="text" class="blank-input inline" data-ans="sei"> krank <input type="text" class="blank-input inline wide" data-ans="gewesen">.</div>
+        <div class="fill-item"><span class="num">5)</span> Die Kinder: „Wir sind ins Kino gegangen.“<br>
+          → Die Kinder erzählen, sie <input type="text" class="blank-input inline" data-ans="seien"> ins Kino <input type="text" class="blank-input inline wide" data-ans="gegangen">.</div>
+        <div class="fill-item"><span class="num">6)</span> Paul: „Ich lernte drei Stunden für Mathe.“<br>
+          → Paul sagt, er <input type="text" class="blank-input inline" data-ans="habe"> drei Stunden für Mathe <input type="text" class="blank-input inline wide" data-ans="gelernt">.</div>
+        <div class="fill-item"><span class="num">7)</span> Max: „Ich werde dich morgen anrufen.“<br>
+          → Max sagt, er <input type="text" class="blank-input inline" data-ans="werde"> mich morgen <input type="text" class="blank-input inline wide" data-ans="anrufen">.</div>
+        <div class="fill-item"><span class="num">8)</span> Die Lehrer: „Wir werden den Ausflug planen.“<br>
+          → Die Lehrer sagen, sie <input type="text" class="blank-input inline" data-ans="würden"> den Ausflug <input type="text" class="blank-input inline wide" data-ans="planen">.</div>
+        <div class="fill-item"><span class="num">9)</span> Mia: „Der Bus wird schon weg sein.“ <i>(Vermutung)</i><br>
+          → Mia meint, der Bus <input type="text" class="blank-input inline" data-ans="werde"> schon weg <input type="text" class="blank-input inline wide" data-ans="sein">.</div>
+        <div class="fill-item"><span class="num">10)</span> Jonas: „Bis Freitag werde ich das Buch gelesen haben.“<br>
+          → Jonas sagt, er <input type="text" class="blank-input inline" data-ans="werde"> das Buch bis Freitag <input type="text" class="blank-input inline wide" data-ans="gelesen haben">.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub6-check">Prüfen</button>
+        <button class="btn secondary" id="ub6-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub6-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 7: пасив ===== -->
+    <section class="panel" id="panel-ub7">
+      <p class="section-label">Üb. 7</p>
+      <h2 class="panel-title">Das Passiv im Konjunktiv I</h2>
+      <p class="lead">Перекажи повідомлення в пасиві. У першу клітинку — допоміжне дієслово (<i>werde, würden, sei, seien…</i>), у другу — усе, що стоїть у кінці речення (напр. <i>eingeladen worden</i>).</p>
+      <div class="card" id="ub7-list">
+        <div class="fill-item"><span class="num">1)</span> Der Direktor: „Die Aula wird gerade renoviert.“<br>
+          → Der Direktor sagt, die Aula <input type="text" class="blank-input inline" data-ans="werde"> gerade <input type="text" class="blank-input inline wide" data-ans="renoviert">.</div>
+        <div class="fill-item"><span class="num">2)</span> Die Lehrerin: „Die Eltern werden per E-Mail informiert.“<br>
+          → Die Lehrerin sagt, die Eltern <input type="text" class="blank-input inline" data-ans="würden"> per E-Mail <input type="text" class="blank-input inline wide" data-ans="informiert">.</div>
+        <div class="fill-item"><span class="num">3)</span> Frau Berg: „Der Ausflug wurde auf Juni verschoben.“<br>
+          → Frau Berg sagt, der Ausflug <input type="text" class="blank-input inline" data-ans="sei"> auf Juni <input type="text" class="blank-input inline wide" data-ans="verschoben worden">.</div>
+        <div class="fill-item"><span class="num">4)</span> Der Hausmeister: „Die Fenster sind gestern geputzt worden.“<br>
+          → Der Hausmeister sagt, die Fenster <input type="text" class="blank-input inline" data-ans="seien"> gestern <input type="text" class="blank-input inline wide" data-ans="geputzt worden">.</div>
+        <div class="fill-item"><span class="num">5)</span> Die Klassensprecherin: „Das Schulfest wird im Mai gefeiert werden.“<br>
+          → Die Klassensprecherin sagt, das Schulfest <input type="text" class="blank-input inline" data-ans="werde"> im Mai <input type="text" class="blank-input inline wide" data-ans="gefeiert werden">.</div>
+        <div class="fill-item"><span class="num">6)</span> Der Bibliothekar: „Die neuen Bücher werden nächste Woche verteilt werden.“<br>
+          → Der Bibliothekar sagt, die neuen Bücher <input type="text" class="blank-input inline" data-ans="würden"> nächste Woche <input type="text" class="blank-input inline wide" data-ans="verteilt werden">.</div>
+        <div class="fill-item"><span class="num">7)</span> Sara: „Ich wurde zu Julias Geburtstag eingeladen.“<br>
+          → Sara erzählt, sie <input type="text" class="blank-input inline" data-ans="sei"> zu Julias Geburtstag <input type="text" class="blank-input inline wide" data-ans="eingeladen worden">.</div>
+        <div class="fill-item"><span class="num">8)</span> Mama zu Tim: „Du wirst gleich abgeholt.“<br>
+          → Mama sagt, Tim <input type="text" class="blank-input inline" data-ans="werde"> gleich <input type="text" class="blank-input inline wide" data-ans="abgeholt">.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub7-check">Prüfen</button>
+        <button class="btn secondary" id="ub7-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub7-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 8: перетворення ===== -->
+    <section class="panel" id="panel-ub8">
+      <p class="section-label">Üb. 8</p>
+      <h2 class="panel-title">Direkt → indirekt</h2>
+      <p class="lead">Допиши непряму мову цілим реченням: після коми без <i>dass</i> (<i>…, er habe keine Zeit</i>) або з <i>dass</i> (<i>…, dass er keine Zeit habe</i>) — підходять обидва варіанти. Не забудь змінити займенники й обрати форму: Konjunktiv I чи заміну.</p>
+      <div class="card" id="ub8-list">
+        <div class="fill-item"><span class="num">1)</span> Max: „Ich habe heute keine Zeit.“<br>
+          → Max sagt, …<input type="text" class="blank-input inline full" data-ans="er habe heute keine Zeit|dass er heute keine Zeit habe"></div>
+        <div class="fill-item"><span class="num">2)</span> Lisa: „Ich bin sehr müde.“<br>
+          → Lisa sagt, …<input type="text" class="blank-input inline full" data-ans="sie sei sehr müde|dass sie sehr müde sei"></div>
+        <div class="fill-item"><span class="num">3)</span> Ben: „Mein Hund kann schwimmen.“<br>
+          → Ben erzählt, …<input type="text" class="blank-input inline full" data-ans="sein Hund könne schwimmen|dass sein Hund schwimmen könne"></div>
+        <div class="fill-item"><span class="num">4)</span> Die Zwillinge: „Wir wohnen in Köln.“<br>
+          → Die Zwillinge sagen, …<input type="text" class="blank-input inline full" data-ans="sie würden in Köln wohnen|dass sie in Köln wohnen würden"></div>
+        <div class="fill-item"><span class="num">5)</span> Emma: „Ich habe das Buch schon gelesen.“<br>
+          → Emma sagt, …<input type="text" class="blank-input inline full" data-ans="sie habe das Buch schon gelesen|dass sie das Buch schon gelesen habe"></div>
+        <div class="fill-item"><span class="num">6)</span> Leon: „Ich fuhr in den Ferien nach Berlin.“<br>
+          → Leon erzählt, …<input type="text" class="blank-input inline full" data-ans="er sei in den Ferien nach Berlin gefahren|dass er in den Ferien nach Berlin gefahren sei"></div>
+        <div class="fill-item"><span class="num">7)</span> Nina: „Meine Eltern haben ein neues Auto gekauft.“<br>
+          → Nina erzählt, …<input type="text" class="blank-input inline full" data-ans="ihre Eltern hätten ein neues Auto gekauft|dass ihre Eltern ein neues Auto gekauft hätten"></div>
+        <div class="fill-item"><span class="num">8)</span> Frau Schulz: „Der Test wird am Montag geschrieben.“<br>
+          → Frau Schulz sagt, …<input type="text" class="blank-input inline full" data-ans="der Test werde am Montag geschrieben|dass der Test am Montag geschrieben werde"></div>
+        <div class="fill-item"><span class="num">9)</span> Tim: „Ich werde nächstes Jahr Spanisch lernen.“<br>
+          → Tim sagt, …<input type="text" class="blank-input inline full" data-ans="er werde nächstes Jahr Spanisch lernen|dass er nächstes Jahr Spanisch lernen werde"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub8-check">Prüfen</button>
+        <button class="btn secondary" id="ub8-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub8-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das Wichtigste</p>
+        <p>Konjunktiv I = Infinitivstamm + -e, -est, -e, -en, -et, -en (er mache, er gebe, er könne). Nur <b>sein</b> ist anders: ich sei, er sei, wir seien. Ist der Konjunktiv I gleich wie der Indikativ, nimmt man den Konjunktiv II (sie hätten, wir führen) oder würde + Infinitiv (sie würden spielen). Zukunft: werde + Infinitiv; Vergangenheit: habe oder sei + Partizip II; Passiv: werde / sei … worden.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Konjunktiv I утворюється від основи інфінітива з закінченнями <i>-e, -est, -e, -en, -et, -en</i>, без зміни кореневого голосного; виняток — <i>sein</i> (<i>ich sei, er sei, wir seien</i>). Якщо форма збігається з індикативом, її замінюють на Konjunktiv II, а якщо й той збігається з Präteritum — на <i>würde</i> + інфінітив. Майбутній час — <i>werde</i> + інфінітив, минулий (один замість трьох) — <i>habe/sei</i> + Partizip II, пасив — <i>werde … / sei … worden</i>.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Де це ще трапляється</p>
+        <div class="gram-related" id="gramRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <p class="lead" id="gramBest" style="font-size:14px;"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/grammar-data.js"></script>
+<script src="../../data/lessons-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/site.js"></script>
+<script>
+  const GRAM_ID = "konjunktiv-1-formen";
+
+  // Üb. 1: квіз
+  buildQuiz('ub1-quiz', [
+    {q: "Tom sagt: „Ich komme später.“ → Tom sagt, er ___ später.", opts: ["komme", "kommt", "käme"], correct: "komme"},
+    {q: "Konjunktiv I von „du gibst“:", opts: ["du gibest", "du gebest", "du gäbest"], correct: "du gebest"},
+    {q: "Konjunktiv I von „er kann“:", opts: ["er kann", "er könnte", "er könne"], correct: "er könne"},
+    {q: "Die Kinder sagen: „Wir sind müde.“ → Die Kinder sagen, sie ___ müde.", opts: ["sind", "seien", "sei"], correct: "seien"},
+    {q: "Konjunktiv I von „du bist“:", opts: ["du seist", "du bist", "du seiset"], correct: "du seist"},
+    {q: "Die Eltern sagen: „Wir haben keine Zeit.“ → Die Eltern sagen, sie ___ keine Zeit.", opts: ["haben", "hatten", "hätten"], correct: "hätten"},
+    {q: "Die Freunde sagen: „Wir lernen zusammen.“ → Die Freunde sagen, sie ___.", opts: ["würden zusammen lernen", "lernten zusammen", "lernen zusammen"], correct: "würden zusammen lernen"},
+    {q: "Konjunktiv I von „ihr könnt“:", opts: ["ihr könnet", "ihr könnt", "ihr kannet"], correct: "ihr könnet"},
+    {q: "Ben: „Ich fuhr mit dem Zug.“ → Ben sagt, er ___ mit dem Zug gefahren.", opts: ["habe", "sei", "wäre gewesen"], correct: "sei"},
+    {q: "Lara: „Ich hatte lange gewartet.“ → Lara sagt, sie ___ lange gewartet.", opts: ["sei", "hatte", "habe"], correct: "habe"},
+    {q: "Paul: „Ich werde morgen kommen.“ → Paul sagt, er ___ morgen kommen.", opts: ["werde", "wird", "würdest"], correct: "werde"},
+    {q: "„Das Haus wurde 1990 gebaut.“ → Man sagt, das Haus ___.", opts: ["werde 1990 gebaut worden", "sei 1990 gebaut geworden", "sei 1990 gebaut worden"], correct: "sei 1990 gebaut worden"},
+  ]);
+
+  // Üb. 2: токени
+  initTokenClicks('ub2-text');
+  setTotal(document.querySelectorAll('#ub2-text .tok[data-correct="true"]').length);
+  document.getElementById('ub2-check').addEventListener('click', () => checkTokens('ub2-text', 'ub2-score', 'ub2'));
+  document.getElementById('ub2-reset').addEventListener('click', () => resetTokens('ub2-text', 'ub2-score', 'ub2'));
+
+  // Üb. 3: сортування
+  buildSort('ub3-sort', {
+    buckets: ["eindeutig Konjunktiv I", "wie Indikativ Präsens"],
+    items: [
+      {t: "er habe", b: "eindeutig Konjunktiv I"}, {t: "ich habe", b: "wie Indikativ Präsens"},
+      {t: "du gehest", b: "eindeutig Konjunktiv I"}, {t: "wir gehen", b: "wie Indikativ Präsens"},
+      {t: "sie lerne", b: "eindeutig Konjunktiv I"}, {t: "sie lernen", b: "wie Indikativ Präsens"},
+      {t: "er arbeite", b: "eindeutig Konjunktiv I"}, {t: "ihr arbeitet", b: "wie Indikativ Präsens"},
+      {t: "ich sei", b: "eindeutig Konjunktiv I"}, {t: "ihr seiet", b: "eindeutig Konjunktiv I"},
+      {t: "ich wisse", b: "eindeutig Konjunktiv I"}, {t: "wir wissen", b: "wie Indikativ Präsens"},
+      {t: "er rede", b: "eindeutig Konjunktiv I"}, {t: "du redest", b: "wie Indikativ Präsens"},
+      {t: "ich werde", b: "wie Indikativ Präsens"}, {t: "ihr werdet", b: "wie Indikativ Präsens"},
+      {t: "ich dürfe", b: "eindeutig Konjunktiv I"}
+    ]
+  });
+
+  // Üb. 4–8: пропуски й таблиці
+  wireBlanks('ub4');
+  wireBlanks('ub5');
+  wireBlanks('ub6');
+  wireBlanks('ub7');
+  wireBlanks('ub8');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📰','✏️','📘','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  // ЗАВЖДИ останнім рядком
+  initGrammarPage(GRAM_ID);
+</script>
+</body>
+</html>
