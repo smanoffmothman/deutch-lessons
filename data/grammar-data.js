@@ -155,7 +155,8 @@ const GRAMMAR = [
     opublikovano: 16, dyv: ["verben-praepositionalobjekt", "rektion-verben", "infinitiv-um-zu", "nebensaetze", "trennbare-verben", "reflexive-verben", "perfekt-plusquamperfekt", "satzstellung-hauptsatz", "indirekte-rede", "modalverben", "passiv", "kommaregeln"] },
   { id: "funktionsverbgefuege", rozdil: "rektion", knyha: 62,
     tema: "Funktionsverbgefüge", uk: "Сталі дієслівні сполучення",
-    pidrozdily: ["Akkusativobjekt in einer festen Verbindung", "Akkusativobjekt-Verb-Verbindungen mit präpositionalem Objekt", "Objekt-Verb-Verbindungen mit vorangestellter Präposition", "Redensarten und ihre Bedeutungen"] },
+    pidrozdily: ["Das Verb verliert seine Bedeutung", "Nomen im Akkusativ + Verb: eine Frage stellen", "Artikel und Ergänzung: eine Entscheidung – die Entscheidung, …", "Trennbare und untrennbare Funktionsverben: eine Prüfung ablegen", "Verneinung und Satzstellung: kein oder nicht?", "Mit präpositionalem Objekt: Wert legen auf + Akk.", "Ohne Nomen: darauf, dass … – auf ihn", "Präposition + Nomen + Verb: in Frage kommen", "Mit Objekt: etwas zur Diskussion stellen", "Paare: zur Sprache bringen – zur Sprache kommen", "Redensarten mit festem Artikel"],
+    opublikovano: 62, dyv: ["rektion-verben", "verben-praepositionalobjekt", "verben-dass-infinitiv", "adverbien-praeposition", "trennbare-verben", "untrennbare-verben", "trennbar-untrennbar", "reflexive-verben", "perfekt-plusquamperfekt", "satzstellung-hauptsatz", "artikel-gebrauch", "wechselpraepositionen", "passiv", "zustandspassiv"] },
 
   // ===== Порядок слів і сполучники =====
   { id: "fragen", rozdil: "satzbau", knyha: 17,
