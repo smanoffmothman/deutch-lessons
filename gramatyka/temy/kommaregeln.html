@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Die wichtigsten Kommaregeln · Grammatik · Deutsch mit uns</title>
+<!-- =================================================================
+     ШАБЛОН сторінки граматичної теми. Лежить у тій самій папці, де й
+     готові теми (gramatyka/temy/), тож шляхи "../../" уже правильні —
+     при копіюванні їх НЕ міняти. Копію називай точно як id теми в
+     data/grammar-data.js: gramatyka/temy/<id>.html.
+     Правила наповнення — GRAMMAR-BRIEF.md.
+     ================================================================= -->
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'gramatyka' });</script>
+<!-- хлібні крихти малює initGrammarPage() внизу — з даних grammar-data.js -->
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">GRAMMATIK · Довідка</span>
+        <h1>Die wichtigsten Kommaregeln</h1>
+        <p class="sub">Коли кома в німецькій обов’язкова, коли вставка береться у дві коми, а коли кому можна поставити або пропустити. Усе головне — на одній сторінці.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="regel" aria-selected="true">Regel</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Welche Regel?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Hauptsätze</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Nebensätze</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Infinitiv & Partizip</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Einschübe</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Muss oder kann?</button>
+    <button class="tab-btn" data-tab="ub7">Üb. 7 · Alles zusammen</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <section class="panel active" id="panel-regel">
+      <p class="section-label">Regel</p>
+      <h2 class="panel-title">Die wichtigsten Kommaregeln</h2>
+      <ul class="regel-toc" id="regelToc"></ul>
+
+      <div class="card">
+        <p>Im Deutschen folgt das Komma der <b>Grammatik</b>, nicht den Pausen beim Sprechen. Du musst also wissen, wie der Satz gebaut ist: Wo beginnt ein neuer Satz? Wo steht ein Nebensatz? Was ist nur ein Einschub?</p>
+        <p>Die Regeln haben drei Gruppen: <b>Komma muss</b> – hier steht immer ein Komma. <b>Zwei Kommas</b> – ein Einschub unterbricht den Satz und steht zwischen zwei Kommas. <b>Komma kann</b> – du darfst das Komma setzen oder weglassen.</p>
+        <p class="beispiel">Ich komme mit<b>,</b> wenn du willst. · Mein Bruder<b>,</b> ein großer Fußballfan<b>,</b> hat heute Geburtstag. · Ich hoffe(<b>,</b>) dich bald zu sehen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Німецька кома, як і українська, ставиться за будовою речення, а не за інтонацією. Тому багато правил збігаються: кома перед <i>aber</i> / <i>sondern</i> (як перед «але» / «а»), між головним і підрядним реченням, навколо вставок і прикладок. Але є й відмінності: між двома головними реченнями з <i>und</i> кома <b>необов’язкова</b> (в українській перед «і» між простими реченнями вона ставиться); порівняння <i>so groß wie ich</i> пишеться <b>без коми</b> (українською «високий, як я» — з комою); дієприкметникова група на початку речення може стояти без коми. Позначка <b>(,)</b> на цій сторінці означає: кома можлива, але не обов’язкова.
+        </div>
+      </div>
+
+      <section class="card regel-block" id="hauptsaetze">
+        <h3>Komma muss: zwischen Hauptsätzen – aber, denn, sondern, deshalb …</h3>
+        <p>Zwei Hauptsätze stehen nebeneinander. Vor <b>aber, doch, jedoch, sondern</b> und <b>denn</b> steht immer ein Komma. Auch vor <b>deshalb, trotzdem, dann, also</b> usw. steht ein Komma (oder ein Punkt): Mit diesen Wörtern beginnt ein neuer Hauptsatz.</p>
+        <table class="gtable">
+          <tr><th>Wort</th><th>Komma?</th><th>Beispiel</th></tr>
+          <tr><td>aber, doch, jedoch</td><td>immer</td><td>Ich bin müde<b>, aber</b> ich kann nicht schlafen.</td></tr>
+          <tr><td>denn</td><td>immer</td><td>Wir gehen nach Hause<b>, denn</b> es ist schon spät.</td></tr>
+          <tr><td>sondern</td><td>immer</td><td>Ich fahre nicht mit dem Bus<b>, sondern</b> ich gehe zu Fuß.</td></tr>
+          <tr><td>deshalb, trotzdem, dann, also …</td><td>Komma oder Punkt</td><td>Es regnet<b>, deshalb</b> bleiben wir zu Hause.</td></tr>
+          <tr><td>und, oder</td><td>kann (siehe unten)</td><td>Es regnet(<b>,</b>) und wir bleiben zu Hause.</td></tr>
+        </table>
+        <p>Das Komma vor <b>aber</b> und <b>sondern</b> steht auch dann, wenn nur Wörter oder Wortgruppen verbunden sind:</p>
+        <p class="beispiel">Das Handy ist alt<b>, aber</b> gut. · Der Test ist nicht heute<b>, sondern</b> morgen. · Wir haben nicht nur einen Hund<b>, sondern auch</b> eine Katze.</p>
+        <p class="merke">Vor aber, doch, jedoch, sondern und denn steht immer ein Komma.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          <i>aber</i> = «але», <i>sondern</i> = «а» (після заперечення), <i>denn</i> = «бо» — і в українській перед ними теж завжди кома, тож тут легко. <i>deshalb</i> («тому»), <i>trotzdem</i> («однак, все одно»), <i>dann</i> («потім») стоять на першій позиції нового головного речення (дієслово одразу після них: <i>deshalb <b>bleiben</b> wir</i>). Перед ними ставиш кому, крапку з комою або крапку. Перед <i>und</i> та <i>oder</i> між двома головними реченнями кома не обов’язкова — про це блок «Komma kann» нижче.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="nebensatz">
+        <h3>Komma muss: zwischen Hauptsatz und Nebensatz</h3>
+        <p>Ein Nebensatz wird <b>immer</b> mit Komma vom Hauptsatz getrennt – egal, ob er hinten oder vorn steht. Den Nebensatz erkennst du am Anfang (Konjunktion, Relativpronomen oder Fragewort) und am Ende (dort steht das konjugierte Verb).</p>
+        <table class="gtable">
+          <tr><th>Nebensatz hinten</th><th>Nebensatz vorn</th></tr>
+          <tr><td>Ich rufe dich an<b>, wenn</b> ich zu Hause bin.</td><td><b>Wenn</b> ich zu Hause bin<b>,</b> rufe ich dich an.</td></tr>
+          <tr><td>Wir bleiben drinnen<b>, weil</b> es regnet.</td><td><b>Weil</b> es regnet<b>,</b> bleiben wir drinnen.</td></tr>
+          <tr><td>Ich weiß nicht<b>, ob</b> er kommt.</td><td><b>Ob</b> er kommt<b>,</b> weiß ich nicht.</td></tr>
+          <tr><td>Das ist der Junge<b>, der</b> neben mir sitzt.</td><td>–</td></tr>
+        </table>
+        <p>Steht vor der Konjunktion noch ein Wort (<b>auch wenn, kurz bevor, vor allem weil</b>), kommt das Komma vor die ganze Gruppe:</p>
+        <p class="beispiel">Wir spielen draußen<b>, auch wenn</b> es kalt ist. · Er kam<b>, kurz bevor</b> der Film begann.</p>
+        <p class="merke">Hauptsatz und Nebensatz werden immer durch ein Komma getrennt.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Так само, як в українській: перед «що, бо, коли, якщо, який…» кома є завжди. Підказка для перевірки: у німецькому підрядному реченні дієслово стоїть у кінці (<i>…, weil es <b>regnet</b></i>), а якщо підрядне стоїть першим, головне починається з дієслова (<i>…, <b>bleiben</b> wir drinnen</i>). Кома стоїть рівно на межі між цими двома частинами. Якщо перед сполучником є уточнювальне слово (<i>auch wenn</i> — «навіть якщо»), кома ставиться перед усією групою, а не між словами.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="mehrere-nebensaetze">
+        <h3>Komma muss: zwischen Nebensätzen</h3>
+        <p>Oft hängt ein Nebensatz von einem anderen Nebensatz ab. Dann steht zwischen den Nebensätzen auch ein Komma.</p>
+        <p class="beispiel">Ich glaube<b>,</b> dass er nicht kommt<b>,</b> weil er krank ist.</p>
+        <p class="beispiel">Sie fragt<b>,</b> ob wir wissen<b>,</b> wann der Bus fährt.</p>
+        <p>Aber: Sind zwei Nebensätze <b>gleichrangig</b> und mit <b>und</b> oder <b>oder</b> verbunden, steht zwischen ihnen <b>kein</b> Komma – wie bei einer Aufzählung.</p>
+        <table class="gtable">
+          <tr><th>Situation</th><th>Komma?</th><th>Beispiel</th></tr>
+          <tr><td>ein Nebensatz hängt vom anderen ab</td><td>ja</td><td>Er sagt<b>,</b> dass er müde ist<b>,</b> weil er schlecht geschlafen hat.</td></tr>
+          <tr><td>gleichrangig, ohne Konjunktion</td><td>ja</td><td>Ich hoffe<b>,</b> dass du kommst<b>,</b> dass du Kuchen mitbringst.</td></tr>
+          <tr><td>gleichrangig, mit und / oder</td><td>nein</td><td>Ich hoffe<b>,</b> dass du kommst <b>und</b> dass du Kuchen mitbringst.</td></tr>
+        </table>
+        <p class="merke">Zwischen Nebensätzen steht ein Komma – außer vor und / oder bei gleichrangigen Nebensätzen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Кожне підрядне речення відділяєш від сусіднього, як окрему «цеглинку». Виняток — два рівноправні підрядні, з’єднані <i>und</i> чи <i>oder</i>: вони поводяться як перелік, і коми між ними немає (в українській так само: «що ти прийдеш і що принесеш торт»). Спитай себе: друге підрядне пояснює перше (тоді кома) чи стоїть поруч із ним на рівних через <i>und</i> (тоді без коми)?
+        </div>
+      </section>
+
+      <section class="card regel-block" id="aufzaehlung">
+        <h3>Komma muss: bei Aufzählungen – aber nicht vor und / oder</h3>
+        <p>Bei Aufzählungen trennt das Komma Wörter, Wortgruppen und auch Verben (Satzaussagen). Stehen <b>und, oder, sowie, sowohl … als auch, weder … noch, entweder … oder</b> dazwischen, fällt das Komma weg.</p>
+        <p class="beispiel">Wir brauchen Eier<b>,</b> Mehl<b>,</b> Zucker <b>und</b> Milch.</p>
+        <p class="beispiel">Nach der Schule esse ich<b>,</b> mache Hausaufgaben <b>und</b> treffe meine Freunde.</p>
+        <p class="beispiel">Trinkst du Tee <b>oder</b> Kaffee? · Er spielt <b>sowohl</b> Gitarre <b>als auch</b> Klavier.</p>
+        <table class="gtable">
+          <tr><th>Komma</th><th>kein Komma</th></tr>
+          <tr><td>Aufzählung ohne Konjunktion: rot<b>,</b> gelb<b>,</b> grün</td><td>und, oder, sowie: rot <b>und</b> grün</td></tr>
+          <tr><td>aber, doch, sondern: klein<b>, aber</b> schnell</td><td>sowohl … als auch, weder … noch, entweder … oder</td></tr>
+          <tr><td>gleichrangige Adjektive: ein langer<b>,</b> langweiliger Film</td><td>nicht gleichrangig: ein schönes altes Haus</td></tr>
+        </table>
+        <p>Test für Adjektive: Kannst du <b>und</b> dazwischen sagen (<i>ein langer und langweiliger Film</i>)? Dann setzt du ein Komma.</p>
+        <p class="merke">Wo und oder oder steht, steht in der Aufzählung kein Komma.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Тут усе як в українській: «яйця, борошно, цукор і молоко» — перед «і» коми немає. Кома стоїть там, де сполучника немає, а <i>und</i>, <i>oder</i> та парні сполучники <i>sowohl … als auch</i> («як …, так і»), <i>weder … noch</i> («ні … ні»), <i>entweder … oder</i> («або … або») кому замінюють. Зверни увагу на відмінність: в українській перед другим «ні» чи «або» кома ставиться («ні чаю, ні кави»), у німецькій — ні: <i>weder Tee noch Kaffee</i>. Між прикметниками кома — лише коли вони рівноправні (можна вставити «і»).
+        </div>
+      </section>
+
+      <section class="card regel-block" id="infinitiv">
+        <h3>Komma muss: bei Infinitivgruppen mit um, ohne, statt …</h3>
+        <p>Eine Infinitivgruppe ist ein Satzteil mit <b>zu + Infinitiv</b>. In drei Fällen muss das Komma stehen:</p>
+        <table class="gtable">
+          <tr><th>Wann?</th><th>Beispiel</th></tr>
+          <tr><td>1. mit <b>um, ohne, statt, anstatt, außer, als</b></td><td>Ich spare Geld<b>, um</b> ein Fahrrad <b>zu</b> kaufen.<br><b>Ohne</b> ein Wort <b>zu</b> sagen<b>,</b> ging er hinaus.</td></tr>
+          <tr><td>2. nach einem Nomen, das die Gruppe erklärt</td><td>Ich habe keine <b>Lust,</b> heute Fußball zu spielen.<br>Sie hatte die <b>Idee,</b> eine Party zu machen.</td></tr>
+          <tr><td>3. mit einem Hinweiswort: es, das, darauf, daran, dazu …</td><td>Ich liebe <b>es,</b> am Wochenende lange zu schlafen.<br>Wir freuen uns <b>darauf,</b> euch zu besuchen.</td></tr>
+        </table>
+        <p>Das gilt auch für kurze Gruppen: Er ging<b>, ohne</b> zu grüßen. In allen anderen Fällen <b>kann</b> das Komma stehen – siehe unten: Komma kann.</p>
+        <p class="merke">um, ohne, statt, anstatt, außer, als + zu: immer Komma.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          <i>um … zu</i> = «щоб», <i>ohne … zu</i> = «не …-вши» (<i>ohne zu grüßen</i> — «не привітавшись»), <i>statt / anstatt … zu</i> = «замість того щоб», <i>außer … zu</i> = «крім того щоб», <i>als … zu</i> — після <i>nichts anderes</i>, <i>lieber</i> тощо. З цими словами кома обов’язкова завжди, як в українській перед «щоб». Ще два обов’язкові випадки: коли інфінітив пояснює іменник (<i>Lust</i> — «бажання <b>що</b>?») і коли в головному реченні є слово-«вказівник» на інфінітив: <i>es</i>, <i>darauf</i>, <i>daran</i> («Я люблю <b>те</b>, щоб…»). Детальніше про звороти — у темі про <i>um … zu</i>.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="partizip">
+        <h3>Partizipgruppen: vorn kann, hinten muss</h3>
+        <p>Eine Partizipgruppe ist ein Partizip mit mehreren Wörtern davor: <i>laut lachend</i>, <i>vom Regen völlig nass</i>, <i>müde von der Reise</i>. Sie gehört zum Subjekt.</p>
+        <table class="gtable">
+          <tr><th>Position</th><th>Komma?</th><th>Beispiel</th></tr>
+          <tr><td>am Satzanfang</td><td>kann (meist gesetzt)</td><td>Laut lachend(<b>,</b>) kamen die Kinder aus der Schule.</td></tr>
+          <tr><td>hinter dem Satz</td><td>muss</td><td>Die Kinder kamen aus der Schule<b>,</b> laut lachend.</td></tr>
+          <tr><td>mitten im Satz</td><td>muss (zwei Kommas)</td><td>Die Kinder<b>,</b> laut lachend<b>,</b> kamen aus der Schule.</td></tr>
+          <tr><td>nur ein Wort</td><td>kein Komma</td><td>Lachend kamen die Kinder aus der Schule.</td></tr>
+        </table>
+        <p>Steht am Satzanfang ein Hinweiswort wie <b>so</b> oder <b>genau so</b>, muss das Komma stehen: Laut lachend<b>, so</b> kamen die Kinder aus der Schule.</p>
+        <p class="merke">Partizipgruppe hinten oder in der Mitte: Komma muss. Vorn: Komma kann – es macht den Satz leichter lesbar.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Це схоже на український дієприслівниковий зворот («Голосно сміючись, діти вийшли зі школи»), але правило м’якше: на початку речення німецька кома <b>можлива, але не обов’язкова</b> — хоча зазвичай її ставлять, бо так легше читати. Якщо ж група стоїть у кінці (як доповнення) або всередині (як вставка), кома обов’язкова. Одне слово без пояснень (<i>Lachend kamen sie…</i>) комою не відокремлюється. Детальніше — у темі «Partizipialsätze».
+        </div>
+      </section>
+
+      <section class="card regel-block" id="einschub-nebensatz">
+        <h3>Zwei Kommas: eingeschobene Nebensätze und Relativsätze</h3>
+        <p>Manchmal steht ein Nebensatz <b>mitten im Hauptsatz</b> und unterbricht ihn. Dann steht ein Komma davor und ein Komma danach. Der Hauptsatz läuft nach dem zweiten Komma einfach weiter.</p>
+        <p class="beispiel">Der Pullover<b>,</b> den ich von Oma bekommen habe<b>,</b> ist sehr warm.</p>
+        <p class="beispiel">Mein Vater hat<b>,</b> als er jung war<b>,</b> in England gewohnt.</p>
+        <p class="beispiel">Das Konzert<b>,</b> auf das wir so lange gewartet haben<b>,</b> war fantastisch.</p>
+        <p>Test: Nimm den Einschub weg. Bleibt ein vollständiger Satz übrig (<i>Der Pullover ist sehr warm.</i>), hast du die Kommas richtig gesetzt.</p>
+        <p class="merke">Ein Einschub steht zwischen zwei Kommas. Das zweite Komma nicht vergessen!</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Вставка — як дужки: відкрив — закрий. Найчастіша помилка — поставити кому перед <i>den</i>, <i>der</i>, <i>das</i> і забути другу після дієслова в кінці вставки. В українській так само: «Светр, який мені подарувала бабуся, дуже теплий». Перевірка: прибери вставку — має лишитися правильне речення без «дірок». Якщо вставка закінчується разом із реченням, друга кома не потрібна — її замінює крапка.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="apposition">
+        <h3>Zwei Kommas: Appositionen</h3>
+        <p>Eine Apposition ist ein Nomen (mit Artikel und oft mit Adjektiv), das ein anderes Nomen genauer erklärt. Sie steht im <b>gleichen Kasus</b> und zwischen zwei Kommas. Am Satzende steht nur ein Komma davor.</p>
+        <p class="beispiel">Frau Weber<b>,</b> unsere Deutschlehrerin<b>,</b> kommt aus Graz.</p>
+        <p class="beispiel">Ich besuche meinen Onkel<b>,</b> einen bekannten Koch<b>,</b> in München.</p>
+        <p class="beispiel">Das ist Lisa<b>,</b> meine beste Freundin.</p>
+        <table class="gtable">
+          <tr><th>mit Kommas (erklärt genauer)</th><th>ohne Komma (Teil des Namens)</th></tr>
+          <tr><td>Max<b>,</b> mein bester Freund<b>,</b> kommt mit.</td><td>Mein Freund Max kommt mit.</td></tr>
+          <tr><td>Wien<b>,</b> die Hauptstadt Österreichs<b>,</b> ist schön.</td><td>Die Stadt Wien ist schön.</td></tr>
+          <tr><td>Anna<b>,</b> meine Tante<b>,</b> wohnt hier.</td><td>Tante Anna wohnt hier.</td></tr>
+        </table>
+        <p class="merke">Die Apposition steht zwischen zwei Kommas – am Satzende nur mit einem Komma davor.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Прикладка — те саме, що в українській: «Київ, столиця України, дуже гарний». Зверни увагу на відмінок: прикладка повторює відмінок слова, яке пояснює (<i>meinen Onkel, <b>einen</b> bekannten Koch</i> — обидва в Akkusativ). Без ком пишуться «щільні» сполучення, де пояснення — частина назви: <i>mein Freund Max</i>, <i>die Stadt Wien</i>, <i>Tante Anna</i>. Детальніше — у темі «Appositionen».
+        </div>
+      </section>
+
+      <section class="card regel-block" id="einschub-gruppen">
+        <h3>Zwei Kommas: eingeschobene Partizip- und Infinitivgruppen</h3>
+        <p>Auch Partizipgruppen und Infinitivgruppen mit <b>um, ohne, statt</b> können den Satz unterbrechen. Dann stehen sie – wie jeder Einschub – zwischen zwei Kommas.</p>
+        <p class="beispiel">Die Schüler<b>,</b> müde nach dem langen Tag<b>,</b> fuhren nach Hause.</p>
+        <p class="beispiel">Tom<b>,</b> vor Freude strahlend<b>,</b> zeigte uns sein Zeugnis.</p>
+        <p class="beispiel">Sie hat<b>,</b> um Geld zu sparen<b>,</b> ihr altes Fahrrad repariert.</p>
+        <p class="beispiel">Er ging<b>,</b> ohne uns zu grüßen<b>,</b> an uns vorbei.</p>
+        <p class="merke">Unterbricht eine Gruppe den Satz, steht sie zwischen zwei Kommas.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Принцип той самий, що й з підрядними реченнями: будь-яка вставка всередині речення береться в дві коми. Для дієприкметникової групи кома всередині речення обов’язкова, хоча на початку речення вона могла б і не стояти (див. блок «Partizipgruppen»). Перевірка та сама: прибери вставку — <i>Er ging an uns vorbei</i> — речення ціле.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="kann-infinitiv">
+        <h3>Komma kann: Infinitivgruppen ohne um, ohne, statt</h3>
+        <p>Hat die Infinitivgruppe <b>kein</b> um, ohne, statt …, <b>kein</b> Nomen und <b>kein</b> Hinweiswort davor (siehe oben), darfst du selbst entscheiden: mit Komma oder ohne.</p>
+        <p class="beispiel">Ich hoffe(<b>,</b>) dich bald zu sehen.</p>
+        <p class="beispiel">Er hat vergessen(<b>,</b>) die Tür abzuschließen.</p>
+        <p class="beispiel">Wir versuchen(<b>,</b>) pünktlich zu sein.</p>
+        <p>Das Komma kann aber den Sinn klar machen:</p>
+        <table class="gtable">
+          <tr><th>Satz</th><th>Bedeutung</th></tr>
+          <tr><td>Er empfahl<b>,</b> ihm zu helfen.</td><td>Man soll ihm helfen.</td></tr>
+          <tr><td>Er empfahl ihm<b>,</b> zu helfen.</td><td>Er soll helfen.</td></tr>
+        </table>
+        <p>Nur <b>zu + Infinitiv</b> ohne weitere Wörter bekommt normalerweise kein Komma: Er beginnt zu lesen.</p>
+        <p class="merke">Ohne um, ohne, statt, Nomen oder Hinweiswort: Das Komma kann stehen. Mit Komma ist der Satz oft klarer.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Це найчастіший «вільний» випадок: після <i>hoffen, versuchen, vergessen, versprechen, beginnen</i> тощо кому перед інфінітивною групою можна ставити, а можна й ні — помилкою не буде жодне. Але кома може змінити зміст: <i>Er empfahl, ihm zu helfen</i> — «Він порадив допомогти йому»; <i>Er empfahl ihm, zu helfen</i> — «Він порадив йому допомогти (комусь)». Тому якщо сумніваєшся — кому краще поставити. Один голий інфінітив (<i>zu lesen</i>) комою зазвичай не відокремлюють.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="kann-und">
+        <h3>Komma kann: vor und / oder zwischen Hauptsätzen</h3>
+        <p>Verbinden <b>und</b> oder <b>oder</b> zwei <b>vollständige Hauptsätze</b>, kannst du ein Komma setzen. Du musst aber nicht.</p>
+        <p class="beispiel">Es klingelte(<b>,</b>) und alle Schüler rannten hinaus.</p>
+        <p class="beispiel">Kommst du mit(<b>,</b>) oder bleibst du zu Hause?</p>
+        <p>Das Komma hilft, wenn man den Satz sonst falsch lesen könnte:</p>
+        <p class="beispiel">Ich treffe heute meine Freundin<b>,</b> und ihr Bruder kommt auch mit.</p>
+        <p>Ohne Komma denkt man zuerst: <i>Ich treffe meine Freundin und ihren Bruder</i>. Bei der Aufzählung von Wörtern (<i>Brot und Butter</i>) steht vor und <b>nie</b> ein Komma.</p>
+        <p class="merke">Zwei Hauptsätze mit und / oder: Komma kann. Wörter in einer Aufzählung mit und / oder: nie Komma.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Тут німецька відрізняється від української: у нас «Задзвонив дзвоник, і всі вибігли» — кома обов’язкова, а в німецькій її можна пропустити. Проте кома корисна, коли без неї речення легко прочитати неправильно (як у прикладі з <i>meine Freundin, und ihr Bruder…</i>). Важливо: це стосується лише двох повних речень, кожне зі своїм дієсловом. Якщо <i>und</i> з’єднує окремі слова чи групи — коми немає ніколи.
+        </div>
+      </section>
+
+      <section class="card regel-block" id="ueberblick">
+        <h3>Alles auf einen Blick</h3>
+        <div style="overflow-x:auto;">
+        <table class="gtable">
+          <tr><th>Situation</th><th>Komma</th><th>Beispiel</th></tr>
+          <tr><td>aber, doch, sondern, denn</td><td>muss</td><td>Er ist klein<b>, aber</b> stark.</td></tr>
+          <tr><td>deshalb, trotzdem, dann … (neuer Hauptsatz)</td><td>muss (oder Punkt)</td><td>Ich war krank<b>, deshalb</b> fehlte ich.</td></tr>
+          <tr><td>Hauptsatz + Nebensatz</td><td>muss</td><td>Ich weiß<b>, dass</b> du recht hast.</td></tr>
+          <tr><td>Nebensatz + Nebensatz</td><td>muss</td><td>Sie sagt<b>,</b> dass sie nicht kommt<b>,</b> weil sie lernt.</td></tr>
+          <tr><td>Aufzählung ohne und / oder</td><td>muss</td><td>Äpfel<b>,</b> Birnen und Bananen</td></tr>
+          <tr><td>um, ohne, statt, außer, als … zu</td><td>muss</td><td>Ich lerne<b>, um</b> die Prüfung zu bestehen.</td></tr>
+          <tr><td>Infinitiv nach Nomen oder Hinweiswort</td><td>muss</td><td>Ich habe keine Zeit<b>,</b> dich abzuholen.</td></tr>
+          <tr><td>Einschub: Nebensatz, Relativsatz, Apposition, Gruppe</td><td>zwei Kommas</td><td>Tim<b>,</b> mein Nachbar<b>,</b> ist nett.</td></tr>
+          <tr><td>Partizipgruppe hinten</td><td>muss</td><td>Sie kam herein<b>,</b> völlig nass.</td></tr>
+          <tr><td>Partizipgruppe vorn</td><td>kann</td><td>Völlig nass(<b>,</b>) kam sie herein.</td></tr>
+          <tr><td>Infinitivgruppe ohne um, ohne, statt …</td><td>kann</td><td>Ich versuche(<b>,</b>) ruhig zu bleiben.</td></tr>
+          <tr><td>Hauptsatz + und / oder + Hauptsatz</td><td>kann</td><td>Es regnet(<b>,</b>) und es ist kalt.</td></tr>
+          <tr><td>und, oder, sowohl … als auch, weder … noch</td><td>kein</td><td>weder Tee noch Kaffee</td></tr>
+          <tr><td>Vergleich ohne Verb: als, wie</td><td>kein</td><td>Er ist größer als ich. · so groß wie du</td></tr>
+          <tr><td>Vergleich mit Verb (Nebensatz)</td><td>muss</td><td>Er ist größer<b>, als</b> ich dachte.</td></tr>
+        </table>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Коротко: <b>обов’язково</b> — між реченнями (крім <i>und/oder</i>), перед підрядними, у переліку без сполучника, перед <i>um/ohne/statt … zu</i>. <b>Дві коми</b> — навколо будь-якої вставки. <b>Можна</b> — перед <i>und/oder</i> між двома повними реченнями, перед інфінітивом без <i>um/ohne/statt</i>, після дієприкметникової групи на початку. <b>Ніколи</b> — перед <i>und/oder</i> у переліку слів і перед <i>als/wie</i> у порівнянні без дієслова (<i>größer als ich</i> — на відміну від українського «вищий, ніж я»).
+        </div>
+      </section>
+
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Welche Regel ist das?</h2>
+      <p class="lead">Визнач, чому в реченні стоїть кома, або обери правильно написане речення. Позначка (,) означає місце, де кома можлива.</p>
+      <div class="card" id="ub1-quiz"></div>
+    </section>
+
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Hauptsätze und Aufzählungen</h2>
+      <p class="lead">У кожному місці, позначеному «?», обери: кома чи коми немає. Тут у кожному місці правильна лише одна відповідь: подумай про <i>aber, denn, sondern, deshalb</i> і про переліки з <i>und / oder</i>.</p>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> Ich wollte ins Kino gehen<select class="blank inline" data-ans=","><option value="">?</option><option value=",">,</option><option value="kein">kein Komma</option></select> aber meine Freundin hatte keine Zeit.</div>
+        <div class="fill-item"><span class="num">2)</span> Wir bleiben heute zu Hause<select class="blank inline" data-ans=","><option value="">?</option><option value=",">,</option><option value="kein">kein Komma</option></select> denn es regnet sehr stark.</div>
+        <div class="fill-item"><span class="num">3)</span> Das ist kein Tee<select class="blank inline" data-ans=","><option value="">?</option><option value=",">,</option><option value="kein">kein Komma</option></select> sondern Kaffee.</div>
+        <div class="fill-item"><span class="num">4)</span> Lea hat viel gelernt<select class="blank inline" data-ans=","><option value="">?</option><option value=",">,</option><option value="kein">kein Komma</option></select> deshalb hat sie eine gute Note bekommen.</div>
+        <div class="fill-item"><span class="num">5)</span> Paul war erkältet<select class="blank inline" data-ans=","><option value="">?</option><option value=",">,</option><option value="kein">kein Komma</option></select> trotzdem ist er zum Training gegangen.</div>
+        <div class="fill-item"><span class="num">6)</span> In meiner Tasche sind Bücher<select class="blank inline" data-ans=","><option value="">?</option><option value=",">,</option><option value="kein">kein Komma</option></select> Hefte<select class="blank inline" data-ans="kein"><option value="">?</option><option value=",">,</option><option value="kein">kein Komma</option></select> und ein Apfel.</div>
+        <div class="fill-item"><span class="num">7)</span> Am Wochenende schlafen wir lange<select class="blank inline" data-ans=","><option value="">?</option><option value=",">,</option><option value="kein">kein Komma</option></select> frühstücken gemütlich<select class="blank inline" data-ans="kein"><option value="">?</option><option value=",">,</option><option value="kein">kein Komma</option></select> und gehen in den Park.</div>
+        <div class="fill-item"><span class="num">8)</span> Möchtest du Saft<select class="blank inline" data-ans="kein"><option value="">?</option><option value=",">,</option><option value="kein">kein Komma</option></select> oder Wasser?</div>
+        <div class="fill-item"><span class="num">9)</span> Ich mag Mathe<select class="blank inline" data-ans="kein"><option value="">?</option><option value=",">,</option><option value="kein">kein Komma</option></select> und Physik<select class="blank inline" data-ans=","><option value="">?</option><option value=",">,</option><option value="kein">kein Komma</option></select> aber Chemie finde ich langweilig.</div>
+        <div class="fill-item"><span class="num">10)</span> Wir haben nicht nur einen Hund<select class="blank inline" data-ans=","><option value="">?</option><option value=",">,</option><option value="kein">kein Komma</option></select> sondern auch zwei Katzen.</div>
+        <div class="fill-item"><span class="num">11)</span> Mein Bruder spielt sowohl Gitarre<select class="blank inline" data-ans="kein"><option value="">?</option><option value=",">,</option><option value="kein">kein Komma</option></select> als auch Klavier.</div>
+        <div class="fill-item"><span class="num">12)</span> Wir können entweder heute<select class="blank inline" data-ans="kein"><option value="">?</option><option value=",">,</option><option value="kein">kein Komma</option></select> oder morgen kommen.</div>
+        <div class="fill-item"><span class="num">13)</span> Das Wetter war kalt<select class="blank inline" data-ans=","><option value="">?</option><option value=",">,</option><option value="kein">kein Komma</option></select> aber sonnig.</div>
+        <div class="fill-item"><span class="num">14)</span> Ich habe weder Zeit<select class="blank inline" data-ans="kein"><option value="">?</option><option value=",">,</option><option value="kein">kein Komma</option></select> noch Lust.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Kommas bei Nebensätzen</h2>
+      <p class="lead">Натисни на кожне слово, <b>після</b> якого має стояти кома. В одному реченні їх може бути кілька або лише одна. Коли все позначиш — «Prüfen».</p>
+      <div class="card" id="ub3-text">
+        <div class="fill-item"><span class="num">1)</span> <span class="tok" data-correct="false">Ich</span> <span class="tok" data-correct="true">weiß</span> <span class="tok" data-correct="false">dass</span> <span class="tok" data-correct="false">du</span> <span class="tok" data-correct="false">recht</span> <span class="tok" data-correct="false">hast.</span></div>
+        <div class="fill-item"><span class="num">2)</span> <span class="tok" data-correct="false">Wenn</span> <span class="tok" data-correct="false">es</span> <span class="tok" data-correct="false">morgen</span> <span class="tok" data-correct="true">regnet</span> <span class="tok" data-correct="false">bleiben</span> <span class="tok" data-correct="false">wir</span> <span class="tok" data-correct="false">zu</span> <span class="tok" data-correct="false">Hause.</span></div>
+        <div class="fill-item"><span class="num">3)</span> <span class="tok" data-correct="false">Ich</span> <span class="tok" data-correct="false">habe</span> <span class="tok" data-correct="false">einen</span> <span class="tok" data-correct="true">Freund</span> <span class="tok" data-correct="false">der</span> <span class="tok" data-correct="false">in</span> <span class="tok" data-correct="false">Berlin</span> <span class="tok" data-correct="false">wohnt.</span></div>
+        <div class="fill-item"><span class="num">4)</span> <span class="tok" data-correct="false">Obwohl</span> <span class="tok" data-correct="false">der</span> <span class="tok" data-correct="false">Test</span> <span class="tok" data-correct="false">schwer</span> <span class="tok" data-correct="true">war</span> <span class="tok" data-correct="false">hat</span> <span class="tok" data-correct="false">Max</span> <span class="tok" data-correct="false">eine</span> <span class="tok" data-correct="false">Eins</span> <span class="tok" data-correct="false">bekommen.</span></div>
+        <div class="fill-item"><span class="num">5)</span> <span class="tok" data-correct="false">Sie</span> <span class="tok" data-correct="false">fragt</span> <span class="tok" data-correct="true">mich</span> <span class="tok" data-correct="false">ob</span> <span class="tok" data-correct="false">ich</span> <span class="tok" data-correct="true">mitkomme</span> <span class="tok" data-correct="false">weil</span> <span class="tok" data-correct="false">sie</span> <span class="tok" data-correct="false">nicht</span> <span class="tok" data-correct="false">allein</span> <span class="tok" data-correct="false">gehen</span> <span class="tok" data-correct="false">will.</span></div>
+        <div class="fill-item"><span class="num">6)</span> <span class="tok" data-correct="false">Als</span> <span class="tok" data-correct="false">ich</span> <span class="tok" data-correct="false">nach</span> <span class="tok" data-correct="false">Hause</span> <span class="tok" data-correct="true">kam</span> <span class="tok" data-correct="false">war</span> <span class="tok" data-correct="false">niemand</span> <span class="tok" data-correct="false">da.</span></div>
+        <div class="fill-item"><span class="num">7)</span> <span class="tok" data-correct="false">Er</span> <span class="tok" data-correct="true">erzählt</span> <span class="tok" data-correct="false">dass</span> <span class="tok" data-correct="false">er</span> <span class="tok" data-correct="false">einen</span> <span class="tok" data-correct="false">Hund</span> <span class="tok" data-correct="true">hat</span> <span class="tok" data-correct="false">den</span> <span class="tok" data-correct="false">er</span> <span class="tok" data-correct="false">sehr</span> <span class="tok" data-correct="false">liebt.</span></div>
+        <div class="fill-item"><span class="num">8)</span> <span class="tok" data-correct="false">Weißt</span> <span class="tok" data-correct="true">du</span> <span class="tok" data-correct="false">wann</span> <span class="tok" data-correct="false">der</span> <span class="tok" data-correct="false">Film</span> <span class="tok" data-correct="false">beginnt?</span></div>
+        <div class="fill-item"><span class="num">9)</span> <span class="tok" data-correct="false">Ich</span> <span class="tok" data-correct="true">glaube</span> <span class="tok" data-correct="false">dass</span> <span class="tok" data-correct="false">er</span> <span class="tok" data-correct="false">kommt</span> <span class="tok" data-correct="false">und</span> <span class="tok" data-correct="false">dass</span> <span class="tok" data-correct="false">er</span> <span class="tok" data-correct="false">uns</span> <span class="tok" data-correct="false">hilft.</span></div>
+        <div class="fill-item"><span class="num">10)</span> <span class="tok" data-correct="false">Wir</span> <span class="tok" data-correct="false">gehen</span> <span class="tok" data-correct="true">spazieren</span> <span class="tok" data-correct="false">sobald</span> <span class="tok" data-correct="false">die</span> <span class="tok" data-correct="false">Sonne</span> <span class="tok" data-correct="false">scheint.</span></div>
+        <div class="fill-item"><span class="num">11)</span> <span class="tok" data-correct="false">Ruf</span> <span class="tok" data-correct="false">mich</span> <span class="tok" data-correct="true">an</span> <span class="tok" data-correct="false">auch</span> <span class="tok" data-correct="false">wenn</span> <span class="tok" data-correct="false">es</span> <span class="tok" data-correct="false">spät</span> <span class="tok" data-correct="false">ist.</span></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Infinitiv- und Partizipgruppen</h2>
+      <p class="lead">У кожному місці, позначеному «?», обери: кома чи коми немає. Увага: там, де кома необов’язкова, зараховуються обидві відповіді — але спершу вирішуй, чи вона тут обов’язкова.</p>
+      <div class="card" id="ub4-list">
+        <div class="fill-item"><span class="num">1)</span> Ich fahre in die Stadt<select class="blank inline" data-ans=","><option value="">?</option><option value=",">,</option><option value="kein">kein Komma</option></select> um neue Schuhe zu kaufen.</div>
+        <div class="fill-item"><span class="num">2)</span> Er ging nach Hause<select class="blank inline" data-ans=","><option value="">?</option><option value=",">,</option><option value="kein">kein Komma</option></select> ohne sich zu verabschieden.</div>
+        <div class="fill-item"><span class="num">3)</span> Statt zu lernen<select class="blank inline" data-ans=","><option value="">?</option><option value=",">,</option><option value="kein">kein Komma</option></select> hat Tim den ganzen Abend gespielt.</div>
+        <div class="fill-item"><span class="num">4)</span> Ich hoffe<select class="blank inline" data-ans=",|kein"><option value="">?</option><option value=",">,</option><option value="kein">kein Komma</option></select> dich bald wiederzusehen.</div>
+        <div class="fill-item"><span class="num">5)</span> Ich liebe es<select class="blank inline" data-ans=","><option value="">?</option><option value=",">,</option><option value="kein">kein Komma</option></select> im Meer zu schwimmen.</div>
+        <div class="fill-item"><span class="num">6)</span> Wir hatten die Idee<select class="blank inline" data-ans=","><option value="">?</option><option value=",">,</option><option value="kein">kein Komma</option></select> eine Party zu machen.</div>
+        <div class="fill-item"><span class="num">7)</span> Sie hat versprochen<select class="blank inline" data-ans=",|kein"><option value="">?</option><option value=",">,</option><option value="kein">kein Komma</option></select> mir morgen zu helfen.</div>
+        <div class="fill-item"><span class="num">8)</span> Ich habe keine Lust<select class="blank inline" data-ans=","><option value="">?</option><option value=",">,</option><option value="kein">kein Komma</option></select> heute Hausaufgaben zu machen.</div>
+        <div class="fill-item"><span class="num">9)</span> Laut singend<select class="blank inline" data-ans=",|kein"><option value="">?</option><option value=",">,</option><option value="kein">kein Komma</option></select> kamen die Kinder ins Klassenzimmer.</div>
+        <div class="fill-item"><span class="num">10)</span> Anna kam nach Hause<select class="blank inline" data-ans=","><option value="">?</option><option value=",">,</option><option value="kein">kein Komma</option></select> völlig nass vom Regen.</div>
+        <div class="fill-item"><span class="num">11)</span> Er hat nichts anderes getan<select class="blank inline" data-ans=","><option value="">?</option><option value=",">,</option><option value="kein">kein Komma</option></select> als den ganzen Tag zu schlafen.</div>
+        <div class="fill-item"><span class="num">12)</span> Wir versuchen<select class="blank inline" data-ans=",|kein"><option value="">?</option><option value=",">,</option><option value="kein">kein Komma</option></select> immer pünktlich zu sein.</div>
+        <div class="fill-item"><span class="num">13)</span> Anstatt den Bus zu nehmen<select class="blank inline" data-ans=","><option value="">?</option><option value=",">,</option><option value="kein">kein Komma</option></select> ist sie zu Fuß gegangen.</div>
+        <div class="fill-item"><span class="num">14)</span> Wir freuen uns darauf<select class="blank inline" data-ans=","><option value="">?</option><option value=",">,</option><option value="kein">kein Komma</option></select> euch bald zu besuchen.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub4-check">Prüfen</button>
+        <button class="btn secondary" id="ub4-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub4-score"></span>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Einschübe: zwei Kommas</h2>
+      <p class="lead">Напиши одне речення з вставкою в середині. У 1–5 друге речення стає підрядним означальним (Relativsatz) або прикладкою (Apposition) після підмета. У 6–9 встав групу з дужок на місце ‸. Не забудь про обидві коми!</p>
+      <div class="card" id="ub5-list">
+        <div class="fill-item"><span class="num">1)</span> <b>Mein Opa wohnt in Wien. Er ist 80 Jahre alt.</b> (Relativsatz)<br><input type="text" class="blank-input inline full" data-ans="Mein Opa, der 80 Jahre alt ist, wohnt in Wien|Mein Opa, der achtzig Jahre alt ist, wohnt in Wien|Mein Opa, welcher 80 Jahre alt ist, wohnt in Wien"></div>
+        <div class="fill-item"><span class="num">2)</span> <b>Das Buch ist spannend. Ich lese es gerade.</b> (Relativsatz)<br><input type="text" class="blank-input inline full" data-ans="Das Buch, das ich gerade lese, ist spannend|Das Buch, welches ich gerade lese, ist spannend"></div>
+        <div class="fill-item"><span class="num">3)</span> <b>Die Lehrerin ist sehr freundlich. Wir haben sie seit September.</b> (Relativsatz)<br><input type="text" class="blank-input inline full" data-ans="Die Lehrerin, die wir seit September haben, ist sehr freundlich|Die Lehrerin, welche wir seit September haben, ist sehr freundlich"></div>
+        <div class="fill-item"><span class="num">4)</span> <b>Herr Braun ist sehr nett. Er ist unser Nachbar.</b> (Apposition)<br><input type="text" class="blank-input inline full" data-ans="Herr Braun, unser Nachbar, ist sehr nett"></div>
+        <div class="fill-item"><span class="num">5)</span> <b>Berlin hat viele Museen. Berlin ist die Hauptstadt Deutschlands.</b> (Apposition)<br><input type="text" class="blank-input inline full" data-ans="Berlin, die Hauptstadt Deutschlands, hat viele Museen"></div>
+        <div class="fill-item"><span class="num">6)</span> <b>Unser Hund ‸ lag vor der Tür.</b> (müde vom langen Spaziergang)<br><input type="text" class="blank-input inline full" data-ans="Unser Hund, müde vom langen Spaziergang, lag vor der Tür"></div>
+        <div class="fill-item"><span class="num">7)</span> <b>Sie begann ‸ sofort mit den Hausaufgaben.</b> (um früher fertig zu sein)<br><input type="text" class="blank-input inline full" data-ans="Sie begann, um früher fertig zu sein, sofort mit den Hausaufgaben"></div>
+        <div class="fill-item"><span class="num">8)</span> <b>Der Film war ‸ ziemlich langweilig.</b> (wie ich finde)<br><input type="text" class="blank-input inline full" data-ans="Der Film war, wie ich finde, ziemlich langweilig"></div>
+        <div class="fill-item"><span class="num">9)</span> <b>Mein Bruder ist ‸ einfach weggegangen.</b> (ohne etwas zu sagen)<br><input type="text" class="blank-input inline full" data-ans="Mein Bruder ist, ohne etwas zu sagen, einfach weggegangen"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub5-check">Prüfen</button>
+        <button class="btn secondary" id="ub5-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub5-score"></span>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">Muss, kann oder kein Komma?</h2>
+      <p class="lead">Подивись на місце ‸ у кожному реченні: кома там обов’язкова, можлива чи неможлива? Розклади картки по кошиках.</p>
+      <div class="card" id="ub6-sort"></div>
+    </section>
+
+    <section class="panel" id="panel-ub7">
+      <p class="section-label">Üb. 7</p>
+      <h2 class="panel-title">Alles zusammen: Sommer in Italien</h2>
+      <p class="lead">У тексті Лукаса немає жодної коми. Натисни на кожне слово, <b>після</b> якого кома обов’язкова. Необов’язкових ком у цьому тексті немає.</p>
+      <div class="card" id="ub7-text">
+        <p style="line-height:2.1;"><span class="tok" data-correct="false">Letzten</span> <span class="tok" data-correct="false">Sommer</span> <span class="tok" data-correct="false">ist</span> <span class="tok" data-correct="false">meine</span> <span class="tok" data-correct="false">Familie</span> <span class="tok" data-correct="false">nach</span> <span class="tok" data-correct="false">Italien</span> <span class="tok" data-correct="true">gefahren</span> <span class="tok" data-correct="false">weil</span> <span class="tok" data-correct="false">meine</span> <span class="tok" data-correct="false">Mutter</span> <span class="tok" data-correct="false">dort</span> <span class="tok" data-correct="false">Freunde</span> <span class="tok" data-correct="false">hat.</span> <span class="tok" data-correct="false">Wir</span> <span class="tok" data-correct="false">sind</span> <span class="tok" data-correct="false">nicht</span> <span class="tok" data-correct="false">mit</span> <span class="tok" data-correct="false">dem</span> <span class="tok" data-correct="true">Auto</span> <span class="tok" data-correct="false">sondern</span> <span class="tok" data-correct="false">mit</span> <span class="tok" data-correct="false">dem</span> <span class="tok" data-correct="false">Zug</span> <span class="tok" data-correct="false">gefahren.</span> <span class="tok" data-correct="false">Unser</span> <span class="tok" data-correct="true">Hotel</span> <span class="tok" data-correct="false">das</span> <span class="tok" data-correct="false">direkt</span> <span class="tok" data-correct="false">am</span> <span class="tok" data-correct="false">Meer</span> <span class="tok" data-correct="true">lag</span> <span class="tok" data-correct="false">war</span> <span class="tok" data-correct="true">klein</span> <span class="tok" data-correct="false">aber</span> <span class="tok" data-correct="false">sehr</span> <span class="tok" data-correct="false">schön.</span> <span class="tok" data-correct="false">Wir</span> <span class="tok" data-correct="false">haben</span> <span class="tok" data-correct="true">Pizza</span> <span class="tok" data-correct="false">Pasta</span> <span class="tok" data-correct="false">und</span> <span class="tok" data-correct="false">sehr</span> <span class="tok" data-correct="false">viel</span> <span class="tok" data-correct="false">Eis</span> <span class="tok" data-correct="false">gegessen.</span> <span class="tok" data-correct="false">Jeden</span> <span class="tok" data-correct="false">Morgen</span> <span class="tok" data-correct="false">bin</span> <span class="tok" data-correct="false">ich</span> <span class="tok" data-correct="false">früh</span> <span class="tok" data-correct="true">aufgestanden</span> <span class="tok" data-correct="false">um</span> <span class="tok" data-correct="false">am</span> <span class="tok" data-correct="false">Strand</span> <span class="tok" data-correct="false">zu</span> <span class="tok" data-correct="false">joggen.</span> <span class="tok" data-correct="false">Mein</span> <span class="tok" data-correct="false">Bruder</span> <span class="tok" data-correct="true">Leo</span> <span class="tok" data-correct="false">ein</span> <span class="tok" data-correct="false">echter</span> <span class="tok" data-correct="true">Langschläfer</span> <span class="tok" data-correct="false">ist</span> <span class="tok" data-correct="false">nie</span> <span class="tok" data-correct="false">mitgekommen.</span> <span class="tok" data-correct="false">Er</span> <span class="tok" data-correct="false">hat</span> <span class="tok" data-correct="false">lieber</span> <span class="tok" data-correct="true">geschlafen</span> <span class="tok" data-correct="false">statt</span> <span class="tok" data-correct="false">mit</span> <span class="tok" data-correct="false">mir</span> <span class="tok" data-correct="false">zu</span> <span class="tok" data-correct="false">laufen.</span> <span class="tok" data-correct="false">Als</span> <span class="tok" data-correct="false">wir</span> <span class="tok" data-correct="false">nach</span> <span class="tok" data-correct="false">Hause</span> <span class="tok" data-correct="true">fuhren</span> <span class="tok" data-correct="false">war</span> <span class="tok" data-correct="false">ich</span> <span class="tok" data-correct="false">ein</span> <span class="tok" data-correct="false">bisschen</span> <span class="tok" data-correct="false">traurig.</span> <span class="tok" data-correct="false">Ich</span> <span class="tok" data-correct="true">hoffe</span> <span class="tok" data-correct="false">dass</span> <span class="tok" data-correct="false">wir</span> <span class="tok" data-correct="false">nächstes</span> <span class="tok" data-correct="false">Jahr</span> <span class="tok" data-correct="false">wieder</span> <span class="tok" data-correct="false">hinfahren.</span></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub7-check">Prüfen</button>
+        <button class="btn secondary" id="ub7-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub7-score"></span>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das Wichtigste</p>
+        <p>Ein Komma steht immer zwischen Hauptsatz und Nebensatz, vor aber, denn, sondern und in Aufzählungen ohne und / oder. Infinitivgruppen mit um, ohne, statt bekommen immer ein Komma. Ein Einschub – Relativsatz, Apposition, Gruppe – steht zwischen zwei Kommas. Vor und / oder zwischen zwei Hauptsätzen und vor einfachen Infinitivgruppen kann das Komma fehlen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Кома обов’язкова між головним і підрядним реченням, перед <i>aber, denn, sondern</i> і в переліку без <i>und / oder</i>. Звороти з <i>um, ohne, statt … zu</i> відокремлюються завжди. Будь-яка вставка — підрядне, прикладка, група — береться у дві коми. Перед <i>und / oder</i> між двома повними реченнями і перед простою інфінітивною групою кому можна пропустити, а в переліку слів з <i>und / oder</i> та в порівнянні <i>größer als ich</i> коми немає ніколи.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Де це ще трапляється</p>
+        <div class="gram-related" id="gramRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <p class="lead" id="gramBest" style="font-size:14px;"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/grammar-data.js"></script>
+<script src="../../data/lessons-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/site.js"></script>
+<script>
+  const GRAM_ID = "kommaregeln";
+
+  // Üb. 1: квіз
+  buildQuiz('ub1-quiz', [
+    {q: "Warum steht hier ein Komma? — Ich bleibe heute zu Hause<b>,</b> weil ich krank bin.", opts: ["Hauptsatz + Nebensatz", "Aufzählung", "Apposition"], correct: "Hauptsatz + Nebensatz"},
+    {q: "Warum steht hier ein Komma? — Wir brauchen Brot<b>,</b> Milch und Käse.", opts: ["zwei Hauptsätze", "Aufzählung", "Infinitiv mit um … zu"], correct: "Aufzählung"},
+    {q: "Warum steht hier ein Komma? — Tom ist müde<b>,</b> trotzdem spielt er weiter.", opts: ["Hauptsatz + Nebensatz", "Aufzählung", "zwei Hauptsätze"], correct: "zwei Hauptsätze"},
+    {q: "Warum stehen hier zwei Kommas? — Frau Klein<b>,</b> unsere Mathelehrerin<b>,</b> ist heute krank.", opts: ["Apposition", "Relativsatz", "Aufzählung"], correct: "Apposition"},
+    {q: "Warum steht hier ein Komma? — Ich lerne jeden Tag<b>,</b> um die Prüfung zu bestehen.", opts: ["Hauptsatz + Nebensatz", "Apposition", "Infinitiv mit um … zu"], correct: "Infinitiv mit um … zu"},
+    {q: "Warum stehen hier zwei Kommas? — Das Handy<b>,</b> das ich gestern gekauft habe<b>,</b> ist schon kaputt.", opts: ["Aufzählung", "eingeschobener Relativsatz", "zwei Hauptsätze"], correct: "eingeschobener Relativsatz"},
+    {q: "Warum steht das zweite Komma? — Er sagt, dass er nicht kommt<b>,</b> weil er keine Zeit hat.", opts: ["Aufzählung", "Apposition", "zwischen zwei Nebensätzen"], correct: "zwischen zwei Nebensätzen"},
+    {q: "Warum steht hier ein Komma? — Die Kinder kamen nach Hause<b>,</b> völlig nass vom Regen.", opts: ["Partizip- / Adjektivgruppe hinten", "Apposition", "Hauptsatz + Nebensatz"], correct: "Partizip- / Adjektivgruppe hinten"},
+    {q: "Welcher Satz ist richtig?", opts: ["Ich kaufe Äpfel, und Birnen.", "Ich kaufe Äpfel und Birnen.", "Ich kaufe, Äpfel und Birnen."], correct: "Ich kaufe Äpfel und Birnen."},
+    {q: "Welcher Satz ist richtig?", opts: ["Er ist nicht dumm, sondern faul.", "Er ist nicht dumm sondern faul.", "Er ist, nicht dumm sondern faul."], correct: "Er ist nicht dumm, sondern faul."},
+    {q: "Welcher Satz ist richtig?", opts: ["Meine Schwester ist größer, als ich.", "Meine Schwester, ist größer als ich.", "Meine Schwester ist größer als ich."], correct: "Meine Schwester ist größer als ich."},
+    {q: "Wo darf das Komma fehlen?", opts: ["Ich gehe(,) ohne mich zu verabschieden.", "Ich freue mich(,) dass du kommst.", "Ich hoffe(,) dich bald zu sehen."], correct: "Ich hoffe(,) dich bald zu sehen."},
+    {q: "Wo darf das Komma fehlen?", opts: ["Es wurde dunkel(,) und wir gingen nach Hause.", "Es wurde dunkel(,) deshalb gingen wir nach Hause.", "Es wurde dunkel(,) aber wir blieben draußen."], correct: "Es wurde dunkel(,) und wir gingen nach Hause."}
+  ]);
+
+  // Üb. 2, 4, 5: пропуски й випадні списки
+  wireBlanks('ub2');
+  wireBlanks('ub4');
+  wireBlanks('ub5');
+
+  // Üb. 3 і Üb. 7: клікабельні токени (setTotal — за кількістю правильних)
+  ['ub3', 'ub7'].forEach(k => {
+    const box = k + '-text';
+    initTokenClicks(box);
+    setTotal(document.querySelectorAll('#' + box + ' .tok[data-correct="true"]').length);
+    document.getElementById(k + '-check').addEventListener('click', () => checkTokens(box, k + '-score', k));
+    document.getElementById(k + '-reset').addEventListener('click', () => resetTokens(box, k + '-score', k));
+  });
+
+  // Üb. 6: розсортуй по кошиках
+  buildSort('ub6-sort', {
+    buckets: ["Komma muss", "Komma kann", "kein Komma"],
+    items: [
+      {t: "Er ging‸ ohne zu grüßen.", b: "Komma muss"},
+      {t: "Ich hoffe‸ bald Urlaub zu machen.", b: "Komma kann"},
+      {t: "Ich kaufe Brot‸ und Butter.", b: "kein Komma"},
+      {t: "Es regnete‸ und wir blieben zu Hause.", b: "Komma kann"},
+      {t: "Sie lacht‸ weil der Film lustig ist.", b: "Komma muss"},
+      {t: "Das ist Tim‸ mein bester Freund.", b: "Komma muss"},
+      {t: "Wir spielen Fußball‸ oder Tennis.", b: "kein Komma"},
+      {t: "Vor Freude lachend‸ lief sie nach Hause.", b: "Komma kann"},
+      {t: "Ich habe keine Zeit‸ dir zu helfen.", b: "Komma muss"},
+      {t: "Er versucht‸ ruhig zu bleiben.", b: "Komma kann"},
+      {t: "Ich weiß nicht‸ ob er kommt.", b: "Komma muss"},
+      {t: "Hörst du Musik‸ oder liest du?", b: "Komma kann"},
+      {t: "Sie spricht sowohl Englisch‸ als auch Französisch.", b: "kein Komma"},
+      {t: "Ich denke daran‸ morgen früher aufzustehen.", b: "Komma muss"},
+      {t: "Mein Bruder ist größer‸ als ich.", b: "kein Komma"}
+    ]
+  });
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['✒️','📘','✏️','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  // ЗАВЖДИ останнім рядком
+  initGrammarPage(GRAM_ID);
+</script>
+</body>
+</html>
