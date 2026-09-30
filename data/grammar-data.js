@@ -266,7 +266,8 @@ const GRAMMAR = [
     opublikovano: 60, dyv: ["praepositionen-allgemein", "praep-akkusativ", "praep-dativ", "praep-genitiv", "legen-liegen", "artikel-gebrauch", "deklination-nomen", "personalpronomen", "verben-praepositionalobjekt", "adverbien-praeposition", "trennbare-verben", "zahlwoerter", "funktionsverbgefuege", "konjunktiv-2-gebrauch"] },
   { id: "praep-genitiv", rozdil: "praepositionen", knyha: 61,
     tema: "Präpositionen mit dem Genitiv", uk: "Прийменники з Genitiv",
-    pidrozdily: [] },
+    pidrozdily: ["Die Formen: des Weges, der Stadt, der Ferien", "Ohne Artikel: von + Dativ", "Zeit: während, innerhalb, außerhalb, binnen, anlässlich, zeit", "Ort: innerhalb, außerhalb, oberhalb, unterhalb, diesseits, jenseits", "Ort: abseits, beiderseits, inmitten, längs, unweit, seitens", "Grund: wegen, aufgrund, infolge, angesichts", "Grund und Quelle: halber, kraft, laut, zufolge, zugunsten", "wegen mit Dativ? meinetwegen, deinetwegen", "Gegengrund: trotz, ungeachtet", "Ersatz: statt, anstatt, anstelle", "Mittel: anhand, mithilfe, mittels, vermöge", "Zweck: zwecks, um … willen", "Präposition oder Nebensatz?", "Alle Präpositionen im Überblick"],
+    opublikovano: 61, dyv: ["praepositionen-allgemein", "praep-akkusativ", "praep-dativ", "wechselpraepositionen", "deklination-nomen", "n-deklination", "adjektivdeklination", "personalpronomen", "temporalsaetze", "kausalsaetze", "konzessivsaetze", "modalsaetze", "finalsaetze", "infinitiv-um-zu", "artikel-gebrauch"] },
 
   // ===== Пасив =====
   { id: "passiv", rozdil: "passiv", knyha: 19,
