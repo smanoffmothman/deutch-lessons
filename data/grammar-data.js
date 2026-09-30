@@ -336,5 +336,6 @@ const GRAMMAR = [
     opublikovano: 64, dyv: ["konjunktionen-position-null", "konjunktionen-position-eins", "nebensaetze", "relativsaetze", "infinitiv-um-zu", "verben-dass-infinitiv", "partizipialsaetze", "appositionen", "indirekte-fragesaetze", "temporalsaetze", "kausalsaetze", "konditionalsaetze", "konzessivsaetze", "konsekutivsaetze", "finalsaetze", "modalsaetze", "indirekte-rede"] },
   { id: "starke-verben", rozdil: "anhang", knyha: null,
     tema: "Liste der starken und unregelmäßigen Verben", uk: "Таблиця сильних і неправильних дієслів",
-    pidrozdily: [] }
+    pidrozdily: ["So liest du die Liste: vier Formen und der Gebrauch", "Die Spalte „Gebrauch“: N, D, A, Inf.-K.", "Ein Verb – viele Bedeutungen: Präfixe und Präpositionen", "Typische Vokalmuster: so lernst du leichter", "Liste A – E: backen … essen", "Liste F – G: fahren … greifen", "Liste H – M: haben … müssen", "Liste N – Sch: nehmen … schießen", "Liste Schl – Schw: schlafen … schwören", "Liste Se – St: sehen … streiten", "Liste T – Z: tragen … zwingen", "Mischverben und ganz unregelmäßige Verben", "Zwei Formen: backte oder buk?", "Stark oder schwach – mit anderer Bedeutung", "hat oder ist? Verben mit beiden Hilfsverben"],
+    opublikovano: 65, dyv: ["konjugation", "perfekt-plusquamperfekt", "trennbare-verben", "untrennbare-verben", "trennbar-untrennbar", "legen-liegen", "modalverben", "rektion-verben", "verben-praepositionalobjekt", "tempusformen", "passiv", "konjunktiv-2-formen"] }
 ];
