@@ -496,6 +496,18 @@ input.blank-input.inline.full{ display:block; width:100%; margin:6px 0 0; }
 .regel-block > h3{
   font-family:var(--serif); font-size:20px; margin:0 0 10px; color:var(--teal-deep);
 }
+/* Посилання в тексті (2026-09): звичайний <a href> без класу всередині
+   картки — напр. стрілка ↓ у таблиці Regel на інший підрозділ (#id).
+   Без цього правила браузер фарбує їх у синій/фіолетовий. Посилання з
+   класом (.gram-link, .gram-chip, зміст .regel-toc) мають свій стиль і
+   це правило їх не зачіпає. Inline-стилі для посилань не потрібні. */
+.panel .card a:not([class]){
+  color:var(--teal); font-weight:600;
+  text-decoration:underline; text-decoration-thickness:1.5px;
+  text-underline-offset:2px; text-decoration-color:rgba(31,92,86,.4);
+}
+.panel .card a:not([class]):hover{ color:var(--brick); text-decoration-color:currentColor; }
+.panel .card .gtable th a:not([class]){ color:#fff; text-decoration-color:rgba(255,255,255,.6); }
 /* "Merke" — коротке правило, яке варто запам'ятати дослівно */
 .merke{
   position:relative; background:var(--mustard-soft); border-radius:10px;
