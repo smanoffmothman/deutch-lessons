@@ -250,7 +250,8 @@ const GRAMMAR = [
   // ===== Прийменники =====
   { id: "praepositionen-allgemein", rozdil: "praepositionen", knyha: 57,
     tema: "Präpositionen: Allgemeine Regeln", uk: "Прийменники: загальні правила",
-    pidrozdily: [] },
+    pidrozdily: ["Den Kasus sieht man am Artikel", "Immer Akkusativ: bis, durch, entlang, für, gegen, ohne, um, wider", "Immer Dativ: aus, bei, mit, nach, seit, von, zu …", "Akkusativ oder Dativ: an, auf, hinter, in, neben, über, unter, vor, zwischen", "Wohin? – Richtung und Ziel: Akkusativ", "Wo? – ein fester Ort: Dativ", "Woher? – immer Dativ", "Präpositionen mit Genitiv", "Präposition statt Vorsilbe: mitkommen – mit uns kommen", "Präpositionen nach Verben und Adjektiven"],
+    opublikovano: 57, dyv: ["praep-akkusativ", "praep-dativ", "wechselpraepositionen", "praep-genitiv", "legen-liegen", "trennbare-verben", "verben-praepositionalobjekt", "adverbien-praeposition", "rektion-verben", "artikel-gebrauch", "deklination-nomen", "personalpronomen", "fragen"] },
   { id: "praep-akkusativ", rozdil: "praepositionen", knyha: 58,
     tema: "Präpositionen mit dem Akkusativ", uk: "Прийменники з Akkusativ",
     pidrozdily: ["bis", "durch", "entlang", "für", "gegen", "ohne", "um", "wider"] },
