@@ -138,7 +138,8 @@ const GRAMMAR = [
     opublikovano: 21, dyv: ["modalverben-subjektiv", "konjugation", "perfekt-plusquamperfekt", "modalverben", "passiv", "nebensaetze", "tempusformen", "konjunktiv-1-formen", "starke-verben"] },
   { id: "tempusformen", rozdil: "verb", knyha: 63,
     tema: "Gebrauch der Tempusformen", uk: "Вживання часів",
-    pidrozdily: ["Präsens und Perfekt", "Präteritum und Plusquamperfekt"] },
+    pidrozdily: ["Die vier Zeitformen: kurz wiederholt", "Präsens: jetzt, immer und allgemein gültig", "Präsens für die Zukunft: Morgen schreiben wir einen Test", "Präsens in Texten: direkte Rede, Inhaltsangabe, Rezension", "Historisches Präsens: Geschichte und spannende Momente", "Perfekt: Vergangenheit beim Sprechen", "Perfekt: das Ergebnis ist jetzt wichtig", "Perfekt vor Präsens: zwei Zeiten in einem Satz", "Präteritum: die Zeit des Erzählens", "Nachrichten und Berichte: erst Perfekt, dann Präteritum", "Erzählen im Alltag: vom Perfekt ins Präteritum", "war, hatte, konnte: Präteritum auch beim Sprechen", "Plusquamperfekt: noch früher als das Präteritum", "Plusquamperfekt vor Präteritum: zwei Zeiten in einem Satz", "Lange Rückblicke: zurück ins Präteritum", "Mündlich: Plusquamperfekt und dann Perfekt", "Alles auf einen Blick"],
+    opublikovano: 63, dyv: ["konjugation", "perfekt-plusquamperfekt", "modalverben", "futur", "temporalsaetze", "indirekte-rede", "trennbare-verben", "starke-verben"] },
 
   // ===== Керування дієслів =====
   { id: "rektion-verben", rozdil: "rektion", knyha: 14,
