@@ -332,7 +332,8 @@ const GRAMMAR = [
   // ===== Довідка =====
   { id: "kommaregeln", rozdil: "anhang", knyha: null,
     tema: "Die wichtigsten Kommaregeln", uk: "Основні правила вживання коми",
-    pidrozdily: ["Ein Komma wird gesetzt", "In Kommas eingeschlossen", "Kommas, die entfallen können"] },
+    pidrozdily: ["Komma muss: zwischen Hauptsätzen – aber, denn, sondern, deshalb …", "Komma muss: zwischen Hauptsatz und Nebensatz", "Komma muss: zwischen Nebensätzen", "Komma muss: bei Aufzählungen – aber nicht vor und / oder", "Komma muss: bei Infinitivgruppen mit um, ohne, statt …", "Partizipgruppen: vorn kann, hinten muss", "Zwei Kommas: eingeschobene Nebensätze und Relativsätze", "Zwei Kommas: Appositionen", "Zwei Kommas: eingeschobene Partizip- und Infinitivgruppen", "Komma kann: Infinitivgruppen ohne um, ohne, statt", "Komma kann: vor und / oder zwischen Hauptsätzen", "Alles auf einen Blick"],
+    opublikovano: 64, dyv: ["konjunktionen-position-null", "konjunktionen-position-eins", "nebensaetze", "relativsaetze", "infinitiv-um-zu", "verben-dass-infinitiv", "partizipialsaetze", "appositionen", "indirekte-fragesaetze", "temporalsaetze", "kausalsaetze", "konditionalsaetze", "konzessivsaetze", "konsekutivsaetze", "finalsaetze", "modalsaetze", "indirekte-rede"] },
   { id: "starke-verben", rozdil: "anhang", knyha: null,
     tema: "Liste der starken und unregelmäßigen Verben", uk: "Таблиця сильних і неправильних дієслів",
     pidrozdily: [] }
