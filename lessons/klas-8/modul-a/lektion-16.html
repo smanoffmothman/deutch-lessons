@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 16 · Modul A · Тематична контрольна робота</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 8'},
+    {label: 'Урок 16: Тематична контрольна робота'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 16 · MODUL A</span>
+        <h1>Kontrollarbeit: Lebensstil</h1>
+        <p class="sub">Тематична контрольна робота за Модуль A «Стиль життя»: лексика, граматика, читання й лист — усе, що ми вивчили за 15 уроків.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Perfekt</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Genitiv &amp; Vergleich</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · sich, man, Imperativ</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Satzbau</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Lesen</button>
+    <button class="tab-btn" data-tab="ub7">Üb. 7 · Schreiben</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== ПАНЕЛЬ: вступ ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Worum geht es heute?</h2>
+      <div class="card">
+        <p>Heute schreiben wir die Kontrollarbeit zum Modul A „Lebensstil“. Du zeigst, was du in den letzten Wochen gelernt hast: Wörter zu Erholung, Sport und gesunder Lebensweise, das Perfekt, Präpositionen mit Genitiv, den Superlativ, reflexive Verben, „man“ + Modalverb, den Imperativ und Sätze mit „weil“ und „wenn“. Am Ende liest du einen Forumsbeitrag und schreibst selbst eine E-Mail.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Сьогодні пишемо контрольну роботу за Модуль A «Стиль життя». Ти показуєш, чого навчився(-лась) за останні тижні: слова про відпочинок, спорт і здоровий спосіб життя, Perfekt, прийменники з Genitiv, найвищий ступінь порівняння, зворотні дієслова, «man» + модальне дієслово, наказовий спосіб і речення з «weil» та «wenn». Наприкінці читаєш допис на форумі й сам(а) пишеш лист.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Was wird geprüft?</p>
+        <table class="gtable">
+          <tr><th>Übung</th><th>Thema</th><th>Aus Lektion</th></tr>
+          <tr><td>Üb. 1</td><td>Wortschatz: Erholung, Sport, Gesundheit, Tagesablauf</td><td>3–15</td></tr>
+          <tr><td>Üb. 2</td><td>Perfekt mit haben / sein, trennbare Verben</td><td>2, 5, 15</td></tr>
+          <tr><td>Üb. 3</td><td>Präpositionen mit Genitiv, Superlativ, gern – lieber – am liebsten</td><td>1, 4, 7, 11</td></tr>
+          <tr><td>Üb. 4</td><td>Reflexive Verben, man + Modalverb, Imperativ, Uhrzeit</td><td>8, 10, 12, 13</td></tr>
+          <tr><td>Üb. 5</td><td>Satzbau: Perfekt, weil, wenn, während</td><td>12, 14, 15</td></tr>
+          <tr><td>Üb. 6</td><td>Leseverstehen: Richtig oder falsch?</td><td>Modul A</td></tr>
+          <tr><td>Üb. 7</td><td>Schreiben: E-Mail über deinen Lebensstil</td><td>Modul A</td></tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">So funktioniert die Kontrollarbeit</p>
+        <p>Arbeite allein und ohne Hefte. Nur dein erster Versuch zählt. Die Übungen 1–6 prüft der Computer, die E-Mail in Übung 7 bewertet dein Lehrer / deine Lehrerin.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Як працює контрольна</span>
+          Працюй самостійно, без зошитів і підручника. <b>Кожну відповідь можна дати лише один раз.</b> Щойно ти натиснув(-ла) варіант або «Prüfen», відповідь блокується: зелений — правильно, червоний — неправильно, змінити її вже не можна (правильна відповідь не показується). Порожні поля лишаються відкритими — їх можна заповнити й перевірити пізніше. Тому спершу подумай, а потім натискай.<br><br>
+          Вправи 1–6 перевіряє комп'ютер, лист у вправі 7 оцінює вчитель(-ка). Перевірка домашнього завдання — це розминка, вона <b>не входить</b> в оцінку. Таблицю переведення балів у оцінку знайдеш у вкладці «Fertig!». <b>Не натискай «Von vorn beginnen» і не оновлюй сторінку</b> до кінця роботи — усі відповіді зітруться.<br><br>
+          Орієнтовний час: Üb. 1–4 — приблизно по 4–5 хв, Üb. 5–6 — по 4 хв, Üb. 7 — 8–10 хв.
+        </div>
+      </div>
+
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Keine Panik! Lies jede Aufgabe genau – du kannst das. Viel Erfolg!</p>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: перевірка ДЗ (поле dz уроку 15) ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: <i>„Stell dir vor: Du warst eine Woche im Indianerlager in Niedersachsen. Schreib einen Post für deine Freunde in einem sozialen Netzwerk (6–8 Sätze) im Perfekt: Was hast du dort erlebt? Benutze mindestens drei Verben mit „sein“ (z. B. reiten, Kanu fahren, aufwachen) und zwei trennbare Verben (z. B. aufwachen, mitmachen, sich zudecken). Der letzte Satz ist deine Meinung mit „weil“: Wie findest du diese Erholungsart? Zeichne ein „Foto“ zu deinem Post (oder klebe eins ein) und schreib eine kurze Bildunterschrift. Unter den Post schreibst du zwei Kommentare von Freunden – zwei W-Fragen an dich (z. B. „Wo hast du geschlafen?“). Nächstes Mal beantworten wir die Fragen in Paaren.“</i><br><br>
+        <b>Крок 1 (2–3 хв, усно в парах):</b> обміняйтеся постами, поставте одне одному обидва W-питання з коментарів і дайте відповідь у Perfekt.<br>
+        <b>Крок 2:</b> перевір себе на пості Макса нижче — це така сама робота, як твоя. Обери допоміжне дієслово (haben чи sein) і впиши Partizip II дієслова в дужках.<br><br>
+        ℹ️ Це розминка перед контрольною: тут (і у Wörter-Check) можна виправляти помилки, і результат <b>не входить</b> в оцінку за контрольну.
+      </div>
+
+      <div class="card" id="dz-list" style="margin-top:16px;">
+        <p class="section-label" style="margin:0 0 8px;">Max' Post: Eine Woche im Indianerlager ⛺</p>
+        <div class="fill-item">
+          <span class="num">1)</span> Jeden Morgen
+          <select class="blank inline" data-ans="bin"><option value="">—</option><option>habe</option><option>hat</option><option>bin</option><option>ist</option></select>
+          ich um sechs Uhr
+          <input type="text" class="blank-input inline" data-ans="aufgewacht"> (aufwachen).
+        </div>
+        <div class="fill-item">
+          <span class="num">2)</span> Wir
+          <select class="blank inline" data-ans="sind"><option value="">—</option><option>haben</option><option>sind</option><option>hat</option><option>ist</option></select>
+          jeden Tag auf Pferden
+          <input type="text" class="blank-input inline" data-ans="geritten"> (reiten).
+        </div>
+        <div class="fill-item">
+          <span class="num">3)</span> Am Nachmittag
+          <select class="blank inline" data-ans="sind"><option value="">—</option><option>sind</option><option>haben</option><option>ist</option><option>hat</option></select>
+          wir Kanu
+          <input type="text" class="blank-input inline" data-ans="gefahren"> (fahren).
+        </div>
+        <div class="fill-item">
+          <span class="num">4)</span> Am Abend
+          <select class="blank inline" data-ans="habe"><option value="">—</option><option>bin</option><option>habe</option><option>ist</option><option>hat</option></select>
+          ich bei allen Spielen
+          <input type="text" class="blank-input inline" data-ans="mitgemacht"> (mitmachen).
+        </div>
+        <div class="fill-item">
+          <span class="num">5)</span> In der Nacht
+          <select class="blank inline" data-ans="habe"><option value="">—</option><option>habe</option><option>bin</option><option>hat</option><option>ist</option></select>
+          ich mich mit einem Fell
+          <input type="text" class="blank-input inline" data-ans="zugedeckt"> (sich zudecken).
+        </div>
+        <div class="fill-item">
+          <span class="num">6)</span> Ich finde diese Erholungsart super,
+          <select class="blank inline" data-ans="weil"><option value="">—</option><option>denn</option><option>weil</option><option>aber</option></select>
+          ich die Natur liebe.
+        </div>
+        <div class="fill-item">
+          <span class="num">7)</span> Kommentar von Lisa:
+          <select class="blank inline" data-ans="Wo"><option value="">—</option><option>Wann</option><option>Wie</option><option>Wo</option></select>
+          habt ihr geschlafen? — Max: In einem Tipi!
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="dz-check">Prüfen</button>
+        <button class="btn secondary" id="dz-reset">Zurücksetzen</button>
+        <span class="score-pill" id="dz-score"></span>
+      </div>
+
+      <div class="card" id="dz-vocab-wrap" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">Wörter-Check</p>
+        <p class="lead">Перевір слова з минулого уроку.</p>
+        <div id="dz-vocab"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: Wortschatz (квіз + сортування) ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1 · Wortschatz</p>
+      <h2 class="panel-title">Was passt?</h2>
+      <p class="lead">Teil A: Wähle das passende Wort.</p>
+      <div class="ua-note">
+        Обери слово, яке підходить за змістом. Після першого натискання питання блокується — змінити відповідь не можна.
+      </div>
+      <div class="card" style="margin-top:16px;">
+        <div id="ub1-quiz"></div>
+      </div>
+
+      <p class="lead">Teil B: Welche Sportart gehört wohin?</p>
+      <div class="ua-note">
+        Розсортуй види спорту по трьох групах: командний спорт, водний спорт, екстремальний спорт. Натисни картку, потім назву групи. Поки не натиснув(-ла) «Prüfen», картки можна переставляти; після перевірки розкладені картки блокуються.
+      </div>
+      <div class="card" style="margin-top:16px;">
+        <div id="ub1-sort"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 2: Perfekt ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2 · Grammatik</p>
+      <h2 class="panel-title">Was hast du in den Ferien gemacht?</h2>
+      <p class="lead">Wähle haben oder sein und schreib das Partizip II.</p>
+      <div class="ua-note">
+        У кожному реченні дві дії: (1) обери правильну форму допоміжного дієслова <i>haben</i> чи <i>sein</i>; (2) впиши Partizip II дієслова з дужок. Звертай увагу на відокремлювані дієслова та на дієслова на <i>-ieren</i> і з невідокремлюваними префіксами.<br>Після «Prüfen» заповнені поля блокуються; порожні можна заповнити й перевірити пізніше.
+      </div>
+      <div class="card" id="ub2-list" style="margin-top:16px;">
+        <div class="fill-item">
+          <span class="num">1)</span> Letzten Sommer
+          <select class="blank inline" data-ans="sind"><option value="">—</option><option>haben</option><option>hat</option><option>sind</option><option>ist</option></select>
+          wir an die Ostsee
+          <input type="text" class="blank-input inline" data-ans="gefahren"> (fahren).
+        </div>
+        <div class="fill-item">
+          <span class="num">2)</span> Ich
+          <select class="blank inline" data-ans="habe"><option value="">—</option><option>bin</option><option>habe</option><option>ist</option><option>hat</option></select>
+          dort viele Möwen
+          <input type="text" class="blank-input inline" data-ans="fotografiert"> (fotografieren).
+        </div>
+        <div class="fill-item">
+          <span class="num">3)</span> Mein Bruder
+          <select class="blank inline" data-ans="ist"><option value="">—</option><option>hat</option><option>ist</option><option>haben</option><option>sind</option></select>
+          jeden Morgen um sechs Uhr
+          <input type="text" class="blank-input inline" data-ans="aufgestanden"> (aufstehen).
+        </div>
+        <div class="fill-item">
+          <span class="num">4)</span> Wir
+          <select class="blank inline" data-ans="haben"><option value="">—</option><option>sind</option><option>ist</option><option>haben</option><option>hat</option></select>
+          drei Nächte in einem Zelt
+          <input type="text" class="blank-input inline" data-ans="übernachtet|uebernachtet"> (übernachten).
+        </div>
+        <div class="fill-item">
+          <span class="num">5)</span> Anna
+          <select class="blank inline" data-ans="ist"><option value="">—</option><option>ist</option><option>hat</option><option>sind</option><option>haben</option></select>
+          mit ihren Freunden in den Bergen
+          <input type="text" class="blank-input inline" data-ans="gewandert"> (wandern).
+        </div>
+        <div class="fill-item">
+          <span class="num">6)</span> Am Abend
+          <select class="blank inline" data-ans="haben"><option value="">—</option><option>haben</option><option>sind</option><option>hat</option><option>ist</option></select>
+          wir am Lagerfeuer
+          <input type="text" class="blank-input inline" data-ans="gesungen"> (singen).
+        </div>
+        <div class="fill-item">
+          <span class="num">7)</span> Paul
+          <select class="blank inline" data-ans="hat"><option value="">—</option><option>ist</option><option>sind</option><option>hat</option><option>haben</option></select>
+          beim Volleyballturnier
+          <input type="text" class="blank-input inline" data-ans="mitgespielt"> (mitspielen).
+        </div>
+        <div class="fill-item">
+          <span class="num">8)</span> Die Ferien
+          <select class="blank inline" data-ans="sind"><option value="">—</option><option>haben</option><option>sind</option><option>hat</option><option>ist</option></select>
+          leider sehr schnell
+          <input type="text" class="blank-input inline" data-ans="vergangen"> (vergehen).
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: Genitiv-Präpositionen, Superlativ, gern/lieber/am liebsten ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3 · Grammatik</p>
+      <h2 class="panel-title">Genitiv, Superlativ und „am liebsten“</h2>
+      <p class="lead">Wähle das richtige Wort oder schreib die richtige Form.</p>
+      <div class="ua-note">
+        У реченнях 1–5 — прийменники з Genitiv і артиклі після них (обери у списку). У реченнях 6–8 впиши найвищий ступінь прикметника з дужок (тільки саме слово, артикль або <i>am</i> уже стоять у реченні). У реченні 9 обери <i>gern / lieber / am liebsten</i>.<br>Після «Prüfen» заповнені поля блокуються; порожні можна заповнити й перевірити пізніше.
+      </div>
+      <div class="card" id="ub3-list" style="margin-top:16px;">
+        <div class="fill-item">
+          <span class="num">1)</span>
+          <select class="blank inline" data-ans="Während"><option value="">—</option><option>Trotz</option><option>Während</option><option>Unweit</option></select>
+          der Sommerferien bin ich jeden Tag im See geschwommen.
+        </div>
+        <div class="fill-item">
+          <span class="num">2)</span>
+          <select class="blank inline" data-ans="Wegen"><option value="">—</option><option>Wegen</option><option>Trotz</option><option>Innerhalb</option></select>
+          des schlechten Wetters sind wir zu Hause geblieben.
+        </div>
+        <div class="fill-item">
+          <span class="num">3)</span>
+          <select class="blank inline" data-ans="Trotz"><option value="">—</option><option>Wegen</option><option>Unweit</option><option>Trotz</option></select>
+          des Regens sind wir wandern gegangen.
+        </div>
+        <div class="fill-item">
+          <span class="num">4)</span> Unweit
+          <select class="blank inline" data-ans="des"><option value="">—</option><option>dem</option><option>den</option><option>des</option></select>
+          Waldes liegt ein schöner See.
+        </div>
+        <div class="fill-item">
+          <span class="num">5)</span> Innerhalb
+          <select class="blank inline" data-ans="einer"><option value="">—</option><option>einer</option><option>eine</option><option>einem</option></select>
+          Stunde waren wir auf dem Gipfel.
+        </div>
+        <div class="fill-item">
+          <span class="num">6)</span> Der Rhein ist der
+          <input type="text" class="blank-input inline" data-ans="längste|laengste"> Fluss in Deutschland. (lang)
+        </div>
+        <div class="fill-item">
+          <span class="num">7)</span> Die Zugspitze ist der
+          <input type="text" class="blank-input inline" data-ans="höchste|hoechste"> Berg Deutschlands. (hoch)
+        </div>
+        <div class="fill-item">
+          <span class="num">8)</span> Im Juli ist es bei uns am
+          <input type="text" class="blank-input inline" data-ans="wärmsten|waermsten">. (warm)
+        </div>
+        <div class="fill-item">
+          <span class="num">9)</span> Ich spiele gern Tennis,
+          <select class="blank inline" data-ans="lieber"><option value="">—</option><option>gern</option><option>lieber</option><option>am liebsten</option></select>
+          spiele ich Volleyball, aber
+          <select class="blank inline" data-ans="am liebsten"><option value="">—</option><option>am liebsten</option><option>lieber</option><option>gern</option></select>
+          fahre ich Rad.
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4: Reflexive Verben, man + Modalverb, Imperativ, Uhrzeit ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4 · Grammatik</p>
+      <h2 class="panel-title">Tagesablauf und gute Ratschläge</h2>
+      <p class="lead">Wähle das richtige Wort oder schreib die richtige Form.</p>
+      <div class="ua-note">
+        1–3: зворотний займенник (<i>mich / mir, uns / euch …</i>). 4–5: модальне дієслово після <i>man</i>. 6–8: впиши дієслово з дужок у наказовому способі для зазначеної особи (для <i>Sie</i> — разом із самим «Sie», напр. <i>kommen Sie</i>). 9–10: неофіційний час — подивись на годинник у дужках.<br>Після «Prüfen» заповнені поля блокуються; порожні можна заповнити й перевірити пізніше.
+      </div>
+      <div class="card" id="ub4-list" style="margin-top:16px;">
+        <div class="fill-item">
+          <span class="num">1)</span> Ich wasche
+          <select class="blank inline" data-ans="mich"><option value="">—</option><option>mir</option><option>mich</option><option>sich</option></select>
+          jeden Morgen mit kaltem Wasser.
+        </div>
+        <div class="fill-item">
+          <span class="num">2)</span> Nach dem Frühstück putze ich
+          <select class="blank inline" data-ans="mir"><option value="">—</option><option>mir</option><option>mich</option><option>sich</option></select>
+          die Zähne.
+        </div>
+        <div class="fill-item">
+          <span class="num">3)</span> Wir haben verschlafen und ziehen
+          <select class="blank inline" data-ans="uns"><option value="">—</option><option>euch</option><option>sich</option><option>uns</option></select>
+          ganz schnell an.
+        </div>
+        <div class="fill-item">
+          <span class="num">4)</span> Im Schwimmbad
+          <select class="blank inline" data-ans="darf"><option value="">—</option><option>muss</option><option>darf</option><option>will</option></select>
+          man nicht laufen – das ist verboten.
+        </div>
+        <div class="fill-item">
+          <span class="num">5)</span> Mein Rat: Um fit zu bleiben,
+          <select class="blank inline" data-ans="sollte"><option value="">—</option><option>darf</option><option>sollte</option><option>will</option></select>
+          man sich jeden Tag bewegen.
+        </div>
+        <div class="fill-item">
+          <span class="num">6)</span> Max,
+          <input type="text" class="blank-input inline" data-ans="trink"> mehr Wasser! (trinken – du)
+        </div>
+        <div class="fill-item">
+          <span class="num">7)</span> Kinder,
+          <input type="text" class="blank-input inline" data-ans="esst"> weniger Süßigkeiten! (essen – ihr)
+        </div>
+        <div class="fill-item">
+          <span class="num">8)</span> Herr Müller,
+          <input type="text" class="blank-input inline wide" data-ans="gehen Sie"> jeden Tag spazieren! (gehen – Sie)
+        </div>
+        <div class="fill-item">
+          <span class="num">9)</span> (7:15) Ich stehe um Viertel
+          <select class="blank inline" data-ans="nach"><option value="">—</option><option>vor</option><option>nach</option></select>
+          sieben auf.
+        </div>
+        <div class="fill-item">
+          <span class="num">10)</span> (6:30) Mein Vater steht schon um
+          <select class="blank inline" data-ans="halb sieben"><option value="">—</option><option>halb sechs</option><option>halb sieben</option><option>Viertel nach sechs</option></select>
+          auf.
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub4-check">Prüfen</button>
+        <span class="score-pill" id="ub4-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5: Satzbau (buildOrder) ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5 · Satzbau</p>
+      <h2 class="panel-title">Bilde Sätze</h2>
+      <p class="lead">Klicke die Wörter in der richtigen Reihenfolge an.</p>
+      <div class="ua-note">
+        Натискай картки по черзі, щоб скласти речення. Поки речення не складене повністю, поставлену картку можна повернути назад (натисни на неї ще раз). Щойно стоять усі картки — речення перевіряється й блокується. Пам'ятай про рамкову конструкцію в Perfekt, дієслово в кінці після <i>weil / wenn</i> і порядок «дієслово — підмет» після обставини на початку речення.
+      </div>
+      <div class="card" style="margin-top:16px;">
+        <div id="ub5-order"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 6: Lesen (Richtig / Falsch) ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6 · Leseverstehen</p>
+      <h2 class="panel-title">Lenas Forumsbeitrag</h2>
+      <p class="lead">Lies den Text. Sind die Aussagen richtig oder falsch?</p>
+      <div class="ua-note">
+        Прочитай допис Лени на форумі «Mein Lebensstil» і визнач, чи твердження правильні (Richtig) чи неправильні (Falsch). Текст можна перечитувати скільки завгодно, але відповідь на кожне твердження — лише одна, вона одразу блокується.
+      </div>
+
+      <div class="mail-window" style="margin-top:16px;">
+        <div class="mail-titlebar">Forum „Jung &amp; aktiv“ · Thema: Mein Lebensstil</div>
+        <div class="mail-fields">Von: <b>Lena_14</b> · Freiburg</div>
+        <div class="mail-body">
+          <p>Hallo zusammen! Ich heiße Lena, bin 14 Jahre alt und wohne in Freiburg. Mein Tag beginnt früh: Ich stehe um Viertel nach sechs auf, wasche mich und ziehe mich schnell an. Zum Frühstück esse ich meistens Müsli mit Obst – Süßigkeiten esse ich nur am Wochenende.</p>
+          <p>Dreimal pro Woche gehe ich nach der Schule zum Volleyballtraining. Volleyball ist ein Mannschaftssport, und der Teamgeist in unserer Mannschaft ist super! Im Winter laufe ich gern Ski, aber am liebsten schwimme ich im Sommer im See.</p>
+          <p>In den Sommerferien bin ich mit meiner Familie in die Alpen gefahren. Dort habe ich zum ersten Mal Rafting ausprobiert. Trotz des kalten Wassers hat es riesigen Spaß gemacht! Mein Bruder wollte sogar Bungeejumping machen, aber meine Eltern waren dagegen – sie finden das zu riskant. Ich habe ein bisschen Höhenangst, deshalb ist Fallschirmspringen nichts für mich.</p>
+          <p style="margin:0;">Mein Tipp: Bewegt euch jeden Tag, trinkt genug Wasser und geht nicht zu spät ins Bett! Man sollte mindestens acht Stunden schlafen.</p>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:20px;">
+        <div id="ub6-quiz"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 7: Schreiben (оцінює вчитель) ===== -->
+    <section class="panel" id="panel-ub7">
+      <p class="section-label">Üb. 7 · Schreiben</p>
+      <h2 class="panel-title">Antworte Lena!</h2>
+      <p class="lead">Schreib Lena eine E-Mail (8–10 Sätze) über deinen Lebensstil.</p>
+      <div class="card tinted-mustard">
+        <p style="margin:0 0 8px;"><b>In deiner E-Mail:</b></p>
+        <p style="margin:0;">
+          ✔ beschreibst du deinen Tagesablauf mit zwei Uhrzeiten und einem reflexiven Verb;<br>
+          ✔ erzählst du, welche Sportart du gern / lieber / am liebsten treibst;<br>
+          ✔ schreibst du zwei Sätze im Perfekt über deine letzten Ferien;<br>
+          ✔ benutzt du eine Präposition mit Genitiv (während, wegen, trotz …);<br>
+          ✔ sagst du deine Meinung zum Extremsport mit „weil“;<br>
+          ✔ gibst du Lena einen Tipp für eine gesunde Lebensweise (Imperativ oder „man sollte“).
+        </p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Напиши Лені лист на 8–10 речень про свій стиль життя. У листі: опиши свій розпорядок дня з двома позначеннями часу і одним зворотним дієсловом; розкажи, яким спортом ти займаєшся охоче / охочіше / найохочіше; два речення в Perfekt про свої останні канікули; один прийменник з Genitiv; твоя думка про екстремальний спорт з «weil»; порада Лені щодо здорового способу життя (Imperativ або «man sollte»).<br><br>
+          ⚠️ Вставляти текст у поле не можна — набирай сам(а). Текст нікуди не надсилається автоматично: коли закінчиш, перепиши його в зошит або покажи вчителеві (чи зроби знімок екрана). Цю вправу оцінює вчитель — <b>до 3 балів</b> (див. таблицю у вкладці «Fertig!»).
+        </div>
+      </div>
+      <div class="mail-window">
+        <div class="mail-titlebar">Neue Nachricht</div>
+        <div class="mail-fields">An: <b>Lena_14</b> · Betreff: Mein Lebensstil</div>
+        <div class="mail-body">
+          <div class="qa" style="margin:0;">
+            <label for="ub7-text">Liebe Lena, …</label>
+            <textarea id="ub7-text" rows="12" placeholder="Liebe Lena, vielen Dank für deinen Beitrag! …"></textarea>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ПРИКІНЦЕВА ПАНЕЛЬ ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Mach deine persönliche „Fehlerkarte“ zur Kontrollarbeit: Wähle drei Aufgaben aus verschiedenen Übungen, bei denen du einen Fehler gemacht hast oder unsicher warst. Schreib zu jeder Aufgabe: 1) deine Antwort, 2) die richtige Antwort, 3) die Regel in einem kurzen Satz mit Beispiel (z. B. „wegen + Genitiv: wegen des Regens“). Hattest du keine Fehler? Dann wähle die drei Aufgaben, die für dich am schwierigsten waren. Schreib außerdem eine eigene Quizfrage zum Wortschatz des Moduls „Lebensstil“ auf eine Karte: die Frage und drei Antworten (nur eine ist richtig). Nächstes Mal machen wir aus euren Karten ein Klassen-Quiz!</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Склади свою «картку помилок» до контрольної роботи: обери три завдання з різних вправ, у яких ти помилився(-лася) або вагався(-лася). До кожного завдання напиши: 1) свою відповідь, 2) правильну відповідь, 3) правило одним коротким реченням з прикладом (напр. «wegen + Genitiv: wegen des Regens»). Помилок не було? Тоді обери три завдання, які були для тебе найскладнішими. Крім того, напиши на картці власне питання-вікторину з лексики модуля «Стиль життя»: питання і три варіанти відповіді (правильний лише один). Наступного уроку зробимо з ваших карток класну вікторину!
+        </div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Deine Note</p>
+        <p>Hier siehst du dein Ergebnis für die Übungen 1–6 – in Prozent und in Punkten. Für die E-Mail (Üb. 7) gibt dein Lehrer / deine Lehrerin noch bis zu 3 Punkte.</p>
+        <div id="testResult"></div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Твоя оцінка</span>
+          Відсоток і бали за вправи 1–6 рахуються автоматично (максимум 9) — твій рядок у таблиці підсвічено. Невиконані завдання рахуються як неправильні. Перевірка ДЗ і Wörter-Check сюди не входять. До цього додаються бали вчителя за лист (максимум 3): <b>9 + 3 = 12 балів</b>.<br>
+          Лист оцінюється так: 3 — є всі 6 пунктів плану, помилки майже не заважають розумінню; 2 — є 4–5 пунктів або багато граматичних помилок; 1 — є 2–3 пункти, текст короткий; 0 — лист не написано.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Wörter zum Lernen</p>
+        <div class="chip-row" id="vocabChips"></div>
+      </div>
+
+      <div class="card" id="lessonGramWrap">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="lessonGram"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../data/glossary-data.js"></script>
+<script src="../../../data/lessons-data.js"></script>
+<script src="../../../data/grammar-data.js"></script>
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  // ===== Слова цього уроку у вкладці Fertig =====
+  const LEKTION_KLAS = "8", LEKTION_MODUL = "A", LEKTION_LEKTION = 16;
+  const LEKTION_PREV_LEKTION = 15;
+
+  // Контрольна робота: одна відповідь без виправлень, вкладка Hausaufgabe
+  // (розминка + Wörter-Check) не входить у результат. Див. STYLE-BRIEF.
+  enableTestMode();
+
+  (function renderLessonVocab(){
+    const box = document.getElementById('vocabChips');
+    if (!box || typeof GLOSSARY === 'undefined') return;
+    const words = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_LEKTION
+    );
+    if (words.length === 0){
+      box.innerHTML = '<p class="empty-note">Слова для цього уроку ще не додані в глосарій.</p>';
+      return;
+    }
+    box.innerHTML = words.map(w =>
+      '<span class="chip static">' + w.de + ' — ' + w.uk + '</span>'
+    ).join('');
+  })();
+
+  // ===== Граматика до цього уроку у вкладці Fertig (поле gram у lessons-data.js) =====
+  (function renderLessonGrammar(){
+    const wrap = document.getElementById('lessonGramWrap');
+    const box = document.getElementById('lessonGram');
+    if (!wrap || !box) return;
+    const hide = () => { wrap.style.display = 'none'; };
+    if (typeof LESSONS === 'undefined' || typeof GRAMMAR === 'undefined') return hide();
+    const me = LESSONS.find(l => l.klas === LEKTION_KLAS && l.modul === LEKTION_MODUL && l.lektion === LEKTION_LEKTION);
+    const topics = ((me && me.gram) || []).map(id => GRAMMAR.find(t => t.id === id)).filter(t => t && t.opublikovano > 0);
+    if (topics.length === 0) return hide();
+    const src = document.querySelector('script[src$="data/grammar-data.js"]').getAttribute('src');
+    const root = src.slice(0, src.length - 'data/grammar-data.js'.length);
+    box.innerHTML = topics.map(t =>
+      '<a class="gram-link" href="' + root + 'gramatyka/temy/' + t.id + '.html">'
+      + '<span class="k">' + t.uk + '</span>' + t.tema + '</a>'
+    ).join('');
+  })();
+
+  // ===== Wörter-Check у вкладці Hausaufgabe (слова ПОПЕРЕДНЬОГО уроку) =====
+  function guessPos(de){
+    var base = (de || '').replace(/\([^)]*\)/g, '').trim();
+    if(/^(der|die|das)(\/(der|die|das))?\s/.test(base)) return 'noun';
+    if(/^sich\s/.test(base)) return 'verb';
+    if(/^am\s/.test(base)) return 'other'; // "am liebsten", "am besten" — прислівникова найвища форма, не дієслово
+    if(/\(\+(Gen|Dat|Akk)\.?\)/.test(de)) return 'prep';
+    var words = base.split(/\s+/);
+    var last = words[words.length - 1];
+    if(/(en|ern|eln)$/.test(last) && last === last.toLowerCase()) return 'verb';
+    return 'other'; // прикметники / прислівники / сталі вирази
+  }
+
+  (function renderDzVocabCheck(){
+    const wrap = document.getElementById('dz-vocab-wrap');
+    const box = document.getElementById('dz-vocab');
+    if (!wrap || !box || typeof GLOSSARY === 'undefined') return;
+    if (!LEKTION_PREV_LEKTION){ wrap.style.display = 'none'; return; }
+
+    const prevWords = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_PREV_LEKTION
+    );
+    if (prevWords.length < 3){ wrap.style.display = 'none'; return; }
+
+    const pool = shuffleArray(prevWords).slice(0, 6);
+    const quizData = pool.map(w => {
+      const pos = guessPos(w.de);
+      let sameKind = GLOSSARY.filter(g => g.uk !== w.uk && guessPos(g.de) === pos);
+      if(sameKind.length < 2) sameKind = GLOSSARY.filter(g => g.uk !== w.uk);
+      const distractors = shuffleArray(sameKind).slice(0, 2).map(g => g.uk);
+      return { q: w.de, opts: [w.uk, ...distractors], correct: w.uk };
+    });
+    buildQuiz('dz-vocab', quizData);
+  })();
+
+  // Hausaufgabe: розминка-перевірка (пост Макса)
+  wireBlanks('dz');
+
+  // Üb. 1 · Teil A: квіз з лексики (позиції correct: 1,2,3,1,3,2,2,1)
+  const ub1Data = [
+    {q: "Wer Angst vor großer Höhe hat, hat …", opts: ["Höhenangst", "Nervenkitzel", "Langeweile"], correct: "Höhenangst"},
+    {q: "Fußball, Handball und Volleyball sind …", opts: ["Wassersportarten", "Mannschaftssportarten", "Extremsportarten"], correct: "Mannschaftssportarten"},
+    {q: "Jeden Tag viele Süßigkeiten essen ist für die Gesundheit …", opts: ["ausreichend", "regelmäßig", "schädlich"], correct: "schädlich"},
+    {q: "Nach einer anstrengenden Woche möchte ich mich am Wochenende gut …", opts: ["erholen", "ernähren", "bemühen"], correct: "erholen"},
+    {q: "Beim Bungeejumping sucht man das Abenteuer und den …", opts: ["Teamgeist", "Tagesablauf", "Nervenkitzel"], correct: "Nervenkitzel"},
+    {q: "Experten empfehlen: fünf Portionen Obst und … am Tag.", opts: ["Fastfood", "Gemüse", "Süßigkeiten"], correct: "Gemüse"},
+    {q: "Was du von morgens bis abends machst, ist dein …", opts: ["Lebensstil", "Tagesablauf", "Wanderweg"], correct: "Tagesablauf"},
+    {q: "Für Freiklettern und Rafting braucht man eine gute …", opts: ["Ausrüstung", "Anzeige", "Vollpension"], correct: "Ausrüstung"}
+  ];
+  buildQuiz('ub1-quiz', ub1Data);
+
+  // Üb. 1 · Teil B: розсортувати види спорту
+  buildSort('ub1-sort', {
+    buckets: ["Mannschaftssport", "Wassersport", "Extremsport"],
+    items: [
+      {t: "Handball", b: "Mannschaftssport"},
+      {t: "Eishockey", b: "Mannschaftssport"},
+      {t: "Volleyball", b: "Mannschaftssport"},
+      {t: "Rudern", b: "Wassersport"},
+      {t: "Kanu fahren", b: "Wassersport"},
+      {t: "Schwimmen", b: "Wassersport"},
+      {t: "Fallschirmspringen", b: "Extremsport"},
+      {t: "Bungeejumping", b: "Extremsport"},
+      {t: "Freiklettern", b: "Extremsport"}
+    ]
+  });
+
+  // Üb. 2–4: пропуски й випадні списки
+  wireBlanks('ub2');
+  wireBlanks('ub3');
+  wireBlanks('ub4');
+
+  // Üb. 5: склади речення
+  buildOrder('ub5-order', [
+    { words: ["Ich", "bin", "heute", "um sieben Uhr", "aufgestanden"], end: ".",
+      alt: ["Heute bin ich um sieben Uhr aufgestanden", "Um sieben Uhr bin ich heute aufgestanden"],
+      hint: "Perfekt з відокремлюваним дієсловом aufstehen" },
+    { words: ["Ich treibe gern Sport,", "weil", "das", "gesund", "ist"], end: ".",
+      hint: "Підрядне речення з weil" },
+    { words: ["Wenn", "man", "fit bleiben", "will,", "sollte", "man", "viel Obst", "essen"], end: ".",
+      hint: "Почни з «Wenn …»" },
+    { words: ["Während", "der Ferien", "bin", "ich", "oft", "geschwommen"], end: ".",
+      alt: ["Ich bin während der Ferien oft geschwommen"],
+      hint: "während + Genitiv, Perfekt" },
+    { words: ["Beim Rafting", "muss", "man", "einen Helm", "tragen"], end: ".",
+      alt: ["Man muss beim Rafting einen Helm tragen"],
+      hint: "man + Modalverb" },
+    { words: ["Nach dem Frühstück", "putze", "ich", "mir", "die Zähne"], end: ".",
+      alt: ["Ich putze mir nach dem Frühstück die Zähne"],
+      hint: "Зворотне дієслово з Dativ" }
+  ]);
+
+  // Üb. 6: Richtig / Falsch (позиції correct: 1,2,2,1,2,1,1,2 — порядок у opts чергується)
+  const ub6Data = [
+    {q: "Lena steht um 6:15 Uhr auf.", opts: ["Richtig", "Falsch"], correct: "Richtig"},
+    {q: "Lena isst jeden Tag Süßigkeiten.", opts: ["Richtig", "Falsch"], correct: "Falsch"},
+    {q: "Lena spielt in einer Mannschaft Volleyball.", opts: ["Falsch", "Richtig"], correct: "Richtig"},
+    {q: "Am liebsten läuft Lena Ski.", opts: ["Falsch", "Richtig"], correct: "Falsch"},
+    {q: "Wegen des kalten Wassers hat Lena kein Rafting gemacht.", opts: ["Richtig", "Falsch"], correct: "Falsch"},
+    {q: "Lenas Bruder hat in den Ferien Bungeejumping gemacht.", opts: ["Falsch", "Richtig"], correct: "Falsch"},
+    {q: "Fallschirmspringen ist nichts für Lena, weil sie Höhenangst hat.", opts: ["Richtig", "Falsch"], correct: "Richtig"},
+    {q: "Lena meint, man sollte acht Stunden oder mehr schlafen.", opts: ["Falsch", "Richtig"], correct: "Richtig"}
+  ];
+  buildQuiz('ub6-quiz', ub6Data);
+
+  // Фінальна панель зі штампами (іконки — на тему модуля «Стиль життя»)
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🏃','⛺','🥗','⏰','🏆']);
+    renderTestResult('testResult', { label: 'Üb. 1–6', extra: { label: 'E-Mail (Üb. 7)', max: 3 } });
+  });
+  document.getElementById('restart-all').addEventListener('click', () => {
+    if (confirm('Усі відповіді зітруться. Почати спочатку?')) location.reload();
+  });
+</script>
+</body>
+</html>
