@@ -555,5 +555,16 @@ const LESSONS = [
     nove: true,
     gram: ["infinitiv-um-zu", "konditionalsaetze"],
     dz: "Gestalte eine Anzeige (wie A–F in der Stunde) für einen Kochkurs, wo man ukrainische Spezialitäten kochen lernt. Deine Anzeige hat: einen Titel, den Namen des Kochs oder der Köchin, das Programm des Kurses (mindestens 4 ukrainische Gerichte, z. B. Borschtsch, Wareniki, Syrnyky, Kartoffelpuffer), wo und wie lange der Kurs ist und was er kostet. Schreib in deine Anzeige einen Satz mit „um … zu“ (z. B. „Um ukrainisch kochen zu lernen, besuchen Sie unseren Kurs!“) und einen Satz, der mit „Wenn …“ beginnt (z. B. „Wenn Sie Wareniki lieben, kommen Sie zu uns!“). Mal ein Bild dazu oder klebe ein Foto ein. Nächstes Mal hängen wir alle Anzeigen auf und jeder wählt einen Kurs."
+  },
+  {
+    klas: "8",
+    modul: "A",
+    lektion: 15,
+    nazva: "Ein interessantes Abenteuer: Ferien im Indianerlager",
+    opys: "Цікава пригода: аудіювання про канікули «гобі-індіанців» у Нижній Саксонії (картинки, факти, Richtig/Falsch з виправленням, Satzteile), Perfekt з haben / sein і відокремлювані дієслова (aufgewacht, mitgemacht, eingetreten), щоденник Яна, W-Fragen з ihr для рольового інтерв'ю та власна думка: Wie findest du diese Erholungsart? (weil / denn).",
+    file: "klas-8/modul-a/lektion-15.html",
+    nove: true,
+    gram: ["perfekt-plusquamperfekt", "fragen"],
+    dz: "Stell dir vor: Du warst eine Woche im Indianerlager in Niedersachsen. Schreib einen Post für deine Freunde in einem sozialen Netzwerk (6–8 Sätze) im Perfekt: Was hast du dort erlebt? Benutze mindestens drei Verben mit „sein“ (z. B. reiten, Kanu fahren, aufwachen) und zwei trennbare Verben (z. B. aufwachen, mitmachen, sich zudecken). Der letzte Satz ist deine Meinung mit „weil“: Wie findest du diese Erholungsart? Zeichne ein „Foto“ zu deinem Post (oder klebe eins ein) und schreib eine kurze Bildunterschrift. Unter den Post schreibst du zwei Kommentare von Freunden – zwei W-Fragen an dich (z. B. „Wo hast du geschlafen?“). Nächstes Mal beantworten wir die Fragen in Paaren."
   }
 ];

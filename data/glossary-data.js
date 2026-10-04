@@ -621,5 +621,17 @@ const GLOSSARY = [
   {de: "die Küche (die italienische Küche)", uk: "кухня як кулінарна традиція (італійська кухня)", klas: "7", modul: "B", lektion: 6},
   {de: "vegetarisch", uk: "вегетаріанський", klas: "7", modul: "B", lektion: 6},
   {de: "die Spezialität (die Spezialitäten)", uk: "фірмова (національна) страва, особливість кухні", klas: "7", modul: "B", lektion: 6},
-  {de: "nützlich", uk: "корисний", klas: "7", modul: "B", lektion: 6}
+  {de: "nützlich", uk: "корисний", klas: "7", modul: "B", lektion: 6},
+  {de: "das Abenteuer", uk: "пригода", klas: "8", modul: "A", lektion: 15},
+  {de: "der Hobby-Indianer (die Hobby-Indianer)", uk: "«гобі-індіанець» — людина, що захоплюється життям і культурою індіанців", klas: "8", modul: "A", lektion: 15},
+  {de: "das Indianerlager", uk: "індіанський табір", klas: "8", modul: "A", lektion: 15},
+  {de: "die Wiese", uk: "луг, галявина", klas: "8", modul: "A", lektion: 15},
+  {de: "am Rand (+Gen.)", uk: "на краю (am Rand eines Dorfes — на краю села)", klas: "8", modul: "A", lektion: 15},
+  {de: "Kanu fahren", uk: "плавати на каное", klas: "8", modul: "A", lektion: 15},
+  {de: "aufwachen (trennbar)", uk: "прокидатися", klas: "8", modul: "A", lektion: 15},
+  {de: "sich zudecken (mit +Dat.) (trennbar)", uk: "укриватися (чимось)", klas: "8", modul: "A", lektion: 15},
+  {de: "der Schmuck", uk: "прикраси", klas: "8", modul: "A", lektion: 15},
+  {de: "das Leder (aus Leder)", uk: "шкіра як матеріал (зі шкіри, шкіряний)", klas: "8", modul: "A", lektion: 15},
+  {de: "selbst gemacht", uk: "саморобний, зроблений власноруч", klas: "8", modul: "A", lektion: 15},
+  {de: "die Erholungsart", uk: "вид відпочинку", klas: "8", modul: "A", lektion: 15}
 ];
