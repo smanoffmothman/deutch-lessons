@@ -599,5 +599,16 @@ const LESSONS = [
     nove: true,
     gram: ["tempusformen", "starke-verben", "temporalsaetze", "zahlwoerter"],
     dz: "Stell dir vor: Es ist das Jahr 2080, und eine Zeitung schreibt über dein Leben. 1) Mach eine Tabelle wie Einsteins Lebenslauf in Üb. 1 (mindestens 8 Zeilen): links die Zeit (am …, ab …, von … bis …, mit … Jahren), rechts ein Nomen (z. B. Geburt in …, Abitur, Studium in …, Praktikum, Heirat, Umzug nach …, Auszeichnung mit dem …preis). 2) Schreib dazu einen kurzen Zeitungsartikel (8–10 Sätze) in der 3. Person im Präteritum (z. B. „Olena Petrenko ist am 5. Mai 2011 in Kyjiw geboren. Als sie 17 war, …“). Benutze mindestens zwei als-Sätze, ein trennbares Verb (z. B. umziehen, anfangen) und drei starke Verben (z. B. verließ, fand, wurde). Kein „in 2035“ – nur „2035“ oder „im Jahr 2035“! 3) Gib deinem Artikel eine Überschrift. Nächstes Mal lesen wir die Artikel ohne Namen vor und raten: Wessen Zukunft ist das?"
+  },
+  {
+    klas: "9",
+    modul: "A",
+    lektion: 17,
+    nazva: "Familienatmosphäre: Wiederholung",
+    opys: "Родинна атмосфера — урок-повторення: добрі стосунки й виклики в родині (сортування), ein gutes Verhältnis zu + Dativ з denn / weil, допис Б'янки на форумі й поради (wenn-речення, Komparativ, «Du kannst versuchen, … zu …»), аудіювання з запитаннями для анкети-Steckbrief, презентація людини в 3-й особі (er / sein, sie / ihr) і гра з кубиком «Mein Umfeld».",
+    file: "klas-9/modul-a/lektion-17.html",
+    nove: true,
+    gram: ["konjunktionen-position-null", "kausalsaetze", "konditionalsaetze", "komparation", "verben-dass-infinitiv", "possessivartikel"],
+    dz: "Familien-Interview: Wähle eine Person aus deiner Familie oder einen Verwandten (z. B. Oma, Opa, Tante, Onkel, Cousin) und stell ihr die zehn Fragen aus Üb. 5 (z. B. „Wann und wo bist du geboren?“, „Wann bist du zur Schule gegangen?“). 1) Füll für diese Person einen Steckbrief aus – alle neun Zeilen wie in Üb. 5. 2) Schreib dazu eine kurze Präsentation in der 3. Person (6–8 Sätze) wie in Üb. 6 – mit „er / sein“ oder „sie / ihr“ (z. B. „Meine Oma heißt Halyna. Sie ist am 2. Juni 1958 in Tschernihiw geboren. Ihre Eltern waren …“). 3) Der letzte Satz ist über eure Beziehung: „Ich habe ein … Verhältnis zu ihm / zu ihr, denn …“. Kleb ein Foto ein oder zeichne die Person. Nächstes Mal stellen wir die Personen in Gruppen vor – die anderen stellen dir zwei Zusatzfragen."
   }
 ];

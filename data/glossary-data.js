@@ -669,5 +669,17 @@ const GLOSSARY = [
   {de: "auszeichnen (trennbar)", uk: "нагороджувати, відзначати (jdn. mit dem Nobelpreis auszeichnen)", klas: "9", modul: "A", lektion: 16},
   {de: "emigrieren (die Emigration)", uk: "емігрувати (еміграція)", klas: "9", modul: "A", lektion: 16},
   {de: "zur Welt kommen", uk: "народитися, з'явитися на світ", klas: "9", modul: "A", lektion: 16},
-  {de: "der Tod (sterben)", uk: "смерть (помирати)", klas: "9", modul: "A", lektion: 16}
+  {de: "der Tod (sterben)", uk: "смерть (помирати)", klas: "9", modul: "A", lektion: 16},
+  {de: "die Herausforderung", uk: "виклик, складність (у стосунках)", klas: "9", modul: "A", lektion: 17},
+  {de: "das Verständnis (Verständnis füreinander haben)", uk: "розуміння (розуміти одне одного)", klas: "9", modul: "A", lektion: 17},
+  {de: "der Ärger (Ärger haben mit +Dat.)", uk: "неприємності, конфлікт (мати неприємності з кимось)", klas: "9", modul: "A", lektion: 17},
+  {de: "der Rat (um Rat bitten)", uk: "порада (просити поради)", klas: "9", modul: "A", lektion: 17},
+  {de: "Rücksicht nehmen (auf +Akk.)", uk: "зважати (на когось), бути уважним до інших", klas: "9", modul: "A", lektion: 17},
+  {de: "das Umfeld", uk: "оточення (люди навколо тебе)", klas: "9", modul: "A", lektion: 17},
+  {de: "das Einzelkind", uk: "єдина дитина в сім'ї", klas: "9", modul: "A", lektion: 17},
+  {de: "geduldig", uk: "терплячий", klas: "9", modul: "A", lektion: 17},
+  {de: "wütend", uk: "розлючений, лютий", klas: "9", modul: "A", lektion: 17},
+  {de: "ständig", uk: "постійно", klas: "9", modul: "A", lektion: 17},
+  {de: "zerreißen (zerriss, hat zerrissen)", uk: "розірвати, порвати", klas: "9", modul: "A", lektion: 17},
+  {de: "schaden (+Dat.)", uk: "шкодити (Das schadet der Gesundheit.)", klas: "9", modul: "A", lektion: 17}
 ];
