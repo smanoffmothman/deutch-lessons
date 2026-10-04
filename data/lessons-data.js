@@ -544,5 +544,16 @@ const LESSONS = [
     nove: true,
     gram: ["infinitiv-um-zu", "wechselpraepositionen"],
     dz: "1) Schreib zwei Rätsel über ukrainische Spezialitäten (wie in Üb. 5, je 3–4 Sätze) – aber nenne den Namen des Gerichts nicht! Was für ein Gericht ist das (eine Suppe, ein Gemüsegericht, ein Fleischgericht, eine Süßspeise …)? Was braucht man dafür? Wie macht man es? Benutze in jedem Rätsel mindestens zwei Verben aus der Stunde (z. B. schälen, reiben, schneiden, würzen, braten, kochen) und schreib die Lösung mit Artikel auf die Rückseite. Nächstes Mal raten die anderen! 2) Schreib eine Rezeptkarte für unser „Klassen-Kochbuch“: Name des Gerichts, Zutaten für eine Portion mit Mengenangaben (z. B. zwei Esslöffel Mehl, eine Zwiebel) und 5 Schritte im Rezeptstil – mit dem Infinitiv am Ende (z. B. „Zuerst Kartoffeln schälen und reiben.“). Mindestens ein Schritt enthält „um … zu“ (z. B. „Eine Küchenmaschine benutzen, um die Zwiebeln zu zerkleinern.“)."
+    },
+  {
+    klas: "7",
+    modul: "B",
+    lektion: 6,
+    nazva: "Kochen lernen: Kochkurse",
+    opys: "Як можна навчитися готувати: 8 способів (einen Kochkurs besuchen, Rezepte sammeln, sich eine Kochshow ansehen…), мета з um … zu і умова з wenn (Um besser kochen zu lernen, kann man … / Wenn man … will, kann man …), оголошення про кулінарні курси, книжки й шоу (зіставлення з ситуаціями, Richtig/Falsch) і обговорення: Welche Anzeige findest du interessant?",
+    file: "klas-7/modul-b/lektion-6.html",
+    nove: true,
+    gram: ["infinitiv-um-zu", "konditionalsaetze"],
+    dz: "Gestalte eine Anzeige (wie A–F in der Stunde) für einen Kochkurs, wo man ukrainische Spezialitäten kochen lernt. Deine Anzeige hat: einen Titel, den Namen des Kochs oder der Köchin, das Programm des Kurses (mindestens 4 ukrainische Gerichte, z. B. Borschtsch, Wareniki, Syrnyky, Kartoffelpuffer), wo und wie lange der Kurs ist und was er kostet. Schreib in deine Anzeige einen Satz mit „um … zu“ (z. B. „Um ukrainisch kochen zu lernen, besuchen Sie unseren Kurs!“) und einen Satz, der mit „Wenn …“ beginnt (z. B. „Wenn Sie Wareniki lieben, kommen Sie zu uns!“). Mal ein Bild dazu oder klebe ein Foto ein. Nächstes Mal hängen wir alle Anzeigen auf und jeder wählt einen Kurs."
   }
 ];

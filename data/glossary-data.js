@@ -609,5 +609,17 @@ const GLOSSARY = [
   {de: "das Mehl", uk: "борошно", klas: "7", modul: "B", lektion: 5},
   {de: "die Zwiebel (die Zwiebeln)", uk: "цибуля", klas: "7", modul: "B", lektion: 5},
   {de: "goldbraun", uk: "золотисто-коричневий, рум'яний", klas: "7", modul: "B", lektion: 5},
-  {de: "um … zu (+ Infinitiv)", uk: "щоб, для того щоб (мета; zu + інфінітив — у кінці речення)", klas: "7", modul: "B", lektion: 5}
+  {de: "um … zu (+ Infinitiv)", uk: "щоб, для того щоб (мета; zu + інфінітив — у кінці речення)", klas: "7", modul: "B", lektion: 5},
+  {de: "der Kochkurs (die Kochkurse)", uk: "кулінарні курси", klas: "7", modul: "B", lektion: 6},
+  {de: "das Kochbuch (die Kochbücher)", uk: "кулінарна книжка", klas: "7", modul: "B", lektion: 6},
+  {de: "die Kochshow (die Kochshows)", uk: "кулінарне шоу", klas: "7", modul: "B", lektion: 6},
+  {de: "die Kochlehre (eine Kochlehre machen)", uk: "навчання на кухаря (вчитися на кухаря)", klas: "7", modul: "B", lektion: 6},
+  {de: "der Koch / die Köchin", uk: "кухар / кухарка", klas: "7", modul: "B", lektion: 6},
+  {de: "der Chefkoch (die Chefköche)", uk: "шеф-кухар", klas: "7", modul: "B", lektion: 6},
+  {de: "sammeln (Rezepte sammeln)", uk: "збирати (збирати рецепти)", klas: "7", modul: "B", lektion: 6},
+  {de: "experimentieren (mit Rezepten)", uk: "експериментувати (з рецептами)", klas: "7", modul: "B", lektion: 6},
+  {de: "die Küche (die italienische Küche)", uk: "кухня як кулінарна традиція (італійська кухня)", klas: "7", modul: "B", lektion: 6},
+  {de: "vegetarisch", uk: "вегетаріанський", klas: "7", modul: "B", lektion: 6},
+  {de: "die Spezialität (die Spezialitäten)", uk: "фірмова (національна) страва, особливість кухні", klas: "7", modul: "B", lektion: 6},
+  {de: "nützlich", uk: "корисний", klas: "7", modul: "B", lektion: 6}
 ];
