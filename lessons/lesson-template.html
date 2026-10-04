@@ -209,6 +209,11 @@
   const LEKTION_KLAS = "...", LEKTION_MODUL = "...", LEKTION_LEKTION = 0; // TODO: виставити під конкретний урок
   const LEKTION_PREV_LEKTION = 0; // TODO: номер ПОПЕРЕДНЬОГО уроку цього ж модуля; 0, якщо це урок №1 модуля (блок Wörter-Check тоді сам ховається)
 
+  // ЛИШЕ ДЛЯ КОНТРОЛЬНИХ РОБІТ — розкоментуй (саме тут, до будь-яких вправ):
+  // одна відповідь без виправлень, вкладка Hausaufgabe не входить у результат.
+  // Деталі — STYLE-BRIEF, розділ "Контрольні роботи".
+  // enableTestMode();
+
   (function renderLessonVocab(){
     const box = document.getElementById('vocabChips');
     if (!box || typeof GLOSSARY === 'undefined') return;
@@ -314,6 +319,9 @@
   // Фінальна панель зі штампами (іконки — на тему модуля)
   document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
     renderEndStamps('stampRow', 'finalScoreText', ['🏖️','⛰️','🗺️','✉️']);
+    // ЛИШЕ ДЛЯ КОНТРОЛЬНИХ: відсоток + бали + таблиця шкали (у Fertig! потрібен
+    // <div id="testResult"></div> усередині картки). Див. STYLE-BRIEF.
+    // renderTestResult('testResult', { label: 'Üb. 1–6', extra: { label: 'E-Mail (Üb. 7)', max: 3 } });
   });
   document.getElementById('restart-all').addEventListener('click', () => location.reload());
 </script>
