@@ -588,5 +588,16 @@ const LESSONS = [
     nove: true,
     gram: ["possessivartikel", "fragen", "verben-praepositionalobjekt"],
     dz: "1) Mach ein Interview mit einem Freund, einer Freundin oder einem Familienmitglied über seinen / ihren besten Freund oder seine / ihre beste Freundin. Stell mindestens fünf Fragen aus Üb. 5 (z. B. „Wie heißt dein Freund?“, „Seit wann seid ihr befreundet?“, „Wofür interessiert er sich?“) und schreib die Antworten in der 3. Person auf – mit „sein“ oder „ihr“ (z. B. „Ihr Freund heißt Taras. Sie sind seit drei Jahren befreundet. Er interessiert sich für Fußball.“). 2) Wähle ein Sprichwort über Freundschaft aus der Stunde, schreib es schön auf eine Karte, mal ein Bild dazu und schreib darunter das ukrainische Äquivalent. Nächstes Mal stellen wir die Interviews vor und machen aus euren Karten eine „Freundschaftswand“."
+  },
+  {
+    klas: "9",
+    modul: "A",
+    lektion: 16,
+    nazva: "Meine Biografie: Albert Einstein",
+    opys: "Біографія Альберта Ейнштейна: аудіювання з доповненням таблиці-життєпису й питаннями на деталі, Präteritum слабких і сильних дієслів з тексту (zog … um / als … umzog), дати в біографії (am / im / ab / von … bis / mit … Jahren, «im Jahr 1905», а не «in 1905»), роки словами та розповідь про життя вченого за таблицею.",
+    file: "klas-9/modul-a/lektion-16.html",
+    nove: true,
+    gram: ["tempusformen", "starke-verben", "temporalsaetze", "zahlwoerter"],
+    dz: "Stell dir vor: Es ist das Jahr 2080, und eine Zeitung schreibt über dein Leben. 1) Mach eine Tabelle wie Einsteins Lebenslauf in Üb. 1 (mindestens 8 Zeilen): links die Zeit (am …, ab …, von … bis …, mit … Jahren), rechts ein Nomen (z. B. Geburt in …, Abitur, Studium in …, Praktikum, Heirat, Umzug nach …, Auszeichnung mit dem …preis). 2) Schreib dazu einen kurzen Zeitungsartikel (8–10 Sätze) in der 3. Person im Präteritum (z. B. „Olena Petrenko ist am 5. Mai 2011 in Kyjiw geboren. Als sie 17 war, …“). Benutze mindestens zwei als-Sätze, ein trennbares Verb (z. B. umziehen, anfangen) und drei starke Verben (z. B. verließ, fand, wurde). Kein „in 2035“ – nur „2035“ oder „im Jahr 2035“! 3) Gib deinem Artikel eine Überschrift. Nächstes Mal lesen wir die Artikel ohne Namen vor und raten: Wessen Zukunft ist das?"
   }
 ];

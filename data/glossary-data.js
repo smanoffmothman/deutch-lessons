@@ -657,5 +657,17 @@ const GLOSSARY = [
   {de: "intelligent", uk: "розумний, кмітливий", klas: "8", modul: "B", lektion: 1},
   {de: "einander helfen", uk: "допомагати одне одному", klas: "8", modul: "B", lektion: 1},
   {de: "das Interesse (die Interessen)", uk: "інтерес, захоплення", klas: "8", modul: "B", lektion: 1},
-  {de: "die AG (die Arbeitsgemeinschaft)", uk: "гурток (у школі)", klas: "8", modul: "B", lektion: 1}
+  {de: "die AG (die Arbeitsgemeinschaft)", uk: "гурток (у школі)", klas: "8", modul: "B", lektion: 1},
+  {de: "die Volksschule", uk: "народна школа (стара назва початкової школи)", klas: "9", modul: "A", lektion: 16},
+  {de: "mittelmäßig", uk: "посередній, середній (mittelmäßiger Schüler)", klas: "9", modul: "A", lektion: 16},
+  {de: "die Naturwissenschaften (Pl.)", uk: "природничі науки", klas: "9", modul: "A", lektion: 16},
+  {de: "das Patentamt", uk: "патентне бюро (відомство)", klas: "9", modul: "A", lektion: 16},
+  {de: "veröffentlichen (die Veröffentlichung)", uk: "публікувати, оприлюднювати (публікація)", klas: "9", modul: "A", lektion: 16},
+  {de: "der Wissenschaftler", uk: "науковець, учений", klas: "9", modul: "A", lektion: 16},
+  {de: "die Relativitätstheorie", uk: "теорія відносності", klas: "9", modul: "A", lektion: 16},
+  {de: "weltberühmt", uk: "всесвітньо відомий", klas: "9", modul: "A", lektion: 16},
+  {de: "auszeichnen (trennbar)", uk: "нагороджувати, відзначати (jdn. mit dem Nobelpreis auszeichnen)", klas: "9", modul: "A", lektion: 16},
+  {de: "emigrieren (die Emigration)", uk: "емігрувати (еміграція)", klas: "9", modul: "A", lektion: 16},
+  {de: "zur Welt kommen", uk: "народитися, з'явитися на світ", klas: "9", modul: "A", lektion: 16},
+  {de: "der Tod (sterben)", uk: "смерть (помирати)", klas: "9", modul: "A", lektion: 16}
 ];
