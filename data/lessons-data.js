@@ -533,5 +533,16 @@ const LESSONS = [
     nove: true,
     gram: ["nebensaetze", "konditionalsaetze", "temporalsaetze"],
     dz: "1) Fehlersuche: Im Text sind 6 Fehler (Artikel oder Wortfolge). Finde sie und schreib den Text richtig ins Heft: „In unserer Küche gibt es viele Geräte. Das Kühlschrank ist groß und weiß. Meine Mutter benutzt den Herd, wenn sie kocht eine Suppe. Die Kaffeemaschine braucht mein Vater, wenn er ist am Morgen müde. Der Mikrowelle benutzen wir, wenn wir das Essen schnell aufwärmen wollen. Wenn ich Saft trinken will, ich benutze die Saftpresse. Die Küchenmaschine ist sehr praktisch, wenn man will einen Kuchen backen. Den Fleischwolf brauchen wir selten.“ 2) Mach ein Mini-Interview mit einem Familienmitglied: Welche Küchengeräte benutzt ihr zu Hause und wann? Schreib 4 Sätze mit „wenn“ (z. B. „Meine Oma benutzt den Mixer, wenn sie einen Kuchen backen will.“). Mindestens ein Satz beginnt mit „Wenn …“."
+  },
+  {
+    klas: "7",
+    modul: "B",
+    lektion: 5,
+    nazva: "Aus dem Kochbuch",
+    opys: "Кухонні прилади в діалогах (einen / eine / ein, keinen / keine / kein), дієслова приготування з прийменниками (in einer Pfanne braten, durch den Fleischwolf drehen, mithilfe einer Raspel reiben), аудіорецепт дерунів із пропусками, мова рецептів (Infinitiv-Stil) і um … zu + Infinitiv та загадки про українські страви.",
+    file: "klas-7/modul-b/lektion-5.html",
+    nove: true,
+    gram: ["infinitiv-um-zu", "wechselpraepositionen"],
+    dz: "1) Schreib zwei Rätsel über ukrainische Spezialitäten (wie in Üb. 5, je 3–4 Sätze) – aber nenne den Namen des Gerichts nicht! Was für ein Gericht ist das (eine Suppe, ein Gemüsegericht, ein Fleischgericht, eine Süßspeise …)? Was braucht man dafür? Wie macht man es? Benutze in jedem Rätsel mindestens zwei Verben aus der Stunde (z. B. schälen, reiben, schneiden, würzen, braten, kochen) und schreib die Lösung mit Artikel auf die Rückseite. Nächstes Mal raten die anderen! 2) Schreib eine Rezeptkarte für unser „Klassen-Kochbuch“: Name des Gerichts, Zutaten für eine Portion mit Mengenangaben (z. B. zwei Esslöffel Mehl, eine Zwiebel) und 5 Schritte im Rezeptstil – mit dem Infinitiv am Ende (z. B. „Zuerst Kartoffeln schälen und reiben.“). Mindestens ein Schritt enthält „um … zu“ (z. B. „Eine Küchenmaschine benutzen, um die Zwiebeln zu zerkleinern.“)."
   }
 ];

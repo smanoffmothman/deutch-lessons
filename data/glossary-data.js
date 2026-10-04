@@ -597,5 +597,17 @@ const GLOSSARY = [
   {de: "das Küchengerät (die Küchengeräte)", uk: "кухонний прилад", klas: "7", modul: "B", lektion: 4},
   {de: "aufwärmen (trennbar)", uk: "розігрівати (їжу)", klas: "7", modul: "B", lektion: 4},
   {de: "zerkleinern", uk: "подрібнювати", klas: "7", modul: "B", lektion: 4},
-  {de: "wenn (…, wenn man Saft trinken will.)", uk: "коли, якщо (сполучник; дієслово — в кінці речення)", klas: "7", modul: "B", lektion: 4}
+  {de: "wenn (…, wenn man Saft trinken will.)", uk: "коли, якщо (сполучник; дієслово — в кінці речення)", klas: "7", modul: "B", lektion: 4},
+  {de: "würzen", uk: "приправляти, присмачувати (сіллю, перцем, спеціями)", klas: "7", modul: "B", lektion: 5},
+  {de: "reiben (er reibt)", uk: "терти (на тертці)", klas: "7", modul: "B", lektion: 5},
+  {de: "drehen (durch den Fleischwolf drehen)", uk: "крутити; прокручувати (через м'ясорубку)", klas: "7", modul: "B", lektion: 5},
+  {de: "aufbewahren (trennbar)", uk: "зберігати (продукти)", klas: "7", modul: "B", lektion: 5},
+  {de: "die Raspel (die Raspeln)", uk: "тертка", klas: "7", modul: "B", lektion: 5},
+  {de: "der Esslöffel (die Esslöffel)", uk: "столова ложка", klas: "7", modul: "B", lektion: 5},
+  {de: "der Kartoffelpuffer (die Kartoffelpuffer)", uk: "дерун, картопляна оладка", klas: "7", modul: "B", lektion: 5},
+  {de: "die saure Sahne", uk: "сметана", klas: "7", modul: "B", lektion: 5},
+  {de: "das Mehl", uk: "борошно", klas: "7", modul: "B", lektion: 5},
+  {de: "die Zwiebel (die Zwiebeln)", uk: "цибуля", klas: "7", modul: "B", lektion: 5},
+  {de: "goldbraun", uk: "золотисто-коричневий, рум'яний", klas: "7", modul: "B", lektion: 5},
+  {de: "um … zu (+ Infinitiv)", uk: "щоб, для того щоб (мета; zu + інфінітив — у кінці речення)", klas: "7", modul: "B", lektion: 5}
 ];
