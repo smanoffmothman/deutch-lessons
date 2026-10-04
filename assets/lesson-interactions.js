@@ -118,6 +118,54 @@ function shuffleArray(arr){
   return a;
 }
 
+/* ---------- Режим контрольної роботи (з 2026-10) ----------
+   Звичайний урок = навчання: після неправильної відповіді можна шукати
+   правильну далі (зараховується лише перша спроба). Для контрольної цього
+   замало — учень бачить червоне й виправляє, тож у роботі лишаються
+   "підправлені" відповіді. Тому для контрольних є режим, який вмикається
+   ОДНИМ рядком у скрипті уроку:
+
+     enableTestMode();                    // вкладка Hausaufgabe — не в оцінку
+     enableTestMode({exclude: ['dz']});   // те саме явно
+     enableTestMode({exclude: []});       // рахувати всі вкладки
+
+   ВАЖЛИВО: виклик стоїть НА ПОЧАТКУ скрипту уроку — одразу після констант
+   LEKTION_*, ДО renderDzVocabCheck і будь-яких buildQuiz/wireBlanks/...
+   (функції дивляться на режим у момент побудови вправи).
+
+   Що змінюється в усіх вправах, що НЕ у виключених вкладках:
+   - buildQuiz: після першого ж натискання питання закривається; при
+     неправильній відповіді — "Leider falsch ✗", правильна не показується;
+   - checkBlanks / wireBlanks: після "Prüfen" заповнені поля й списки
+     блокуються, порожні лишаються відкритими (можна дописати й перевірити
+     пізніше); кнопка Zurücksetzen ховається, resetBlanks нічого не робить;
+   - buildSort: розкладені й перевірені картки блокуються, Zurücksetzen
+     сховано (поки не натиснуто Prüfen, картки можна переставляти);
+   - buildOrder: щойно речення складене повністю — воно закрите (до цього
+     картки можна повертати);
+   - токени: checkTokens і так блокує після перевірки; resetTokens не діє.
+   Виключені вкладки (типово Hausaufgabe з Wörter-Check) працюють як у
+   звичайному уроці, але НЕ додаються до лічильника: літак угорі й
+   "X von Y" у renderEndStamps показують лише результат контрольної.
+   Для виключених вкладок використовуй функції, що рахують самі (buildQuiz,
+   wireBlanks, buildOrder, buildSort) — ручний setTotal() там зарахувався б.
+
+   Обмеження (чесно): перезавантаження сторінки стирає все, і учень може
+   почати заново. На статичному сайті без логіну це не закрити. */
+const testMode = {on: false, exclude: []};
+function enableTestMode(opts){
+  testMode.on = true;
+  testMode.exclude = ((opts && opts.exclude) || ['dz']).map(t => 'panel-' + t);
+}
+// чи йде вправа в цьому контейнері в загальний результат
+function isScored(containerId){
+  if(!testMode.on) return true;
+  const el = document.getElementById(containerId);
+  return !(el && testMode.exclude.some(p => el.closest('#' + p)));
+}
+// чи діє в цьому контейнері правило "одна відповідь — без виправлень"
+function isLocked(containerId){ return testMode.on && isScored(containerId); }
+
 /* ---------- Міні-квіз з варіантами-кнопками ---------- */
 // data: [{ q: "текст питання", opts: ["a","b"], correct: "b" }, ...]
 // Кожне правильно вибрана відповідь додає +1 до прогресу.
@@ -140,7 +188,8 @@ function shuffleArray(arr){
 // (кнопки вимикаються) лише тоді, коли учень сам натиснув правильну.
 function buildQuiz(containerId, data){
   const wrap = document.getElementById(containerId);
-  setTotal(data.length);
+  const scored = isScored(containerId), locked = isLocked(containerId);
+  if(scored) setTotal(data.length);
   data.forEach((item, qi) => {
     const div = document.createElement('div');
     div.className = 'quiz-q';
@@ -160,13 +209,18 @@ function buildQuiz(containerId, data){
           fb.textContent = 'Richtig! ✓'; fb.className = 'feedback ok';
           optsWrap.querySelectorAll('.opt-btn').forEach(x => x.disabled = true);
           div.dataset.solved = '1';
+        } else if(locked){ // режим контрольної: одна спроба
+          b.classList.add('wrong');
+          fb.textContent = 'Leider falsch ✗'; fb.className = 'feedback bad';
+          optsWrap.querySelectorAll('.opt-btn').forEach(x => x.disabled = true);
+          div.dataset.solved = '1';
         } else {
           b.classList.add('wrong');
           fb.textContent = 'Nicht ganz — versuch es noch mal.'; fb.className = 'feedback bad';
         }
         if(!firstTryDone){
           firstTryDone = true;
-          if(isCorrect) markDone(1);
+          if(isCorrect && scored) markDone(1);
         }
       });
       optsWrap.appendChild(b);
@@ -246,13 +300,19 @@ function checkBlanks(containerId, scoreId, stateKey){
     if(lockedArr[idx] && lockedArr[idx].correct) correct++;
   });
 
+  // режим контрольної: заповнені поля після перевірки закриваються
+  if(isLocked(containerId)){
+    blanksIn(containerId).forEach(inp => { if(String(inp.value).trim() !== '') inp.disabled = true; });
+  }
+
   const scoreEl = document.getElementById(scoreId);
   if(scoreEl) scoreEl.textContent = correct + ' / ' + total + ' richtig (1. Versuch zählt)';
   const newly = correct - state[stateKey];
-  if(newly > 0){ markDone(newly); state[stateKey] = correct; }
+  if(newly > 0){ if(isScored(containerId)) markDone(newly); state[stateKey] = correct; }
   return {correct, total};
 }
 function resetBlanks(containerId, scoreId, stateKey){
+  if(isLocked(containerId)) return; // контрольна: почати заново не можна
   blanksIn(containerId).forEach(inp => {
     if(inp.tagName === 'SELECT') inp.selectedIndex = 0; else inp.value = '';
     inp.classList.remove('correct', 'wrong');
@@ -260,7 +320,10 @@ function resetBlanks(containerId, scoreId, stateKey){
   const scoreEl = document.getElementById(scoreId);
   if(scoreEl) scoreEl.textContent = '';
   const state = checkBlanks._state || (checkBlanks._state = {});
-  if(state[stateKey] > 0){ progress.done -= state[stateKey]; state[stateKey] = 0; renderProgress(); }
+  if(state[stateKey] > 0){
+    if(isScored(containerId)){ progress.done -= state[stateKey]; renderProgress(); }
+    state[stateKey] = 0;
+  }
   const locked = checkBlanks._locked || (checkBlanks._locked = {});
   locked[stateKey] = []; // повний ресет знімає й "заморозку" — чесний новий старт
 }
@@ -272,10 +335,13 @@ function resetBlanks(containerId, scoreId, stateKey){
    #ub2-reset, лічильник #ub2-score. Старий спосіб теж працює. */
 function wireBlanks(key){
   const list = key + '-list', score = key + '-score';
-  setTotal(blanksIn(list).length);
+  if(isScored(list)) setTotal(blanksIn(list).length);
   const c = document.getElementById(key + '-check'), r = document.getElementById(key + '-reset');
   if(c) c.addEventListener('click', () => checkBlanks(list, score, key));
-  if(r) r.addEventListener('click', () => resetBlanks(list, score, key));
+  if(r){
+    if(isLocked(list)) r.style.display = 'none'; // контрольна: без Zurücksetzen
+    else r.addEventListener('click', () => resetBlanks(list, score, key));
+  }
 }
 
 /* ---------- Клікабельні токени в тексті (span.tok[data-correct]) ----------
@@ -308,10 +374,11 @@ function checkTokens(containerId, scoreId, stateKey){
   const scoreEl = document.getElementById(scoreId);
   if(scoreEl) scoreEl.textContent = correct + ' gefunden (' + wrong + ' Fehlgriffe)';
   const newly = correct - state[stateKey];
-  if(newly > 0){ markDone(newly); state[stateKey] = correct; }
+  if(newly > 0){ if(isScored(containerId)) markDone(newly); state[stateKey] = correct; }
   return {correct, wrong, total};
 }
 function resetTokens(containerId, scoreId, stateKey){
+  if(isLocked(containerId)) return; // контрольна: почати заново не можна
   document.querySelectorAll('#' + containerId + ' .tok').forEach(span => {
     if(span.dataset.locked) return;
     span.classList.remove('picked', 'correct', 'wrong', 'missed');
@@ -320,7 +387,10 @@ function resetTokens(containerId, scoreId, stateKey){
   const scoreEl = document.getElementById(scoreId);
   if(scoreEl) scoreEl.textContent = '';
   const state = checkBlanks._state || (checkBlanks._state = {});
-  if(state[stateKey] > 0){ progress.done -= state[stateKey]; state[stateKey] = 0; renderProgress(); }
+  if(state[stateKey] > 0){
+    if(isScored(containerId)){ progress.done -= state[stateKey]; renderProgress(); }
+    state[stateKey] = 0;
+  }
 }
 
 /* ---------- Склади речення (з 2026-09) ----------
@@ -355,7 +425,8 @@ function resetTokens(containerId, scoreId, stateKey){
 function buildOrder(containerId, items){
   const wrap = document.getElementById(containerId);
   if(!wrap) return;
-  setTotal(items.length);
+  const scored = isScored(containerId), lockedMode = isLocked(containerId);
+  if(scored) setTotal(items.length);
   let solvedFirst = 0;
   const scoreEl = document.createElement('span');
   scoreEl.className = 'score-pill';
@@ -384,13 +455,17 @@ function buildOrder(containerId, items){
         fb.textContent = 'Richtig! ✓'; fb.className = 'feedback ok';
         div.classList.remove('is-wrong'); div.classList.add('is-solved');
         slots.querySelectorAll('button').forEach(b => b.disabled = true);
+      } else if(lockedMode){ // режим контрольної: одна повна спроба
+        fb.textContent = 'Leider falsch ✗'; fb.className = 'feedback bad';
+        div.classList.add('is-wrong');
+        slots.querySelectorAll('button').forEach(b => b.disabled = true);
       } else {
         fb.textContent = 'Noch nicht — ändere die Reihenfolge.'; fb.className = 'feedback bad';
         div.classList.add('is-wrong');
       }
       if(!firstTryDone){
         firstTryDone = true;
-        if(ok){ markDone(1); solvedFirst++; updScore(); }
+        if(ok){ if(scored) markDone(1); solvedFirst++; updScore(); }
       }
     }
     // базова форма картки: перше слово — з малої (якщо не gross)
@@ -438,7 +513,8 @@ function buildOrder(containerId, items){
 function buildSort(containerId, data){
   const wrap = document.getElementById(containerId);
   if(!wrap) return;
-  setTotal(data.items.length);
+  const scored = isScored(containerId), lockedMode = isLocked(containerId);
+  if(scored) setTotal(data.items.length);
   const locked = [];
   let counted = 0, selected = null;
 
@@ -448,6 +524,7 @@ function buildSort(containerId, data){
   const pool = wrap.querySelector('.sort-pool'), bucketsEl = wrap.querySelector('.sort-buckets');
   const [checkBtn, resetBtn] = wrap.querySelectorAll('.check-bar .btn');
   const scoreEl = wrap.querySelector('.score-pill');
+  if(lockedMode) resetBtn.style.display = 'none'; // контрольна: без Zurücksetzen
 
   const buckets = data.buckets.map(name => {
     const box = document.createElement('div');
@@ -500,13 +577,16 @@ function buildSort(containerId, data){
     });
     locked.forEach(l => { if(l && l.correct) correct++; });
     scoreEl.textContent = correct + ' / ' + data.items.length + ' richtig (1. Versuch zählt)';
-    if(correct > counted){ markDone(correct - counted); counted = correct; }
+    if(correct > counted){ if(scored) markDone(correct - counted); counted = correct; }
+    // режим контрольної: перевірені картки в кошиках закриваються
+    if(lockedMode) cards.forEach(b => { if(b.closest('.sort-bucket')) b.disabled = true; });
   });
   resetBtn.addEventListener('click', () => {
+    if(lockedMode) return;
     cards.forEach(b => { b.classList.remove('correct', 'wrong', 'picked'); pool.appendChild(b); });
     selected = null; wrap.classList.remove('has-pick');
     scoreEl.textContent = '';
-    if(counted > 0){ progress.done -= counted; counted = 0; renderProgress(); }
+    if(counted > 0){ if(scored){ progress.done -= counted; renderProgress(); } counted = 0; }
     locked.length = 0; // чесний новий старт, як у resetBlanks
   });
 }
@@ -563,6 +643,59 @@ function renderEndStamps(wrapId, textId, icons){
   });
   const textEl = document.getElementById(textId);
   if(textEl) textEl.textContent = progress.done + ' von ' + progress.total + ' lösbaren Aufgaben richtig gelöst.';
+}
+
+/* ---------- Результат контрольної: відсоток і бали (з 2026-10) ----------
+   Рахує відсоток правильних відповідей з того самого лічильника, що й літак
+   угорі (progress.done / progress.total), переводить його в бали за шкалою
+   і малює підсумок + таблицю шкали з підсвіченим рядком учня. Таблицю в
+   HTML уроку писати НЕ треба — вона будується з тієї самої шкали, тож
+   підрахунок і таблиця ніколи не розійдуться.
+   У режимі контрольної (enableTestMode) виключені вкладки (Hausaufgabe)
+   сюди не входять — рахуються лише вправи контрольної.
+
+   HTML (у Fertig!, усередині звичайної .card):  <div id="testResult"></div>
+   Виклик — у тому самому обробнику вкладки Fertig!, що й renderEndStamps:
+     renderTestResult('testResult', {
+       label: 'Üb. 1–6',                            // що саме рахується
+       extra: {label: 'E-Mail (Üb. 7)', max: 3}     // (необов'язково) бали вчителя
+     });
+   - scale — (необов'язково) шкала [[мін. %, бали], ...]. Типова — 9 балів:
+     95→9, 85→8, 75→7, 65→6, 55→5, 45→4, 35→3, 25→2, 0→1; разом з extra
+     max: 3 це дає 12-бальну систему.
+   - Відсоток округлюється ВНИЗ до цілого (94,9 % → 94 % → 8 балів), щоб
+     показане число завжди збігалося з рядком таблиці.
+   - Невиконані завдання рахуються як неправильні (загальна кількість не
+     змінюється). Поки вправи не виконані повністю, учень бачить підказку. */
+const TEST_SCALE_DEFAULT = [[95, 9], [85, 8], [75, 7], [65, 6], [55, 5], [45, 4], [35, 3], [25, 2], [0, 1]];
+function renderTestResult(boxId, opts){
+  const box = document.getElementById(boxId);
+  if(!box) return;
+  opts = opts || {};
+  const scale = (opts.scale || TEST_SCALE_DEFAULT).slice().sort((a, b) => b[0] - a[0]);
+  const max = scale[0][1];
+  const pct = progress.total ? Math.floor(progress.done / progress.total * 100) : 0;
+  const hit = scale.find(r => pct >= r[0]) || scale[scale.length - 1];
+  const label = opts.label || 'Kontrollarbeit';
+  const extra = opts.extra || null;
+
+  let html = '<p><span class="score-pill">' + progress.done + ' / ' + progress.total + ' richtig · ' + pct + ' %</span></p>'
+    + '<p class="beispiel">→ <b>' + hit[1] + ' von ' + max + ' Punkten</b> für ' + label + '</p>';
+  if(extra){
+    html += '<p class="lead" style="margin:6px 0 0;">+ bis zu ' + extra.max + ' Punkte für ' + extra.label
+      + ' — bewertet dein Lehrer / deine Lehrerin. Maximal: ' + (max + extra.max) + ' Punkte.</p>';
+  }
+  html += '<table class="gtable"><tr><th>Richtig gelöst (' + label + ')</th><th>Punkte</th></tr>';
+  scale.forEach((r, i) => {
+    const range = (r[0] === 0 && i > 0) ? 'unter ' + scale[i - 1][0] + ' %'
+      : r[0] + '–' + (i === 0 ? 100 : scale[i - 1][0] - 1) + ' %';
+    const mine = (r === hit);
+    const st = mine ? ' style="background:var(--mustard-soft);font-weight:700;"' : '';
+    html += '<tr' + st + '><td>' + range + '</td><td>' + r[1] + (mine ? ' ← dein Ergebnis' : '') + '</td></tr>';
+  });
+  if(extra) html += '<tr><td><b>+ ' + extra.label + '</b></td><td><b>0–' + extra.max + '</b></td></tr>';
+  html += '</table>';
+  box.innerHTML = html;
 }
 
 /* ---------- Заборона вставки тексту в поля для письма (2026-09) ----------
