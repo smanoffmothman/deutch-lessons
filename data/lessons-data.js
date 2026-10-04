@@ -577,5 +577,16 @@ const LESSONS = [
     nove: true,
     gram: ["perfekt-plusquamperfekt", "praep-genitiv", "komparation", "reflexive-verben", "modalverben", "imperativ", "kausalsaetze", "konditionalsaetze"],
     dz: "Mach deine persönliche „Fehlerkarte“ zur Kontrollarbeit: Wähle drei Aufgaben aus verschiedenen Übungen, bei denen du einen Fehler gemacht hast oder unsicher warst. Schreib zu jeder Aufgabe: 1) deine Antwort, 2) die richtige Antwort, 3) die Regel in einem kurzen Satz mit Beispiel (z. B. „wegen + Genitiv: wegen des Regens“). Hattest du keine Fehler? Dann wähle die drei Aufgaben, die für dich am schwierigsten waren. Schreib außerdem eine eigene Quizfrage zum Wortschatz des Moduls „Lebensstil“ auf eine Karte: die Frage und drei Antworten (nur eine ist richtig). Nächstes Mal machen wir aus euren Karten ein Klassen-Quiz!"
+  },
+  {
+    klas: "8",
+    modul: "B",
+    lektion: 1,
+    nazva: "Meine Freunde und ich: Sprichwörter über Freundschaft",
+    opys: "Вступ до модуля «Я і мої друзі»: німецькі прислів'я про дружбу (з'єднати частини й перевірити за аудіо, українські відповідники), що таке дружба (сортування ідей), присвійні артиклі mein / dein / sein / ihr, sich interessieren für, seit wann … befreundet, питання з карток, діалог Лени і Йонаса та інтерв'ю в парах про друзів.",
+    file: "klas-8/modul-b/lektion-1.html",
+    nove: true,
+    gram: ["possessivartikel", "fragen", "verben-praepositionalobjekt"],
+    dz: "1) Mach ein Interview mit einem Freund, einer Freundin oder einem Familienmitglied über seinen / ihren besten Freund oder seine / ihre beste Freundin. Stell mindestens fünf Fragen aus Üb. 5 (z. B. „Wie heißt dein Freund?“, „Seit wann seid ihr befreundet?“, „Wofür interessiert er sich?“) und schreib die Antworten in der 3. Person auf – mit „sein“ oder „ihr“ (z. B. „Ihr Freund heißt Taras. Sie sind seit drei Jahren befreundet. Er interessiert sich für Fußball.“). 2) Wähle ein Sprichwort über Freundschaft aus der Stunde, schreib es schön auf eine Karte, mal ein Bild dazu und schreib darunter das ukrainische Äquivalent. Nächstes Mal stellen wir die Interviews vor und machen aus euren Karten eine „Freundschaftswand“."
   }
 ];

@@ -645,5 +645,17 @@ const GLOSSARY = [
   {de: "dagegen sein", uk: "бути проти", klas: "8", modul: "A", lektion: 16},
   {de: "zum ersten Mal", uk: "вперше", klas: "8", modul: "A", lektion: 16},
   {de: "deshalb", uk: "тому, через це", klas: "8", modul: "A", lektion: 16},
-  {de: "der Brieffreund / die Brieffreundin", uk: "друг / подруга по листуванню", klas: "8", modul: "A", lektion: 16}
+  {de: "der Brieffreund / die Brieffreundin", uk: "друг / подруга по листуванню", klas: "8", modul: "A", lektion: 16},
+  {de: "die Freundschaft", uk: "дружба", klas: "8", modul: "B", lektion: 1},
+  {de: "der Freund / die Freundin (die Freunde / die Freundinnen)", uk: "друг / подруга", klas: "8", modul: "B", lektion: 1},
+  {de: "befreundet sein (mit +Dat.)", uk: "дружити (з кимось), бути друзями", klas: "8", modul: "B", lektion: 1},
+  {de: "die Not (in der Not)", uk: "біда, скрута (у біді)", klas: "8", modul: "B", lektion: 1},
+  {de: "der Schatz", uk: "скарб", klas: "8", modul: "B", lektion: 1},
+  {de: "das Silber", uk: "срібло", klas: "8", modul: "B", lektion: 1},
+  {de: "das Gold", uk: "золото", klas: "8", modul: "B", lektion: 1},
+  {de: "gutherzig", uk: "добросердий, добрий", klas: "8", modul: "B", lektion: 1},
+  {de: "intelligent", uk: "розумний, кмітливий", klas: "8", modul: "B", lektion: 1},
+  {de: "einander helfen", uk: "допомагати одне одному", klas: "8", modul: "B", lektion: 1},
+  {de: "das Interesse (die Interessen)", uk: "інтерес, захоплення", klas: "8", modul: "B", lektion: 1},
+  {de: "die AG (die Arbeitsgemeinschaft)", uk: "гурток (у школі)", klas: "8", modul: "B", lektion: 1}
 ];
