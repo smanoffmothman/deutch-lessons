@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 6 · Modul B · Kochen lernen: Kochkurse</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 7'},
+    {label: 'Урок 6: Кулінарні курси'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 6 · MODUL B</span>
+        <h1>Kochen lernen: Kochkurse</h1>
+        <p class="sub">Як можна навчитися готувати: кулінарні курси, кулінарні книжки й шоу. Читаємо оголошення, вчимося пояснювати мету з um … zu і умову з wenn.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Wege</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · um … zu / wenn</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Anzeigen</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Sprechen</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== ПАНЕЛЬ: вступ ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Wie kann man kochen lernen?</h2>
+      <div class="card">
+        <p>Wir sind immer noch im Modul „Essen“. Wir kennen schon Lebensmittel, Küchengeräte und Rezepte. Heute fragen wir: <b>Wie kann man (besser) kochen lernen?</b> Man kann einen Kochkurs besuchen, ein Kochbuch kaufen oder sich eine Kochshow im Fernsehen ansehen. Wir lesen Anzeigen für Kochkurse und Kochbücher und sagen, was wir interessant finden.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Ми й далі в модулі «Харчування». Продукти, кухонні прилади й рецепти ми вже знаємо. Сьогодні питання: <b>як можна (краще) навчитися готувати?</b> Можна піти на кулінарні курси, купити кулінарну книжку або дивитися кулінарне шоу по телевізору. Ми читатимемо оголошення про кулінарні курси й книжки та розповімо, що нам цікаво.
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Heute lernst du</p>
+        <p style="margin:0;">✔ 8 Wege, kochen zu lernen (einen Kochkurs besuchen, Rezepte sammeln …)<br>
+        ✔ Ziel mit <b>um … zu</b> und Bedingung mit <b>wenn</b><br>
+        ✔ Anzeigen verstehen und passende Angebote finden<br>
+        ✔ sagen, welche Anzeige du interessant findest</p>
+      </div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Hallo! Ich lerne auch kochen und möchte mir gerne eine Kochshow ansehen. Los geht's!</p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('dz')">Zur Hausaufgabe</button>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: перевірка ДЗ (dz уроку 7-B-5) ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: <b>1)</b> скласти дві загадки про українські страви (3–4 речення, без назви страви, щонайменше два дієслова з уроку: schälen, reiben, schneiden, würzen, braten, kochen), відповідь з артиклем — на звороті; <b>2)</b> картка-рецепт для «Klassen-Kochbuch»: назва, інгредієнти на одну порцію з кількістю і 5 кроків у рецептному стилі (інфінітив у кінці), щонайменше один крок з «um … zu».
+      </div>
+
+      <div id="dz-check">
+        <div class="card" style="margin-top:18px;">
+          <p class="section-label" style="margin:0 0 6px;">Teil A · Rätsel-Runde</p>
+          <p class="lead">Спершу прочитайте вголос свої загадки — клас відгадує. А тепер розгадай загадки вчителя: яка це страва?</p>
+          <div id="dz-quiz"></div>
+        </div>
+        <div class="card">
+          <p class="section-label" style="margin:0 0 6px;">Teil B · Aus dem Klassen-Kochbuch</p>
+          <p class="lead">Склади кроки рецепта в рецептному стилі. Клацай картки по черзі; клік по вже поставленій картці повертає її назад.</p>
+          <div class="ua-note">
+            Нагадування: у рецепті дієслово стоїть <b>в інфінітиві в кінці</b> (Zuerst Kartoffeln schälen.). У звороті <b>um … zu</b> частка <b>zu</b> + інфінітив теж ідуть у самий кінець, а перед <b>um</b> ставиться кома.
+          </div>
+          <div id="dz-order" style="margin-top:10px;"></div>
+        </div>
+      </div>
+
+      <div class="card" id="dz-vocab-wrap" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">Wörter-Check</p>
+        <p class="lead">Перевір слова з минулого уроку.</p>
+        <div id="dz-vocab"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: Üb.1 — способи навчитися готувати (select.blank) ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Wege zum Kochen</h2>
+      <p class="lead">Як можна навчитися готувати? Обери до кожного словосполучення дієслово, яке пасує.</p>
+      <div class="card" id="ub1-list">
+        <p class="section-label" style="margin:0 0 12px;">🍳 kochen lernen — man kann …</p>
+        <div class="fill-item"><span class="num">1)</span> einen Kochkurs
+          <select class="blank inline" data-ans="besuchen"><option value="">—</option><option>ansehen</option><option>besuchen</option><option>experimentieren</option><option>fragen</option><option>helfen</option><option>machen</option><option>sammeln</option><option>zubereiten</option></select>
+        </div>
+        <div class="fill-item"><span class="num">2)</span> Rezepte
+          <select class="blank inline" data-ans="sammeln"><option value="">—</option><option>ansehen</option><option>besuchen</option><option>experimentieren</option><option>fragen</option><option>helfen</option><option>machen</option><option>sammeln</option><option>zubereiten</option></select>
+        </div>
+        <div class="fill-item"><span class="num">3)</span> zu Hause kochen
+          <select class="blank inline" data-ans="helfen"><option value="">—</option><option>ansehen</option><option>besuchen</option><option>experimentieren</option><option>fragen</option><option>helfen</option><option>machen</option><option>sammeln</option><option>zubereiten</option></select>
+        </div>
+        <div class="fill-item"><span class="num">4)</span> eine Kochlehre
+          <select class="blank inline" data-ans="machen"><option value="">—</option><option>ansehen</option><option>besuchen</option><option>experimentieren</option><option>fragen</option><option>helfen</option><option>machen</option><option>sammeln</option><option>zubereiten</option></select>
+        </div>
+        <div class="fill-item"><span class="num">5)</span> mit Rezepten
+          <select class="blank inline" data-ans="experimentieren"><option value="">—</option><option>ansehen</option><option>besuchen</option><option>experimentieren</option><option>fragen</option><option>helfen</option><option>machen</option><option>sammeln</option><option>zubereiten</option></select>
+        </div>
+        <div class="fill-item"><span class="num">6)</span> jeden Tag ein neues Gericht
+          <select class="blank inline" data-ans="zubereiten"><option value="">—</option><option>ansehen</option><option>besuchen</option><option>experimentieren</option><option>fragen</option><option>helfen</option><option>machen</option><option>sammeln</option><option>zubereiten</option></select>
+        </div>
+        <div class="fill-item"><span class="num">7)</span> die Oma nach alten Rezepten
+          <select class="blank inline" data-ans="fragen"><option value="">—</option><option>ansehen</option><option>besuchen</option><option>experimentieren</option><option>fragen</option><option>helfen</option><option>machen</option><option>sammeln</option><option>zubereiten</option></select>
+        </div>
+        <div class="fill-item"><span class="num">8)</span> sich eine Kochshow im Fernsehen
+          <select class="blank inline" data-ans="ansehen"><option value="">—</option><option>ansehen</option><option>besuchen</option><option>experimentieren</option><option>fragen</option><option>helfen</option><option>machen</option><option>sammeln</option><option>zubereiten</option></select>
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub1-check">Prüfen</button>
+        <button class="btn secondary" id="ub1-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub1-score"></span>
+      </div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Нові слова</span>
+        <dl>
+          <dt>der Kochkurs</dt><dd>кулінарні курси</dd>
+          <dt>die Kochlehre</dt><dd>навчання на кухаря (професійне)</dd>
+          <dt>die Kochshow</dt><dd>кулінарне шоу</dd>
+          <dt>Rezepte sammeln</dt><dd>збирати рецепти</dd>
+          <dt>experimentieren (mit + Dat.)</dt><dd>експериментувати (з чимось)</dd>
+        </dl>
+        Після перевірки скажіть усно, що з цього робите ви: <i>Ich helfe zu Hause kochen. Ich sehe mir manchmal eine Kochshow an.</i>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: Üb.2 — um … zu / wenn (граматика) ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Um … zu oder wenn?</h2>
+      <div class="card">
+        <p>Dieselbe Idee kann man auf zwei Arten sagen:</p>
+        <table class="gtable">
+          <tr><th>Ziel: um … zu + Infinitiv</th><th>Bedingung: wenn … (Verb am Ende)</th></tr>
+          <tr>
+            <td><b>Um</b> (besser) kochen <b>zu lernen</b>, <b>kann</b> man einen Kochkurs besuchen.</td>
+            <td><b>Wenn</b> man (besser) kochen lernen <b>will</b>, <b>kann</b> man einen Kochkurs besuchen.</td>
+          </tr>
+          <tr>
+            <td>Man kauft ein Kochbuch, <b>um</b> neue Rezepte <b>zu finden</b>.</td>
+            <td>Man kauft ein Kochbuch, <b>wenn</b> man neue Rezepte finden <b>will</b>.</td>
+          </tr>
+        </table>
+        <div class="merke">Steht der Nebensatz vorn, kommt nach dem Komma sofort das Verb: <b>…, kann man …</b> (nicht: <s>…, man kann …</s>).</div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Пояснення</span>
+          <b>um … zu</b> = «щоб, для того щоб» — називає <b>мету</b>. У цьому звороті немає власного підмета (ні man, ні ich): <b>zu</b> + інфінітив стоїть у самому кінці. Якщо дієслово відокремлюване, <b>zu</b> стає всередину: ansehen → <i>um sich eine Kochshow an<b>zu</b>sehen</i>.<br><br>
+          <b>wenn</b> = «якщо, коли» — називає <b>умову</b>. Тут підмет є (man, Lars, ich…), а відмінюване дієслово (will, hat) іде в кінець підрядного речення.<br><br>
+          В обох випадках: якщо підрядне речення стоїть <b>на початку</b>, то після коми одразу йде дієслово головного речення, а вже потім підмет: <i>…, <b>kann man</b> einen Kochkurs besuchen</i>. Це те саме правило «дієслово на 2-му місці»: усе підрядне речення займає 1-ше місце.
+        </div>
+      </div>
+
+      <div class="card" id="ub2-list">
+        <p class="section-label" style="margin:0 0 12px;">Teil A · um oder wenn?</p>
+        <div class="fill-item"><span class="num">1)</span>
+          <select class="blank inline" data-ans="um"><option value="">—</option><option>um</option><option>wenn</option></select>
+          neue Kochideen zu finden, kauft Frau Lehm ein Kochbuch.
+        </div>
+        <div class="fill-item"><span class="num">2)</span>
+          <select class="blank inline" data-ans="wenn"><option value="">—</option><option>um</option><option>wenn</option></select>
+          Svenja Pizza backen lernen will, besucht sie einen Kochkurs.
+        </div>
+        <div class="fill-item"><span class="num">3)</span>
+          <select class="blank inline" data-ans="wenn"><option value="">—</option><option>um</option><option>wenn</option></select>
+          Lars keine Zeit hat, sieht er sich eine Kochshow an.
+        </div>
+        <div class="fill-item"><span class="num">4)</span> Ich frage meine Oma,
+          <select class="blank inline" data-ans="um"><option value="">—</option><option>um</option><option>wenn</option></select>
+          alte Rezepte zu sammeln.
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+      <div class="ua-note">Підказка: є <b>zu</b> + інфінітив у кінці → <b>um</b>; є підмет і дієслово в особовій формі в кінці (will, hat) → <b>wenn</b>.</div>
+
+      <div class="card" style="margin-top:20px;">
+        <p class="section-label" style="margin:0 0 6px;">Teil B · Sätze bauen</p>
+        <p class="lead">Склади речення з карток. Велика літера на початку з'явиться сама.</p>
+        <div id="ub2-order"></div>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: Üb.3 — оголошення (читання) ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Kochkurse, Kochbücher, Kochshows</h2>
+      <p class="lead">Прочитай оголошення A–F. Потім виконай завдання під ними.</p>
+
+      <div class="pic-grid">
+        <div class="pic-card">
+          <div class="swatch">🍕</div>
+          <div class="num">A · Italienisch kochen lernen!</div>
+          <p style="padding:6px 12px 0;font-size:13.5px;text-align:left;margin:0;">Der italienische Koch Mario Marini zeigt, wie man leckere italienische Speisen macht. Auf dem Programm des Kurses stehen die Klassiker der italienischen Küche: Pizza, Pasta, Risotto, Ravioli, Tiramisu.</p>
+        </div>
+        <div class="pic-card">
+          <div class="swatch">🏠</div>
+          <div class="num">B · Küche gesucht für Kochkurs</div>
+          <p style="padding:6px 12px 0;font-size:13.5px;text-align:left;margin:0;">Suche für meinen dreimonatigen Kochkurs einen Raum in Bonn. Die Küche muss eine Spüle, einige Herde mit Backöfen, Tische, Küchengeräte und Geschirr haben. Freue mich auf Angebote!</p>
+        </div>
+        <div class="pic-card">
+          <div class="swatch">🧁</div>
+          <div class="num">C · Einfach backen</div>
+          <p style="padding:6px 12px 0;font-size:13.5px;text-align:left;margin:0;">Kaufen Sie das neue Kochbuch „Einfach backen“! Um rund 4,50 Euro erhalten Sie nicht nur tolle 100 Backrezepte, sondern auch praktische Tipps zu fast jedem Rezept.</p>
+        </div>
+        <div class="pic-card">
+          <div class="swatch">📺</div>
+          <div class="num">D · Kochshow: einfach und lecker!</div>
+          <p style="padding:6px 12px 0;font-size:13.5px;text-align:left;margin:0;">Der kulinarische Fokus liegt auf einer einfachen Küche. Der Koch Hans Jörg Bachmeier präsentiert wunderbare Gerichte der deutschen Küche und gibt zahlreiche Kochtipps.</p>
+        </div>
+        <div class="pic-card">
+          <div class="swatch">🍚</div>
+          <div class="num">E · Reisgerichte aus der chinesischen Küche</div>
+          <p style="padding:6px 12px 0;font-size:13.5px;text-align:left;margin:0;">In diesem Kochkurs zeigt Ihnen unser Chefkoch Tobias Kitzel, wie man verschiedene Reisgerichte der chinesischen Küche kocht. Außerdem gibt der Chefkoch hilfreiche Tipps zum Reiskochen.</p>
+        </div>
+        <div class="pic-card">
+          <div class="swatch">📗</div>
+          <div class="num">F · Das neue große Kochbuch</div>
+          <p style="padding:6px 12px 0;font-size:13.5px;text-align:left;margin:0;">Mehr als 150 neue Rezepte · Rezepte für vegetarische Küche · Interessante Alternativen zu Pizza, Pasta und Pommes.</p>
+        </div>
+      </div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Слова до оголошень</span>
+        <dl>
+          <dt>die Anzeige</dt><dd>оголошення</dd>
+          <dt>die Küche (die italienische Küche)</dt><dd>тут: кухня як кулінарна традиція (італійська кухня)</dd>
+          <dt>der Chefkoch</dt><dd>шеф-кухар</dd>
+          <dt>dreimonatig</dt><dd>тримісячний</dd>
+          <dt>vegetarisch</dt><dd>вегетаріанський</dd>
+          <dt>das Angebot</dt><dd>пропозиція</dd>
+        </dl>
+      </div>
+
+      <div class="card" id="ub3-list" style="margin-top:20px;">
+        <p class="section-label" style="margin:0 0 6px;">Teil A · Welche Anzeige passt?</p>
+        <p class="lead">Не всі оголошення підходять! Обери літеру.</p>
+        <div class="fill-item"><span class="num">1)</span> Frau Lehm kocht sehr gern. Sie will mit neuen Rezepten experimentieren und sucht nach einem guten Kochbuch mit interessanten Kochideen. →
+          <select class="blank inline" data-ans="F"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option></select>
+        </div>
+        <div class="fill-item"><span class="num">2)</span> Svenja mag italienische Küche und möchte gern italienische Speisen wie Pasta und Pizza zubereiten lernen. →
+          <select class="blank inline" data-ans="A"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option></select>
+        </div>
+        <div class="fill-item"><span class="num">3)</span> Lars kann nicht sehr gut kochen und will Gerichte der deutschen Küche kochen lernen. Leider hat er keine Zeit für einen Kochkurs. →
+          <select class="blank inline" data-ans="D"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option></select>
+        </div>
+        <div class="fill-item"><span class="num">4)</span> In welcher Anzeige sucht man keine Kursteilnehmer, sondern einen Raum? →
+          <select class="blank inline" data-ans="B"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option></select>
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+
+      <div class="card" style="margin-top:20px;">
+        <p class="section-label" style="margin:0 0 6px;">Teil B · Richtig oder falsch?</p>
+        <div id="ub3-quiz"></div>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: Üb.4 — мовлення (Üb. 11 підручника) ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Welche Anzeige findest du interessant?</h2>
+      <p class="lead">Обговоріть у групах (3–4 учні), потім запиши свою думку.</p>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Redemittel</p>
+        <div class="wordbank">
+          <span>Ich finde die Anzeige … besonders interessant.</span>
+          <span>Ich finde … toll / super / klasse.</span>
+          <span>Ich möchte gerne … mitmachen / besuchen / kaufen.</span>
+          <span>Um … zu lernen, möchte ich …</span>
+          <span>Wenn ich … will, kann ich …</span>
+          <span>Das finde ich nicht so interessant, weil …</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="qa">
+          <label for="ub4-a">1) Welche Anzeige findest du interessant? Warum? (2–3 Sätze)</label>
+          <textarea id="ub4-a" rows="3" placeholder="Ich finde die Anzeige … besonders interessant. Ich möchte gerne …"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub4-b">2) Und du? Wie lernst du kochen? Schreib einen Satz mit „um … zu“ und einen mit „Wenn …“.</label>
+          <textarea id="ub4-b" rows="3" placeholder="Um besser kochen zu lernen, … / Wenn ich ein neues Gericht kochen will, …"></textarea>
+        </div>
+        <div class="ua-note">
+          Пиши сам(а): вставка тексту в ці поля вимкнена. Ці відповіді не оцінюються автоматично — прочитайте їх уголос у групі, а вчитель послухає.
+        </div>
+      </div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Ich finde die Anzeige D toll — ich möchte mir die Kochshow gerne ansehen!</p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ende')">Fertig!</button>
+      </div>
+    </section>
+
+    <!-- ===== ПРИКІНЦЕВА ПАНЕЛЬ ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Gestalte eine Anzeige (wie A–F in der Stunde) für einen Kochkurs, wo man ukrainische Spezialitäten kochen lernt. Deine Anzeige hat: einen Titel, den Namen des Kochs oder der Köchin, das Programm des Kurses (mindestens 4 ukrainische Gerichte, z. B. Borschtsch, Wareniki, Syrnyky, Kartoffelpuffer), wo und wie lange der Kurs ist und was er kostet. Schreib in deine Anzeige einen Satz mit „um … zu“ (z. B. „Um ukrainisch kochen zu lernen, besuchen Sie unseren Kurs!“) und einen Satz, der mit „Wenn …“ beginnt (z. B. „Wenn Sie Wareniki lieben, kommen Sie zu uns!“). Mal ein Bild dazu oder klebe ein Foto ein. Nächstes Mal hängen wir alle Anzeigen auf und jeder wählt einen Kurs.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Створи оголошення (як A–F на уроці) про кулінарні курси, де вчать готувати українські страви. В оголошенні має бути: заголовок, ім'я кухаря чи кухарки, програма курсу (щонайменше 4 українські страви, напр. борщ, вареники, сирники, деруни), де і скільки триває курс і скільки він коштує. Додай одне речення з «um … zu» (напр. «Um ukrainisch kochen zu lernen, besuchen Sie unseren Kurs!») і одне речення, що починається з «Wenn …» (напр. «Wenn Sie Wareniki lieben, kommen Sie zu uns!»). Намалюй малюнок або вклей фото. Наступного уроку ми вивісимо всі оголошення, і кожен обере собі курс.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Wörter zum Lernen</p>
+        <div class="chip-row" id="vocabChips"></div>
+      </div>
+
+      <div class="card" id="lessonGramWrap">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="lessonGram"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../data/glossary-data.js"></script>
+<script src="../../../data/lessons-data.js"></script>
+<script src="../../../data/grammar-data.js"></script>
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  // ===== Слова цього уроку у вкладці Fertig =====
+  const LEKTION_KLAS = "7", LEKTION_MODUL = "B", LEKTION_LEKTION = 6;
+  const LEKTION_PREV_LEKTION = 5;
+
+  (function renderLessonVocab(){
+    const box = document.getElementById('vocabChips');
+    if (!box || typeof GLOSSARY === 'undefined') return;
+    const words = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_LEKTION
+    );
+    if (words.length === 0){
+      box.innerHTML = '<p class="empty-note">Слова для цього уроку ще не додані в глосарій.</p>';
+      return;
+    }
+    box.innerHTML = words.map(w =>
+      '<span class="chip static">' + w.de + ' — ' + w.uk + '</span>'
+    ).join('');
+  })();
+
+  // ===== Граматика до цього уроку у вкладці Fertig (поле gram у lessons-data.js) =====
+  (function renderLessonGrammar(){
+    const wrap = document.getElementById('lessonGramWrap');
+    const box = document.getElementById('lessonGram');
+    if (!wrap || !box) return;
+    const hide = () => { wrap.style.display = 'none'; };
+    if (typeof LESSONS === 'undefined' || typeof GRAMMAR === 'undefined') return hide();
+    const me = LESSONS.find(l => l.klas === LEKTION_KLAS && l.modul === LEKTION_MODUL && l.lektion === LEKTION_LEKTION);
+    const topics = ((me && me.gram) || []).map(id => GRAMMAR.find(t => t.id === id)).filter(t => t && t.opublikovano > 0);
+    if (topics.length === 0) return hide();
+    const src = document.querySelector('script[src$="data/grammar-data.js"]').getAttribute('src');
+    const root = src.slice(0, src.length - 'data/grammar-data.js'.length);
+    box.innerHTML = topics.map(t =>
+      '<a class="gram-link" href="' + root + 'gramatyka/temy/' + t.id + '.html">'
+      + '<span class="k">' + t.uk + '</span>' + t.tema + '</a>'
+    ).join('');
+  })();
+
+  // ===== Wörter-Check у вкладці Hausaufgabe (слова ПОПЕРЕДНЬОГО уроку) =====
+  function guessPos(de){
+    var base = (de || '').replace(/\([^)]*\)/g, '').trim();
+    if(/^(der|die|das)(\/(der|die|das))?\s/.test(base)) return 'noun';
+    if(/^sich\s/.test(base)) return 'verb';
+    if(/^am\s/.test(base)) return 'other';
+    if(/\(\+(Gen|Dat|Akk)\.?\)/.test(de)) return 'prep';
+    var words = base.split(/\s+/);
+    var last = words[words.length - 1];
+    if(/(en|ern|eln)$/.test(last) && last === last.toLowerCase()) return 'verb';
+    return 'other';
+  }
+
+  (function renderDzVocabCheck(){
+    const wrap = document.getElementById('dz-vocab-wrap');
+    const box = document.getElementById('dz-vocab');
+    if (!wrap || !box || typeof GLOSSARY === 'undefined') return;
+    if (!LEKTION_PREV_LEKTION){ wrap.style.display = 'none'; return; }
+
+    const prevWords = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_PREV_LEKTION
+    );
+    if (prevWords.length < 3){ wrap.style.display = 'none'; return; }
+
+    const pool = shuffleArray(prevWords).slice(0, 6);
+    const quizData = pool.map(w => {
+      const pos = guessPos(w.de);
+      let sameKind = GLOSSARY.filter(g => g.uk !== w.uk && guessPos(g.de) === pos);
+      if(sameKind.length < 2) sameKind = GLOSSARY.filter(g => g.uk !== w.uk);
+      const distractors = shuffleArray(sameKind).slice(0, 2).map(g => g.uk);
+      return { q: w.de, opts: [w.uk, ...distractors], correct: w.uk };
+    });
+    buildQuiz('dz-vocab', quizData);
+  })();
+
+  // ===== Hausaufgabe, Teil A: загадки вчителя (позиції correct: 1, 2, 3) =====
+  buildQuiz('dz-quiz', [
+    {q: "Das ist eine Suppe. Sie ist rot. Man braucht Rote Bete, Kohl, Kartoffeln und Fleisch. Man isst sie mit saurer Sahne.",
+     opts: ["der Borschtsch", "die Wareniki", "die Syrnyky"], correct: "der Borschtsch"},
+    {q: "Man braucht Quark, Eier, Mehl und Zucker. Man formt kleine runde Küchlein und brät sie in einer Pfanne goldbraun.",
+     opts: ["die Kartoffelpuffer", "die Syrnyky", "der Borschtsch"], correct: "die Syrnyky"},
+    {q: "Man macht einen Teig aus Mehl und Wasser. Man füllt ihn mit Kartoffeln, Quark oder Kirschen und kocht ihn im Wasser.",
+     opts: ["die Holubzi", "die Syrnyky", "die Wareniki"], correct: "die Wareniki"}
+  ]);
+
+  // ===== Hausaufgabe, Teil B: кроки рецепта (Infinitiv-Stil, um … zu) =====
+  buildOrder('dz-order', [
+    { words: ["Zuerst", "die Kartoffeln", "schälen", "und", "reiben"], end: ".",
+      hint: "Спочатку почистити й натерти картоплю." },
+    { words: ["Eine Raspel", "benutzen,", "um", "die Kartoffeln", "zu", "reiben"], end: ".",
+      hint: "Узяти тертку, щоб натерти картоплю." },
+    { words: ["Einen Mixer", "benutzen,", "um", "alle Zutaten", "zu", "vermischen"], end: ".",
+      hint: "Узяти міксер, щоб змішати всі інгредієнти." },
+    { words: ["Den Teig", "in einer Pfanne", "goldbraun", "braten"], end: ".",
+      alt: ["Den Teig goldbraun in einer Pfanne braten"],
+      hint: "Обсмажити тісто на сковорідці до золотистої скоринки." }
+  ]);
+
+  // ===== Üb. 1: способи навчитися готувати (select.blank) =====
+  wireBlanks('ub1');
+
+  // ===== Üb. 2: um oder wenn (select.blank) + Sätze bauen =====
+  wireBlanks('ub2');
+  buildOrder('ub2-order', [
+    { words: ["Um", "besser", "kochen", "zu", "lernen,", "kann", "man", "einen Kochkurs", "besuchen"], end: ".",
+      hint: "Щоб краще навчитися готувати, можна піти на кулінарні курси." },
+    { words: ["Wenn", "man", "italienisch", "kochen", "lernen", "will,", "kann", "man", "den Kurs von Mario Marini", "besuchen"], end: ".",
+      hint: "Якщо хочеш навчитися готувати по-італійськи, можна піти на курс Маріо Маріні." },
+    { words: ["Frau Lehm", "kauft", "ein Kochbuch,", "um", "mit neuen Rezepten", "zu", "experimentieren"], end: ".",
+      gross: true, hint: "Пані Лем купує кулінарну книжку, щоб експериментувати з новими рецептами." },
+    { words: ["Wenn", "Lars", "keine Zeit", "für einen Kochkurs", "hat,", "sieht", "er", "sich", "eine Kochshow", "an"], end: ".",
+      alt: ["Wenn Lars für einen Kochkurs keine Zeit hat, sieht er sich eine Kochshow an"],
+      hint: "Якщо Ларс не має часу на курси, він дивиться кулінарне шоу." },
+    { words: ["Svenja", "besucht", "einen Kochkurs,", "um", "Pizza und Pasta", "zubereiten", "zu", "lernen"], end: ".",
+      gross: true, hint: "Свеня ходить на курси, щоб навчитися готувати піцу й пасту." },
+    { words: ["Um", "Rezepte", "zu", "sammeln,", "fragt", "Petryk", "seine Oma"], end: ".",
+      hint: "Щоб збирати рецепти, Петрик розпитує бабусю." }
+  ]);
+
+  // ===== Üb. 3: оголошення — Teil A (select.blank) і Teil B (Richtig/Falsch) =====
+  wireBlanks('ub3');
+  // позиції correct в opts: 1, 2, 1, 2, 1, 2 (рівномірно)
+  buildQuiz('ub3-quiz', [
+    {q: "Im Kurs von Mario Marini kocht man auch Risotto.", opts: ["Richtig", "Falsch"], correct: "Richtig"},
+    {q: "Das Kochbuch „Einfach backen“ kostet rund 45 Euro.", opts: ["Richtig", "Falsch"], correct: "Falsch"},
+    {q: "Für den Kurs B braucht man eine Küche mit Spüle und Herden.", opts: ["Richtig", "Falsch"], correct: "Richtig"},
+    {q: "Hans Jörg Bachmeier zeigt Gerichte aus der italienischen Küche.", opts: ["Richtig", "Falsch"], correct: "Falsch"},
+    {q: "Bei Tobias Kitzel lernt man Reisgerichte kochen.", opts: ["Richtig", "Falsch"], correct: "Richtig"},
+    {q: "Im großen Kochbuch F gibt es keine vegetarischen Rezepte.", opts: ["Richtig", "Falsch"], correct: "Falsch"}
+  ]);
+
+  // Фінальна панель зі штампами (іконки — на тему модуля)
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🍳','📖','📺','🧑‍🍳']);
+  });
+  // кнопка «Fertig!» в Üb.4 перемикає вкладку не кліком по ній — штампи теж оновлюємо
+  document.querySelectorAll('button[onclick="showTab(\'ende\')"]').forEach(b =>
+    b.addEventListener('click', () => renderEndStamps('stampRow', 'finalScoreText', ['🍳','📖','📺','🧑‍🍳']))
+  );
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
