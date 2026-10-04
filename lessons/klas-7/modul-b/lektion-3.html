@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 3 · Modul B · Wir kochen nach Rezept</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 7'},
+    {label: 'Урок 3: Wir kochen nach Rezept'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 3 · MODUL B</span>
+        <h1>Wir kochen nach Rezept</h1>
+        <p class="sub">Кухонне приладдя і що ним можна робити, СМС Яна й рецепт його улюбленої страви, послідовність приготування та власна картка-рецепт.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · In der Küche</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Jans SMS</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Reihenfolge</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Erzähl!</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Mein Rezept</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== ПАНЕЛЬ: вступ ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Worum geht es in diesem Modul?</h2>
+      <div class="card">
+        <p>Im Modul B geht es um Essen: Wir kaufen ein, wir sprechen im Lebensmittelgeschäft – und heute kochen wir! Wir lernen, was man in der Küche mit einer Pfanne, einem Messer oder einem Kochtopf machen kann. Dann lesen wir eine SMS von Jan und sein Rezept: Würstchen mit Sauerkraut. Zum Schluss schreibst du eine Rezeptkarte für deine Lieblingsspeise.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Модуль B — про харчування: ми купуємо продукти, розмовляємо в продуктовій крамниці, а сьогодні — готуємо! Вивчимо, що можна робити на кухні сковорідкою, ножем чи каструлею. Потім прочитаємо СМС від Яна та його рецепт — сосиски з квашеною капустою. Наприкінці ти напишеш картку-рецепт своєї улюбленої страви.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Ziel der Stunde</p>
+        <p>Am Ende der Stunde kannst du Küchengeräte nennen und sagen, was man damit macht („In einer Pfanne kann man Fisch braten.“), ein Rezept lesen und verstehen, die Zubereitung Schritt für Schritt erzählen („Zuerst brät man …, dann …“) und selbst ein kurzes Rezept schreiben.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Мета уроку</span>
+          Наприкінці уроку ти зможеш назвати кухонне приладдя і сказати, що ним роблять («У сковорідці можна смажити рибу»), прочитати й зрозуміти рецепт, розповісти про приготування страви крок за кроком («Спочатку смажать…, потім…») і самостійно написати короткий рецепт.
+        </div>
+      </div>
+
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Mmh! Heute wird es lecker! Ich mag Würstchen sehr gern. Und ihr? Los geht's!</p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('dz')">Weiter</button>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: перевірка домашнього завдання ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: 1) Bring den Dialog in die richtige Reihenfolge und schreib ihn ins Heft: a) Nein, danke. Nichts mehr. b) Guten Tag! Brauchen Sie etwas? c) Aber die Brötchen sind trocken! So was kann ich nicht nehmen. d) Ja, ich brauche vier Brötchen, bitte. e) Oh, Entschuldigung! Hier sind frische Brötchen. Brauchen Sie noch etwas? f) Bitte schön. 2) Schreib dein Lieblingsrezept (5–6 Sätze) mit „man“: Was braucht man und was macht man in der Küche? Benutze mindestens vier Verben aus der Stunde (z. B. schälen, waschen, schneiden, vermischen, umrühren, braten, dazugeben) und einmal „etwas“ oder „nichts“.
+      </div>
+
+      <div id="dz-check">
+        <div class="card">
+          <p class="section-label" style="margin:0 0 6px;">Teil 1 · Der Dialog im Geschäft</p>
+          <p class="lead">Звір свій зошит: яка репліка стоїть на кожному місці? Обери букву.</p>
+          <div id="dz-list">
+            <div class="fill-item"><span class="num">1.</span> <select class="blank inline" data-ans="b"><option value="">—</option><option>a</option><option>b</option><option>c</option><option>d</option><option>e</option><option>f</option></select></div>
+            <div class="fill-item"><span class="num">2.</span> <select class="blank inline" data-ans="d"><option value="">—</option><option>a</option><option>b</option><option>c</option><option>d</option><option>e</option><option>f</option></select></div>
+            <div class="fill-item"><span class="num">3.</span> <select class="blank inline" data-ans="f"><option value="">—</option><option>a</option><option>b</option><option>c</option><option>d</option><option>e</option><option>f</option></select></div>
+            <div class="fill-item"><span class="num">4.</span> <select class="blank inline" data-ans="c"><option value="">—</option><option>a</option><option>b</option><option>c</option><option>d</option><option>e</option><option>f</option></select></div>
+            <div class="fill-item"><span class="num">5.</span> <select class="blank inline" data-ans="e"><option value="">—</option><option>a</option><option>b</option><option>c</option><option>d</option><option>e</option><option>f</option></select></div>
+            <div class="fill-item"><span class="num">6.</span> <select class="blank inline" data-ans="a"><option value="">—</option><option>a</option><option>b</option><option>c</option><option>d</option><option>e</option><option>f</option></select></div>
+          </div>
+          <div class="check-bar">
+            <button class="btn" id="dz-check-btn">Prüfen</button>
+            <button class="btn secondary" id="dz-reset">Zurücksetzen</button>
+            <span class="score-pill" id="dz-score"></span>
+          </div>
+          <div class="ua-note">
+            <span class="ua-label">🇺🇦 Підказка</span>
+            Хто говорить першим — продавчиня чи покупець? Що каже продавчиня, коли покупець скаржиться? Яка репліка може бути тільки останньою?
+          </div>
+        </div>
+
+        <div class="card">
+          <p class="section-label" style="margin:0 0 6px;">Teil 2 · Dein Lieblingsrezept</p>
+          <p>Lies dein Rezept deinem Partner / deiner Partnerin vor. Der Partner hört zu und zählt: Wie oft hörst du „man“? Welche Küchenverben hörst du? Gibt es „etwas“ oder „nichts“?</p>
+          <div class="ua-note">
+            <span class="ua-label">🇺🇦 Українською</span>
+            Прочитай свій рецепт партнерові / партнерці. Той, хто слухає, рахує: скільки разів звучить «man»? Які «кухонні» дієслова ти чуєш? Чи є «etwas» або «nichts»? Не викидай рецепт — він знадобиться у вправі 5!
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="dz-vocab-wrap" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">Wörter-Check</p>
+        <p class="lead">Перевір слова з минулого уроку.</p>
+        <div id="dz-vocab"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: кухонне приладдя + man kann + Infinitiv ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Was kann man in der Küche machen?</h2>
+
+      <div class="pic-grid">
+        <div class="pic-card"><div class="swatch">🍳</div><div class="num">die Pfanne</div></div>
+        <div class="pic-card"><div class="swatch">🥄</div><div class="num">der Löffel</div></div>
+        <div class="pic-card"><div class="swatch">🍲</div><div class="num">der Kochtopf</div></div>
+        <div class="pic-card"><div class="swatch">🥧</div><div class="num">der Backofen</div></div>
+        <div class="pic-card"><div class="swatch">🔪</div><div class="num">das Messer</div></div>
+        <div class="pic-card"><div class="swatch">🥣</div><div class="num">die Schüssel</div></div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">So sagt man das</p>
+        <p class="beispiel">In einer Pfanne <b>kann</b> man Fisch <b>braten</b>.</p>
+        <p class="beispiel">Mit einem Messer <b>kann</b> man Brot <b>schneiden</b>.</p>
+        <div class="merke">„man kann“ + Infinitiv: <b>kann</b> стоїть на 2-му місці, дієслово-інфінітив — у самому кінці речення.</div>
+        <div style="overflow-x:auto;">
+          <table class="gtable">
+            <tr><th></th><th>der</th><th>die</th><th>das</th></tr>
+            <tr><td>Wer? Was? (Nominativ)</td><td>ein Löffel</td><td>eine Pfanne</td><td>ein Messer</td></tr>
+            <tr><td>Womit? Worin? (Dativ)</td><td>mit <b>einem</b> Löffel</td><td>in <b>einer</b> Pfanne</td><td>mit <b>einem</b> Messer</td></tr>
+          </table>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Граматика</span>
+          <b>man</b> — це безособовий займенник («людина взагалі»): <i>man kann</i> = «можна». Дієслово після <i>man</i> завжди у формі 3-ї особи однини (як після er/sie/es), а інфінітив іде в кінець речення.<br>
+          Після <b>mit</b> (чим?) і <b>in</b> (у чому? де?) іменник стоїть у <b>Dativ</b>: <i>der/das</i> → <b>einem</b>, <i>die</i> → <b>einer</b>. Тому: <i>mit einem Löffel, mit einem Messer, in einer Pfanne, in einer Schüssel</i>.
+        </div>
+      </div>
+
+      <div class="card" id="ub1-list">
+        <p class="section-label" style="margin:0 0 6px;">A · Ergänze die Sätze</p>
+        <p class="lead">Обери, що можна приготувати чи зробити цим кухонним предметом.</p>
+        <div class="fill-item"><span class="num">1)</span> In einer Pfanne kann man Fisch,
+          <select class="blank inline" data-ans="Eier"><option value="">—</option><option>Tee</option><option>Eier</option><option>Joghurt</option></select> braten.</div>
+        <div class="fill-item"><span class="num">2)</span> Mit einem Löffel kann man
+          <select class="blank inline" data-ans="Suppe"><option value="">—</option><option>Brot</option><option>Äpfel</option><option>Suppe</option></select> umrühren.</div>
+        <div class="fill-item"><span class="num">3)</span> In einem Kochtopf kann man
+          <select class="blank inline" data-ans="Kartoffeln"><option value="">—</option><option>Kartoffeln</option><option>Saft</option><option>Butter</option></select> kochen.</div>
+        <div class="fill-item"><span class="num">4)</span> In einem Backofen kann man
+          <select class="blank inline" data-ans="Kuchen"><option value="">—</option><option>Salat</option><option>Kuchen</option><option>Milch</option></select> backen.</div>
+        <div class="fill-item"><span class="num">5)</span> Mit einem Messer kann man
+          <select class="blank inline" data-ans="Brot"><option value="">—</option><option>Wasser</option><option>Suppe</option><option>Brot</option></select> schneiden.</div>
+        <div class="fill-item"><span class="num">6)</span> In einer Schüssel kann man
+          <select class="blank inline" data-ans="Mehl und Eier"><option value="">—</option><option>Mehl und Eier</option><option>Brötchen</option><option>Tee</option></select> vermischen.</div>
+        <div class="fill-item"><span class="num">7)</span> Man kann
+          <select class="blank inline" data-ans="Kartoffeln"><option value="">—</option><option>Milch</option><option>Kartoffeln</option><option>Käse</option></select> waschen und schälen.</div>
+
+        <p class="section-label" style="margin:18px 0 6px;">B · einem oder einer?</p>
+        <div class="fill-item"><span class="num">8)</span> Mit
+          <select class="blank inline" data-ans="einer"><option value="">—</option><option>einem</option><option>einer</option></select> Gabel (die) isst man Salat.</div>
+        <div class="fill-item"><span class="num">9)</span> In
+          <select class="blank inline" data-ans="einem"><option value="">—</option><option>einem</option><option>einer</option></select> Topf (der) kocht man Nudeln.</div>
+        <div class="fill-item"><span class="num">10)</span> Mit
+          <select class="blank inline" data-ans="einem"><option value="">—</option><option>einer</option><option>einem</option></select> Messer (das) schält man Äpfel.</div>
+        <div class="fill-item"><span class="num">11)</span> In
+          <select class="blank inline" data-ans="einer"><option value="">—</option><option>einem</option><option>einer</option></select> Schüssel (die) macht man Salat.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub1-check">Prüfen</button>
+        <button class="btn secondary" id="ub1-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub1-score"></span>
+      </div>
+
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Machen wir einen Wettbewerb: Wer die meisten Wörter schreibt, gewinnt!</p>
+      </div>
+      <div class="card">
+        <div class="qa">
+          <label for="ub1-wettbewerb">C · Wettbewerb: Was kann man noch braten, kochen, backen, schneiden …? Schreib so viele Wörter wie möglich (2 Minuten).</label>
+          <textarea id="ub1-wettbewerb" rows="4" placeholder="braten: Fisch, Eier, Fleisch, … / kochen: … / backen: …"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Змагання: що ще можна смажити, варити, пекти, різати…? Запиши якомога більше слів за 2 хвилини — хто назбирає найбільше, той переміг. Вставка тексту тут вимкнена, тож набирай сам(а).
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 2: СМС і рецепт ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Lies die SMS und das Rezept</h2>
+      <p class="lead">Прочитай листування Петрика з Яном і рецепт, а потім дай відповіді на питання.</p>
+
+      <div class="phone">
+        <div class="phone-bar"><span>17:38</span><span>▮▮▮ 🔋</span></div>
+        <div class="phone-header">Jan</div>
+        <div class="phone-body">
+          <div class="msg me">Hey, Jan! Wie geht es dir?</div>
+          <div class="msg them">Hey, Petryk! Danke, prima. Gestern hatten wir Besuch.</div>
+          <div class="msg me">Habt ihr etwas gekocht?</div>
+          <div class="msg them">Na ja, Würstchen mit Sauerkraut. Das ist ein typisch deutsches Gericht. Es ist sehr lecker. Das ist mein Lieblingsgericht.</div>
+          <div class="msg me">So was habe ich noch nicht probiert.</div>
+          <div class="msg them">Ich schicke dir das Rezept.</div>
+          <div class="msg me">Danke sehr! Wir werden das gerne kochen.</div>
+        </div>
+      </div>
+
+      <div class="card tinted-mustard" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">Rezept · Würstchen mit Sauerkraut</p>
+        <p><b>Zutaten:</b> 2 Dosen Sauerkraut · 8 Stück Würstchen · 3 Zwiebeln · Öl oder Fett</p>
+        <p>Würstchen in etwas Fett oder Öl in der Pfanne braun braten und dann aus der Pfanne nehmen. Beiseite stellen. Zwiebeln schälen, waschen und schneiden, auch in der Pfanne braten. Sauerkraut in die Pfanne geben und braten, bis es schön braun ist. Würstchen auf das Kraut legen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Слова до тексту</span>
+          <dl>
+            <dt>Gestern hatten wir Besuch.</dt><dd>Учора в нас були гості.</dd>
+            <dt>das Gericht</dt><dd>страва</dd>
+            <dt>das Lieblingsgericht</dt><dd>улюблена страва</dd>
+            <dt>So was habe ich noch nicht probiert.</dt><dd>Такого я ще не куштував.</dd>
+            <dt>die Zutaten</dt><dd>інгредієнти</dd>
+            <dt>das Sauerkraut</dt><dd>квашена капуста</dd>
+            <dt>die Zwiebel</dt><dd>цибуля</dd>
+            <dt>beiseite stellen</dt><dd>відставити вбік</dd>
+            <dt>bis es schön braun ist</dt><dd>доки вона гарно не підрум'яниться</dd>
+          </dl>
+        </div>
+        <div class="merke">У рецептах німці зазвичай пишуть дієслово в <b>інфінітиві</b> в кінці: <i>Zwiebeln schälen, waschen und schneiden.</i> — так коротше, без «man» і без підмета.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Hast du alles verstanden?</p>
+        <div id="ub2-quiz"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: порядок кроків ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wie bereitet man Jans Lieblingsgericht zu?</h2>
+      <p class="lead">Пронумеруй кроки в правильному порядку (2–8). Перший крок уже позначено. Якщо треба — поглянь ще раз на рецепт у вправі 2.</p>
+      <div class="card" id="ub3-list">
+        <div class="fill-item"><span class="num">1</span> ✓ Würstchen in der Pfanne braten (Beispiel)</div>
+        <div class="fill-item"><select class="blank inline" data-ans="4"><option value="">—</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select> Zwiebeln schälen und waschen</div>
+        <div class="fill-item"><select class="blank inline" data-ans="7"><option value="">—</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select> Sauerkraut in die Pfanne geben und braten</div>
+        <div class="fill-item"><select class="blank inline" data-ans="6"><option value="">—</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select> Zwiebeln braten</div>
+        <div class="fill-item"><select class="blank inline" data-ans="2"><option value="">—</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select> Würstchen aus der Pfanne nehmen</div>
+        <div class="fill-item"><select class="blank inline" data-ans="8"><option value="">—</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select> Würstchen dazugeben</div>
+        <div class="fill-item"><select class="blank inline" data-ans="5"><option value="">—</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select> Zwiebeln schneiden</div>
+        <div class="fill-item"><select class="blank inline" data-ans="3"><option value="">—</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select> Würstchen beiseite stellen</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Підказка</span>
+        Кожен номер використовується лише один раз. <i>dazugeben</i> — «додати (до чогось)»: у рецепті це місце, де сосиски кладуть на капусту.
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4: розповідь з man і zuerst/dann ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Erzähl: Wie kocht man das?</h2>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Vom Rezept zur Erzählung</p>
+        <div style="overflow-x:auto;">
+          <table class="gtable">
+            <tr><th>Rezept (Infinitiv)</th><th>Erzählung (man + Verb)</th></tr>
+            <tr><td>Würstchen braten</td><td><b>Zuerst brät man</b> die Würstchen.</td></tr>
+            <tr><td>aus der Pfanne nehmen</td><td><b>Dann nimmt man</b> die Würstchen aus der Pfanne.</td></tr>
+            <tr><td>beiseite stellen</td><td><b>Danach stellt man</b> die Würstchen <b>beiseite</b>.</td></tr>
+            <tr><td>Würstchen dazugeben</td><td><b>Zum Schluss gibt man</b> die Würstchen <b>dazu</b>.</td></tr>
+          </table>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Граматика</span>
+          Коли розповідаєш рецепт, а не записуєш його, потрібне речення з дієсловом на <b>2-му місці</b>. Якщо речення починається з <i>zuerst</i> (спочатку), <i>dann</i> (потім), <i>danach</i> (після цього), <i>zum Schluss</i> (наостанок), то <b>man</b> стає <b>після</b> дієслова: <i>Zuerst brät man…</i><br>
+          Пам'ятай про сильні дієслова зі зміною голосної: <i>braten → man brät</i>, <i>nehmen → man nimmt</i>, <i>geben → man gibt</i>.<br>
+          Відокремлювані дієслова «розпадаються»: префікс іде в кінець — <i>beiseite stellen → man stellt … beiseite</i>, <i>dazugeben → man gibt … dazu</i>, <i>umrühren → man rührt … um</i>.
+        </div>
+      </div>
+
+      <div class="card" id="ub4-list">
+        <p class="section-label" style="margin:0 0 6px;">A · Welche Form passt?</p>
+        <div class="fill-item"><span class="num">1)</span> Zuerst
+          <select class="blank inline" data-ans="brät"><option value="">—</option><option>bratet</option><option>brät</option><option>braten</option></select> man die Würstchen in Öl.</div>
+        <div class="fill-item"><span class="num">2)</span> Dann
+          <select class="blank inline" data-ans="nimmt"><option value="">—</option><option>nimmt</option><option>nehmt</option><option>nehmen</option></select> man die Würstchen aus der Pfanne.</div>
+        <div class="fill-item"><span class="num">3)</span> Man
+          <select class="blank inline" data-ans="rührt"><option value="">—</option><option>umrührt</option><option>rühren</option><option>rührt</option></select> das Sauerkraut gut
+          <select class="blank inline" data-ans="um"><option value="">—</option><option>um</option><option>mit</option><option>an</option></select>.</div>
+        <div class="fill-item"><span class="num">4)</span> Zum Schluss
+          <select class="blank inline" data-ans="gibt"><option value="">—</option><option>gebt</option><option>geben</option><option>gibt</option></select> man die Würstchen
+          <select class="blank inline" data-ans="dazu"><option value="">—</option><option>dazu</option><option>zu</option><option>da</option></select>.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub4-check">Prüfen</button>
+        <button class="btn secondary" id="ub4-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub4-score"></span>
+      </div>
+
+      <div class="card" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">B · Bilde Sätze</p>
+        <p class="lead">Натискай картки в правильному порядку — і в тебе вийде розповідь про те, як готують страву Яна. Клік по вже поставленій картці повертає її назад.</p>
+        <div id="ub4-order"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5: власна картка-рецепт ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Schreib das Rezept deiner Lieblingsspeise</h2>
+      <p class="lead">Візьми свій рецепт із домашнього завдання і перетвори його на картку-рецепт, як у Яна: спершу інгредієнти з кількістю, потім короткі кроки з інфінітивом у кінці.</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-name">Name der Speise</label>
+          <textarea id="ub5-name" rows="1" placeholder="z. B. Syrnyky mit Schmand"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-zutaten">Zutaten (mit Mengenangaben!)</label>
+          <textarea id="ub5-zutaten" rows="3" placeholder="z. B. 500 Gramm Quark, 2 Eier, 3 Esslöffel Mehl, etwas Zucker …"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-zubereitung">Zubereitung (Infinitiv am Ende, wie bei Jan)</label>
+          <textarea id="ub5-zubereitung" rows="5" placeholder="z. B. Quark, Eier und Zucker in einer Schüssel vermischen. Mehl dazugeben und gut umrühren. …"></textarea>
+        </div>
+        <div class="wordbank">
+          <span>schälen</span><span>waschen</span><span>schneiden</span><span>vermischen</span><span>umrühren</span><span>braten</span><span>kochen</span><span>backen</span><span>dazugeben</span><span>beiseite stellen</span><span>in die Pfanne geben</span>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Не забудь міри й упаковки з першого уроку модуля без артикля (<i>2 Dosen Sauerkraut, 1 Kilo Kartoffeln, 200 Gramm Käse</i>). Вставка тексту в ці поля вимкнена — набирай сам(а). Коли закінчиш, розкажи свій рецепт сусідові по парті вголос: <i>Zuerst … man …, dann … man …, zum Schluss …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ПРИКІНЦЕВА ПАНЕЛЬ ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>1) Schreib einen SMS-Chat (8–10 Nachrichten) mit einem Freund oder einer Freundin aus Deutschland – wie Petryk und Jan: Er/Sie fragt, was ihr gestern gegessen habt. Du erzählst von einem typisch ukrainischen Gericht (z. B. Borschtsch, Wareniki, Syrnyky) und schickst das Rezept. Erzähl die Zubereitung in mindestens vier Schritten mit „man“ und mit zuerst, dann, danach, zum Schluss (z. B. „Zuerst schält man die Kartoffeln.“). Benutze mindestens ein trennbares Verb (z. B. umrühren, dazugeben, beiseitestellen). 2) Zeichne vier Küchengeräte und schreib zu jedem einen Satz: „Mit einem Messer kann man Brot schneiden.“ / „In einer Pfanne kann man …“.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          1) Напиши СМС-листування (8–10 повідомлень) з другом або подругою з Німеччини — як Петрик і Ян: він/вона питає, що ви вчора їли. Ти розповідаєш про типову українську страву (напр. борщ, вареники, сирники) і надсилаєш рецепт. Розкажи про приготування щонайменше в чотири кроки з «man» і словами zuerst, dann, danach, zum Schluss (напр. «Zuerst schält man die Kartoffeln.»). Використай щонайменше одне відокремлюване дієслово (напр. umrühren, dazugeben, beiseitestellen). 2) Намалюй чотири кухонні предмети й напиши до кожного речення: «Mit einem Messer kann man Brot schneiden.» / «In einer Pfanne kann man …».
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Wörter zum Lernen</p>
+        <div class="chip-row" id="vocabChips"></div>
+      </div>
+
+      <div class="card" id="lessonGramWrap">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="lessonGram"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../data/glossary-data.js"></script>
+<script src="../../../data/lessons-data.js"></script>
+<script src="../../../data/grammar-data.js"></script>
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  // ===== Слова цього уроку у вкладці Fertig =====
+  const LEKTION_KLAS = "7", LEKTION_MODUL = "B", LEKTION_LEKTION = 3;
+  const LEKTION_PREV_LEKTION = 2;
+
+  (function renderLessonVocab(){
+    const box = document.getElementById('vocabChips');
+    if (!box || typeof GLOSSARY === 'undefined') return;
+    const words = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_LEKTION
+    );
+    if (words.length === 0){
+      box.innerHTML = '<p class="empty-note">Слова для цього уроку ще не додані в глосарій.</p>';
+      return;
+    }
+    box.innerHTML = words.map(w =>
+      '<span class="chip static">' + w.de + ' — ' + w.uk + '</span>'
+    ).join('');
+  })();
+
+  // ===== Граматика до цього уроку у вкладці Fertig (поле gram у lessons-data.js) =====
+  (function renderLessonGrammar(){
+    const wrap = document.getElementById('lessonGramWrap');
+    const box = document.getElementById('lessonGram');
+    if (!wrap || !box) return;
+    const hide = () => { wrap.style.display = 'none'; };
+    if (typeof LESSONS === 'undefined' || typeof GRAMMAR === 'undefined') return hide();
+    const me = LESSONS.find(l => l.klas === LEKTION_KLAS && l.modul === LEKTION_MODUL && l.lektion === LEKTION_LEKTION);
+    const topics = ((me && me.gram) || []).map(id => GRAMMAR.find(t => t.id === id)).filter(t => t && t.opublikovano > 0);
+    if (topics.length === 0) return hide();
+    const src = document.querySelector('script[src$="data/grammar-data.js"]').getAttribute('src');
+    const root = src.slice(0, src.length - 'data/grammar-data.js'.length);
+    box.innerHTML = topics.map(t =>
+      '<a class="gram-link" href="' + root + 'gramatyka/temy/' + t.id + '.html">'
+      + '<span class="k">' + t.uk + '</span>' + t.tema + '</a>'
+    ).join('');
+  })();
+
+  // ===== Wörter-Check у вкладці Hausaufgabe (слова ПОПЕРЕДНЬОГО уроку) =====
+  function guessPos(de){
+    var base = (de || '').replace(/\([^)]*\)/g, '').trim();
+    if(/^(der|die|das)(\/(der|die|das))?\s/.test(base)) return 'noun';
+    if(/^sich\s/.test(base)) return 'verb';
+    if(/^am\s/.test(base)) return 'other';
+    if(/\(\+(Gen|Dat|Akk)\.?\)/.test(de)) return 'prep';
+    var words = base.split(/\s+/);
+    var last = words[words.length - 1];
+    if(/(en|ern|eln)$/.test(last) && last === last.toLowerCase()) return 'verb';
+    return 'other';
+  }
+
+  (function renderDzVocabCheck(){
+    const wrap = document.getElementById('dz-vocab-wrap');
+    const box = document.getElementById('dz-vocab');
+    if (!wrap || !box || typeof GLOSSARY === 'undefined') return;
+    if (!LEKTION_PREV_LEKTION){ wrap.style.display = 'none'; return; }
+
+    const prevWords = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_PREV_LEKTION
+    );
+    if (prevWords.length < 3){ wrap.style.display = 'none'; return; }
+
+    const pool = shuffleArray(prevWords).slice(0, 6);
+    const quizData = pool.map(w => {
+      const pos = guessPos(w.de);
+      let sameKind = GLOSSARY.filter(g => g.uk !== w.uk && guessPos(g.de) === pos);
+      if(sameKind.length < 2) sameKind = GLOSSARY.filter(g => g.uk !== w.uk);
+      const distractors = shuffleArray(sameKind).slice(0, 2).map(g => g.uk);
+      return { q: w.de, opts: [w.uk, ...distractors], correct: w.uk };
+    });
+    buildQuiz('dz-vocab', quizData);
+  })();
+
+  // Hausaufgabe, Teil 1: порядок діалогу (кнопка має id dz-check-btn, бо id "dz-check" зайнятий контейнером шаблону)
+  setTotal(document.querySelectorAll('#dz-list select.blank').length);
+  document.getElementById('dz-check-btn').addEventListener('click', () => checkBlanks('dz-list', 'dz-score', 'dz'));
+  document.getElementById('dz-reset').addEventListener('click', () => resetBlanks('dz-list', 'dz-score', 'dz'));
+
+  // Üb. 1: кухонне приладдя (випадні списки)
+  wireBlanks('ub1');
+
+  // Üb. 2: розуміння СМС і рецепта
+  const ub2Data = [
+    {q: "Wer hatte gestern Besuch?", opts: ["Petryk", "Jan", "Jans Oma"], correct: "Jan"},
+    {q: "Was hat Jans Familie gekocht?", opts: ["Würstchen mit Sauerkraut", "Fisch mit Kartoffeln", "Borschtsch"], correct: "Würstchen mit Sauerkraut"},
+    {q: "Wie findet Jan das Gericht?", opts: ["Es ist zu salzig.", "Es schmeckt nicht gut.", "Es ist sein Lieblingsgericht."], correct: "Es ist sein Lieblingsgericht."},
+    {q: "„So was habe ich noch nicht probiert.“ bedeutet:", opts: ["Такого я ще не куштував.", "Такого я ще не готував.", "Такого я не люблю."], correct: "Такого я ще не куштував."},
+    {q: "Wie viele Zwiebeln braucht man für das Rezept?", opts: ["zwei", "drei", "acht"], correct: "drei"},
+    {q: "Worin brät man die Würstchen?", opts: ["in Zucker oder Mehl", "in Wasser oder Milch", "in Fett oder Öl"], correct: "in Fett oder Öl"},
+    {q: "Was schickt Jan Petryk?", opts: ["ein Foto", "ein Paket", "das Rezept"], correct: "das Rezept"},
+    {q: "Wie lange brät man das Sauerkraut?", opts: ["bis es schön braun ist", "zwei Stunden", "bis es kalt ist"], correct: "bis es schön braun ist"}
+  ];
+  buildQuiz('ub2-quiz', ub2Data);
+
+  // Üb. 3: порядок кроків
+  wireBlanks('ub3');
+
+  // Üb. 4: форми дієслів + склади речення
+  wireBlanks('ub4');
+  buildOrder('ub4-order', [
+    { words: ["Zuerst", "brät", "man", "die Würstchen", "in der Pfanne"], end: ".",
+      alt: ["Man brät zuerst die Würstchen in der Pfanne", "Zuerst brät man in der Pfanne die Würstchen"] },
+    { words: ["Dann", "nimmt", "man", "die Würstchen", "aus der Pfanne"], end: ".",
+      alt: ["Man nimmt dann die Würstchen aus der Pfanne", "Dann nimmt man aus der Pfanne die Würstchen"] },
+    { words: ["Danach", "stellt", "man", "die Würstchen", "beiseite"], end: ".",
+      alt: ["Man stellt danach die Würstchen beiseite", "Man stellt die Würstchen danach beiseite"] },
+    { words: ["Dann", "schneidet", "man", "die Zwiebeln"], end: ".",
+      alt: ["Man schneidet dann die Zwiebeln"] },
+    { words: ["Jetzt", "gibt", "man", "das Sauerkraut", "in die Pfanne"], end: ".",
+      alt: ["Man gibt jetzt das Sauerkraut in die Pfanne"] },
+    { words: ["Zum Schluss", "legt", "man", "die Würstchen", "auf das Kraut"], end: ".",
+      alt: ["Man legt zum Schluss die Würstchen auf das Kraut"], hint: "Останній крок рецепта" }
+  ]);
+
+  // Фінальна панель зі штампами
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🍳','🥄','🔪','🍲','🌭']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
