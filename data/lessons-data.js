@@ -610,5 +610,16 @@ const LESSONS = [
     nove: true,
     gram: ["konjunktionen-position-null", "kausalsaetze", "konditionalsaetze", "komparation", "verben-dass-infinitiv", "possessivartikel"],
     dz: "Familien-Interview: Wähle eine Person aus deiner Familie oder einen Verwandten (z. B. Oma, Opa, Tante, Onkel, Cousin) und stell ihr die zehn Fragen aus Üb. 5 (z. B. „Wann und wo bist du geboren?“, „Wann bist du zur Schule gegangen?“). 1) Füll für diese Person einen Steckbrief aus – alle neun Zeilen wie in Üb. 5. 2) Schreib dazu eine kurze Präsentation in der 3. Person (6–8 Sätze) wie in Üb. 6 – mit „er / sein“ oder „sie / ihr“ (z. B. „Meine Oma heißt Halyna. Sie ist am 2. Juni 1958 in Tschernihiw geboren. Ihre Eltern waren …“). 3) Der letzte Satz ist über eure Beziehung: „Ich habe ein … Verhältnis zu ihm / zu ihr, denn …“. Kleb ein Foto ein oder zeichne die Person. Nächstes Mal stellen wir die Personen in Gruppen vor – die anderen stellen dir zwei Zusatzfragen."
+  },
+  {
+    klas: "9",
+    modul: "A",
+    lektion: 18,
+    nazva: "Тематична контрольна робота: Ich, meine Familie, meine Freunde",
+    opys: "Тематична контрольна робота за модуль A (режим контрольної, бали рахуються автоматично): лексика модуля, дієслова з прийменниками й займенники в Dativ / Akkusativ, закінчення прикметників після ein і ступені порівняння, Präteritum у життєписі, порядок слів (wenn / als / weil / denn, man + Modalverb, Sie-Form), als / wenn / wann, читання допису про патчворк-родину, лист-відповідь і бонус «Familienrätsel».",
+    file: "klas-9/modul-a/lektion-18.html",
+    nove: true,
+    gram: ["verben-praepositionalobjekt", "personalpronomen", "adjektivdeklination", "komparation", "tempusformen", "starke-verben", "temporalsaetze", "konditionalsaetze", "kausalsaetze", "konjunktionen-position-null"],
+    dz: "Mein Fehler-Detektiv-Heft: 1) Schreib nach der Kontrollarbeit aus dem Gedächtnis drei Aufgaben auf, bei denen du unsicher warst (z. B. Adjektivendungen nach „ein“, als / wenn / wann, Präteritum, Verben mit Präpositionen). Schlag zu jeder Aufgabe die Regel nach (Heft, Lehrbuch oder Grammatik-Seite) und schreib sie in einem Satz auf. 2) Schreib zu jeder Regel zwei eigene, richtige Beispielsätze über deine Familie oder deine Freunde. 3) Mach ein Wortnetz „Modul A: Ich, meine Familie, meine Freunde“ mit mindestens 15 Wörtern aus fünf Bereichen: Familie, Beziehungen, Charakter, Freizeit, Lebenslauf – Nomen immer mit Artikel. Nächstes Mal besprechen wir die typischen Fehler der Kontrollarbeit."
   }
 ];

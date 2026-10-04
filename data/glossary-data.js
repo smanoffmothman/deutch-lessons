@@ -681,5 +681,16 @@ const GLOSSARY = [
   {de: "wütend", uk: "розлючений, лютий", klas: "9", modul: "A", lektion: 17},
   {de: "ständig", uk: "постійно", klas: "9", modul: "A", lektion: 17},
   {de: "zerreißen (zerriss, hat zerrissen)", uk: "розірвати, порвати", klas: "9", modul: "A", lektion: 17},
-  {de: "schaden (+Dat.)", uk: "шкодити (Das schadet der Gesundheit.)", klas: "9", modul: "A", lektion: 17}
+  {de: "schaden (+Dat.)", uk: "шкодити (Das schadet der Gesundheit.)", klas: "9", modul: "A", lektion: 17},
+  {de: "die Patchworkfamilie", uk: "патчворк-родина (діти з різних шлюбів живуть разом)", klas: "9", modul: "A", lektion: 18},
+  {de: "der Stiefvater (die Stiefmutter)", uk: "вітчим (мачуха)", klas: "9", modul: "A", lektion: 18},
+  {de: "der Halbbruder (die Halbschwester)", uk: "брат (сестра) лише по матері або лише по батькові", klas: "9", modul: "A", lektion: 18},
+  {de: "sich kümmern um (+Akk.)", uk: "дбати, піклуватися про когось/щось", klas: "9", modul: "A", lektion: 18},
+  {de: "sich ärgern über (+Akk.)", uk: "сердитися, дратуватися через когось/щось", klas: "9", modul: "A", lektion: 18},
+  {de: "sich entschuldigen (bei +Dat.)", uk: "вибачатися (перед кимось)", klas: "9", modul: "A", lektion: 18},
+  {de: "der Kompromiss (einen Kompromiss finden)", uk: "компроміс (знайти компроміс)", klas: "9", modul: "A", lektion: 18},
+  {de: "die Atmosphäre", uk: "атмосфера (настрій, клімат у групі людей)", klas: "9", modul: "A", lektion: 18},
+  {de: "der Zusammenhalt", uk: "згуртованість, єдність", klas: "9", modul: "A", lektion: 18},
+  {de: "die Geduld (Geduld haben)", uk: "терпіння (мати терпіння)", klas: "9", modul: "A", lektion: 18},
+  {de: "hundertprozentig", uk: "на всі сто відсотків, повністю", klas: "9", modul: "A", lektion: 18}
 ];
