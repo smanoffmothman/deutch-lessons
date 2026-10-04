@@ -585,5 +585,17 @@ const GLOSSARY = [
   {de: "das Rezept (die Rezepte)", uk: "рецепт", klas: "7", modul: "B", lektion: 3},
   {de: "die Zutat (die Zutaten)", uk: "інгредієнт, складник (страви)", klas: "7", modul: "B", lektion: 3},
   {de: "das Gericht (das Lieblingsgericht)", uk: "страва (улюблена страва)", klas: "7", modul: "B", lektion: 3},
-  {de: "dazugeben (trennbar)", uk: "додавати (до чогось)", klas: "7", modul: "B", lektion: 3}
+  {de: "dazugeben (trennbar)", uk: "додавати (до чогось)", klas: "7", modul: "B", lektion: 3},
+  {de: "der Herd (die Herde)", uk: "плита (кухонна)", klas: "7", modul: "B", lektion: 4},
+  {de: "der Kühlschrank (die Kühlschränke)", uk: "холодильник", klas: "7", modul: "B", lektion: 4},
+  {de: "die Mikrowelle (die Mikrowellen)", uk: "мікрохвильова піч, мікрохвильовка", klas: "7", modul: "B", lektion: 4},
+  {de: "der Mixer (die Mixer)", uk: "міксер", klas: "7", modul: "B", lektion: 4},
+  {de: "die Kaffeemaschine (die Kaffeemaschinen)", uk: "кавоварка, кавомашина", klas: "7", modul: "B", lektion: 4},
+  {de: "die Saftpresse (die Saftpressen)", uk: "соковижималка", klas: "7", modul: "B", lektion: 4},
+  {de: "der Fleischwolf (die Fleischwölfe)", uk: "м'ясорубка", klas: "7", modul: "B", lektion: 4},
+  {de: "die Küchenmaschine (die Küchenmaschinen)", uk: "кухонний комбайн", klas: "7", modul: "B", lektion: 4},
+  {de: "das Küchengerät (die Küchengeräte)", uk: "кухонний прилад", klas: "7", modul: "B", lektion: 4},
+  {de: "aufwärmen (trennbar)", uk: "розігрівати (їжу)", klas: "7", modul: "B", lektion: 4},
+  {de: "zerkleinern", uk: "подрібнювати", klas: "7", modul: "B", lektion: 4},
+  {de: "wenn (…, wenn man Saft trinken will.)", uk: "коли, якщо (сполучник; дієслово — в кінці речення)", klas: "7", modul: "B", lektion: 4}
 ];

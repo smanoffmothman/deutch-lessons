@@ -522,5 +522,16 @@ const LESSONS = [
     nove: true,
     gram: ["indefinitpronomen", "modalverben", "praep-dativ", "trennbare-verben"],
     dz: "1) Schreib einen SMS-Chat (8–10 Nachrichten) mit einem Freund oder einer Freundin aus Deutschland – wie Petryk und Jan: Er/Sie fragt, was ihr gestern gegessen habt. Du erzählst von einem typisch ukrainischen Gericht (z. B. Borschtsch, Wareniki, Syrnyky) und schickst das Rezept. Erzähl die Zubereitung in mindestens vier Schritten mit „man“ und mit zuerst, dann, danach, zum Schluss (z. B. „Zuerst schält man die Kartoffeln.“). Benutze mindestens ein trennbares Verb (z. B. umrühren, dazugeben, beiseitestellen). 2) Zeichne vier Küchengeräte und schreib zu jedem einen Satz: „Mit einem Messer kann man Brot schneiden.“ / „In einer Pfanne kann man …“."
+  },
+  {
+    klas: "7",
+    modul: "B",
+    lektion: 4,
+    nazva: "In der Küche: Küchengeräte",
+    opys: "Вісім кухонних приладів (der Herd, der Kühlschrank, die Mikrowelle, der Mixer…) з двома аудіо, складні іменники (Kaffee + Maschine = die Kaffeemaschine, артикль від останнього слова), текст «Helfer in der Küche» і підрядне речення з wenn: Man benutzt …, wenn man … will / Wenn …, benutzt man …",
+    file: "klas-7/modul-b/lektion-4.html",
+    nove: true,
+    gram: ["nebensaetze", "konditionalsaetze", "temporalsaetze"],
+    dz: "1) Fehlersuche: Im Text sind 6 Fehler (Artikel oder Wortfolge). Finde sie und schreib den Text richtig ins Heft: „In unserer Küche gibt es viele Geräte. Das Kühlschrank ist groß und weiß. Meine Mutter benutzt den Herd, wenn sie kocht eine Suppe. Die Kaffeemaschine braucht mein Vater, wenn er ist am Morgen müde. Der Mikrowelle benutzen wir, wenn wir das Essen schnell aufwärmen wollen. Wenn ich Saft trinken will, ich benutze die Saftpresse. Die Küchenmaschine ist sehr praktisch, wenn man will einen Kuchen backen. Den Fleischwolf brauchen wir selten.“ 2) Mach ein Mini-Interview mit einem Familienmitglied: Welche Küchengeräte benutzt ihr zu Hause und wann? Schreib 4 Sätze mit „wenn“ (z. B. „Meine Oma benutzt den Mixer, wenn sie einen Kuchen backen will.“). Mindestens ein Satz beginnt mit „Wenn …“."
   }
 ];
