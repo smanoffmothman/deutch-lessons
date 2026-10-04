@@ -573,5 +573,17 @@ const GLOSSARY = [
   {de: "das Ereignis (die Ereignisse)", uk: "подія", klas: "9", modul: "A", lektion: 15},
   {de: "einmalig", uk: "одноразовий; неповторний", klas: "9", modul: "A", lektion: 15},
   {de: "die Vergangenheit", uk: "минуле; минулий час (граматика)", klas: "9", modul: "A", lektion: 15},
-  {de: "der Temporalsatz", uk: "підрядне речення часу", klas: "9", modul: "A", lektion: 15}
+  {de: "der Temporalsatz", uk: "підрядне речення часу", klas: "9", modul: "A", lektion: 15},
+  {de: "der Löffel (die Löffel)", uk: "ложка", klas: "7", modul: "B", lektion: 3},
+  {de: "das Messer (die Messer)", uk: "ніж", klas: "7", modul: "B", lektion: 3},
+  {de: "der Kochtopf (die Kochtöpfe)", uk: "каструля", klas: "7", modul: "B", lektion: 3},
+  {de: "der Backofen (die Backöfen)", uk: "духовка, піч", klas: "7", modul: "B", lektion: 3},
+  {de: "schälen", uk: "чистити (від шкірки, лушпиння)", klas: "7", modul: "B", lektion: 3},
+  {de: "schneiden (er schneidet)", uk: "різати", klas: "7", modul: "B", lektion: 3},
+  {de: "umrühren (trennbar)", uk: "помішувати", klas: "7", modul: "B", lektion: 3},
+  {de: "vermischen", uk: "змішувати", klas: "7", modul: "B", lektion: 3},
+  {de: "das Rezept (die Rezepte)", uk: "рецепт", klas: "7", modul: "B", lektion: 3},
+  {de: "die Zutat (die Zutaten)", uk: "інгредієнт, складник (страви)", klas: "7", modul: "B", lektion: 3},
+  {de: "das Gericht (das Lieblingsgericht)", uk: "страва (улюблена страва)", klas: "7", modul: "B", lektion: 3},
+  {de: "dazugeben (trennbar)", uk: "додавати (до чогось)", klas: "7", modul: "B", lektion: 3}
 ];

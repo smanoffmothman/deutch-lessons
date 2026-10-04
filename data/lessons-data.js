@@ -511,5 +511,16 @@ const LESSONS = [
     file: "klas-9/modul-a/lektion-15.html",
     nove: true,
     dz: "Gestalte eine Seite „Mein Lebensalbum“: Wähle 5 wichtige Momente (Wendepunkte) aus deinem Leben (z. B. die Geburt deiner Schwester, der erste Schultag, ein Umzug, ein besonderes Ereignis in den Ferien). Klebe zu jedem Moment ein Foto ein oder zeichne ein Bild und schreib darunter eine Bildunterschrift mit einem als-Satz im Präteritum. Mindestens zwei Sätze beginnen mit „Als …“ (z. B. „Als ich sechs war, kam ich in die Schule.“), und in mindestens einem Satz steht ein trennbares Verb (z. B. „…, als wir nach Lwiw umzogen.“). Schreib außerdem drei Interviewfragen in der Sie-Form an eine bekannte Person, deren Lebenslauf dich interessiert (z. B. „Wann haben Sie Ihre erste Stelle bekommen?“)."
+  },
+  {
+    klas: "7",
+    modul: "B",
+    lektion: 3,
+    nazva: "Wir kochen nach Rezept",
+    opys: "Кухонне приладдя (Pfanne, Löffel, Kochtopf, Backofen, Messer, Schüssel) і man kann + Infinitiv з mit/in + Dativ, СМС Яна й рецепт «Würstchen mit Sauerkraut», порядок кроків приготування, розповідь із zuerst / dann / danach / zum Schluss (man brät, man stellt … beiseite) і власна картка-рецепт.",
+    file: "klas-7/modul-b/lektion-3.html",
+    nove: true,
+    gram: ["indefinitpronomen", "modalverben", "praep-dativ", "trennbare-verben"],
+    dz: "1) Schreib einen SMS-Chat (8–10 Nachrichten) mit einem Freund oder einer Freundin aus Deutschland – wie Petryk und Jan: Er/Sie fragt, was ihr gestern gegessen habt. Du erzählst von einem typisch ukrainischen Gericht (z. B. Borschtsch, Wareniki, Syrnyky) und schickst das Rezept. Erzähl die Zubereitung in mindestens vier Schritten mit „man“ und mit zuerst, dann, danach, zum Schluss (z. B. „Zuerst schält man die Kartoffeln.“). Benutze mindestens ein trennbares Verb (z. B. umrühren, dazugeben, beiseitestellen). 2) Zeichne vier Küchengeräte und schreib zu jedem einen Satz: „Mit einem Messer kann man Brot schneiden.“ / „In einer Pfanne kann man …“."
   }
 ];
