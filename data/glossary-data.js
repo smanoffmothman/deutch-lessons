@@ -633,5 +633,17 @@ const GLOSSARY = [
   {de: "der Schmuck", uk: "прикраси", klas: "8", modul: "A", lektion: 15},
   {de: "das Leder (aus Leder)", uk: "шкіра як матеріал (зі шкіри, шкіряний)", klas: "8", modul: "A", lektion: 15},
   {de: "selbst gemacht", uk: "саморобний, зроблений власноруч", klas: "8", modul: "A", lektion: 15},
-  {de: "die Erholungsart", uk: "вид відпочинку", klas: "8", modul: "A", lektion: 15}
+  {de: "die Erholungsart", uk: "вид відпочинку", klas: "8", modul: "A", lektion: 15},
+  {de: "die Wiederholung", uk: "повторення (навчального матеріалу)", klas: "8", modul: "A", lektion: 16},
+  {de: "die Regel (die Regeln)", uk: "правило", klas: "8", modul: "A", lektion: 16},
+  {de: "die Lösung (die Lösungen)", uk: "розв'язок, правильна відповідь", klas: "8", modul: "A", lektion: 16},
+  {de: "die Note (die Noten)", uk: "оцінка (у школі)", klas: "8", modul: "A", lektion: 16},
+  {de: "unsicher sein", uk: "бути невпевненим, вагатися", klas: "8", modul: "A", lektion: 16},
+  {de: "das Training", uk: "тренування", klas: "8", modul: "A", lektion: 16},
+  {de: "trainieren", uk: "тренуватися", klas: "8", modul: "A", lektion: 16},
+  {de: "der Helm (die Helme)", uk: "шолом", klas: "8", modul: "A", lektion: 16},
+  {de: "dagegen sein", uk: "бути проти", klas: "8", modul: "A", lektion: 16},
+  {de: "zum ersten Mal", uk: "вперше", klas: "8", modul: "A", lektion: 16},
+  {de: "deshalb", uk: "тому, через це", klas: "8", modul: "A", lektion: 16},
+  {de: "der Brieffreund / die Brieffreundin", uk: "друг / подруга по листуванню", klas: "8", modul: "A", lektion: 16}
 ];

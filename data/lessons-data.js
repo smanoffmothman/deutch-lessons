@@ -566,5 +566,16 @@ const LESSONS = [
     nove: true,
     gram: ["perfekt-plusquamperfekt", "fragen"],
     dz: "Stell dir vor: Du warst eine Woche im Indianerlager in Niedersachsen. Schreib einen Post für deine Freunde in einem sozialen Netzwerk (6–8 Sätze) im Perfekt: Was hast du dort erlebt? Benutze mindestens drei Verben mit „sein“ (z. B. reiten, Kanu fahren, aufwachen) und zwei trennbare Verben (z. B. aufwachen, mitmachen, sich zudecken). Der letzte Satz ist deine Meinung mit „weil“: Wie findest du diese Erholungsart? Zeichne ein „Foto“ zu deinem Post (oder klebe eins ein) und schreib eine kurze Bildunterschrift. Unter den Post schreibst du zwei Kommentare von Freunden – zwei W-Fragen an dich (z. B. „Wo hast du geschlafen?“). Nächstes Mal beantworten wir die Fragen in Paaren."
+  },
+  {
+    klas: "8",
+    modul: "A",
+    lektion: 16,
+    nazva: "Тематична контрольна робота: Lebensstil",
+    opys: "Контрольна робота за Модуль A «Стиль життя»: лексика (відпочинок, спорт, здоров'я, розпорядок дня), Perfekt, прийменники з Genitiv, Superlativ і gern – lieber – am liebsten, зворотні дієслова, man + Modalverb, Imperativ, порядок слів (weil, wenn, während), читання форумного допису й лист-відповідь.",
+    file: "klas-8/modul-a/lektion-16.html",
+    nove: true,
+    gram: ["perfekt-plusquamperfekt", "praep-genitiv", "komparation", "reflexive-verben", "modalverben", "imperativ", "kausalsaetze", "konditionalsaetze"],
+    dz: "Mach deine persönliche „Fehlerkarte“ zur Kontrollarbeit: Wähle drei Aufgaben aus verschiedenen Übungen, bei denen du einen Fehler gemacht hast oder unsicher warst. Schreib zu jeder Aufgabe: 1) deine Antwort, 2) die richtige Antwort, 3) die Regel in einem kurzen Satz mit Beispiel (z. B. „wegen + Genitiv: wegen des Regens“). Hattest du keine Fehler? Dann wähle die drei Aufgaben, die für dich am schwierigsten waren. Schreib außerdem eine eigene Quizfrage zum Wortschatz des Moduls „Lebensstil“ auf eine Karte: die Frage und drei Antworten (nur eine ist richtig). Nächstes Mal machen wir aus euren Karten ein Klassen-Quiz!"
   }
 ];
