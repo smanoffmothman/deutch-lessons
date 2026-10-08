@@ -25,12 +25,16 @@ function getNewestPerKlas(lessons){
 
 // Посилання з картки уроку на граматичні теми (поле gram у lessons-data.js).
 // Показуються лише вже готові теми; якщо grammar-data.js не підключено — нічого.
+// З 2026-10 згорнуті в один рядок «📐 Граматика · N» (<details>), щоб
+// картка не роздувалась від 6–10 чипів; по кліку розгортаються.
 function lessonGramChips(l, lessonFileBase){
   if(!Array.isArray(l.gram) || typeof GRAMMAR === 'undefined') return '';
   const base = lessonFileBase.replace(/lessons\/$/, '') + 'gramatyka/temy/';
   const chips = l.gram.map(id => GRAMMAR.find(t => t.id === id)).filter(t => t && t.opublikovano > 0)
     .map(t => '<a class="gram-chip" href="' + base + t.id + '.html" title="' + t.tema.replace(/"/g, '&quot;') + '">' + t.uk + '</a>');
-  return chips.length ? '<div class="gram-chips">' + chips.join('') + '</div>' : '';
+  if(!chips.length) return '';
+  return '<details class="gram-fold"><summary>📐 Граматика · ' + chips.length + '</summary>'
+    + '<div class="gram-chips">' + chips.join('') + '</div></details>';
 }
 
 /* ---------- Каталог уроків (сторінка klasy/) ---------- */
@@ -153,15 +157,19 @@ function renderClassCatalog(klasList, lessonFileBase){
         const grid = document.createElement('div');
         grid.className = 'lesson-grid';
         items.forEach(l => {
+          // Уся картка клікабельна (з 2026-10): посилання стоїть на назві,
+          // а його ::after розтягнутий на всю картку (site.css, .lesson-link).
+          // Блок «Граматика» лежить над ним і клікається окремо.
+          // Опис обрізається до 3 рядків у CSS; повний — у підказці (title).
           const card = document.createElement('article');
           card.className = 'lesson-card';
           card.style.setProperty('--module-color', color);
           card.innerHTML = '<div class="lesson-num">Урок ' + l.lektion + '</div>'
-            + '<h4>' + l.nazva + '</h4>'
-            + '<p>' + l.opys + '</p>'
+            + '<h4><a class="lesson-link" href="' + lessonFileBase + l.file + '" target="_blank" rel="noopener">' + l.nazva + '</a></h4>'
+            + '<p class="lesson-desc" title="' + escHtml(String(l.opys || '').replace(/<[^>]*>/g, '')) + '">' + l.opys + '</p>'
             + lessonGramChips(l, lessonFileBase)
-            + '<a class="open-link" href="' + lessonFileBase + l.file + '" target="_blank" rel="noopener">Відкрити</a>'
-            + (l === newestPerKlas[l.klas] ? '<span class="new-badge">нове</span>' : '');
+            + '<div class="lesson-foot"><span class="open-cue" aria-hidden="true">Відкрити →</span>'
+            + (l === newestPerKlas[l.klas] ? '<span class="new-badge">нове</span>' : '') + '</div>';
           grid.appendChild(card);
         });
         details.appendChild(grid);
@@ -271,7 +279,7 @@ function renderGlossary(){
 function renderMaterials(){
   const wrap = document.getElementById('materialsGrid');
   if(MATERIALS.length === 0){
-    wrap.innerHTML = '<p class="empty-note">Матеріалів поки немає — з\u2019являться тут, щойно додаси перший.</p>';
+    wrap.innerHTML = '<p class="empty-note">Матеріалів поки немає — з’являться тут, щойно додаси перший.</p>';
     return;
   }
   wrap.innerHTML = '';

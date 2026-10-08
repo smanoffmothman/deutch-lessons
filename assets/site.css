@@ -130,12 +130,25 @@ summary.module-head:focus-visible{ outline:2px solid var(--mustard); outline-off
   .module-head h3{ font-size:17px; }
 }
 
+/* Картка уроку (з 2026-10): уся картка — посилання на урок.
+   Посилання стоїть на назві (.lesson-link), його ::after розтягнутий на
+   всю картку. Блок «Граматика» (.gram-fold) піднятий над ним (z-index),
+   тому клікається окремо. Опис — максимум 3 рядки. */
 .lesson-grid{
   display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:14px;
 }
+/* коли в якійсь картці розгорнуто «Граматику», сусіди в ряду не тягнуться за нею */
+.lesson-grid:has(.gram-fold[open]){ align-items:start; }
 .lesson-card{
   position:relative; background:var(--card); border:1px solid var(--line);
   border-radius:10px; padding:16px 16px 14px; overflow:hidden;
+  display:flex; flex-direction:column;
+  transition:transform .12s ease, border-color .12s ease, box-shadow .12s ease;
+}
+.lesson-card:hover{
+  transform:translateY(-2px);
+  border-color:var(--module-color, var(--teal));
+  box-shadow:0 4px 14px rgba(0,0,0,.07);
 }
 .lesson-card::before{
   content:""; position:absolute; top:0; right:0;
@@ -150,14 +163,32 @@ summary.module-head:focus-visible{ outline:2px solid var(--mustard); outline-off
 .lesson-card h4{
   font-family:var(--serif); font-size:16.5px; margin:0 0 6px; color:var(--ink); line-height:1.3;
 }
-.lesson-card p{ font-size:12.5px; color:var(--ink-soft); margin:0 0 12px; line-height:1.5; }
-.lesson-card a.open-link{
-  font-size:13px; font-weight:700; color:var(--teal); text-decoration:none;
-  border-bottom:1px solid var(--teal);
+.lesson-card a.lesson-link{ color:inherit; text-decoration:none; }
+.lesson-card a.lesson-link::after{
+  content:""; position:absolute; inset:0; z-index:1; border-radius:10px;
 }
+.lesson-card:hover a.lesson-link{ color:var(--teal-deep); }
+.lesson-card a.lesson-link:focus{ outline:none; }
+.lesson-card a.lesson-link:focus-visible::after{ outline:2px solid var(--mustard); outline-offset:-2px; }
+.lesson-card p.lesson-desc{
+  font-size:12.5px; color:var(--ink-soft); margin:0 0 10px; line-height:1.5;
+  display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:3; line-clamp:3;
+  overflow:hidden;
+}
+.lesson-card .lesson-foot{
+  margin-top:auto; display:flex; align-items:center; gap:8px; padding-top:2px;
+}
+.lesson-card .open-cue{
+  font-size:12.5px; font-weight:700; color:var(--teal);
+}
+.lesson-card:hover .open-cue{ color:var(--brick); }
 .lesson-card .new-badge{
   font-size:10px; font-weight:700; color:var(--brick); border:1px solid var(--brick);
-  padding:2px 6px; border-radius:2px; transform:rotate(-3deg); display:inline-block; margin-left:8px;
+  padding:2px 6px; border-radius:2px; transform:rotate(-3deg); display:inline-block;
+}
+@media (prefers-reduced-motion: reduce){
+  .lesson-card{ transition:none; }
+  .lesson-card:hover{ transform:none; }
 }
 
 .empty-note{
@@ -309,14 +340,40 @@ a.gram-row:hover .gram-state::after{ background:var(--card); }
   .gram-part-head{ flex-wrap:wrap; }
 }
 
-/* Граматика на картці уроку в каталозі (поле gram у lessons-data.js) */
+/* Граматика на картці уроку в каталозі (поле gram у lessons-data.js).
+   З 2026-10 — згорнуто в рядок «📐 Граматика · N» (<details class="gram-fold">),
+   по кліку розгортаються чипи. Лежить НАД розтягнутим посиланням картки. */
+.gram-fold{ position:relative; z-index:2; margin:0 0 10px; }
+.gram-fold > summary{
+  display:inline-flex; align-items:center; gap:6px; cursor:pointer; list-style:none;
+  font-size:12px; font-weight:700; color:var(--teal-deep);
+  background:var(--teal-soft); border-radius:100px; padding:3px 10px;
+  user-select:none;
+}
+.gram-fold > summary::-webkit-details-marker{ display:none; }
+.gram-fold > summary::after{
+  content:""; width:0; height:0;
+  border-style:solid; border-width:4px 3.5px 0 3.5px;
+  border-color:var(--teal-deep) transparent transparent transparent;
+  transition:transform .15s ease;
+}
+.gram-fold[open] > summary::after{ transform:rotate(180deg); }
+.gram-fold > summary:hover{ background:var(--teal); color:#fff; }
+.gram-fold > summary:hover::after{ border-top-color:#fff; }
+.gram-fold > summary:focus-visible{ outline:2px solid var(--mustard); outline-offset:2px; }
+.gram-fold .gram-chips{ margin:8px 0 0; }
 .gram-chips{ display:flex; flex-wrap:wrap; gap:5px; margin:-4px 0 12px; }
 .gram-chip{
   font-size:11.5px; font-weight:600; color:var(--teal-deep); text-decoration:none;
   background:var(--teal-soft); border-radius:100px; padding:2px 9px;
 }
 .gram-chip::before{ content:"📐 "; }
-.gram-chip:hover{ background:var(--teal); color:#fff; }
+.gram-fold .gram-chip{ background:#fff; border:1px solid var(--line); }
+.gram-fold .gram-chip::before{ content:none; }
+.gram-chip:hover, .gram-fold .gram-chip:hover{ background:var(--teal); border-color:var(--teal); color:#fff; }
+@media (prefers-reduced-motion: reduce){
+  .gram-fold > summary::after{ transition:none; }
+}
 
 /* "Де це ще трапляється" на сторінці теми граматики */
 .gram-related{ display:flex; flex-direction:column; gap:6px; }
