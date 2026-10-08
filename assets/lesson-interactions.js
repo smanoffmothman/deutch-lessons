@@ -34,6 +34,7 @@ function showTab(name, tabs, panels){
   tabs.forEach(t => t.setAttribute('aria-selected', t.dataset.tab === name ? 'true' : 'false'));
   panels.forEach(p => p.classList.toggle('active', p.id === 'panel-' + name));
   syncTabbar(true);
+  if(name === 'ende') reportOnFertig(); // звіт для вчителя: підвантажити PDF-бібліотеки заздалегідь
   window.scrollTo({top: 0, behavior: 'smooth'});
 }
 /* Панель вкладок на телефоні — один рядок з прокруткою (див. lesson-style.css).
@@ -220,6 +221,7 @@ function buildQuiz(containerId, data){
         }
         if(!firstTryDone){
           firstTryDone = true;
+          div.dataset.first = o; div.dataset.firstOk = isCorrect ? '1' : '0'; // для звіту вчителю
           if(isCorrect && scored) markDone(1);
         }
       });
@@ -267,7 +269,7 @@ function blanksIn(containerId){
   return box ? box.querySelectorAll('.blank-input, select.blank') : [];
 }
 function normAns(s, keepCase){
-  let v = String(s || '').replace(/[\u2018\u2019]/g, "'").replace(/\s+/g, ' ').trim().replace(/[.!?]+$/, '').trim();
+  let v = String(s || '').replace(/[‘’]/g, "'").replace(/\s+/g, ' ').trim().replace(/[.!?]+$/, '').trim();
   return keepCase ? v : v.toLowerCase();
 }
 function blankIsCorrect(el){
@@ -275,6 +277,11 @@ function blankIsCorrect(el){
   const val = normAns(el.value, keepCase);
   if(val === '') return null; // порожньо — ще не відповідав
   return (el.dataset.ans || '').split('|').some(a => normAns(a, keepCase) === val);
+}
+// що учень бачить у полі (для списку — текст обраного варіанта)
+function blankShown(el){
+  if(el.tagName === 'SELECT') return el.value && el.selectedIndex >= 0 ? el.options[el.selectedIndex].text.trim() : '';
+  return String(el.value || '').trim();
 }
 function checkBlanks(containerId, scoreId, stateKey){
   const state = checkBlanks._state || (checkBlanks._state = {});
@@ -296,6 +303,7 @@ function checkBlanks(containerId, scoreId, stateKey){
     // залік лише по першій непорожній спробі цього поля
     if(!lockedArr[idx] && res !== null){
       lockedArr[idx] = { correct: res };
+      inp.dataset.firstVal = blankShown(inp); inp.dataset.firstOk = res ? '1' : '0'; // для звіту вчителю
     }
     if(lockedArr[idx] && lockedArr[idx].correct) correct++;
   });
@@ -316,6 +324,7 @@ function resetBlanks(containerId, scoreId, stateKey){
   blanksIn(containerId).forEach(inp => {
     if(inp.tagName === 'SELECT') inp.selectedIndex = 0; else inp.value = '';
     inp.classList.remove('correct', 'wrong');
+    delete inp.dataset.firstVal; delete inp.dataset.firstOk;
   });
   const scoreEl = document.getElementById(scoreId);
   if(scoreEl) scoreEl.textContent = '';
@@ -465,6 +474,9 @@ function buildOrder(containerId, items){
       }
       if(!firstTryDone){
         firstTryDone = true;
+        // для звіту вчителю: речення першої спроби так, як його бачив учень
+        div.dataset.first = Array.from(slots.children).map(b => b.textContent).join(' ') + (item.end || '');
+        div.dataset.firstOk = ok ? '1' : '0';
         if(ok){ if(scored) markDone(1); solvedFirst++; updScore(); }
       }
     }
@@ -573,7 +585,10 @@ function buildSort(containerId, data){
       if(!box) return;
       const ok = box.dataset.name === data.items[i].b;
       b.classList.add(ok ? 'correct' : 'wrong');
-      if(!locked[i]) locked[i] = {correct: ok};
+      if(!locked[i]){
+        locked[i] = {correct: ok};
+        b.dataset.firstOk = ok ? '1' : '0'; b.dataset.firstBucket = box.dataset.name; // для звіту вчителю
+      }
     });
     locked.forEach(l => { if(l && l.correct) correct++; });
     scoreEl.textContent = correct + ' / ' + data.items.length + ' richtig (1. Versuch zählt)';
@@ -583,7 +598,10 @@ function buildSort(containerId, data){
   });
   resetBtn.addEventListener('click', () => {
     if(lockedMode) return;
-    cards.forEach(b => { b.classList.remove('correct', 'wrong', 'picked'); pool.appendChild(b); });
+    cards.forEach(b => {
+      b.classList.remove('correct', 'wrong', 'picked'); pool.appendChild(b);
+      delete b.dataset.firstOk; delete b.dataset.firstBucket;
+    });
     selected = null; wrap.classList.remove('has-pick');
     scoreEl.textContent = '';
     if(counted > 0){ if(scored){ progress.done -= counted; renderProgress(); } counted = 0; }
@@ -764,5 +782,483 @@ function initNoPaste(){
   document.querySelectorAll('textarea:not([data-allow-paste])').forEach(guardNoPaste);
 }
 
+/* =================================================================
+   ЗВІТ ДЛЯ ВЧИТЕЛЯ: PDF замість скріншотів (з 2026-10)
+   =================================================================
+   Проблема: учні здавали самостійну роботу в Google Classroom десятком
+   скріншотів, а вчителю доводилося все це гортати.
+
+   Рішення: у вкладці Fertig! КОЖНОЇ сторінки з вправами (уроки, граматика,
+   включно зі старими уроками — розмітку правити не треба) автоматично
+   з'являється картка "Bericht für die Lehrkraft": учень вписує ім'я →
+   "Створити PDF" → "Надіслати" (меню "Поділитися" телефона → Google
+   Classroom) або "Зберегти файл" (на комп'ютері — звичайне завантаження).
+
+   Що в PDF: ім'я, урок, дата й час, загальний результат, а далі по кожній
+   вкладці з вправами — відповіді учня ПЕРШОЇ спроби з позначками
+   ✓ / ✗ / ? (заповнено, але не перевірено) / ____ (не виконано), повні
+   тексти з textarea й кількість слів. ПРАВИЛЬНІ ВІДПОВІДІ В ЗВІТ НЕ
+   ПОТРАПЛЯЮТЬ — лише те, що відповів сам учень (інакше PDF ходив би по
+   класу як шпаргалка). Перша спроба фіксується тими самими функціями
+   вправ (dataset.first / firstOk / firstVal / firstBucket), тож звіт
+   збігається з балом "1. Versuch zählt".
+
+   Як це працює технічно:
+   - Картка вставляється перед footer.end-card у #panel-ende. Якщо на
+     сторінці вже є елемент з id="dmuReport", використовується він (можна
+     поставити картку деінде). Вимкнути на сторінці: атрибут data-no-report
+     на body. Окрему вправу чи блок прибрати зі звіту: data-no-report на ньому.
+   - Звіт збирається з DOM у момент натискання: квізи (.quiz-q), пропуски
+     й списки (рядок .fill-item / рядок таблиці / абзац — з відповіддю
+     прямо в тексті), токени (.tok), buildOrder, buildSort, textarea.
+     Нестандартні вправи, зверстані вручну в окремому уроці, у звіт не
+     потрапляють (лише їхні textarea / текстові поля, якщо є).
+   - PDF малюється бібліотеками html2canvas + jsPDF з cdnjs, які
+     завантажуються ЛИШЕ коли учень відкрив Fertig! (сторінки уроків не
+     стають важчими). Сторінки PDF — картинки (текст у PDF не виділяється,
+     зате його й не відредагувати як текст), A4, розрив сторінки лише між
+     рядками, внизу кожної — ім'я, урок і номер сторінки.
+   - Назва файлу: "<Ім'я> - 7A Lektion 5.pdf" (для граматики —
+     "<Ім'я> - Grammatik - <тема>.pdf"; звичайний дефіс — найнадійніше
+     для назв файлів на всіх пристроях).
+   - "Надіслати" — Web Share API з файлом (Android/iPhone; на ПК там, де
+     підтримується). Кнопка з'являється лише якщо пристрій уміє ділитися
+     файлом; інакше — тільки "Зберегти файл".
+   - Запасний варіант (немає інтернету для бібліотек, старий браузер):
+     посилання "Зберегти через друк браузера" → той самий звіт у вікні
+     друку (Зберегти як PDF).
+   - Ім'я запам'ятовується в localStorage ('dmu:student-name'), щоб не
+     вводити щоразу; без localStorage просто не запам'ятовується.
+
+   Обмеження (чесно): ім'я учень вводить сам — підпис, а не логін. */
+const REPORT_LIBS = [
+  'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js',
+  'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js'
+];
+const REPORT_NAME_KEY = 'dmu:student-name';
+// A4 мінус поля 12 мм: 186 × 273 мм. Сторінка звіту = 760 css-px завширшки.
+const RP = {W: 760, MM_W: 186, MM_H: 273, MARGIN: 12};
+RP.PAGE_PX = Math.floor(RP.W * RP.MM_H / RP.MM_W); // ≈ 1115 px на сторінку
+const report = {libs: null, blob: null, file: null, fname: ''};
+
+function rpEsc(s){ return String(s).replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c])); }
+function rpText(el){ return el ? el.textContent.replace(/\s+/g, ' ').trim() : ''; }
+function rpEl(tag, cls, html){ const e = document.createElement(tag); if(cls) e.className = cls; if(html != null) e.innerHTML = html; return e; }
+// відповідь учня з позначкою: state = ok | bad | open (не перевірено)
+function rpAns(text, state, note){
+  const mark = {ok: ' ✓', bad: ' ✗', open: ' ?'}[state] || '';
+  return '<span class="rp-ans rp-' + state + '">' + rpEsc(text) + mark + '</span>'
+    + (note ? ' <span class="rp-note">(' + rpEsc(note) + ')</span>' : '');
+}
+const RP_GAP = '<span class="rp-gap">______</span>';
+// чи схований елемент усередині вкладки (напр. Wörter-Check у першому уроці модуля)
+function rpHidden(el, panel){
+  for(let n = el; n && n !== panel; n = n.parentElement){
+    if(n.hidden || n.hasAttribute('data-no-report') || getComputedStyle(n).display === 'none') return true;
+  }
+  return false;
+}
+
+/* --- окремі типи вправ → рядки звіту. Кожен повертає {html, ok, n, empty} --- */
+function rpBlankState(el){
+  const cur = blankShown(el);
+  if('firstOk' in el.dataset){
+    const first = el.dataset.firstVal || '';
+    const later = cur && normAns(cur) !== normAns(first) ? 'потім: ' + cur : '';
+    return {html: rpAns(first, el.dataset.firstOk === '1' ? 'ok' : 'bad', later), ok: el.dataset.firstOk === '1', empty: false};
+  }
+  if(cur) return {html: rpAns(cur, 'open', 'не перевірено'), ok: false, empty: false};
+  return {html: RP_GAP, ok: false, empty: true};
+}
+function rpBlankLine(line){
+  const orig = line.querySelectorAll('.blank-input, select.blank');
+  const states = Array.from(orig).map(rpBlankState);
+  const clone = line.cloneNode(true);
+  clone.querySelectorAll('button, script, style, .blank-hint, .feedback').forEach(n => n.remove());
+  clone.querySelectorAll('.blank-input, select.blank').forEach((c, i) => c.replaceWith(document.createTextNode('\u0001' + i + '\u0002')));
+  const norm = s => s.replace(/\s+/g, ' ').trim();
+  const text = clone.tagName === 'TR'
+    ? Array.from(clone.cells).map(c => norm(c.textContent)).filter(Boolean).join('  ·  ')
+    : norm(clone.textContent);
+  const html = rpEsc(text).replace(/\u0001(\d+)\u0002/g, (m, i) => states[+i] ? states[+i].html : '');
+  return {html: html, ok: states.filter(s => s.ok).length, n: states.length, empty: states.filter(s => s.empty).length};
+}
+function rpQuiz(q){
+  const text = rpEsc(rpText(q.querySelector('.q-text')));
+  if(!('firstOk' in q.dataset)) return {html: '<span class="rp-q">' + text + '</span> → ' + RP_GAP, ok: 0, n: 1, empty: 1};
+  const ok = q.dataset.firstOk === '1';
+  const later = !ok && q.querySelector('.opt-btn.correct') ? 'потім знайшов(-ла) правильну' : '';
+  return {html: '<span class="rp-q">' + text + '</span> → ' + rpAns(q.dataset.first, ok ? 'ok' : 'bad', later), ok: ok ? 1 : 0, n: 1, empty: 0};
+}
+function rpOrder(div){
+  const num = rpText(div.querySelector('.order-line .num'));
+  const hint = div.querySelector('.order-hint');
+  const pre = (hint ? '<span class="rp-muted">' + rpEsc(rpText(hint)) + '</span><br>' : '') + rpEsc(num) + ' ';
+  if(!('firstOk' in div.dataset)){
+    const part = Array.from(div.querySelectorAll('.order-slots .word-chip')).map(b => b.textContent).join(' ');
+    return {html: pre + (part ? rpAns(part + ' …', 'open', 'не дописано') : RP_GAP), ok: 0, n: 1, empty: part ? 0 : 1};
+  }
+  const ok = div.dataset.firstOk === '1';
+  const later = !ok && div.classList.contains('is-solved') ? 'потім склав(-ла) правильно' : '';
+  return {html: pre + rpAns(div.dataset.first, ok ? 'ok' : 'bad', later), ok: ok ? 1 : 0, n: 1, empty: 0};
+}
+function rpSort(wrap){
+  const cards = Array.from(wrap.querySelectorAll('.word-chip'));
+  const groups = {}, order = [];
+  wrap.querySelectorAll('.sort-bucket').forEach(b => { groups[b.dataset.name] = []; order.push(b.dataset.name); });
+  const loose = [];
+  let ok = 0, empty = 0;
+  cards.forEach(c => {
+    const t = c.textContent;
+    if('firstOk' in c.dataset){ // перша перевірка — у якому кошику картка лежала тоді
+      const good = c.dataset.firstOk === '1'; if(good) ok++;
+      (groups[c.dataset.firstBucket] || (groups[c.dataset.firstBucket] = [])).push(rpAns(t, good ? 'ok' : 'bad'));
+    } else {
+      const box = c.closest('.sort-bucket');
+      if(box) groups[box.dataset.name].push(rpAns(t, 'open'));
+      else { loose.push(rpEsc(t)); empty++; }
+    }
+  });
+  let html = order.map(name => '<b>' + rpEsc(name) + ':</b> ' + (groups[name].length ? groups[name].join(' ') : '—')).join('<br>');
+  if(loose.length) html += '<br><span class="rp-muted">не розкладено: ' + loose.join(', ') + '</span>';
+  return {html: html, ok: ok, n: cards.length, empty: empty};
+}
+function rpTokens(box){
+  const toks = Array.from(box.querySelectorAll('.tok')).filter(t => !t.dataset.locked);
+  const need = toks.filter(t => t.dataset.correct === 'true');
+  const picked = toks.filter(t => t.classList.contains('picked'));
+  const checked = toks.some(t => t.dataset.checked);
+  if(!picked.length) return {html: 'Позначено: ' + RP_GAP, ok: 0, n: need.length, empty: need.length};
+  let ok = 0;
+  const list = picked.map(t => {
+    if(!checked) return rpAns(rpText(t), 'open');
+    const good = t.dataset.correct === 'true'; if(good) ok++;
+    return rpAns(rpText(t), good ? 'ok' : 'bad');
+  }).join(' ');
+  const missed = checked ? need.length - ok : 0;
+  return {html: 'Позначено: ' + list + (checked ? '' : ' <span class="rp-note">(не перевірено)</span>')
+    + (missed > 0 ? ' <span class="rp-muted">· не знайдено: ' + missed + '</span>' : ''), ok: ok, n: need.length, empty: 0};
+}
+function rpFieldLabel(el){
+  const qa = el.closest('.qa');
+  const lbl = (qa && qa.querySelector('label')) || (el.id && document.querySelector('label[for="' + el.id + '"]'));
+  return rpText(lbl) || el.getAttribute('aria-label') || el.getAttribute('placeholder') || '';
+}
+function rpWords(n){ // 1 слово, 2–4 слова, 5+ слів, 21 слово
+  const d = n % 10, h = n % 100;
+  if(d === 1 && h !== 11) return 'слово';
+  if(d >= 2 && d <= 4 && (h < 12 || h > 14)) return 'слова';
+  return 'слів';
+}
+function rpTextarea(el){
+  const v = String(el.value || '').trim();
+  const label = rpFieldLabel(el);
+  const words = v ? v.split(/\s+/).length : 0;
+  const head = (label ? '<span class="rp-q">' + rpEsc(label) + '</span> ' : '')
+    + '<span class="rp-note">(' + words + ' ' + rpWords(words) + ')</span>';
+  if(!v) return {html: head + '<div class="rp-text rp-muted">порожньо</div>', ok: 0, n: 0, empty: 0};
+  // довгий текст ріжемо на шматки (~10 рядків), щоб сторінки PDF рвалися між ними
+  const chunks = rpChunks(v, 700, 10);
+  return {html: head + '<div class="rp-text">' + rpEsc(chunks[0]) + '</div>',
+    more: chunks.slice(1).map(c => '<div class="rp-text">' + rpEsc(c) + '</div>'), ok: 0, n: 0, empty: 0};
+}
+function rpChunks(text, maxChars, maxLines){
+  const out = [];
+  let cur = '';
+  const lines = text.split('\n');
+  const push = () => { if(cur !== '') out.push(cur); cur = ''; };
+  lines.forEach(line => {
+    // дуже довгий рядок без переносів — ділимо за пробілами
+    while(line.length > maxChars){
+      let cut = line.lastIndexOf(' ', maxChars);
+      if(cut < maxChars / 2) cut = maxChars;
+      push(); out.push(line.slice(0, cut)); line = line.slice(cut).replace(/^ /, '');
+    }
+    const next = cur === '' ? line : cur + '\n' + line;
+    if(cur !== '' && (next.length > maxChars || next.split('\n').length > maxLines)){ push(); cur = line; }
+    else cur = next;
+  });
+  push();
+  return out.length ? out : [text];
+}
+
+// усі рядки звіту для однієї вкладки
+function rpCollectPanel(panel){
+  const rows = [];
+  const seen = new Set();
+  let lastCard = null;
+  const sel = '.quiz-q, .order-item, .sort-ex, textarea, input.blank-input, select.blank, .tok, input[type="text"]';
+  panel.querySelectorAll(sel).forEach(el => {
+    if(el.closest('.report-card') || rpHidden(el, panel)) return;
+    let key = el, row = null;
+    if(el.matches('.sort-ex')) row = rpSort(el);
+    else if(el.closest('.sort-ex')) return;
+    else if(el.matches('.quiz-q')) row = rpQuiz(el);
+    else if(el.matches('.order-item')) row = rpOrder(el);
+    else if(el.matches('textarea')) row = rpTextarea(el);
+    else if(el.matches('.tok')){
+      key = el.parentElement.closest('[id]') || el.parentElement;
+      if(seen.has(key)) return;
+      row = rpTokens(key);
+    } else if(el.matches('.blank-input, select.blank')){
+      key = el.closest('.fill-item, tr, li, .match-row, .wo-row, .qa, p') || el.parentElement;
+      if(!panel.contains(key) || key === panel) key = el.parentElement;
+      if(seen.has(key)) return;
+      row = rpBlankLine(key);
+    } else { // інше текстове поле без перевірки — показати, лише якщо заповнене
+      const v = String(el.value || '').trim();
+      if(!v) return;
+      const label = rpFieldLabel(el);
+      row = {html: (label ? '<span class="rp-q">' + rpEsc(label) + ':</span> ' : '') + '<span class="rp-ans rp-plain">' + rpEsc(v) + '</span>', ok: 0, n: 0, empty: 0};
+    }
+    seen.add(key);
+    // підзаголовок картки всередині вкладки (напр. "Wörter-Check")
+    const card = el.closest('.card');
+    const lbl = card && card.querySelector(':scope > .section-label');
+    if(card !== lastCard){ lastCard = card; if(lbl) rows.push({sub: rpText(lbl)}); }
+    rows.push(row);
+  });
+  return rows;
+}
+
+function rpLessonTitle(){
+  const badge = rpText(document.querySelector('.hero .hero-badge'));
+  const h1 = rpText(document.querySelector('.hero h1'));
+  return (badge ? badge + ' — ' : '') + (h1 || document.title);
+}
+function rpLessonShort(){
+  try {
+    if(typeof LEKTION_KLAS !== 'undefined' && LEKTION_KLAS && LEKTION_KLAS !== '...')
+      return LEKTION_KLAS + (typeof LEKTION_MODUL !== 'undefined' ? LEKTION_MODUL : '') + ' Lektion ' + (typeof LEKTION_LEKTION !== 'undefined' ? LEKTION_LEKTION : '');
+  } catch(_) {}
+  const h1 = rpText(document.querySelector('.hero h1'));
+  try { if(typeof GRAM_ID !== 'undefined') return 'Grammatik - ' + h1; } catch(_) {}
+  return h1 || document.title.split('·')[0].trim();
+}
+function rpFileName(name){
+  return (name + ' - ' + rpLessonShort()).replace(/[\\/:*?"<>|\u0000-\u001f]+/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 120) + '.pdf';
+}
+
+/* Збирає звіт у вигляді "одиниць" (шапка, заголовки вкладок, рядки) —
+   щоб розбивати на сторінки PDF лише між ними. */
+function rpBuildUnits(name){
+  const units = [];
+  let total = 0, okAll = 0, emptyAll = 0;
+  const blocks = [];
+  document.querySelectorAll('.panel').forEach(panel => {
+    if(/^panel-(start|regel|ende)$/.test(panel.id) || panel.hasAttribute('data-no-report')) return;
+    const rows = rpCollectPanel(panel);
+    if(!rows.length) return;
+    const tab = document.querySelector('.tab-btn[data-tab="' + panel.id.replace(/^panel-/, '') + '"]');
+    const title = rpText(tab) || rpText(panel.querySelector('.panel-title')) || panel.id;
+    let ok = 0, n = 0;
+    rows.forEach(r => { if(!r.sub){ ok += r.ok || 0; n += r.n || 0; emptyAll += r.empty || 0; } });
+    total += n; okAll += ok;
+    blocks.push({title: title, rows: rows, ok: ok, n: n});
+  });
+
+  const when = new Date().toLocaleString('uk-UA', {day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit'});
+  const pct = total ? Math.floor(okAll / total * 100) : 0;
+  units.push(rpEl('div', 'rp-head',
+    '<div class="rp-brand">Deutsch mit uns · Bericht für die Lehrkraft</div>'
+    + '<div class="rp-title">' + rpEsc(rpLessonTitle()) + '</div>'
+    + '<div class="rp-meta"><b>Учень / учениця:</b> ' + rpEsc(name) + '</div>'
+    + '<div class="rp-meta"><b>Сформовано:</b> ' + rpEsc(when) + '</div>'
+    + (total ? '<div class="rp-meta"><b>Результат з першої спроби:</b> ' + okAll + ' / ' + total + ' (' + pct + ' %)'
+      + (emptyAll ? ' · <span class="rp-bad-txt">не виконано: ' + emptyAll + '</span>' : '') + '</div>' : '')
+    + '<div class="rp-legend"><span class="rp-ans rp-ok">✓</span> правильно з першої спроби &nbsp; <span class="rp-ans rp-bad">✗</span> неправильно з першої спроби &nbsp; <span class="rp-ans rp-open">?</span> заповнено, але не перевірено &nbsp; ' + RP_GAP + ' не виконано</div>'));
+  blocks.forEach(b => {
+    units.push(rpEl('div', 'rp-block-head', '<span>' + rpEsc(b.title) + '</span>' + (b.n ? '<span class="rp-block-score">' + b.ok + ' / ' + b.n + ' ✓</span>' : '')));
+    b.rows.forEach(r => {
+      if(r.sub){ units.push(rpEl('div', 'rp-sub', rpEsc(r.sub))); return; }
+      units.push(rpEl('div', 'rp-row' + (r.more && r.more.length ? ' rp-has-more' : ''), r.html));
+      (r.more || []).forEach((m, k) => units.push(rpEl('div', 'rp-row rp-cont' + (k < r.more.length - 1 ? ' rp-has-more' : ''), m)));
+    });
+  });
+  return {units: units, empty: emptyAll, blocks: blocks.length};
+}
+
+function rpLoadLibs(){
+  if(window.html2canvas && window.jspdf) return Promise.resolve();
+  if(report.libs) return report.libs;
+  report.libs = Promise.all(REPORT_LIBS.map(src => new Promise((res, rej) => {
+    const s = document.createElement('script');
+    s.src = src; s.async = true;
+    s.onload = res; s.onerror = () => rej(new Error('Не завантажилось: ' + src));
+    document.head.appendChild(s);
+  }))).catch(e => { report.libs = null; throw e; });
+  return report.libs;
+}
+
+// розкладає одиниці по сторінках (заголовок вкладки не лишається внизу сторінки сам)
+function rpPaginate(units, stage){
+  const FOOT = 34, LIMIT = RP.PAGE_PX - FOOT;
+  const meas = rpEl('div', 'rp-page-body');
+  stage.appendChild(meas);
+  units.forEach(u => meas.appendChild(u));
+  const hs = units.map(u => u.offsetHeight);
+  stage.removeChild(meas);
+  const pages = [[]];
+  let h = 0;
+  units.forEach((u, i) => {
+    const isHead = u.classList.contains('rp-block-head') || u.classList.contains('rp-sub');
+    // заголовок тягне за собою хоча б початок наступного рядка (не весь, якщо той величезний)
+    const need = hs[i] + (isHead && i + 1 < units.length ? Math.min(hs[i + 1], 120) : 0);
+    if(h > 0 && h + need > LIMIT){ pages.push([]); h = 0; }
+    pages[pages.length - 1].push(u);
+    h += hs[i];
+  });
+  return pages;
+}
+
+async function rpMakePdf(name){
+  const built = rpBuildUnits(name);
+  const stage = rpEl('div', 'rp-stage');
+  document.body.appendChild(stage);
+  try {
+    const pages = rpPaginate(built.units, stage);
+    const short = rpLessonShort();
+    const {jsPDF} = window.jspdf;
+    const pdf = new jsPDF({unit: 'mm', format: 'a4', orientation: 'portrait', compress: true});
+    let pdfPages = 0;
+    for(let p = 0; p < pages.length; p++){
+      const page = rpEl('div', 'rp-page');
+      const body = rpEl('div', 'rp-page-body');
+      pages[p].forEach(u => body.appendChild(u));
+      page.appendChild(body);
+      page.appendChild(rpEl('div', 'rp-foot', '<span>' + rpEsc(name) + ' · ' + rpEsc(short) + '</span><span>' + (p + 1) + ' / ' + pages.length + '</span>'));
+      stage.innerHTML = ''; stage.appendChild(page);
+      const canvas = await window.html2canvas(page, {
+        scale: 2, backgroundColor: '#ffffff', logging: false, useCORS: true,
+        scrollX: 0, scrollY: 0, windowWidth: RP.W + 40,
+        ignoreElements: el => el.classList && (el.classList.contains('app') || el.id === 'siteNav' || el.id === 'crumbs')
+      });
+      // сторінка вища за A4 лише якщо один рядок довший за сторінку (величезний текст) — ріжемо
+      const pxPerMm = canvas.width / RP.MM_W, sliceH = Math.floor(RP.MM_H * pxPerMm);
+      for(let y = 0; y < canvas.height; y += sliceH){
+        const h = Math.min(sliceH, canvas.height - y);
+        if(h < 4) break;
+        const part = document.createElement('canvas');
+        part.width = canvas.width; part.height = h;
+        const ctx = part.getContext('2d');
+        ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, part.width, h);
+        ctx.drawImage(canvas, 0, y, canvas.width, h, 0, 0, canvas.width, h);
+        if(pdfPages++) pdf.addPage();
+        pdf.addImage(part.toDataURL('image/jpeg', 0.85), 'JPEG', RP.MARGIN, RP.MARGIN, RP.MM_W, h / pxPerMm);
+      }
+    }
+    return {blob: pdf.output('blob'), pages: pdfPages, empty: built.empty, blocks: built.blocks};
+  } finally {
+    stage.remove();
+  }
+}
+
+// запасний варіант: той самий звіт у вікні друку браузера ("Зберегти як PDF")
+function rpPrint(name){
+  let holder = document.getElementById('dmuReportPrint');
+  if(!holder){ holder = rpEl('div'); holder.id = 'dmuReportPrint'; document.body.appendChild(holder); }
+  holder.innerHTML = '';
+  const sheet = rpEl('div', 'rp-sheet');
+  rpBuildUnits(name).units.forEach(u => sheet.appendChild(u));
+  holder.appendChild(sheet);
+  const oldTitle = document.title;
+  document.title = rpFileName(name).replace(/\.pdf$/, ''); // браузер бере назву файлу із заголовка
+  document.body.classList.add('dmu-printing');
+  const done = () => { document.body.classList.remove('dmu-printing'); document.title = oldTitle; window.removeEventListener('afterprint', done); };
+  window.addEventListener('afterprint', done);
+  window.print();
+}
+
+function rpDownload(){
+  if(!report.blob) return;
+  const url = URL.createObjectURL(report.blob);
+  const a = rpEl('a');
+  a.href = url; a.download = report.fname;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 60000);
+}
+
+function initReport(){
+  if(document.body.hasAttribute('data-no-report')) return;
+  const ende = document.getElementById('panel-ende');
+  if(!ende) return;
+  if(!document.querySelector('.panel .quiz-q, .panel .blank-input, .panel select.blank, .panel textarea, .panel .tok, .panel .order-item, .panel .sort-ex')) return;
+
+  let card = document.getElementById('dmuReport');
+  if(!card){
+    card = rpEl('div'); card.id = 'dmuReport';
+    const footer = ende.querySelector('footer.end-card');
+    if(footer) ende.insertBefore(card, footer); else ende.appendChild(card);
+  }
+  card.classList.add('card', 'report-card');
+  card.innerHTML =
+      '<p class="section-label" style="margin:0 0 6px;">Bericht für die Lehrkraft</p>'
+    + '<p class="lead" style="font-size:15px;">Збережи свої відповіді одним PDF-файлом і прикріпи його до завдання в Google Classroom — замість скріншотів.</p>'
+    + '<label class="report-label" for="dmuReportName">Ім\'я та прізвище</label>'
+    + '<input type="text" class="report-name" id="dmuReportName" autocomplete="name" maxlength="60" placeholder="напр. Марія Іваненко">'
+    + '<div class="check-bar"><button class="btn" type="button" id="dmuReportMake">Створити PDF</button>'
+    + '<span class="report-status" id="dmuReportStatus" role="status"></span></div>'
+    + '<div class="report-ready" id="dmuReportReady" hidden>'
+    + '<p id="dmuReportInfo"></p>'
+    + '<div class="check-bar"><button class="btn" type="button" id="dmuReportShare">📤 Надіслати (Classroom)</button>'
+    + '<button class="btn secondary" type="button" id="dmuReportSave">⬇ Зберегти файл</button></div></div>'
+    + '<p class="report-alt">Не виходить? <button type="button" class="linklike" id="dmuReportPrintBtn">Зберегти через друк браузера</button></p>';
+
+  const $ = id => document.getElementById(id);
+  const nameIn = $('dmuReportName'), status = $('dmuReportStatus'), ready = $('dmuReportReady');
+  try { nameIn.value = localStorage.getItem(REPORT_NAME_KEY) || ''; } catch(_) {}
+  const say = (msg, bad) => { status.textContent = msg; status.className = 'report-status' + (bad ? ' bad' : ''); };
+  const getName = () => {
+    const v = nameIn.value.replace(/\s+/g, ' ').trim();
+    if(v.length < 2){ say('Впиши, будь ласка, ім\'я та прізвище.', true); nameIn.focus(); return ''; }
+    try { localStorage.setItem(REPORT_NAME_KEY, v); } catch(_) {}
+    return v;
+  };
+  nameIn.addEventListener('input', () => { ready.hidden = true; say(''); });
+  nameIn.addEventListener('focus', () => { rpLoadLibs().catch(() => {}); });
+
+  $('dmuReportMake').addEventListener('click', async () => {
+    const name = getName(); if(!name) return;
+    const btn = $('dmuReportMake');
+    btn.disabled = true; ready.hidden = true;
+    say('Готую PDF… це кілька секунд.');
+    try {
+      await rpLoadLibs();
+      const res = await rpMakePdf(name);
+      report.blob = res.blob; report.fname = rpFileName(name);
+      report.file = null;
+      try { report.file = new File([res.blob], report.fname, {type: 'application/pdf'}); } catch(_) {}
+      const canShare = !!(report.file && navigator.canShare && navigator.share && navigator.canShare({files: [report.file]}));
+      $('dmuReportShare').hidden = !canShare;
+      $('dmuReportInfo').innerHTML = '✓ Готово: <b>' + rpEsc(report.fname) + '</b> · ' + res.pages + ' стор.'
+        + (res.empty ? '<br><span class="rp-bad-txt">Увага: ' + res.empty + ' завд. не виконано — у звіті вони порожні.</span>' : '')
+        + (canShare ? '<br>Натисни «Надіслати» й обери Google Classroom (або збережи файл і прикріпи його до завдання).' : '<br>Збережи файл і прикріпи його до завдання в Google Classroom.');
+      ready.hidden = false;
+      say('');
+    } catch(e){
+      console.error(e);
+      say('Не вдалося створити PDF (можливо, немає інтернету). Спробуй ще раз або збережи через друк браузера нижче.', true);
+    } finally {
+      btn.disabled = false;
+    }
+  });
+  $('dmuReportShare').addEventListener('click', async () => {
+    if(!report.file) return rpDownload();
+    try { await navigator.share({files: [report.file]}); }
+    catch(e){ if(!(e && e.name === 'AbortError')) rpDownload(); }
+  });
+  $('dmuReportSave').addEventListener('click', rpDownload);
+  $('dmuReportPrintBtn').addEventListener('click', () => { const name = getName(); if(name) rpPrint(name); });
+}
+// викликається з showTab при відкритті Fertig!: старий PDF уже неактуальний,
+// а бібліотеки краще почати вантажити заздалегідь
+function reportOnFertig(){
+  const ready = document.getElementById('dmuReportReady');
+  if(!ready) return;
+  ready.hidden = true;
+  rpLoadLibs().catch(() => {});
+}
+
 document.addEventListener('DOMContentLoaded', initTabs);
 document.addEventListener('DOMContentLoaded', initNoPaste);
+document.addEventListener('DOMContentLoaded', initReport);
