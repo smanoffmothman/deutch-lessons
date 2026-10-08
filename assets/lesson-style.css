@@ -615,3 +615,37 @@ input.blank-input.inline.full{ display:block; width:100%; margin:6px 0 0; }
   body.dmu-printing .rp-ans{-webkit-print-color-adjust:exact; print-color-adjust:exact;}
   @page{size:A4; margin:12mm;}
 }
+
+/* ---------- Панель німецьких літер ä ö ü ß (з 2026-10) ----------
+   Малює lesson-interactions.js (initUmlautKb), коли курсор стоїть у
+   текстовому полі; у розмітці уроку нічого не треба. bottom виставляє
+   скрипт (над екранною клавіатурою телефона). */
+.umlaut-kb{
+  position:fixed; left:50%; bottom:10px; transform:translateX(-50%); z-index:1000;
+  display:flex; flex-direction:column; align-items:center; gap:4px;
+  background:var(--card); border:1px solid var(--line); border-radius:14px;
+  padding:8px 10px; box-shadow:0 8px 24px rgba(43,38,32,.22);
+  max-width:calc(100vw - 16px);
+  animation:umlautIn .16s ease;
+}
+.umlaut-kb[hidden]{display:none;}
+html.umlaut-open body{padding-bottom:110px;}
+@keyframes umlautIn{from{opacity:0; transform:translate(-50%,6px);} to{opacity:1; transform:translate(-50%,0);}}
+.umlaut-keys{display:flex; gap:8px;}
+.umlaut-key{
+  width:46px; height:44px; padding:0;
+  font-family:var(--sans); font-weight:700; font-size:20px; line-height:1;
+  color:var(--teal-deep); background:var(--teal-soft);
+  border:1.5px solid var(--teal); border-radius:9px; cursor:pointer;
+  touch-action:manipulation; -webkit-user-select:none; user-select:none;
+  -webkit-tap-highlight-color:transparent;
+  transition:background .1s ease, transform .1s ease;
+}
+.umlaut-key:hover{background:#fff;}
+.umlaut-key:active{transform:translateY(1px); background:var(--mustard-soft); border-color:var(--mustard);}
+.umlaut-shift{font-size:18px; color:var(--ink-soft); background:#fff; border-color:var(--line);}
+.umlaut-shift[aria-pressed="true"]{background:var(--teal); border-color:var(--teal); color:#fff;}
+.umlaut-tip{display:none; margin:0; font-size:11.5px; color:var(--ink-soft); text-align:center;}
+@media (pointer:coarse){ .umlaut-tip{display:block;} }
+@media (prefers-reduced-motion: reduce){ .umlaut-kb{animation:none;} .umlaut-key{transition:none;} }
+@media print{ .umlaut-kb{display:none !important;} }

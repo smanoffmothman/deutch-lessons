@@ -1195,7 +1195,7 @@ function initReport(){
       '<p class="section-label" style="margin:0 0 6px;">Bericht für die Lehrkraft</p>'
     + '<p class="lead" style="font-size:15px;">Збережи свої відповіді одним PDF-файлом і прикріпи його до завдання в Google Classroom — замість скріншотів.</p>'
     + '<label class="report-label" for="dmuReportName">Ім\'я та прізвище</label>'
-    + '<input type="text" class="report-name" id="dmuReportName" autocomplete="name" maxlength="60" placeholder="напр. Марія Іваненко">'
+    + '<input type="text" class="report-name" id="dmuReportName" data-no-umlaut autocomplete="name" maxlength="60" placeholder="напр. Марія Іваненко">'
     + '<div class="check-bar"><button class="btn" type="button" id="dmuReportMake">Створити PDF</button>'
     + '<span class="report-status" id="dmuReportStatus" role="status"></span></div>'
     + '<div class="report-ready" id="dmuReportReady" hidden>'
@@ -1259,6 +1259,142 @@ function reportOnFertig(){
   rpLoadLibs().catch(() => {});
 }
 
+/* ---------- Панель німецьких літер ä ö ü ß (з 2026-10) ----------
+   Проблема: не в усіх учнів на телефоні чи комп'ютері є німецька розкладка,
+   і набрати ä / ö / ü / ß у полі відповіді їм просто нічим.
+
+   Рішення: щойно учень ставить курсор у текстове поле (input type="text" —
+   пропуски, клітинки таблиць — і textarea), унизу екрана з'являється
+   компактна панель  ä ö ü ß ⇧ . Курсор пішов з поля — панель ховається.
+   Нічого в розмітці уроку дописувати не треба: працює на всіх сторінках,
+   що підключають цей файл (уроки, граматика, старі теж).
+   - Літера вставляється в місце курсора (або замість виділеного тексту).
+   - ⇧ — одна наступна літера велика (Ä Ö Ü), як Shift на телефоні.
+     ß лишається ß (на початку слова не буває).
+   - Натискання кнопки НЕ забирає фокус з поля (preventDefault на
+     pointerdown/mousedown), тож клавіатура телефона не закривається.
+   - Після вставки поле отримує звичайну подію input — захист від вставки
+     (guardNoPaste) бачить +1 символ і не заважає.
+   - На телефоні панель стоїть над екранною клавіатурою (visualViewport —
+     iPhone кладе клавіатуру поверх сторінки), а поле, якщо панель його
+     закриває, прокручується вище.
+   - Заблоковані поля (disabled/readonly — напр. режим контрольної після
+     Prüfen) панель не отримують.
+   Вимкнути: атрибут data-no-umlaut на полі, на будь-якому блоці навколо
+   нього або на body (уся сторінка). Поле імені у звіті для вчителя вже
+   має цей атрибут. */
+const UMLAUT_KEYS = ['ä', 'ö', 'ü', 'ß'];
+const umlautKb = {el: null, target: null, upper: false, hideTimer: null};
+
+function umlautEligible(el){
+  if(!el || !el.tagName || el.disabled || el.readOnly) return false;
+  if(el.closest('[data-no-umlaut]')) return false;
+  if(el.tagName === 'TEXTAREA') return true;
+  if(el.tagName !== 'INPUT') return false;
+  const t = (el.getAttribute('type') || 'text').toLowerCase();
+  return t === 'text' || t === 'search';
+}
+function buildUmlautKb(){
+  const bar = document.createElement('div');
+  bar.className = 'umlaut-kb';
+  bar.setAttribute('role', 'toolbar');
+  bar.setAttribute('aria-label', 'Deutsche Buchstaben');
+  bar.hidden = true;
+  bar.innerHTML = '<div class="umlaut-keys">'
+    + UMLAUT_KEYS.map(ch => '<button type="button" class="umlaut-key" tabindex="-1" data-ch="' + ch + '">' + ch + '</button>').join('')
+    + '<button type="button" class="umlaut-key umlaut-shift" tabindex="-1" aria-pressed="false" title="Велика літера (Ä Ö Ü)" aria-label="Велика літера">⇧</button>'
+    + '</div><p class="umlaut-tip">або утримуй a / o / u / s на латинській клавіатурі</p>';
+  // не віддавати фокус кнопкам: поле лишається активним, клавіатура не ховається
+  const press = e => {
+    if(e.button > 0) return;
+    e.preventDefault();
+    if(e.type !== 'pointerdown') return; // mousedown — лише щоб не забрати фокус
+    const b = e.target.closest('.umlaut-key');
+    if(!b) return;
+    if(b.classList.contains('umlaut-shift')) setUmlautUpper(!umlautKb.upper);
+    else umlautInsert(b.dataset.ch);
+  };
+  bar.addEventListener('pointerdown', press);
+  bar.addEventListener('mousedown', press);
+  document.body.appendChild(bar);
+  umlautKb.el = bar;
+  if(window.visualViewport){
+    window.visualViewport.addEventListener('resize', () => { placeUmlautKb(); umlautKeepVisible(); });
+    window.visualViewport.addEventListener('scroll', placeUmlautKb);
+  }
+  window.addEventListener('resize', placeUmlautKb);
+  return bar;
+}
+function setUmlautUpper(on){
+  umlautKb.upper = on;
+  if(!umlautKb.el) return;
+  umlautKb.el.querySelector('.umlaut-shift').setAttribute('aria-pressed', on ? 'true' : 'false');
+  umlautKb.el.querySelectorAll('.umlaut-key[data-ch]').forEach(b => {
+    b.textContent = (on && b.dataset.ch !== 'ß') ? b.dataset.ch.toUpperCase() : b.dataset.ch;
+  });
+}
+function umlautInsert(ch){
+  const el = umlautKb.target;
+  if(!umlautEligible(el)){ hideUmlautKb(); return; }
+  if(umlautKb.upper && ch !== 'ß') ch = ch.toUpperCase();
+  const len = el.value.length;
+  const s = el.selectionStart == null ? len : el.selectionStart;
+  const e = el.selectionEnd == null ? s : el.selectionEnd;
+  if(el.maxLength > 0 && len - (e - s) + 1 > el.maxLength) return;
+  if(document.activeElement !== el) el.focus({preventScroll: true});
+  el.setRangeText(ch, s, e, 'end');
+  el.dispatchEvent(new Event('input', {bubbles: true}));
+  if(umlautKb.upper) setUmlautUpper(false); // ⇧ діє на одну літеру
+}
+// панель над екранною клавіатурою: на iPhone клавіатура лежить ПОВЕРХ
+// сторінки (innerHeight не міняється, зменшується лише visualViewport)
+function placeUmlautKb(){
+  const bar = umlautKb.el;
+  if(!bar || bar.hidden) return;
+  const vv = window.visualViewport;
+  const lift = vv ? Math.max(0, window.innerHeight - (vv.offsetTop + vv.height)) : 0;
+  bar.style.bottom = Math.round(lift + 10) + 'px';
+}
+// якщо панель закриває поле — прокрутити сторінку трохи вище
+function umlautKeepVisible(){
+  const el = umlautKb.target, bar = umlautKb.el;
+  if(!el || !bar || bar.hidden) return;
+  requestAnimationFrame(() => {
+    const r = el.getBoundingClientRect(), top = bar.getBoundingClientRect().top;
+    if(r.bottom > top - 8 && r.top > 60) window.scrollBy({top: Math.min(r.bottom - top + 16, r.top - 60), behavior: 'smooth'});
+  });
+}
+function showUmlautKb(el){
+  clearTimeout(umlautKb.hideTimer);
+  const bar = umlautKb.el || buildUmlautKb();
+  if(umlautKb.target !== el) setUmlautUpper(false);
+  umlautKb.target = el;
+  bar.hidden = false;
+  document.documentElement.classList.add('umlaut-open'); // місце внизу сторінки, щоб останнє поле не ховалось під панеллю
+  placeUmlautKb();
+  umlautKeepVisible();
+}
+function hideUmlautKb(){
+  clearTimeout(umlautKb.hideTimer);
+  umlautKb.target = null;
+  setUmlautUpper(false);
+  if(umlautKb.el) umlautKb.el.hidden = true;
+  document.documentElement.classList.remove('umlaut-open');
+}
+function initUmlautKb(){
+  document.addEventListener('focusin', e => {
+    if(umlautEligible(e.target)) showUmlautKb(e.target);
+    else if(umlautKb.target) hideUmlautKb();
+  });
+  document.addEventListener('focusout', e => {
+    if(e.target !== umlautKb.target) return;
+    clearTimeout(umlautKb.hideTimer);
+    // невелика пауза: при переході на інше поле focusin покаже панель знову
+    umlautKb.hideTimer = setTimeout(() => { if(!umlautEligible(document.activeElement)) hideUmlautKb(); }, 150);
+  });
+}
+
 document.addEventListener('DOMContentLoaded', initTabs);
 document.addEventListener('DOMContentLoaded', initNoPaste);
 document.addEventListener('DOMContentLoaded', initReport);
+document.addEventListener('DOMContentLoaded', initUmlautKb);
