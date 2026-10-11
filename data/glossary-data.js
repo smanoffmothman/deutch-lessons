@@ -752,5 +752,17 @@ const GLOSSARY = [
   {de: "der Tierschutz", uk: "захист тварин", klas: "8", modul: "B", lektion: 2},
   {de: "die Informationsquelle", uk: "джерело інформації", klas: "8", modul: "B", lektion: 2},
   {de: "im Internet surfen", uk: "«серфити», блукати в інтернеті", klas: "8", modul: "B", lektion: 2},
-  {de: "retten (die Natur retten)", uk: "рятувати (рятувати природу)", klas: "8", modul: "B", lektion: 2}
+  {de: "retten (die Natur retten)", uk: "рятувати (рятувати природу)", klas: "8", modul: "B", lektion: 2},
+  {de: "widmen (+Dat.) (Meine Freizeit widme ich dem Sport.)", uk: "присвячувати (свій вільний час чомусь)", klas: "8", modul: "B", lektion: 3},
+  {de: "das Mitglied (die Mitglieder)", uk: "член (клубу, команди, гуртка)", klas: "8", modul: "B", lektion: 3},
+  {de: "der Trickfilm (die Trickfilme)", uk: "мультфільм", klas: "8", modul: "B", lektion: 3},
+  {de: "die Komödie (die Komödien)", uk: "комедія", klas: "8", modul: "B", lektion: 3},
+  {de: "der Kinobesuch (die Kinobesuche)", uk: "похід у кіно", klas: "8", modul: "B", lektion: 3},
+  {de: "das Filmemachen", uk: "створення фільмів, кінозйомка", klas: "8", modul: "B", lektion: 3},
+  {de: "das Computerspiel (die Computerspiele)", uk: "комп'ютерна гра", klas: "8", modul: "B", lektion: 3},
+  {de: "der Erfolg (Erfolg haben)", uk: "успіх (мати успіх)", klas: "8", modul: "B", lektion: 3},
+  {de: "die Enttäuschung (eine bittere Enttäuschung erleben)", uk: "розчарування (пережити гірке розчарування)", klas: "8", modul: "B", lektion: 3},
+  {de: "die Landschaft (die Landschaften)", uk: "краєвид, пейзаж", klas: "8", modul: "B", lektion: 3},
+  {de: "das Talent (Talente entwickeln)", uk: "талант (розвивати таланти)", klas: "8", modul: "B", lektion: 3},
+  {de: "das Fernsehen (im Fernsehen sehen)", uk: "телебачення (дивитися по телевізору)", klas: "8", modul: "B", lektion: 3}
 ];

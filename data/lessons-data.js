@@ -676,5 +676,16 @@ const LESSONS = [
     nove: true,
     gram: ["verben-praepositionalobjekt", "fragen", "reflexive-verben"],
     dz: "1) Fehlersuche: In Leas Blogbeitrag sind 6 Fehler mit Pronominaladverbien oder Präposition + Pronomen. Finde sie und schreib den Text richtig ins Heft: „Ich heiße Lea und interessiere mich vor allem für Tiere und die Umwelt. Mein Hund heißt Rex, und ich sorge jeden Tag dafür. Mit wem beschäftige ich mich in der Freizeit? Mit dem Naturschutz! Ich ärgere mich darauf, dass viele Menschen Müll in den Wald werfen. Meine Freundin Mia ist auch in der Naturschutz-AG. Wir sprechen oft über Tiere und träumen darüber, ein Tierheim zu gründen. Meine Oma wohnt in Lwiw, ich denke oft daran. Und ich denke oft davon, dass wir alle zusammen unsere Natur retten können.“ 2) Wähle eine bekannte Person (Sportler/in, Musiker/in, Schauspieler/in) und schreib fünf Interviewfragen an sie mit wo(r)- + Präposition (z. B. „Wofür interessieren Sie sich?“, „Wovon träumen Sie?“). Schreib dazu die Antworten, die diese Person vielleicht gibt – mit da(r)- + Präposition (z. B. „Ich träume davon, …“). Nächstes Mal spielen wir eure Interviews vor, und die Klasse rät, wer die Person ist!"
+  },
+  {
+    klas: "8",
+    modul: "B",
+    lektion: 3,
+    nazva: "Die Interessen meiner Freunde",
+    opys: "Захоплення моїх друзів: тексти Луїзи, Нікласа, Петера й Анналени (кіно, спорт, комп'ютерні ігри, фотографія) із зіставленням малюнків, аудіювання «Хто говорить?», widmen + Dativ і sich interessieren für + Akkusativ, речення з da та гра «Unsere Interessen».",
+    file: "klas-8/modul-b/lektion-3.html",
+    nove: true,
+    gram: ["rektion-verben", "verben-praepositionalobjekt", "kausalsaetze", "indirekte-fragesaetze"],
+    dz: "1) Mach ein kurzes Interview mit einem Freund oder einer Freundin über seine / ihre Interessen (mindestens 4 Fragen, z. B. „Wofür interessierst du dich?“, „Womit beschäftigst du dich in der Freizeit?“, „Wie oft machst du das?“, „Mit wem?“). 2) Schreib danach über ihn / sie 6 Aussagen in der 3. Person – 4 stimmen, 2 sind erfunden (z. B. „Mein Freund Taras interessiert sich für Fotografie.“, „Seine Freizeit widmet er dem Basketball.“). Benutze mindestens einmal „sich interessieren für“, einmal „widmen + Dativ“ und einen Satz mit „da“ (z. B. „Da er Tiere liebt, hilft er im Tierheim.“). Nächstes Mal spielen wir „Stimmt das?“: Die Klasse rät, welche zwei Aussagen nicht stimmen."
   }
 ];
