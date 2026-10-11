@@ -716,5 +716,17 @@ const GLOSSARY = [
   {de: "das Fleisch", uk: "м'ясо", klas: "7", modul: "B", lektion: 8},
   {de: "die Kartoffel (die Kartoffeln)", uk: "картопля (картоплина)", klas: "7", modul: "B", lektion: 8},
   {de: "stehen (Das Glas steht auf dem Tisch.)", uk: "стояти (про тарілки, склянки, чашки)", klas: "7", modul: "B", lektion: 8},
-  {de: "brauchen (Was braucht ihr?)", uk: "потребувати, бути потрібним", klas: "7", modul: "B", lektion: 8}
+  {de: "brauchen (Was braucht ihr?)", uk: "потребувати, бути потрібним", klas: "7", modul: "B", lektion: 8},
+  {de: "legen (etwas auf den Tisch legen)", uk: "класти (річ лежатиме: ніж, виделку, серветку)", klas: "7", modul: "B", lektion: 9},
+  {de: "stellen (etwas auf den Tisch stellen)", uk: "ставити (річ стоятиме: тарілку, склянку, чашку)", klas: "7", modul: "B", lektion: 9},
+  {de: "bedecken (den Tisch mit einer Tischdecke bedecken)", uk: "накривати, застеляти (стіл скатертиною)", klas: "7", modul: "B", lektion: 9},
+  {de: "vergessen (er vergisst)", uk: "забувати", klas: "7", modul: "B", lektion: 9},
+  {de: "die Mitte (in die Mitte stellen)", uk: "середина (поставити посередині)", klas: "7", modul: "B", lektion: 9},
+  {de: "neben (+Akk.)", uk: "поруч, біля (Wohin? — neben die Teller legen)", klas: "7", modul: "B", lektion: 9},
+  {de: "einladen (trennbar) (zum Tee einladen)", uk: "запрошувати (на чай)", klas: "7", modul: "B", lektion: 9},
+  {de: "der Besuch (Besuch haben)", uk: "гості, візит (мати гостей)", klas: "7", modul: "B", lektion: 9},
+  {de: "die Praline (die Pralinen)", uk: "цукерка (шоколадна)", klas: "7", modul: "B", lektion: 9},
+  {de: "der Obstkuchen (die Obstkuchen)", uk: "фруктовий пиріг, пиріг із фруктами", klas: "7", modul: "B", lektion: 9},
+  {de: "die Geburtstagsparty (die Geburtstagspartys)", uk: "вечірка до дня народження", klas: "7", modul: "B", lektion: 9},
+  {de: "die Vorbereitung (die Vorbereitungen)", uk: "підготовка, приготування", klas: "7", modul: "B", lektion: 9}
 ];

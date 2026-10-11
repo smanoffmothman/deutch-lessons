@@ -400,7 +400,7 @@ const LESSONS = [
     opys: "Німецькі прислів'я про здоров'я з аудіюванням, сортуємо корисні й шкідливі звички за принципом gesund/schädlich та вчимося радити конструкцією „man sollte + Infinitiv“.",
     file: "klas-8/modul-a/lektion-10.html",
     nove: true,
-    dz: "Lies den Text über Jonas' Tag und finde 5 Fehler — Aussagen, die einem gesunden Leben widersprechen. Schreib den Text richtig ab (korrigiere die 5 Stellen): „Jonas steht jeden Tag erst um elf Uhr vormittags auf und isst dann sofort viele Süßigkeiten zum Frühstück, weil das seiner Meinung nach sehr gesund ist. Nach der Schule liegt er drei Stunden lang in der Sonne und trinkt dabei kein Wasser. Am Abend isst er sehr spät, um Mitternacht, und geht dann sofort schlafen. Jonas findet, man muss sich nicht bewegen, um fit zu bleiben.\u201c Schreib danach noch 2 eigene Sätze mit „man sollte“, was Jonas stattdessen tun sollte."
+    dz: "Lies den Text über Jonas' Tag und finde 5 Fehler — Aussagen, die einem gesunden Leben widersprechen. Schreib den Text richtig ab (korrigiere die 5 Stellen): „Jonas steht jeden Tag erst um elf Uhr vormittags auf und isst dann sofort viele Süßigkeiten zum Frühstück, weil das seiner Meinung nach sehr gesund ist. Nach der Schule liegt er drei Stunden lang in der Sonne und trinkt dabei kein Wasser. Am Abend isst er sehr spät, um Mitternacht, und geht dann sofort schlafen. Jonas findet, man muss sich nicht bewegen, um fit zu bleiben.“ Schreib danach noch 2 eigene Sätze mit „man sollte“, was Jonas stattdessen tun sollte."
   },
   {
     klas: "8",
@@ -643,5 +643,16 @@ const LESSONS = [
     nove: true,
     gram: ["deklination-nomen", "legen-liegen", "wechselpraepositionen"],
     dz: "1) Küchen-Rallye: Frag ein Familienmitglied nach fünf Dingen in eurer Küche – wie in Üb. 3 (z. B. „Wo finde ich einen Teller?“ – „Einen Teller findest du im Küchenschrank.“). Schreib die fünf Mini-Dialoge auf. Benutze einen / eine / ein richtig und in den Antworten mindestens zweimal „liegt / liegen“ und zweimal „steht / stehen“. 2) Zähl zu Hause: Wie viele Tassen, Teller, Gläser, Gabeln, Löffel und Messer hat deine Familie? Schreib 6 Sätze mit Pluralformen (z. B. „Wir haben zwölf Gläser.“). Nächstes Mal spielen wir „Wer hat die meisten Tassen?“."
+  },
+  {
+    klas: "7",
+    modul: "B",
+    lektion: 9,
+    nazva: "Am Tisch: legen oder stellen?",
+    opys: "Wohin? legen / stellen + auf / in / neben + Akkusativ (сортування, речення з артиклями), текст «Was macht Maja falsch?» — шукаємо й виправляємо помилки в сервіруванні (Sie sollte … stellen / legen), діалоги «Wie deckt ihr den Tisch?» і меню та сервірування для власної вечірки до дня народження.",
+    file: "klas-7/modul-b/lektion-9.html",
+    nove: true,
+    gram: ["wechselpraepositionen", "legen-liegen"],
+    dz: "Mach einen Comic „So deckt man den Tisch“ für deinen kleinen Bruder, deine kleine Schwester oder einen Freund aus Deutschland: Zeichne 6 Bilder (oder mach 6 Fotos) – Schritt für Schritt, von der Tischdecke bis zum Kuchen. Schreib zu jedem Bild eine Anweisung im Imperativ mit „legen“ oder „stellen“ und auf, in oder neben + Akkusativ (z. B. „Leg zuerst die Tischdecke auf den Tisch!“, „Stell die Gläser neben die Teller!“, „Stell den Kuchen in die Mitte!“). Benutze mindestens einmal „zuerst“, „dann“ und „zum Schluss“. Nächstes Mal tauschen wir die Comics und decken nach euren Anweisungen den Tisch."
   }
 ];
