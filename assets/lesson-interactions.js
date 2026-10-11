@@ -1382,15 +1382,34 @@ function hideUmlautKb(){
   document.documentElement.classList.remove('umlaut-open');
 }
 function initUmlautKb(){
+  /* Фікс 2026-10-11 ("загублений клік"): разом з панеллю зникає й нижній відступ
+     сторінки (html.umlaut-open). Коли сторінку прокручено до самого низу, вона від
+     цього "підскакує". Раніше панель ховалась уже на натисканні миші (mousedown →
+     фокус іде з поля → focusin), тож кнопка (напр. Prüfen під останнім полем)
+     з'їжджала з-під курсора ще до відпускання — і перший клік губився. Тепер, поки
+     кнопка миші / палець натиснуті, панель лише "чекає" і ховається вже ПІСЛЯ
+     кліку. Клавіатура (Tab) — як і раніше, одразу. */
+  let pressing = false, pendingHide = false;
+  const hideIfIdle = () => { if(!umlautEligible(document.activeElement)) hideUmlautKb(); };
+  const requestHide = () => { if(pressing) pendingHide = true; else hideIfIdle(); };
+  const release = () => {
+    pressing = false;
+    if(pendingHide){ pendingHide = false; setTimeout(hideIfIdle, 60); } // після click
+  };
+  document.addEventListener('pointerdown', e => {
+    if(!(e.target.closest && e.target.closest('.umlaut-kb'))) pressing = true;
+  }, true);
+  document.addEventListener('pointerup', release, true);
+  document.addEventListener('pointercancel', release, true);
   document.addEventListener('focusin', e => {
-    if(umlautEligible(e.target)) showUmlautKb(e.target);
-    else if(umlautKb.target) hideUmlautKb();
+    if(umlautEligible(e.target)){ pendingHide = false; showUmlautKb(e.target); }
+    else if(umlautKb.target) requestHide();
   });
   document.addEventListener('focusout', e => {
     if(e.target !== umlautKb.target) return;
     clearTimeout(umlautKb.hideTimer);
     // невелика пауза: при переході на інше поле focusin покаже панель знову
-    umlautKb.hideTimer = setTimeout(() => { if(!umlautEligible(document.activeElement)) hideUmlautKb(); }, 150);
+    umlautKb.hideTimer = setTimeout(requestHide, 150);
   });
 }
 
