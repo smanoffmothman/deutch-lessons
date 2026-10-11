@@ -698,5 +698,16 @@ const LESSONS = [
     nove: true,
     gram: ["deklination-nomen", "artikel-gebrauch"],
     dz: "Schreib Susanna eine Postkarte (auf Papier oder am Computer gestaltet). Vorne: ein Bild oder Foto von deiner Stadt. Hinten: 5–6 Sätze – stell dich kurz vor, beantworte Susannas Frage „Schreibst du lieber Briefe oder E-Mails?“ mit einem weil-Satz und stell ihr zwei Fragen (z. B. „Hast du viele Brieffreunde?“). Benutze mindestens vier Wörter aus Üb. 3, davon mindestens zwei im Plural (z. B. Briefe, E-Mails, Briefmarken). Schreib rechts eine erfundene Adresse in Verona richtig auf (Name, Straße und Hausnummer, Postleitzahl und Stadt, Land) und zeichne eine Briefmarke dazu. Nächstes Mal hängen wir alle Postkarten auf und raten: Welche Stadt ist das?"
+  },
+  {
+    klas: "9",
+    modul: "B",
+    lektion: 1,
+    nazva: "Jugend und Mode",
+    opys: "Вступ до модуля «Одяг. Молодіжна культура»: що таке мода (вислови, власна думка з nicht nur …, sondern), сортуємо одяг, аксесуари й взуття, закінчення прикметників у Nominativ / Dativ / Akkusativ і допис про образ для косплей-фестивалю.",
+    file: "klas-9/modul-b/lektion-1.html",
+    nove: true,
+    gram: ["adjektivdeklination", "konjunktionen-position-null"],
+    dz: "1) Mach eine Mini-Umfrage: Frag zwei Personen (Familie oder Freunde) „Was verstehst du unter Mode?“ und notiere ihre Antworten mit den Sätzen aus Üb. 1 (z. B. „Meine Mutter meint, Mode ist ein Teil der Kultur.“). 2) Gestalte eine Seite „Mein Lieblingsoutfit“: Zeichne dein Lieblingsoutfit oder klebe ein Foto ein und beschrifte mindestens 6 Sachen – je zwei Kleidungsstücke, Accessoires und Schuhe – mit Artikel und Adjektiv (z. B. der blaue Kapuzenpulli, die silberne Kette, die weißen Turnschuhe). Schreib darunter 4 Sätze mit richtigen Adjektivendungen: einen Satz im Nominativ („Mein … ist …“), zwei Sätze mit „Ich trage …“ (Akkusativ) und einen Satz mit „mit“ (Dativ, z. B. „Mit meinem roten Schal …“). Nächstes Mal machen wir eine kleine Modenschau in der Klasse."
   }
 ];

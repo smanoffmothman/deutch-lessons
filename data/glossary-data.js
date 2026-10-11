@@ -776,5 +776,17 @@ const GLOSSARY = [
   {de: "der Bildschirm (die Bildschirme)", uk: "екран, монітор", klas: "8", modul: "B", lektion: 4},
   {de: "die Tastatur (die Tastaturen)", uk: "клавіатура", klas: "8", modul: "B", lektion: 4},
   {de: "die Datei (die Dateien) (als Anhang)", uk: "файл (у вкладенні до e-mail)", klas: "8", modul: "B", lektion: 4},
-  {de: "im Briefwechsel stehen (mit +Dat.)", uk: "листуватися (з кимось)", klas: "8", modul: "B", lektion: 4}
+  {de: "im Briefwechsel stehen (mit +Dat.)", uk: "листуватися (з кимось)", klas: "8", modul: "B", lektion: 4},
+  {de: "die Mode", uk: "мода", klas: "9", modul: "B", lektion: 1},
+  {de: "die Kleidung", uk: "одяг", klas: "9", modul: "B", lektion: 1},
+  {de: "das Accessoire (die Accessoires)", uk: "аксесуар — модне доповнення до одягу", klas: "9", modul: "B", lektion: 1},
+  {de: "im Trend liegen", uk: "бути в тренді, бути модним", klas: "9", modul: "B", lektion: 1},
+  {de: "sich ausdrücken", uk: "виражати себе", klas: "9", modul: "B", lektion: 1},
+  {de: "die Marke (die Marken)", uk: "бренд, марка (одягу)", klas: "9", modul: "B", lektion: 1},
+  {de: "der Kapuzenpulli (die Kapuzenpullis)", uk: "худі, светр із капюшоном", klas: "9", modul: "B", lektion: 1},
+  {de: "das Hemd (die Hemden)", uk: "сорочка", klas: "9", modul: "B", lektion: 1},
+  {de: "der Gürtel (die Gürtel)", uk: "пасок", klas: "9", modul: "B", lektion: 1},
+  {de: "die Krawatte (die Krawatten)", uk: "краватка", klas: "9", modul: "B", lektion: 1},
+  {de: "die Ohrringe (Pl.)", uk: "сережки", klas: "9", modul: "B", lektion: 1},
+  {de: "die Turnschuhe (Pl.)", uk: "кросівки", klas: "9", modul: "B", lektion: 1}
 ];
