@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 1 · Modul B · Jugend und Mode</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 9'},
+    {label: 'Урок 1: Jugend und Mode'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 1 · MODUL B</span>
+        <h1>Jugend und Mode</h1>
+        <p class="sub">Що для нас означає мода: висловлюємо думку, сортуємо слова про одяг, аксесуари й взуття та тренуємо закінчення прикметників у Nominativ, Dativ і Akkusativ.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Was ist Mode?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Kleidung &amp; Co.</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Adjektivendungen</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Mein Outfit</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== START ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Worum geht es in diesem Modul?</h2>
+      <div class="card">
+        <p><b>„Zeig mir dein Umfeld, und ich sage, wer du bist.“</b> In diesem Modul sprechen wir über Kleidung, Mode und Jugendkultur: Was tragen junge Leute gern? Welche Rolle spielen Trends, Marken und Accessoires? Und was sagt unser Stil über uns? Heute beginnen wir mit der Frage: Was ist eigentlich Mode?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          «Покажи мені своє оточення, і я скажу, хто ти». У цьому модулі говоримо про одяг, моду й молодіжну культуру: що люблять носити підлітки? Яку роль відіграють тренди, бренди й аксесуари? І що наш стиль розповідає про нас? Сьогодні почнемо з питання: а що таке, власне, мода?
+        </div>
+      </div>
+
+      <div class="phone">
+        <div class="phone-bar"><span>Freitag, 15:40</span><span>📶 🔋</span></div>
+        <div class="phone-header">Clique 💬</div>
+        <div class="phone-body">
+          <div class="msg them"><b>Tim:</b> Hey Leute, habt ihr gehört, dass am Samstag ein lokales Cosplay-Festival stattfindet?</div>
+          <div class="msg them"><b>Mia:</b> Wirklich?! Das ist ja fantastisch!</div>
+          <div class="msg me"><b>Lena:</b> Ich habe eine Idee: Gehen wir zusammen hin! 🎭</div>
+        </div>
+      </div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Українською</span>
+        Друзі домовляються піти на косплей-фестиваль. А що ти вдягнув(-ла) б на таке свято? Наприкінці уроку (Üb. 4) ти прочитаєш допис Лени про її образ для фестивалю.
+      </div>
+
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Hallo! Heute geht es um Mode – und um die richtigen Adjektivendungen. Los geht's!</p>
+      </div>
+    </section>
+
+    <!-- ===== HAUSAUFGABE ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Це перший урок модуля, ДЗ ще немає. Тож одразу до нової теми — переходь на вкладку «Üb. 1».
+      </div>
+      <div id="dz-check"></div>
+
+      <div class="card" id="dz-vocab-wrap" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">Wörter-Check</p>
+        <p class="lead">Перевір слова з минулого уроку.</p>
+        <div id="dz-vocab"></div>
+      </div>
+    </section>
+
+    <!-- ===== ÜB. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Was verstehst du unter Mode?</h2>
+      <div class="card">
+        <p class="lead">Прочитай вислови про моду. З якими ти погоджуєшся?</p>
+        <ol>
+          <li>Mode ist Kleidung, die im Trend liegt.</li>
+          <li>Mode zeigt, wie Menschen sich ausdrücken.</li>
+          <li>Mode ist ein Phänomen, das sich ständig verändert.</li>
+          <li>Mode zeigt den Stil einer Person.</li>
+          <li>Mode ist nicht nur Kleidung, sondern auch <b>Accessoires</b>.</li>
+          <li>Mode ist ein Ausdruck von Identität.</li>
+          <li>Mode hat mit Farben und Formen zu tun.</li>
+          <li>Mode ist Kleidung der bekannten Marken.</li>
+          <li>Mode sind die Waren, die weltbekannte Designer/innen geschaffen haben.</li>
+          <li>Mode ist ein Teil der Kultur.</li>
+        </ol>
+        <div class="merke"><b>das Accessoire</b> = modisches Zubehör zur Kleidung, z. B. ein Gürtel, ein Hut, eine Brille, Schmuck usw.</div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          <dl>
+            <dt>im Trend liegen</dt><dd>бути в тренді, бути модним</dd>
+            <dt>sich ausdrücken</dt><dd>виражати себе</dd>
+            <dt>sich ständig verändern</dt><dd>постійно змінюватися</dd>
+            <dt>der Ausdruck von Identität</dt><dd>вираження особистості (ідентичності)</dd>
+            <dt>die Marke</dt><dd>бренд, марка</dd>
+            <dt>das Accessoire</dt><dd>аксесуар — модне доповнення до одягу (пасок, капелюх, окуляри, прикраси)</dd>
+          </dl>
+        </div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">A · Satzbau</p>
+        <p class="lead">Склади речення з карток. Зверни увагу: у підрядному реченні (wie …, das …) дієслово стоїть у кінці.</p>
+        <div id="ub1-order"></div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">B · Deine Meinung</p>
+        <p class="lead">Обери 2–3 вислови, з якими погоджуєшся (або ні), і прокоментуй їх. Почни так, як цуценя з підручника: <i>„Ich meine, die Mode ist nicht nur …, sondern sie umfasst viel mehr, zum Beispiel …“</i></p>
+        <div class="qa">
+          <label for="ub1-text">Was verstehst du unter Mode? (4–6 Sätze)</label>
+          <textarea id="ub1-text" rows="6" placeholder="Ich meine, die Mode ist nicht nur …"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Вставка тексту в це поле вимкнена — набирай самостійно. Корисні звороти: <i>Ich stimme zu: …</i> (погоджуюся), <i>Ich bin nicht einverstanden, denn …</i> (не погоджуюся, бо …), <i>Für mich ist Mode …</i> (для мене мода — це …).
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ÜB. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Kleidung, Accessoires, Schuhe</h2>
+      <p class="lead">Розсортуй слова по трьох кошиках. Зразки: <b>der Badeanzug</b> → Kleidung, <b>die Brille</b> → Accessoires, <b>die Damenschuhe</b> → Schuhe.</p>
+      <div class="card">
+        <div id="ub2-sort"></div>
+      </div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Українською</span>
+        <dl>
+          <dt>der Kapuzenpulli</dt><dd>худі, светр із капюшоном</dd>
+          <dt>das / der Sakko</dt><dd>піджак (чоловічий)</dd>
+          <dt>die Unterwäsche</dt><dd>спідня білизна</dd>
+          <dt>die Ohrringe</dt><dd>сережки</dd>
+          <dt>die Krawatte</dt><dd>краватка</dd>
+          <dt>der Gürtel</dt><dd>пасок</dd>
+          <dt>die Turnschuhe</dt><dd>кросівки</dd>
+          <dt>die Winterstiefel</dt><dd>зимові чоботи</dd>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ===== ÜB. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Ergänze die Endungen der Adjektive</h2>
+      <p class="lead">Обери закінчення прикметника в кожній клітинці. Перший рядок — зразок.</p>
+      <div class="card" id="ub3-list">
+        <table class="gtable">
+          <tr><th>Nominativ</th><th>Dativ</th><th>Akkusativ</th></tr>
+          <tr><td colspan="3" class="gender">maskulin: der Hut</td></tr>
+          <tr><td>ein / mein neu<b>er</b> Hut <i>(Beispiel)</i></td><td>einem / meinem neu<select class="blank inline" data-ans="en" aria-label="Endung"><option value="">—</option><option>e</option><option>en</option><option>er</option><option>es</option><option>em</option></select> Hut</td><td>einen / meinen neu<select class="blank inline" data-ans="en" aria-label="Endung"><option value="">—</option><option>e</option><option>en</option><option>er</option><option>es</option><option>em</option></select> Hut</td></tr>
+          <tr><td>der / dieser neu<select class="blank inline" data-ans="e" aria-label="Endung"><option value="">—</option><option>e</option><option>en</option><option>er</option><option>es</option><option>em</option></select> Hut</td><td>dem / diesem neu<select class="blank inline" data-ans="en" aria-label="Endung"><option value="">—</option><option>e</option><option>en</option><option>er</option><option>es</option><option>em</option></select> Hut</td><td>den / diesen neu<select class="blank inline" data-ans="en" aria-label="Endung"><option value="">—</option><option>e</option><option>en</option><option>er</option><option>es</option><option>em</option></select> Hut</td></tr>
+          <tr><td colspan="3" class="gender">neutral: das Hemd</td></tr>
+          <tr><td>ein / mein kariert<select class="blank inline" data-ans="es" aria-label="Endung"><option value="">—</option><option>e</option><option>en</option><option>er</option><option>es</option><option>em</option></select> Hemd</td><td>einem / meinem kariert<select class="blank inline" data-ans="en" aria-label="Endung"><option value="">—</option><option>e</option><option>en</option><option>er</option><option>es</option><option>em</option></select> Hemd</td><td>ein / mein kariert<select class="blank inline" data-ans="es" aria-label="Endung"><option value="">—</option><option>e</option><option>en</option><option>er</option><option>es</option><option>em</option></select> Hemd</td></tr>
+          <tr><td>das / dieses kariert<select class="blank inline" data-ans="e" aria-label="Endung"><option value="">—</option><option>e</option><option>en</option><option>er</option><option>es</option><option>em</option></select> Hemd</td><td>dem / diesem kariert<select class="blank inline" data-ans="en" aria-label="Endung"><option value="">—</option><option>e</option><option>en</option><option>er</option><option>es</option><option>em</option></select> Hemd</td><td>das / dieses kariert<select class="blank inline" data-ans="e" aria-label="Endung"><option value="">—</option><option>e</option><option>en</option><option>er</option><option>es</option><option>em</option></select> Hemd</td></tr>
+          <tr><td colspan="3" class="gender">feminin: die Jeans</td></tr>
+          <tr><td>eine / meine weit<select class="blank inline" data-ans="e" aria-label="Endung"><option value="">—</option><option>e</option><option>en</option><option>er</option><option>es</option><option>em</option></select> Jeans</td><td>einer / meiner weit<select class="blank inline" data-ans="en" aria-label="Endung"><option value="">—</option><option>e</option><option>en</option><option>er</option><option>es</option><option>em</option></select> Jeans</td><td>eine / meine weit<select class="blank inline" data-ans="e" aria-label="Endung"><option value="">—</option><option>e</option><option>en</option><option>er</option><option>es</option><option>em</option></select> Jeans</td></tr>
+          <tr><td>die / diese weit<select class="blank inline" data-ans="e" aria-label="Endung"><option value="">—</option><option>e</option><option>en</option><option>er</option><option>es</option><option>em</option></select> Jeans</td><td>der / dieser weit<select class="blank inline" data-ans="en" aria-label="Endung"><option value="">—</option><option>e</option><option>en</option><option>er</option><option>es</option><option>em</option></select> Jeans</td><td>die / diese weit<select class="blank inline" data-ans="e" aria-label="Endung"><option value="">—</option><option>e</option><option>en</option><option>er</option><option>es</option><option>em</option></select> Jeans</td></tr>
+          <tr><td colspan="3" class="gender">Plural: die Ohrringe</td></tr>
+          <tr><td>cool<select class="blank inline" data-ans="e" aria-label="Endung"><option value="">—</option><option>e</option><option>en</option><option>er</option><option>es</option><option>em</option></select> Ohrringe</td><td>cool<select class="blank inline" data-ans="en" aria-label="Endung"><option value="">—</option><option>e</option><option>en</option><option>er</option><option>es</option><option>em</option></select> Ohrringen</td><td>cool<select class="blank inline" data-ans="e" aria-label="Endung"><option value="">—</option><option>e</option><option>en</option><option>er</option><option>es</option><option>em</option></select> Ohrringe</td></tr>
+          <tr><td>meine cool<select class="blank inline" data-ans="en" aria-label="Endung"><option value="">—</option><option>e</option><option>en</option><option>er</option><option>es</option><option>em</option></select> Ohrringe</td><td>meinen cool<select class="blank inline" data-ans="en" aria-label="Endung"><option value="">—</option><option>e</option><option>en</option><option>er</option><option>es</option><option>em</option></select> Ohrringen</td><td>meine cool<select class="blank inline" data-ans="en" aria-label="Endung"><option value="">—</option><option>e</option><option>en</option><option>er</option><option>es</option><option>em</option></select> Ohrringe</td></tr>
+          <tr><td>die / diese cool<select class="blank inline" data-ans="en" aria-label="Endung"><option value="">—</option><option>e</option><option>en</option><option>er</option><option>es</option><option>em</option></select> Ohrringe</td><td>den / diesen cool<select class="blank inline" data-ans="en" aria-label="Endung"><option value="">—</option><option>e</option><option>en</option><option>er</option><option>es</option><option>em</option></select> Ohrringen</td><td>die / diese cool<select class="blank inline" data-ans="en" aria-label="Endung"><option value="">—</option><option>e</option><option>en</option><option>er</option><option>es</option><option>em</option></select> Ohrringe</td></tr>
+        </table>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+      <div class="merke">Після <b>der / dieser</b>: в однині Nominativ (і Akkusativ f/n) — <b>-e</b>, усюди інакше — <b>-en</b>.<br>Після <b>ein / mein</b> без закінчення прикметник сам «показує» рід: <b>-er</b> (m), <b>-es</b> (n), <b>-e</b> (f).<br><b>Dativ</b> після артикля — завжди <b>-en</b>. Множина без артикля: <b>-e</b>, у Dativ — <b>-en</b> (+ <b>-n</b> в іменнику: den Ohrringe<b>n</b>).</div>
+    </section>
+
+    <!-- ===== ÜB. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Mein Outfit fürs Cosplay-Festival</h2>
+      <p class="lead">Лена пише допис про свій образ для фестивалю. Допиши закінчення прикметників (лише закінчення, напр. <b>en</b>).</p>
+      <div class="mail-window">
+        <div class="mail-titlebar">📸 lena.style · neuer Post</div>
+        <div class="mail-body" id="ub4-list">
+          <div class="fill-item"><span class="num">1)</span> Am Samstag gehe ich mit meinen best<input type="text" class="blank-input inline" data-ans="en" aria-label="Endung"> Freunden zum Cosplay-Festival!</div>
+          <div class="fill-item"><span class="num">2)</span> Ich trage ein lang<input type="text" class="blank-input inline" data-ans="es" aria-label="Endung"> schwarz<input type="text" class="blank-input inline" data-ans="es" aria-label="Endung"> Kleid.</div>
+          <div class="fill-item"><span class="num">3)</span> Dazu passt mein neu<input type="text" class="blank-input inline" data-ans="er" aria-label="Endung"> Hut.</div>
+          <div class="fill-item"><span class="num">4)</span> An meinem link<input type="text" class="blank-input inline" data-ans="en" aria-label="Endung"> Arm trage ich eine silbern<input type="text" class="blank-input inline" data-ans="e" aria-label="Endung"> Uhr.</div>
+          <div class="fill-item"><span class="num">5)</span> Meine Schwester leiht mir ihre cool<input type="text" class="blank-input inline" data-ans="en" aria-label="Endung"> Ohrringe.</div>
+          <div class="fill-item"><span class="num">6)</span> Mit diesem rot<input type="text" class="blank-input inline" data-ans="en" aria-label="Endung"> Schal sehe ich aus wie eine echte Anime-Heldin.</div>
+          <div class="fill-item"><span class="num">7)</span> Mein Freund Tim kommt in einem kariert<input type="text" class="blank-input inline" data-ans="en" aria-label="Endung"> Hemd und einer alt<input type="text" class="blank-input inline" data-ans="en" aria-label="Endung"> Lederjacke.</div>
+          <div class="fill-item"><span class="num">8)</span> Bequem<input type="text" class="blank-input inline" data-ans="e" aria-label="Endung"> Turnschuhe sind für so einen lang<input type="text" class="blank-input inline" data-ans="en" aria-label="Endung"> Tag am besten! 👟</div>
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub4-check">Prüfen</button>
+        <button class="btn secondary" id="ub4-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub4-score"></span>
+      </div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Українською</span>
+        Підказка: спершу визнач відмінок (хто? — Nominativ, кого/що? після <i>tragen, leihen</i> — Akkusativ, після <i>mit, in, an + wo?</i> — Dativ), потім — чи є артикль і яке в нього закінчення. Усно: а що вдягнув(-ла) б на фестиваль ти? Опиши свій образ сусідові по парті 2–3 реченнями.
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>1) Mach eine Mini-Umfrage: Frag zwei Personen (Familie oder Freunde) „Was verstehst du unter Mode?“ und notiere ihre Antworten mit den Sätzen aus Üb. 1 (z. B. „Meine Mutter meint, Mode ist ein Teil der Kultur.“). 2) Gestalte eine Seite „Mein Lieblingsoutfit“: Zeichne dein Lieblingsoutfit oder klebe ein Foto ein und beschrifte mindestens 6 Sachen – je zwei Kleidungsstücke, Accessoires und Schuhe – mit Artikel und Adjektiv (z. B. der blaue Kapuzenpulli, die silberne Kette, die weißen Turnschuhe). Schreib darunter 4 Sätze mit richtigen Adjektivendungen: einen Satz im Nominativ („Mein … ist …“), zwei Sätze mit „Ich trage …“ (Akkusativ) und einen Satz mit „mit“ (Dativ, z. B. „Mit meinem roten Schal …“). Nächstes Mal machen wir eine kleine Modenschau in der Klasse.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          1) Проведи міні-опитування: запитай дві людини (з родини чи друзів) «Was verstehst du unter Mode?» і запиши їхні відповіді за допомогою висловів з Üb. 1 (напр. «Meine Mutter meint, Mode ist ein Teil der Kultur.»). 2) Оформи сторінку «Mein Lieblingsoutfit»: намалюй свій улюблений образ або вклей фото й підпиши щонайменше 6 речей — по дві з одягу, аксесуарів і взуття — з артиклем і прикметником (напр. der blaue Kapuzenpulli, die silberne Kette, die weißen Turnschuhe). Нижче напиши 4 речення з правильними закінченнями прикметників: одне в Nominativ («Mein … ist …»), два з «Ich trage …» (Akkusativ) і одне з «mit» (Dativ, напр. «Mit meinem roten Schal …»). Наступного уроку влаштуємо в класі маленький показ мод.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Wörter zum Lernen</p>
+        <div class="chip-row" id="vocabChips"></div>
+      </div>
+
+      <div class="card" id="lessonGramWrap">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="lessonGram"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../data/glossary-data.js"></script>
+<script src="../../../data/lessons-data.js"></script>
+<script src="../../../data/grammar-data.js"></script>
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  const LEKTION_KLAS = "9", LEKTION_MODUL = "B", LEKTION_LEKTION = 1;
+  const LEKTION_PREV_LEKTION = 0; // перший урок модуля — Wörter-Check ховається сам
+
+  (function renderLessonVocab(){
+    const box = document.getElementById('vocabChips');
+    if (!box || typeof GLOSSARY === 'undefined') return;
+    const words = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_LEKTION
+    );
+    if (words.length === 0){
+      box.innerHTML = '<p class="empty-note">Слова для цього уроку ще не додані в глосарій.</p>';
+      return;
+    }
+    box.innerHTML = words.map(w =>
+      '<span class="chip static">' + w.de + ' — ' + w.uk + '</span>'
+    ).join('');
+  })();
+
+  // ===== Граматика до цього уроку у вкладці Fertig (поле gram у lessons-data.js) =====
+  (function renderLessonGrammar(){
+    const wrap = document.getElementById('lessonGramWrap');
+    const box = document.getElementById('lessonGram');
+    if (!wrap || !box) return;
+    const hide = () => { wrap.style.display = 'none'; };
+    if (typeof LESSONS === 'undefined' || typeof GRAMMAR === 'undefined') return hide();
+    const me = LESSONS.find(l => l.klas === LEKTION_KLAS && l.modul === LEKTION_MODUL && l.lektion === LEKTION_LEKTION);
+    const topics = ((me && me.gram) || []).map(id => GRAMMAR.find(t => t.id === id)).filter(t => t && t.opublikovano > 0);
+    if (topics.length === 0) return hide();
+    // корінь сайту беремо з того самого шляху, яким підключено grammar-data.js —
+    // тож окремо міняти шлях тут при копіюванні шаблону не треба
+    const src = document.querySelector('script[src$="data/grammar-data.js"]').getAttribute('src');
+    const root = src.slice(0, src.length - 'data/grammar-data.js'.length);
+    box.innerHTML = topics.map(t =>
+      '<a class="gram-link" href="' + root + 'gramatyka/temy/' + t.id + '.html">'
+      + '<span class="k">' + t.uk + '</span>' + t.tema + '</a>'
+    ).join('');
+  })();
+
+  // ===== Wörter-Check у вкладці Hausaufgabe (слова ПОПЕРЕДНЬОГО уроку) =====
+  // Використовує ті самі спільні функції, що й Üb.1 (buildQuiz) та
+  // Fertig! (shuffleArray) — нового коду в lesson-interactions.js не було.
+
+  // ---------- Груба евристика частини мови за виглядом "de" ----------
+  // Потрібна лише для того, щоб варіанти-пастки у Wörter-Check були тієї
+  // самої частини мови, що й правильна відповідь (інакше учень вгадує за
+  // формою слова — "це іменник чи дієслово?" — а не за значенням). Це
+  // евристика за текстом рядка, а не лінгвістичний аналізатор, і вона не
+  // вимагає жодного нового поля в даних GLOSSARY.
+  function guessPos(de){
+    var base = (de || '').replace(/\([^)]*\)/g, '').trim();
+    if(/^(der|die|das)(\/(der|die|das))?\s/.test(base)) return 'noun';
+    if(/^sich\s/.test(base)) return 'verb';
+    if(/^am\s/.test(base)) return 'other'; // "am liebsten", "am besten" — прислівникова найвища форма, не дієслово
+    if(/\(\+(Gen|Dat|Akk)\.?\)/.test(de)) return 'prep';
+    var words = base.split(/\s+/);
+    var last = words[words.length - 1];
+    if(/(en|ern|eln)$/.test(last) && last === last.toLowerCase()) return 'verb';
+    return 'other'; // прикметники / прислівники / сталі вирази
+  }
+
+  (function renderDzVocabCheck(){
+    const wrap = document.getElementById('dz-vocab-wrap');
+    const box = document.getElementById('dz-vocab');
+    if (!wrap || !box || typeof GLOSSARY === 'undefined') return;
+    if (!LEKTION_PREV_LEKTION){ wrap.style.display = 'none'; return; }
+
+    const prevWords = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_PREV_LEKTION
+    );
+    if (prevWords.length < 3){ wrap.style.display = 'none'; return; }
+
+    const pool = shuffleArray(prevWords).slice(0, 6); // 5–6 слів на перевірку
+    const quizData = pool.map(w => {
+      // Пастки — тієї самої частини мови, що й правильне слово (guessPos вище),
+      // інакше учень вгадує за формою відповіді, а не за її значенням.
+      const pos = guessPos(w.de);
+      let sameKind = GLOSSARY.filter(g => g.uk !== w.uk && guessPos(g.de) === pos);
+      if(sameKind.length < 2) sameKind = GLOSSARY.filter(g => g.uk !== w.uk); // запасний варіант, якщо слів цієї частини мови замало
+      const distractors = shuffleArray(sameKind).slice(0, 2).map(g => g.uk);
+      return { q: w.de, opts: [w.uk, ...distractors], correct: w.uk };
+    });
+    buildQuiz('dz-vocab', quizData);
+  })();
+
+  // Üb. 1A: склади речення
+  buildOrder('ub1-order', [
+    { words: ["Mode", "zeigt,", "wie", "Menschen", "sich", "ausdrücken"], end: ".", gross: true },
+    { words: ["Mode", "ist", "ein Phänomen,", "das", "sich", "ständig", "verändert"], end: ".", gross: true },
+    { words: ["Ich", "meine,", "die Mode", "ist", "nicht nur", "trendige Kleidung,", "sondern", "sie", "umfasst", "viel mehr"], end: ".",
+      hint: "«Я вважаю, мода — це не лише трендовий одяг, вона охоплює набагато більше»" }
+  ]);
+
+  // Üb. 2: розсортуй по кошиках
+  buildSort('ub2-sort', {
+    buckets: ["Kleidung", "Accessoires", "Schuhe"],
+    items: [
+      {t: "der Bikini", b: "Kleidung"}, {t: "die Bluse", b: "Kleidung"}, {t: "das Hemd", b: "Kleidung"},
+      {t: "die Hose", b: "Kleidung"}, {t: "die Jacke", b: "Kleidung"}, {t: "die Jeans", b: "Kleidung"},
+      {t: "der Kapuzenpulli", b: "Kleidung"}, {t: "das Kleid", b: "Kleidung"}, {t: "die Lederjacke", b: "Kleidung"},
+      {t: "das / der Sakko", b: "Kleidung"}, {t: "das T-Shirt", b: "Kleidung"}, {t: "die Unterwäsche", b: "Kleidung"},
+      {t: "der Gürtel", b: "Accessoires"}, {t: "die Handschuhe", b: "Accessoires"}, {t: "der Hut", b: "Accessoires"},
+      {t: "die Kette", b: "Accessoires"}, {t: "die Krawatte", b: "Accessoires"}, {t: "die Ohrringe", b: "Accessoires"},
+      {t: "der Ring", b: "Accessoires"}, {t: "der Rucksack", b: "Accessoires"}, {t: "der Schal", b: "Accessoires"},
+      {t: "die Sonnenbrille", b: "Accessoires"}, {t: "die Tasche", b: "Accessoires"}, {t: "die Uhr", b: "Accessoires"},
+      {t: "die Herrenschuhe", b: "Schuhe"}, {t: "die Sandalen", b: "Schuhe"}, {t: "die Turnschuhe", b: "Schuhe"},
+      {t: "die Winterstiefel", b: "Schuhe"}
+    ]
+  });
+
+  // Üb. 3 і Üb. 4: таблиця й пропуски
+  wireBlanks('ub3');
+  wireBlanks('ub4');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['👕','🕶️','👟','🎒']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
