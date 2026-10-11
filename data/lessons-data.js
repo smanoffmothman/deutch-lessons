@@ -665,5 +665,16 @@ const LESSONS = [
     nove: true,
     gram: ["artikel-gebrauch", "deklination-nomen", "modalverben"],
     dz: "1) Zeichne in dein Heft eine Tabelle mit den 8 Lebensmittelgruppen aus Üb. 1 (Getränke, Obst, Gemüse, Milchprodukte, Salate, Speisen, Süßes, Fleischwaren) und schreib in jede Gruppe mindestens drei Lebensmittel – Nomen immer mit Artikel (z. B. der Kohl, die Gurke, das Mineralwasser). Markiere mit ✓, was du gern isst oder trinkst, und mit ✗, was du nicht magst. 2) Frag zu Hause, was deine Familie letzte Woche eingekauft hat, und schreib 5–6 Sätze im Perfekt mit Mengenangaben im Akkusativ (z. B. „Meine Mutter hat einen Liter Milch und ein Kilo Äpfel gekauft.“). Der letzte Satz ist über ein Gericht: „Für … braucht man gerade …“. Nächstes Mal spielen wir: Wer findet die meisten Lebensmittel in jeder Gruppe?"
+  },
+  {
+    klas: "8",
+    modul: "B",
+    lektion: 2,
+    nazva: "Meine Interessen: Wofür interessierst du dich?",
+    opys: "Мої захоплення: інтерв'ю Бастіана й Анни (читання, хто є хто), займенникові прислівники wofür – dafür, worüber – darüber і Für wen? – Für ihn, аудіювання про Мартіна й Лею, діалоги за зразком та власне інтерв'ю в класі.",
+    file: "klas-8/modul-b/lektion-2.html",
+    nove: true,
+    gram: ["verben-praepositionalobjekt", "fragen", "reflexive-verben"],
+    dz: "1) Fehlersuche: In Leas Blogbeitrag sind 6 Fehler mit Pronominaladverbien oder Präposition + Pronomen. Finde sie und schreib den Text richtig ins Heft: „Ich heiße Lea und interessiere mich vor allem für Tiere und die Umwelt. Mein Hund heißt Rex, und ich sorge jeden Tag dafür. Mit wem beschäftige ich mich in der Freizeit? Mit dem Naturschutz! Ich ärgere mich darauf, dass viele Menschen Müll in den Wald werfen. Meine Freundin Mia ist auch in der Naturschutz-AG. Wir sprechen oft über Tiere und träumen darüber, ein Tierheim zu gründen. Meine Oma wohnt in Lwiw, ich denke oft daran. Und ich denke oft davon, dass wir alle zusammen unsere Natur retten können.“ 2) Wähle eine bekannte Person (Sportler/in, Musiker/in, Schauspieler/in) und schreib fünf Interviewfragen an sie mit wo(r)- + Präposition (z. B. „Wofür interessieren Sie sich?“, „Wovon träumen Sie?“). Schreib dazu die Antworten, die diese Person vielleicht gibt – mit da(r)- + Präposition (z. B. „Ich träume davon, …“). Nächstes Mal spielen wir eure Interviews vor, und die Klasse rät, wer die Person ist!"
   }
 ];

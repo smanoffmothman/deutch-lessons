@@ -740,5 +740,17 @@ const GLOSSARY = [
   {de: "die Gurke (die Gurken)", uk: "огірок", klas: "7", modul: "B", lektion: 10},
   {de: "die Tomate (die Tomaten)", uk: "помідор", klas: "7", modul: "B", lektion: 10},
   {de: "der Zucker", uk: "цукор", klas: "7", modul: "B", lektion: 10},
-  {de: "die Butter", uk: "вершкове масло", klas: "7", modul: "B", lektion: 10}
+  {de: "die Butter", uk: "вершкове масло", klas: "7", modul: "B", lektion: 10},
+  {de: "das Pronominaladverb (die Pronominaladverbien)", uk: "займенниковий прислівник (wofür, dafür, darüber …)", klas: "8", modul: "B", lektion: 2},
+  {de: "denken an (+Akk.)", uk: "думати про когось / щось", klas: "8", modul: "B", lektion: 2},
+  {de: "träumen von (+Dat.)", uk: "мріяти про щось", klas: "8", modul: "B", lektion: 2},
+  {de: "sich erinnern an (+Akk.)", uk: "згадувати, пам'ятати (когось / щось)", klas: "8", modul: "B", lektion: 2},
+  {de: "warten auf (+Akk.)", uk: "чекати на когось / щось", klas: "8", modul: "B", lektion: 2},
+  {de: "pauken (ugs.)", uk: "зубрити, інтенсивно вчити (розмовне)", klas: "8", modul: "B", lektion: 2},
+  {de: "die Musiksammlung", uk: "музична колекція", klas: "8", modul: "B", lektion: 2},
+  {de: "die Äußerung (die Äußerungen)", uk: "висловлювання", klas: "8", modul: "B", lektion: 2},
+  {de: "der Tierschutz", uk: "захист тварин", klas: "8", modul: "B", lektion: 2},
+  {de: "die Informationsquelle", uk: "джерело інформації", klas: "8", modul: "B", lektion: 2},
+  {de: "im Internet surfen", uk: "«серфити», блукати в інтернеті", klas: "8", modul: "B", lektion: 2},
+  {de: "retten (die Natur retten)", uk: "рятувати (рятувати природу)", klas: "8", modul: "B", lektion: 2}
 ];
