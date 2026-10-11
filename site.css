@@ -1,0 +1,454 @@
+/* =================================================================
+   site.css — стиль ОБОЛОНКИ сайту (головна, каталог класів, глосарій,
+   граматика, матеріали). Підключай ПІСЛЯ lesson-style.css:
+   <link rel="stylesheet" href="assets/lesson-style.css">
+   <link rel="stylesheet" href="assets/site.css">
+   Використовує ті самі кольори/шрифти, що й уроки — це навмисно, щоб
+   сайт виглядав як єдине ціле.
+   ================================================================= */
+
+body{ margin:0; }
+
+/* ---------- Верхня навігація ---------- */
+.site-nav{
+  background:var(--teal-deep);
+  color:#F5EFDE;
+  padding:14px 24px;
+  display:flex; align-items:center; gap:22px; flex-wrap:wrap;
+  font-family:var(--sans);
+}
+.site-nav .brand{
+  font-family:var(--serif); font-weight:700; font-size:18px; color:#F5EFDE;
+  text-decoration:none; margin-right:auto;
+}
+.site-nav a.nav-link{
+  color:#D9E8E5; text-decoration:none; font-size:14.5px; font-weight:600;
+  padding:4px 2px; border-bottom:2px solid transparent;
+}
+.site-nav a.nav-link:hover{ color:#fff; }
+.site-nav a.nav-link.active{ color:#fff; border-bottom-color:var(--mustard); }
+
+.site-main{ max-width:960px; margin:0 auto; padding:0 20px 64px; }
+
+.site-footer{
+  text-align:center; padding:30px 20px; color:var(--ink-soft);
+  font-size:13px; font-family:var(--sans);
+}
+
+/* ---------- Хлібна крихта ---------- */
+.crumbs{
+  font-family:var(--sans); font-size:13px; color:var(--ink-soft);
+  padding:14px 20px 0;
+}
+.crumbs a{ color:var(--teal); text-decoration:none; }
+
+/* ---------- Домашня сторінка: плитки-розділи ---------- */
+.nav-grid{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:16px; margin:28px 0;
+}
+.nav-tile{
+  display:block; background:var(--card); border:1px solid var(--line);
+  border-radius:var(--radius); padding:20px 22px; text-decoration:none;
+  color:var(--ink); box-shadow:var(--shadow); transition:transform .12s ease;
+}
+.nav-tile:hover{ transform:translateY(-2px); }
+.nav-tile .tile-icon{ font-size:26px; }
+.nav-tile h3{
+  font-family:var(--serif); font-size:19px; margin:10px 0 4px; color:var(--ink);
+}
+.nav-tile p{ font-size:13.5px; color:var(--ink-soft); margin:0; line-height:1.5; }
+
+/* ---------- Каталог класів/модулів/уроків ---------- */
+.class-tabs{
+  display:flex; gap:8px; flex-wrap:wrap; margin:22px 0 26px;
+}
+.search-row{ margin:18px 0 6px; }
+.search-row input{
+  width:100%; font-family:var(--sans); font-size:15px; padding:10px 14px;
+  border-radius:9px; border:1.5px solid var(--line); background:#fff; color:var(--ink);
+}
+.search-row input:focus{ outline:2px solid var(--mustard); border-color:var(--mustard); }
+
+/* Липка панель швидкого переходу між модулями */
+.module-jump{
+  position:sticky; top:0; z-index:3;
+  display:flex; flex-wrap:wrap; gap:6px;
+  background:var(--paper);
+  padding:10px 0; margin:-12px 0 16px;
+  border-bottom:1px solid var(--line);
+  font-family:var(--sans);
+}
+.jump-chip{
+  display:inline-flex; align-items:baseline; gap:6px;
+  padding:4px 11px; border-radius:999px;
+  background:var(--card); border:1px solid var(--line);
+  color:var(--module-color, var(--teal)); text-decoration:none;
+  font-size:13px;
+}
+.jump-chip b{ font-family:var(--serif); font-weight:700; }
+.jump-chip .n{ font-size:11.5px; color:var(--ink-soft); }
+a.jump-chip:hover{ border-color:var(--module-color, var(--teal)); }
+.jump-chip.is-current{ background:var(--module-color, var(--teal)); border-color:transparent; color:#fff; }
+.jump-chip.is-current .n{ color:rgba(255,255,255,.8); }
+.jump-chip.is-empty{ opacity:.45; }
+a.jump-chip:focus-visible{ outline:2px solid var(--mustard); outline-offset:2px; }
+
+/* Модуль: <details> (є уроки) або <section class="is-empty"> (порожній) */
+.module-block{ margin-bottom:10px; scroll-margin-top:64px; }
+.module-block[open]{ margin-bottom:34px; }
+.module-head{
+  display:flex; align-items:baseline; gap:10px;
+  padding:8px 0 6px; border-bottom:1px dashed var(--line);
+}
+.module-block[open] > .module-head{ margin-bottom:12px; }
+summary.module-head{ cursor:pointer; list-style:none; }
+summary.module-head::-webkit-details-marker{ display:none; }
+summary.module-head:hover h3{ color:var(--teal); }
+summary.module-head:focus-visible{ outline:2px solid var(--mustard); outline-offset:3px; border-radius:4px; }
+.module-head .chev{
+  width:0; height:0; align-self:center; flex:0 0 auto;
+  border-style:solid; border-width:5px 0 5px 7px;
+  border-color:transparent transparent transparent var(--module-color, var(--teal));
+  transition:transform .15s ease;
+}
+.module-block[open] .chev{ transform:rotate(90deg); }
+.module-block.is-empty .module-head{ padding-left:17px; opacity:.7; }
+.module-block.is-empty .mod-count{ font-style:italic; }
+.module-head .mod-id{
+  font-family:var(--serif); font-weight:700; font-size:13px;
+  color:var(--module-color, var(--teal));
+}
+.module-head h3{ font-family:var(--serif); font-size:19px; margin:0; color:var(--ink); }
+.module-head .mod-count{ margin-left:auto; font-size:12.5px; color:var(--ink-soft); white-space:nowrap; }
+
+@media (prefers-reduced-motion: reduce){
+  .module-head .chev{ transition:none; }
+}
+@media (max-width:600px){
+  .module-head{ flex-wrap:wrap; }
+  .module-head h3{ font-size:17px; }
+}
+
+/* Картка уроку (з 2026-10): уся картка — посилання на урок.
+   Посилання стоїть на назві (.lesson-link), його ::after розтягнутий на
+   всю картку. Блок «Граматика» (.gram-fold) піднятий над ним (z-index),
+   тому клікається окремо. Опис — максимум 3 рядки. */
+.lesson-grid{
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:14px;
+}
+/* коли в якійсь картці розгорнуто «Граматику», сусіди в ряду не тягнуться за нею */
+.lesson-grid:has(.gram-fold[open]){ align-items:start; }
+.lesson-card{
+  position:relative; background:var(--card); border:1px solid var(--line);
+  border-radius:10px; padding:16px 16px 14px; overflow:hidden;
+  display:flex; flex-direction:column;
+  transition:transform .12s ease, border-color .12s ease, box-shadow .12s ease;
+}
+.lesson-card:hover{
+  transform:translateY(-2px);
+  border-color:var(--module-color, var(--teal));
+  box-shadow:0 4px 14px rgba(0,0,0,.07);
+}
+.lesson-card::before{
+  content:""; position:absolute; top:0; right:0;
+  border-style:solid; border-width:0 20px 20px 0;
+  border-color:transparent var(--module-color, var(--teal)) transparent transparent;
+  opacity:.85;
+}
+.lesson-card .lesson-num{
+  font-family:var(--sans); font-weight:700; font-size:11.5px;
+  color:var(--module-color, var(--teal)); margin-bottom:6px;
+}
+.lesson-card h4{
+  font-family:var(--serif); font-size:16.5px; margin:0 0 6px; color:var(--ink); line-height:1.3;
+}
+.lesson-card a.lesson-link{ color:inherit; text-decoration:none; }
+.lesson-card a.lesson-link::after{
+  content:""; position:absolute; inset:0; z-index:1; border-radius:10px;
+}
+.lesson-card:hover a.lesson-link{ color:var(--teal-deep); }
+.lesson-card a.lesson-link:focus{ outline:none; }
+.lesson-card a.lesson-link:focus-visible::after{ outline:2px solid var(--mustard); outline-offset:-2px; }
+.lesson-card p.lesson-desc{
+  font-size:12.5px; color:var(--ink-soft); margin:0 0 10px; line-height:1.5;
+  display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:3; line-clamp:3;
+  overflow:hidden;
+}
+.lesson-card .lesson-foot{
+  margin-top:auto; display:flex; align-items:center; gap:8px; padding-top:2px;
+}
+.lesson-card .open-cue{
+  font-size:12.5px; font-weight:700; color:var(--teal);
+}
+.lesson-card:hover .open-cue{ color:var(--brick); }
+.lesson-card .new-badge{
+  font-size:10px; font-weight:700; color:var(--brick); border:1px solid var(--brick);
+  padding:2px 6px; border-radius:2px; transform:rotate(-3deg); display:inline-block;
+}
+@media (prefers-reduced-motion: reduce){
+  .lesson-card{ transition:none; }
+  .lesson-card:hover{ transform:none; }
+}
+
+.empty-note{
+  font-family:var(--serif); font-style:italic; color:var(--ink-soft);
+  padding:14px 0; font-size:14px;
+}
+
+/* ---------- Глосарій ---------- */
+.glossary-toolbar{
+  display:flex; gap:10px; flex-wrap:wrap; margin:18px 0 20px; align-items:center;
+}
+.glossary-toolbar select{
+  font-family:var(--sans); font-size:14px; padding:8px 10px; border-radius:8px;
+  border:1.5px solid var(--line); background:#fff; color:var(--ink);
+}
+.glossary-count{ font-size:13px; color:var(--ink-soft); margin:0 0 14px; }
+
+/* Буквений покажчик — швидкий перехід до групи слів на цю літеру */
+.letter-index{
+  display:flex; flex-wrap:wrap; gap:5px;
+  margin:16px 0 6px;
+  font-family:var(--sans);
+}
+.letter-index a.letter-btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:26px; height:26px;
+  border-radius:6px;
+  background:var(--card); border:1px solid var(--line);
+  color:var(--teal-deep); font-size:12.5px; font-weight:700;
+  text-decoration:none;
+  transition:background .12s ease, border-color .12s ease;
+}
+.letter-index a.letter-btn:hover{
+  background:var(--teal-soft); border-color:var(--teal);
+}
+
+/* Заголовок-літера над групою слів — "прилипає" зверху при скролі */
+.glossary-letter{
+  position:sticky; top:0; z-index:2;
+  background:var(--paper);
+  font-family:var(--serif); font-weight:700; font-size:15px;
+  color:var(--teal-deep);
+  padding:9px 14px 5px;
+  margin-top:8px;
+  border-bottom:1px solid var(--line);
+}
+.glossary-list{ display:flex; flex-direction:column; gap:1px; }
+.glossary-row{
+  display:flex; gap:16px;
+  align-items:center; background:var(--card); padding:10px 14px; font-size:14px;
+}
+.glossary-row > *{ flex:1 1 0; min-width:0; }
+.glossary-row > *:first-child{ flex-grow:1.2; }
+.glossary-row > *:nth-child(3),
+.glossary-row > *:nth-child(4){ flex:0 0 90px; }
+.glossary-row.head{
+  background:transparent; font-weight:700; color:var(--ink-soft); font-size:12px; padding:0 14px 6px;
+}
+.glossary-row .de{ font-family:var(--serif); font-weight:600; color:var(--teal-deep); }
+.glossary-row .tag{ font-size:11.5px; color:var(--ink-soft); }
+
+/* ---------- Матеріали ---------- */
+.materials-grid{
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:14px; margin:20px 0;
+}
+.material-card{
+  background:var(--card); border:1px solid var(--line); border-radius:10px; padding:16px 18px;
+}
+.material-card h4{ font-family:var(--serif); font-size:16.5px; margin:0 0 6px; color:var(--ink); }
+.material-card p{ font-size:13px; color:var(--ink-soft); margin:0 0 10px; }
+.material-card a{ font-size:13px; font-weight:700; color:var(--teal); text-decoration:none; }
+.mat-section-title{ font-family:var(--serif); font-size:20px; margin:34px 0 0; color:var(--ink); }
+
+/* Статті (з 2026-10): фільтри + картки. Картка — як картка уроку: уся
+   клікабельна (.lesson-link з розтягнутим ::after), опис 3 рядки. */
+.mat-filters{ display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin:12px 0 4px; }
+.mat-levels{ display:flex; flex-wrap:wrap; gap:6px; margin-right:auto; }
+.lvl-chip{
+  font-family:var(--sans); font-size:13px; font-weight:700; color:var(--teal-deep);
+  background:var(--card); border:1px solid var(--line); border-radius:100px;
+  padding:5px 13px; cursor:pointer;
+}
+.lvl-chip:hover{ border-color:var(--teal); }
+.lvl-chip[aria-pressed="true"]{ background:var(--teal); border-color:var(--teal); color:#fff; }
+.lvl-chip:focus-visible{ outline:2px solid var(--mustard); outline-offset:2px; }
+.mat-filters select{
+  font-family:var(--sans); font-size:14px; padding:7px 10px; border-radius:8px;
+  border:1.5px solid var(--line); background:#fff; color:var(--ink);
+}
+.mat-summary{ font-size:13px; color:var(--ink-soft); margin:10px 0 0; }
+
+.mat-grid{ grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); }
+.mat-card{
+  position:relative; background:var(--card); border:1px solid var(--line);
+  border-radius:12px; padding:16px 16px 14px; display:flex; flex-direction:column;
+  transition:transform .12s ease, border-color .12s ease, box-shadow .12s ease;
+}
+.mat-card:hover{ transform:translateY(-2px); border-color:var(--teal); box-shadow:0 4px 14px rgba(0,0,0,.07); }
+.mat-card.is-done{ background:linear-gradient(var(--forest-soft), var(--card) 60%); }
+.mat-card-top{ display:flex; align-items:center; gap:7px; margin-bottom:8px; }
+.lvl-badge{
+  font-family:var(--sans); font-size:11.5px; font-weight:800; letter-spacing:.03em;
+  background:var(--mustard); color:#2B2620; border-radius:6px; padding:2px 7px;
+}
+.mat-card .new-badge{
+  margin-left:auto; font-size:10px; font-weight:700; color:var(--brick); border:1px solid var(--brick);
+  padding:2px 6px; border-radius:2px; transform:rotate(-3deg); display:inline-block;
+}
+.mat-card h4{ font-family:var(--serif); font-size:18px; margin:0 0 6px; color:var(--ink); line-height:1.25; }
+.mat-card a.lesson-link{ color:inherit; text-decoration:none; }
+.mat-card a.lesson-link::after{ content:""; position:absolute; inset:0; z-index:1; border-radius:12px; }
+.mat-card a.lesson-link:focus{ outline:none; }
+.mat-card a.lesson-link:focus-visible::after{ outline:2px solid var(--mustard); outline-offset:-2px; }
+.mat-card:hover a.lesson-link{ color:var(--teal-deep); }
+.mat-card p.lesson-desc{
+  font-size:13px; color:var(--ink-soft); margin:0 0 10px; line-height:1.5;
+  display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:3; line-clamp:3; overflow:hidden;
+}
+.mat-tags{ display:flex; flex-wrap:wrap; gap:4px; margin:0 0 10px; }
+.mat-tags span{ font-size:11.5px; font-weight:600; color:var(--teal-deep); background:var(--teal-soft); border-radius:100px; padding:2px 8px; }
+.mat-card .lesson-foot{ margin-top:auto; display:flex; align-items:center; gap:10px; font-size:12.5px; }
+.mat-card .open-cue{ font-weight:700; color:var(--teal); }
+.mat-card:hover .open-cue{ color:var(--brick); }
+.mat-src{ margin-left:auto; color:var(--ink-soft); font-size:11.5px; font-style:italic; text-align:right; }
+.mat-done{ font-weight:700; color:var(--forest); }
+.mat-prog{ display:inline-flex; align-items:center; gap:6px; font-weight:700; color:var(--teal-deep); font-variant-numeric:tabular-nums; }
+.mat-prog .bar{ width:54px; height:6px; border-radius:6px; background:var(--paper-2); overflow:hidden; }
+.mat-prog .bar span{ display:block; height:100%; background:var(--teal); }
+/* прапорці (ті самі, що й у material-style.css — тут для сторінки-списку) */
+.flag{ display:inline-block; width:18px; height:12px; border-radius:2px; flex:none; box-shadow:0 0 0 1px rgba(0,0,0,.15); background:#999; }
+.flag-DE{ background:linear-gradient(#000 0 33.3%, #DD0000 0 66.6%, #FFCE00 0); }
+.flag-AT{ background:linear-gradient(#C8102E 0 33.3%, #fff 0 66.6%, #C8102E 0); }
+.flag-CH{ width:12px; background:linear-gradient(#fff,#fff) center/58% 18% no-repeat, linear-gradient(#fff,#fff) center/18% 58% no-repeat, #DA291C; }
+.flag-LI{ background:linear-gradient(#002B7F 0 50%, #CE1126 0); }
+.flag-LU{ background:linear-gradient(#EF3340 0 33.3%, #fff 0 66.6%, #00A3E0 0); }
+.flag-EU{ background:#003399; }
+@media (prefers-reduced-motion: reduce){
+  .mat-card{ transition:none; }
+  .mat-card:hover{ transform:none; }
+}
+
+@media (max-width:600px){
+  .glossary-row > *:nth-child(3){ display:none; }
+}
+
+/* ---------- Граматика: зміст усіх тем (з 2026-09) ----------
+   Сторінка gramatyka/ — це "зміст підручника": розділи з рядками тем.
+   Готова тема — посилання, запланована — приглушений рядок "готується".
+   Кружечок ліворуч = прогрес учня в цій темі (localStorage). */
+.grammar-toolbar{
+  display:flex; gap:14px; flex-wrap:wrap; align-items:center; margin:18px 0 8px;
+}
+.grammar-toolbar .search-row{ flex:1 1 260px; margin:0; }
+.grammar-toolbar label{ font-size:14px; color:var(--ink-soft); display:flex; gap:6px; align-items:center; cursor:pointer; }
+.grammar-toolbar input[type=checkbox]{ accent-color:var(--teal); width:16px; height:16px; }
+.grammar-summary{ font-size:13.5px; color:var(--ink-soft); margin:6px 0 20px; }
+.grammar-summary b{ color:var(--teal-deep); }
+.link-btn{
+  background:none; border:none; padding:0; font:inherit; font-size:13px;
+  color:var(--brick); text-decoration:underline; cursor:pointer;
+}
+
+/* панель розділів: завжди один рядок з горизонтальною прокруткою —
+   розділів 11, у кілька рядків липка панель закривала б пів екрана */
+.module-jump.gram-jump{ flex-wrap:nowrap; overflow-x:auto; scrollbar-width:thin; }
+.gram-jump .jump-chip{ flex:none; white-space:nowrap; }
+.gram-part{ margin:0 0 30px; scroll-margin-top:64px; }
+.gram-part-head{
+  display:flex; align-items:baseline; gap:10px;
+  border-bottom:2px solid var(--module-color, var(--teal)); padding-bottom:6px; margin-bottom:4px;
+}
+.gram-part-head h2{ font-family:var(--serif); font-size:21px; margin:0; color:var(--ink); }
+.gram-part-head .mod-count{ margin-left:auto; font-size:12.5px; color:var(--ink-soft); white-space:nowrap; }
+
+.gram-toc{ list-style:none; margin:0; padding:0; }
+.gram-row{
+  display:flex; align-items:center; gap:14px;
+  padding:10px 8px; border-bottom:1px dashed var(--line);
+  color:var(--ink); text-decoration:none;
+}
+a.gram-row:hover{ background:var(--card); }
+a.gram-row:hover .de{ color:var(--teal); }
+a.gram-row:focus-visible{ outline:2px solid var(--mustard); outline-offset:-2px; border-radius:6px; }
+.gram-title{ display:flex; flex-direction:column; min-width:0; flex:1; }
+.gram-title .de{ font-family:var(--serif); font-weight:600; font-size:16.5px; line-height:1.3; }
+.gram-title .uk{ font-size:13px; color:var(--ink-soft); }
+.gram-title .subs{ opacity:.8; }
+.gram-meta{ display:flex; align-items:center; gap:8px; flex:none; font-size:12.5px; color:var(--ink-soft); }
+.gram-meta .new-badge{
+  font-size:10px; font-weight:700; color:var(--brick); border:1px solid var(--brick);
+  padding:2px 6px; border-radius:2px; transform:rotate(-3deg); display:inline-block;
+}
+.gram-score{ font-weight:700; color:var(--teal-deep); font-variant-numeric:tabular-nums; }
+
+/* кружечок прогресу: порожній / частково / пройдено; заплановані — пунктир */
+.gram-state{
+  flex:none; width:22px; height:22px; border-radius:50%;
+  background:conic-gradient(var(--module-color, var(--teal)) calc(var(--pct, 0) * 1%), transparent 0);
+  box-shadow:inset 0 0 0 2px var(--module-color, var(--teal));
+  position:relative;
+}
+.gram-state::after{ /* дірка, щоб часткове коло читалося як кільце */
+  content:""; position:absolute; inset:5px; border-radius:50%; background:var(--paper);
+}
+a.gram-row:hover .gram-state::after{ background:var(--card); }
+.gram-row.is-done .gram-state{ background:var(--module-color, var(--teal)); }
+.gram-row.is-done .gram-state::after{
+  content:"✓"; inset:0; background:none; color:#fff; font-size:13px; font-weight:700;
+  display:flex; align-items:center; justify-content:center;
+}
+.gram-row.is-planned{ opacity:.55; }
+.gram-row.is-planned .gram-state{ box-shadow:none; border:2px dotted var(--ink-soft); }
+.gram-soon{ font-style:italic; }
+
+@media (max-width:600px){
+  .gram-row{ gap:10px; padding:10px 4px; }
+  .gram-title .de{ font-size:15.5px; }
+  .gram-part-head{ flex-wrap:wrap; }
+}
+
+/* Граматика на картці уроку в каталозі (поле gram у lessons-data.js).
+   З 2026-10 — згорнуто в рядок «📐 Граматика · N» (<details class="gram-fold">),
+   по кліку розгортаються чипи. Лежить НАД розтягнутим посиланням картки. */
+.gram-fold{ position:relative; z-index:2; margin:0 0 10px; }
+.gram-fold > summary{
+  display:inline-flex; align-items:center; gap:6px; cursor:pointer; list-style:none;
+  font-size:12px; font-weight:700; color:var(--teal-deep);
+  background:var(--teal-soft); border-radius:100px; padding:3px 10px;
+  user-select:none;
+}
+.gram-fold > summary::-webkit-details-marker{ display:none; }
+.gram-fold > summary::after{
+  content:""; width:0; height:0;
+  border-style:solid; border-width:4px 3.5px 0 3.5px;
+  border-color:var(--teal-deep) transparent transparent transparent;
+  transition:transform .15s ease;
+}
+.gram-fold[open] > summary::after{ transform:rotate(180deg); }
+.gram-fold > summary:hover{ background:var(--teal); color:#fff; }
+.gram-fold > summary:hover::after{ border-top-color:#fff; }
+.gram-fold > summary:focus-visible{ outline:2px solid var(--mustard); outline-offset:2px; }
+.gram-fold .gram-chips{ margin:8px 0 0; }
+.gram-chips{ display:flex; flex-wrap:wrap; gap:5px; margin:-4px 0 12px; }
+.gram-chip{
+  font-size:11.5px; font-weight:600; color:var(--teal-deep); text-decoration:none;
+  background:var(--teal-soft); border-radius:100px; padding:2px 9px;
+}
+.gram-chip::before{ content:"📐 "; }
+.gram-fold .gram-chip{ background:#fff; border:1px solid var(--line); }
+.gram-fold .gram-chip::before{ content:none; }
+.gram-chip:hover, .gram-fold .gram-chip:hover{ background:var(--teal); border-color:var(--teal); color:#fff; }
+@media (prefers-reduced-motion: reduce){
+  .gram-fold > summary::after{ transition:none; }
+}
+
+/* "Де це ще трапляється" на сторінці теми граматики */
+.gram-related{ display:flex; flex-direction:column; gap:6px; }
+.gram-link{
+  display:block; text-decoration:none; color:var(--ink); background:#fff;
+  border:1px solid var(--line); border-radius:9px; padding:8px 12px; font-size:14.5px;
+}
+.gram-link .k{ display:block; font-size:11.5px; font-weight:700; color:var(--teal); }
+.gram-link:hover{ border-color:var(--teal); }
