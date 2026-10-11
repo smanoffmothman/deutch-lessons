@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sonntags geschlossen · Lesen · Deutsch mit uns</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Alltag</span>
+        <h1>Sonntags geschlossen</h1>
+        <p class="sub">О 20:00 — зачинено, у неділю — теж. Чому німецькі магазини працюють так мало і чому про це вже 30 років сперечаються торговці та профспілки?</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Pro und contra</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Was kam zuerst?</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Einkaufen am Abend und am Sonntag</h2>
+      <div class="card">
+        <p>Wann gehst du oder deine Familie einkaufen? Bis wann haben die Geschäfte in deiner Stadt geöffnet? Was glaubst du: Wie ist das in Deutschland?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай: чи можна у твоєму місті купити продукти о 22:00 або в неділю? Як гадаєш, кому вигідно, щоб магазини працювали довго, а кому — ні?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Um 20 Uhr ist der Supermarkt zu, am Sonntag sowieso. Viele Gäste aus dem Ausland <span class="gl" data-uk="дивуватися" data-lemma="sich wundern">wundern sich</span> über die deutschen Einkaufszeiten. Dahinter steht eine lange Geschichte – und ein Streit, der bis heute nicht zu Ende ist.</p>
+
+          <h3>Von 18.30 Uhr bis 20 Uhr</h3>
+          <p>Jahrzehntelang mussten die meisten Geschäfte in Deutschland schon um 18.30 Uhr schließen. Erst vor 30 Jahren änderte sich das: Mit einem neuen <span class="gl" data-key data-uk="закон про час закриття магазинів" data-lemma="das Ladenschlussgesetz">Ladenschlussgesetz</span> durften die Läden ab November 1996 werktags bis 20 Uhr und samstags bis 16 Uhr öffnen.</p>
+
+          <p>Schon damals gab es viel <span class="gl" data-uk="суперечка" data-lemma="der Streit">Streit</span>. Die Regierung und die Wirtschaft wollten längere <span class="gl" data-key data-uk="години роботи" data-lemma="die Öffnungszeit, -en">Öffnungszeiten</span>, denn so kaufen die Menschen mehr. Die <span class="gl" data-key data-uk="профспілка" data-lemma="die Gewerkschaft, -en">Gewerkschaften</span> <span class="gl" data-uk="протестувати" data-lemma="protestieren">protestierten</span>: Die Angestellten brauchen faire <span class="gl" data-uk="умови праці" data-lemma="die Arbeitsbedingungen (Pl.)">Arbeitsbedingungen</span> und Zeit für ihre Familie.</p>
+
+          <p>Seit 2006 entscheidet jedes <span class="gl" data-key data-uk="федеральна земля" data-lemma="das Bundesland, -ä-er">Bundesland</span> selbst über die Öffnungszeiten. Deshalb gibt es heute große <span class="gl" data-uk="відмінність, різниця" data-lemma="der Unterschied, -e">Unterschiede</span>: In manchen Regionen dürfen Geschäfte sehr lange öffnen, in anderen – zum Beispiel in Bayern – ist um 20 Uhr Schluss.</p>
+
+          <h3>Zwei Seiten, zwei Meinungen</h3>
+          <p>Der Handelsverband Deutschland (HDE) findet die längeren Zeiten gut. Steven Haarke vom HDE sagt, dass vor allem die Kunden davon <span class="gl" data-uk="мати користь, виграти" data-lemma="profitieren">profitiert</span> haben. Außerdem müssten die Geschäfte heute mit dem Onlinehandel <span class="gl" data-uk="конкурувати" data-lemma="konkurrieren">konkurrieren</span> – und online kann man ja immer einkaufen.</p>
+
+          <p>Die Gewerkschaft Verdi sieht das anders. Silke Zimmer, die bei Verdi für den Handel <span class="gl" data-uk="відповідальний" data-lemma="zuständig">zuständig</span> ist, kritisiert: Seit 1996 sind die Arbeitsbedingungen immer schlechter geworden. Die Arbeitszeiten sind schwer zu planen, und es gibt immer weniger <span class="gl" data-uk="робота на повну ставку" data-lemma="der Vollzeitjob, -s">Vollzeitjobs</span>. Stattdessen arbeiten viele Menschen <span class="gl" data-uk="частково, неповний робочий день" data-lemma="Teilzeit">Teilzeit</span> oder im Minijob. Das bedeutet wenig Geld – heute und später bei der <span class="gl" data-uk="пенсія" data-lemma="die Rente, -n">Rente</span>.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Der Sonntag ist in Deutschland durch das <span class="gl" data-uk="Основний закон (конституція Німеччини)" data-lemma="das Grundgesetz">Grundgesetz</span> geschützt – als Tag der Ruhe. Nur ein paar Mal im Jahr darf eine Stadt einen <span class="gl" data-uk="неділя, коли магазини працюють" data-lemma="der verkaufsoffene Sonntag">verkaufsoffenen Sonntag</span> erlauben. Ein <span class="gl" data-uk="міні-робота (з невеликою зарплатою)" data-lemma="der Minijob, -s">Minijob</span> ist ein Job, bei dem man nur bis 603 Euro im Monat verdient.</p>
+          </aside>
+
+          <h3>Und der Sonntag?</h3>
+          <p>Besonders emotional ist das Thema Sonntag. Traditionell ist er für Familie, <span class="gl" data-uk="відпочинок, відновлення сил" data-lemma="die Erholung">Erholung</span> und Freunde da. Für Verdi ist Arbeit am Sonntag deshalb ein <span class="gl" data-uk="напад (на щось)" data-lemma="der Angriff, -e">Angriff</span> auf das Familienleben. Der HDE meint dagegen, Shopping sei heute auch Freizeit und ein Spaß für die ganze Familie.</p>
+
+          <p>Die Diskussion geht weiter. Bibliotheken und Bäckereien sollen sonntags länger öffnen dürfen. In Brandenburg dürfen kleine Supermärkte ohne Personal sogar <span class="gl" data-uk="цілодобово" data-lemma="rund um die Uhr">rund um die Uhr</span> offen sein. Verdi <span class="gl" data-uk="застерігати від (чогось)" data-lemma="warnen vor">warnt</span> aber: Auch für solche Läden müssen indirekt Menschen arbeiten. Und die bayerische Landesregierung will gar nichts ändern.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь у кожному питанні.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»). Один абзац зайвий.</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3: pro / contra ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wer sagt was?</h2>
+      <p class="lead">Чий це аргумент — Союзу торгівлі (HDE) чи профспілки Verdi? Розклади картки.</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 4: хронологія ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Was kam zuerst?</h2>
+      <p class="lead">Розстав події в тому порядку, у якому вони відбувалися. Натиснеш на вже поставлене — воно повернеться вниз.</p>
+      <div class="card" id="ub4-seq"></div>
+    </section>
+
+    <!-- ===== Üb. 5: лексика ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub5-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>Öffnungszeiten</span><span>Gewerkschaft</span><span>Bundesland</span><span>Rente</span><span>rund um die Uhr</span></div>
+        <div id="ub5b-list">
+          <div class="fill-item"><span class="num">1)</span> Jedes <input type="text" class="blank-input inline" data-ans="Bundesland"> hat eigene Regeln für die Läden.</div>
+          <div class="fill-item"><span class="num">2)</span> Die <input type="text" class="blank-input inline wide" data-ans="Öffnungszeiten"> stehen an der Tür des Geschäfts.</div>
+          <div class="fill-item"><span class="num">3)</span> Die <input type="text" class="blank-input inline wide" data-ans="Gewerkschaft"> kämpft für die Interessen der Angestellten.</div>
+          <div class="fill-item"><span class="num">4)</span> Wer wenig verdient, bekommt später auch wenig <input type="text" class="blank-input inline" data-ans="Rente">.</div>
+          <div class="fill-item"><span class="num">5)</span> Der kleine Supermarkt ohne Personal ist <input type="text" class="blank-input inline wide" data-ans="rund um die Uhr"> offen.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub5b-check">Prüfen</button>
+          <button class="btn secondary" id="ub5b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub5b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 6: письмо ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (4–6 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub6-a">1. Wann haben die Geschäfte in deiner Stadt geöffnet? Vergleiche mit Deutschland.</label>
+          <textarea id="ub6-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub6-b">2. Sollten Geschäfte auch am Sonntag öffnen? Nenne ein Argument dafür und eins dagegen – und deine Meinung.</label>
+          <textarea id="ub6-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Bei uns …, in Deutschland dagegen … · Ein Vorteil / Nachteil ist, dass … · Einerseits …, andererseits … · Ich finde es gut / nicht gut, dass …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Seit 1996 dürfen Geschäfte in Deutschland bis 20 Uhr öffnen, seit 2006 entscheiden die Bundesländer selbst. Der Sonntag ist durch das Grundgesetz geschützt. Händler wollen mehr Freiheit, die Gewerkschaften denken an die Angestellten – der Streit geht weiter.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          З 1996 року магазини в Німеччині можуть працювати до 20:00, а з 2006 року кожна федеральна земля вирішує сама. Неділю захищає Основний закон. Торговці хочуть більше свободи, профспілки думають про працівників — і суперечка триває.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "sonntags-geschlossen";
+
+  // Üb. 1а: квіз
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Um die Geschichte der Ladenöffnungszeiten und den Streit darüber",
+            "Um die besten Supermärkte in Deutschland",
+            "Um Tipps, wie man am Sonntag günstig einkauft"],
+     correct: "Um die Geschichte der Ladenöffnungszeiten und den Streit darüber"},
+    {q: "Warum gibt es heute so große Unterschiede zwischen den Regionen?",
+     opts: ["Weil jedes Bundesland selbst über die Öffnungszeiten entscheidet",
+            "Weil jede Stadt ein eigenes Grundgesetz hat",
+            "Weil die Supermärkte selbst entscheiden, wann sie schließen"],
+     correct: "Weil jedes Bundesland selbst über die Öffnungszeiten entscheidet"}
+  ]);
+  // Üb. 1б: заголовки ↔ абзаци (один абзац зайвий)
+  buildMatch('ub1h', [
+    ["Ein neues Gesetz im Jahr 1996", "Absatz 1"],
+    ["Mehr Konsum oder mehr Familienzeit?", "Absatz 2"],
+    ["Jedes Land macht eigene Regeln", "Absatz 3"],
+    ["Die Kritik der Gewerkschaft", "Absatz 5"],
+    ["Neue Ideen – und ein Nein aus Bayern", "Absatz 7"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5", "Absatz 6", "Absatz 7"], lead: true});
+
+  // Üb. 2: richtig (r) / falsch (f) / steht nicht im Text (n)
+  buildRF('ub2-rf', [
+    {s: "Vor 1996 mussten viele Geschäfte schon um 18.30 Uhr schließen.", a: "r"},
+    {s: "Seit 1996 dürfen Läden samstags bis 20 Uhr öffnen.", a: "f"},
+    {s: "In Bayern schließen die Geschäfte um 20 Uhr.", a: "r"},
+    {s: "Die meisten Deutschen kaufen lieber online ein.", a: "n"},
+    {s: "Laut Verdi gibt es heute mehr Vollzeitjobs im Handel als früher.", a: "f"},
+    {s: "In Brandenburg gibt es kleine Supermärkte ohne Personal.", a: "r"},
+    {s: "Die bayerische Regierung möchte die Läden sonntags öffnen.", a: "f"}
+  ]);
+
+  // Üb. 3: розсортуй аргументи
+  buildSort('ub3-sort', {
+    buckets: ["HDE (Handel)", "Verdi (Gewerkschaft)"],
+    items: [
+      {t: "Die Kunden profitieren von langen Öffnungszeiten.", b: "HDE (Handel)"},
+      {t: "Läden müssen mit dem Onlinehandel konkurrieren.", b: "HDE (Handel)"},
+      {t: "Shopping ist ein Spaß für die ganze Familie.", b: "HDE (Handel)"},
+      {t: "Die Arbeitszeiten sind schwer zu planen.", b: "Verdi (Gewerkschaft)"},
+      {t: "Es gibt immer weniger Vollzeitjobs.", b: "Verdi (Gewerkschaft)"},
+      {t: "Sonntagsarbeit schadet dem Familienleben.", b: "Verdi (Gewerkschaft)"}
+    ]
+  });
+
+  // Üb. 4: хронологія
+  buildSequence('ub4-seq', [
+    "Die meisten Geschäfte schließen um 18.30 Uhr.",
+    "Ein neues Gesetz erlaubt: werktags bis 20 Uhr, samstags bis 16 Uhr.",
+    "Die Bundesländer bekommen das Recht, selbst zu entscheiden.",
+    "Man diskutiert über Supermärkte ohne Personal und längere Sonntage für Bäckereien."
+  ]);
+
+  // Üb. 5а: слово ↔ переклад
+  buildMatch('ub5', [
+    ["sich wundern", "дивуватися"],
+    ["der Streit", "суперечка"],
+    ["profitieren", "мати користь, виграти"],
+    ["zuständig", "відповідальний"],
+    ["die Erholung", "відпочинок, відновлення сил"],
+    ["warnen vor", "застерігати від"]
+  ]);
+  // Üb. 5б: пропуски
+  wireBlanks('ub5b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🛒','🕗','📜','⚖️']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

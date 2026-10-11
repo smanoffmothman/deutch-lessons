@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ein Ticket für ganz Deutschland · Lesen · Deutsch mit uns</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Reisen &amp; Städte</span>
+        <h1>Ein Ticket für ganz Deutschland</h1>
+        <p class="sub">Один квиток на місяць — і можна їздити автобусами й поїздами по всій країні. Як німці полюбили проїзний за 9 євро і що з нього вийшло.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Reihenfolge</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Mit Bus und Bahn</h2>
+      <div class="card">
+        <p>Wie fährst du zur Schule? Mit dem Bus, mit der Straßenbahn, zu Fuß? Hast du eine Monatskarte?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Уяви: один квиток на місяць — і ти можеш їздити всіма автобусами, трамваями й регіональними поїздами країни. Куди б ти поїхав(-ла) насамперед?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Eine Journalistin aus München hat kein Auto. Sie fährt mit Bus und Bahn – und liebt eine besondere <span class="gl" data-key data-uk="квиток" data-lemma="die Fahrkarte, -n">Fahrkarte</span>: das Deutschlandticket.</p>
+
+          <p>Alles beginnt im Jahr 2022. Russland hat die Ukraine <span class="gl" data-uk="напасти (на країну)" data-lemma="angreifen (griff an, hat angegriffen)">angegriffen</span>, und die Preise für Energie <span class="gl" data-uk="рости, підніматися" data-lemma="steigen (stieg, ist gestiegen)">steigen</span> stark. Die Regierung will den Menschen helfen. Darum gibt es im Sommer ein spezielles Ticket: Für nur 9 Euro im Monat kann man mit allen Bussen, Straßenbahnen und <span class="gl" data-key data-uk="регіональний поїзд" data-lemma="der Regionalzug, -ü-e">Regionalzügen</span> in ganz Deutschland fahren.</p>
+
+          <p>Die Deutschen lieben das 9-Euro-Ticket. Die <span class="gl" data-uk="транспортна компанія" data-lemma="das Verkehrsunternehmen, -">Verkehrsunternehmen</span> verkaufen rund 52 Millionen Tickets. Die Journalistin macht am Wochenende viele <span class="gl" data-key data-uk="поїздка, екскурсія" data-lemma="der Ausflug, -ü-e">Ausflüge</span>: zum Wandern, zum Schwimmen, zu Freunden in anderen Städten. Einmal fährt sie sogar nach Salzburg in Österreich, denn manche <span class="gl" data-uk="маршрут" data-lemma="die Strecke, -n">Strecken</span> gehen auch ins Ausland.</p>
+
+          <p>Im September ist der Sommer vorbei – und das Ticket auch. Aber nicht lange: Im Mai 2023 kommt das Deutschlandticket. Es kostet 49 Euro im Monat. Das ist mehr Geld, aber das Prinzip ist gleich: Man kann überall <span class="gl" data-uk="сідати (в автобус, поїзд)" data-lemma="einsteigen (stieg ein, ist eingestiegen)">einsteigen</span> und muss nicht die <span class="gl" data-uk="тарифи, ціни на проїзд" data-lemma="der Tarif, -e">Tarife</span> jeder Stadt <span class="gl" data-uk="знати, розуміти" data-lemma="kennen (kannte, hat gekannt)">kennen</span>.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Mit dem Deutschlandticket fährt man im <span class="gl" data-uk="місцевий і регіональний транспорт" data-lemma="der Nahverkehr">Nahverkehr</span>: Bus, U-Bahn, S-Bahn, Straßenbahn und Regionalzüge. Schnelle Fernzüge wie der ICE gehören nicht dazu. Man kauft das Ticket als <span class="gl" data-uk="підписка, абонемент" data-lemma="das Abonnement, -s">Abonnement</span>, meistens im Handy.</p>
+          </aside>
+
+          <p>Heute kostet das Deutschlandticket 63 Euro. Nächstes Jahr soll es noch <span class="gl" data-key data-uk="дорожчий" data-lemma="teuer">teurer</span> werden. Die Journalistin ist ein bisschen <span class="gl" data-uk="стурбований" data-lemma="besorgt">besorgt</span>: Wie geht es weiter? Aber sie hat einen Plan. Noch einmal will sie mit dem Ticket nach Salzburg fahren – <span class="gl" data-uk="поки (що)" data-lemma="solange">solange</span> es geht.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">Про що текст загалом? Обери одну відповідь у кожному питанні.</p>
+      <div class="card" id="ub1-quiz"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3: хронологія ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Was kam zuerst?</h2>
+      <p class="lead">Розстав події по порядку. Натиснеш на вже поставлене — воно повернеться вниз.</p>
+      <div class="card" id="ub3-seq"></div>
+    </section>
+
+    <!-- ===== Üb. 4: лексика ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки.</p>
+      <div class="card">
+        <div class="wordbank"><span>Fahrkarte</span><span>Ausflug</span><span>einsteigen</span><span>teurer</span><span>Regionalzug</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> Ohne <input type="text" class="blank-input inline" data-ans="Fahrkarte"> darf man nicht mit dem Bus fahren.</div>
+          <div class="fill-item"><span class="num">2)</span> Am Samstag machen wir einen <input type="text" class="blank-input inline" data-ans="Ausflug"> an den See.</div>
+          <div class="fill-item"><span class="num">3)</span> Der Zug ist da. Wir können jetzt <input type="text" class="blank-input inline" data-ans="einsteigen">.</div>
+          <div class="fill-item"><span class="num">4)</span> Früher kostete das Ticket 49 Euro, heute ist es <input type="text" class="blank-input inline" data-ans="teurer">.</div>
+          <div class="fill-item"><span class="num">5)</span> Mit dem <input type="text" class="blank-input inline wide" data-ans="Regionalzug"> fahren wir von München nach Salzburg.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5: письмо ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (3–5 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Wie fährst du in deiner Stadt? Was kostet eine Fahrt mit dem Bus oder der Straßenbahn?</label>
+          <textarea id="ub5-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Du hast einen Monat lang ein Ticket für ganz Deutschland. Wohin fährst du? Was machst du dort?</label>
+          <textarea id="ub5-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Ich fahre meistens mit … · Eine Fahrt kostet … · Zuerst fahre ich nach …, dann … · Dort möchte ich …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Im Sommer 2022 gab es in Deutschland das 9-Euro-Ticket. Seit Mai 2023 gibt es das Deutschlandticket: Damit fährt man mit Bus, Bahn und Regionalzügen im ganzen Land. Heute kostet es 63 Euro im Monat. Schnelle Fernzüge wie der ICE gehören nicht dazu.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Улітку 2022 року в Німеччині був квиток за 9 євро. З травня 2023 року діє Deutschlandticket: з ним можна їздити автобусами, міськими й регіональними поїздами по всій країні. Зараз він коштує 63 євро на місяць. Швидкі поїзди далекого сполучення, як-от ICE, до нього не входять.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "ode-an-das-deutschlandticket";
+
+  // Üb. 1: квіз
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text?",
+     opts: ["Um ein günstiges Ticket für Bus und Bahn in ganz Deutschland",
+            "Um eine neue Zugstrecke von München nach Salzburg",
+            "Um die Probleme der Deutschen Bahn"],
+     correct: "Um ein günstiges Ticket für Bus und Bahn in ganz Deutschland"},
+    {q: "Wie findet die Journalistin das Ticket?",
+     opts: ["Sie liebt es.", "Sie findet es zu teuer.", "Sie benutzt es nie."],
+     correct: "Sie liebt es."},
+    {q: "Warum gab es 2022 das 9-Euro-Ticket?",
+     opts: ["Die Regierung wollte den Menschen bei den hohen Energiepreisen helfen.",
+            "Die Bahn hatte zu viele leere Züge im Sommer.",
+            "Die Städte wollten mehr Touristen nach Deutschland holen."],
+     correct: "Die Regierung wollte den Menschen bei den hohen Energiepreisen helfen."}
+  ]);
+
+  // Üb. 2: richtig (r) / falsch (f) / steht nicht im Text (n)
+  buildRF('ub2-rf', [
+    {s: "Die Journalistin hat ein Auto.", a: "f"},
+    {s: "Das 9-Euro-Ticket gab es nur im Sommer 2022.", a: "r"},
+    {s: "Das 9-Euro-Ticket kostete 9 Euro pro Woche.", a: "f"},
+    {s: "Die Journalistin ist mit dem Ticket nach Salzburg gefahren.", a: "r"},
+    {s: "Die Journalistin fährt jeden Tag mit dem Bus zur Arbeit.", a: "n"},
+    {s: "Das Deutschlandticket kostet heute 49 Euro.", a: "f"},
+    {s: "Der Preis für das Ticket soll weiter steigen.", a: "r"}
+  ]);
+
+  // Üb. 3: хронологія
+  buildSequence('ub3-seq', [
+    "Die Preise für Energie steigen stark.",
+    "Im Sommer fährt man für 9 Euro im Monat durch ganz Deutschland.",
+    "Das 9-Euro-Ticket ist vorbei.",
+    "Das Deutschlandticket kommt und kostet 49 Euro.",
+    "Das Deutschlandticket kostet 63 Euro."
+  ]);
+
+  // Üb. 4а: слово ↔ переклад
+  buildMatch('ub4', [
+    ["die Strecke", "маршрут"],
+    ["steigen", "рости, підніматися"],
+    ["das Verkehrsunternehmen", "транспортна компанія"],
+    ["besorgt", "стурбований"],
+    ["solange", "поки (що)"],
+    ["der Nahverkehr", "місцевий і регіональний транспорт"]
+  ]);
+  // Üb. 4б: пропуски
+  wireBlanks('ub4b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🚌','🚆','🎫','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
