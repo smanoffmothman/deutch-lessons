@@ -260,6 +260,75 @@ summary.module-head:focus-visible{ outline:2px solid var(--mustard); outline-off
 .material-card h4{ font-family:var(--serif); font-size:16.5px; margin:0 0 6px; color:var(--ink); }
 .material-card p{ font-size:13px; color:var(--ink-soft); margin:0 0 10px; }
 .material-card a{ font-size:13px; font-weight:700; color:var(--teal); text-decoration:none; }
+.mat-section-title{ font-family:var(--serif); font-size:20px; margin:34px 0 0; color:var(--ink); }
+
+/* Статті (з 2026-10): фільтри + картки. Картка — як картка уроку: уся
+   клікабельна (.lesson-link з розтягнутим ::after), опис 3 рядки. */
+.mat-filters{ display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin:12px 0 4px; }
+.mat-levels{ display:flex; flex-wrap:wrap; gap:6px; margin-right:auto; }
+.lvl-chip{
+  font-family:var(--sans); font-size:13px; font-weight:700; color:var(--teal-deep);
+  background:var(--card); border:1px solid var(--line); border-radius:100px;
+  padding:5px 13px; cursor:pointer;
+}
+.lvl-chip:hover{ border-color:var(--teal); }
+.lvl-chip[aria-pressed="true"]{ background:var(--teal); border-color:var(--teal); color:#fff; }
+.lvl-chip:focus-visible{ outline:2px solid var(--mustard); outline-offset:2px; }
+.mat-filters select{
+  font-family:var(--sans); font-size:14px; padding:7px 10px; border-radius:8px;
+  border:1.5px solid var(--line); background:#fff; color:var(--ink);
+}
+.mat-summary{ font-size:13px; color:var(--ink-soft); margin:10px 0 0; }
+
+.mat-grid{ grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); }
+.mat-card{
+  position:relative; background:var(--card); border:1px solid var(--line);
+  border-radius:12px; padding:16px 16px 14px; display:flex; flex-direction:column;
+  transition:transform .12s ease, border-color .12s ease, box-shadow .12s ease;
+}
+.mat-card:hover{ transform:translateY(-2px); border-color:var(--teal); box-shadow:0 4px 14px rgba(0,0,0,.07); }
+.mat-card.is-done{ background:linear-gradient(var(--forest-soft), var(--card) 60%); }
+.mat-card-top{ display:flex; align-items:center; gap:7px; margin-bottom:8px; }
+.lvl-badge{
+  font-family:var(--sans); font-size:11.5px; font-weight:800; letter-spacing:.03em;
+  background:var(--mustard); color:#2B2620; border-radius:6px; padding:2px 7px;
+}
+.mat-card .new-badge{
+  margin-left:auto; font-size:10px; font-weight:700; color:var(--brick); border:1px solid var(--brick);
+  padding:2px 6px; border-radius:2px; transform:rotate(-3deg); display:inline-block;
+}
+.mat-card h4{ font-family:var(--serif); font-size:18px; margin:0 0 6px; color:var(--ink); line-height:1.25; }
+.mat-card a.lesson-link{ color:inherit; text-decoration:none; }
+.mat-card a.lesson-link::after{ content:""; position:absolute; inset:0; z-index:1; border-radius:12px; }
+.mat-card a.lesson-link:focus{ outline:none; }
+.mat-card a.lesson-link:focus-visible::after{ outline:2px solid var(--mustard); outline-offset:-2px; }
+.mat-card:hover a.lesson-link{ color:var(--teal-deep); }
+.mat-card p.lesson-desc{
+  font-size:13px; color:var(--ink-soft); margin:0 0 10px; line-height:1.5;
+  display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:3; line-clamp:3; overflow:hidden;
+}
+.mat-tags{ display:flex; flex-wrap:wrap; gap:4px; margin:0 0 10px; }
+.mat-tags span{ font-size:11.5px; font-weight:600; color:var(--teal-deep); background:var(--teal-soft); border-radius:100px; padding:2px 8px; }
+.mat-card .lesson-foot{ margin-top:auto; display:flex; align-items:center; gap:10px; font-size:12.5px; }
+.mat-card .open-cue{ font-weight:700; color:var(--teal); }
+.mat-card:hover .open-cue{ color:var(--brick); }
+.mat-src{ margin-left:auto; color:var(--ink-soft); font-size:11.5px; font-style:italic; text-align:right; }
+.mat-done{ font-weight:700; color:var(--forest); }
+.mat-prog{ display:inline-flex; align-items:center; gap:6px; font-weight:700; color:var(--teal-deep); font-variant-numeric:tabular-nums; }
+.mat-prog .bar{ width:54px; height:6px; border-radius:6px; background:var(--paper-2); overflow:hidden; }
+.mat-prog .bar span{ display:block; height:100%; background:var(--teal); }
+/* прапорці (ті самі, що й у material-style.css — тут для сторінки-списку) */
+.flag{ display:inline-block; width:18px; height:12px; border-radius:2px; flex:none; box-shadow:0 0 0 1px rgba(0,0,0,.15); background:#999; }
+.flag-DE{ background:linear-gradient(#000 0 33.3%, #DD0000 0 66.6%, #FFCE00 0); }
+.flag-AT{ background:linear-gradient(#C8102E 0 33.3%, #fff 0 66.6%, #C8102E 0); }
+.flag-CH{ width:12px; background:linear-gradient(#fff,#fff) center/58% 18% no-repeat, linear-gradient(#fff,#fff) center/18% 58% no-repeat, #DA291C; }
+.flag-LI{ background:linear-gradient(#002B7F 0 50%, #CE1126 0); }
+.flag-LU{ background:linear-gradient(#EF3340 0 33.3%, #fff 0 66.6%, #00A3E0 0); }
+.flag-EU{ background:#003399; }
+@media (prefers-reduced-motion: reduce){
+  .mat-card{ transition:none; }
+  .mat-card:hover{ transform:none; }
+}
 
 @media (max-width:600px){
   .glossary-row > *:nth-child(3){ display:none; }

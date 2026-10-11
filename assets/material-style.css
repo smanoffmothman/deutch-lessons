@@ -1,0 +1,260 @@
+/* =================================================================
+   material-style.css — сторінки статей розділу «Матеріали»
+   Підключай ПІСЛЯ lesson-style.css і site.css. Кольори, шрифти й
+   картки — ті самі, що в уроках (змінні з lesson-style.css); тут лише
+   те, чого в уроках немає: текст статті, переклад по тапу, шухляда з
+   текстом, вкладка Wörter і нові типи вправ (material-reader.js).
+   ================================================================= */
+
+:root{ --mat-fs:17.5px; }
+
+/* ---------- Бейджі під заголовком (hero) ---------- */
+.mat-meta{ display:flex; flex-wrap:wrap; gap:6px; margin-top:14px; position:relative; z-index:1; }
+.mm-chip{
+  display:inline-flex; align-items:center; gap:6px;
+  font-size:12.5px; font-weight:600; color:#F5EFDE;
+  background:rgba(245,239,222,.12); border:1px solid rgba(245,239,222,.28);
+  padding:3px 10px; border-radius:100px;
+}
+.mm-chip.mm-level{ background:var(--mustard); color:#2B2620; border-color:var(--mustard); font-weight:800; }
+
+/* прапорці .flag-DE … — у site.css (спільні зі сторінкою-списком) */
+
+/* ---------- Панель над текстом ---------- */
+.mat-tools{
+  display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px 14px;
+  margin:0 0 12px; font-size:13px; color:var(--ink-soft);
+}
+.mt-btns{ display:flex; gap:6px; flex-wrap:wrap; }
+.mt-btn{
+  font-family:var(--sans); font-size:13px; font-weight:700; color:var(--teal-deep);
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:5px 11px; cursor:pointer;
+}
+.mt-btn:hover:not(:disabled){ border-color:var(--teal); }
+.mt-btn:disabled{ opacity:.4; cursor:default; }
+.mt-btn[aria-pressed="true"]{ background:var(--teal); border-color:var(--teal); color:#fff; }
+.mt-btn:focus-visible{ outline:2px solid var(--mustard); outline-offset:2px; }
+.gl-sample{ border-bottom:2px dotted var(--teal); color:var(--teal-deep); font-weight:600; }
+
+/* ---------- Текст статті ---------- */
+.mat-text{
+  font-family:var(--serif); font-size:var(--mat-fs); line-height:1.75; color:var(--ink);
+  counter-reset:abs;
+}
+.mat-text > p{ margin:0 0 1em; }
+.mat-text > h3{
+  font-family:var(--serif); font-size:1.18em; color:var(--teal-deep);
+  margin:1.4em 0 .5em; line-height:1.3;
+}
+.mat-text > h3:first-child{ margin-top:0; }
+.mat-text .lead-in{ font-weight:600; color:var(--teal-deep); } /* вступний абзац-лід */
+.mat-text blockquote{
+  margin:1.2em 0; padding:.2em 0 .2em 1em; border-left:4px solid var(--mustard);
+  font-style:italic; color:var(--teal-deep);
+}
+.mat-text ul, .mat-text ol{ margin:0 0 1em; padding-left:1.4em; }
+/* нумерація абзаців (для вправ «у якому абзаці…»): <article class="mat-text numbered"> */
+.mat-text.numbered > p{ position:relative; padding-left:2.1em; }
+.mat-text.numbered > p::before{
+  counter-increment:abs; content:counter(abs);
+  position:absolute; left:0; top:.28em;
+  font-family:var(--sans); font-size:.62em; font-weight:800; color:var(--teal);
+  background:var(--teal-soft); border-radius:100px; min-width:1.9em; text-align:center; line-height:1.7;
+}
+.mat-text.numbered > p.lead-in{ padding-left:0; }
+.mat-text.numbered > p.lead-in::before{ content:none; counter-increment:none; }
+
+/* слово з перекладом */
+.gl{
+  border-bottom:2px dotted rgba(31,92,86,.55); cursor:pointer; border-radius:3px;
+  transition:background .12s ease;
+  -webkit-tap-highlight-color:transparent;
+}
+.gl:hover{ background:var(--teal-soft); }
+.gl:focus-visible{ outline:2px solid var(--mustard); outline-offset:1px; }
+.gl.is-open{ background:var(--mustard-soft); border-bottom-color:var(--mustard); }
+.gl.is-starred{ border-bottom-style:solid; border-bottom-color:var(--mustard); }
+/* «Усі переклади» */
+.mat-text.show-uk .gl::after{
+  content:" (" attr(data-uk) ")";
+  font-family:var(--sans); font-size:.68em; font-weight:600; color:var(--forest);
+  font-style:normal;
+}
+
+/* «Gut zu wissen» — країнознавча вставка в тексті й у Fertig! */
+.lk-box{
+  position:relative; margin:1.3em 0; padding:14px 16px 12px 54px;
+  background:var(--teal-soft); border-radius:12px;
+  font-family:var(--sans); font-size:14.5px; line-height:1.6; color:var(--ink);
+}
+.lk-box::before{
+  content:"i"; position:absolute; left:16px; top:14px;
+  width:26px; height:26px; border-radius:50%; background:var(--teal); color:#fff;
+  font-family:var(--serif); font-weight:700; font-size:16px; font-style:italic;
+  display:flex; align-items:center; justify-content:center;
+}
+.lk-box .lk-title{ font-family:var(--serif); font-weight:700; color:var(--teal-deep); margin:0 0 4px; font-size:15px; }
+.lk-box p{ margin:0 0 6px; }
+.lk-box p:last-child{ margin:0; }
+
+figure.mat-fig{ margin:1.2em 0; }
+figure.mat-fig img{ width:100%; height:auto; border-radius:10px; display:block; }
+figure.mat-fig figcaption{ font-family:var(--sans); font-size:12px; color:var(--ink-soft); margin-top:6px; }
+
+.mat-source{ font-size:13px; color:var(--ink-soft); margin:14px 0 0; }
+.mat-source a{ color:var(--teal); font-weight:600; }
+
+/* ключові слова у «Vor dem Lesen» */
+.mat-kw{ display:flex; flex-wrap:wrap; gap:8px; }
+.mat-kw .kw{
+  background:#fff; border:1px solid var(--line); border-radius:100px; padding:5px 12px; font-size:13.5px;
+}
+.mat-kw .kw b{ font-family:var(--serif); color:var(--teal-deep); }
+
+/* ---------- Спливаюча підказка з перекладом ---------- */
+.gl-pop{
+  position:absolute; z-index:1200; max-width:min(320px, calc(100vw - 16px)); min-width:170px;
+  background:var(--teal-deep); color:#F5EFDE; border-radius:12px;
+  padding:10px 14px 10px; box-shadow:0 10px 28px rgba(18,62,58,.35);
+  font-family:var(--sans); animation:glIn .14s ease;
+}
+.gl-pop[hidden]{ display:none; }
+@keyframes glIn{ from{ opacity:0; transform:translateY(-4px); } to{ opacity:1; transform:none; } }
+.gl-pop.above{ animation-name:glInUp; }
+@keyframes glInUp{ from{ opacity:0; transform:translateY(4px); } to{ opacity:1; transform:none; } }
+.gl-pop-de{ font-family:var(--serif); font-weight:700; font-size:16px; color:#fff; line-height:1.3; }
+.gl-pop-uk{ font-size:15px; margin-top:2px; color:var(--mustard-soft); }
+.gl-pop-note{ font-size:12.5px; color:#BFD6D2; margin-top:3px; }
+.gl-pop-note[hidden]{ display:none; }
+.gl-pop-star{
+  margin-top:8px; background:none; border:1px solid rgba(245,239,222,.35); color:#F5EFDE;
+  font-family:var(--sans); font-size:12px; font-weight:700; border-radius:100px; padding:3px 10px; cursor:pointer;
+}
+.gl-pop-star[aria-pressed="true"]{ background:var(--mustard); border-color:var(--mustard); color:#2B2620; }
+
+/* ---------- Текст під рукою: кнопка + шухляда ---------- */
+.text-fab{
+  position:fixed; right:18px; bottom:18px; z-index:900;
+  font-family:var(--sans); font-weight:800; font-size:14px;
+  background:var(--mustard); color:#2B2620; border:none; border-radius:100px;
+  padding:12px 18px; cursor:pointer; box-shadow:0 6px 18px rgba(43,38,32,.28);
+  transition:transform .12s ease;
+}
+.text-fab:hover{ transform:translateY(-2px); }
+.text-fab[hidden]{ display:none; }
+.app{ padding-bottom:96px; } /* щоб кнопка 📄 не закривала кінець вкладки */
+.text-fab:focus-visible{ outline:3px solid var(--teal); outline-offset:2px; }
+html.umlaut-open .text-fab{ display:none; } /* не заважати панелі ä ö ü ß */
+body.drawer-open .text-fab{ background:var(--teal); color:#fff; }
+
+.text-drawer{
+  position:fixed; z-index:950; background:var(--card); display:flex; flex-direction:column;
+  box-shadow:0 -8px 30px rgba(43,38,32,.25);
+  left:0; right:0; bottom:0; height:min(78vh, 680px);
+  border-radius:18px 18px 0 0; animation:tdUp .2s ease;
+}
+.text-drawer[hidden]{ display:none; }
+@keyframes tdUp{ from{ transform:translateY(30px); opacity:.4; } to{ transform:none; opacity:1; } }
+.td-head{
+  display:flex; align-items:center; gap:10px; padding:12px 16px 10px;
+  border-bottom:1px solid var(--line); position:relative;
+  font-family:var(--serif); font-size:15.5px; color:var(--teal-deep);
+}
+.td-head b{ flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.td-grip{ position:absolute; left:50%; top:5px; width:40px; height:4px; margin-left:-20px; border-radius:4px; background:var(--line); }
+.td-close{
+  flex:none; width:34px; height:34px; border-radius:50%; border:1px solid var(--line);
+  background:#fff; font-size:15px; cursor:pointer; color:var(--ink-soft);
+}
+.td-close:hover{ border-color:var(--teal); color:var(--teal); }
+.td-body{ overflow-y:auto; padding:16px 20px 30px; overscroll-behavior:contain; flex:1; }
+.td-body .mat-text{ font-size:calc(var(--mat-fs) - 1px); }
+.td-backdrop{ position:fixed; inset:0; z-index:940; background:rgba(18,30,28,.35); }
+.td-backdrop[hidden]{ display:none; }
+/* широкий екран: панель праворуч, вправа лишається видимою ліворуч */
+@media (min-width:1100px){
+  .text-drawer{
+    top:0; bottom:0; left:auto; right:0; height:auto; width:min(460px, 40vw);
+    border-radius:0; box-shadow:-8px 0 30px rgba(43,38,32,.18); animation:tdIn .2s ease;
+  }
+  @keyframes tdIn{ from{ transform:translateX(30px); opacity:.4; } to{ transform:none; opacity:1; } }
+  .td-grip{ display:none; }
+  .td-backdrop{ display:none; }
+  body.drawer-open .app{ margin-left:16px; margin-right:calc(min(460px, 40vw) + 16px); }
+  body.drawer-open .text-fab{ right:calc(min(460px, 40vw) + 18px); }
+}
+@media print{ .text-fab, .text-drawer, .td-backdrop, .gl-pop{ display:none !important; } }
+
+/* ---------- Вкладка Wörter ---------- */
+.mw-bar{ display:flex; align-items:center; gap:6px; flex-wrap:wrap; margin-bottom:14px; }
+.mw-sp{ flex:1; }
+.mw-list{ list-style:none; margin:0; padding:0; }
+.mw-list li{
+  display:flex; align-items:baseline; gap:12px; padding:9px 4px; border-bottom:1px dashed var(--line); font-size:14.5px;
+}
+.mw-list li:last-child{ border-bottom:none; }
+.mw-de{ flex:1 1 45%; font-family:var(--serif); font-weight:600; color:var(--teal-deep); min-width:0; }
+.mw-uk{ flex:1 1 45%; min-width:0; }
+.mw-note{ color:var(--ink-soft); font-size:12.5px; }
+.mw-star{
+  flex:none; background:none; border:none; font-size:19px; line-height:1; cursor:pointer; color:var(--ink-soft); padding:0 4px;
+  align-self:center;
+}
+.mw-star[aria-pressed="true"]{ color:var(--mustard); }
+.mw-star:focus-visible{ outline:2px solid var(--mustard); border-radius:4px; }
+@media (max-width:560px){
+  .mw-list li{ flex-wrap:wrap; gap:2px 10px; }
+  .mw-de{ flex:1 1 calc(100% - 40px); }
+  .mw-uk{ order:3; flex-basis:100%; color:var(--ink-soft); }
+}
+.mw-top{ display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; }
+.mw-count{ font-weight:700; color:var(--ink-soft); font-size:13px; }
+.mw-card{
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px;
+  width:100%; min-height:190px; padding:24px 18px; cursor:pointer;
+  background:#fff; border:1.5px solid var(--line); border-radius:16px;
+  box-shadow:0 4px 0 rgba(43,38,32,.08); font-family:var(--serif); color:var(--teal-deep);
+  transition:border-color .15s ease, background .15s ease;
+}
+.mw-card:hover{ border-color:var(--teal); }
+.mw-card.flipped{ background:var(--forest-soft); border-color:var(--forest); }
+.mw-front{ font-size:24px; font-weight:700; text-align:center; line-height:1.25; }
+.mw-back{ font-family:var(--sans); font-size:18px; color:var(--ink); text-align:center; }
+.mw-back[hidden], .mw-tap[hidden], .mw-answer[hidden]{ display:none; }
+.mw-tap{ font-family:var(--sans); font-size:12px; color:var(--ink-soft); }
+.mw-done{ text-align:center; padding:18px 0 6px; }
+.mw-done-big{ font-family:var(--serif); font-size:26px; font-weight:700; color:var(--forest); margin:0 0 4px; }
+
+/* ---------- Вправи ---------- */
+/* buildRF: кнопки richtig / falsch / steht nicht im Text */
+.rf-ex .quiz-opts{ gap:6px; }
+.rf-ex .opt-btn{ min-width:92px; }
+.rf-ex .q-text{ font-family:var(--serif); font-weight:500; font-size:16px; }
+
+/* buildMatch: зіставлення */
+.match-ex .match-row{ gap:12px; padding:6px 0; margin:0; border-bottom:1px dashed var(--line); }
+.match-ex .match-row:last-of-type{ border-bottom:none; }
+.match-ex .match-row .name{ width:auto; flex:1 1 50%; font-weight:600; line-height:1.35; }
+.match-ex .match-row .name .num{ font-family:var(--serif); font-weight:700; color:var(--brick); margin-right:2px; }
+.match-ex .match-row select{ flex:1 1 50%; min-width:0; }
+.match-lead .match-row{ flex-direction:column; align-items:stretch; gap:6px; padding:10px 0; }
+.match-lead .match-row .name{ font-family:var(--serif); font-weight:500; font-size:15.5px; }
+@media (max-width:560px){
+  .match-ex .match-row{ flex-direction:column; align-items:stretch; gap:6px; padding:10px 0; }
+}
+
+/* buildSequence: картки-рядки, поставлені пронумеровані */
+.seq-ex .order-line{ flex-direction:column; align-items:stretch; counter-reset:seq; padding:8px 10px; background-image:none; }
+.seq-ex .order-line .word-chip::before{ counter-increment:seq; content:counter(seq) ". "; font-weight:700; color:var(--brick); }
+.seq-ex.seq-single .order-line > .num{ display:none; }
+.seq-ex .order-line .order-slots:empty + .order-end{ display:none; }
+.seq-ex .order-line:has(.order-slots:empty)::after{
+  content:"Натискай речення в правильному порядку ↓"; font-family:var(--sans); font-size:13px; color:var(--ink-soft); padding:6px 2px;
+}
+.seq-ex .order-bank{ flex-direction:column; align-items:stretch; }
+.seq-ex .word-chip{ font-family:var(--sans); font-size:14.5px; text-align:left; line-height:1.4; padding:9px 12px; }
+.seq-ex .order-bank .word-chip::before{ content:"＋ "; color:var(--teal); font-weight:700; }
+
+/* порожній лічильник «x / y richtig» до першої перевірки не показуємо */
+.panel .score-pill:empty{ display:none; }

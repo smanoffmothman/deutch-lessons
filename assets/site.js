@@ -275,21 +275,131 @@ function renderGlossary(){
   render();
 }
 
-/* ---------- Матеріали (плоский список) ---------- */
+/* ---------- Матеріали (з 2026-10: статті для читання) ----------
+   Дані: data/materials-data.js (MATERIALS + MATERIAL_TEMY).
+   - Статті (typ: "stattya") — картки, найновіші зверху; останній запис у
+     масиві = мітка «нове» (як в уроках). Фільтри: рівень (чипи), країна,
+     тема, пошук. Показуються лише значення, які реально є в даних.
+   - Прогрес учня в статті — localStorage 'dmu:progress:mat:<id>' (пише
+     trackProgress у lesson-interactions.js; вмикає initMaterialPage).
+   - Інші матеріали (typ: "fail" або без typ — старий формат nazva/opys/file)
+     — окремим списком під статтями, без фільтрів.
+   Прапорці — CSS (.flag-DE …), бо емодзі-прапорців Windows не показує. */
+const MAT_LEVELS = ['A2', 'B1', 'B2', 'C1', 'C2'];
+const MAT_LANDS = {DE: 'Німеччина', AT: 'Австрія', CH: 'Швейцарія', LI: 'Ліхтенштейн', LU: 'Люксембург', EU: 'Європа'};
+function matIsArticle(m){ return m && m.typ === 'stattya'; }
+function articleCountLabel(n){ // 1 стаття, 2–4 статті, 5+ статей, 21 стаття
+  const m10 = n % 10, m100 = n % 100;
+  if(m10 === 1 && m100 !== 11) return n + ' стаття';
+  if(m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) return n + ' статті';
+  return n + ' статей';
+}
+function matFlagHtml(code){
+  return '<span class="flag flag-' + escHtml(code) + '" title="' + escHtml(MAT_LANDS[code] || code) + '"></span>';
+}
+
 function renderMaterials(){
   const wrap = document.getElementById('materialsGrid');
-  if(MATERIALS.length === 0){
-    wrap.innerHTML = '<p class="empty-note">Матеріалів поки немає — з’являться тут, щойно додаси перший.</p>';
+  const toolbar = document.getElementById('materialsToolbar');
+  const otherEl = document.getElementById('materialsOther');
+  const all = (typeof MATERIALS !== 'undefined') ? MATERIALS : [];
+  const articles = all.filter(matIsArticle);
+  const others = all.filter(m => !matIsArticle(m));
+  const newest = articles[articles.length - 1] || null;
+  const state = {level: '', land: '', tema: '', q: ''};
+
+  // інші матеріали — простий список, як було раніше
+  if(otherEl){
+    if(others.length){
+      otherEl.innerHTML = '<h2 class="mat-section-title">Інші матеріали</h2><div class="materials-grid">'
+        + others.map(m => '<div class="material-card"><h4>' + m.nazva + '</h4><p>' + (m.opys || '') + '</p>'
+          + '<a href="' + m.file + '" target="_blank" rel="noopener">Відкрити</a></div>').join('') + '</div>';
+    } else otherEl.innerHTML = '';
+  }
+
+  if(!articles.length){
+    if(toolbar) toolbar.style.display = 'none';
+    wrap.innerHTML = '<p class="empty-note">Статей поки немає — з’являться тут, щойно додаси першу.</p>';
     return;
   }
-  wrap.innerHTML = '';
-  MATERIALS.forEach(m => {
-    const card = document.createElement('div');
-    card.className = 'material-card';
-    card.innerHTML = '<h4>' + m.nazva + '</h4><p>' + (m.opys || '') + '</p>'
-      + '<a href="' + m.file + '" target="_blank" rel="noopener">Відкрити</a>';
-    wrap.appendChild(card);
-  });
+
+  // фільтри: лише ті значення, що реально трапляються в статтях
+  const levels = MAT_LEVELS.filter(l => articles.some(a => a.riven === l));
+  const lands = Object.keys(MAT_LANDS).filter(c => articles.some(a => [].concat(a.krayina || []).includes(c)));
+  const temyOrder = (typeof MATERIAL_TEMY !== 'undefined') ? MATERIAL_TEMY : [];
+  const temySet = new Set();
+  articles.forEach(a => [].concat(a.temy || []).forEach(t => temySet.add(t)));
+  const temy = temyOrder.filter(t => temySet.has(t)).concat(Array.from(temySet).filter(t => !temyOrder.includes(t)));
+
+  if(toolbar){
+    toolbar.innerHTML = '<div class="search-row"><input type="search" id="matSearch" placeholder="Пошук: назва, тема, слово…" aria-label="Пошук статей"></div>'
+      + '<div class="mat-filters">'
+      + '<div class="mat-levels" role="group" aria-label="Рівень">'
+      + '<button type="button" class="lvl-chip" data-l="" aria-pressed="true">Усі рівні</button>'
+      + levels.map(l => '<button type="button" class="lvl-chip" data-l="' + l + '" aria-pressed="false">' + l + '</button>').join('') + '</div>'
+      + (lands.length > 1 ? '<select id="matLand" aria-label="Країна"><option value="">Усі країни</option>'
+        + lands.map(c => '<option value="' + c + '">' + MAT_LANDS[c] + '</option>').join('') + '</select>' : '')
+      + (temy.length > 1 ? '<select id="matTema" aria-label="Тема"><option value="">Усі теми</option>'
+        + temy.map(t => '<option>' + escHtml(t) + '</option>').join('') + '</select>' : '')
+      + '</div><p class="mat-summary" id="matSummary"></p>';
+    toolbar.querySelectorAll('.lvl-chip').forEach(b => b.addEventListener('click', () => {
+      state.level = b.dataset.l;
+      toolbar.querySelectorAll('.lvl-chip').forEach(x => x.setAttribute('aria-pressed', x === b ? 'true' : 'false'));
+      render();
+    }));
+    const landEl = document.getElementById('matLand'), temaEl = document.getElementById('matTema'), qEl = document.getElementById('matSearch');
+    if(landEl) landEl.addEventListener('change', () => { state.land = landEl.value; render(); });
+    if(temaEl) temaEl.addEventListener('change', () => { state.tema = temaEl.value; render(); });
+    qEl.addEventListener('input', () => { state.q = qEl.value.trim().toLowerCase(); render(); });
+  }
+
+  function progressOf(a){
+    const p = loadStoredProgress('mat:' + a.id);
+    if(!p) return null;
+    return {best: p.best, total: p.total, pct: Math.round(Math.min(1, p.best / p.total) * 100)};
+  }
+
+  function card(a){
+    const p = progressOf(a);
+    const lands = [].concat(a.krayina || []);
+    const src = a.dzherelo && a.dzherelo.nazva ? a.dzherelo.nazva + (a.dzherelo.nomer ? ' ' + a.dzherelo.nomer : '') : '';
+    const status = p
+      ? (p.pct >= 100 ? '<span class="mat-done">✓ пройдено</span>' : '<span class="mat-prog"><span class="bar"><span style="width:' + p.pct + '%"></span></span>' + p.best + ' / ' + p.total + '</span>')
+      : '<span class="open-cue" aria-hidden="true">Читати →</span>';
+    return '<article class="mat-card' + (p && p.pct >= 100 ? ' is-done' : '') + '">'
+      + '<div class="mat-card-top"><span class="lvl-badge">' + escHtml(a.riven || '—') + '</span>'
+      + lands.map(matFlagHtml).join('')
+      + (a === newest ? '<span class="new-badge">нове</span>' : '') + '</div>'
+      + '<h4><a class="lesson-link" href="' + escHtml(a.file) + '">' + escHtml(a.nazva) + '</a></h4>'
+      + '<p class="lesson-desc" title="' + escHtml(String(a.opys || '')) + '">' + escHtml(a.opys || '') + '</p>'
+      + ([].concat(a.temy || []).length ? '<div class="mat-tags">' + [].concat(a.temy).map(t => '<span>' + escHtml(t) + '</span>').join('') + '</div>' : '')
+      + '<div class="lesson-foot">' + status + (src ? '<span class="mat-src" title="Джерело">' + escHtml(src) + '</span>' : '') + '</div>'
+      + '</article>';
+  }
+
+  function render(){
+    const list = articles.slice().reverse().filter(a => {
+      if(state.level && a.riven !== state.level) return false;
+      if(state.land && ![].concat(a.krayina || []).includes(state.land)) return false;
+      if(state.tema && ![].concat(a.temy || []).includes(state.tema)) return false;
+      if(state.q){
+        const hay = [a.nazva, a.opys, [].concat(a.temy || []).join(' '), a.dzherelo ? a.dzherelo.nazva : ''].join(' ').toLowerCase();
+        if(!hay.includes(state.q)) return false;
+      }
+      return true;
+    });
+    const sum = document.getElementById('matSummary');
+    if(sum){
+      const done = articles.filter(a => { const p = progressOf(a); return p && p.pct >= 100; }).length;
+      const filtered = list.length !== articles.length;
+      sum.textContent = (filtered ? 'Знайдено: ' + articleCountLabel(list.length) + ' з ' + articles.length : articleCountLabel(articles.length))
+        + (done ? ' · пройдено: ' + done : '');
+    }
+    wrap.innerHTML = list.length ? list.map(card).join('')
+      : '<p class="empty-note">Нічого не знайдено — зміни фільтри або слово для пошуку.</p>';
+  }
+  wrap.classList.add('mat-grid');
+  render();
 }
 
 /* =================================================================
