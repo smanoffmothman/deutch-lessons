@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Äpfel aus dem Alten Land · Lesen · Deutsch mit uns</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Natur &amp; Umwelt</span>
+        <h1>Äpfel aus dem Alten Land</h1>
+        <p class="sub">Поруч із Гамбургом — один із найбільших садових регіонів Північної Європи. Восени тут пахне яблуками, і кожен може сам зібрати свій урожай.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Sätze bauen</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Herbstzeit ist Apfelzeit</h2>
+      <div class="card">
+        <p>Isst du gern Äpfel? Welche Speisen mit Äpfeln kennst du? Hast du schon einmal Äpfel vom Baum gepflückt?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Згадай: де в Україні вирощують багато яблук? Чи збирав(-ла) ти колись яблука в саду? Як гадаєш, що можна робити восени на фермі, крім збирання врожаю?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Hier <span class="gl" data-uk="пахнути" data-lemma="riechen (roch, hat gerochen)">riecht</span> es nach Obst, nach <span class="gl" data-uk="мокрий, вологий" data-lemma="nass">nasser</span> <span class="gl" data-uk="земля, ґрунт" data-lemma="die Erde">Erde</span> und manchmal nach frischem Apfelkuchen. Willkommen im Alten Land!</p>
+
+          <p>Das Alte Land liegt im Norden von Deutschland, <span class="gl" data-uk="на південний захід (від)" data-lemma="südwestlich">südwestlich</span> der Elbe. Ein Teil gehört zu Hamburg, ein Teil zu Niedersachsen. Es ist eine der größten Regionen für <span class="gl" data-key data-uk="вирощування фруктів, садівництво" data-lemma="der Obstanbau">Obstanbau</span> in Nordeuropa. Auf rund 10 000 <span class="gl" data-uk="гектар" data-lemma="der Hektar, -">Hektar</span> <span class="gl" data-uk="вирощувати" data-lemma="anbauen">bauen</span> die Menschen dort Obst an – vor allem Äpfel. Von dort fließt die Elbe weiter bis in die Nordsee.</p>
+
+          <p>Im Herbst ist die beste Zeit für einen Besuch. Denn bis Oktober dauert die <span class="gl" data-key data-uk="збір яблук" data-lemma="die Apfelernte, -n">Apfelernte</span>. Auf vielen <span class="gl" data-key data-uk="фруктова ферма, садове господарство" data-lemma="der Obsthof, -ö-e">Obsthöfen</span> sind die Menschen jetzt sehr <span class="gl" data-uk="зайнятий" data-lemma="beschäftigt">beschäftigt</span>.</p>
+
+          <p>Außerdem gibt es die Altländer Apfelwochen. Auf den Höfen finden verschiedene Events statt. Dort kann man lernen, wie die <span class="gl" data-uk="робота під час збору врожаю" data-lemma="die Erntearbeit">Erntearbeit</span> funktioniert. In den <span class="gl" data-key data-uk="магазин при фермі" data-lemma="der Hofladen, -ä-">Hofläden</span> kann man regionale <span class="gl" data-uk="фірмова страва, особливий продукт" data-lemma="die Spezialität, -en">Spezialitäten</span> kaufen. Und auf manchen Höfen dürfen Besucher die Äpfel sogar selbst <span class="gl" data-key data-uk="збирати (урожай)" data-lemma="ernten">ernten</span>. Ein <span class="gl" data-uk="поїздка, екскурсія" data-lemma="der Ausflug, -ü-e">Ausflug</span> ins Alte Land ist also perfekt für alle, die Natur und Äpfel lieben. Und von der Hamburger Innenstadt ist es nicht weit.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Der Apfel ist das beliebteste Obst der Deutschen. Typisch sind zum Beispiel Apfelkuchen, Apfelmus und Apfelschorle – Apfelsaft mit <span class="gl" data-uk="мінеральна вода" data-lemma="das Mineralwasser">Mineralwasser</span>. Ein Hofladen ist ein kleines Geschäft direkt auf einem Bauernhof.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь у кожному питанні.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3: лексика ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub3-list"></div>
+
+      <p class="lead">б) Встав слова з рамки.</p>
+      <div class="card">
+        <div class="wordbank"><span>Obsthof</span><span>ernten</span><span>Hofladen</span><span>Herbst</span><span>Apfelkuchen</span></div>
+        <div id="ub3b-list">
+          <div class="fill-item"><span class="num">1)</span> Im <input type="text" class="blank-input inline" data-ans="Herbst"> sind die Äpfel reif.</div>
+          <div class="fill-item"><span class="num">2)</span> Familie Meyer hat einen <input type="text" class="blank-input inline" data-ans="Obsthof"> mit vielen Apfelbäumen.</div>
+          <div class="fill-item"><span class="num">3)</span> Heute dürfen wir die Äpfel selbst <input type="text" class="blank-input inline" data-ans="ernten">.</div>
+          <div class="fill-item"><span class="num">4)</span> Im <input type="text" class="blank-input inline" data-ans="Hofladen"> kaufen wir Saft und Marmelade.</div>
+          <div class="fill-item"><span class="num">5)</span> Oma backt einen <input type="text" class="blank-input inline wide" data-ans="Apfelkuchen">.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub3b-check">Prüfen</button>
+          <button class="btn secondary" id="ub3b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub3b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4: склади речення ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Sätze bauen</h2>
+      <p class="lead">Склади речення з тексту: натискай слова в правильному порядку.</p>
+      <div class="card" id="ub4-order"></div>
+    </section>
+
+    <!-- ===== Üb. 5: письмо ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (3–5 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Welches Obst wächst in deiner Region? Wann erntet man es?</label>
+          <textarea id="ub5-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Was isst oder trinkst du gern mit Äpfeln? Gibt es ein typisch ukrainisches Rezept mit Äpfeln?</label>
+          <textarea id="ub5-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Bei uns wachsen … · Im Sommer / Im Herbst erntet man … · Ich esse gern … · Meine Oma macht …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Das Alte Land bei Hamburg ist eine der größten Obstregionen in Nordeuropa. Dort wachsen vor allem Äpfel. Die Apfelernte dauert bis Oktober. Bei den Altländer Apfelwochen kann man auf Obsthöfen Äpfel selbst ernten und im Hofladen regionale Spezialitäten kaufen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Альтес Ланд біля Гамбурга — один із найбільших садових регіонів Північної Європи. Тут ростуть передусім яблука. Збір урожаю триває до жовтня. Під час «Яблучних тижнів» можна самому зібрати яблука на фермі й купити місцеві смаколики в крамниці при господарстві.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "apfelernte-im-alten-land";
+
+  // Üb. 1а: квіз
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text?",
+     opts: ["Um eine Obstregion in Norddeutschland und die Apfelernte",
+            "Um ein Rezept für Apfelkuchen",
+            "Um einen Bauernmarkt in Hamburg"],
+     correct: "Um eine Obstregion in Norddeutschland und die Apfelernte"},
+    {q: "Warum soll man im Herbst ins Alte Land fahren?",
+     opts: ["Weil dann die Apfelernte ist und es viele Events gibt",
+            "Weil dann die Bäume blühen",
+            "Weil dann alle Hofläden geschlossen sind"],
+     correct: "Weil dann die Apfelernte ist und es viele Events gibt"}
+  ]);
+  // Üb. 1б: заголовки ↔ абзаци
+  buildMatch('ub1h', [
+    ["Wo liegt das Alte Land?", "Absatz 1"],
+    ["Die Zeit der Ernte", "Absatz 2"],
+    ["Was Besucher machen können", "Absatz 3"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3"]});
+
+  // Üb. 2: richtig (r) / falsch (f) / steht nicht im Text (n)
+  buildRF('ub2-rf', [
+    {s: "Das Alte Land liegt in Süddeutschland.", a: "f"},
+    {s: "Ein Teil vom Alten Land gehört zu Hamburg.", a: "r"},
+    {s: "Im Alten Land wachsen vor allem Kirschen.", a: "f"},
+    {s: "Die Apfelernte dauert bis Oktober.", a: "r"},
+    {s: "Die Apfelwochen kosten 10 Euro Eintritt.", a: "n"},
+    {s: "Auf manchen Höfen kann man selbst Äpfel ernten.", a: "r"}
+  ]);
+
+  // Üb. 3а: слово ↔ переклад
+  buildMatch('ub3', [
+    ["die Erde", "земля, ґрунт"],
+    ["anbauen", "вирощувати"],
+    ["beschäftigt", "зайнятий"],
+    ["die Spezialität", "фірмова страва, особливий продукт"],
+    ["der Obstanbau", "вирощування фруктів"]
+  ]);
+  // Üb. 3б: пропуски
+  wireBlanks('ub3b');
+
+  // Üb. 4: склади речення
+  buildOrder('ub4-order', [
+    {words: ["Die Apfelernte", "dauert", "bis Oktober"], end: "."},
+    {words: ["Im Herbst", "ist", "die beste Zeit", "für einen Besuch"], end: ".",
+     alt: ["Die beste Zeit für einen Besuch ist im Herbst"]},
+    {words: ["Auf manchen Höfen", "darf", "man", "selbst", "Äpfel", "ernten"], end: ".",
+     alt: ["Man darf auf manchen Höfen selbst Äpfel ernten"]}
+  ]);
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🍎','🌳','🧺','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
