@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 9 · Modul B · Am Tisch</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 7'},
+    {label: 'Урок 9: За столом'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 9 · MODUL B</span>
+        <h1>Am Tisch</h1>
+        <p class="sub">За столом: куди класти й ставити посуд і прибори (legen / stellen + Akkusativ), шукаємо помилки Маї та плануємо стіл для дня народження.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · legen oder stellen?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Wohin? + Akk.</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Majas Fehler</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wir decken den Tisch</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Geburtstagsparty</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== ПАНЕЛЬ: вступ ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Worum geht es heute?</h2>
+      <div class="card">
+        <p>In unserem Modul geht es ums Essen: Wir kaufen ein, kochen und decken den Tisch. Heute hat Maja Besuch – aber beim Tischdecken macht sie viele Fehler. Wir finden ihre Fehler und korrigieren sie. Wir lernen auch: Wohin legt oder stellt man Teller, Gläser und Besteck? Nach <b>auf, in, neben</b> fragt man <b>Wohin?</b> – dann kommt der <b>Akkusativ</b>. Zum Schluss planst du deine eigene Geburtstagsparty.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          У нашому модулі йдеться про їжу: ми купуємо продукти, готуємо й накриваємо на стіл. Сьогодні до Маї прийшли гості, але, накриваючи на стіл, вона робить багато помилок. Ми знайдемо її помилки й виправимо їх. А ще дізнаємося: куди кладуть або ставлять тарілки, склянки й прибори? Після <b>auf, in, neben</b> питаємо <b>Wohin?</b> (куди?) — і тоді вживаємо <b>Akkusativ</b>. Наприкінці ти сплануєш власну вечірку до дня народження.
+        </div>
+      </div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Hallo! Ich helfe gern beim Tischdecken. Und du? Wer deckt bei euch zu Hause den Tisch?</p>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: перевірка ДЗ ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: 1) «Küchen-Rallye» — п'ять міні-діалогів «Wo finde ich einen / eine / ein …?» з liegt / liegen і steht / stehen у відповідях; 2) порахувати вдома посуд і прибори та написати 6 речень із формами множини (напр. «Wir haben zwölf Gläser.»).
+        Звір свої речення: обери правильні слова й впиши форми множини (іменники — з великої літери).
+      </div>
+      <div class="card" id="hz-list">
+        <p class="section-label" style="margin:0 0 6px;">1) Küchen-Rallye</p>
+        <div class="fill-item">
+          <span class="num">1)</span> „Wo finde ich <select class="blank inline" data-ans="einen"><option value="">—</option><option>ein</option><option>eine</option><option>einen</option></select> Teller?“ – „Die Teller <select class="blank inline" data-ans="stehen"><option value="">—</option><option>liegen</option><option>stehen</option><option>liegt</option><option>steht</option></select> im Küchenschrank.“
+        </div>
+        <div class="fill-item">
+          <span class="num">2)</span> „Wo finde ich <select class="blank inline" data-ans="eine"><option value="">—</option><option>einen</option><option>ein</option><option>eine</option></select> Gabel?“ – „Die Gabeln <select class="blank inline" data-ans="liegen"><option value="">—</option><option>steht</option><option>liegt</option><option>stehen</option><option>liegen</option></select> in der Schublade.“
+        </div>
+        <div class="fill-item">
+          <span class="num">3)</span> „Wo finde ich <select class="blank inline" data-ans="ein"><option value="">—</option><option>eine</option><option>ein</option><option>einen</option></select> Glas?“ – „Ein Glas <select class="blank inline" data-ans="steht"><option value="">—</option><option>liegt</option><option>steht</option><option>stehen</option><option>liegen</option></select> auf dem Tisch.“
+        </div>
+        <div class="fill-item">
+          <span class="num">4)</span> „Wo finde ich <select class="blank inline" data-ans="einen"><option value="">—</option><option>eine</option><option>einen</option><option>ein</option></select> Löffel?“ – „Ein Löffel <select class="blank inline" data-ans="liegt"><option value="">—</option><option>steht</option><option>stehen</option><option>liegt</option><option>liegen</option></select> neben dem Teller.“
+        </div>
+        <div class="fill-item">
+          <span class="num">5)</span> „Wo finde ich <select class="blank inline" data-ans="ein"><option value="">—</option><option>ein</option><option>einen</option><option>eine</option></select> Messer?“ – „Die Messer <select class="blank inline" data-ans="liegen"><option value="">—</option><option>liegen</option><option>stehen</option><option>liegt</option><option>steht</option></select> in der Schublade.“
+        </div>
+        <p class="section-label" style="margin:14px 0 6px;">2) Wie viele haben wir? (Plural)</p>
+        <div class="fill-item"><span class="num">6)</span> Wir haben zwölf <input type="text" class="blank-input inline" data-case data-ans="Gläser">. <span class="lead">(das Glas)</span></div>
+        <div class="fill-item"><span class="num">7)</span> Wir haben sechs <input type="text" class="blank-input inline" data-case data-ans="Tassen">. <span class="lead">(die Tasse)</span></div>
+        <div class="fill-item"><span class="num">8)</span> Wir haben acht <input type="text" class="blank-input inline" data-case data-ans="Teller">. <span class="lead">(der Teller)</span></div>
+        <div class="fill-item"><span class="num">9)</span> Wir haben zehn <input type="text" class="blank-input inline" data-case data-ans="Gabeln">. <span class="lead">(die Gabel)</span></div>
+        <div class="fill-item"><span class="num">10)</span> Wir haben sechs <input type="text" class="blank-input inline" data-case data-ans="Messer">. <span class="lead">(das Messer)</span></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="hz-check">Prüfen</button>
+        <button class="btn secondary" id="hz-reset">Zurücksetzen</button>
+        <span class="score-pill" id="hz-score"></span>
+      </div>
+
+      <div class="card" id="dz-vocab-wrap" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">Wörter-Check</p>
+        <p class="lead">Перевір слова з минулого уроку.</p>
+        <div id="dz-vocab"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: legen / stellen — правило + сортування ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Legen oder stellen? Wohin?</h2>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Merke dir!</p>
+        <p><b>Wo?</b> — щось уже <b>лежить / стоїть</b>: liegen / stehen + <b>Dativ</b>.<br><b>Wohin?</b> — ми щось <b>кладемо / ставимо</b>: legen / stellen + <b>Akkusativ</b>.</p>
+        <table class="gtable">
+          <tr><th></th><th>Wohin? legen / stellen + Akk.</th><th>Wo? liegen / stehen + Dat.</th></tr>
+          <tr><td class="gender">m</td><td>Ich lege den Löffel <strong>auf den</strong> Tisch.</td><td>Der Löffel liegt auf dem Tisch.</td></tr>
+          <tr><td class="gender">n</td><td>Ich stelle das Glas <strong>ins</strong> (= in das) Regal.</td><td>Das Glas steht im Regal.</td></tr>
+          <tr><td class="gender">f</td><td>Ich stelle die Schüssel <strong>in die</strong> Mitte.</td><td>Die Schüssel steht in der Mitte.</td></tr>
+          <tr><td class="gender">Pl.</td><td>Ich lege die Gabeln <strong>neben die</strong> Teller.</td><td>Die Gabeln liegen neben den Tellern.</td></tr>
+        </table>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Як обрати дієслово</span>
+          <b>legen</b> — річ потім буде <b>лежати</b> (ніж, виделка, ложка, серветка, скатертина).<br>
+          <b>stellen</b> — річ потім буде <b>стояти</b> (тарілка, склянка, чашка, миска, хлібниця, сільничка).
+        </div>
+      </div>
+      <p class="lead">Розсортуй речі: що ми на стіл <b>кладемо</b> (legen), а що <b>ставимо</b> (stellen)?</p>
+      <div class="card"><div id="ub1-sort"></div></div>
+    </section>
+
+    <!-- ===== Üb. 2: Wohin? + Akkusativ ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Wohin? – Akkusativ</h2>
+      <p class="lead">Обери правильне дієслово (legt / stellt) і правильний артикль в Akkusativ.</p>
+      <div class="card" id="ub2-list">
+        <div class="fill-item">
+          <span class="num">1)</span> Maja <select class="blank inline" data-ans="legt"><option value="">—</option><option>stellt</option><option>legt</option></select> die Tischdecke auf <select class="blank inline" data-ans="den"><option value="">—</option><option>dem</option><option>den</option><option>der</option></select> Tisch.
+        </div>
+        <div class="fill-item">
+          <span class="num">2)</span> Dann <select class="blank inline" data-ans="stellt"><option value="">—</option><option>stellt</option><option>legt</option></select> sie die Teekanne in <select class="blank inline" data-ans="die"><option value="">—</option><option>der</option><option>das</option><option>die</option></select> Mitte.
+        </div>
+        <div class="fill-item">
+          <span class="num">3)</span> Tim <select class="blank inline" data-ans="legt"><option value="">—</option><option>legt</option><option>stellt</option></select> die Gabeln links neben <select class="blank inline" data-ans="die"><option value="">—</option><option>den</option><option>die</option><option>der</option></select> Teller. <span class="lead">(Pl.)</span>
+        </div>
+        <div class="fill-item">
+          <span class="num">4)</span> Ich <select class="blank inline" data-ans="stelle"><option value="">—</option><option>lege</option><option>stelle</option></select> die Gläser <select class="blank inline" data-ans="ins"><option value="">—</option><option>im</option><option>in der</option><option>ins</option></select> Regal.
+        </div>
+        <div class="fill-item">
+          <span class="num">5)</span> Papa <select class="blank inline" data-ans="stellt"><option value="">—</option><option>legt</option><option>stellt</option></select> den Brotkorb neben <select class="blank inline" data-ans="die"><option value="">—</option><option>die</option><option>der</option><option>den</option></select> Schüssel.
+        </div>
+        <div class="fill-item">
+          <span class="num">6)</span> <select class="blank inline" data-ans="Leg"><option value="">—</option><option>Leg</option><option>Stell</option></select> bitte den Teelöffel auf <select class="blank inline" data-ans="die"><option value="">—</option><option>der</option><option>die</option><option>das</option></select> Untertasse!
+        </div>
+        <div class="fill-item">
+          <span class="num">7)</span> Mama <select class="blank inline" data-ans="stellt"><option value="">—</option><option>stellt</option><option>legt</option></select> den Kuchen in <select class="blank inline" data-ans="den"><option value="">—</option><option>den</option><option>dem</option><option>das</option></select> Kühlschrank.
+        </div>
+        <div class="fill-item">
+          <span class="num">8)</span> Wir <select class="blank inline" data-ans="legen"><option value="">—</option><option>stellen</option><option>legen</option></select> die Servietten auf <select class="blank inline" data-ans="die"><option value="">—</option><option>den</option><option>der</option><option>die</option></select> Teller. <span class="lead">(Pl.)</span>
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: Majas Fehler — токени + виправлення ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Was macht Maja falsch?</h2>
+      <p class="lead">Прочитай текст. Маїні подруги прийдуть на чай із тортом і цукерками. Знайди й натисни <b>6 помилок</b> — речі, які на такому столі не потрібні або стоять неправильно.</p>
+      <div class="mail-window">
+        <div class="mail-titlebar">Majas Teeparty</div>
+        <div class="mail-body" id="ub3-text">
+          Heute Abend hat Maja Besuch. Sie hat drei Freundinnen zum Tee eingeladen. Zum Tee gibt es Gebäck, Schokoladenpralinen und <span class="tok" data-correct="false">einen Obstkuchen</span>. Den hat Majas Mutter gebacken.<br>
+          Jetzt deckt Maja den Tisch. Sie stellt auf den Tisch <span class="tok" data-correct="true">vier tiefe Teller</span> und <span class="tok" data-correct="false">vier Untertassen</span>. Auf die Untertassen stellt sie <span class="tok" data-correct="true">Gläser</span> und legt daneben <span class="tok" data-correct="true">drei Esslöffel</span>. Rechts von jedem Teller legt Maja <span class="tok" data-correct="true">ein Messer und eine Gabel</span>. In die Mitte stellt sie <span class="tok" data-correct="true">einen Brotkorb mit Brot</span>, <span class="tok" data-correct="false">eine Schüssel mit Pralinen</span> und <span class="tok" data-correct="true">einen Salzstreuer</span>.
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+
+      <div class="airmail-rule"></div>
+
+      <p class="section-label">Korrigiere!</p>
+      <div class="card tinted-teal">
+        <p style="margin:0;"><b>Beispiel:</b> Ich meine, zuerst sollte Maja den Tisch mit einer Tischdecke bedecken und die Servietten legen. Das hat sie aber vergessen.</p>
+        <div class="ua-note">Виправ решту помилок за зразком: «Maja hat … gestellt / gelegt. Das ist aber falsch. Sie sollte … stellen / legen.» Обери дієприкметник і те, що Мая мала б поставити чи покласти.</div>
+      </div>
+      <div class="card" id="ub3k-list">
+        <div class="fill-item">
+          <span class="num">1)</span> Maja hat tiefe Teller auf den Tisch <select class="blank inline" data-ans="gestellt"><option value="">—</option><option>gelegt</option><option>gestellt</option></select>. Das ist aber falsch. Sie sollte <select class="blank inline" data-ans="flache Teller"><option value="">—</option><option>Suppenteller</option><option>flache Teller</option><option>Schüsseln</option></select> auf den Tisch stellen.
+        </div>
+        <div class="fill-item">
+          <span class="num">2)</span> Maja hat Gläser auf die Untertassen <select class="blank inline" data-ans="gestellt"><option value="">—</option><option>gestellt</option><option>gelegt</option></select>. Das ist aber falsch. Sie sollte <select class="blank inline" data-ans="Tassen"><option value="">—</option><option>Teller</option><option>Brotkörbe</option><option>Tassen</option></select> auf die Untertassen stellen.
+        </div>
+        <div class="fill-item">
+          <span class="num">3)</span> Maja hat drei Esslöffel neben die Untertassen <select class="blank inline" data-ans="gelegt"><option value="">—</option><option>gestellt</option><option>gelegt</option></select>. Das ist aber falsch. Sie sollte <select class="blank inline" data-ans="vier Teelöffel"><option value="">—</option><option>vier Teelöffel</option><option>vier Esslöffel</option><option>drei Teelöffel</option></select> neben die Untertassen legen.
+        </div>
+        <div class="fill-item">
+          <span class="num">4)</span> Maja hat ein Messer und eine Gabel neben die Teller <select class="blank inline" data-ans="gelegt"><option value="">—</option><option>gelegt</option><option>gestellt</option></select>. Das ist aber falsch. Sie sollte <select class="blank inline" data-ans="eine Kuchengabel"><option value="">—</option><option>einen Esslöffel</option><option>ein Messer</option><option>eine Kuchengabel</option></select> neben jeden Teller legen.
+        </div>
+        <div class="fill-item">
+          <span class="num">5)</span> Maja hat einen Brotkorb mit Brot in die Mitte <select class="blank inline" data-ans="gestellt"><option value="">—</option><option>gelegt</option><option>gestellt</option></select>. Das ist aber falsch. Sie sollte <select class="blank inline" data-ans="den Obstkuchen"><option value="">—</option><option>den Obstkuchen</option><option>den Salzstreuer</option><option>das Fleisch</option></select> in die Mitte stellen.
+        </div>
+        <div class="fill-item">
+          <span class="num">6)</span> Maja hat einen Salzstreuer auf den Tisch <select class="blank inline" data-ans="gestellt"><option value="">—</option><option>gestellt</option><option>gelegt</option></select>. Das ist aber falsch. Sie sollte <select class="blank inline" data-ans="die Teekanne"><option value="">—</option><option>den Brotkorb</option><option>die Teekanne</option><option>die Suppe</option></select> auf den Tisch stellen.
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3k-check">Prüfen</button>
+        <button class="btn secondary" id="ub3k-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3k-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4: Ситуації + склади речення + усна розмова ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wie deckt ihr den Tisch?</h2>
+      <p class="lead">Спершу склади з карток речення з діалогу — натискай слова по черзі. Потім у групах по четверо оберіть ситуацію й розіграйте свій діалог.</p>
+      <div class="card"><div id="ub4-order"></div></div>
+
+      <p class="section-label">Wählt eine Situation und diskutiert</p>
+      <div class="pic-grid">
+        <div class="pic-card"><div class="swatch">🍲</div><div class="num">a)</div>Ihr wollt zu Mittag essen.</div>
+        <div class="pic-card"><div class="swatch">🍕</div><div class="num">b)</div>Ihr wollt Pizza essen.</div>
+        <div class="pic-card"><div class="swatch">☕</div><div class="num">c)</div>Ihr habt eure Freunde zum Tee eingeladen.</div>
+        <div class="pic-card"><div class="swatch">🎉</div><div class="num">d)</div>Ihr organisiert eine Party für eure Mitschüler/innen.</div>
+      </div>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Dialog-Gerüst (A, B, C, D)</p>
+        <p style="margin:0;">
+          <b>A:</b> Wir wollen … essen / trinken und müssen den Tisch für zwei / … / viele Personen decken.<br>
+          <b>B:</b> Was brauchen wir also?<br>
+          <b>C:</b> Ich glaube, wir brauchen … .<br>
+          <b>D:</b> Ich bedecke den Tisch mit … .<br>
+          <b>A:</b> Gut! Und ich lege / stelle … auf den Tisch.<br>
+          <b>B:</b> Stell / Leg bitte … in die Mitte / links von / rechts von … .<br>
+          <b>C:</b> Okay! Wir müssen auch … neben … legen / stellen.<br>
+          <b>D:</b> Das stimmt.
+        </p>
+        <div class="ua-note">Це усна вправа: перевіряє вчитель. Пам'ятай — після <b>auf, in, neben</b> на питання <b>Wohin?</b> вживаємо Akkusativ: auf <b>den</b> Tisch, in <b>die</b> Mitte, neben <b>die</b> Teller.</div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5: Письмо — Geburtstagsparty ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Meine Geburtstagsparty</h2>
+      <p class="lead">Уяви: ти святкуєш день народження й улаштовуєш вечірку. Склади меню й опиши, як ти готуєшся і накриваєш на стіл.</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-menu">Mein Geburtstagsmenü (5–6 Speisen und Getränke, z. B. Geburtstagskuchen, Pizza, Saft …)</label>
+          <textarea id="ub5-menu" rows="3"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-text">So decke ich den Tisch (5–6 Sätze): Ich brauche … . Ich muss … kaufen. Zuerst lege / stelle ich … . Dann … . Zum Schluss …</label>
+          <textarea id="ub5-text" rows="7"></textarea>
+        </div>
+        <div class="ua-note">
+          Вживи щонайменше три речення з legen / stellen + auf / in / neben + Akkusativ (напр. «Zuerst lege ich die Tischdecke auf den Tisch.», «Den Geburtstagskuchen stelle ich in die Mitte.»).
+          Вставляти скопійований текст у ці поля не можна — набирай сам(а).
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ПРИКІНЦЕВА ПАНЕЛЬ ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Mach einen Comic „So deckt man den Tisch“ für deinen kleinen Bruder, deine kleine Schwester oder einen Freund aus Deutschland: Zeichne 6 Bilder (oder mach 6 Fotos) – Schritt für Schritt, von der Tischdecke bis zum Kuchen. Schreib zu jedem Bild eine Anweisung im Imperativ mit „legen“ oder „stellen“ und auf, in oder neben + Akkusativ (z. B. „Leg zuerst die Tischdecke auf den Tisch!“, „Stell die Gläser neben die Teller!“, „Stell den Kuchen in die Mitte!“). Benutze mindestens einmal „zuerst“, „dann“ und „zum Schluss“. Nächstes Mal tauschen wir die Comics und decken nach euren Anweisungen den Tisch.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Намалюй комікс «Як накривати на стіл» для молодшого брата, молодшої сестри або друга з Німеччини: 6 малюнків (або 6 фото) — крок за кроком, від скатертини до торта. До кожного малюнка напиши інструкцію в наказовому способі з «legen» або «stellen» і auf, in чи neben + Akkusativ (напр. «Leg zuerst die Tischdecke auf den Tisch!», «Stell die Gläser neben die Teller!», «Stell den Kuchen in die Mitte!»). Хоча б по одному разу вживи «zuerst», «dann» і «zum Schluss». Наступного уроку ми обміняємося коміксами й накриємо на стіл за вашими інструкціями.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Wörter zum Lernen</p>
+        <div class="chip-row" id="vocabChips"></div>
+      </div>
+
+      <div class="card" id="lessonGramWrap">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="lessonGram"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../data/glossary-data.js"></script>
+<script src="../../../data/lessons-data.js"></script>
+<script src="../../../data/grammar-data.js"></script>
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  const LEKTION_KLAS = "7", LEKTION_MODUL = "B", LEKTION_LEKTION = 9;
+  const LEKTION_PREV_LEKTION = 8;
+
+  (function renderLessonVocab(){
+    const box = document.getElementById('vocabChips');
+    if (!box || typeof GLOSSARY === 'undefined') return;
+    const words = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_LEKTION
+    );
+    if (words.length === 0){
+      box.innerHTML = '<p class="empty-note">Слова для цього уроку ще не додані в глосарій.</p>';
+      return;
+    }
+    box.innerHTML = words.map(w =>
+      '<span class="chip static">' + w.de + ' — ' + w.uk + '</span>'
+    ).join('');
+  })();
+
+  (function renderLessonGrammar(){
+    const wrap = document.getElementById('lessonGramWrap');
+    const box = document.getElementById('lessonGram');
+    if (!wrap || !box) return;
+    const hide = () => { wrap.style.display = 'none'; };
+    if (typeof LESSONS === 'undefined' || typeof GRAMMAR === 'undefined') return hide();
+    const me = LESSONS.find(l => l.klas === LEKTION_KLAS && l.modul === LEKTION_MODUL && l.lektion === LEKTION_LEKTION);
+    const topics = ((me && me.gram) || []).map(id => GRAMMAR.find(t => t.id === id)).filter(t => t && t.opublikovano > 0);
+    if (topics.length === 0) return hide();
+    const src = document.querySelector('script[src$="data/grammar-data.js"]').getAttribute('src');
+    const root = src.slice(0, src.length - 'data/grammar-data.js'.length);
+    box.innerHTML = topics.map(t =>
+      '<a class="gram-link" href="' + root + 'gramatyka/temy/' + t.id + '.html">'
+      + '<span class="k">' + t.uk + '</span>' + t.tema + '</a>'
+    ).join('');
+  })();
+
+  function guessPos(de){
+    var base = (de || '').replace(/\([^)]*\)/g, '').trim();
+    if(/^(der|die|das)(\/(der|die|das))?\s/.test(base)) return 'noun';
+    if(/^sich\s/.test(base)) return 'verb';
+    if(/^am\s/.test(base)) return 'other';
+    if(/\(\+(Gen|Dat|Akk)\.?\)/.test(de)) return 'prep';
+    var words = base.split(/\s+/);
+    var last = words[words.length - 1];
+    if(/(en|ern|eln)$/.test(last) && last === last.toLowerCase()) return 'verb';
+    return 'other';
+  }
+
+  (function renderDzVocabCheck(){
+    const wrap = document.getElementById('dz-vocab-wrap');
+    const box = document.getElementById('dz-vocab');
+    if (!wrap || !box || typeof GLOSSARY === 'undefined') return;
+    if (!LEKTION_PREV_LEKTION){ wrap.style.display = 'none'; return; }
+    const prevWords = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_PREV_LEKTION
+    );
+    if (prevWords.length < 3){ wrap.style.display = 'none'; return; }
+    const pool = shuffleArray(prevWords).slice(0, 6);
+    const quizData = pool.map(w => {
+      const pos = guessPos(w.de);
+      let sameKind = GLOSSARY.filter(g => g.uk !== w.uk && guessPos(g.de) === pos);
+      if(sameKind.length < 2) sameKind = GLOSSARY.filter(g => g.uk !== w.uk);
+      const distractors = shuffleArray(sameKind).slice(0, 2).map(g => g.uk);
+      return { q: w.de, opts: [w.uk, ...distractors], correct: w.uk };
+    });
+    buildQuiz('dz-vocab', quizData);
+  })();
+
+  // Hausaufgabe: перевірка ДЗ 7-B-8 (списки + форми множини)
+  wireBlanks('hz');
+
+  // Üb. 1: legen oder stellen? — сортування
+  buildSort('ub1-sort', {
+    buckets: ["legen", "stellen"],
+    items: [
+      {t: "die Gabel", b: "legen"},
+      {t: "das Glas", b: "stellen"},
+      {t: "die Serviette", b: "legen"},
+      {t: "die Tasse", b: "stellen"},
+      {t: "das Messer", b: "legen"},
+      {t: "die Schüssel", b: "stellen"},
+      {t: "der Teelöffel", b: "legen"},
+      {t: "der Brotkorb", b: "stellen"},
+      {t: "die Tischdecke", b: "legen"},
+      {t: "der Salzstreuer", b: "stellen"},
+      {t: "der Esslöffel", b: "legen"},
+      {t: "die Teekanne", b: "stellen"}
+    ]
+  });
+
+  // Üb. 2: дієслово + артикль в Akkusativ
+  wireBlanks('ub2');
+
+  // Üb. 3: помилки Маї (токени) + виправлення (списки)
+  initTokenClicks('ub3-text');
+  setTotal(document.querySelectorAll('#ub3-text .tok[data-correct="true"]').length);
+  document.getElementById('ub3-check').addEventListener('click', () => checkTokens('ub3-text', 'ub3-score', 'ub3'));
+  document.getElementById('ub3-reset').addEventListener('click', () => resetTokens('ub3-text', 'ub3-score', 'ub3'));
+  wireBlanks('ub3k');
+
+  // Üb. 4: склади речення з діалогу
+  buildOrder('ub4-order', [
+    { words: ["Wir", "wollen", "zu Mittag", "essen"], end: "." },
+    { words: ["Was", "brauchen", "wir", "also"], end: "?" },
+    { words: ["Ich", "bedecke", "den Tisch", "mit", "einer Tischdecke"], end: "." },
+    { words: ["Stell", "bitte", "die Schüssel", "in", "die Mitte"], end: "!",
+      alt: ["Stell die Schüssel bitte in die Mitte"] },
+    { words: ["Ich", "lege", "die Gabeln", "links", "neben", "die Teller"], end: ".",
+      alt: ["Ich lege links neben die Teller die Gabeln", "Links neben die Teller lege ich die Gabeln"] },
+    { words: ["Wir", "müssen", "auch", "die Gläser", "neben", "die Teller", "stellen"], end: ".",
+      alt: ["Wir müssen die Gläser auch neben die Teller stellen", "Die Gläser müssen wir auch neben die Teller stellen"] }
+  ]);
+
+  // Фінальна панель зі штампами
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🍽️','🥄','☕','🎂']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
