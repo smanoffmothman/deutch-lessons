@@ -654,5 +654,16 @@ const LESSONS = [
     nove: true,
     gram: ["wechselpraepositionen", "legen-liegen"],
     dz: "Mach einen Comic „So deckt man den Tisch“ für deinen kleinen Bruder, deine kleine Schwester oder einen Freund aus Deutschland: Zeichne 6 Bilder (oder mach 6 Fotos) – Schritt für Schritt, von der Tischdecke bis zum Kuchen. Schreib zu jedem Bild eine Anweisung im Imperativ mit „legen“ oder „stellen“ und auf, in oder neben + Akkusativ (z. B. „Leg zuerst die Tischdecke auf den Tisch!“, „Stell die Gläser neben die Teller!“, „Stell den Kuchen in die Mitte!“). Benutze mindestens einmal „zuerst“, „dann“ und „zum Schluss“. Nächstes Mal tauschen wir die Comics und decken nach euren Anweisungen den Tisch."
+  },
+  {
+    klas: "7",
+    modul: "B",
+    lektion: 10,
+    nazva: "Lebensmittel: Was kauft die Familie?",
+    opys: "Групи продуктів (Getränke, Obst, Gemüse, Milchprodukte, Salate, Speisen, Süßes, Fleischwaren) — сортування, аудіо «Was hat die Familie im Supermarkt gekauft?» з мірами й упаковками, Akkusativ після hat … gekauft (einen Kopf Kohl, einen Liter Milch) і що можна приготувати з цих продуктів.",
+    file: "klas-7/modul-b/lektion-10.html",
+    nove: true,
+    gram: ["artikel-gebrauch", "deklination-nomen", "modalverben"],
+    dz: "1) Zeichne in dein Heft eine Tabelle mit den 8 Lebensmittelgruppen aus Üb. 1 (Getränke, Obst, Gemüse, Milchprodukte, Salate, Speisen, Süßes, Fleischwaren) und schreib in jede Gruppe mindestens drei Lebensmittel – Nomen immer mit Artikel (z. B. der Kohl, die Gurke, das Mineralwasser). Markiere mit ✓, was du gern isst oder trinkst, und mit ✗, was du nicht magst. 2) Frag zu Hause, was deine Familie letzte Woche eingekauft hat, und schreib 5–6 Sätze im Perfekt mit Mengenangaben im Akkusativ (z. B. „Meine Mutter hat einen Liter Milch und ein Kilo Äpfel gekauft.“). Der letzte Satz ist über ein Gericht: „Für … braucht man gerade …“. Nächstes Mal spielen wir: Wer findet die meisten Lebensmittel in jeder Gruppe?"
   }
 ];

@@ -728,5 +728,17 @@ const GLOSSARY = [
   {de: "die Praline (die Pralinen)", uk: "цукерка (шоколадна)", klas: "7", modul: "B", lektion: 9},
   {de: "der Obstkuchen (die Obstkuchen)", uk: "фруктовий пиріг, пиріг із фруктами", klas: "7", modul: "B", lektion: 9},
   {de: "die Geburtstagsparty (die Geburtstagspartys)", uk: "вечірка до дня народження", klas: "7", modul: "B", lektion: 9},
-  {de: "die Vorbereitung (die Vorbereitungen)", uk: "підготовка, приготування", klas: "7", modul: "B", lektion: 9}
+  {de: "die Vorbereitung (die Vorbereitungen)", uk: "підготовка, приготування", klas: "7", modul: "B", lektion: 9},
+  {de: "die Lebensmittel (Pl.)", uk: "продукти харчування", klas: "7", modul: "B", lektion: 10},
+  {de: "das Getränk (die Getränke)", uk: "напій", klas: "7", modul: "B", lektion: 10},
+  {de: "das Milchprodukt (die Milchprodukte)", uk: "молочний продукт", klas: "7", modul: "B", lektion: 10},
+  {de: "die Fleischwaren (Pl.)", uk: "м'ясні вироби", klas: "7", modul: "B", lektion: 10},
+  {de: "Süßes (etwas Süßes)", uk: "солодке, солодощі (щось солодке)", klas: "7", modul: "B", lektion: 10},
+  {de: "der Kohl (ein Kopf Kohl)", uk: "капуста (головка капусти)", klas: "7", modul: "B", lektion: 10},
+  {de: "die Möhre (die Möhren)", uk: "морква", klas: "7", modul: "B", lektion: 10},
+  {de: "die Rote Rübe (die Roten Rüben)", uk: "буряк", klas: "7", modul: "B", lektion: 10},
+  {de: "die Gurke (die Gurken)", uk: "огірок", klas: "7", modul: "B", lektion: 10},
+  {de: "die Tomate (die Tomaten)", uk: "помідор", klas: "7", modul: "B", lektion: 10},
+  {de: "der Zucker", uk: "цукор", klas: "7", modul: "B", lektion: 10},
+  {de: "die Butter", uk: "вершкове масло", klas: "7", modul: "B", lektion: 10}
 ];
