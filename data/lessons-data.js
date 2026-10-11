@@ -687,5 +687,16 @@ const LESSONS = [
     nove: true,
     gram: ["rektion-verben", "verben-praepositionalobjekt", "kausalsaetze", "indirekte-fragesaetze"],
     dz: "1) Mach ein kurzes Interview mit einem Freund oder einer Freundin über seine / ihre Interessen (mindestens 4 Fragen, z. B. „Wofür interessierst du dich?“, „Womit beschäftigst du dich in der Freizeit?“, „Wie oft machst du das?“, „Mit wem?“). 2) Schreib danach über ihn / sie 6 Aussagen in der 3. Person – 4 stimmen, 2 sind erfunden (z. B. „Mein Freund Taras interessiert sich für Fotografie.“, „Seine Freizeit widmet er dem Basketball.“). Benutze mindestens einmal „sich interessieren für“, einmal „widmen + Dativ“ und einen Satz mit „da“ (z. B. „Da er Tiere liebt, hilft er im Tierheim.“). Nächstes Mal spielen wir „Stimmt das?“: Die Klasse rät, welche zwei Aussagen nicht stimmen."
+  },
+  {
+    klas: "8",
+    modul: "B",
+    lektion: 4,
+    nazva: "Briefwechsel: Brief oder E-Mail?",
+    opys: "Листування: лексика паперової й електронної пошти (der Briefumschlag, die Briefmarke, der Internetanschluss…) з аудіо, ein / eine до картинок, артиклі й множина іменників (der Brief – die Briefe) з аудіоконтролем, речення з цими словами та відповідь Сюзанні: Brief oder E-Mail?",
+    file: "klas-8/modul-b/lektion-4.html",
+    nove: true,
+    gram: ["deklination-nomen", "artikel-gebrauch"],
+    dz: "Schreib Susanna eine Postkarte (auf Papier oder am Computer gestaltet). Vorne: ein Bild oder Foto von deiner Stadt. Hinten: 5–6 Sätze – stell dich kurz vor, beantworte Susannas Frage „Schreibst du lieber Briefe oder E-Mails?“ mit einem weil-Satz und stell ihr zwei Fragen (z. B. „Hast du viele Brieffreunde?“). Benutze mindestens vier Wörter aus Üb. 3, davon mindestens zwei im Plural (z. B. Briefe, E-Mails, Briefmarken). Schreib rechts eine erfundene Adresse in Verona richtig auf (Name, Straße und Hausnummer, Postleitzahl und Stadt, Land) und zeichne eine Briefmarke dazu. Nächstes Mal hängen wir alle Postkarten auf und raten: Welche Stadt ist das?"
   }
 ];

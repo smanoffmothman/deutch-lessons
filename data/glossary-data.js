@@ -764,5 +764,17 @@ const GLOSSARY = [
   {de: "die Enttäuschung (eine bittere Enttäuschung erleben)", uk: "розчарування (пережити гірке розчарування)", klas: "8", modul: "B", lektion: 3},
   {de: "die Landschaft (die Landschaften)", uk: "краєвид, пейзаж", klas: "8", modul: "B", lektion: 3},
   {de: "das Talent (Talente entwickeln)", uk: "талант (розвивати таланти)", klas: "8", modul: "B", lektion: 3},
-  {de: "das Fernsehen (im Fernsehen sehen)", uk: "телебачення (дивитися по телевізору)", klas: "8", modul: "B", lektion: 3}
+  {de: "das Fernsehen (im Fernsehen sehen)", uk: "телебачення (дивитися по телевізору)", klas: "8", modul: "B", lektion: 3},
+  {de: "der Brief (die Briefe)", uk: "лист", klas: "8", modul: "B", lektion: 4},
+  {de: "der Briefumschlag (die Briefumschläge)", uk: "конверт", klas: "8", modul: "B", lektion: 4},
+  {de: "der Briefkasten (die Briefkästen)", uk: "поштова скринька", klas: "8", modul: "B", lektion: 4},
+  {de: "die Briefmarke (die Briefmarken)", uk: "поштова марка", klas: "8", modul: "B", lektion: 4},
+  {de: "die Papierpost", uk: "паперова пошта", klas: "8", modul: "B", lektion: 4},
+  {de: "die E-Mail (die E-Mails)", uk: "електронний лист, e-mail", klas: "8", modul: "B", lektion: 4},
+  {de: "die E-Mail-Adresse (die E-Mail-Adressen)", uk: "адреса електронної пошти", klas: "8", modul: "B", lektion: 4},
+  {de: "der Internetanschluss", uk: "підключення до інтернету", klas: "8", modul: "B", lektion: 4},
+  {de: "der Bildschirm (die Bildschirme)", uk: "екран, монітор", klas: "8", modul: "B", lektion: 4},
+  {de: "die Tastatur (die Tastaturen)", uk: "клавіатура", klas: "8", modul: "B", lektion: 4},
+  {de: "die Datei (die Dateien) (als Anhang)", uk: "файл (у вкладенні до e-mail)", klas: "8", modul: "B", lektion: 4},
+  {de: "im Briefwechsel stehen (mit +Dat.)", uk: "листуватися (з кимось)", klas: "8", modul: "B", lektion: 4}
 ];
