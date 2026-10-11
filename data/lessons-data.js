@@ -709,5 +709,16 @@ const LESSONS = [
     nove: true,
     gram: ["adjektivdeklination", "konjunktionen-position-null"],
     dz: "1) Mach eine Mini-Umfrage: Frag zwei Personen (Familie oder Freunde) „Was verstehst du unter Mode?“ und notiere ihre Antworten mit den Sätzen aus Üb. 1 (z. B. „Meine Mutter meint, Mode ist ein Teil der Kultur.“). 2) Gestalte eine Seite „Mein Lieblingsoutfit“: Zeichne dein Lieblingsoutfit oder klebe ein Foto ein und beschrifte mindestens 6 Sachen – je zwei Kleidungsstücke, Accessoires und Schuhe – mit Artikel und Adjektiv (z. B. der blaue Kapuzenpulli, die silberne Kette, die weißen Turnschuhe). Schreib darunter 4 Sätze mit richtigen Adjektivendungen: einen Satz im Nominativ („Mein … ist …“), zwei Sätze mit „Ich trage …“ (Akkusativ) und einen Satz mit „mit“ (Dativ, z. B. „Mit meinem roten Schal …“). Nächstes Mal machen wir eine kleine Modenschau in der Klasse."
+  },
+  {
+    klas: "9",
+    modul: "B",
+    lektion: 2,
+    nazva: "Was trägt die Jugend von heute?",
+    opys: "Молодіжна мода: описуємо образи п'ятьох підлітків (закінчення прикметників), вирази in sein / out sein / ein No-Go sein / der Mode folgen / aus der Mode kommen з аудіоконтролем, діалоги «Ist / Sind … heute in?» і текст-опитування про те, що носить німецька молодь (Richtig/Falsch, in чи No-Go).",
+    file: "klas-9/modul-b/lektion-2.html",
+    nove: true,
+    gram: ["adjektivdeklination", "fragen", "perfekt-plusquamperfekt"],
+    dz: "Gestalte dein persönliches „Mode-Barometer“ (auf Papier oder digital): Zeichne ein großes Thermometer. Oben – 4 Sachen, die für dich total in sind, unten – 4 Sachen, die für dich out oder ein No-Go sind. Schreib jede Sache mit Adjektiv (z. B. lockere Jeans, weiße Turnschuhe, ein karierter Sakko). Schreib daneben 5 Sätze mit verschiedenen Ausdrücken aus der Stunde: große Mode sein, in sein, out sein, ein No-Go sein, der Mode folgen. Ein Satz steht im Perfekt mit „aus der Mode kommen“ (z. B. „Pelzmäntel sind aus der Mode gekommen.“). Schreib am Ende eine Frage an die Klasse: „Was meint ihr: Ist / Sind … heute in?“ Nächstes Mal vergleichen wir eure Barometer und stellen eure Fragen."
   }
 ];

@@ -788,5 +788,17 @@ const GLOSSARY = [
   {de: "der Gürtel (die Gürtel)", uk: "пасок", klas: "9", modul: "B", lektion: 1},
   {de: "die Krawatte (die Krawatten)", uk: "краватка", klas: "9", modul: "B", lektion: 1},
   {de: "die Ohrringe (Pl.)", uk: "сережки", klas: "9", modul: "B", lektion: 1},
-  {de: "die Turnschuhe (Pl.)", uk: "кросівки", klas: "9", modul: "B", lektion: 1}
+  {de: "die Turnschuhe (Pl.)", uk: "кросівки", klas: "9", modul: "B", lektion: 1},
+  {de: "große Mode sein", uk: "бути дуже модним, у великій моді", klas: "9", modul: "B", lektion: 2},
+  {de: "in sein (= in Mode sein)", uk: "бути в моді", klas: "9", modul: "B", lektion: 2},
+  {de: "out sein", uk: "бути не в моді, вийти з моди", klas: "9", modul: "B", lektion: 2},
+  {de: "ein No-Go sein", uk: "бути абсолютно неприйнятним («так не можна»)", klas: "9", modul: "B", lektion: 2},
+  {de: "der Mode folgen (+Dat.)", uk: "стежити за модою, слідувати моді", klas: "9", modul: "B", lektion: 2},
+  {de: "aus der Mode kommen (ist aus der Mode gekommen)", uk: "виходити з моди (вийшов з моди)", klas: "9", modul: "B", lektion: 2},
+  {de: "die Oversize-Mode", uk: "оверсайз — мода на навмисно великий, вільний одяг", klas: "9", modul: "B", lektion: 2},
+  {de: "die Jeanskleidung", uk: "джинсовий одяг", klas: "9", modul: "B", lektion: 2},
+  {de: "der Overall (die Overalls)", uk: "комбінезон", klas: "9", modul: "B", lektion: 2},
+  {de: "die Kopfhörer (Pl.)", uk: "навушники", klas: "9", modul: "B", lektion: 2},
+  {de: "bequem", uk: "зручний", klas: "9", modul: "B", lektion: 2},
+  {de: "kariert", uk: "картатий, у клітинку", klas: "9", modul: "B", lektion: 2}
 ];
