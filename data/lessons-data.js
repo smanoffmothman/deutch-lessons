@@ -632,5 +632,16 @@ const LESSONS = [
     nove: true,
     gram: ["deklination-nomen", "wechselpraepositionen"],
     dz: "1) Zeichne einen gedeckten Tisch für dich und eine Person aus deiner Familie (z. B. für das Frühstück oder das Abendbrot) und beschrifte mindestens 10 Dinge mit Artikel (z. B. der Teller, die Gabel, die Untertasse, der Brotkorb). Mindestens vier Wörter sind Komposita – markiere bei ihnen das Grundwort farbig und schreib seinen Artikel dazu (z. B. Tee|kanne → die Kanne → die Teekanne). 2) Schreib unter das Bild 4 Sätze: Wo liegt oder steht was? (z. B. „Die Gabel liegt links vom Teller.“, „Das Glas steht über dem Messer.“) 3) Verschlüssle drei Wörter vom Tisch ohne Vokale wie in Üb. 3 (z. B. Slzstrr = der Salzstreuer) – nächstes Mal lösen die anderen deine Rätsel."
+  },
+  {
+    klas: "7",
+    modul: "B",
+    lektion: 8,
+    nazva: "Die Kunst, den Tisch zu decken",
+    opys: "Посуд і прибори в множині (das Glas → die Gläser, die Tasse → die Tassen) з аудіоконтролем, аудіювання «Was steht auf dem Tisch?» з картинками, діалоги «Wo finde ich …?» з einen / eine / ein в Akkusativ і liegen / stehen.",
+    file: "klas-7/modul-b/lektion-8.html",
+    nove: true,
+    gram: ["deklination-nomen", "legen-liegen", "wechselpraepositionen"],
+    dz: "1) Küchen-Rallye: Frag ein Familienmitglied nach fünf Dingen in eurer Küche – wie in Üb. 3 (z. B. „Wo finde ich einen Teller?“ – „Einen Teller findest du im Küchenschrank.“). Schreib die fünf Mini-Dialoge auf. Benutze einen / eine / ein richtig und in den Antworten mindestens zweimal „liegt / liegen“ und zweimal „steht / stehen“. 2) Zähl zu Hause: Wie viele Tassen, Teller, Gläser, Gabeln, Löffel und Messer hat deine Familie? Schreib 6 Sätze mit Pluralformen (z. B. „Wir haben zwölf Gläser.“). Nächstes Mal spielen wir „Wer hat die meisten Tassen?“."
   }
 ];

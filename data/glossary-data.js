@@ -704,5 +704,17 @@ const GLOSSARY = [
   {de: "die Teekanne (die Teekannen)", uk: "заварник, чайник для заварювання", klas: "7", modul: "B", lektion: 7},
   {de: "die Zuckerdose (die Zuckerdosen)", uk: "цукорниця", klas: "7", modul: "B", lektion: 7},
   {de: "der Salzstreuer (die Salzstreuer)", uk: "сільничка", klas: "7", modul: "B", lektion: 7},
-  {de: "das Besteck", uk: "столові прибори (ніж, виделка, ложка)", klas: "7", modul: "B", lektion: 7}
+  {de: "das Besteck", uk: "столові прибори (ніж, виделка, ложка)", klas: "7", modul: "B", lektion: 7},
+  {de: "der Küchenschrank (die Küchenschränke)", uk: "кухонна шафа", klas: "7", modul: "B", lektion: 8},
+  {de: "die Schublade (die Schubladen)", uk: "шухляда", klas: "7", modul: "B", lektion: 8},
+  {de: "der Suppenteller (die Suppenteller)", uk: "глибока тарілка (для супу)", klas: "7", modul: "B", lektion: 8},
+  {de: "die Kuchengabel (die Kuchengabeln)", uk: "десертна виделка (для торта)", klas: "7", modul: "B", lektion: 8},
+  {de: "die Suppe (die Suppen)", uk: "суп", klas: "7", modul: "B", lektion: 8},
+  {de: "der Saft (die Säfte)", uk: "сік", klas: "7", modul: "B", lektion: 8},
+  {de: "der Salat (die Salate)", uk: "салат", klas: "7", modul: "B", lektion: 8},
+  {de: "der Kuchen (die Kuchen)", uk: "торт, пиріг", klas: "7", modul: "B", lektion: 8},
+  {de: "das Fleisch", uk: "м'ясо", klas: "7", modul: "B", lektion: 8},
+  {de: "die Kartoffel (die Kartoffeln)", uk: "картопля (картоплина)", klas: "7", modul: "B", lektion: 8},
+  {de: "stehen (Das Glas steht auf dem Tisch.)", uk: "стояти (про тарілки, склянки, чашки)", klas: "7", modul: "B", lektion: 8},
+  {de: "brauchen (Was braucht ihr?)", uk: "потребувати, бути потрібним", klas: "7", modul: "B", lektion: 8}
 ];
