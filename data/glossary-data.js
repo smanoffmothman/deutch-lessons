@@ -800,5 +800,17 @@ const GLOSSARY = [
   {de: "der Overall (die Overalls)", uk: "комбінезон", klas: "9", modul: "B", lektion: 2},
   {de: "die Kopfhörer (Pl.)", uk: "навушники", klas: "9", modul: "B", lektion: 2},
   {de: "bequem", uk: "зручний", klas: "9", modul: "B", lektion: 2},
-  {de: "kariert", uk: "картатий, у клітинку", klas: "9", modul: "B", lektion: 2}
+  {de: "kariert", uk: "картатий, у клітинку", klas: "9", modul: "B", lektion: 2},
+  {de: "der Stil (seinem eigenen Stil treu bleiben)", uk: "стиль (залишатися вірним своєму стилю)", klas: "9", modul: "B", lektion: 3},
+  {de: "gestylt", uk: "стильно вбраний, «при параді»", klas: "9", modul: "B", lektion: 3},
+  {de: "jemandem stehen (Sportkleidung steht mir am besten.)", uk: "личити, пасувати (про одяг, колір)", klas: "9", modul: "B", lektion: 3},
+  {de: "eng", uk: "вузький, тісний (про одяг)", klas: "9", modul: "B", lektion: 3},
+  {de: "weit (weite Hosen)", uk: "широкий, вільний (про одяг)", klas: "9", modul: "B", lektion: 3},
+  {de: "auffällig", uk: "помітний, яскравий, що впадає в око", klas: "9", modul: "B", lektion: 3},
+  {de: "gemustert", uk: "візерунчастий, з візерунком", klas: "9", modul: "B", lektion: 3},
+  {de: "der Pastellton (die Pastelltöne)", uk: "пастельний відтінок", klas: "9", modul: "B", lektion: 3},
+  {de: "sich schminken", uk: "фарбуватися, робити макіяж", klas: "9", modul: "B", lektion: 3},
+  {de: "sich kleiden", uk: "одягатися (певним чином)", klas: "9", modul: "B", lektion: 3},
+  {de: "die Persönlichkeit", uk: "особистість", klas: "9", modul: "B", lektion: 3},
+  {de: "die Steigerung (der Adjektive)", uk: "ступені порівняння (прикметників)", klas: "9", modul: "B", lektion: 3}
 ];

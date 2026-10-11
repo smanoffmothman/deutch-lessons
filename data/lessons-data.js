@@ -720,5 +720,16 @@ const LESSONS = [
     nove: true,
     gram: ["adjektivdeklination", "fragen", "perfekt-plusquamperfekt"],
     dz: "Gestalte dein persönliches „Mode-Barometer“ (auf Papier oder digital): Zeichne ein großes Thermometer. Oben – 4 Sachen, die für dich total in sind, unten – 4 Sachen, die für dich out oder ein No-Go sind. Schreib jede Sache mit Adjektiv (z. B. lockere Jeans, weiße Turnschuhe, ein karierter Sakko). Schreib daneben 5 Sätze mit verschiedenen Ausdrücken aus der Stunde: große Mode sein, in sein, out sein, ein No-Go sein, der Mode folgen. Ein Satz steht im Perfekt mit „aus der Mode kommen“ (z. B. „Pelzmäntel sind aus der Mode gekommen.“). Schreib am Ende eine Frage an die Klasse: „Was meint ihr: Ist / Sind … heute in?“ Nächstes Mal vergleichen wir eure Barometer und stellen eure Fragen."
+  },
+  {
+    klas: "9",
+    modul: "B",
+    lektion: 3,
+    nazva: "Modetrends: Was trägst du wann?",
+    opys: "Модні тенденції: що вдягаємо в різних ситуаціях (wenn-речення, закінчення прикметників), форумні дописи підлітків про одяг і стиль, ступені порівняння (gut – besser – am besten, gern – lieber – am liebsten, als / wie) і гра «Wessen Karte?».",
+    file: "klas-9/modul-b/lektion-3.html",
+    nove: true,
+    gram: ["komparation", "adjektivdeklination", "temporalsaetze"],
+    dz: "1) Fehlersuche: In Lenas Forumsbeitrag sind 7 Fehler mit Komparativ, Superlativ oder als / wie. Finde sie und schreib den Text richtig ins Heft: „Hallo! Ich heiße Lena und bin 15. Mode finde ich wichtig, aber Bequemlichkeit ist mir noch wichtiger. Am gernsten trage ich weite Jeans und Kapuzenpullis. Hoodies finde ich viel gemütlicher wie Hemden. Meine Schwester ist zwei Jahre junger als ich, aber sie ist viel mehr modisch. Sie sagt immer: ‚Schwarz steht dir am gutesten!‘ Ich finde helle Farben aber schöner. Turnschuhe gefallen mir mehr gut als elegante Schuhe, und am praktischtesten finde ich meinen Rucksack.“ 2) Was trägst du wann? Schreib 5 Sätze mit „wenn“ über deine Kleidung in verschiedenen Situationen (z. B. „Wenn ich ins Konzert gehe, trage ich mein schwarzes T-Shirt.“). In jedem Satz steht ein Adjektiv mit richtiger Endung, und in mindestens zwei Sätzen vergleichst du (z. B. „…, denn sie sind bequemer als Hemden.“ oder „Am liebsten trage ich …“). Nächstes Mal machen wir eine Klassenumfrage: Wer trägt was am liebsten?"
   }
 ];
