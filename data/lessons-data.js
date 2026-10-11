@@ -621,5 +621,16 @@ const LESSONS = [
     nove: true,
     gram: ["verben-praepositionalobjekt", "personalpronomen", "adjektivdeklination", "komparation", "tempusformen", "starke-verben", "temporalsaetze", "konditionalsaetze", "kausalsaetze", "konjunktionen-position-null"],
     dz: "Mein Fehler-Detektiv-Heft: 1) Schreib nach der Kontrollarbeit aus dem Gedächtnis drei Aufgaben auf, bei denen du unsicher warst (z. B. Adjektivendungen nach „ein“, als / wenn / wann, Präteritum, Verben mit Präpositionen). Schlag zu jeder Aufgabe die Regel nach (Heft, Lehrbuch oder Grammatik-Seite) und schreib sie in einem Satz auf. 2) Schreib zu jeder Regel zwei eigene, richtige Beispielsätze über deine Familie oder deine Freunde. 3) Mach ein Wortnetz „Modul A: Ich, meine Familie, meine Freunde“ mit mindestens 15 Wörtern aus fünf Bereichen: Familie, Beziehungen, Charakter, Freizeit, Lebenslauf – Nomen immer mit Artikel. Nächstes Mal besprechen wir die typischen Fehler der Kontrollarbeit."
+  },
+  {
+    klas: "7",
+    modul: "B",
+    lektion: 7,
+    nazva: "Wir decken den Tisch",
+    opys: "Посуд і столові прибори (der Teller, die Gabel, die Untertasse, der Salzstreuer…): складаємо складні іменники й перевіряємо за аудіо, розгадуємо слова-шифровки, визначаємо артикль композита за останнім словом і накриваємо стіл (Die Gabel liegt links vom Teller).",
+    file: "klas-7/modul-b/lektion-7.html",
+    nove: true,
+    gram: ["deklination-nomen", "wechselpraepositionen"],
+    dz: "1) Zeichne einen gedeckten Tisch für dich und eine Person aus deiner Familie (z. B. für das Frühstück oder das Abendbrot) und beschrifte mindestens 10 Dinge mit Artikel (z. B. der Teller, die Gabel, die Untertasse, der Brotkorb). Mindestens vier Wörter sind Komposita – markiere bei ihnen das Grundwort farbig und schreib seinen Artikel dazu (z. B. Tee|kanne → die Kanne → die Teekanne). 2) Schreib unter das Bild 4 Sätze: Wo liegt oder steht was? (z. B. „Die Gabel liegt links vom Teller.“, „Das Glas steht über dem Messer.“) 3) Verschlüssle drei Wörter vom Tisch ohne Vokale wie in Üb. 3 (z. B. Slzstrr = der Salzstreuer) – nächstes Mal lösen die anderen deine Rätsel."
   }
 ];

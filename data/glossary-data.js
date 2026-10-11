@@ -692,5 +692,17 @@ const GLOSSARY = [
   {de: "die Atmosphäre", uk: "атмосфера (настрій, клімат у групі людей)", klas: "9", modul: "A", lektion: 18},
   {de: "der Zusammenhalt", uk: "згуртованість, єдність", klas: "9", modul: "A", lektion: 18},
   {de: "die Geduld (Geduld haben)", uk: "терпіння (мати терпіння)", klas: "9", modul: "A", lektion: 18},
-  {de: "hundertprozentig", uk: "на всі сто відсотків, повністю", klas: "9", modul: "A", lektion: 18}
+  {de: "hundertprozentig", uk: "на всі сто відсотків, повністю", klas: "9", modul: "A", lektion: 18},
+  {de: "die Gabel (die Gabeln)", uk: "виделка", klas: "7", modul: "B", lektion: 7},
+  {de: "der Teller (die Teller)", uk: "тарілка", klas: "7", modul: "B", lektion: 7},
+  {de: "die Tasse (die Tassen)", uk: "чашка", klas: "7", modul: "B", lektion: 7},
+  {de: "die Untertasse (die Untertassen)", uk: "блюдце", klas: "7", modul: "B", lektion: 7},
+  {de: "der Teelöffel (die Teelöffel)", uk: "чайна ложка", klas: "7", modul: "B", lektion: 7},
+  {de: "die Serviette (die Servietten)", uk: "серветка", klas: "7", modul: "B", lektion: 7},
+  {de: "die Tischdecke (die Tischdecken)", uk: "скатертина", klas: "7", modul: "B", lektion: 7},
+  {de: "der Brotkorb (die Brotkörbe)", uk: "хлібниця (кошик для хліба)", klas: "7", modul: "B", lektion: 7},
+  {de: "die Teekanne (die Teekannen)", uk: "заварник, чайник для заварювання", klas: "7", modul: "B", lektion: 7},
+  {de: "die Zuckerdose (die Zuckerdosen)", uk: "цукорниця", klas: "7", modul: "B", lektion: 7},
+  {de: "der Salzstreuer (die Salzstreuer)", uk: "сільничка", klas: "7", modul: "B", lektion: 7},
+  {de: "das Besteck", uk: "столові прибори (ніж, виделка, ложка)", klas: "7", modul: "B", lektion: 7}
 ];
