@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mein Finger ist mein Schlüssel · Lesen · Deutsch mit uns</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Technik</span>
+        <h1>Mein Finger ist mein Schlüssel</h1>
+        <p class="sub">Телефон розблоковується від погляду, двері відчиняються від дотику пальця. Як комп'ютер розуміє, що це саме ти?</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Gute Merkmale</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Deine Meinung</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Wer bist du?</h2>
+      <div class="card">
+        <p>Wie entsperrst du dein Handy? Mit einer PIN, mit dem Finger oder mit dem Gesicht? Was glaubst du: Woran erkennt ein Computer einen Menschen?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай: як ти розблоковуєш свій телефон? Як гадаєш, за якими ознаками комп'ютер може точно впізнати людину — а за якими ні?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Ein kurzer Blick aufs Display, und schon ist das Handy <span class="gl" data-key data-uk="розблоковувати" data-lemma="entsperren">entsperrt</span>. Ein Finger auf den Scanner, und die Tür geht auf. Hinter solchen kleinen Wundern <span class="gl" data-uk="стояти (за чимось), бути причиною" data-lemma="hinter etwas stecken">steckt</span> die Biometrie.</p>
+
+          <p>Das Wort kommt aus dem Griechischen: „bios“ bedeutet Leben, „metron“ bedeutet Maß. Bei der Biometrie werden also Menschen <span class="gl" data-uk="обмірювати" data-lemma="vermessen (vermaß, hat vermessen)">vermessen</span>. Das Ziel: Man will einen Menschen sicher von allen anderen <span class="gl" data-uk="розрізняти" data-lemma="unterscheiden (unterschied, hat unterschieden)">unterscheiden</span>. Das funktioniert so: Ein Sensor misst bestimmte <span class="gl" data-key data-uk="ознака, риса" data-lemma="das Merkmal, -e">Merkmale</span> einer Person. Danach <span class="gl" data-uk="порівнювати" data-lemma="vergleichen (verglich, hat verglichen)">vergleicht</span> ein Computer diese Daten mit Daten, die er schon <span class="gl" data-key data-uk="зберігати (дані)" data-lemma="speichern">gespeichert</span> hat. Passen sie zusammen, weiß das Programm genau, wer vor ihm steht.</p>
+
+          <h3>Was einen Menschen einzigartig macht</h3>
+
+          <p>Aber nicht jedes Merkmal ist dafür <span class="gl" data-uk="придатний" data-lemma="geeignet">geeignet</span>. Braune Haare haben sehr viele Menschen, und 1,80 Meter groß sind auch viele. Man braucht also Merkmale, die bei jedem Menschen anders sind und sich im Laufe des Lebens nicht <span class="gl" data-uk="змінюватися" data-lemma="sich verändern">verändern</span>.</p>
+
+          <p>Das bekannteste Beispiel ist der <span class="gl" data-key data-uk="відбиток пальця" data-lemma="der Fingerabdruck, -ü-e">Fingerabdruck</span>. Sieh dir einmal deine <span class="gl" data-uk="подушечка пальця" data-lemma="die Fingerkuppe, -n">Fingerkuppe</span> genau an: Feine Linien bilden dort ein <span class="gl" data-uk="візерунок" data-lemma="das Muster, -">Muster</span>, und dieses Muster ist sogar bei <span class="gl" data-uk="близнюк" data-lemma="der Zwilling, -e">Zwillingen</span> verschieden. Auch die Iris – der farbige Ring um die Pupille – sieht bei jedem Menschen ein bisschen anders aus. Und dann ist da noch das Gesicht. Ein Computer kann zum Beispiel den <span class="gl" data-uk="відстань" data-lemma="der Abstand, -ä-e">Abstand</span> zwischen den Augen oder zwischen Nase und Mund genau <span class="gl" data-uk="обчислювати" data-lemma="berechnen">berechnen</span>.</p>
+
+          <h3>Biometrie im Alltag</h3>
+
+          <p>Viele Smartphones kann man heute mit dem Fingerabdruck oder mit dem Gesicht entsperren. Bei manchen Türen braucht man keinen Schlüssel mehr: Man legt den Finger auf einen Scanner, und wenn der Abdruck gespeichert ist, öffnet sich das <span class="gl" data-uk="замок" data-note="тут: дверний замок" data-lemma="das Schloss, -ö-er">Schloss</span>. Auch Firmen schützen sich so vor <span class="gl" data-uk="стороння особа" data-lemma="der/die Unbefugte, -n">Unbefugten</span>. Der Grund: Eine PIN oder ein Passwort kann man stehlen oder <span class="gl" data-uk="зламати" data-note="розм., про пароль чи код" data-lemma="knacken">knacken</span>. Bei biometrischen Merkmalen ist das viel schwieriger.</p>
+
+          <p>Auch moderne <span class="gl" data-uk="закордонний паспорт" data-lemma="der Reisepass, -ä-e">Reisepässe</span> sind biometrisch. Sie haben einen Chip, und darin sind Fingerabdrücke und ein spezielles Foto gespeichert. So soll niemand mit einem falschen Pass über die Grenze kommen. An manchen Flughäfen und Bahnhöfen gibt es außerdem eine <span class="gl" data-key data-uk="розпізнавання облич" data-lemma="die Gesichtserkennung">Gesichtserkennung</span>: Kameras filmen die Menschen, und ein Computer vergleicht ihre Gesichter mit Fotos von Personen, nach denen die Polizei sucht. Die Polizei arbeitet auch schon lange mit Fingerabdrücken. So hat sie viele <span class="gl" data-uk="злочинець, правопорушник" data-lemma="der Täter, -">Täter</span> gefunden – aber auch viele Unschuldige <span class="gl" data-uk="виправдовувати, знімати підозру" data-lemma="entlasten">entlastet</span>.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>In Deutschland hat der Reisepass seit 2005 einen Chip, seit 2007 sind darin auch zwei Fingerabdrücke gespeichert. Seit August 2021 ist das auch beim <span class="gl" data-uk="посвідчення особи (ID-картка)" data-lemma="der Personalausweis, -e">Personalausweis</span> <span class="gl" data-uk="обов'язок" data-lemma="die Pflicht, -en">Pflicht</span>. Und einen Personalausweis oder einen Reisepass müssen alle Deutschen ab 16 Jahren haben.</p>
+          </aside>
+
+          <p>Hundertprozentig sicher ist aber auch die Biometrie nicht. Und manchmal macht der Sensor einfach einen <span class="gl" data-uk="помилка вимірювання" data-lemma="der Messfehler, -">Messfehler</span>: Man fährt zehnmal mit dem Finger über das Display – und das Handy erkennt einen trotzdem nicht.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Gutes Merkmal oder nicht?</h2>
+      <p class="lead">Які ознаки годяться для біометрії (вони в кожної людини інші й не змінюються), а які — ні? Підказка — в абзацах 2 і 3.</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>Merkmale</span><span>Fingerabdruck</span><span>Passwort</span><span>gespeichert</span><span>Gesichtserkennung</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> Ein Sensor misst bestimmte <input type="text" class="blank-input inline" data-ans="Merkmale"> eines Menschen.</div>
+          <div class="fill-item"><span class="num">2)</span> Mein Handy entsperre ich mit meinem <input type="text" class="blank-input inline wide" data-ans="Fingerabdruck">.</div>
+          <div class="fill-item"><span class="num">3)</span> Ein <input type="text" class="blank-input inline" data-ans="Passwort"> kann man stehlen oder knacken.</div>
+          <div class="fill-item"><span class="num">4)</span> Im Chip des Passes sind ein Foto und Fingerabdrücke <input type="text" class="blank-input inline" data-ans="gespeichert">.</div>
+          <div class="fill-item"><span class="num">5)</span> Kameras filmen Menschen, und ein Computer erkennt ihre Gesichter. Das nennt man <input type="text" class="blank-input inline wide" data-ans="Gesichtserkennung">.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Deine Meinung – und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (4–6 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Wie entsperrst du dein Handy: mit PIN, mit dem Finger oder mit dem Gesicht? Warum? Wo benutzt du oder deine Familie sonst noch Biometrie (zum Beispiel beim Pass)?</label>
+          <textarea id="ub5-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Kameras mit Gesichtserkennung am Bahnhof – findest du das gut oder nicht? Nenne einen Vorteil und einen Nachteil.</label>
+          <textarea id="ub5-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Ich entsperre mein Handy mit …, weil …, Ein Vorteil ist, dass …, Ein Nachteil ist, dass …, Ich finde es (nicht) gut, dass …, Bei uns in der Ukraine …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Biometrie erkennt Menschen an Merkmalen, die bei jedem anders sind: Fingerabdruck, Iris, Gesicht. In Deutschland sind Fingerabdrücke im Reisepass und seit 2021 auch im Personalausweis gespeichert. Einen Ausweis oder Pass müssen alle Deutschen ab 16 Jahren haben.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Біометрія впізнає людей за ознаками, які в кожного свої: відбиток пальця, райдужка ока, обличчя. У Німеччині відбитки пальців зберігаються в закордонному паспорті, а з 2021 року — і в ID-картці (Personalausweis). Мати посвідчення особи чи паспорт зобов'язані всі громадяни Німеччини, яким виповнилося 16.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "biometrie-im-alltag";
+
+  // Üb. 1а
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Wie Computer Menschen an Körpermerkmalen erkennen und wo man das benutzt",
+            "Warum Smartphones heute so viele persönliche Daten speichern",
+            "Wie man für sein Handy ein wirklich sicheres Passwort findet"],
+     correct: "Wie Computer Menschen an Körpermerkmalen erkennen und wo man das benutzt"}
+  ]);
+  // Üb. 1б
+  buildMatch('ub1h', [
+    ["Finger, Auge, Gesicht", "Absatz 3"],
+    ["Was das Wort bedeutet und wie es funktioniert", "Absatz 1"],
+    ["Nicht ganz ohne Fehler", "Absatz 6"],
+    ["Haarfarbe? Nicht genug!", "Absatz 2"],
+    ["Pass, Kamera, Polizei", "Absatz 5"],
+    ["Ein Finger statt Schlüssel und Passwort", "Absatz 4"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5", "Absatz 6"], lead: true});
+
+  // Üb. 2
+  buildRF('ub2-rf', [
+    {s: "Das Wort „Biometrie“ kommt aus dem Lateinischen.", a: "f"},
+    {s: "Auch Zwillinge haben verschiedene Fingerabdrücke.", a: "r"},
+    {s: "Die Körpergröße ist ein gutes biometrisches Merkmal.", a: "f"},
+    {s: "Die meisten Menschen in Deutschland entsperren ihr Handy mit dem Gesicht.", a: "n"},
+    {s: "Ein Passwort kann man leichter stehlen als einen Fingerabdruck.", a: "r"},
+    {s: "Im Chip eines modernen Reisepasses ist ein Foto gespeichert.", a: "r"},
+    {s: "Biometrie funktioniert immer ohne Fehler.", a: "f"}
+  ]);
+
+  // Üb. 3
+  buildSort('ub3-sort', {
+    buckets: ["Gut für Biometrie", "Nicht gut für Biometrie"],
+    items: [
+      {t: "der Fingerabdruck", b: "Gut für Biometrie"},
+      {t: "die Haarfarbe", b: "Nicht gut für Biometrie"},
+      {t: "die Iris", b: "Gut für Biometrie"},
+      {t: "die Körpergröße", b: "Nicht gut für Biometrie"},
+      {t: "der Abstand zwischen den Augen", b: "Gut für Biometrie"},
+      {t: "der Abstand zwischen Nase und Mund", b: "Gut für Biometrie"}
+    ]
+  });
+
+  // Üb. 4а
+  buildMatch('ub4', [
+    ["vergleichen", "порівнювати"],
+    ["speichern", "зберігати (дані)"],
+    ["der Abstand", "відстань"],
+    ["der Zwilling", "близнюк"],
+    ["der Täter", "злочинець, правопорушник"],
+    ["geeignet", "придатний"]
+  ]);
+  // Üb. 4б
+  wireBlanks('ub4b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['👆','👁️','🔐','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

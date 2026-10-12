@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nachbarn in der Nacht · Lesen · Deutsch mit uns</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Natur</span>
+        <h1>Nachbarn in der Nacht</h1>
+        <p class="sub">Хто шарудить уночі на горищі і чому зранці не заводиться машина? Знайомся з нічними сусідами німців.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Welches Tier?</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Wer ist nachts unterwegs?</h2>
+      <div class="card">
+        <p>Welche Tiere sind in der Nacht aktiv? Hast du schon einmal einen Igel oder einen Fuchs gesehen? Wo war das?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай: які тварини живуть поруч із людьми в місті чи в селі, але виходять лише вночі? Чи бачив(-ла) ти колись їжака або лисицю?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Sie leben in unseren Gärten, in Parks und manchmal sogar unter unserem Dach. Trotzdem sehen wir sie nur selten. Denn wenn wir ins Bett gehen, fängt ihr Tag erst an.</p>
+
+          <h3>Der Igel</h3>
+
+          <p>Ein Igel ist klein, aber ganz schön laut. Wenn er nachts <span class="gl" data-uk="равлик" data-lemma="die Schnecke, -n">Schnecken</span> und <span class="gl" data-uk="черв'як" data-lemma="der Wurm, -ü-er">Würmer</span> frisst, <span class="gl" data-uk="плямкати" data-lemma="schmatzen">schmatzt</span> und <span class="gl" data-uk="рохкати" data-lemma="grunzen">grunzt</span> er. Und wenn ein anderer Igel ihm das <span class="gl" data-uk="корм" data-lemma="das Futter">Futter</span> wegnehmen will, <span class="gl" data-uk="шипіти" data-lemma="fauchen">faucht</span> er sogar. Vor anderen Tieren hat der Igel wenig Angst. Bei Gefahr <span class="gl" data-uk="згортатися (клубком)" data-lemma="sich zusammenrollen">rollt</span> er sich zu einer Kugel zusammen, und seine <span class="gl" data-key data-uk="голка, колючка" data-lemma="der Stachel, -n">Stacheln</span> <span class="gl" data-uk="колотися" data-lemma="stechen (stach, hat gestochen)">stechen</span>.</p>
+
+          <p>Für Igel sind Autos sehr gefährlich. Igel sehen schlecht, aber sie hören gut. Beim Laufen sind ihre Stacheln aber so laut, dass sie nichts anderes hören. Deshalb bleiben sie auf der Straße oft stehen und hören, ob ein Auto kommt. Diese kleine Pause ist für viele Igel <span class="gl" data-uk="смертельний" data-lemma="tödlich">tödlich</span>.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Im Winter findet ein Igel kaum Futter. Darum hält er <span class="gl" data-uk="зимова сплячка" data-lemma="der Winterschlaf">Winterschlaf</span> – ungefähr von November bis März. In Deutschland <span class="gl" data-uk="бути під охороною природи" data-lemma="unter Naturschutz stehen">steht</span> der Igel unter Naturschutz. Man darf ihn nicht einfach fangen und mit nach Hause nehmen.</p>
+          </aside>
+
+          <h3>Der Fuchs</h3>
+
+          <p>Rotfüchse fühlen sich im Wald wohl, aber auch mitten in der Stadt. Warum? Sie fressen fast alles: Essensreste aus dem <span class="gl" data-uk="сміття" data-lemma="der Müll">Müll</span>, <span class="gl" data-uk="ягода" data-lemma="die Beere, -n">Beeren</span>, tote Tiere, Mäuse, <span class="gl" data-uk="кролик" data-lemma="das Kaninchen, -">Kaninchen</span>, Würmer und sogar Fische. Ihr Futter suchen sie in der <span class="gl" data-key data-uk="сутінки" data-lemma="die Dämmerung">Dämmerung</span> und in der Nacht. Dabei helfen ihnen ihre gute Nase und ihre Ohren. Die Ohren kann ein Fuchs fast ganz im Kreis drehen. Den Tag verbringt er in seinem <span class="gl" data-uk="нора" data-note="тут: нора лисиці" data-lemma="der Bau, -e">Bau</span> unter der Erde.</p>
+
+          <h3>Der Steinmarder</h3>
+
+          <p>Nachts <span class="gl" data-uk="шелестіти, шарудіти" data-lemma="rascheln">raschelt</span> etwas auf dem <span class="gl" data-key data-uk="горище" data-lemma="der Dachboden, -ö-">Dachboden</span>? Am Morgen startet das Auto nicht? Dann war vielleicht ein <span class="gl" data-key data-uk="кам'яна куниця" data-lemma="der Steinmarder, -">Steinmarder</span> da. Eigentlich lebt dieses kleine, schlanke <span class="gl" data-key data-uk="хижак, хижий звір" data-lemma="das Raubtier, -e">Raubtier</span> am Waldrand, zwischen Steinen und Felsen. Aber es wohnt auch gern in der Nähe von Menschen.</p>
+
+          <p>Nachts sind Marder viel unterwegs, und oft <span class="gl" data-uk="ховатися" data-lemma="sich verstecken">verstecken</span> sie sich im <span class="gl" data-uk="моторний відсік" data-lemma="der Motorraum, -ä-e">Motorraum</span> von Autos. Riecht ein Marder dort einen anderen Marder, wird er <span class="gl" data-uk="розлючений" data-lemma="wütend">wütend</span>. Dann <span class="gl" data-uk="перегризати" data-lemma="durchbeißen (biss durch, hat durchgebissen)">beißt</span> er die Kabel durch. Die Autobesitzer ärgern sich natürlich sehr. Steinmarder leben allein, und ihr <span class="gl" data-uk="територія (тварини)" data-lemma="das Revier, -e">Revier</span> ist ihnen sehr wichtig.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">Прочитай питання й обери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Welches Tier ist das?</h2>
+      <p class="lead">Про яку тварину йдеться? Розклади картки по кошиках.</p>
+      <div class="card" id="ub2-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub3-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки.</p>
+      <div class="card">
+        <div class="wordbank"><span>Stacheln</span><span>Dachboden</span><span>Müll</span><span>Dämmerung</span><span>Revier</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> Der Igel hat auf dem Rücken viele <input type="text" class="blank-input inline" data-ans="Stacheln">.</div>
+          <div class="fill-item"><span class="num">2)</span> Ganz oben im Haus, direkt unter dem Dach, ist der <input type="text" class="blank-input inline wide" data-ans="Dachboden">.</div>
+          <div class="fill-item"><span class="num">3)</span> In der Stadt suchen Füchse Essensreste im <input type="text" class="blank-input inline" data-ans="Müll">.</div>
+          <div class="fill-item"><span class="num">4)</span> Am Abend wird es langsam dunkel – das ist die <input type="text" class="blank-input inline wide" data-ans="Dämmerung">.</div>
+          <div class="fill-item"><span class="num">5)</span> Ein Steinmarder will in seinem <input type="text" class="blank-input inline" data-ans="Revier"> keinen anderen Marder sehen.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (3–5 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Welche Tiere siehst du in deiner Stadt oder in deinem Dorf? Wo und wann siehst du sie?</label>
+          <textarea id="ub5-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Welches Tier aus dem Text findest du am interessantesten? Warum?</label>
+          <textarea id="ub5-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Bei uns gibt es …, Ich sehe oft / manchmal / nie …, Am interessantesten finde ich …, weil …, Ich wusste nicht, dass …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Igel, Füchse und Steinmarder leben in Deutschland oft ganz nah bei den Menschen – in Gärten, Parks und Städten. Der Igel steht unter Naturschutz und hält im Winter Winterschlaf. Und wenn das Auto morgens nicht startet, war vielleicht ein Marder da.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Їжаки, лисиці й кам'яні куниці в Німеччині часто живуть зовсім поруч із людьми — у садах, парках і містах. Їжак перебуває під охороною і взимку впадає в сплячку. А якщо зранці машина не заводиться — можливо, вночі там побувала куниця.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "nachttiere-im-garten";
+
+  // Üb. 1
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Um drei Tiere, die nachts in der Nähe von Menschen aktiv sind",
+            "Um drei Tiere, die man im Zoo in der Nacht besuchen kann",
+            "Um drei Haustiere, die nachts gern im Garten spielen"],
+     correct: "Um drei Tiere, die nachts in der Nähe von Menschen aktiv sind"},
+    {q: "Warum sterben viele Igel auf der Straße?",
+     opts: ["Sie bleiben stehen, um zu hören, ob ein Auto kommt",
+            "Sie suchen auf der Straße nach Schnecken und Würmern",
+            "Sie rollen sich vor dem Auto zu einer Kugel zusammen"],
+     correct: "Sie bleiben stehen, um zu hören, ob ein Auto kommt"},
+    {q: "Warum können Füchse auch in der Stadt gut leben?",
+     opts: ["Weil sie fast alles fressen",
+            "Weil die Menschen sie füttern",
+            "Weil es dort keine Autos gibt"],
+     correct: "Weil sie fast alles fressen"}
+  ]);
+
+  // Üb. 2
+  buildSort('ub2-sort', {
+    buckets: ["Igel", "Fuchs", "Steinmarder"],
+    items: [
+      {t: "rollt sich bei Gefahr zusammen", b: "Igel"},
+      {t: "schläft am Tag unter der Erde", b: "Fuchs"},
+      {t: "beißt Kabel durch", b: "Steinmarder"},
+      {t: "sieht schlecht, hört aber gut", b: "Igel"},
+      {t: "kann die Ohren fast im Kreis drehen", b: "Fuchs"},
+      {t: "versteckt sich im Motorraum", b: "Steinmarder"},
+      {t: "hält Winterschlaf", b: "Igel"},
+      {t: "sucht Essensreste im Müll", b: "Fuchs"},
+      {t: "lebt eigentlich am Waldrand", b: "Steinmarder"}
+    ]
+  });
+
+  // Üb. 3
+  buildRF('ub3-rf', [
+    {s: "Igel fressen Schnecken und Würmer.", a: "r"},
+    {s: "Igel sehen in der Nacht sehr gut.", a: "f"},
+    {s: "Füchse leben nur im Wald.", a: "f"},
+    {s: "Ein Fuchs wird bis zu 15 Jahre alt.", a: "n"},
+    {s: "Füchse fressen manchmal auch Fische.", a: "r"},
+    {s: "Steinmarder leben gern mit anderen Mardern zusammen.", a: "f"},
+    {s: "Man darf in Deutschland einen Igel nicht einfach mit nach Hause nehmen.", a: "r"}
+  ]);
+
+  // Üb. 4а
+  buildMatch('ub4', [
+    ["schmatzen", "плямкати"],
+    ["fauchen", "шипіти"],
+    ["rascheln", "шелестіти, шарудіти"],
+    ["sich verstecken", "ховатися"],
+    ["durchbeißen", "перегризати"],
+    ["wütend", "розлючений"]
+  ]);
+  // Üb. 4б
+  wireBlanks('ub4b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🦔','🦊','🌙','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
