@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kürbiszeit! · Lesen · Deutsch mit uns</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Essen &amp; Trinken</span>
+        <h1>Kürbiszeit!</h1>
+        <p class="sub">Жовтень — місяць гарбуза. Скільки його їдять у Німеччині, де він росте — і як спекти гарбузовий пиріг.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Backen</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Orange und rund</h2>
+      <div class="card">
+        <p>Isst du gern Kürbis? Was kann man aus einem Kürbis machen – Suppe, Kuchen, eine Halloween-Laterne?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Пригадай: які страви з гарбуза готують у твоїй родині? Як гадаєш, чому гарбуз став таким популярним саме восени?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Im Oktober ist der <span class="gl" data-key data-uk="гарбуз" data-lemma="der Kürbis, -se">Kürbis</span> überall: in Suppen, in Kuchen, sogar in heißen Getränken. Der Kürbiskuchen kommt eigentlich aus Amerika, aber auch in Deutschland ist er heute sehr beliebt.</p>
+
+          <h3>Kürbis in Zahlen</h3>
+
+          <p>Die Deutschen essen immer mehr Kürbis. Heute isst jeder Mensch in Deutschland <span class="gl" data-uk="в середньому" data-lemma="durchschnittlich">durchschnittlich</span> mehr als ein Kilogramm Kürbis pro Jahr. Vor etwa zehn Jahren waren es nur rund 750 Gramm. Ein wichtiger Grund für den Kürbis-Boom ist Halloween: Das Fest wird in Deutschland immer beliebter.</p>
+
+          <p>Deshalb <span class="gl" data-uk="вирощувати" data-lemma="anbauen (baute an, hat angebaut)">bauen</span> die Bauern auch mehr Kürbisse an. Die <span class="gl" data-key data-uk="площа" data-lemma="die Fläche, -n">Fläche</span> für Kürbisse ist seit 2006 mehr als viermal so groß geworden. Zuletzt waren es etwa 5300 <span class="gl" data-uk="гектар" data-lemma="der Hektar, -e">Hektar</span>. Drei Viertel der deutschen Kürbisse <span class="gl" data-uk="рости" data-lemma="wachsen (wuchs, ist gewachsen)">wachsen</span> in vier Bundesländern: in Bayern, Nordrhein-Westfalen, Rheinland-Pfalz und Baden-Württemberg.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Der Hokkaido-Kürbis ist in Deutschland besonders beliebt. Er ist klein und orange, und man kann ihn mit der <span class="gl" data-uk="шкірка" data-lemma="die Schale, -n">Schale</span> essen. Das spart viel Arbeit in der Küche.</p>
+          </aside>
+
+          <h3>Ein Kuchen mit Kürbis</h3>
+
+          <p>Für einen Kürbiskuchen braucht man unter anderem 300 Gramm Kürbis, zum Beispiel Hokkaido, Eier, Zucker, eine Zitrone, <span class="gl" data-uk="мелений мигдаль" data-lemma="gemahlene Mandeln (Pl.)">gemahlene Mandeln</span> und <span class="gl" data-key data-uk="борошно" data-lemma="das Mehl">Mehl</span>. Zuerst <span class="gl" data-uk="терти (на терці)" data-lemma="reiben (rieb, hat gerieben)">reibt</span> man den Kürbis fein. Dann <span class="gl" data-uk="змішувати" data-lemma="mischen">mischt</span> man alles zu einem <span class="gl" data-key data-uk="тісто" data-lemma="der Teig, -e">Teig</span> und <span class="gl" data-key data-uk="пекти" data-lemma="backen (backte, hat gebacken)">backt</span> ihn etwa 50 Minuten bei 180 Grad. Oben auf den Kuchen kommt eine weiße <span class="gl" data-uk="крем" data-lemma="die Creme, -s">Creme</span> aus <span class="gl" data-uk="вершковий сир" data-lemma="der Frischkäse">Frischkäse</span>, Zucker und <span class="gl" data-uk="вершки" data-lemma="die Sahne">Sahne</span>. Zum Schluss streut man Nüsse oder Kürbiskerne darauf. Guten Appetit!</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Обери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wir backen!</h2>
+      <p class="lead">Розстав кроки рецепта в правильному порядку. Натискай речення по черзі; натиснеш на вже поставлене — воно повернеться вниз.</p>
+      <div class="card" id="ub3-seq"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>reibt</span><span>backt</span><span>Mehl</span><span>Fläche</span><span>durchschnittlich</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> Jeder Deutsche isst <input type="text" class="blank-input inline wide" data-ans="durchschnittlich"> mehr als ein Kilo Kürbis pro Jahr.</div>
+          <div class="fill-item"><span class="num">2)</span> Die <input type="text" class="blank-input inline" data-ans="Fläche"> für Kürbisse ist viel größer geworden.</div>
+          <div class="fill-item"><span class="num">3)</span> Zuerst <input type="text" class="blank-input inline" data-ans="reibt"> man den Kürbis fein.</div>
+          <div class="fill-item"><span class="num">4)</span> Für den Teig braucht man auch <input type="text" class="blank-input inline" data-ans="Mehl">.</div>
+          <div class="fill-item"><span class="num">5)</span> Man <input type="text" class="blank-input inline" data-ans="backt"> den Kuchen etwa 50 Minuten.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (4–6 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Welche Gerichte mit Kürbis kennst du aus der Ukraine (zum Beispiel Kürbisbrei / „Harbusowa kascha“)? Beschreibe ein Gericht.</label>
+          <textarea id="ub5-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Schreib ein einfaches Rezept für dein Lieblingsessen: Was braucht man? Was macht man zuerst, dann, zum Schluss?</label>
+          <textarea id="ub5-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Man braucht …, Zuerst …, Dann …, Danach …, Zum Schluss …, Bei uns isst man oft …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Die Deutschen essen immer mehr Kürbis – auch wegen Halloween. Die meisten Kürbisse wachsen in Bayern, Nordrhein-Westfalen, Rheinland-Pfalz und Baden-Württemberg. Besonders beliebt ist der kleine Hokkaido-Kürbis.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Німці їдять дедалі більше гарбузів — зокрема через Halloween. Більшість гарбузів росте в Баварії, Північному Рейні-Вестфалії, Рейнланд-Пфальці та Баден-Вюртемберзі. Особливо популярний невеликий гарбуз гоккайдо.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "kuerbiskuchen";
+
+  // Üb. 1а: квіз
+  buildQuiz('ub1-quiz', [
+    {q: "Warum essen die Deutschen mehr Kürbis als früher?",
+     opts: ["Ein wichtiger Grund ist Halloween.",
+            "Kürbis ist billiger geworden als Kartoffeln.",
+            "Die Ärzte empfehlen jeden Tag Kürbis."],
+     correct: "Ein wichtiger Grund ist Halloween."},
+    {q: "Woher kommt der Kürbiskuchen eigentlich?",
+     opts: ["Aus Amerika", "Aus Bayern", "Aus Japan"],
+     correct: "Aus Amerika"}
+  ]);
+  // Üb. 1б: заголовки ↔ абзаци
+  buildMatch('ub1h', [
+    ["Vom Feld: mehr Kürbisse auf mehr Fläche", "Absatz 2"],
+    ["Mehr Kürbis auf dem Teller", "Absatz 1"],
+    ["In die Küche: so backt man den Kuchen", "Absatz 3"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3"], lead: true});
+
+  // Üb. 2: richtig / falsch / steht nicht im Text
+  buildRF('ub2-rf', [
+    {s: "Vor zehn Jahren aß man in Deutschland mehr Kürbis als heute.", a: "f"},
+    {s: "Seit 2006 ist die Fläche für Kürbisse mehr als viermal so groß geworden.", a: "r"},
+    {s: "Die meisten Kürbisse wachsen in Berlin.", a: "f"},
+    {s: "Den Hokkaido-Kürbis muss man nicht schälen.", a: "r"},
+    {s: "Kürbiskuchen isst man in Deutschland vor allem zu Weihnachten.", a: "n"},
+    {s: "Der Kuchen bekommt oben eine weiße Creme.", a: "r"}
+  ]);
+
+  // Üb. 3: кроки рецепта
+  buildSequence('ub3-seq', [
+    "Den Kürbis fein reiben.",
+    "Alle Zutaten zu einem Teig mischen.",
+    "Den Kuchen etwa 50 Minuten bei 180 Grad backen.",
+    "Frischkäse, Zucker und Sahne zu einer Creme rühren und auf den Kuchen geben.",
+    "Zum Schluss Nüsse oder Kürbiskerne darauf streuen."
+  ]);
+
+  // Üb. 4а: слово ↔ переклад
+  buildMatch('ub4', [
+    ["der Kürbis", "гарбуз"],
+    ["das Mehl", "борошно"],
+    ["die Sahne", "вершки"],
+    ["reiben", "терти (на терці)"],
+    ["anbauen", "вирощувати"],
+    ["die Schale", "шкірка"]
+  ]);
+  // Üb. 4б: пропуски
+  wireBlanks('ub4b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🎃','🥧','🌾','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

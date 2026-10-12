@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Innsbruck – Stadt in den Alpen · Lesen · Deutsch mit uns</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Reisen &amp; Städte</span>
+        <h1>Innsbruck – Stadt in den Alpen</h1>
+        <p class="sub">Вранці — золотий дах імператора, по обіді — вершина на 2300 метрах. І все це без машини.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Was ist was?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Stadt oder Berge?</h2>
+      <div class="card">
+        <p>Was machst du lieber im Urlaub: eine Stadt besichtigen oder in den Bergen wandern? Was weißt du über Österreich? Kennst du eine Stadt in Österreich außer Wien?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Знайди на карті Австрію і місто Інсбрук. Як гадаєш, чим може бути цікаве місто, яке з усіх боків оточують гори?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Innsbruck hat rund 132 000 <span class="gl" data-key data-uk="мешканець" data-lemma="der Einwohner, -">Einwohner</span> und ist die <span class="gl" data-key data-uk="столиця" data-lemma="die Hauptstadt, -ä-e">Hauptstadt</span> von Tirol. Die Stadt liegt mitten in den Bergen – und man kommt ganz leicht hinauf.</p>
+
+          <p>Ein Spaziergang beginnt am besten in der <span class="gl" data-key data-uk="старе місто" data-lemma="die Altstadt, -ä-e">Altstadt</span>. Hier steht Innsbrucks bekannteste <span class="gl" data-key data-uk="пам'ятка" data-lemma="die Sehenswürdigkeit, -en">Sehenswürdigkeit</span>: das Goldene <span class="gl" data-uk="дашок" data-note="австр.: зменшувальне від das Dach" data-lemma="das Dachl, -">Dachl</span>. Kaiser Maximilian I. hat es um 1500 bauen lassen. Das kleine Dach über einem <span class="gl" data-uk="еркер" data-lemma="der Erker, -">Erker</span> hat 2657 Schindeln aus Kupfer, und alle sind mit Gold <span class="gl" data-uk="покривати" data-lemma="bedecken">bedeckt</span>.</p>
+
+          <p>Ganz in der Nähe liegt die Kaiserliche Hofburg. Hier haben früher die <span class="gl" data-uk="правитель" data-lemma="der Herrscher, -">Herrscher</span> von Tirol gewohnt. Im 18. Jahrhundert hat Kaiserin Maria Theresia das Gebäude im Stil des Rokoko <span class="gl" data-uk="перебудовувати" data-lemma="umbauen">umbauen</span> lassen. Neben der Hofburg gibt es einen schönen Park, den Hofgarten.</p>
+
+          <p>Auch die wichtigste Straße der Stadt ist nach der Kaiserin <span class="gl" data-uk="бути названим на честь когось" data-lemma="nach jdm benannt sein">benannt</span>: die Maria-Theresien-Straße. Sie hat <span class="gl" data-uk="розкішний" data-lemma="prächtig">prächtige</span> alte Fassaden, viele Geschäfte und Cafés – und am Ende der Straße sieht man die Berge.</p>
+
+          <p>Dorthin fährt die Nordkettenbahn. Die <span class="gl" data-key data-uk="канатна дорога" data-lemma="die Seilbahn, -en">Seilbahn</span> bringt Gäste in etwa 30 Minuten vom Zentrum auf das Hafelekar, 2300 Meter hoch. Von oben hat man eine spektakuläre <span class="gl" data-uk="краєвид, вид" data-lemma="die Aussicht, -en">Aussicht</span> auf die Stadt. Wer lieber Tiere sieht, besucht den Alpenzoo. Er ist der höchstgelegene Themenzoo Europas. Dort leben Tiere aus den Alpen, zum Beispiel <span class="gl" data-uk="серна" data-lemma="die Gämse, -n">Gämsen</span> und <span class="gl" data-uk="бабак" data-lemma="das Murmeltier, -e">Murmeltiere</span>.</p>
+
+          <p>Ein anderer Berg liegt südlich der Stadt: der Patscherkofel. Die Innsbrucker nennen ihn liebevoll ihren „<span class="gl" data-uk="«домашня» гора міста" data-lemma="der Hausberg, -e">Hausberg</span>“. Im Sommer geht man dort wandern, im Winter Ski fahren. Sportlich ist auch die Bergisel-Schanze. Die berühmte Architektin Zaha Hadid hat sie <span class="gl" data-uk="проєктувати" data-lemma="entwerfen (entwarf, hat entworfen)">entworfen</span>. Hier finden Wettbewerbe im <span class="gl" data-uk="стрибки з трампліна" data-lemma="das Skispringen">Skispringen</span> statt.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Österreich hat neun <span class="gl" data-uk="федеральна земля" data-lemma="das Bundesland, -ä-er">Bundesländer</span>, Tirol ist eins davon. Innsbruck war schon zweimal Gastgeber der Olympischen Winterspiele: 1964 und 1976.</p>
+          </aside>
+
+          <p>Noch ein Tipp: In Wattens, nicht weit von Innsbruck, gibt es die Swarovski Kristallwelten. Am Eingang steht ein riesiger Kopf aus Gras, aus dem Wasser <span class="gl" data-uk="бризкати" data-lemma="spritzen">spritzt</span>. Unter der Erde warten 18 <span class="gl" data-uk="кунсткамера, «кімната чудес»" data-lemma="die Wunderkammer, -n">Wunderkammern</span> – zum Beispiel ein <span class="gl" data-uk="купол" data-lemma="der Dom, -e" data-note="тут: купол, а не собор">Dom</span> aus 595 Spiegeln und ein Raum, in dem das ganze Jahr Schnee liegt.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Обери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Was ist was?</h2>
+      <p class="lead">Що до чого пасує? Обери опис для кожного місця.</p>
+      <div class="card" id="ub3-list"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>Hauptstadt</span><span>Seilbahn</span><span>Aussicht</span><span>Altstadt</span><span>Einwohner</span><span>Sehenswürdigkeit</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> Innsbruck ist die <input type="text" class="blank-input inline" data-ans="Hauptstadt"> von Tirol.</div>
+          <div class="fill-item"><span class="num">2)</span> Die Stadt hat etwa 132 000 <input type="text" class="blank-input inline" data-ans="Einwohner">.</div>
+          <div class="fill-item"><span class="num">3)</span> Das Goldene Dachl ist die bekannteste <input type="text" class="blank-input inline wide" data-ans="Sehenswürdigkeit"> der Stadt.</div>
+          <div class="fill-item"><span class="num">4)</span> Die alten Häuser stehen in der <input type="text" class="blank-input inline" data-ans="Altstadt">.</div>
+          <div class="fill-item"><span class="num">5)</span> Mit der <input type="text" class="blank-input inline" data-ans="Seilbahn"> fährt man schnell auf den Berg.</div>
+          <div class="fill-item"><span class="num">6)</span> Oben auf dem Hafelekar hat man eine tolle <input type="text" class="blank-input inline" data-ans="Aussicht">.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою. Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Du bist einen Tag in Innsbruck. Schreib eine Postkarte an eine Freundin oder einen Freund (5–6 Sätze): Was hast du gesehen? Was hat dir am besten gefallen?</label>
+          <textarea id="ub5-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Gibt es in der Ukraine auch Orte mit Bergen, Seilbahnen oder einer schönen Altstadt? Beschreibe einen Ort, den du kennst (4–6 Sätze).</label>
+          <textarea id="ub5-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Liebe/r …, viele Grüße aus …, Heute habe ich … besichtigt, Am besten hat mir … gefallen, In der Ukraine gibt es …, Dort kann man …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Innsbruck ist die Hauptstadt von Tirol, einem der neun österreichischen Bundesländer. In der Altstadt stehen das Goldene Dachl von Kaiser Maximilian I. und die Hofburg. Mit der Seilbahn kommt man in etwa 30 Minuten auf 2300 Meter. Und „Dachl“ ist ein typisch österreichisches Wort: ein kleines Dach.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Інсбрук — столиця Тіролю, однієї з дев'яти федеральних земель Австрії. У старому місті — Золотий дашок імператора Максиміліана I і палац Гофбург. Канатною дорогою за 30 хвилин можна піднятися на висоту 2300 метрів. А «Dachl» — типово австрійське слово: маленький дах.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "innsbruck";
+
+  // Üb. 1а: квіз
+  buildQuiz('ub1-quiz', [
+    {q: "Was ist das Besondere an Innsbruck?",
+     opts: ["Man kann an einem Tag eine alte Stadt und die Berge erleben.",
+            "Es ist die größte Stadt in Österreich.",
+            "In Innsbruck gibt es keine Autos."],
+     correct: "Man kann an einem Tag eine alte Stadt und die Berge erleben."},
+    {q: "Wer hat das Goldene Dachl bauen lassen?",
+     opts: ["Kaiser Maximilian I.", "Kaiserin Maria Theresia", "Zaha Hadid"],
+     correct: "Kaiser Maximilian I."}
+  ]);
+  // Üb. 1б: заголовки ↔ абзаци
+  buildMatch('ub1h', [
+    ["Mit der Bahn nach oben", "Absatz 4"],
+    ["Ein Dach aus Gold", "Absatz 1"],
+    ["Kristalle unter der Erde", "Absatz 6"],
+    ["Ein Palast und ein Park", "Absatz 2"],
+    ["Wandern, Skifahren, Springen", "Absatz 5"],
+    ["Bummeln und Kaffee trinken", "Absatz 3"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5", "Absatz 6"], lead: true});
+
+  // Üb. 2: richtig / falsch / steht nicht im Text
+  buildRF('ub2-rf', [
+    {s: "Innsbruck ist die Hauptstadt von Österreich.", a: "f"},
+    {s: "Das Goldene Dachl ist ungefähr 500 Jahre alt.", a: "r"},
+    {s: "Maria Theresia hat in Innsbruck geheiratet.", a: "n"},
+    {s: "Die Nordkettenbahn fährt in etwa 30 Minuten auf das Hafelekar.", a: "r"},
+    {s: "Im Alpenzoo leben Tiere aus Afrika.", a: "f"},
+    {s: "Auf dem Patscherkofel kann man nur im Winter Sport machen.", a: "f"},
+    {s: "Die Swarovski Kristallwelten liegen nicht direkt in Innsbruck.", a: "r"}
+  ]);
+
+  // Üb. 3: місце ↔ опис
+  buildMatch('ub3', [
+    ["das Goldene Dachl", "hat 2657 Schindeln aus Kupfer und Gold"],
+    ["die Hofburg", "hier haben die Herrscher von Tirol gewohnt"],
+    ["die Maria-Theresien-Straße", "Geschäfte, Cafés und ein Blick auf die Berge"],
+    ["die Nordkettenbahn", "bringt Gäste auf 2300 Meter"],
+    ["der Patscherkofel", "der „Hausberg“ der Innsbrucker"],
+    ["die Bergisel-Schanze", "hier springen Sportler auf Skiern"],
+    ["die Swarovski Kristallwelten", "ein Dom aus 595 Spiegeln"]
+  ]);
+
+  // Üb. 4а: слово ↔ переклад
+  buildMatch('ub4', [
+    ["die Hauptstadt", "столиця"],
+    ["die Seilbahn", "канатна дорога"],
+    ["die Aussicht", "краєвид"],
+    ["prächtig", "розкішний"],
+    ["entwerfen", "проєктувати"],
+    ["das Murmeltier", "бабак"]
+  ]);
+  // Üb. 4б: пропуски
+  wireBlanks('ub4b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🏔️','🏰','🚡','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

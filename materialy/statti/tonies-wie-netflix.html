@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tonies: Hörspiel statt Bildschirm · Lesen · Deutsch mit uns</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Kultur &amp; Medien</span>
+        <h1>Tonies: Hörspiel statt Bildschirm</h1>
+        <p class="sub">Кубик з вушками і фігурка зверху — і дитина слухає казку. Як компанія з Дюссельдорфа хоче стати «Netflix для малечі».</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Zahlen</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und du?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Zuhören statt zuschauen</h2>
+      <div class="card">
+        <p>Hast du als Kind Geschichten gehört – im Radio, auf CD oder in einer App? Wie viele Stunden am Tag schaust du heute auf einen Bildschirm? Und was meinst du: Warum wollen viele Eltern, dass ihre Kinder weniger fernsehen?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Пригадай улюблені аудіоказки чи платівки з дитинства. Як гадаєш, чому сьогодні батьки шукають для дітей розваги без екрана? Чи бачив(-ла) ти коли-небудь Toniebox?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Ein Kind stellt eine kleine Figur auf einen bunten Würfel – und schon erzählt der Würfel eine Geschichte. So einfach funktioniert die Toniebox. Mit dieser Idee ist aus einem Düsseldorfer Start-up ein Unternehmen geworden, das an der <span class="gl" data-uk="фондова біржа" data-lemma="die Börse, -n">Börse</span> gehandelt wird.</p>
+
+          <p>Die Box selbst ist ein <span class="gl" data-uk="м'який, з набивкою" data-lemma="gepolstert">gepolsterter</span> <span class="gl" data-key data-uk="кубик" data-lemma="der Würfel, -">Würfel</span>, zwölf Zentimeter breit. Bildschirm und Knöpfe gibt es nicht. Steht eine Figur auf der Box, <span class="gl" data-uk="починатися" data-lemma="losgehen (ging los, ist losgegangen)">geht</span> das <span class="gl" data-key data-uk="аудіовистава, аудіоказка" data-lemma="das Hörspiel, -e">Hörspiel</span> los; nimmt das Kind sie herunter, <span class="gl" data-uk="ставати на паузу" data-lemma="pausieren">pausiert</span> die Geschichte und läuft später an derselben Stelle weiter. Wer vor- oder zurückspulen will, gibt der Box einen leichten <span class="gl" data-uk="легкий шльопок" data-lemma="der Klaps, -e">Klaps</span> auf die Seite, und die beiden Ohren <span class="gl" data-uk="слугувати (чимось)" data-lemma="dienen (als)">dienen</span> als <span class="gl" data-uk="регулятор гучності" data-lemma="der Lautstärkeregler, -">Lautstärkeregler</span>. In jeder Figur <span class="gl" data-uk="бути (всередині), міститися" data-lemma="stecken">steckt</span> ein Chip. Die Tonies gibt es aus hartem Kunststoff, aus weichem Silikon oder mit Plüsch, inzwischen in über 1500 Varianten.</p>
+
+          <p>Viele Jahre lang hatte das Unternehmen nur dieses eine Gerät im <span class="gl" data-uk="асортимент" data-lemma="das Sortiment, -e">Sortiment</span>. Trotzdem wurden mehr als zwölf Millionen Tonieboxen und über 165 Millionen Figuren verkauft. Im vergangenen Jahr hat Tonies 630 Millionen Euro <span class="gl" data-uk="виручка, обіг" data-lemma="der Umsatz, -ä-e">Umsatz</span> gemacht, 44 Prozent davon in den USA. Bis 2030 soll der Umsatz auf 1,4 Milliarden Euro <span class="gl" data-uk="рости, зростати" data-lemma="wachsen (wuchs, ist gewachsen)">wachsen</span>.</p>
+
+          <h3>Geld verdienen mit Figuren</h3>
+
+          <p>Warum vergleicht sich ein Hersteller von Hörspielboxen mit Netflix? Der <span class="gl" data-uk="голова правління" data-lemma="der/die Vorstandsvorsitzende, -n">Vorstandsvorsitzende</span> Tobias Wann erklärt es so: Tonies sei kein <span class="gl" data-uk="виробник іграшок" data-lemma="das Spielzeugunternehmen, -">Spielzeugunternehmen</span>, sondern gehöre eher zur Unterhaltung, wie Spotify oder Netflix. Das <span class="gl" data-key data-uk="модель підписки" data-lemma="das Abomodell, -e">Abomodell</span> von Tonies seien die Figuren: Wer eine Box hat, kauft <span class="gl" data-uk="в середньому" data-lemma="im Schnitt">im Schnitt</span> in vier bis fünf Jahren 20 Figuren dazu – zu jeweils etwa 17 Euro. Mit diesen <span class="gl" data-uk="доповнення, додаткова покупка" data-lemma="der Zusatz, -ä-e">Zusätzen</span> verdient die Firma mehr als mit der Box selbst.</p>
+
+          <p>Nach fast zehn Jahren kam im vergangenen Jahr ein <span class="gl" data-uk="наступник" data-lemma="der Nachfolger, -">Nachfolger</span> auf den Markt: die Toniebox 2, mit mehr Funktionen, aber auch teurer. In den USA kostet sie mit einer Figur knapp 150 Dollar. Bald folgt eine günstigere „Lite“-Variante für rund 80 Dollar – zuerst in den USA, dann in Großbritannien, Australien und Neuseeland. In Deutschland ist sie noch nicht <span class="gl" data-uk="планувати" data-lemma="planen">geplant</span>. Der Grund: Die USA sind der größte Markt, und dort gibt es noch viel <span class="gl" data-key data-uk="потенціал зростання" data-lemma="das Wachstumspotenzial">Wachstumspotenzial</span>. In Deutschland besitzen schon 60 Prozent der Familien mit Kindern zwischen einem und neun Jahren eine Toniebox, in den USA erst zwölf Prozent.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Hörspiele haben in Deutschland eine lange Tradition. Serien wie „Benjamin Blümchen“ (seit 1977) oder „Die drei ???“ (seit 1979) hören Kinder – und viele Erwachsene – schon seit Jahrzehnten: früher auf Kassette, dann auf CD, heute auch per App oder eben mit Tonies.</p>
+          </aside>
+
+          <h3>Rückenwind aus der Bildschirm-Debatte</h3>
+
+          <p>An der Börse lief es nicht immer gut. Kurz nach dem <span class="gl" data-uk="вихід на біржу" data-lemma="der Börsengang, -ä-e">Börsengang</span> Ende 2021 verlor die <span class="gl" data-uk="акція" data-lemma="die Aktie, -n">Aktie</span> mehr als 70 Prozent an Wert. Im vergangenen Jahr hat sich ihr Wert aber mehr als <span class="gl" data-uk="подвоюватися" data-lemma="sich verdoppeln">verdoppelt</span>. Tobias Wann ist optimistisch, auch wegen der Diskussion über zu lange <span class="gl" data-key data-uk="екранний час" data-lemma="die Bildschirmzeit, -en">Bildschirmzeiten</span> von Kindern. Als die Toniebox auf den Markt kam, war das noch kein großes Thema – Smartphones sind heute viel weiter <span class="gl" data-uk="поширений" data-lemma="verbreitet">verbreitet</span>. Der <span class="gl" data-uk="дух часу" data-lemma="der Zeitgeist">Zeitgeist</span> gebe Tonies <span class="gl" data-uk="попутний вітер; підтримка (перен.)" data-lemma="der Rückenwind">Rückenwind</span>, sagt er: Immer mehr Eltern suchen nach <span class="gl" data-key data-uk="альтернатива" data-lemma="die Alternative, -n">Alternativen</span> zum Bildschirm.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Обери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Was bedeuten die Zahlen?</h2>
+      <p class="lead">Що означає кожне число в тексті? Обери правильне пояснення.</p>
+      <div class="card" id="ub3-list"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>Umsatz</span><span>Nachfolger</span><span>Hörspiel</span><span>Bildschirmzeit</span><span>verdoppelt</span><span>Würfel</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> Die Toniebox sieht aus wie ein weicher <input type="text" class="blank-input inline" data-ans="Würfel">.</div>
+          <div class="fill-item"><span class="num">2)</span> Mein kleiner Bruder hört jeden Abend ein <input type="text" class="blank-input inline" data-ans="Hörspiel">.</div>
+          <div class="fill-item"><span class="num">3)</span> Die Toniebox 2 ist der <input type="text" class="blank-input inline" data-ans="Nachfolger"> der ersten Box.</div>
+          <div class="fill-item"><span class="num">4)</span> 2030 soll der <input type="text" class="blank-input inline" data-ans="Umsatz"> 1,4 Milliarden Euro betragen.</div>
+          <div class="fill-item"><span class="num">5)</span> Der Wert der Aktie hat sich im letzten Jahr mehr als <input type="text" class="blank-input inline" data-ans="verdoppelt">.</div>
+          <div class="fill-item"><span class="num">6)</span> Viele Eltern wollen die <input type="text" class="blank-input inline wide" data-ans="Bildschirmzeit"> ihrer Kinder begrenzen.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und du?</h2>
+      <p class="lead">Напиши відповіді німецькою (5–7 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Ist die Toniebox eine gute Alternative zum Bildschirm? Nenne ein Argument dafür und eins dagegen – denk auch an den Preis der Figuren.</label>
+          <textarea id="ub5-a" rows="6"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Welche Geschichten, Hörbücher oder Podcasts hast du als Kind gern gehört – und was hörst du heute? Wie viel Zeit verbringst du am Tag vor dem Bildschirm?</label>
+          <textarea id="ub5-b" rows="6"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Einerseits …, andererseits …, Ein Vorteil ist, dass …, Ein Nachteil ist, dass …, Als Kind habe ich gern … gehört, Heute verbringe ich etwa … Stunden …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Die Toniebox kommt aus Düsseldorf und spielt Hörspiele ohne Bildschirm. In Deutschland haben 60 Prozent der Familien mit kleinen Kindern so eine Box. Das Geld verdient die Firma vor allem mit den Figuren – ähnlich wie Netflix mit dem Abo. Hörspiele sind in Deutschland seit Jahrzehnten beliebt.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Toniebox родом із Дюссельдорфа і програє аудіоказки без екрана. У Німеччині такий кубик є в 60 % родин із дітьми від одного до дев'яти років. Заробляє компанія передусім на фігурках — приблизно як Netflix на підписці. А аудіовистави в Німеччині люблять уже кілька десятиліть.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "tonies-wie-netflix";
+
+  // Üb. 1а: квіз
+  buildQuiz('ub1-quiz', [
+    {q: "Warum vergleicht sich Tonies mit Netflix?",
+     opts: ["Weil die Firma vor allem mit immer neuen Inhalten – den Figuren – Geld verdient",
+            "Weil man mit der Toniebox auch Filme sehen kann",
+            "Weil Netflix die Firma Tonies gekauft hat"],
+     correct: "Weil die Firma vor allem mit immer neuen Inhalten – den Figuren – Geld verdient"},
+    {q: "Warum gibt es die „Lite“-Variante zuerst in den USA?",
+     opts: ["Die USA sind der größte Markt, und dort haben erst wenige Familien eine Box.",
+            "In Deutschland ist die Box verboten.",
+            "In den USA sind die Figuren billiger als in Deutschland."],
+     correct: "Die USA sind der größte Markt, und dort haben erst wenige Familien eine Box."}
+  ]);
+  // Üb. 1б: заголовки ↔ абзаци
+  buildMatch('ub1h', [
+    ["Kleine Box, große Zahlen", "Absatz 2"],
+    ["Aufstellen – zuhören – wegnehmen", "Absatz 1"],
+    ["Hochs und Tiefs an der Börse", "Absatz 5"],
+    ["Das Geschäft mit den Figuren", "Absatz 3"],
+    ["Neue Boxen für neue Märkte", "Absatz 4"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5"], lead: true});
+
+  // Üb. 2: richtig / falsch / steht nicht im Text
+  buildRF('ub2-rf', [
+    {s: "Die Toniebox hat keine Knöpfe und kein Display.", a: "r"},
+    {s: "Wenn man die Figur herunternimmt, beginnt die Geschichte später wieder von vorn.", a: "f"},
+    {s: "Mit den Ohren der Box macht man die Musik lauter oder leiser.", a: "r"},
+    {s: "Fast die Hälfte des Umsatzes kommt aus den USA.", a: "r"},
+    {s: "Die Lite-Variante kann man schon jetzt in Deutschland kaufen.", a: "f"},
+    {s: "Die Toniebox 2 ist kleiner als die erste Box.", a: "n"},
+    {s: "Nach dem Börsengang ist die Aktie zuerst stark gefallen.", a: "r"},
+    {s: "Als die Toniebox neu war, sprach man schon viel über Bildschirmzeit bei Kindern.", a: "f"}
+  ]);
+
+  // Üb. 3: число ↔ значення
+  buildMatch('ub3', [
+    ["12 Zentimeter", "so breit ist die Toniebox"],
+    ["1500", "so viele verschiedene Figuren gibt es"],
+    ["165 Millionen", "so viele Figuren wurden verkauft"],
+    ["20", "so viele Figuren kauft eine Familie im Schnitt in vier bis fünf Jahren dazu"],
+    ["17 Euro", "so viel kostet ungefähr eine Figur"],
+    ["60 Prozent", "so viele Familien mit kleinen Kindern in Deutschland haben eine Box"],
+    ["1,4 Milliarden Euro", "so viel Umsatz will Tonies 2030 machen"]
+  ]);
+
+  // Üb. 4а: слово ↔ переклад
+  buildMatch('ub4', [
+    ["der Umsatz", "виручка, обіг"],
+    ["die Börse", "фондова біржа"],
+    ["der Nachfolger", "наступник"],
+    ["im Schnitt", "в середньому"],
+    ["verbreitet", "поширений"],
+    ["der Rückenwind", "попутний вітер, підтримка"],
+    ["das Sortiment", "асортимент"]
+  ]);
+  // Üb. 4б: пропуски
+  wireBlanks('ub4b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🎧','🧸','📈','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

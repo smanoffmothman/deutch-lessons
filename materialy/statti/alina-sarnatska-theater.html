@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Von der Armee auf die Bühne · Lesen · Deutsch mit uns</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Kultur &amp; Medien</span>
+        <h1>Von der Armee auf die Bühne</h1>
+        <p class="sub">Аліна Сарнацька з Києва більше двох років служила в ЗСУ. Тепер вона ставить вистави з ветеранами — і одна з них приїжджає до Штутгарта.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Und du?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Theater erzählt</h2>
+      <div class="card">
+        <p>Warst du schon einmal im Theater? Was kann ein Theaterstück erzählen, was ein Zeitungsartikel nicht kann?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай: чому люди розповідають про важкий досвід через мистецтво — театр, музику, книжки? Чи знаєш ти українські вистави або фільми, створені ветеранами?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Alina Sarnatska kommt aus Kyjiw, der Hauptstadt der Ukraine. Früher war sie <span class="gl" data-uk="солдатка, військовослужбовиця" data-lemma="die Soldatin, -nen">Soldatin</span>, heute macht sie Theater – und ihre Arbeit ist jetzt auch in Deutschland zu sehen.</p>
+
+          <p>Mehr als zwei Jahre hat Sarnatska in der ukrainischen <span class="gl" data-key data-uk="армія" data-lemma="die Armee, -n">Armee</span> <span class="gl" data-uk="служити" data-lemma="dienen">gedient</span>. Jetzt arbeitet sie als <span class="gl" data-key data-uk="драматургиня" data-lemma="die Dramaturgin, -nen">Dramaturgin</span> – und sie ist damit sehr <span class="gl" data-uk="успішний" data-lemma="erfolgreich">erfolgreich</span>.</p>
+
+          <p>Was macht eine Dramaturgin? Sie arbeitet am Theater mit Texten: Sie <span class="gl" data-uk="вибирати" data-lemma="auswählen (wählte aus, hat ausgewählt)">wählt</span> Stücke aus, <span class="gl" data-uk="опрацьовувати, адаптувати" data-lemma="bearbeiten">bearbeitet</span> sie und hilft bei der <span class="gl" data-uk="постановка" data-lemma="die Inszenierung, -en">Inszenierung</span>.</p>
+
+          <p>In der Ukraine <span class="gl" data-key data-uk="ставити (виставу)" data-lemma="inszenieren">inszeniert</span> sie <span class="gl" data-key data-uk="вистава, п'єса" data-lemma="das Theaterstück, -e">Theaterstücke</span> mit <span class="gl" data-key data-uk="ветеранка" data-lemma="die Veteranin, -nen">Veteraninnen</span> und Veteranen. Veteranen sind Menschen, die in der Armee gedient haben – so wie Sarnatska selbst. Sie arbeitet also mit Menschen, die Ähnliches erlebt haben wie sie. Gemeinsam bringen sie ihre Geschichten auf die <span class="gl" data-key data-uk="сцена" data-lemma="die Bühne, -n">Bühne</span>.</p>
+
+          <p>Jetzt kommt eine ihrer <span class="gl" data-uk="вистава, показ" data-lemma="die Aufführung, -en">Aufführungen</span> nach Deutschland. Das Stück heißt „Misiachni“. Es erzählt von den <span class="gl" data-uk="досвід" data-lemma="die Erfahrung, -en">Erfahrungen</span> von Frauen im Krieg. Zu sehen ist es am Schauspiel Stuttgart. Stuttgart liegt im Südwesten Deutschlands. So kann auch das deutsche Publikum diese Geschichten aus der Ukraine kennenlernen.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Das Schauspiel Stuttgart gehört zu den Staatstheatern Stuttgart. Dazu gehören auch die Oper und das Ballett.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">Обери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub3-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>Bühne</span><span>gedient</span><span>Theaterstück</span><span>inszeniert</span><span>Erfahrungen</span></div>
+        <div id="ub3b-list">
+          <div class="fill-item"><span class="num">1)</span> Alina Sarnatska hat mehr als zwei Jahre in der Armee <input type="text" class="blank-input inline" data-ans="gedient">.</div>
+          <div class="fill-item"><span class="num">2)</span> Heute <input type="text" class="blank-input inline" data-ans="inszeniert"> sie Stücke mit Veteraninnen und Veteranen.</div>
+          <div class="fill-item"><span class="num">3)</span> Gemeinsam bringen sie ihre Geschichten auf die <input type="text" class="blank-input inline" data-ans="Bühne">.</div>
+          <div class="fill-item"><span class="num">4)</span> Das Stück erzählt von den <input type="text" class="blank-input inline" data-ans="Erfahrungen"> von Frauen im Krieg.</div>
+          <div class="fill-item"><span class="num">5)</span> Das <input type="text" class="blank-input inline wide" data-ans="Theaterstück"> „Misiachni“ kommt nach Stuttgart.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub3b-check">Prüfen</button>
+          <button class="btn secondary" id="ub3b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub3b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Und du?</h2>
+      <p class="lead">Напиши відповіді німецькою (4–6 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub4-a">1. Warum ist es wichtig, dass ukrainische Theaterstücke auch in Deutschland gezeigt werden? Was können die Zuschauer dort lernen?</label>
+          <textarea id="ub4-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub4-b">2. Stell ein ukrainisches Theaterstück, einen Film oder ein Buch vor, das dir wichtig ist. Worum geht es?</label>
+          <textarea id="ub4-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Ich finde es wichtig, dass …, Die Zuschauer können erfahren, wie …, Das Stück / Der Film heißt …, Es geht um …, Mir gefällt besonders, dass …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Alina Sarnatska aus Kyjiw hat in der ukrainischen Armee gedient und ist heute Dramaturgin. Sie macht Theater mit Veteraninnen und Veteranen. Ihr Stück „Misiachni“ über Frauen im Krieg ist am Schauspiel Stuttgart zu sehen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Аліна Сарнацька з Києва служила в українській армії, а тепер працює драматургинею. Вона ставить вистави з ветеранками й ветеранами. Її виставу «Місячні» про досвід жінок на війні показують у театрі Schauspiel Stuttgart.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "alina-sarnatska-theater";
+
+  // Üb. 1: квіз
+  buildQuiz('ub1-quiz', [
+    {q: "Was macht Alina Sarnatska heute?",
+     opts: ["Sie macht Theater mit Veteraninnen und Veteranen.",
+            "Sie ist Schauspielerin in Hollywood.",
+            "Sie unterrichtet Deutsch in Kyjiw."],
+     correct: "Sie macht Theater mit Veteraninnen und Veteranen."},
+    {q: "Worum geht es im Stück „Misiachni“?",
+     opts: ["Um die Erfahrungen von Frauen im Krieg",
+            "Um eine Liebesgeschichte in Stuttgart",
+            "Um die Geschichte des Theaters"],
+     correct: "Um die Erfahrungen von Frauen im Krieg"}
+  ]);
+
+  // Üb. 2: richtig / falsch / steht nicht im Text
+  buildRF('ub2-rf', [
+    {s: "Alina Sarnatska kommt aus Kyjiw.", a: "r"},
+    {s: "Sie war weniger als ein Jahr in der Armee.", a: "f"},
+    {s: "Sie macht Theater mit Menschen, die auch in der Armee waren.", a: "r"},
+    {s: "„Misiachni“ wird in Berlin gezeigt.", a: "f"},
+    {s: "Das Stück wird auf Deutsch gespielt.", a: "n"}
+  ]);
+
+  // Üb. 3а: слово ↔ переклад
+  buildMatch('ub3', [
+    ["dienen", "служити"],
+    ["inszenieren", "ставити (виставу)"],
+    ["die Bühne", "сцена"],
+    ["die Aufführung", "вистава, показ"],
+    ["die Erfahrung", "досвід"]
+  ]);
+  // Üb. 3б: пропуски
+  wireBlanks('ub3b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🎭','🇺🇦','🎟️','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

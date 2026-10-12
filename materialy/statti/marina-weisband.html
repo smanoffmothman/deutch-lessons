@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marina Weisband: Schüler entscheiden mit · Lesen · Deutsch mit uns</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Arbeit &amp; Schule</span>
+        <h1>Marina Weisband: Schüler entscheiden mit</h1>
+        <p class="sub">Вона народилася в Києві, а тепер допомагає німецьким школярам самим вирішувати, якою буде їхня школа.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Wer entscheidet in der Schule?</h2>
+      <div class="card">
+        <p>Wer entscheidet an deiner Schule über Regeln und Pausen? Was möchtest du an deiner Schule gern ändern?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай: чи можуть учні у твоїй школі на щось впливати — наприклад, через учнівське самоврядування? Що б ти змінив(-ла), якби міг (могла)?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Marina Weisband möchte, dass Kinder und Jugendliche in der Schule mehr sagen dürfen. Dafür hat sie ein Projekt mit dem Namen „aula“ entwickelt.</p>
+
+          <p>Weisband wurde 1987 in Kyjiw <span class="gl" data-uk="народжуватися" data-lemma="geboren werden">geboren</span>. Sie ist in einer <span class="gl" data-uk="єврейський" data-lemma="jüdisch">jüdischen</span> Familie <span class="gl" data-uk="виростати" data-lemma="aufwachsen (wuchs auf, ist aufgewachsen)">aufgewachsen</span>. 1994 ist sie mit ihren Eltern nach Deutschland <span class="gl" data-uk="переїжджати" data-lemma="ziehen (zog, ist gezogen)">gezogen</span>. In ganz Deutschland bekannt wurde sie zuerst als Politikerin: Sie war <span class="gl" data-uk="політичний секретар (партії)" data-lemma="die politische Geschäftsführerin, -nen">politische Geschäftsführerin</span> der Piratenpartei.</p>
+
+          <p>Im September hat sie ihr wichtigstes Projekt <span class="gl" data-uk="представляти" data-lemma="vorstellen (stellte vor, hat vorgestellt)">vorgestellt</span>: „aula“. Das ist ein digitales Konzept für die <span class="gl" data-key data-uk="участь" data-lemma="die Beteiligung">Beteiligung</span> an Schulen. Mit „aula“ können Schülerinnen und Schüler über ihren <span class="gl" data-key data-uk="шкільні будні" data-lemma="der Schulalltag">Schulalltag</span> <span class="gl" data-key data-uk="брати участь у вирішенні" data-lemma="mitentscheiden (entschied mit, hat mitentschieden)">mitentscheiden</span> – zum Beispiel über Räume, <span class="gl" data-key data-uk="правило" data-lemma="die Regel, -n">Regeln</span>, Pausen oder Veranstaltungen. Wie könnte das aussehen? Vielleicht wünscht sich eine Klasse einen ruhigen Raum für die Mittagspause. Oder die Schüler möchten ein Schulfest <span class="gl" data-uk="організовувати" data-lemma="organisieren">organisieren</span>. Mit „aula“ können die Schüler bei solchen Fragen mitreden und mitentscheiden.</p>
+
+          <p>Das Ziel: Junge Menschen sollen das Gefühl haben, dass man ihnen <span class="gl" data-uk="слухати (когось)" data-lemma="zuhören (hörte zu, hat zugehört)">zuhört</span>. Sie sollen merken: Meine Meinung ist wichtig. Und sie sollen lernen, <span class="gl" data-key data-uk="брати на себе відповідальність" data-lemma="Verantwortung übernehmen">Verantwortung zu übernehmen</span>.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>An fast allen Schulen in Deutschland gibt es eine <span class="gl" data-uk="учнівське самоврядування" data-lemma="die Schülervertretung, -en">Schülervertretung</span> (SV). Die Klassen wählen Klassensprecher, und die Schülersprecher <span class="gl" data-uk="представляти (інтереси)" data-lemma="vertreten (vertrat, hat vertreten)">vertreten</span> alle Schüler gegenüber der Schulleitung.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">Обери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub3-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>Regeln</span><span>mitentscheiden</span><span>Verantwortung</span><span>aufgewachsen</span><span>vorgestellt</span></div>
+        <div id="ub3b-list">
+          <div class="fill-item"><span class="num">1)</span> Marina Weisband ist in Kyjiw geboren und in einer jüdischen Familie <input type="text" class="blank-input inline" data-ans="aufgewachsen">.</div>
+          <div class="fill-item"><span class="num">2)</span> Im September hat sie das Projekt „aula“ <input type="text" class="blank-input inline" data-ans="vorgestellt">.</div>
+          <div class="fill-item"><span class="num">3)</span> Mit „aula“ können Schüler über ihre Schule <input type="text" class="blank-input inline wide" data-ans="mitentscheiden">.</div>
+          <div class="fill-item"><span class="num">4)</span> Zum Beispiel können sie neue <input type="text" class="blank-input inline" data-ans="Regeln"> für die Pausen vorschlagen.</div>
+          <div class="fill-item"><span class="num">5)</span> Junge Menschen sollen lernen, <input type="text" class="blank-input inline wide" data-ans="Verantwortung"> zu übernehmen.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub3b-check">Prüfen</button>
+          <button class="btn secondary" id="ub3b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub3b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (4–6 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub4-a">1. Worüber möchtest du an deiner Schule mitentscheiden? Nenne zwei Beispiele und erkläre, warum.</label>
+          <textarea id="ub4-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub4-b">2. Gibt es an deiner Schule eine Schülervertretung? Was macht sie? Würdest du gern mitmachen?</label>
+          <textarea id="ub4-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Ich möchte gern über … mitentscheiden, weil …, An unserer Schule gibt es …, Die Schülervertretung organisiert …, Ich würde (nicht) gern mitmachen, weil …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Marina Weisband kommt aus Kyjiw und lebt seit 1994 in Deutschland. Mit ihrem Projekt „aula“ können Schüler digital über ihren Schulalltag mitentscheiden. In Deutschland vertritt außerdem an fast jeder Schule eine Schülervertretung die Interessen der Schüler.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Марина Вайсбанд родом із Києва і живе в Німеччині з 1994 року. Завдяки її проєкту «aula» учні можуть онлайн брати участь у рішеннях щодо шкільного життя. А ще майже в кожній німецькій школі є учнівське самоврядування, яке представляє інтереси учнів.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "marina-weisband";
+
+  // Üb. 1: квіз
+  buildQuiz('ub1-quiz', [
+    {q: "Was ist „aula“?",
+     opts: ["Ein digitales Projekt, mit dem Schüler über ihre Schule mitentscheiden",
+            "Eine neue Schule in Kyjiw",
+            "Eine App zum Deutschlernen"],
+     correct: "Ein digitales Projekt, mit dem Schüler über ihre Schule mitentscheiden"},
+    {q: "Was ist das Ziel von „aula“?",
+     opts: ["Junge Menschen sollen sich gehört fühlen und Verantwortung lernen.",
+            "Lehrer sollen weniger arbeiten müssen.",
+            "Schüler sollen mehr Hausaufgaben machen."],
+     correct: "Junge Menschen sollen sich gehört fühlen und Verantwortung lernen."}
+  ]);
+
+  // Üb. 2: richtig / falsch / steht nicht im Text
+  buildRF('ub2-rf', [
+    {s: "Marina Weisband ist in Deutschland geboren.", a: "f"},
+    {s: "Sie kam als Kind mit ihren Eltern nach Deutschland.", a: "r"},
+    {s: "Bekannt wurde sie zuerst als Lehrerin.", a: "f"},
+    {s: "Mit „aula“ kann man zum Beispiel über Pausen mitentscheiden.", a: "r"},
+    {s: "„aula“ gibt es schon an tausend Schulen.", a: "n"}
+  ]);
+
+  // Üb. 3а: слово ↔ переклад
+  buildMatch('ub3', [
+    ["aufwachsen", "виростати"],
+    ["die Beteiligung", "участь"],
+    ["mitentscheiden", "брати участь у вирішенні"],
+    ["der Schulalltag", "шкільні будні"],
+    ["Verantwortung übernehmen", "брати на себе відповідальність"]
+  ]);
+  // Üb. 3б: пропуски
+  wireBlanks('ub3b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🏫','🗳️','💬','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

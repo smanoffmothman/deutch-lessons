@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Einwanderung in Deutschland · Lesen · Deutsch mit uns</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Geschichte</span>
+        <h1>Einwanderung in Deutschland</h1>
+        <p class="sub">Мігрант, біженець, «гастарбайтер» — що означають ці слова і чому Німеччина ще 1955 року почала запрошувати людей з інших країн.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Zeitleiste</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Begriffe</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Menschen unterwegs</h2>
+      <div class="card">
+        <p>Warum verlassen Menschen ihr Land? Kennst du jemanden, der in einem anderen Land lebt oder arbeitet?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай: які причини змушують людей переїжджати в іншу країну — робота, навчання, родина, війна? Чим відрізняються мігрант і біженець?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Ohne Menschen aus anderen Ländern sähe Deutschland heute ganz anders aus. Hier sind die wichtigsten Wörter und Daten zum Thema <span class="gl" data-key data-uk="імміграція" data-lemma="die Einwanderung">Einwanderung</span>.</p>
+
+          <h3>Was bedeutet Migration?</h3>
+
+          <p>Das Wort „Migration“ kommt aus dem Lateinischen: <i>migrare</i> heißt „wandern“ oder „wegziehen“. Migration ist also der Weg von Menschen von einem Ort zu einem anderen. Kommt jemand in ein Land, ist das Einwanderung. Verlässt jemand sein Land, ist das <span class="gl" data-uk="еміграція" data-lemma="die Auswanderung">Auswanderung</span>. Oft hört man auch das Wort <span class="gl" data-uk="приплив людей, імміграція (часто тимчасова)" data-lemma="die Zuwanderung">Zuwanderung</span>. Der Unterschied: Bei der Einwanderung will man meistens für immer bleiben, bei der Zuwanderung eher nur für eine <span class="gl" data-uk="певний час" data-lemma="eine gewisse Zeit">gewisse Zeit</span>.</p>
+
+          <p>Menschen <span class="gl" data-uk="мігрувати" data-lemma="migrieren">migrieren</span> aus verschiedenen <span class="gl" data-uk="причина" data-lemma="der Grund, -ü-e">Gründen</span>. Man unterscheidet vier große Gruppen: Arbeit, Ausbildung, humanitäre Gründe und die Familie.</p>
+
+          <p>Ein <span class="gl" data-key data-uk="біженець" data-lemma="der Flüchtling, -e">Flüchtling</span> ist kein „normaler“ Migrant. Flüchtlinge bekommen nach einem <span class="gl" data-uk="процедура, процес" data-lemma="das Verfahren, -">Verfahren</span> besonderen <span class="gl" data-uk="захист" data-lemma="der Schutz">Schutz</span>. <span class="gl" data-key data-uk="притулок" data-lemma="das Asyl">Asyl</span> ist das Recht auf Schutz für Menschen, die in ihrem Land <span class="gl" data-uk="переслідувати" data-lemma="verfolgen">verfolgt</span> werden oder vor einem Krieg <span class="gl" data-uk="тікати" data-lemma="fliehen (floh, ist geflohen)">geflohen</span> sind. Wer kein gültiges <span class="gl" data-uk="віза" data-lemma="das Visum, Visa">Visum</span> und keinen legalen <span class="gl" data-uk="дозвіл на перебування" data-lemma="der Aufenthaltsstatus">Aufenthaltsstatus</span> hat, gilt als irregulärer Migrant.</p>
+
+          <h3>Von den Gastarbeitern bis heute</h3>
+
+          <p>In den 1950er-Jahren <span class="gl" data-uk="бракувати" data-lemma="fehlen">fehlten</span> in Westdeutschland viele <span class="gl" data-key data-uk="робоча сила, працівники" data-lemma="die Arbeitskraft, -ä-e">Arbeitskräfte</span>. Deshalb suchte die Regierung Arbeiter im Ausland. 1955 <span class="gl" data-uk="укладати (угоду)" data-lemma="abschließen (schloss ab, hat abgeschlossen)">schloss</span> die Bundesrepublik das erste <span class="gl" data-uk="угода про вербування робітників" data-lemma="das Anwerbeabkommen, -">Anwerbeabkommen</span> mit Italien ab. Bis 1968 folgten Abkommen mit weiteren Ländern, zum Beispiel Griechenland, Spanien, die Türkei und Jugoslawien. Die Menschen, die so nach Deutschland kamen, nannte man „<span class="gl" data-key data-uk="гастарбайтер, «запрошений працівник»" data-lemma="der Gastarbeiter, -">Gastarbeiter</span>“. Ihre Zahl stieg von etwa 330 000 im Jahr 1960 auf 2,6 Millionen im Jahr 1973.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Das Wort „Gastarbeiter“ zeigt, was man damals dachte: Die Arbeiter sind nur Gäste und gehen bald wieder nach Hause. Viele sind aber geblieben und haben ihre Familien geholt. Heute leben ihre Kinder und Enkel in Deutschland.</p>
+          </aside>
+
+          <p>1973 gab es eine <span class="gl" data-uk="економічна криза" data-lemma="die Wirtschaftskrise, -n">Wirtschaftskrise</span>. Deshalb stoppte Deutschland die Anwerbung. Heute fehlen wieder viele Arbeitskräfte. Seit März 2020 macht das <span class="gl" data-uk="закон про імміграцію кваліфікованих фахівців" data-lemma="das Fachkräfteeinwanderungsgesetz">Fachkräfteeinwanderungsgesetz</span> es für <span class="gl" data-key data-uk="кваліфікований фахівець" data-lemma="die Fachkraft, -ä-e">Fachkräfte</span> aus Ländern außerhalb der EU leichter, in Deutschland zu arbeiten. Beschlossen wurde das Gesetz schon 2019.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Обери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Zeitleiste</h2>
+      <p class="lead">Що сталося в якому році? Обери правильну подію.</p>
+      <div class="card" id="ub3-list"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Begriffe</h2>
+      <p class="lead">а) Яке пояснення пасує до слова?</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>Gründen</span><span>Asyl</span><span>Arbeitskräfte</span><span>Gastarbeiter</span><span>Flüchtling</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> In den 1950er-Jahren fehlten in Deutschland viele <input type="text" class="blank-input inline wide" data-ans="Arbeitskräfte">.</div>
+          <div class="fill-item"><span class="num">2)</span> Die Arbeiter aus Italien oder der Türkei nannte man <input type="text" class="blank-input inline" data-ans="Gastarbeiter">.</div>
+          <div class="fill-item"><span class="num">3)</span> Wer vor einem Krieg flieht, ist ein <input type="text" class="blank-input inline" data-ans="Flüchtling">.</div>
+          <div class="fill-item"><span class="num">4)</span> Menschen, die in ihrem Land verfolgt werden, haben ein Recht auf <input type="text" class="blank-input inline" data-ans="Asyl">.</div>
+          <div class="fill-item"><span class="num">5)</span> Menschen migrieren aus ganz verschiedenen <input type="text" class="blank-input inline" data-ans="Gründen">.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (4–6 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Auch viele Ukrainerinnen und Ukrainer leben im Ausland. Aus welchen Gründen sind sie gegangen? Kennst du jemanden? Erzähle.</label>
+          <textarea id="ub5-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Möchtest du später einmal im Ausland studieren oder arbeiten? In welchem Land und warum (nicht)?</label>
+          <textarea id="ub5-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Viele sind wegen … gegangen, Meine Tante lebt seit … in …, Dort arbeitet/studiert sie …, Ich möchte (nicht) im Ausland …, weil …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Ab 1955 holte die Bundesrepublik „Gastarbeiter“ aus Italien, Griechenland, Spanien, der Türkei und Jugoslawien. 1973 stoppte sie die Anwerbung. Seit 2020 hilft ein Gesetz Fachkräften aus Ländern außerhalb der EU. Ein Flüchtling ist kein normaler Migrant: Er hat ein Recht auf besonderen Schutz.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          З 1955 року ФРН запрошувала «гастарбайтерів» з Італії, Греції, Іспанії, Туреччини та Югославії. У 1973 році вербування припинили. З 2020 року закон полегшує приїзд фахівців з країн поза ЄС. Біженець — не звичайний мігрант: він має право на особливий захист.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "einwanderung-in-deutschland";
+
+  // Üb. 1а: квіз
+  buildQuiz('ub1-quiz', [
+    {q: "Was erklärt der Text?",
+     opts: ["Wichtige Begriffe zur Migration und die Geschichte der Einwanderung nach Deutschland",
+            "Wie man ein Visum für Deutschland bekommt",
+            "Warum Deutsche gern im Ausland Urlaub machen"],
+     correct: "Wichtige Begriffe zur Migration und die Geschichte der Einwanderung nach Deutschland"},
+    {q: "Warum holte Deutschland in den 1950er-Jahren Arbeiter aus dem Ausland?",
+     opts: ["Weil im Land viele Arbeitskräfte fehlten",
+            "Weil es in Deutschland eine Wirtschaftskrise gab",
+            "Weil viele Deutsche nach Italien gezogen waren"],
+     correct: "Weil im Land viele Arbeitskräfte fehlten"}
+  ]);
+  // Üb. 1б: заголовки ↔ абзаци
+  buildMatch('ub1h', [
+    ["Wer hat ein Recht auf Schutz?", "Absatz 3"],
+    ["Woher das Wort kommt", "Absatz 1"],
+    ["Krise – und ein neues Gesetz", "Absatz 5"],
+    ["Warum Menschen gehen", "Absatz 2"],
+    ["Arbeiter aus Südeuropa und der Türkei", "Absatz 4"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5"], lead: true});
+
+  // Üb. 2: richtig / falsch / steht nicht im Text
+  buildRF('ub2-rf', [
+    {s: "Das Wort „Migration“ kommt aus dem Griechischen.", a: "f"},
+    {s: "Wer einwandert, will meistens für immer bleiben.", a: "r"},
+    {s: "Jeder Migrant ist auch ein Flüchtling.", a: "f"},
+    {s: "Das erste Anwerbeabkommen schloss Deutschland mit Italien.", a: "r"},
+    {s: "Die meisten Gastarbeiter kamen aus Griechenland.", a: "n"},
+    {s: "1973 kamen 2,6 Millionen neue Gastarbeiter nach Deutschland.", a: "f"},
+    {s: "Das Gesetz von 2019 ist für Fachkräfte aus Ländern außerhalb der EU.", a: "r"}
+  ]);
+
+  // Üb. 3: рік ↔ подія
+  buildMatch('ub3', [
+    ["1955", "erstes Anwerbeabkommen mit Italien"],
+    ["1960", "etwa 330 000 ausländische Arbeitnehmer"],
+    ["bis 1968", "Abkommen mit weiteren Ländern"],
+    ["1973", "Stopp der Anwerbung wegen einer Wirtschaftskrise"],
+    ["2019", "neues Gesetz für Fachkräfte beschlossen"]
+  ]);
+
+  // Üb. 4а: слово ↔ пояснення
+  buildMatch('ub4', [
+    ["die Einwanderung", "man kommt in ein neues Land, um dort zu leben"],
+    ["die Auswanderung", "man verlässt sein Land"],
+    ["der Flüchtling", "jemand, der vor Krieg oder Verfolgung flieht"],
+    ["das Asyl", "das Recht auf Schutz in einem anderen Land"],
+    ["die Fachkraft", "jemand, der einen Beruf gut gelernt hat"]
+  ]);
+  // Üb. 4б: пропуски
+  wireBlanks('ub4b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🧳','🏭','📜','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
