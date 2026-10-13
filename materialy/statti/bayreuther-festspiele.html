@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>150 Jahre Wagner in Bayreuth · Lesen · Deutsch mit uns</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Geschichte</span>
+        <h1>150 Jahre Wagner in Bayreuth</h1>
+        <p class="sub">Фестиваль, де вже 150 років звучить музика лише одного композитора, і родина, що керує ним від самого початку. У цій історії є й темні сторінки.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Zeitleiste</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Deine Meinung</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Musik und Geschichte</h2>
+      <div class="card">
+        <p>Kennst du deutsche Komponisten? Warst du schon einmal in der Oper oder auf einem Musikfestival? Kann man die Musik eines Künstlers mögen, wenn man seine Meinungen schlimm findet?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай: яких німецьких композиторів ти знаєш (Бах, Бетховен, Вагнер…)? Чи можна слухати музику людини, чиї погляди були жахливими? Чи треба відокремлювати твір від автора?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Seit 150 Jahren gibt es in der kleinen bayerischen Stadt Bayreuth ein Festival mit Musik von nur einem einzigen <span class="gl" data-key data-uk="композитор" data-lemma="der Komponist, -en">Komponisten</span>: Richard Wagner. Die Bayreuther <span class="gl" data-key data-uk="фестиваль" data-lemma="die Festspiele (Pl.)">Festspiele</span> sind weltberühmt – und ihre Geschichte ist nicht immer schön.</p>
+
+          <p>Richard Wagner (1813–1883) kam aus Leipzig. Er wünschte sich ein Theater weit weg von den großen Städten, in dem nur seine eigenen <span class="gl" data-uk="твір" data-lemma="das Werk, -e">Werke</span> gespielt werden. Er wählte das ruhige Bayreuth im Norden Bayerns, und dort baute man extra für ihn ein Opernhaus. 1876 wurde es mit der Oper „Rheingold“ eröffnet. Viele berühmte Gäste kamen, zum Beispiel die Komponisten Franz Liszt und Peter Tschaikowski, der Philosoph Friedrich Nietzsche und Kaiser Wilhelm I.</p>
+
+          <p>Der Anfang war schwer: Die ersten Festspiele brachten ein großes <span class="gl" data-uk="дефіцит, збиток" data-lemma="das Defizit, -e">Defizit</span>, und das Haus stand danach sechs Jahre leer. 1882 wurde dort die Oper „Parsifal“ zum ersten Mal gespielt. Ein Jahr später starb Wagner in Venedig. Das Festival <span class="gl" data-uk="керувати, очолювати" data-lemma="leiten">leitet</span> seitdem immer jemand aus seiner Familie. Zuerst übernahm seine Frau Cosima, eine Tochter von Franz Liszt. Mit strenger Hand und guter Werbung machte sie die Festspiele auf der ganzen Welt bekannt.</p>
+
+          <p>Dann kamen dunkle Jahre. Schon in den 1920er-Jahren war die Stimmung im Festspielhaus <span class="gl" data-uk="націоналістичний" data-lemma="nationalistisch">nationalistisch</span>. Adolf Hitler war ein enger Freund der Familie und besuchte die Festspiele 1925 zum ersten Mal. Ab 1930 leitete Winifred Wagner, die Schwiegertochter des Komponisten, das Festival. Sie war eine <span class="gl" data-uk="переконаний" data-lemma="überzeugt">überzeugte</span> <span class="gl" data-uk="прихильниця" data-lemma="die Anhängerin, -nen">Anhängerin</span> Hitlers und wollte, dass keine jüdischen Musikerinnen und Musiker mehr mitspielen. In der Zeit des <span class="gl" data-key data-uk="націонал-соціалізм, нацизм" data-lemma="der Nationalsozialismus">Nationalsozialismus</span> waren die Festspiele eng mit dem Regime <span class="gl" data-uk="пов'язаний" data-lemma="verbunden">verbunden</span>.</p>
+
+          <p>Nach dem Krieg gaben Winifreds Söhne Wieland und Wolfgang dem Festival eine neue Richtung. 1951 begann das sogenannte „Neu-Bayreuth“: moderne <span class="gl" data-uk="постановка" data-lemma="die Inszenierung, -en">Inszenierungen</span> und ein klarer Bruch mit den Ideen der Nazis. Seit 2008 leitet Katharina Wagner, die Tochter von Wolfgang, die Festspiele. Sie hat sie modernisiert: Es gibt zum Beispiel Angebote für Kinder und Open-Air-Konzerte mit freiem <span class="gl" data-uk="вхід" data-lemma="der Eintritt">Eintritt</span>.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Das Festival bekommt Geld vom Bund, von der Stadt Bayreuth und vom Freistaat Bayern. <span class="gl" data-uk="вільна держава (назва деяких земель)" data-lemma="der Freistaat, -en">Freistaat</span> ist ein altes Wort für Republik. Drei Bundesländer tragen es bis heute im Namen: Bayern, Sachsen und Thüringen. Politisch sind sie aber ganz normale Bundesländer.</p>
+          </aside>
+
+          <p>Ein Thema bleibt aber schwierig: der <span class="gl" data-key data-uk="антисемітизм" data-lemma="der Antisemitismus">Antisemitismus</span>. Richard Wagner selbst war Antisemit und schrieb schon 1850 einen Text gegen Juden in der Musik. Viele Fans sagen, man müsse das Werk und den Künstler <span class="gl" data-key data-uk="розділяти, відокремлювати" data-lemma="trennen">trennen</span>. Im <span class="gl" data-uk="ювілейний рік" data-lemma="das Jubiläumsjahr, -e">Jubiläumsjahr</span> 2026 gab es wieder <span class="gl" data-uk="скандал, неприємність" data-lemma="der Ärger">Ärger</span>: Der jüdische <span class="gl" data-uk="публіцист" data-lemma="der Publizist, -en">Publizist</span> Michel Friedman sollte über jüdische Künstler sprechen, die von den Nazis <span class="gl" data-uk="убивати" data-lemma="ermorden">ermordet</span> wurden. Kurz vorher wurde sein <span class="gl" data-uk="доповідь, лекція" data-lemma="der Vortrag, -ä-e">Vortrag</span> <span class="gl" data-uk="скасовувати" data-lemma="absagen">abgesagt</span>. Nach heftiger Kritik <span class="gl" data-uk="перепрошувати" data-lemma="sich entschuldigen">entschuldigte</span> sich Katharina Wagner einen Tag später und lud ihn wieder ein.</p>
+
+          <p>Und die Zukunft? Die <i>New York Times</i> hat Bayreuth zu den 52 besten Reisezielen 2026 gezählt. Trotzdem wird das <span class="gl" data-uk="публіка, глядачі" data-lemma="das Publikum">Publikum</span> älter und kleiner, junge Leute kommen zu wenig. Früher musste man Karten lange <span class="gl" data-uk="заздалегідь" data-lemma="im Voraus">im Voraus</span> bestellen. Heute kann man sie einfach im Internet kaufen, und manchmal bleiben sogar Plätze leer.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Die Zeitleiste</h2>
+      <p class="lead">Що сталося в якому році? Знайди відповідь у тексті.</p>
+      <div class="card" id="ub3-list"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки.</p>
+      <div class="card">
+        <div class="wordbank"><span>Komponisten</span><span>Publikum</span><span>abgesagt</span><span>leitet</span><span>Eintritt</span><span>trennen</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> Beim Festival hört man nur Musik von einem <input type="text" class="blank-input inline wide" data-ans="Komponisten">.</div>
+          <div class="fill-item"><span class="num">2)</span> Heute <input type="text" class="blank-input inline" data-ans="leitet"> Katharina Wagner die Festspiele.</div>
+          <div class="fill-item"><span class="num">3)</span> Die Open-Air-Konzerte kosten nichts, der <input type="text" class="blank-input inline" data-ans="Eintritt"> ist frei.</div>
+          <div class="fill-item"><span class="num">4)</span> Der Vortrag hat nicht stattgefunden, er wurde <input type="text" class="blank-input inline wide" data-ans="abgesagt">.</div>
+          <div class="fill-item"><span class="num">5)</span> Das <input type="text" class="blank-input inline wide" data-ans="Publikum"> in Bayreuth wird immer älter.</div>
+          <div class="fill-item"><span class="num">6)</span> Kann man ein Werk und seinen Autor <input type="text" class="blank-input inline" data-ans="trennen">?</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Deine Meinung</h2>
+      <p class="lead">Напиши відповіді німецькою (4–6 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Muss man Werk und Künstler trennen? Kann man Wagners Musik hören, obwohl er Antisemit war? Was denkst du?</label>
+          <textarea id="ub5-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Und bei uns? Welches Musik- oder Kulturfestival in der Ukraine kennst du? Was ist dort besonders?</label>
+          <textarea id="ub5-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Ich finde, dass …; Einerseits …, andererseits …; Für mich ist wichtig, dass …; Ich kenne das Festival …; Dort kann man …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Die Bayreuther Festspiele gibt es seit 1876. Dort spielt man nur Opern von Richard Wagner, und das Festival leitet immer jemand aus seiner Familie. In der Nazi-Zeit waren die Festspiele eng mit Hitler verbunden; nach 1951 kam ein Neuanfang. Wagners Antisemitismus ist bis heute ein schwieriges Thema.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Байройтський фестиваль існує з 1876 року. Там ставлять лише опери Ріхарда Вагнера, а керує фестивалем завжди хтось із його родини. За нацистів фестиваль був тісно пов'язаний із Гітлером; після 1951 року почався новий етап. Антисемітизм Вагнера й досі залишається складною темою.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "bayreuther-festspiele";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Um die Geschichte eines berühmten Opernfestivals – mit hellen und dunklen Seiten",
+            "Um das Leben von Richard Wagner in Venedig",
+            "Um die besten Opern von Richard Wagner"],
+     correct: "Um die Geschichte eines berühmten Opernfestivals – mit hellen und dunklen Seiten"}
+  ]);
+  buildMatch('ub1h', [
+    ["Ein Theater nur für einen Komponisten", "Absatz 1"],
+    ["Schwerer Start und eine Frau an der Spitze", "Absatz 2"],
+    ["Das Festival und die Nazis", "Absatz 3"],
+    ["Neuanfang nach dem Krieg", "Absatz 4"],
+    ["Ein Problem, das bleibt", "Absatz 5"],
+    ["Beliebt, aber mit Sorgen", "Absatz 6"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5", "Absatz 6"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "Wagner wollte sein Theater in einer großen Stadt haben.", a: "f"},
+    {s: "Die ersten Festspiele haben viel Geld verloren.", a: "r"},
+    {s: "Cosima Wagner war die Tochter von Franz Liszt.", a: "r"},
+    {s: "Winifred Wagner war gegen Hitler.", a: "f"},
+    {s: "Nach 1951 hat man in Bayreuth moderne Inszenierungen gezeigt.", a: "r"},
+    {s: "Michel Friedman hat seinen Vortrag selbst abgesagt.", a: "f"},
+    {s: "Eine Karte für die Festspiele kostet heute mindestens 100 Euro.", a: "n"},
+    {s: "Heute bleiben manchmal Plätze leer.", a: "r"}
+  ]);
+
+  buildMatch('ub3', [
+    ["1876", "Das Festspielhaus wird mit „Rheingold“ eröffnet."],
+    ["1882", "„Parsifal“ wird zum ersten Mal gespielt."],
+    ["1883", "Richard Wagner stirbt in Venedig."],
+    ["1925", "Hitler besucht die Festspiele zum ersten Mal."],
+    ["1951", "„Neu-Bayreuth“ beginnt."],
+    ["2008", "Katharina Wagner wird Chefin."]
+  ], {lead: true});
+
+  buildMatch('ub4', [
+    ["das Werk", "твір"],
+    ["leiten", "керувати, очолювати"],
+    ["überzeugt", "переконаний"],
+    ["die Inszenierung", "постановка"],
+    ["sich entschuldigen", "перепрошувати"],
+    ["das Defizit", "дефіцит, збиток"]
+  ]);
+  wireBlanks('ub4b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🎼','🎭','🏛️','📜','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

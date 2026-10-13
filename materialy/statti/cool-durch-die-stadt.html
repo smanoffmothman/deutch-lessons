@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Im Schatten durch die Stadt · Lesen · Deutsch mit uns</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Natur & Umwelt</span>
+        <h1>Im Schatten durch die Stadt</h1>
+        <p class="sub">Найкоротший шлях — не завжди найкращий, коли надворі +35. Як застосунок з Гайдельберга прокладає маршрути по тіні.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Wenn die Stadt heiß wird</h2>
+      <div class="card">
+        <p>Wie kommst du an heißen Tagen zur Schule? Nimmst du immer den schnellsten Weg? Welche Apps benutzt du, um einen Weg zu finden?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай: де в місті влітку найспекотніше — на площах, на асфальті, біля скла? Де прохолодніше? Чи був би тобі корисний застосунок, що веде тінню?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">In diesem Jahr wurde in Deutschland die höchste Temperatur <span class="gl" data-uk="вимірювати" data-lemma="messen (maß, hat gemessen)">gemessen</span>, seit es überhaupt <span class="gl" data-uk="вимірювання" data-lemma="die Messung, -en">Messungen</span> gibt. <span class="gl" data-key data-uk="спека" data-lemma="die Hitze">Hitze</span> ist für viele <span class="gl" data-uk="неприємний" data-lemma="unangenehm">unangenehm</span>, oft gefährlich und kann sogar <span class="gl" data-uk="смертельний" data-lemma="tödlich">tödlich</span> sein.</p>
+
+          <p>Es gibt viele Wege, sich bei Hitze zu <span class="gl" data-uk="захищати(ся)" data-lemma="schützen">schützen</span>. Einer davon ist – ganz <span class="gl" data-uk="буквально" data-lemma="wörtlich">wörtlich</span> – der Weg selbst. Denn an heißen Tagen ist der beste Weg nicht immer der schnellste, sondern der mit dem meisten <span class="gl" data-key data-uk="тінь" data-lemma="der Schatten, -">Schatten</span>. Morgens geht man vielleicht lieber auf der linken Straßenseite, abends auf der rechten – <span class="gl" data-uk="залежно від того" data-lemma="je nachdem">je nachdem</span>, wo die Sonne gerade steht.</p>
+
+          <p>Genau dabei hilft eine neue App: shaded.ors. Menschen in Heidelberg in Baden-Württemberg und in Worms in Rheinland-Pfalz können damit statt ihrer normalen <span class="gl" data-key data-uk="маршрут" data-lemma="die Route, -n">Route</span> einen anderen Weg finden – durch Parks und durch <span class="gl" data-uk="район, територія" data-lemma="das Gebiet, -e">Gebiete</span>, in denen es mehr Schatten gibt.</p>
+
+          <p>Wie <span class="gl" data-uk="вирішувати" data-lemma="entscheiden (entschied, hat entschieden)">entscheidet</span> die App, welcher Weg der beste ist? Sie <span class="gl" data-uk="враховувати" data-lemma="berücksichtigen">berücksichtigt</span> mehrere <span class="gl" data-uk="чинник" data-lemma="der Faktor, -en">Faktoren</span>: das Wetter, die <span class="gl" data-uk="підйом, ухил" data-lemma="die Steigung, -en">Steigung</span> des Weges und den <span class="gl" data-uk="стан" data-lemma="der Zustand, -ä-e">Zustand</span> des Bodens. Wer zu Fuß oder mit dem Rad <span class="gl" data-uk="в дорозі" data-lemma="unterwegs">unterwegs</span> ist, kommt so etwas kühler ans Ziel.</p>
+
+          <p>Bis jetzt gibt es die App nur in diesen zwei Städten. <span class="gl" data-uk="теоретично" data-lemma="theoretisch">Theoretisch</span> kann es sie aber in jeder anderen Stadt geben. Denn die Daten sind <span class="gl" data-key data-uk="відкритий (доступний усім)" data-lemma="offen">offen</span>: Alle können sie sehen und für eigene Projekte benutzen.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Bei starker Hitze gibt der Deutsche Wetterdienst (DWD) offizielle <span class="gl" data-uk="попередження про спеку" data-lemma="die Hitzewarnung, -en">Hitzewarnungen</span> heraus. Dann soll man viel Wasser trinken, in der Mittagszeit im Schatten bleiben und besonders auf ältere Menschen und kleine Kinder achten.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub3-list"></div>
+
+      <p class="lead">б) Встав слова з рамки.</p>
+      <div class="card">
+        <div class="wordbank"><span>Schatten</span><span>Hitze</span><span>Route</span><span>offen</span><span>Steigung</span><span>tödlich</span></div>
+        <div id="ub3b-list">
+          <div class="fill-item"><span class="num">1)</span> Unter dem Baum ist es kühl, dort ist <input type="text" class="blank-input inline" data-ans="Schatten">.</div>
+          <div class="fill-item"><span class="num">2)</span> Bei 38 Grad ist die <input type="text" class="blank-input inline" data-ans="Hitze"> kaum auszuhalten.</div>
+          <div class="fill-item"><span class="num">3)</span> Die App zeigt mir eine andere <input type="text" class="blank-input inline" data-ans="Route"> durch den Park.</div>
+          <div class="fill-item"><span class="num">4)</span> Die Daten sind <input type="text" class="blank-input inline" data-ans="offen">, jeder kann sie benutzen.</div>
+          <div class="fill-item"><span class="num">5)</span> Mit dem Fahrrad ist eine starke <input type="text" class="blank-input inline wide" data-ans="Steigung"> anstrengend.</div>
+          <div class="fill-item"><span class="num">6)</span> Extreme Hitze kann für alte Menschen sogar <input type="text" class="blank-input inline" data-ans="tödlich"> sein.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub3b-check">Prüfen</button>
+          <button class="btn secondary" id="ub3b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub3b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (5–7 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub4-a">1. Beschreibe deinen Schulweg an einem heißen Tag. Wo gibt es Schatten, wo ist es besonders heiß?</label>
+          <textarea id="ub4-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub4-b">2. Welche App würdest du gern für deine Stadt erfinden? Was soll sie können?</label>
+          <textarea id="ub4-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Auf meinem Schulweg …; Besonders heiß ist es …; Im Schatten …; Meine App soll …; Sie hilft, wenn …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>In Deutschland werden die Sommer heißer. In Heidelberg und Worms zeigt die App shaded.ors Wege mit viel Schatten. Sie achtet auf Wetter, Steigung und Boden. Weil die Daten offen sind, könnte es die App bald auch in anderen Städten geben.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Літо в Німеччині стає спекотнішим. У Гайдельберзі та Вормсі застосунок shaded.ors показує маршрути з великою кількістю тіні. Він враховує погоду, підйоми й стан дороги. Оскільки дані відкриті, застосунок незабаром може з'явитися й в інших містах.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "cool-durch-die-stadt";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Um eine App, die bei Hitze Wege mit viel Schatten zeigt",
+            "Um eine App, die vor Gewitter und Sturm warnt",
+            "Um neue Parks in Heidelberg und Worms"],
+     correct: "Um eine App, die bei Hitze Wege mit viel Schatten zeigt"}
+  ]);
+  buildMatch('ub1h', [
+    ["Nicht der schnellste, sondern der kühlste Weg", "Absatz 1"],
+    ["Eine App für zwei Städte", "Absatz 2"],
+    ["So rechnet die App", "Absatz 3"],
+    ["Bald auch anderswo?", "Absatz 4"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "In diesem Jahr wurde in Deutschland ein Hitzerekord gemessen.", a: "r"},
+    {s: "Laut Text ist der schnellste Weg bei Hitze immer der beste.", a: "f"},
+    {s: "Die App gibt es in Heidelberg und in Worms.", a: "r"},
+    {s: "Die App zeigt Wege durch Parks.", a: "r"},
+    {s: "Die App kostet fünf Euro im Monat.", a: "n"},
+    {s: "Die App achtet nur auf die Temperatur.", a: "f"},
+    {s: "Andere Städte dürfen die Daten nicht benutzen.", a: "f"}
+  ]);
+
+  buildMatch('ub3', [
+    ["tödlich", "смертельний"],
+    ["der Zustand", "стан"],
+    ["berücksichtigen", "враховувати"],
+    ["der Faktor", "чинник"],
+    ["theoretisch", "теоретично"],
+    ["die Hitzewarnung", "попередження про спеку"]
+  ]);
+  wireBlanks('ub3b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ["☀️", "🌳", "📱", "🗺️", "⭐"]);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

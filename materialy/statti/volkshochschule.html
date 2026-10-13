@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mehr als ein Sprachkurs · Lesen · Deutsch mit uns</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Arbeit &amp; Schule</span>
+        <h1>Mehr als ein Sprachkurs</h1>
+        <p class="sub">Тетяна втекла з Одеси й за тиждень уже сиділа в класі в Мюнхені. Чому школа для дорослих стала для неї майже домом?</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Reihenfolge</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Lernen als Erwachsener</h2>
+      <div class="card">
+        <p>Lernen nur Kinder und Jugendliche? Was möchten Erwachsene vielleicht noch lernen – zum Beispiel deine Eltern oder Großeltern? Und wo können sie das machen?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай (або обговоріть у парі): чого хотіли б навчитися дорослі з твого оточення — мови, кулінарії, малювання? Де в Україні дорослі можуть відвідувати такі курси? Як гадаєш, що таке «Volkshochschule»?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">In fast jeder deutschen Stadt gibt es eine <span class="gl" data-key data-uk="народний університет (школа для дорослих)" data-lemma="die Volkshochschule, -n" data-note="коротко: die VHS">Volkshochschule</span>, kurz VHS. Dort lernen <span class="gl" data-uk="дорослий" data-lemma="der/die Erwachsene, -n">Erwachsene</span> – und nicht nur Sprachen.</p>
+
+          <p>Tetiana Romanovska kommt aus Odessa in der Ukraine. Als vor ihrer Stadt die ersten <span class="gl" data-uk="військовий корабель" data-lemma="das Kriegsschiff, -e">Kriegsschiffe</span> zu sehen waren, ist sie mit ihrem Mann <span class="gl" data-uk="тікати" data-lemma="fliehen (floh, ist geflohen)">geflohen</span>. Die Reise ging über die Slowakei und Österreich nach Deutschland. Schon eine Woche nach der <span class="gl" data-uk="прибуття" data-lemma="die Ankunft, -ü-e">Ankunft</span> saß sie in München im Klassenraum: in einem Deutschkurs der Volkshochschule für <span class="gl" data-key data-uk="біженець, біженка" data-lemma="der/die Geflüchtete, -n">Geflüchtete</span>.</p>
+
+          <p>In ihrem Kurs waren viele Frauen aus der Ukraine. Sie haben nicht nur Wörter und Grammatik gelernt, sondern auch über ihre <span class="gl" data-uk="пережите, досвід" data-lemma="das Erlebnis, -se">Erlebnisse</span> gesprochen. Schon die erste Stunde war sehr emotional. Aus den Teilnehmerinnen sind Freundinnen geworden – bis heute. Inzwischen hat Tetiana den B2-Kurs <span class="gl" data-uk="закінчувати" data-lemma="abschließen (schloss ab, hat abgeschlossen)">abgeschlossen</span>. Für sie ist klar: Wer in einem Land lebt, muss wenigstens die <span class="gl" data-uk="основа" data-lemma="die Grundlage, -n">Grundlagen</span> der Sprache lernen.</p>
+
+          <p>Aber die VHS <span class="gl" data-key data-uk="пропонувати" data-lemma="anbieten (bot an, hat angeboten)">bietet</span> viel mehr an als Sprachkurse. Tetiana hat an historischen <span class="gl" data-uk="екскурсія містом" data-lemma="die Stadtführung, -en">Stadtführungen</span> <span class="gl" data-key data-uk="брати участь (у)" data-lemma="teilnehmen an (nahm teil, hat teilgenommen)">teilgenommen</span> und einen Kurs über das politische System Deutschlands besucht. Als Nächstes möchte sie kochen lernen, zum Beispiel Sushi. Auch Singen interessiert sie – <span class="gl" data-uk="хоча" data-lemma="obwohl">obwohl</span> sie selbst lachend sagt, dass sie sehr schlecht singt.</p>
+
+          <p>Und es gibt noch eine <span class="gl" data-uk="несподіванка" data-lemma="die Überraschung, -en">Überraschung</span>: In der Ukraine war Tetiana Lehrerin für Englisch und Spanisch. Kurz nach ihrer Ankunft hat die VHS sie gefragt, ob sie selbst <span class="gl" data-key data-uk="викладати" data-lemma="unterrichten">unterrichten</span> möchte. Sie hat Ja gesagt – für sie die beste Entscheidung. Die Arbeit gibt ihrem Alltag Struktur und hilft bei der Integration. Am liebsten unterrichtet sie ältere Menschen, die <span class="gl" data-uk="попри, незважаючи на" data-lemma="trotz">trotz</span> Problemen mit der Gesundheit mit viel Freude eine neue Sprache lernen.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Die erste Volkshochschule wurde 1902 in Berlin <span class="gl" data-uk="засновувати" data-lemma="gründen">gegründet</span>. Heute gibt es in Deutschland mehr als 800 Volkshochschulen. Die größte in Europa ist in München: Dort gibt es jedes Jahr rund 18 000 Kurse und <span class="gl" data-uk="захід (подія)" data-lemma="die Veranstaltung, -en">Veranstaltungen</span>. Auch in Österreich (etwa 400) und in der Schweiz (etwa 70) gibt es Volkshochschulen.</p>
+          </aside>
+
+          <p>Warum gehen so viele Menschen an die VHS? Die Kurse sind <span class="gl" data-key data-uk="недорогий, вигідний" data-lemma="günstig">günstig</span>, denn sie bekommen Geld von der Stadt oder vom Land. So sollen möglichst viele Menschen lernen können – egal, wie alt sie sind. Für Tetiana ist die Volkshochschule heute fast wie ein <span class="gl" data-uk="дім, домівка" data-lemma="das Zuhause">Zuhause</span>.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub3-list"></div>
+
+      <p class="lead">б) Встав слова з рамки.</p>
+      <div class="card">
+        <div class="wordbank"><span>Ankunft</span><span>günstig</span><span>obwohl</span><span>teilgenommen</span><span>unterrichtet</span><span>Erwachsene</span></div>
+        <div id="ub3b-list">
+          <div class="fill-item"><span class="num">1)</span> Die Volkshochschule ist eine Schule für <input type="text" class="blank-input inline" data-ans="Erwachsene">.</div>
+          <div class="fill-item"><span class="num">2)</span> Eine Woche nach ihrer <input type="text" class="blank-input inline" data-ans="Ankunft"> war Tetiana schon im Deutschkurs.</div>
+          <div class="fill-item"><span class="num">3)</span> Sie hat an einer Stadtführung <input type="text" class="blank-input inline wide" data-ans="teilgenommen">.</div>
+          <div class="fill-item"><span class="num">4)</span> Sie möchte einen Gesangskurs machen, <input type="text" class="blank-input inline" data-ans="obwohl"> sie schlecht singt.</div>
+          <div class="fill-item"><span class="num">5)</span> Heute <input type="text" class="blank-input inline wide" data-ans="unterrichtet"> sie selbst an der VHS.</div>
+          <div class="fill-item"><span class="num">6)</span> Die Kurse kosten nicht viel, sie sind <input type="text" class="blank-input inline" data-ans="günstig">.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub3b-check">Prüfen</button>
+          <button class="btn secondary" id="ub3b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub3b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Tetianas Weg</h2>
+      <p class="lead">Розстав події з життя Тетяни в правильному порядку. Натискай речення по черзі; натиснеш на вже поставлене — воно повернеться вниз.</p>
+      <div class="card" id="ub4-seq"></div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (4–6 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Welchen Kurs würdest du an der Volkshochschule gern besuchen? Warum?</label>
+          <textarea id="ub5-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Wo können Erwachsene in der Ukraine etwas Neues lernen? Vergleiche mit Deutschland.</label>
+          <textarea id="ub5-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Ich würde gern … lernen, weil …; Bei uns gibt es …; In Deutschland dagegen …; Ich finde es gut, dass …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Die Volkshochschule (VHS) ist eine Schule für Erwachsene. Es gibt sie seit 1902, heute in über 800 deutschen Städten – und auch in Österreich und der Schweiz. Man kann dort Sprachen lernen, aber auch kochen, singen oder etwas über Politik und Geschichte erfahren. Die Kurse sind günstig, weil Städte und Länder dafür bezahlen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Volkshochschule (VHS) — школа для дорослих. Вони існують з 1902 року, сьогодні — у понад 800 містах Німеччини, а також в Австрії та Швейцарії. Там можна вивчати мови, а ще куховарити, співати чи дізнатися більше про політику й історію. Курси недорогі, бо їх фінансують міста й землі.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "volkshochschule";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Was die Volkshochschule anbietet – am Beispiel einer Frau aus Odessa",
+            "Wie man in München eine billige Wohnung findet",
+            "Warum Deutsch für Ukrainerinnen eine schwere Sprache ist"],
+     correct: "Was die Volkshochschule anbietet – am Beispiel einer Frau aus Odessa"}
+  ]);
+  buildMatch('ub1h', [
+    ["Von Odessa in einen Münchner Klassenraum", "Absatz 1"],
+    ["Mehr als Grammatik: neue Freundinnen", "Absatz 2"],
+    ["Kochen, Singen, Politik", "Absatz 3"],
+    ["Aus der Schülerin wird eine Lehrerin", "Absatz 4"],
+    ["Lernen für wenig Geld", "Absatz 5"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "Tetiana ist allein nach Deutschland gekommen.", a: "f"},
+    {s: "Ihr erster Deutschkurs war ein Kurs für Geflüchtete.", a: "r"},
+    {s: "Im Kurs waren nur Männer.", a: "f"},
+    {s: "Tetiana hat in München einen Kochkurs für Sushi schon abgeschlossen.", a: "f"},
+    {s: "Tetianas Mann besucht auch einen Kurs an der VHS.", a: "n"},
+    {s: "Die Volkshochschule hat Tetiana gefragt, ob sie unterrichten möchte.", a: "r"},
+    {s: "Die größte Volkshochschule Europas ist in Berlin.", a: "f"},
+    {s: "Tetiana unterrichtet gern ältere Menschen.", a: "r"}
+  ]);
+
+  buildMatch('ub3', [
+    ["fliehen", "тікати"],
+    ["die Ankunft", "прибуття"],
+    ["das Erlebnis", "пережите, досвід"],
+    ["abschließen", "закінчувати"],
+    ["die Überraschung", "несподіванка"],
+    ["trotz", "попри, незважаючи на"],
+    ["gründen", "засновувати"]
+  ]);
+  wireBlanks('ub3b');
+
+  buildSequence('ub4-seq', [
+    "Tetiana arbeitet in der Ukraine als Lehrerin für Englisch und Spanisch.",
+    "Vor Odessa sind Kriegsschiffe zu sehen, Tetiana flieht mit ihrem Mann.",
+    "Über die Slowakei und Österreich kommt sie nach Deutschland.",
+    "Eine Woche später sitzt sie in München im Deutschkurs.",
+    "Die VHS fragt sie, ob sie selbst unterrichten möchte.",
+    "Tetiana schließt den B2-Kurs ab."
+  ]);
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📚','🇺🇦','🍣','🎤','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

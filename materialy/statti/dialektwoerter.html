@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moin, fei, Oida! · Lesen · Deutsch mit uns</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Sprache</span>
+        <h1>Moin, fei, Oida!</h1>
+        <p class="sub">Чому на півночі кажуть «Moin» навіть уночі, а одне баварське слово з трьох літер має латинське коріння? Діалектні слова, яких не знайдеш у підручнику.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wo sagt man das?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Deutsch ist nicht überall gleich</h2>
+      <div class="card">
+        <p>Hast du schon einmal ein deutsches Wort gehört, das nicht im Lehrbuch steht? Gibt es in deiner Sprache Wörter, die man nur in einer Region benutzt?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай: чи знаєш ти слова, які вживають лише в певному регіоні України (наприклад, на заході чи на сході)? Як гадаєш, чи розуміють одне одного німці з Гамбурга і з Мюнхена, коли говорять діалектом?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Im Deutschkurs lernt man Hochdeutsch. Aber wer durch Deutschland, Österreich oder die Schweiz reist, hört viele Wörter, die in keinem Lehrbuch stehen. Die Zeitschrift <i>Deutsch perfekt</i> hat ihre Leserinnen und Leser nach ihren Lieblingswörtern im <span class="gl" data-key data-uk="діалект, говірка" data-lemma="der Dialekt, -e">Dialekt</span> gefragt. Hier ist eine kleine <span class="gl" data-uk="добірка, вибір" data-lemma="die Auswahl">Auswahl</span>.</p>
+
+          <p>Fangen wir mit dem Grüßen an. Im Norden Deutschlands sagt man <span class="gl" data-uk="привіт (у будь-який час доби)" data-lemma="Moin" data-note="Norddeutschland">Moin</span> – und zwar nicht nur am Morgen, sondern zu jeder <span class="gl" data-uk="час доби" data-lemma="die Tageszeit, -en">Tageszeit</span>, sogar nachts. Eine Theorie: Das Wort kommt vom plattdeutschen <i>moi</i>, also „schön“ oder „gut“. Wer sich in Württemberg oder in Franken <span class="gl" data-key data-uk="прощатися" data-lemma="sich verabschieden">verabschiedet</span>, sagt vielleicht <span class="gl" data-uk="бувай, до побачення" data-lemma="Adele" data-note="Württemberg, Franken">Adele</span>. Die schwäbische Endung <i>-le</i> macht den Gruß klein und besonders freundlich.</p>
+
+          <p>Ein echtes Multitalent ist das bayerische <span class="gl" data-uk="та нормально, все гаразд" data-lemma="Basst scho." data-note="Bayern; = Das passt schon.">Basst scho</span> – die kurze Form von „Das passt schon“. Damit kann man fast alles sagen: von „Alles in Ordnung“ bis „Lass mich in Ruhe!“. Wie man es meint, hört man am Ton. Beim Bezahlen bedeutet es oft: Das <span class="gl" data-uk="решта (гроші)" data-lemma="das Wechselgeld">Wechselgeld</span> können Sie behalten. Typisch für den Süden ist auch das kleine Wort <span class="gl" data-uk="ж, таки (підсилює речення)" data-lemma="fei" data-note="Süddeutschland">fei</span>. Es macht einen Satz stärker: <i>Pass fei auf!</i> Seine <span class="gl" data-uk="корінь (походження)" data-lemma="die Wurzel, -n">Wurzeln</span> sind überraschend: Es kommt vom lateinischen <i>finis</i> („Ende“) und kam über das französische <i>fin</i> ins Deutsche.</p>
+
+          <p>Bei Jugendlichen in Österreich und Bayern hört man ständig <span class="gl" data-uk="чувак, ого (букв. «старий»)" data-lemma="Oida" data-note="Österreich, Bayern; = Alter">Oida</span>, die Dialektform von „Alter“. Man sagt es überrascht, <span class="gl" data-uk="у захваті" data-lemma="begeistert">begeistert</span> oder <span class="gl" data-uk="роздратований" data-lemma="genervt" data-note="розм.">genervt</span>. 2018 hat man es in Österreich sogar zum Jugendwort des Jahres <span class="gl" data-uk="обирати" data-lemma="wählen">gewählt</span>. Ganz anders klingt das Alemannische, das man im Südwesten des deutschen <span class="gl" data-uk="мовний простір" data-lemma="der Sprachraum, -ä-e">Sprachraums</span> spricht, zum Beispiel in Baden-Württemberg, in der Schweiz und in Liechtenstein. Dort heißt „gewesen“ einfach <span class="gl" data-uk="був, була (= gewesen)" data-lemma="gsi" data-note="alemannisch">gsi</span>: <i>I bin gsi.</i></p>
+
+          <p>Viele Dinge haben <span class="gl" data-key data-uk="залежно від" data-lemma="je nach">je nach</span> Region einen anderen Namen. Die Kartoffel ist in Österreich und in der Schweiz auch ein <span class="gl" data-uk="картопля" data-lemma="der Erdapfel, -ä-" data-note="österr., schweiz.">Erdapfel</span>. In der Pfalz und in Rheinhessen sagt man <span class="gl" data-uk="картопля" data-lemma="die Krumbeer" data-note="Pfalz, Rheinhessen">Krumbeer</span>, nach dem alten Wort <i>Grundbirne</i>. Ein Marienkäfer heißt in Thüringen <span class="gl" data-uk="сонечко (комаха)" data-lemma="das Mufferküpchen" data-note="Thüringen">Mufferküpchen</span>. Und den süßen Mann aus <span class="gl" data-uk="дріжджове тісто" data-lemma="der Hefeteig, -e">Hefeteig</span>, den die Bäckereien vor Weihnachten verkaufen, nennt man rund um Karlsruhe <span class="gl" data-uk="чоловічок із тіста" data-lemma="der Dambedei" data-note="Region Karlsruhe">Dambedei</span>.</p>
+
+          <p>Wo es hohe Berge gibt, wandert man nicht nur – man <span class="gl" data-uk="дертися (вгору)" data-lemma="kraxeln" data-note="Bayern, Österreich">kraxelt</span>. Das Wort bedeutet <span class="gl" data-uk="виснажливий, важкий" data-lemma="anstrengend">anstrengendes</span> <span class="gl" data-uk="лазіння, скелелазіння" data-lemma="das Klettern">Klettern</span>. In Süddeutschland nennt man den Partner, die Partnerin oder das Kind <span class="gl" data-uk="ніжно, з любов'ю" data-lemma="liebevoll">liebevoll</span> <span class="gl" data-uk="горобчику, сонечко (пестливо)" data-lemma="das/der Spatzl" data-note="Süddeutschland; von: der Spatz">Spatzl</span>. Wer in Norddeutschland zu viele <span class="gl" data-uk="непотрібний" data-lemma="unnötig">unnötige</span> Dinge in der Wohnung hat, hat <span class="gl" data-uk="мотлох, дрібниці" data-lemma="der Tüddelkram" data-note="Norddeutschland">Tüddelkram</span>. Und wer klug ist, ist im Norden <span class="gl" data-uk="кмітливий, розумний" data-lemma="plietsch" data-note="niederdeutsch">plietsch</span>.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>In der Schule, in den Nachrichten und im Büro spricht man meistens Hochdeutsch. Zu Hause und mit Freunden sprechen aber viele Menschen Dialekt. In der deutschsprachigen Schweiz ist das ganz normal: Im Alltag sprechen fast alle Schweizerdeutsch – geschrieben wird aber meistens Hochdeutsch.</p>
+          </aside>
+
+          <p>Zum Schluss ein Test für Ihre <span class="gl" data-key data-uk="вимова" data-lemma="die Aussprache, -n">Aussprache</span>: <span class="gl" data-uk="білячий хвіст" data-lemma="der Oachkatzlschwoaf" data-note="Bayern, Österreich; = Eichhörnchenschwanz">Oachkatzlschwoaf</span>. So heißt in Bayern und Österreich der <span class="gl" data-uk="хвіст" data-lemma="der Schwanz, -ä-e">Schwanz</span> des <span class="gl" data-uk="білка" data-lemma="das Eichhörnchen, -">Eichhörnchens</span>. Viele Deutsche können das Wort selbst nicht richtig aussprechen. In Südtirol benutzt man es sogar als Test: Wer es sagen kann, versteht den Dialekt wirklich.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wo sagt man das?</h2>
+      <p class="lead">Розклади слова з тексту: де їх найчастіше можна почути?</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що це означає літературною німецькою (Hochdeutsch)?</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки.</p>
+      <div class="card">
+        <div class="wordbank"><span>Aussprache</span><span>je nach</span><span>verabschiedet</span><span>Wechselgeld</span><span>anstrengend</span><span>Auswahl</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> Das Wort ist schwer zu sagen – die <input type="text" class="blank-input inline wide" data-ans="Aussprache"> ist kompliziert.</div>
+          <div class="fill-item"><span class="num">2)</span> <input type="text" class="blank-input inline" data-ans="Je nach"> Region hat die Kartoffel einen anderen Namen.</div>
+          <div class="fill-item"><span class="num">3)</span> Am Ende des Besuchs hat sie sich mit „Adele“ <input type="text" class="blank-input inline wide" data-ans="verabschiedet">.</div>
+          <div class="fill-item"><span class="num">4)</span> „Basst scho“ – Sie können das <input type="text" class="blank-input inline wide" data-ans="Wechselgeld"> behalten.</div>
+          <div class="fill-item"><span class="num">5)</span> Kraxeln ist viel <input type="text" class="blank-input inline wide" data-ans="anstrengend|anstrengender"> als Wandern.</div>
+          <div class="fill-item"><span class="num">6)</span> Der Text zeigt nur eine kleine <input type="text" class="blank-input inline" data-ans="Auswahl"> von Dialektwörtern.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (4–6 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Welches Dialektwort aus dem Text gefällt dir am besten? Was bedeutet es, und warum magst du es?</label>
+          <textarea id="ub5-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Gibt es in der Ukraine Wörter, die man nur in einer Region benutzt? Nenne ein Beispiel und erkläre es auf Deutsch.</label>
+          <textarea id="ub5-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Mir gefällt das Wort … am besten, weil …; Es bedeutet …; In meiner Region sagt man …; In anderen Teilen der Ukraine sagt man dagegen …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Neben dem Hochdeutschen gibt es viele Dialekte. Im Norden grüßt man mit „Moin“, in Bayern und Österreich hört man „Basst scho“ und „Oida“, im Südwesten und in der Schweiz spricht man Alemannisch. Auch Alltagsdinge wie die Kartoffel haben je nach Region andere Namen. In der Deutschschweiz spricht man im Alltag Dialekt, schreibt aber Hochdeutsch.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Окрім літературної німецької, є багато діалектів. На півночі вітаються «Moin», у Баварії та Австрії чути «Basst scho» і «Oida», на південному заході й у Швейцарії говорять алеманськими діалектами. Навіть звичайні речі, як-от картопля, у різних регіонах називаються по-різному. У німецькомовній Швейцарії в побуті говорять діалектом, а пишуть літературною німецькою.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "dialektwoerter";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Um Lieblingswörter aus verschiedenen Dialekten und was sie bedeuten",
+            "Um die Frage, ob man in der Schule Dialekt lernen soll",
+            "Um die Geschichte der hochdeutschen Sprache seit dem Mittelalter"],
+     correct: "Um Lieblingswörter aus verschiedenen Dialekten und was sie bedeuten"},
+    {q: "Woher kommen die Wörter im Text?",
+     opts: ["Leserinnen und Leser einer Zeitschrift haben sie geschickt",
+            "Ein Wörterbuch hat die wichtigsten Dialektwörter gesammelt",
+            "Schüler haben sie für einen Wettbewerb aufgeschrieben"],
+     correct: "Leserinnen und Leser einer Zeitschrift haben sie geschickt"}
+  ]);
+  buildMatch('ub1h', [
+    ["Hallo und Tschüss", "Absatz 1"],
+    ["Zwei kleine Wörter mit großer Wirkung", "Absatz 2"],
+    ["Was Jugendliche sagen – und wie man im Südwesten spricht", "Absatz 3"],
+    ["Kartoffel, Marienkäfer, Hefemann", "Absatz 4"],
+    ["Berge, Liebe und unnötige Dinge", "Absatz 5"],
+    ["Ein Wort als Sprachtest", "Absatz 6"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5", "Absatz 6"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "„Moin“ sagt man in Norddeutschland nur am Morgen.", a: "f"},
+    {s: "Mit „Basst scho“ kann man Zufriedenheit, aber auch Ärger zeigen.", a: "r"},
+    {s: "Das Wort „fei“ kommt ursprünglich aus dem Lateinischen.", a: "r"},
+    {s: "„Oida“ war 2018 in Deutschland das Jugendwort des Jahres.", a: "f"},
+    {s: "Den Dambedei kann man vor allem im Sommer kaufen.", a: "f"},
+    {s: "Der Dambedei ist mit Schokolade gefüllt.", a: "n"},
+    {s: "In der Deutschschweiz schreibt man meistens Hochdeutsch.", a: "r"},
+    {s: "Auch viele Deutsche finden das Wort „Oachkatzlschwoaf“ schwer.", a: "r"}
+  ]);
+
+  buildSort('ub3-sort', {
+    buckets: ["Norddeutschland", "Bayern & Österreich", "Südwesten & Schweiz"],
+    items: [
+      {t: "Moin", b: "Norddeutschland"},
+      {t: "Tüddelkram", b: "Norddeutschland"},
+      {t: "plietsch", b: "Norddeutschland"},
+      {t: "Basst scho", b: "Bayern & Österreich"},
+      {t: "Oida", b: "Bayern & Österreich"},
+      {t: "kraxeln", b: "Bayern & Österreich"},
+      {t: "Oachkatzlschwoaf", b: "Bayern & Österreich"},
+      {t: "gsi", b: "Südwesten & Schweiz"},
+      {t: "Dambedei", b: "Südwesten & Schweiz"}
+    ]
+  });
+
+  buildMatch('ub4', [
+    ["Moin", "Hallo / Guten Tag"],
+    ["Adele", "Auf Wiedersehen"],
+    ["Oida", "Alter"],
+    ["gsi", "gewesen"],
+    ["Erdapfel", "Kartoffel"],
+    ["Mufferküpchen", "Marienkäfer"],
+    ["kraxeln", "klettern"],
+    ["plietsch", "klug"]
+  ]);
+  wireBlanks('ub4b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['👋','🥨','⛰️','🐿️','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

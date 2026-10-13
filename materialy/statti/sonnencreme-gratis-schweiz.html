@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sonnencreme für alle · Lesen · Deutsch mit uns</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Alltag</span>
+        <h1>Sonnencreme für alle</h1>
+        <p class="sub">У Швейцарії сонцезахисний крем роздають безкоштовно — біля озер, у басейнах і навіть у горах. Чому саме там це так важливо?</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Zahlen</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Sicher in der Sonne</h2>
+      <div class="card">
+        <p>Benutzt du im Sommer Sonnencreme? Wann und wo? Was passiert, wenn man zu lange in der Sonne ist?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай: чи береш ти з собою сонцезахисний крем на пляж або в гори? Що означає цифра на тюбику (SPF 30, 50)? Як ще можна захиститися від сонця?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in"><span class="gl" data-key data-uk="сонцезахисний крем" data-lemma="die Sonnencreme, -s">Sonnencreme</span> gratis? In der Schweiz geht das – zumindest in diesem Sommer.</p>
+
+          <p>An rund 70 Orten im ganzen Land stehen <span class="gl" data-key data-uk="дозатор" data-lemma="der Spender, -">Spender</span> mit <span class="gl" data-uk="безкоштовний" data-lemma="kostenlos">kostenloser</span> Sonnencreme. Die Creme hat <span class="gl" data-key data-uk="фактор захисту від сонця (SPF)" data-lemma="der Lichtschutzfaktor, -en">Lichtschutzfaktor</span> 50+, sie schützt also sehr stark. Man findet die Spender an Seen und in Schwimmbädern, aber auch in Städten, in den Bergen und bei <span class="gl" data-uk="захід, подія" data-lemma="die Veranstaltung, -en">Veranstaltungen</span>.</p>
+
+          <p>Hinter der <span class="gl" data-uk="акція" data-lemma="die Aktion, -en">Aktion</span> stehen die Krebsliga Schweiz – ein <span class="gl" data-uk="спілка, товариство" data-lemma="der Verein, -e">Verein</span>, der gegen <span class="gl" data-uk="рак (хвороба)" data-lemma="der Krebs">Krebs</span> kämpft – und die Kosmetikfirma Beiersdorf. Das <span class="gl" data-uk="пропозиція" data-lemma="das Angebot, -e">Angebot</span> gilt bis zum Ende des Sommers.</p>
+
+          <p>Warum gibt es diese Aktion? Im Vergleich mit anderen Ländern gibt es in der Schweiz besonders viele <span class="gl" data-uk="випадок (хвороби)" data-lemma="der Fall, -ä-e">Fälle</span> von <span class="gl" data-key data-uk="рак шкіри" data-lemma="der Hautkrebs">Hautkrebs</span>. Jedes Jahr bekommen dort etwa 3500 Menschen schwarzen Hautkrebs und rund 25 000 Menschen hellen Hautkrebs. Die Aktion soll alle daran <span class="gl" data-uk="нагадувати" data-lemma="erinnern an">erinnern</span>, wie wichtig Sonnencreme ist.</p>
+
+          <p>Besonders in den Bergen muss man <span class="gl" data-uk="бути обережним" data-lemma="aufpassen (passte auf, hat aufgepasst)">aufpassen</span>: Je höher man ist, desto stärker ist die <span class="gl" data-uk="ультрафіолетове випромінювання" data-lemma="die UV-Strahlung">UV-Strahlung</span>. Gute Tipps sind deshalb: Sonnencreme oft wieder auftragen, mittags im Schatten bleiben und einen Hut und eine Sonnenbrille tragen.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Die Firma Beiersdorf kommt aus Hamburg. Ihre bekannteste <span class="gl" data-uk="бренд, марка" data-lemma="die Marke, -n">Marke</span> ist Nivea – die blaue Dose mit Creme kennt man auf der ganzen Welt.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Die Aktion in Zahlen</h2>
+      <p class="lead">Що означає кожне число? Знайди відповідь у тексті.</p>
+      <div class="card" id="ub3-list"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки.</p>
+      <div class="card">
+        <div class="wordbank"><span>Sonnencreme</span><span>kostenlos</span><span>Spender</span><span>Hautkrebs</span><span>aufpassen</span><span>Angebot</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> Vor dem Baden creme ich mich mit <input type="text" class="blank-input inline wide" data-ans="Sonnencreme"> ein.</div>
+          <div class="fill-item"><span class="num">2)</span> Die Creme kostet nichts, sie ist <input type="text" class="blank-input inline wide" data-ans="kostenlos">.</div>
+          <div class="fill-item"><span class="num">3)</span> Aus dem <input type="text" class="blank-input inline" data-ans="Spender"> kommt die Creme direkt in die Hand.</div>
+          <div class="fill-item"><span class="num">4)</span> Zu viel Sonne kann <input type="text" class="blank-input inline wide" data-ans="Hautkrebs"> verursachen.</div>
+          <div class="fill-item"><span class="num">5)</span> In den Bergen muss man bei der Sonne gut <input type="text" class="blank-input inline wide" data-ans="aufpassen">.</div>
+          <div class="fill-item"><span class="num">6)</span> Das <input type="text" class="blank-input inline" data-ans="Angebot"> gilt nur bis zum Ende des Sommers.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (4–6 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Wie schützt du dich im Sommer vor der Sonne? Was machst du am Strand oder in den Bergen?</label>
+          <textarea id="ub5-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Findest du die Idee mit kostenloser Sonnencreme gut? Wo sollte es so etwas in der Ukraine geben?</label>
+          <textarea id="ub5-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Im Sommer …; Ich nehme immer … mit; Ich finde die Idee gut, weil …; Bei uns sollte es … geben, zum Beispiel …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>In der Schweiz gibt es an rund 70 Orten kostenlose Sonnencreme mit Lichtschutzfaktor 50+. Die Aktion der Krebsliga Schweiz soll zeigen, wie wichtig Sonnenschutz ist, denn in der Schweiz gibt es viele Fälle von Hautkrebs. In den Bergen ist die UV-Strahlung besonders stark.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          У Швейцарії приблизно в 70 місцях можна безкоштовно взяти сонцезахисний крем із SPF 50+. Акція Швейцарської протиракової ліги нагадує, наскільки важливий захист від сонця, адже у Швейцарії багато випадків раку шкіри. У горах ультрафіолет особливо сильний.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "sonnencreme-gratis-schweiz";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Um eine Aktion mit kostenloser Sonnencreme in der Schweiz",
+            "Um neue Schwimmbäder in der Schweiz",
+            "Um eine Kosmetikfirma, die billige Cremes verkauft"],
+     correct: "Um eine Aktion mit kostenloser Sonnencreme in der Schweiz"}
+  ]);
+  buildMatch('ub1h', [
+    ["Creme aus dem Spender", "Absatz 1"],
+    ["Wer macht die Aktion?", "Absatz 2"],
+    ["Viele Fälle von Hautkrebs", "Absatz 3"],
+    ["Vorsicht in den Bergen", "Absatz 4"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "Die Sonnencreme kostet zwei Franken.", a: "f"},
+    {s: "Es gibt Spender auch in den Bergen.", a: "r"},
+    {s: "Die Aktion gibt es das ganze Jahr.", a: "f"},
+    {s: "In der Schweiz gibt es im Vergleich viele Fälle von Hautkrebs.", a: "r"},
+    {s: "Die meisten Spender stehen in Zürich.", a: "n"},
+    {s: "In den Bergen ist die UV-Strahlung schwächer.", a: "f"},
+    {s: "Beiersdorf ist eine Firma aus Hamburg.", a: "r"}
+  ]);
+
+  buildMatch('ub3', [
+    ["70", "Orte mit Spendern"],
+    ["50+", "Lichtschutzfaktor der Creme"],
+    ["3500", "Menschen mit schwarzem Hautkrebs pro Jahr"],
+    ["25 000", "Menschen mit hellem Hautkrebs pro Jahr"]
+  ]);
+
+  buildMatch('ub4', [
+    ["der Verein", "спілка, товариство"],
+    ["die Aktion", "акція"],
+    ["erinnern an", "нагадувати"],
+    ["der Fall", "випадок (хвороби)"],
+    ["die Veranstaltung", "захід, подія"],
+    ["die Marke", "бренд, марка"]
+  ]);
+  wireBlanks('ub4b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ["☀️", "🧴", "🏔️", "🕶️", "⭐"]);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

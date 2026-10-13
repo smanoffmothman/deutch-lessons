@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Die ganze Welt im Maßstab 1:87 · Lesen · Deutsch mit uns</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Reisen &amp; Städte</span>
+        <h1>Die ganze Welt im Maßstab 1:87</h1>
+        <p class="sub">Поганий настрій, крамничка в Цюриху і дзвінок братові-близнюку: так почалася історія найбільшої модельної залізниці у світі.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Zahlen</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Chronologie</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Deine Meinung</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Groß denken – im Kleinen</h2>
+      <div class="card">
+        <p>Was ist die beliebteste Sehenswürdigkeit in deiner Stadt oder in deinem Land? Was glaubst du: Warum würden Millionen Menschen eine Modelleisenbahn besuchen?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай (або обговоріть у парі): що робить пам'ятку чи атракцію такою популярною, що туди стоять у черзі? Як гадаєш, чи може іграшкова залізниця бути успішним бізнесом?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Jeden Tag stehen in der Hamburger Speicherstadt lange <span class="gl" data-uk="черга" data-lemma="die Schlange, -n">Schlangen</span> vor einem alten Backsteingebäude. Drinnen wartet kein Museum mit berühmten Gemälden, sondern eine <span class="gl" data-key data-uk="модельна залізниця" data-lemma="die Modelleisenbahn, -en">Modelleisenbahn</span> – allerdings die größte der Welt. Das Miniatur Wunderland wird 25 Jahre alt und gilt inzwischen als die beliebteste <span class="gl" data-key data-uk="пам'ятка, туристична принада" data-lemma="die Sehenswürdigkeit, -en">Sehenswürdigkeit</span> Deutschlands.</p>
+
+          <p>Angefangen hat alles nicht in Hamburg, sondern in Zürich – und mit schlechter <span class="gl" data-uk="настрій" data-lemma="die Laune, -n">Laune</span>. Frederik Braun <span class="gl" data-uk="тримати, вести (бізнес)" data-lemma="betreiben (betrieb, hat betrieben)">betrieb</span> damals eine Diskothek und hatte die <span class="gl" data-uk="поверховий" data-lemma="oberflächlich">oberflächliche</span> Partywelt <span class="gl" data-uk="бути ситим по горло" data-lemma="etwas satthaben" data-note="розм.">satt</span>. Ein Urlaub in der Schweiz sollte ihn auf andere Gedanken bringen. Um sich die Zeit zu <span class="gl" data-uk="гаяти (час)" data-lemma="sich die Zeit vertreiben (vertrieb, hat vertrieben)">vertreiben</span>, ging er in ein Geschäft für Modelleisenbahnen – und fühlte sich plötzlich wieder wie ein Kind. Schon als Jungen hatten er und sein <span class="gl" data-key data-uk="брат-близнюк" data-lemma="der Zwillingsbruder, -ü-">Zwillingsbruder</span> Gerrit davon geträumt, im Keller eine riesige Bahn zu bauen. Frederik rief seinen Bruder sofort an: „Wir bauen die größte Modelleisenbahn der Welt.“</p>
+
+          <p>Ein Hobby sollte das aber nie werden, sondern ein <span class="gl" data-key data-uk="бізнес-модель" data-lemma="das Geschäftsmodell, -e">Geschäftsmodell</span>. Braun hatte schon als DJ Geld verdient, ein Plattenlabel <span class="gl" data-uk="засновувати" data-lemma="gründen">gegründet</span> und Partys organisiert. Bei allem stellt er sich dieselbe Frage: Wie lässt sich das gut verkaufen? Seine Antwort für die Eisenbahn war ein <span class="gl" data-key data-uk="найвищий ступінь, «най-»" data-lemma="der Superlativ, -e">Superlativ</span>. Niemand reist weit, um irgendeine Modellbahn zu sehen – die größte der Welt dagegen will jeder sehen, und die Presse berichtet von selbst darüber. Deshalb rechneten die Brüder zuerst am Laptop aus, wie groß die Anlage sein musste, um den Rekord zu holen. Erst dann begann die <span class="gl" data-uk="ручна робота" data-lemma="die Handarbeit">Handarbeit</span>.</p>
+
+          <p>Bei der Eröffnung 2001 <span class="gl" data-uk="спрацьовувати, вдаватися" data-lemma="aufgehen (ging auf, ist aufgegangen)" data-note="тут: про план">ging</span> der Plan nicht ganz auf: In Amerika gab es noch eine größere Anlage. Das Team musste sich mit dem Titel „größte digitale Modelleisenbahn der Welt“ <span class="gl" data-uk="задовольнятися (чимось)" data-lemma="sich zufriedengeben mit (gab zufrieden, hat zufriedengegeben)">zufriedengeben</span>, denn die amerikanische Bahn fuhr noch analog. Den feinen Unterschied bemerkte allerdings kaum jemand. Zeitungen in ganz Deutschland <span class="gl" data-uk="повідомляти, писати (про)" data-lemma="berichten über">berichteten</span>, und die Besucher kamen aus dem ganzen Land.</p>
+
+          <p>Heute arbeiten rund 400 Menschen für das Wunderland, und seit der Eröffnung haben es mehr als 25 Millionen Gäste besucht. In Hamburg <span class="gl" data-uk="приваблювати" data-lemma="anlocken">locken</span> nur der Michel, die wichtigste Kirche der Stadt, und die Elbphilharmonie noch mehr Menschen an. Gezeigt werden Städte und Landschaften aus aller Welt im <span class="gl" data-key data-uk="масштаб" data-lemma="der Maßstab, -ä-e">Maßstab</span> 1:87: Züge fahren durch Berglandschaften, am Flughafen „Knuffingen Airport“ starten und landen Flugzeuge, Schiffe gleiten durch skandinavische Fjorde, und in Monaco rasen Formel-1-Wagen. Alle 15 Minuten wird es Nacht, und Tausende kleine Lichter gehen an. Für die gesamte Anlage brauchte man rund 1,2 Millionen Arbeitsstunden; sie hat 1231 Züge, über 292 000 Figuren und mehr als 521 500 LEDs.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Die Speicherstadt am Hamburger Hafen ist das größte historische <span class="gl" data-uk="складський квартал" data-lemma="das Lagerhausviertel, -">Lagerhausviertel</span> der Welt. Früher lagerte man hier Waren aus dem Hafen, zum Beispiel Kaffee, Tee und Gewürze. Seit 2015 gehört das Viertel zum UNESCO-Welterbe.</p>
+          </aside>
+
+          <p>Die Brüder sind sehr verschieden. Frederik ist der <span class="gl" data-uk="надмірно захоплений, бурхливий" data-lemma="überschwänglich">überschwängliche</span> Optimist mit immer neuen Ideen: eine Dschungelwelt mit einem Restaurantboot oder eine Fahrt des ganzen Teams in einem Modellzug von Hamburg nach Berlin. Die Zugfahrt hat er übrigens <span class="gl" data-uk="відмовлятися (від)" data-lemma="aufgeben (gab auf, hat aufgegeben)">aufgegeben</span> – zu <span class="gl" data-uk="затратний, дорогий і клопіткий" data-lemma="aufwendig">aufwendig</span>. Gerrit ist skeptischer und hat die Ideen seines Bruders oft <span class="gl" data-uk="гальмувати, стримувати" data-lemma="bremsen">gebremst</span>. Früher hat Frederik ihn deshalb einen Pessimisten genannt, heute spricht er lieber von einem Realisten. Denn um Gerrit zu <span class="gl" data-uk="переконувати" data-lemma="überzeugen">überzeugen</span>, muss er seine Pläne immer weiter verbessern – und am Ende ist das Ergebnis besser.</p>
+
+          <p>Mit dem Alter ist Frederik Braun nach eigenen Worten etwas ruhiger geworden. Er kämpft nicht mehr um jeden Preis für jede Idee. Etwas ganz Neues außerhalb des Wunderlands sucht er trotzdem nicht: Hier kann er sich jeden Tag neu <span class="gl" data-uk="винаходити себе заново" data-lemma="sich neu erfinden (erfand, hat erfunden)">erfinden</span>, findet er. Zum <span class="gl" data-uk="ювілей" data-lemma="das Jubiläum, Jubiläen">Jubiläum</span> ist ein neuer <span class="gl" data-uk="відрізок, частина" data-lemma="der Abschnitt, -e">Abschnitt</span> über den Rockmusiker Udo Lindenberg dazugekommen, der „Panik-Express“. Ab Ende des Jahres soll außerdem Südamerika zu sehen sein.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Обери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Das Wunderland in Zahlen</h2>
+      <p class="lead">Що означає кожне число? Знайди відповідь у тексті.</p>
+      <div class="card" id="ub3-list"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Яке пояснення німецькою пасує до слова?</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки в правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>überzeugen</span><span>aufwendig</span><span>Laune</span><span>Geschäftsmodell</span><span>berichten</span><span>Maßstab</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> Im Urlaub hatte Frederik Braun zuerst sehr schlechte <input type="text" class="blank-input inline" data-ans="Laune">.</div>
+          <div class="fill-item"><span class="num">2)</span> Die Bahn sollte kein Hobby sein, sondern ein <input type="text" class="blank-input inline wide" data-ans="Geschäftsmodell">.</div>
+          <div class="fill-item"><span class="num">3)</span> Nach der Eröffnung haben viele Zeitungen über das Wunderland <input type="text" class="blank-input inline wide" data-ans="berichtet">.</div>
+          <div class="fill-item"><span class="num">4)</span> Alle Modelle sind im <input type="text" class="blank-input inline" data-ans="Maßstab"> 1:87 gebaut.</div>
+          <div class="fill-item"><span class="num">5)</span> Eine Zugfahrt nach Berlin war zu <input type="text" class="blank-input inline" data-ans="aufwendig">.</div>
+          <div class="fill-item"><span class="num">6)</span> Frederik muss gute Argumente haben, um seinen Bruder zu <input type="text" class="blank-input inline wide" data-ans="überzeugen">.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Wie alles kam</h2>
+      <p class="lead">Розстав події в тому порядку, у якому вони відбувалися. Натискай речення по черзі; натиснеш на вже поставлене — воно повернеться вниз.</p>
+      <div class="card" id="ub5-seq"></div>
+    </section>
+
+    <!-- ===== Üb. 6 ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">Deine Meinung</h2>
+      <p class="lead">Напиши відповіді німецькою (5–8 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub6-a">1. „Die Menschen wollen nicht irgendetwas sehen, sondern das Größte.“ Stimmt das? Funktionieren Superlative als Werbung? Nenne Beispiele.</label>
+          <textarea id="ub6-a" rows="6"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub6-b">2. Ein Optimist und ein Realist arbeiten zusammen. Ist das eine gute Kombination? Bist du eher wie Frederik oder wie Gerrit?</label>
+          <textarea id="ub6-b" rows="6"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub6-c">3. Und bei uns? Welche Sehenswürdigkeit in der Ukraine würdest du ausländischen Gästen empfehlen? Warum?</label>
+          <textarea id="ub6-c" rows="6"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Meiner Meinung nach …; Einerseits …, andererseits …; Ein gutes Beispiel dafür ist …; Ich halte … für …; Ich würde … empfehlen, weil …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Das Miniatur Wunderland in der Hamburger Speicherstadt ist die größte Modelleisenbahn der Welt und eine der beliebtesten Sehenswürdigkeiten Deutschlands. Die Zwillinge Frederik und Gerrit Braun haben es 2001 eröffnet. Ihr Erfolgsrezept: ein Superlativ – und viele liebevolle Details im Maßstab 1:87.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Miniatur Wunderland у гамбурзькому складському кварталі Шпайхерштадт — найбільша модельна залізниця у світі й одна з найпопулярніших пам'яток Німеччини. Брати-близнюки Фредерік і Герріт Браун відкрили її 2001 року. Їхній рецепт успіху — «най-» (рекорд) і безліч любовно зроблених деталей у масштабі 1:87.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "miniatur-wunderland";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Wie aus einer Kindheitsidee die größte Modellbahn der Welt wurde",
+            "Wie man zu Hause eine eigene Modelleisenbahn baut",
+            "Warum die Speicherstadt heute zum UNESCO-Welterbe gehört"],
+     correct: "Wie aus einer Kindheitsidee die größte Modellbahn der Welt wurde"},
+    {q: "Was ist laut Frederik Braun das Geheimnis des Erfolgs?",
+     opts: ["Der Superlativ: Man muss das Größte bauen, dann kommen Presse und Besucher",
+            "Niedrige Eintrittspreise, damit sich jede Familie einen Besuch leisten kann",
+            "Viel Werbung im Fernsehen und große Plakate in ganz Deutschland"],
+     correct: "Der Superlativ: Man muss das Größte bauen, dann kommen Presse und Besucher"},
+    {q: "Welche Rolle spielt Gerrit Braun im Text?",
+     opts: ["Er ist der Skeptiker, der die Ideen seines Bruders besser macht",
+            "Er hatte die erste Idee für das Wunderland in Zürich",
+            "Er ist für die Technik der Züge und Lichter allein verantwortlich"],
+     correct: "Er ist der Skeptiker, der die Ideen seines Bruders besser macht"}
+  ]);
+  buildMatch('ub1h', [
+    ["Ein Anruf aus der Schweiz", "Absatz 1"],
+    ["Das Rezept: immer das Größte", "Absatz 2"],
+    ["Ein Rekord mit kleinem Haken", "Absatz 3"],
+    ["Eine Welt voller Details", "Absatz 4"],
+    ["Optimist trifft Realist", "Absatz 5"],
+    ["Ruhiger, aber nicht fertig", "Absatz 6"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5", "Absatz 6"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "Die Idee für das Wunderland hatte Frederik Braun in Hamburg.", a: "f"},
+    {s: "Die Brüder haben schon als Kinder von einer großen Modellbahn geträumt.", a: "r"},
+    {s: "Bevor sie mit dem Bauen anfingen, berechneten die Brüder die nötige Größe.", a: "r"},
+    {s: "Bei der Eröffnung war das Wunderland die größte Modelleisenbahn überhaupt.", a: "f"},
+    {s: "Die Eltern der Brüder haben das Projekt am Anfang finanziert.", a: "n"},
+    {s: "In Hamburg hat keine andere Sehenswürdigkeit mehr Besucher als das Wunderland.", a: "f"},
+    {s: "Die Zugfahrt mit dem ganzen Team nach Berlin hat nicht stattgefunden.", a: "r"},
+    {s: "Frederik Braun möchte bald ein neues Projekt außerhalb des Wunderlands starten.", a: "f"}
+  ]);
+
+  buildMatch('ub3', [
+    ["2001", "Jahr der Eröffnung"],
+    ["25 Millionen", "Besucher seit der Eröffnung"],
+    ["400", "Mitarbeiterinnen und Mitarbeiter"],
+    ["1:87", "Maßstab der Modelle"],
+    ["15 Minuten", "dann wird es in der Anlage Nacht"],
+    ["1231", "Züge in der Anlage"],
+    ["1,2 Millionen", "Arbeitsstunden für den Bau"]
+  ]);
+
+  buildMatch('ub4', [
+    ["satthaben", "keine Lust mehr auf etwas haben"],
+    ["sich zufriedengeben", "etwas als gut genug akzeptieren"],
+    ["aufgehen (ein Plan)", "funktionieren, Erfolg haben"],
+    ["bremsen (eine Idee)", "machen, dass etwas langsamer oder kleiner wird"],
+    ["überschwänglich", "voller Freude und Begeisterung"],
+    ["aufgeben", "etwas doch nicht machen"]
+  ]);
+  wireBlanks('ub4b');
+
+  buildSequence('ub5-seq', [
+    "Als Kinder träumen die Zwillinge von einer riesigen Bahn im Keller.",
+    "Frederik Braun leitet eine Diskothek und hat genug von der Partywelt.",
+    "In einem Geschäft in Zürich ruft er seinen Bruder an.",
+    "Die Brüder berechnen am Laptop die nötige Größe der Anlage.",
+    "Das Wunderland eröffnet als größte digitale Modelleisenbahn.",
+    "Zum 25. Geburtstag kommt der „Panik-Express“ dazu."
+  ]);
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🚂','✈️','🚢','🏎️','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

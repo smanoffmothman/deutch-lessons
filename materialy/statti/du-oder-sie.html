@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Du oder Sie? · Lesen · Deutsch mit uns</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Sprache</span>
+        <h1>Du oder Sie?</h1>
+        <p class="sub">Учительці кажеш «Sie», а бабусі — «du». А як звертатися до продавця, сусіда чи журналу для тих, хто вчить німецьку? Маленьке слово з великими правилами.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Du oder Sie?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Wie spricht man mit wem?</h2>
+      <div class="card">
+        <p>Wem sagst du „du“, wem sagst du „Sie“? Hast du schon einmal die falsche Form benutzt? Was ist passiert?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          В українській теж є «ти» і «Ви». Подумай: до кого ти звертаєшся на «ти», а до кого на «Ви»? Хто зазвичай пропонує перейти на «ти»? Як гадаєш, у німців так само?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Wer Deutsch lernt, muss schon in der ersten Stunde eine wichtige Frage <span class="gl" data-uk="вирішувати" data-lemma="entscheiden (entschied, hat entschieden)">entscheiden</span>: du oder Sie? Die richtige <span class="gl" data-key data-uk="звертання" data-lemma="die Anrede, -n">Anrede</span> ist gar nicht so einfach.</p>
+
+          <p>Im Deutschen gibt es zwei Formen. „Du“ ist <span class="gl" data-key data-uk="неформальний" data-lemma="informell">informell</span>, „Sie“ ist formell und <span class="gl" data-key data-uk="ввічливий" data-lemma="höflich">höflich</span>. Das höfliche „Sie“ schreibt man immer groß – auch mitten im Satz. Für die zwei Formen gibt es auch eigene Verben: <span class="gl" data-key data-uk="звертатися на «ти»" data-lemma="duzen">duzen</span> und <span class="gl" data-key data-uk="звертатися на «Ви»" data-lemma="siezen">siezen</span>.</p>
+
+          <p>„Du“ sagt man zu Menschen, die man gut kennt: zur Familie, zu Freundinnen und Freunden. Kinder und Jugendliche duzen sich untereinander sofort. Auch im Internet und in sozialen Netzwerken ist das Du sehr <span class="gl" data-uk="поширений" data-lemma="verbreitet">verbreitet</span>.</p>
+
+          <p>„Sie“ sagt man zu Erwachsenen, die man nicht kennt – zum Beispiel im Geschäft, beim Arzt, bei der Polizei oder auf einem <span class="gl" data-uk="установа, відомство" data-lemma="das Amt, -ä-er">Amt</span>. Auch in vielen Firmen <span class="gl" data-uk="звертатися на «Ви»" data-lemma="siezen">siezen</span> sich die Kolleginnen und Kollegen. Schülerinnen und Schüler sagen zu ihren Lehrern fast immer Sie.</p>
+
+          <p>Und wann wechselt man vom Sie zum Du? Meistens <span class="gl" data-uk="пропонувати" data-lemma="anbieten (bot an, hat angeboten)">bietet</span> die ältere Person oder die Person mit der höheren Position das Du an, zum Beispiel so: „Wollen wir uns duzen?“ Wer einfach so „du“ sagt, kann <span class="gl" data-uk="неввічливий" data-lemma="unhöflich">unhöflich</span> wirken.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Manche Firmen duzen ihre Kunden ganz <span class="gl" data-uk="свідомо" data-lemma="bewusst">bewusst</span>, zum Beispiel das Möbelhaus IKEA. Das soll locker und freundlich klingen. Im Ukrainischen gibt es mit „ти“ und „Ви“ ein ähnliches System.</p>
+          </aside>
+
+          <p>Auch Zeitschriften müssen sich entscheiden. Die Zeitschrift <i>Deutsch perfekt</i> hat ihre Leserinnen und Leser gefragt: Du oder Sie? Die <span class="gl" data-uk="думка" data-lemma="die Meinung, -en">Meinungen</span> waren sehr unterschiedlich. 43,5 Prozent wollten weiter das Sie, denn für sie ist es ein Zeichen von <span class="gl" data-uk="повага" data-lemma="der Respekt">Respekt</span>. Fast genauso viele – etwa 40 Prozent – finden das Du freundlicher und <span class="gl" data-uk="справжній, щирий" data-lemma="authentisch">authentischer</span>. Das <span class="gl" data-uk="результат" data-lemma="das Ergebnis, -se">Ergebnis</span>: Die Zeitschrift bleibt beim Sie.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Du oder Sie?</h2>
+      <p class="lead">Ти в Німеччині. Як ти звертаєшся до цих людей — на «du» чи на «Sie»? Розклади картки.</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки.</p>
+      <div class="card">
+        <div class="wordbank"><span>duzen</span><span>sieze</span><span>höflich</span><span>Anrede</span><span>Respekt</span><span>Meinung</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> „Du“ oder „Sie“ – welche <input type="text" class="blank-input inline" data-ans="Anrede"> ist richtig?</div>
+          <div class="fill-item"><span class="num">2)</span> Meine Freunde und ich <input type="text" class="blank-input inline" data-ans="duzen"> uns natürlich.</div>
+          <div class="fill-item"><span class="num">3)</span> Meinen Lehrer <input type="text" class="blank-input inline" data-ans="sieze"> ich.</div>
+          <div class="fill-item"><span class="num">4)</span> „Sie“ ist die <input type="text" class="blank-input inline" data-ans="höflich|höfliche"> Form.</div>
+          <div class="fill-item"><span class="num">5)</span> Für viele ist das Sie ein Zeichen von <input type="text" class="blank-input inline" data-ans="Respekt">.</div>
+          <div class="fill-item"><span class="num">6)</span> Was ist deine <input type="text" class="blank-input inline" data-ans="Meinung">: du oder Sie?</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (4–6 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Wem sagst du in der Ukraine „ти“ und wem „Ви“? Ist das wie in Deutschland oder anders?</label>
+          <textarea id="ub5-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Was ist dir lieber, wenn eine Zeitschrift oder eine App mit dir spricht: du oder Sie? Warum?</label>
+          <textarea id="ub5-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Ich sage „ти“ zu …; Zu … sage ich „Ви“; Das ist ähnlich wie in Deutschland; Anders ist, dass …; Mir ist … lieber, weil …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Im Deutschen gibt es das informelle „du“ und das höfliche „Sie“ (immer groß geschrieben). Freunde, Familie und Jugendliche duzen sich; fremde Erwachsene, Lehrer und oft auch Kollegen siezt man. Das Du bietet meistens die ältere Person oder die Person mit der höheren Position an.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          У німецькій є неформальне «du» і ввічливе «Sie» (завжди з великої літери). Друзі, родина й молодь звертаються на «du»; до незнайомих дорослих, учителів, а часто й колег — на «Sie». Перейти на «du» зазвичай пропонує старша людина або та, що має вищу посаду.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "du-oder-sie";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Wann man im Deutschen „du“ und wann „Sie“ sagt",
+            "Wie man im Deutschen Briefe schreibt",
+            "Warum Deutsch eine schwere Sprache ist"],
+     correct: "Wann man im Deutschen „du“ und wann „Sie“ sagt"}
+  ]);
+  buildMatch('ub1h', [
+    ["Zwei Formen, zwei Verben", "Absatz 1"],
+    ["Für Freunde und Familie", "Absatz 2"],
+    ["Für Fremde und im Beruf", "Absatz 3"],
+    ["Der Wechsel zum Du", "Absatz 4"],
+    ["Eine Umfrage", "Absatz 5"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "Das höfliche „Sie“ schreibt man immer groß.", a: "r"},
+    {s: "Jugendliche siezen sich, wenn sie sich zum ersten Mal sehen.", a: "f"},
+    {s: "Beim Arzt sagt man normalerweise „Sie“.", a: "r"},
+    {s: "Meistens bietet die jüngere Person das Du an.", a: "f"},
+    {s: "In Österreich duzt man öfter als in Deutschland.", a: "n"},
+    {s: "Die meisten Leserinnen und Leser wollten das Du.", a: "f"},
+    {s: "Die Zeitschrift sagt weiter „Sie“ zu ihren Lesern.", a: "r"}
+  ]);
+
+  buildSort('ub3-sort', {
+    buckets: ["du", "Sie"],
+    items: [
+      {t: "deine Oma", b: "du"},
+      {t: "dein bester Freund", b: "du"},
+      {t: "deine Mitschülerin", b: "du"},
+      {t: "deine kleine Cousine", b: "du"},
+      {t: "die Ärztin", b: "Sie"},
+      {t: "ein Polizist", b: "Sie"},
+      {t: "dein Lehrer", b: "Sie"},
+      {t: "die Verkäuferin im Geschäft", b: "Sie"}
+    ]
+  });
+
+  buildMatch('ub4', [
+    ["höflich", "ввічливий"],
+    ["unhöflich", "неввічливий"],
+    ["die Anrede", "звертання"],
+    ["verbreitet", "поширений"],
+    ["das Ergebnis", "результат"],
+    ["das Amt", "установа, відомство"]
+  ]);
+  wireBlanks('ub4b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🤝','🗣️','✉️','🎩','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

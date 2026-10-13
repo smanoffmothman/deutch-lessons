@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hannibals Weg über die Alpen · Lesen · Deutsch mit uns</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Geschichte</span>
+        <h1>Hannibals Weg über die Alpen</h1>
+        <p class="sub">40 000 воїнів, 7 000 коней і 37 слонів перейшли Альпи понад 2 200 років тому. Але яким шляхом? Німецькі науковці мають нову відповідь.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Zahlen</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Schreiben</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Eine legendäre Reise</h2>
+      <div class="card">
+        <p>Was weißt du über die Alpen? Wie kommt man heute über die Berge? Und wie war das vor über 2000 Jahren – ohne Straßen und Tunnel?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай: чи чув(-ла) ти про Ганнібала і його слонів? Як гадаєш, що було найважчим у переході через гори з величезною армією?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Vor über 2200 Jahren zog der <span class="gl" data-key data-uk="полководець" data-lemma="der Feldherr, -en">Feldherr</span> Hannibal mit einer riesigen <span class="gl" data-uk="армія" data-lemma="die Armee, -n">Armee</span> über die Alpen. Aber welchen Weg hat er genommen? Darauf gibt es jetzt eine neue Antwort – aus Deutschland.</p>
+
+          <p>Hannibal kam aus Karthago in Nordafrika und kämpfte gegen Rom. Mit 40 000 <span class="gl" data-key data-uk="солдат" data-lemma="der Soldat, -en">Soldaten</span>, 7000 <span class="gl" data-uk="кінь" data-lemma="das Pferd, -e">Pferden</span> und 37 <span class="gl" data-uk="слон" data-lemma="der Elefant, -en">Elefanten</span> ist er über die Alpen gegangen. Diese Reise ist bis heute <span class="gl" data-uk="легендарний" data-lemma="legendär">legendär</span>.</p>
+
+          <p>Bis jetzt hat man gedacht, dass Hannibal über den <span class="gl" data-key data-uk="перевал" data-lemma="der Pass, -ä-e">Pass</span> Col du Clapier gegangen ist. Forscher der Friedrich-Schiller-Universität Jena und des Deutschen Zentrums für integrative Biodiversitätsforschung haben das jetzt neu <span class="gl" data-key data-uk="досліджувати" data-lemma="untersuchen">untersucht</span>. Ihre <span class="gl" data-uk="результат" data-lemma="das Ergebnis, -se">Ergebnisse</span> haben sie in einer bekannten wissenschaftlichen Zeitschrift aus den USA publiziert.</p>
+
+          <p>Das Ergebnis: Wahrscheinlich ist die Armee über einen anderen Pass <span class="gl" data-uk="мандрувати, іти пішки" data-lemma="wandern (ist gewandert)">gewandert</span>, den Col de la Traversette. Dieser Weg braucht nämlich viel weniger <span class="gl" data-key data-uk="енергія, сили" data-lemma="die Energie, -n">Energie</span>. Und Energie war bei der schweren Reise sehr wichtig: Die Soldaten haben wahrscheinlich 19 Prozent von ihren Fettreserven <span class="gl" data-uk="втрачати" data-lemma="verlieren (verlor, hat verloren)">verloren</span>. Für viele war die Reise <span class="gl" data-uk="смертельний" data-lemma="tödlich">tödlich</span>.</p>
+
+          <p>Ganz <span class="gl" data-uk="певний, точний" data-lemma="sicher">sicher</span> ist die neue Route aber nicht. Denn Hannibal hat seine GPS-Daten natürlich nie publiziert.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Ein Pass ist eine Stelle, an der ein Weg über die Berge führt. Über die Alpen gibt es heute viele Pässe und lange <span class="gl" data-uk="тунель" data-lemma="der Tunnel, -/-s">Tunnel</span>, zum Beispiel den Brenner zwischen Österreich und Italien oder den Gotthard in der Schweiz.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Hannibals Reise in Zahlen</h2>
+      <p class="lead">Що означає кожне число? Знайди відповідь у тексті.</p>
+      <div class="card" id="ub3-list"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки.</p>
+      <div class="card">
+        <div class="wordbank"><span>Pass</span><span>Soldaten</span><span>untersucht</span><span>Energie</span><span>verloren</span><span>sicher</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> Über einen <input type="text" class="blank-input inline" data-ans="Pass"> kommt man durch die Berge.</div>
+          <div class="fill-item"><span class="num">2)</span> Eine Armee hat viele <input type="text" class="blank-input inline wide" data-ans="Soldaten">.</div>
+          <div class="fill-item"><span class="num">3)</span> Die Forscher haben die alte Route neu <input type="text" class="blank-input inline wide" data-ans="untersucht">.</div>
+          <div class="fill-item"><span class="num">4)</span> Ein Weg nach oben kostet viel <input type="text" class="blank-input inline wide" data-ans="Energie">.</div>
+          <div class="fill-item"><span class="num">5)</span> Auf der Reise haben viele Soldaten Kraft <input type="text" class="blank-input inline wide" data-ans="verloren">.</div>
+          <div class="fill-item"><span class="num">6)</span> Ist die neue Route richtig? Das ist nicht ganz <input type="text" class="blank-input inline" data-ans="sicher">.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Schreiben</h2>
+      <p class="lead">Напиши відповіді німецькою (4–6 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Stell dir vor, du bist ein Soldat in Hannibals Armee. Schreib einen kurzen Tagebucheintrag über einen Tag in den Bergen.</label>
+          <textarea id="ub5-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Welche Geschichte aus der Vergangenheit findest du besonders spannend? Warum?</label>
+          <textarea id="ub5-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Heute sind wir …; Es war sehr kalt / steil / …; Die Elefanten …; Ich finde … spannend, weil …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Hannibal aus Karthago ist vor über 2200 Jahren mit 37 Elefanten über die Alpen gezogen. Forscher aus Jena glauben jetzt, dass er wahrscheinlich über den Col de la Traversette gegangen ist, weil dieser Weg weniger Energie kostet. Ganz sicher weiß man es aber nicht.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Ганнібал із Карфагена понад 2200 років тому перейшов Альпи з 37 слонами. Дослідники з Єни тепер вважають, що він, найімовірніше, пройшов через перевал Коль-де-ла-Траверсетт, бо цей шлях потребує менше сил. Але напевно цього не знає ніхто.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "hannibal-alpen-route";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Um eine neue Theorie, welchen Weg Hannibal über die Alpen genommen hat",
+            "Um die Geschichte der Stadt Rom",
+            "Um Elefanten im Zoo von Jena"],
+     correct: "Um eine neue Theorie, welchen Weg Hannibal über die Alpen genommen hat"}
+  ]);
+  buildMatch('ub1h', [
+    ["Eine Armee mit Elefanten", "Absatz 1"],
+    ["Forscher aus Deutschland", "Absatz 2"],
+    ["Ein leichterer Weg", "Absatz 3"],
+    ["Keine GPS-Daten", "Absatz 4"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "Hannibal kämpfte für Rom.", a: "f"},
+    {s: "Hannibals Armee hatte 37 Elefanten.", a: "r"},
+    {s: "Früher dachte man, Hannibal sei über den Col du Clapier gegangen.", a: "r"},
+    {s: "Die Forscher kommen aus Jena.", a: "r"},
+    {s: "Der Col de la Traversette braucht mehr Energie.", a: "f"},
+    {s: "Die meisten Elefanten sind auf der Reise gestorben.", a: "n"},
+    {s: "Jetzt weiß man ganz sicher, welchen Weg Hannibal genommen hat.", a: "f"}
+  ]);
+
+  buildMatch('ub3', [
+    ["2200", "so viele Jahre ist die Reise her (etwa)"],
+    ["40 000", "Soldaten"],
+    ["7000", "Pferde"],
+    ["37", "Elefanten"],
+    ["19 Prozent", "so viel Fettreserven haben die Soldaten verloren"]
+  ]);
+
+  buildMatch('ub4', [
+    ["der Feldherr", "полководець"],
+    ["das Pferd", "кінь"],
+    ["das Ergebnis", "результат"],
+    ["legendär", "легендарний"],
+    ["tödlich", "смертельний"],
+    ["der Tunnel", "тунель"]
+  ]);
+  wireBlanks('ub4b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ["🐘", "⛰️", "⚔️", "🔬", "⭐"]);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

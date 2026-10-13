@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ein Tag in Hamburg · Lesen · Deutsch mit uns</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Reisen &amp; Städte</span>
+        <h1>Ein Tag in Hamburg</h1>
+        <p class="sub">Мюзикл, що йде вже 25 років, концертна зала за 866 мільйонів і місто, де мостів більше, ніж у Венеції. Прогулянка денним Гамбургом.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Zahlen</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Eine Stadt am Wasser</h2>
+      <div class="card">
+        <p>Was weißt du schon über Hamburg? Welche Sehenswürdigkeiten kennst du? Was möchtest du in einer großen Hafenstadt sehen oder machen?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай (або обговоріть у парі): що ти знаєш про Гамбург — може, футбольний клуб, порт чи концертну залу? Чим портові міста відрізняються від інших? Згадай Одесу.
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Hamburg ist die zweitgrößte Stadt Deutschlands und liegt an der Elbe, nicht weit von der Nordsee. Wer hier ankommt, hört oft zuerst einen kurzen <span class="gl" data-uk="привітання" data-lemma="der Gruß, -ü-e">Gruß</span>: „Moin!“ – egal, ob morgens oder abends. Zeit für einen Spaziergang durch die Stadt.</p>
+
+          <p>Viele Gäste kommen wegen eines Musicals. Seit 25 Jahren läuft am <span class="gl" data-key data-uk="порт, гавань" data-lemma="der Hafen, -ä-">Hafen</span> „König der Löwen“ – für die Welt der Shows ist das extrem lang. Das Stück erzählt die Geschichte des jungen Löwen Simba, der nach dem Tod seines Vaters seinen Platz im Leben sucht. Ein Schauspieler ist von Anfang an dabei: Joachim Benoit spielt seit der ersten <span class="gl" data-uk="вистава" data-lemma="die Vorstellung, -en">Vorstellung</span> den Vogel Zazu, inzwischen über 8500 Mal. Das Team ist international. Viele <span class="gl" data-uk="виконавець, актор" data-lemma="der Darsteller, -">Darsteller</span> kommen aus dem Ausland und haben extra für das Musical Deutsch gelernt.</p>
+
+          <p>Nach der Show nehmen viele Zuschauer die <span class="gl" data-key data-uk="пором" data-lemma="die Fähre, -n">Fähre</span> über den Fluss – für Musicalgäste ist sie <span class="gl" data-uk="безкоштовний" data-lemma="kostenlos">kostenlos</span>. Auf der anderen Seite steht die Elbphilharmonie, ein Konzerthaus, das die Hamburger kurz „Elphi“ nennen. Von ihrer <span class="gl" data-uk="оглядовий майданчик, платформа" data-lemma="die Plattform, -en">Plattform</span> sieht man den ganzen Hafen mit seinen Containerschiffen. Nur Videos mit dem Handy sind hier schwierig: Fast immer <span class="gl" data-uk="дути (про вітер)" data-lemma="wehen">weht</span> ein starker Wind, und man versteht kaum ein Wort.</p>
+
+          <p>Heute ist die Elphi sehr beliebt, aber sie ist auch <span class="gl" data-key data-uk="суперечливий, спірний" data-lemma="umstritten">umstritten</span>. Geplant waren 77 Millionen Euro, am Ende hat der Bau rund 866 Millionen gekostet. Die <i>New York Times</i> hat sie deshalb zu den umstrittensten Gebäuden der Welt gezählt. Viele Hamburgerinnen und Hamburger haben gegen die hohen <span class="gl" data-uk="витрати" data-lemma="die Kosten (Pl.)">Kosten</span> <span class="gl" data-uk="протестувати" data-lemma="protestieren">protestiert</span>.</p>
+
+          <p>Proteste haben in Hamburg Tradition. In <span class="gl" data-key data-uk="квартал, район міста" data-lemma="das Viertel, -">Vierteln</span> wie St. Pauli oder dem Schanzenviertel gibt es eine große alternative <span class="gl" data-uk="тусовка, середовище" data-lemma="die Szene, -n">Szene</span>. Früher haben Menschen dort leere Häuser <span class="gl" data-uk="самовільно займати (будинок)" data-lemma="besetzen">besetzt</span>, um gegen teure Wohnungen zu protestieren, in denen niemand wohnte. Ein bekanntes Beispiel ist die Rote Flora, ein <span class="gl" data-uk="незалежний, самоврядний" data-lemma="autonom">autonomes</span> Kulturzentrum. In der „Schanze“ findet man heute kleine Läden mit Secondhand-Mode, Imbisse und viele junge Leute.</p>
+
+          <p>Ein besonderer Ort in St. Pauli ist ein riesiger <span class="gl" data-uk="бункер, бомбосховище" data-lemma="der Bunker, -">Bunker</span>. Im Zweiten Weltkrieg hat er Menschen vor Bomben <span class="gl" data-uk="захищати" data-lemma="schützen">geschützt</span>. Heute sind darin Medienfirmen und ein Musikklub, und vom Dach hat man einen schönen Blick über die Stadt. Ganz in der Nähe steht das Millerntor-Stadion des FC St. Pauli. In Hamburg ist Fußball ein großes Thema – man ist entweder für den HSV oder für St. Pauli.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Hamburg ist ein <span class="gl" data-uk="місто-земля" data-lemma="der Stadtstaat, -en">Stadtstaat</span>: Die Stadt ist gleichzeitig ein eigenes Bundesland. In Deutschland gibt es noch zwei andere Stadtstaaten – Berlin und Bremen.</p>
+          </aside>
+
+          <p>Zum Schluss eine Zahl, die viele <span class="gl" data-uk="дивувати" data-lemma="überraschen">überrascht</span>: Hamburg hat rund 2500 <span class="gl" data-key data-uk="міст" data-lemma="die Brücke, -n">Brücken</span>. Das sind mehr als in Venedig oder Amsterdam – kein anderer Ort in Europa hat so viele. Nur New York <span class="gl" data-uk="мати (рекорд)" data-lemma="halten (hielt, hat gehalten)" data-note="тут: einen Rekord halten">hält</span> mit etwa 2800 Brücken einen noch größeren Rekord.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Hamburg in Zahlen</h2>
+      <p class="lead">Що означає кожне число? Знайди відповідь у тексті.</p>
+      <div class="card" id="ub3-list"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки.</p>
+      <div class="card">
+        <div class="wordbank"><span>Fähre</span><span>kostenlos</span><span>umstritten</span><span>Viertel</span><span>Brücken</span><span>Hafen</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> Große Containerschiffe kommen jeden Tag in den <input type="text" class="blank-input inline" data-ans="Hafen">.</div>
+          <div class="fill-item"><span class="num">2)</span> Mit der <input type="text" class="blank-input inline" data-ans="Fähre"> fährt man über die Elbe.</div>
+          <div class="fill-item"><span class="num">3)</span> Für Musicalgäste kostet die Fahrt nichts, sie ist <input type="text" class="blank-input inline wide" data-ans="kostenlos">.</div>
+          <div class="fill-item"><span class="num">4)</span> Über die Elphi gibt es viele verschiedene Meinungen – sie ist <input type="text" class="blank-input inline wide" data-ans="umstritten">.</div>
+          <div class="fill-item"><span class="num">5)</span> St. Pauli ist ein bekanntes <input type="text" class="blank-input inline" data-ans="Viertel"> in Hamburg.</div>
+          <div class="fill-item"><span class="num">6)</span> In Hamburg gibt es mehr <input type="text" class="blank-input inline" data-ans="Brücken"> als in Venedig.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (4–6 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Ein Freund aus Hamburg besucht deine Stadt für einen Tag. Was zeigst du ihm? Schreib einen kleinen Plan.</label>
+          <textarea id="ub5-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Was möchtest du in Hamburg am liebsten sehen: das Musical, die Elphi, die Schanze oder ein Fußballspiel? Warum?</label>
+          <textarea id="ub5-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Zuerst gehen wir …; Danach zeige ich dir …; Am Abend …; Am liebsten möchte ich …, weil …; Das interessiert mich, denn …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Hamburg ist die zweitgrößte Stadt Deutschlands und ein eigenes Bundesland. Bekannt sind der Hafen, das Musical „König der Löwen“ und die Elbphilharmonie, die viel teurer war als geplant. Es gibt eine große alternative Szene, zwei bekannte Fußballvereine und rund 2500 Brücken – Rekord in Europa.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Гамбург — друге за величиною місто Німеччини й окрема федеральна земля. Він відомий портом, мюзиклом «Король Лев» і Ельбською філармонією, яка коштувала набагато більше, ніж планували. Тут велика альтернативна сцена, два відомі футбольні клуби й близько 2500 мостів — рекорд Європи.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "moin-hamburg";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Um Orte und Besonderheiten, die man in Hamburg am Tag entdecken kann",
+            "Um die Geschichte des Hamburger Hafens seit dem Mittelalter",
+            "Um die besten Restaurants und Cafés in Hamburg"],
+     correct: "Um Orte und Besonderheiten, die man in Hamburg am Tag entdecken kann"}
+  ]);
+  buildMatch('ub1h', [
+    ["Ein Vogel seit 25 Jahren", "Absatz 1"],
+    ["Mit dem Schiff zum Konzerthaus", "Absatz 2"],
+    ["Ein sehr teures Gebäude", "Absatz 3"],
+    ["Die Stadt der Proteste", "Absatz 4"],
+    ["Vom Schutzraum zum Medienzentrum", "Absatz 5"],
+    ["Ein europäischer Rekord", "Absatz 6"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5", "Absatz 6"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "„Moin“ sagt man in Hamburg nur am Morgen.", a: "f"},
+    {s: "Joachim Benoit spielt im Musical den Löwen Simba.", a: "f"},
+    {s: "Viele Darsteller haben für das Musical Deutsch gelernt.", a: "r"},
+    {s: "Für Musicalgäste kostet die Fähre nichts.", a: "r"},
+    {s: "Der Bau der Elbphilharmonie war viel teurer als geplant.", a: "r"},
+    {s: "Ein Konzert in der Elbphilharmonie kostet mindestens 50 Euro.", a: "n"},
+    {s: "Der Bunker in St. Pauli wurde erst nach dem Krieg gebaut.", a: "f"},
+    {s: "Hamburg hat mehr Brücken als New York.", a: "f"}
+  ]);
+
+  buildMatch('ub3', [
+    ["25", "so viele Jahre läuft „König der Löwen“"],
+    ["8500", "so oft hat Joachim Benoit den Zazu gespielt"],
+    ["77 Millionen Euro", "so viel sollte die Elphi kosten"],
+    ["866 Millionen Euro", "so viel hat die Elphi am Ende gekostet"],
+    ["2500", "so viele Brücken hat Hamburg"],
+    ["2800", "so viele Brücken hat New York"]
+  ]);
+
+  buildMatch('ub4', [
+    ["die Vorstellung", "вистава"],
+    ["der Darsteller", "виконавець, актор"],
+    ["wehen", "дути (про вітер)"],
+    ["die Kosten", "витрати"],
+    ["besetzen", "самовільно займати (будинок)"],
+    ["schützen", "захищати"],
+    ["überraschen", "дивувати"]
+  ]);
+  wireBlanks('ub4b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['⚓','🦁','🎻','🌉','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

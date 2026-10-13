@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Führerscheine zum Nulltarif · Lesen · Deutsch mit uns</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Alltag</span>
+        <h1>Führerscheine zum Nulltarif</h1>
+        <p class="sub">Права на авто в Німеччині коштують до 4500 євро. А от «права» на ножиці, швейну машинку чи ручку діти отримують безкоштовно — і навіть можуть провалити іспит.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Welcher Führerschein?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Schreiben</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Erst lernen, dann dürfen</h2>
+      <div class="card">
+        <p>Was braucht man, um Auto fahren zu dürfen? Musstest du schon einmal eine Prüfung machen, bevor du etwas benutzen durftest – zum Beispiel in der Schule oder im Sportverein?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай: скільки в Україні коштує отримати водійські права і з якого віку? Чи були у тебе в школі «допуски» — наприклад, до роботи в майстерні чи на уроці фізкультури?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Einen <span class="gl" data-key data-uk="посвідчення водія, права" data-lemma="der Führerschein, -e">Führerschein</span> in Deutschland gratis machen? Klingt unmöglich. Laut ADAC, dem größten Automobilclub des Landes, kostet die <span class="gl" data-uk="дозвіл на керування авто" data-lemma="die Fahrerlaubnis, -se">Fahrerlaubnis</span> bis zu 4500 Euro – <span class="gl" data-uk="з тенденцією до зростання" data-lemma="Tendenz steigend">Tendenz steigend</span>. Eine Kolumnistin von <i>Deutsch perfekt</i> hat trotzdem jede Menge kostenlose Führerscheine gefunden.</p>
+
+          <p>Natürlich geht es beim Auto auch etwas günstiger. Auf dem Land sind <span class="gl" data-key data-uk="автошкола" data-lemma="die Fahrschule, -n">Fahrschulen</span> oft billiger als in der Großstadt. Und Kinder vom Dorf brauchen meistens weniger <span class="gl" data-key data-uk="урок водіння" data-lemma="die Fahrstunde, -n">Fahrstunden</span>: Mit zwölf sind sie schon Traktor gefahren, mit fünfzehn haben sie auf dem Hof einen <span class="gl" data-uk="причіп" data-lemma="der Anhänger, -">Anhänger</span> rückwärts <span class="gl" data-uk="маневрувати" data-lemma="rangieren">rangiert</span>. Und wenn der Bus nur zweimal am Tag fährt, ist die <span class="gl" data-uk="мотивація" data-lemma="die Motivation">Motivation</span> groß. Billig wird der Führerschein trotzdem nicht.</p>
+
+          <p>Die ersten Führerscheine gibt es dagegen umsonst – und schon im Kindergarten. Mit vier Jahren steht ein Kind vor einer großen Aufgabe: der ersten <span class="gl" data-uk="виріб, робота руками" data-lemma="die Bastelarbeit, -en">Bastelarbeit</span> mit der Schere. Die Theorie ist einfach („Nicht werfen!“), die Praxis heißt: schneiden. Und am Ende gibt es, wie es sich gehört, einen <span class="gl" data-uk="посвідчення, підтвердження" data-lemma="der Nachweis, -e">Nachweis</span>: den Scheren-Führerschein. Manche Kitas gehen noch weiter und vergeben Führerscheine fürs Schleifenbinden, für den Heißkleber oder den Roller. Jeder kommt als <span class="gl" data-uk="заламінований" data-lemma="laminiert">laminiertes</span> Kärtchen.</p>
+
+          <p>In der Grundschule geht es weiter. Die Kinder der Autorin brachten aus dem <span class="gl" data-uk="група продовженого дня" data-lemma="der Hort, -e">Hort</span> einen Holz-Führerschein mit. Ohne ihn durften sie in der Werkstatt nicht mit Säge und Handbohrer arbeiten. Andere Eltern erzählen vom Füller-Führerschein für Kinder, die gerade schreiben lernen, vom Nähmaschinen-Führerschein für die Handarbeits-AG – und natürlich vom Fahrrad-Führerschein.</p>
+
+          <p>Der Fahrrad-Führerschein ist eine ernste Sache, denn hier kann man <span class="gl" data-key data-uk="провалити (іспит)" data-lemma="durchfallen (fiel durch, ist durchgefallen)" data-note="розм.">durchfallen</span>. Genau das ist dem Sohn der Autorin passiert. Die ersten Führerscheine hatte er noch <span class="gl" data-key data-uk="складати (іспит) успішно" data-lemma="bestehen (bestand, hat bestanden)">bestanden</span>, doch bei der Praxisprüfung auf dem Fahrrad <span class="gl" data-uk="зазнати невдачі" data-lemma="scheitern (ist gescheitert)">scheiterte</span> er: Wegen einer <span class="gl" data-uk="травма коліна" data-lemma="die Knieverletzung, -en">Knieverletzung</span> durfte er gar nicht erst starten. Der Verkehrspolizist blieb trotzdem <span class="gl" data-uk="послідовний, принциповий" data-lemma="konsequent">konsequent</span> und erklärte ihn kurz und trocken für durchgefallen – nicht gerade <span class="gl" data-uk="педагогічний" data-lemma="pädagogisch">pädagogisch</span>.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>In Deutschland machen fast alle Kinder in der dritten oder vierten Klasse eine <span class="gl" data-uk="навчання їзди на велосипеді" data-lemma="die Radfahrausbildung">Radfahrausbildung</span>, oft zusammen mit der Polizei. Am Ende gibt es eine Prüfung im echten Straßenverkehr. Den Führerschein fürs Auto kann man ab 18 Jahren machen, mit Begleitung durch einen Erwachsenen sogar schon ab 17.</p>
+          </aside>
+
+          <p>Zum Glück <span class="gl" data-uk="визначати майбутнє, задавати напрям у житті" data-lemma="die Weichen stellen">stellt</span> so eine Prüfung keine Weichen fürs Leben. Der Sohn darf, wie alle anderen, auch ohne bestandene Prüfung Rad fahren, und Schere, Nähmaschine oder Füller benutzt man auch ohne Nachweis. Beim Auto ist das leider anders: Hier braucht man teure Fahrstunden, muss die Theorie lernen und sollte möglichst alles im ersten <span class="gl" data-uk="спроба" data-lemma="der Versuch, -e">Versuch</span> bestehen – sonst wird es noch teurer. Immerhin bekommt man dann kein laminiertes Kärtchen, sondern eine Karte aus Hartplastik.</p>
+
+          <p>Einen Wunsch hat die Autorin für die Zukunft: Wenn ihr Sohn eines Tages seinen Autoführerschein hat, soll er noch einmal dem Polizisten von damals <span class="gl" data-uk="зустрічати (випадково)" data-lemma="begegnen (ist begegnet)">begegnen</span>. Nur, um ihm genauso kurz und trocken zu sagen: bestanden.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Обери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Welcher Führerschein wofür?</h2>
+      <p class="lead">Для чого потрібен кожен «Führerschein»? Знайди відповідь у тексті.</p>
+      <div class="card" id="ub3-list"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Яке пояснення німецькою пасує до слова?</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки в правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>bestanden</span><span>durchgefallen</span><span>Fahrstunden</span><span>Versuch</span><span>Nachweis</span><span>begegnet</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> Super, ich habe die Prüfung <input type="text" class="blank-input inline wide" data-ans="bestanden">!</div>
+          <div class="fill-item"><span class="num">2)</span> Leider ist mein Bruder bei der Theorieprüfung <input type="text" class="blank-input inline wide" data-ans="durchgefallen">.</div>
+          <div class="fill-item"><span class="num">3)</span> In der Fahrschule nimmt man <input type="text" class="blank-input inline wide" data-ans="Fahrstunden">.</div>
+          <div class="fill-item"><span class="num">4)</span> Am besten besteht man alles im ersten <input type="text" class="blank-input inline" data-ans="Versuch">.</div>
+          <div class="fill-item"><span class="num">5)</span> Das Kärtchen ist ein <input type="text" class="blank-input inline wide" data-ans="Nachweis">: Das Kind kann mit der Schere arbeiten.</div>
+          <div class="fill-item"><span class="num">6)</span> Gestern bin ich zufällig meinem alten Lehrer <input type="text" class="blank-input inline wide" data-ans="begegnet">.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Schreiben</h2>
+      <p class="lead">Напиши відповіді німецькою (5–8 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Erfinde einen neuen „Führerschein“ für deine Schule (zum Beispiel einen Handy-Führerschein). Was muss man dafür lernen, und wie sieht die Prüfung aus?</label>
+          <textarea id="ub5-a" rows="6"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Und bei uns? Ab wann darf man in der Ukraine Auto fahren? Möchtest du später einen Führerschein machen? Warum (nicht)?</label>
+          <textarea id="ub5-b" rows="6"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Mein Führerschein heißt …; Man muss lernen, wie …; In der Prüfung muss man …; In der Ukraine darf man ab … Jahren …; Ich möchte (k)einen Führerschein machen, weil …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Ein Autoführerschein ist in Deutschland teuer – bis zu 4500 Euro. Man kann ihn ab 18 machen, mit Begleitung ab 17. Kinder bekommen dagegen schon in der Kita und in der Grundschule viele kleine „Führerscheine“, zum Beispiel für die Schere. In der Grundschule machen fast alle eine Fahrradprüfung, oft mit der Polizei.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Права на авто в Німеччині дорогі — до 4500 євро. Отримати їх можна з 18 років, а з супроводом дорослого — з 17. Діти ж уже в садочку й початковій школі отримують багато маленьких «посвідчень», наприклад на ножиці. У початковій школі майже всі складають іспит з їзди на велосипеді, часто разом із поліцією.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "fuehrerschein-gratis";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es in der Kolumne vor allem?",
+     opts: ["Um die vielen kleinen „Führerscheine“, die Kinder in Deutschland machen",
+            "Um Tipps, wie man den Autoführerschein billig bekommt",
+            "Um die Arbeit von Verkehrspolizisten an Grundschulen"],
+     correct: "Um die vielen kleinen „Führerscheine“, die Kinder in Deutschland machen"},
+    {q: "Welchen Ton hat der Text?",
+     opts: ["ironisch und humorvoll",
+            "streng und wissenschaftlich",
+            "traurig und wütend"],
+     correct: "ironisch und humorvoll"},
+    {q: "Warum ist der Sohn beim Fahrrad-Führerschein durchgefallen?",
+     opts: ["Er durfte wegen einer Verletzung nicht starten",
+            "Er hat die Verkehrsregeln nicht gekannt",
+            "Er ist zu schnell gefahren"],
+     correct: "Er durfte wegen einer Verletzung nicht starten"}
+  ]);
+  buildMatch('ub1h', [
+    ["Auf dem Land geht es billiger", "Absatz 1"],
+    ["Der erste Führerschein: die Schere", "Absatz 2"],
+    ["Säge, Füller, Nähmaschine", "Absatz 3"],
+    ["Durchgefallen!", "Absatz 4"],
+    ["Ohne Prüfung geht es auch – außer beim Auto", "Absatz 5"],
+    ["Ein Wunsch für später", "Absatz 6"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5", "Absatz 6"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "Laut ADAC kann ein Autoführerschein bis zu 4500 Euro kosten.", a: "r"},
+    {s: "In der Großstadt sind Fahrschulen meistens billiger.", a: "f"},
+    {s: "Den Scheren-Führerschein machen Kinder schon im Kindergarten.", a: "r"},
+    {s: "Für den Holz-Führerschein mussten die Kinder viel Geld bezahlen.", a: "f"},
+    {s: "Der Sohn der Autorin hat alle Führerscheine im ersten Versuch bestanden.", a: "f"},
+    {s: "Ohne Fahrrad-Führerschein darf man in Deutschland nicht Rad fahren.", a: "f"},
+    {s: "Die Theorieprüfung fürs Auto kann man auf Ukrainisch machen.", a: "n"},
+    {s: "Der Autoführerschein ist eine Karte aus Hartplastik.", a: "r"}
+  ]);
+
+  buildMatch('ub3', [
+    ["Scheren-Führerschein", "mit der Schere basteln"],
+    ["Schleifen-Führerschein", "Schleifen binden"],
+    ["Holz-Führerschein", "mit Säge und Handbohrer arbeiten"],
+    ["Füller-Führerschein", "mit dem Füller schreiben"],
+    ["Nähmaschinen-Führerschein", "in der Handarbeits-AG nähen"],
+    ["Fahrrad-Führerschein", "sicher im Straßenverkehr Rad fahren"]
+  ], {lead: true});
+
+  buildMatch('ub4', [
+    ["durchfallen", "eine Prüfung nicht bestehen"],
+    ["scheitern", "keinen Erfolg haben"],
+    ["rangieren", "ein Fahrzeug vorsichtig an einen Platz bewegen"],
+    ["der Hort", "Ort, an dem Grundschulkinder nachmittags betreut werden"],
+    ["konsequent", "so, dass man bei seiner Regel bleibt"],
+    ["Weichen fürs Leben stellen", "entscheiden, wie das spätere Leben wird"]
+  ]);
+  wireBlanks('ub4b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['✂️','🪚','🖋️','🚲','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
