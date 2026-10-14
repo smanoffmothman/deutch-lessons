@@ -25,7 +25,7 @@
    </script>
 
    Вузький екран (≤760px, з 2026-10): замість пунктів у два рядки —
-   один рядок «Deutsch mit uns · [☰ Меню]», пункти розгортаються
+   один рядок «DeutschHeft · [☰ Меню]», пункти розгортаються
    списком під хедером. Стилі ЦЬОГО меню вбудовані нижче (NAV_MENU_CSS),
    а не в site.css: так правка навігації — завжди один файл, і вона
    працює на будь-якій сторінці, навіть зі старою копією site.css.
@@ -103,7 +103,7 @@ function renderSiteNav(containerId, opts){
 
   const menuId = containerId + 'Menu';
   el.outerHTML = '<nav class="site-nav" id="' + containerId + '" aria-label="Розділи сайту">'
-    + '<a class="brand" href="' + root + 'index.html">Deutsch mit uns</a>'
+    + '<a class="brand" href="' + root + 'index.html">DeutschHeft</a>'
     + '<button type="button" class="nav-toggle" aria-expanded="false" aria-controls="' + menuId + '">'
     +   '<svg class="bars" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>'
     +   '<svg class="x" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>'

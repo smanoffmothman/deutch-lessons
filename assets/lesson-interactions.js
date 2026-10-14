@@ -1060,7 +1060,7 @@ function rpBuildUnits(name){
   const when = new Date().toLocaleString('uk-UA', {day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit'});
   const pct = total ? Math.floor(okAll / total * 100) : 0;
   units.push(rpEl('div', 'rp-head',
-    '<div class="rp-brand">Deutsch mit uns · Bericht für die Lehrkraft</div>'
+    '<div class="rp-brand">DeutschHeft · Bericht für die Lehrkraft</div>'
     + '<div class="rp-title">' + rpEsc(rpLessonTitle()) + '</div>'
     + '<div class="rp-meta"><b>Учень / учениця:</b> ' + rpEsc(name) + '</div>'
     + '<div class="rp-meta"><b>Сформовано:</b> ' + rpEsc(when) + '</div>'
