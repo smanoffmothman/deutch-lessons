@@ -1,0 +1,232 @@
+/* =================================================================
+   home.css — лише ГОЛОВНА сторінка (index.html). Підключай після
+   lesson-style.css і site.css. Кольори й шрифти — ті самі змінні
+   «зошитового» стилю з lesson-style.css.
+   ================================================================= */
+
+/* ---------- Hero ---------- */
+.home-hero{
+  position:relative; overflow:hidden;
+  background:linear-gradient(160deg, var(--teal) 0%, var(--teal-deep) 100%);
+  color:#F5EFDE;
+  padding:44px 20px 96px;
+}
+.home-hero::before{ /* крапковий «зошитовий» папір */
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background-image:radial-gradient(rgba(245,239,222,.10) 1px, transparent 1.4px);
+  background-size:14px 14px; opacity:.55;
+}
+.home-hero::after{ /* велика прозора ß на фоні */
+  content:"ß"; position:absolute; right:-40px; bottom:-150px; pointer-events:none;
+  font-family:var(--serif); font-weight:700; font-size:440px; line-height:1;
+  color:rgba(245,239,222,.045);
+}
+.home-hero-in{
+  position:relative; z-index:1;
+  max-width:960px; margin:0 auto;
+  display:grid; grid-template-columns:minmax(0,1fr) 330px; gap:40px; align-items:center;
+}
+.home-hero .hero-badge{ font-size:12.5px; }
+.home-hero h1{
+  font-family:var(--serif); font-optical-sizing:auto; font-weight:700;
+  font-size:clamp(34px,5.4vw,56px); line-height:1.02; letter-spacing:-.01em;
+  margin:18px 0 4px;
+}
+.home-hero .hand{
+  display:block; font-family:var(--hand); font-weight:700;
+  font-size:clamp(24px,3.2vw,32px); color:var(--mustard); line-height:1.1;
+  margin:0 0 14px; transform:rotate(-1.5deg); transform-origin:left;
+}
+.home-hero p.sub{ margin:0; max-width:50ch; color:#D9E8E5; font-size:16px; line-height:1.55; }
+
+/* лічильники */
+.home-stats{
+  display:flex; flex-wrap:wrap; gap:8px 28px; margin:26px 0 0; padding:18px 0 0;
+  border-top:1px dashed rgba(245,239,222,.28);
+}
+.home-stats[hidden]{ display:none; }
+.hs-item{ display:flex; flex-direction:column; color:#F5EFDE; text-decoration:none; }
+.hs-item b{ font-family:var(--serif); font-size:30px; line-height:1.05; font-weight:700; font-variant-numeric:lining-nums tabular-nums; }
+.hs-item span{ font-size:12.5px; color:#BFD6D1; font-weight:600; }
+.hs-item:hover b{ color:var(--mustard); }
+.hs-item:focus-visible{ outline:2px solid var(--mustard); outline-offset:4px; border-radius:4px; }
+
+/* ---------- Слово дня (картка-картотека) ---------- */
+.word-card{
+  position:relative; background:var(--card); color:var(--ink);
+  border-radius:6px; padding:30px 22px 18px;
+  transform:rotate(1.6deg);
+  box-shadow:0 18px 40px rgba(0,0,0,.28), 0 2px 0 rgba(0,0,0,.08);
+  background-image:repeating-linear-gradient(transparent 0 27px, rgba(31,92,86,.13) 27px 28px);
+  background-position:0 54px;
+}
+.word-card[hidden]{ display:none; }
+.word-card::before{ /* скотч */
+  content:""; position:absolute; top:-11px; left:50%; width:96px; height:24px;
+  transform:translateX(-50%) rotate(-3deg);
+  background:rgba(222,158,59,.75); box-shadow:0 1px 2px rgba(0,0,0,.12);
+}
+.word-card::after{ /* червона «поля» зошита */
+  content:""; position:absolute; top:0; bottom:0; left:14px; width:1px; background:rgba(177,78,62,.35);
+}
+.wc-label{
+  font-family:var(--hand); font-weight:700; font-size:22px; color:var(--brick);
+  margin:0 0 6px; line-height:1;
+}
+.wc-de{
+  font-family:var(--serif); font-weight:700; font-size:25px; line-height:1.2; margin:0 0 4px;
+  overflow-wrap:anywhere;
+}
+.wc-de small{ display:block; font-size:14px; font-weight:500; color:var(--ink-soft); margin-top:2px; }
+.art{ font-weight:600; }
+.art-der{ color:#2F6EA8; }
+.art-die{ color:var(--brick); }
+.art-das{ color:var(--forest); }
+.wc-uk{
+  font-family:var(--hand); font-weight:600; font-size:24px; line-height:1.15; color:var(--teal);
+  min-height:28px; margin:6px 0 4px;
+  filter:blur(7px); opacity:.55; user-select:none;
+  transition:filter .25s ease, opacity .25s ease;
+}
+.word-card.is-open .wc-uk{ filter:none; opacity:1; user-select:auto; }
+.wc-meta{ font-size:11.5px; color:var(--ink-soft); margin:0 0 12px; }
+.wc-actions{ display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+.wc-actions button{
+  font-family:var(--sans); font-size:13px; font-weight:700; cursor:pointer;
+  border-radius:8px; padding:7px 11px; border:1.5px solid var(--teal);
+  white-space:nowrap;
+}
+.wc-reveal{ background:var(--teal); color:#fff; }
+.wc-reveal:hover{ background:var(--teal-deep); border-color:var(--teal-deep); }
+.wc-next{ background:transparent; color:var(--teal); }
+.wc-next:hover{ background:var(--teal-soft); }
+.wc-actions button:focus-visible{ outline:2px solid var(--mustard); outline-offset:2px; }
+.wc-actions a{ margin-left:auto; white-space:nowrap; font-size:12.5px; font-weight:700; color:var(--teal); text-decoration:none; }
+.wc-actions a:hover{ color:var(--brick); }
+
+/* ---------- Плитки розділів (наїжджають на hero) ---------- */
+.home-main{ max-width:960px; margin:0 auto; padding:0 20px 40px; }
+.home-tiles{
+  position:relative; z-index:2;
+  display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px;
+  margin:-56px 0 0;
+}
+.home-tile{
+  --accent:var(--teal);
+  position:relative; display:flex; flex-direction:column;
+  background:var(--card); color:var(--ink); text-decoration:none;
+  border:1px solid var(--line); border-radius:var(--radius);
+  padding:20px 20px 16px; overflow:hidden;
+  box-shadow:var(--shadow);
+  transition:transform .14s ease, box-shadow .14s ease, border-color .14s ease;
+}
+.home-tile::before{ content:""; position:absolute; left:0; right:0; top:0; height:4px; background:var(--accent); }
+.home-tile:hover{ transform:translateY(-3px); border-color:var(--accent); box-shadow:0 12px 28px rgba(43,38,32,.18); }
+.home-tile:focus-visible{ outline:3px solid var(--mustard); outline-offset:2px; }
+.home-tile .ti{
+  width:44px; height:44px; border-radius:12px; display:grid; place-items:center;
+  background:color-mix(in srgb, var(--accent) 13%, #fff); color:var(--accent);
+  margin-bottom:14px;
+}
+.home-tile .ti svg{ width:24px; height:24px; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+.home-tile h3{ font-family:var(--serif); font-size:20px; margin:0 0 6px; line-height:1.2; }
+.home-tile p{ font-size:13.5px; color:var(--ink-soft); margin:0 0 14px; line-height:1.5; }
+.home-tile .tf{
+  margin-top:auto; display:flex; align-items:center; gap:8px;
+  padding-top:12px; border-top:1px dashed var(--line);
+  font-size:12.5px; font-weight:700;
+}
+.home-tile .tf .cnt{ color:var(--accent); white-space:nowrap; }
+.home-tile .tf .cnt[hidden]{ display:none; }
+.home-tile .tf .go{ margin-left:auto; white-space:nowrap; color:var(--ink-soft); transition:transform .14s ease, color .14s ease; }
+.home-tile:hover .tf .go{ color:var(--accent); transform:translateX(3px); }
+.t-lessons  { --accent:var(--teal); }
+.t-glossary { --accent:#B07A1E; }
+.t-grammar  { --accent:var(--brick); }
+.t-materials{ --accent:var(--forest); }
+
+/* ---------- Нове на сайті ---------- */
+.home-news{ margin:44px 0 0; }
+.home-news[hidden]{ display:none; }
+.home-sec-title{
+  display:flex; align-items:baseline; gap:12px; margin:0 0 16px;
+  font-family:var(--serif); font-size:24px; font-weight:700; color:var(--ink);
+}
+.home-sec-title .hand{ font-family:var(--hand); font-size:24px; color:var(--brick); font-weight:700; transform:rotate(-2deg); display:inline-block; }
+.hn-grid{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+.hn-col{
+  --accent:var(--teal);
+  background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+  padding:16px 16px 12px; display:flex; flex-direction:column;
+}
+.hn-col.hn-gram{ --accent:var(--brick); }
+.hn-col.hn-mat{ --accent:var(--forest); }
+.hn-col header{ display:flex; align-items:baseline; gap:8px; margin:0 0 6px; padding-bottom:8px; border-bottom:2px solid var(--accent); }
+.hn-col h3{ font-family:var(--serif); font-size:18px; margin:0; color:var(--ink); }
+.hn-col header span{ font-size:12px; color:var(--ink-soft); }
+.hn-list{ display:flex; flex-direction:column; }
+.hn-row{
+  display:flex; align-items:center; gap:10px;
+  padding:10px 6px; margin:0 -6px; border-radius:8px;
+  color:var(--ink); text-decoration:none; border-bottom:1px dashed var(--line);
+}
+.hn-row:last-child{ border-bottom:none; }
+.hn-row:hover{ background:#fff; }
+.hn-row:hover b{ color:var(--accent); }
+.hn-row:focus-visible{ outline:2px solid var(--mustard); outline-offset:-2px; }
+.hn-txt{ display:flex; flex-direction:column; min-width:0; flex:1; }
+.hn-txt b{ font-family:var(--serif); font-weight:600; font-size:15px; line-height:1.3; }
+.hn-txt small{ display:flex; align-items:center; gap:5px; flex-wrap:wrap; font-size:12px; color:var(--ink-soft); margin-top:2px; line-height:1.4; }
+.hn-txt .lvl-badge{ font-size:10.5px; padding:1px 6px; }
+.hn-klas{
+  flex:none; width:40px; height:40px; border-radius:10px;
+  background:var(--teal-soft); color:var(--teal-deep);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  font-family:var(--serif); font-weight:700; font-size:18px; line-height:1;
+}
+.hn-klas i{ font-style:normal; font-family:var(--sans); font-size:9px; font-weight:700; letter-spacing:.03em; margin-top:2px; }
+.hn-row .new-badge{
+  flex:none; font-size:10px; font-weight:700; color:var(--brick); border:1px solid var(--brick);
+  padding:2px 6px; border-radius:2px; transform:rotate(-3deg);
+}
+.hn-more{ margin-top:auto; padding-top:10px; font-size:13px; font-weight:700; color:var(--accent); text-decoration:none; }
+.hn-more:hover{ text-decoration:underline; }
+
+/* ---------- Підвал ---------- */
+.home-footer{
+  max-width:960px; margin:40px auto 0; padding:22px 20px 34px;
+  border-top:1px dashed var(--line);
+  display:flex; flex-wrap:wrap; gap:6px 16px; justify-content:space-between;
+  font-size:13px; color:var(--ink-soft);
+}
+.home-footer b{ font-family:var(--serif); color:var(--ink); }
+
+/* ---------- Адаптивність ---------- */
+/* «Слово дня» на вузькому екрані — після плиток (переносить home.js) */
+.word-slot:empty{ display:none; }
+.word-slot{ margin:36px 0 0; }
+
+@media (max-width:880px){
+  .home-hero-in{ grid-template-columns:1fr; }
+  .word-card{ max-width:420px; margin:0 auto; transform:rotate(-.8deg); }
+  .home-tiles{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .hn-grid{ grid-template-columns:1fr; }
+}
+@media (max-width:520px){
+  .home-hero{ padding:30px 16px 84px; }
+  .home-hero::after{ font-size:300px; bottom:-100px; right:-30px; }
+  .home-stats{ display:grid; grid-template-columns:1fr 1fr; gap:14px 16px; }
+  .hs-item b{ font-size:26px; }
+  .home-main{ padding:0 16px 32px; }
+  .home-tiles{ grid-template-columns:1fr; gap:12px; margin-top:-52px; }
+  .home-tile{ display:grid; grid-template-columns:44px 1fr; column-gap:14px; padding:16px; }
+  .home-tile .ti{ grid-row:1 / span 2; margin:0; }
+  .home-tile h3{ font-size:18px; margin:2px 0 4px; }
+  .home-tile p{ margin:0 0 10px; }
+  .home-tile .tf{ grid-column:1 / -1; }
+  .home-footer{ flex-direction:column; }
+}
+@media (prefers-reduced-motion: reduce){
+  .home-tile, .home-tile .tf .go, .wc-uk{ transition:none; }
+  .home-tile:hover{ transform:none; }
+}
