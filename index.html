@@ -3,52 +3,93 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Матеріали до уроків німецької</title>
+<title>Deutsch mit uns — німецька для 7–9 класу</title>
+<meta name="description" content="Інтерактивні уроки німецької для 7–9 класу, граматика з вправами, глосарій і статті для читання — в одному місці.">
+<meta name="theme-color" content="#1F5C56">
 <link rel="stylesheet" href="assets/lesson-style.css">
 <link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/home.css">
 </head>
-<body>
+<body class="home">
 
 <div id="siteNav"></div>
 <script src="assets/site-nav.js"></script>
 <script>renderSiteNav('siteNav', { root: '', active: null });</script>
 
-<header class="hero">
-  <div class="hero-top">
+<header class="home-hero">
+  <div class="home-hero-in">
     <div>
       <span class="hero-badge">DEUTSCH · 7–9 КЛАС</span>
-      <h1>Матеріали до уроків німецької</h1>
-      <p class="sub">Усе, що видається учням на уроках: інтерактивні вправи, глосарій і граматика — в одному місці.</p>
+      <h1>Deutsch mit uns</h1>
+      <span class="hand">Lernen, üben, lesen — alles an einem Ort</span>
+      <p class="sub">Усе, що видається учням на уроках німецької: інтерактивні вправи, граматика з таблицями, глосарій і статті для читання.</p>
+      <!-- лічильники заповнює home.js з data/*.js -->
+      <nav class="home-stats" id="homeStats" aria-label="Що є на сайті" hidden></nav>
     </div>
-    <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+
+    <!-- «Слово дня» — з glossary-data.js, заповнює home.js -->
+    <aside class="word-card" id="wordCard" aria-label="Слово дня" hidden>
+      <p class="wc-label">Wort des Tages</p>
+      <p class="wc-de" lang="de"></p>
+      <p class="wc-uk"></p>
+      <p class="wc-meta"></p>
+      <div class="wc-actions">
+        <button type="button" class="wc-reveal" aria-expanded="false">Переклад</button>
+        <button type="button" class="wc-next" title="Інше слово">Ще слово ↻</button>
+        <a href="glosariy/index.html">Глосарій →</a>
+      </div>
+    </aside>
   </div>
 </header>
 
-<div class="site-main">
-  <div class="nav-grid">
-    <a class="nav-tile" href="klasy/index.html">
-      <div class="tile-icon">📘</div>
+<main class="home-main">
+  <nav class="home-tiles" aria-label="Розділи сайту">
+    <a class="home-tile t-lessons" href="klasy/index.html">
+      <span class="ti" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 5.5c2.6-1 5.6-1 9 1 3.4-2 6.4-2 9-1v13c-2.6-1-5.6-1-9 1-3.4-2-6.4-2-9-1z"/><path d="M12 6.5v13"/></svg></span>
       <h3>Уроки</h3>
-      <p>Клас 7, 8 і 9 — по 8 модулів у кожному, з пошуком по всіх уроках одразу.</p>
+      <p>7, 8 і 9 клас — по модулях, з вправами, домашнім завданням і пошуком по всіх уроках.</p>
+      <span class="tf"><span class="cnt" data-count="klasy" hidden></span><span class="go">Відкрити →</span></span>
     </a>
-    <a class="nav-tile" href="glosariy/index.html">
-      <div class="tile-icon">🗂️</div>
+    <a class="home-tile t-glossary" href="glosariy/index.html">
+      <span class="ti" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="13" height="13" rx="2"/><path d="M8 4h11a2 2 0 0 1 2 2v11"/><path d="M6.5 16.5l3-6.5 3 6.5M7.6 14.2h3.8"/></svg></span>
       <h3>Глосарій</h3>
-      <p>Усі слова з усіх уроків в одному місці, з фільтром за класом і модулем.</p>
+      <p>Усі слова з усіх уроків за абеткою — з фільтром за класом і модулем.</p>
+      <span class="tf"><span class="cnt" data-count="glosariy" hidden></span><span class="go">Відкрити →</span></span>
     </a>
-    <a class="nav-tile" href="gramatyka/index.html">
-      <div class="tile-icon">📐</div>
+    <a class="home-tile t-grammar" href="gramatyka/index.html">
+      <span class="ti" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9.5h18M9.5 9.5V20"/></svg></span>
       <h3>Граматика</h3>
-      <p>Правила з таблицями й вправи на кожну тему — для всіх класів, для довідки й тренування.</p>
+      <p>Правила з таблицями й вправи на кожну тему — для довідки й тренування.</p>
+      <span class="tf"><span class="cnt" data-count="gramatyka" hidden></span><span class="go">Відкрити →</span></span>
     </a>
-    <a class="nav-tile" href="materialy/index.html">
-      <div class="tile-icon">📰</div>
+    <a class="home-tile t-materials" href="materialy/index.html">
+      <span class="ti" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h12v14H6a2 2 0 0 1-2-2z"/><path d="M16 8.5h4V17a2 2 0 0 1-2 2h-2"/><path d="M7 9h6M7 12h6M7 15h3.5"/></svg></span>
       <h3>Матеріали</h3>
-      <p>Статті з німецькомовних журналів: переклад слів одним дотиком, вправи на розуміння й країнознавство.</p>
+      <p>Статті з німецькомовних журналів: переклад слова одним дотиком і вправи на розуміння.</p>
+      <span class="tf"><span class="cnt" data-count="materialy" hidden></span><span class="go">Відкрити →</span></span>
     </a>
-  </div>
-</div>
+  </nav>
 
-<footer class="site-footer">Оновлюється щотижня, після кожного нового уроку.</footer>
+  <!-- на вузькому екрані сюди переїжджає «Слово дня» (home.js), щоб розділи були вище -->
+  <div class="word-slot" id="wordSlot"></div>
+
+  <!-- «Нове на сайті» — з data/*.js, заповнює home.js -->
+  <section class="home-news" id="homeNews" hidden>
+    <h2 class="home-sec-title">Нове на сайті <span class="hand">frisch!</span></h2>
+    <div class="hn-grid"></div>
+  </section>
+</main>
+
+<footer class="home-footer">
+  <span><b>Deutsch mit uns</b> · матеріали до уроків німецької</span>
+  <span>Оновлюється щотижня, після кожного нового уроку.</span>
+</footer>
+
+<script src="data/lessons-data.js"></script>
+<script src="data/modules-data.js"></script>
+<script src="data/glossary-data.js"></script>
+<script src="data/grammar-data.js"></script>
+<script src="data/materials-data.js"></script>
+<script src="assets/home.js"></script>
 </body>
 </html>
