@@ -319,7 +319,7 @@ function renderMaterials(){
 
   if(!articles.length){
     if(toolbar) toolbar.style.display = 'none';
-    wrap.innerHTML = '<p class="empty-note">Статей поки немає — з’являться тут, щойно додаси першу.</p>';
+    wrap.innerHTML = '<p class="empty-note">Статей поки немає — скоро з’являться.</p>';
     return;
   }
 
@@ -440,7 +440,8 @@ function renderGrammar(){
   const readyOnlyEl = document.getElementById('grammarReadyOnly');
   if(!wrap) return;
   if(typeof GRAMMAR === 'undefined' || typeof GRAMMAR_ROZDILY === 'undefined'){
-    wrap.innerHTML = '<p class="empty-note">Не вдалося завантажити план тем (data/grammar-data.js).</p>';
+    console.warn('Не завантажився data/grammar-data.js');
+    wrap.innerHTML = '<p class="empty-note">Не вдалося завантажити список тем — онови сторінку.</p>';
     return;
   }
   const newest = gramNewest();
