@@ -1,4 +1,4 @@
-# Deutsch mit uns — архітектура сайту
+# DeutschHeft — архітектура сайту
 
 ## Структура папок
 
@@ -319,7 +319,10 @@ STYLE-BRIEF / GRAMMAR-BRIEF / MATERIAL-BRIEF.
 
 ## Розгортання
 
-Той самий підхід, що й раніше: перетягуєш папку `site` цілком на
-[app.netlify.com/drop](https://app.netlify.com/drop), або тримаєш у
-GitHub-репозиторії з увімкненим GitHub Pages. Оновлення — перетягуєш
-папку ще раз / робиш commit; посилання лишається тим самим.
+Сайт живе на GitHub Pages (репозиторій `smanoffmothman/deutch-lessons`)
+за адресою **https://deutschheft.com.ua** (домен на NIC.UA, деталі —
+CHANGELOG, «Технічне»). Оновлення — перетягуєш на GitHub ВМІСТ папки
+(Claude віддає зміни `.zip`-архівом з потрібними папками). У корені
+репозиторію мають лежати `.nojekyll` і `CNAME` — `CNAME` не видаляти,
+інакше сайт повернеться на github.io. Стара адреса github.io сама
+перенаправляє на домен. Шляхи на сторінках — лише відносні.
