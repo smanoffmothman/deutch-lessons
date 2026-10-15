@@ -1,0 +1,38 @@
+# Після кожного завантаження на GitHub оновлює sitemap.xml (карту сайту
+# для пошуковиків). Вручну нічого робити не треба. Скрипт —
+# .github/scripts/build_sitemap.py. Запустити вручну: Actions → sitemap → Run workflow.
+name: sitemap
+
+on:
+  push:
+    branches: [main]
+    paths-ignore: ['sitemap.xml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sitemap
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Зібрати sitemap.xml
+        run: python3 .github/scripts/build_sitemap.py
+      - name: Закомітити, якщо змінився
+        run: |
+          git add sitemap.xml
+          if git diff --cached --quiet; then
+            echo "sitemap.xml без змін"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git commit -m "sitemap.xml: оновлено автоматично"
+          git push
