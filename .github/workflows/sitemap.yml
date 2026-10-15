@@ -1,6 +1,8 @@
-# Після кожного завантаження на GitHub оновлює sitemap.xml (карту сайту
-# для пошуковиків). Вручну нічого робити не треба. Скрипт —
-# .github/scripts/build_sitemap.py. Запустити вручну: Actions → sitemap → Run workflow.
+# Після кожного завантаження на GitHub:
+#   1) вписує в уроки, теми й статті пошукові теги (опис, картка посилання) —
+#      скрипт .github/scripts/build_seo.py, дані з data/*.js;
+#   2) оновлює sitemap.xml (карту сайту) — .github/scripts/build_sitemap.py.
+# Вручну нічого робити не треба. Запустити вручну: Actions → sitemap → Run workflow.
 name: sitemap
 
 on:
@@ -20,19 +22,25 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - name: Зібрати sitemap.xml
-        run: python3 .github/scripts/build_sitemap.py
-      - name: Закомітити, якщо змінився
+      - name: Налаштувати git
         run: |
-          git add sitemap.xml
-          if git diff --cached --quiet; then
-            echo "sitemap.xml без змін"
-            exit 0
-          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          git commit -m "sitemap.xml: оновлено автоматично"
+      - name: Пошукові теги в уроках, темах і статтях
+        run: |
+          python3 .github/scripts/build_seo.py
+          git add -A lessons gramatyka/temy materialy/statti
+          git diff --cached --quiet || git commit -m "робот: пошукові теги оновлено автоматично"
+      - name: Зібрати sitemap.xml
+        run: |
+          python3 .github/scripts/build_sitemap.py
+          git add sitemap.xml
+          git diff --cached --quiet || git commit -m "робот: sitemap.xml оновлено автоматично"
+      - name: Відправити на GitHub
+        run: |
+          if [ "$(git rev-list --count origin/main..HEAD)" = "0" ]; then echo "без змін"; exit 0; fi
+          git pull --rebase -q origin main
           git push
