@@ -34,6 +34,7 @@
    ================================================================= */
 
 var NAV_MENU_CSS = `
+.brand-heft{ color:#DE9E3B; }
 .site-nav{ position:relative; z-index:40; }
 .site-nav .nav-menu{ display:flex; align-items:center; gap:22px; flex-wrap:wrap; }
 .site-nav .nav-toggle{ display:none; }
@@ -72,6 +73,24 @@ var NAV_MENU_CSS = `
 }
 `;
 
+/* Іконка сайту для сторінок, у яких її немає в <head> (старі уроки, теми,
+   статті): додається тут, тож правити самі сторінки не треба. Сторінки
+   оболонки мають власні <link rel="icon"> — для них нічого не відбувається.
+   Файли favicon.ico / favicon.svg / apple-touch-icon.png лежать у корені. */
+function ensureFavicon(root){
+  if(document.querySelector('link[rel~="icon"]')) return;
+  const head = document.head || document.documentElement;
+  [['icon', root + 'favicon.ico', null, 'any'],
+   ['icon', root + 'favicon.svg', 'image/svg+xml', null],
+   ['apple-touch-icon', root + 'apple-touch-icon.png', null, null]].forEach(a => {
+    const l = document.createElement('link');
+    l.rel = a[0]; l.href = a[1];
+    if(a[2]) l.type = a[2];
+    if(a[3]) l.setAttribute('sizes', a[3]);
+    head.appendChild(l);
+  });
+}
+
 function injectNavMenuCss(){
   if(document.getElementById('siteNavMenuCss')) return;
   const st = document.createElement('style');
@@ -100,10 +119,11 @@ function renderSiteNav(containerId, opts){
   const el = document.getElementById(containerId);
   if(!el) return;
   injectNavMenuCss();
+  ensureFavicon(root);
 
   const menuId = containerId + 'Menu';
   el.outerHTML = '<nav class="site-nav" id="' + containerId + '" aria-label="Розділи сайту">'
-    + '<a class="brand" href="' + root + 'index.html">DeutschHeft</a>'
+    + '<a class="brand" href="' + root + 'index.html">Deutsch<span class="brand-heft">Heft</span></a>'
     + '<button type="button" class="nav-toggle" aria-expanded="false" aria-controls="' + menuId + '">'
     +   '<svg class="bars" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>'
     +   '<svg class="x" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>'
