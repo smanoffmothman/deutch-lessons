@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 11 · Modul B · Das Rezept eines beliebten Gerichts</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 7'},
+    {label: 'Урок 11: Рецепт популярної страви'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 11 · MODUL B</span>
+        <h1>Das Rezept eines beliebten Gerichts</h1>
+        <p class="sub">Повторюємо кухонну лексику: що з чим поєднується, гра «Stimmt das?», навіщо потрібен посуд (ihn / sie / es + um … zu) — і пишемо рецепт популярної страви.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Was passt zusammen?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Stimmt das?</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wozu brauchst du …?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Mein Rezept</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== Start ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Worum geht es heute?</h2>
+      <div class="card">
+        <p>Heute wiederholen wir alles, was wir über das Kochen gelernt haben. Welche Wörter passen zusammen – <i>einen Kuchen backen</i> oder <i>einen Kuchen braten</i>? Im Spiel „Stimmt das?“ prüfen wir Küchengeräte und Geschirr. Dann sagen wir, wozu wir einen Kochtopf, eine Pfanne oder ein Messer brauchen. Zum Schluss wählst du ein beliebtes Gericht – Borschtsch, Gemüsesalat, Obstkuchen oder Pasta mit Fleisch – und schreibst das Rezept: Zutaten und Zubereitung.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Сьогодні повторюємо все, що вивчили про приготування їжі. Які слова пасують одне до одного — <i>einen Kuchen backen</i> чи <i>einen Kuchen braten</i>? У грі «Stimmt das?» («Це правда?») перевіряємо кухонне приладдя й посуд. Потім пояснюємо, навіщо нам каструля, сковорідка чи ніж. Насамкінець ти обираєш популярну страву — борщ, овочевий салат, фруктовий пиріг або пасту з м'ясом — і пишеш рецепт: інгредієнти та приготування.
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Unser Ziel</p>
+        <p style="margin:0;">Ich kann ein einfaches Rezept schreiben und erklären, wozu ich ein Küchengerät brauche: <b>„Ich brauche sie, um einen Salat zu vermischen.“</b></p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Мета уроку</span>
+          Я вмію написати простий рецепт і пояснити, навіщо мені кухонний прилад чи посуд.
+        </div>
+      </div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Hallo, Küchenchef! Schürze an – los geht's! 🍲</p>
+      </div>
+    </section>
+
+    <!-- ===== Hausaufgabe ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: 1) таблиця з 8 групами продуктів (Getränke, Obst, Gemüse, Milchprodukte, Salate, Speisen, Süßes, Fleischwaren), у кожній — щонайменше три продукти з артиклем; 2) 5–6 речень у Perfekt про покупки родини з мірами й упаковками в Akkusativ (напр. „Meine Mutter hat einen Liter Milch und ein Kilo Äpfel gekauft.“) і останнє речення „Für … braucht man gerade …“.
+        <br><br>Покажи вчителеві таблицю, а тепер перевір себе: обери правильну форму або впиши слово.
+      </div>
+      <div class="card" id="dz-list" style="margin-top:16px;">
+        <p class="section-label" style="margin:0 0 10px;">Was hat die Familie gekauft?</p>
+        <div class="fill-item"><span class="num">1)</span> Meine Mutter hat
+          <select class="blank inline" data-ans="einen"><option value="">—</option><option>ein</option><option>eine</option><option>einen</option></select>
+          Liter Milch gekauft.</div>
+        <div class="fill-item"><span class="num">2)</span> Mein Vater hat
+          <select class="blank inline" data-ans="ein"><option value="">—</option><option>ein</option><option>eine</option><option>einen</option></select>
+          Kilo Äpfel gekauft.</div>
+        <div class="fill-item"><span class="num">3)</span> Wir haben
+          <select class="blank inline" data-ans="eine"><option value="">—</option><option>ein</option><option>eine</option><option>einen</option></select>
+          Flasche Mineralwasser gekauft.</div>
+        <div class="fill-item"><span class="num">4)</span> Oma hat
+          <select class="blank inline" data-ans="einen"><option value="">—</option><option>ein</option><option>eine</option><option>einen</option></select>
+          Kopf Kohl auf dem Markt gekauft.</div>
+        <div class="fill-item"><span class="num">5)</span> Ich habe
+          <select class="blank inline" data-ans="eine"><option value="">—</option><option>ein</option><option>eine</option><option>einen</option></select>
+          Packung Butter gekauft.</div>
+        <div class="fill-item"><span class="num">6)</span> Meine Schwester hat zwei <input type="text" class="blank-input inline" data-ans="Tüten" aria-label="die Tüte im Plural"> Bonbons gekauft. <i>(die Tüte → Plural)</i></div>
+        <div class="fill-item"><span class="num">7)</span> Mein Bruder hat Brot und Wurst <input type="text" class="blank-input inline" data-ans="gekauft" aria-label="Partizip II von kaufen">. <i>(kaufen → Perfekt)</i></div>
+        <div class="fill-item"><span class="num">8)</span> Für einen Obstkuchen braucht man gerade
+          <select class="blank inline" data-ans="Mehl, Äpfel und Eier"><option value="">—</option><option>Nudeln und Hackfleisch</option><option>Mehl, Äpfel und Eier</option><option>Gurken und Radieschen</option></select>.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="dz-check">Prüfen</button>
+        <button class="btn secondary" id="dz-reset">Zurücksetzen</button>
+        <span class="score-pill" id="dz-score"></span>
+      </div>
+
+      <div class="card" id="dz-vocab-wrap" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">Wörter-Check</p>
+        <p class="lead">Перевір слова з минулого уроку.</p>
+        <div id="dz-vocab"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Was passt zusammen?</h2>
+      <p class="lead">Обери дієслово, яке пасує до кожного словосполучення. Кожне дієслово — лише один раз.</p>
+      <div class="wordbank"><span>backen</span><span>braten</span><span>decken</span><span>gehen</span><span>kochen</span><span>legen</span><span>schneiden</span><span>sehen</span><span>würzen</span></div>
+      <div class="card" id="ub1-list" style="margin-top:14px;">
+        <div class="fill-item"><span class="num">1)</span> Kartoffeln in Würfel
+          <select class="blank inline" data-ans="schneiden"><option value="">—</option><option>backen</option><option>braten</option><option>decken</option><option>gehen</option><option>kochen</option><option>legen</option><option>schneiden</option><option>sehen</option><option>würzen</option></select></div>
+        <div class="fill-item"><span class="num">2)</span> den Tisch
+          <select class="blank inline" data-ans="decken"><option value="">—</option><option>backen</option><option>braten</option><option>decken</option><option>gehen</option><option>kochen</option><option>legen</option><option>schneiden</option><option>sehen</option><option>würzen</option></select></div>
+        <div class="fill-item"><span class="num">3)</span> eine Kochshow
+          <select class="blank inline" data-ans="sehen"><option value="">—</option><option>backen</option><option>braten</option><option>decken</option><option>gehen</option><option>kochen</option><option>legen</option><option>schneiden</option><option>sehen</option><option>würzen</option></select></div>
+        <div class="fill-item"><span class="num">4)</span> Fleisch in einer Pfanne
+          <select class="blank inline" data-ans="braten"><option value="">—</option><option>backen</option><option>braten</option><option>decken</option><option>gehen</option><option>kochen</option><option>legen</option><option>schneiden</option><option>sehen</option><option>würzen</option></select></div>
+        <div class="fill-item"><span class="num">5)</span> die Suppe mit Pfeffer
+          <select class="blank inline" data-ans="würzen"><option value="">—</option><option>backen</option><option>braten</option><option>decken</option><option>gehen</option><option>kochen</option><option>legen</option><option>schneiden</option><option>sehen</option><option>würzen</option></select></div>
+        <div class="fill-item"><span class="num">6)</span> einen Kuchen
+          <select class="blank inline" data-ans="backen"><option value="">—</option><option>backen</option><option>braten</option><option>decken</option><option>gehen</option><option>kochen</option><option>legen</option><option>schneiden</option><option>sehen</option><option>würzen</option></select></div>
+        <div class="fill-item"><span class="num">7)</span> Nudeln im Kochtopf
+          <select class="blank inline" data-ans="kochen"><option value="">—</option><option>backen</option><option>braten</option><option>decken</option><option>gehen</option><option>kochen</option><option>legen</option><option>schneiden</option><option>sehen</option><option>würzen</option></select></div>
+        <div class="fill-item"><span class="num">8)</span> einkaufen
+          <select class="blank inline" data-ans="gehen"><option value="">—</option><option>backen</option><option>braten</option><option>decken</option><option>gehen</option><option>kochen</option><option>legen</option><option>schneiden</option><option>sehen</option><option>würzen</option></select></div>
+        <div class="fill-item"><span class="num">9)</span> die Butter in den Kühlschrank
+          <select class="blank inline" data-ans="legen"><option value="">—</option><option>backen</option><option>braten</option><option>decken</option><option>gehen</option><option>kochen</option><option>legen</option><option>schneiden</option><option>sehen</option><option>würzen</option></select></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub1-check">Prüfen</button>
+        <button class="btn secondary" id="ub1-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub1-score"></span>
+      </div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Sag es laut als Satz: „Zuerst schneidet man die Kartoffeln in Würfel.“</p>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Spiel „Stimmt das?“</h2>
+      <p class="lead">Підписи під картинками — не завжди правильні! Подивись на посуд (не на їжу) і скажи, що там насправді.</p>
+      <div class="pic-grid">
+        <div class="pic-card"><div class="num">A1</div><div class="swatch">🍽️</div>„die Schüssel“</div>
+        <div class="pic-card"><div class="num">B1</div><div class="swatch">🥄</div>„die Gabel“</div>
+        <div class="pic-card"><div class="num">C1</div><div class="swatch">🍳</div>„der Brotkorb“</div>
+        <div class="pic-card"><div class="num">A2</div><div class="swatch">☕</div>„die Tasse“</div>
+        <div class="pic-card"><div class="num">B2</div><div class="swatch">🔪</div>„der Teelöffel“</div>
+        <div class="pic-card"><div class="num">C2</div><div class="swatch">🧂</div>„der Salzstreuer“</div>
+        <div class="pic-card"><div class="num">A3</div><div class="swatch">🥗</div>„der Kochtopf“</div>
+        <div class="pic-card"><div class="num">B3</div><div class="swatch">🫖</div>„die Flasche“</div>
+        <div class="pic-card"><div class="num">C3</div><div class="swatch">🥛</div>„der Teller“</div>
+      </div>
+      <div class="card" id="ub2-list">
+        <p class="section-label" style="margin:0 0 10px;">Was ist das wirklich?</p>
+        <div class="fill-item"><span class="num">A1</span> „die Schüssel“? Das ist
+          <select class="blank inline" data-ans="ein Teller"><option value="">—</option><option>ein Glas</option><option>ein Kochtopf</option><option>ein Löffel</option><option>ein Messer</option><option>ein Salzstreuer</option><option>ein Teller</option><option>eine Flasche</option><option>eine Gabel</option><option>eine Pfanne</option><option>eine Schüssel</option><option>eine Tasse</option><option>eine Teekanne</option></select>.</div>
+        <div class="fill-item"><span class="num">B1</span> „die Gabel“? Das ist
+          <select class="blank inline" data-ans="ein Löffel"><option value="">—</option><option>ein Glas</option><option>ein Kochtopf</option><option>ein Löffel</option><option>ein Messer</option><option>ein Salzstreuer</option><option>ein Teller</option><option>eine Flasche</option><option>eine Gabel</option><option>eine Pfanne</option><option>eine Schüssel</option><option>eine Tasse</option><option>eine Teekanne</option></select>.</div>
+        <div class="fill-item"><span class="num">C1</span> „der Brotkorb“? Das ist
+          <select class="blank inline" data-ans="eine Pfanne"><option value="">—</option><option>ein Glas</option><option>ein Kochtopf</option><option>ein Löffel</option><option>ein Messer</option><option>ein Salzstreuer</option><option>ein Teller</option><option>eine Flasche</option><option>eine Gabel</option><option>eine Pfanne</option><option>eine Schüssel</option><option>eine Tasse</option><option>eine Teekanne</option></select>.</div>
+        <div class="fill-item"><span class="num">A2</span> „die Tasse“? Das ist
+          <select class="blank inline" data-ans="eine Tasse"><option value="">—</option><option>ein Glas</option><option>ein Kochtopf</option><option>ein Löffel</option><option>ein Messer</option><option>ein Salzstreuer</option><option>ein Teller</option><option>eine Flasche</option><option>eine Gabel</option><option>eine Pfanne</option><option>eine Schüssel</option><option>eine Tasse</option><option>eine Teekanne</option></select>.</div>
+        <div class="fill-item"><span class="num">B2</span> „der Teelöffel“? Das ist
+          <select class="blank inline" data-ans="ein Messer"><option value="">—</option><option>ein Glas</option><option>ein Kochtopf</option><option>ein Löffel</option><option>ein Messer</option><option>ein Salzstreuer</option><option>ein Teller</option><option>eine Flasche</option><option>eine Gabel</option><option>eine Pfanne</option><option>eine Schüssel</option><option>eine Tasse</option><option>eine Teekanne</option></select>.</div>
+        <div class="fill-item"><span class="num">C2</span> „der Salzstreuer“? Das ist
+          <select class="blank inline" data-ans="ein Salzstreuer"><option value="">—</option><option>ein Glas</option><option>ein Kochtopf</option><option>ein Löffel</option><option>ein Messer</option><option>ein Salzstreuer</option><option>ein Teller</option><option>eine Flasche</option><option>eine Gabel</option><option>eine Pfanne</option><option>eine Schüssel</option><option>eine Tasse</option><option>eine Teekanne</option></select>.</div>
+        <div class="fill-item"><span class="num">A3</span> „der Kochtopf“? Das ist
+          <select class="blank inline" data-ans="eine Schüssel"><option value="">—</option><option>ein Glas</option><option>ein Kochtopf</option><option>ein Löffel</option><option>ein Messer</option><option>ein Salzstreuer</option><option>ein Teller</option><option>eine Flasche</option><option>eine Gabel</option><option>eine Pfanne</option><option>eine Schüssel</option><option>eine Tasse</option><option>eine Teekanne</option></select>.</div>
+        <div class="fill-item"><span class="num">B3</span> „die Flasche“? Das ist
+          <select class="blank inline" data-ans="eine Teekanne"><option value="">—</option><option>ein Glas</option><option>ein Kochtopf</option><option>ein Löffel</option><option>ein Messer</option><option>ein Salzstreuer</option><option>ein Teller</option><option>eine Flasche</option><option>eine Gabel</option><option>eine Pfanne</option><option>eine Schüssel</option><option>eine Tasse</option><option>eine Teekanne</option></select>.</div>
+        <div class="fill-item"><span class="num">C3</span> „der Teller“? Das ist
+          <select class="blank inline" data-ans="ein Glas"><option value="">—</option><option>ein Glas</option><option>ein Kochtopf</option><option>ein Löffel</option><option>ein Messer</option><option>ein Salzstreuer</option><option>ein Teller</option><option>eine Flasche</option><option>eine Gabel</option><option>eine Pfanne</option><option>eine Schüssel</option><option>eine Tasse</option><option>eine Teekanne</option></select>.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+
+      <div class="card tinted-mustard" style="margin-top:20px;">
+        <p class="section-label" style="margin:0 0 6px;">Jetzt spielt zu zweit!</p>
+        <p class="beispiel"><b>A:</b> Was ist auf A3?<br>
+        <b>B:</b> Das ist ein Kochtopf. Stimmt das?<br>
+        <b>A:</b> Nein, du irrst dich! Das ist eine Schüssel.<br>
+        <b>B:</b> Wozu brauchst du eine Schüssel?<br>
+        <b>A:</b> Ich brauche sie, um einen Salat zu vermischen.<br>
+        <b>B:</b> Kannst du einen Salat machen?<br>
+        <b>A:</b> Na klar! Das ist ganz einfach!</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Як грати</span>
+          Працюйте в парах: А називає клітинку, Б читає підпис і питає «Stimmt das?». А виправляє, якщо підпис хибний («Nein, du irrst dich! — Ні, ти помиляєшся!»). Далі — питання «Навіщо тобі …?» і відповідь з <b>um … zu</b>. Мінімум 3 діалоги, потім мінятеся ролями. Як правильно відповідати на «Wozu?» — тренуємо в Üb. 3.
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wozu brauchst du …?</h2>
+      <div class="card tinted-teal">
+        <table class="gtable" style="margin-top:0;">
+          <tr><th>Wozu brauchst du …?</th><th>Ich brauche …</th></tr>
+          <tr><td>einen Kochtopf (der)</td><td><b>ihn</b>, um Suppe zu kochen.</td></tr>
+          <tr><td>eine Pfanne (die)</td><td><b>sie</b>, um Fleisch zu braten.</td></tr>
+          <tr><td>ein Messer (das)</td><td><b>es</b>, um Brot zu schneiden.</td></tr>
+        </table>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Правило</span>
+          Щоб не повторювати іменник, заміни його займенником в Akkusativ: <b>der → ihn</b>, <b>die → sie</b>, <b>das → es</b>. Мета: <b>um … zu + інфінітив</b> у кінці речення, перед <b>um</b> — кома.
+        </div>
+      </div>
+
+      <p class="section-label" style="margin-top:18px;">A · ihn, sie oder es?</p>
+      <div id="ub3-quiz"></div>
+
+      <p class="section-label" style="margin-top:18px;">B · Bilde Sätze</p>
+      <p class="lead">Натискай картки в правильному порядку. Натиснеш ще раз — картка повернеться назад.</p>
+      <div class="card" id="ub3-order"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wähle ein Gericht und schreib das Rezept</h2>
+      <p class="lead">Спершу розклади інгредієнти: що для якої страви?</p>
+      <div id="ub4-sort"></div>
+
+      <div class="card" style="margin-top:20px;">
+        <p class="section-label" style="margin:0 0 6px;">Beispiel: Gemüsesalat</p>
+        <table class="gtable">
+          <tr><th>Zutaten</th><th>Zubereitung</th></tr>
+          <tr>
+            <td>2 Gurken<br>5 Radieschen<br>ein Kopf Salat<br>2 Esslöffel saure Sahne<br>Salz und Pfeffer</td>
+            <td>Zuerst wäscht man das Gemüse. Dann schneidet man die Gurken und die Radieschen in Würfel. Danach gibt man alles in eine Schüssel und würzt es mit Salz und Pfeffer. Zum Schluss gibt man die saure Sahne dazu und vermischt alles mit einem Löffel. Guten Appetit!</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Jetzt du!</p>
+        <p>Wähle: <b>Borschtsch</b>, <b>Gemüsesalat</b>, <b>Obstkuchen</b> oder <b>Pasta mit Fleisch</b>.</p>
+        <div class="qa">
+          <label for="ub4-gericht">1. Mein Gericht heißt …</label>
+          <textarea id="ub4-gericht" rows="1" placeholder="z. B. Borschtsch"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub4-zutaten">2. Zutaten (mit Mengenangaben)</label>
+          <textarea id="ub4-zutaten" rows="4" placeholder="z. B. 3 Kartoffeln, ein Kopf Kohl, 2 Rote Rüben …"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub4-zubereitung">3. Zubereitung (mindestens 5 Sätze mit zuerst, dann, danach, zum Schluss)</label>
+          <textarea id="ub4-zubereitung" rows="7" placeholder="Zuerst schält man …"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Пиши з <b>man</b> (дієслово на 2-му місці: «Dann <b>schneidet</b> man …») і використай щонайменше три вирази з Üb. 1. Вставляти скопійований текст у поля не можна — набирай сам(а).
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Fertig! ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Mini-Kochshow: Schreib ein kurzes Drehbuch (8–10 Repliken) für deine eigene Kochshow. Personen: der Moderator / die Moderatorin und du als Koch / Köchin. Wähle ein Gericht aus der Stunde (Borschtsch, Gemüsesalat, Obstkuchen oder Pasta mit Fleisch). 1) Der Moderator fragt mindestens zweimal „Wozu brauchst du einen / eine / ein …?“ – du antwortest mit ihn / sie / es und um … zu (z. B. „Ich brauche sie, um das Gemüse zu vermischen.“). 2) Erklär die Zubereitung in mindestens vier Schritten mit zuerst, dann, danach, zum Schluss und benutze mindestens vier Wortverbindungen aus Üb. 1 (z. B. Kartoffeln in Würfel schneiden, mit Pfeffer würzen, in einer Pfanne braten). 3) Die letzte Replik ist: „Na klar! Das ist ganz einfach!“ Wer möchte, filmt die Show mit einem Familienmitglied (bis 1 Minute). Nächstes Mal spielen wir eure Kochshows in Paaren vor.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Міні-кулінарне шоу: напиши короткий сценарій (8–10 реплік) для власного кулінарного шоу. Дійові особи: ведучий / ведуча і ти як кухар / кухарка. Обери страву з уроку (борщ, овочевий салат, фруктовий пиріг або паста з м'ясом). 1) Ведучий щонайменше двічі питає «Wozu brauchst du einen / eine / ein …?» («Навіщо тобі …?») — ти відповідаєш з ihn / sie / es і um … zu (напр. «Ich brauche sie, um das Gemüse zu vermischen.»). 2) Поясни приготування щонайменше в чотири кроки з zuerst, dann, danach, zum Schluss і використай щонайменше чотири словосполучення з Üb. 1 (напр. Kartoffeln in Würfel schneiden, mit Pfeffer würzen, in einer Pfanne braten). 3) Остання репліка: «Na klar! Das ist ganz einfach!» Охочі можуть зняти шоу на відео з кимось із родини (до 1 хвилини). Наступного уроку розіграємо ваші кулінарні шоу в парах.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Wörter zum Lernen</p>
+        <div class="chip-row" id="vocabChips"></div>
+      </div>
+
+      <div class="card" id="lessonGramWrap">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="lessonGram"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../data/glossary-data.js"></script>
+<script src="../../../data/lessons-data.js"></script>
+<script src="../../../data/grammar-data.js"></script>
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  const LEKTION_KLAS = "7", LEKTION_MODUL = "B", LEKTION_LEKTION = 11;
+  const LEKTION_PREV_LEKTION = 10;
+
+  (function renderLessonVocab(){
+    const box = document.getElementById('vocabChips');
+    if (!box || typeof GLOSSARY === 'undefined') return;
+    const words = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_LEKTION
+    );
+    if (words.length === 0){
+      box.innerHTML = '<p class="empty-note">Слова для цього уроку ще не додані в глосарій.</p>';
+      return;
+    }
+    box.innerHTML = words.map(w =>
+      '<span class="chip static">' + w.de + ' — ' + w.uk + '</span>'
+    ).join('');
+  })();
+
+  // ===== Граматика до цього уроку у вкладці Fertig (поле gram у lessons-data.js) =====
+  (function renderLessonGrammar(){
+    const wrap = document.getElementById('lessonGramWrap');
+    const box = document.getElementById('lessonGram');
+    if (!wrap || !box) return;
+    const hide = () => { wrap.style.display = 'none'; };
+    if (typeof LESSONS === 'undefined' || typeof GRAMMAR === 'undefined') return hide();
+    const me = LESSONS.find(l => l.klas === LEKTION_KLAS && l.modul === LEKTION_MODUL && l.lektion === LEKTION_LEKTION);
+    const topics = ((me && me.gram) || []).map(id => GRAMMAR.find(t => t.id === id)).filter(t => t && t.opublikovano > 0);
+    if (topics.length === 0) return hide();
+    // корінь сайту беремо з того самого шляху, яким підключено grammar-data.js —
+    // тож окремо міняти шлях тут при копіюванні шаблону не треба
+    const src = document.querySelector('script[src$="data/grammar-data.js"]').getAttribute('src');
+    const root = src.slice(0, src.length - 'data/grammar-data.js'.length);
+    box.innerHTML = topics.map(t =>
+      '<a class="gram-link" href="' + root + 'gramatyka/temy/' + t.id + '.html">'
+      + '<span class="k">' + t.uk + '</span>' + t.tema + '</a>'
+    ).join('');
+  })();
+
+  // ===== Wörter-Check у вкладці Hausaufgabe (слова ПОПЕРЕДНЬОГО уроку) =====
+  // Використовує ті самі спільні функції, що й Üb.1 (buildQuiz) та
+  // Fertig! (shuffleArray) — нового коду в lesson-interactions.js не було.
+
+  // ---------- Груба евристика частини мови за виглядом "de" ----------
+  // Потрібна лише для того, щоб варіанти-пастки у Wörter-Check були тієї
+  // самої частини мови, що й правильна відповідь (інакше учень вгадує за
+  // формою слова — "це іменник чи дієслово?" — а не за значенням). Це
+  // евристика за текстом рядка, а не лінгвістичний аналізатор, і вона не
+  // вимагає жодного нового поля в даних GLOSSARY.
+  function guessPos(de){
+    var base = (de || '').replace(/\([^)]*\)/g, '').trim();
+    if(/^(der|die|das)(\/(der|die|das))?\s/.test(base)) return 'noun';
+    if(/^sich\s/.test(base)) return 'verb';
+    if(/^am\s/.test(base)) return 'other'; // "am liebsten", "am besten" — прислівникова найвища форма, не дієслово
+    if(/\(\+(Gen|Dat|Akk)\.?\)/.test(de)) return 'prep';
+    var words = base.split(/\s+/);
+    var last = words[words.length - 1];
+    if(/(en|ern|eln)$/.test(last) && last === last.toLowerCase()) return 'verb';
+    return 'other'; // прикметники / прислівники / сталі вирази
+  }
+
+  (function renderDzVocabCheck(){
+    const wrap = document.getElementById('dz-vocab-wrap');
+    const box = document.getElementById('dz-vocab');
+    if (!wrap || !box || typeof GLOSSARY === 'undefined') return;
+    if (!LEKTION_PREV_LEKTION){ wrap.style.display = 'none'; return; }
+
+    const prevWords = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_PREV_LEKTION
+    );
+    if (prevWords.length < 3){ wrap.style.display = 'none'; return; }
+
+    const pool = shuffleArray(prevWords).slice(0, 6); // 5–6 слів на перевірку
+    const quizData = pool.map(w => {
+      // Пастки — тієї самої частини мови, що й правильне слово (guessPos вище),
+      // інакше учень вгадує за формою відповіді, а не за її значенням.
+      const pos = guessPos(w.de);
+      let sameKind = GLOSSARY.filter(g => g.uk !== w.uk && guessPos(g.de) === pos);
+      if(sameKind.length < 2) sameKind = GLOSSARY.filter(g => g.uk !== w.uk); // запасний варіант, якщо слів цієї частини мови замало
+      const distractors = shuffleArray(sameKind).slice(0, 2).map(g => g.uk);
+      return { q: w.de, opts: [w.uk, ...distractors], correct: w.uk };
+    });
+    buildQuiz('dz-vocab', quizData);
+  })();
+
+
+  // Hausaufgabe: перевірка ДЗ (пропуски й списки)
+  wireBlanks('dz');
+
+  // Üb. 1: Was passt zusammen?
+  wireBlanks('ub1');
+
+  // Üb. 2: Stimmt das?
+  wireBlanks('ub2');
+
+  // Üb. 3A: ihn / sie / es
+  buildQuiz('ub3-quiz', [
+    {q: "Wozu brauchst du einen Kochtopf? — Ich brauche ___, um Suppe zu kochen.", opts: ["ihn", "sie", "es"], correct: "ihn"},
+    {q: "Wozu brauchst du eine Pfanne? — Ich brauche ___, um Kartoffeln zu braten.", opts: ["ihn", "sie", "es"], correct: "sie"},
+    {q: "Wozu brauchst du ein Messer? — Ich brauche ___, um Brot zu schneiden.", opts: ["ihn", "sie", "es"], correct: "es"},
+    {q: "Wozu brauchst du eine Schüssel? — Ich brauche ___, um einen Salat zu vermischen.", opts: ["ihn", "sie", "es"], correct: "sie"},
+    {q: "Wozu brauchst du einen Löffel? — Ich brauche ___, um die Suppe umzurühren.", opts: ["ihn", "sie", "es"], correct: "ihn"},
+    {q: "Wozu brauchst du ein Glas? — Ich brauche ___, um Saft zu trinken.", opts: ["ihn", "sie", "es"], correct: "es"}
+  ]);
+
+  // Üb. 3B: Sätze mit um … zu
+  buildOrder('ub3-order', [
+    { words: ["Ich", "brauche", "sie,", "um", "Kartoffeln", "zu", "braten"], end: ".", hint: "Wozu brauchst du eine Pfanne?" },
+    { words: ["Ich", "brauche", "es,", "um", "das Brot", "zu", "schneiden"], end: ".", hint: "Wozu brauchst du ein Messer?" },
+    { words: ["Ich", "brauche", "ihn,", "um", "Borschtsch", "zu", "kochen"], end: ".", hint: "Wozu brauchst du einen Kochtopf?" },
+    { words: ["Man", "braucht", "ihn,", "um", "einen Kuchen", "zu", "backen"], end: ".", hint: "Wozu braucht man einen Backofen?" }
+  ]);
+
+  // Üb. 4: Zutaten sortieren
+  buildSort('ub4-sort', {
+    buckets: ["Borschtsch", "Gemüsesalat", "Obstkuchen", "Pasta mit Fleisch"],
+    items: [
+      {t: "die Roten Rüben", b: "Borschtsch"},
+      {t: "der Kohl", b: "Borschtsch"},
+      {t: "die Kartoffeln", b: "Borschtsch"},
+      {t: "die Gurken", b: "Gemüsesalat"},
+      {t: "die Radieschen", b: "Gemüsesalat"},
+      {t: "der Kopfsalat", b: "Gemüsesalat"},
+      {t: "das Mehl", b: "Obstkuchen"},
+      {t: "die Äpfel", b: "Obstkuchen"},
+      {t: "die Eier", b: "Obstkuchen"},
+      {t: "die Nudeln", b: "Pasta mit Fleisch"},
+      {t: "das Hackfleisch", b: "Pasta mit Fleisch"},
+      {t: "der Parmesan", b: "Pasta mit Fleisch"}
+    ]
+  });
+
+  // Фінальна панель зі штампами
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🥄','🍳','🥗','🍲','📖']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
