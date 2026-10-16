@@ -812,5 +812,17 @@ const GLOSSARY = [
   {de: "sich schminken", uk: "фарбуватися, робити макіяж", klas: "9", modul: "B", lektion: 3},
   {de: "sich kleiden", uk: "одягатися (певним чином)", klas: "9", modul: "B", lektion: 3},
   {de: "die Persönlichkeit", uk: "особистість", klas: "9", modul: "B", lektion: 3},
-  {de: "die Steigerung (der Adjektive)", uk: "ступені порівняння (прикметників)", klas: "9", modul: "B", lektion: 3}
+  {de: "die Steigerung (der Adjektive)", uk: "ступені порівняння (прикметників)", klas: "9", modul: "B", lektion: 3},
+  {de: "die Zubereitung", uk: "приготування (страви)", klas: "7", modul: "B", lektion: 11},
+  {de: "der Würfel (in Würfel schneiden)", uk: "кубик (нарізати кубиками)", klas: "7", modul: "B", lektion: 11},
+  {de: "der Pfeffer", uk: "перець (приправа)", klas: "7", modul: "B", lektion: 11},
+  {de: "das Salz", uk: "сіль", klas: "7", modul: "B", lektion: 11},
+  {de: "der Borschtsch", uk: "борщ", klas: "7", modul: "B", lektion: 11},
+  {de: "die Nudeln (Pl.)", uk: "макарони, локшина", klas: "7", modul: "B", lektion: 11},
+  {de: "das Hackfleisch", uk: "м'ясний фарш", klas: "7", modul: "B", lektion: 11},
+  {de: "das Ei (die Eier)", uk: "яйце", klas: "7", modul: "B", lektion: 11},
+  {de: "der Apfel (die Äpfel)", uk: "яблуко", klas: "7", modul: "B", lektion: 11},
+  {de: "wozu?", uk: "навіщо? для чого?", klas: "7", modul: "B", lektion: 11},
+  {de: "Das ist ganz einfach!", uk: "Це зовсім просто!", klas: "7", modul: "B", lektion: 11},
+  {de: "der Moderator / die Moderatorin", uk: "ведучий / ведуча (шоу)", klas: "7", modul: "B", lektion: 11}
 ];

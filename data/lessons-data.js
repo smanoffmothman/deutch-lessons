@@ -731,5 +731,16 @@ const LESSONS = [
     nove: true,
     gram: ["komparation", "adjektivdeklination", "temporalsaetze"],
     dz: "1) Fehlersuche: In Lenas Forumsbeitrag sind 7 Fehler mit Komparativ, Superlativ oder als / wie. Finde sie und schreib den Text richtig ins Heft: „Hallo! Ich heiße Lena und bin 15. Mode finde ich wichtig, aber Bequemlichkeit ist mir noch wichtiger. Am gernsten trage ich weite Jeans und Kapuzenpullis. Hoodies finde ich viel gemütlicher wie Hemden. Meine Schwester ist zwei Jahre junger als ich, aber sie ist viel mehr modisch. Sie sagt immer: ‚Schwarz steht dir am gutesten!‘ Ich finde helle Farben aber schöner. Turnschuhe gefallen mir mehr gut als elegante Schuhe, und am praktischtesten finde ich meinen Rucksack.“ 2) Was trägst du wann? Schreib 5 Sätze mit „wenn“ über deine Kleidung in verschiedenen Situationen (z. B. „Wenn ich ins Konzert gehe, trage ich mein schwarzes T-Shirt.“). In jedem Satz steht ein Adjektiv mit richtiger Endung, und in mindestens zwei Sätzen vergleichst du (z. B. „…, denn sie sind bequemer als Hemden.“ oder „Am liebsten trage ich …“). Nächstes Mal machen wir eine Klassenumfrage: Wer trägt was am liebsten?"
+  },
+  {
+    klas: "7",
+    modul: "B",
+    lektion: 11,
+    nazva: "Das Rezept eines beliebten Gerichts",
+    opys: "Повторення теми «Кухня»: словосполучення (Kartoffeln in Würfel schneiden, mit Pfeffer würzen, einkaufen gehen), гра «Stimmt das?» з посудом (ein / eine), Wozu brauchst du …? — ihn / sie / es + um … zu, інгредієнти чотирьох страв і власний рецепт (Zutaten / Zubereitung).",
+    file: "klas-7/modul-b/lektion-11.html",
+    nove: true,
+    gram: ["infinitiv-um-zu", "personalpronomen"],
+    dz: "Mini-Kochshow: Schreib ein kurzes Drehbuch (8–10 Repliken) für deine eigene Kochshow. Personen: der Moderator / die Moderatorin und du als Koch / Köchin. Wähle ein Gericht aus der Stunde (Borschtsch, Gemüsesalat, Obstkuchen oder Pasta mit Fleisch). 1) Der Moderator fragt mindestens zweimal „Wozu brauchst du einen / eine / ein …?“ – du antwortest mit ihn / sie / es und um … zu (z. B. „Ich brauche sie, um das Gemüse zu vermischen.“). 2) Erklär die Zubereitung in mindestens vier Schritten mit zuerst, dann, danach, zum Schluss und benutze mindestens vier Wortverbindungen aus Üb. 1 (z. B. Kartoffeln in Würfel schneiden, mit Pfeffer würzen, in einer Pfanne braten). 3) Die letzte Replik ist: „Na klar! Das ist ganz einfach!“ Wer möchte, filmt die Show mit einem Familienmitglied (bis 1 Minute). Nächstes Mal spielen wir eure Kochshows in Paaren vor."
   }
 ];
