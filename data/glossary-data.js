@@ -847,5 +847,17 @@ const GLOSSARY = [
   {de: "der Inhalt", uk: "зміст", klas: "7", modul: "B", lektion: 13},
   {de: "die Bewertung", uk: "оцінювання, оцінка (роботи)", klas: "7", modul: "B", lektion: 13},
   {de: "der Umschlag (die Umschläge)", uk: "конверт", klas: "7", modul: "B", lektion: 13},
-  {de: "der Papierstreifen (die Papierstreifen)", uk: "смужка паперу", klas: "7", modul: "B", lektion: 13}
+  {de: "der Papierstreifen (die Papierstreifen)", uk: "смужка паперу", klas: "7", modul: "B", lektion: 13},
+  {de: "die Rolle (die Rollen)", uk: "роль", klas: "7", modul: "B", lektion: 14},
+  {de: "verteilen (die Rollen verteilen)", uk: "розподіляти (розподілити ролі)", klas: "7", modul: "B", lektion: 14},
+  {de: "moderieren", uk: "вести (шоу, передачу)", klas: "7", modul: "B", lektion: 14},
+  {de: "der Teilnehmer / die Teilnehmerin", uk: "учасник / учасниця", klas: "7", modul: "B", lektion: 14},
+  {de: "der Zuschauer / die Zuschauerin", uk: "глядач / глядачка", klas: "7", modul: "B", lektion: 14},
+  {de: "die Kameraleute (Pl.)", uk: "оператори, знімальна група", klas: "7", modul: "B", lektion: 14},
+  {de: "filmen", uk: "знімати на відео", klas: "7", modul: "B", lektion: 14},
+  {de: "ein Video drehen", uk: "знімати відео", klas: "7", modul: "B", lektion: 14},
+  {de: "stimmen für (+Akk.)", uk: "голосувати за (когось / щось)", klas: "7", modul: "B", lektion: 14},
+  {de: "weltbekannt", uk: "всесвітньо відомий", klas: "7", modul: "B", lektion: 14},
+  {de: "erfolgreich", uk: "успішний, вдалий", klas: "7", modul: "B", lektion: 14},
+  {de: "besprechen", uk: "обговорювати", klas: "7", modul: "B", lektion: 14}
 ];

@@ -764,5 +764,16 @@ const LESSONS = [
     nove: true,
     gram: ["deklination-nomen", "artikel-gebrauch", "indefinitpronomen", "wechselpraepositionen", "legen-liegen", "konditionalsaetze", "infinitiv-um-zu", "trennbare-verben", "perfekt-plusquamperfekt", "modalverben"],
     dz: "1) Schau dir deinen Bericht zur Kontrollarbeit an. Wähle drei Aufgaben, bei denen du einen Fehler gemacht hast oder unsicher warst, und schreib sie richtig in dein Heft – jeweils mit einer kurzen Regel auf Ukrainisch (z. B. „stellen + Akkusativ: Stell die Gläser auf den Tisch!“). 2) Wortsalat für die Klasse: Schreib fünf eigene Sätze zum Thema „Essen und Kochen“ auf Papierstreifen und schneide jeden Satz in Wörter. Jeder Satz zeigt eine andere Regel: ein Satz mit „wenn“, ein Satz mit „um … zu“, ein Satz mit „legen“ oder „stellen“, ein Satz mit einem trennbaren Verb (z. B. umrühren, dazugeben, einkaufen) und ein Satz im Perfekt. Steck jeden Satz in einen eigenen Umschlag. Nächstes Mal tauschen wir die Umschläge, und die anderen bauen eure Sätze wieder zusammen."
+  },
+  {
+    klas: "7",
+    modul: "B",
+    lektion: 14,
+    nazva: "Projekt: Unsere Kochshow",
+    opys: "Проєктний урок модуля «Харчування»: розподіляємо ролі для власного кулінарного шоу (ведучі, шеф-кухарі, глядачі, оператори), даємо інструкції в Imperativ для ihr, пишемо сценарій розмови ведучої з кухарем і після перегляду відео обговорюємо, чи вдалося шоу.",
+    file: "klas-7/modul-b/lektion-14.html",
+    nove: true,
+    gram: ["imperativ", "trennbare-verben", "infinitiv-um-zu", "personalpronomen"],
+    dz: "Kochshow-Kritik für die Schülerzeitung: 1) Mach eine Bewertungskarte für drei Speisen aus unserer Kochshow: Name der Speise, Koch oder Köchin, Sterne (1–5 ★) und ein Satz mit „Ich finde …, weil …“ (z. B. „Ich finde den Borschtsch prima, weil er sehr lecker war.“). 2) Schreib einen kurzen Bericht (6–8 Sätze) im Perfekt: Wer hat die Show moderiert? Wer hat was gekocht? Wer hat gefilmt? Welche Speise hat gewonnen? (z. B. „Anna und Maks haben die Show moderiert.“, „Die Zuschauer haben für die Wareniki gestimmt.“). Benutze mindestens zwei trennbare Verben (z. B. vorstellen, zubereiten, mitbringen). 3) Der letzte Satz ist: „Wir haben … kennengelernt.“ Nächstes Mal sehen wir das Video noch einmal und vergleichen eure Berichte."
   }
 ];
