@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 14 · Modul B · Projekt: Unsere Kochshow</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 7'},
+    {label: 'Урок 14: Projekt „Unsere Kochshow“'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 14 · MODUL B</span>
+        <h1>Projekt: Unsere Kochshow</h1>
+        <p class="sub">Проєктний урок: розподіляємо ролі, готуємо сценарій і знімаємо власне кулінарне шоу, а потім разом вирішуємо, чи воно вдалося.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Rollen</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Imperativ (ihr)</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Drehbuch</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · War die Show gut?</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== ПАНЕЛЬ: вступ ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Worum geht es heute?</h2>
+      <div class="card">
+        <p>Im Modul B haben wir viel über Essen und Kochen gelernt: Mengenangaben, Küchengeräte, Geschirr, Lebensmittel, Rezepte und Tischmanieren. Heute machen wir ein Projekt: <b>„Unsere Kochshow“</b>. Die Klasse wird zu einem Fernsehstudio. Jede Gruppe hat eine Rolle und eine Aufgabe. Am Ende sehen wir uns das Video an und besprechen: War unsere Kochshow erfolgreich?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          У модулі B ми багато дізналися про їжу та приготування: міри й упаковки, кухонні прилади, посуд, продукти, рецепти й манери за столом. Сьогодні в нас проєкт <b>«Наше кулінарне шоу»</b>. Клас перетворюється на телестудію. Кожна група має свою роль і своє завдання. Наприкінці дивимося відео й обговорюємо: чи вдалося наше шоу?
+        </div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Verteilt die Rollen!</p>
+        <div class="pic-grid">
+          <div class="pic-card"><div class="swatch">🎤</div><div class="num">3–4 Moderatoren / Moderatorinnen</div></div>
+          <div class="pic-card"><div class="swatch">👩‍🍳</div><div class="num">weltbekannte Chefköche und Chefköchinnen</div></div>
+          <div class="pic-card"><div class="swatch">🗳️</div><div class="num">Zuschauer / Zuschauerinnen</div></div>
+          <div class="pic-card"><div class="swatch">🎥</div><div class="num">3–4 Kameraleute</div></div>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Розподіліть ролі: 3–4 ведучі, кілька «всесвітньо відомих» шеф-кухарів і шеф-кухарок, кілька глядачів і глядачок та 3–4 оператори. Що саме робить кожна група — з'ясуємо у вправі 1.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">So läuft unser Projekt</p>
+        <p>1) Rollen verteilen → 2) Speisen wählen und das Drehbuch schreiben → 3) die Kochshow spielen und filmen → 4) das Video ansehen und besprechen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          1) розподілити ролі → 2) обрати страви й написати сценарій → 3) зіграти шоу й зняти його на відео → 4) переглянути відео й обговорити.
+        </div>
+      </div>
+
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Hallo! Heute bin ich euer Gast im Studio. Ich habe schon Hunger – los geht's!</p>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         ПАНЕЛЬ: перевірка домашнього завдання.
+         Джерело — поле "dz" уроку 7-B-13 (тематична контрольна робота).
+         ================================================================= -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: 1) виписати в зошит три завдання з контрольної, де була помилка чи сумнів, — правильно й з коротким правилом українською; 2) «Wortsalat»: скласти п'ять речень на тему «Essen und Kochen» (з wenn, з um … zu, з legen / stellen, з відокремлюваним дієсловом і в Perfekt), розрізати на слова й покласти в конверти.
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Teil 1 · Fehlerheft</p>
+        <p>Zeig deinem Partner / deiner Partnerin deine drei Fehler und die Regeln. Habt ihr die gleichen Fehler gemacht?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Покажи сусідові чи сусідці по парті свої три помилки й правила. Чи були у вас однакові помилки? Цю частину перевіряємо усно й у зошиті.
+        </div>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Teil 2 · Wortsalat</p>
+        <p class="lead">Ось «конверти» з п'ятьма реченнями — по одному на кожне правило. Натискай слова в правильному порядку (клік по поставленому слову повертає його назад). Потім обміняйтеся своїми конвертами в класі.</p>
+        <div id="dz-check"></div>
+      </div>
+
+      <div class="card" id="dz-vocab-wrap" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">Wörter-Check</p>
+        <p class="lead">Перевір слова з минулого уроку.</p>
+        <div id="dz-vocab"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: хто що робить (buildSort) ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Wer macht was in der Show?</h2>
+      <div class="card">
+        <p>Jede Gruppe hat ihre Aufgaben. Die Moderatoren moderieren die Show. Die Chefköche präsentieren ihre Speisen. Die Zuschauer sehen die Show und bestimmen die beste Speise. Die Kameraleute filmen die ganze Show mit ihren Smartphones.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Кожна група має свої завдання. Ведучі ведуть шоу. Шеф-кухарі презентують свої страви. Глядачі дивляться шоу й визначають найкращу страву. Оператори знімають усе шоу на смартфони.
+        </div>
+      </div>
+      <p class="lead">Розклади завдання по групах: натисни картку, а потім групу, яка це робить.</p>
+      <div class="card" id="ub1-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 2: Imperativ для ihr (пропуски) ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Die Lehrerin gibt Anweisungen</h2>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Imperativ für „ihr“</p>
+        <p class="beispiel">ihr moderiert → <b>Moderiert</b> die Show!</p>
+        <p class="beispiel">ihr stellt … vor → <b>Stellt</b> eure Speise <b>vor</b>!</p>
+        <p class="beispiel">ihr seid → <b>Seid</b> bitte leise!</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Наказовий спосіб для «ihr» (до групи) = форма Präsens для ihr, тільки без самого «ihr». Відокремлюваний префікс іде в кінець речення. Виняток: sein → <b>seid</b>.
+        </div>
+      </div>
+      <p class="lead">Учителька дає групам інструкції перед шоу. Впиши дієслово в Imperativ для «ihr» (з великої літери на початку речення).</p>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> (moderieren) <input type="text" class="blank-input inline" data-ans="Moderiert"> die Show, liebe Moderatoren!</div>
+        <div class="fill-item"><span class="num">2)</span> (stellen) <input type="text" class="blank-input inline" data-ans="Stellt"> Fragen an die Teilnehmer!</div>
+        <div class="fill-item"><span class="num">3)</span> (wählen) <input type="text" class="blank-input inline" data-ans="Wählt"> eure Speisen, liebe Chefköche!</div>
+        <div class="fill-item"><span class="num">4)</span> (schreiben) <input type="text" class="blank-input inline" data-ans="Schreibt"> die Rezepte auf Karten!</div>
+        <div class="fill-item"><span class="num">5)</span> (vorstellen) <input type="text" class="blank-input inline" data-ans="Stellt"> eure Speise in zwei Minuten <input type="text" class="blank-input inline" data-ans="vor">!</div>
+        <div class="fill-item"><span class="num">6)</span> (mitbringen) <input type="text" class="blank-input inline" data-ans="Bringt"> Schürzen und Kochmützen <input type="text" class="blank-input inline" data-ans="mit">!</div>
+        <div class="fill-item"><span class="num">7)</span> (stimmen) <input type="text" class="blank-input inline" data-ans="Stimmt"> für die beste Speise, liebe Zuschauer!</div>
+        <div class="fill-item"><span class="num">8)</span> (drehen) <input type="text" class="blank-input inline" data-ans="Dreht"> ein Video mit dem Smartphone, liebe Kameraleute!</div>
+        <div class="fill-item"><span class="num">9)</span> (sein) <input type="text" class="blank-input inline" data-ans="Seid"> bitte leise während der Show!</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: сценарій шоу (випадні списки) ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Das Drehbuch: Borschtsch im Studio</h2>
+      <p class="lead">Ось початок сценарію: ведуча Ліза розпитує шеф-кухаря Тараса. Обери в кожному рядку правильне слово. Потім використайте цей діалог як зразок для свого шоу.</p>
+      <div class="card" id="ub3-list">
+        <div class="fill-item"><span class="num">1)</span> <b>Lisa:</b> Herzlich willkommen zu unserer Kochshow! Taras, was
+          <select class="blank inline" data-ans="kochst"><option value="">—</option><option>kocht</option><option>kochst</option><option>kochen</option></select> du heute?</div>
+        <div class="fill-item"><span class="num">2)</span> <b>Taras:</b> Heute koche ich Borschtsch. Das ist eine ukrainische
+          <select class="blank inline" data-ans="Spezialität"><option value="">—</option><option>Zutat</option><option>Spezialität</option><option>Küchengerät</option></select>.</div>
+        <div class="fill-item"><span class="num">3)</span> <b>Lisa:</b> Welche
+          <select class="blank inline" data-ans="Zutaten"><option value="">—</option><option>Küchengeräte</option><option>Rezepte</option><option>Zutaten</option></select> brauchst du? – <b>Taras:</b> Rote Rüben, Kohl, Kartoffeln, Möhren, Zwiebeln und Fleisch.</div>
+        <div class="fill-item"><span class="num">4)</span> <b>Lisa:</b> Und wozu brauchst du
+          <select class="blank inline" data-ans="die"><option value="">—</option><option>den</option><option>die</option><option>das</option></select> Raspel?</div>
+        <div class="fill-item"><span class="num">5)</span> <b>Taras:</b> Ich brauche
+          <select class="blank inline" data-ans="sie"><option value="">—</option><option>ihn</option><option>sie</option><option>es</option></select>, um die Roten Rüben zu reiben.</div>
+        <div class="fill-item"><span class="num">6)</span> <b>Taras:</b> Und den Kochtopf brauche ich,
+          <select class="blank inline" data-ans="um"><option value="">—</option><option>weil</option><option>wenn</option><option>um</option></select> die Suppe zu kochen.</div>
+        <div class="fill-item"><span class="num">7)</span> <b>Taras:</b>
+          <select class="blank inline" data-ans="Zuerst"><option value="">—</option><option>Zuerst</option><option>Zum Schluss</option></select> schäle ich das Gemüse.</div>
+        <div class="fill-item"><span class="num">8)</span> <b>Taras:</b> Dann schneide ich die Kartoffeln in Würfel und
+          <select class="blank inline" data-ans="brate"><option value="">—</option><option>brät</option><option>braten</option><option>brate</option></select> die Zwiebeln in einer Pfanne.</div>
+        <div class="fill-item"><span class="num">9)</span> <b>Taras:</b>
+          <select class="blank inline" data-ans="Zum Schluss"><option value="">—</option><option>Zuerst</option><option>Zum Schluss</option></select> gebe ich etwas Salz und Pfeffer dazu.</div>
+        <div class="fill-item"><span class="num">10)</span> <b>Lisa:</b> Das klingt lecker! Ist das schwer? – <b>Taras:</b> Na klar nicht! Das ist ganz
+          <select class="blank inline" data-ans="einfach"><option value="">—</option><option>langweilig</option><option>einfach</option><option>verdorben</option></select>!</div>
+        <div class="fill-item"><span class="num">11)</span> <b>Lisa:</b> Liebe Zuschauer,
+          <select class="blank inline" data-ans="stimmt"><option value="">—</option><option>stimme</option><option>stimmen</option><option>stimmt</option></select> jetzt für die beste Speise!</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Moderatoren, stellt auch eigene Fragen: „Wozu brauchst du …?“, „Wie lange dauert das?“</p>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4: обговорення після перегляду відео ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Seht euch das Video an: War die Kochshow erfolgreich?</h2>
+      <p class="lead">Після перегляду відео розклади відгуки: що вдалося, а що наступного разу можна зробити краще?</p>
+      <div class="card" id="ub4-sort"></div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Deine Meinung</p>
+        <div class="qa">
+          <label for="ub4-text">Wie war unsere Kochshow? Schreib 3–4 Sätze (z. B. „Ich finde, die Kochshow war prima.“, „Wir haben viele tolle Rezepte kennengelernt.“, „Am besten hat mir … gefallen.“).</label>
+          <textarea id="ub4-text" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Напиши 3–4 речення про шоу: що сподобалося, що вийшло не дуже, яку страву ви обрали найкращою. Вставляти текст тут не можна — набирай сам(а).
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ПРИКІНЦЕВА ПАНЕЛЬ ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Kochshow-Kritik für die Schülerzeitung: 1) Mach eine Bewertungskarte für drei Speisen aus unserer Kochshow: Name der Speise, Koch oder Köchin, Sterne (1–5 ★) und ein Satz mit „Ich finde …, weil …“ (z. B. „Ich finde den Borschtsch prima, weil er sehr lecker war.“). 2) Schreib einen kurzen Bericht (6–8 Sätze) im Perfekt: Wer hat die Show moderiert? Wer hat was gekocht? Wer hat gefilmt? Welche Speise hat gewonnen? (z. B. „Anna und Maks haben die Show moderiert.“, „Die Zuschauer haben für die Wareniki gestimmt.“). Benutze mindestens zwei trennbare Verben (z. B. vorstellen, zubereiten, mitbringen). 3) Der letzte Satz ist: „Wir haben … kennengelernt.“ Nächstes Mal sehen wir das Video noch einmal und vergleichen eure Berichte.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Рецензія на кулінарне шоу для шкільної газети: 1) Зроби оцінювальну картку для трьох страв з нашого шоу: назва страви, кухар чи кухарка, зірочки (1–5 ★) і одне речення з «Ich finde …, weil …» (напр. «Ich finde den Borschtsch prima, weil er sehr lecker war.»). 2) Напиши короткий звіт (6–8 речень) у Perfekt: хто вів шоу? Хто що готував? Хто знімав? Яка страва перемогла? (напр. «Anna und Maks haben die Show moderiert.», «Die Zuschauer haben für die Wareniki gestimmt.»). Використай щонайменше два відокремлювані дієслова (напр. vorstellen, zubereiten, mitbringen). 3) Останнє речення: «Wir haben … kennengelernt.» Наступного разу ще раз переглянемо відео й порівняємо ваші звіти.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Wörter zum Lernen</p>
+        <div class="chip-row" id="vocabChips"></div>
+      </div>
+
+      <div class="card" id="lessonGramWrap">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="lessonGram"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../data/glossary-data.js"></script>
+<script src="../../../data/lessons-data.js"></script>
+<script src="../../../data/grammar-data.js"></script>
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  // ===== Слова цього уроку у вкладці Fertig =====
+  const LEKTION_KLAS = "7", LEKTION_MODUL = "B", LEKTION_LEKTION = 14;
+  const LEKTION_PREV_LEKTION = 13;
+
+  (function renderLessonVocab(){
+    const box = document.getElementById('vocabChips');
+    if (!box || typeof GLOSSARY === 'undefined') return;
+    const words = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_LEKTION
+    );
+    if (words.length === 0){
+      box.innerHTML = '<p class="empty-note">Слова для цього уроку ще не додані в глосарій.</p>';
+      return;
+    }
+    box.innerHTML = words.map(w =>
+      '<span class="chip static">' + w.de + ' — ' + w.uk + '</span>'
+    ).join('');
+  })();
+
+  // ===== Граматика до цього уроку у вкладці Fertig (поле gram у lessons-data.js) =====
+  (function renderLessonGrammar(){
+    const wrap = document.getElementById('lessonGramWrap');
+    const box = document.getElementById('lessonGram');
+    if (!wrap || !box) return;
+    const hide = () => { wrap.style.display = 'none'; };
+    if (typeof LESSONS === 'undefined' || typeof GRAMMAR === 'undefined') return hide();
+    const me = LESSONS.find(l => l.klas === LEKTION_KLAS && l.modul === LEKTION_MODUL && l.lektion === LEKTION_LEKTION);
+    const topics = ((me && me.gram) || []).map(id => GRAMMAR.find(t => t.id === id)).filter(t => t && t.opublikovano > 0);
+    if (topics.length === 0) return hide();
+    const src = document.querySelector('script[src$="data/grammar-data.js"]').getAttribute('src');
+    const root = src.slice(0, src.length - 'data/grammar-data.js'.length);
+    box.innerHTML = topics.map(t =>
+      '<a class="gram-link" href="' + root + 'gramatyka/temy/' + t.id + '.html">'
+      + '<span class="k">' + t.uk + '</span>' + t.tema + '</a>'
+    ).join('');
+  })();
+
+  // ===== Wörter-Check у вкладці Hausaufgabe (слова ПОПЕРЕДНЬОГО уроку) =====
+  function guessPos(de){
+    var base = (de || '').replace(/\([^)]*\)/g, '').trim();
+    if(/^(der|die|das)(\/(der|die|das))?\s/.test(base)) return 'noun';
+    if(/^sich\s/.test(base)) return 'verb';
+    if(/^am\s/.test(base)) return 'other';
+    if(/\(\+(Gen|Dat|Akk)\.?\)/.test(de)) return 'prep';
+    var words = base.split(/\s+/);
+    var last = words[words.length - 1];
+    if(/(en|ern|eln)$/.test(last) && last === last.toLowerCase()) return 'verb';
+    return 'other';
+  }
+
+  (function renderDzVocabCheck(){
+    const wrap = document.getElementById('dz-vocab-wrap');
+    const box = document.getElementById('dz-vocab');
+    if (!wrap || !box || typeof GLOSSARY === 'undefined') return;
+    if (!LEKTION_PREV_LEKTION){ wrap.style.display = 'none'; return; }
+
+    const prevWords = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_PREV_LEKTION
+    );
+    if (prevWords.length < 3){ wrap.style.display = 'none'; return; }
+
+    const pool = shuffleArray(prevWords).slice(0, 6);
+    const quizData = pool.map(w => {
+      const pos = guessPos(w.de);
+      let sameKind = GLOSSARY.filter(g => g.uk !== w.uk && guessPos(g.de) === pos);
+      if(sameKind.length < 2) sameKind = GLOSSARY.filter(g => g.uk !== w.uk);
+      const distractors = shuffleArray(sameKind).slice(0, 2).map(g => g.uk);
+      return { q: w.de, opts: [w.uk, ...distractors], correct: w.uk };
+    });
+    buildQuiz('dz-vocab', quizData);
+  })();
+
+  // ===== Hausaufgabe, Teil 2: Wortsalat (по одному реченню на кожне правило з ДЗ) =====
+  buildOrder('dz-check', [
+    { hint: 'Речення з «wenn» — почни з підрядного', words: ["Wenn", "ich", "Hunger", "habe,", "mache", "ich", "ein Butterbrot"], end: "." },
+    { hint: 'Речення з «um … zu»', words: ["Ich", "nehme", "ein Messer,", "um", "das Brot", "zu schneiden"], end: "." },
+    { hint: 'Речення з «legen» (Imperativ)', words: ["Leg", "die Gabeln", "links", "neben", "die Teller"], end: "!" },
+    { hint: 'Відокремлюване дієслово «einkaufen»', words: ["Zuerst", "kaufen", "wir", "Gemüse", "im Supermarkt", "ein"], end: ".",
+      alt: ["Wir kaufen zuerst Gemüse im Supermarkt ein", "Zuerst kaufen wir im Supermarkt Gemüse ein", "Wir kaufen zuerst im Supermarkt Gemüse ein"] },
+    { hint: 'Perfekt', words: ["Gestern", "hat", "meine Oma", "einen Obstkuchen", "gebacken"], end: ".",
+      alt: ["Meine Oma hat gestern einen Obstkuchen gebacken"] }
+  ]);
+
+  // ===== Üb. 1: хто що робить =====
+  buildSort('ub1-sort', {
+    buckets: ["🎤 Moderatoren", "👩‍🍳 Chefköche", "🗳️ Zuschauer", "🎥 Kameraleute"],
+    items: [
+      {t: "die Gäste begrüßen", b: "🎤 Moderatoren"},
+      {t: "die Show moderieren", b: "🎤 Moderatoren"},
+      {t: "Fragen an die Teilnehmer stellen", b: "🎤 Moderatoren"},
+      {t: "Speisen wählen", b: "👩‍🍳 Chefköche"},
+      {t: "Rezepte schreiben", b: "👩‍🍳 Chefköche"},
+      {t: "ihre Speisen präsentieren", b: "👩‍🍳 Chefköche"},
+      {t: "die Show sehen", b: "🗳️ Zuschauer"},
+      {t: "für die beste Speise stimmen", b: "🗳️ Zuschauer"},
+      {t: "die ganze Show filmen", b: "🎥 Kameraleute"},
+      {t: "ein Video drehen", b: "🎥 Kameraleute"}
+    ]
+  });
+
+  // ===== Üb. 2 і Üb. 3: пропуски / випадні списки =====
+  wireBlanks('ub2');
+  wireBlanks('ub3');
+
+  // ===== Üb. 4: відгуки після перегляду відео =====
+  buildSort('ub4-sort', {
+    buckets: ["👍 Das war gut", "👎 Das machen wir nächstes Mal besser"],
+    items: [
+      {t: "Die Kochshow war prima.", b: "👍 Das war gut"},
+      {t: "Wir haben viele tolle Rezepte kennengelernt.", b: "👍 Das war gut"},
+      {t: "Die Moderatoren haben interessante Fragen gestellt.", b: "👍 Das war gut"},
+      {t: "Der Borschtsch hat super geschmeckt.", b: "👍 Das war gut"},
+      {t: "Das Video ist zu dunkel.", b: "👎 Das machen wir nächstes Mal besser"},
+      {t: "Man hört die Köche schlecht.", b: "👎 Das machen wir nächstes Mal besser"},
+      {t: "Die Show war zu lang.", b: "👎 Das machen wir nächstes Mal besser"},
+      {t: "Die Zuschauer waren sehr laut.", b: "👎 Das machen wir nächstes Mal besser"}
+    ]
+  });
+
+  // Фінальна панель зі штампами
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🎤','👩‍🍳','🗳️','🎥']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
