@@ -742,5 +742,16 @@ const LESSONS = [
     nove: true,
     gram: ["infinitiv-um-zu", "personalpronomen"],
     dz: "Mini-Kochshow: Schreib ein kurzes Drehbuch (8–10 Repliken) für deine eigene Kochshow. Personen: der Moderator / die Moderatorin und du als Koch / Köchin. Wähle ein Gericht aus der Stunde (Borschtsch, Gemüsesalat, Obstkuchen oder Pasta mit Fleisch). 1) Der Moderator fragt mindestens zweimal „Wozu brauchst du einen / eine / ein …?“ – du antwortest mit ihn / sie / es und um … zu (z. B. „Ich brauche sie, um das Gemüse zu vermischen.“). 2) Erklär die Zubereitung in mindestens vier Schritten mit zuerst, dann, danach, zum Schluss und benutze mindestens vier Wortverbindungen aus Üb. 1 (z. B. Kartoffeln in Würfel schneiden, mit Pfeffer würzen, in einer Pfanne braten). 3) Die letzte Replik ist: „Na klar! Das ist ganz einfach!“ Wer möchte, filmt die Show mit einem Familienmitglied (bis 1 Minute). Nächstes Mal spielen wir eure Kochshows in Paaren vor."
+  },
+  {
+    klas: "7",
+    modul: "B",
+    lektion: 12,
+    nazva: "Wie benimmt man sich am Tisch?",
+    opys: "Як поводитися за столом: аудіо «Die Geschichte vom Zappel-Philipp» з книжки «Der Struwwelpeter» (порядок картинок, Richtig/Falsch), дієслова руху у вірші (schaukeln, zappeln), правила з man muss / man darf nicht і власні поради Філіппу.",
+    file: "klas-7/modul-b/lektion-12.html",
+    nove: true,
+    gram: ["modalverben", "indefinitpronomen"],
+    dz: "1) Gestalte ein Plakat „Tischregeln für Philipp“: Schreib 6 Regeln – drei mit „Man muss …“ und drei mit „Man darf nicht …“ (z. B. „Man muss beim Essen still sitzen.“, „Man darf nicht mit vollem Mund sprechen.“). Zeichne zu jeder Regel ein kleines Bild oder ein Symbol (✓ oder ✗). 2) Erzähl die Geschichte vom Zappel-Philipp in 4–5 Sätzen im Perfekt nach – als Philipps Mutter (z. B. „Mein Sohn Philipp hat auf dem Stuhl geschaukelt. Dann ist der Stuhl nach hinten gefallen …“). Nächstes Mal hängen wir die Plakate auf und wählen die drei wichtigsten Tischregeln der Klasse."
   }
 ];

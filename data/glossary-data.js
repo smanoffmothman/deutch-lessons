@@ -824,5 +824,17 @@ const GLOSSARY = [
   {de: "der Apfel (die Äpfel)", uk: "яблуко", klas: "7", modul: "B", lektion: 11},
   {de: "wozu?", uk: "навіщо? для чого?", klas: "7", modul: "B", lektion: 11},
   {de: "Das ist ganz einfach!", uk: "Це зовсім просто!", klas: "7", modul: "B", lektion: 11},
-  {de: "der Moderator / die Moderatorin", uk: "ведучий / ведуча (шоу)", klas: "7", modul: "B", lektion: 11}
+  {de: "der Moderator / die Moderatorin", uk: "ведучий / ведуча (шоу)", klas: "7", modul: "B", lektion: 11},
+  {de: "sich benehmen (sich am Tisch gut benehmen)", uk: "поводитися (добре поводитися за столом)", klas: "7", modul: "B", lektion: 12},
+  {de: "die Tischmanieren (Pl.)", uk: "манери за столом, правила поведінки за столом", klas: "7", modul: "B", lektion: 12},
+  {de: "still sitzen", uk: "сидіти спокійно, не крутитися", klas: "7", modul: "B", lektion: 12},
+  {de: "schaukeln (auf dem Stuhl schaukeln)", uk: "гойдатися (на стільці)", klas: "7", modul: "B", lektion: 12},
+  {de: "zappeln", uk: "крутитися, смикатися, не сидіти на місці", klas: "7", modul: "B", lektion: 12},
+  {de: "der Stuhl (die Stühle)", uk: "стілець", klas: "7", modul: "B", lektion: 12},
+  {de: "das Tischtuch (die Tischtücher)", uk: "скатертина (= die Tischdecke)", klas: "7", modul: "B", lektion: 12},
+  {de: "brav", uk: "слухняний, чемний", klas: "7", modul: "B", lektion: 12},
+  {de: "hungrig", uk: "голодний", klas: "7", modul: "B", lektion: 12},
+  {de: "zornig", uk: "сердитий, розгніваний", klas: "7", modul: "B", lektion: 12},
+  {de: "mit vollem Mund sprechen", uk: "говорити з повним ротом", klas: "7", modul: "B", lektion: 12},
+  {de: "Guten Appetit!", uk: "Смачного!", klas: "7", modul: "B", lektion: 12}
 ];
