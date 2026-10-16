@@ -753,5 +753,16 @@ const LESSONS = [
     nove: true,
     gram: ["modalverben", "indefinitpronomen"],
     dz: "1) Gestalte ein Plakat „Tischregeln für Philipp“: Schreib 6 Regeln – drei mit „Man muss …“ und drei mit „Man darf nicht …“ (z. B. „Man muss beim Essen still sitzen.“, „Man darf nicht mit vollem Mund sprechen.“). Zeichne zu jeder Regel ein kleines Bild oder ein Symbol (✓ oder ✗). 2) Erzähl die Geschichte vom Zappel-Philipp in 4–5 Sätzen im Perfekt nach – als Philipps Mutter (z. B. „Mein Sohn Philipp hat auf dem Stuhl geschaukelt. Dann ist der Stuhl nach hinten gefallen …“). Nächstes Mal hängen wir die Plakate auf und wählen die drei wichtigsten Tischregeln der Klasse."
+  },
+  {
+    klas: "7",
+    modul: "B",
+    lektion: 13,
+    nazva: "Тематична контрольна робота за Модуль B",
+    opys: "Тематична контрольна робота за Модуль B «Харчування» (режим контрольної, бали рахуються автоматично): лексика (міри й упаковки, кухонні прилади, посуд, продукти), складні іменники, etwas / nichts, einen / eine / ein, legen / stellen + Akkusativ, wenn і um … zu, відокремлювані дієслова, Perfekt, читання листа Лени й лист-відповідь із рецептом.",
+    file: "klas-7/modul-b/lektion-13.html",
+    nove: true,
+    gram: ["deklination-nomen", "artikel-gebrauch", "indefinitpronomen", "wechselpraepositionen", "legen-liegen", "konditionalsaetze", "infinitiv-um-zu", "trennbare-verben", "perfekt-plusquamperfekt", "modalverben"],
+    dz: "1) Schau dir deinen Bericht zur Kontrollarbeit an. Wähle drei Aufgaben, bei denen du einen Fehler gemacht hast oder unsicher warst, und schreib sie richtig in dein Heft – jeweils mit einer kurzen Regel auf Ukrainisch (z. B. „stellen + Akkusativ: Stell die Gläser auf den Tisch!“). 2) Wortsalat für die Klasse: Schreib fünf eigene Sätze zum Thema „Essen und Kochen“ auf Papierstreifen und schneide jeden Satz in Wörter. Jeder Satz zeigt eine andere Regel: ein Satz mit „wenn“, ein Satz mit „um … zu“, ein Satz mit „legen“ oder „stellen“, ein Satz mit einem trennbaren Verb (z. B. umrühren, dazugeben, einkaufen) und ein Satz im Perfekt. Steck jeden Satz in einen eigenen Umschlag. Nächstes Mal tauschen wir die Umschläge, und die anderen bauen eure Sätze wieder zusammen."
   }
 ];

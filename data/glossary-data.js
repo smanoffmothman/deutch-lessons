@@ -836,5 +836,16 @@ const GLOSSARY = [
   {de: "hungrig", uk: "голодний", klas: "7", modul: "B", lektion: 12},
   {de: "zornig", uk: "сердитий, розгніваний", klas: "7", modul: "B", lektion: 12},
   {de: "mit vollem Mund sprechen", uk: "говорити з повним ротом", klas: "7", modul: "B", lektion: 12},
-  {de: "Guten Appetit!", uk: "Смачного!", klas: "7", modul: "B", lektion: 12}
+  {de: "Guten Appetit!", uk: "Смачного!", klas: "7", modul: "B", lektion: 12},
+  {de: "das Brot (die Brote)", uk: "хліб", klas: "7", modul: "B", lektion: 13},
+  {de: "der Käse", uk: "сир (твердий)", klas: "7", modul: "B", lektion: 13},
+  {de: "das Lieblingsrezept", uk: "улюблений рецепт", klas: "7", modul: "B", lektion: 13},
+  {de: "zurückbringen (trennbar)", uk: "повертати, приносити назад (напр. у магазин)", klas: "7", modul: "B", lektion: 13},
+  {de: "hinstellen (trennbar)", uk: "ставити (кудись), розставляти", klas: "7", modul: "B", lektion: 13},
+  {de: "selbst (Ich koche selbst.)", uk: "сам, самостійно (Я готую сам(а).)", klas: "7", modul: "B", lektion: 13},
+  {de: "gratulieren (zum Geburtstag gratulieren)", uk: "вітати (з днем народження)", klas: "7", modul: "B", lektion: 13},
+  {de: "der Inhalt", uk: "зміст", klas: "7", modul: "B", lektion: 13},
+  {de: "die Bewertung", uk: "оцінювання, оцінка (роботи)", klas: "7", modul: "B", lektion: 13},
+  {de: "der Umschlag (die Umschläge)", uk: "конверт", klas: "7", modul: "B", lektion: 13},
+  {de: "der Papierstreifen (die Papierstreifen)", uk: "смужка паперу", klas: "7", modul: "B", lektion: 13}
 ];
