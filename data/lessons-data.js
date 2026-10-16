@@ -797,5 +797,16 @@ const LESSONS = [
     nove: true,
     gram: ["adjektivdeklination",  "possessivartikel",  "kausalsaetze",  "verben-praepositionalobjekt"],
     dz: "Brieffreunde gesucht! 1) Wähle eine Person aus Üb. 1 (Sophie, Lukas, Christian oder Leonie) und schreib ihr / ihm eine Antwort-E-Mail (8–10 Sätze). Präsentiere dich selbst nach dem Plan: Name → Alter → Land / Wohnort → Schule → Aussehen → Interessen und Hobbys. Benutze mindestens vier Adjektive mit der richtigen Endung (z. B. „Ich habe lange blonde Haare.“, „Kyjiw ist eine große Stadt.“, „Mit meinen besten Freunden …“) und unterstreiche die Endungen. Schreib auch einen Satz mit „weil“: Warum möchtest du gerade mit dieser Person im Briefwechsel stehen? Stell ihr / ihm am Ende zwei Fragen. 2) Achtung, Rätsel: Schreib den Namen der Person NICHT in die Anrede – beginne einfach mit „Hallo!“. Nächstes Mal lesen wir die E-Mails vor, und die Klasse rät: An wen ist dieser Brief?"
+  },
+  {
+    klas: "8",
+    modul: "B",
+    lektion: 7,
+    nazva: "Freundschaft auf Distanz",
+    opys: "Дружба на відстані: читаємо й коментуємо статистику «Wie viele Freunde hast du?» (онлайн-опитування 3.000 підлітків: Schulfreunde, virtuelle Freunde, Freunde im Verein, in der Nachbarschaft), відсотки й частки (die Hälfte, ein Viertel, mehr … als), речення з dass, опитування в класі та коментар до його результатів.",
+    file: "klas-8/modul-b/lektion-7.html",
+    nove: true,
+    gram: ["zahlwoerter", "komparation", "verben-dass-infinitiv"],
+    dz: "Freundschaft auf Distanz – ein Poster: Hast du einen Brieffreund oder eine Brieffreundin? Wenn nicht, stell dir vor, du hast welche! 1) Mach einen Steckbrief deines Brieffreundes / deiner Brieffreundin (Name, Alter, Land und Wohnort, Aussehen, Hobbys) und klebe ein Foto ein oder zeichne ein Bild. 2) Schreib darunter einen kurzen Text (6–8 Sätze): Wie und wo habt ihr euch kennengelernt? Seit wann steht ihr im Briefwechsel? Wie oft schreibt ihr einander – per Post, per Mail oder im Messenger? Welche gemeinsamen Interessen habt ihr? Was ist schön und was ist schwierig an einer Freundschaft auf Distanz? Benutze mindestens einen Satz mit „dass“ (z. B. „Ich finde gut, dass …“) und einen Vergleich mit „als“ (z. B. „Ich schreibe lieber Mails als Briefe.“). 3) Schreib zum Schluss das Sprichwort „Gleich und Gleich gesellt sich gern“ und einen Satz dazu: Passt es zu euch oder nicht? Nächstes Mal stellen wir eure Poster in Gruppen vor und machen eine Klassenstatistik: In welchen Ländern wohnen unsere Brieffreunde?"
   }
 ];

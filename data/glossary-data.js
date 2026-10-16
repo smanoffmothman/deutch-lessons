@@ -883,5 +883,17 @@ const GLOSSARY = [
   {de: "ähnlich (ähnliche Interessen)", uk: "схожий (схожі інтереси)", klas: "8", modul: "B", lektion: 6},
   {de: "der Sportfan (die Sportfans)", uk: "шанувальник / шанувальниця спорту", klas: "8", modul: "B", lektion: 6},
   {de: "hoffentlich", uk: "сподіваюся, будемо сподіватися", klas: "8", modul: "B", lektion: 6},
-  {de: "begründen (Begründe deine Wahl!)", uk: "обґрунтовувати (Обґрунтуй свій вибір!)", klas: "8", modul: "B", lektion: 6}
+  {de: "begründen (Begründe deine Wahl!)", uk: "обґрунтовувати (Обґрунтуй свій вибір!)", klas: "8", modul: "B", lektion: 6},
+  {de: "die Statistik (die Statistiken)", uk: "статистика", klas: "8", modul: "B", lektion: 7},
+  {de: "das Diagramm (die Diagramme)", uk: "діаграма", klas: "8", modul: "B", lektion: 7},
+  {de: "durchführen (trennbar) (eine Umfrage durchführen)", uk: "проводити (опитування)", klas: "8", modul: "B", lektion: 7},
+  {de: "teilnehmen an (+Dat.) (trennbar) (an der Umfrage teilnehmen)", uk: "брати участь (в опитуванні)", klas: "8", modul: "B", lektion: 7},
+  {de: "der / die Befragte (die Befragten)", uk: "опитаний / опитана, респондент (опитані)", klas: "8", modul: "B", lektion: 7},
+  {de: "mitteilen (trennbar) (Sie haben mitgeteilt, dass …)", uk: "повідомляти (Вони повідомили, що …)", klas: "8", modul: "B", lektion: 7},
+  {de: "das Prozent (36 Prozent)", uk: "відсоток (36 відсотків)", klas: "8", modul: "B", lektion: 7},
+  {de: "die Hälfte", uk: "половина", klas: "8", modul: "B", lektion: 7},
+  {de: "die Nachbarschaft (Freunde in der Nachbarschaft)", uk: "сусідство (друзі по сусідству)", klas: "8", modul: "B", lektion: 7},
+  {de: "virtuell (virtuelle Freunde)", uk: "віртуальний (друзі в інтернеті)", klas: "8", modul: "B", lektion: 7},
+  {de: "bundesweit", uk: "по всій країні (по всій Німеччині)", klas: "8", modul: "B", lektion: 7},
+  {de: "Gleich und Gleich gesellt sich gern.", uk: "Рибак рибака бачить здалека. (Схожі люди тягнуться одне до одного.)", klas: "8", modul: "B", lektion: 7}
 ];
