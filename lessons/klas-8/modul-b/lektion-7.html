@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 7 · Modul B · Freundschaft auf Distanz</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 8'},
+    {label: 'Урок 7: Дружба на відстані'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 7 · MODUL B</span>
+        <h1>Freundschaft auf Distanz</h1>
+        <p class="sub">Де німецькі підлітки знаходять друзів? Читаємо й коментуємо статистику, працюємо з відсотками й порівняннями, проводимо власне опитування в класі й говоримо про друзів по листуванню.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Die Statistik</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Kommentar</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Prozente</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Unsere Umfrage</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== ПАНЕЛЬ: вступ ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Worum geht es heute?</h2>
+      <div class="card">
+        <p>Freunde wohnen nicht immer nebenan. Manche Freunde sehen wir jeden Tag in der Schule, andere treffen wir im Verein oder in der Nachbarschaft, und mit einigen stehen wir nur im Briefwechsel – per Post, per Mail oder im Internet.</p>
+        <p>Heute liest du eine Statistik: Wo haben deutsche Jugendliche ihre Freunde? Du kommentierst die Zahlen, vergleichst die Gruppen und machst mit deiner Klasse eine eigene Umfrage.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Друзі не завжди живуть по сусідству. Деяких друзів ми бачимо щодня в школі, інших зустрічаємо в клубі чи по сусідству, а з деякими лише листуємося — поштою, електронною поштою або в інтернеті.<br>
+          Сьогодні ти прочитаєш статистику: де німецькі підлітки мають друзів? Ти прокоментуєш цифри, порівняєш групи і разом із класом проведеш власне опитування.
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Merke: eine Statistik kommentieren</p>
+        <p class="beispiel">Im Juni 2024 <b>hat man</b> eine Umfrage zum Thema … <b>durchgeführt</b>.</p>
+        <p class="beispiel">An der Umfrage <b>haben</b> 3.000 Personen <b>teilgenommen</b>.</p>
+        <p class="beispiel"><b>Die meisten</b> Befragten, und zwar 36 Prozent, haben Freunde in der Schule.</p>
+        <p class="beispiel">25 Prozent der Befragten <b>haben</b> … · Eine weitere Gruppe (15 Prozent) <b>hat</b> …</p>
+        <p class="beispiel"><b>Nur</b> 4 Prozent haben mitgeteilt, <b>dass</b> sie enge Freunde <b>haben</b>.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          <b>man hat … durchgeführt</b> — «провели» (хто саме — не важливо). <b>teilnehmen an + Dat.</b> — брати участь: <i>an der Umfrage teilnehmen</i>.<br>
+          Після <b>… Prozent</b> + множина дієслово стоїть у множині: <i>36 Prozent haben</i>. Після <b>eine Gruppe, die Hälfte, ein Viertel</b> — в однині: <i>eine Gruppe hat</i>.<br>
+          <b>die meisten</b> — більшість, <b>nur</b> — лише. У підрядному реченні з <b>dass</b> дієслово стоїть у кінці: <i>…, dass sie enge Freunde haben</i>.
+        </div>
+      </div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Gleich und Gleich gesellt sich gern! Und wo hast du deine Freunde? Los geht's!</p>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: перевірка домашнього завдання ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: Brieffreunde gesucht! 1) Wähle eine Person aus Üb. 1 (Sophie, Lukas, Christian oder Leonie) und schreib ihr / ihm eine Antwort-E-Mail (8–10 Sätze). Präsentiere dich selbst nach dem Plan: Name → Alter → Land / Wohnort → Schule → Aussehen → Interessen und Hobbys. Benutze mindestens vier Adjektive mit der richtigen Endung (z. B. „Ich habe lange blonde Haare.“, „Kyjiw ist eine große Stadt.“, „Mit meinen besten Freunden …“) und unterstreiche die Endungen. Schreib auch einen Satz mit „weil“: Warum möchtest du gerade mit dieser Person im Briefwechsel stehen? Stell ihr / ihm am Ende zwei Fragen. 2) Achtung, Rätsel: Schreib den Namen der Person NICHT in die Anrede – beginne einfach mit „Hallo!“. Nächstes Mal lesen wir die E-Mails vor, und die Klasse rät: An wen ist dieser Brief?
+      </div>
+
+      <div class="card" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">Die E-Mail von Taras</p>
+        <p class="lead">Так написав свій лист Тарас. Обери закінчення прикметників — так само, як ти підкреслював(-ла) їх у своєму листі. Потім звір свій лист.</p>
+        <div class="mail-window" style="margin:12px 0 4px;">
+          <div class="mail-titlebar">Neue Nachricht · An: ??? ✉️</div>
+          <div class="mail-body" id="dz-list">
+            <div class="fill-item">Hallo! Ich heiße Taras und bin 14 Jahre alt.</div>
+            <div class="fill-item"><span class="num">1)</span> Ich wohne in Lwiw, das ist eine schön<select class="blank inline" data-ans="e" aria-label="Endung 1"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Stadt im Westen der Ukraine.</div>
+            <div class="fill-item"><span class="num">2)</span> Ich gehe in die acht<select class="blank inline" data-ans="e" aria-label="Endung 2"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Klasse.</div>
+            <div class="fill-item"><span class="num">3)</span> Ich habe kurz<select class="blank inline" data-ans="e" aria-label="Endung 3"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> dunkl<select class="blank inline" data-ans="e" aria-label="Endung 4"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Haare und braun<select class="blank inline" data-ans="e" aria-label="Endung 5"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Augen.</div>
+            <div class="fill-item"><span class="num">4)</span> Ich bin ein groß<select class="blank inline" data-ans="er" aria-label="Endung 6"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Tierfreund, und mein liebst<select class="blank inline" data-ans="es" aria-label="Endung 7"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Hobby ist Reiten.</div>
+            <div class="fill-item"><span class="num">5)</span> Im Sommer schwimme ich viel mit meinen best<select class="blank inline" data-ans="en" aria-label="Endung 8"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Freunden.</div>
+            <div class="fill-item"><span class="num">6)</span> Ich möchte mit dir im Briefwechsel stehen, weil wir ähnlich<select class="blank inline" data-ans="e" aria-label="Endung 9"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Interessen haben.</div>
+            <div class="fill-item"><span class="num">7)</span> Hast du ein eigen<select class="blank inline" data-ans="es" aria-label="Endung 10"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Pferd? Und wie oft gehst du schwimmen?</div>
+            <div class="fill-item">Viele Grüße aus Lwiw, Taras</div>
+          </div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="dz-check">Prüfen</button>
+          <button class="btn secondary" id="dz-reset">Zurücksetzen</button>
+          <span class="score-pill" id="dz-score"></span>
+        </div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Rätsel: An wen ist dieser Brief?</p>
+        <p class="lead">Ось уривки з листів твоїх однокласників. Кому вони писали — Софі, Лукасу, Крістіану чи Леоні? Потім прочитайте свої листи вголос — клас відгадує!</p>
+        <div id="dz-quiz"></div>
+      </div>
+
+      <div class="card" id="dz-vocab-wrap" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">Wörter-Check</p>
+        <p class="lead">Перевір слова з минулого уроку.</p>
+        <div id="dz-vocab"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: статистика — читаємо діаграму ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Sieh dir die Statistik an</h2>
+      <p class="lead">Роздивись діаграму й картку з інформацією про опитування. Потім дай відповіді на запитання.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 4px;">Gleich und Gleich gesellt sich gern:</p>
+        <p style="font-family:var(--serif); font-weight:700; font-size:19px; margin:0 0 12px;">Wie viele Freunde hast du – und wo?</p>
+        <div style="display:flex; flex-wrap:wrap; gap:18px 26px; align-items:center;">
+          <svg viewBox="0 0 220 220" style="width:100%; max-width:240px; flex:none; margin:0 auto;" role="img" aria-label="Kreisdiagramm: Schulfreunde 36 %, virtuelle Freunde 25 %, Freunde in einem Verein oder einer AG 15 %, Freunde in der Nachbarschaft 12 %, keine Freunde 8 %, enge Freunde 4 %">
+            <g font-family="Public Sans, sans-serif" font-weight="700" font-size="13">
+              <path d="M110 110 L110.0 10.0 A100 100 0 0 1 187.1 173.7Z" fill="#1F5C56" stroke="#fff" stroke-width="2"/>
+              <path d="M110 110 L187.1 173.7 A100 100 0 0 1 46.3 187.1Z" fill="#DE9E3B" stroke="#fff" stroke-width="2"/>
+              <path d="M110 110 L46.3 187.1 A100 100 0 0 1 10.2 103.7Z" fill="#8A9A8E" stroke="#fff" stroke-width="2"/>
+              <path d="M110 110 L10.2 103.7 A100 100 0 0 1 41.5 37.1Z" fill="#E8C15A" stroke="#fff" stroke-width="2"/>
+              <path d="M110 110 L41.5 37.1 A100 100 0 0 1 85.1 13.1Z" fill="#6FA8A0" stroke="#fff" stroke-width="2"/>
+              <path d="M110 110 L85.1 13.1 A100 100 0 0 1 110.0 10.0Z" fill="#48713F" stroke="#fff" stroke-width="2"/>
+              <text x="160" y="96" text-anchor="middle" fill="#fff" font-size="16">36%</text>
+              <text x="116" y="168" text-anchor="middle" fill="#2B2620" font-size="16">25%</text>
+              <text x="50" y="142" text-anchor="middle" fill="#fff">15%</text>
+              <text x="50" y="86" text-anchor="middle" fill="#2B2620">12%</text>
+              <text x="76" y="56" text-anchor="middle" fill="#2B2620" font-size="11">8%</text>
+              <text x="99" y="33" text-anchor="middle" fill="#fff" font-size="9">4%</text>
+            </g>
+          </svg>
+          <ul style="list-style:none; margin:0; padding:0; flex:1; min-width:200px; font-size:14.5px; line-height:1.5;">
+            <li style="margin:0 0 6px;"><span style="display:inline-block; width:13px; height:13px; border-radius:3px; background:#1F5C56; margin-right:8px; vertical-align:-1px;"></span>Schulfreunde</li>
+            <li style="margin:0 0 6px;"><span style="display:inline-block; width:13px; height:13px; border-radius:3px; background:#DE9E3B; margin-right:8px; vertical-align:-1px;"></span>virtuelle Freunde</li>
+            <li style="margin:0 0 6px;"><span style="display:inline-block; width:13px; height:13px; border-radius:3px; background:#8A9A8E; margin-right:8px; vertical-align:-1px;"></span>Freunde in einem Verein / in einer AG</li>
+            <li style="margin:0 0 6px;"><span style="display:inline-block; width:13px; height:13px; border-radius:3px; background:#E8C15A; margin-right:8px; vertical-align:-1px;"></span>Freunde in der Nachbarschaft</li>
+            <li style="margin:0 0 6px;"><span style="display:inline-block; width:13px; height:13px; border-radius:3px; background:#6FA8A0; margin-right:8px; vertical-align:-1px;"></span>keine Freunde</li>
+            <li style="margin:0;"><span style="display:inline-block; width:13px; height:13px; border-radius:3px; background:#48713F; margin-right:8px; vertical-align:-1px;"></span>enge Freunde (3–4 Personen)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Info zur Umfrage</p>
+        <p style="margin:0;"><i>Online-Umfrage:</i> bundesweit · <i>Thema:</i> Freunde und Freundschaft · <i>Datum:</i> Juni 2024 · <i>Altersgruppe:</i> 10- bis 16-Jährige · <i>Zahl der Befragten:</i> 3.000</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Слова до картки</span>
+          <b>bundesweit</b> — по всій країні (Німеччині) · <b>die Altersgruppe</b> — вікова група · <b>die Befragten</b> — опитані, респонденти · <b>virtuelle Freunde</b> — друзі в інтернеті · <b>die Nachbarschaft</b> — сусідство · <b>enge Freunde</b> — близькі друзі · <b>Gleich und Gleich gesellt sich gern</b> — «Рибак рибака бачить здалека».
+        </div>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Fragen zur Statistik</p>
+        <div id="ub1-quiz"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 2: коментар до статистики (пропуски) ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Kommentiere die Infos</h2>
+      <p class="lead">Доповни коментар до статистики з Üb. 1: числа впиши цифрами, решту обери зі списку. Діаграма — у вкладці Üb. 1.</p>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> Im Juni 2024 hat man bundesweit eine Umfrage zum Thema <i>Freunde und Freundschaft</i>
+          <select class="blank inline" data-ans="durchgeführt" aria-label="Lücke 1"><option value="">—</option><option>teilgenommen</option><option>durchgeführt</option><option>mitgeteilt</option></select>.</div>
+        <div class="fill-item"><span class="num">2)</span> An der Umfrage haben
+          <input type="text" class="blank-input inline" inputmode="numeric" data-ans="3.000|3000|3 000|dreitausend" aria-label="Lücke 2"> Personen
+          <select class="blank inline" data-ans="teilgenommen" aria-label="Lücke 3"><option value="">—</option><option>durchgeführt</option><option>mitgeteilt</option><option>teilgenommen</option></select>.</div>
+        <div class="fill-item"><span class="num">3)</span> Man hat Jugendliche von
+          <input type="text" class="blank-input inline" inputmode="numeric" data-ans="10|zehn" aria-label="Lücke 4"> bis
+          <input type="text" class="blank-input inline" inputmode="numeric" data-ans="16|sechzehn" aria-label="Lücke 5"> Jahren nach ihren Freunden gefragt.</div>
+        <div class="fill-item"><span class="num">4)</span> Die meisten Befragten, und zwar
+          <input type="text" class="blank-input inline" inputmode="numeric" data-ans="36" aria-label="Lücke 6"> Prozent, haben Freunde in
+          <select class="blank inline" data-ans="schule" aria-label="Lücke 7"><option value="">—</option><option value="nachbarschaft">der Nachbarschaft</option><option value="schule">der Schule</option><option value="verein">einem Verein oder einer AG</option></select>.</div>
+        <div class="fill-item"><span class="num">5)</span>
+          <input type="text" class="blank-input inline" inputmode="numeric" data-ans="25" aria-label="Lücke 8"> Prozent der befragten Schülerinnen und Schüler haben
+          <select class="blank inline" data-ans="virtuell" aria-label="Lücke 9"><option value="">—</option><option value="eng">enge Freunde</option><option value="keine">keine Freunde</option><option value="virtuell">virtuelle Freunde</option></select>.</div>
+        <div class="fill-item"><span class="num">6)</span> Eine weitere Gruppe (
+          <input type="text" class="blank-input inline" inputmode="numeric" data-ans="15" aria-label="Lücke 10"> Prozent) hat Freunde in
+          <select class="blank inline" data-ans="verein" aria-label="Lücke 11"><option value="">—</option><option value="schule">der Schule</option><option value="verein">einem Verein oder einer AG</option><option value="nachbarschaft">der Nachbarschaft</option></select>.</div>
+        <div class="fill-item"><span class="num">7)</span>
+          <input type="text" class="blank-input inline" inputmode="numeric" data-ans="12" aria-label="Lücke 12"> Prozent haben Freunde in
+          <select class="blank inline" data-ans="nachbarschaft" aria-label="Lücke 13"><option value="">—</option><option value="verein">einem Verein oder einer AG</option><option value="nachbarschaft">der Nachbarschaft</option><option value="schule">der Schule</option></select>.</div>
+        <div class="fill-item"><span class="num">8)</span>
+          <input type="text" class="blank-input inline" inputmode="numeric" data-ans="8" aria-label="Lücke 14"> Prozent haben keine Freunde.</div>
+        <div class="fill-item"><span class="num">9)</span> Nur
+          <input type="text" class="blank-input inline" inputmode="numeric" data-ans="4" aria-label="Lücke 15"> Prozent der Befragten haben
+          <select class="blank inline" data-ans="mitgeteilt" aria-label="Lücke 16"><option value="">—</option><option>mitgeteilt</option><option>teilgenommen</option><option>durchgeführt</option></select>, dass sie
+          <select class="blank inline" data-ans="eng" aria-label="Lücke 17"><option value="">—</option><option value="virtuell">virtuelle Freunde</option><option value="keine">keine Freunde</option><option value="eng">enge Freunde (3–4 Personen)</option></select> haben.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Підказка</span>
+        <b>durchführen</b> — проводити (опитування) · <b>teilnehmen an</b> — брати участь у · <b>mitteilen</b> — повідомляти. Усі три — відокремлювані дієслова, тому в Perfekt <b>-ge-</b> стоїть усередині: <i>durch<b>ge</b>führt, teil<b>ge</b>nommen, mit<b>ge</b>teilt</i>.<br>
+        А тепер у парах: прочитайте коментар уголос, по черзі, по одному реченню.
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: відсотки, частки, порівняння ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Prozente und Vergleiche</h2>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Merke</p>
+        <table class="gtable">
+          <tr><th>Prozent</th><th>So kann man es auch sagen</th></tr>
+          <tr><td>50 %</td><td><b>die Hälfte</b> der Befragten</td></tr>
+          <tr><td>≈ 33 %</td><td><b>ein Drittel</b> der Befragten</td></tr>
+          <tr><td>25 %</td><td><b>ein Viertel</b> der Befragten</td></tr>
+          <tr><td>10 %</td><td><b>jeder Zehnte</b> (jede zehnte Person)</td></tr>
+        </table>
+        <p class="beispiel">36 Prozent – das ist <b>mehr als</b> ein Drittel. · 8 Prozent – das ist <b>weniger als</b> jeder Zehnte.</p>
+        <p class="beispiel">Es gibt <b>mehr</b> virtuelle Freunde <b>als</b> Freunde in der Nachbarschaft.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          <b>die Hälfte</b> — половина, <b>ein Drittel</b> — третина, <b>ein Viertel</b> — чверть, <b>jeder Zehnte</b> — кожен десятий.<br>
+          Порівнюємо так: <b>mehr … als</b> — більше, ніж; <b>weniger … als</b> — менше, ніж; <b>genauso viele … wie</b> — стільки ж, скільки.
+        </div>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Richtig oder falsch?</p>
+        <p class="lead">Подивись ще раз на діаграму в Üb. 1. Чи правильні ці твердження?</p>
+        <div id="ub3-quiz"></div>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Sätze für den Kommentar</p>
+        <p class="lead">Склади речення для коментаря до статистики: натискай слова в правильному порядку. Пам'ятай: дієслово стоїть на другому місці, а після <b>dass</b> — у кінці.</p>
+        <div id="ub3-order"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4: опитування в класі ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wie viele Freunde habt ihr?</h2>
+      <p class="lead">Проведіть опитування в класі: учитель(-ка) по черзі називає рядки, і хто має таких друзів — піднімає руку (можна кілька разів). Порахуйте руки, впишіть кількість учнів, а потім поставте місце (Platz): 1 — найбільше.</p>
+      <div class="card">
+        <table class="gtable">
+          <tr><th>Wie viele Freunde? Wo?</th><th>Schülerzahl</th><th>Platz</th></tr>
+          <tr><td>in der Schule</td><td><input type="text" inputmode="numeric" data-no-umlaut aria-label="in der Schule: Schülerzahl" style="width:100%; min-width:3.5em; font:inherit; padding:5px 7px; border:1.5px solid var(--line); border-radius:8px; background:#fff;"></td><td><input type="text" inputmode="numeric" data-no-umlaut aria-label="in der Schule: Platz" style="width:100%; min-width:3em; font:inherit; padding:5px 7px; border:1.5px solid var(--line); border-radius:8px; background:#fff;"></td></tr>
+          <tr><td>in einem Verein / Club, in einer AG</td><td><input type="text" inputmode="numeric" data-no-umlaut aria-label="im Verein, in einer AG: Schülerzahl" style="width:100%; min-width:3.5em; font:inherit; padding:5px 7px; border:1.5px solid var(--line); border-radius:8px; background:#fff;"></td><td><input type="text" inputmode="numeric" data-no-umlaut aria-label="im Verein, in einer AG: Platz" style="width:100%; min-width:3em; font:inherit; padding:5px 7px; border:1.5px solid var(--line); border-radius:8px; background:#fff;"></td></tr>
+          <tr><td>in der Nachbarschaft</td><td><input type="text" inputmode="numeric" data-no-umlaut aria-label="in der Nachbarschaft: Schülerzahl" style="width:100%; min-width:3.5em; font:inherit; padding:5px 7px; border:1.5px solid var(--line); border-radius:8px; background:#fff;"></td><td><input type="text" inputmode="numeric" data-no-umlaut aria-label="in der Nachbarschaft: Platz" style="width:100%; min-width:3em; font:inherit; padding:5px 7px; border:1.5px solid var(--line); border-radius:8px; background:#fff;"></td></tr>
+          <tr><td>in sozialen Netzwerken</td><td><input type="text" inputmode="numeric" data-no-umlaut aria-label="in sozialen Netzwerken: Schülerzahl" style="width:100%; min-width:3.5em; font:inherit; padding:5px 7px; border:1.5px solid var(--line); border-radius:8px; background:#fff;"></td><td><input type="text" inputmode="numeric" data-no-umlaut aria-label="in sozialen Netzwerken: Platz" style="width:100%; min-width:3em; font:inherit; padding:5px 7px; border:1.5px solid var(--line); border-radius:8px; background:#fff;"></td></tr>
+          <tr><td>Brieffreunde</td><td><input type="text" inputmode="numeric" data-no-umlaut aria-label="Brieffreunde: Schülerzahl" style="width:100%; min-width:3.5em; font:inherit; padding:5px 7px; border:1.5px solid var(--line); border-radius:8px; background:#fff;"></td><td><input type="text" inputmode="numeric" data-no-umlaut aria-label="Brieffreunde: Platz" style="width:100%; min-width:3em; font:inherit; padding:5px 7px; border:1.5px solid var(--line); border-radius:8px; background:#fff;"></td></tr>
+          <tr><td>enge Freunde</td><td><input type="text" inputmode="numeric" data-no-umlaut aria-label="enge Freunde: Schülerzahl" style="width:100%; min-width:3.5em; font:inherit; padding:5px 7px; border:1.5px solid var(--line); border-radius:8px; background:#fff;"></td><td><input type="text" inputmode="numeric" data-no-umlaut aria-label="enge Freunde: Platz" style="width:100%; min-width:3em; font:inherit; padding:5px 7px; border:1.5px solid var(--line); border-radius:8px; background:#fff;"></td></tr>
+          <tr><td>keine Freunde</td><td><input type="text" inputmode="numeric" data-no-umlaut aria-label="keine Freunde: Schülerzahl" style="width:100%; min-width:3.5em; font:inherit; padding:5px 7px; border:1.5px solid var(--line); border-radius:8px; background:#fff;"></td><td><input type="text" inputmode="numeric" data-no-umlaut aria-label="keine Freunde: Platz" style="width:100%; min-width:3em; font:inherit; padding:5px 7px; border:1.5px solid var(--line); border-radius:8px; background:#fff;"></td></tr>
+        </table>
+        <div class="ua-note">
+          Хочеш наочніше? Намалюйте на дошці стовпчикову діаграму (das Säulendiagramm): кожен рядок таблиці — один стовпчик.
+        </div>
+      </div>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Redemittel</p>
+        <p class="beispiel">In unserer Klasse haben wir eine Umfrage zum Thema … durchgeführt.</p>
+        <p class="beispiel">An der Umfrage haben … Schülerinnen und Schüler teilgenommen.</p>
+        <p class="beispiel">Auf Platz 1 sind … · Die meisten von uns haben Freunde … · Nur … haben …</p>
+        <p class="beispiel">Es gibt mehr / weniger … als … · Genauso viele … wie …</p>
+        <p class="beispiel">Ich finde interessant, dass … · Mich überrascht, dass …</p>
+      </div>
+      <div class="card">
+        <div class="qa">
+          <label for="ub4-text">Kommentiere die Ergebnisse eurer Klassenumfrage. (5–6 Sätze)</label>
+          <textarea id="ub4-text" rows="6" placeholder="In unserer Klasse haben wir eine Umfrage zum Thema „Freunde und Freundschaft“ durchgeführt. An der Umfrage haben …"></textarea>
+        </div>
+        <div class="ua-note">
+          Прокоментуй результати опитування вашого класу за зразком коментаря з Üb. 2. Ужий щонайменше одне порівняння (<b>mehr … als</b> / <b>weniger … als</b>) і одне речення з <b>dass</b> (дієслово в кінці!). Порівняй ваш клас із німецькою статистикою: що схоже, а що ні? Вставка тексту тут вимкнена — набирай текст сам(а).
+        </div>
+      </div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Und wer von euch hat Brieffreunde? Erzählt mal: Wo wohnen sie, und wie oft schreibt ihr einander?</p>
+      </div>
+    </section>
+
+    <!-- ===== ПРИКІНЦЕВА ПАНЕЛЬ ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Freundschaft auf Distanz – ein Poster: Hast du einen Brieffreund oder eine Brieffreundin? Wenn nicht, stell dir vor, du hast welche! 1) Mach einen Steckbrief deines Brieffreundes / deiner Brieffreundin (Name, Alter, Land und Wohnort, Aussehen, Hobbys) und klebe ein Foto ein oder zeichne ein Bild. 2) Schreib darunter einen kurzen Text (6–8 Sätze): Wie und wo habt ihr euch kennengelernt? Seit wann steht ihr im Briefwechsel? Wie oft schreibt ihr einander – per Post, per Mail oder im Messenger? Welche gemeinsamen Interessen habt ihr? Was ist schön und was ist schwierig an einer Freundschaft auf Distanz? Benutze mindestens einen Satz mit „dass“ (z. B. „Ich finde gut, dass …“) und einen Vergleich mit „als“ (z. B. „Ich schreibe lieber Mails als Briefe.“). 3) Schreib zum Schluss das Sprichwort „Gleich und Gleich gesellt sich gern“ und einen Satz dazu: Passt es zu euch oder nicht? Nächstes Mal stellen wir eure Poster in Gruppen vor und machen eine Klassenstatistik: In welchen Ländern wohnen unsere Brieffreunde?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Дружба на відстані — постер: у тебе є друг або подруга по листуванню? Якщо ні — уяви, що є! 1) Склади Steckbrief свого друга / своєї подруги по листуванню (ім'я, вік, країна й місто, зовнішність, захоплення) і вклей фото або намалюй малюнок. 2) Напиши під ним короткий текст (6–8 речень): як і де ви познайомилися? Відколи ви листуєтеся? Як часто ви пишете одне одному — поштою, електронною поштою чи в месенджері? Які у вас спільні інтереси? Що приємного і що складного в дружбі на відстані? Ужий щонайменше одне речення з „dass“ (напр. „Ich finde gut, dass …“) і одне порівняння з „als“ (напр. „Ich schreibe lieber Mails als Briefe.“). 3) Наприкінці запиши прислів'я „Gleich und Gleich gesellt sich gern“ і одне речення до нього: пасує воно до вас чи ні? Наступного разу ми представимо ваші постери в групах і складемо статистику класу: у яких країнах живуть наші друзі по листуванню?
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Wörter zum Lernen</p>
+        <div class="chip-row" id="vocabChips"></div>
+      </div>
+
+      <div class="card" id="lessonGramWrap">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="lessonGram"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../data/glossary-data.js"></script>
+<script src="../../../data/lessons-data.js"></script>
+<script src="../../../data/grammar-data.js"></script>
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  // ===== Слова цього уроку у вкладці Fertig =====
+  // Ті самі klas/modul/lektion, що й у рядку цього уроку в lessons-data.js.
+  const LEKTION_KLAS = "8", LEKTION_MODUL = "B", LEKTION_LEKTION = 7;
+  const LEKTION_PREV_LEKTION = 6;
+
+  (function renderLessonVocab(){
+    const box = document.getElementById('vocabChips');
+    if (!box || typeof GLOSSARY === 'undefined') return;
+    const words = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_LEKTION
+    );
+    if (words.length === 0){
+      box.innerHTML = '<p class="empty-note">Слова для цього уроку ще не додані в глосарій.</p>';
+      return;
+    }
+    box.innerHTML = words.map(w =>
+      '<span class="chip static">' + w.de + ' — ' + w.uk + '</span>'
+    ).join('');
+  })();
+
+  // ===== Граматика до цього уроку у вкладці Fertig (поле gram у lessons-data.js) =====
+  (function renderLessonGrammar(){
+    const wrap = document.getElementById('lessonGramWrap');
+    const box = document.getElementById('lessonGram');
+    if (!wrap || !box) return;
+    const hide = () => { wrap.style.display = 'none'; };
+    if (typeof LESSONS === 'undefined' || typeof GRAMMAR === 'undefined') return hide();
+    const me = LESSONS.find(l => l.klas === LEKTION_KLAS && l.modul === LEKTION_MODUL && l.lektion === LEKTION_LEKTION);
+    const topics = ((me && me.gram) || []).map(id => GRAMMAR.find(t => t.id === id)).filter(t => t && t.opublikovano > 0);
+    if (topics.length === 0) return hide();
+    // корінь сайту беремо з того самого шляху, яким підключено grammar-data.js —
+    // тож окремо міняти шлях тут при копіюванні шаблону не треба
+    const src = document.querySelector('script[src$="data/grammar-data.js"]').getAttribute('src');
+    const root = src.slice(0, src.length - 'data/grammar-data.js'.length);
+    box.innerHTML = topics.map(t =>
+      '<a class="gram-link" href="' + root + 'gramatyka/temy/' + t.id + '.html">'
+      + '<span class="k">' + t.uk + '</span>' + t.tema + '</a>'
+    ).join('');
+  })();
+
+  // ===== Wörter-Check у вкладці Hausaufgabe (слова ПОПЕРЕДНЬОГО уроку) =====
+  // Використовує ті самі спільні функції, що й Üb.1 (buildQuiz) та
+  // Fertig! (shuffleArray) — нового коду в lesson-interactions.js не було.
+
+  // ---------- Груба евристика частини мови за виглядом "de" ----------
+  // Потрібна лише для того, щоб варіанти-пастки у Wörter-Check були тієї
+  // самої частини мови, що й правильна відповідь (інакше учень вгадує за
+  // формою слова — "це іменник чи дієслово?" — а не за значенням). Це
+  // евристика за текстом рядка, а не лінгвістичний аналізатор, і вона не
+  // вимагає жодного нового поля в даних GLOSSARY.
+  function guessPos(de){
+    var base = (de || '').replace(/\([^)]*\)/g, '').trim();
+    if(/^(der|die|das)(\/(der|die|das))?\s/.test(base)) return 'noun';
+    if(/^sich\s/.test(base)) return 'verb';
+    if(/^am\s/.test(base)) return 'other'; // "am liebsten", "am besten" — прислівникова найвища форма, не дієслово
+    if(/\(\+(Gen|Dat|Akk)\.?\)/.test(de)) return 'prep';
+    var words = base.split(/\s+/);
+    var last = words[words.length - 1];
+    if(/(en|ern|eln)$/.test(last) && last === last.toLowerCase()) return 'verb';
+    return 'other'; // прикметники / прислівники / сталі вирази
+  }
+
+  (function renderDzVocabCheck(){
+    const wrap = document.getElementById('dz-vocab-wrap');
+    const box = document.getElementById('dz-vocab');
+    if (!wrap || !box || typeof GLOSSARY === 'undefined') return;
+    if (!LEKTION_PREV_LEKTION){ wrap.style.display = 'none'; return; }
+
+    const prevWords = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_PREV_LEKTION
+    );
+    if (prevWords.length < 3){ wrap.style.display = 'none'; return; }
+
+    const pool = shuffleArray(prevWords).slice(0, 6); // 5–6 слів на перевірку
+    const quizData = pool.map(w => {
+      // Пастки — тієї самої частини мови, що й правильне слово (guessPos вище),
+      // інакше учень вгадує за формою відповіді, а не за її значенням.
+      const pos = guessPos(w.de);
+      let sameKind = GLOSSARY.filter(g => g.uk !== w.uk && guessPos(g.de) === pos);
+      if(sameKind.length < 2) sameKind = GLOSSARY.filter(g => g.uk !== w.uk); // запасний варіант, якщо слів цієї частини мови замало
+      const distractors = shuffleArray(sameKind).slice(0, 2).map(g => g.uk);
+      return { q: w.de, opts: [w.uk, ...distractors], correct: w.uk };
+    });
+    buildQuiz('dz-vocab', quizData);
+  })();
+
+  // ===== Hausaufgabe: лист Тараса (закінчення прикметників) + загадка «An wen?» =====
+  wireBlanks('dz');
+  buildQuiz('dz-quiz', [
+    {q: "Taras: An wen schreibt er? (Lies seine E-Mail oben noch einmal.)", opts: ["Lukas", "Sophie", "Christian", "Leonie"], correct: "Lukas"},
+    {q: "Olena: „Ich lese auch gern spannende Krimis und höre viel Musik. Was ist deine Lieblingsband?“", opts: ["Sophie", "Leonie", "Lukas", "Christian"], correct: "Leonie"},
+    {q: "Maksym: „Ich bin ein wahrer Sportfan und spiele Basketball in einem Verein. Welche neue Sportart probierst du aus?“", opts: ["Leonie", "Sophie", "Christian", "Lukas"], correct: "Christian"},
+    {q: "Iryna: „Ich wandere gern und fahre viel Rad. Warst du schon einmal in den Karpaten?“", opts: ["Christian", "Lukas", "Leonie", "Sophie"], correct: "Sophie"}
+  ]);
+
+  // ===== Üb. 1: питання до статистики (квіз) =====
+  buildQuiz('ub1-quiz', [
+    {q: "Wer hat an der Umfrage teilgenommen?", opts: ["10- bis 16-Jährige", "Lehrerinnen und Lehrer", "Eltern von Schülern"], correct: "10- bis 16-Jährige"},
+    {q: "Wann hat man die Umfrage durchgeführt?", opts: ["im Januar 2024", "im Juni 2024", "im Juni 2014"], correct: "im Juni 2024"},
+    {q: "Wie viele Personen hat man befragt?", opts: ["300", "30.000", "3.000"], correct: "3.000"},
+    {q: "Wo hat man die Umfrage durchgeführt?", opts: ["bundesweit – in ganz Deutschland", "nur in Berlin", "in einer Schule in München"], correct: "bundesweit – in ganz Deutschland"},
+    {q: "Welche Gruppe ist am größten?", opts: ["virtuelle Freunde", "Freunde in der Nachbarschaft", "Schulfreunde"], correct: "Schulfreunde"},
+    {q: "Wie viele Prozent der Befragten haben keine Freunde?", opts: ["4 Prozent", "8 Prozent", "12 Prozent"], correct: "8 Prozent"},
+    {q: "Was bedeutet das Sprichwort „Gleich und Gleich gesellt sich gern“?", opts: ["Люди зі схожими інтересами тягнуться одне до одного.", "Друзів ніколи не буває забагато.", "Старий друг кращий за двох нових."], correct: "Люди зі схожими інтересами тягнуться одне до одного."}
+  ]);
+
+  // ===== Üb. 2: коментар до статистики (поля й випадні списки) =====
+  wireBlanks('ub2');
+
+  // ===== Üb. 3: richtig / falsch + склади речення =====
+  buildQuiz('ub3-quiz', [
+    {q: "Ein Viertel der Befragten hat virtuelle Freunde.", opts: ["richtig", "falsch"], correct: "richtig"},
+    {q: "Mehr als die Hälfte der Jugendlichen hat Schulfreunde.", opts: ["richtig", "falsch"], correct: "falsch"},
+    {q: "Es gibt mehr Jugendliche mit Freunden in der Nachbarschaft als mit Freunden im Verein.", opts: ["richtig", "falsch"], correct: "falsch"},
+    {q: "Weniger als zehn Prozent der Befragten haben keine Freunde.", opts: ["richtig", "falsch"], correct: "richtig"},
+    {q: "Mehr als ein Drittel der Befragten hat Schulfreunde.", opts: ["richtig", "falsch"], correct: "richtig"},
+    {q: "Genauso viele Jugendliche haben enge Freunde wie keine Freunde.", opts: ["richtig", "falsch"], correct: "falsch"}
+  ]);
+  buildOrder('ub3-order', [
+    { words: ["Im Juni 2024", "hat", "man", "eine Umfrage", "durchgeführt"], end: ".",
+      alt: ["Man hat im Juni 2024 eine Umfrage durchgeführt"],
+      hint: "У червні 2024 року провели опитування." },
+    { words: ["An der Umfrage", "haben", "3.000 Jugendliche", "teilgenommen"], end: ".",
+      alt: ["3.000 Jugendliche haben an der Umfrage teilgenommen"],
+      hint: "В опитуванні взяли участь 3000 підлітків." },
+    { words: ["Die meisten Befragten", "haben", "Freunde", "in der Schule"], end: ".",
+      alt: ["In der Schule haben die meisten Befragten Freunde"],
+      hint: "Більшість опитаних мають друзів у школі." },
+    { words: ["Es", "gibt", "mehr", "virtuelle Freunde", "als", "Freunde", "in der Nachbarschaft"], end: ".",
+      hint: "Віртуальних друзів більше, ніж друзів по сусідству." },
+    { words: ["Nur 4 Prozent", "haben", "mitgeteilt,", "dass", "sie", "enge Freunde", "haben"], end: ".",
+      hint: "Лише 4 відсотки повідомили, що мають близьких друзів." }
+  ]);
+
+  // Фінальна панель зі штампами (іконки — на тему модуля)
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📊','✉️','🌍','🤝']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
