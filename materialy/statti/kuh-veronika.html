@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veronika, die kluge Kuh · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Tiere</span>
+        <h1>Veronika, die kluge Kuh</h1>
+        <p class="sub">Корова, яка чухає спину щіткою — і робить це так спритно, що нею зацікавилися вчені. Що ж такого особливого вміє Вероніка?</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Und du?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Kluge Tiere</h2>
+      <div class="card">
+        <p>Welche Tiere sind deiner Meinung nach besonders klug? Hast du ein Haustier? Was kann es?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай: які тварини вміють користуватися предметами як інструментами — наприклад, палицею чи каменем? Як гадаєш, чи може це корова?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">In Österreich lebt eine Kuh, die etwas kann, was man bisher nur von <span class="gl" data-uk="шимпанзе" data-lemma="der Schimpanse, -n">Schimpansen</span> kannte.</p>
+
+          <p>Die Kuh heißt Veronika und ist 13 Jahre alt. Sie lebt im Süden Österreichs bei einem <span class="gl" data-key data-uk="органічний фермер" data-lemma="der Biobauer, -n">Biobauern</span>. Dort arbeitet sie nicht, sondern ist ein <span class="gl" data-key data-uk="домашня тварина, улюбленець" data-lemma="das Haustier, -e">Haustier</span>. Veronika hat eine besondere <span class="gl" data-uk="звичка" data-lemma="die Gewohnheit, -en">Gewohnheit</span>: Wenn es sie <span class="gl" data-uk="свербіти" data-lemma="jucken">juckt</span>, nimmt sie einen <span class="gl" data-uk="палиця" data-lemma="der Stock, -ö-e">Stock</span> oder einen <span class="gl" data-key data-uk="щітка для підлоги" data-lemma="der Schrubber, -">Schrubber</span> und <span class="gl" data-uk="чухатися" data-lemma="sich kratzen">kratzt sich</span> damit.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Brown_Swiss_cows_on_Simplonpass_01.jpg/960px-Brown_Swiss_cows_on_Simplonpass_01.jpg" alt="Kühe auf einer Weide in den Alpen." width="960" height="640" loading="lazy">
+            <figcaption>Kühe auf einer Weide in den Alpen. Foto: Hp.Baumeler, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Brown_Swiss_cows_on_Simplonpass_01.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Für ein <span class="gl" data-key data-uk="експеримент" data-lemma="das Experiment, -e">Experiment</span> haben Forscher ihr den Schrubber viele Male hingelegt, immer ein bisschen anders. Das Ergebnis: Für den <span class="gl" data-uk="спина" data-lemma="der Rücken, -">Rücken</span> nimmt Veronika das Ende vom <span class="gl" data-uk="держак, ручка" data-lemma="der Stiel, -e">Stiel</span> ins <span class="gl" data-uk="паща, рот (у тварин)" data-lemma="das Maul, -ä-er">Maul</span> und dreht den Kopf zur Seite. So kommt sie mit der <span class="gl" data-uk="щітка" data-lemma="die Bürste, -n">Bürste</span> an ihren Rücken. Am <span class="gl" data-uk="живіт" data-lemma="der Bauch, -ä-e">Bauch</span> ist die Haut <span class="gl" data-uk="чутливий" data-lemma="empfindlich">empfindlicher</span>. Dort nimmt sie den Schrubber andersherum und kratzt sich ganz <span class="gl" data-uk="обережно" data-lemma="vorsichtig">vorsichtig</span> mit dem Stiel.</p>
+
+          <p>Veronika <span class="gl" data-uk="використовувати" data-lemma="benutzen">benutzt</span> also ein <span class="gl" data-key data-uk="інструмент, знаряддя" data-lemma="das Werkzeug, -e">Werkzeug</span> – und zwar für jede Stelle auf die richtige Art. Das hat man bei einer Kuh noch nie <span class="gl" data-uk="доводити (науково)" data-lemma="nachweisen (wies nach, hat nachgewiesen)">nachgewiesen</span>.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Österreich ist ein Land der Biobauern: Ein großer Teil der Bauernhöfe arbeitet dort <span class="gl" data-uk="органічний" data-lemma="biologisch">biologisch</span>. Viele Kühe stehen im Sommer auf Weiden in den Bergen, auf der „Alm“.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">Обери одну відповідь на кожне питання.</p>
+      <div class="card" id="ub1-quiz"></div>
+    </section>
+
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Яка частина тіла? Обери переклад.</p>
+      <div class="card" id="ub3-list"></div>
+
+      <p class="lead">б) Встав слова з рамки.</p>
+      <div class="card">
+        <div class="wordbank"><span>Haustier</span><span>vorsichtig</span><span>Werkzeug</span><span>juckt</span></div>
+        <div id="ub3b-list">
+          <div class="fill-item"><span class="num">1)</span> Mein Hund ist mein liebstes <input type="text" class="blank-input inline wide" data-ans="Haustier">.</div>
+          <div class="fill-item"><span class="num">2)</span> Ein Hammer ist ein <input type="text" class="blank-input inline wide" data-ans="Werkzeug">.</div>
+          <div class="fill-item"><span class="num">3)</span> Die Mücke hat mich gestochen. Jetzt <input type="text" class="blank-input inline" data-ans="juckt"> es!</div>
+          <div class="fill-item"><span class="num">4)</span> Die Tasse ist heiß. Trink <input type="text" class="blank-input inline wide" data-ans="vorsichtig">!</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub3b-check">Prüfen</button>
+          <button class="btn secondary" id="ub3b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub3b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Und du?</h2>
+      <p class="lead">Напиши відповідь німецькою (4–6 речень). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub4-a">Erzähl von einem Tier, das du kennst (ein Haustier oder ein Tier auf dem Bauernhof). Was kann es besonders gut?</label>
+          <textarea id="ub4-a" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Ich habe / Meine Oma hat …, Es heißt …, Es ist … Jahre alt, Es kann …, Besonders lustig ist, wenn …</i>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Die Kuh Veronika lebt bei einem Biobauern in Österreich. Sie kratzt sich mit einem Schrubber – und benutzt ihn für jede Körperstelle anders. So etwas hat man bei Kühen noch nie gesehen, nur bei Schimpansen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Корова Вероніка живе в органічного фермера в Австрії. Вона чухається щіткою — і для кожної частини тіла тримає її по-різному. Таке раніше бачили лише в шимпанзе, а в корів — ніколи.
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "kuh-veronika";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Was ist das Besondere an Veronika?",
+     opts: ["Sie benutzt einen Schrubber als Werkzeug.",
+            "Sie gibt besonders viel Milch.",
+            "Sie kann bis zehn zählen."],
+     correct: "Sie benutzt einen Schrubber als Werkzeug."},
+    {q: "Welches Tier kann so etwas auch?",
+     opts: ["der Schimpanse", "das Pferd", "der Hund"],
+     correct: "der Schimpanse"}
+  ]);
+
+  buildRF('ub2-rf', [
+    {s: "Veronika lebt in Deutschland.", a: "f"},
+    {s: "Veronika ist ein Haustier.", a: "r"},
+    {s: "Für den Rücken nimmt sie den Stiel ins Maul.", a: "r"},
+    {s: "Am Bauch kratzt sie sich mit der Bürste.", a: "f"},
+    {s: "Veronika gibt jeden Tag 20 Liter Milch.", a: "n"},
+    {s: "Vor Veronika hat man das bei keiner Kuh nachgewiesen.", a: "r"}
+  ]);
+
+  buildMatch('ub3', [
+    ["der Rücken", "спина"],
+    ["der Bauch", "живіт"],
+    ["das Maul", "паща, рот (у тварин)"],
+    ["der Kopf", "голова"]
+  ]);
+  wireBlanks('ub3b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🐄','🧹','🧠','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

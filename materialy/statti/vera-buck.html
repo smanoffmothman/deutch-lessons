@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vera Buck: Spannung auf Papier · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Literatur</span>
+        <h1>Vera Buck: Spannung auf Papier</h1>
+        <p class="sub">Вивчала журналістику в Німеччині, сценарну майстерність на Гаваях, а живе у Швейцарії. Знайомся: одна з найвідоміших авторок трилерів німецькою мовою.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Lebenslauf</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Welches Buch?</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Und du?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Lesen in der Freizeit</h2>
+      <div class="card">
+        <p>Liest du gern? Was liest du lieber: Krimis, Fantasy, Comics oder etwas anderes? Kennst du eine Autorin oder einen Autor aus Deutschland, Österreich oder der Schweiz?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай: що робить книжку захопливою, так що її неможливо відкласти? Як гадаєш, чим письменник займається до того, як стає відомим?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Vera Buck schreibt Bücher, die man nicht mehr aus der Hand legen will. Heute ist sie eine der bekanntesten <span class="gl" data-key data-uk="авторка, письменниця" data-lemma="die Autorin, -nen">Autorinnen</span> von <span class="gl" data-key data-uk="трилер" data-lemma="der Thriller, -">Thrillern</span> in deutscher Sprache.</p>
+
+          <h3>Von Hannover bis Hawaii</h3>
+          <p>Vera Buck ist 1986 in Nordrhein-Westfalen <span class="gl" data-uk="народжений" data-lemma="geboren">geboren</span>. Sie hat in Hannover Journalismus <span class="gl" data-uk="вивчати (в університеті)" data-lemma="studieren">studiert</span>. Außerdem hat sie auf Hawaii gelernt, wie man <span class="gl" data-uk="сценарій (фільму)" data-lemma="das Drehbuch, -ü-er">Drehbücher</span> schreibt. Schon während des Studiums hat sie Texte für Radio, Fernsehen und <span class="gl" data-uk="журнал" data-lemma="die Zeitschrift, -en">Zeitschriften</span> geschrieben. Seit 2012 lebt und arbeitet sie in der Schweiz.</p>
+
+          <h3>Ein Krimi aus der Geschichte</h3>
+          <p>Ihr erster <span class="gl" data-key data-uk="роман" data-lemma="der Roman, -e">Roman</span> „Runa“ ist 2015 <span class="gl" data-uk="виходити (друком)" data-lemma="erscheinen (erschien, ist erschienen)">erschienen</span>. Er spielt Ende des 19. Jahrhunderts in Paris, in der Salpêtrière. Diese <span class="gl" data-uk="лікарня" data-lemma="die Klinik, -en">Klinik</span> für Nervenkranke war damals in ganz Europa berühmt. Das Buch erzählt von den Anfängen der Gehirnchirurgie und ist <span class="gl" data-uk="водночас" data-lemma="zugleich">zugleich</span> historischer Krimi und Medizinthriller. Es hat in Deutschland und im Ausland <span class="gl" data-uk="премія, нагорода" data-lemma="der Preis, -e">Preise</span> <span class="gl" data-uk="отримувати (премію)" data-lemma="gewinnen (gewann, hat gewonnen)">gewonnen</span>.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Chapelle_Saint-Louis_de_la_Salp%C3%AAtri%C3%A8re_%40_H%C3%B4pital_Piti%C3%A9-Salp%C3%AAtri%C3%A8re_%40_Paris_%2832846821324%29.jpg/960px-Chapelle_Saint-Louis_de_la_Salp%C3%AAtri%C3%A8re_%40_H%C3%B4pital_Piti%C3%A9-Salp%C3%AAtri%C3%A8re_%40_Paris_%2832846821324%29.jpg" alt="Die Kapelle der Salpêtrière in Paris." width="960" height="640" loading="lazy">
+            <figcaption>Die Kapelle der Salpêtrière in Paris. Foto: Guilhem Vellut, <a href="https://creativecommons.org/licenses/by/2.0" target="_blank" rel="noopener">CC BY 2.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Chapelle_Saint-Louis_de_la_Salp%C3%AAtri%C3%A8re_@_H%C3%B4pital_Piti%C3%A9-Salp%C3%AAtri%C3%A8re_@_Paris_(32846821324).jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>2018 kam „Das Buch der vergessenen Artisten“. Dieser historische Roman <span class="gl" data-uk="нагадувати про" data-lemma="erinnern (an + Akk.)">erinnert</span> an Künstler, die in der Zeit des Nationalsozialismus <span class="gl" data-uk="переслідувати" data-lemma="verfolgen">verfolgt</span> wurden. Im Roman „Der Algorithmus der Menschlichkeit“ (2021) ist die Hauptfigur Mari eine <span class="gl" data-uk="штучний інтелект (ШІ)" data-lemma="die KI (künstliche Intelligenz)">KI</span>. Sie möchte Menschen glücklich machen – und lernt, dass Menschen oft nicht <span class="gl" data-uk="логічно, раціонально" data-lemma="logisch">logisch</span> handeln, sondern mit Gefühlen.</p>
+
+          <h3>Spannung aus Schweden und Sardinien</h3>
+          <p>Seit 2023 schreibt Vera Buck vor allem Thriller. In „Wolfskinder“ (2023) sucht eine Journalistin ein Mädchen, das in den Bergen verschwunden ist. Die Geschichte wird von sechs Personen erzählt – das ist das Besondere an dem Buch. „Das Baumhaus“ (2024) spielt in Schweden, „Der dunkle Sommer“ (2025) in einem fast leeren Dorf auf Sardinien. Dort möchte eine Architektin ein altes Haus <span class="gl" data-uk="ремонтувати, реставрувати" data-lemma="renovieren">renovieren</span>, aber das Dorf hat ein dunkles <span class="gl" data-key data-uk="таємниця" data-lemma="das Geheimnis, -se">Geheimnis</span>.</p>
+
+          <p>Am 3. August 2026 ist ihr neuer Roman „Keine Angst, Darling“ erschienen. Lea Graves hat ein scheinbar perfektes Leben, zumindest im Internet: Millionen Menschen <span class="gl" data-uk="стежити (за кимось), бути підписаним" data-lemma="folgen (+ Dat.)">folgen</span> ihr in den sozialen Medien. Doch plötzlich <span class="gl" data-uk="замовкати" data-lemma="verstummen (ist verstummt)">verstummt</span> Lea. Ihre Schwester Paula macht sich große <span class="gl" data-uk="турбота, хвилювання" data-lemma="die Sorge, -n">Sorgen</span> – und will <span class="gl" data-uk="з'ясовувати, дізнаватися" data-lemma="herausfinden (fand heraus, hat herausgefunden)">herausfinden</span>, was <span class="gl" data-uk="ставатися, відбуватися" data-lemma="passieren (ist passiert)">passiert</span> ist.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Krimis sind in Deutschland sehr beliebt. Viele Leserinnen und Leser mögen besonders Regionalkrimis: Die Geschichte spielt in einer bekannten Stadt oder Landschaft. Im Fernsehen gibt es seit 1970 den „Tatort“ – jeden Sonntagabend sehen Millionen Menschen diesen Krimi.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">Про що текст? Обери одну відповідь на кожне питання.</p>
+      <div class="card" id="ub1-quiz"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3: хронологія ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Vera Bucks Lebenslauf</h2>
+      <p class="lead">Розстав події в житті Віри Бук у правильному порядку. Натискай речення по черзі; натиснеш на вже поставлене — воно повернеться вниз.</p>
+      <div class="card" id="ub3-seq"></div>
+    </section>
+
+    <!-- ===== Üb. 4: яка книжка ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Welches Buch ist das?</h2>
+      <p class="lead">Про яку книжку йдеться? Обери назву.</p>
+      <div class="card" id="ub4-list"></div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">Встав слова з рамки в правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>erschienen</span><span>Geheimnis</span><span>Roman</span><span>Sorgen</span><span>Zeitschrift</span><span>herausfinden</span></div>
+        <div id="ub5-list">
+          <div class="fill-item"><span class="num">1)</span> Das neue Buch ist im August <input type="text" class="blank-input inline wide" data-ans="erschienen">.</div>
+          <div class="fill-item"><span class="num">2)</span> Ich lese jede Woche eine <input type="text" class="blank-input inline wide" data-ans="Zeitschrift"> über Sport.</div>
+          <div class="fill-item"><span class="num">3)</span> Kannst du ein <input type="text" class="blank-input inline wide" data-ans="Geheimnis"> für dich behalten?</div>
+          <div class="fill-item"><span class="num">4)</span> Der <input type="text" class="blank-input inline" data-ans="Roman"> hat 400 Seiten.</div>
+          <div class="fill-item"><span class="num">5)</span> Meine Mutter macht sich <input type="text" class="blank-input inline" data-ans="Sorgen">, wenn ich spät nach Hause komme.</div>
+          <div class="fill-item"><span class="num">6)</span> Die Polizei will <input type="text" class="blank-input inline wide" data-ans="herausfinden">, wer das Fahrrad genommen hat.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub5-check">Prüfen</button>
+          <button class="btn secondary" id="ub5-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub5-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 6 ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">Und du?</h2>
+      <p class="lead">Напиши відповіді німецькою (3–5 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub6-a">1. Welches Buch von Vera Buck möchtest du gern lesen? Warum?</label>
+          <textarea id="ub6-a" rows="4"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub6-b">2. Stell dein Lieblingsbuch vor: Wie heißt es, wer hat es geschrieben, und worum geht es?</label>
+          <textarea id="ub6-b" rows="4"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Ich möchte gern … lesen, weil …, Das Buch klingt spannend, denn …, Mein Lieblingsbuch heißt …, Es ist von …, In dem Buch geht es um …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Vera Buck kommt aus Nordrhein-Westfalen und lebt seit 2012 in der Schweiz. Sie hat mit historischen Romanen angefangen und schreibt heute vor allem Thriller. Krimis und Thriller gehören zu den beliebtesten Büchern in Deutschland – und im Fernsehen läuft seit 1970 der „Tatort“.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Віра Бук родом із Північного Рейну — Вестфалії, а з 2012 року живе у Швейцарії. Вона почала з історичних романів, а тепер пише переважно трилери. Детективи й трилери — одні з найпопулярніших книжок у Німеччині, а на телебаченні з 1970 року виходить детективний серіал «Tatort».
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "vera-buck";
+
+  // Üb. 1: квіз
+  buildQuiz('ub1-quiz', [
+    {q: "Was für ein Text ist das?",
+     opts: ["Ein Porträt einer Autorin und ihrer Bücher",
+            "Ein Interview mit einer Schauspielerin",
+            "Eine Anleitung, wie man einen Thriller schreibt"],
+     correct: "Ein Porträt einer Autorin und ihrer Bücher"},
+    {q: "Was schreibt Vera Buck heute vor allem?",
+     opts: ["Thriller", "Kinderbücher", "Drehbücher fürs Fernsehen"],
+     correct: "Thriller"}
+  ]);
+
+  // Üb. 2: richtig (r) / falsch (f) / steht nicht im Text (n)
+  buildRF('ub2-rf', [
+    {s: "Vera Buck ist in der Schweiz geboren.", a: "f"},
+    {s: "Sie hat Journalismus studiert.", a: "r"},
+    {s: "„Runa“ spielt im 19. Jahrhundert in Paris.", a: "r"},
+    {s: "„Runa“ wurde auch als Film gedreht.", a: "n"},
+    {s: "Die Hauptfigur in „Der Algorithmus der Menschlichkeit“ ist ein Mensch.", a: "f"},
+    {s: "„Wolfskinder“ wird von nur einer Person erzählt.", a: "f"},
+    {s: "Lea Graves hat viele Follower in den sozialen Medien.", a: "r"},
+    {s: "Vera Buck schreibt jeden Tag acht Stunden.", a: "n"}
+  ]);
+
+  // Üb. 3: події У ПРАВИЛЬНОМУ порядку
+  buildSequence('ub3-seq', [
+    "Vera Buck wird in Nordrhein-Westfalen geboren.",
+    "Sie zieht in die Schweiz.",
+    "Ihr erster Roman „Runa“ erscheint.",
+    "Ihr erster Thriller „Wolfskinder“ erscheint.",
+    "„Keine Angst, Darling“ kommt in die Buchläden."
+  ]);
+
+  // Üb. 4: зміст ↔ книжка
+  buildMatch('ub4', [
+    ["Eine KI möchte Menschen glücklich machen.", "Der Algorithmus der Menschlichkeit"],
+    ["Eine Klinik in Paris um 1900", "Runa"],
+    ["Ein Dorf auf Sardinien hat ein Geheimnis.", "Der dunkle Sommer"],
+    ["Künstler in der Zeit des Nationalsozialismus", "Das Buch der vergessenen Artisten"],
+    ["Sechs Personen erzählen die Geschichte.", "Wolfskinder"],
+    ["Eine Frau mit Millionen Followern verstummt plötzlich.", "Keine Angst, Darling"]
+  ], {lead: true});
+
+  // Üb. 5: пропуски
+  wireBlanks('ub5');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📚','🔍','✍️','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

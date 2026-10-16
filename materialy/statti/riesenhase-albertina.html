@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ein pinker Hase auf dem Dach · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Kunst</span>
+        <h1>Ein pinker Hase auf dem Dach</h1>
+        <p class="sub">Заєць заввишки 2,5 метра сидить на даху віденського музею. Що він там робить — і до чого тут художник, який жив 500 років тому?</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Kunst in der Stadt</h2>
+      <div class="card">
+        <p>Gibt es in deiner Stadt Kunst auf der Straße – zum Beispiel Figuren, Graffiti oder Denkmäler? Welches Kunstwerk gefällt dir besonders?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подивись на малюнок зайця у тексті. Ти бачив(-ла) його раніше — на листівці, у зошиті, на постері? Як гадаєш, навіщо музею ставити на дах величезну рожеву копію?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">In Wien sitzt seit dem Sommer ein <span class="gl" data-uk="величезний, гігантський" data-lemma="riesig">riesiger</span> Hase auf einem Museum. Er ist pink und gut zu sehen – auch von weit weg.</p>
+
+          <p>Der Hase ist eine <span class="gl" data-key data-uk="скульптура" data-lemma="die Skulptur, -en">Skulptur</span> des deutschen <span class="gl" data-key data-uk="митець, художник" data-lemma="der Künstler, -">Künstlers</span> Ottmar Hörl. Er ist ungefähr 2,5 Meter hoch und <span class="gl" data-uk="важити" data-lemma="wiegen (wog, hat gewogen)">wiegt</span> 120 Kilogramm. Seit dem 1. Juli steht er auf dem langen <span class="gl" data-uk="навіс, дах-козирок" data-lemma="das Flugdach, -ä-er">Flugdach</span> der Albertina. Das Museum <span class="gl" data-uk="святкувати" data-lemma="feiern">feiert</span> in diesem Jahr seinen 250. Geburtstag. Mit dem Hasen möchte es zeigen: Hier gibt es ein <span class="gl" data-key data-uk="ювілей" data-lemma="das Jubiläum, Jubiläen">Jubiläum</span>! Bis zum Ende des Jahres bleibt er auf dem Dach.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Wien_-_Albertina_%28b%29.JPG/960px-Wien_-_Albertina_%28b%29.JPG" alt="Die Albertina in Wien mit ihrem langen Flugdach." width="960" height="702" loading="lazy">
+            <figcaption>Die Albertina in Wien mit ihrem langen Flugdach. Foto: C.Stadler/Bwag, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Wien_-_Albertina_(b).JPG" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Aber warum gerade ein Hase? Die Skulptur erinnert an ein sehr <span class="gl" data-uk="відомий, знаменитий" data-lemma="berühmt">berühmtes</span> <span class="gl" data-key data-uk="твір мистецтва" data-lemma="das Kunstwerk, -e">Kunstwerk</span>: den „Feldhasen“ von Albrecht Dürer. Der <span class="gl" data-key data-uk="художник (живописець)" data-lemma="der Maler, -">Maler</span> hat den Hasen im Jahr 1502 sehr genau und mit vielen Details gemalt. Das Bild kennen bis heute sehr viele Menschen. Seit Generationen sieht man es auf Postkarten, auf <span class="gl" data-uk="альбом для малювання" data-lemma="der Zeichenblock, -ö-e">Zeichenblöcken</span> und auf anderen Sachen für die Schule.</p>
+
+          <figure class="mat-fig" style="max-width:300px;margin-left:auto;margin-right:auto">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Albrecht_D%C3%BCrer_-_Hare%2C_1502_-_Google_Art_Project.jpg/960px-Albrecht_D%C3%BCrer_-_Hare%2C_1502_-_Google_Art_Project.jpg" alt="Der „Feldhase“ von Albrecht Dürer (1502)." width="960" height="1061" loading="lazy">
+            <figcaption>Der „Feldhase“ von Albrecht Dürer (1502). Bild: Albrecht Dürer, gemeinfrei, <a href="https://commons.wikimedia.org/wiki/File:Albrecht_D%C3%BCrer_-_Hare,_1502_-_Google_Art_Project.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Der echte Feldhase ist klein, braun und sehr <span class="gl" data-uk="природний, наближений до реальності" data-lemma="naturgetreu">naturgetreu</span>. Der Hase von Ottmar Hörl ist das <span class="gl" data-uk="протилежність" data-lemma="das Gegenteil, -e">Gegenteil</span>: groß, einfarbig und knallig pink. So wird ein altes Bild plötzlich wieder neu und <span class="gl" data-uk="яскравий, помітний" data-lemma="auffällig">auffällig</span>.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Albrecht Dürer (1471–1528) kam aus Nürnberg und ist einer der wichtigsten deutschen Maler der <span class="gl" data-uk="Відродження, Ренесанс" data-lemma="die Renaissance">Renaissance</span>. Die Albertina in Wien hat eine sehr große Sammlung von Zeichnungen und <span class="gl" data-uk="гравюра, графічний відбиток" data-lemma="die Druckgrafik, -en">Druckgrafiken</span> – auch der echte „Feldhase“ gehört dazu.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">Відповідай на питання. Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub3-list"></div>
+
+      <p class="lead">б) Встав слова з рамки.</p>
+      <div class="card">
+        <div class="wordbank"><span>Gegenteil</span><span>Jubiläum</span><span>Künstler</span><span>wiegt</span></div>
+        <div id="ub3b-list">
+          <div class="fill-item"><span class="num">1)</span> Unsere Schule ist 100 Jahre alt. Das <input type="text" class="blank-input inline wide" data-ans="Jubiläum"> feiern wir mit einem großen Fest.</div>
+          <div class="fill-item"><span class="num">2)</span> Der Hase ist groß. Das <input type="text" class="blank-input inline wide" data-ans="Gegenteil"> von „groß“ ist „klein“.</div>
+          <div class="fill-item"><span class="num">3)</span> Mein Koffer <input type="text" class="blank-input inline" data-ans="wiegt"> 20 Kilogramm.</div>
+          <div class="fill-item"><span class="num">4)</span> Ottmar Hörl ist ein deutscher <input type="text" class="blank-input inline wide" data-ans="Künstler">.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub3b-check">Prüfen</button>
+          <button class="btn secondary" id="ub3b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub3b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (3–5 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub4-a">1. Wie findest du den pinken Hasen auf dem Dach? Warum?</label>
+          <textarea id="ub4-a" rows="4"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub4-b">2. Welches berühmte Bild oder Kunstwerk aus der Ukraine kennst du? Beschreibe es kurz.</label>
+          <textarea id="ub4-b" rows="4"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Ich finde den Hasen lustig / komisch / schön, weil …, Auf dem Bild sieht man …, Der Künstler / Die Künstlerin heißt …, Das Bild ist sehr bekannt, denn …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Die Albertina in Wien wird 250 Jahre alt. Zum Jubiläum sitzt ein großer pinker Hase von Ottmar Hörl auf ihrem Dach. Er erinnert an den „Feldhasen“ von Albrecht Dürer aus dem Jahr 1502 – eines der bekanntesten Bilder der deutschen Kunst.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Віденському музею Альбертіна виповнюється 250 років. На честь ювілею на його даху сидить великий рожевий заєць роботи Отмара Гьорля. Він нагадує «Зайця» Альбрехта Дюрера 1502 року — одну з найвідоміших картин німецького мистецтва.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "riesenhase-albertina";
+
+  // Üb. 1: квіз
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text?",
+     opts: ["Um eine große Hasen-Skulptur auf einem Museum in Wien",
+            "Um einen echten Hasen, der auf ein Dach geklettert ist",
+            "Um eine neue Ausstellung mit Tierbildern in Nürnberg"],
+     correct: "Um eine große Hasen-Skulptur auf einem Museum in Wien"},
+    {q: "Warum steht der Hase auf dem Dach?",
+     opts: ["Die Albertina feiert ihr 250-jähriges Jubiläum.",
+            "Das Museum möchte den Hasen dort verkaufen.",
+            "Der Hase soll Vögel vom Dach fernhalten."],
+     correct: "Die Albertina feiert ihr 250-jähriges Jubiläum."},
+    {q: "Was ist das Vorbild für die Skulptur?",
+     opts: ["Ein berühmtes Bild von Albrecht Dürer",
+            "Eine Figur aus einem Zeichentrickfilm",
+            "Ein Foto aus einem Kinderbuch"],
+     correct: "Ein berühmtes Bild von Albrecht Dürer"}
+  ]);
+
+  // Üb. 2: richtig (r) / falsch (f) / steht nicht im Text (n)
+  buildRF('ub2-rf', [
+    {s: "Der Hase ist ungefähr 2,5 Meter hoch.", a: "r"},
+    {s: "Die Skulptur bleibt für immer auf dem Dach.", a: "f"},
+    {s: "Dürer hat den Feldhasen im Jahr 1502 gemalt.", a: "r"},
+    {s: "Der Hase von Ottmar Hörl ist braun, wie Dürers Hase.", a: "f"},
+    {s: "Viele Touristen machen Fotos von dem Hasen.", a: "n"},
+    {s: "Dürers Feldhase gehört zur Sammlung der Albertina.", a: "r"}
+  ]);
+
+  // Üb. 3а: слово ↔ переклад
+  buildMatch('ub3', [
+    ["berühmt", "відомий, знаменитий"],
+    ["der Maler", "художник (живописець)"],
+    ["das Kunstwerk", "твір мистецтва"],
+    ["auffällig", "яскравий, помітний"],
+    ["feiern", "святкувати"]
+  ]);
+  // Üb. 3б: пропуски
+  wireBlanks('ub3b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🐇','🎨','🏛️','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

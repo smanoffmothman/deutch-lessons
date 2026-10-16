@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Älplermagronen: Nudeln aus den Bergen · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Essen</span>
+        <h1>Älplermagronen: Nudeln aus den Bergen</h1>
+        <p class="sub">Макарони, картопля, сир — і яблучне пюре до них. Як італійські робітники, будівництво тунелю й життя на альпійських пасовищах подарували Швейцарії національну страву.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Kochen</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Essen in den Bergen</h2>
+      <div class="card">
+        <p>Was isst man gern nach einer langen Wanderung? Kennst du ein typisches Gericht aus der Schweiz? Was denkst du: Passen Nudeln und Apfelmus zusammen?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Уяви, що ти живеш усе літо високо в горах і всі продукти треба нести на собі. Які продукти ти б узяв(-ла)? Чому?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Älplermagronen sind ein Klassiker der Schweizer Küche. Man isst sie in den Bergen, im Sommer und im Winter – und immer mit Apfelmus.</p>
+
+          <h3>Woher kommt das Gericht?</h3>
+          <p>Der Name sagt es schon: Das Gericht kommt aus den Alpen. „Älpler“ sind Menschen, die im Sommer auf der <span class="gl" data-uk="альпійське пасовище" data-note="schweiz./österr.; у Німеччині — die Alm" data-lemma="die Alp, -en">Alp</span> arbeiten, und „Magronen“ sind <span class="gl" data-uk="макарони" data-lemma="die Makkaroni (Pl.)">Makkaroni</span>.</p>
+
+          <p>Zwischen 1838 und 1860 entstanden in der Schweiz mehrere Fabriken für <span class="gl" data-key data-uk="макаронні вироби" data-note="так у Швейцарії й Німеччині офіційно називають пасту" data-lemma="die Teigwaren (Pl.)">Teigwaren</span>. Wirklich beliebt wurden sie aber erst durch italienische <span class="gl" data-uk="робітник" data-lemma="der Arbeiter, -">Arbeiter</span>. Sie kamen in den 1870er-Jahren in die Schweiz und bauten den ersten Gotthardtunnel. Damals waren Nudeln noch <span class="gl" data-uk="дорогий" data-lemma="teuer">teuer</span>. Bis zum Anfang des 20. Jahrhunderts aßen sie fast nur <span class="gl" data-uk="заможний" data-lemma="wohlhabend">wohlhabende</span> Familien.</p>
+
+          <p>In der Weltwirtschaftskrise der 1930er-Jahre änderte sich das. Nudeln waren schnell <span class="gl" data-uk="готувати (страву)" data-lemma="zubereiten">zubereitet</span>, sie schmeckten gut und passten als <span class="gl" data-uk="гарнір" data-lemma="die Beilage, -n">Beilage</span> zu vielen Gerichten. In den Bergen hatten sie noch zwei <span class="gl" data-key data-uk="перевага" data-lemma="der Vorteil, -e">Vorteile</span>: Man kann sie lange <span class="gl" data-uk="зберігати" data-lemma="aufbewahren">aufbewahren</span>, und sie sind leicht. Das war wichtig, denn im Sommer auf der Alp mussten die Menschen alles zu Fuß nach oben tragen. Milch und Käse gab es in den <span class="gl" data-key data-uk="альпійська хатинка" data-lemma="die Alphütte, -n">Alphütten</span> immer. Zusammen mit den Nudeln wurde daraus ein <span class="gl" data-uk="ситний" data-lemma="sättigend">sättigendes</span> Essen: die Älplermagronen.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Alp_Tschigla_-_Leckere_%C3%84lplermagronen.jpg/960px-Alp_Tschigla_-_Leckere_%C3%84lplermagronen.jpg" alt="Älplermagronen auf einer Alp in der Ostschweiz." width="960" height="540" loading="lazy">
+            <figcaption>Älplermagronen auf einer Alp in der Ostschweiz. Foto: Uwe Häntsch, <a href="https://creativecommons.org/licenses/by-sa/2.0" target="_blank" rel="noopener">CC BY-SA 2.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Alp_Tschigla_-_Leckere_%C3%84lplermagronen.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Im Sommer bringen viele Bauern in der Schweiz ihre Kühe auf die Alp. Dort fressen die Tiere frisches Gras, und die Älpler machen aus der Milch Käse. Im Herbst kommen Mensch und Tier wieder ins Tal. Dieser <span class="gl" data-uk="спуск худоби з гір" data-lemma="der Alpabzug, -ü-e">Alpabzug</span> ist in vielen Orten ein großes Fest.</p>
+          </aside>
+
+          <h3>Das Rezept (für 4 Personen)</h3>
+          <p>Man braucht: 300 g Makkaroni, 300 g Kartoffeln, die beim Kochen fest bleiben, 4 kleine <span class="gl" data-key data-uk="цибулина" data-lemma="die Zwiebel, -n">Zwiebeln</span>, 2 <span class="gl" data-uk="зубчик часнику" data-lemma="die Knoblauchzehe, -n">Knoblauchzehen</span>, 600 ml Milch, 200 ml <span class="gl" data-uk="вершки" data-lemma="die Sahne">Sahne</span>, 100 g <span class="gl" data-uk="тертий" data-lemma="gerieben">geriebenen</span> Gruyère-Käse, 300 g Apfelmus und 1 <span class="gl" data-uk="столова ложка" data-lemma="der Esslöffel, - (EL)">Esslöffel</span> Mehl.</p>
+
+          <ol>
+            <li>Zuerst Zwiebeln, Knoblauch und Kartoffeln <span class="gl" data-uk="чистити (від шкірки)" data-lemma="schälen">schälen</span>. Zwiebeln und Knoblauch in Ringe schneiden, die Kartoffeln in kleine <span class="gl" data-uk="кубик" data-lemma="der Würfel, -">Würfel</span>.</li>
+            <li>Die Zwiebel- und Knoblauchringe in etwas Mehl wenden und in einer <span class="gl" data-uk="сковорідка" data-lemma="die Pfanne, -n">Pfanne</span> <span class="gl" data-uk="хрусткий" data-lemma="knusprig">knusprig</span> braten. Dann zur Seite stellen.</li>
+            <li>Milch und Sahne in einen <span class="gl" data-uk="каструля" data-lemma="der Topf, -ö-e">Topf</span> geben und zum Kochen bringen. Die Kartoffeln dazugeben und fünf Minuten leise kochen lassen.</li>
+            <li>Jetzt die Nudeln dazugeben und etwa zehn Minuten kochen, bis sie al dente sind.</li>
+            <li>Den Käse unterrühren und alles mit Salz und Pfeffer <span class="gl" data-uk="приправляти" data-lemma="würzen">würzen</span>. Auf Teller verteilen und die gebratenen Zwiebeln und den Knoblauch darüber geben.</li>
+            <li>Mit Apfelmus servieren.</li>
+          </ol>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/%C3%84lplermagronen_2021.jpeg/960px-%C3%84lplermagronen_2021.jpeg" alt="Älplermagronen mit Apfelmus." width="960" height="720" loading="lazy">
+            <figcaption>Älplermagronen mit Apfelmus. Foto: Adrian Michael, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:%C3%84lplermagronen_2021.jpeg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">Обери одну відповідь на кожне питання.</p>
+      <div class="card" id="ub1-quiz"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3: послідовність рецепту ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Was macht man zuerst?</h2>
+      <p class="lead">Розстав кроки рецепта в правильному порядку. Натискай речення по черзі; натиснеш на вже поставлене — воно повернеться вниз.</p>
+      <div class="card" id="ub3-seq"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки.</p>
+      <div class="card">
+        <div class="wordbank"><span>Pfanne</span><span>schälen</span><span>Topf</span><span>teuer</span><span>Vorteil</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> Die Suppe kocht in einem großen <input type="text" class="blank-input inline" data-ans="Topf">.</div>
+          <div class="fill-item"><span class="num">2)</span> Die Eier brate ich in der <input type="text" class="blank-input inline" data-ans="Pfanne">.</div>
+          <div class="fill-item"><span class="num">3)</span> Vor dem Kochen muss man die Kartoffeln <input type="text" class="blank-input inline" data-ans="schälen">.</div>
+          <div class="fill-item"><span class="num">4)</span> Früher waren Nudeln <input type="text" class="blank-input inline" data-ans="teuer">, heute sind sie billig.</div>
+          <div class="fill-item"><span class="num">5)</span> Ein <input type="text" class="blank-input inline" data-ans="Vorteil"> von Nudeln: Sie sind leicht.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (4–6 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Möchtest du Älplermagronen probieren? Was findest du gut, was komisch?</label>
+          <textarea id="ub5-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Beschreibe ein einfaches ukrainisches Gericht: Was braucht man, und wie macht man es?</label>
+          <textarea id="ub5-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Ich möchte … probieren, weil …, Komisch finde ich …, Für … braucht man …, Zuerst …, dann …, danach …, zum Schluss …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Älplermagronen sind ein Gericht aus den Schweizer Alpen: Nudeln, Kartoffeln, Käse und Sahne, dazu Apfelmus. Beliebt wurden Nudeln in der Schweiz durch italienische Arbeiter am Gotthardtunnel. Auf der Alp waren sie praktisch, denn sie sind leicht und lange haltbar. In der Schweiz sagt man „die Alp“, in Deutschland „die Alm“.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Älplermagronen — страва зі швейцарських Альп: макарони, картопля, сир і вершки, а до них яблучне пюре. Популярними макарони у Швейцарії зробили італійські робітники, які будували Готардський тунель. На альпійських пасовищах вони були зручні: легкі й довго зберігаються. У Швейцарії кажуть «die Alp», у Німеччині — «die Alm».
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "aelplermagronen";
+
+  // Üb. 1: квіз
+  buildQuiz('ub1-quiz', [
+    {q: "Was erfährt man im Text?",
+     opts: ["Die Geschichte und das Rezept eines Schweizer Gerichts",
+            "Wie man in den Alpen Käse macht",
+            "Welche Restaurants in Zürich die besten Nudeln haben"],
+     correct: "Die Geschichte und das Rezept eines Schweizer Gerichts"},
+    {q: "Was bedeutet „Magronen“?",
+     opts: ["Makkaroni", "Kartoffeln", "Bergbauern"],
+     correct: "Makkaroni"},
+    {q: "Warum waren Nudeln auf der Alp so praktisch?",
+     opts: ["Sie sind leicht und lange haltbar.",
+            "Sie wachsen auf der Alp.",
+            "Man braucht zum Kochen kein Wasser."],
+     correct: "Sie sind leicht und lange haltbar."}
+  ]);
+
+  // Üb. 2: richtig (r) / falsch (f) / steht nicht im Text (n)
+  buildRF('ub2-rf', [
+    {s: "Die ersten Nudelfabriken in der Schweiz entstanden im 19. Jahrhundert.", a: "r"},
+    {s: "Italienische Arbeiter haben den Gotthardtunnel gebaut.", a: "r"},
+    {s: "Um 1880 aßen alle Schweizer jeden Tag Nudeln.", a: "f"},
+    {s: "Auf der Alp gab es keine Milch.", a: "f"},
+    {s: "Älplermagronen isst man in der Schweiz am liebsten zu Weihnachten.", a: "n"},
+    {s: "Das Rezept ist für vier Personen.", a: "r"},
+    {s: "Die Zwiebeln kocht man zusammen mit den Nudeln.", a: "f"}
+  ]);
+
+  // Üb. 3: кроки У ПРАВИЛЬНОМУ порядку
+  buildSequence('ub3-seq', [
+    "Zwiebeln, Knoblauch und Kartoffeln schälen und schneiden.",
+    "Zwiebel- und Knoblauchringe knusprig braten.",
+    "Milch und Sahne zum Kochen bringen.",
+    "Die Kartoffeln fünf Minuten kochen lassen.",
+    "Die Nudeln dazugeben und zehn Minuten kochen.",
+    "Den Käse unterrühren und würzen.",
+    "Mit Apfelmus servieren."
+  ]);
+
+  // Üb. 4а: слово ↔ переклад
+  buildMatch('ub4', [
+    ["die Sahne", "вершки"],
+    ["die Zwiebel", "цибулина"],
+    ["knusprig", "хрусткий"],
+    ["die Beilage", "гарнір"],
+    ["würzen", "приправляти"],
+    ["wohlhabend", "заможний"]
+  ]);
+  // Üb. 4б: пропуски
+  wireBlanks('ub4b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🏔️','🧀','🍝','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

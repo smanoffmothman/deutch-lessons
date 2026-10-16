@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Die Lichtburg – ein Kino mit Geschichte · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Geschichte</span>
+        <h1>Die Lichtburg – ein Kino mit Geschichte</h1>
+        <p class="sub">Тут виступав Луї Армстронг, а за неї боровся Він Вендерс. Як один кінотеатр в Ессені пережив майже сто років історії Німеччини?</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Reihenfolge</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Ins Kino gehen</h2>
+      <div class="card">
+        <p>Wie oft gehst du ins Kino? Siehst du Filme lieber im Kino oder zu Hause? Was glaubst du: Wie alt ist das älteste Kino in deiner Stadt?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай: що може статися з кінотеатром за сто років? Що могло загрожувати кіно — війна, телебачення, нові мультиплекси?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Die Lichtburg in Essen ist fast 100 Jahre alt und hat den größten <span class="gl" data-key data-uk="кінозал" data-lemma="der Kinosaal, -säle">Kinosaal</span> Deutschlands. Ihre Geschichte ist auch ein Stück deutsche Geschichte.</p>
+
+          <p>Das Kino wurde am 18. Oktober 1928 <span class="gl" data-key data-uk="відкривати (урочисто)" data-lemma="eröffnen">eröffnet</span>, in den „Goldenen Zwanzigern“. Das Ruhrgebiet war damals eine der wichtigsten Industrieregionen Europas. Mit fast 2000 Plätzen und moderner Technik war die Lichtburg eines der modernsten Kinos Europas. Bei der Eröffnung spielte ein Orchester, und Tänzerinnen aus Paris <span class="gl" data-uk="виступати (на сцені)" data-lemma="auftreten (trat auf, ist aufgetreten)">traten</span> auf.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Essen%2C_Lichtburg.jpg/960px-Essen%2C_Lichtburg.jpg" alt="Die Lichtburg im Zentrum von Essen." width="960" height="640" loading="lazy">
+            <figcaption>Die Lichtburg im Zentrum von Essen. Foto: Wiki05, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en" target="_blank" rel="noopener">CC0</a>, <a href="https://commons.wikimedia.org/wiki/File:Essen,_Lichtburg.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Doch bald gab es Probleme. Für den neuen <span class="gl" data-uk="звуковий фільм" data-lemma="der Tonfilm, -e">Tonfilm</span> brauchte das Kino teure <span class="gl" data-uk="перебудова, реконструкція" data-lemma="der Umbau, -ten">Umbauten</span>, und nach der <span class="gl" data-uk="світова економічна криза" data-lemma="die Weltwirtschaftskrise">Weltwirtschaftskrise</span> von 1929 kamen weniger Besucher.</p>
+
+          <p>Später <span class="gl" data-uk="керувати (підприємством)" data-lemma="führen">führte</span> der <span class="gl" data-uk="єврейський" data-lemma="jüdisch">jüdische</span> Unternehmer Karl Wolffsohn das Kino. 1934 musste er es unter dem <span class="gl" data-uk="тиск" data-lemma="der Druck">Druck</span> der Nationalsozialisten an die Filmfirma Ufa verkaufen. Die Nazis nutzten die Lichtburg dann für ihre Propaganda. Am 5. März 1943 wurde das Kino bei einem <span class="gl" data-uk="авіаналіт" data-lemma="der Luftangriff, -e">Luftangriff</span> schwer <span class="gl" data-key data-uk="руйнувати" data-lemma="zerstören">zerstört</span>. Nur die Fassade blieb stehen.</p>
+
+          <p>Nach dem <span class="gl" data-key data-uk="відбудова" data-lemma="der Wiederaufbau">Wiederaufbau</span> öffnete die Lichtburg am 23. März 1950 wieder. In den 1950er- und 1960er-Jahren war sie das wichtigste Premierenkino Deutschlands. Stars wie Romy Schneider und Buster Keaton kamen nach Essen, und auf der <span class="gl" data-uk="сцена" data-lemma="die Bühne, -n">Bühne</span> stand zum Beispiel Louis Armstrong.</p>
+
+          <p>Dann kam das <span class="gl" data-uk="телебачення" data-lemma="das Fernsehen">Fernsehen</span>, und viele Menschen blieben zu Hause. Im Ruhrgebiet mussten außerdem viele <span class="gl" data-uk="шахта (вугільна)" data-lemma="die Zeche, -n">Zechen</span> schließen, und die <span class="gl" data-uk="безробіття" data-lemma="die Arbeitslosigkeit">Arbeitslosigkeit</span> stieg. In 15 Jahren schlossen in Essen etwa zwei <span class="gl" data-uk="третина" data-lemma="das Drittel, -">Drittel</span> aller Kinos. 1991 öffnete in der Innenstadt ein großes Multiplex-Kino. Mitte der 1990er-Jahre <span class="gl" data-uk="загрожувати" data-lemma="drohen (+ Dat.)">drohte</span> der Lichtburg das Ende.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Das Ruhrgebiet liegt in Nordrhein-Westfalen. Hier liegen viele große Städte dicht nebeneinander, zum Beispiel Essen, Dortmund und Duisburg. Früher arbeiteten hier sehr viele Menschen in Zechen und holten <span class="gl" data-uk="вугілля" data-lemma="die Kohle, -n">Kohle</span> aus der Erde. Die letzte Zeche im Ruhrgebiet hat 2018 geschlossen.</p>
+          </aside>
+
+          <p>Aber viele Menschen <span class="gl" data-uk="боротися" data-lemma="kämpfen (für + Akk.)">kämpften</span> für ihr Kino, auch der berühmte Regisseur Wim Wenders. Der Verkauf wurde <span class="gl" data-uk="запобігати, не допустити" data-lemma="verhindern">verhindert</span>, und seit 1998 steht die Lichtburg unter <span class="gl" data-key data-uk="охорона пам'яток" data-lemma="der Denkmalschutz">Denkmalschutz</span>. Nach einer langen Renovierung öffnete sie am 16. März 2003 wieder.</p>
+
+          <p>Heute hat der Saal noch rund 1250 Plätze – und ist damit immer noch der größte Kinosaal Deutschlands. Hier gibt es Filme, aber auch Konzerte, <span class="gl" data-uk="літературне читання" data-lemma="die Lesung, -en">Lesungen</span>, Kabarett und Theater. Im Sommer kann man Filme auch draußen im <span class="gl" data-uk="кінотеатр просто неба" data-lemma="das Freiluftkino, -s">Freiluftkino</span> sehen.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Lichtburg-Essen-Kinosaal-2025.jpg/960px-Lichtburg-Essen-Kinosaal-2025.jpg" alt="Der große Kinosaal der Lichtburg." width="960" height="641" loading="lazy">
+            <figcaption>Der große Kinosaal der Lichtburg. Foto: Tuxyso, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Lichtburg-Essen-Kinosaal-2025.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: загальне розуміння + числа ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Що означає це число в тексті? Обери відповідь.</p>
+      <div class="card" id="ub1z-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2: richtig / falsch / steht nicht im Text ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3: розстав по порядку ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Was kam zuerst?</h2>
+      <p class="lead">Розстав події з історії Lichtburg у правильному порядку. Натискай речення по черзі; натиснеш на вже поставлене — воно повернеться вниз.</p>
+      <div class="card" id="ub3-seq"></div>
+    </section>
+
+    <!-- ===== Üb. 4: лексика ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки в правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>Bühne</span><span>eröffnet</span><span>Fernsehen</span><span>zerstört</span><span>Kinosaal</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> Der <input type="text" class="blank-input inline wide" data-ans="Kinosaal"> war voll – alle 300 Plätze waren besetzt.</div>
+          <div class="fill-item"><span class="num">2)</span> Das neue Museum wird nächste Woche <input type="text" class="blank-input inline" data-ans="eröffnet">.</div>
+          <div class="fill-item"><span class="num">3)</span> Im Krieg wurden viele Häuser <input type="text" class="blank-input inline" data-ans="zerstört">.</div>
+          <div class="fill-item"><span class="num">4)</span> Nach dem Konzert kam die Sängerin noch einmal auf die <input type="text" class="blank-input inline" data-ans="Bühne">.</div>
+          <div class="fill-item"><span class="num">5)</span> Heute sehen viele Menschen Filme nicht mehr im <input type="text" class="blank-input inline wide" data-ans="Fernsehen">, sondern im Internet.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5: письмо ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (4–6 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Gibt es in deiner Stadt ein altes Kino, Theater oder ein anderes berühmtes Gebäude? Was weißt du über seine Geschichte?</label>
+          <textarea id="ub5-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Kino oder Streaming zu Hause – was ist besser? Schreib deine Meinung mit Gründen.</label>
+          <textarea id="ub5-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>In meiner Stadt gibt es …, Das Gebäude wurde … gebaut / eröffnet, Ich gehe lieber ins Kino, weil …, Zu Hause kann man …, Ein Vorteil / Nachteil ist, dass …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Die Lichtburg in Essen wurde 1928 eröffnet. In der NS-Zeit musste ihr jüdischer Betreiber sie verkaufen, 1943 wurde sie im Krieg zerstört. Nach 1950 war sie das wichtigste Premierenkino Deutschlands. Heute steht sie unter Denkmalschutz und hat den größten Kinosaal des Landes.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Кінотеатр Lichtburg в Ессені відкрили 1928 року. За нацистів його єврейського власника змусили продати кінотеатр, а 1943 року будівлю зруйнували під час війни. Після 1950 року тут відбувалися найважливіші кінопрем'єри Німеччини. Сьогодні Lichtburg — пам'ятка архітектури з найбільшим кінозалом країни.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "lichtburg-essen";
+
+  // Üb. 1а: квіз
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Um die Geschichte eines berühmten Kinos in Essen",
+            "Um die besten deutschen Filme der 1950er-Jahre",
+            "Um das Leben des Regisseurs Wim Wenders"],
+     correct: "Um die Geschichte eines berühmten Kinos in Essen"}
+  ]);
+  // Üb. 1б: число ↔ значення
+  buildMatch('ub1z', [
+    ["fast 2000", "So viele Plätze hatte das Kino 1928."],
+    ["rund 1250", "So viele Plätze hat der Saal heute."],
+    ["1934", "Karl Wolffsohn musste das Kino verkaufen."],
+    ["zwei Drittel", "So viele Kinos in Essen schlossen in 15 Jahren."],
+    ["1998", "Seit diesem Jahr steht das Kino unter Denkmalschutz."]
+  ], {lead: true});
+
+  // Üb. 2: richtig (r) / falsch (f) / steht nicht im Text (n)
+  buildRF('ub2-rf', [
+    {s: "Die Lichtburg hat heute den größten Kinosaal Deutschlands.", a: "r"},
+    {s: "Bei der Eröffnung 1928 lief ein Film von Wim Wenders.", a: "f"},
+    {s: "Die Weltwirtschaftskrise war gut für das Kino.", a: "f"},
+    {s: "Nach dem Luftangriff 1943 stand die Fassade noch.", a: "r"},
+    {s: "Romy Schneider hat in Essen gewohnt.", a: "n"},
+    {s: "Das Fernsehen war ein Problem für die Kinos.", a: "r"},
+    {s: "Das Multiplex-Kino in Essen hat mehr Plätze als die Lichtburg.", a: "n"},
+    {s: "Heute zeigt die Lichtburg nur Filme.", a: "f"}
+  ]);
+
+  // Üb. 3: події У ПРАВИЛЬНОМУ порядку — перемішаються самі
+  buildSequence('ub3-seq', [
+    "Die Lichtburg wird mit einem Orchester und Tänzerinnen eröffnet.",
+    "Karl Wolffsohn muss das Kino an die Ufa verkaufen.",
+    "Bei einem Luftangriff wird das Kino schwer zerstört.",
+    "Stars wie Romy Schneider kommen zu Premieren nach Essen.",
+    "In der Innenstadt öffnet ein Multiplex-Kino.",
+    "Die Lichtburg kommt unter Denkmalschutz.",
+    "Nach der Renovierung öffnet das Kino wieder."
+  ]);
+
+  // Üb. 4а: слово ↔ переклад
+  buildMatch('ub4', [
+    ["der Luftangriff", "авіаналіт"],
+    ["der Wiederaufbau", "відбудова"],
+    ["die Zeche", "шахта (вугільна)"],
+    ["verhindern", "запобігати, не допустити"],
+    ["der Denkmalschutz", "охорона пам'яток"],
+    ["die Lesung", "літературне читання"]
+  ]);
+  // Üb. 4б: пропуски
+  wireBlanks('ub4b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🎬','🍿','🎟️','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

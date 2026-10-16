@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neue Nachbarn in der Nordsee · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Natur</span>
+        <h1>Neue Nachbarn in der Nordsee</h1>
+        <p class="sub">Ще 2020 року кальмари майже нічого не важили для німецьких рибалок, а тепер дають п'яту частину виторгу. Добра новина — чи тривожний сигнал?</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Fisch oder Tintenfisch?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Was lebt im Meer?</h2>
+      <div class="card">
+        <p>Welche Meerestiere kennst du? Hast du schon einmal Tintenfisch gegessen? Was glaubst du: Wie verändert der Klimawandel das Leben im Meer?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Як гадаєш, що станеться, якщо в морі з'явиться багато нових тварин, а риби стане менше? Кому це вигідно, а кому — ні?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Calamari aus der Nordsee? Lange war das eine <span class="gl" data-uk="рідкість" data-lemma="die Seltenheit, -en">Seltenheit</span>. Doch das Meer wird wärmer, und immer mehr <span class="gl" data-key data-uk="кальмар, каракатиця" data-note="загальна назва головоногих: каракатиць, кальмарів, часто й восьминогів" data-lemma="der Tintenfisch, -e">Tintenfische</span> schwimmen aus dem Atlantik in die Nordsee. Der Meeresbiologe Daniel Oesterwind hat der Zeitung <i>taz</i> aus Berlin erklärt, was das bedeutet.</p>
+
+          <h3>Vom Beifang zum Geschäft</h3>
+          <p>Ein paar Tintenfische gab es in der Nordsee schon immer – meist als <span class="gl" data-key data-uk="прилов (випадковий улов)" data-lemma="der Beifang, -ä-e">Beifang</span>, also zufällig im Netz. Gezielt nach ihnen zu fischen, <span class="gl" data-uk="бути вигідним, окупатися" data-lemma="sich lohnen">lohnte sich</span> aber nicht. Das hat sich <span class="gl" data-uk="докорінно" data-lemma="grundlegend">grundlegend</span> geändert. Laut Oesterwind leben inzwischen <span class="gl" data-uk="постійно, надовго" data-lemma="dauerhaft">dauerhaft</span> mehrere Arten in der Nordsee, zum Beispiel Langflossenkalmare wie <i>Loligo forbesii</i> und Kurzflossenkalmare wie <i>Illex coindetii</i>.</p>
+
+          <p>Die Zahlen zeigen den Wandel deutlich. 2020 machten Tintenfische bei der deutschen <span class="gl" data-uk="донне тралове рибальство" data-note="ловля великою сіткою, яку тягнуть по дну" data-lemma="die Grundschleppnetzfischerei">Grundschleppnetzfischerei</span> gerade einmal ein Prozent des <span class="gl" data-key data-uk="виторг, оборот" data-lemma="der Umsatz, -ü-e">Umsatzes</span> aus. Vier Jahre später waren es schon rund 20 Prozent. In Belgien und den Niederlanden werden die Tiere verkauft, in Deutschland bisher nur in kleinen Mengen direkt <span class="gl" data-uk="на місці" data-lemma="vor Ort">vor Ort</span>. Kann der Tintenfisch die Nordseefischerei also vor dem <span class="gl" data-uk="занепад" data-lemma="der Niedergang">Niedergang</span> retten? Oesterwind <span class="gl" data-uk="відповідати ствердно" data-lemma="bejahen">bejaht</span> das ohne Zögern.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/00_2640_Krabbenkutter_-_Hafen_%28Fedderwardersiel%29.jpg/960px-00_2640_Krabbenkutter_-_Hafen_%28Fedderwardersiel%29.jpg" alt="Fischkutter im Hafen von Fedderwardersiel an der Nordsee." width="960" height="640" loading="lazy">
+            <figcaption>Fischkutter im Hafen von Fedderwardersiel an der Nordsee. Foto: W. Bulach, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:00_2640_Krabbenkutter_-_Hafen_(Fedderwardersiel).jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Für die Fischer ist der Umstieg einfach. Sie benutzen dieselben Netze, die über den <span class="gl" data-uk="морське дно" data-lemma="der Meeresboden">Meeresboden</span> gezogen werden. Nur die Höhe der Netze und die Größe der <span class="gl" data-uk="вічко (сітки)" data-lemma="die Masche, -n">Maschen</span> haben sie etwas angepasst, damit weniger Beifang darin landet.</p>
+
+          <h3>Warum es keine Quote gibt</h3>
+          <p>Das eigentliche Problem sieht der Biologe woanders: Für Tintenfische gibt es bisher keine <span class="gl" data-key data-uk="квота (на вилов)" data-lemma="die Fangquote, -n">Fangquote</span>. Für eine <span class="gl" data-key data-uk="сталий, екологічно відповідальний" data-lemma="nachhaltig">nachhaltige</span> Fischerei sei aber ein solches System <span class="gl" data-uk="необхідний, конче потрібний" data-lemma="unerlässlich">unerlässlich</span>. Bei Fischen funktioniert es so: Forscher des Internationalen Rats für Meeresforschung (ICES) fahren jedes Jahr aufs Meer, fangen Fische, zählen sie und bestimmen ihr Alter. Aus diesen Daten berechnen sie eine Quote und <span class="gl" data-uk="рекомендувати" data-lemma="empfehlen (empfahl, hat empfohlen)">empfehlen</span> sie der EU. Bis die EU <span class="gl" data-uk="ухвалювати рішення" data-lemma="beschließen (beschloss, hat beschlossen)">beschließt</span>, dauert es ein bis zwei Jahre.</p>
+
+          <p>Für Fische ist das kein Problem, denn bei ihnen leben mehrere Generationen gleichzeitig im Meer. Tintenfische dagegen leben nur ein Jahr und <span class="gl" data-uk="розмножуватися" data-lemma="sich fortpflanzen">pflanzen sich</span> nur einmal fort – oft werden sie schon vorher gefangen. Ist ein <span class="gl" data-uk="популяція, запас (риби)" data-lemma="der Bestand, -ä-e">Bestand</span> <span class="gl" data-uk="виловлений до кінця" data-lemma="weggefischt">weggefischt</span>, ist er einfach weg. Außerdem reagieren die Tiere sehr <span class="gl" data-uk="чутливо" data-lemma="empfindlich">empfindlich</span> auf die Temperatur. Was in zwei Jahren sein wird, kann niemand <span class="gl" data-uk="передбачати" data-lemma="vorhersagen">vorhersagen</span>.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Die EU legt für viele Fischarten jedes Jahr fest, wie viel gefangen werden darf. Diese Mengen werden dann auf die einzelnen Länder <span class="gl" data-uk="розподіляти" data-lemma="verteilen">verteilt</span>. Deutschland liegt an zwei Meeren: an der Nordsee und an der Ostsee. Die deutsche Nordseeküste <span class="gl" data-uk="належати до" data-lemma="gehören (zu + Dat.)">gehört</span> vor allem zu Niedersachsen und Schleswig-Holstein.</p>
+          </aside>
+
+          <p>Oesterwind <span class="gl" data-uk="виступати за" data-lemma="sich einsetzen (für + Akk.)">setzt sich</span> deshalb für schnellere und bessere Daten ein. In einem Projekt zählt sein Team in der <span class="gl" data-uk="період розмноження" data-lemma="die Fortpflanzungszeit, -en">Fortpflanzungszeit</span> die <span class="gl" data-uk="личинка" data-lemma="die Larve, -n">Larven</span> und schätzt, wie viele erwachsene Tiere es ein halbes Jahr später geben könnte. Andere Länder gehen anders vor: Sie beobachten, wie viele Tintenfische pro Stunde ins Netz gehen. Sinkt die Zahl unter eine bestimmte Grenze, wird die Fischerei gestoppt.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Sepia_com%C3%BAn_%28Sepia_officinalis%29%2C_Catania%2C_Sicilia%2C_Italia%2C_2025-04-04%2C_DD_02.jpg/960px-Sepia_com%C3%BAn_%28Sepia_officinalis%29%2C_Catania%2C_Sicilia%2C_Italia%2C_2025-04-04%2C_DD_02.jpg" alt="Ein Gewöhnlicher Tintenfisch (Sepia officinalis)." width="960" height="640" loading="lazy">
+            <figcaption>Ein Gewöhnlicher Tintenfisch (Sepia officinalis). Foto: Diego Delso, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Sepia_com%C3%BAn_(Sepia_officinalis),_Catania,_Sicilia,_Italia,_2025-04-04,_DD_02.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <h3>Gewinner des Klimawandels</h3>
+          <p>Warum kommen die Tintenfische gerade jetzt? Ein Grund sind die <span class="gl" data-uk="наслідок" data-lemma="die Folge, -n">Folgen</span> des Klimawandels. Ein anderer könnte sein, dass es weniger <span class="gl" data-key data-uk="хижа риба" data-lemma="der Raubfisch, -e">Raubfische</span> gibt – im <span class="gl" data-uk="екосистема" data-lemma="das Ökosystem, -e">Ökosystem</span> sind <span class="gl" data-uk="прогалина, ніша" data-lemma="die Lücke, -n">Lücken</span> entstanden. Wegen ihres kurzen Lebens können sich Tintenfische schnell <span class="gl" data-uk="пристосовуватися" data-lemma="sich anpassen">anpassen</span> und stark <span class="gl" data-uk="розмножуватися (у великій кількості)" data-lemma="sich vermehren">vermehren</span>. Sie <span class="gl" data-uk="витісняти" data-lemma="verdrängen">verdrängen</span> andere Tiere und fressen alles, was sie <span class="gl" data-uk="подолати, схопити" data-lemma="überwältigen">überwältigen</span> können. In manchen Teilen der Nordsee spielen sie schon eine <span class="gl" data-uk="ключова роль" data-lemma="die Schlüsselrolle, -n">Schlüsselrolle</span>.</p>
+
+          <p>Macht ihm das Sorgen? Oesterwind <span class="gl" data-uk="визнавати" data-lemma="zugeben (gab zu, hat zugegeben)">gibt zu</span>, dass er Tintenfische liebt – für ihn sind es wunderbare Tiere. Aus ökologischer Sicht findet er aber <span class="gl" data-uk="різкий, радикальний" data-lemma="drastisch">drastisch</span>, was gerade in den Meeren passiert.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Яка головна думка тексту? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3: розсортуй ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Fisch oder Tintenfisch?</h2>
+      <p class="lead">Що в тексті сказано про риб, а що — про кальмарів? Розклади картки.</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки в правильній формі. Одне слово зайве.</p>
+      <div class="card">
+        <div class="wordbank"><span>Beifang</span><span>empfindlich</span><span>lohnt sich</span><span>nachhaltig</span><span>vorhersagen</span><span>Umsatz</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> Delfine im Netz sind unerwünschter <input type="text" class="blank-input inline" data-ans="Beifang">.</div>
+          <div class="fill-item"><span class="num">2)</span> Der Laden hat im Dezember den höchsten <input type="text" class="blank-input inline" data-ans="Umsatz"> des Jahres.</div>
+          <div class="fill-item"><span class="num">3)</span> Das Wetter für nächsten Monat kann niemand genau <input type="text" class="blank-input inline wide" data-ans="vorhersagen">.</div>
+          <div class="fill-item"><span class="num">4)</span> Meine Haut ist sehr <input type="text" class="blank-input inline wide" data-ans="empfindlich"> – ich brauche immer Sonnencreme.</div>
+          <div class="fill-item"><span class="num">5)</span> Wer <input type="text" class="blank-input inline wide" data-ans="nachhaltig"> lebt, denkt auch an die Zukunft der Natur.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (5–8 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Tintenfische in der Nordsee: eine Chance für die Fischer oder ein Warnsignal? Begründe deine Meinung.</label>
+          <textarea id="ub5-a" rows="6"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Welche Veränderungen in der Natur durch das wärmere Klima kennst du aus der Ukraine (Tiere, Pflanzen, Wetter)?</label>
+          <textarea id="ub5-b" rows="6"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Einerseits …, andererseits …, Für die Fischer bedeutet das …, Ich halte das für …, weil …, In der Ukraine beobachtet man, dass …, Früher …, heute …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Weil die Nordsee wärmer wird, leben dort jetzt dauerhaft mehrere Tintenfischarten. Für die deutsche Fischerei sind sie schon ein wichtiges Geschäft. Eine Fangquote wie für Fische gibt es aber noch nicht – das System passt nicht zu Tieren, die nur ein Jahr leben. Die EU legt Fangquoten mit Hilfe der Daten des ICES fest.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Північне море теплішає, і там тепер постійно живуть кілька видів кальмарів. Для німецьких рибалок вони вже важливе джерело заробітку. Але квоти на їхній вилов, як для риби, поки немає: ця система не пасує тваринам, які живуть лише рік. Квоти на вилов в ЄС визначають на основі даних Міжнародної ради з дослідження моря (ICES).
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "tintenfische-in-der-nordsee";
+
+  // Üb. 1а: квіз
+  buildQuiz('ub1-quiz', [
+    {q: "Was ist die Hauptaussage des Textes?",
+     opts: ["Tintenfische bringen der Fischerei Geld, aber man braucht neue Regeln, um sie zu schützen",
+            "Tintenfische sind gefährlich für Menschen, die in der Nordsee baden",
+            "Die deutsche Fischerei braucht keine Fangquoten mehr"],
+     correct: "Tintenfische bringen der Fischerei Geld, aber man braucht neue Regeln, um sie zu schützen"},
+    {q: "Wie steht Daniel Oesterwind zu den Tintenfischen?",
+     opts: ["Er mag die Tiere sehr, sieht die Entwicklung im Meer aber kritisch",
+            "Er findet die Tiere hässlich und möchte sie aus der Nordsee entfernen",
+            "Er interessiert sich nur für den Umsatz der Fischer"],
+     correct: "Er mag die Tiere sehr, sieht die Entwicklung im Meer aber kritisch"}
+  ]);
+  // Üb. 1б: заголовок ↔ абзац
+  buildMatch('ub1h', [
+    ["Von einem zu zwanzig Prozent", "Absatz 2"],
+    ["Fast dasselbe Werkzeug", "Absatz 3"],
+    ["So entsteht eine Quote für Fische", "Absatz 4"],
+    ["Ein kurzes Leben macht alles schwierig", "Absatz 5"],
+    ["Larven zählen", "Absatz 6"],
+    ["Platz im Meer und viel Hunger", "Absatz 7"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5", "Absatz 6", "Absatz 7", "Absatz 8"], lead: true});
+
+  // Üb. 2: richtig (r) / falsch (f) / steht nicht im Text (n)
+  buildRF('ub2-rf', [
+    {s: "Früher gab es in der Nordsee überhaupt keine Tintenfische.", a: "f"},
+    {s: "2024 kam etwa ein Fünftel des Umsatzes der deutschen Grundschleppnetzfischerei von Tintenfischen.", a: "r"},
+    {s: "In Deutschland werden Tintenfische aus der Nordsee schon in allen Supermärkten verkauft.", a: "f"},
+    {s: "Für den Tintenfischfang brauchen die Fischer ganz neue Schiffe.", a: "f"},
+    {s: "Bis die EU eine Fangquote beschließt, dauert es ein bis zwei Jahre.", a: "r"},
+    {s: "Tintenfische aus der Nordsee schmecken besser als Tintenfische aus dem Mittelmeer.", a: "n"},
+    {s: "Andere Länder stoppen die Fischerei, wenn pro Stunde zu wenige Tintenfische ins Netz gehen.", a: "r"},
+    {s: "Oesterwind arbeitet seit zwanzig Jahren für den ICES.", a: "n"}
+  ]);
+
+  // Üb. 3: розсортуй
+  buildSort('ub3-sort', {
+    buckets: ["Fische", "Tintenfische"],
+    items: [
+      {t: "Mehrere Generationen leben gleichzeitig.", b: "Fische"},
+      {t: "Für sie gibt es eine Fangquote.", b: "Fische"},
+      {t: "Forscher bestimmen ihr Alter.", b: "Fische"},
+      {t: "Raubfische werden weniger.", b: "Fische"},
+      {t: "Sie leben nur ein Jahr.", b: "Tintenfische"},
+      {t: "Sie pflanzen sich nur einmal fort.", b: "Tintenfische"},
+      {t: "Sie reagieren stark auf die Temperatur.", b: "Tintenfische"},
+      {t: "Sie verdrängen andere Tiere.", b: "Tintenfische"}
+    ]
+  });
+
+  // Üb. 4а: слово ↔ переклад
+  buildMatch('ub4', [
+    ["der Bestand", "популяція, запас (риби)"],
+    ["dauerhaft", "постійно, надовго"],
+    ["sich vermehren", "розмножуватися (у великій кількості)"],
+    ["verdrängen", "витісняти"],
+    ["die Lücke", "прогалина, ніша"],
+    ["unerlässlich", "необхідний, конче потрібний"]
+  ]);
+  // Üb. 4б: пропуски
+  wireBlanks('ub4b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🦑','🌊','🎣','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
