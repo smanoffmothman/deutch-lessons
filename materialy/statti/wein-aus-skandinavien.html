@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weinberge im hohen Norden · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Natur &amp; Umwelt</span>
+        <h1>Weinberge im hohen Norden</h1>
+        <p class="sub">Виноградники у Швеції та Данії — уже не фантастика. До чого тут потепління, правила ЄС і сорт винограду з Фрайбурга?</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Welches Land?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Zeitleiste</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Weintrauben aus Skandinavien?</h2>
+      <div class="card">
+        <p>In welchen Ländern wachsen Weintrauben? Braucht man dafür viel Sonne oder viel Wärme? Und was glaubst du: Kann man auch in Schweden Weintrauben anbauen?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай: де в Європі традиційно вирощують виноград? Як зміна клімату може вплинути на те, що росте в північних країнах — і в Україні?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Weinberge in Schweden und Dänemark? Was nach Science-Fiction klingt, ist längst Wirklichkeit. <span class="gl" data-uk="знавець вина" data-lemma="der Weinkenner, -">Weinkenner</span> reisen inzwischen sogar <span class="gl" data-uk="цілеспрямований" data-note="тут: спеціально" data-lemma="gezielt">gezielt</span> nach Südschweden.</p>
+
+          <p>Dort besuchen sie <span class="gl" data-key data-uk="виноробне господарство" data-lemma="das Weingut, -ü-er">Weingüter</span> direkt am Meer, sprechen mit <span class="gl" data-uk="амбітний, честолюбний" data-lemma="ehrgeizig">ehrgeizigen</span> <span class="gl" data-key data-uk="винороб" data-lemma="der Winzer, -">Winzerinnen und Winzern</span> und lernen deren Arbeit im Keller kennen. Manche dieser „Önotouristen“, wie Fachleute sie nennen, bleiben gleich mehrere Tage – zum Beispiel auf dem Bio-Weingut Ästad Vingård am Kattegat, dem Meer zwischen Schweden und Dänemark, zwischen Göteborg und Helsingborg. Zum Gut gehören ein Hotel und ein Restaurant mit Michelin-Stern.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/%C3%84stad_Ving%C3%A5rd_main_building.jpg/960px-%C3%84stad_Ving%C3%A5rd_main_building.jpg" alt="Das Weingut Ästad Vingård bei Tvååker in Südschweden." width="960" height="720" loading="lazy">
+            <figcaption>Das Weingut Ästad Vingård bei Tvååker in Südschweden. Foto: Sjö, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:%C3%84stad_Ving%C3%A5rd_main_building.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Seit 2025 dürfen schwedische Weingüter ihre Flaschen auch direkt vor Ort im <span class="gl" data-uk="магазин при фермі" data-lemma="der Hofladen, -ä-">Hofladen</span> verkaufen. Das ist eine <span class="gl" data-uk="виняток" data-lemma="die Ausnahme, -n">Ausnahme</span>, denn normalerweise ist der Verkauf von Alkohol in Schweden Sache des Staates.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Getränke mit mehr als 3,5 Prozent Alkohol – also auch Wein – verkauft in Schweden normalerweise nur die staatliche Ladenkette Systembolaget. So will der Staat den Alkoholkonsum kontrollieren.</p>
+          </aside>
+
+          <p>Dass im Norden überhaupt Wein entsteht, hat auch mit der EU zu tun – dem größten Weinproduzenten der Welt. Damit die Qualität <span class="gl" data-uk="бути належним, відповідати вимогам" data-lemma="stimmen">stimmt</span> und nicht zu viel Wein produziert wird, ist der <span class="gl" data-key data-uk="виноградарство" data-lemma="der Weinanbau">Weinanbau</span> in der EU streng <span class="gl" data-uk="регулювати" data-lemma="reglementieren">reglementiert</span>. Als Schweden 1995 der EU <span class="gl" data-uk="вступати (до організації)" data-lemma="beitreten (trat bei, ist beigetreten)">beitrat</span>, war es kein anerkanntes Weinbauland und bekam deshalb keine <span class="gl" data-uk="право на посадку (виноградників)" data-lemma="das Pflanzrecht, -e">Pflanzrechte</span>. Erst eine Reform von 1999 erlaubte den schwedischen Winzern, Wein kommerziell herzustellen. Dänemark gilt seit 2000 offiziell als Weinbauland der EU. Heute gibt es in Schweden rund 100 Weingüter, von denen 55 Wein für den Verkauf produzieren; in Dänemark sind es sogar etwa 90 kommerzielle <span class="gl" data-uk="підприємство, господарство" data-lemma="der Betrieb, -e">Betriebe</span>.</p>
+
+
+          <p>Möglich macht das vor allem das Klima. Früher war es im Norden für Weinreben einfach zu kalt. Durch die <span class="gl" data-uk="зростати, підвищуватися" data-lemma="steigen (stieg, ist gestiegen)">gestiegenen</span> Temperaturen ist es dort milder geworden, aber noch nicht zu heiß. Außerdem scheint die Sonne im skandinavischen Sommer viel länger als in Mittel- und Südeuropa. Und am Meer, wo die <span class="gl" data-uk="виноградна лоза (кущ)" data-lemma="der Rebstock, -ö-e">Rebstöcke</span> stehen, <span class="gl" data-uk="коливатися" data-lemma="schwanken">schwanken</span> die Temperaturen nur wenig. Vor allem im Süden Schwedens sind deshalb in den letzten Jahren viele neue Weinberge <span class="gl" data-uk="виникати, з'являтися" data-lemma="entstehen (entstand, ist entstanden)">entstanden</span>.</p>
+
+          <p>Ein weiterer wichtiger Grund kommt aus Deutschland: die weiße <span class="gl" data-key data-uk="сорт винограду" data-lemma="die Rebsorte, -n">Rebsorte</span> Solaris. Forscher des Staatlichen Weinbauinstituts in Freiburg im Breisgau haben sie 1975 durch Kreuzung neu <span class="gl" data-uk="виводити (новий сорт)" data-lemma="züchten">gezüchtet</span>. Die Sorte ist robust und wird vom <span class="gl" data-uk="грибок борошнистої роси (хвороба рослин)" data-lemma="der Mehltaupilz, -e">Mehltaupilz</span> kaum befallen. Ihre Trauben <span class="gl" data-uk="дозрівати" data-lemma="reifen">reifen</span> schon früh im Jahr, und kühles Wetter macht ihr nichts aus. Deshalb <span class="gl" data-uk="робити ставку на" data-lemma="setzen auf (+ Akk.)">setzen</span> die meisten Winzer in Dänemark und Schweden vor allem auf diese Sorte. Daneben bauen sie noch ein paar andere Sorten an, darunter auch rote.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Solaris_grapes_in_Chateaux_Luna_vineyard_24.jpg/960px-Solaris_grapes_in_Chateaux_Luna_vineyard_24.jpg" alt="Trauben der Rebsorte Solaris auf einem Weingut in Schweden." width="960" height="540" loading="lazy">
+            <figcaption>Trauben der Rebsorte Solaris auf einem Weingut in Schweden. Foto: W.carter, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en" target="_blank" rel="noopener">CC0</a>, <a href="https://commons.wikimedia.org/wiki/File:Solaris_grapes_in_Chateaux_Luna_vineyard_24.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Freiburg liegt in Baden, einer der wärmsten und sonnigsten Regionen Deutschlands. Rund um die Stadt wachsen viele Weinberge – kein Wunder also, dass dort seit Jahrzehnten an neuen Rebsorten geforscht wird.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери відповіді.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Schweden, Dänemark oder Deutschland?</h2>
+      <p class="lead">Про яку країну це сказано в тексті? Натисни картку, потім — потрібний кошик.</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Zeitleiste</h2>
+      <p class="lead">Розстав події в тому порядку, у якому вони відбувалися. Натискай речення по черзі; натиснеш на вже поставлене — воно повернеться вниз.</p>
+      <div class="card" id="ub4-seq"></div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub5-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>Winzer</span><span>Ausnahme</span><span>reifen</span><span>schwanken</span><span>robust</span><span>Rebsorte</span></div>
+        <div id="ub5b-list">
+          <div class="fill-item"><span class="num">1)</span> Ein <input type="text" class="blank-input inline" data-ans="Winzer"> kümmert sich das ganze Jahr um seine Weinberge.</div>
+          <div class="fill-item"><span class="num">2)</span> Solaris ist eine weiße <input type="text" class="blank-input inline" data-ans="Rebsorte">.</div>
+          <div class="fill-item"><span class="num">3)</span> Im Norden müssen die Trauben schnell <input type="text" class="blank-input inline" data-ans="reifen">, bevor es kalt wird.</div>
+          <div class="fill-item"><span class="num">4)</span> In der Wüste <input type="text" class="blank-input inline" data-ans="schwanken"> die Temperaturen zwischen Tag und Nacht sehr stark.</div>
+          <div class="fill-item"><span class="num">5)</span> Diese Pflanze ist sehr <input type="text" class="blank-input inline" data-ans="robust"> und wird selten krank.</div>
+          <div class="fill-item"><span class="num">6)</span> Normalerweise ist das verboten, aber heute machen wir eine <input type="text" class="blank-input inline" data-ans="Ausnahme">.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub5b-check">Prüfen</button>
+          <button class="btn secondary" id="ub5b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub5b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 6 ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (5–7 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub6-a">1. Welches Obst und Gemüse wächst in deiner Region besonders gut? Gibt es etwas, wofür deine Region bekannt ist?</label>
+          <textarea id="ub6-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub6-b">2. Der Klimawandel verändert auch die Landwirtschaft. Was hast du darüber in der Ukraine gehört oder selbst bemerkt?</label>
+          <textarea id="ub6-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>In meiner Region wachsen vor allem …; Bekannt sind wir für …; Die Sommer werden immer …; Früher …, heute …; Die Bauern müssen …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Weinbau ist in der EU streng geregelt: Schweden darf erst seit 1999 kommerziell Wein herstellen, Dänemark ist seit 2000 offiziell Weinbauland. Mildere Temperaturen, lange Sommertage und die robuste Rebsorte Solaris aus Freiburg machen es möglich. In Schweden verkauft normalerweise nur der Staat Alkohol – Weingüter sind seit 2025 eine Ausnahme.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Виноградарство в ЄС суворо регулюється: Швеція може комерційно виробляти вино лише з 1999 року, Данія з 2000 року офіційно є виноробною країною ЄС. Це стало можливим завдяки м'якшим температурам, довгим літнім дням і витривалому сорту Solaris з Фрайбурга. У Швеції алкоголь зазвичай продає лише держава — виноробні господарства з 2025 року є винятком.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "wein-aus-skandinavien";
+
+  // Üb. 1а
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Warum man heute auch in Schweden und Dänemark Weintrauben anbauen kann",
+            "Wie man in Schweden am günstigsten Urlaub am Meer macht",
+            "Warum Alkohol in Skandinavien so teuer ist"],
+     correct: "Warum man heute auch in Schweden und Dänemark Weintrauben anbauen kann"},
+    {q: "Was macht die Rebsorte Solaris für den Norden besonders geeignet?",
+     opts: ["Sie reift früh und mag kühles Wetter.",
+            "Sie braucht sehr viel Hitze und wenig Sonne.",
+            "Sie wächst nur in der Nähe von Freiburg."],
+     correct: "Sie reift früh und mag kühles Wetter."}
+  ]);
+  // Üb. 1б
+  buildMatch('ub1h', [
+    ["Urlaub auf dem Weingut", "Absatz 1"],
+    ["Verkaufen, wo der Wein entsteht", "Absatz 2"],
+    ["Strenge Regeln aus Brüssel", "Absatz 3"],
+    ["Lange Tage, milde Temperaturen", "Absatz 4"],
+    ["Eine Traube aus dem Breisgau", "Absatz 5"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5"], lead: true});
+
+  // Üb. 2
+  buildRF('ub2-rf', [
+    {s: "Das Weingut Ästad Vingård liegt in der Nähe des Meeres.", a: "r"},
+    {s: "Weingüter in Schweden durften schon immer ihren Wein selbst verkaufen.", a: "f"},
+    {s: "Als Schweden der EU beitrat, durfte es sofort Weinreben pflanzen.", a: "f"},
+    {s: "In Dänemark gibt es mehr kommerzielle Weinbetriebe als in Schweden.", a: "r"},
+    {s: "Schwedischer Wein ist teurer als Wein aus Südeuropa.", a: "n"},
+    {s: "Im skandinavischen Sommer scheint die Sonne länger als in Südeuropa.", a: "r"},
+    {s: "Die Rebsorte Solaris wurde in Schweden gezüchtet.", a: "f"},
+    {s: "In Skandinavien werden auch rote Rebsorten angebaut.", a: "r"}
+  ]);
+
+  // Üb. 3
+  buildSort('ub3-sort', {
+    buckets: ["Schweden", "Dänemark", "Deutschland"],
+    items: [
+      {t: "Hier liegt das Weingut Ästad Vingård.", b: "Schweden"},
+      {t: "Trat 1995 der EU bei.", b: "Schweden"},
+      {t: "Rund 100 Weingüter, 55 davon verkaufen Wein.", b: "Schweden"},
+      {t: "Seit 2000 offiziell Weinbauland der EU.", b: "Dänemark"},
+      {t: "Etwa 90 kommerzielle Betriebe.", b: "Dänemark"},
+      {t: "Hier wurde die Rebsorte Solaris gezüchtet.", b: "Deutschland"}
+    ]
+  });
+
+  // Üb. 4
+  buildSequence('ub4-seq', [
+    "In Freiburg wird die Rebsorte Solaris gezüchtet.",
+    "Schweden wird Mitglied der EU, bekommt aber keine Pflanzrechte.",
+    "Eine EU-Reform erlaubt schwedischen Winzern die kommerzielle Weinproduktion.",
+    "Dänemark wird offiziell Weinbauland der EU.",
+    "Schwedische Weingüter dürfen ihren Wein im Hofladen verkaufen."
+  ]);
+
+  // Üb. 5а
+  buildMatch('ub5', [
+    ["das Weingut", "виноробне господарство"],
+    ["ehrgeizig", "амбітний, честолюбний"],
+    ["der Rebstock", "виноградна лоза (кущ)"],
+    ["züchten", "виводити (новий сорт)"],
+    ["beitreten", "вступати (до організації)"],
+    ["gezielt", "цілеспрямовано, спеціально"]
+  ]);
+  // Üb. 5б
+  wireBlanks('ub5b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📰','🍇','☀️','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

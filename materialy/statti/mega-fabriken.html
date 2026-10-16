@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fabriken so groß wie Städte · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Wissenschaft &amp; Technik</span>
+        <h1>Fabriken so groß wie Städte</h1>
+        <p class="sub">Завод завбільшки із Сан-Франциско, цехи майже без людей і дата-центри, що вже споживають понад 4 % електрики Німеччини. Хто будує майбутнє — і чого бракує Німеччині?</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wer sagt was?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Zahlen</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Die Fabrik von morgen</h2>
+      <div class="card">
+        <p>Wie stellst du dir eine moderne Fabrik vor? Arbeiten dort noch viele Menschen – oder vor allem Roboter? Und woher kommen eigentlich die Chips in deinem Smartphone?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай (або обговоріть у парі): як виглядає сучасний завод? Чому для країни може бути небезпечно, якщо важливі речі — мікросхеми, батареї — виробляють лише в одному місці світу?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Sie sind größer als manche Städte, fast menschenleer und für viele Staaten so wichtig wie Kraftwerke oder Häfen: Mega-Fabriken für Chips, Batterien und Elektroautos. Hier entscheidet sich, wer die Technologien von morgen <span class="gl" data-uk="володіти, контролювати" data-lemma="beherrschen">beherrscht</span>.</p>
+
+          <h3>Fabriken als Machtfaktor</h3>
+
+          <p>Lange Zeit zogen Fabriken einfach dorthin, wo Löhne und Produktionskosten am niedrigsten waren. Heute gelten sie als strategische Infrastruktur. Mit <span class="gl" data-key data-uk="програма підтримки (державна)" data-lemma="das Förderprogramm, -e">Förderprogrammen</span> in Milliardenhöhe versuchen Regierungen, Unternehmen ins eigene Land zu <span class="gl" data-uk="приваблювати, заманювати" data-lemma="locken">locken</span>, und viele Staaten kämpfen um neue <span class="gl" data-key data-uk="місце розташування (підприємства)" data-lemma="der Standort, -e">Standorte</span>. Die Dimensionen sind <span class="gl" data-uk="величезний, колосальний" data-lemma="gewaltig">gewaltig</span>: Das neue Werk des chinesischen Autobauers BYD in Zhengzhou ist rund 130 Quadratkilometer groß – etwa so groß wie San Francisco. Jede Minute verlässt dort ein neues Elektroauto das <span class="gl" data-uk="конвеєр" data-lemma="das Band, -ä-er">Band</span>, Roboter <span class="gl" data-uk="зварювати" data-lemma="schweißen">schweißen</span> die Karosserien zusammen, und eine KI überwacht die Produktion.</p>
+
+          <p>Wie abhängig die Welt von wenigen Orten ist, zeigt Taiwan. Etwa 60 Prozent aller <span class="gl" data-key data-uk="напівпровідник" data-lemma="der Halbleiter, -">Halbleiter</span> werden dort hergestellt, und mehr als 90 Prozent der modernsten Hochleistungschips stammen von einem einzigen Konzern: TSMC. Achim Wambach, Präsident des Leibniz-Zentrums für Europäische Wirtschaftsforschung (ZEW) in Mannheim, warnt: Wenn wichtige Bauteile fast nur aus einer Region kommen, kann aus wirtschaftlicher <span class="gl" data-key data-uk="залежність" data-lemma="die Abhängigkeit, -en">Abhängigkeit</span> schnell ein Sicherheitsrisiko werden. Eigene Werke kosten zwar mehr, machen ein Land aber <span class="gl" data-uk="стійкий, витривалий" data-lemma="widerstandsfähig">widerstandsfähiger</span> in Krisen. Deshalb will Europa bis 2030 deutlich mehr Chips selbst produzieren, und auch die USA und China investieren riesige Summen.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/TSMC_Fab_6_front_May_2025.jpg/960px-TSMC_Fab_6_front_May_2025.jpg" alt="Ein Chipwerk von TSMC in Taiwan. Das Fenster sieht aus wie ein Silizium-Wafer." width="960" height="640" loading="lazy">
+            <figcaption>Ein Chipwerk von TSMC in Taiwan. Das Fenster sieht aus wie ein Silizium-Wafer. Foto: 4300streetcar, <a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener">CC BY 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:TSMC_Fab_6_front_May_2025.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <h3>Kaum noch Menschen am Band</h3>
+
+          <p>Wer eine solche Fabrik betritt, findet kaum noch <span class="gl" data-uk="гучний, галасливий" data-lemma="lärmend">lärmende</span> Maschinen und hektische <span class="gl" data-uk="робота на конвеєрі" data-lemma="die Fließbandarbeit">Fließbandarbeit</span>. Stattdessen gibt es sterile <span class="gl" data-uk="чисте приміщення (без пилу)" data-lemma="der Reinraum, -ä-e">Reinräume</span>, fahrerlose Transportfahrzeuge und Roboterarme, die sich fast <span class="gl" data-uk="беззвучний" data-note="тут: беззвучно" data-lemma="lautlos">lautlos</span> bewegen. Maschinen, Software und Daten kommunizieren ständig miteinander. Florian Degen vom Fraunhofer-Institut betont, dass nicht allein die Größe entscheidet, sondern der modulare Aufbau: Schon eine einzige Halle kann jedes Jahr Batterien mit rund zehn Gigawattstunden herstellen – genug für etwa 200.000 Elektroautos. Steigt die <span class="gl" data-uk="попит" data-lemma="die Nachfrage">Nachfrage</span>, wird einfach ein weiteres Modul angebaut.</p>
+
+          <p>Manche träumen bereits von der „Dark Factory“, einer Fabrik, die fast ohne Menschen rund um die Uhr produziert – theoretisch sogar im Dunkeln. Ganz ohne Menschen wird es nach Degens <span class="gl" data-uk="оцінка, думка" data-lemma="die Einschätzung, -en">Einschätzung</span> aber nicht gehen: Für Reparaturen und <span class="gl" data-uk="технічне обслуговування" data-lemma="die Wartung, -en">Wartung</span> werden sie weiter gebraucht, und manche Aufgaben erledigen sie flexibler und sogar günstiger als ein Roboter. Der Wirtschaftspsychologe Gunther Olesch sieht in der Automatisierung für Deutschland sogar eine Chance: Weil die Bevölkerung immer älter wird, könne KI helfen, den <span class="gl" data-key data-uk="нестача кваліфікованих кадрів" data-lemma="der Fachkräftemangel">Fachkräftemangel</span> <span class="gl" data-uk="компенсувати, вирівнювати" data-lemma="ausgleichen (glich aus, hat ausgeglichen)">auszugleichen</span>.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Auch in Deutschland steht eine solche Mega-Fabrik: Seit 2022 baut Tesla in Grünheide bei Berlin Elektroautos. Die Fraunhofer-Gesellschaft, für die Florian Degen arbeitet, ist die größte Organisation für <span class="gl" data-uk="прикладні дослідження" data-lemma="die angewandte Forschung">angewandte Forschung</span> in Europa; ihre Institute gibt es in ganz Deutschland.</p>
+          </aside>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Tesla_Gigafactory_4_DJI_20230728123435.JPG/960px-Tesla_Gigafactory_4_DJI_20230728123435.JPG" alt="Die Tesla-Gigafactory in Grünheide bei Berlin im Juli 2023." width="960" height="720" loading="lazy">
+            <figcaption>Die Tesla-Gigafactory in Grünheide bei Berlin im Juli 2023. Foto: Michael Wolf, <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Tesla_Gigafactory_4_DJI_20230728123435.JPG" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <h3>Das Herz der digitalen Welt</h3>
+
+          <p>Das eigentliche Herz dieser Fabriken schlägt allerdings woanders – in riesigen <span class="gl" data-key data-uk="дата-центр, центр обробки даних" data-lemma="das Rechenzentrum, -zentren">Rechenzentren</span>. Von außen sehen sie <span class="gl" data-uk="непримітний" data-lemma="unscheinbar">unscheinbar</span> aus – große Hallen aus Beton und Stahl, ganz ohne Fenster. Drinnen verarbeiten Hunderttausende Prozessoren Tag und Nacht Daten, steuern Produktionsprozesse und trainieren KI. 2025 steckten allein Amazon, Microsoft, Google und Meta zusammen mehr als 300 Milliarden US-Dollar in neue Rechenzentren.</p>
+
+          <p>Diese Entwicklung hat ihren Preis. Schon der Bau eines großen Rechenzentrums mit 100 Megawatt Leistung <span class="gl" data-uk="спричиняти" data-lemma="verursachen">verursacht</span> rund 30.000 Tonnen CO₂. Danach braucht es für die <span class="gl" data-uk="охолодження" data-lemma="die Kühlung">Kühlung</span> jedes Jahr etwa 365 Millionen Liter Wasser. Rechenzentren verbrauchen schon heute gut vier Prozent des Stroms in Deutschland – <span class="gl" data-uk="з тенденцією до зростання" data-lemma="Tendenz steigend">Tendenz steigend</span>. Der Berliner Forscher Ralph Hintemann fordert deshalb einen schnellen <span class="gl" data-uk="розбудова, розширення" data-lemma="der Ausbau">Ausbau</span> der Stromnetze und bessere Speicher. Neue Gaskraftwerke neben den Rechenzentren hält er nicht für eine <span class="gl" data-uk="сталий, екологічно відповідальний" data-lemma="nachhaltig">nachhaltige</span> Lösung.</p>
+
+          <p>Am Ende verfolgen alle Mega-Fabriken dasselbe Ziel: technologische <span class="gl" data-uk="незалежність" data-lemma="die Unabhängigkeit">Unabhängigkeit</span>. Degen vergleicht eigene Produktionskapazitäten mit einer Versicherung: Solange alles funktioniert, scheinen sie überflüssig – <span class="gl" data-uk="обриватися, руйнуватися" data-lemma="zusammenbrechen (brach zusammen, ist zusammengebrochen)">brechen</span> die <span class="gl" data-key data-uk="ланцюжок постачання" data-lemma="die Lieferkette, -n">Lieferketten</span> aber zusammen, ist man froh, sie bezahlt zu haben. Und Olesch meint, Deutschland habe hervorragende Ingenieure. Oft fehle aber der Mut, neue Technologien <span class="gl" data-uk="рішучий" data-note="тут: рішуче" data-lemma="entschlossen">entschlossen</span> <span class="gl" data-uk="просувати вперед" data-lemma="vorantreiben (trieb voran, hat vorangetrieben)">voranzutreiben</span>.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери відповіді.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»). Один абзац зайвий.</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wer sagt was?</h2>
+      <p class="lead">Чия це думка? Розсортуй твердження за експертами з тексту.</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Zahlen im Text</h2>
+      <p class="lead">Яке число пасує до якого твердження? Знайди його в тексті.</p>
+      <div class="card" id="ub4-list"></div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub5-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>Abhängigkeit</span><span>Standort</span><span>Nachfrage</span><span>Lieferkette</span><span>Fachkräftemangel</span><span>nachhaltig</span></div>
+        <div id="ub5b-list">
+          <div class="fill-item"><span class="num">1)</span> Viele Firmen suchen Ingenieure, aber finden keine: Es gibt einen großen <input type="text" class="blank-input inline wide" data-ans="Fachkräftemangel">.</div>
+          <div class="fill-item"><span class="num">2)</span> Wenn ein Schiff im Kanal feststeckt, kann die ganze <input type="text" class="blank-input inline" data-ans="Lieferkette"> unterbrochen werden.</div>
+          <div class="fill-item"><span class="num">3)</span> Die Stadt hofft, dass das Unternehmen sie als neuen <input type="text" class="blank-input inline" data-ans="Standort"> wählt.</div>
+          <div class="fill-item"><span class="num">4)</span> Weil die <input type="text" class="blank-input inline" data-ans="Nachfrage"> nach Elektroautos steigt, baut die Firma eine neue Halle.</div>
+          <div class="fill-item"><span class="num">5)</span> Europa möchte seine <input type="text" class="blank-input inline wide" data-ans="Abhängigkeit"> von Chips aus Asien verringern.</div>
+          <div class="fill-item"><span class="num">6)</span> Strom aus Sonne und Wind ist <input type="text" class="blank-input inline" data-ans="nachhaltiger"> als Strom aus Gas.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub5b-check">Prüfen</button>
+          <button class="btn secondary" id="ub5b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub5b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 6 ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (6–8 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub6-a">1. Würdest du gern in einer „Dark Factory“ arbeiten, in der fast nur Roboter sind? Welche Berufe werden in Zukunft wichtiger, welche verschwinden vielleicht?</label>
+          <textarea id="ub6-a" rows="6"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub6-b">2. Welche Produkte sollte die Ukraine selbst herstellen, statt sie zu importieren? Begründe deine Meinung mit Beispielen.</label>
+          <textarea id="ub6-b" rows="6"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Ich könnte mir (nicht) vorstellen, …; In Zukunft braucht man mehr …; Es wäre wichtig, dass …; Wenn ein Land … selbst produziert, ist es weniger abhängig von …; Ein Nachteil wäre, dass …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Mega-Fabriken für Chips, Batterien und Elektroautos gelten heute als strategisch so wichtig wie Kraftwerke. Auch Deutschland hat eine: das Tesla-Werk in Grünheide bei Berlin. Rechenzentren brauchen viel Energie – schon gut vier Prozent des deutschen Stroms. Der Experte Gunther Olesch meint: Das Land hat gute Ingenieure, braucht aber mehr Mut zu neuen Technologien.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Мегазаводи мікросхем, батарей і електромобілів сьогодні важать для країн не менше, ніж електростанції. Такий завод є й у Німеччині — Tesla у Ґрюнгайде біля Берліна. Дата-центри споживають багато енергії — уже понад чотири відсотки німецької електрики. Експерт Гунтер Олеш вважає: інженери в країні чудові, але бракує сміливості впроваджувати нові технології.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "mega-fabriken";
+
+  // Üb. 1а
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Warum riesige Fabriken und Rechenzentren für die Zukunft ganzer Staaten so wichtig sind",
+            "Wie man in einer Autofabrik eine Ausbildung bekommt",
+            "Warum Fabriken heute vor allem in Länder mit niedrigen Löhnen ziehen"],
+     correct: "Warum riesige Fabriken und Rechenzentren für die Zukunft ganzer Staaten so wichtig sind"},
+    {q: "Warum macht sich die Welt Sorgen wegen Taiwan?",
+     opts: ["Weil dort ein großer Teil aller Chips produziert wird",
+            "Weil dort die meisten Elektroautos der Welt gebaut werden",
+            "Weil Taiwan keine Chips mehr exportieren will"],
+     correct: "Weil dort ein großer Teil aller Chips produziert wird"},
+    {q: "Womit vergleicht Florian Degen eigene Produktionskapazitäten?",
+     opts: ["Mit einer Versicherung", "Mit einem Kraftwerk", "Mit einer Bank"],
+     correct: "Mit einer Versicherung"}
+  ]);
+  // Üb. 1б
+  buildMatch('ub1h', [
+    ["Eine Fabrik so groß wie eine Stadt", "Absatz 1"],
+    ["Gefährlich: alles aus einer Region", "Absatz 2"],
+    ["Ein Modul nach dem anderen", "Absatz 3"],
+    ["Die Fabrik im Dunkeln", "Absatz 4"],
+    ["Viel Strom, viel Wasser", "Absatz 6"],
+    ["Was Deutschland fehlt", "Absatz 7"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5", "Absatz 6", "Absatz 7"], lead: true});
+
+  // Üb. 2
+  buildRF('ub2-rf', [
+    {s: "Früher bauten Firmen ihre Fabriken vor allem dort, wo es billig war.", a: "r"},
+    {s: "Das BYD-Werk in Zhengzhou ist viel kleiner als San Francisco.", a: "f"},
+    {s: "Mehr als 90 Prozent der modernsten Chips stammen von TSMC.", a: "r"},
+    {s: "Europa will seine Chipproduktion bis 2030 deutlich steigern.", a: "r"},
+    {s: "In einer modernen Gigafabrik arbeiten mehr Menschen als früher.", a: "f"},
+    {s: "In einer „Dark Factory“ arbeiten fast keine Menschen mehr.", a: "r"},
+    {s: "Das Tesla-Werk in Grünheide ist die größte Fabrik Europas.", a: "n"},
+    {s: "Ralph Hintemann hält Gaskraftwerke neben Rechenzentren für eine gute Lösung.", a: "f"}
+  ]);
+
+  // Üb. 3
+  buildSort('ub3-sort', {
+    buckets: ["Achim Wambach", "Florian Degen", "Gunther Olesch", "Ralph Hintemann"],
+    items: [
+      {t: "Wirtschaftliche Abhängigkeit kann zum Sicherheitsrisiko werden.", b: "Achim Wambach"},
+      {t: "Eigene Werke machen ein Land in Krisen widerstandsfähiger.", b: "Achim Wambach"},
+      {t: "Entscheidend ist der modulare Aufbau.", b: "Florian Degen"},
+      {t: "Für Wartung und Reparaturen braucht man weiter Menschen.", b: "Florian Degen"},
+      {t: "KI kann helfen, den Fachkräftemangel auszugleichen.", b: "Gunther Olesch"},
+      {t: "Deutschland fehlt oft der Mut zu neuen Technologien.", b: "Gunther Olesch"},
+      {t: "Die Stromnetze müssen schnell ausgebaut werden.", b: "Ralph Hintemann"}
+    ]
+  });
+
+  // Üb. 4
+  buildMatch('ub4', [
+    ["So viele Quadratkilometer groß ist das BYD-Werk.", "rund 130"],
+    ["So viel Prozent aller Halbleiter kommen aus Taiwan.", "etwa 60"],
+    ["Für so viele Elektroautos reichen die Batterien aus einer einzigen Halle.", "etwa 200.000"],
+    ["So viele Milliarden US-Dollar investierten vier Konzerne 2025 in Rechenzentren.", "mehr als 300"],
+    ["So viel Wasser braucht ein großes Rechenzentrum pro Jahr (in Litern).", "etwa 365 Millionen"],
+    ["So viel Prozent des deutschen Stroms verbrauchen Rechenzentren.", "gut vier"]
+  ], {lead: true});
+
+  // Üb. 5а
+  buildMatch('ub5', [
+    ["der Halbleiter", "напівпровідник"],
+    ["der Reinraum", "чисте приміщення (без пилу)"],
+    ["die Wartung", "технічне обслуговування"],
+    ["unscheinbar", "непримітний"],
+    ["die Kühlung", "охолодження"],
+    ["entschlossen", "рішуче"]
+  ]);
+  // Üb. 5б
+  wireBlanks('ub5b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📰','🏭','🔋','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fliegen wie ein Vogel · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Wissenschaft &amp; Technik</span>
+        <h1>Fliegen wie ein Vogel</h1>
+        <p class="sub">Хто першим полетів — англійський аристократ, його кучер чи німецький інженер? Історія планера від 1810 року до Річарда Бренсона.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wer war das?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Zeitleiste</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Der Traum vom Fliegen</h2>
+      <div class="card">
+        <p>Bist du schon einmal geflogen? Was glaubst du: Wann ist der erste Mensch geflogen – mit einem Motor oder ohne? Und was braucht ein Flugzeug, damit es in der Luft bleibt?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Як ти гадаєш, коли людина вперше піднялася в повітря без мотора? Які частини має кожен літак?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Seit Jahrtausenden träumen Menschen davon, wie Vögel durch die Luft zu <span class="gl" data-uk="ковзати, планерувати" data-lemma="gleiten (glitt, ist geglitten)">gleiten</span>. Aber wer hat das erste <span class="gl" data-key data-uk="планер" data-lemma="das Gleitflugzeug, -e">Gleitflugzeug</span> gebaut – und wer ist als Erster wirklich damit geflogen?</p>
+
+          <p>Dem Engländer Sir George Cayley (1773–1857) war früh klar, dass man sich nicht einfach zwei Flügel an die Arme <span class="gl" data-uk="пристібати, прив'язувати" data-lemma="schnallen">schnallen</span> und losfliegen kann. Schon 1810 beschrieb der <span class="gl" data-uk="дворянин, аристократ" data-lemma="der Adlige, -n">Adlige</span> aus Scarborough in Yorkshire, was ein Fluggerät braucht: <span class="gl" data-key data-uk="крило (літака), несна поверхня" data-lemma="die Tragfläche, -n">Tragflächen</span>, einen <span class="gl" data-uk="двигун, привід" data-lemma="der Antrieb, -e">Antrieb</span> und eine <span class="gl" data-uk="керування" data-lemma="die Steuerung, -en">Steuerung</span>. Damit hatte er das <span class="gl" data-uk="основний принцип" data-lemma="das Grundprinzip, -ien">Grundprinzip</span> jedes Flugzeugs formuliert. Deshalb nennt man ihn bis heute den „Vater der Aeronautik“.</p>
+
+          <p>1852 baute Cayley einen „steuerbaren <span class="gl" data-uk="парашут" data-lemma="der Fallschirm, -e">Fallschirm</span>“ – in Wahrheit das erste Gleitflugzeug der Welt. Es hatte eine Tragfläche, ein <span class="gl" data-uk="хвостове оперення" data-lemma="das Leitwerk, -e">Leitwerk</span> und einen <span class="gl" data-uk="фюзеляж, корпус" data-lemma="der Rumpf, -ü-e">Rumpf</span> und <span class="gl" data-uk="відриватися від землі, злітати" data-lemma="abheben (hob ab, ist abgehoben)">hob</span> ohne Piloten, nur mit <span class="gl" data-uk="баласт, вантаж" data-lemma="der Ballast">Ballast</span>, vom Boden ab. Zuvor hatte er bereits Tiere und Jungen als Passagiere mitfliegen lassen – das klappte nicht immer. Ein Jahr später soll Cayley seinen <span class="gl" data-uk="кучер" data-lemma="der Kutscher, -">Kutscher</span> <span class="gl" data-uk="умовляти, переконувати" data-lemma="überreden">überredet</span> haben, mit einem größeren Modell von einem <span class="gl" data-uk="схил" data-lemma="der Hang, -ä-e">Hang</span> zu starten. <span class="gl" data-uk="нібито, начебто" data-lemma="angeblich">Angeblich</span> kam der Mann 130 Meter weit. Ob das wirklich so passiert ist, wurde allerdings nie ganz geklärt.</p>
+
+          <p>Dass Cayleys Konstruktion tatsächlich einen Menschen tragen konnte, wurde erst viel später <span class="gl" data-uk="доводити" data-lemma="beweisen (bewies, hat bewiesen)">bewiesen</span>. 1973 flog der englische <span class="gl" data-uk="планерист" data-lemma="der Segelflieger, -">Segelflieger</span> Derek Piggott mit einem <span class="gl" data-key data-uk="копія, відтворена модель" data-lemma="der Nachbau, -ten">Nachbau</span> des Gleiters, den ein Auto in die Luft zog. 2003 <span class="gl" data-uk="наважуватися" data-lemma="wagen">wagte</span> es auch der britische Unternehmer Richard Branson – und flog mit dem Nachbau ein Stück.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Replica_1853_Cayley_Glider_%28BAPC89%29_%2850731050317%29.jpg/960px-Replica_1853_Cayley_Glider_%28BAPC89%29_%2850731050317%29.jpg" alt="Ein Nachbau von Cayleys Gleiter aus dem Jahr 1853." width="960" height="640" loading="lazy">
+            <figcaption>Ein Nachbau von Cayleys Gleiter aus dem Jahr 1853. Foto: Alan Wilson, <a href="https://creativecommons.org/licenses/by-sa/2.0" target="_blank" rel="noopener">CC BY-SA 2.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Replica_1853_Cayley_Glider_(BAPC89)_(50731050317).jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Trotzdem gilt der Deutsche Otto Lilienthal (1848–1896) als erster Mensch, dem ein erfolgreicher Gleitflug <span class="gl" data-uk="вдаватися, щастити" data-lemma="gelingen (gelang, ist gelungen)">gelang</span>. 1891 machte er eine <span class="gl" data-uk="покинутий, закинутий" data-lemma="aufgelassen">aufgelassene</span> <span class="gl" data-uk="піщаний кар'єр" data-lemma="die Sandgrube, -n">Sandgrube</span> zwischen den Dörfern Derwitz und Krielow in Brandenburg zu seinem Flugplatz. Mit Flügeln, die er selbst <span class="gl" data-uk="проєктувати, розробляти" data-lemma="entwerfen (entwarf, hat entworfen)">entworfen</span> hatte, <span class="gl" data-uk="ширяти, планерувати" data-lemma="segeln">segelte</span> er zunächst bis zu 25 Meter weit. Später schaffte er Tausende Flüge, einige davon bis zu 250 Meter lang. 1894 ließ er sich in Berlin-Lichterfelde sogar einen eigenen Hügel <span class="gl" data-uk="насипати" data-lemma="aufschütten">aufschütten</span>, den „Fliegeberg“. Weil der Hügel rund war, konnte er dort bei jeder <span class="gl" data-uk="напрямок вітру" data-lemma="die Windrichtung, -en">Windrichtung</span> starten.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Otto Lilienthal stammte aus Anklam in Mecklenburg-Vorpommern. Dort erinnert heute ein Museum an den <span class="gl" data-key data-uk="піонер авіації" data-lemma="der Flugpionier, -e">Flugpionier</span>. Auch der frühere Berliner Flughafen Tegel trug seinen Namen: Flughafen Berlin-Tegel „Otto Lilienthal“.</p>
+          </aside>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Lilienthal_im_unruhigen_Gleitflug.jpg/960px-Lilienthal_im_unruhigen_Gleitflug.jpg" alt="Otto Lilienthal bei einem Gleitflug im September 1894." width="960" height="480" loading="lazy">
+            <figcaption>Otto Lilienthal bei einem Gleitflug im September 1894. Foto: Ottomar Anschütz, gemeinfrei, <a href="https://commons.wikimedia.org/wiki/File:Lilienthal_im_unruhigen_Gleitflug.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Alle diese Pioniere teilten eine wichtige <span class="gl" data-uk="пізнання, висновок" data-lemma="die Erkenntnis, -se">Erkenntnis</span>: Fliegen hat mit Aerodynamik zu tun. <span class="gl" data-key data-uk="підйомна сила" data-lemma="der Auftrieb">Auftrieb</span> und <span class="gl" data-uk="тяга, рух уперед" data-lemma="der Vortrieb">Vortrieb</span> sind zwei verschiedene Dinge, und es kommt auf die Form und die <span class="gl" data-uk="вигин, опуклість" data-lemma="die Wölbung, -en">Wölbung</span> der Tragflächen an. Diese <span class="gl" data-uk="основа" data-lemma="die Grundlage, -n">Grundlagen</span> gelten bis heute – für das kleine Segelflugzeug genauso wie für den großen Passagierjet.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери відповіді.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Cayley, Lilienthal – oder beide?</h2>
+      <p class="lead">Про кого це сказано в тексті? Натисни картку, потім — потрібний кошик.</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Zeitleiste</h2>
+      <p class="lead">Розстав події в тому порядку, у якому вони відбувалися. Натискай речення по черзі; натиснеш на вже поставлене — воно повернеться вниз.</p>
+      <div class="card" id="ub4-seq"></div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub5-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>Tragfläche</span><span>Nachbau</span><span>angeblich</span><span>überreden</span><span>gelingen</span></div>
+        <div id="ub5b-list">
+          <div class="fill-item"><span class="num">1)</span> Ein Flugzeug braucht zwei große <input type="text" class="blank-input inline" data-ans="Tragflächen">.</div>
+          <div class="fill-item"><span class="num">2)</span> Im Museum steht kein echtes Flugzeug von 1852, sondern ein <input type="text" class="blank-input inline" data-ans="Nachbau">.</div>
+          <div class="fill-item"><span class="num">3)</span> Der Kutscher wollte nicht fliegen, aber Cayley konnte ihn <input type="text" class="blank-input inline" data-ans="überreden">.</div>
+          <div class="fill-item"><span class="num">4)</span> <input type="text" class="blank-input inline" data-ans="Angeblich"> flog der Mann 130 Meter weit – sicher ist das aber nicht.</div>
+          <div class="fill-item"><span class="num">5)</span> Dem Deutschen Otto Lilienthal ist als erstem Menschen ein erfolgreicher Gleitflug <input type="text" class="blank-input inline" data-ans="gelungen">.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub5b-check">Prüfen</button>
+          <button class="btn secondary" id="ub5b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub5b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 6 ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (5–7 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub6-a">1. Würdest du gern einmal in einem Segelflugzeug mitfliegen? Warum (nicht)?</label>
+          <textarea id="ub6-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub6-b">2. Kennst du einen Erfinder oder eine Erfinderin aus der Ukraine? Was hat diese Person erfunden oder gebaut?</label>
+          <textarea id="ub6-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Наприклад, Ігор Сікорський народився в Києві. Корисні звороти: <i>Ich hätte (keine) Angst, weil …; Es wäre spannend, …; … wurde in … geboren; Er/Sie hat … entwickelt / gebaut; Bekannt ist er/sie für …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Der Engländer George Cayley beschrieb schon 1810, was ein Flugzeug braucht, und baute 1852 das erste Gleitflugzeug. Als erster Mensch mit erfolgreichem Gleitflug gilt aber Otto Lilienthal: Ab 1891 flog er Tausende Male – zuerst in Brandenburg, später auch in Berlin. Seine Heimatstadt Anklam hat ein Lilienthal-Museum, und auch der frühere Berliner Flughafen Tegel trug seinen Namen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Англієць Джордж Кейлі ще 1810 року описав, що потрібно літаку, а 1852-го збудував перший планер. Але першою людиною, яка успішно пролетіла на планері, вважають Отто Лілієнталя: від 1891 року він тисячі разів літав — спершу в Бранденбурзі, згодом і в Берліні. У його рідному Анкламі є музей Лілієнталя, а колишній берлінський аеропорт Тегель носив його ім'я.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "gleitflug-lilienthal";
+
+  // Üb. 1а
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Um die ersten Gleitflugzeuge und die Pioniere, die sie gebaut haben",
+            "Um die Geschichte der großen Passagierflugzeuge",
+            "Um einen Streit zwischen England und Deutschland über ein Patent"],
+     correct: "Um die ersten Gleitflugzeuge und die Pioniere, die sie gebaut haben"},
+    {q: "Warum nennt man George Cayley den „Vater der Aeronautik“?",
+     opts: ["Weil er als Erster beschrieb, welche Teile ein Fluggerät braucht",
+            "Weil er als erster Mensch mit einem Gleiter 250 Meter weit flog",
+            "Weil er den ersten Flughafen in England eröffnet hat"],
+     correct: "Weil er als Erster beschrieb, welche Teile ein Fluggerät braucht"}
+  ]);
+  // Üb. 1б
+  buildMatch('ub1h', [
+    ["Die Idee: Was ein Flugzeug braucht", "Absatz 1"],
+    ["Ein Flug, den niemand beweisen kann", "Absatz 2"],
+    ["Der Beweis kommt 120 Jahre später", "Absatz 3"],
+    ["Tausende Flüge aus einer Sandgrube", "Absatz 4"],
+    ["Was bis heute gilt", "Absatz 5"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5"], lead: true});
+
+  // Üb. 2
+  buildRF('ub2-rf', [
+    {s: "Cayley wusste schon 1810, dass ein Fluggerät eine Steuerung braucht.", a: "r"},
+    {s: "Bei Cayleys erstem Gleitflugzeug von 1852 saß ein Pilot an Bord.", a: "f"},
+    {s: "Der Kutscher war danach nie wieder bereit, in einen Gleiter zu steigen.", a: "n"},
+    {s: "Es ist sicher bewiesen, dass der Kutscher 130 Meter weit geflogen ist.", a: "f"},
+    {s: "1973 zog ein Auto den Nachbau von Cayleys Gleiter in die Luft.", a: "r"},
+    {s: "Lilienthal flog zuerst nur bis zu 25 Meter weit.", a: "r"},
+    {s: "Lilienthal war von Beruf Ingenieur.", a: "n"},
+    {s: "Laut Text ist die Form der Tragflächen beim Fliegen unwichtig.", a: "f"}
+  ]);
+
+  // Üb. 3
+  buildSort('ub3-sort', {
+    buckets: ["George Cayley", "Otto Lilienthal", "beide"],
+    items: [
+      {t: "kam aus Yorkshire in England", b: "George Cayley"},
+      {t: "baute einen „steuerbaren Fallschirm“", b: "George Cayley"},
+      {t: "schickte angeblich seinen Kutscher in die Luft", b: "George Cayley"},
+      {t: "startete in einer Sandgrube in Brandenburg", b: "Otto Lilienthal"},
+      {t: "schaffte Flüge bis zu 250 Meter", b: "Otto Lilienthal"},
+      {t: "gab einem Berliner Flughafen seinen Namen", b: "Otto Lilienthal"},
+      {t: "erkannte, dass Fliegen mit Aerodynamik zu tun hat", b: "beide"}
+    ]
+  });
+
+  // Üb. 4
+  buildSequence('ub4-seq', [
+    "Cayley beschreibt das Grundprinzip eines Flugzeugs.",
+    "Cayleys Gleiter hebt mit Ballast, aber ohne Pilot ab.",
+    "Ein Kutscher soll mit einem größeren Modell von einem Hang gestartet sein.",
+    "Lilienthal fliegt in einer Sandgrube bis zu 25 Meter weit.",
+    "Derek Piggott fliegt mit einem Nachbau von Cayleys Gleiter.",
+    "Richard Branson steigt in den Nachbau und fliegt ein Stück."
+  ]);
+
+  // Üb. 5а
+  buildMatch('ub5', [
+    ["der Rumpf", "фюзеляж, корпус"],
+    ["der Hang", "схил"],
+    ["abheben", "відриватися від землі, злітати"],
+    ["wagen", "наважуватися"],
+    ["entwerfen", "проєктувати, розробляти"],
+    ["der Auftrieb", "підйомна сила"]
+  ]);
+  // Üb. 5б
+  wireBlanks('ub5b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📰','🪽','🛩️','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

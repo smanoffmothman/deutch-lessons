@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Die größten Bibliotheken der Welt · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Kultur &amp; Medien</span>
+        <h1>Die größten Bibliotheken der Welt</h1>
+        <p class="sub">200 мільйонів книжок, газет і записів — і ніхто не знає точної цифри. Яка бібліотека найбільша у світі і на якому місці німецька?</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Die Rangliste</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Bücher, Bücher, Bücher</h2>
+      <div class="card">
+        <p>Wie oft gehst du in eine Bibliothek? Was kann man dort außer Büchern noch ausleihen oder finden? Was glaubst du: In welchem Land steht die größte Bibliothek der Welt?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай: навіщо країні національна бібліотека, яка зберігає все, що видано в країні? Як гадаєш, скільки книжок може бути в найбільшій бібліотеці світу?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Wie viele Bücher, Zeitungen und <span class="gl" data-uk="аудіозапис" data-lemma="die Tonaufnahme, -n">Tonaufnahmen</span> passen in eine Bibliothek? Bei den größten Bibliotheken der Welt geht es um viele Millionen <span class="gl" data-key data-uk="носій інформації, видання" data-note="книжки, газети, аудіозаписи тощо" data-lemma="das Medium, Medien">Medien</span> – so viele, dass man sie nur <span class="gl" data-uk="оцінювати приблизно" data-lemma="schätzen">schätzen</span> kann.</p>
+
+          <p>Ganz oben auf der Liste steht die British Library in London, die <span class="gl" data-key data-uk="національна бібліотека" data-lemma="die Nationalbibliothek, -en">Nationalbibliothek</span> des Vereinigten Königreichs, mit rund 200 Millionen Medien. Sie sammelt nicht nur Bücher aus allen Zeiten, Ländern und Sprachen, sondern auch Zeitschriften, Zeitungen, Tonaufnahmen, Patente, Landkarten, Briefmarken und sogar <span class="gl" data-uk="картина (живопис)" data-lemma="das Gemälde, -">Gemälde</span>. Zu ihren <span class="gl" data-uk="скарб" data-lemma="der Schatz, -ä-e">Schätzen</span> gehört eine <span class="gl" data-uk="оригінальне (перше) видання" data-lemma="die Originalausgabe, -n">Originalausgabe</span> von Shakespeares Werken aus dem Jahr 1623. Der <span class="gl" data-uk="вхід, доступ" data-lemma="der Zutritt">Zutritt</span> zum <span class="gl" data-key data-uk="читальна зала" data-lemma="der Lesesaal, -säle">Lesesaal</span> ist kostenlos – nur leise muss man sein.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/St_Pancras_Station_and_the_British_Library_-_geograph.org.uk_-_5204348.jpg/960px-St_Pancras_Station_and_the_British_Library_-_geograph.org.uk_-_5204348.jpg" alt="Der Bahnhof St Pancras und die British Library in London." width="960" height="637" loading="lazy">
+            <figcaption>Der Bahnhof St Pancras und die British Library in London. Foto: Richard Sutcliffe, <a href="https://creativecommons.org/licenses/by-sa/2.0" target="_blank" rel="noopener">CC BY-SA 2.0</a>, <a href="https://commons.wikimedia.org/wiki/File:St_Pancras_Station_and_the_British_Library_-_geograph.org.uk_-_5204348.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Die British Library ist eine sogenannte <span class="gl" data-uk="бібліотека обов'язкового примірника" data-lemma="die Pflichtexemplarbibliothek, -en">Pflichtexemplarbibliothek</span>: Sie bewahrt jedes Buch und jede Zeitung auf, die in Großbritannien, Nordirland oder in der Republik Irland <span class="gl" data-uk="виходити друком" data-lemma="erscheinen (erschien, ist erschienen)">erscheinen</span>. Weil man die genaue Zahl ihrer Medien nie ganz kennt, macht ihr die Kongressbibliothek in Washington, D. C. mit etwa 178 Millionen Medien immer wieder den ersten Platz <span class="gl" data-uk="оскаржувати, змагатися за щось" data-lemma="jemandem etwas streitig machen">streitig</span>.</p>
+
+          <p>Auf den Plätzen drei bis fünf <span class="gl" data-uk="йти слідом" data-lemma="folgen (ist gefolgt)">folgen</span> die Türkische Nationalbibliothek in Ankara mit 142 Millionen, die Russische Staatsbibliothek in Moskau mit 126 Millionen und die Shanghai-Bibliothek in China mit 58 Millionen Medien. Platz sechs <span class="gl" data-uk="посідати (місце)" data-lemma="belegen">belegt</span> die New York Public Library mit 55 Millionen.</p>
+
+          <p>Auf Platz sieben steht die Deutsche Nationalbibliothek mit rund 53 Millionen Medien. Sie hat gleich zwei <span class="gl" data-uk="місце розташування" data-lemma="der Standort, -e">Standorte</span>: Frankfurt am Main und Leipzig. Dahinter <span class="gl" data-uk="іти (далі в рейтингу), бути" data-lemma="liegen (lag, hat gelegen)">liegen</span> die Nationale Parlamentsbibliothek Japans in Tokio und Kyoto, die Königliche Bibliothek Dänemarks in Kopenhagen und die Chinesische Nationalbibliothek in Peking. Alle Zahlen sind übrigens <span class="gl" data-uk="округлений" data-lemma="gerundet">gerundet</span>.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Die Deutsche Nationalbibliothek sammelt alle Werke, die seit 1913 in Deutschland und auf Deutsch erschienen sind. Verlage sind <span class="gl" data-uk="зобов'язаний" data-lemma="verpflichtet">verpflichtet</span>, ihr von jedem neuen Buch zwei Exemplare zu schicken. In Leipzig gehört außerdem das Deutsche Musikarchiv dazu, in dem Schallplatten, CDs und Noten aufbewahrt werden.</p>
+          </aside>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Deutsche_Nationalbibliothek_Leipzig.jpg/960px-Deutsche_Nationalbibliothek_Leipzig.jpg" alt="Die Deutsche Nationalbibliothek in Leipzig." width="960" height="570" loading="lazy">
+            <figcaption>Die Deutsche Nationalbibliothek in Leipzig. Foto: Appaloosa, <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Deutsche_Nationalbibliothek_Leipzig.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Fast alle Bibliotheken auf der Liste sind Nationalbibliotheken. Ihre wichtigste Aufgabe ist es, möglichst alles zu sammeln und für die Zukunft <span class="gl" data-key data-uk="зберігати" data-lemma="aufbewahren">aufzubewahren</span>, was in ihrem Land <span class="gl" data-uk="публікувати, видавати" data-lemma="veröffentlichen">veröffentlicht</span> wird. So können auch spätere Generationen noch <span class="gl" data-uk="прочитати, звіритися (з текстом)" data-lemma="nachlesen (las nach, hat nachgelesen)">nachlesen</span>, was heute gedacht, geschrieben und gedruckt wird.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери відповіді.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Яка бібліотека в якому місті? Обери з переліку.</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Die Rangliste</h2>
+      <p class="lead">Розстав бібліотеки за розміром — від найбільшої до сьомого місця. Натискай по черзі; натиснеш на вже поставлену бібліотеку — вона повернеться вниз.</p>
+      <div class="card" id="ub3-seq"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>Lesesaal</span><span>aufbewahren</span><span>erscheinen</span><span>schätzen</span><span>Schatz</span><span>verpflichtet</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> Im <input type="text" class="blank-input inline" data-ans="Lesesaal"> ist es so still, dass man jedes Blatt hört.</div>
+          <div class="fill-item"><span class="num">2)</span> Ein neues Buch meiner Lieblingsautorin ist gestern <input type="text" class="blank-input inline" data-ans="erschienen">.</div>
+          <div class="fill-item"><span class="num">3)</span> Alte Fotos sollte man an einem trockenen Ort <input type="text" class="blank-input inline" data-ans="aufbewahren">.</div>
+          <div class="fill-item"><span class="num">4)</span> Wie viele Bücher hat die Bibliothek? Man kann es nur <input type="text" class="blank-input inline" data-ans="schätzen">.</div>
+          <div class="fill-item"><span class="num">5)</span> Diese alte Handschrift ist ein echter <input type="text" class="blank-input inline" data-ans="Schatz">.</div>
+          <div class="fill-item"><span class="num">6)</span> Verlage sind <input type="text" class="blank-input inline" data-ans="verpflichtet">, der Bibliothek Exemplare zu schicken.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (5–7 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Welche große Bibliothek gibt es in der Ukraine oder in deiner Stadt? Was weißt du über sie, und warst du schon einmal dort?</label>
+          <textarea id="ub5-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Brauchen wir in Zeiten von Internet und E-Books noch Bibliotheken? Begründe deine Meinung.</label>
+          <textarea id="ub5-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Найбільша бібліотека України — Національна бібліотека України імені В. І. Вернадського в Києві. Корисні звороти: <i>Die größte Bibliothek bei uns ist …; Dort kann man …; Ich finde Bibliotheken wichtig / nicht mehr so wichtig, weil …; Im Internet findet man zwar …, aber …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Die größte Bibliothek der Welt ist die British Library in London mit rund 200 Millionen Medien. Die Deutsche Nationalbibliothek in Frankfurt und Leipzig steht mit 53 Millionen auf Platz sieben. Sie sammelt alles, was seit 1913 in Deutschland und auf Deutsch erscheint – Verlage müssen ihr von jedem Buch zwei Exemplare schicken.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Найбільша бібліотека світу — Британська бібліотека в Лондоні: у ній близько 200 мільйонів одиниць зберігання. Німецька національна бібліотека у Франкфурті та Лейпцигу з 53 мільйонами — на сьомому місці. Вона збирає все, що з 1913 року виходить у Німеччині та німецькою мовою: видавництва мусять надсилати їй по два примірники кожної книжки.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "groesste-bibliotheken";
+
+  // Üb. 1а
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Um die größten Bibliotheken der Welt und was sie sammeln",
+            "Um die beliebtesten Bücher in Europa",
+            "Um die Geschichte der Bibliothek in Leipzig"],
+     correct: "Um die größten Bibliotheken der Welt und was sie sammeln"},
+    {q: "Warum kann man die genaue Zahl der Medien nur schätzen?",
+     opts: ["Weil es einfach zu viele sind",
+            "Weil die Bibliotheken ihre Zahlen geheim halten",
+            "Weil viele Bücher verloren gegangen sind"],
+     correct: "Weil es einfach zu viele sind"}
+  ]);
+  // Üb. 1б
+  buildMatch('ub1h', [
+    ["British Library", "London"],
+    ["Kongressbibliothek der USA", "Washington, D. C."],
+    ["Türkische Nationalbibliothek", "Ankara"],
+    ["Russische Staatsbibliothek", "Moskau"],
+    ["Deutsche Nationalbibliothek", "Frankfurt und Leipzig"],
+    ["Königliche Bibliothek Dänemarks", "Kopenhagen"]
+  ]);
+
+  // Üb. 2
+  buildRF('ub2-rf', [
+    {s: "Die British Library sammelt nur Bücher.", a: "f"},
+    {s: "In der British Library gibt es eine Originalausgabe von Shakespeares Werken.", a: "r"},
+    {s: "Für den Lesesaal der British Library muss man Eintritt bezahlen.", a: "f"},
+    {s: "Die Kongressbibliothek macht der British Library manchmal den ersten Platz streitig.", a: "r"},
+    {s: "Die Deutsche Nationalbibliothek hat zwei Standorte.", a: "r"},
+    {s: "Die Deutsche Nationalbibliothek ist die älteste Bibliothek Europas.", a: "n"},
+    {s: "Alle Bibliotheken auf der Liste sind Nationalbibliotheken.", a: "f"}
+  ]);
+
+  // Üb. 3
+  buildSequence('ub3-seq', [
+    "British Library (London)",
+    "Kongressbibliothek (Washington, D. C.)",
+    "Türkische Nationalbibliothek (Ankara)",
+    "Russische Staatsbibliothek (Moskau)",
+    "Shanghai-Bibliothek",
+    "New York Public Library",
+    "Deutsche Nationalbibliothek (Frankfurt und Leipzig)"
+  ]);
+
+  // Üb. 4а
+  buildMatch('ub4', [
+    ["der Zutritt", "вхід, доступ"],
+    ["erscheinen", "виходити друком"],
+    ["belegen (einen Platz)", "посідати (місце)"],
+    ["gerundet", "округлений"],
+    ["nachlesen", "прочитати, звіритися (з текстом)"],
+    ["die Nationalbibliothek", "національна бібліотека"]
+  ]);
+  // Üb. 4б
+  wireBlanks('ub4b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📰','📚','🏛️','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
