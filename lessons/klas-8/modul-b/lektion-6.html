@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 6 · Modul B · Brieffreunde gesucht!</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 8'},
+    {label: 'Урок 6: Листування з друзями'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 6 · MODUL B</span>
+        <h1>Brieffreunde gesucht!</h1>
+        <p class="sub">Читаємо оголошення чотирьох підлітків, які шукають друзів по листуванню, вставляємо закінчення прикметників (kurze Haare, eine große Stadt, mit meinen besten Freunden), складаємо Steckbrief і вирішуємо, кому написати.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Anzeigen</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Wer ist wer?</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Steckbriefe</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wen wählst du?</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== ПАНЕЛЬ: вступ ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Worum geht es heute?</h2>
+      <div class="card">
+        <p>Vier Jugendliche aus Deutschland – Sophie, Lukas, Christian und Leonie – suchen Brieffreunde. Sie haben Anzeigen geschrieben: Wie alt sind sie? Wo wohnen sie? Wie sehen sie aus? Was machen sie gern?</p>
+        <p>Heute liest du die Anzeigen und ergänzt die Endungen der Adjektive. Dann machst du Steckbriefe, präsentierst die Jugendlichen und entscheidest: Mit wem möchtest du im Briefwechsel stehen – und warum?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Четверо підлітків із Німеччини — Софі, Лукас, Крістіан і Леоні — шукають друзів по листуванню. Вони написали оголошення: скільки їм років? Де вони живуть? Який у них вигляд? Що вони люблять робити?<br>
+          Сьогодні ти прочитаєш оголошення й допишеш закінчення прикметників. Потім складеш Steckbrief, презентуєш підлітків і вирішиш: з ким тобі хотілося б листуватися — і чому?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Merke</p>
+        <p class="beispiel">Ich habe kurz<b>e</b> Haare und blau<b>e</b> Augen. · Ich lerne gern neu<b>e</b> Menschen kennen.</p>
+        <p class="beispiel">Dresden ist ein<b>e</b> groß<b>e</b> Stadt. · Bist du auch ein wahr<b>er</b> Sportfan?</p>
+        <p class="beispiel">Mein<b>e</b> groß<b>en</b> Hobbys sind … · Mit mein<b>en</b> best<b>en</b> Freunden … · Mein weiter<b>es</b> Hobby ist Musik.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          <b>Множина без артикля</b> (Nom./Akk.): закінчення <b>-e</b> — <i>kurze Haare, blaue Augen, neue Menschen</i>.<br>
+          <b>Після ein / eine / mein</b> прикметник «показує» рід, якщо артикль його не показав: <i>ein wahr<b>er</b> Sportfan</i> (der), <i>mein weiter<b>es</b> Hobby</i> (das), <i>eine groß<b>e</b> Stadt</i> (die).<br>
+          <b>Після meine / meinen у множині</b> та в Dativ — завжди <b>-en</b>: <i>meine großen Hobbys, mit meinen besten Freunden</i>.<br>
+          Після означеного артикля в Nom./Akk. однини жіночого роду — <b>-e</b>: <i>in die acht<b>e</b> Klasse</i>.
+        </div>
+      </div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Hallo! Ich suche auch einen Brieffreund. Hilfst du mir, die Anzeigen zu lesen? Los geht's!</p>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: перевірка домашнього завдання ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: 1) Schreib einen kurzen Dialog (6–8 Repliken) zu dritt wie in Üb. 3: A schickt Briefe lieber per Post, B zieht die E-Mail der Papierpost vor, C teilt die Meinung von A oder B nicht. Jede Person nennt mindestens ein Argument mit „weil“ – das Verb steht am Ende! (z. B. „…, weil man nicht das Haus verlassen muss.“). Benutze mindestens zwei trennbare Verben aus der Stunde (z. B. aufkleben, einwerfen, einschalten, abschicken). 2) Mach ein Wortnetz „Neue Freunde“ wie in Üb. 4: Schreib mindestens sechs Orte, wo man neue Freunde finden kann – mit der richtigen Präposition und dem Artikel im Dativ (z. B. im Park, in einem Verein, auf einer Party). Markiere den Ort, wo du deinen besten Freund oder deine beste Freundin kennengelernt hast. Nächstes Mal spielen wir eure Dialoge zu dritt vor.
+      </div>
+
+      <div class="card" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">Ira, Max und Sofia diskutieren</p>
+        <p class="lead">Так написали свій діалог Іра, Макс і Софія. Встав дієслова з банку слів: у реченні з <b>weil</b> дієслово стоїть у кінці, після <b>kann / muss</b> — інфінітив у кінці, а без модального дієслова відокремлюваний префікс іде в кінець. Потім зіграйте свої діалоги втрьох.</p>
+        <div class="wordbank">
+          <span>muss</span><span>aufkleben</span><span>ab</span><span>ist</span><span>einschalten</span><span>geht</span><span>schickt</span>
+        </div>
+        <div class="mail-window" style="margin:12px 0 4px;">
+          <div class="mail-titlebar">Dialog: Per Post oder per Mail? 💬</div>
+          <div class="mail-body" id="dz-list">
+            <div class="fill-item"><span class="num">1)</span> <b>Ira:</b> Ich schicke meine Briefe lieber per Post, weil ein Brief auf Papier persönlicher
+              <input type="text" class="blank-input inline" data-ans="ist" aria-label="Lücke 1">.</div>
+            <div class="fill-item"><span class="num">2)</span> <b>Max:</b> Ich ziehe die E-Mail der Papierpost vor, weil man nicht zur Post gehen
+              <input type="text" class="blank-input inline" data-ans="muss" aria-label="Lücke 2">.</div>
+            <div class="fill-item"><span class="num">3)</span> <b>Sofia:</b> Ich teile deine Meinung nicht, Ira, weil ein Brief manchmal verloren
+              <input type="text" class="blank-input inline" data-ans="geht" aria-label="Lücke 3">.</div>
+            <div class="fill-item"><span class="num">4)</span> <b>Ira:</b> Aber auf einen Briefumschlag kann man schöne Briefmarken
+              <input type="text" class="blank-input inline wide" data-ans="aufkleben" aria-label="Lücke 4">!</div>
+            <div class="fill-item"><span class="num">5)</span> <b>Max:</b> Für eine E-Mail muss man nur den Computer
+              <input type="text" class="blank-input inline wide" data-ans="einschalten" aria-label="Lücke 5">.</div>
+            <div class="fill-item"><span class="num">6)</span> <b>Sofia:</b> Und dann
+              <input type="text" class="blank-input inline" data-ans="schickt" aria-label="Lücke 6"> man die E-Mail mit einem Klick
+              <input type="text" class="blank-input inline" data-ans="ab" aria-label="Lücke 7">.</div>
+          </div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="dz-check">Prüfen</button>
+          <button class="btn secondary" id="dz-reset">Zurücksetzen</button>
+          <span class="score-pill" id="dz-score"></span>
+        </div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Wortnetz „Neue Freunde“</p>
+        <p class="lead">Перевір свою асоціограму: де можна знайти нових друзів? Обери правильну форму (Wo? + Dativ).</p>
+        <div id="dz-quiz"></div>
+      </div>
+
+      <div class="card" id="dz-vocab-wrap" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">Wörter-Check</p>
+        <p class="lead">Перевір слова з минулого уроку.</p>
+        <div id="dz-vocab"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: оголошення — закінчення прикметників ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Vier Jugendliche suchen Brieffreunde</h2>
+      <p class="lead">Прочитай оголошення й обери закінчення прикметників. Перше закінчення в оголошенні Софі вже вписане як приклад.</p>
+      <div id="ub1-list">
+        <div class="mail-window" style="margin-bottom:18px;">
+          <div class="mail-titlebar">A · Sophie, 15, Dresden</div>
+          <div class="mail-body">
+            <div class="fill-item">Hallo, ich heiße Sophie und bin 15.</div>
+            <div class="fill-item"><span class="num">1)</span> Ich habe kurz<b>e</b> schwarz<select class="blank inline" data-ans="e" aria-label="Endung"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Haare und dunkl<select class="blank inline" data-ans="e" aria-label="Endung"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Augen.</div>
+            <div class="fill-item"><span class="num">2)</span> Ich wohne in Dresden, das ist eine groß<select class="blank inline" data-ans="e" aria-label="Endung"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Stadt.</div>
+            <div class="fill-item"><span class="num">3)</span> Ich lerne in einem Gymnasium und bin eine gut<select class="blank inline" data-ans="e" aria-label="Endung"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Schülerin.</div>
+            <div class="fill-item"><span class="num">4)</span> Meine groß<select class="blank inline" data-ans="en" aria-label="Endung"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Hobbys sind Reisen, Radfahren und Wandern.</div>
+            <div class="fill-item">Wenn ihr Lust habt, schreibt mir, wir können dann im Briefwechsel stehen.</div>
+          </div>
+        </div>
+        <div class="mail-window" style="margin-bottom:18px;">
+          <div class="mail-titlebar">B · Lukas, 14, Leipzig</div>
+          <div class="mail-body">
+            <div class="fill-item"><span class="num">5)</span> Hi, mein Name ist Lukas. Ich bin 14 und gehe in die acht<select class="blank inline" data-ans="e" aria-label="Endung"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Klasse.</div>
+            <div class="fill-item"><span class="num">6)</span> Mein Heimatort ist Leipzig. Das ist eine cool<select class="blank inline" data-ans="e" aria-label="Endung"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Stadt, ich mag sie sehr.</div>
+            <div class="fill-item"><span class="num">7)</span> Ich bin groß (1,72 m), habe lang<select class="blank inline" data-ans="e" aria-label="Endung"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Haare und blau<select class="blank inline" data-ans="e" aria-label="Endung"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Augen.</div>
+            <div class="fill-item">In meiner Freizeit reite und schwimme ich gern.</div>
+            <div class="fill-item"><span class="num">8)</span> Ich lerne gern neu<select class="blank inline" data-ans="e" aria-label="Endung"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Menschen kennen, so schreibt mir.</div>
+            <div class="fill-item"><span class="num">9)</span> Hoffentlich haben wir gemeinsam<select class="blank inline" data-ans="e" aria-label="Endung"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Interessen.</div>
+          </div>
+        </div>
+        <div class="mail-window" style="margin-bottom:18px;">
+          <div class="mail-titlebar">C · Christian, 13, Stuttgart</div>
+          <div class="mail-body">
+            <div class="fill-item"><span class="num">10)</span> Hey Leute, ich heiße Christian und bin 13. Ich wohne in Stuttgart und besuche hier eine modern<select class="blank inline" data-ans="e" aria-label="Endung"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Schule.</div>
+            <div class="fill-item"><span class="num">11)</span> Ich habe glatt<select class="blank inline" data-ans="e" aria-label="Endung"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> kurz<select class="blank inline" data-ans="e" aria-label="Endung"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Haare und grün<select class="blank inline" data-ans="e" aria-label="Endung"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Augen.</div>
+            <div class="fill-item"><span class="num">12)</span> Wenn ich frei<select class="blank inline" data-ans="e" aria-label="Endung"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Zeit habe, treibe ich gern Sport.</div>
+            <div class="fill-item"><span class="num">13)</span> Jetzt besuche ich einen Sportclub, wo ich eine neu<select class="blank inline" data-ans="e" aria-label="Endung"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Sportart ausprobieren will.</div>
+            <div class="fill-item"><span class="num">14)</span> Bist du auch ein wahr<select class="blank inline" data-ans="er" aria-label="Endung"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Sportfan? Dann können wir Brieffreunde sein. Schreib mir!</div>
+          </div>
+        </div>
+        <div class="mail-window">
+          <div class="mail-titlebar">D · Leonie, 14, Berlin</div>
+          <div class="mail-body">
+            <div class="fill-item"><span class="num">15)</span> Hallo zusammen! Ich suche Freunde. Ich heiße Leonie und bin 14. Ich habe glatt<select class="blank inline" data-ans="e" aria-label="Endung"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> blond<select class="blank inline" data-ans="e" aria-label="Endung"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Haare und blau<select class="blank inline" data-ans="e" aria-label="Endung"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Augen.</div>
+            <div class="fill-item">Jetzt gehe ich auf ein Gymnasium in Berlin, wo ich viele Freunde habe.</div>
+            <div class="fill-item"><span class="num">16)</span> Mit meinen best<select class="blank inline" data-ans="en" aria-label="Endung"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Freunden verbringe ich viel Zeit.</div>
+            <div class="fill-item"><span class="num">17)</span> Außerdem surfe ich gern im Internet und lese spannend<select class="blank inline" data-ans="e" aria-label="Endung"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Krimis.</div>
+            <div class="fill-item"><span class="num">18)</span> Mein weiter<select class="blank inline" data-ans="es" aria-label="Endung"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Hobby ist Musik.</div>
+            <div class="fill-item"><span class="num">19)</span> Wenn du auch ähnlich<select class="blank inline" data-ans="e" aria-label="Endung"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Interessen hast, können wir einander schreiben.</div>
+          </div>
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub1-check">Prüfen</button>
+        <button class="btn secondary" id="ub1-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub1-score"></span>
+      </div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Підказка</span>
+        Спершу подивись, що стоїть <b>перед</b> прикметником: нічого (множина → <b>-e</b>), <i>ein / eine</i> чи <i>mein / meine</i>. Потім — рід і число іменника: <i>der Sportfan, das Hobby, die Stadt, die Haare (Pl.)</i>.<br>
+        <b>glatt</b> — пряме (про волосся) · <b>blond</b> — світле, біляве · <b>der Heimatort</b> — рідне місто · <b>hoffentlich</b> — сподіваюся · <b>der Krimi</b> — детектив · <b>ähnlich</b> — схожий.
+      </div>
+    </section>
+
+    <!-- ===== Üb. 2: хто є хто (розуміння прочитаного) ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Wer ist wer?</h2>
+      <p class="lead">Хто це? Знайди відповідь в оголошеннях з Üb. 1, а потім упізнай підлітків на портретах.</p>
+      <div class="card">
+        <div id="ub2-quiz"></div>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Wer ist auf den Bildern?</p>
+        <p class="lead" style="font-size:15px;">Подивись на портрети: волосся й колір очей. Хто це? Обери ім'я під кожним малюнком.</p>
+        <div class="pic-grid" id="ub2-list">
+          <div class="pic-card"><div class="swatch" style="height:110px;"><svg viewBox="0 0 100 100" width="96" height="96" aria-hidden="true"><path d="M27 46 Q26 20 50 20 Q74 20 73 46 L76 86 Q50 92 24 86Z" fill="#E8C15A"/><path d="M18 100 Q20 78 50 76 Q80 78 82 100Z" fill="#B14E3E"/><rect x="44" y="64" width="12" height="14" rx="4" fill="#F2C9A0"/><circle cx="50" cy="48" r="22" fill="#F2C9A0"/><path d="M28 44 Q30 22 50 22 Q70 22 72 44 Q64 32 50 32 Q36 32 28 44Z" fill="#E8C15A"/><ellipse cx="41" cy="49" rx="4.6" ry="3.6" fill="#fff"/><circle cx="41" cy="49" r="2.6" fill="#3B7DD8"/><circle cx="41" cy="49" r="1" fill="#1b1b1b"/><ellipse cx="59" cy="49" rx="4.6" ry="3.6" fill="#fff"/><circle cx="59" cy="49" r="2.6" fill="#3B7DD8"/><circle cx="59" cy="49" r="1" fill="#1b1b1b"/><path d="M36 45.5 L38 47 M64 45.5 L62 47" stroke="#2B2620" stroke-width="1.2"/><path d="M43 59 Q50 64 57 59" stroke="#B14E3E" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div><p class="num" style="margin:0 0 6px;">Bild 1 <select class="blank inline" data-ans="leonie" aria-label="Bild 1"><option value="">—</option><option value="sophie">Sophie</option><option value="lukas">Lukas</option><option value="christian">Christian</option><option value="leonie">Leonie</option></select></p></div>
+          <div class="pic-card"><div class="swatch" style="height:110px;"><svg viewBox="0 0 100 100" width="96" height="96" aria-hidden="true"><path d="M18 100 Q20 78 50 76 Q80 78 82 100Z" fill="#48713F"/><rect x="44" y="64" width="12" height="14" rx="4" fill="#F2C9A0"/><circle cx="50" cy="48" r="22" fill="#F2C9A0"/><path d="M27 46 Q26 21 50 21 Q74 21 73 46 Q68 32 50 31 Q36 31 27 46Z" fill="#6B4A2B"/><ellipse cx="41" cy="49" rx="4.6" ry="3.6" fill="#fff"/><circle cx="41" cy="49" r="2.6" fill="#3C9A4A"/><circle cx="41" cy="49" r="1" fill="#1b1b1b"/><ellipse cx="59" cy="49" rx="4.6" ry="3.6" fill="#fff"/><circle cx="59" cy="49" r="2.6" fill="#3C9A4A"/><circle cx="59" cy="49" r="1" fill="#1b1b1b"/><path d="M43 59 Q50 64 57 59" stroke="#B14E3E" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div><p class="num" style="margin:0 0 6px;">Bild 2 <select class="blank inline" data-ans="christian" aria-label="Bild 2"><option value="">—</option><option value="sophie">Sophie</option><option value="lukas">Lukas</option><option value="christian">Christian</option><option value="leonie">Leonie</option></select></p></div>
+          <div class="pic-card"><div class="swatch" style="height:110px;"><svg viewBox="0 0 100 100" width="96" height="96" aria-hidden="true"><path d="M18 100 Q20 78 50 76 Q80 78 82 100Z" fill="#DE9E3B"/><rect x="44" y="64" width="12" height="14" rx="4" fill="#F2C9A0"/><circle cx="50" cy="48" r="22" fill="#F2C9A0"/><path d="M25 60 Q22 20 50 20 Q78 20 75 60 L69 60 Q70 36 54 33 Q44 40 31 38 Q30 48 31 60Z" fill="#1E1A16"/><ellipse cx="41" cy="49" rx="4.6" ry="3.6" fill="#fff"/><circle cx="41" cy="49" r="2.6" fill="#4A3220"/><circle cx="41" cy="49" r="1" fill="#1b1b1b"/><ellipse cx="59" cy="49" rx="4.6" ry="3.6" fill="#fff"/><circle cx="59" cy="49" r="2.6" fill="#4A3220"/><circle cx="59" cy="49" r="1" fill="#1b1b1b"/><path d="M36 45.5 L38 47 M64 45.5 L62 47" stroke="#2B2620" stroke-width="1.2"/><path d="M43 59 Q50 64 57 59" stroke="#B14E3E" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div><p class="num" style="margin:0 0 6px;">Bild 3 <select class="blank inline" data-ans="sophie" aria-label="Bild 3"><option value="">—</option><option value="sophie">Sophie</option><option value="lukas">Lukas</option><option value="christian">Christian</option><option value="leonie">Leonie</option></select></p></div>
+          <div class="pic-card"><div class="swatch" style="height:110px;"><svg viewBox="0 0 100 100" width="96" height="96" aria-hidden="true"><path d="M27 46 Q26 20 50 20 Q74 20 73 46 L74 70 Q50 74 26 70Z" fill="#8A5A32"/><path d="M18 100 Q20 78 50 76 Q80 78 82 100Z" fill="#1F5C56"/><rect x="44" y="64" width="12" height="14" rx="4" fill="#F2C9A0"/><circle cx="50" cy="48" r="22" fill="#F2C9A0"/><path d="M28 46 Q28 22 50 22 Q72 22 72 46 Q66 31 52 32 Q40 30 28 46Z" fill="#8A5A32"/><ellipse cx="41" cy="49" rx="4.6" ry="3.6" fill="#fff"/><circle cx="41" cy="49" r="2.6" fill="#3B7DD8"/><circle cx="41" cy="49" r="1" fill="#1b1b1b"/><ellipse cx="59" cy="49" rx="4.6" ry="3.6" fill="#fff"/><circle cx="59" cy="49" r="2.6" fill="#3B7DD8"/><circle cx="59" cy="49" r="1" fill="#1b1b1b"/><path d="M43 59 Q50 64 57 59" stroke="#B14E3E" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div><p class="num" style="margin:0 0 6px;">Bild 4 <select class="blank inline" data-ans="lukas" aria-label="Bild 4"><option value="">—</option><option value="sophie">Sophie</option><option value="lukas">Lukas</option><option value="christian">Christian</option><option value="leonie">Leonie</option></select></p></div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub2-check">Prüfen</button>
+          <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub2-score"></span>
+        </div>
+      </div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Und jetzt erzählt! „Ich meine, auf Bild 1 ist …, weil sie / er … Haare und … Augen hat.“</p>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: Steckbriefe + презентація (sein / ihr) ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Steckbriefe der Jugendlichen</h2>
+      <p class="lead">Заповни Steckbrief для кожного з підлітків: вік і місто впиши (цифрою / назвою міста), захоплення обери зі списку.</p>
+      <div id="ub3-list">
+        <div class="card">
+          <table class="gtable">
+            <tr><th>Name</th><th>Sophie</th></tr>
+            <tr><td>Alter</td><td><input type="text" class="blank-input" data-ans="15|fünfzehn" aria-label="Sophie: Alter"></td></tr>
+            <tr><td>Wohnort</td><td><input type="text" class="blank-input" data-ans="Dresden" aria-label="Sophie: Wohnort"></td></tr>
+            <tr><td>Aussehen</td><td>kurze schwarze Haare, dunkle Augen</td></tr>
+            <tr><td>Interessen</td><td><select class="blank" data-ans="reisen" aria-label="Interessen"><option value="">—</option><option value="reisen">Reisen, Wandern</option><option value="reiten">Reiten, Schwimmen</option><option value="sport">Sport, Sportclub</option><option value="krimis">Krimis, Musik</option></select></td></tr>
+          </table>
+        </div>
+        <div class="card">
+          <table class="gtable">
+            <tr><th>Name</th><th>Lukas</th></tr>
+            <tr><td>Alter</td><td><input type="text" class="blank-input" data-ans="14|vierzehn" aria-label="Lukas: Alter"></td></tr>
+            <tr><td>Wohnort</td><td><input type="text" class="blank-input" data-ans="Leipzig" aria-label="Lukas: Wohnort"></td></tr>
+            <tr><td>Aussehen</td><td>groß (1,72 m), lange Haare, blaue Augen</td></tr>
+            <tr><td>Interessen</td><td><select class="blank" data-ans="reiten" aria-label="Interessen"><option value="">—</option><option value="reisen">Reisen, Wandern</option><option value="reiten">Reiten, Schwimmen</option><option value="sport">Sport, Sportclub</option><option value="krimis">Krimis, Musik</option></select></td></tr>
+          </table>
+        </div>
+        <div class="card">
+          <table class="gtable">
+            <tr><th>Name</th><th>Christian</th></tr>
+            <tr><td>Alter</td><td><input type="text" class="blank-input" data-ans="13|dreizehn" aria-label="Christian: Alter"></td></tr>
+            <tr><td>Wohnort</td><td><input type="text" class="blank-input" data-ans="Stuttgart" aria-label="Christian: Wohnort"></td></tr>
+            <tr><td>Aussehen</td><td>glatte kurze Haare, grüne Augen</td></tr>
+            <tr><td>Interessen</td><td><select class="blank" data-ans="sport" aria-label="Interessen"><option value="">—</option><option value="reisen">Reisen, Wandern</option><option value="reiten">Reiten, Schwimmen</option><option value="sport">Sport, Sportclub</option><option value="krimis">Krimis, Musik</option></select></td></tr>
+          </table>
+        </div>
+        <div class="card">
+          <table class="gtable">
+            <tr><th>Name</th><th>Leonie</th></tr>
+            <tr><td>Alter</td><td><input type="text" class="blank-input" data-ans="14|vierzehn" aria-label="Leonie: Alter"></td></tr>
+            <tr><td>Wohnort</td><td><input type="text" class="blank-input" data-ans="Berlin" aria-label="Leonie: Wohnort"></td></tr>
+            <tr><td>Aussehen</td><td>glatte blonde Haare, blaue Augen</td></tr>
+            <tr><td>Interessen</td><td><select class="blank" data-ans="krimis" aria-label="Interessen"><option value="">—</option><option value="reisen">Reisen, Wandern</option><option value="reiten">Reiten, Schwimmen</option><option value="sport">Sport, Sportclub</option><option value="krimis">Krimis, Musik</option></select></td></tr>
+          </table>
+        </div>
+
+        <div class="card tinted-mustard">
+          <p class="section-label" style="margin:0 0 6px;">Präsentation: er / sein oder sie / ihr?</p>
+          <p class="lead" style="font-size:15px;">Так Олег і Даша презентують двох підлітків. Обери правильний займенник.</p>
+          <div class="fill-item"><span class="num">1)</span> Das ist Christian. <select class="blank inline" data-ans="er"><option value="">—</option><option value="er">Er</option><option value="sie">Sie</option></select> ist 13 Jahre alt und wohnt in Stuttgart.</div>
+          <div class="fill-item"><span class="num">2)</span> Er hat glatte kurze Haare und grüne Augen. <select class="blank inline" data-ans="seine"><option value="">—</option><option value="seine">Seine</option><option value="ihre">Ihre</option></select> Hobbys sind Sport und sein Sportclub.</div>
+          <div class="fill-item"><span class="num">3)</span> Zu <select class="blank inline" data-ans="seinen"><option value="">—</option><option value="seinen">seinen</option><option value="ihren">ihren</option></select> Interessen gehört auch eine neue Sportart.</div>
+          <div class="fill-item"><span class="num">4)</span> Das ist Leonie. <select class="blank inline" data-ans="sie"><option value="">—</option><option value="er">Er</option><option value="sie">Sie</option></select> ist 14 Jahre alt und besucht ein Gymnasium in Berlin.</div>
+          <div class="fill-item"><span class="num">5)</span> Sie hat glatte blonde Haare und blaue Augen. <select class="blank inline" data-ans="ihre"><option value="">—</option><option value="seine">Seine</option><option value="ihre">Ihre</option></select> Hobbys sind Surfen im Internet und Krimis.</div>
+          <div class="fill-item"><span class="num">6)</span> Zu <select class="blank inline" data-ans="ihren"><option value="">—</option><option value="seinen">seinen</option><option value="ihren">ihren</option></select> Interessen gehört auch Musik.</div>
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 А тепер у групах по четверо</span>
+        Кожен презентує одну особу за зразком: <i>Das ist … . Er / Sie ist … Jahre alt und wohnt in … . Er / Sie besucht … . Er / Sie hat … Haare und … Augen. Seine / Ihre Hobbys sind … . Zu seinen / ihren Interessen gehört auch … .</i> Пам'ятай: про хлопця — <b>sein</b>, про дівчину — <b>ihr</b>.
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4: з ким листуватися (Redemittel + weil) ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Mit wem möchtest du im Briefwechsel stehen?</h2>
+      <p class="lead">Хто з підлітків тобі сподобався? Склади репліки для обговорення: натискай слова в правильному порядку. Після <b>weil</b> і <b>dass</b> дієслово стоїть у кінці.</p>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Redemittel</p>
+        <p class="beispiel"><b>A:</b> Mir hat … gefallen, weil er / sie sich für … interessiert. Ich interessiere mich auch dafür und möchte gern einen Brief an … schreiben. Und ihr?</p>
+        <p class="beispiel"><b>B:</b> Na klar. Seine / Ihre Hobbys finde ich sehr interessant und möchte gern mit ihm / ihr im Briefwechsel stehen.</p>
+        <p class="beispiel"><b>C:</b> Nein, eher nicht. Ich finde die Hobbys von … viel interessanter, weil ich auch Musikfreund / Sportfan / … bin.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          <b>A:</b> Мені сподобався(-лася) …, бо він / вона цікавиться … . Мене це теж цікавить, і я хотів(-ла) би написати … листа. А ви? · <b>B:</b> Аякже. Його / її захоплення я вважаю дуже цікавими й охоче листувався(-лася) б із ним / нею. · <b>C:</b> Ні, мабуть, ні. Захоплення … я вважаю набагато цікавішими, бо я теж любитель музики / шанувальник спорту / … .
+        </div>
+      </div>
+      <div class="card">
+        <div id="ub4-order"></div>
+      </div>
+      <div class="card">
+        <div class="qa">
+          <label for="ub4-text">Und du? Wer hat dir gefallen? Mit wem möchtest du im Briefwechsel stehen? Begründe deine Wahl. (3–4 Sätze)</label>
+          <textarea id="ub4-text" rows="5" placeholder="Mir hat … gefallen, weil … . Ich möchte gern mit … im Briefwechsel stehen, weil …"></textarea>
+        </div>
+        <div class="ua-note">
+          Напиши 3–4 речення: хто тобі сподобався і з ким ти хотів(-ла) б листуватися. Обґрунтуй вибір реченням із <b>weil</b> (дієслово в кінці!) і вжий <b>sich interessieren für</b>. Вставка тексту тут вимкнена — набирай текст сам(а).
+        </div>
+      </div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Jetzt zu dritt: A, B und C diskutieren. Wer bekommt die meisten Briefe aus eurer Klasse?</p>
+      </div>
+    </section>
+
+    <!-- ===== ПРИКІНЦЕВА ПАНЕЛЬ ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Brieffreunde gesucht! 1) Wähle eine Person aus Üb. 1 (Sophie, Lukas, Christian oder Leonie) und schreib ihr / ihm eine Antwort-E-Mail (8–10 Sätze). Präsentiere dich selbst nach dem Plan: Name → Alter → Land / Wohnort → Schule → Aussehen → Interessen und Hobbys. Benutze mindestens vier Adjektive mit der richtigen Endung (z. B. „Ich habe lange blonde Haare.“, „Kyjiw ist eine große Stadt.“, „Mit meinen besten Freunden …“) und unterstreiche die Endungen. Schreib auch einen Satz mit „weil“: Warum möchtest du gerade mit dieser Person im Briefwechsel stehen? Stell ihr / ihm am Ende zwei Fragen. 2) Achtung, Rätsel: Schreib den Namen der Person NICHT in die Anrede – beginne einfach mit „Hallo!“. Nächstes Mal lesen wir die E-Mails vor, und die Klasse rät: An wen ist dieser Brief?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Шукаємо друзів по листуванню! 1) Обери одну особу з Üb. 1 (Софі, Лукас, Крістіан чи Леоні) і напиши їй / йому лист-відповідь (8–10 речень). Презентуй себе за планом: ім'я → вік → країна / місце проживання → школа → зовнішність → інтереси й захоплення. Ужий щонайменше чотири прикметники з правильним закінченням (напр. „Ich habe lange blonde Haare.“, „Kyjiw ist eine große Stadt.“, „Mit meinen besten Freunden …“) і підкресли закінчення. Напиши також речення з „weil“: чому ти хочеш листуватися саме з цією особою? Наприкінці постав їй / йому два запитання. 2) Увага, загадка: НЕ пиши ім'я особи у звертанні — почни просто з „Hallo!“. Наступного разу ми прочитаємо листи, а клас відгадає: кому цей лист?
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Wörter zum Lernen</p>
+        <div class="chip-row" id="vocabChips"></div>
+      </div>
+
+      <div class="card" id="lessonGramWrap">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="lessonGram"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../data/glossary-data.js"></script>
+<script src="../../../data/lessons-data.js"></script>
+<script src="../../../data/grammar-data.js"></script>
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  // ===== Слова цього уроку у вкладці Fertig =====
+  // Ті самі klas/modul/lektion, що й у рядку цього уроку в lessons-data.js.
+  const LEKTION_KLAS = "8", LEKTION_MODUL = "B", LEKTION_LEKTION = 6;
+  const LEKTION_PREV_LEKTION = 5;
+
+  (function renderLessonVocab(){
+    const box = document.getElementById('vocabChips');
+    if (!box || typeof GLOSSARY === 'undefined') return;
+    const words = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_LEKTION
+    );
+    if (words.length === 0){
+      box.innerHTML = '<p class="empty-note">Слова для цього уроку ще не додані в глосарій.</p>';
+      return;
+    }
+    box.innerHTML = words.map(w =>
+      '<span class="chip static">' + w.de + ' — ' + w.uk + '</span>'
+    ).join('');
+  })();
+
+  // ===== Граматика до цього уроку у вкладці Fertig (поле gram у lessons-data.js) =====
+  (function renderLessonGrammar(){
+    const wrap = document.getElementById('lessonGramWrap');
+    const box = document.getElementById('lessonGram');
+    if (!wrap || !box) return;
+    const hide = () => { wrap.style.display = 'none'; };
+    if (typeof LESSONS === 'undefined' || typeof GRAMMAR === 'undefined') return hide();
+    const me = LESSONS.find(l => l.klas === LEKTION_KLAS && l.modul === LEKTION_MODUL && l.lektion === LEKTION_LEKTION);
+    const topics = ((me && me.gram) || []).map(id => GRAMMAR.find(t => t.id === id)).filter(t => t && t.opublikovano > 0);
+    if (topics.length === 0) return hide();
+    // корінь сайту беремо з того самого шляху, яким підключено grammar-data.js —
+    // тож окремо міняти шлях тут при копіюванні шаблону не треба
+    const src = document.querySelector('script[src$="data/grammar-data.js"]').getAttribute('src');
+    const root = src.slice(0, src.length - 'data/grammar-data.js'.length);
+    box.innerHTML = topics.map(t =>
+      '<a class="gram-link" href="' + root + 'gramatyka/temy/' + t.id + '.html">'
+      + '<span class="k">' + t.uk + '</span>' + t.tema + '</a>'
+    ).join('');
+  })();
+
+  // ===== Wörter-Check у вкладці Hausaufgabe (слова ПОПЕРЕДНЬОГО уроку) =====
+  // Використовує ті самі спільні функції, що й Üb.1 (buildQuiz) та
+  // Fertig! (shuffleArray) — нового коду в lesson-interactions.js не було.
+
+  // ---------- Груба евристика частини мови за виглядом "de" ----------
+  // Потрібна лише для того, щоб варіанти-пастки у Wörter-Check були тієї
+  // самої частини мови, що й правильна відповідь (інакше учень вгадує за
+  // формою слова — "це іменник чи дієслово?" — а не за значенням). Це
+  // евристика за текстом рядка, а не лінгвістичний аналізатор, і вона не
+  // вимагає жодного нового поля в даних GLOSSARY.
+  function guessPos(de){
+    var base = (de || '').replace(/\([^)]*\)/g, '').trim();
+    if(/^(der|die|das)(\/(der|die|das))?\s/.test(base)) return 'noun';
+    if(/^sich\s/.test(base)) return 'verb';
+    if(/^am\s/.test(base)) return 'other'; // "am liebsten", "am besten" — прислівникова найвища форма, не дієслово
+    if(/\(\+(Gen|Dat|Akk)\.?\)/.test(de)) return 'prep';
+    var words = base.split(/\s+/);
+    var last = words[words.length - 1];
+    if(/(en|ern|eln)$/.test(last) && last === last.toLowerCase()) return 'verb';
+    return 'other'; // прикметники / прислівники / сталі вирази
+  }
+
+  (function renderDzVocabCheck(){
+    const wrap = document.getElementById('dz-vocab-wrap');
+    const box = document.getElementById('dz-vocab');
+    if (!wrap || !box || typeof GLOSSARY === 'undefined') return;
+    if (!LEKTION_PREV_LEKTION){ wrap.style.display = 'none'; return; }
+
+    const prevWords = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_PREV_LEKTION
+    );
+    if (prevWords.length < 3){ wrap.style.display = 'none'; return; }
+
+    const pool = shuffleArray(prevWords).slice(0, 6); // 5–6 слів на перевірку
+    const quizData = pool.map(w => {
+      // Пастки — тієї самої частини мови, що й правильне слово (guessPos вище),
+      // інакше учень вгадує за формою відповіді, а не за її значенням.
+      const pos = guessPos(w.de);
+      let sameKind = GLOSSARY.filter(g => g.uk !== w.uk && guessPos(g.de) === pos);
+      if(sameKind.length < 2) sameKind = GLOSSARY.filter(g => g.uk !== w.uk); // запасний варіант, якщо слів цієї частини мови замало
+      const distractors = shuffleArray(sameKind).slice(0, 2).map(g => g.uk);
+      return { q: w.de, opts: [w.uk, ...distractors], correct: w.uk };
+    });
+    buildQuiz('dz-vocab', quizData);
+  })();
+
+  // ===== Hausaufgabe: діалог Іри, Макса й Софії (пропуски) + Wortnetz (квіз) =====
+  wireBlanks('dz');
+  buildQuiz('dz-quiz', [
+    {q: "Neue Freunde kann man … finden.", opts: ["im Verein", "in Verein", "auf dem Verein"], correct: "im Verein"},
+    {q: "Man lernt oft neue Leute … kennen.", opts: ["auf eine Party", "auf einer Party", "in einer Party"], correct: "auf einer Party"},
+    {q: "Viele finden ihre besten Freunde …", opts: ["in die Schule", "im Schule", "in der Schule"], correct: "in der Schule"},
+    {q: "Brieffreunde findet man oft …", opts: ["in das Internet", "im Internet", "auf das Internet"], correct: "im Internet"},
+    {q: "Im Sommer kann man Freunde … kennenlernen.", opts: ["am Strand", "an den Strand", "im Strand"], correct: "am Strand"}
+  ]);
+
+  // ===== Üb. 1: закінчення прикметників в оголошеннях (випадні списки) =====
+  wireBlanks('ub1');
+
+  // ===== Üb. 2: хто є хто (квіз + портрети) =====
+  wireBlanks('ub2');
+  buildQuiz('ub2-quiz', [
+    {q: "Wer hat kurze schwarze Haare und dunkle Augen?", opts: ["Sophie", "Lukas", "Christian", "Leonie"], correct: "Sophie"},
+    {q: "Wer ist 1,72 m groß und hat lange Haare?", opts: ["Leonie", "Lukas", "Sophie", "Christian"], correct: "Lukas"},
+    {q: "Wer ist erst 13 Jahre alt?", opts: ["Lukas", "Sophie", "Christian", "Leonie"], correct: "Christian"},
+    {q: "Wer surft gern im Internet und liest Krimis?", opts: ["Sophie", "Christian", "Lukas", "Leonie"], correct: "Leonie"},
+    {q: "Wessen Heimatort ist Leipzig?", opts: ["Lukas", "Leonie", "Christian", "Sophie"], correct: "Lukas"},
+    {q: "Wer reist, fährt Rad und wandert gern?", opts: ["Christian", "Sophie", "Leonie", "Lukas"], correct: "Sophie"},
+    {q: "Wer will eine neue Sportart ausprobieren?", opts: ["Leonie", "Lukas", "Christian", "Sophie"], correct: "Christian"},
+    {q: "Wer verbringt viel Zeit mit den besten Freunden und mag Musik?", opts: ["Sophie", "Lukas", "Christian", "Leonie"], correct: "Leonie"}
+  ]);
+
+  // ===== Üb. 3: Steckbriefe + презентація (поля й випадні списки) =====
+  wireBlanks('ub3');
+
+  // ===== Üb. 4: репліки для обговорення (склади речення) =====
+  buildOrder('ub4-order', [
+    { words: ["Mir", "hat", "Leonie", "gefallen,", "weil", "sie", "sich", "für", "Krimis", "interessiert"], end: ".",
+      alt: ["Leonie hat mir gefallen, weil sie sich für Krimis interessiert"],
+      hint: "Мені сподобалася Леоні, бо вона цікавиться детективами." },
+    { words: ["Ich", "interessiere", "mich", "auch", "dafür"], end: ".",
+      alt: ["Dafür interessiere ich mich auch"],
+      hint: "Мене це теж цікавить." },
+    { words: ["Ich", "möchte", "gern", "einen Brief", "an", "Lukas", "schreiben"], end: ".",
+      alt: ["Ich möchte gern an Lukas einen Brief schreiben", "Ich möchte an Lukas gern einen Brief schreiben"],
+      hint: "Я хотів(-ла) би написати листа Лукасу." },
+    { words: ["Seine", "Hobbys", "finde", "ich", "sehr", "interessant"], end: ".",
+      alt: ["Ich finde seine Hobbys sehr interessant"],
+      hint: "Його захоплення я вважаю дуже цікавими." },
+    { words: ["Ich", "möchte", "gern", "mit", "ihr", "im Briefwechsel", "stehen"], end: ".",
+      alt: ["Ich möchte mit ihr gern im Briefwechsel stehen"],
+      hint: "Я охоче листувався(-лася) б із нею." },
+    { words: ["Ich", "finde", "die Hobbys", "von", "Christian", "viel", "interessanter,", "weil", "ich", "auch", "Sportfan", "bin"], end: ".",
+      hint: "Захоплення Крістіана я вважаю набагато цікавішими, бо я теж шанувальник спорту." }
+  ]);
+
+  // Фінальна панель зі штампами (іконки — на тему модуля)
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['✉️','📮','🖊️','🤝']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
