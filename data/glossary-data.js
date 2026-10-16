@@ -859,5 +859,17 @@ const GLOSSARY = [
   {de: "stimmen für (+Akk.)", uk: "голосувати за (когось / щось)", klas: "7", modul: "B", lektion: 14},
   {de: "weltbekannt", uk: "всесвітньо відомий", klas: "7", modul: "B", lektion: 14},
   {de: "erfolgreich", uk: "успішний, вдалий", klas: "7", modul: "B", lektion: 14},
-  {de: "besprechen", uk: "обговорювати", klas: "7", modul: "B", lektion: 14}
+  {de: "besprechen", uk: "обговорювати", klas: "7", modul: "B", lektion: 14},
+  {de: "der Kuli (die Kulis)", uk: "кулькова ручка", klas: "8", modul: "B", lektion: 5},
+  {de: "tippen (einen Brief auf der Tastatur tippen)", uk: "друкувати, набирати текст на клавіатурі", klas: "8", modul: "B", lektion: 5},
+  {de: "einschalten (trennbar) (den Computer einschalten)", uk: "вмикати (комп'ютер)", klas: "8", modul: "B", lektion: 5},
+  {de: "aufkleben (trennbar) (eine Briefmarke aufkleben)", uk: "наклеювати (марку)", klas: "8", modul: "B", lektion: 5},
+  {de: "stecken (in den Briefumschlag stecken)", uk: "вкладати, засовувати (в конверт)", klas: "8", modul: "B", lektion: 5},
+  {de: "einwerfen (trennbar) (in den Briefkasten einwerfen)", uk: "вкидати (в поштову скриньку)", klas: "8", modul: "B", lektion: 5},
+  {de: "abschicken (trennbar)", uk: "відправляти, надсилати (лист, e-mail)", klas: "8", modul: "B", lektion: 5},
+  {de: "der Anhang (als Anhang schicken)", uk: "вкладення до e-mail (надіслати вкладенням)", klas: "8", modul: "B", lektion: 5},
+  {de: "die Antwort (eine Antwort bekommen)", uk: "відповідь (отримати відповідь)", klas: "8", modul: "B", lektion: 5},
+  {de: "verloren gehen (Der Brief geht verloren.)", uk: "губитися, пропадати (Лист губиться.)", klas: "8", modul: "B", lektion: 5},
+  {de: "vorziehen (trennbar) (die E-Mail der Papierpost vorziehen)", uk: "надавати перевагу (e-mail перед паперовою поштою)", klas: "8", modul: "B", lektion: 5},
+  {de: "die Meinung teilen (Ich teile deine Meinung nicht.)", uk: "поділяти думку (Я не поділяю твою думку.)", klas: "8", modul: "B", lektion: 5}
 ];

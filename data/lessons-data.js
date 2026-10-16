@@ -775,5 +775,16 @@ const LESSONS = [
     nove: true,
     gram: ["imperativ", "trennbare-verben", "infinitiv-um-zu", "personalpronomen"],
     dz: "Kochshow-Kritik für die Schülerzeitung: 1) Mach eine Bewertungskarte für drei Speisen aus unserer Kochshow: Name der Speise, Koch oder Köchin, Sterne (1–5 ★) und ein Satz mit „Ich finde …, weil …“ (z. B. „Ich finde den Borschtsch prima, weil er sehr lecker war.“). 2) Schreib einen kurzen Bericht (6–8 Sätze) im Perfekt: Wer hat die Show moderiert? Wer hat was gekocht? Wer hat gefilmt? Welche Speise hat gewonnen? (z. B. „Anna und Maks haben die Show moderiert.“, „Die Zuschauer haben für die Wareniki gestimmt.“). Benutze mindestens zwei trennbare Verben (z. B. vorstellen, zubereiten, mitbringen). 3) Der letzte Satz ist: „Wir haben … kennengelernt.“ Nächstes Mal sehen wir das Video noch einmal und vergleichen eure Berichte."
+  },
+  {
+    klas: "8",
+    modul: "B",
+    lektion: 5,
+    nazva: "Per Post oder per Mail?",
+    opys: "Способи листування: сортуємо дії per Post / per Mail, розповідаємо крок за кроком з man muss / kann + Infinitiv (aufkleben, einwerfen, einschalten, abschicken), складаємо репліки для дискусії з weil (Ich ziehe die E-Mail der Papierpost vor, weil …) і з'ясовуємо, де знайти нових друзів (im Park, in einem Verein, beim Sport).",
+    file: "klas-8/modul-b/lektion-5.html",
+    nove: true,
+    gram: ["modalverben", "trennbare-verben", "konditionalsaetze", "kausalsaetze", "wechselpraepositionen"],
+    dz: "1) Schreib einen kurzen Dialog (6–8 Repliken) zu dritt wie in Üb. 3: A schickt Briefe lieber per Post, B zieht die E-Mail der Papierpost vor, C teilt die Meinung von A oder B nicht. Jede Person nennt mindestens ein Argument mit „weil“ – das Verb steht am Ende! (z. B. „…, weil man nicht das Haus verlassen muss.“). Benutze mindestens zwei trennbare Verben aus der Stunde (z. B. aufkleben, einwerfen, einschalten, abschicken). 2) Mach ein Wortnetz „Neue Freunde“ wie in Üb. 4: Schreib mindestens sechs Orte, wo man neue Freunde finden kann – mit der richtigen Präposition und dem Artikel im Dativ (z. B. im Park, in einem Verein, auf einer Party). Markiere den Ort, wo du deinen besten Freund oder deine beste Freundin kennengelernt hast. Nächstes Mal spielen wir eure Dialoge zu dritt vor."
   }
 ];
