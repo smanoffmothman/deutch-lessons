@@ -31,6 +31,12 @@
    працює на будь-якій сторінці, навіть зі старою копією site.css.
    Базовий вигляд хедера (.site-nav, .brand, .nav-link) — як і раніше
    в site.css.
+
+   Статистика відвідувань (з 2026-10-16): лічильник GoatCounter
+   підключає renderSiteNav сам (ensureStats нижче) — у сторінки й
+   шаблони його НЕ вписувати. Рахує лише на справжньому домені
+   deutschheft.com.ua, без шаблонів і превʼю. Деталі — CHANGELOG,
+   «Статистика відвідувань: GoatCounter».
    ================================================================= */
 
 var NAV_MENU_CSS = `
@@ -91,6 +97,41 @@ function ensureFavicon(root){
   });
 }
 
+/* Статистика відвідувань — GoatCounter (з 2026-10-16), панель:
+   https://deutschheft.goatcounter.com
+   Без cookies і без персональних даних, тому банер згоди не потрібен.
+   Лічильник підключається тут, а не в кожній сторінці: так він працює
+   на всіх уроках, темах і статтях (і старих), а шаблони не міняються.
+   - Рахує ЛИШЕ на deutschheft.com.ua (і www.): превʼю в чаті, файли,
+     відкриті з диска, і github.io не потрапляють у статистику.
+   - Шаблони (*-template.html) і превʼю (*-preview.html) не рахуються.
+   - Адреса сторінки зводиться до одного вигляду: без «index.html» і без
+     «?…» (мітки месенджерів), тож /klasy/ і /klasy/index.html — одна сторінка.
+   - Якщо gc.zgo.at заблоковано (шкільна мережа, блокувальник реклами) —
+     візит просто не врахується, на сторінці нічого не ламається.
+   - Свої візити не рахувати: один раз у кожному своєму браузері відкрити
+     https://deutschheft.com.ua/#toggle-goatcounter */
+var GOATCOUNTER_URL = 'https://deutschheft.goatcounter.com/count';
+function ensureStats(){
+  if(window.__dhStats) return;
+  window.__dhStats = true;
+  if(document.querySelector('script[data-goatcounter]')) return;
+  if(!/(^|\.)deutschheft\.com\.ua$/i.test(location.hostname)) return;
+  if(/-(template|preview)\.html$/i.test(location.pathname)) return;
+  window.goatcounter = window.goatcounter || {};
+  if(!window.goatcounter.path){
+    window.goatcounter.path = function(p){
+      p = String(p || '/').split('?')[0].split('#')[0];
+      return p.replace(/(^|\/)index\.html$/i, '$1') || '/';
+    };
+  }
+  const s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://gc.zgo.at/count.js';
+  s.setAttribute('data-goatcounter', GOATCOUNTER_URL);
+  (document.head || document.documentElement).appendChild(s);
+}
+
 function injectNavMenuCss(){
   if(document.getElementById('siteNavMenuCss')) return;
   const st = document.createElement('style');
@@ -103,6 +144,7 @@ function renderSiteNav(containerId, opts){
   opts = opts || {};
   const root = opts.root || '';
   const active = opts.active || null;
+  try { ensureStats(); } catch(_) {}
 
   const links = [
     {key: 'klasy',     label: 'Уроки',     href: root + 'klasy/index.html'},
