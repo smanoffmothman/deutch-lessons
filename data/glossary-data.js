@@ -871,5 +871,17 @@ const GLOSSARY = [
   {de: "die Antwort (eine Antwort bekommen)", uk: "відповідь (отримати відповідь)", klas: "8", modul: "B", lektion: 5},
   {de: "verloren gehen (Der Brief geht verloren.)", uk: "губитися, пропадати (Лист губиться.)", klas: "8", modul: "B", lektion: 5},
   {de: "vorziehen (trennbar) (die E-Mail der Papierpost vorziehen)", uk: "надавати перевагу (e-mail перед паперовою поштою)", klas: "8", modul: "B", lektion: 5},
-  {de: "die Meinung teilen (Ich teile deine Meinung nicht.)", uk: "поділяти думку (Я не поділяю твою думку.)", klas: "8", modul: "B", lektion: 5}
+  {de: "die Meinung teilen (Ich teile deine Meinung nicht.)", uk: "поділяти думку (Я не поділяю твою думку.)", klas: "8", modul: "B", lektion: 5},
+  {de: "das Aussehen", uk: "зовнішність, вигляд", klas: "8", modul: "B", lektion: 6},
+  {de: "die Haare (Pl.) (kurze / lange Haare)", uk: "волосся (коротке / довге волосся)", klas: "8", modul: "B", lektion: 6},
+  {de: "das Auge (die Augen)", uk: "око (очі)", klas: "8", modul: "B", lektion: 6},
+  {de: "glatt (glatte Haare)", uk: "пряме (про волосся); гладкий", klas: "8", modul: "B", lektion: 6},
+  {de: "blond", uk: "світлий, білявий (про волосся)", klas: "8", modul: "B", lektion: 6},
+  {de: "dunkel (dunkle Augen)", uk: "темний (темні очі)", klas: "8", modul: "B", lektion: 6},
+  {de: "der Heimatort", uk: "рідне місто, місце, звідки ти родом", klas: "8", modul: "B", lektion: 6},
+  {de: "der Krimi (die Krimis)", uk: "детектив (книжка чи фільм)", klas: "8", modul: "B", lektion: 6},
+  {de: "ähnlich (ähnliche Interessen)", uk: "схожий (схожі інтереси)", klas: "8", modul: "B", lektion: 6},
+  {de: "der Sportfan (die Sportfans)", uk: "шанувальник / шанувальниця спорту", klas: "8", modul: "B", lektion: 6},
+  {de: "hoffentlich", uk: "сподіваюся, будемо сподіватися", klas: "8", modul: "B", lektion: 6},
+  {de: "begründen (Begründe deine Wahl!)", uk: "обґрунтовувати (Обґрунтуй свій вибір!)", klas: "8", modul: "B", lektion: 6}
 ];

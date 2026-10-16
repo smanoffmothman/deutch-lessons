@@ -786,5 +786,16 @@ const LESSONS = [
     nove: true,
     gram: ["modalverben", "trennbare-verben", "konditionalsaetze", "kausalsaetze", "wechselpraepositionen"],
     dz: "1) Schreib einen kurzen Dialog (6–8 Repliken) zu dritt wie in Üb. 3: A schickt Briefe lieber per Post, B zieht die E-Mail der Papierpost vor, C teilt die Meinung von A oder B nicht. Jede Person nennt mindestens ein Argument mit „weil“ – das Verb steht am Ende! (z. B. „…, weil man nicht das Haus verlassen muss.“). Benutze mindestens zwei trennbare Verben aus der Stunde (z. B. aufkleben, einwerfen, einschalten, abschicken). 2) Mach ein Wortnetz „Neue Freunde“ wie in Üb. 4: Schreib mindestens sechs Orte, wo man neue Freunde finden kann – mit der richtigen Präposition und dem Artikel im Dativ (z. B. im Park, in einem Verein, auf einer Party). Markiere den Ort, wo du deinen besten Freund oder deine beste Freundin kennengelernt hast. Nächstes Mal spielen wir eure Dialoge zu dritt vor."
+  },
+  {
+    klas: "8",
+    modul: "B",
+    lektion: 6,
+    nazva: "Brieffreunde gesucht!",
+    opys: "Листування з друзями: читаємо оголошення Софі, Лукаса, Крістіана й Леоні, які шукають друзів по листуванню, вставляємо закінчення прикметників (kurze Haare, eine große Stadt, mit meinen besten Freunden), складаємо Steckbrief і презентуємо підлітків з sein / ihr, а потім обираємо, з ким листуватися, і обґрунтовуємо вибір з weil.",
+    file: "klas-8/modul-b/lektion-6.html",
+    nove: true,
+    gram: ["adjektivdeklination",  "possessivartikel",  "kausalsaetze",  "verben-praepositionalobjekt"],
+    dz: "Brieffreunde gesucht! 1) Wähle eine Person aus Üb. 1 (Sophie, Lukas, Christian oder Leonie) und schreib ihr / ihm eine Antwort-E-Mail (8–10 Sätze). Präsentiere dich selbst nach dem Plan: Name → Alter → Land / Wohnort → Schule → Aussehen → Interessen und Hobbys. Benutze mindestens vier Adjektive mit der richtigen Endung (z. B. „Ich habe lange blonde Haare.“, „Kyjiw ist eine große Stadt.“, „Mit meinen besten Freunden …“) und unterstreiche die Endungen. Schreib auch einen Satz mit „weil“: Warum möchtest du gerade mit dieser Person im Briefwechsel stehen? Stell ihr / ihm am Ende zwei Fragen. 2) Achtung, Rätsel: Schreib den Namen der Person NICHT in die Anrede – beginne einfach mit „Hallo!“. Nächstes Mal lesen wir die E-Mails vor, und die Klasse rät: An wen ist dieser Brief?"
   }
 ];
