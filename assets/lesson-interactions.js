@@ -1388,19 +1388,35 @@ function initUmlautKb(){
      фокус іде з поля → focusin), тож кнопка (напр. Prüfen під останнім полем)
      з'їжджала з-під курсора ще до відпускання — і перший клік губився. Тепер, поки
      кнопка миші / палець натиснуті, панель лише "чекає" і ховається вже ПІСЛЯ
-     кліку. Клавіатура (Tab) — як і раніше, одразу. */
-  let pressing = false, pendingHide = false;
+     кліку. Клавіатура (Tab) — як і раніше, одразу.
+
+     Фікс 2026-10-17 (те саме на сенсорних екранах): на телефоні порядок подій
+     інший — pointerup приходить ДО того, як фокус іде з поля (браузер шле
+     mousedown/focus лише після того, як палець піднято, а click — ще пізніше).
+     Тому «відпускання» по pointerup не допомагало: панель ховалась між pointerup
+     і click, сторінка підскакувала, і дотик губився. Тепер для дотику/стилуса
+     чекаємо саму подію click (запасний таймер — якщо click так і не прийде,
+     напр. довге натискання). Для миші — як і раніше, pointerup. */
+  let pressing = false, pendingHide = false, releaseTimer = null;
   const hideIfIdle = () => { if(!umlautEligible(document.activeElement)) hideUmlautKb(); };
   const requestHide = () => { if(pressing) pendingHide = true; else hideIfIdle(); };
   const release = () => {
+    clearTimeout(releaseTimer);
     pressing = false;
     if(pendingHide){ pendingHide = false; setTimeout(hideIfIdle, 60); } // після click
   };
   document.addEventListener('pointerdown', e => {
-    if(!(e.target.closest && e.target.closest('.umlaut-kb'))) pressing = true;
+    if(e.target.closest && e.target.closest('.umlaut-kb')) return;
+    clearTimeout(releaseTimer);
+    pressing = true;
   }, true);
-  document.addEventListener('pointerup', release, true);
-  document.addEventListener('pointercancel', release, true);
+  document.addEventListener('pointerup', e => {
+    if(!pressing) return;
+    if(e.pointerType === 'mouse') release();
+    else { clearTimeout(releaseTimer); releaseTimer = setTimeout(release, 700); } // дотик: чекаємо click
+  }, true);
+  document.addEventListener('click', () => { if(pressing) release(); }, true);
+  document.addEventListener('pointercancel', release, true); // прокрутка пальцем замість дотику
   document.addEventListener('focusin', e => {
     if(umlautEligible(e.target)){ pendingHide = false; showUmlautKb(e.target); }
     else if(umlautKb.target) requestHide();
