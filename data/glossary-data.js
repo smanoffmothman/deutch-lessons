@@ -907,5 +907,17 @@ const GLOSSARY = [
   {de: "aussehen (trennbar) (jünger aussehen)", uk: "виглядати (виглядати молодшим)", klas: "9", modul: "B", lektion: 4},
   {de: "eher (bald – eher – am ehesten)", uk: "радше, скоріше", klas: "9", modul: "B", lektion: 4},
   {de: "die Garderobe", uk: "гардероб (увесь одяг людини)", klas: "9", modul: "B", lektion: 4},
-  {de: "äußern (seine Meinung äußern)", uk: "висловлювати (висловлювати свою думку)", klas: "9", modul: "B", lektion: 4}
+  {de: "äußern (seine Meinung äußern)", uk: "висловлювати (висловлювати свою думку)", klas: "9", modul: "B", lektion: 4},
+  {de: "die Jugendszene (die Jugendszenen)", uk: "молодіжна субкультура, молодіжна «тусовка»", klas: "9", modul: "B", lektion: 5},
+  {de: "die Subkultur (die Subkulturen)", uk: "субкультура", klas: "9", modul: "B", lektion: 5},
+  {de: "die Jugendgruppe (die Jugendgruppen)", uk: "молодіжна група, молодіжне об'єднання", klas: "9", modul: "B", lektion: 5},
+  {de: "angehören (trennbar, + Dativ)", uk: "належати (до групи, субкультури): Ich gehöre keiner Subkultur an.", klas: "9", modul: "B", lektion: 5},
+  {de: "der / die Jugendliche (die Jugendlichen)", uk: "підліток, юнак / дівчина", klas: "9", modul: "B", lektion: 5},
+  {de: "der Fan (ein Fan von Anime und Manga sein)", uk: "фанат, шанувальник (бути фанатом аніме й манги)", klas: "9", modul: "B", lektion: 5},
+  {de: "der / die Goth (die Goths)", uk: "гот / готка", klas: "9", modul: "B", lektion: 5},
+  {de: "der Punk (die Punks)", uk: "панк", klas: "9", modul: "B", lektion: 5},
+  {de: "der Hippie (die Hippies)", uk: "гіпі", klas: "9", modul: "B", lektion: 5},
+  {de: "der Traceur (die Traceure)", uk: "трейсер — той, хто займається паркуром", klas: "9", modul: "B", lektion: 5},
+  {de: "der Cosplayer (die Cosplayer)", uk: "косплеєр", klas: "9", modul: "B", lektion: 5},
+  {de: "der Quadrobist (die Quadrobisten)", uk: "квадробер — підліток, що наслідує рухи тварин", klas: "9", modul: "B", lektion: 5}
 ];

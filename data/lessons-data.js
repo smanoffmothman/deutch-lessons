@@ -819,5 +819,16 @@ const LESSONS = [
     nove: true,
     gram: ["komparation", "adjektivdeklination"],
     dz: "Shopping-Chat: Schreib einen SMS-Chat (8–10 Nachrichten) zwischen zwei Freunden oder Freundinnen, die zusammen in einem Geschäft Kleidung kaufen – wie in Üb. 2, Satz 8 und 10. Person A folgt immer der neuesten Mode, Person B findet Bequemlichkeit und den Preis wichtiger. 1) Benutze mindestens sechs Steigerungsformen, davon mindestens zwei Superlative (z. B. preiswerter, eine Nummer größer, öfter, am liebsten, das günstigste Angebot, nach der neuesten Mode). 2) Schreib mindestens zwei Vergleiche mit „als“ oder „so … wie“ (z. B. „Diese Jeans ist weiter als die blaue.“, „Das Hemd ist so teuer wie die Jacke.“). 3) Eine Nachricht ist eine Meinung über Make-up oder Accessoires (z. B. „Ich finde es gut, wenn …“). Zum Schluss entscheiden die beiden: Was kaufen sie? Nächstes Mal spielen wir eure Chats in Paaren vor."
+  },
+  {
+    klas: "9",
+    modul: "B",
+    lektion: 5,
+    nazva: "Jugendszenen: Wofür interessierst du dich?",
+    opys: "Молодіжні субкультури та інтереси: сортуємо захоплення, розпитуємо одне одного (sich interessieren für + Akkusativ, angehören + Dativ), слухаємо назви субкультур і їхню множину (der Goth – die Goths, der Traceur – die Traceure) та визначаємо, хто до якої субкультури належить.",
+    file: "klas-9/modul-b/lektion-5.html",
+    nove: true,
+    gram: ["verben-praepositionalobjekt", "rektion-verben", "trennbare-verben", "deklination-nomen"],
+    dz: "Jugendszenen-Umfrage: 1) Stell drei Personen (Freunde, Geschwister, Eltern …) die fünf Fragen aus Üb. 2 (z. B. „Wofür interessierst du dich?“, „Gehörst du einer Jugendgruppe oder einer Subkultur an?“) und notiere die Antworten in einer Tabelle. 2) Schreib zu jeder Person zwei Sätze in der 3. Person – einen mit „sich interessieren für“ + Akkusativ und einen mit „angehören“ + Dativ (z. B. „Mein Cousin Ivan interessiert sich für Rap. Er gehört keiner Subkultur an.“). 3) Rätsel: Beschreib eine Jugendszene aus Üb. 3 in 3–4 Sätzen (Kleidung, Musik, Hobbys), ohne ihren Namen zu nennen, und schreib die Lösung mit Artikel und Pluralform auf die Rückseite (z. B. der Traceur – die Traceure). Nächstes Mal raten die anderen: Welche Szene ist das?"
   }
 ];
