@@ -808,5 +808,16 @@ const LESSONS = [
     nove: true,
     gram: ["zahlwoerter", "komparation", "verben-dass-infinitiv"],
     dz: "Freundschaft auf Distanz – ein Poster: Hast du einen Brieffreund oder eine Brieffreundin? Wenn nicht, stell dir vor, du hast welche! 1) Mach einen Steckbrief deines Brieffreundes / deiner Brieffreundin (Name, Alter, Land und Wohnort, Aussehen, Hobbys) und klebe ein Foto ein oder zeichne ein Bild. 2) Schreib darunter einen kurzen Text (6–8 Sätze): Wie und wo habt ihr euch kennengelernt? Seit wann steht ihr im Briefwechsel? Wie oft schreibt ihr einander – per Post, per Mail oder im Messenger? Welche gemeinsamen Interessen habt ihr? Was ist schön und was ist schwierig an einer Freundschaft auf Distanz? Benutze mindestens einen Satz mit „dass“ (z. B. „Ich finde gut, dass …“) und einen Vergleich mit „als“ (z. B. „Ich schreibe lieber Mails als Briefe.“). 3) Schreib zum Schluss das Sprichwort „Gleich und Gleich gesellt sich gern“ und einen Satz dazu: Passt es zu euch oder nicht? Nächstes Mal stellen wir eure Poster in Gruppen vor und machen eine Klassenstatistik: In welchen Ländern wohnen unsere Brieffreunde?"
+  },
+  {
+    klas: "9",
+    modul: "B",
+    lektion: 4,
+    nazva: "Was halte ich von Mode?",
+    opys: "Моє ставлення до моди: ступені порівняння прикметників і прислівників (bald – eher, gern – lieber – am liebsten, hoch – höher) з аудіоконтролем, виправляємо хибні твердження про думки Марти, Томаса, Сандри й Давида з форуму та пишемо власний допис про моду.",
+    file: "klas-9/modul-b/lektion-4.html",
+    nove: true,
+    gram: ["komparation", "adjektivdeklination"],
+    dz: "Shopping-Chat: Schreib einen SMS-Chat (8–10 Nachrichten) zwischen zwei Freunden oder Freundinnen, die zusammen in einem Geschäft Kleidung kaufen – wie in Üb. 2, Satz 8 und 10. Person A folgt immer der neuesten Mode, Person B findet Bequemlichkeit und den Preis wichtiger. 1) Benutze mindestens sechs Steigerungsformen, davon mindestens zwei Superlative (z. B. preiswerter, eine Nummer größer, öfter, am liebsten, das günstigste Angebot, nach der neuesten Mode). 2) Schreib mindestens zwei Vergleiche mit „als“ oder „so … wie“ (z. B. „Diese Jeans ist weiter als die blaue.“, „Das Hemd ist so teuer wie die Jacke.“). 3) Eine Nachricht ist eine Meinung über Make-up oder Accessoires (z. B. „Ich finde es gut, wenn …“). Zum Schluss entscheiden die beiden: Was kaufen sie? Nächstes Mal spielen wir eure Chats in Paaren vor."
   }
 ];

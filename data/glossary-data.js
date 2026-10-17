@@ -895,5 +895,17 @@ const GLOSSARY = [
   {de: "die Nachbarschaft (Freunde in der Nachbarschaft)", uk: "сусідство (друзі по сусідству)", klas: "8", modul: "B", lektion: 7},
   {de: "virtuell (virtuelle Freunde)", uk: "віртуальний (друзі в інтернеті)", klas: "8", modul: "B", lektion: 7},
   {de: "bundesweit", uk: "по всій країні (по всій Німеччині)", klas: "8", modul: "B", lektion: 7},
-  {de: "Gleich und Gleich gesellt sich gern.", uk: "Рибак рибака бачить здалека. (Схожі люди тягнуться одне до одного.)", klas: "8", modul: "B", lektion: 7}
+  {de: "Gleich und Gleich gesellt sich gern.", uk: "Рибак рибака бачить здалека. (Схожі люди тягнуться одне до одного.)", klas: "8", modul: "B", lektion: 7},
+  {de: "das Make-up", uk: "макіяж", klas: "9", modul: "B", lektion: 4},
+  {de: "der Ton (die Töne) (helle / dunkle Töne)", uk: "тон, відтінок (світлі / темні тони)", klas: "9", modul: "B", lektion: 4},
+  {de: "der Absatz (die Absätze) (Schuhe mit hohen Absätzen)", uk: "підбор, каблук (взуття на високих підборах)", klas: "9", modul: "B", lektion: 4},
+  {de: "die Nummer (eine Nummer größer)", uk: "розмір (на розмір більший)", klas: "9", modul: "B", lektion: 4},
+  {de: "preiswert", uk: "недорогий, вигідний за ціною", klas: "9", modul: "B", lektion: 4},
+  {de: "günstig (das günstigste Angebot)", uk: "вигідний, дешевий (найвигідніша пропозиція)", klas: "9", modul: "B", lektion: 4},
+  {de: "das Angebot (die Angebote)", uk: "пропозиція (у магазині), асортимент", klas: "9", modul: "B", lektion: 4},
+  {de: "unnatürlich", uk: "неприродний", klas: "9", modul: "B", lektion: 4},
+  {de: "aussehen (trennbar) (jünger aussehen)", uk: "виглядати (виглядати молодшим)", klas: "9", modul: "B", lektion: 4},
+  {de: "eher (bald – eher – am ehesten)", uk: "радше, скоріше", klas: "9", modul: "B", lektion: 4},
+  {de: "die Garderobe", uk: "гардероб (увесь одяг людини)", klas: "9", modul: "B", lektion: 4},
+  {de: "äußern (seine Meinung äußern)", uk: "висловлювати (висловлювати свою думку)", klas: "9", modul: "B", lektion: 4}
 ];
