@@ -830,5 +830,16 @@ const LESSONS = [
     nove: true,
     gram: ["verben-praepositionalobjekt", "rektion-verben", "trennbare-verben", "deklination-nomen"],
     dz: "Jugendszenen-Umfrage: 1) Stell drei Personen (Freunde, Geschwister, Eltern …) die fünf Fragen aus Üb. 2 (z. B. „Wofür interessierst du dich?“, „Gehörst du einer Jugendgruppe oder einer Subkultur an?“) und notiere die Antworten in einer Tabelle. 2) Schreib zu jeder Person zwei Sätze in der 3. Person – einen mit „sich interessieren für“ + Akkusativ und einen mit „angehören“ + Dativ (z. B. „Mein Cousin Ivan interessiert sich für Rap. Er gehört keiner Subkultur an.“). 3) Rätsel: Beschreib eine Jugendszene aus Üb. 3 in 3–4 Sätzen (Kleidung, Musik, Hobbys), ohne ihren Namen zu nennen, und schreib die Lösung mit Artikel und Pluralform auf die Rückseite (z. B. der Traceur – die Traceure). Nächstes Mal raten die anderen: Welche Szene ist das?"
+  },
+  {
+    klas: "9",
+    modul: "B",
+    lektion: 6,
+    nazva: "Subkulturen: Was für ein Stil ist das?",
+    opys: "Молодіжні субкультури зблизька: зіставляємо пояснення з назвами (готи, панки, трейсери, косплеєри, хіп-хопери…), описуємо типові риси (ein typisches Merkmal von …, typisch für …), питальні займенники was für ein / welch- у всіх відмінках та інтерв'ю гота Алекса й панкерки Міріам.",
+    file: "klas-9/modul-b/lektion-6.html",
+    nove: true,
+    gram: ["fragen", "adjektivdeklination"],
+    dz: "Geheimes Interview: Wähle eine Jugendszene aus Üb. 1 – aber nicht Goths oder Punks (z. B. Skater, Traceure, Cosplayer, Hippies, Hip-Hopper). 1) Schreib ein kurzes Interview wie in Üb. 4 mit einem erfundenen Jugendlichen aus dieser Szene: Name, Alter und mindestens vier Fragen mit Antworten (z. B. typische Merkmale, Kleidung und Frisur, Musik, Hobbys, Entstehung der Szene). 2) Mindestens zwei Fragen beginnen mit „Was für (ein) …?“ und mindestens zwei mit „Welch- …?“ – in verschiedenen Kasus (z. B. „Was für Kleidung tragt ihr?“, „Welchen Musikstil hört ihr am liebsten?“, „Mit welchen Freunden trefft ihr euch?“). Unterstreiche die Endungen. 3) Nenne den Namen der Szene im Interview nicht! Nächstes Mal lesen wir die Interviews vor, und die Klasse rät: Welche Jugendszene ist das?"
   }
 ];

@@ -919,5 +919,17 @@ const GLOSSARY = [
   {de: "der Hippie (die Hippies)", uk: "гіпі", klas: "9", modul: "B", lektion: 5},
   {de: "der Traceur (die Traceure)", uk: "трейсер — той, хто займається паркуром", klas: "9", modul: "B", lektion: 5},
   {de: "der Cosplayer (die Cosplayer)", uk: "косплеєр", klas: "9", modul: "B", lektion: 5},
-  {de: "der Quadrobist (die Quadrobisten)", uk: "квадробер — підліток, що наслідує рухи тварин", klas: "9", modul: "B", lektion: 5}
+  {de: "der Quadrobist (die Quadrobisten)", uk: "квадробер — підліток, що наслідує рухи тварин", klas: "9", modul: "B", lektion: 5},
+  {de: "das Merkmal (die Merkmale) (ein typisches Merkmal von + Dat.)", uk: "ознака, риса (типова риса когось / чогось)", klas: "9", modul: "B", lektion: 6},
+  {de: "die Frisur (die Frisuren)", uk: "зачіска", klas: "9", modul: "B", lektion: 6},
+  {de: "der Irokesenschnitt", uk: "ірокез (зачіска)", klas: "9", modul: "B", lektion: 6},
+  {de: "provozierend (ein provozierendes Aussehen)", uk: "провокаційний, зухвалий (зухвалий вигляд)", klas: "9", modul: "B", lektion: 6},
+  {de: "rebellisch (eine rebellische Haltung)", uk: "бунтарський (бунтарська поведінка, позиція)", klas: "9", modul: "B", lektion: 6},
+  {de: "sich verkleiden (als + Nom.)", uk: "перевдягатися (у когось): sich als Ninja verkleiden", klas: "9", modul: "B", lektion: 6},
+  {de: "der Anhänger / die Anhängerin", uk: "прихильник / прихильниця (напр. хіп-хопу)", klas: "9", modul: "B", lektion: 6},
+  {de: "die Gesellschaft (Protest gegen die Gesellschaft)", uk: "суспільство (протест проти суспільства)", klas: "9", modul: "B", lektion: 6},
+  {de: "entstehen (ist entstanden)", uk: "виникати, з'являтися (Die Szene ist in England entstanden.)", klas: "9", modul: "B", lektion: 6},
+  {de: "das Hindernis (die Hindernisse)", uk: "перешкода (Hindernisse überwinden — долати перешкоди)", klas: "9", modul: "B", lektion: 6},
+  {de: "was für ein? (Was für eine Frisur hat er?)", uk: "який? що за? — питання про властивість, тип", klas: "9", modul: "B", lektion: 6},
+  {de: "welcher, welche, welches? (Welcher Szene gehörst du an?)", uk: "який саме? котрий? — питання про вибір з групи", klas: "9", modul: "B", lektion: 6}
 ];
