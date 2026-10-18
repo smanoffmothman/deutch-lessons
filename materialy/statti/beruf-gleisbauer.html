@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arbeit auf dem Gleis · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Arbeit &amp; Schule</span>
+        <h1>Arbeit auf dem Gleis</h1>
+        <p class="sub">Він ходить там, куди всім іншим ходити заборонено, і розрізає рейки так, що летять іскри. Хто дбає, щоб 40 000 поїздів на день їздили безпечно?</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Passt der Beruf?</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Wer baut die Gleise?</h2>
+      <div class="card">
+        <p>Fährst du oft mit dem Zug? Hast du schon einmal Bauarbeiten an einer Bahnstrecke gesehen? Was glaubst du: Was muss man in einem Beruf auf dem Gleis können?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай (або обговоріть у парі): хто ремонтує залізницю? Які небезпеки чекають на людей, що працюють просто на коліях?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Jeden Tag sind in Deutschland rund 40.000 Züge unterwegs. Dass sie sicher fahren können, verdanken die Reisenden Menschen wie Eric Herrmann. Er arbeitet direkt auf den <span class="gl" data-key data-uk="колія" data-lemma="das Gleis, -e">Gleisen</span> – oft auch nachts.</p>
+
+          <p>Normalerweise ist es streng verboten, auf die Gleise zu gehen. Eric, 36, darf das: Er ist <span class="gl" data-key data-uk="колійник, робітник з будівництва колій" data-lemma="der Gleisbauer, -">Gleisbauer</span> bei der Deutschen Bahn. Heute arbeitet sein Team bei Golßen in Brandenburg. In einer Richtung ist die <span class="gl" data-uk="ділянка (залізниці)" data-lemma="die Strecke, -n">Strecke</span> <span class="gl" data-uk="закривати (для руху)" data-lemma="sperren">gesperrt</span>, in der anderen fahren noch Züge vorbei – so nah, dass Eric sie fast berühren könnte. Deshalb gibt es strenge Regeln: Die Arbeiter tragen Schuhe mit Stahlkappen, einen Helm und leuchtend orange Kleidung, damit man sie schon von Weitem sieht.</p>
+
+          <p>Zu den Aufgaben von Gleisbauern gehört es, Gleise zu bauen und zu reparieren, <span class="gl" data-key data-uk="рейка" data-lemma="die Schiene, -n">Schienen</span> zu <span class="gl" data-uk="монтувати" data-lemma="montieren">montieren</span> und <span class="gl" data-uk="залізничний переїзд" data-lemma="der Bahnübergang, -ä-e">Bahnübergänge</span> in Ordnung zu halten. Heute tauscht das Team die <span class="gl" data-key data-uk="шпала" data-lemma="die Schwelle, -n">Schwellen</span> aus. Das sind Blöcke aus Beton, die unter den Schienen im <span class="gl" data-uk="щебінь" data-lemma="der Schotter">Schotter</span> liegen. Jede wiegt rund 300 Kilogramm, und auf zehn Meter Gleis kommen etwa 16 Stück. Die Schwellen halten das Gleis stabil. Sind sie kaputt, kann ein Zug im schlimmsten Fall <span class="gl" data-uk="сходити з рейок" data-lemma="entgleisen">entgleisen</span>. Zuerst schneidet Eric die alte Schiene mit einer Maschine durch – dabei <span class="gl" data-uk="бризкати, розлітатися" data-lemma="sprühen">sprühen</span> <span class="gl" data-uk="іскра" data-lemma="der Funke, -n">Funken</span>.</p>
+
+          <p>Früher war die Arbeit viel härter. Im 19. Jahrhundert legte man die Gleise fast nur mit <span class="gl" data-uk="м'язова сила" data-lemma="die Muskelkraft">Muskelkraft</span>, und die Schwellen waren schwere, dicke <span class="gl" data-uk="дерев'яна балка, брус" data-lemma="der Holzbalken, -">Holzbalken</span>. Ganze Gruppen von Arbeitern mussten sie tragen. Heute helfen Spezialmaschinen. Eine besonders große heißt „SUM“ – kurz für „schnelle Umbaumaschine“. Sie ist ungefähr zehnmal so lang wie ein Schulbus, hebt die Schienen mit einem Greifarm hoch und legt neue Schwellen ins Gleis. So schafft das Team an einem Arbeitstag rund 850 Meter.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/J27_042_Matisa-Schnellumbaumaschine%2C_Verlegebeginn.jpg/960px-J27_042_Matisa-Schnellumbaumaschine%2C_Verlegebeginn.jpg" alt="Eine Schnellumbaumaschine legt neue Schwellen ins Gleis." width="960" height="640" loading="lazy">
+            <figcaption>Eine Schnellumbaumaschine legt neue Schwellen ins Gleis. Foto: Falk2, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:J27_042_Matisa-Schnellumbaumaschine,_Verlegebeginn.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Deutschland hat mit rund 39.000 Kilometern das längste <span class="gl" data-uk="залізнична мережа" data-lemma="das Eisenbahnnetz, -e">Eisenbahnnetz</span> der Europäischen Union. Strecken mit viel Verkehr müssen alle sechs Jahre <span class="gl" data-uk="оновлювати" data-lemma="erneuern">erneuert</span> werden. Deshalb gibt es eigentlich immer irgendwo eine <span class="gl" data-uk="будова, місце ремонтних робіт" data-lemma="die Baustelle, -n">Baustelle</span> – und für die Reisenden <span class="gl" data-uk="об'їзд, зміна маршруту" data-lemma="die Umleitung, -en">Umleitungen</span> und Verspätungen. Wenn es Verzögerungen gibt, arbeitet ein Team am Tag und ein anderes in der Nacht, mit großen Lampen. Auch das Wetter kann Probleme machen: Im letzten Winter hat der viele Schnee das Team wochenlang aufgehalten – es kam kaum <span class="gl" data-uk="просуватися вперед" data-lemma="vorankommen (kam voran, ist vorangekommen)">voran</span>. Höchstens zehn Tage bleibt das Team an einer Baustelle und schläft im Hotel, dann hat es frei.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Die erste deutsche Eisenbahn fuhr 1835 zwischen Nürnberg und Fürth in Bayern. Ihre bekannteste <span class="gl" data-uk="локомотив" data-lemma="die Lokomotive, -n">Lokomotive</span> hieß „Adler“. Die Wagen wurden damals mal von einer Dampflok, mal von Pferden gezogen.</p>
+          </aside>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/DB_Museum_Nuernberg%2C_Adler_02_11.jpg/960px-DB_Museum_Nuernberg%2C_Adler_02_11.jpg" alt="Ein Nachbau der Lokomotive „Adler“ im DB Museum in Nürnberg." width="960" height="639" loading="lazy">
+            <figcaption>Ein Nachbau der Lokomotive „Adler“ im DB Museum in Nürnberg. Foto: Хрюша, <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/wiki/File:DB_Museum_Nuernberg,_Adler_02_11.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Wer Gleisbauer werden will, macht eine <span class="gl" data-key data-uk="професійне навчання" data-lemma="die Ausbildung, -en">Ausbildung</span>. Sie dauert drei Jahre. In Deutschland gibt es rund 6600 Gleisbau-Fachkräfte. Sie verdienen etwa 4500 Euro im Monat – davon gehen noch <span class="gl" data-uk="податок" data-lemma="die Steuer, -n">Steuern</span> ab. Man sollte gern im Team arbeiten, bei jedem Wetter draußen sein und keine Angst vor Lärm haben. Nichts für Langschläfer: Oft wird auch nachts gearbeitet. Eric war schon als kleiner Junge ein Fan von Zügen – sein Vater war auch Gleisbauer. Am schönsten an seinem Beruf findet er, dass er am Abend sieht, was er geschafft hat.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Viele Berufe lernt man in Deutschland in einer <b>dualen Ausbildung</b>: Man arbeitet in einem Betrieb und geht gleichzeitig in die <span class="gl" data-uk="професійна школа" data-lemma="die Berufsschule, -n">Berufsschule</span>. Schon während der Ausbildung bekommt man Geld.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Обери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub3-list"></div>
+
+      <p class="lead">б) Встав слова з рамки.</p>
+      <div class="card">
+        <div class="wordbank"><span>Schwellen</span><span>Baustelle</span><span>Ausbildung</span><span>Schienen</span><span>gesperrt</span></div>
+        <div id="ub3b-list">
+          <div class="fill-item"><span class="num">1)</span> Unter den Schienen liegen <input type="text" class="blank-input inline" data-ans="Schwellen"> aus Beton.</div>
+          <div class="fill-item"><span class="num">2)</span> Die Strecke ist heute <input type="text" class="blank-input inline" data-ans="gesperrt">, hier fährt kein Zug.</div>
+          <div class="fill-item"><span class="num">3)</span> Die SUM hebt mit einem Greifarm die <input type="text" class="blank-input inline" data-ans="Schienen"> hoch.</div>
+          <div class="fill-item"><span class="num">4)</span> Wegen einer <input type="text" class="blank-input inline" data-ans="Baustelle"> hat mein Zug Verspätung.</div>
+          <div class="fill-item"><span class="num">5)</span> Die <input type="text" class="blank-input inline" data-ans="Ausbildung"> zum Gleisbauer dauert drei Jahre.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub3b-check">Prüfen</button>
+          <button class="btn secondary" id="ub3b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub3b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Passt der Beruf zu dir?</h2>
+      <p class="lead">Що, за текстом, пасує до професії колійника, а що ні? Розклади картки по кошиках.</p>
+      <div class="card" id="ub4-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (4–6 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Könntest du dir vorstellen, als Gleisbauer oder Gleisbauerin zu arbeiten? Warum (nicht)?</label>
+          <textarea id="ub5-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Wie lernt man in der Ukraine einen Beruf wie diesen? Welchen Beruf möchtest du später lernen?</label>
+          <textarea id="ub5-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Ich könnte mir (nicht) vorstellen, … zu arbeiten, weil … Mir gefällt, dass … Bei uns lernt man diesen Beruf … Später möchte ich … werden.</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Deutschland hat das längste Eisenbahnnetz der EU, und viel befahrene Strecken werden alle sechs Jahre erneuert. Gleisbauer lernen ihren Beruf in einer dreijährigen Ausbildung. Die erste deutsche Eisenbahn fuhr 1835 von Nürnberg nach Fürth.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          У Німеччині найдовша залізнична мережа в ЄС, а завантажені ділянки оновлюють кожні шість років. Професії колійника навчаються три роки. Перша німецька залізниця 1835 року з'єднала Нюрнберг і Фюрт.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "beruf-gleisbauer";
+
+  // Üb. 1а
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Um die Arbeit eines Gleisbauers und seinen Beruf",
+            "Um die Geschichte der ersten Lokomotive in Deutschland",
+            "Um die Frage, warum Züge in Deutschland oft zu spät kommen"],
+     correct: "Um die Arbeit eines Gleisbauers und seinen Beruf"},
+    {q: "Warum tragen Gleisbauer leuchtend orange Kleidung?",
+     opts: ["Damit man sie schon von Weitem sieht.",
+            "Weil Orange die Farbe der Deutschen Bahn ist.",
+            "Damit sie im Winter nicht frieren."],
+     correct: "Damit man sie schon von Weitem sieht."}
+  ]);
+  // Üb. 1б
+  buildMatch('ub1h', [
+    ["Immer irgendwo eine Baustelle", "Absatz 4"],
+    ["Ein Tag an der Strecke", "Absatz 1"],
+    ["Vom Holzbalken zur Riesenmaschine", "Absatz 3"],
+    ["So wird man Gleisbauer", "Absatz 5"],
+    ["Neue Schwellen für das Gleis", "Absatz 2"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5"], lead: true});
+
+  // Üb. 2
+  buildRF('ub2-rf', [
+    {s: "Eric arbeitet bei der Deutschen Bahn.", a: "r"},
+    {s: "Eine Schwelle aus Beton wiegt etwa 30 Kilogramm.", a: "f"},
+    {s: "Die Maschine „SUM“ ist ungefähr zehnmal so lang wie ein Schulbus.", a: "r"},
+    {s: "Eric fährt in seiner Freizeit gern Zug.", a: "n"},
+    {s: "Viel befahrene Strecken werden nur alle 20 Jahre erneuert.", a: "f"},
+    {s: "Das Team bleibt höchstens zehn Tage an einer Baustelle.", a: "r"},
+    {s: "Für die Ausbildung zum Gleisbauer braucht man Abitur.", a: "n"},
+    {s: "Erics Vater hatte einen ganz anderen Beruf.", a: "f"}
+  ]);
+
+  // Üb. 3а
+  buildMatch('ub3', [
+    ["das Gleis", "колія"],
+    ["die Schwelle", "шпала"],
+    ["die Strecke", "ділянка (залізниці)"],
+    ["entgleisen", "сходити з рейок"],
+    ["erneuern", "оновлювати"],
+    ["die Umleitung", "об'їзд, зміна маршруту"]
+  ]);
+  // Üb. 3б
+  wireBlanks('ub3b');
+
+  // Üb. 4
+  buildSort('ub4-sort', {
+    buckets: ["Passt zum Beruf", "Passt nicht zum Beruf"],
+    items: [
+      {t: "gern im Team arbeiten", b: "Passt zum Beruf"},
+      {t: "bei jedem Wetter draußen sein", b: "Passt zum Beruf"},
+      {t: "bei Lärm ruhig bleiben", b: "Passt zum Beruf"},
+      {t: "auch nachts arbeiten können", b: "Passt zum Beruf"},
+      {t: "morgens am liebsten lange schlafen", b: "Passt nicht zum Beruf"},
+      {t: "nur im warmen Büro arbeiten wollen", b: "Passt nicht zum Beruf"},
+      {t: "große Angst vor lauten Maschinen haben", b: "Passt nicht zum Beruf"}
+    ]
+  });
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🚆','🦺','🛤️','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ein neues Zuhause für Elefanten · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Natur &amp; Umwelt</span>
+        <h1>Ein neues Zuhause für Elefanten</h1>
+        <p class="sub">Самотні слони з цирків і зоопарків нарешті отримають простір і компанію. А чому Німеччина в цьому питанні — виняток у ЄС?</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Sätze bauen</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Elefanten in Europa</h2>
+      <div class="card">
+        <p>Wo hast du schon einmal einen Elefanten gesehen – im Zoo, im Zirkus oder im Fernsehen? Was brauchen Elefanten, damit es ihnen gut geht?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай (або обговоріть у парі): чи добре слонам у цирку? Як гадаєш, чи дозволені в Україні та в Німеччині виступи диких тварин у цирку?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">In Europa leben Elefanten fast nur in Zoos und im Zirkus. Viele von ihnen haben wenig Platz, manche leben ganz allein. Das soll sich jetzt ändern – mit einem besonderen Ort im Süden Portugals.</p>
+
+          <p>Die <span class="gl" data-key data-uk="організація захисту тварин" data-lemma="die Tierschutzorganisation, -en">Tierschutzorganisation</span> Pangea hat in der Region Alentejo das erste große <span class="gl" data-key data-uk="заповідник, притулок для тварин" data-lemma="das Schutzgebiet, -e">Schutzgebiet</span> für Elefanten in Europa gebaut. Bald sollen die ersten Tiere dorthin kommen. Viele dieser Tiere hatten bisher kein gutes Leben: Sie lebten unter schlechten <span class="gl" data-uk="умова" data-lemma="die Bedingung, -en">Bedingungen</span>, manche sogar in <span class="gl" data-key data-uk="утримання поодинці" data-lemma="die Einzelhaltung">Einzelhaltung</span> – also ganz ohne andere Elefanten.</p>
+
+          <p>Das ist für Elefanten besonders schlimm, denn sie sind <span class="gl" data-key data-uk="стадна тварина" data-lemma="das Herdentier, -e">Herdentiere</span>. In der Natur leben sie in Gruppen, sie fressen, spielen und ruhen gemeinsam. Allein fühlen sie sich <span class="gl" data-uk="самотній" data-lemma="einsam">einsam</span>. Im neuen Schutzgebiet haben die Tiere viel Freiheit und können so <span class="gl" data-uk="відповідно до виду, природно для тварини" data-lemma="artgerecht">artgerecht</span> wie möglich leben. Deshalb ist es auch kein Zoo: Tägliche Besucherinnen und Besucher sind nicht <span class="gl" data-uk="передбачений, запланований" data-lemma="vorgesehen">vorgesehen</span>.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Elephants_in_Australia_Zoo_02%2B_%28528669523%29.jpg/960px-Elephants_in_Australia_Zoo_02%2B_%28528669523%29.jpg" alt="Elefanten leben gern in Gruppen – hier zwei Tiere im Australia Zoo." width="960" height="640" loading="lazy">
+            <figcaption>Elefanten leben gern in Gruppen – hier zwei Tiere im Australia Zoo. Foto: Sheba_Also, <a href="https://creativecommons.org/licenses/by-sa/2.0" target="_blank" rel="noopener">CC BY-SA 2.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Elephants_in_Australia_Zoo_02%2B_(528669523).jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Früher war auf dem Gelände eine Farm für Rinder. Die <span class="gl" data-uk="площа, територія" data-lemma="die Fläche, -n">Fläche</span> ist heute 400 Hektar groß, das sind ungefähr 560 Fußballfelder. In Zukunft soll hier Platz für 30 Elefanten sein. Die Tiere können also große <span class="gl" data-uk="відстань" data-lemma="die Strecke, -n">Strecken</span> laufen und selbst <span class="gl" data-uk="вирішувати" data-lemma="entscheiden (entschied, hat entschieden)">entscheiden</span>, wo sie sein möchten – ganz anders als in einem kleinen <span class="gl" data-uk="вольєр" data-lemma="das Gehege, -">Gehege</span>.</p>
+
+          <p>Und wie ist es im Zirkus? Für <span class="gl" data-uk="дика тварина" data-lemma="das Wildtier, -e">Wildtiere</span> im Zirkus gibt es in Europa keine <span class="gl" data-uk="єдиний, однаковий" data-lemma="einheitlich">einheitlichen</span> Regeln. Jedes Land entscheidet selbst, ob zum Beispiel Elefanten oder Löwen <span class="gl" data-uk="виступати (на сцені, арені)" data-lemma="auftreten (trat auf, ist aufgetreten)">auftreten</span> dürfen. Unter allen EU-Ländern fehlt nur in Deutschland ein allgemeines <span class="gl" data-key data-uk="заборона" data-lemma="das Verbot, -e">Verbot</span>. Auch privat darf man in Deutschland <span class="gl" data-uk="у принципі, принципово" data-lemma="grundsätzlich">grundsätzlich</span> einen Elefanten halten. Das ist aber sehr teuer und <span class="gl" data-uk="складний, клопіткий" data-lemma="aufwendig">aufwendig</span>.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Der Alentejo ist eine große, sehr warme Region im Süden Portugals. Typisch für die Landschaft sind <span class="gl" data-uk="коркове дерево, корковий дуб" data-lemma="die Korkeiche, -n">Korkeichen</span>: Aus ihrer Rinde macht man zum Beispiel Korken für Flaschen. Portugal produziert mehr Kork als jedes andere Land der Welt.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Обери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub3-list"></div>
+
+      <p class="lead">б) Встав слова з рамки.</p>
+      <div class="card">
+        <div class="wordbank"><span>Herdentiere</span><span>einsam</span><span>Verbot</span><span>Schutzgebiet</span><span>Fläche</span></div>
+        <div id="ub3b-list">
+          <div class="fill-item"><span class="num">1)</span> Elefanten sind <input type="text" class="blank-input inline wide" data-ans="Herdentiere"> und leben gern in Gruppen.</div>
+          <div class="fill-item"><span class="num">2)</span> Allein fühlt sich ein Elefant <input type="text" class="blank-input inline" data-ans="einsam">.</div>
+          <div class="fill-item"><span class="num">3)</span> Das <input type="text" class="blank-input inline wide" data-ans="Schutzgebiet"> liegt im Süden Portugals.</div>
+          <div class="fill-item"><span class="num">4)</span> Die <input type="text" class="blank-input inline" data-ans="Fläche"> ist so groß wie 560 Fußballfelder.</div>
+          <div class="fill-item"><span class="num">5)</span> In Deutschland gibt es kein allgemeines <input type="text" class="blank-input inline" data-ans="Verbot"> für Wildtiere im Zirkus.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub3b-check">Prüfen</button>
+          <button class="btn secondary" id="ub3b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub3b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Sätze bauen</h2>
+      <p class="lead">Склади речення з тексту: натискай слова в правильному порядку. Натиснеш на поставлене слово — воно повернеться назад.</p>
+      <div class="card" id="ub4-order"></div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (4–6 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Sollten Wildtiere wie Elefanten oder Löwen im Zirkus auftreten dürfen? Was denkst du? Begründe deine Meinung.</label>
+          <textarea id="ub5-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Gibt es in deiner Region einen Zoo, einen Tierpark oder ein Tierheim? Wie leben die Tiere dort?</label>
+          <textarea id="ub5-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Ich finde, dass … , Meiner Meinung nach … , Tiere brauchen … , In unserer Stadt gibt es … , Dort haben die Tiere …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Im Alentejo in Portugal gibt es jetzt das erste große Schutzgebiet für Elefanten in Europa. Elefanten sind Herdentiere und leiden, wenn sie allein leben. Deutschland ist das einzige EU-Land ohne allgemeines Verbot von Wildtieren im Zirkus.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          В Алентежу (Португалія) збудували перший великий заповідник для слонів у Європі. Слони — стадні тварини, і вони страждають, коли живуть поодинці. Німеччина — єдина країна ЄС, де немає загальної заборони на диких тварин у цирку.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "elefanten-schutzgebiet";
+
+  // Üb. 1а
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Um ein neues Schutzgebiet für Elefanten in Portugal",
+            "Um einen neuen Zirkus mit vielen Elefanten",
+            "Um eine Reise zu wilden Elefanten in Afrika"],
+     correct: "Um ein neues Schutzgebiet für Elefanten in Portugal"},
+    {q: "Warum dürfen keine täglichen Besucher in das Schutzgebiet?",
+     opts: ["Die Elefanten sollen so artgerecht wie möglich leben.",
+            "Der Weg dorthin ist zu gefährlich.",
+            "Die Tickets wären zu teuer."],
+     correct: "Die Elefanten sollen so artgerecht wie möglich leben."}
+  ]);
+  // Üb. 1б
+  buildMatch('ub1h', [
+    ["Regeln für den Zirkus", "Absatz 4"],
+    ["Das erste große Schutzgebiet Europas", "Absatz 1"],
+    ["Platz wie auf 560 Fußballfeldern", "Absatz 3"],
+    ["Zusammen statt allein", "Absatz 2"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4"], lead: true});
+
+  // Üb. 2
+  buildRF('ub2-rf', [
+    {s: "Das Schutzgebiet liegt im Süden Portugals.", a: "r"},
+    {s: "Im Schutzgebiet leben schon 30 Elefanten.", a: "f"},
+    {s: "Früher war auf dem Gelände eine Rinderfarm.", a: "r"},
+    {s: "Die Elefanten kommen alle aus deutschen Zoos.", a: "n"},
+    {s: "Jeden Tag können Touristen die Elefanten besuchen.", a: "f"},
+    {s: "In Deutschland dürfen Elefanten im Zirkus auftreten.", a: "r"},
+    {s: "Einen Elefanten privat zu halten, ist billig und einfach.", a: "f"},
+    {s: "Ein Elefant frisst jeden Tag 150 Kilogramm Futter.", a: "n"}
+  ]);
+
+  // Üb. 3а
+  buildMatch('ub3', [
+    ["das Herdentier", "стадна тварина"],
+    ["einsam", "самотній"],
+    ["das Verbot", "заборона"],
+    ["die Fläche", "площа, територія"],
+    ["aufwendig", "складний, клопіткий"],
+    ["das Wildtier", "дика тварина"]
+  ]);
+  // Üb. 3б
+  wireBlanks('ub3b');
+
+  // Üb. 4
+  buildOrder('ub4-order', [
+    {words: ["Elefanten", "sind", "Herdentiere"], end: ".", gross: true},
+    {words: ["Allein", "fühlen", "sie", "sich", "einsam"], end: ".", alt: ["Sie fühlen sich allein einsam"]},
+    {words: ["Bald", "sollen", "die ersten Tiere", "dorthin", "kommen"], end: ".", alt: ["Die ersten Tiere sollen bald dorthin kommen", "Dorthin sollen bald die ersten Tiere kommen"]},
+    {words: ["Jedes Land", "entscheidet", "selbst"], end: "."}
+  ]);
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🐘','🌳','🇵🇹','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

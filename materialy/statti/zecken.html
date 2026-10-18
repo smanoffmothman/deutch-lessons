@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kleine Blutsauger · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Natur &amp; Umwelt</span>
+        <h1>Kleine Blutsauger</h1>
+        <p class="sub">Без очей, зате з особливим органом на передніх лапках і з укусом, якого не відчуваєш. Що треба знати про кліщів після прогулянки в лісі чи саду?</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Was tun?</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Nach dem Spaziergang</h2>
+      <div class="card">
+        <p>Bist du gern im Wald, auf der Wiese oder im Garten? Hattest du schon einmal eine Zecke? Was weißt du über diese kleinen Tiere?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай (або обговоріть у парі): чим небезпечні кліщі? Що робити, якщо знайшов кліща на шкірі?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Sie sind winzig, haben keine Augen und ernähren sich nur von Blut: <span class="gl" data-key data-uk="кліщ" data-lemma="die Zecke, -n">Zecken</span>. Nach einem Tag in der Natur sollte man sich deshalb gut nach ihnen <span class="gl" data-uk="оглядати (шукаючи щось)" data-lemma="absuchen (suchte ab, hat abgesucht)">absuchen</span>. Warum, erklärt dieser Text.</p>
+
+          <h3>Vom Ei zur erwachsenen Zecke</h3>
+
+          <p>Zecken saugen das Blut von Vögeln und <span class="gl" data-uk="ссавець" data-lemma="das Säugetier, -e">Säugetieren</span>, zum Beispiel von Hunden oder Menschen. Im Herbst legen sie sehr viele Eier. Wenn es im Frühling wärmer wird, <span class="gl" data-uk="вилуплюватися" data-lemma="schlüpfen">schlüpfen</span> daraus <span class="gl" data-uk="личинка" data-lemma="die Larve, -n">Larven</span> mit sechs Beinen. Nach einer Mahlzeit aus Blut wird die Larve zu einer Nymphe mit acht Beinen, und nach einer weiteren Blutmahlzeit ist die Zecke erwachsen. Ein erwachsenes Weibchen kann bei einer einzigen Mahlzeit 100- bis 200-mal schwerer werden!</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Ixodes_ricinus_on_dry_grass.jpg/960px-Ixodes_ricinus_on_dry_grass.jpg" alt="Ein Weibchen des Gemeinen Holzbocks auf trockenem Gras." width="960" height="720" loading="lazy">
+            <figcaption>Ein Weibchen des Gemeinen Holzbocks auf trockenem Gras. Foto: W.alter, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Ixodes_ricinus_on_dry_grass.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <h3>Ein Jäger, der wartet</h3>
+
+          <p>Die häufigste Zecke in Europa heißt Gemeiner Holzbock. Sie kann nichts sehen. Stattdessen hat sie an den Vorderbeinen ein besonderes <span class="gl" data-uk="орган (тіла)" data-lemma="das Organ, -e">Organ</span>, mit dem sie Stoffe <span class="gl" data-uk="відчувати, сприймати" data-lemma="wahrnehmen (nahm wahr, hat wahrgenommen)">wahrnimmt</span>, die Menschen und Tiere beim Atmen, <span class="gl" data-uk="пітніти" data-lemma="schwitzen">Schwitzen</span> oder Pinkeln abgeben. Der Holzbock <span class="gl" data-uk="чатувати, підстерігати" data-lemma="lauern">lauert</span> in hohem Gras oder in Büschen und streckt die Vorderbeine in die Luft. Kommt ein Mensch oder Tier vorbei, <span class="gl" data-uk="чіплятися" data-lemma="sich festklammern (klammerte sich fest, hat sich festgeklammert)">klammert</span> er sich blitzschnell an ihm fest.</p>
+
+          <p>Zecken <span class="gl" data-uk="кусати" data-lemma="beißen (biss, hat gebissen)">beißen</span> übrigens nicht, sie <span class="gl" data-key data-uk="жалити, колоти" data-lemma="stechen (stach, hat gestochen)">stechen</span>. Ihr <span class="gl" data-uk="жало, хоботок" data-lemma="der Stachel, -">Stachel</span> ist sogar dicker als der einer Mücke. Trotzdem merkt man den <span class="gl" data-key data-uk="укус (комахи, кліща)" data-lemma="der Stich, -e">Stich</span> nicht: Im <span class="gl" data-uk="слина" data-lemma="der Speichel">Speichel</span> der Zecke ist ein <span class="gl" data-uk="знеболювальний засіб" data-lemma="das Betäubungsmittel, -">Betäubungsmittel</span>, deshalb tut er nicht weh und juckt nicht.</p>
+
+          <h3>Warum Zecken gefährlich sein können</h3>
+
+          <p>Zecken können Bakterien und Viren <span class="gl" data-uk="переносити, передавати" data-lemma="übertragen (übertrug, hat übertragen)">übertragen</span>, die schwere Krankheiten <span class="gl" data-uk="викликати" data-lemma="auslösen (löste aus, hat ausgelöst)">auslösen</span>. Die bekanntesten sind Borreliose und FSME, eine Entzündung des Gehirns und der Hirnhäute. Die FSME-Viren gelangen sofort beim Stich in den Körper. Gegen FSME kann man sich aber <span class="gl" data-key data-uk="робити (собі) щеплення" data-lemma="sich impfen lassen (gegen + Akk.)">impfen lassen</span>. Bei Borreliose ist es anders: Die Zecke muss lange saugen, das Risiko steigt nach etwa zwölf Stunden. Wer eine Zecke schnell <span class="gl" data-uk="видаляти" data-lemma="entfernen">entfernt</span>, ist also besser geschützt.</p>
+
+          <p>Und wenn man eine Zecke findet? Keine Panik, aber schnell handeln: Mit einer <span class="gl" data-key data-uk="пінцет" data-lemma="die Pinzette, -n">Pinzette</span> nah an der Haut greifen und die Zecke gerade herausziehen, ohne ihren Körper zu <span class="gl" data-uk="розчавлювати" data-lemma="zerquetschen">zerquetschen</span>. Danach die Stelle <span class="gl" data-uk="дезінфікувати" data-lemma="desinfizieren">desinfizieren</span> und beobachten. Bildet sich ein roter Ring, der größer wird, oder bekommt man Fieber, muss man zum Arzt. Am besten ist es, sich zu schützen: lange Kleidung tragen, die Hose in die Socken stecken und nicht durch hohes Gras laufen. Auch manche Sprays helfen, denn Zecken mögen ihren Geruch nicht.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>In Deutschland gibt es FSME vor allem im Süden, besonders in Bayern und Baden-Württemberg. Dort empfehlen Ärzte vielen Menschen die Impfung. Die Gebiete heißen <b>FSME-Risikogebiete</b>.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Обери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub3-list"></div>
+
+      <p class="lead">б) Встав слова з рамки.</p>
+      <div class="card">
+        <div class="wordbank"><span>Pinzette</span><span>stechen</span><span>Larven</span><span>impfen</span><span>Stich</span></div>
+        <div id="ub3b-list">
+          <div class="fill-item"><span class="num">1)</span> Zecken beißen nicht, sie <input type="text" class="blank-input inline" data-ans="stechen">.</div>
+          <div class="fill-item"><span class="num">2)</span> Den <input type="text" class="blank-input inline" data-ans="Stich"> merkt man nicht, weil er nicht wehtut.</div>
+          <div class="fill-item"><span class="num">3)</span> Im Frühling schlüpfen aus den Eiern <input type="text" class="blank-input inline" data-ans="Larven">.</div>
+          <div class="fill-item"><span class="num">4)</span> Gegen FSME kann man sich <input type="text" class="blank-input inline" data-ans="impfen"> lassen.</div>
+          <div class="fill-item"><span class="num">5)</span> Eine Zecke entfernt man am besten mit einer <input type="text" class="blank-input inline" data-ans="Pinzette">.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub3b-check">Prüfen</button>
+          <button class="btn secondary" id="ub3b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub3b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Was tun bei einem Zeckenstich?</h2>
+      <p class="lead">Розстав кроки в правильному порядку. Натискай речення по черзі; натиснеш на вже поставлене — воно повернеться вниз.</p>
+      <div class="card" id="ub4-seq"></div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (4–6 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Gibt es in deiner Region viele Zecken? Was machst du oder deine Familie, um dich zu schützen?</label>
+          <textarea id="ub5-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Schreib einem jüngeren Kind drei Tipps für einen Ausflug in den Wald.</label>
+          <textarea id="ub5-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Bei uns gibt es … , Wir tragen … , Nach dem Ausflug … , Du solltest … , Vergiss nicht, … zu …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Die häufigste Zecke in Europa ist der Gemeine Holzbock. Zecken können Borreliose und FSME übertragen; gegen FSME gibt es eine Impfung, die vor allem in Süddeutschland empfohlen wird. Nach einem Tag in der Natur sucht man sich gründlich ab und entfernt eine Zecke schnell mit der Pinzette.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Найпоширеніший кліщ у Європі — Gemeiner Holzbock (європейський лісовий кліщ). Кліщі можуть переносити бореліоз і кліщовий енцефаліт; від енцефаліту є щеплення, його часто радять на півдні Німеччини. Після дня на природі треба уважно оглянути себе й швидко видалити кліща пінцетом.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "zecken";
+
+  // Üb. 1а
+  buildQuiz('ub1-quiz', [
+    {q: "Was will der Text vor allem?",
+     opts: ["Über Zecken informieren und erklären, wie man sich schützt",
+            "Zeigen, dass Zecken eigentlich harmlos sind",
+            "Erklären, wie man Zecken im Garten züchtet"],
+     correct: "Über Zecken informieren und erklären, wie man sich schützt"},
+    {q: "Warum merkt man den Zeckenstich nicht?",
+     opts: ["Im Speichel der Zecke ist ein Betäubungsmittel.",
+            "Die menschliche Haut ist zu dick.",
+            "Zecken stechen nur, wenn man schläft."],
+     correct: "Im Speichel der Zecke ist ein Betäubungsmittel."}
+  ]);
+  // Üb. 1б
+  buildMatch('ub1h', [
+    ["Schmerzlos, aber nicht harmlos", "Absatz 3"],
+    ["Von der Larve zum Weibchen", "Absatz 1"],
+    ["Richtig reagieren und sich schützen", "Absatz 5"],
+    ["Ohne Augen auf der Jagd", "Absatz 2"],
+    ["Zwei gefährliche Krankheiten", "Absatz 4"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5"], lead: true});
+
+  // Üb. 2
+  buildRF('ub2-rf', [
+    {s: "Zecken ernähren sich nur von Blut.", a: "r"},
+    {s: "Zeckenlarven haben acht Beine.", a: "f"},
+    {s: "Der Gemeine Holzbock sieht sehr gut.", a: "f"},
+    {s: "Ein Zeckenstich juckt sehr stark.", a: "f"},
+    {s: "Gegen FSME gibt es eine Impfung.", a: "r"},
+    {s: "Hunde bekommen nach einem Zeckenstich oft Fieber.", a: "n"},
+    {s: "Das Borreliose-Risiko steigt, wenn die Zecke lange saugt.", a: "r"},
+    {s: "Zecken können mehrere Jahre ohne Blut überleben.", a: "n"}
+  ]);
+
+  // Üb. 3а
+  buildMatch('ub3', [
+    ["die Zecke", "кліщ"],
+    ["übertragen", "переносити, передавати"],
+    ["entfernen", "видаляти"],
+    ["der Speichel", "слина"],
+    ["lauern", "чатувати, підстерігати"],
+    ["schlüpfen", "вилуплюватися"]
+  ]);
+  // Üb. 3б
+  wireBlanks('ub3b');
+
+  // Üb. 4
+  buildSequence('ub4-seq', [
+    "Nach dem Ausflug den Körper gründlich absuchen.",
+    "Die Zecke mit einer Pinzette nah an der Haut greifen.",
+    "Die Zecke gerade herausziehen, ohne sie zu zerquetschen.",
+    "Die Stelle desinfizieren.",
+    "Die Stelle beobachten und bei einem roten Ring zum Arzt gehen."
+  ]);
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🕷️','🌲','💉','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

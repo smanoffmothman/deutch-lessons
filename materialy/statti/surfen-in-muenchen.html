@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Surfen ohne Meer · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Sport &amp; Freizeit</span>
+        <h1>Surfen ohne Meer</h1>
+        <p class="sub">Баварія далеко від моря, але найкращі серфінгісти світу їдуть саме сюди. Що їх тут приваблює?</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Leons Weg</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Wellen und Bretter</h2>
+      <div class="card">
+        <p>Hast du schon einmal gesurft oder Surfern zugeschaut? Was braucht man zum Surfen? Und kann man auch weit weg vom Meer surfen?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай (або обговоріть у парі): що потрібно для серфінгу? Як гадаєш, чи можна займатися серфінгом у місті, яке стоїть далеко від моря?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Bayern liegt weit weg vom Meer. Trotzdem kommen einige der besten Surfer der Welt in die Nähe von München. Der Grund ist ein riesiges <span class="gl" data-key data-uk="басейн, резервуар" data-lemma="das Becken, -">Becken</span>, in dem eine Maschine die <span class="gl" data-key data-uk="хвиля" data-lemma="die Welle, -n">Wellen</span> macht.</p>
+
+          <p>Die <span class="gl" data-uk="комплекс, споруда" data-lemma="die Anlage, -n">Anlage</span> heißt Surftown MUC. Sie liegt in Hallbergmoos, einem kleinen Ort direkt beim Münchner Flughafen, und ist erst zwei Jahre alt. Das Becken ist 180 Meter lang und <span class="gl" data-uk="вміщувати" data-lemma="fassen">fasst</span> elf Millionen Liter Wasser. Der Bau hat 45 Millionen Euro gekostet. Damit gehört Surftown MUC zu den größten Surfparks in Europa.</p>
+
+          <p>Wie entsteht hier eine Welle? An einer Seite des Beckens liegen 34 große <span class="gl" data-uk="камера" data-lemma="die Kammer, -n">Kammern</span> unter der Erde. In diese Kammern wird zuerst Luft <span class="gl" data-uk="всмоктувати" data-lemma="saugen (saugte / sog, hat gesaugt / gesogen)">gesaugt</span>. Danach drückt man die Luft nach unten auf große <span class="gl" data-uk="заслінка, клапан" data-lemma="die Klappe, -n">Klappen</span>, und die Klappen <span class="gl" data-uk="штовхати, виштовхувати" data-lemma="schieben (schob, hat geschoben)">schieben</span> das Wasser ins Becken. So kann man kleine Wellen für Anfänger machen, aber auch <span class="gl" data-uk="велика хвиля" data-note="у серфінгу: велика хвиля, що розбивається" data-lemma="der Brecher, -">Brecher</span> bis 2,20 Meter für Profis. Ein „Wellenmeister“ <span class="gl" data-uk="керувати" data-lemma="steuern">steuert</span> die Maschinen aus einem Turm über dem Becken. Sie laufen 16 Stunden am Tag, von 7 bis 23 Uhr. Bis zu 56 Menschen dürfen <span class="gl" data-uk="одночасно" data-lemma="gleichzeitig">gleichzeitig</span> im Wasser sein, und <span class="gl" data-key data-uk="рятувальник (на воді)" data-lemma="der Rettungsschwimmer, -">Rettungsschwimmer</span> <span class="gl" data-uk="пильнувати, наглядати" data-lemma="aufpassen (passte auf, hat aufgepasst)">passen</span> auf.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/O2_Surftown_MUC_%28Munich-Hallbergmoos%29_%282024-08-11%29_16.jpg/960px-O2_Surftown_MUC_%28Munich-Hallbergmoos%29_%282024-08-11%29_16.jpg" alt="Eine künstliche Welle bei Surftown MUC in Hallbergmoos." width="960" height="594" loading="lazy">
+            <figcaption>Eine künstliche Welle bei Surftown MUC in Hallbergmoos. Foto: Wavepainter, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:O2_Surftown_MUC_(Munich-Hallbergmoos)_(2024-08-11)_16.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Einer der Profis, die hier trainieren, ist Leon Glatzer, 29. Er wurde auf Hawaii geboren, seine Eltern kommen aus Deutschland. Mit zwei Jahren ging er mit seiner Mutter nach Costa Rica und <span class="gl" data-uk="виростати" data-lemma="aufwachsen (wuchs auf, ist aufgewachsen)">wuchs</span> dort am Strand auf. Mit 15 wurde er Surfprofi. Am Anfang hatte er kaum Geld: Auf Reisen schlief er bei Freunden auf dem Boden, oft in der großen Tasche für seine <span class="gl" data-key data-uk="дошка для серфінгу" data-lemma="das Surfbrett, -er">Surfbretter</span>. Heute bezahlen Sponsoren seine Reisen und seine <span class="gl" data-key data-uk="спорядження" data-lemma="die Ausrüstung, -en">Ausrüstung</span>.</p>
+
+          <p>Warum trainiert er ausgerechnet in Bayern? Im Meer wartet man oft lange auf eine gute Welle. Manchmal ist kein Wind da, manchmal gibt es Sturm. Im Becken bekommt ein Surfer dagegen zehn bis zwölf Wellen pro Stunde, und jede dauert bis zu 25 Sekunden. Auch sein Trainer Martin Walz sieht darin den großen Vorteil: Die Wellen sind <span class="gl" data-uk="надійний" data-lemma="zuverlässig">zuverlässig</span>, und man kann das Training genau planen.</p>
+
+          <p>Leon trainiert jeden Tag morgens und abends je zwei Stunden im Becken. Dazu kommen Kraft- und <span class="gl" data-uk="тренування на витривалість" data-lemma="das Ausdauertraining">Ausdauertraining</span>, ein Physiotherapeut und ein Mentaltrainer. Sein großes Ziel sind die Olympischen Spiele 2028 in Los Angeles. Bei Olympia war er schon einmal: 2021 war er der erste deutsche Surfer, der dort startete. Besonders gut ist er in der Luft. Er benutzt die <span class="gl" data-uk="край, ребро" data-lemma="die Kante, -n">Kante</span> der Welle wie eine Rampe, fliegt hoch und landet wieder auf der Welle.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Surfen ist eine junge olympische Sportart. Bei den Spielen in Tokio war es 2021 zum ersten Mal dabei. Diese Spiele heißen offiziell „Tokio 2020“ – wegen der Corona-Pandemie fanden sie aber ein Jahr später statt.</p>
+          </aside>
+
+          <p>Nur das Wetter in Bayern gefällt dem Surfer nicht so gut. An einem Tag im Mai hat die Luft gerade mal 8 Grad, das Wasser nur 14 Grad. Leon trägt zwar einen <span class="gl" data-key data-uk="гідрокостюм" data-lemma="der Neoprenanzug, -ü-e">Neoprenanzug</span>, aber er gibt offen zu, dass er die <span class="gl" data-uk="холод" data-lemma="die Kälte">Kälte</span> <span class="gl" data-uk="ненавидіти" data-lemma="hassen">hasst</span>. Kein Wunder, dass er sich nach dem Training vor allem auf eines freut: eine heiße Dusche.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>München ist bei Surfern schon lange bekannt – wegen der <b>Eisbachwelle</b>. Im Englischen Garten, mitten in der Stadt, fließt der Eisbach, ein künstlich <span class="gl" data-uk="прокладати, створювати" data-lemma="anlegen (legte an, hat angelegt)">angelegter</span> Bach. An einer Stelle bildet das Wasser eine Welle, auf der man surfen kann, sogar im Winter. Für viele Touristen ist das ein beliebtes Fotomotiv.</p>
+          </aside>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Eisbachwelle_am_8.2.2019.jpg/960px-Eisbachwelle_am_8.2.2019.jpg" alt="Ein Surfer auf der Eisbachwelle im Winter." width="960" height="720" loading="lazy">
+            <figcaption>Ein Surfer auf der Eisbachwelle im Winter. Foto: Strubbl, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en" target="_blank" rel="noopener">CC0</a>, <a href="https://commons.wikimedia.org/wiki/File:Eisbachwelle_am_8.2.2019.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub3-list"></div>
+
+      <p class="lead">б) Встав слова з рамки.</p>
+      <div class="card">
+        <div class="wordbank"><span>Neoprenanzug</span><span>Wellen</span><span>steuert</span><span>Rettungsschwimmer</span><span>trainiert</span></div>
+        <div id="ub3b-list">
+          <div class="fill-item"><span class="num">1)</span> Ohne <input type="text" class="blank-input inline wide" data-ans="Neoprenanzug"> ist das Wasser im Mai viel zu kalt.</div>
+          <div class="fill-item"><span class="num">2)</span> Der Wellenmeister <input type="text" class="blank-input inline" data-ans="steuert"> die Maschinen aus einem Turm.</div>
+          <div class="fill-item"><span class="num">3)</span> Am Becken passen <input type="text" class="blank-input inline wide" data-ans="Rettungsschwimmer"> auf die Surfer auf.</div>
+          <div class="fill-item"><span class="num">4)</span> Im Becken bekommt Leon zehn bis zwölf <input type="text" class="blank-input inline" data-ans="Wellen"> pro Stunde.</div>
+          <div class="fill-item"><span class="num">5)</span> Leon <input type="text" class="blank-input inline" data-ans="trainiert"> jeden Tag zweimal im Becken.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub3b-check">Prüfen</button>
+          <button class="btn secondary" id="ub3b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub3b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Leons Weg</h2>
+      <p class="lead">Розстав події з життя Леона в правильному порядку. Натискай речення по черзі; натиснеш на вже поставлене — воно повернеться вниз.</p>
+      <div class="card" id="ub4-seq"></div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (4–6 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Wo kann man in der Ukraine surfen oder andere Wassersportarten machen? Würdest du lieber im Meer oder in einem Becken wie Surftown MUC surfen? Warum?</label>
+          <textarea id="ub5-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Leon trainiert jeden Tag sehr viel. Welchen Sport machst du (oder möchtest du machen)? Wie oft trainierst du, und was ist dein Ziel?</label>
+          <textarea id="ub5-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Bei uns kann man … , Ich würde lieber … , weil … , Ein Vorteil ist, dass … , Ich trainiere … pro Woche. Mein Ziel ist …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>München liegt nicht am Meer und ist trotzdem eine Surfstadt: In Hallbergmoos beim Flughafen gibt es eines der größten Wellenbecken Europas, und im Englischen Garten surfen Menschen auf der Eisbachwelle. Surfen ist seit 2021 olympisch – Leon Glatzer war der erste deutsche Surfer bei Olympia.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Мюнхен не стоїть біля моря, але це місто серфінгу: біля аеропорту, у Галльбергмоосі, — один з найбільших хвильових басейнів Європи, а в Англійському саду серфінгісти катаються на хвилі струмка Айсбах. Серфінг став олімпійським видом спорту 2021 року, і Леон Глатцер був першим німецьким серфінгістом на Олімпіаді.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "surfen-in-muenchen";
+
+  // Üb. 1а
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Um ein Wellenbecken bei München, in dem auch Profis trainieren",
+            "Um die schönsten Strände für Surfer in Costa Rica",
+            "Um die Frage, warum man in Bayern nicht surfen darf"],
+     correct: "Um ein Wellenbecken bei München, in dem auch Profis trainieren"},
+    {q: "Warum trainiert Leon gern im Becken?",
+     opts: ["Die Wellen kommen regelmäßig, und man kann gut planen.",
+            "Das Wasser im Becken ist wärmer als im Meer.",
+            "Das Training im Becken ist für Profis kostenlos."],
+     correct: "Die Wellen kommen regelmäßig, und man kann gut planen."}
+  ]);
+  // Üb. 1б
+  buildMatch('ub1h', [
+    ["Das Problem mit der Kälte", "Absatz 6"],
+    ["So entsteht eine Welle", "Absatz 2"],
+    ["Ein riesiges Becken beim Flughafen", "Absatz 1"],
+    ["Training für Olympia", "Absatz 5"],
+    ["Vom Strand in Costa Rica zum Profi", "Absatz 3"],
+    ["Besser als das Meer?", "Absatz 4"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5", "Absatz 6"], lead: true});
+
+  // Üb. 2
+  buildRF('ub2-rf', [
+    {s: "Surftown MUC liegt mitten in der Münchner Altstadt.", a: "f"},
+    {s: "Der Bau des Beckens hat 45 Millionen Euro gekostet.", a: "r"},
+    {s: "Im Becken sind alle Wellen gleich hoch.", a: "f"},
+    {s: "Eine Stunde Surfen bei Surftown MUC kostet 80 Euro.", a: "n"},
+    {s: "Leon Glatzer ist in Costa Rica geboren.", a: "f"},
+    {s: "Leon war schon einmal bei den Olympischen Spielen.", a: "r"},
+    {s: "Leon bekommt im Becken ungefähr alle fünf bis sechs Minuten eine Welle.", a: "r"},
+    {s: "Leons Trainer war früher selbst Surfprofi.", a: "n"}
+  ]);
+
+  // Üb. 3а
+  buildMatch('ub3', [
+    ["das Becken", "басейн, резервуар"],
+    ["gleichzeitig", "одночасно"],
+    ["zuverlässig", "надійний"],
+    ["die Ausrüstung", "спорядження"],
+    ["aufwachsen", "виростати"],
+    ["die Kälte", "холод"]
+  ]);
+  // Üb. 3б
+  wireBlanks('ub3b');
+
+  // Üb. 4
+  buildSequence('ub4-seq', [
+    "Leon wird auf Hawaii geboren.",
+    "Mit zwei Jahren zieht er mit seiner Mutter nach Costa Rica.",
+    "Mit 15 Jahren wird er Surfprofi.",
+    "Er startet als erster deutscher Surfer bei Olympia.",
+    "Er trainiert bei München für die Spiele in Los Angeles."
+  ]);
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🌊','🏄','🏅','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

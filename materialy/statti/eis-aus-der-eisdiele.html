@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Das Geheimnis der Eisdiele · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Essen &amp; Trinken</span>
+        <h1>Das Geheimnis der Eisdiele</h1>
+        <p class="sub">Чому морозиво в кафе таке м'яке й кремове, а вдома — тверде, як камінь? Відповідь дає фізика.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Eisdiele oder zu Hause?</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Eis, bitte!</h2>
+      <div class="card">
+        <p>Welche Eissorte isst du am liebsten? Wo schmeckt dir Eis besser: in der Eisdiele oder zu Hause aus dem Gefrierschrank? Warum, glaubst du, ist das so?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай (або обговоріть у парі): чим морозиво з кафе відрізняється від того, що лежить у морозилці вдома? Як гадаєш, у чому секрет?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Ein <span class="gl" data-uk="стаканчик, креманка" data-lemma="der Becher, -">Becher</span> Schokoladeneis mit <span class="gl" data-uk="кондитерська посипка" data-lemma="der/das Streusel, - (meist Pl.)">Streuseln</span> oder ein Spaghettieis mit Erdbeersoße – in der <span class="gl" data-key data-uk="кафе-морозиво" data-lemma="die Eisdiele, -n">Eisdiele</span> ist das Eis besonders <span class="gl" data-key data-uk="кремовий" data-lemma="cremig">cremig</span>. Zu Hause klappt das selten. Woran liegt das? Die Antwort hat viel mit Physik zu tun.</p>
+
+          <p>In der Eisdiele kann man das Eis ganz leicht zu <span class="gl" data-uk="кулька" data-lemma="die Kugel, -n">Kugeln</span> formen, und es <span class="gl" data-uk="танути" data-lemma="schmelzen (schmolz, ist geschmolzen)">schmilzt</span> nur langsam. Eis aus dem eigenen <span class="gl" data-key data-uk="морозильна камера" data-lemma="der Gefrierschrank, -ä-e">Gefrierschrank</span> ist dagegen oft so hart, dass man es erst ein paar Minuten <span class="gl" data-uk="трохи відтанути" data-lemma="antauen (taute an, ist angetaut)">antauen</span> lassen muss.</p>
+
+          <p>Ein Grund ist die Temperatur. Ein Gefrierschrank zu Hause hat etwa minus 18 Grad. So kalt muss er sein, damit Fleisch, Gemüse und andere Lebensmittel viele Monate lang <span class="gl" data-uk="який довго зберігається" data-lemma="haltbar">haltbar</span> bleiben. Für Eis ist das aber eigentlich zu kalt. In der <span class="gl" data-uk="вітрина-холодильник для морозива" data-lemma="die Eistheke, -n">Eistheke</span> ist es viel wärmer: Dort hat das Eis nur ungefähr minus 11 Grad – deshalb bleibt es weich.</p>
+
+          <p>Wichtig ist auch der <span class="gl" data-uk="цукор" data-lemma="der Zucker">Zucker</span>. Er <span class="gl" data-uk="знижувати" data-lemma="senken">senkt</span> den <span class="gl" data-key data-uk="точка замерзання" data-lemma="der Gefrierpunkt, -e">Gefrierpunkt</span> der Flüssigkeit im Eis. Das heißt: Die Flüssigkeit wird erst bei einer tieferen Temperatur zu Eis. Dadurch <span class="gl" data-uk="утворюватися" data-lemma="entstehen (entstand, ist entstanden)">entstehen</span> keine großen <span class="gl" data-key data-uk="кристал льоду" data-lemma="der Eiskristall, -e">Eiskristalle</span>.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Spaghettieis_und_Cappuccino.jpg/960px-Spaghettieis_und_Cappuccino.jpg" alt="Spaghettieis und Cappuccino in einem Straßencafé in Ulm." width="960" height="540" loading="lazy">
+            <figcaption>Spaghettieis und Cappuccino in einem Straßencafé in Ulm. Foto: Andreas Praefcke, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en" target="_blank" rel="noopener">CC0</a>, <a href="https://commons.wikimedia.org/wiki/File:Spaghettieis_und_Cappuccino.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Außerdem wird das Eis in der Eisdiele frisch gemacht. Während es <span class="gl" data-uk="замерзати" data-lemma="gefrieren (gefror, ist gefroren)">gefriert</span>, wird es die ganze Zeit <span class="gl" data-uk="мішати, розмішувати" data-lemma="rühren">gerührt</span> und gekühlt. Danach wird es schnell verkauft. So bilden sich nur ganz kleine Kristalle. Mit dem Eis zu Hause passiert oft etwas anderes: Man nimmt es aus dem Gefrierschrank, es taut ein bisschen an, und dann friert man es wieder ein. Dabei <span class="gl" data-uk="утворюватися" data-lemma="sich bilden">bilden</span> sich an der <span class="gl" data-uk="поверхня" data-lemma="die Oberfläche, -n">Oberfläche</span> große, harte Kristalle.</p>
+
+          <p>Cremiges Eis ist also vor allem eine Frage der Physik: Die Temperatur muss stimmen, und die Eiskristalle müssen möglichst klein sein.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Das <b>Spaghettieis</b> ist eine deutsche Erfindung. Der Eismacher Dario Fontanella hat es 1969 in Mannheim erfunden: Er hat Vanilleeis durch eine <span class="gl" data-uk="прес для шпецле (локшини)" data-note="Spätzle — південнонімецька яєчна локшина" data-lemma="die Spätzlepresse, -n">Spätzlepresse</span> gedrückt. So sieht das Eis aus wie Spaghetti, die Erdbeersoße wie Tomatensoße und weiße Schokolade wie Parmesan.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Обери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub3-list"></div>
+
+      <p class="lead">б) Встав слова з рамки.</p>
+      <div class="card">
+        <div class="wordbank"><span>cremig</span><span>Zucker</span><span>Kristalle</span><span>gerührt</span><span>Gefrierschrank</span></div>
+        <div id="ub3b-list">
+          <div class="fill-item"><span class="num">1)</span> Im <input type="text" class="blank-input inline wide" data-ans="Gefrierschrank"> zu Hause hat das Eis etwa minus 18 Grad.</div>
+          <div class="fill-item"><span class="num">2)</span> Der <input type="text" class="blank-input inline" data-ans="Zucker"> senkt den Gefrierpunkt.</div>
+          <div class="fill-item"><span class="num">3)</span> Frisches Eis wird beim Gefrieren ständig <input type="text" class="blank-input inline" data-ans="gerührt">.</div>
+          <div class="fill-item"><span class="num">4)</span> Kleine <input type="text" class="blank-input inline" data-ans="Kristalle|Eiskristalle"> machen das Eis glatt und weich.</div>
+          <div class="fill-item"><span class="num">5)</span> Das Eis in der Eisdiele ist besonders <input type="text" class="blank-input inline" data-ans="cremig">.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub3b-check">Prüfen</button>
+          <button class="btn secondary" id="ub3b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub3b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Eisdiele oder zu Hause?</h2>
+      <p class="lead">Що стосується морозива в кафе, а що — морозива з домашньої морозилки? Розклади картки по кошиках.</p>
+      <div class="card" id="ub4-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (4–6 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Welche Eissorten sind in der Ukraine beliebt? Gibt es bei euch auch Eisdielen wie in Deutschland?</label>
+          <textarea id="ub5-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Erfinde selbst einen Eisbecher: Wie heißt er, und was ist drin?</label>
+          <textarea id="ub5-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Bei uns ist … sehr beliebt. Ich esse am liebsten … Mein Eisbecher heißt … Darin sind … , … und … Obendrauf kommt …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Eis in der Eisdiele ist wärmer (etwa minus 11 Grad) als im Gefrierschrank (etwa minus 18 Grad), und es hat nur kleine Eiskristalle – deshalb ist es so cremig. Das Spaghettieis wurde 1969 in Mannheim erfunden.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Морозиво в кафе тепліше (близько мінус 11 градусів), ніж у морозилці (близько мінус 18), і в ньому лише дрібні кристали льоду — тому воно таке кремове. «Морозиво-спагеті» винайшли 1969 року в Мангеймі.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "eis-aus-der-eisdiele";
+
+  // Üb. 1а
+  buildQuiz('ub1-quiz', [
+    {q: "Welche Frage beantwortet der Text?",
+     opts: ["Warum ist Eis in der Eisdiele cremiger als zu Hause?",
+            "Wie viel Eis essen die Deutschen im Jahr?",
+            "Welche Eissorte ist in Deutschland am beliebtesten?"],
+     correct: "Warum ist Eis in der Eisdiele cremiger als zu Hause?"},
+    {q: "Was macht Eis besonders cremig?",
+     opts: ["Die richtige Temperatur und kleine Eiskristalle",
+            "Möglichst viel Sahne und große Eiskristalle",
+            "Eine sehr kalte Temperatur von minus 30 Grad"],
+     correct: "Die richtige Temperatur und kleine Eiskristalle"}
+  ]);
+  // Üb. 1б
+  buildMatch('ub1h', [
+    ["Frisch gerührt und schnell verkauft", "Absatz 4"],
+    ["Weich oder steinhart?", "Absatz 1"],
+    ["Die Antwort in einem Satz", "Absatz 5"],
+    ["Minus 18 oder minus 11 Grad", "Absatz 2"],
+    ["Was der Zucker macht", "Absatz 3"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5"], lead: true});
+
+  // Üb. 2
+  buildRF('ub2-rf', [
+    {s: "Ein Gefrierschrank zu Hause hat etwa minus 18 Grad.", a: "r"},
+    {s: "In der Eistheke ist es kälter als im Gefrierschrank.", a: "f"},
+    {s: "Zucker senkt den Gefrierpunkt.", a: "r"},
+    {s: "Eis mit viel Zucker ist ungesund.", a: "n"},
+    {s: "In der Eisdiele wird das Eis lange gelagert, bevor man es verkauft.", a: "f"},
+    {s: "Wenn man Eis wieder einfriert, entstehen große Kristalle.", a: "r"},
+    {s: "Die meisten Eisdielen in Deutschland gehören Italienern.", a: "n"}
+  ]);
+
+  // Üb. 3а
+  buildMatch('ub3', [
+    ["schmelzen", "танути"],
+    ["haltbar", "який довго зберігається"],
+    ["senken", "знижувати"],
+    ["rühren", "мішати, розмішувати"],
+    ["die Oberfläche", "поверхня"],
+    ["die Kugel", "кулька"]
+  ]);
+  // Üb. 3б
+  wireBlanks('ub3b');
+
+  // Üb. 4
+  buildSort('ub4-sort', {
+    buckets: ["In der Eisdiele", "Zu Hause im Gefrierschrank"],
+    items: [
+      {t: "etwa minus 11 Grad", b: "In der Eisdiele"},
+      {t: "wird frisch gemacht", b: "In der Eisdiele"},
+      {t: "wird beim Gefrieren ständig gerührt", b: "In der Eisdiele"},
+      {t: "wird schnell verkauft", b: "In der Eisdiele"},
+      {t: "etwa minus 18 Grad", b: "Zu Hause im Gefrierschrank"},
+      {t: "muss erst antauen", b: "Zu Hause im Gefrierschrank"},
+      {t: "bekommt nach dem Wiedereinfrieren harte Kristalle", b: "Zu Hause im Gefrierschrank"}
+    ]
+  });
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🍦','❄️','🍓','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

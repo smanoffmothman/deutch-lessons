@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hoffnung ist realistisch · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Natur &amp; Umwelt</span>
+        <h1>Hoffnung ist realistisch</h1>
+        <p class="sub">Найуспішніша німецька дитяча письменниця і кліматична активістка розповідають школярам, як не впасти у відчай через кліматичну кризу.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wer sagt was?</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Mut statt Angst</h2>
+      <div class="card">
+        <p>Viele junge Menschen machen sich Sorgen wegen der Klimakrise. Was hilft dir, wenn dich schlechte Nachrichten traurig oder wütend machen? Kann ein einzelner Mensch etwas verändern?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай (або обговоріть у парі): що для тебе означає надія? Чи можна мати надію, коли проблема здається дуже великою?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Zwei Schüler aus der Nähe von Hamburg, Niklas (13) und Johann (14), haben mit zwei bekannten Frauen über die Klimakrise gesprochen: mit der Kinderbuchautorin Cornelia Funke und der Klimaaktivistin Luisa Neubauer. Ihre zentrale Frage: Wie verliert man nicht den Mut?</p>
+
+          <h3>Zwei Stimmen für das Klima</h3>
+
+          <p>Cornelia Funke, 67, ist die international erfolgreichste deutsche Kinderbuchautorin. Bekannt wurde sie mit Büchern wie „Die Wilden Hühner“ und „Tintenherz“. Luisa Neubauer, 30, gehört zu den bekanntesten <span class="gl" data-key data-uk="кліматична активістка" data-lemma="die Klimaaktivistin, -nen">Klimaaktivistinnen</span> Deutschlands. Beide halten Klimaschutz für eine Frage der <span class="gl" data-key data-uk="справедливість" data-lemma="die Gerechtigkeit">Gerechtigkeit</span>. Funke <span class="gl" data-uk="наголошувати" data-lemma="betonen">betont</span>, dass gerade Menschen in Ländern, die die Krise kaum <span class="gl" data-uk="спричиняти" data-lemma="verursachen">verursacht</span> haben, den höchsten Preis zahlen – viele haben schon ihre Heimat verloren. Neubauer findet es auch jungen Menschen gegenüber unfair: In der Schule sollen sie sich für ihre Zukunft <span class="gl" data-uk="докладати зусиль" data-lemma="sich anstrengen">anstrengen</span> und lernen gleichzeitig, wie stark diese Zukunft <span class="gl" data-uk="під загрозою" data-lemma="bedroht">bedroht</span> ist.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Cornelia_Funke_Buchmesse.JPG/960px-Cornelia_Funke_Buchmesse.JPG" alt="Cornelia Funke bei einem Interview auf einer Buchmesse." width="960" height="640" loading="lazy">
+            <figcaption>Cornelia Funke bei einem Interview auf einer Buchmesse. Foto: Smalltown Boy, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en" target="_blank" rel="noopener">CC0</a>, <a href="https://commons.wikimedia.org/wiki/File:Cornelia_Funke_Buchmesse.JPG" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Funke hat viele Jahre in Kalifornien gelebt. Für sie ist die Region ein <span class="gl" data-uk="вітрина" data-note="тут: місце, де щось видно особливо чітко" data-lemma="das Schaufenster, -">Schaufenster</span> der Klimakrise: tote Wälder und riesige Feuer, die immer häufiger kommen. Mehrmals musste sie vor den <span class="gl" data-key data-uk="пожежа" data-lemma="der Brand, -ä-e">Bränden</span> <span class="gl" data-uk="тікати, рятуватися втечею" data-lemma="fliehen (floh, ist geflohen)">fliehen</span>, und ein gepackter Koffer stand immer bereit. Mit diesem Gefühl wollte sie nicht mehr leben, deshalb ist sie nach Europa <span class="gl" data-uk="повертатися" data-lemma="zurückkehren (kehrte zurück, ist zurückgekehrt)">zurückgekehrt</span>. Sie weiß aber, dass viele Menschen diese <span class="gl" data-uk="вибір" data-lemma="die Wahl">Wahl</span> nicht haben und nicht einfach umziehen können.</p>
+
+          <h3>Warum passiert so wenig?</h3>
+
+          <p>Neubauer <span class="gl" data-uk="розрізняти" data-lemma="unterscheiden (unterschied, hat unterschieden) zwischen + Dat.">unterscheidet</span> zwischen Naturkatastrophen und Klimakatastrophen. Waldbrände hat es immer gegeben, und ökologisch sind sie nicht nur schlecht: Danach wird der Boden wieder <span class="gl" data-uk="родючий" data-lemma="fruchtbar">fruchtbar</span>. Doch weil die Menschen das Klima so stark verändert haben, gibt es heute extreme Feuer, auf die weder Wälder noch Menschen <span class="gl" data-uk="підготовлений" data-lemma="vorbereitet">vorbereitet</span> sind. Die Politik, so Neubauer, müsste deutlich sagen, wie ernst die Lage ist – sonst bereitet sich niemand richtig auf Hochwasser oder Hitzewellen vor. Warum das nicht geschieht? Funke meint, die Menschen wollten es <span class="gl" data-uk="зручний" data-lemma="bequem">bequem</span> haben. Neubauer meint, viele wüssten mit dem <span class="gl" data-uk="розум" data-lemma="der Verstand">Verstand</span> über die Krise Bescheid, fühlten sie aber nicht wirklich. Außerdem redeten Politiker nicht gern über Probleme, die sich nicht leicht lösen lassen.</p>
+
+          <p>Auch die <span class="gl" data-uk="співпраця" data-lemma="die Zusammenarbeit">Zusammenarbeit</span> zwischen den Ländern ist schwierig. <span class="gl" data-uk="кліматична угода" data-lemma="das Klimaabkommen, -">Klimaabkommen</span> kosten die Staaten zunächst viel Geld. Deshalb finden es manche <span class="gl" data-uk="спокусливий" data-lemma="verlockend">verlockend</span>, zu <span class="gl" data-uk="хитрувати, шахраювати" data-note="розм." data-lemma="schummeln">schummeln</span>. Dabei ist guter Klimaschutz auf lange Sicht billiger als die Folgen der <span class="gl" data-uk="нагрівання, потепління" data-lemma="die Erhitzung">Erhitzung</span>. Dass Zusammenarbeit funktionieren kann, zeigt für Neubauer die Antarktis: Vor über 50 Jahren haben zwölf Länder beschlossen, den Kontinent nicht industriell <span class="gl" data-uk="експлуатувати" data-lemma="ausbeuten (beutete aus, hat ausgebeutet)">auszubeuten</span>. Heute machen mehr als 50 Staaten mit, und alle halten sich daran.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Der <b>Antarktis-Vertrag</b> wurde 1959 unterschrieben. Seitdem darf die Antarktis nur für friedliche Zwecke und für die Forschung genutzt werden. Auch Deutschland betreibt dort Forschungsstationen.</p>
+          </aside>
+
+          <h3>Was Hoffnung bedeutet</h3>
+
+          <p>Ist es also schon zu spät? Nein, sagt Neubauer. Man kann dafür sorgen, dass die Erhitzung weniger stark wird – und auch kleine Schritte zählen: der <span class="gl" data-uk="зусилля, боротьба (за щось)" data-lemma="der Einsatz für + Akk.">Einsatz</span> für einen Vogel, für eine Tierart, die nicht <span class="gl" data-uk="вимирати" data-lemma="aussterben (starb aus, ist ausgestorben)">ausstirbt</span>. Funke erinnert daran, dass Politiker von den Stimmen der Wählerinnen und Wähler <span class="gl" data-uk="залежний" data-lemma="abhängig von + Dat.">abhängig</span> sind. Wenn viele Menschen etwas fordern, wird das Thema in der Politik wichtiger.</p>
+
+          <figure class="mat-fig" style="max-width:300px;margin-left:auto;margin-right:auto">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Luisa_Neubauer_at_15_September_2023_Fridays_for_Future_rally.jpg/960px-Luisa_Neubauer_at_15_September_2023_Fridays_for_Future_rally.jpg" alt="Luisa Neubauer spricht bei einem Klimastreik von Fridays for Future (2023)." width="960" height="960" loading="lazy">
+            <figcaption>Luisa Neubauer spricht bei einem Klimastreik von Fridays for Future (2023). Foto: Robbie Morrison, <a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener">CC BY 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Luisa_Neubauer_at_15_September_2023_Fridays_for_Future_rally.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Und wie behalten die beiden selbst die <span class="gl" data-key data-uk="надія" data-lemma="die Hoffnung, -en">Hoffnung</span>? Funke tankt Kraft in der Natur, zum Beispiel wenn sie den Vögeln vor ihrem Fenster zuhört. Für sie darf Hoffnung aber keine <span class="gl" data-uk="умова" data-lemma="die Bedingung, -en">Bedingung</span> sein: Selbst ohne Hoffnung müsste man weiterkämpfen. Neubauer erklärt, Hoffnung bedeute nicht zu glauben, dass alles von selbst gut wird. Hoffnung heißt für sie, zu <span class="gl" data-uk="усвідомлювати, розуміти" data-lemma="erkennen (erkannte, hat erkannt)">erkennen</span>: Ich kann etwas verändern – allein etwas Kleines oder mit anderen zusammen etwas Großes. In diesem Sinn sei Hoffnung <span class="gl" data-key data-uk="реалістичний" data-lemma="realistisch">realistisch</span>.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Обери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub3-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>Hoffnung</span><span>Gerechtigkeit</span><span>bequem</span><span>abhängig</span><span>Brand</span></div>
+        <div id="ub3b-list">
+          <div class="fill-item"><span class="num">1)</span> Für beide Frauen ist Klimaschutz eine Frage der <input type="text" class="blank-input inline wide" data-ans="Gerechtigkeit">.</div>
+          <div class="fill-item"><span class="num">2)</span> In Kalifornien musste Funke mehrmals vor <input type="text" class="blank-input inline" data-ans="Bränden"> fliehen.</div>
+          <div class="fill-item"><span class="num">3)</span> Laut Funke wollen es die Menschen gern <input type="text" class="blank-input inline" data-ans="bequem"> haben.</div>
+          <div class="fill-item"><span class="num">4)</span> Politiker sind von den Stimmen der Wähler <input type="text" class="blank-input inline" data-ans="abhängig">.</div>
+          <div class="fill-item"><span class="num">5)</span> Neubauer sagt: <input type="text" class="blank-input inline" data-ans="Hoffnung"> ist realistisch.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub3b-check">Prüfen</button>
+          <button class="btn secondary" id="ub3b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub3b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wer sagt was?</h2>
+      <p class="lead">Чия це думка — Корнелії Функе чи Луїзи Нойбауер? Розклади картки по кошиках.</p>
+      <div class="card" id="ub4-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (80–120 слів на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Neubauer sagt, Hoffnung bedeute: „Ich kann etwas verändern.“ Stimmst du zu? Was kannst du selbst oder zusammen mit anderen verändern?</label>
+          <textarea id="ub5-a" rows="6"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Was hilft dir, wenn dich schwierige Nachrichten belasten? Schreib einem Freund oder einer Freundin ein paar Tipps.</label>
+          <textarea id="ub5-b" rows="6"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Ich stimme (nicht) zu, weil … Ich selbst kann … Zusammen mit anderen könnten wir … Mir hilft es, wenn … Versuch doch mal, …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Cornelia Funke („Tintenherz“, „Die Wilden Hühner“) ist die international erfolgreichste deutsche Kinderbuchautorin, Luisa Neubauer eine der bekanntesten Klimaaktivistinnen Deutschlands. Beide sehen Klimaschutz als Frage der Gerechtigkeit. Neubauer betont: Auch kleine Schritte zählen. Der Antarktis-Vertrag zeigt, dass Länder zusammenarbeiten können.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Корнелія Функе («Чорнильне серце», «Дикі курчата») — найуспішніша у світі німецька дитяча письменниця, Луїза Нойбауер — одна з найвідоміших кліматичних активісток Німеччини. Обидві вважають захист клімату питанням справедливості. Нойбауер наголошує: навіть маленькі кроки мають значення. Договір про Антарктиду показує, що країни здатні домовлятися.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "funke-neubauer-klima";
+
+  // Üb. 1а
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Gespräch vor allem?",
+     opts: ["Wie man trotz der Klimakrise Mut und Hoffnung behält",
+            "Wie man ein erfolgreiches Kinderbuch schreibt",
+            "Warum man in Kalifornien besser nicht leben sollte"],
+     correct: "Wie man trotz der Klimakrise Mut und Hoffnung behält"},
+    {q: "Warum nennt Neubauer die Antarktis als Beispiel?",
+     opts: ["Sie zeigt, dass Länder sich an gemeinsame Regeln halten können.",
+            "Dort ist die Klimakrise schon gestoppt.",
+            "Dort leben keine Menschen, deshalb gibt es keine Probleme."],
+     correct: "Sie zeigt, dass Länder sich an gemeinsame Regeln halten können."},
+    {q: "Was bedeutet Hoffnung für Luisa Neubauer?",
+     opts: ["Zu erkennen, dass man selbst etwas verändern kann",
+            "Zu glauben, dass alles von selbst gut wird",
+            "Auf neue Technik zu warten"],
+     correct: "Zu erkennen, dass man selbst etwas verändern kann"}
+  ]);
+  // Üb. 1б
+  buildMatch('ub1h', [
+    ["Kleine Schritte zählen", "Absatz 5"],
+    ["Wer die beiden Frauen sind", "Absatz 1"],
+    ["Ein Vertrag, der funktioniert", "Absatz 4"],
+    ["Leben mit gepacktem Koffer", "Absatz 2"],
+    ["Hoffnung ohne Bedingung", "Absatz 6"],
+    ["Natur- oder Klimakatastrophe?", "Absatz 3"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5", "Absatz 6"], lead: true});
+
+  // Üb. 2
+  buildRF('ub2-rf', [
+    {s: "Cornelia Funke hat viele Jahre in Kalifornien gelebt.", a: "r"},
+    {s: "Laut Neubauer sind Waldbrände ökologisch immer nur schlecht.", a: "f"},
+    {s: "Funke ist nach Europa zurückgekehrt, weil sie nicht mehr mit der Angst vor Bränden leben wollte.", a: "r"},
+    {s: "Laut Neubauer ist guter Klimaschutz langfristig teurer als die Klimafolgen.", a: "f"},
+    {s: "Heute machen mehr als 50 Staaten beim Schutz der Antarktis mit.", a: "r"},
+    {s: "Niklas und Johann wollen selbst Klimaaktivisten werden.", a: "n"},
+    {s: "Neubauer glaubt, dass es für den Klimaschutz schon zu spät ist.", a: "f"},
+    {s: "Funke schreibt gerade ein Buch über die Klimakrise.", a: "n"}
+  ]);
+
+  // Üb. 3а
+  buildMatch('ub3', [
+    ["die Gerechtigkeit", "справедливість"],
+    ["verursachen", "спричиняти"],
+    ["fruchtbar", "родючий"],
+    ["verlockend", "спокусливий"],
+    ["aussterben", "вимирати"],
+    ["die Bedingung", "умова"],
+    ["vorbereitet", "підготовлений"]
+  ]);
+  // Üb. 3б
+  wireBlanks('ub3b');
+
+  // Üb. 4
+  buildSort('ub4-sort', {
+    buckets: ["Cornelia Funke", "Luisa Neubauer"],
+    items: [
+      {t: "Kalifornien ist ein Schaufenster der Klimakrise.", b: "Cornelia Funke"},
+      {t: "Die Menschen wollen es bequem haben.", b: "Cornelia Funke"},
+      {t: "Politiker sind von unseren Stimmen abhängig.", b: "Cornelia Funke"},
+      {t: "Auch ohne Hoffnung müsste man weiterkämpfen.", b: "Cornelia Funke"},
+      {t: "Viele kennen die Krise nur mit dem Verstand, nicht mit dem Gefühl.", b: "Luisa Neubauer"},
+      {t: "Die Antarktis zeigt, dass Zusammenarbeit funktioniert.", b: "Luisa Neubauer"},
+      {t: "Es ist nicht zu spät.", b: "Luisa Neubauer"},
+      {t: "Hoffnung ist realistisch.", b: "Luisa Neubauer"}
+    ]
+  });
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📚','🌍','🐦','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
