@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Burgenbau wie im Mittelalter · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Geschichte</span>
+        <h1>Burgenbau wie im Mittelalter</h1>
+        <p class="sub">Без бетону, без електрики, без точного креслення — і 35–40 років роботи. Хто й навіщо сьогодні будує справжній середньовічний замок?</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Drei Burgen</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Ritter, Türme, dicke Mauern</h2>
+      <div class="card">
+        <p>Warst du schon einmal in einer Burg? Was hat dir dort gefallen? Und was glaubst du: Wie lange hat man im Mittelalter an einer Burg gebaut – ohne Kran und ohne Strom?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Згадай замок, у якому ти був(-ла) або який бачив(-ла) на фото. Як гадаєш, скільки років будували такий замок у Середньовіччі і чим тоді заміняли крани й машини?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Eine Burg sieht von Weitem romantisch aus: Türme, dicke Mauern, ein schöner Innenhof. Aber könnten wir so ein <span class="gl" data-uk="споруда, будівля" data-lemma="das Bauwerk, -e">Bauwerk</span> heute noch einmal bauen – mit den Mitteln des Mittelalters? An zwei Orten in Europa versucht man es gerade.</p>
+
+          <p>Die Deutschen lieben Burgen, und das schon seit der <span class="gl" data-uk="романтизм" data-note="епоха в мистецтві й літературі кінця XVIII – першої половини XIX ст." data-lemma="die Romantik">Romantik</span>. Damals fanden Künstler die alten <span class="gl" data-key data-uk="руїна" data-lemma="die Ruine, -n">Ruinen</span> plötzlich wunderschön. Am Rhein steht fast hinter jeder <span class="gl" data-uk="вигин, поворот (річки)" data-lemma="die Flusskurve, -n">Flusskurve</span> eine Burg, in Thüringen liegen viele auf Hügeln. Insgesamt gibt es in Deutschland etwa 9500 Burgen. Manche sind heute Museen, andere gehören <span class="gl" data-uk="приватна особа" data-lemma="die Privatperson, -en">Privatpersonen</span>. Schon um 1820 zeichnete der preußische Architekt Karl Friedrich Schinkel Pläne für die Ruine Rheinstein bei Bingen. 1823 kaufte Prinz Friedrich von Preußen die Burg und ließ sie <span class="gl" data-uk="відбудовувати" data-lemma="wiederaufbauen">wiederaufbauen</span>.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Burg_Eltz_5.jpg/960px-Burg_Eltz_5.jpg" alt="Die Burg Eltz in Rheinland-Pfalz." width="960" height="720" loading="lazy">
+            <figcaption>Die Burg Eltz in Rheinland-Pfalz. Foto: Ahrtaler2, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en" target="_blank" rel="noopener">CC0</a>, <a href="https://commons.wikimedia.org/wiki/File:Burg_Eltz_5.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Auch der britische Schauspieler Jeremy Irons wollte eine eigene Burg. In Südirland fand er die Ruine Kilcoe Castle, kaufte sie und begann 1998 mit dem <span class="gl" data-uk="відбудова" data-lemma="der Wiederaufbau">Wiederaufbau</span>. Zu seinem Team gehörten ein <span class="gl" data-uk="тесля" data-lemma="der Zimmermann, Zimmerleute">Zimmermann</span> und ein <span class="gl" data-key data-uk="каменяр" data-lemma="der Steinmetz, -e">Steinmetz</span> aus Deutschland – die beiden waren gerade auf der Walz und zufällig an der Burg <span class="gl" data-uk="проходити, проїжджати повз" data-lemma="vorbeikommen (kam vorbei, ist vorbeigekommen)">vorbeigekommen</span>.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen: die Walz</p>
+            <p>Junge <span class="gl" data-key data-uk="ремісник" data-lemma="der Handwerker, -">Handwerker</span> in Deutschland gehen nach der Ausbildung manchmal „auf die Walz“: Mindestens drei Jahre und einen Tag reisen sie durch die Welt und arbeiten mal hier, mal dort. Nach Hause dürfen sie in dieser Zeit nicht. Man erkennt sie an ihrer schwarzen Kleidung, der <span class="gl" data-uk="традиційний одяг підмайстрів" data-lemma="die Kluft, -en">Kluft</span>.</p>
+          </aside>
+
+          <p>Irons arbeitete nicht wie im Mittelalter: Er kaufte einen Kran, ein <span class="gl" data-uk="будівельне риштування" data-lemma="das Baugerüst, -e">Baugerüst</span> und einen Generator. Die Steine – schöne grüne Natursteine – ließ er extra aus England holen. Sechs Jahre lang reparierten die Handwerker den Hauptturm und füllten die alten <span class="gl" data-uk="шов (між каменями)" data-lemma="die Fuge, -n">Fugen</span> mit neuem <span class="gl" data-key data-uk="будівельний розчин" data-lemma="der Mörtel">Mörtel</span>. Doch schon nach dem ersten Herbststurm stand im Turm überall Wasser: Der Mörtel war nicht dicht. Am Ende ließ Irons den ganzen Turm <span class="gl" data-uk="тинькувати" data-lemma="verputzen">verputzen</span>, und seine grünen Steine verschwanden unter dem <span class="gl" data-uk="тиньк, штукатурка" data-lemma="der Putz">Putz</span>. Ein bisschen ironisch: Ausgerechnet ein Engländer baute die Burg wieder auf, die englische <span class="gl" data-uk="військо, загін" data-lemma="die Truppe, -n">Truppen</span> im 17. Jahrhundert erobert und verfallen lassen hatten.</p>
+
+          <h3>Bauen ohne Strom</h3>
+
+          <p>Ganz ohne moderne Technik arbeitet ein Team in Kärnten. Bei Friesach entsteht seit zwölf Jahren die Burg Siegfriedstein, und zwar mit Methoden aus dem Mittelalter. Das Projekt leitet Gerald Krenn. Die Universität Graz <span class="gl" data-uk="супроводжувати" data-lemma="begleiten">begleitet</span> den Bau, das Geld kommt von der EU, von Österreich, vom Land Kärnten und von <span class="gl" data-uk="спонсор" data-lemma="der Sponsor, -en">Sponsoren</span>. Solche Projekte nennt man <span class="gl" data-uk="експериментальна археологія" data-lemma="die experimentelle Archäologie">experimentelle Archäologie</span>: Man baut nach, um zu verstehen, wie die Menschen früher gearbeitet haben.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen: Kärnten</p>
+            <p>Österreich hat neun <span class="gl" data-uk="федеральна земля" data-lemma="das Bundesland, -ä-er">Bundesländer</span>. Kärnten liegt ganz im Süden, an der Grenze zu Italien und Slowenien. Die Hauptstadt ist Klagenfurt.</p>
+          </aside>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Erlebnis_Burgbau_Friesach_P4150013.jpg/960px-Erlebnis_Burgbau_Friesach_P4150013.jpg" alt="Der Turm der Burg in Friesach im August 2023." width="960" height="640" loading="lazy">
+            <figcaption>Der Turm der Burg in Friesach im August 2023. Foto: Worldfootage, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Erlebnis_Burgbau_Friesach_P4150013.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Der größte Gegner ist das Wetter. Im Herbst macht der Regen den Mörtel nass. Wie die Handwerker im Mittelalter ihre <span class="gl" data-key data-uk="будівельний майданчик" data-lemma="die Baustelle, -n">Baustellen</span> vor dem Winter schützten, weiß niemand. Deshalb <span class="gl" data-uk="накривати" data-lemma="abdecken">deckt</span> das Team in Friesach den Turm jedes Jahr Ende September mit Stroh ab. Sonst würden auch die Holzbalken schnell <span class="gl" data-uk="трухлявий, гнилий" data-lemma="morsch">morsch</span>.</p>
+
+          <p>Genaue Baupläne gibt es nicht. Ein Fenster soll ungefähr 90 Zentimeter hoch sein – aber wo es am Ende genau sitzt, hängt von den Steinen ab. Natursteine sind eben nicht so gleichmäßig wie Ziegel. Auch die Wände des Turms bilden keine perfekten <span class="gl" data-uk="прямий кут" data-lemma="der rechte Winkel">rechten Winkel</span>: Viele Ecken <span class="gl" data-uk="відхилятися" data-lemma="abweichen (wich ab, ist abgewichen)">weichen</span> um etwa sieben Grad ab. Ganz ohne moderne Regeln geht es aber nicht: Für die Sicherheit der Arbeiter musste ein Ingenieur das Gerüst berechnen.</p>
+
+          <p>Die zweite Baustelle liegt in Frankreich, südöstlich von Paris. Dort baut man seit 1995 die Burg Guédelon. Alles ist dort Handarbeit: die Steine, der Kran, die Seile, der Mörtel und sogar die Farben für die Wände. Strom braucht diese Baustelle nicht. Der Nachteil: Es geht sehr, sehr langsam. Manche Handwerker sind schon seit 30 Jahren dabei. In der <span class="gl" data-uk="будівельний сезон" data-lemma="die Bausaison, -s">Bausaison</span> arbeiten in Guédelon bis zu 70 Menschen, in Friesach bis zu 25.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Chantier_m%C3%A9di%C3%A9val_de_Gu%C3%A9delon_27.jpg/960px-Chantier_m%C3%A9di%C3%A9val_de_Gu%C3%A9delon_27.jpg" alt="Die Burg Guédelon in Frankreich." width="960" height="640" loading="lazy">
+            <figcaption>Die Burg Guédelon in Frankreich. Foto: FrDr, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Chantier_m%C3%A9di%C3%A9val_de_Gu%C3%A9delon_27.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Für den Bau in Friesach rechnet Krenn mit 35 bis 40 Jahren – ein Projekt für mehrere Generationen, wie früher. Und was würde eine ganze Burg heute kosten, wenn sich ein reicher Popstar eine wünschen würde? Krenn <span class="gl" data-uk="оцінювати (приблизно)" data-lemma="schätzen">schätzt</span>: etwa 70 Millionen Euro. Am teuersten ist die Arbeit. Pro Saison kommen in Friesach rund 25 000 <span class="gl" data-uk="робоча година" data-lemma="die Arbeitsstunde, -n">Arbeitsstunden</span> zusammen; bei 60 Euro pro Stunde sind das 1,5 Millionen Euro im Jahr.</p>
+
+          <p>Wer solche Projekte sieht, bekommt großen <span class="gl" data-uk="повага" data-lemma="der Respekt">Respekt</span> vor den Baumeistern des Mittelalters. Sie hatten keine moderne Mathematik, nur <span class="gl" data-uk="циркуль" data-lemma="der Zirkel, -">Zirkel</span>, <span class="gl" data-uk="виск (інструмент для вертикалі)" data-lemma="das Senkblei, -e">Senkblei</span> und Seile – und trotzdem stehen ihre Burgen und Kathedralen bis heute. Jeder Stein wurde mit <span class="gl" data-uk="м'язова сила" data-lemma="die Muskelkraft">Muskelkraft</span> und viel <span class="gl" data-uk="витривалість, терпіння" data-lemma="die Ausdauer">Ausdauer</span> bearbeitet.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Drei Burgen</h2>
+      <p class="lead">До якого замку належить кожна інформація? Розклади картки по кошиках.</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>Baustelle</span><span>Mörtel</span><span>Ruine</span><span>Strom</span><span>Handwerker</span><span>verputzen</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> Jeremy Irons hat eine alte <input type="text" class="blank-input inline" data-ans="Ruine"> in Irland gekauft.</div>
+          <div class="fill-item"><span class="num">2)</span> Der <input type="text" class="blank-input inline" data-ans="Mörtel"> war nicht dicht, deshalb kam Wasser in den Turm.</div>
+          <div class="fill-item"><span class="num">3)</span> Am Ende ließ er den ganzen Turm <input type="text" class="blank-input inline" data-ans="verputzen">.</div>
+          <div class="fill-item"><span class="num">4)</span> In Guédelon braucht man keinen <input type="text" class="blank-input inline" data-ans="Strom">, alles ist Handarbeit.</div>
+          <div class="fill-item"><span class="num">5)</span> Im Winter wird die <input type="text" class="blank-input inline" data-ans="Baustelle"> in Friesach mit Stroh geschützt.</div>
+          <div class="fill-item"><span class="num">6)</span> In Guédelon arbeiten in der Saison bis zu 70 <input type="text" class="blank-input inline" data-ans="Handwerker|Handwerkern|Menschen">.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (4–6 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Welche Burg oder Festung in der Ukraine kennst du? Beschreibe sie: Wo liegt sie, wie sieht sie aus, was kann man dort machen?</label>
+          <textarea id="ub5-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. 35 bis 40 Jahre für eine Burg ohne Strom und Kran – findest du solche Projekte sinnvoll? Warum (nicht)?</label>
+          <textarea id="ub5-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Наприклад, Хотинська, Кам'янець-Подільська чи Луцька фортеця. Корисні звороти: <i>Die Festung liegt in …, Sie ist aus Stein gebaut., Man kann dort … besichtigen., Ich finde solche Projekte sinnvoll, weil …, Ein Nachteil ist, dass …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>In Deutschland gibt es etwa 9500 Burgen – seit der Romantik lieben die Deutschen alte Ruinen. In Friesach in Kärnten (Österreich) und in Guédelon in Frankreich baut man heute Burgen mit Methoden aus dem Mittelalter: ohne Strom, ohne genaue Pläne und sehr langsam. Junge Handwerker aus Deutschland gehen manchmal „auf die Walz“ und arbeiten jahrelang an verschiedenen Orten.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          У Німеччині близько 9500 замків — ще з доби романтизму німці захоплюються старими руїнами. У Фрізаху (Каринтія, Австрія) і в Гедлоні (Франція) сьогодні будують замки середньовічними методами: без електрики, без точних креслень і дуже повільно. А молоді німецькі ремісники інколи вирушають у «мандри» (die Walz) і роками працюють у різних місцях.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "burgen-bauen-wie-im-mittelalter";
+
+  // Üb. 1а
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Um Menschen, die heute Burgen wie im Mittelalter bauen oder wiederaufbauen",
+            "Um die schönsten Burgen am Rhein und ihre Geschichte",
+            "Um Ritter und ihr Leben auf einer mittelalterlichen Burg"],
+     correct: "Um Menschen, die heute Burgen wie im Mittelalter bauen oder wiederaufbauen"},
+    {q: "Was möchte der Autor am Ende zeigen?",
+     opts: ["Die Baumeister im Mittelalter haben ohne moderne Technik sehr viel geschafft.",
+            "Mit modernen Maschinen sollte man alte Burgen schneller reparieren.",
+            "Eine eigene Burg ist heute für jeden Menschen bezahlbar."],
+     correct: "Die Baumeister im Mittelalter haben ohne moderne Technik sehr viel geschafft."}
+  ]);
+  // Üb. 1б
+  buildMatch('ub1h', [
+    ["Ein Schauspieler kauft eine Ruine", "Absatz 2"],
+    ["Das Wetter macht Probleme", "Absatz 5"],
+    ["Fenster ohne genauen Plan", "Absatz 6"],
+    ["Alles ist Handarbeit", "Absatz 7"],
+    ["Was kostet eine Burg?", "Absatz 8"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5", "Absatz 6", "Absatz 7", "Absatz 8", "Absatz 9"], lead: true});
+
+  // Üb. 2
+  buildRF('ub2-rf', [
+    {s: "In Deutschland gibt es ungefähr 9500 Burgen.", a: "r"},
+    {s: "Jeremy Irons hat Kilcoe Castle ohne moderne Maschinen wiederaufgebaut.", a: "f"},
+    {s: "Nach dem ersten Herbststurm war im Turm von Kilcoe Castle Wasser.", a: "r"},
+    {s: "In Guédelon kann man im Sommer auch selbst mitbauen.", a: "n"},
+    {s: "Die Burg in Friesach baut man schon seit 1995.", a: "f"},
+    {s: "Die Universität Graz begleitet das Projekt in Friesach.", a: "r"},
+    {s: "Die Wände des Turms in Friesach stehen genau im rechten Winkel.", a: "f"}
+  ]);
+
+  // Üb. 3: розсортуй
+  buildSort('ub3-sort', {
+    buckets: ["Kilcoe Castle", "Friesach", "Guédelon"],
+    items: [
+      {t: "Ein Schauspieler hat die Ruine gekauft.", b: "Kilcoe Castle"},
+      {t: "Grüne Steine aus England", b: "Kilcoe Castle"},
+      {t: "Kran, Gerüst und Generator", b: "Kilcoe Castle"},
+      {t: "liegt in Kärnten", b: "Friesach"},
+      {t: "Der Turm bekommt im Winter Stroh.", b: "Friesach"},
+      {t: "bis zu 25 Personen pro Saison", b: "Friesach"},
+      {t: "südöstlich von Paris", b: "Guédelon"},
+      {t: "Baubeginn 1995", b: "Guédelon"},
+      {t: "bis zu 70 Personen pro Saison", b: "Guédelon"}
+    ]
+  });
+
+  // Üb. 4а
+  buildMatch('ub4', [
+    ["der Mörtel", "будівельний розчин"],
+    ["die Baustelle", "будівельний майданчик"],
+    ["der Steinmetz", "каменяр"],
+    ["der Zimmermann", "тесля"],
+    ["verputzen", "тинькувати"],
+    ["abdecken", "накривати"],
+    ["morsch", "трухлявий, гнилий"]
+  ]);
+  // Üb. 4б
+  wireBlanks('ub4b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🏰','🧱','🪨','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

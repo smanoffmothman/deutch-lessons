@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wie schwer ist die Welt? · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Natur &amp; Umwelt</span>
+        <h1>Wie schwer ist die Welt?</h1>
+        <p class="sub">Близько 2020 року непомітно сталася важлива подія: усе, що зробили люди, — будинки, дороги, машини — стало важити стільки ж, скільки все живе на планеті. А скільки важить сама Земля?</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Zahlen</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Ins Erdinnere</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Deine Meinung</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Alles auf die Waage!</h2>
+      <div class="card">
+        <p>Was glaubst du: Was ist schwerer – alle Pflanzen und Tiere der Erde oder alles, was Menschen gebaut haben? Und was liegt tief unter unseren Füßen?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Як гадаєш, що важить більше: усі рослини й тварини Землі чи все, що збудували люди? З яких шарів складається наша планета?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Ein alter Mythos erzählt, dass die Erde auf dem Rücken einer Schildkröte liegt. Die arme Schildkröte! Denn unser Planet ist ziemlich schwer. Aber wie schwer genau – und wie viel davon haben wir Menschen selbst gemacht?</p>
+
+          <h3>Das Gewicht der Menschen-Dinge</h3>
+
+          <p>Häuser, Straßen, Schuhe, Flaschen, Autos, Schiffe, <span class="gl" data-uk="гребля, дамба" data-lemma="der Staudamm, -ä-e">Staudämme</span>: Forscher vom Weizmann-Institut in Israel haben berechnet, wie schwer alle Dinge sind, die Menschen hergestellt haben. Solange die Menschen in Höhlen lebten, war das nicht viel. Doch vor etwa 12 000 Jahren begannen sie, Felder zu <span class="gl" data-uk="обробляти (землю)" data-lemma="bewirtschaften">bewirtschaften</span>, Häuser und Ställe zu bauen. Seit der <span class="gl" data-key data-uk="індустріалізація" data-lemma="die Industrialisierung">Industrialisierung</span> wächst der Berg von Dingen immer schneller. Die Erde selbst wird dadurch aber nicht schwerer: Der Mensch macht nichts aus dem Nichts, er <span class="gl" data-uk="перетворювати" data-lemma="verwandeln (in + Akk.)">verwandelt</span> nur, was schon da ist – Bäume in Regale, Lehm in Ziegel, Eisenerz in Eisenbahnen.</p>
+
+          <p>Gerechnet wird in <span class="gl" data-key data-uk="тератонна (10¹² тонн)" data-lemma="die Teratonne, -n">Teratonnen</span>. Eine Teratonne sind eine Billion Tonnen – und eine Tonne wiegt ungefähr so viel wie ein kleines Auto. Die Forscher haben die Menschen-Dinge mit der lebenden <span class="gl" data-key data-uk="біомаса" data-lemma="die Biomasse">Biomasse</span> verglichen. Diese besteht zu 90 Prozent aus Pflanzen; der Rest sind Bakterien, <span class="gl" data-uk="гриб" data-lemma="der Pilz, -e">Pilze</span>, Tiere und Menschen. Vor 12 000 Jahren wog die Biomasse etwas mehr als zwei Teratonnen. Seitdem hat der Mensch so viele Wälder <span class="gl" data-uk="вирубувати (ліс)" data-lemma="roden">gerodet</span> und so viel Boden mit Beton und Asphalt <span class="gl" data-uk="запечатувати, забетоновувати" data-note="тут: вкривати землю асфальтом, бетоном" data-lemma="versiegeln">versiegelt</span>, dass sich die Masse aller Pflanzen <span class="gl" data-uk="зменшуватися вдвічі" data-lemma="sich halbieren">halbiert hat</span>.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen: Milliarde und Billion</p>
+            <p>Vorsicht bei großen Zahlen! Im Deutschen ist eine Milliarde 1 000 000 000 (= мільярд). Eine Billion ist tausendmal mehr: 1 000 000 000 000 – auf Ukrainisch ist das ein трильйон. Das englische „billion“ <span class="gl" data-uk="відповідати" data-lemma="entsprechen (entsprach, hat entsprochen)">entspricht</span> also der deutschen Milliarde.</p>
+          </aside>
+
+          <p>Um das Jahr 2020 kam der große Moment: Alles, was Menschen gemacht haben, war genauso schwer wie alle Lebewesen der Erde – jeweils gut eine Teratonne. Fast die Hälfte der Menschen-Dinge ist <span class="gl" data-key data-uk="бетон" data-lemma="der Beton">Beton</span>. Ungefähr genauso viel sind <span class="gl" data-uk="щебінь" data-lemma="der Schotter">Schotter</span>, <span class="gl" data-uk="гравій" data-lemma="der Kies">Kies</span> und Sand für Fundamente, dazu Asphalt und Ziegel. Metall, Glas, Papier und Plastik machen nur sechs Prozent aus – und darin sind schon alle Autos, Züge, Schiffe und Flugzeuge der Welt.</p>
+
+          <h3>Eine Reise ins Erdinnere</h3>
+
+          <p>Doch auch das ist nur ein winziger Teil der ganzen Erde. Bernhard Steinberger vom GFZ Helmholtz-Zentrum für Geoforschung in Potsdam simuliert am Computer, wie die Kontinente auf dem <span class="gl" data-uk="в'язкий, густий" data-lemma="zähflüssig">zähflüssigen</span> <span class="gl" data-key data-uk="мантія Землі" data-lemma="der Erdmantel">Erdmantel</span> wandern. In das Erdinnere ist noch nie ein Mensch gereist. Aber bei einem <span class="gl" data-uk="землетрус" data-lemma="das Erdbeben, -">Erdbeben</span> <span class="gl" data-uk="коливатися, вібрувати" data-lemma="schwingen (schwang, hat geschwungen)">schwingt</span> die Erde wie eine <span class="gl" data-uk="дзвін" data-lemma="die Glocke, -n">Glocke</span>. Daraus können Forscher berechnen, wie dicht das Material in verschiedenen Tiefen ist.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen: die Helmholtz-Gemeinschaft</p>
+            <p>Das GFZ in Potsdam gehört zur Helmholtz-Gemeinschaft, der größten <span class="gl" data-uk="науково-дослідна організація" data-lemma="die Forschungsorganisation, -en">Forschungsorganisation</span> Deutschlands. Ihren Namen hat sie vom Physiker Hermann von Helmholtz, der im 19. Jahrhundert lebte.</p>
+          </aside>
+
+          <p>Das Ergebnis: Von der Mitte bis zur Oberfläche sind es knapp 6400 Kilometer. Ganz innen liegt der <span class="gl" data-key data-uk="ядро Землі" data-lemma="der Erdkern">Erdkern</span> aus Eisen und einigen anderen Elementen, zum Teil fest, zum Teil flüssig. Er hat einen Radius von 3500 Kilometern und wiegt zwei Milliarden Teratonnen – ein Drittel der ganzen Erde. Um ihn herum liegt der 2800 Kilometer dicke Erdmantel aus zähflüssigem <span class="gl" data-uk="гірська порода" data-lemma="das Gestein, -e">Gestein</span>: vier Milliarden Teratonnen. Ganz außen kommt die dünne <span class="gl" data-key data-uk="земна кора" data-lemma="die Erdkruste">Erdkruste</span>, auf den Kontinenten etwa 30 Kilometer dick, am Meeresboden nur zehn.</p>
+
+          <figure class="mat-fig" style="max-width:300px;margin-left:auto;margin-right:auto">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/The_Blue_Marble_%28remastered%29.jpg/960px-The_Blue_Marble_%28remastered%29.jpg" alt="Die Erde, fotografiert 1972 von der Besatzung von Apollo 17." width="960" height="960" loading="lazy">
+            <figcaption>Die Erde, fotografiert 1972 von der Besatzung von Apollo 17. Foto: NASA, gemeinfrei, <a href="https://commons.wikimedia.org/wiki/File:The_Blue_Marble_(remastered).jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Zusammen wiegt die Erde also ziemlich genau sechs Milliarden Teratonnen. Und das ist gut so: Nur weil sie so schwer ist, hält uns ihre <span class="gl" data-uk="сила тяжіння" data-lemma="die Schwerkraft">Schwerkraft</span> fest – das sieht man jeden Morgen auf der <span class="gl" data-uk="підлогові ваги" data-lemma="die Personenwaage, -n">Personenwaage</span>. Ohne all das Eisen und Gestein unter unseren Füßen würden wir davonfliegen wie ein Luftballon.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Обери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Zahlen und Fakten</h2>
+      <p class="lead">Яке число пасує до якого факту?</p>
+      <div class="card" id="ub2-list"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub3-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Von außen nach innen</h2>
+      <p class="lead">Уяви подорож від поверхні до центру Землі. Розстав шари по порядку — від зовнішнього до найглибшого.</p>
+      <div class="card" id="ub4-seq"></div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub5-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>Beton</span><span>Erdbeben</span><span>Schwerkraft</span><span>gerodet</span><span>Billion</span></div>
+        <div id="ub5b-list">
+          <div class="fill-item"><span class="num">1)</span> Eine <input type="text" class="blank-input inline" data-ans="Billion"> hat zwölf Nullen.</div>
+          <div class="fill-item"><span class="num">2)</span> Fast die Hälfte aller Menschen-Dinge besteht aus <input type="text" class="blank-input inline" data-ans="Beton">.</div>
+          <div class="fill-item"><span class="num">3)</span> Für Felder und Städte haben Menschen viele Wälder <input type="text" class="blank-input inline" data-ans="gerodet">.</div>
+          <div class="fill-item"><span class="num">4)</span> Bei einem <input type="text" class="blank-input inline" data-ans="Erdbeben"> schwingt die Erde wie eine Glocke.</div>
+          <div class="fill-item"><span class="num">5)</span> Die <input type="text" class="blank-input inline" data-ans="Schwerkraft"> hält uns auf der Erde fest.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub5b-check">Prüfen</button>
+          <button class="btn secondary" id="ub5b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub5b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 6 ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">Deine Meinung</h2>
+      <p class="lead">Напиши відповіді німецькою (5–7 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub6-a">1. Die Dinge der Menschen sind heute so schwer wie alle Lebewesen. Was denkst du darüber? Ist das ein Problem?</label>
+          <textarea id="ub6-a" rows="6"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub6-b">2. Gibt es in deiner Stadt oder deinem Dorf heute mehr Beton oder mehr Natur als früher? Beschreibe ein Beispiel aus deiner Umgebung.</label>
+          <textarea id="ub6-b" rows="6"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Mich überrascht, dass …, Ich finde das (nicht) problematisch, weil …, In meiner Stadt gibt es immer mehr …, Früher war dort …, heute …, Man sollte …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Um das Jahr 2020 waren alle Dinge der Menschen so schwer wie alle Lebewesen der Erde. Die ganze Erde wiegt ungefähr sechs Milliarden Teratonnen; ein Drittel davon ist der Erdkern. Am GFZ in Potsdam erforscht man das Erdinnere. Und Vorsicht: Eine deutsche „Billion“ ist ein ukrainischer трильйон!</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Близько 2020 року все, що виготовили люди, стало важити стільки ж, скільки всі живі організми Землі. Сама Земля важить близько шести мільярдів тератонн, третина з них припадає на ядро. Надра Землі досліджують, зокрема, у центрі GFZ у Потсдамі. І обережно: німецьке «Billion» — це український трильйон!
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "wie-schwer-ist-die-welt";
+
+  // Üb. 1а
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text?",
+     opts: ["Wie viel die Dinge der Menschen, die Lebewesen und die ganze Erde wiegen",
+            "Warum die Erde jedes Jahr schwerer wird",
+            "Wie man mit einer Waage das Gewicht von Tieren misst"],
+     correct: "Wie viel die Dinge der Menschen, die Lebewesen und die ganze Erde wiegen"},
+    {q: "Warum wird die ganze Erde durch die Menschen-Dinge nicht schwerer?",
+     opts: ["Weil die Menschen nur Material umwandeln, das schon auf der Erde ist",
+            "Weil die Menschen-Dinge schnell kaputtgehen",
+            "Weil Beton leichter ist als Gestein"],
+     correct: "Weil die Menschen nur Material umwandeln, das schon auf der Erde ist"}
+  ]);
+  // Üb. 1б
+  buildMatch('ub1h', [
+    ["Vom Höhlenleben zur Industrie", "Absatz 1"],
+    ["Weniger Pflanzen", "Absatz 2"],
+    ["Beton, Kies und ein bisschen Plastik", "Absatz 3"],
+    ["Die Erde klingt wie eine Glocke", "Absatz 4"],
+    ["Ohne Gewicht kein Halt", "Absatz 6"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5", "Absatz 6"], lead: true});
+
+  // Üb. 2: число ↔ факт
+  buildMatch('ub2', [
+    ["Vor so vielen Jahren begannen die Menschen mit der Landwirtschaft.", "12 000"],
+    ["So viel Prozent der Biomasse sind Pflanzen.", "90"],
+    ["So viel Prozent der Menschen-Dinge sind Metall, Glas, Papier und Plastik.", "6"],
+    ["So viele Kilometer sind es von der Erdmitte bis zur Oberfläche.", "6400"],
+    ["So dick ist der Erdmantel (in Kilometern).", "2800"],
+    ["So viele Milliarden Teratonnen wiegt die ganze Erde.", "6 (sechs)"]
+  ], {lead: true});
+
+  // Üb. 3
+  buildRF('ub3-rf', [
+    {s: "Die Forschung zu den Menschen-Dingen kommt aus Israel.", a: "r"},
+    {s: "Eine Tonne wiegt ungefähr so viel wie ein kleines Auto.", a: "r"},
+    {s: "Die Masse aller Pflanzen hat sich in 12 000 Jahren verdoppelt.", a: "f"},
+    {s: "Alle Autos, Züge und Schiffe zusammen sind schwerer als der Beton.", a: "f"},
+    {s: "Bernhard Steinberger war selbst schon tief unter der Erdkruste.", a: "f"},
+    {s: "Der Erdkern ist ganz flüssig.", a: "f"},
+    {s: "In Potsdam gibt es ein Museum über das Erdinnere.", a: "n"}
+  ]);
+
+  // Üb. 4
+  buildSequence('ub4-seq', [
+    "die Erdkruste – 10 bis 30 Kilometer dick",
+    "der Erdmantel aus zähflüssigem Gestein – 2800 Kilometer dick",
+    "der Erdkern aus Eisen – Radius 3500 Kilometer"
+  ]);
+
+  // Üb. 5а
+  buildMatch('ub5', [
+    ["der Erdkern", "ядро Землі"],
+    ["die Erdkruste", "земна кора"],
+    ["das Gestein", "гірська порода"],
+    ["zähflüssig", "в'язкий, густий"],
+    ["roden", "вирубувати (ліс)"],
+    ["die Schwerkraft", "сила тяжіння"]
+  ]);
+  // Üb. 5б
+  wireBlanks('ub5b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🌍','⚖️','🏗️','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

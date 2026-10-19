@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cholesterin: lebenswichtig und gefährlich · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Wissenschaft &amp; Technik</span>
+        <h1>Cholesterin: lebenswichtig und gefährlich</h1>
+        <p class="sub">Без холестерину не працює жодна клітина — і саме він закупорює судини навіть у підлітків. Чому яйця не такі страшні, як думали, а кава з френч-преса — не така невинна?</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Mythos oder Fakt?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Was hilft?</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Deine Meinung</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">„Gutes“ und „böses“ Cholesterin?</h2>
+      <div class="card">
+        <p>Was weißt du über Cholesterin? Ist es gut oder schlecht für den Körper? Welche Lebensmittel haben deiner Meinung nach viel Cholesterin?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Ти, мабуть, чув(-ла) про «поганий» і «хороший» холестерин. Як гадаєш, звідки береться холестерин у крові — переважно з їжі чи організм виробляє його сам?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Ein schlanker 13-Jähriger, der nicht raucht und keinen Diabetes hat, kommt mit starken Brustschmerzen in die Notaufnahme: <span class="gl" data-key data-uk="інфаркт" data-lemma="der Herzinfarkt, -e">Herzinfarkt</span>. Seine <span class="gl" data-key data-uk="кровоносна судина" data-lemma="das Gefäß, -e">Gefäße</span> sehen aus wie die eines Achtzigjährigen. Die Ursache findet man im Blut – zu viel Cholesterin.</p>
+
+          <p>Der Junge, der überlebt hat, leidet an einer <span class="gl" data-uk="спадковий" data-lemma="erblich">erblichen</span> <span class="gl" data-uk="хвороба обміну речовин" data-lemma="die Stoffwechselkrankheit, -en">Stoffwechselkrankheit</span>, der Familiären Hypercholesterinämie, die durch eine <span class="gl" data-uk="мутація гена" data-lemma="die Genmutation, -en">Genmutation</span> entsteht. Normalerweise holt die <span class="gl" data-key data-uk="печінка" data-lemma="die Leber, -n">Leber</span> das LDL-Cholesterin aus dem Blut. Bei dieser Krankheit funktioniert das nicht richtig, und das Cholesterin <span class="gl" data-uk="накопичуватися" data-lemma="sich sammeln">sammelt sich</span> im Blut. Bei ihm war der Wert fast fünfmal höher als normal.</p>
+
+          <h3>Ein lebenswichtiger Stoff</h3>
+
+          <p>Dabei ist Cholesterin an sich gar nicht „böse“. Wir brauchen es in jeder einzelnen Zelle: als <span class="gl" data-uk="складова, будівельний елемент" data-lemma="der Baustein, -e">Baustein</span> der Zellwände, für <span class="gl" data-uk="гормон" data-lemma="das Hormon, -e">Hormone</span> wie Testosteron und Östrogen, für die Hülle der Nerven im Gehirn und für Vitamin D. Ins Blut gehört es nur für den Transport. Weil sich Cholesterin mit Blut so schlecht mischt wie Öl mit Wasser, wird es in kleine Pakete verpackt, die sogenannten Lipoproteine. Die wichtigsten heißen LDL und HDL. Sie sind also keine verschiedenen Arten von Cholesterin, sondern verschiedene <span class="gl" data-uk="упаковка, «обгортка»" data-lemma="die Verpackung, -en">Verpackungen</span>.</p>
+
+          <p>Gefährlich wird vor allem das LDL. Es kann in die Wand eines Blutgefäßes eindringen und dort hängen bleiben. Das führt zu einer <span class="gl" data-uk="запалення" data-lemma="die Entzündung, -en">Entzündung</span>, und mit der Zeit entsteht eine <span class="gl" data-key data-uk="бляшка (у судині)" data-lemma="die Plaque, -s">Plaque</span>, in der sich auch Kalk ablagert. Deshalb spricht man von <span class="gl" data-uk="звапнування судин, атеросклероз" data-lemma="die Gefäßverkalkung, -en">Gefäßverkalkung</span> oder Atherosklerose. Platzt eine solche Plaque plötzlich auf, kann sie ein Gefäß <span class="gl" data-uk="закупорювати" data-lemma="verschließen (verschloss, hat verschlossen)">verschließen</span> – die Folge ist ein Herzinfarkt oder ein <span class="gl" data-uk="інсульт" data-lemma="der Schlaganfall, -ä-e">Schlaganfall</span>.</p>
+
+          <h3>Kein Problem nur für Ältere</h3>
+
+          <p>Das betrifft viel mehr Menschen, als man denkt. Nach einer deutschen Studie mit Daten von Krankenkassen hat jeder fünfte Versicherte eine <span class="gl" data-uk="порушення жирового обміну" data-lemma="die Fettstoffwechselstörung, -en">Fettstoffwechselstörung</span>. Bei einer Untersuchung der Universität Würzburg hatten über 60 Prozent der Männer und die Hälfte der Frauen zu hohe LDL-Werte – und die Hälfte von ihnen wusste nichts davon. In einer europäischen Studie mit 16 000 scheinbar gesunden Menschen fand man bei fast 60 Prozent Verkalkungen, sogar bei manchen 18- bis 29-Jährigen. Je höher das LDL und je länger der Körper ihm <span class="gl" data-uk="піддаватися (дії)" data-lemma="ausgesetzt sein">ausgesetzt ist</span>, desto früher entsteht Atherosklerose.</p>
+
+          <h3>Das Ei ist nicht der Hauptschuldige</h3>
+
+          <p>Ein Ei enthält fast so viel Cholesterin, wie man pro Tag höchstens zu sich nehmen sollte. Trotzdem lassen Eier in manchen Studien den Cholesterinspiegel kaum steigen. Der Grund: Nur etwa 20 Prozent des Cholesterins im Körper stammt aus der <span class="gl" data-key data-uk="їжа, харчування" data-lemma="die Nahrung">Nahrung</span>, den Rest stellt der Körper selbst her, vor allem in der Leber. Und die Leber entscheidet, wie viel LDL ins Blut kommt. Das hat die Evolution klug eingerichtet: Bei einer <span class="gl" data-uk="голод (масовий)" data-lemma="die Hungersnot, -ö-e">Hungersnot</span> würden Nerven und Hormone sonst nicht mehr funktionieren.</p>
+
+          <p>Einige Lebensmittel können den LDL-Wert trotzdem etwas <span class="gl" data-key data-uk="знижувати" data-lemma="senken">senken</span>, wenn sie ungünstige Lebensmittel <span class="gl" data-uk="заміняти" data-lemma="ersetzen">ersetzen</span>: zum Beispiel Rapsöl statt Butter, Haferflocken, Nüsse, Vollkornprodukte und <span class="gl" data-uk="бобова культура" data-lemma="die Hülsenfrucht, -ü-e">Hülsenfrüchte</span>. Eine Überraschung gab es beim Kaffee: Vier bis sechs Tassen ungefilterter Kaffee am Tag – etwa aus der French Press oder vielen Kaffeevollautomaten – <span class="gl" data-uk="підвищувати" data-lemma="steigern">steigern</span> das LDL. Schuld sind Öle aus der Kaffeebohne. Beim Filterkaffee bleiben sie im Papier hängen. Experten empfehlen insgesamt eine <span class="gl" data-uk="середземноморський" data-lemma="mediterran">mediterrane</span> Ernährung mit viel Gemüse, Obst, Fisch und Olivenöl.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Rolled_oats_in_bowl_2.jpg/960px-Rolled_oats_in_bowl_2.jpg" alt="Haferflocken in einer Schüssel." width="960" height="720" loading="lazy">
+            <figcaption>Haferflocken in einer Schüssel. Foto: Bodhi Peace, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Rolled_oats_in_bowl_2.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen: der Kaffeefilter</p>
+            <p>Den Kaffeefilter aus Papier hat eine Frau aus Dresden erfunden: Melitta Bentz. 1908 ließ sie ihre Erfindung patentieren. Filterkaffee ist in Deutschland bis heute sehr beliebt.</p>
+          </aside>
+
+          <h3>Medikamente und neue Hoffnung</h3>
+
+          <p>Wie hoch das LDL ist, hängt aber vor allem von den Genen ab. Die Familiäre Hypercholesterinämie hat in Deutschland etwa einer von 300 Menschen. Deshalb empfehlen Experten in den USA, das LDL schon bei Kindern zu messen. Das wichtigste Mittel sind Medikamente, die sogenannten Statine: Sie <span class="gl" data-uk="гальмувати" data-lemma="bremsen">bremsen</span> die Cholesterinproduktion der Leber und können das LDL halbieren. Doch viele Patienten hören wegen angeblicher <span class="gl" data-key data-uk="побічна дія" data-lemma="die Nebenwirkung, -en">Nebenwirkungen</span> auf, sie zu nehmen: Nach einer deutschen Studie von 2023 hatten nach drei Jahren vier von fünf Patienten die Statine wieder abgesetzt. Dabei treten zum Beispiel Muskelschmerzen in neun von zehn Fällen auch bei Menschen auf, die nur ein <span class="gl" data-uk="плацебо, «пустушка»" data-lemma="das Placebo, -s">Placebo</span> bekommen. Für die Zukunft gibt es neue Ideen: In einer Teststudie bekamen 35 Menschen mit der Genmutation eine Gentherapie, die das Problem vielleicht ein Leben lang löst.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Обери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Mythos oder Fakt?</h2>
+      <p class="lead">Що, за текстом, — міф, а що — факт? Розклади картки.</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Was hilft, was schadet?</h2>
+      <p class="lead">Як, за текстом, впливає на LDL-холестерин? Розклади картки.</p>
+      <div class="card" id="ub4-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub5-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>Leber</span><span>Gefäße</span><span>senken</span><span>Nebenwirkungen</span><span>Nahrung</span></div>
+        <div id="ub5b-list">
+          <div class="fill-item"><span class="num">1)</span> Die <input type="text" class="blank-input inline" data-ans="Leber"> stellt den größten Teil des Cholesterins selbst her.</div>
+          <div class="fill-item"><span class="num">2)</span> Nur etwa 20 Prozent des Cholesterins kommt aus der <input type="text" class="blank-input inline" data-ans="Nahrung">.</div>
+          <div class="fill-item"><span class="num">3)</span> Plaques können die <input type="text" class="blank-input inline" data-ans="Gefäße"> verschließen.</div>
+          <div class="fill-item"><span class="num">4)</span> Haferflocken und Nüsse können das LDL etwas <input type="text" class="blank-input inline" data-ans="senken">.</div>
+          <div class="fill-item"><span class="num">5)</span> Viele Patienten haben Angst vor <input type="text" class="blank-input inline wide" data-ans="Nebenwirkungen">.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub5b-check">Prüfen</button>
+          <button class="btn secondary" id="ub5b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub5b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 6 ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">Deine Meinung</h2>
+      <p class="lead">Напиши відповіді німецькою (6–8 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub6-a">1. Experten in den USA empfehlen, das Cholesterin schon bei Kindern zu messen. Findest du diese Idee gut? Begründe deine Meinung.</label>
+          <textarea id="ub6-a" rows="6"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub6-b">2. Welche Information im Text hat dich am meisten überrascht? Warum?</label>
+          <textarea id="ub6-b" rows="6"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Ich halte das für sinnvoll, weil …, Ein Vorteil wäre, dass …, Andererseits …, Am meisten hat mich überrascht, dass …, Das wusste ich vorher nicht.</i> (Це навчальний текст, а не медична порада.)
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Cholesterin ist lebenswichtig, aber zu viel LDL im Blut führt zu Atherosklerose – manchmal schon bei jungen Menschen. Der Körper stellt den größten Teil selbst her, deshalb hängt der Wert vor allem von den Genen ab. In Deutschland ist Filterkaffee beliebt – den Papierfilter hat Melitta Bentz aus Dresden erfunden.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Холестерин життєво необхідний, але надлишок LDL у крові спричиняє атеросклероз — часом навіть у молодих людей. Більшу частину холестерину організм виробляє сам, тому його рівень залежить насамперед від генів. А паперовий фільтр для кави винайшла Мелітта Бенц із Дрездена. (Це навчальний текст, а не медична порада.)
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "cholesterin";
+
+  // Üb. 1а
+  buildQuiz('ub1-quiz', [
+    {q: "Was ist die wichtigste Aussage des Textes?",
+     opts: ["Cholesterin ist lebenswichtig, aber zu viel LDL im Blut schadet den Gefäßen.",
+            "Cholesterin ist ein Gift, das man vollständig vermeiden sollte.",
+            "Wer keine Eier isst, hat nie Probleme mit Cholesterin."],
+     correct: "Cholesterin ist lebenswichtig, aber zu viel LDL im Blut schadet den Gefäßen."},
+    {q: "Warum steigt der Cholesterinspiegel durch Eier oft kaum?",
+     opts: ["Weil der Körper das meiste Cholesterin selbst herstellt und die Leber die Menge im Blut steuert",
+            "Weil Eier gar kein Cholesterin enthalten",
+            "Weil man Eier immer zusammen mit Haferflocken isst"],
+     correct: "Weil der Körper das meiste Cholesterin selbst herstellt und die Leber die Menge im Blut steuert"}
+  ]);
+  // Üb. 1б
+  buildMatch('ub1h', [
+    ["Ein Fehler in den Genen", "Absatz 1"],
+    ["Wofür der Körper Cholesterin braucht", "Absatz 2"],
+    ["Wie eine Plaque entsteht", "Absatz 3"],
+    ["Viele wissen nichts davon", "Absatz 4"],
+    ["Eine Überraschung beim Kaffee", "Absatz 6"],
+    ["Tabletten und Gentherapie", "Absatz 7"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5", "Absatz 6", "Absatz 7"], lead: true});
+
+  // Üb. 2
+  buildRF('ub2-rf', [
+    {s: "Der 13-jährige Junge hat den Herzinfarkt überlebt.", a: "r"},
+    {s: "LDL und HDL sind zwei verschiedene Arten von Cholesterin.", a: "f"},
+    {s: "In der europäischen Studie fand man auch bei manchen jungen Erwachsenen Verkalkungen.", a: "r"},
+    {s: "Etwa 80 Prozent des Cholesterins stellt der Körper selbst her.", a: "r"},
+    {s: "Filterkaffee erhöht das LDL stark.", a: "f"},
+    {s: "Statine wurden in Deutschland erfunden.", a: "n"},
+    {s: "Die meisten Patienten nehmen Statine viele Jahre lang regelmäßig.", a: "f"}
+  ]);
+
+  // Üb. 3
+  buildSort('ub3-sort', {
+    buckets: ["Mythos", "Fakt"],
+    items: [
+      {t: "Cholesterin ist immer „böse“.", b: "Mythos"},
+      {t: "Hohes Cholesterin ist nur ein Problem alter Menschen.", b: "Mythos"},
+      {t: "Das meiste Cholesterin kommt aus dem Essen.", b: "Mythos"},
+      {t: "Statine verursachen fast immer Muskelschmerzen.", b: "Mythos"},
+      {t: "Jede Zelle braucht Cholesterin.", b: "Fakt"},
+      {t: "Die Leber steuert, wie viel LDL ins Blut kommt.", b: "Fakt"},
+      {t: "Der LDL-Wert hängt vor allem von den Genen ab.", b: "Fakt"},
+      {t: "Viele Menschen wissen nichts von ihren hohen Werten.", b: "Fakt"}
+    ]
+  });
+
+  // Üb. 4
+  buildSort('ub4-sort', {
+    buckets: ["senkt LDL", "erhöht LDL", "kaum Einfluss"],
+    items: [
+      {t: "Haferflocken", b: "senkt LDL"},
+      {t: "Nüsse", b: "senkt LDL"},
+      {t: "Rapsöl statt Butter", b: "senkt LDL"},
+      {t: "Statine", b: "senkt LDL"},
+      {t: "viel Kaffee aus der French Press", b: "erhöht LDL"},
+      {t: "eine Genmutation wie die Familiäre Hypercholesterinämie", b: "erhöht LDL"},
+      {t: "Filterkaffee", b: "kaum Einfluss"}
+    ]
+  });
+
+  // Üb. 5а
+  buildMatch('ub5', [
+    ["das Gefäß", "кровоносна судина"],
+    ["die Leber", "печінка"],
+    ["die Entzündung", "запалення"],
+    ["der Schlaganfall", "інсульт"],
+    ["die Nebenwirkung", "побічна дія"],
+    ["senken", "знижувати"]
+  ]);
+  // Üb. 5б
+  wireBlanks('ub5b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['❤️','🥣','☕','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

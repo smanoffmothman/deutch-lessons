@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eine Woche voller Ideen · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Wissenschaft &amp; Technik</span>
+        <h1>Eine Woche voller Ideen</h1>
+        <p class="sub">Цукрова посипка, прогулянка на каное і клейка стрічка на космічному кораблі: один тиждень і кілька способів вибратися з «автобану» звичних думок.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wer sagt was?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Probier es aus!</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Woher kommen gute Ideen?</h2>
+      <div class="card">
+        <p>Wann hast du deine besten Ideen: am Schreibtisch, unter der Dusche, beim Spazierengehen? Ist Kreativität ein Talent, oder kann man sie trainieren?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Коли тобі спадають на думку найкращі ідеї? Як ти думаєш, креативність — це вроджений талант чи навичка, яку можна натренувати? Чи знаєш ти якісь способи «вигадувати» ідеї, наприклад мозковий штурм?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Kreativität – da denken viele an Malen, Musik oder Basteln. Gemeint ist hier aber etwas viel Alltäglicheres: die Fähigkeit, auf neue Gedanken zu kommen, im Beruf, in der Beziehung oder bei ganz praktischen Problemen. Begleiten Sie uns durch eine ganz normale Woche.</p>
+
+          <h3>Montag: Raus aus der Routine</h3>
+
+          <p>Am Frühstückstisch ist alles wie immer: dieselben Tassen, dieselben Gespräche, dieselben Pläne für die Woche. Die Sozialpsychologin Simone Ritter, die seit über 15 Jahren Kreativität erforscht, erklärt das so: Unser Gehirn arbeitet gern <span class="gl" data-uk="енергоефективний" data-lemma="energieeffizient">energieeffizient</span> und nimmt die „<span class="gl" data-uk="автобан, автомагістраль" data-lemma="die Autobahn, -en">Autobahn</span> im Denken“. Das ist praktisch, wenn man das Ziel schon kennt. Bei vielen Problemen gibt es aber kein klares Richtig oder Falsch – dann braucht man möglichst viele verschiedene Ideen, also <span class="gl" data-key data-uk="дивергентне мислення" data-note="мислення, що шукає багато різних рішень" data-lemma="das divergente Denken">divergentes Denken</span>.</p>
+
+          <p>Ein Trick ist, das Gehirn mit etwas Unerwartetem zu überraschen. In den Niederlanden isst man Brot gern mit Zuckerstreuseln. Drückt man das Brot in die Streusel, statt sie darüberzustreuen, werden die Menschen danach kreativer, hat Ritter herausgefunden. Später entwickelte der Arzt und Psychologe Edward de Bono aus Malta Methoden, um gewohnte <span class="gl" data-key data-uk="шаблон (мислення)" data-lemma="das Denkmuster, -">Denkmuster</span> <span class="gl" data-uk="навмисно" data-lemma="absichtlich">absichtlich</span> zu <span class="gl" data-uk="порушувати, руйнувати" data-lemma="durchbrechen (durchbrach, hat durchbrochen)">durchbrechen</span>; er nannte das „laterales Denken“. Ein Paar könnte zum Beispiel einen Tag lang alles anders machen als sonst: auf dem Balkon frühstücken oder die Hausarbeit tauschen.</p>
+
+          <h3>Dienstag: Ideen sammeln im Team</h3>
+
+          <p>Im Büro braucht die Chefin bis Freitag ein neues Konzept. Klar: Brainstorming! Sein Erfinder, der <span class="gl" data-uk="фахівець з реклами" data-lemma="der Werbefachmann, -leute">Werbefachmann</span> Alex Osborn, hatte dafür strenge Regeln: möglichst viele und möglichst wilde Ideen – und vor allem keine Kritik. Noch besser funktioniert oft das <span class="gl" data-uk="брейнрайтинг (письмовий збір ідей)" data-lemma="das Brainwriting">Brainwriting</span>, bei dem jeder seine Ideen zuerst allein aufschreibt. In einer Studie von 2025 hatten Studierende so deutlich mehr und originellere Ideen als beim Brainstorming.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen: die Methode 6-3-5</p>
+            <p>Eine bekannte Form des Brainwritings hat 1968 der deutsche Unternehmensberater Bernd Rohrbach erfunden. Sechs Personen schreiben je drei Ideen auf ein Blatt, nach fünf Minuten geht das Blatt weiter, und der Nächste <span class="gl" data-uk="розвивати далі" data-lemma="weiterentwickeln">entwickelt</span> die Ideen weiter. Am Ende kann es bis zu 108 Ideen geben.</p>
+          </aside>
+
+          <h3>Donnerstag: Nichts tun hilft</h3>
+
+          <p>Feiertag! Statt zu arbeiten, macht man eine Kanutour – und plötzlich ist die Lösung für ein Problem da, über das man tagelang <span class="gl" data-uk="довго розмірковувати, сушити голову" data-lemma="grübeln">gegrübelt</span> hat. Das passierte schon dem französischen Mathematiker Henri Poincaré im 19. Jahrhundert: Die Idee kam ihm in dem Moment, als er in einen Bus stieg. Die Wissenschaft nennt diesen Effekt <span class="gl" data-key data-uk="інкубація" data-note="тут: «дозрівання» ідеї під час перерви" data-lemma="die Inkubation">Inkubation</span>. Die Psychologin Ut Na Sio hat 117 Experimente dazu <span class="gl" data-uk="аналізувати, опрацьовувати" data-lemma="auswerten">ausgewertet</span>. Ihr Ergebnis: Am besten hilft eine Pause, in der man etwas Einfaches tut, zum Beispiel spazieren geht – besser, als gar nichts zu tun.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen: Kreativitätsforschung in Graz</p>
+            <p>Am Creative Cognition Lab der Universität Graz in Österreich untersucht man, was im Gehirn bei kreativen Aufgaben passiert. Ein wichtiges Ergebnis: Unkreative Menschen gibt es eigentlich nicht. Wer aber <span class="gl" data-uk="відкритий" data-lemma="offen (für + Akk.)">offen</span> für neue Erfahrungen ist, ist im Durchschnitt kreativer.</p>
+          </aside>
+
+          <h3>Freitag: Weniger Freiheit, mehr Ideen</h3>
+
+          <p>Eine Freundin hat ein Date und möchte, dass es nicht wieder so <span class="gl" data-uk="передбачуваний" data-lemma="vorhersehbar">vorhersehbar</span> wird wie immer. Hier hilft eine überraschende Idee der Psychologin Patricia Stokes: <span class="gl" data-key data-uk="обмеження" data-lemma="die Beschränkung, -en">Beschränkungen</span> machen kreativ. Haben wir die freie Wahl, machen wir meist das, was früher schon funktioniert hat. Ein gutes Beispiel ist der Maler Claude Monet: Er malte immer wieder dieselben Motive, etwa Heuhaufen oder Seerosen. Weil das Motiv gleich blieb, musste er mit Licht und Farbe <span class="gl" data-uk="експериментувати" data-lemma="experimentieren">experimentieren</span>. Mit seinem Stil prägte er eine ganze Kunstrichtung: den Impressionismus. Für das Date heißt das: kein Tisch, kein Spaziergang. Vielleicht also Billard oder ein Besuch im Buchladen?</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Claude_Monet_-_Haystacks%2C_end_of_Summer_-_Google_Art_Project.jpg/960px-Claude_Monet_-_Haystacks%2C_end_of_Summer_-_Google_Art_Project.jpg" alt="Claude Monet: Heuhaufen am Ende des Sommers." width="960" height="564" loading="lazy">
+            <figcaption>Claude Monet: Heuhaufen am Ende des Sommers. Bild: Claude Monet, gemeinfrei, <a href="https://commons.wikimedia.org/wiki/File:Claude_Monet_-_Haystacks,_end_of_Summer_-_Google_Art_Project.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <h3>Sonntag: Aus wenig viel machen</h3>
+
+          <p>Familienausflug in die Berge – und am Parkplatz löst sich die <span class="gl" data-uk="підошва" data-lemma="die Sohle, -n">Sohle</span> vom Wanderschuh. Ist der Tag jetzt vorbei? Denken wir an Apollo 13: Im April 1970 explodierte auf dem Weg zum Mond ein Sauerstofftank. Die drei Astronauten mussten in die kleine <span class="gl" data-uk="місячний модуль" data-lemma="die Mondfähre, -n">Mondfähre</span> <span class="gl" data-uk="переходити, рятуватися (в інше місце)" data-lemma="ausweichen (wich aus, ist ausgewichen)">ausweichen</span>, deren <span class="gl" data-uk="фільтр" data-lemma="der Filter, -">Filter</span> für drei Menschen nicht reichten. Die eckigen Filter aus der Kommandokapsel passten nicht in die runden <span class="gl" data-uk="роз'єм, з'єднання" data-lemma="der Anschluss, -ü-e">Anschlüsse</span>. Mit Schläuchen, Plastiktüten und <span class="gl" data-uk="клейка стрічка, скотч" data-lemma="das Klebeband, -ä-er">Klebeband</span> bauten sie eine <span class="gl" data-key data-uk="тимчасове (аварійне) рішення" data-lemma="die Notlösung, -en">Notlösung</span> – und kamen sicher zurück.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Apollo_13_LM_with_Mailbox.jpg/960px-Apollo_13_LM_with_Mailbox.jpg" alt="Die Bastellösung in der Mondfähre von Apollo 13." width="960" height="829" loading="lazy">
+            <figcaption>Die Bastellösung in der Mondfähre von Apollo 13. Foto: NASA, gemeinfrei, <a href="https://commons.wikimedia.org/wiki/File:Apollo_13_LM_with_Mailbox.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>In Südasien gibt es für diese Art zu denken ein eigenes Wort: <span class="gl" data-uk="джугаад, геніальне рішення з підручних засобів" data-note="слово з гінді, урду й панджабі" data-lemma="Jugaad">Jugaad</span> – eine geniale Lösung mit wenigen Mitteln. Man wartet nicht auf die perfekte Lösung, sondern kombiniert neu, was gerade da ist. Und der Wanderschuh? Eine Plastiktüte, eine leere Flasche und ein Band halten die Sohle vielleicht ein paar Kilometer lang.</p>
+
+          <p>Bleibt am Ende eine letzte Frage: Welche Idee <span class="gl" data-key data-uk="втілювати, реалізовувати" data-lemma="umsetzen">setzt</span> man um? Leider entscheiden wir uns oft lieber für das <span class="gl" data-uk="звичне, відоме" data-lemma="das Bekannte">Bekannte</span>, weil wir Angst haben, zu <span class="gl" data-uk="зазнавати невдачі" data-lemma="scheitern">scheitern</span>. Simone Ritter <span class="gl" data-uk="радити, рекомендувати" data-lemma="empfehlen (empfahl, hat empfohlen)">empfiehlt</span> deshalb, neben einer sicheren Lösung immer auch eine <span class="gl" data-uk="амбітний, сміливий" data-lemma="ambitioniert">ambitionierte</span> Idee <span class="gl" data-uk="включати до короткого списку" data-lemma="in die engere Wahl nehmen">in die engere Wahl zu nehmen</span>. Dabei kann mehr schiefgehen – aber nur so entsteht etwas wirklich Neues.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">Обери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wer steht wofür?</h2>
+      <p class="lead">Яка ідея чи історія пов'язана з якою людиною? Обери ім'я.</p>
+      <div class="card" id="ub3-list"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>Beschränkungen</span><span>Denkmuster</span><span>scheitern</span><span>Inkubation</span><span>Kritik</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> Beim Brainstorming ist <input type="text" class="blank-input inline" data-ans="Kritik"> verboten.</div>
+          <div class="fill-item"><span class="num">2)</span> Laterales Denken soll alte <input type="text" class="blank-input inline wide" data-ans="Denkmuster"> durchbrechen.</div>
+          <div class="fill-item"><span class="num">3)</span> Wenn die Lösung in einer Pause kommt, spricht man von <input type="text" class="blank-input inline" data-ans="Inkubation">.</div>
+          <div class="fill-item"><span class="num">4)</span> Laut Patricia Stokes machen <input type="text" class="blank-input inline wide" data-ans="Beschränkungen"> kreativ.</div>
+          <div class="fill-item"><span class="num">5)</span> Viele Menschen wählen das Bekannte, weil sie Angst haben zu <input type="text" class="blank-input inline" data-ans="scheitern">.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Probier es aus!</h2>
+      <p class="lead">Напиши відповіді німецькою (5–7 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Wähle eine Methode aus dem Text (z. B. Brainwriting, eine Pause, eine Beschränkung oder Jugaad) und wende sie auf ein Problem aus deinem Alltag an. Beschreibe, was passiert.</label>
+          <textarea id="ub5-a" rows="6"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Kann man Kreativität in der Schule lernen? Was sollte die Schule anders machen? Nenne Argumente.</label>
+          <textarea id="ub5-b" rows="6"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Ich habe die Methode … ausprobiert., Mein Problem war, dass …, Zuerst …, danach …, Am Ende …, Meiner Meinung nach sollte die Schule …, Es wäre gut, wenn …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Kreativität kann man trainieren: mit Überraschungen, Brainwriting, Pausen, Beschränkungen oder einfachen Notlösungen. Die Methode 6-3-5 hat ein deutscher Berater erfunden, und in Graz erforscht man, wie Kreativität im Gehirn entsteht. Wichtig ist am Ende auch der Mut, eine neue Idee wirklich auszuprobieren.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Креативність можна тренувати: несподіванками, брейнрайтингом, перервами, обмеженнями чи простими рішеннями з підручних засобів. Метод 6-3-5 вигадав німецький консультант, а в австрійському Граці досліджують, як креативність виникає в мозку. А наостанок потрібна сміливість справді випробувати нову ідею.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "kreativitaet-im-alltag";
+
+  // Üb. 1
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Um Methoden, mit denen man im Alltag auf neue Ideen kommt",
+            "Um berühmte Künstler und ihre wichtigsten Werke",
+            "Um eine Woche im Leben einer Psychologin aus Graz"],
+     correct: "Um Methoden, mit denen man im Alltag auf neue Ideen kommt"},
+    {q: "Was meint Simone Ritter mit der „Autobahn im Denken“?",
+     opts: ["Unser Gehirn nimmt gern den bekannten, bequemen Weg.",
+            "Beim Autofahren hat man die besten Ideen.",
+            "Schnelles Denken ist immer besser als langsames."],
+     correct: "Unser Gehirn nimmt gern den bekannten, bequemen Weg."},
+    {q: "Welche Pause hilft laut Ut Na Sio am meisten?",
+     opts: ["Eine Pause, in der man etwas Einfaches tut",
+            "Eine Pause, in der man gar nichts tut",
+            "Eine Pause, in der man an einem anderen schweren Problem arbeitet"],
+     correct: "Eine Pause, in der man etwas Einfaches tut"},
+    {q: "Was empfiehlt Simone Ritter, wenn man zwischen Ideen wählt?",
+     opts: ["Neben einer sicheren auch eine ambitionierte Idee in die Auswahl nehmen",
+            "Immer die Idee wählen, die die Mehrheit gut findet",
+            "Nur Ideen wählen, die schon einmal funktioniert haben"],
+     correct: "Neben einer sicheren auch eine ambitionierte Idee in die Auswahl nehmen"}
+  ]);
+
+  // Üb. 2
+  buildRF('ub2-rf', [
+    {s: "Mit Kreativität sind im Text vor allem Malen und Musik gemeint.", a: "f"},
+    {s: "Edward de Bono war Arzt und Psychologe.", a: "r"},
+    {s: "In einer Studie von 2025 hatten Brainwriter mehr Ideen als Brainstormer.", a: "r"},
+    {s: "Henri Poincaré hatte seine Idee in einem Bus.", a: "r"},
+    {s: "Monet malte jedes Motiv nur ein einziges Mal.", a: "f"},
+    {s: "Simone Ritter hat selbst ein Buch über Brainwriting geschrieben.", a: "n"},
+    {s: "Die Filter aus dem Raumschiff passten sofort in die Mondfähre.", a: "f"}
+  ]);
+
+  // Üb. 3
+  buildMatch('ub3', [
+    ["„Laterales Denken“ und Methoden gegen gewohnte Denkmuster", "Edward de Bono"],
+    ["Brainstorming mit strengen Regeln: viele Ideen, keine Kritik", "Alex Osborn"],
+    ["Die Methode 6-3-5", "Bernd Rohrbach"],
+    ["Die Lösung kam beim Einsteigen in einen Bus", "Henri Poincaré"],
+    ["Beschränkungen machen kreativ", "Patricia Stokes"],
+    ["Die „Autobahn im Denken“", "Simone Ritter"]
+  ], {lead: true});
+
+  // Üb. 4а
+  buildMatch('ub4', [
+    ["die Beschränkung", "обмеження"],
+    ["das Denkmuster", "шаблон (мислення)"],
+    ["scheitern", "зазнавати невдачі"],
+    ["vorhersehbar", "передбачуваний"],
+    ["das Klebeband", "клейка стрічка, скотч"],
+    ["empfehlen", "радити, рекомендувати"]
+  ]);
+  // Üb. 4б
+  wireBlanks('ub4b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['💡','☕','🛶','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

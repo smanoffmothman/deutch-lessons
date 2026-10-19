@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Was wir vom Raben lernen können · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Natur &amp; Umwelt</span>
+        <h1>Was wir vom Raben lernen können</h1>
+        <p class="sub">Ворон, якого одного разу обдурили, не матиме справ з обманщиком навіть через місяць. Може, і людям не варто соромитися рахувати, хто що дає у стосунках?</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Das Experiment</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Redewendungen</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Meine Meinung</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Geben und Nehmen</h2>
+      <div class="card">
+        <p>Stell dir vor: Ein Freund leiht sich oft Geld von dir, gibt es aber nie zurück. Was machst du? Sprichst du darüber – oder sagst du lieber nichts?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Як ти думаєш, чи нормально «вести рахунок» у дружбі — пам'ятати, хто кому допоміг і хто що винен? Чи це дріб'язково? Чи знаєш ти, які тварини живуть парами все життя?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Viele Menschen finden es <span class="gl" data-uk="незручний, соромний" data-lemma="peinlich">peinlich</span>, in einer Beziehung genau zu rechnen: Wer gibt wie viel, wer bekommt wie viel? Raben haben damit kein Problem. Vielleicht können wir von ihnen etwas lernen.</p>
+
+          <p>Ein kleines Experiment: Ein Rabe soll ein Stück Brot gegen ein Stück Käse <span class="gl" data-key data-uk="обмінювати" data-lemma="tauschen">tauschen</span>. Er legt sein Brot hin – doch den Käse bekommt er nicht. Was passiert danach? Mit diesem Partner macht der Rabe keine Geschäfte mehr, auch einen Monat später nicht. Er hat sich gut gemerkt, wer ihn <span class="gl" data-uk="обманювати" data-lemma="betrügen (betrog, hat betrogen)">betrogen</span> hat.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Pair_of_Common_Ravens_Corvus_corax_Bryce_Canyon_8136.jpg/960px-Pair_of_Common_Ravens_Corvus_corax_Bryce_Canyon_8136.jpg" alt="Ein Rabenpaar auf einem Ast." width="960" height="640" loading="lazy">
+            <figcaption>Ein Rabenpaar auf einem Ast. Foto: ImagePerson, <a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener">CC BY 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Pair_of_Common_Ravens_Corvus_corax_Bryce_Canyon_8136.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Thomas Bugnyar ist Professor für Biologie an der Universität Wien und erforscht Raben. Er erklärt, dass die Vögel mit solchen Tauschgeschäften testen, ob der andere <span class="gl" data-key data-uk="надійний" data-lemma="zuverlässig">zuverlässig</span> ist. Auch in der Natur machen sie solche Tests, zum Beispiel mit einem kleinen <span class="gl" data-uk="камінчик, галька" data-lemma="der Kieselstein, -e">Kieselstein</span>: Ein Rabe pickt ihn auf, ein anderer kommt dazu und berührt ihn. Wer nicht so reagiert, wie man es <span class="gl" data-uk="очікувати" data-lemma="erwarten">erwartet</span>, ist als Partner nicht mehr interessant.</p>
+
+          <p>Für Raben ist das <span class="gl" data-uk="життєво важливий" data-lemma="lebenswichtig">lebenswichtig</span>. Junge Raben suchen auf diese Weise einen passenden Partner, ältere <span class="gl" data-uk="перевіряти" data-lemma="prüfen">prüfen</span>, ob ihr Partner fair bleibt. Nur zu zweit können sie ein <span class="gl" data-key data-uk="територія" data-lemma="das Territorium, Territorien">Territorium</span> erobern und <span class="gl" data-uk="захищати, обороняти" data-lemma="verteidigen">verteidigen</span>. Meist bleibt ein Rabenpaar ein Leben lang zusammen. Aber wenn einer immer mehr nimmt, als er gibt, kann es zur <span class="gl" data-key data-uk="розставання, розрив" data-lemma="die Trennung, -en">Trennung</span> kommen.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen: der Kolkrabe</p>
+            <p>Der Kolkrabe ist der größte <span class="gl" data-uk="співочий птах" data-lemma="der Singvogel, -ö-">Singvogel</span> der Welt. Mit seinen Flügeln ist er über einen Meter breit.</p>
+          </aside>
+
+          <p>Und wir Menschen? Wir <span class="gl" data-uk="порушувати (тему), заговорювати про" data-lemma="ansprechen (sprach an, hat angesprochen)">sprechen</span> kleine <span class="gl" data-uk="прикрість, роздратування" data-lemma="das Ärgernis, -se">Ärgernisse</span> oft nicht an. Der Partner stellt eine leere Milchpackung zurück in den Kühlschrank, die Partnerin nimmt sich immer das größte Stück Kuchen – <span class="gl" data-uk="не варто й згадувати" data-lemma="nicht der Rede wert">nicht der Rede wert</span>, denken wir. Doch solche Kleinigkeiten <span class="gl" data-uk="накопичуватися" data-lemma="sich summieren">summieren sich</span>. <span class="gl" data-uk="зводити рахунки, розраховуватися" data-lemma="abrechnen">Abgerechnet</span> wird oft erst dann, wenn man es nicht mehr <span class="gl" data-uk="витримувати" data-lemma="aushalten (hielt aus, hat ausgehalten)">aushält</span> – und dann gibt es großen Streit.</p>
+
+          <p>Dass wir auf <span class="gl" data-key data-uk="справедливість, чесність" data-lemma="die Fairness">Fairness</span> achten, ist ganz natürlich, meint der Anthropologe Michael Tomasello. Schon die frühen Menschen konnten nur gemeinsam genug <span class="gl" data-uk="їжа, харчі" data-lemma="die Nahrung">Nahrung</span> finden. So haben sie gelernt, dass alle in der Gruppe <span class="gl" data-uk="рівноцінний" data-lemma="gleichwertig">gleichwertig</span> sind: Was du tust, könnte genauso gut ich tun. Fair ist also, wer sich selbst als einen von vielen sieht.</p>
+
+          <p>Das zeigen auch Experimente. Eine Person bekommt 100 Euro und soll sie mit einer anderen <span class="gl" data-uk="ділити" data-lemma="teilen">teilen</span>. Bietet sie weniger als etwa 40 Euro an, <span class="gl" data-uk="відмовлятися, відхиляти" data-lemma="ablehnen">lehnt</span> die andere Person meistens ab – dann bekommen beide nichts. Ein rein rationaler Mensch würde sogar einen einzigen Euro nehmen, denn ein Euro ist mehr als keiner. Wir aber reagieren eher wie der Rabe. Laut Tomasello <span class="gl" data-uk="боліти, завдавати болю" data-lemma="wehtun (tat weh, hat wehgetan)">tut</span> Unfairness vor allem deshalb weh, weil wir das Gefühl haben, dass wir nicht zählen.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen: Erbsen zählen</p>
+            <p>Wer alles ganz genau nachrechnet, ist ein <span class="gl" data-uk="дріб'язкова людина, буквоїд" data-note="розм., з відтінком осуду" data-lemma="der Erbsenzähler, -">Erbsenzähler</span>. Ähnlich ist der Ausdruck <span class="gl" data-uk="вести облік, записувати" data-lemma="Buch führen">Buch führen</span>: Man schreibt alles auf, wie in einer Firma.</p>
+          </aside>
+
+          <p>Wer sich immer wieder unfair behandelt fühlt, wird <span class="gl" data-uk="озлоблений, ображений" data-lemma="verbittert">verbittert</span>. Deshalb kann es sich <span class="gl" data-uk="бути вартим, окуплятися" data-lemma="sich lohnen">lohnen</span>, ab und zu ehrlich <span class="gl" data-uk="підбивати підсумки" data-lemma="Bilanz ziehen">Bilanz zu ziehen</span> und offen zu sagen, was einen stört. Der Rabe <span class="gl" data-uk="не змушувати себе просити двічі" data-lemma="sich nicht zweimal bitten lassen">lässt sich</span> jedenfalls nicht zweimal bitten: Ist ein Partner unfair, fliegt er einfach weg.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Яка головна думка тексту? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Das Experiment mit den 100 Euro</h2>
+      <p class="lead">Розстав кроки експерименту в правильному порядку. Натискай речення по черзі; натиснеш на вже поставлене — воно повернеться вниз.</p>
+      <div class="card" id="ub3-seq"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wörter und Redewendungen</h2>
+      <p class="lead">а) Що означає вираз? Обери пояснення.</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>zuverlässig</span><span>tauschen</span><span>Trennung</span><span>verteidigen</span><span>Fairness</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> Im Experiment soll der Rabe Brot gegen Käse <input type="text" class="blank-input inline" data-ans="tauschen">.</div>
+          <div class="fill-item"><span class="num">2)</span> Raben testen, ob ihr Partner <input type="text" class="blank-input inline" data-ans="zuverlässig"> ist.</div>
+          <div class="fill-item"><span class="num">3)</span> Zu zweit können Raben ihr Territorium <input type="text" class="blank-input inline" data-ans="verteidigen">.</div>
+          <div class="fill-item"><span class="num">4)</span> Nimmt einer immer mehr, als er gibt, kann es zur <input type="text" class="blank-input inline" data-ans="Trennung"> kommen.</div>
+          <div class="fill-item"><span class="num">5)</span> Laut Tomasello achten Menschen von Natur aus auf <input type="text" class="blank-input inline" data-ans="Fairness">.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Meine Meinung</h2>
+      <p class="lead">Напиши відповіді німецькою (5–7 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. „Darf man in einer Freundschaft Buch führen?“ Was denkst du? Nenne Argumente und ein Beispiel.</label>
+          <textarea id="ub5-a" rows="6"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Im Ukrainischen sagt man: „Рахунок дружби не псує.“ Erkläre das Sprichwort auf Deutsch. Passt es zum Text?</label>
+          <textarea id="ub5-b" rows="6"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Meiner Meinung nach …, Einerseits … andererseits …, Ich finde es (nicht) kleinlich, wenn …, Das Sprichwort bedeutet, dass …, Das passt zum Text, weil …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>An der Universität Wien erforscht Thomas Bugnyar, wie Raben ihre Partner testen: Wer einmal unfair war, bekommt keine zweite Chance. Auch Menschen achten von Natur aus auf Fairness. Wer immer alles nachrechnet, heißt auf Deutsch „Erbsenzähler“ – aber ab und zu Bilanz zu ziehen, kann einer Beziehung helfen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          У Віденському університеті Томас Буґняр досліджує, як ворони перевіряють партнерів: хто раз повівся нечесно, другого шансу не отримує. Люди теж від природи зважають на справедливість. Того, хто все підраховує, німці називають «Erbsenzähler» («той, хто рахує горошини»), — але час від часу підбити підсумки корисно для стосунків.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "was-lernen-wir-vom-raben";
+
+  // Üb. 1а
+  buildQuiz('ub1-quiz', [
+    {q: "Was ist die wichtigste Aussage des Textes?",
+     opts: ["Wie Raben achten auch Menschen auf Fairness – und ehrlich zu rechnen kann Beziehungen helfen.",
+            "Raben sind klüger als Menschen und lösen jedes Problem allein.",
+            "In einer Liebesbeziehung sollte man nie über Geld oder Kleinigkeiten sprechen."],
+     correct: "Wie Raben achten auch Menschen auf Fairness – und ehrlich zu rechnen kann Beziehungen helfen."}
+  ]);
+  // Üb. 1б
+  buildMatch('ub1h', [
+    ["Brot gegen Käse", "Absatz 1"],
+    ["Zusammen ein Leben lang", "Absatz 3"],
+    ["Kleine Ärgernisse im Alltag", "Absatz 4"],
+    ["Fairness seit der Urzeit", "Absatz 5"],
+    ["Lieber nichts als zu wenig", "Absatz 6"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5", "Absatz 6", "Absatz 7"], lead: true});
+
+  // Üb. 2
+  buildRF('ub2-rf', [
+    {s: "Ein betrogener Rabe vergisst den Betrug schon nach wenigen Tagen.", a: "f"},
+    {s: "Thomas Bugnyar arbeitet an der Universität Wien.", a: "r"},
+    {s: "Mit einem Kieselstein testen Raben, wie andere Raben reagieren.", a: "r"},
+    {s: "Raben können ein Territorium nur als Paar verteidigen.", a: "r"},
+    {s: "Raben werden in Gefangenschaft älter als in der Natur.", a: "n"},
+    {s: "Menschen sprechen kleine Ärgernisse oft sofort an.", a: "f"},
+    {s: "Ein rein rationaler Mensch würde auch einen Euro annehmen.", a: "r"}
+  ]);
+
+  // Üb. 3
+  buildSequence('ub3-seq', [
+    "Eine Person bekommt 100 Euro.",
+    "Sie soll das Geld mit einer anderen Person teilen.",
+    "Sie bietet der anderen Person weniger als 40 Euro an.",
+    "Die andere Person lehnt das Angebot ab.",
+    "Am Ende bekommen beide kein Geld."
+  ]);
+
+  // Üb. 4а
+  buildMatch('ub4', [
+    ["nicht der Rede wert", "так дрібно, що не варто й говорити"],
+    ["Buch führen", "усе записувати й підраховувати"],
+    ["der Erbsenzähler", "дріб'язкова людина"],
+    ["sich nicht zweimal bitten lassen", "робити щось одразу, без умовлянь"],
+    ["Bilanz ziehen", "підбивати підсумки"]
+  ]);
+  // Üb. 4б
+  wireBlanks('ub4b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🐦','🍞','🧀','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

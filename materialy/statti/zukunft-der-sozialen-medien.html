@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Social Media: Wie geht es weiter? · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Kultur &amp; Medien</span>
+        <h1>Social Media: Wie geht es weiter?</h1>
+        <p class="sub">Соцмережі задумували як цифрову площу для вільної розмови, а отримали думскролінг і «ШІ-сміття». Як так сталося — і що буде далі?</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Zeitleiste</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Deine Meinung</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Wie lange bist du online?</h2>
+      <div class="card">
+        <p>Welche sozialen Netzwerke benutzt du? Wie viel Zeit verbringst du dort pro Tag? Und warum: um Freunde zu treffen, Nachrichten zu lesen oder einfach so?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подивись у налаштуваннях телефону, скільки часу ти вчора провів(-ла) у соцмережах. Чи здивувала тебе ця цифра? Як гадаєш, навіщо соцмережі показують тобі саме ті відео, які ти бачиш?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Am 26. August 2026 ging der Meta-Konzern, zu dem Facebook und Instagram gehören, in den USA einen <span class="gl" data-uk="мирова угода, компроміс" data-lemma="der Vergleich, -e">Vergleich</span> mit 47 Bundesstaaten ein. Kinder unter 13 Jahren sollen ausgesperrt werden, Jugendliche nur noch zwei Stunden am Tag auf den Plattformen sein dürfen. Wie konnte es so weit kommen?</p>
+
+          <p>Meta hat sich außerdem <span class="gl" data-uk="зобов'язуватися" data-lemma="sich verpflichten">verpflichtet</span>, unter den Beiträgen von Jugendlichen keine Likes mehr anzuzeigen und ihnen einen <span class="gl" data-key data-uk="стрічка (у соцмережі)" data-lemma="der Feed, -s">Feed</span> ohne <span class="gl" data-key data-uk="алгоритм" data-lemma="der Algorithmus, Algorithmen">Algorithmus</span> anzubieten. Die EU-Kommission und die UN forderten sofort, diese Regeln auch in Europa oder sogar weltweit <span class="gl" data-uk="запроваджувати, втілювати" data-lemma="umsetzen">umzusetzen</span>. Denn soziale Medien stehen heute für Hass, Werbung, <span class="gl" data-uk="залежність" data-lemma="die Sucht, -ü-e">Sucht</span> und eine <span class="gl" data-uk="розколотий" data-lemma="gespalten">gespaltene</span> Gesellschaft. Dabei hatte alles ganz anders begonnen.</p>
+
+          <h3>Ein digitaler Marktplatz</h3>
+
+          <p>Am Anfang stand eine schöne Idee: ein digitaler Ort, an dem alle frei und respektvoll miteinander diskutieren können – wie auf der Agora, dem Versammlungsplatz im alten Griechenland. 1990 gründete Stacy Horn in New York das Forum „Echo“. Die Nutzer wählten sich per <span class="gl" data-uk="модем" data-lemma="das Modem, -s">Modem</span> über die Telefonleitung in einen Server ein, der in Horns Wohnung stand. Es gab keine Bilder, nur Text. Ende der Neunzigerjahre waren rund 3500 New Yorker dabei. Horn merkte schnell, dass Menschen länger online blieben, wenn sie sich auch persönlich kannten – deshalb organisierte sie Lesungen und Filmabende. Ähnliche Projekte gab es bald auch in Amsterdam und Berlin.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Hayes_Smartmodem_1982_%281%29.jpg/960px-Hayes_Smartmodem_1982_%281%29.jpg" alt="Ein Modem aus dem Jahr 1982." width="960" height="556" loading="lazy">
+            <figcaption>Ein Modem aus dem Jahr 1982. Foto: Aeroid, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Hayes_Smartmodem_1982_(1).jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <h3>Freundschaft als Produkt</h3>
+
+          <p>In den 2000er-Jahren begann der große <span class="gl" data-uk="ажіотаж, хайп" data-lemma="der Hype, -s">Hype</span>: Friendster, Myspace, YouTube, dann Facebook, das 2012 bereits eine Milliarde Nutzer hatte. Viele glaubten, dass die Millionen Stimmen im Netz die Demokratie stärken würden. Doch die <span class="gl" data-uk="інвестор" data-lemma="der Investor, -en">Investoren</span> wollten Geld verdienen. Weil niemand für die Netzwerke bezahlen wollte, musste das Geld über Werbung kommen. Die Inhalte lieferten die Nutzer kostenlos, und die Plattformen sammelten dabei riesige Mengen an Daten – ein Traum für die Werbeindustrie, ein <span class="gl" data-uk="кошмар" data-lemma="der Albtraum, -ä-e">Albtraum</span> für Datenschützer. Die Medienwissenschaftlerin Danah Boyd fasst es so zusammen: Freundschaft bringt den Plattformen viel weniger Geld, als wenn Nutzer immer mehr Inhalte <span class="gl" data-uk="споживати" data-lemma="konsumieren">konsumieren</span>.</p>
+
+          <p>Ab etwa 2010 zeigten die Netzwerke die Beiträge nicht mehr einfach nach der Zeit an. Stattdessen <span class="gl" data-uk="вирішувати" data-lemma="entscheiden (entschied, hat entschieden)">entschieden</span> Algorithmen, was man zu sehen bekam. Manche Nutzer blätterten nun stundenlang durch ihren Feed – dafür gibt es das Wort „<span class="gl" data-key data-uk="думскролінг" data-note="нескінченне гортання (часто тривожних) новин" data-lemma="das Doomscrolling">Doomscrolling</span>“. 2018 kam TikTok, bei dem nur noch eine künstliche Intelligenz <span class="gl" data-uk="визначати" data-lemma="bestimmen">bestimmt</span>, welche Videos man sieht. Die eigenen Freunde spielen dabei fast keine Rolle mehr. Heute <span class="gl" data-uk="заповнювати, затоплювати" data-lemma="fluten">fluten</span> außerdem KI-Videos die Netzwerke: Hunde tanzen Breakdance, Häuser stürzen ein, wo es nie ein Erdbeben gab. Boyd spricht deshalb nicht mehr von sozialen, sondern von „<span class="gl" data-uk="парасоціальний" data-note="тут: стосунки лише в один бік, як із телеекраном" data-lemma="parasozial">parasozialen</span> Netzwerken“.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen: Wie lange sind wir online?</p>
+            <p>Laut einer Umfrage von 2025 unter Internetnutzern zwischen 16 und 64 Jahren verbringen Menschen in Deutschland täglich etwa 1 Stunde 41 Minuten in sozialen Netzwerken, in Österreich 1 Stunde 32, in der Schweiz 1 Stunde 46. Das ist etwa ein Drittel ihrer ganzen Zeit im Internet.</p>
+          </aside>
+
+          <p>Die Folgen zeigen viele Studien. Die Psychologin Kathrin Karsay von der Universität Wien sagt, dass es einen deutlichen <span class="gl" data-uk="зв'язок, взаємозв'язок" data-lemma="der Zusammenhang, -ä-e">Zusammenhang</span> zwischen sehr viel Social Media und schlechterer psychischer Gesundheit gibt. War diese Entwicklung <span class="gl" data-uk="неминучий" data-lemma="unausweichlich">unausweichlich</span>? Nein, meint Boyd: Die Firmen und auch die Politik hätten sich anders entscheiden können.</p>
+
+          <h3>Drei Szenarien für die Zukunft</h3>
+
+          <p>Inzwischen <span class="gl" data-uk="відвертатися, відходити (від)" data-lemma="sich abwenden (wandte sich ab, hat sich abgewandt)">wenden</span> sich manche Nutzer leise ab: Sie löschen ihr Profil oder besuchen es einfach nicht mehr. Der Kommunikationsforscher Adrian Meier-Ernst von der Universität Erlangen-Nürnberg glaubt trotzdem nicht, dass die großen Plattformen <span class="gl" data-uk="розвалюватися, зазнавати краху" data-lemma="zusammenbrechen (brach zusammen, ist zusammengebrochen)">zusammenbrechen</span>. Er sieht drei mögliche Wege. Erstens: Die Menschen ziehen sich in <span class="gl" data-key data-uk="месенджер" data-lemma="der Messenger, -">Messenger</span> wie Signal oder WhatsApp zurück, jüngere auch in Computerspiele. Zweitens: Künstliche Intelligenz wählt immer mehr aus, bis der Feed wie ein eigener Fernsehsender ist, der den ganzen Tag nebenbei läuft. Drittens: Social Media werden zu einem <span class="gl" data-key data-uk="метавсесвіт" data-lemma="das Metaversum">Metaversum</span>, einer virtuellen Welt, in der man sich mit einer Datenbrille trifft – deshalb hat Mark Zuckerberg seinen Konzern in „Meta“ umbenannt.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen: die Karteileiche</p>
+            <p>Wer ein Profil hat, es aber nie benutzt, ist eine <span class="gl" data-uk="«мертва душа», неактивний учасник" data-note="розм.; дослівно «труп у картотеці»" data-lemma="die Karteileiche, -n">Karteileiche</span>. So nennt man auf Deutsch auch Mitglieder eines Vereins, die nur noch auf dem Papier existieren.</p>
+          </aside>
+
+          <p>Der Informatiker Arvind Narayanan von der Princeton University hat eine Hoffnung: dass Kinder in Zukunft verstehen, wie Algorithmen funktionieren – so wie sie heute wissen, wie Straßen oder Busse funktionieren. Dann könnten sie sich <span class="gl" data-uk="самостійний, свідомий" data-lemma="selbstbestimmt">selbstbestimmt</span> in der digitalen Welt bewegen und sie sogar mitgestalten.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Обери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Zeitleiste</h2>
+      <p class="lead">Розстав події в хронологічному порядку. Натискай речення по черзі; натиснеш на вже поставлене — воно повернеться вниз.</p>
+      <div class="card" id="ub2-seq"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub3-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>Werbung</span><span>Algorithmen</span><span>Sucht</span><span>Karteileiche</span><span>Messenger</span><span>Daten</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> Die Plattformen verdienen ihr Geld vor allem mit <input type="text" class="blank-input inline" data-ans="Werbung">.</div>
+          <div class="fill-item"><span class="num">2)</span> Heute entscheiden <input type="text" class="blank-input inline wide" data-ans="Algorithmen">, welche Beiträge wir sehen.</div>
+          <div class="fill-item"><span class="num">3)</span> Wer jeden Tag stundenlang scrollt, kann eine <input type="text" class="blank-input inline" data-ans="Sucht"> entwickeln.</div>
+          <div class="fill-item"><span class="num">4)</span> Die Plattformen sammeln riesige Mengen an <input type="text" class="blank-input inline" data-ans="Daten">.</div>
+          <div class="fill-item"><span class="num">5)</span> Viele Menschen schreiben lieber in einem <input type="text" class="blank-input inline" data-ans="Messenger"> wie Signal.</div>
+          <div class="fill-item"><span class="num">6)</span> Mein Profil benutze ich nie – ich bin eine <input type="text" class="blank-input inline wide" data-ans="Karteileiche">.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Deine Meinung</h2>
+      <p class="lead">Напиши відповіді німецькою (6–8 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Social Media erst ab 13, für Jugendliche höchstens zwei Stunden am Tag: Sollte es solche Regeln auch in Europa und in der Ukraine geben? Begründe deine Meinung.</label>
+          <textarea id="ub5-a" rows="6"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Welches der drei Szenarien hältst du für am wahrscheinlichsten? Und welches wünschst du dir?</label>
+          <textarea id="ub5-b" rows="6"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Ich bin dafür / dagegen, dass …, Ein wichtiges Argument ist …, Man könnte einwenden, dass …, Am wahrscheinlichsten finde ich …, weil …, Ich würde mir wünschen, dass …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Soziale Netzwerke begannen als Idee für freie Diskussionen, heute bestimmen Werbung und Algorithmen, was wir sehen. In Deutschland, Österreich und der Schweiz verbringen Menschen täglich etwa anderthalb Stunden in sozialen Netzwerken. Wer ein Profil nie benutzt, ist auf Deutsch eine „Karteileiche“.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Соцмережі починалися як ідея вільного обговорення, а сьогодні те, що ми бачимо, визначають реклама й алгоритми. У Німеччині, Австрії та Швейцарії люди проводять у соцмережах приблизно півтори години на день. А того, хто має профіль, але ніколи ним не користується, німці називають «Karteileiche».
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "zukunft-der-sozialen-medien";
+
+  // Üb. 1а
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Wie aus einer guten Idee ein problematisches Geschäft wurde – und wie es weitergehen könnte",
+            "Wie man am besten ein Profil auf Instagram erstellt",
+            "Warum Jugendliche heute keine sozialen Netzwerke mehr benutzen"],
+     correct: "Wie aus einer guten Idee ein problematisches Geschäft wurde – und wie es weitergehen könnte"},
+    {q: "Warum hat Stacy Horn Lesungen und Filmabende organisiert?",
+     opts: ["Weil die Leute länger online blieben, wenn sie sich auch persönlich kannten",
+            "Weil sie mit den Eintrittskarten Geld verdienen wollte",
+            "Weil es bei Echo keine Bilder gab"],
+     correct: "Weil die Leute länger online blieben, wenn sie sich auch persönlich kannten"}
+  ]);
+  // Üb. 1б
+  buildMatch('ub1h', [
+    ["Neue Regeln für Jugendliche", "Absatz 1"],
+    ["Ein Server in der Wohnung", "Absatz 2"],
+    ["Geld mit Werbung und Daten", "Absatz 3"],
+    ["Die Maschine entscheidet", "Absatz 4"],
+    ["Ein Feed wie ein Fernsehsender", "Absatz 6"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5", "Absatz 6", "Absatz 7"], lead: true});
+
+  // Üb. 2
+  buildSequence('ub2-seq', [
+    "Stacy Horn gründet in New York das Forum Echo.",
+    "Friendster, Myspace und YouTube starten.",
+    "Facebook hat eine Milliarde Nutzer.",
+    "TikTok kommt auf den Markt.",
+    "Meta schließt einen Vergleich mit 47 US-Bundesstaaten."
+  ]);
+
+  // Üb. 3
+  buildRF('ub3-rf', [
+    {s: "Laut dem Vergleich sollen Kinder unter 13 Jahren Facebook und Instagram nicht mehr benutzen.", a: "r"},
+    {s: "Bei Echo konnte man schon Fotos und Videos teilen.", a: "f"},
+    {s: "Für Echo musste man sich über die Telefonleitung einwählen.", a: "r"},
+    {s: "Stacy Horn hat Echo später für viel Geld verkauft.", a: "n"},
+    {s: "Bei TikTok bestimmen vor allem die eigenen Freunde, welche Videos man sieht.", a: "f"},
+    {s: "Laut Danah Boyd war die heutige Entwicklung nicht unausweichlich.", a: "r"},
+    {s: "Adrian Meier-Ernst erwartet, dass die großen Plattformen bald zusammenbrechen.", a: "f"}
+  ]);
+
+  // Üb. 4а
+  buildMatch('ub4', [
+    ["die Sucht", "залежність"],
+    ["der Zusammenhang", "зв'язок, взаємозв'язок"],
+    ["unausweichlich", "неминучий"],
+    ["sich verpflichten", "зобов'язуватися"],
+    ["der Albtraum", "кошмар"],
+    ["selbstbestimmt", "самостійний, свідомий"]
+  ]);
+  // Üb. 4б
+  wireBlanks('ub4b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📱','💬','🤖','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

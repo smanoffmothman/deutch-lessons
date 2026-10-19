@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wer meint es wirklich ernst? · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Gesellschaft</span>
+        <h1>Wer meint es wirklich ernst?</h1>
+        <p class="sub">Брехню ми розпізнаємо майже так само «влучно», як підкинута монета. То як зрозуміти, чи людина справді серйозна — у дружбі, коханні чи справах? Підказка: подивись на павича.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Worte oder Taten?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Deine Meinung</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Versprochen ist versprochen</h2>
+      <div class="card">
+        <p>Woran erkennst du, dass ein Freund oder eine Freundin wirklich zu dir hält? An dem, was sie sagen, oder an dem, was sie tun? Kannst du gut erkennen, wenn jemand lügt?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Згадай людину, якій ти довіряєш. Чому саме їй — через її слова чи вчинки? Як гадаєш, чи можна розпізнати брехню з погляду або рухів рук?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Zwei Freunde sagen, dass sie geflüchteten Menschen helfen wollen. Der eine redet lange und klug darüber, was die Politik tun müsste. Der andere gibt in einer <span class="gl" data-uk="житло, гуртожиток (для біженців)" data-lemma="die Unterkunft, -ü-e">Unterkunft</span> Deutschkurse und geht mit Geflüchteten zu den <span class="gl" data-uk="державна установа" data-lemma="das Amt, -ä-er">Ämtern</span>. Wem glauben Sie mehr?</p>
+
+          <p>Wahrscheinlich dem zweiten. Bei ihm <span class="gl" data-uk="переконувати" data-lemma="überzeugen">überzeugen</span> nicht die Worte, sondern die <span class="gl" data-key data-uk="вчинок, дія" data-lemma="die Tat, -en">Taten</span>. Das gilt nicht nur in politischen Fragen, sondern auch in der Liebe, in Freundschaften und im Beruf. Trotzdem achten wir oft auf das Falsche – auf Worte und den äußeren <span class="gl" data-uk="враження" data-lemma="der Eindruck, -ü-e">Eindruck</span>. In Studien erkennen Menschen Lügen nur in 54 Prozent der Fälle. Der „<span class="gl" data-uk="детектор брехні" data-lemma="der Lügendetektor, -en">Lügendetektor</span> im Kopf“, der an nervösen Händen oder unsicheren Blicken eine Lüge sieht, ist also kaum besser als ein <span class="gl" data-uk="підкидання монети" data-lemma="der Münzwurf, -ü-e">Münzwurf</span>.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen: Taten statt Worte</p>
+            <p>Auch im Deutschen gibt es dafür Sprichwörter: „Taten sagen mehr als Worte“ oder „Den Worten müssen Taten folgen“. Im Englischen sagt man kurz: „Talk is cheap“ – Reden kostet nichts.</p>
+          </aside>
+
+          <p>Die Wissenschaft bestätigt das: Worte sind billig. Der amerikanische Sozialpsychologe Stephen Kraus hat Studien <span class="gl" data-uk="аналізувати" data-lemma="analysieren">analysiert</span>, in denen Menschen zuerst ihre <span class="gl" data-key data-uk="намір" data-lemma="die Absicht, -en">Absichten</span> erklärten und später <span class="gl" data-uk="спостерігати" data-lemma="beobachten">beobachtet</span> wurden. Ergebnis: Das, was jemand sagt, und das, was er später tut, hängen nur wenig zusammen. Ein <span class="gl" data-key data-uk="обіцянка" data-lemma="das Versprechen, -">Versprechen</span> ist also ein „billiges“ <span class="gl" data-key data-uk="сигнал" data-lemma="das Signal, -e">Signal</span>.</p>
+
+          <p>Teure Signale sagen mehr. Das klassische Beispiel aus der Biologie ist der Pfau. Sein prächtiger <span class="gl" data-uk="хвіст (птаха)" data-lemma="der Schweif, -e">Schweif</span> ist eigentlich unpraktisch und schwer. Gerade deshalb ist er ein <span class="gl" data-key data-uk="вартий довіри, переконливий" data-lemma="glaubwürdig">glaubwürdiges</span> Zeichen für Stärke: Ein schwaches Tier könnte ihn sich gar nicht <span class="gl" data-uk="дозволяти собі" data-lemma="sich leisten">leisten</span>. Für uns Menschen heißt das: Reden kostet nichts und beweist nichts. Zeit und <span class="gl" data-uk="зусилля, клопіт" data-lemma="die Mühe, -n">Mühe</span>, die man nicht zurückbekommt, beweisen viel.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Peacock_In_Full_Display_%28174382481%29.jpeg/960px-Peacock_In_Full_Display_%28174382481%29.jpeg" alt="Ein Pfau schlägt ein Rad." width="960" height="640" loading="lazy">
+            <figcaption>Ein Pfau schlägt ein Rad. Foto: Marlon Bunday, <a href="https://creativecommons.org/licenses/by/3.0" target="_blank" rel="noopener">CC BY 3.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Peacock_In_Full_Display_(174382481).jpeg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Allerdings zählt nicht jede Stunde, die man zusammen verbringt: Gemeinsam vor dem Fernseher zu sitzen, sagt wenig. Die Sozialpsychologin Caryl Rusbult hat ein Modell entwickelt, das misst, wie viel jemand in eine Beziehung <span class="gl" data-uk="інвестувати, вкладати" data-lemma="investieren">investiert</span>: Zeit, gemeinsame Pläne, Freunde, die man einander vorgestellt hat. Wer investiert, bleibt. Und wie beim Geld zählen auch kleine <span class="gl" data-uk="сума, внесок" data-lemma="der Betrag, -ä-e">Beträge</span>: Ruft jemand zurück, wenn er es versprochen hat? Das sagt oft mehr als eine große <span class="gl" data-uk="освідчення в коханні" data-lemma="die Liebeserklärung, -en">Liebeserklärung</span>. Entscheidend ist, wie sich jemand verhält, wenn es <span class="gl" data-uk="незручний" data-lemma="unbequem">unbequem</span> wird.</p>
+
+          <p>Vorsicht ist dagegen bei zu viel Gefühl am Anfang geboten. Dafür gibt es moderne Begriffe wie „Love-Bombing“ oder „<span class="gl" data-uk="бредкрамбінг" data-note="коли людині дають лише «крихти» уваги, щоб тримати її поруч, але нічого не обіцяють" data-lemma="das Breadcrumbing">Breadcrumbing</span>“: Jemand <span class="gl" data-uk="розкидати, сипати" data-lemma="streuen">streut</span> kleine <span class="gl" data-uk="крихта, шматочок" data-lemma="der Happen, -">Happen</span> Aufmerksamkeit, damit die Beziehung nicht ganz kalt wird – <span class="gl" data-uk="обов'язковий, серйозний" data-lemma="verbindlich">verbindlich</span> wird sie aber nie.</p>
+
+          <p>Hinter allem steht am Ende das <span class="gl" data-key data-uk="довіра" data-lemma="das Vertrauen">Vertrauen</span>. Die neuseeländische Philosophin Annette Baier hat es mit einer <span class="gl" data-uk="крихкий, тендітний" data-lemma="zerbrechlich">zerbrechlichen</span> Pflanze verglichen: Wer ständig an ihren Wurzeln gräbt, um sie zu prüfen, macht sie kaputt. Wer also immer neue Beweise verlangt, <span class="gl" data-uk="руйнувати" data-lemma="zerstören">zerstört</span> vielleicht genau das, was er sucht. Vertrauen heißt, etwas zu riskieren und sich <span class="gl" data-uk="вразливий" data-lemma="verletzbar">verletzbar</span> zu machen. Und wer davor Angst hat, meint es vielleicht selbst nicht ganz ernst.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Обери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Billiges oder teures Signal?</h2>
+      <p class="lead">Що, за текстом, мало що доводить («billig»), а що показує, що людина справді серйозна («teuer»)? Розклади картки.</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>Versprechen</span><span>Taten</span><span>Vertrauen</span><span>glaubwürdig</span><span>Absichten</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> Worte sind billig, <input type="text" class="blank-input inline" data-ans="Taten"> sagen mehr.</div>
+          <div class="fill-item"><span class="num">2)</span> Ein <input type="text" class="blank-input inline wide" data-ans="Versprechen"> allein beweist nicht viel.</div>
+          <div class="fill-item"><span class="num">3)</span> Menschen erklären ihre <input type="text" class="blank-input inline" data-ans="Absichten">, aber handeln oft anders.</div>
+          <div class="fill-item"><span class="num">4)</span> Der Schweif des Pfaus ist ein <input type="text" class="blank-input inline" data-ans="glaubwürdiges"> Zeichen für Stärke.</div>
+          <div class="fill-item"><span class="num">5)</span> Wer ständig Beweise verlangt, kann das <input type="text" class="blank-input inline" data-ans="Vertrauen"> zerstören.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Deine Meinung</h2>
+      <p class="lead">Напиши відповіді німецькою (5–7 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Erzähle von einer Situation, in der jemand dir mit Taten (nicht nur mit Worten) gezeigt hat, dass er oder sie zu dir hält.</label>
+          <textarea id="ub5-a" rows="6"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. „Wer ständig Beweise verlangt, zerstört das Vertrauen.“ Stimmst du zu? Begründe deine Meinung.</label>
+          <textarea id="ub5-b" rows="6"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Einmal hat mir … geholfen, als …, Daran habe ich gemerkt, dass …, Ich stimme (nicht) zu, denn …, Einerseits …, andererseits …, Vertrauen bedeutet für mich, …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Ob jemand es ernst meint, zeigt sich weniger an Worten als an Taten – besonders an kleinen Dingen und in unbequemen Momenten. „Taten sagen mehr als Worte“, sagt man auch auf Deutsch. Doch ohne Vertrauen geht es nicht: Wer alles prüft, kann es zerstören.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Чи людина серйозна, видно не так зі слів, як із учинків — особливо з дрібниць і з того, як вона поводиться в незручній ситуації. Німці кажуть: «Taten sagen mehr als Worte» — «Учинки кажуть більше, ніж слова». Але без довіри не обійтися: хто все перевіряє, може її зруйнувати.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "worte-und-taten";
+
+  // Üb. 1а
+  buildQuiz('ub1-quiz', [
+    {q: "Was ist die wichtigste Aussage des Textes?",
+     opts: ["Ob jemand es ernst meint, erkennt man eher an Taten als an Worten.",
+            "Man kann Lügen leicht an nervösen Händen erkennen.",
+            "In einer Beziehung sollte man den Partner ständig testen."],
+     correct: "Ob jemand es ernst meint, erkennt man eher an Taten als an Worten."},
+    {q: "Warum ist der Schweif des Pfaus ein „teures“ Signal?",
+     opts: ["Weil nur ein starkes Tier ihn sich leisten kann",
+            "Weil er besonders bunt und schön ist",
+            "Weil der Pfau ihn jedes Jahr neu wachsen lässt"],
+     correct: "Weil nur ein starkes Tier ihn sich leisten kann"}
+  ]);
+  // Üb. 1б
+  buildMatch('ub1h', [
+    ["Unser Lügendetektor funktioniert schlecht", "Absatz 1"],
+    ["Sagen und Tun passen selten zusammen", "Absatz 2"],
+    ["Ein Beispiel aus der Tierwelt", "Absatz 3"],
+    ["Auch kleine Dinge zählen", "Absatz 4"],
+    ["Eine Pflanze mit empfindlichen Wurzeln", "Absatz 6"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5", "Absatz 6"], lead: true});
+
+  // Üb. 2
+  buildRF('ub2-rf', [
+    {s: "In Studien erkennen Menschen Lügen in etwa der Hälfte der Fälle.", a: "r"},
+    {s: "Laut Stephen Kraus tun Menschen meistens genau das, was sie vorher angekündigt haben.", a: "f"},
+    {s: "Gemeinsam fernsehen ist laut Text ein gutes Zeichen für eine starke Beziehung.", a: "f"},
+    {s: "Caryl Rusbult hat auch ein Buch über Freundschaft geschrieben.", a: "n"},
+    {s: "Beim Breadcrumbing wird eine Beziehung nie wirklich verbindlich.", a: "r"},
+    {s: "Annette Baier kommt aus Neuseeland.", a: "r"}
+  ]);
+
+  // Üb. 3
+  buildSort('ub3-sort', {
+    buckets: ["billiges Signal", "teures Signal"],
+    items: [
+      {t: "lange über Hilfe reden", b: "billiges Signal"},
+      {t: "ein großes Versprechen", b: "billiges Signal"},
+      {t: "eine große Liebeserklärung", b: "billiges Signal"},
+      {t: "zusammen vor dem Fernseher sitzen", b: "billiges Signal"},
+      {t: "Deutschkurse für Geflüchtete geben", b: "teures Signal"},
+      {t: "zurückrufen, wie versprochen", b: "teures Signal"},
+      {t: "dem anderen die eigenen Freunde vorstellen", b: "teures Signal"},
+      {t: "helfen, wenn es unbequem wird", b: "teures Signal"}
+    ]
+  });
+
+  // Üb. 4а
+  buildMatch('ub4', [
+    ["die Absicht", "намір"],
+    ["glaubwürdig", "вартий довіри, переконливий"],
+    ["unbequem", "незручний"],
+    ["verbindlich", "обов'язковий, серйозний"],
+    ["zerbrechlich", "крихкий, тендітний"],
+    ["verletzbar", "вразливий"]
+  ]);
+  // Üb. 4б
+  wireBlanks('ub4b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🤝','🦚','💬','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

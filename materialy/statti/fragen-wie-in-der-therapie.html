@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Die Kunst, gute Fragen zu stellen · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Sprache</span>
+        <h1>Die Kunst, gute Fragen zu stellen</h1>
+        <p class="sub">Відкрите запитання, пауза до п'яти і 36 запитань, після яких незнайомці стають ближчими: чого можна навчитися в психотерапевтів, навіть якщо ти не збираєшся до них іти.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Wer sagt was?</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Offen oder geschlossen?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Frag mal!</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Wie geht's dir – wirklich?</h2>
+      <div class="card">
+        <p>Wie oft fragst du andere „Wie geht's?“ – und willst du die Antwort wirklich wissen? Welche Frage hat dir einmal besonders geholfen oder dich zum Nachdenken gebracht?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Згадай розмову, після якої ти почувався(-лася) по-справжньому зрозумілим(-ою). Які запитання ставила тобі тоді людина? Чим «гарне» запитання відрізняється від «поганого»?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">In der berühmten Fernsehserie „The Sopranos“ landet ein Mafiaboss bei einer Psychotherapeutin. Sie macht ihm keine <span class="gl" data-uk="докір" data-lemma="der Vorwurf, -ü-e">Vorwürfe</span>, sondern sieht ihn freundlich an und fragt nur: „Was wollen Sie mir erzählen?“ Kaum jemand nutzt die Macht von Fragen so geschickt wie Therapeutinnen und Therapeuten. Was können wir von ihnen lernen?</p>
+
+          <h3>Fragen halten die Welt zusammen</h3>
+
+          <p>Thomas Spranz-Fogasy ist Linguist an der Universität Mannheim und hat viele Therapiegespräche untersucht. Für ihn sind Fragen so etwas wie die kleinsten <span class="gl" data-uk="складова, цеглинка" data-lemma="der Baustein, -e">Bausteine</span> des sozialen Lebens: Eine Frage will immer eine Antwort. Mit den W-Fragen – wer, wie, was, wann, wo, warum – erfahren wir Schritt für Schritt alles, was wir brauchen, um eine Situation zu verstehen. Auch in der Therapie: Am Anfang weiß die Therapeutin fast nichts über die Person, die ihr <span class="gl" data-uk="сидіти навпроти" data-lemma="gegenübersitzen (saß gegenüber, hat gegenübergesessen)">gegenübersitzt</span>. Und der Patient kommt sozusagen selbst als Frage: Was habe ich? Können Sie mir helfen?</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen: das IDS in Mannheim</p>
+            <p>Spranz-Fogasy arbeitet auch am Leibniz-Institut für Deutsche Sprache in Mannheim. Dort <span class="gl" data-uk="досліджувати" data-lemma="erforschen">erforscht</span> man, wie Menschen die deutsche Sprache heute wirklich benutzen – zum Beispiel in Gesprächen, in Zeitungen oder im Internet.</p>
+          </aside>
+
+          <h3>Erst Small Talk, dann offene Fragen</h3>
+
+          <p>Die Familientherapeutin Eva Frank arbeitet seit über 20 Jahren in ihrem Beruf. Am Anfang setzt sie auf etwas ganz Einfaches: Small Talk. Wie war die <span class="gl" data-uk="дорога (сюди), приїзд" data-lemma="die Anreise, -n">Anreise</span>? Möchten Sie eine Tasse Tee? Solche Fragen schaffen sofort <span class="gl" data-key data-uk="близькість" data-lemma="die Nähe">Nähe</span>. Danach fragt sie möglichst <span class="gl" data-key data-uk="відкритий" data-lemma="offen">offen</span>: „Was führt Sie zu mir?“ So kann der Patient selbst entscheiden, was er erzählt und wie viel. Wichtig ist ihr außerdem, nicht zu <span class="gl" data-uk="оцінювати" data-lemma="werten">werten</span>. Eine Frage, die nach einem <span class="gl" data-uk="судження, оцінка" data-lemma="das Urteil, -e">Urteil</span> klingt, kann dazu führen, dass der Patient die gerade geöffnete Tür sofort wieder zuschlägt. Ihre <span class="gl" data-uk="емпіричне правило" data-lemma="die Faustregel, -n">Faustregel</span> hat drei Schritte: mitgehen, mitgehen, führen.</p>
+
+          <p>Wie es mit <span class="gl" data-key data-uk="закритий" data-note="тут: закрите запитання — відповідь «так» чи «ні»" data-lemma="geschlossen">geschlossenen</span> Fragen schiefgehen kann, zeigt eine bekannte Geschichte aus Deutschland. Der Journalist Friedrich Nowottny stellte Bundeskanzler Willy Brandt in einem Interview nur Ja-Nein-Fragen – und Brandt antwortete tatsächlich nur mit „Ja“ und „Nein“. In der Therapie passiert das selten, sagt Spranz-Fogasy: Meist antworten Menschen auf geschlossene Fragen ähnlich <span class="gl" data-uk="докладний" data-lemma="ausführlich">ausführlich</span> wie auf offene.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen: Willy Brandt</p>
+            <p>Willy Brandt (1913–1992) war von 1969 bis 1974 Bundeskanzler der Bundesrepublik Deutschland. Für seine Politik der Annäherung an die Länder Osteuropas bekam er 1971 den <span class="gl" data-uk="Нобелівська премія миру" data-lemma="der Friedensnobelpreis, -e">Friedensnobelpreis</span>.</p>
+          </aside>
+
+          <h3>Die Kraft des Schweigens</h3>
+
+          <p>Johannes Ehrenthal ist Psychotherapeut und Professor an der Universität zu Köln. Er weiß: Manchmal ist es besser, gar nicht zu fragen. In der klassischen Psychoanalyse galten Fragen anfangs sogar als zu <span class="gl" data-uk="нав'язливий, вторгливий" data-lemma="aufdringlich">aufdringlich</span>. <span class="gl" data-key data-uk="мовчання" data-lemma="das Schweigen">Schweigen</span> kann <span class="gl" data-uk="співчуття" data-lemma="das Mitgefühl">Mitgefühl</span> zeigen, so wie bei guten Freunden, mit denen man gemeinsam schweigen kann – „wie eine Decke, die einen umhüllt“. Wenn eine Frage im Raum steht, verspürt Ehrenthal oft den <span class="gl" data-uk="потяг, порив" data-lemma="der Drang">Drang</span>, sofort die nächste kluge Frage zu stellen. Doch er hat einen Trick: Er <span class="gl" data-uk="витримувати" data-lemma="aushalten (hielt aus, hat ausgehalten)">hält</span> die Stille aus, bis er im Kopf bis fünf gezählt hat. Wichtige Themen kommen nämlich wieder.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Freud_Museum_%28Couch_and_Office%29_in_2024.jpg/960px-Freud_Museum_%28Couch_and_Office%29_in_2024.jpg" alt="Das Arbeitszimmer mit der Couch im Freud Museum in London." width="960" height="720" loading="lazy">
+            <figcaption>Das Arbeitszimmer mit der Couch im Freud Museum in London. Foto: Marcelo, gemeinfrei, <a href="https://commons.wikimedia.org/wiki/File:Freud_Museum_(Couch_and_Office)_in_2024.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Gute Therapeuten fragen außerdem nicht nur „Was ist passiert?“ und „Wie haben Sie sich dabei gefühlt?“, sondern auch: „Wie fühlen Sie sich, während Sie mir das jetzt erzählen?“ Und sie fragen, weil sie die Antwort wirklich wissen wollen. Für viele Patienten ist es eine ganz neue Erfahrung, dass sich jemand <span class="gl" data-uk="справді, по-справжньому" data-lemma="tatsächlich">tatsächlich</span> für sie interessiert.</p>
+
+          <h3>36 Fragen, die verbinden</h3>
+
+          <p>Dass Fragen allein Menschen näherbringen können, zeigte 1997 eine Studie der Psychologen Arthur und Elaine Aron. Fremde Studierende stellten sich in Paaren 36 persönliche Fragen – danach fühlten sie sich einander deutlich näher als eine <span class="gl" data-uk="контрольна група" data-lemma="die Kontrollgruppe, -n">Kontrollgruppe</span>, die einfach frei geredet hatte. Jahre später machte die „New York Times“ daraus die „36 Fragen, die zur Liebe führen“. Das ist <span class="gl" data-uk="перебільшений" data-lemma="übertrieben">übertrieben</span>, aber eines stimmt: Fragen machen einen <span class="gl" data-uk="вимірюваний, відчутний" data-lemma="messbar">messbaren</span> Unterschied. Und <span class="gl" data-key data-uk="цікавість" data-lemma="die Neugier">Neugier</span> tut auch dem gut, der fragt: Sie <span class="gl" data-uk="сприяти, підтримувати" data-lemma="fördern">fördert</span> das Gedächtnis und das allgemeine <span class="gl" data-uk="самопочуття" data-lemma="das Wohlbefinden">Wohlbefinden</span>.</p>
+
+          <p>Und wenn eine Frage doch einmal falsch war? Wenn das <span class="gl" data-uk="співрозмовник" data-lemma="das Gegenüber, -">Gegenüber</span> plötzlich <span class="gl" data-uk="небагатослівний, мовчазний" data-lemma="einsilbig">einsilbig</span> wird? Dann hilft – natürlich – eine weitere Frage. Ehrenthal fragt in solchen Momenten einfach: „Habe ich gerade mit dieser Frage einen Fehler gemacht?“ Eine Frage zu stellen, ist also fast immer eine gute Idee.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Обери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Richtig, falsch oder nicht im Text?</p>
+      <div class="card" id="ub1-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Wer sagt oder macht was?</h2>
+      <p class="lead">Хто з людей у тексті пов'язаний із цією думкою чи порадою?</p>
+      <div class="card" id="ub2-list"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Offen oder geschlossen?</h2>
+      <p class="lead">Відкрите запитання дає людині самій вирішити, що відповісти; на закрите можна відповісти «так» або «ні». Розсортуй запитання.</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>Nähe</span><span>Schweigen</span><span>Neugier</span><span>werten</span><span>einsilbig</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> Small Talk schafft sofort eine gewisse <input type="text" class="blank-input inline" data-ans="Nähe">.</div>
+          <div class="fill-item"><span class="num">2)</span> Eine gute Frage sollte nicht <input type="text" class="blank-input inline" data-ans="werten">.</div>
+          <div class="fill-item"><span class="num">3)</span> Manchmal sagt <input type="text" class="blank-input inline" data-ans="Schweigen"> mehr als Worte.</div>
+          <div class="fill-item"><span class="num">4)</span> Wenn jemand nur noch „Ja“ oder „Nein“ sagt, ist er <input type="text" class="blank-input inline" data-ans="einsilbig">.</div>
+          <div class="fill-item"><span class="num">5)</span> <input type="text" class="blank-input inline" data-ans="Neugier"> ist gut für das Gedächtnis.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Frag mal!</h2>
+      <p class="lead">Напиши відповіді німецькою. Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Du willst einen neuen Mitschüler besser kennenlernen. Schreibe fünf offene Fragen auf, die ihm helfen, etwas Persönliches zu erzählen.</label>
+          <textarea id="ub5-a" rows="6"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Welcher Tipp aus dem Text gefällt dir am besten, und in welcher Situation möchtest du ihn ausprobieren? (5–7 Sätze)</label>
+          <textarea id="ub5-b" rows="6"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Відкриті запитання починаються з W-слів: <i>Was …? Wie …? Warum …? Wovon träumst du …? Was machst du am liebsten, wenn …?</i> Звороти: <i>Am besten gefällt mir der Tipp, …, weil …, Ich möchte ihn ausprobieren, wenn …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Gute Fragen sind offen, werten nicht und lassen dem anderen Zeit – auch Schweigen gehört dazu. Am Leibniz-Institut für Deutsche Sprache in Mannheim erforscht man, wie Menschen wirklich sprechen. Und von Willy Brandt weiß man: Wer nur Ja-Nein-Fragen stellt, bekommt vielleicht nur „Ja“ oder „Nein“.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Гарні запитання — відкриті, без оцінок і дають людині час; мовчання теж частина розмови. У Лейбніц-інституті німецької мови в Мангеймі досліджують, як люди насправді говорять. А історія з Віллі Брандтом показує: хто ставить лише запитання «так чи ні», може й почути тільки «так» або «ні».
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "fragen-wie-in-der-therapie";
+
+  // Üb. 1а
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Was wir von Therapeuten über gute Fragen lernen können",
+            "Wie man eine Therapie in Deutschland bezahlt",
+            "Warum die Serie „The Sopranos“ so berühmt wurde"],
+     correct: "Was wir von Therapeuten über gute Fragen lernen können"},
+    {q: "Warum stellt Eva Frank am Anfang offene Fragen?",
+     opts: ["Damit der Patient selbst entscheiden kann, was er erzählt",
+            "Damit das Gespräch schneller vorbei ist",
+            "Weil sie die Antworten schon kennt"],
+     correct: "Damit der Patient selbst entscheiden kann, was er erzählt"}
+  ]);
+  // Üb. 1б
+  buildRF('ub1-rf', [
+    {s: "Die Therapeutin in „The Sopranos“ macht dem Mafiaboss Vorwürfe.", a: "f"},
+    {s: "Eva Frank beginnt ihre Gespräche gern mit Small Talk.", a: "r"},
+    {s: "Willy Brandt antwortete Nowottny nur mit „Ja“ und „Nein“.", a: "r"},
+    {s: "Ehrenthal zählt bis zehn, bevor er die nächste Frage stellt.", a: "f"},
+    {s: "Die Studie von 1997 fand an einer amerikanischen Universität statt.", a: "n"},
+    {s: "Neugier ist auch für den gut, der fragt.", a: "r"}
+  ]);
+
+  // Üb. 2
+  buildMatch('ub2', [
+    ["Eine Frage will immer eine Antwort – Fragen sind Bausteine des sozialen Lebens.", "Thomas Spranz-Fogasy"],
+    ["Mitgehen, mitgehen, führen.", "Eva Frank"],
+    ["Bis fünf zählen und die Stille aushalten.", "Johannes Ehrenthal"],
+    ["36 persönliche Fragen bringen Fremde einander näher.", "Arthur und Elaine Aron"],
+    ["Er bekam auf Ja-Nein-Fragen nur „Ja“ und „Nein“.", "Friedrich Nowottny"]
+  ], {lead: true});
+
+  // Üb. 3
+  buildSort('ub3-sort', {
+    buckets: ["offene Frage", "geschlossene Frage"],
+    items: [
+      {t: "Was führt Sie zu mir?", b: "offene Frage"},
+      {t: "Wie war die Anreise?", b: "offene Frage"},
+      {t: "Was wollen Sie mir erzählen?", b: "offene Frage"},
+      {t: "Wie fühlen Sie sich gerade?", b: "offene Frage"},
+      {t: "Möchten Sie eine Tasse Tee?", b: "geschlossene Frage"},
+      {t: "Haben Sie gut geschlafen?", b: "geschlossene Frage"},
+      {t: "Sind Sie zum ersten Mal hier?", b: "geschlossene Frage"},
+      {t: "Habe ich einen Fehler gemacht?", b: "geschlossene Frage"}
+    ]
+  });
+
+  // Üb. 4а
+  buildMatch('ub4', [
+    ["die Nähe", "близькість"],
+    ["werten", "оцінювати"],
+    ["die Faustregel", "емпіричне правило"],
+    ["aufdringlich", "нав'язливий, вторгливий"],
+    ["übertrieben", "перебільшений"],
+    ["das Wohlbefinden", "самопочуття"]
+  ]);
+  // Üb. 4б
+  wireBlanks('ub4b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['❓','🛋️','🤫','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

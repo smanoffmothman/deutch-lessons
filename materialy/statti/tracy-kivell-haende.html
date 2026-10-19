@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Die Hand – unser bestes Werkzeug · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Wissenschaft &amp; Technik</span>
+        <h1>Die Hand – unser bestes Werkzeug</h1>
+        <p class="sub">Без якого пальця людина обійшлася б найлегше? Дослідниця з Лейпцига читає історію людства з кісток рук — і знає, чому Люсі була успішнішою за нас.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Fragen und Antworten</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Deine Meinung</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Zehn Finger</h2>
+      <div class="card">
+        <p>Was machst du heute alles mit deinen Händen? Zähle in einer Minute so viele Tätigkeiten wie möglich auf. Und welchen Finger brauchst du am wenigsten?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Спробуй за хвилину назвати якомога більше справ, які ти сьогодні робиш руками. Як гадаєш, чим наша рука відрізняється від руки шимпанзе? І без якого пальця було б найлегше обійтися?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">In ihrem Büro in Leipzig steht eine Kiste voller Handknochen – zum Glück nur <span class="gl" data-uk="зліпок, копія" data-lemma="der Abguss, -ü-e">Abgüsse</span>. Tracy Kivell leitet am Max-Planck-Institut für evolutionäre Anthropologie die Abteilung für menschliche Ursprünge. Ihr Spezialgebiet sind Hände, manche davon Millionen Jahre alt. In einem Gespräch mit ZEIT WISSEN erklärt sie, was unsere Hände so besonders macht.</p>
+
+          <h3>Hände, die fast alles können</h3>
+
+          <p>Für Kivell sind die Hände das Beste am Menschen. Wir laufen auf zwei Beinen, und unsere Füße sind dafür stark <span class="gl" data-uk="спеціалізований" data-lemma="spezialisiert">spezialisiert</span>. Die Hände dagegen sind echte <span class="gl" data-uk="універсал, мастак на все" data-lemma="der Alleskönner, -">Alleskönner</span>: Mit ihnen schreiben wir, bedienen ein Smartphone, klettern auf Bäume, stellen <span class="gl" data-key data-uk="знаряддя, інструмент" data-lemma="das Werkzeug, -e">Werkzeuge</span> her – und wenn es sein muss, laufen wir sogar auf ihnen. Ganz anders ist es bei einem Wal oder einer Fledermaus: Deren „Hände“ taugen nur für eine einzige Aufgabe.</p>
+
+          <p>Das Geheimnis einer <span class="gl" data-key data-uk="спритний, вправний" data-lemma="geschickt">geschickten</span> Hand sind breite Fingerspitzen, ein langer, kräftiger <span class="gl" data-key data-uk="великий палець" data-lemma="der Daumen, -">Daumen</span> und relativ kurze Finger. Schimpansen und Orang-Utans haben sehr lange, <span class="gl" data-uk="вигнутий, зігнутий" data-lemma="gekrümmt">gekrümmte</span> Finger. Damit können sie sich wie mit einem Haken an einem Ast festhalten. Mit dem Daumen erreichen sie ihre Fingerspitzen aber nur schwer. Wir Menschen schaffen dagegen präzise <span class="gl" data-uk="хапання, хват" data-lemma="der Griff, -e">Griffe</span>, und das sogar mit viel Kraft.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Schimpanse_Finger_Pan_troglodytes_Zoo_Augsburg-01.jpg/960px-Schimpanse_Finger_Pan_troglodytes_Zoo_Augsburg-01.jpg" alt="Die Finger eines Schimpansen sind lang und gekrümmt." width="960" height="778" loading="lazy">
+            <figcaption>Die Finger eines Schimpansen sind lang und gekrümmt. Foto: Rufus46, <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Schimpanse_Finger_Pan_troglodytes_Zoo_Augsburg-01.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Auf welchen Finger könnten wir am ehesten <span class="gl" data-uk="відмовлятися (від чогось), обходитися без" data-lemma="verzichten (auf + Akk.)">verzichten</span>? Den kleinen Finger braucht man, um große Dinge stabil zu halten. Den Daumen zu verlieren, wäre eine <span class="gl" data-uk="катастрофа" data-lemma="die Katastrophe, -n">Katastrophe</span>: Er hat bei uns zusätzliche Muskeln, die anderen Affen fehlen, und ist viel kräftiger als bei einem Schimpansen. Müsste Kivell einen Finger <span class="gl" data-uk="жертвувати" data-lemma="opfern">opfern</span>, dann wäre es der Ringfinger – er ist am wenigsten nützlich. Perfekt ist unsere Hand übrigens nicht: Mit etwas kürzeren Fingern könnten wir noch genauer greifen. Ihr Erfolg liegt gerade darin, dass sie so viele verschiedene Dinge gut kann.</p>
+
+          <h3>Knochen leben</h3>
+
+          <p>Knochen sind kein totes Material, sondern lebendes <span class="gl" data-uk="тканина (біол.)" data-lemma="das Gewebe, -">Gewebe</span>. Sie <span class="gl" data-key data-uk="пристосовуватися" data-lemma="sich anpassen">passen sich</span> an ihre Aufgaben an. Bei einer Tennisspielerin sind die Knochen im Schlagarm dicker als im anderen Arm, weil sie ständig <span class="gl" data-uk="навантажувати" data-lemma="belasten">belastet</span> werden. Im Weltraum passiert das Gegenteil: Ohne Belastung <span class="gl" data-uk="розщеплювати, руйнувати" data-lemma="abbauen">bauen</span> die Zellen Knochen ab, weil der Körper glaubt, ihn nicht mehr zu brauchen. Etwa alle sieben Jahre, sagt man, sind alle Knochenzellen ersetzt – wir bekommen sozusagen ein neues <span class="gl" data-uk="скелет" data-lemma="das Skelett, -e">Skelett</span>. Die Zähne dagegen erneuern sich nicht.</p>
+
+          <p>Außerdem hängt im Skelett alles zusammen, wie bei einer Kette. Ist das <span class="gl" data-uk="гомілковостопний суглоб" data-lemma="das Sprunggelenk, -e">Sprunggelenk</span> nur ein bisschen verschoben, verändert das auch Knie und Hüfte – und damit unseren <span class="gl" data-uk="хода" data-lemma="der Gang">Gang</span>. Deshalb erkennen wir vertraute Menschen schon von Weitem daran, wie sie gehen.</p>
+
+          <h3>Vom Kunststudium zu den Fossilien</h3>
+
+          <p>Kivell ist in Kanada geboren und hauptsächlich in Alberta aufgewachsen, einer Region mit vielen Dinosaurierfossilien. In den Familienferien suchte sie oft nach Muscheln, Steinen und <span class="gl" data-key data-uk="скам'янілість, викопні рештки" data-lemma="das Fossil, -ien">Fossilien</span>. Naturwissenschaften mochte sie in der Schule trotzdem nicht. Erst ihre Englischlehrerin weckte ihr Interesse: Sie erzählte, wie Forscher an Skeletten herausgefunden hatten, woran die Männer einer Arktis-Expedition im 19. Jahrhundert gestorben waren – an einer <span class="gl" data-uk="отруєння свинцем" data-lemma="die Bleivergiftung, -en">Bleivergiftung</span>. Kivell studierte zuerst Kunst, dann arbeitete sie in Kanada, den USA und Großbritannien, bevor sie nach Leipzig kam.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Max_Planck_Institute_for_Evolutionary_Anthropology.png/960px-Max_Planck_Institute_for_Evolutionary_Anthropology.png" alt="Das Max-Planck-Institut für evolutionäre Anthropologie in Leipzig." width="960" height="720" loading="lazy">
+            <figcaption>Das Max-Planck-Institut für evolutionäre Anthropologie in Leipzig. Foto: Usingmodel, gemeinfrei, <a href="https://commons.wikimedia.org/wiki/File:Max_Planck_Institute_for_Evolutionary_Anthropology.png" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen: die Max-Planck-Gesellschaft</p>
+            <p>Die Max-Planck-Gesellschaft ist eine der bekanntesten <span class="gl" data-uk="науково-дослідна організація" data-lemma="die Forschungsorganisation, -en">Forschungsorganisationen</span> Deutschlands. Zu ihr gehören rund 80 Institute, in denen man <span class="gl" data-uk="фундаментальні дослідження" data-lemma="die Grundlagenforschung">Grundlagenforschung</span> betreibt. Ihren Namen hat sie vom Physiker Max Planck, der den Nobelpreis für Physik 1918 erhielt.</p>
+          </aside>
+
+          <h3>Lucy war erfolgreicher als wir</h3>
+
+          <p>Am meisten <span class="gl" data-uk="захоплювати, зачаровувати" data-lemma="faszinieren">fasziniert</span> Kivell die frühe Zeit der Evolution. Vor sechs bis sieben Millionen Jahren hatten wir den letzten gemeinsamen <span class="gl" data-key data-uk="предок" data-lemma="der Vorfahr, -en">Vorfahren</span> mit Schimpansen und Bonobos. Danach lebten oft mehrere menschenähnliche Arten gleichzeitig. Die Art des berühmten <span class="gl" data-uk="австралопітек" data-lemma="der Australopithecus">Australopithecus</span> „Lucy“ gab es über eine Million Jahre lang, den modernen Menschen erst seit etwa 300 000 Jahren. Die alte Vorstellung, die Evolution laufe wie auf einer Linie auf den Menschen als <span class="gl" data-uk="вершина, кульмінація" data-lemma="der Höhepunkt, -e">Höhepunkt</span> zu, hält sie deshalb für falsch – und ein bisschen peinlich.</p>
+
+          <p>Interessant findet sie auch die Verbindung zwischen Händen und Sprache. Das Sprachzentrum liegt in der linken <span class="gl" data-uk="півкуля мозку" data-lemma="die Gehirnhälfte, -n">Gehirnhälfte</span>, und von dort wird auch die rechte Hand gesteuert – etwa 90 Prozent der Menschen sind <span class="gl" data-uk="правша" data-lemma="der Rechtshänder, -">Rechtshänder</span>. Nach einer <span class="gl" data-uk="гіпотеза" data-lemma="die Hypothese, -n">Hypothese</span> hat die Sprache sogar als Geste begonnen. Kein Wunder also, dass wir beim Sprechen fast immer auch mit den Händen „reden“.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Обери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Fragen und Antworten</h2>
+      <p class="lead">Уяви, що ти береш інтерв'ю у Трейсі Ківелл. Яка відповідь пасує до якого запитання?</p>
+      <div class="card" id="ub3-list"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>Daumen</span><span>geschickt</span><span>Werkzeuge</span><span>Vorfahren</span><span>passen</span><span>Gang</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> Ohne den <input type="text" class="blank-input inline" data-ans="Daumen"> könnten wir kaum präzise greifen.</div>
+          <div class="fill-item"><span class="num">2)</span> Menschen haben sehr <input type="text" class="blank-input inline" data-ans="geschickte"> Hände.</div>
+          <div class="fill-item"><span class="num">3)</span> Schon frühe Menschen stellten <input type="text" class="blank-input inline" data-ans="Werkzeuge"> her.</div>
+          <div class="fill-item"><span class="num">4)</span> Knochen <input type="text" class="blank-input inline" data-ans="passen"> sich an ihre Aufgaben an.</div>
+          <div class="fill-item"><span class="num">5)</span> Freunde erkennt man oft schon von Weitem an ihrem <input type="text" class="blank-input inline" data-ans="Gang">.</div>
+          <div class="fill-item"><span class="num">6)</span> Mit Schimpansen und Bonobos haben wir gemeinsame <input type="text" class="blank-input inline" data-ans="Vorfahren">.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Deine Meinung</h2>
+      <p class="lead">Напиши відповіді німецькою (5–7 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Tracy Kivell hat sich wegen einer Lehrerin für die Wissenschaft interessiert. Gab es bei dir eine Lehrerin oder einen Lehrer, die oder der dein Interesse für ein Fach geweckt hat? Erzähle.</label>
+          <textarea id="ub5-a" rows="6"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. „Der Mensch ist nicht der Höhepunkt der Evolution.“ Stimmst du dieser Aussage zu? Begründe deine Meinung.</label>
+          <textarea id="ub5-b" rows="6"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Sie/Er hat mein Interesse für … geweckt., Ich erinnere mich gut daran, wie …, Ich stimme (nicht) zu, weil …, Einerseits …, andererseits …, Man darf nicht vergessen, dass …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>In Leipzig erforscht Tracy Kivell am Max-Planck-Institut für evolutionäre Anthropologie, wie sich die menschliche Hand entwickelt hat. Unsere Hände sind Alleskönner, und unsere Knochen leben und passen sich an. Die Max-Planck-Gesellschaft ist eine der wichtigsten Forschungsorganisationen in Deutschland.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          У Лейпцигу, в Інституті еволюційної антропології Макса Планка, Трейсі Ківелл досліджує, як розвивалася людська рука. Наші руки вміють майже все, а кістки — живі й пристосовуються до навантажень. Товариство Макса Планка — одна з найважливіших науково-дослідних організацій Німеччини.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "tracy-kivell-haende";
+
+  // Üb. 1а
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Um die menschliche Hand, lebende Knochen und die Geschichte der Evolution",
+            "Um eine neue Methode, Krankheiten der Hand zu behandeln",
+            "Um die Arbeit von Tierärzten in einem Leipziger Zoo"],
+     correct: "Um die menschliche Hand, lebende Knochen und die Geschichte der Evolution"},
+    {q: "Warum ist die menschliche Hand laut Kivell so erfolgreich?",
+     opts: ["Weil sie sehr viele verschiedene Dinge gut kann",
+            "Weil sie für eine einzige Aufgabe perfekt gebaut ist",
+            "Weil sie längere Finger als die Hand eines Schimpansen hat"],
+     correct: "Weil sie sehr viele verschiedene Dinge gut kann"}
+  ]);
+  // Üb. 1б
+  buildMatch('ub1h', [
+    ["Welcher Finger ist entbehrlich?", "Absatz 3"],
+    ["Dickere Knochen beim Tennis", "Absatz 4"],
+    ["Eine Lehrerin erzählt eine Geschichte", "Absatz 6"],
+    ["Ein langer Weg ohne Höhepunkt", "Absatz 7"],
+    ["Sprache und Gesten", "Absatz 8"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5", "Absatz 6", "Absatz 7", "Absatz 8"], lead: true});
+
+  // Üb. 2
+  buildRF('ub2-rf', [
+    {s: "Unsere Füße sind stärker spezialisiert als unsere Hände.", a: "r"},
+    {s: "Schimpansen können mit dem Daumen leichter ihre Fingerspitzen berühren als Menschen.", a: "f"},
+    {s: "Kivell würde am ehesten auf den Ringfinger verzichten.", a: "r"},
+    {s: "Im Weltraum werden die Knochen dicker.", a: "f"},
+    {s: "Kivell hat als Kind selbst einen Dinosaurierknochen gefunden.", a: "n"},
+    {s: "Unsere Zähne wachsen ein Leben lang immer wieder nach.", a: "f"},
+    {s: "Lucys Art hat länger existiert als der moderne Mensch bis heute.", a: "r"}
+  ]);
+
+  // Üb. 3: питання ↔ відповідь
+  buildMatch('ub3', [
+    ["Was braucht eine geschickte Hand?", "Breite Fingerspitzen, einen kräftigen Daumen und kurze Finger."],
+    ["Welchen Finger würden Sie opfern?", "Den Ringfinger, weil er am wenigsten nützlich ist."],
+    ["Warum hat eine Tennisspielerin dickere Knochen im Schlagarm?", "Weil Knochen sich an die Belastung anpassen."],
+    ["Wie haben Sie sich für die Forschung begeistert?", "Durch die Geschichten meiner Englischlehrerin."],
+    ["Warum ist die Idee vom Menschen als Höhepunkt falsch?", "Weil zum Beispiel Lucys Art viel länger existiert hat als wir bisher."]
+  ], {lead: true});
+
+  // Üb. 4а
+  buildMatch('ub4', [
+    ["das Werkzeug", "знаряддя, інструмент"],
+    ["der Vorfahr", "предок"],
+    ["verzichten auf", "обходитися без"],
+    ["das Gewebe", "тканина (біол.)"],
+    ["gekrümmt", "вигнутий, зігнутий"],
+    ["der Rechtshänder", "правша"],
+    ["der Gang", "хода"]
+  ]);
+  // Üb. 4б
+  wireBlanks('ub4b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['✋','🦴','🔬','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

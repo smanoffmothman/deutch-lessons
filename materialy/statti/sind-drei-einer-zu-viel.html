@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sind drei immer einer zu viel? · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Gesellschaft</span>
+        <h1>Sind drei immer einer zu viel?</h1>
+        <p class="sub">Третій зайвий? Фізика каже, що з трьома тілами починається хаос, психоаналітик — що втрьох важко поділити увагу. Але є й ліки: гумор і креативність.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Redewendungen</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Deine Meinung</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Zu zweit oder zu dritt?</h2>
+      <div class="card">
+        <p>Bist du lieber mit einer Freundin oder einem Freund zusammen oder in einer Gruppe zu dritt? Gab es schon einmal Streit, weil ihr zu dritt wart?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Українською кажуть «третій зайвий». Чи погоджуєшся ти з цим? Згадай ситуації, коли втрьох було весело — і коли хтось почувався зайвим.
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Am Ende jedes Heftes beantwortet ZEIT WISSEN eine Frage von Leserinnen und Lesern. Diesmal hat eine Leserin gefragt: Sind drei immer einer zu viel? Die Antwort führt von der Physik bis in die Kindheit.</p>
+
+          <p>Beginnen wir mit der Physik. Wie sich zwei <span class="gl" data-uk="небесне тіло" data-lemma="der Himmelskörper, -">Himmelskörper</span> bewegen, zum Beispiel die Sonne und die Erde, kann man mit schönen <span class="gl" data-uk="рівняння" data-lemma="die Gleichung, -en">Gleichungen</span> ziemlich einfach beschreiben. Bei dreien – Sonne, Erde und Mond – ist es dagegen eine harte <span class="gl" data-uk="горіх" data-note="eine harte Nuss — «міцний горішок», складна задача" data-lemma="die Nuss, -ü-e">Nuss</span>. Bereits 1890 zeigte der Mathematiker Henri Poincaré: Bei drei Körpern führen schon winzige Unterschiede am Anfang zu völlig anderen <span class="gl" data-uk="орбіта, траєкторія" data-lemma="die Bahn, -en">Bahnen</span>. Man nennt das das <span class="gl" data-key data-uk="задача трьох тіл" data-lemma="das Dreikörperproblem">Dreikörperproblem</span>.</p>
+
+          <p>Für Menschen gilt etwas Ähnliches: Je mehr Personen, desto <span class="gl" data-uk="непередбачуваний" data-lemma="unberechenbar">unberechenbarer</span> wird es. Das muss aber kein <span class="gl" data-uk="недолік" data-lemma="der Nachteil, -e">Nachteil</span> sein, denn ein bisschen Chaos gehört zum Leben – anders als in der Physik ist das <span class="gl" data-uk="непередбачуване" data-lemma="das Unberechenbare">Unberechenbare</span> bei Menschen oft sogar das Spannende. In Mythen, <span class="gl" data-uk="казка" data-lemma="das Märchen, -">Märchen</span> und Religionen gibt es deshalb oft Teams aus drei Figuren, und im Märchen hat man oft genau drei Wünsche. Friedlich sind diese Dreierteams allerdings selten – nicht einmal bei Göttern und Königen.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen: drei in der Sprache</p>
+            <p>Im Deutschen gibt es ein positives Sprichwort: „Aller guten Dinge sind drei.“ Wer sich aber in einer Gruppe <span class="gl" data-uk="зайвий" data-lemma="überflüssig">überflüssig</span> fühlt, ist „das fünfte Rad am Wagen“ – auf Ukrainisch sagt man „третій зайвий“.</p>
+          </aside>
+
+          <p>Der Psychoanalytiker Wolfgang Schmidbauer hat in seiner Praxis oft mit <span class="gl" data-key data-uk="ревнощі" data-lemma="die Eifersucht">Eifersucht</span> zu tun. Er sagt: 90 Prozent der Konflikte entstehen, wenn ein Paar ein Kind bekommt. Auch unter Freunden gibt es zu dritt oft Streit. Denn dann muss man es <span class="gl" data-uk="витримувати" data-lemma="aushalten (hielt aus, hat ausgehalten)">aushalten</span>, dass ein anderer bekommt, was man selbst gern hätte – vor allem <span class="gl" data-key data-uk="увага" data-lemma="die Aufmerksamkeit">Aufmerksamkeit</span>. Und das am besten ohne <span class="gl" data-key data-uk="заздрість" data-lemma="der Neid">Neid</span>. Laut Schmidbauer ist der Neid der <span class="gl" data-uk="руйнівний" data-lemma="destruktiv">destruktive</span> <span class="gl" data-uk="суперник, протилежність" data-lemma="der Gegenspieler, -">Gegenspieler</span> der <span class="gl" data-key data-uk="вдячність" data-lemma="die Dankbarkeit">Dankbarkeit</span>.</p>
+
+          <p>Die Wurzel dafür liegt in der Kindheit. Ein Baby ist ganz von der <span class="gl" data-uk="турбота, увага" data-lemma="die Zuwendung">Zuwendung</span> seiner Mutter oder anderer <span class="gl" data-uk="близька людина, опікун" data-lemma="die Bezugsperson, -en">Bezugspersonen</span> <span class="gl" data-uk="залежний" data-lemma="abhängig (von + Dat.)">abhängig</span> – ohne sie kann es nicht <span class="gl" data-uk="виживати" data-lemma="überleben">überleben</span>. Fehlt diese Zuwendung in schwierigen Momenten, kann das Spuren hinterlassen. Wer in dieser Zeit <span class="gl" data-uk="рана" data-lemma="die Wunde, -n">Wunden</span> bekommen hat, sucht oft auch als Erwachsener die <span class="gl" data-uk="неподільний" data-lemma="ungeteilt">ungeteilte</span> Aufmerksamkeit eines anderen Menschen. Kommt ein Dritter dazu, entsteht leicht das, was Schmidbauer eine „Dankbarkeitsstörung“ nennt: Man kann nicht mehr dankbar sein, wenn man nicht das größte Stück bekommt.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Altenburg_Skatbrunnen_14.jpg/960px-Altenburg_Skatbrunnen_14.jpg" alt="Der Skatbrunnen in Altenburg (Thüringen)." width="960" height="640" loading="lazy">
+            <figcaption>Der Skatbrunnen in Altenburg (Thüringen). Foto: J.-H. Janßen, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Altenburg_Skatbrunnen_14.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Was hilft? Humor und <span class="gl" data-uk="креативність" data-lemma="die Kreativität">Kreativität</span>, meint Schmidbauer. Beides macht es leichter, dankbar zu sein, auch wenn nicht alles perfekt ist. Dann wird der oder die Dritte zur <span class="gl" data-uk="збагачення" data-lemma="die Bereicherung, -en">Bereicherung</span>: beim Kartenspiel, im Gespräch, im Urlaub und in der Familie.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen: der Skat</p>
+            <p>Das beliebteste Kartenspiel der Deutschen braucht genau drei Spieler: Skat. Es ist Anfang des 19. Jahrhunderts in Altenburg in Thüringen entstanden. Seit 2016 gehört Skat zum immateriellen <span class="gl" data-uk="культурна спадщина" data-lemma="das Kulturerbe">Kulturerbe</span> in Deutschland.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Обери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Redewendungen mit Zahlen</h2>
+      <p class="lead">Що означає вираз? Обери пояснення.</p>
+      <div class="card" id="ub3-list"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>Eifersucht</span><span>Neid</span><span>Aufmerksamkeit</span><span>Dankbarkeit</span><span>Bereicherung</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> Als ihr kleiner Bruder geboren wurde, spürte Lena große <input type="text" class="blank-input inline wide" data-ans="Eifersucht">.</div>
+          <div class="fill-item"><span class="num">2)</span> Zu dritt muss man die <input type="text" class="blank-input inline wide" data-ans="Aufmerksamkeit"> teilen.</div>
+          <div class="fill-item"><span class="num">3)</span> Schmidbauer sagt, der <input type="text" class="blank-input inline" data-ans="Neid"> ist der Gegenspieler der Dankbarkeit.</div>
+          <div class="fill-item"><span class="num">4)</span> Humor hilft, auch dann <input type="text" class="blank-input inline wide" data-ans="Dankbarkeit"> zu spüren, wenn nicht alles perfekt ist.</div>
+          <div class="fill-item"><span class="num">5)</span> Ein dritter Freund kann eine echte <input type="text" class="blank-input inline wide" data-ans="Bereicherung"> sein.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Deine Meinung</h2>
+      <p class="lead">Напиши відповіді німецькою (5–7 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. „Aller guten Dinge sind drei“ oder „das fünfte Rad am Wagen“: Welche Erfahrungen hast du zu dritt gemacht? Erzähle ein Beispiel.</label>
+          <textarea id="ub5-a" rows="6"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Was kann man tun, damit sich in einer Dreiergruppe niemand überflüssig fühlt? Gib drei Tipps.</label>
+          <textarea id="ub5-b" rows="6"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Einmal waren wir zu dritt …, Ich habe mich überflüssig gefühlt, weil …, Es hat geholfen, dass …, Man sollte …, Wichtig ist, dass alle …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Zu dritt wird es schnell unberechenbar – in der Physik und unter Menschen. Wer Aufmerksamkeit mit anderen teilen kann, ohne neidisch zu sein, erlebt einen Dritten als Bereicherung. Die Deutschen sagen „Aller guten Dinge sind drei“ und spielen gern Skat – ein Kartenspiel für genau drei Personen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Утрьох усе швидко стає непередбачуваним — і у фізиці, і між людьми. Той, хто вміє ділитися увагою без заздрощів, сприймає третього як збагачення. Німці кажуть «Aller guten Dinge sind drei» («Бог трійцю любить») і охоче грають у скат — карткову гру саме для трьох.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "sind-drei-einer-zu-viel";
+
+  // Üb. 1а
+  buildQuiz('ub1-quiz', [
+    {q: "Welche Antwort gibt der Text auf die Frage „Sind drei immer einer zu viel?“",
+     opts: ["Nicht unbedingt – mit Humor und Kreativität kann ein Dritter eine Bereicherung sein.",
+            "Ja, drei Menschen streiten immer.",
+            "Nein, zu dritt gibt es nie Probleme."],
+     correct: "Nicht unbedingt – mit Humor und Kreativität kann ein Dritter eine Bereicherung sein."},
+    {q: "Was ist das Dreikörperproblem?",
+     opts: ["Die Bewegung von drei Himmelskörpern ist schwer zu berechnen.",
+            "Drei Menschen passen nicht in ein kleines Auto.",
+            "Ein Paar bekommt ein drittes Kind."],
+     correct: "Die Bewegung von drei Himmelskörpern ist schwer zu berechnen."}
+  ]);
+  // Üb. 1б
+  buildMatch('ub1h', [
+    ["Chaos am Himmel", "Absatz 1"],
+    ["Dreierteams in Märchen", "Absatz 2"],
+    ["Eifersucht und Neid", "Absatz 3"],
+    ["Alles beginnt in der Kindheit", "Absatz 4"],
+    ["Lachen hilft", "Absatz 5"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5"], lead: true});
+
+  // Üb. 2
+  buildRF('ub2-rf', [
+    {s: "Die Frage kam von einer Leserin.", a: "r"},
+    {s: "Henri Poincaré zeigte das Dreikörperproblem schon im 19. Jahrhundert.", a: "r"},
+    {s: "Laut Text ist jedes Chaos im Leben ein Nachteil.", a: "f"},
+    {s: "Laut Schmidbauer entstehen die meisten Konflikte, wenn ein Paar ein Kind bekommt.", a: "r"},
+    {s: "Schmidbauer ist selbst Vater von drei Kindern.", a: "n"},
+    {s: "Neid und Dankbarkeit gehören laut Schmidbauer gut zusammen.", a: "f"}
+  ]);
+
+  // Üb. 3
+  buildMatch('ub3', [
+    ["Aller guten Dinge sind drei.", "Beim dritten Mal klappt es – drei ist eine gute Zahl."],
+    ["das fünfte Rad am Wagen sein", "in einer Gruppe überflüssig sein"],
+    ["eine harte Nuss", "ein schwieriges Problem"],
+    ["das größte Stück bekommen", "mehr bekommen als die anderen"]
+  ], {lead: true});
+
+  // Üb. 4а
+  buildMatch('ub4', [
+    ["die Eifersucht", "ревнощі"],
+    ["der Neid", "заздрість"],
+    ["abhängig", "залежний"],
+    ["unberechenbar", "непередбачуваний"],
+    ["überflüssig", "зайвий"],
+    ["die Zuwendung", "турбота, увага"]
+  ]);
+  // Üb. 4б
+  wireBlanks('ub4b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['3️⃣','🃏','🌍','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
