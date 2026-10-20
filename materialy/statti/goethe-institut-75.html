@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>75 Jahre Goethe-Institut · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Geschichte</span>
+        <h1>75 Jahre Goethe-Institut</h1>
+        <p class="sub">Його заснували вчителі німецької через кілька років після Другої світової — щоб світ знову повірив Німеччині. Сьогодні курси Гете-Інституту в Києві часом проходять в укритті.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Chronologie</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Mehr als eine Sprachschule</h2>
+      <div class="card">
+        <p>Kennst du das Goethe-Institut? Was macht man dort? Was glaubst du: Warum hat Deutschland nach dem Zweiten Weltkrieg Institute in der ganzen Welt eröffnet?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Чи знаєш ти Гете-Інститут? Може, складав(-ла) там іспит або бачив(-ла) його в Києві? Як гадаєш, навіщо Німеччина після Другої світової війни відкривала такі інститути по всьому світу?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">In einem Goethe-Institut kann man nicht nur Deutsch lernen. Man kann dort auch Konzerte hören, Kunst sehen oder an Diskussionen <span class="gl" data-uk="брати участь (у)" data-lemma="teilnehmen an (nahm teil, hat teilgenommen)">teilnehmen</span>. 2026 wird das Institut 75 Jahre alt – und seine Geschichte beginnt in einer sehr schwierigen Zeit.</p>
+
+          <p>Als das Goethe-Institut 1951 <span class="gl" data-key data-uk="засновувати" data-lemma="gründen">gegründet</span> wurde, war der Zweite Weltkrieg erst wenige Jahre <span class="gl" data-uk="минулий, закінчений" data-lemma="vorbei">vorbei</span>. Viele Menschen in der Welt dachten bei Deutschland an Hitler, Krieg und Holocaust. Deshalb gründeten Deutschlehrerinnen und Deutschlehrer einen <span class="gl" data-uk="товариство, об'єднання" data-lemma="der Verein, -e">Verein</span>: Sie wollten die deutsche Sprache in der Welt <span class="gl" data-uk="підтримувати, сприяти" data-lemma="fördern">fördern</span> und nach der NS-Diktatur neues <span class="gl" data-key data-uk="довіра" data-lemma="das Vertrauen">Vertrauen</span> <span class="gl" data-uk="створювати" data-lemma="schaffen">schaffen</span>. Die junge Demokratie wollte wieder Freunde finden, erklärt die heutige Präsidentin des Instituts, Gesche Joost.</p>
+
+          <p>Der Anfang war nicht leicht, denn es fehlte Geld. Trotzdem holte der Verein Deutschlehrer aus dem Ausland in die Bundesrepublik, um sie <span class="gl" data-uk="підвищувати кваліфікацію" data-lemma="weiterbilden">weiterzubilden</span>. 1952 öffnete in Athen das erste Goethe-Institut im Ausland, bis 1961 kamen mehr als 50 weitere dazu. Neben Sprachkursen zeigten die Institute immer auch deutsche Literatur, Musik, Theater und Filme. Die Welt sollte sehen: Deutschland ist mehr als seine <span class="gl" data-key data-uk="минуле" data-lemma="die Vergangenheit">Vergangenheit</span>.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Goethe_Institut_Abidjan.jpg/960px-Goethe_Institut_Abidjan.jpg" alt="Das Goethe-Institut in Abidjan (Côte d’Ivoire)." width="960" height="638" loading="lazy">
+            <figcaption>Das Goethe-Institut in Abidjan (Côte d’Ivoire). Foto: Kctzch, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Goethe_Institut_Abidjan.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Ein perfektes Bild von Deutschland wollte das Institut aber nie zeigen, sondern das echte Land – mit Kultur und Wissenschaft, aber auch mit seinen Problemen. Seit den 1970er-Jahren hat es den Nationalsozialismus in <span class="gl" data-uk="виставка" data-lemma="die Ausstellung, -en">Ausstellungen</span> und Diskussionen intensiv <span class="gl" data-uk="осмислювати, опрацьовувати (минуле)" data-lemma="aufarbeiten">aufgearbeitet</span>. Die Idee dahinter: Vertrauen <span class="gl" data-uk="виникати" data-lemma="entstehen (entstand, ist entstanden)">entsteht</span>, wenn man offen über Probleme spricht.</p>
+
+          <p>Auch die große Politik hat die Arbeit immer <span class="gl" data-uk="впливати (на)" data-lemma="beeinflussen">beeinflusst</span>. Im <span class="gl" data-uk="холодна війна" data-lemma="der Kalte Krieg">Kalten Krieg</span> <span class="gl" data-uk="конкурувати, суперничати" data-lemma="konkurrieren">konkurrierten</span> die Bundesrepublik und die DDR auch in der Kultur – die DDR <span class="gl" data-uk="стверджувати" data-lemma="behaupten">behauptete</span> sogar, das Goethe-Institut sei eine Spionage-Organisation. In den 1990er-Jahren öffneten neue Institute in Osteuropa. Und nach den <span class="gl" data-uk="теракт" data-lemma="der Terroranschlag, -ä-e">Terroranschlägen</span> vom 11. September 2001 wurde der Dialog zwischen den Kulturen noch wichtiger.</p>
+
+          <p>Heute arbeitet das Institut oft dort, wo es Krisen und Konflikte gibt – zum Beispiel in Jerusalem, Ramallah oder Kyjiw. In der Ukraine finden Sprachkurse manchmal sogar im <span class="gl" data-key data-uk="бомбосховище, укриття" data-lemma="der Luftschutzkeller, -">Luftschutzkeller</span> statt. Krise sei für das Institut <span class="gl" data-uk="тим часом, тепер уже" data-lemma="inzwischen">inzwischen</span> der Normalfall, sagt Joost. Die wichtigste <span class="gl" data-key data-uk="завдання" data-lemma="die Aufgabe, -n">Aufgabe</span> ist aber dieselbe wie 1951: <span class="gl" data-uk="міст" data-lemma="die Brücke, -n">Brücken</span> zwischen Deutschland und der Welt zu bauen.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Heute gibt es 154 Goethe-Institute in 100 Ländern. Das Geld kommt vor allem vom <span class="gl" data-uk="Міністерство закордонних справ Німеччини" data-lemma="das Auswärtige Amt">Auswärtigen Amt</span>, einen Teil verdient das Institut selbst mit Kursen und Prüfungen. Jedes Jahr werden weltweit mehr als eine Million Goethe-Prüfungen gemacht. Seinen Namen hat das Institut von Johann Wolfgang von Goethe, einem der bekanntesten deutschen Dichter.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Was kam zuerst?</h2>
+      <p class="lead">Розстав події з історії Гете-Інституту в правильному порядку. Натискай речення по черзі; натиснеш на вже поставлене — воно повернеться вниз.</p>
+      <div class="card" id="ub3-seq"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>gründen</span><span>das Vertrauen</span><span>die Vergangenheit</span><span>die Aufgabe</span><span>teilnehmen</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> Das Goethe-Institut wurde 1951 <input type="text" class="blank-input inline" data-ans="gegründet">.</div>
+          <div class="fill-item"><span class="num">2)</span> Nach dem Krieg musste Deutschland neues <input type="text" class="blank-input inline" data-ans="Vertrauen"> schaffen.</div>
+          <div class="fill-item"><span class="num">3)</span> Über die <input type="text" class="blank-input inline wide" data-ans="Vergangenheit"> muss man offen sprechen.</div>
+          <div class="fill-item"><span class="num">4)</span> Ich möchte an einem Deutschkurs <input type="text" class="blank-input inline" data-ans="teilnehmen">.</div>
+          <div class="fill-item"><span class="num">5)</span> Die wichtigste <input type="text" class="blank-input inline" data-ans="Aufgabe"> des Instituts: Brücken bauen.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (4–6 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Warum lernst du Deutsch? Was möchtest du später mit der Sprache machen?</label>
+          <textarea id="ub5-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. „Sprache und Kultur können Menschen verbinden.“ Stimmst du zu? Schreib ein Beispiel aus deinem Leben.</label>
+          <textarea id="ub5-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Ich lerne Deutsch, weil …; Später möchte ich …; Ich stimme (nicht) zu, denn …; Zum Beispiel habe ich …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Das Goethe-Institut wurde 1951 gegründet, um nach dem Nationalsozialismus neues Vertrauen in Deutschland zu schaffen. Es lehrt Deutsch und zeigt deutsche Kultur – auch die schwierige Vergangenheit. Heute gibt es 154 Institute in 100 Ländern, auch in Kyjiw, wo Kurse manchmal im Luftschutzkeller stattfinden.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Гете-Інститут заснували 1951 року, щоб після нацизму знову завоювати довіру до Німеччини. Він навчає німецької й показує німецьку культуру — разом зі складним минулим. Сьогодні є 154 інститути в 100 країнах, зокрема в Києві, де курси іноді проходять в укритті.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "goethe-institut-75";
+
+  // Üb. 1а
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Um die Geschichte und die Aufgaben des Goethe-Instituts",
+            "Um das Leben des Dichters Johann Wolfgang von Goethe",
+            "Um die beste Methode, Deutsch zu lernen"],
+     correct: "Um die Geschichte und die Aufgaben des Goethe-Instituts"},
+    {q: "Warum wurde das Goethe-Institut gegründet?",
+     opts: ["Um nach dem Krieg neues Vertrauen in Deutschland zu schaffen",
+            "Um mit Sprachkursen viel Geld zu verdienen",
+            "Um deutsche Schüler ins Ausland zu schicken"],
+     correct: "Um nach dem Krieg neues Vertrauen in Deutschland zu schaffen"}
+  ]);
+  // Üb. 1б
+  buildMatch('ub1h', [
+    ["Kurse unter schwierigen Bedingungen", "Absatz 5"],
+    ["Wenig Geld, aber schnelles Wachstum", "Absatz 2"],
+    ["Ein Neuanfang nach dem Krieg", "Absatz 1"],
+    ["Ehrlich über die Vergangenheit sprechen", "Absatz 3"],
+    ["Ost und West, Kalter Krieg und neue Krisen", "Absatz 4"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5"], lead: true});
+
+  // Üb. 2
+  buildRF('ub2-rf', [
+    {s: "Das Goethe-Institut wurde kurz nach dem Zweiten Weltkrieg gegründet.", a: "r"},
+    {s: "Am Anfang hatte das Institut sehr viel Geld.", a: "f"},
+    {s: "Das erste Goethe-Institut im Ausland öffnete in Athen.", a: "r"},
+    {s: "Die ersten Lehrer im Ausland waren alle Germanisten aus Berlin.", a: "n"},
+    {s: "Das Institut wollte immer nur ein positives Bild von Deutschland zeigen.", a: "f"},
+    {s: "Die DDR hielt das Goethe-Institut für eine Spionage-Organisation.", a: "r"},
+    {s: "In der Ukraine gibt es zurzeit keine Sprachkurse des Goethe-Instituts.", a: "f"},
+    {s: "Das Goethe-Institut in Kyjiw ist das größte der Welt.", a: "n"}
+  ]);
+
+  // Üb. 3
+  buildSequence('ub3-seq', [
+    "Deutschlehrer gründen das Goethe-Institut als Verein.",
+    "In Athen öffnet das erste Institut im Ausland.",
+    "Es gibt schon mehr als 50 Institute im Ausland.",
+    "Das Institut beschäftigt sich intensiv mit dem Nationalsozialismus.",
+    "Neue Institute öffnen in Osteuropa.",
+    "Nach den Anschlägen in den USA wird der Dialog der Kulturen noch wichtiger."
+  ]);
+
+  // Üb. 4а
+  buildMatch('ub4', [
+    ["fördern", "підтримувати, сприяти"],
+    ["der Verein", "товариство, об'єднання"],
+    ["behaupten", "стверджувати"],
+    ["entstehen", "виникати"],
+    ["der Luftschutzkeller", "укриття, бомбосховище"],
+    ["weiterbilden", "підвищувати кваліфікацію"]
+  ]);
+  // Üb. 4б
+  wireBlanks('ub4b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📚','🌍','🎭','🤝']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wörter, die zusammengehören · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Sprache</span>
+        <h1>Wörter, die zusammengehören</h1>
+        <p class="sub">«Кривавий» новачок не стікає кров'ю, а «товсті» друзі зовсім не товсті. Чому німецькі слова краще вчити парами — і де ці пари шукати.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wortpaare</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Das passende Wort</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Hausaufgaben machen oder tun?</h2>
+      <div class="card">
+        <p>Wie lernst du neue deutsche Wörter? Einzeln oder in Sätzen? Ergänze ganz schnell: „Ich ___ meine Hausaufgaben.“ – Welches Verb kommt dir zuerst in den Kopf?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Як ти вчиш нові німецькі слова — поодинці чи в реченнях? Доповни якнайшвидше: «Ich ___ meine Hausaufgaben». Яке дієслово спало на думку першим? Згадай: в українській ми «ставимо запитання», а не «робимо» його — у німецькій теж є такі сталі пари.
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Ein <span class="gl" data-uk="повний новачок" data-note="дослівно: «кривавий новачок»" data-lemma="der blutige Anfänger">blutiger Anfänger</span> blutet nicht, und ein großer Künstler muss nicht groß sein. Willkommen in der Welt der <span class="gl" data-key data-uk="колокація, стале словосполучення" data-lemma="die Kollokation, -en">Kollokationen</span>!</p>
+
+          <p>Kollokationen sind Wörter, die oft zusammen <span class="gl" data-uk="траплятися, вживатися" data-lemma="vorkommen (kam vor, ist vorgekommen)">vorkommen</span>: eine Frage stellen, Hausaufgaben machen, ein Formular <span class="gl" data-uk="заповнювати" data-lemma="ausfüllen">ausfüllen</span>. Es gibt sie in verschiedenen Kombinationen, zum Beispiel Nomen + Verb, Adjektiv + Nomen (ein dickes Buch) oder Adverb + Verb (gefährlich leben). Manche <span class="gl" data-uk="складатися (з)" data-lemma="bestehen aus (bestand, hat bestanden)">bestehen</span> sogar aus drei oder vier Wörtern: Wer als Gast sehr <span class="gl" data-uk="сердечно, щиро" data-lemma="herzlich">herzlich</span> <span class="gl" data-uk="приймати, зустрічати" data-lemma="empfangen (empfing, hat empfangen)">empfangen</span> wird, wird „mit offenen Armen“ empfangen.</p>
+
+          <p>Warum sind sie so wichtig? Erwin Tschirner, Professor für Deutsch als Fremdsprache an der University of Iowa, rät: Ein neues Wort sollte man nie allein lernen, sondern immer mit seinen typischen „Partnern“. Denn wir <span class="gl" data-uk="спілкуватися" data-lemma="kommunizieren">kommunizieren</span> in Wortverbindungen. Sogar Grammatik lernt man so <span class="gl" data-uk="між іншим, мимохідь" data-lemma="nebenbei">nebenbei</span>: Wer „mit dem Auto“ als <span class="gl" data-key data-uk="одиниця, ціле" data-lemma="die Einheit, -en">Einheit</span> kennt, benutzt den Dativ richtig, ohne an die <span class="gl" data-uk="закінчення" data-lemma="die Endung, -en">Endung</span> zu denken.</p>
+
+          <p>Manche Kollokationen versteht man nicht Wort für Wort, weil ein Wort im <span class="gl" data-uk="переносний, метафоричний" data-lemma="übertragen">übertragenen</span> Sinn benutzt wird. Dicke Freunde sind nicht dick, sondern sehr gute Freunde. Wer eine leise <span class="gl" data-uk="здогад, уявлення" data-lemma="die Ahnung, -en">Ahnung</span> hat, weiß ein bisschen. Und Pablo Picasso war nur 1,63 Meter groß – und trotzdem ein großer Künstler.</p>
+
+          <p>Kollokationen helfen auch, Fehler zu <span class="gl" data-uk="уникати" data-lemma="vermeiden (vermied, hat vermieden)">vermeiden</span>. Auf Englisch „nimmt“ man ein Foto, auf Deutsch macht man es. Wer viel raucht, ist auf Deutsch ein starker Raucher – auf Englisch ein „schwerer“, auf Französisch ein „großer“. Falsche Verbindungen versteht man meistens trotzdem, aber für Deutsche klingen sie <span class="gl" data-uk="неприродний" data-lemma="unnatürlich">unnatürlich</span>. Wer <span class="gl" data-uk="натомість, навпаки" data-lemma="dagegen">dagegen</span> beim Arzt einen Termin <span class="gl" data-uk="домовлятися (про)" data-lemma="vereinbaren">vereinbart</span>, zeigt: Mein Deutsch ist schon ziemlich gut.</p>
+
+          <figure class="mat-fig" style="max-width:300px;margin-left:auto;margin-right:auto">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Duden%2C_Band_1%2C_27._Auflage%2C_Berlin_2017.jpg/960px-Duden%2C_Band_1%2C_27._Auflage%2C_Berlin_2017.jpg" alt="Der Duden: das bekannte Wörterbuch der deutschen Rechtschreibung." width="960" height="1280" loading="lazy">
+            <figcaption>Der Duden: das bekannte Wörterbuch der deutschen Rechtschreibung. Foto: Kalligraf, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Duden,_Band_1,_27._Auflage,_Berlin_2017.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <h3>So sammelt man Wortpaare</h3>
+          <p>In vielen Lehrbüchern stehen vor allem einzelne Wörter. Kollokationen kann man aber selbst sammeln: einen Text lesen und danach mit einem <span class="gl" data-uk="маркер, текстовиділювач" data-lemma="der Textmarker, -">Textmarker</span> die Verbindungen markieren, die man selbst noch nicht benutzt. Im Internet helfen das Duden-Wörterbuch mit seinen „typischen Verbindungen“ und das Wortschatz-Portal der Universität Leipzig. Zum Wort „Kaffee“ findet man dort zum Beispiel heiß, schwarz, trinken und kochen.</p>
+
+          <p>Auf Vokabelkarten schreibt man am besten ganze Beispielsätze. Auch ein „Wortigel“ hilft: ein Wort in die Mitte eines <span class="gl" data-uk="аркуш" data-lemma="das Blatt, -ä-er">Blattes</span>, seine Partner <span class="gl" data-uk="навколо" data-lemma="rundherum">rundherum</span>. Tschirners wichtigster Tipp: viel lesen – aber auf dem eigenen <span class="gl" data-key data-uk="рівень" data-lemma="das Niveau, -s">Niveau</span>. Lesen sei die „Königsdisziplin“ beim <span class="gl" data-key data-uk="словниковий запас, лексика" data-lemma="der Wortschatz">Wortschatz</span>lernen, denn man kann zurückgehen, nachdenken und sich neue Wortpaare in Ruhe <span class="gl" data-uk="запам'ятовувати" data-lemma="sich merken">merken</span>.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Noch einen Schritt weiter gehen <b>Redewendungen</b> – feste Ausdrücke mit einer ganz eigenen Bedeutung. Wer sehr bekannt ist, ist „bekannt wie ein <span class="gl" data-uk="строкатий" data-lemma="bunt">bunter</span> Hund“. Wer jemanden mit seinen Problemen allein lässt, „lässt ihn im Regen stehen“. Und wer etwas sehr ungern und traurig tut, tut es „schweren Herzens“.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Обери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Welches Verb passt?</h2>
+      <p class="lead">Яке дієслово утворює з іменником сталу пару? Деякі дієслова підходять кільком іменникам — обирай найтиповіше з тексту.</p>
+      <div class="card" id="ub3-list"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Das passende Wort</h2>
+      <p class="lead">Обери прикметник, який утворює сталу пару. Подумай про текст!</p>
+      <div class="card">
+        <div id="ub4-list">
+          <div class="fill-item"><span class="num">1)</span> Ich fahre erst seit einer Woche Auto – ich bin noch ein
+            <select class="blank inline" data-ans="blutiger"><option value="">—</option><option>blutiger</option><option>roter</option><option>kranker</option></select> Anfänger.</div>
+          <div class="fill-item"><span class="num">2)</span> Anna und Lea kennen sich seit dem Kindergarten. Sie sind
+            <select class="blank inline" data-ans="dicke"><option value="">—</option><option>schwere</option><option>dicke</option><option>breite</option></select> Freundinnen.</div>
+          <div class="fill-item"><span class="num">3)</span> Er raucht 30 Zigaretten am Tag. Er ist ein
+            <select class="blank inline" data-ans="starker"><option value="">—</option><option>großer</option><option>schwerer</option><option>starker</option></select> Raucher.</div>
+          <div class="fill-item"><span class="num">4)</span> Wo ist Max? – Ich habe nur eine
+            <select class="blank inline" data-ans="leise"><option value="">—</option><option>leise</option><option>stille</option><option>kleine</option></select> Ahnung.</div>
+          <div class="fill-item"><span class="num">5)</span> Unsere Gastfamilie hat uns mit
+            <select class="blank inline" data-ans="offenen"><option value="">—</option><option>breiten</option><option>offenen</option><option>warmen</option></select> Armen empfangen.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4-check">Prüfen</button>
+          <button class="btn secondary" id="ub4-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою. Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Mach einen „Wortigel“ in Sätzen: Schreib fünf Sätze mit dem Wort „Tee“ oder „Musik“ – jeder Satz mit einem anderen typischen Verb oder Adjektiv.</label>
+          <textarea id="ub5-a" rows="6"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Welche deutschen Wortpaare sind anders als auf Ukrainisch (zum Beispiel „ein Foto machen“)? Welche Fehler machst du oft? (4–6 Sätze)</label>
+          <textarea id="ub5-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Auf Ukrainisch sagt man …, auf Deutsch aber …; Ich verwechsle oft …; Am Anfang habe ich immer … gesagt.</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Kollokationen sind feste Wortpaare wie „eine Frage stellen“ oder „ein starker Raucher“. Man lernt neue Wörter am besten mit ihren typischen Partnern – in Beispielsätzen, auf Vokabelkarten oder im Wortigel. Hilfe gibt es im Duden und im Wortschatz-Portal der Universität Leipzig. Und der wichtigste Tipp: viel lesen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Колокації — це сталі пари слів на кшталт «eine Frage stellen» чи «ein starker Raucher». Нові слова найкраще вчити разом з їхніми типовими «партнерами»: у реченнях-прикладах, на картках або в «Wortigel». Допоможуть словник Duden і портал Wortschatz Лейпцизького університету. А найголовніша порада — багато читати.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "kollokationen";
+
+  // Üb. 1а
+  buildQuiz('ub1-quiz', [
+    {q: "Was ist eine Kollokation?",
+     opts: ["Eine typische Verbindung von Wörtern, die oft zusammen vorkommen",
+            "Ein Wort, das aus einer anderen Sprache kommt",
+            "Eine Regel für die Endungen im Dativ"],
+     correct: "Eine typische Verbindung von Wörtern, die oft zusammen vorkommen"},
+    {q: "Was rät Professor Tschirner vor allem?",
+     opts: ["Viel lesen – auf dem eigenen Niveau",
+            "Jeden Tag 50 einzelne Wörter auswendig lernen",
+            "Nur mit Grammatikbüchern arbeiten"],
+     correct: "Viel lesen – auf dem eigenen Niveau"}
+  ]);
+  // Üb. 1б
+  buildMatch('ub1h', [
+    ["Typische Fehler vermeiden", "Absatz 4"],
+    ["Nicht wörtlich nehmen!", "Absatz 3"],
+    ["Hilfe aus Wörterbüchern und dem Internet", "Absatz 5"],
+    ["Was sind Kollokationen?", "Absatz 1"],
+    ["Wörter mit Partnern lernen", "Absatz 2"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5", "Absatz 6"], lead: true});
+
+  // Üb. 2
+  buildRF('ub2-rf', [
+    {s: "Kollokationen bestehen immer aus genau zwei Wörtern.", a: "f"},
+    {s: "Laut Tschirner kann man durch Wortverbindungen auch Grammatik lernen.", a: "r"},
+    {s: "Picasso war ein sehr großer Mann.", a: "f"},
+    {s: "Wer Kollokationen falsch benutzt, wird meistens trotzdem verstanden.", a: "r"},
+    {s: "Im Duden findet man typische Verbindungen zu vielen Wörtern.", a: "r"},
+    {s: "Das Wortschatz-Portal aus Leipzig ist vor allem für Anfänger gedacht.", a: "n"},
+    {s: "Tschirner empfiehlt, möglichst schwierige Texte zu lesen.", a: "f"}
+  ]);
+
+  // Üb. 3: Nomen ↔ Verb
+  buildMatch('ub3', [
+    ["eine Frage", "stellen"],
+    ["ein Formular", "ausfüllen"],
+    ["ein Foto", "machen"],
+    ["beim Arzt einen Termin", "vereinbaren|machen"],
+    ["Hausaufgaben", "machen"],
+    ["einen Gast mit offenen Armen", "empfangen"]
+  ], {options: ["stellen", "nehmen", "ausfüllen", "machen", "vereinbaren", "empfangen"]});
+
+  // Üb. 4
+  wireBlanks('ub4');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🔗','📖','🖍️','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

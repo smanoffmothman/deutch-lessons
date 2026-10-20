@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plattdeutsch statt Französisch? · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Sprache</span>
+        <h1>Plattdeutsch statt Französisch?</h1>
+        <p class="sub">Друга іноземна після англійської — не французька, а платдойч? У Нижній Саксонії регіональна мова півночі вперше стає звичайним шкільним предметом.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Eine Sprache aus dem Norden</h2>
+      <div class="card">
+        <p>Welche Sprachen lernst du in der Schule? Kennst du deutsche Dialekte? Was glaubst du: Was ist Plattdeutsch?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Які мови ти вчиш у школі? Чи знаєш ти німецькі діалекти? Як гадаєш, що таке платдойч?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Französisch, Spanisch – oder Plattdeutsch? An einer Schule in Niedersachsen können Schülerinnen und Schüler jetzt Plattdeutsch als zweite <span class="gl" data-key data-uk="іноземна мова" data-lemma="die Fremdsprache, -n">Fremdsprache</span> nach Englisch lernen.</p>
+
+          <p>Plattdeutsch ist eine <span class="gl" data-key data-uk="регіональна мова" data-lemma="die Regionalsprache, -n">Regionalsprache</span> aus Norddeutschland. <span class="gl" data-key data-uk="уроки, навчання" data-lemma="der Unterricht">Unterricht</span> in Plattdeutsch gibt es an manchen Schulen schon <span class="gl" data-uk="довше, вже давно" data-lemma="länger">länger</span>. Aber ab dem nächsten <span class="gl" data-uk="навчальний рік" data-lemma="das Schuljahr, -e">Schuljahr</span> kann man es zum ersten Mal als normales <span class="gl" data-key data-uk="(шкільний) предмет" data-lemma="das Fach, -ä-er">Fach</span> <span class="gl" data-uk="обирати" data-lemma="wählen">wählen</span> – genauso wie Französisch oder Spanisch.</p>
+
+          <figure class="mat-fig" style="max-width:300px;margin-left:auto;margin-right:auto">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/DE-NDS-Norderney-Ortsschild.jpg/960px-DE-NDS-Norderney-Ortsschild.jpg" alt="Ein Ortsschild auf Hochdeutsch und Plattdeutsch: Norderney – Nördernee." width="960" height="1280" loading="lazy">
+            <figcaption>Ein Ortsschild auf Hochdeutsch und Plattdeutsch: Norderney – Nördernee. Foto: aeroid, <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/wiki/File:DE-NDS-Norderney-Ortsschild.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Plattdeutsch <span class="gl" data-uk="звучати" data-lemma="klingen (klang, hat geklungen)">klingt</span> ganz anders als Hochdeutsch. Ein paar Wörter kennen aber fast alle Deutschen. „Moin“ zum Beispiel: So <span class="gl" data-uk="вітати" data-lemma="begrüßen">begrüßt</span> man sich im Norden – und zwar den ganzen Tag. „Lütt“ <span class="gl" data-uk="означати" data-lemma="heißen (hieß, hat geheißen)">heißt</span> klein, und „snacken“ heißt sprechen.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Plattdeutsch heißt auch <b>Niederdeutsch</b>. Man spricht es vor allem in Niedersachsen, Schleswig-Holstein, Hamburg, Bremen und Mecklenburg-Vorpommern. Es ist in Deutschland offiziell als Regionalsprache <span class="gl" data-uk="захищений" data-lemma="schützen">geschützt</span>. Manche Orte im Norden haben deshalb Ortsschilder auf Hochdeutsch und auf Plattdeutsch.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Обери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub1-rf"></div>
+    </section>
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово з платдойчу? Обери.</p>
+      <div class="card" id="ub2-list"></div>
+      <p class="lead">б) Встав слова з рамки. Одне слово зайве.</p>
+      <div class="card">
+        <div class="wordbank"><span>Fach</span><span>Fremdsprache</span><span>wählen</span><span>Schuljahr</span><span>Unterricht</span><span>Regionalsprache</span></div>
+        <div id="ub2b-list">
+          <div class="fill-item"><span class="num">1)</span> Mathe ist mein liebstes <input type="text" class="blank-input inline" data-ans="Fach">.</div>
+          <div class="fill-item"><span class="num">2)</span> Englisch ist meine erste <input type="text" class="blank-input inline wide" data-ans="Fremdsprache">.</div>
+          <div class="fill-item"><span class="num">3)</span> Im neuen <input type="text" class="blank-input inline wide" data-ans="Schuljahr"> lerne ich Spanisch.</div>
+          <div class="fill-item"><span class="num">4)</span> Welche Sprache möchtest du <input type="text" class="blank-input inline" data-ans="wählen">?</div>
+          <div class="fill-item"><span class="num">5)</span> Plattdeutsch ist eine <input type="text" class="blank-input inline wide" data-ans="Regionalsprache">.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub2b-check">Prüfen</button>
+          <button class="btn secondary" id="ub2b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub2b-score"></span>
+        </div>
+      </div>
+    </section>
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою. Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub3-a">1. Welche Sprachen lernst du? Welche Sprache möchtest du noch lernen und warum? (4–6 Sätze)</label>
+          <textarea id="ub3-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub3-b">2. Gibt es in der Ukraine Dialekte oder Wörter, die man nur in einer Region benutzt? Nenn ein Beispiel. (3–5 Sätze)</label>
+          <textarea id="ub3-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Ich lerne …; Ich möchte noch … lernen, weil …; In meiner Region sagt man …</i>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Plattdeutsch (Niederdeutsch) ist eine Regionalsprache aus Norddeutschland und offiziell geschützt. An einer Schule in Niedersachsen kann man es jetzt als zweite Fremdsprache wählen. Ein plattdeutsches Wort kennen fast alle: „Moin“.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Платдойч (нижньонімецька) — регіональна мова Північної Німеччини, яку офіційно захищає держава. В одній школі Нижньої Саксонії її тепер можна обрати як другу іноземну. А одне слово платдойчем знають майже всі: «Moin».
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "plattdeutsch-als-schulfach";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Was ist neu?",
+     opts: ["Man kann Plattdeutsch als normales Schulfach wählen.",
+            "Alle Schulen in Deutschland müssen Plattdeutsch unterrichten.",
+            "Französisch ist an der Schule verboten."],
+     correct: "Man kann Plattdeutsch als normales Schulfach wählen."}
+  ]);
+  buildRF('ub1-rf', [
+    {s: "Die Schule liegt in Niedersachsen.", a: "r"},
+    {s: "Plattdeutsch kann man dort als erste Fremdsprache vor Englisch lernen.", a: "f"},
+    {s: "Unterricht in Plattdeutsch gab es vorher noch nie.", a: "f"},
+    {s: "Schon 200 Schüler haben Plattdeutsch gewählt.", a: "n"},
+    {s: "„Moin“ sagt man im Norden nur am Morgen.", a: "f"}
+  ]);
+  buildMatch('ub2', [
+    ["Moin", "привіт"],
+    ["lütt", "маленький"],
+    ["snacken", "говорити"]
+  ]);
+  wireBlanks('ub2b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['⚓','🗣️','📚']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

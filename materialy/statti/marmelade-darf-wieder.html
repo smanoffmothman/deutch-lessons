@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Die Marmelade ist zurück · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Essen & Trinken</span>
+        <h1>Die Marmelade ist zurück</h1>
+        <p class="sub">Роками полуничне варення в Німеччині не можна було офіційно називати «Marmelade». Тепер можна — але не для апельсинового.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Marmelade oder Konfitüre?</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Was isst du zum Frühstück?</h2>
+      <div class="card">
+        <p>Was isst du gern zum Frühstück? Isst du gern Marmelade? Welche Sorte magst du am liebsten?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Що ти любиш їсти на сніданок? Чи любиш ти варення або джем? Яке найбільше?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in"><span class="gl" data-uk="бюрократія" data-lemma="die Bürokratie">Bürokratie</span> auf dem <span class="gl" data-uk="стіл для сніданку" data-lemma="der Frühstückstisch, -e">Frühstückstisch</span>? Damit ist jetzt <span class="gl" data-uk="кінець" data-lemma="Schluss sein mit">Schluss</span> – oder fast. In Deutschland darf Marmelade wieder Marmelade heißen.</p>
+
+          <p>Lange war das anders. Nach einer alten <span class="gl" data-key data-uk="норма, стандарт" data-lemma="die Norm, -en">Norm</span> durften nur Produkte aus <span class="gl" data-key data-uk="цитрусовий фрукт" data-lemma="die Zitrusfrucht, -ü-e">Zitrusfrüchten</span> „Marmelade“ heißen, zum Beispiel aus Orangen oder Zitronen. Alles andere, etwa aus <span class="gl" data-uk="полуниця" data-lemma="die Erdbeere, -n">Erdbeeren</span> oder <span class="gl" data-uk="абрикос" data-lemma="die Aprikose, -n">Aprikosen</span>, musste „<span class="gl" data-key data-uk="конфітюр, варення" data-lemma="die Konfitüre, -n">Konfitüre</span>“ heißen.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Aprikosenkonfit%C3%BCre.jpg/960px-Aprikosenkonfit%C3%BCre.jpg" alt="Hausgemachte Aprikosen-Konfitüre – oder jetzt wieder: Marmelade." width="960" height="923" loading="lazy">
+            <figcaption>Hausgemachte Aprikosen-Konfitüre – oder jetzt wieder: Marmelade. Foto: Liesbeth Lass, <a href="https://creativecommons.org/licenses/by-sa/3.0/de/deed.en" target="_blank" rel="noopener">CC BY-SA 3.0 de</a>, <a href="https://commons.wikimedia.org/wiki/File:Aprikosenkonfit%C3%BCre.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Die alte Regel kommt aus England. Dort <span class="gl" data-uk="виготовляти" data-lemma="herstellen">stellt</span> man Marmelade <span class="gl" data-uk="традиційно" data-lemma="traditionell">traditionell</span> nur aus Zitrusfrüchten her. Jetzt gilt in Deutschland eine neue Norm der <span class="gl" data-key data-uk="Європейський Союз" data-lemma="die Europäische Union (EU)">Europäischen Union</span>. Aber ein bisschen Bürokratie <span class="gl" data-uk="залишатися" data-lemma="bleiben (blieb, ist geblieben)">bleibt</span>: Marmelade aus Zitrusfrüchten muss jetzt „Zitrusmarmelade“ heißen.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Im Alltag haben die meisten Deutschen sowieso immer „Marmelade“ gesagt – egal, aus welchem Obst. Und noch ein Unterschied: <span class="gl" data-uk="желе" data-lemma="das Gelee, -s">Gelee</span> macht man nicht aus ganzen Früchten, sondern aus Fruchtsaft.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Обери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub1-rf"></div>
+    </section>
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Wie heißt das?</h2>
+      <p class="lead">а) Як це називалося за СТАРИМ правилом? Розклади картки.</p>
+      <div class="card" id="ub2-sort"></div>
+      <p class="lead">б) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub2b-list"></div>
+    </section>
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою. Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub3-a">1. Was frühstückt man in deiner Familie? Gibt es bei euch selbst gemachte Marmelade? (4–6 Sätze)</label>
+          <textarea id="ub3-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub3-b">2. Kennst du eine Regel, die du komisch oder unnötig findest? Beschreib sie. (3–5 Sätze)</label>
+          <textarea id="ub3-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Zum Frühstück essen wir …; Meine Oma macht …; Ich finde die Regel komisch, weil …</i>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Nach einer neuen EU-Norm darf in Deutschland jeder Fruchtaufstrich wieder „Marmelade“ heißen. Früher galt der Name nur für Produkte aus Zitrusfrüchten, alles andere war „Konfitüre“. Jetzt heißt Marmelade aus Orangen oder Zitronen „Zitrusmarmelade“.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          За новою нормою ЄС у Німеччині будь-яке фруктове варення знову можна називати «Marmelade». Раніше ця назва була лише для продуктів із цитрусових, а все інше було «Konfitüre». Тепер апельсинове чи лимонне варення називається «Zitrusmarmelade».
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "marmelade-darf-wieder";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Was ist neu?",
+     opts: ["Jede Marmelade darf wieder „Marmelade“ heißen.",
+            "Marmelade ist in der EU verboten.",
+            "Man darf Marmelade nur noch aus England kaufen."],
+     correct: "Jede Marmelade darf wieder „Marmelade“ heißen."}
+  ]);
+  buildRF('ub1-rf', [
+    {s: "Früher durfte Erdbeermarmelade offiziell nicht „Marmelade“ heißen.", a: "r"},
+    {s: "Die alte Regel kommt aus Frankreich.", a: "f"},
+    {s: "Jetzt gibt es gar keine Bürokratie mehr.", a: "f"},
+    {s: "Marmelade aus Orangen heißt jetzt „Zitrusmarmelade“.", a: "r"},
+    {s: "Die Deutschen essen jedes Jahr mehr Marmelade.", a: "n"}
+  ]);
+  buildSort('ub2-sort', {
+    buckets: ["Marmelade", "Konfitüre"],
+    items: [
+      {t: "aus Orangen", b: "Marmelade"},
+      {t: "aus Zitronen", b: "Marmelade"},
+      {t: "aus Erdbeeren", b: "Konfitüre"},
+      {t: "aus Aprikosen", b: "Konfitüre"},
+      {t: "aus Kirschen", b: "Konfitüre"}
+    ]
+  });
+  buildMatch('ub2b', [
+    ["die Norm", "норма, стандарт"],
+    ["die Zitrusfrucht", "цитрусовий фрукт"],
+    ["herstellen", "виготовляти"],
+    ["bleiben", "залишатися"],
+    ["die Bürokratie", "бюрократія"]
+  ]);
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🍓','🍊','🥐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

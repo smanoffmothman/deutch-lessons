@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rauch, Würstchen und ein bisschen Chaos · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Kolumne</span>
+        <h1>Rauch, Würstchen und ein bisschen Chaos</h1>
+        <p class="sub">Улітку Німеччина перетворюється на одну велику зону для гриля. Колумністка з Мюнхена — про запах диму, згоріле м'ясо і смітник, що раптом спалахнув.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wie grillt man?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Der Geruch des Sommers</h2>
+      <div class="card">
+        <p>Welcher Geruch erinnert dich an den Sommer? Grillt deine Familie gern? Was glaubst du: Wo und wie grillen die Deutschen?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Який запах нагадує тобі про літо? Чи любить твоя родина шашлики? Як гадаєш, де й як смажать на грилі в Німеччині?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Wenn es an einem heißen Tag plötzlich regnet, riecht die Erde ganz besonders. Dieser <span class="gl" data-uk="аромат, запах" data-lemma="der Duft, -ü-e">Duft</span> hat sogar einen wissenschaftlichen Namen: Petrichor. Die Kolumnistin Claudia May liebt ihn – und noch einen zweiten Sommergeruch: Marinade, Würstchen und Rauch. Denn im Sommer wird Deutschland zur Grillzone.</p>
+
+          <p>May ist eigentlich Hamburgerin, lebt aber mit ihrer Familie in München, in der Nähe eines Sees mit offizieller Grillzone. Manche Nachbarn <span class="gl" data-uk="сердитися (на)" data-lemma="sich ärgern über">ärgern sich</span> über die <span class="gl" data-uk="клуби диму" data-lemma="die Rauchschwade, -n">Rauchschwaden</span>, die an warmen Wochenenden über die Häuser ziehen. Sie dagegen <span class="gl" data-uk="вдихати (глибоко)" data-lemma="einatmen">atmet</span> tief ein und findet nur eins schade: dass niemand sie eingeladen hat.</p>
+
+          <p>Selbst grillt ihre Familie eher selten. Der Grund ist ihr <span class="gl" data-key data-uk="гриль на деревному вугіллі" data-lemma="der Holzkohlegrill, -s">Holzkohlegrill</span> – wohl die <span class="gl" data-uk="клопіткий, трудомісткий" data-lemma="aufwändig">aufwändigste</span> Variante überhaupt. Während die Nachbarn <span class="gl" data-uk="навпроти" data-lemma="gegenüber">gegenüber</span> einfach ihren Gasgrill <span class="gl" data-uk="вмикати, запускати" data-note="розм." data-lemma="anwerfen (warf an, hat angeworfen)">anwerfen</span> und sofort <span class="gl" data-uk="починати (енергійно)" data-note="розм." data-lemma="loslegen">loslegen</span>, beginnt bei Mays erst ein langes Vorprogramm: Kohle <span class="gl" data-uk="запалювати" data-lemma="anzünden">anzünden</span>, warten, durchglühen lassen, verteilen. Dann ist der Grill auf einmal extrem heiß. <span class="gl" data-uk="опік" data-lemma="die Verbrennung, -en">Verbrennungen</span> gibt es dabei schon – allerdings nicht bei den Menschen, sondern beim Fleisch.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Charcoal_BBQ.jpg/960px-Charcoal_BBQ.jpg" alt="Glühende Holzkohle im Grill." width="960" height="720" loading="lazy">
+            <figcaption>Glühende Holzkohle im Grill. Foto: AlphaLemur, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Charcoal_BBQ.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Diese Methode kennt May aus ihrer Kindheit. Auch ihr Vater grillte immer bei voller Hitze und <span class="gl" data-uk="рятувати" data-lemma="retten">rettete</span> das Fleisch oft erst im letzten Moment. Dass es anders geht, hat sie mit 16 bei einem <span class="gl" data-uk="шкільний обмін" data-lemma="der Schüleraustausch">Schüleraustausch</span> in Argentinien gelernt. Dort kümmert man sich stundenlang um große Fleischstücke, die bei <span class="gl" data-uk="помірний" data-lemma="moderat">moderater</span> Hitze langsam genau richtig werden.</p>
+
+          <p>Zur <span class="gl" data-uk="захист, виправдання" data-lemma="die Verteidigung">Verteidigung</span> ihrer <span class="gl" data-uk="земляк" data-lemma="der Landsmann, -leute">Landsleute</span> gibt sie aber zu: Auch in Deutschland haben inzwischen viele verstanden, dass gutes Grillen Zeit braucht. Bei einem alten Schulfreund ihres Mannes steht jetzt ein <span class="gl" data-uk="коптильня" data-lemma="der Smoker, -">Smoker</span> im Garten, und seinen marinierten <span class="gl" data-uk="реберця" data-lemma="das Rippchen, -">Rippchen</span> <span class="gl" data-uk="присвячувати" data-lemma="widmen">widmet</span> er einen ganzen Vormittag. Den Mays fehlt dafür wohl die Routine – oder die <span class="gl" data-key data-uk="терпіння" data-lemma="die Geduld">Geduld</span>.</p>
+
+          <p>Am See gibt es noch ein anderes Problem. Viele Grillfans werfen ihre heiße <span class="gl" data-key data-uk="попіл" data-lemma="die Asche">Asche</span> nicht in die Metallbehälter, die extra dafür dastehen, sondern in den normalen Müll. Erst raucht es ein bisschen, dann brennt der <span class="gl" data-uk="смітник, урна" data-lemma="der Mülleimer, -">Mülleimer</span>. Mays Mann ist bei der freiwilligen <span class="gl" data-key data-uk="пожежна команда" data-lemma="die Feuerwehr, -en">Feuerwehr</span> und muss dann <span class="gl" data-uk="виїжджати на виклик" data-lemma="ausrücken">ausrücken</span>. Manchmal rettet die Familie nur der größte <span class="gl" data-uk="ворог" data-lemma="der Feind, -e">Feind</span> aller Grillfans: ein <span class="gl" data-uk="сильний" data-lemma="kräftig">kräftiger</span> Sommerregen. Für May ist das die perfekte Kombination – erst Grillduft, dann Petrichor.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Grillen_%2810584565295%29.jpg/960px-Grillen_%2810584565295%29.jpg" alt="Würstchen auf dem Grill." width="960" height="640" loading="lazy">
+            <figcaption>Würstchen auf dem Grill. Foto: Dirk Vorderstraße, <a href="https://creativecommons.org/licenses/by/2.0" target="_blank" rel="noopener">CC BY 2.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Grillen_(10584565295).jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>In Deutschland sind die meisten Feuerwehrleute <b>Freiwillige</b>: Sie haben einen normalen Beruf und helfen in ihrer Freizeit, ohne Bezahlung, wenn es brennt oder ein Unfall passiert. Nur größere Städte haben eine Berufsfeuerwehr. Grillen ist übrigens nicht überall erlaubt – in vielen Parks und an Seen nur in markierten Grillzonen.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Обери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wie grillt man?</h2>
+      <p class="lead">Що до чого стосується? Розклади картки.</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Яке пояснення німецькою пасує до слова?</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>anzünden</span><span>die Geduld</span><span>ausrücken</span><span>sich ärgern</span><span>aufwändig</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> Zuerst muss man die Kohle <input type="text" class="blank-input inline wide" data-ans="anzünden">.</div>
+          <div class="fill-item"><span class="num">2)</span> Ein Holzkohlegrill ist viel <input type="text" class="blank-input inline wide" data-ans="aufwändiger"> als ein Gasgrill.</div>
+          <div class="fill-item"><span class="num">3)</span> Gutes Grillen braucht Zeit und <input type="text" class="blank-input inline" data-ans="Geduld">.</div>
+          <div class="fill-item"><span class="num">4)</span> Die Nachbarn <input type="text" class="blank-input inline" data-ans="ärgern"> <input type="text" class="blank-input inline" data-ans="sich"> über den Rauch.</div>
+          <div class="fill-item"><span class="num">5)</span> Wenn der Mülleimer brennt, muss die Feuerwehr <input type="text" class="blank-input inline wide" data-ans="ausrücken">.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою. Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. In der Ukraine macht man oft Schaschlik. Wie, wo und mit wem grillt man bei euch? Was ist ähnlich wie in Deutschland, was ist anders? (6–8 Sätze)</label>
+          <textarea id="ub5-a" rows="6"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Schreib eine kleine Kolumne (80–100 Wörter) über einen Geruch, den du liebst – mit einer lustigen Szene aus deinem Alltag.</label>
+          <textarea id="ub5-b" rows="7"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Bei uns ist es üblich, dass …; Anders als in Deutschland …; Ich liebe den Geruch von …, weil …; Einmal ist etwas Lustiges passiert: …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Im Sommer grillen die Deutschen gern – im Garten oder in offiziellen Grillzonen an Seen und in Parks. Viele haben einen Gasgrill, andere einen Holzkohlegrill, der mehr Zeit braucht. Heiße Asche gehört in spezielle Metallbehälter, sonst muss die Feuerwehr kommen – und die besteht in Deutschland oft aus Freiwilligen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Улітку німці охоче смажать на грилі — у саду або в спеціальних зонах біля озер і в парках. У багатьох газовий гриль, в інших — вугільний, із яким довше морочитися. Гарячий попіл викидають у спеціальні металеві контейнери, інакше доведеться викликати пожежників — а це в Німеччині часто волонтери.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "grillen-kolumne";
+
+  // Üb. 1а
+  buildQuiz('ub1-quiz', [
+    {q: "Was für ein Text ist das?",
+     opts: ["Eine humorvolle Kolumne über das Grillen in Deutschland",
+            "Ein Rezept für marinierte Rippchen",
+            "Eine Nachricht über einen großen Brand am See"],
+     correct: "Eine humorvolle Kolumne über das Grillen in Deutschland"},
+    {q: "Was ist Petrichor?",
+     opts: ["Der Geruch, wenn Regen auf trockene Erde fällt",
+            "Eine spezielle Marinade für Fleisch",
+            "Ein Grill aus Argentinien"],
+     correct: "Der Geruch, wenn Regen auf trockene Erde fällt"}
+  ]);
+  // Üb. 1б
+  buildMatch('ub1h', [
+    ["Brennende Mülleimer", "Absatz 5"],
+    ["Langsam grillen lernen – in Südamerika", "Absatz 3"],
+    ["Rauch über den Häusern", "Absatz 1"],
+    ["Viel Arbeit, bevor es losgeht", "Absatz 2"],
+    ["Auch Deutsche können geduldig sein", "Absatz 4"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5"], lead: true});
+
+  // Üb. 2
+  buildRF('ub2-rf', [
+    {s: "Alle Nachbarn freuen sich über den Grillgeruch.", a: "f"},
+    {s: "Claudia May grillt sehr oft mit ihrer Familie.", a: "f"},
+    {s: "Mit einem Gasgrill kann man sofort anfangen.", a: "r"},
+    {s: "In Argentinien grillt man große Fleischstücke langsam.", a: "r"},
+    {s: "Der Schulfreund ihres Mannes grillt auch vegetarisch.", a: "n"},
+    {s: "Am See gibt es spezielle Behälter für die Asche.", a: "r"},
+    {s: "Claudia May arbeitet bei der freiwilligen Feuerwehr.", a: "f"},
+    {s: "Ein Sommerregen ist für Grillfans ein Problem.", a: "r"}
+  ]);
+
+  // Üb. 3
+  buildSort('ub3-sort', {
+    buckets: ["Holzkohlegrill der Familie May", "Gasgrill der Nachbarn", "Grillen in Argentinien"],
+    items: [
+      {t: "Kohle anzünden und warten", b: "Holzkohlegrill der Familie May"},
+      {t: "plötzlich extrem heiß", b: "Holzkohlegrill der Familie May"},
+      {t: "Fleisch im letzten Moment retten", b: "Holzkohlegrill der Familie May"},
+      {t: "einfach anwerfen", b: "Gasgrill der Nachbarn"},
+      {t: "sofort loslegen", b: "Gasgrill der Nachbarn"},
+      {t: "stundenlang grillen", b: "Grillen in Argentinien"},
+      {t: "moderate Hitze", b: "Grillen in Argentinien"},
+      {t: "große Fleischstücke", b: "Grillen in Argentinien"}
+    ]
+  });
+
+  // Üb. 4а
+  buildMatch('ub4', [
+    ["der Duft", "ein angenehmer Geruch"],
+    ["die Asche", "das Graue, das nach einem Feuer übrig bleibt"],
+    ["die Geduld", "man kann ruhig warten"],
+    ["der Landsmann", "eine Person aus demselben Land"],
+    ["kräftig", "stark"],
+    ["der Feind", "das Gegenteil von Freund"]
+  ]);
+  // Üb. 4б
+  wireBlanks('ub4b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🔥','🌭','🌧️','🚒']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

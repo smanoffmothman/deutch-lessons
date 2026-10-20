@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tofu: plötzlich ausverkauft · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Essen & Trinken</span>
+        <h1>Tofu: plötzlich ausverkauft</h1>
+        <p class="sub">Порожні полиці в супермаркеті — і саме там, де має лежати тофу. Що сталося з соєвим сиром у Німеччині?</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Ursachen</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Leere Regale</h2>
+      <div class="card">
+        <p>Isst du gern Tofu? Was isst du, wenn du kein Fleisch essen möchtest? Was glaubst du: Warum ist Tofu in Deutschland manchmal ausverkauft?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Чи їси ти тофу? Що ти їси, коли не хочеш м'яса? Як гадаєш, чому в Німеччині тофу інколи розкуповують до останнього шматка?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Leere <span class="gl" data-key data-uk="полиця, стелаж" data-lemma="das Regal, -e">Regale</span> im Supermarkt – und zwar ausgerechnet beim Tofu. Das Produkt aus <span class="gl" data-key data-uk="соєвий біб" data-lemma="die Sojabohne, -n">Sojabohnen</span> gibt es in Deutschland eigentlich in fast jedem Supermarkt. Doch zurzeit ist es manchmal <span class="gl" data-key data-uk="розпроданий" data-lemma="ausverkauft">ausverkauft</span>.</p>
+
+          <p>Der Grund ist ein echter Tofu-<span class="gl" data-key data-uk="ажіотаж, бум" data-note="англ." data-lemma="der Hype, -s">Hype</span>: Die Menschen in Deutschland essen heute <span class="gl" data-uk="удвічі, подвійно" data-lemma="doppelt">doppelt</span> so viel Tofu wie noch vor drei Jahren. Dafür gibt es mehrere Gründe. Supermärkte <span class="gl" data-uk="пропонувати" data-lemma="anbieten (bot an, hat angeboten)">bieten</span> immer mehr vegane und vegetarische Produkte an, und asiatische <span class="gl" data-uk="страва" data-lemma="das Gericht, -e">Gerichte</span> sind sehr beliebt.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Japanese_SilkyTofu_%28Kinugoshi_Tofu%29.JPG/960px-Japanese_SilkyTofu_%28Kinugoshi_Tofu%29.JPG" alt="Ein Stück Tofu." width="960" height="820" loading="lazy">
+            <figcaption>Ein Stück Tofu. Foto: DryPot, <a href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Japanese_SilkyTofu_(Kinugoshi_Tofu).JPG" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Dazu kommt ein Protein-Hype: Alles soll möglichst viel Protein haben. Das ist eine <span class="gl" data-uk="наслідок" data-lemma="die Folge, -n">Folge</span> von Trends aus der Fitness-Community im Internet. Auch davon profitiert der Tofu.</p>
+
+          <p>Das große Interesse hat aber ein Problem: Die Tofu-<span class="gl" data-uk="промисловість, галузь" data-lemma="die Industrie, -n">Industrie</span> in Deutschland ist nicht sehr groß. Die <span class="gl" data-uk="виробник" data-lemma="der Hersteller, -">Hersteller</span> <span class="gl" data-uk="встигати, справлятися" data-note="розм." data-lemma="hinterherkommen (kam hinterher, ist hinterhergekommen)">kommen</span> mit der Produktion und den <span class="gl" data-uk="поставка" data-lemma="die Lieferung, -en">Lieferungen</span> nicht mehr hinterher. Deshalb bleibt das Tofu-Regal öfter mal leer. Der Tipp: Wer im Supermarkt Tofu findet, sollte schnell sein – vielleicht ist er bald wieder ausverkauft.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Glycine_max_003.JPG/960px-Glycine_max_003.JPG" alt="Sojabohnen an der Pflanze." width="960" height="720" loading="lazy">
+            <figcaption>Sojabohnen an der Pflanze. Foto: H. Zell, <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Glycine_max_003.JPG" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Tofu kommt ursprünglich aus China. Man macht ihn aus Sojabohnen: Zuerst entsteht eine Art <span class="gl" data-uk="соєве молоко" data-lemma="die Sojamilch">Sojamilch</span>, dann wird sie fest – ein bisschen wie bei der Produktion von Käse. Tofu selbst schmeckt fast neutral, deshalb <span class="gl" data-uk="приправляти" data-lemma="würzen">würzen</span> ihn viele Menschen stark.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Обери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub1-rf"></div>
+    </section>
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Warum? Und mit welcher Folge?</h2>
+      <p class="lead">Що спричинило тофу-бум, а що — порожні полиці? Розклади картки.</p>
+      <div class="card" id="ub2-sort"></div>
+    </section>
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">Встав слова з рамки у правильній формі. Одне слово зайве.</p>
+      <div class="card">
+        <div class="wordbank"><span>ausverkauft</span><span>doppelt</span><span>Hersteller</span><span>Regal</span><span>Lieferung</span><span>würzen</span></div>
+        <div id="ub3-list">
+          <div class="fill-item"><span class="num">1)</span> Im <input type="text" class="blank-input inline" data-ans="Regal"> liegt kein Tofu mehr.</div>
+          <div class="fill-item"><span class="num">2)</span> Der Tofu ist schon wieder <input type="text" class="blank-input inline wide" data-ans="ausverkauft">!</div>
+          <div class="fill-item"><span class="num">3)</span> Heute essen die Deutschen <input type="text" class="blank-input inline" data-ans="doppelt"> so viel Tofu wie vor drei Jahren.</div>
+          <div class="fill-item"><span class="num">4)</span> Die <input type="text" class="blank-input inline wide" data-ans="Hersteller"> können nicht genug Tofu produzieren.</div>
+          <div class="fill-item"><span class="num">5)</span> Tofu schmeckt neutral, deshalb muss man ihn gut <input type="text" class="blank-input inline" data-ans="würzen">.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub3-check">Prüfen</button>
+          <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub3-score"></span>
+        </div>
+      </div>
+    </section>
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою. Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub4-a">1. Isst du gern vegetarisch? Was isst du am liebsten ohne Fleisch? (4–6 Sätze)</label>
+          <textarea id="ub4-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub4-b">2. Gibt es auch in der Ukraine Produkte, die plötzlich alle kaufen wollen? Erzähl von einem Hype. (4–6 Sätze)</label>
+          <textarea id="ub4-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Ich esse (nicht) gern …; Mein Lieblingsgericht ohne Fleisch ist …; Plötzlich wollten alle … kaufen; Der Grund war …</i>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Tofu ist in Deutschland so beliebt wie nie: Die Menschen essen heute doppelt so viel wie vor drei Jahren. Gründe sind vegane und vegetarische Ernährung, asiatische Küche und der Protein-Trend. Weil die Industrie klein ist, sind die Regale manchmal leer.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Тофу в Німеччині популярний як ніколи: люди їдять удвічі більше, ніж три роки тому. Причини — веганське й вегетаріанське харчування, азійська кухня і мода на протеїн. Через те що виробництво невелике, полиці інколи порожні.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "tofu-hype";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text?",
+     opts: ["Warum Tofu in Deutschland so beliebt ist – und manchmal fehlt",
+            "Wie man Tofu zu Hause selbst macht",
+            "Warum Supermärkte in Deutschland zumachen"],
+     correct: "Warum Tofu in Deutschland so beliebt ist – und manchmal fehlt"},
+    {q: "Was ist das Problem?",
+     opts: ["Die Tofu-Industrie in Deutschland ist zu klein.",
+            "Tofu ist in Deutschland verboten.",
+            "Niemand möchte Tofu kaufen."],
+     correct: "Die Tofu-Industrie in Deutschland ist zu klein."}
+  ]);
+  buildRF('ub1-rf', [
+    {s: "Tofu macht man aus Sojabohnen.", a: "r"},
+    {s: "Heute isst man in Deutschland weniger Tofu als vor drei Jahren.", a: "f"},
+    {s: "Asiatische Gerichte sind in Deutschland beliebt.", a: "r"},
+    {s: "Der meiste Tofu in Deutschland kommt aus China.", a: "n"},
+    {s: "Die Hersteller können sehr schnell mehr Tofu produzieren.", a: "f"}
+  ]);
+  buildSort('ub2-sort', {
+    buckets: ["Gründe für den Tofu-Hype", "Gründe für leere Regale"],
+    items: [
+      {t: "mehr vegane und vegetarische Produkte", b: "Gründe für den Tofu-Hype"},
+      {t: "beliebte asiatische Gerichte", b: "Gründe für den Tofu-Hype"},
+      {t: "der Protein-Trend im Internet", b: "Gründe für den Tofu-Hype"},
+      {t: "eine kleine Tofu-Industrie", b: "Gründe für leere Regale"},
+      {t: "zu wenig Produktion", b: "Gründe für leere Regale"},
+      {t: "Probleme mit den Lieferungen", b: "Gründe für leere Regale"}
+    ]
+  });
+  wireBlanks('ub3');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🫘','🥢','🛒']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

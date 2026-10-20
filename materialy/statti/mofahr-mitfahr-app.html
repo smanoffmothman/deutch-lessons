@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gemeinsam zur Uni · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Umwelt</span>
+        <h1>Gemeinsam zur Uni</h1>
+        <p class="sub">Навіщо їхати на роботу самому, якщо колега живе поруч? Університет у Магдебурзі запустив застосунок, який збирає попутників.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Allein oder zusammen?</h2>
+      <div class="card">
+        <p>Wie kommst du zur Schule? Allein oder mit anderen? Was glaubst du: Wie kann eine App dem Klima helfen?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Як ти добираєшся до школи — сам(а) чи з кимось? Як гадаєш, як застосунок може допомогти клімату?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Allein im Auto zur Arbeit oder zur Uni? Das ist nicht nur ein bisschen <span class="gl" data-uk="самотній" data-lemma="einsam">einsam</span>, sondern auch schlecht für das Klima. Die Otto-von-Guericke-Universität in Magdeburg hat dafür eine einfache <span class="gl" data-key data-uk="рішення" data-lemma="die Lösung, -en">Lösung</span> gefunden.</p>
+
+          <p>Sie hat eine App gestartet: MoFahr. Studierende und <span class="gl" data-uk="службовець, працівник" data-lemma="der/die Angestellte, -n">Angestellte</span> mit einem ähnlichen <span class="gl" data-key data-uk="дорога на роботу" data-lemma="der Arbeitsweg, -e">Arbeitsweg</span> können sich dort <span class="gl" data-key data-uk="домовлятися, узгоджувати" data-lemma="sich absprechen (sprach ab, hat abgesprochen)">absprechen</span>, wenn sie ungefähr zur gleichen Zeit zur Uni fahren wollen. Dann fahren sie zusammen in einem Auto. Der Name ist kurz für den Slogan „Modern Fahren Sachsen-Anhalt“.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Magdeburg_Universit%C3%A4tsviertel_aerial_view_01.jpg/960px-Magdeburg_Universit%C3%A4tsviertel_aerial_view_01.jpg" alt="Der Campus der Universität Magdeburg von oben." width="960" height="652" loading="lazy">
+            <figcaption>Der Campus der Universität Magdeburg von oben. Foto: Olivier Cleynen, <a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener">CC BY 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Magdeburg_Universit%C3%A4tsviertel_aerial_view_01.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Das <span class="gl" data-uk="заощаджувати" data-lemma="sparen">spart</span> nicht nur Geld, sondern auch <span class="gl" data-uk="шкідливий" data-lemma="schädlich">schädliche</span> <span class="gl" data-uk="викид, емісія" data-lemma="die Emission, -en">Emissionen</span>. <span class="gl" data-uk="розробляти" data-lemma="entwickeln">Entwickelt</span> hat die App eine Firma aus München, die <span class="gl" data-uk="схожий" data-lemma="ähnlich">ähnliche</span> Angebote schon in anderen Städten hat. Und es gibt noch größere Pläne: Bald sollen noch mehr Universitäten und Firmen solche <span class="gl" data-key data-uk="платформа для спільних поїздок" data-lemma="die Mitfahr-Plattform, -en">Mitfahr-Plattformen</span> anbieten und benutzen.</p>
+
+          <p>So kann <span class="gl" data-key data-uk="захист клімату" data-lemma="der Klimaschutz">Klimaschutz</span> nicht nur <span class="gl" data-uk="розумний, доцільний" data-lemma="sinnvoll">sinnvoll</span> sein, sondern auch Spaß machen. Und vielleicht findet man bei den <span class="gl" data-uk="спільний" data-lemma="gemeinsam">gemeinsamen</span> Fahrten sogar neue Freundinnen und Freunde.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Das „Mitfahren“ ist in Deutschland schon lange beliebt. Wer mit dem Auto in eine andere Stadt fährt, bietet freie Plätze im Internet an. Die Mitfahrer <span class="gl" data-uk="ділити, розподіляти" data-lemma="teilen">teilen</span> dann die Kosten für das Benzin. So eine Fahrt nennt man <b>Mitfahrgelegenheit</b>. Magdeburg ist übrigens die Hauptstadt von Sachsen-Anhalt.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Обери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub1-rf"></div>
+    </section>
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub2-list"></div>
+      <p class="lead">б) Встав слова з рамки у правильній формі. Одне слово зайве.</p>
+      <div class="card">
+        <div class="wordbank"><span>sparen</span><span>absprechen</span><span>Lösung</span><span>Arbeitsweg</span><span>gemeinsam</span><span>einsam</span></div>
+        <div id="ub2b-list">
+          <div class="fill-item"><span class="num">1)</span> Wir <input type="text" class="blank-input inline" data-ans="sprechen"> uns <input type="text" class="blank-input inline" data-ans="ab">: Wer fährt morgen?</div>
+          <div class="fill-item"><span class="num">2)</span> Mit der App <input type="text" class="blank-input inline" data-ans="spart"> man Geld.</div>
+          <div class="fill-item"><span class="num">3)</span> Mein <input type="text" class="blank-input inline wide" data-ans="Arbeitsweg"> ist 20 Kilometer lang.</div>
+          <div class="fill-item"><span class="num">4)</span> Die Uni hat eine einfache <input type="text" class="blank-input inline" data-ans="Lösung"> gefunden.</div>
+          <div class="fill-item"><span class="num">5)</span> Allein im Auto ist es ein bisschen <input type="text" class="blank-input inline" data-ans="einsam">.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub2b-check">Prüfen</button>
+          <button class="btn secondary" id="ub2b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub2b-score"></span>
+        </div>
+      </div>
+    </section>
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою. Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub3-a">1. Wie kommen die Menschen in deiner Stadt zur Arbeit oder zur Schule? Was ist gut, was ist schlecht für das Klima? (4–6 Sätze)</label>
+          <textarea id="ub3-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub3-b">2. Würdest du mit fremden Leuten in einem Auto fahren? Warum (nicht)? (3–5 Sätze)</label>
+          <textarea id="ub3-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Viele fahren mit …; Das ist gut/schlecht für das Klima, weil …; Ich würde (nicht) mitfahren, denn …</i>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>In Magdeburg können Studierende und Angestellte der Universität über die App MoFahr zusammen zur Uni fahren. Das spart Geld und Emissionen. Mitfahren ist in Deutschland auch zwischen Städten beliebt: Man teilt sich die Kosten für das Benzin.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          У Магдебурзі студенти й працівники університету можуть через застосунок MoFahr їздити на навчання разом. Це економить гроші й зменшує викиди. Спільні поїздки популярні в Німеччині і між містами: попутники ділять витрати на пальне.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "mofahr-mitfahr-app";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text?",
+     opts: ["Um eine App, mit der Menschen zusammen zur Uni fahren",
+            "Um neue Busse in Magdeburg",
+            "Um ein Auto, das ohne Fahrer fährt"],
+     correct: "Um eine App, mit der Menschen zusammen zur Uni fahren"},
+    {q: "Wofür steht der Name „MoFahr“?",
+     opts: ["Modern Fahren Sachsen-Anhalt", "Morgens fahren", "Mobil fahren in Magdeburg"],
+     correct: "Modern Fahren Sachsen-Anhalt"}
+  ]);
+  buildRF('ub1-rf', [
+    {s: "Die App ist nur für Studierende.", a: "f"},
+    {s: "Eine Firma aus München hat die App entwickelt.", a: "r"},
+    {s: "Mit der App spart man Geld.", a: "r"},
+    {s: "Schon 5000 Menschen benutzen die App.", a: "n"},
+    {s: "Später sollen auch andere Universitäten und Firmen solche Plattformen nutzen.", a: "r"}
+  ]);
+  buildMatch('ub2', [
+    ["schädlich", "шкідливий"],
+    ["sinnvoll", "доцільний"],
+    ["gemeinsam", "спільний"],
+    ["der Klimaschutz", "захист клімату"],
+    ["entwickeln", "розробляти"]
+  ]);
+  wireBlanks('ub2b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🚗','🤝','🌍']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

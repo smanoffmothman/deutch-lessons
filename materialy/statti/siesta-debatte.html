@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mittagspause gegen die Hitze? · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Debatte</span>
+        <h1>Mittagspause gegen die Hitze?</h1>
+        <p class="sub">33 градуси, а робочий день у розпалі. Може, Німеччині варто перейняти в Іспанії сієсту? Лікар і підприємиця відповідають по-різному — і обидва мають аргументи.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Wer sagt was?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Deine Meinung</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Arbeiten bei 33 Grad</h2>
+      <div class="card">
+        <p>Wie gut kannst du bei großer Hitze lernen oder arbeiten? Was ist eine Siesta, und in welchen Ländern ist sie üblich? Wäre eine lange Mittagspause auch in Deutschland eine gute Idee?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай: як тобі вчиться або працюється в спеку? Що таке сієста і де вона поширена? Як гадаєш, чи пасувала б довга обідня перерва Німеччині?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Die Sommer in Deutschland werden heißer, und <span class="gl" data-key data-uk="хвиля спеки, спекотний період" data-lemma="die Hitzewelle, -n">Hitzewellen</span> kommen immer öfter. Wer bei 33 Grad im Büro sitzt oder draußen arbeitet, fragt sich: Wäre eine Siesta nicht <span class="gl" data-uk="розумний, доцільний" data-lemma="sinnvoll">sinnvoll</span> – die lange Mittagspause, die man aus Südeuropa und Südamerika kennt? Darüber wird in Deutschland diskutiert. Zwei Stimmen aus der Debatte.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/%2820260628%29_Berlin_heatwave_155820.jpg/960px-%2820260628%29_Berlin_heatwave_155820.jpg" alt="Ein Schläfchen im Schatten: Hitzewelle in Berlin im Juni 2026." width="960" height="640" loading="lazy">
+            <figcaption>Ein Schläfchen im Schatten: Hitzewelle in Berlin im Juni 2026. Foto: Roy Zuo, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:(20260628)_Berlin_heatwave_155820.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <h3>„Ja – aber nicht für alle gleich“</h3>
+          <p>Für Peter Schäfer, den Chef des Bundesverbands der Ärztinnen und Ärzte des Öffentlichen Gesundheitsdienstes, ist klar: Hitze verändert die <span class="gl" data-uk="умова" data-lemma="die Bedingung, -en">Bedingungen</span>, unter denen Menschen arbeiten. Deshalb sei es richtig, über neue Arbeitszeiten zu sprechen. Allerdings warnt er vor einem <span class="gl" data-uk="непорозуміння" data-lemma="das Missverständnis, -se">Missverständnis</span>: Es gehe nicht um <span class="gl" data-uk="жорсткий, незмінний" data-lemma="starr">starre</span> Regeln oder lange Pausen für alle <span class="gl" data-uk="найманий працівник, службовець" data-lemma="der/die Angestellte, -n">Angestellten</span>, sondern um Lösungen, die sich an der Gesundheit <span class="gl" data-uk="орієнтуватися (на)" data-lemma="sich orientieren an">orientieren</span>.</p>
+
+          <p>Sein wichtigstes Argument: Menschen <span class="gl" data-uk="реагувати (на)" data-lemma="reagieren auf">reagieren</span> ganz unterschiedlich auf hohe Temperaturen. Manche arbeiten auch bei Hitze gut, andere bekommen Probleme mit dem <span class="gl" data-uk="кровообіг" data-lemma="der Kreislauf">Kreislauf</span>. Darum brauche man mehr Freiheit: Wo es möglich ist, könnten Beschäftigte früher anfangen, körperlich schwere Arbeit in kühlere Stunden <span class="gl" data-uk="переносити, зсувати" data-lemma="verschieben (verschob, hat verschoben)">verschieben</span> oder öfter Pausen machen.</p>
+
+          <p>Besonders wichtig ist für Schäfer, dass Angestellte zusammen mit ihren <span class="gl" data-key data-uk="роботодавець" data-lemma="der Arbeitgeber, -">Arbeitgebern</span> <span class="gl" data-uk="брати участь у вирішенні" data-lemma="mitentscheiden (entschied mit, hat mitentschieden)">mitentscheiden</span> können: über Pausen, Rhythmus oder Arbeitsort. Wer selbst <span class="gl" data-uk="мати вплив (на)" data-lemma="Einfluss haben auf">Einfluss</span> auf seinen Arbeitstag hat, kann besser auf die <span class="gl" data-uk="навантаження" data-lemma="die Belastung, -en">Belastung</span> reagieren. Er gibt aber zu, dass das nicht überall geht. Krankenhäuser oder <span class="gl" data-uk="рятувальна служба, швидка допомога" data-lemma="der Rettungsdienst, -e">Rettungsdienste</span> müssen auch bei großer Hitze <span class="gl" data-uk="надійний, надійно" data-lemma="zuverlässig">zuverlässig</span> funktionieren – dort brauche es <span class="gl" data-uk="прагматичний, практичний" data-lemma="pragmatisch">pragmatische</span> Lösungen. Sein Fazit: Der <span class="gl" data-key data-uk="зміна клімату" data-lemma="der Klimawandel">Klimawandel</span> macht Hitzewellen häufiger und stärker, also muss sich die Arbeit an die Gesundheit <span class="gl" data-uk="пристосовуватися (до)" data-lemma="sich anpassen an">anpassen</span>.</p>
+
+          <h3>„Nein – die Werkzeuge gibt es schon“</h3>
+          <p>Ganz anders sieht das Marie-Christine Ostermann, Präsidentin des Verbands „Die Familienunternehmer“. Manche meinen, dass man bei <span class="gl" data-uk="задушливий, гнітючий" data-lemma="drückend">drückender</span> Hitze kaum noch produktiv arbeiten kann. Eine Siesta für Deutschland hält Ostermann trotzdem für keine gute Idee. Denn schon heute <span class="gl" data-uk="зобов'язувати" data-lemma="verpflichten">verpflichten</span> <span class="gl" data-uk="припис, правило" data-lemma="die Vorschrift, -en">Vorschriften</span> zum <span class="gl" data-key data-uk="охорона праці" data-lemma="der Arbeitsschutz">Arbeitsschutz</span> die Arbeitgeber, bei hohen Temperaturen etwas zu tun.</p>
+
+          <p>Außerdem, so Ostermann, haben viele Jobs längst flexible Modelle wie <span class="gl" data-key data-uk="гнучкий графік роботи" data-lemma="die Gleitzeit">Gleitzeit</span> oder <span class="gl" data-uk="робочий час «на довірі» (без контролю)" data-lemma="die Vertrauensarbeitszeit">Vertrauensarbeitszeit</span>. Wer an heißen Tagen früh anfängt, nutzt die kühlen Morgenstunden und hat am heißen Nachmittag früher <span class="gl" data-uk="кінець (робочого дня)" data-note="розм.: Schluss machen — закінчувати" data-lemma="der Schluss">Schluss</span>. Wer lieber mittags länger Pause macht, arbeitet dafür bis in den Abend. Dieses <span class="gl" data-uk="довіра" data-lemma="das Vertrauen">Vertrauen</span> in die <span class="gl" data-uk="власна відповідальність" data-lemma="die Eigenverantwortung">Eigenverantwortung</span> der Angestellten verbessert ihrer Meinung nach die Beziehung zwischen Chefs und Team viel mehr als eine Siesta, die ein Gesetz <span class="gl" data-uk="приписувати, наказувати" data-lemma="vorschreiben (schrieb vor, hat vorgeschrieben)">vorschreibt</span>.</p>
+
+          <p>Ein weiteres Problem sieht sie im Alltag: Eine Siesta würde den Arbeitstag für alle in die frühen und späten Stunden schieben. Nicht jeder ist dann produktiv, und für viele würde die <span class="gl" data-uk="баланс роботи й особистого життя" data-lemma="die Work-Life-Balance">Work-Life-Balance</span> leiden. In Südeuropa sei die Siesta über Jahrhunderte <span class="gl" data-uk="рости; тут: складатися історично" data-lemma="wachsen (wuchs, ist gewachsen)">gewachsen</span>. In Deutschland dagegen folge das private Leben ganz anderen Zeiten.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Bei <b>Gleitzeit</b> kann man selbst entscheiden, wann der Arbeitstag beginnt und endet – oft gibt es nur eine feste <span class="gl" data-uk="обов'язковий час присутності" data-lemma="die Kernzeit, -en">Kernzeit</span>, in der alle da sein müssen. Bei <b>Vertrauensarbeitszeit</b> kontrolliert der Arbeitgeber Beginn und Ende gar nicht: Wichtig ist nur, dass die Arbeit erledigt wird.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Wer sagt was?</h2>
+      <p class="lead">а) Про що текст? Обери відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Чий це аргумент — Петера Шефера чи Марі-Крістін Остерманн? Розклади картки.</p>
+      <div class="card" id="ub1-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Яке пояснення німецькою пасує до слова?</p>
+      <div class="card" id="ub3-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>verschieben</span><span>zuverlässig</span><span>der Einfluss</span><span>das Missverständnis</span><span>sich anpassen</span></div>
+        <div id="ub3b-list">
+          <div class="fill-item"><span class="num">1)</span> Wegen der Hitze <input type="text" class="blank-input inline" data-ans="verschieben"> wir das Training auf den Abend.</div>
+          <div class="fill-item"><span class="num">2)</span> Ein Rettungsdienst muss immer <input type="text" class="blank-input inline" data-ans="zuverlässig"> funktionieren.</div>
+          <div class="fill-item"><span class="num">3)</span> Die Angestellten wollen mehr <input type="text" class="blank-input inline" data-ans="Einfluss"> auf ihre Arbeitszeit haben.</div>
+          <div class="fill-item"><span class="num">4)</span> Das war ein <input type="text" class="blank-input inline wide" data-ans="Missverständnis">: Niemand will drei Stunden Pause für alle.</div>
+          <div class="fill-item"><span class="num">5)</span> Die Arbeit muss <input type="text" class="blank-input inline" data-ans="sich"> an das Klima <input type="text" class="blank-input inline" data-ans="anpassen">.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub3b-check">Prüfen</button>
+          <button class="btn secondary" id="ub3b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub3b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Deine Meinung</h2>
+      <p class="lead">Напиши німецькою. Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub4-a">1. Wessen Argumente überzeugen dich mehr – die von Peter Schäfer oder die von Marie-Christine Ostermann? Schreib einen kurzen Kommentar (80–120 Wörter).</label>
+          <textarea id="ub4-a" rows="7"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub4-b">2. Und bei uns? Wie arbeitet oder lernt man in der Ukraine bei großer Hitze? Gibt es Regeln, zum Beispiel in der Schule? (4–6 Sätze)</label>
+          <textarea id="ub4-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Ich bin der Meinung, dass …; Einerseits …, andererseits …; Ein wichtiges Argument dafür/dagegen ist …; Mich überzeugt mehr, dass …; Bei uns ist es üblich, dass …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Wegen des Klimawandels gibt es auch in Deutschland immer mehr heiße Tage. Eine feste Siesta wie in Südeuropa will dort aber kaum jemand. Diskutiert wird eher über flexible Lösungen: früher anfangen, Pausen selbst planen, Gleitzeit. Schon heute müssen Arbeitgeber wegen des Arbeitsschutzes bei Hitze etwas tun.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Через зміну клімату спекотних днів і в Німеччині стає дедалі більше. Але фіксованої сієсти, як у Південній Європі, там майже ніхто не хоче. Обговорюють радше гнучкі рішення: починати раніше, самим планувати перерви, гнучкий графік. І вже тепер роботодавці мають діяти в спеку — цього вимагають правила охорони праці.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "siesta-debatte";
+
+  // Üb. 1а
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Wie man in Deutschland bei großer Hitze arbeiten soll",
+            "Warum die Siesta in Südeuropa langsam verschwindet",
+            "Welche Berufe bei Hitze besonders gefährlich sind"],
+     correct: "Wie man in Deutschland bei großer Hitze arbeiten soll"},
+    {q: "Worin sind sich beide Personen einig?",
+     opts: ["Eine starre Siesta für alle ist nicht die richtige Lösung.",
+            "Arbeitgeber sollen bei Hitze gar nichts tun müssen.",
+            "In Deutschland soll man nur noch abends arbeiten."],
+     correct: "Eine starre Siesta für alle ist nicht die richtige Lösung."}
+  ]);
+  // Üb. 1б: wer sagt das?
+  buildSort('ub1-sort', {
+    buckets: ["Peter Schäfer", "Marie-Christine Ostermann"],
+    items: [
+      {t: "Menschen reagieren sehr unterschiedlich auf Hitze.", b: "Peter Schäfer"},
+      {t: "Angestellte sollen über Pausen und Arbeitsort mitentscheiden.", b: "Peter Schäfer"},
+      {t: "Krankenhäuser brauchen pragmatische Lösungen.", b: "Peter Schäfer"},
+      {t: "Der Klimawandel macht Hitzewellen häufiger.", b: "Peter Schäfer"},
+      {t: "Gleitzeit und Vertrauensarbeitszeit gibt es schon.", b: "Marie-Christine Ostermann"},
+      {t: "Arbeitgeber müssen wegen des Arbeitsschutzes schon jetzt handeln.", b: "Marie-Christine Ostermann"},
+      {t: "In Südeuropa ist die Siesta über Jahrhunderte gewachsen.", b: "Marie-Christine Ostermann"},
+      {t: "Eine Siesta würde der Work-Life-Balance schaden.", b: "Marie-Christine Ostermann"}
+    ]
+  });
+
+  // Üb. 2
+  buildRF('ub2-rf', [
+    {s: "Peter Schäfer möchte, dass alle Angestellten mittags drei Stunden Pause machen.", a: "f"},
+    {s: "Laut Schäfer kommen manche Menschen mit Hitze besser zurecht als andere.", a: "r"},
+    {s: "Schäfer glaubt, dass flexible Modelle in jedem Beruf funktionieren.", a: "f"},
+    {s: "Schäfer hat früher selbst in einem Krankenhaus gearbeitet.", a: "n"},
+    {s: "Ostermann meint, dass Arbeitgeber bei Hitze schon heute etwas tun müssen.", a: "r"},
+    {s: "Mit Gleitzeit kann man an heißen Tagen früher nach Hause gehen.", a: "r"},
+    {s: "Ostermann findet, dass eine gesetzliche Siesta das Verhältnis zwischen Chefs und Team verbessert.", a: "f"},
+    {s: "In den Firmen ihres Verbands gibt es keine Klimaanlagen.", a: "n"}
+  ]);
+
+  // Üb. 3а: Wort ↔ Erklärung
+  buildMatch('ub3', [
+    ["starr", "so, dass man es nicht ändern kann"],
+    ["die Hitzewelle", "eine Zeit mit vielen sehr heißen Tagen"],
+    ["die Gleitzeit", "man wählt selbst, wann man anfängt und aufhört"],
+    ["der Arbeitsschutz", "Regeln, die die Gesundheit bei der Arbeit schützen"],
+    ["drückend", "heiß und feucht, schwer zu ertragen"],
+    ["die Eigenverantwortung", "man ist selbst für etwas verantwortlich"]
+  ], {lead: false});
+  // Üb. 3б
+  wireBlanks('ub3b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['☀️','⏰','💼','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
