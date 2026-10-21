@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Підручники — онлайн-вправи до підручників німецької — DeutschHeft</title>
+<meta name="description" content="Онлайн-вправи з перевіркою і слова з перекладом українською до популярних підручників німецької мови — за кожним розділом книжки. Для вчителів і учнів.">
+<link rel="canonical" href="https://deutschheft.com.ua/pidruchnyky/index.html">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DeutschHeft">
+<meta property="og:locale" content="uk_UA">
+<meta property="og:title" content="Підручники — DeutschHeft">
+<meta property="og:description" content="Онлайн-вправи з перевіркою і слова з перекладом українською до популярних підручників німецької мови — за кожним розділом книжки.">
+<meta property="og:url" content="https://deutschheft.com.ua/pidruchnyky/index.html">
+<meta property="og:image" content="https://deutschheft.com.ua/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/lesson-style.css">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<script src="../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../', active: 'pidruchnyky' });</script>
+
+<header class="hero">
+  <div class="hero-top">
+    <div>
+      <span class="hero-badge">ПІДРУЧНИКИ · ÜBUNGEN</span>
+      <h1>Вправи до твого підручника</h1>
+      <p class="sub">Онлайн-вправи з перевіркою і слова з перекладом українською — за кожним розділом книжки. Учень виконує вдома й надсилає вчителю звіт у PDF.</p>
+    </div>
+    <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+  </div>
+</header>
+
+<div class="site-main">
+  <!-- картки книжок малює renderBookList() з data/pidruchnyky-data.js;
+       пошук з'являється сам, коли книжок більше чотирьох -->
+  <div id="knSearch"></div>
+  <div class="kn-books" id="knBooks"></div>
+  <p class="kn-disclaimer">Вправи створені DeutschHeft незалежно від видавництв і не є офіційними матеріалами до підручників. Аудіо до книжок — на сайтах видавців.</p>
+</div>
+
+<footer class="site-footer">Твій прогрес у вправах зберігається в цьому браузері.</footer>
+
+<script src="../data/pidruchnyky-data.js"></script>
+<script src="../assets/pidruchnyk.js"></script>
+<script>
+  renderBookList();
+</script>
+</body>
+</html>

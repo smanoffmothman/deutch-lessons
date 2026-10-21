@@ -12,6 +12,14 @@ data/lessons-data.js, data/grammar-data.js, data/materials-data.js — тому
 досить заповнити opys у data-файлі, у сторінці нічого писати не треба.
 Блок щоразу переписується повністю; вміст поза маркерами не змінюється.
 Сторінки оболонки (index.html розділів) робот не чіпає — там теги вручну.
+
+Розділ «Підручники» (з 2026-10-22): хаб книжки pidruchnyky/<книга>/index.html
+і сторінки розділів pidruchnyky/<книга>/<розділ>.html — опис складається з
+data/pidruchnyky-data.js (назва книжки, клас, автори, видавництво, рік,
+Lektion/Modul, сторінки), якщо в книжки/розділу немає власного opys. Для
+них блок містить ще й розмітку schema.org (LearningResource на основі
+Book) — так Google бачить, до якої саме книжки ці вправи. Список книжок
+pidruchnyky/index.html — сторінка оболонки, її теги вручну.
 """
 import json, os, re, subprocess, sys
 from html import escape
@@ -25,7 +33,7 @@ BLOCK_RE = re.compile(r'[ \t]*<!-- seo:.*?<!-- /seo -->\n?', re.S)
 NODE = r'''
 const fs = require('fs'), vm = require('vm');
 const out = {};
-for (const [f, name] of [['lessons-data', 'LESSONS'], ['grammar-data', 'GRAMMAR'], ['materials-data', 'MATERIALS']]) {
+for (const [f, name] of [['lessons-data', 'LESSONS'], ['grammar-data', 'GRAMMAR'], ['materials-data', 'MATERIALS'], ['pidruchnyky-data', 'PIDRUCHNYKY']]) {
   try {
     const c = {}; vm.createContext(c);
     vm.runInContext(fs.readFileSync('data/' + f + '.js', 'utf8') + '\n;this.__x = ' + name + ';', c);
@@ -54,7 +62,61 @@ def first_image(html):
         or re.search(r'<img\b[^>]*\bsrc="(https://[^"]+)"', html)
     return m.group(1) if m else None
 
-def block(url, title, desc, og_type, image, has_own_desc):
+def book_ld(book, url, title, desc, kind):
+    """schema.org: вправи (LearningResource) на основі підручника (Book)."""
+    b = {'@type': 'Book', 'name': book.get('nazva', '')}
+    if book.get('avtory'):
+        b['author'] = [{'@type': 'Person', 'name': a} for a in book['avtory']]
+    if book.get('vydavnytstvo'):
+        b['publisher'] = {'@type': 'Organization', 'name': book['vydavnytstvo']}
+    if book.get('rik'):
+        b['datePublished'] = str(book['rik'])
+    if book.get('isbn'):
+        b['isbn'] = book['isbn']
+    ld = {'@context': 'https://schema.org', '@type': 'LearningResource', 'name': title,
+          'url': url, 'inLanguage': ['de', 'uk'], 'isAccessibleForFree': True,
+          'learningResourceType': kind, 'isBasedOn': b,
+          'provider': {'@type': 'Organization', 'name': 'DeutschHeft', 'url': BASE}}
+    if desc:
+        ld['description'] = desc
+    lvl = book.get('klas') or book.get('riven')
+    if lvl:
+        ld['educationalLevel'] = lvl
+    return '<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False).replace('</', '<\\/') + '</script>'
+
+def book_info(books):
+    """{шлях сторінки: (опис, книжка, тип ресурсу)} для розділу «Підручники»."""
+    out = {}
+    for bk in books or []:
+        bid = bk.get('id')
+        if not bid:
+            continue
+        nazva = bk.get('nazva', '')
+        who = ', '.join(x for x in [bk.get('klas'), bk.get('riven')] if x)
+        avt = ', '.join(bk.get('avtory') or [])
+        pub = ('«' + bk['vydavnytstvo'] + '»' if bk.get('vydavnytstvo') else '') + (', ' + str(bk['rik']) if bk.get('rik') else '')
+        tail = ', '.join(x for x in [who, avt] if x) + (' (' + pub + ')' if pub else '')
+        hub = bk.get('opys') or ('Онлайн-вправи з перевіркою і слова з перекладом українською до підручника «'
+                                 + nazva + '»' + (', ' + tail if tail else '') + ' — за кожним розділом книжки.')
+        out['pidruchnyky/' + bid + '/index.html'] = (clip(hub, 300), bk, 'exercise collection')
+        rivni = bk.get('rivni') or []
+
+        def walk(nodes, path):
+            for n in nodes or []:
+                if n.get('typ') and n.get('typ') != 'bez-storinky':
+                    parts = []
+                    for depth, x in enumerate(path + [n]):
+                        tag = ((rivni[depth] + ' ') if depth < len(rivni) and rivni[depth] and x.get('label') else '') + (x.get('label') or '')
+                        parts.append((tag + ' ' if tag else '') + '«' + x.get('nazva', '') + '»')
+                    pages = ' (с. ' + n['storinky'] + ')' if n.get('storinky') else ''
+                    desc = n.get('opys') or (', '.join(parts) + pages + ' — онлайн-вправи і слова з перекладом до підручника «'
+                                             + nazva + '»' + (', ' + tail if tail else '') + '.')
+                    out['pidruchnyky/' + bid + '/' + n['id'] + '.html'] = (clip(desc, 300), bk, 'exercise')
+                walk(n.get('dity'), path + [n])
+        walk(bk.get('rozdily'), [])
+    return out
+
+def block(url, title, desc, og_type, image, has_own_desc, extra=None):
     a = lambda s: escape(s, quote=True)
     lines = [START]
     if desc and not has_own_desc:
@@ -75,7 +137,10 @@ def block(url, title, desc, og_type, image, has_own_desc):
     if not image:
         lines += ['<meta property="og:image:width" content="1200">',
                   '<meta property="og:image:height" content="630">']
-    lines += ['<meta name="twitter:card" content="summary_large_image">', END]
+    lines.append('<meta name="twitter:card" content="summary_large_image">')
+    if extra:
+        lines.append(extra)
+    lines.append(END)
     return '\n'.join(lines) + '\n'
 
 def main():
@@ -94,7 +159,11 @@ def main():
             desc = clip(m.get('opys')) + (' Рівень ' + m['riven'] + '.' if m.get('riven') else '')
             info['materialy/' + m['file']] = ('article', desc.strip())
 
-    roots = [('lessons', True), ('gramatyka/temy', False), ('materialy/statti', False)]
+    books = book_info(d.get('PIDRUCHNYKY', []))
+    for path, (desc, bk, kind) in books.items():
+        info[path] = ('article', desc)
+
+    roots = [('lessons', True), ('gramatyka/temy', False), ('materialy/statti', False), ('pidruchnyky', True)]
     changed = total = 0
     for root, recursive in roots:
         if not os.path.isdir(root):
@@ -108,6 +177,8 @@ def main():
                 rel = os.path.join(dirpath, name).replace(os.sep, '/')
                 if rel.startswith('lessons/') and rel.count('/') < 2:
                     continue  # у корені lessons/ лише шаблон
+                if rel.startswith('pidruchnyky/') and (rel.count('/') < 2 or rel.startswith('pidruchnyky/shablon/')):
+                    continue  # список книжок — оболонка (теги вручну), shablon/ — шаблони
                 with open(rel, encoding='utf-8') as f:
                     html = f.read()
                 if '</head>' not in html:
@@ -117,7 +188,11 @@ def main():
                 bare = BLOCK_RE.sub('', html)
                 has_own = re.search(r'<meta\s+name="description"', bare) is not None
                 image = first_image(bare) if rel.startswith('materialy/') else None
-                new = bare.replace('</head>', block(BASE + rel, page_title(bare), desc, og_type, image, has_own) + '</head>', 1)
+                extra = None
+                if rel in books:
+                    _, bk, kind = books[rel]
+                    extra = book_ld(bk, BASE + rel, page_title(bare), desc, kind)
+                new = bare.replace('</head>', block(BASE + rel, page_title(bare), desc, og_type, image, has_own, extra) + '</head>', 1)
                 if new != html:
                     with open(rel, 'w', encoding='utf-8') as f:
                         f.write(new)
