@@ -335,12 +335,14 @@
     material-style.css, lesson-style.css, lesson-interactions.js,
     site-nav.js, site.css і build-material-preview.py (site.css і
     скрипт — для превʼю);
-  - з проєктом підручників (П'ЯТИЙ, з 2026-10-22, створює людина):
-    README.md, CHANGELOG.md, BOOK-BRIEF.md (ще буде), pidruchnyky-data.js,
+  - з проєктом підручників (П'ЯТИЙ, з 2026-10-22): README.md,
+    CHANGELOG.md, BOOK-BRIEF.md, pidruchnyky-data.js,
     data/slova/<книга>.js, rozdil-template.html, knyha-template.html,
     pidruchnyk.js, pidruchnyk.css, material-reader.js, material-style.css,
     lesson-style.css, lesson-interactions.js, site-nav.js, site.css,
-    grammar-data.js (лише для вибору id у полі `gram`);
+    grammar-data.js (лише для вибору id у полі `gram`) і
+    build-book-preview.py (превʼю; головна копія — у Knowledge того
+    проєкту, на GitHub не потрібен);
   - лише тут: HTML-сторінки оболонки, а також `home.css` і `home.js`
     головної (site.css і site.js редагуються лише тут, але копія
     site.css потрібна в проєктах граматики й матеріалів, site.js — у
@@ -917,8 +919,9 @@
 - **Статті ↔ уроки** (ідея, не зроблено): необов'язкове поле в
   `lessons-data.js` (за зразком `gram`), щоб на картці уроку / у Fertig!
   показувати «Почитай статтю на цю тему».
-- **Підручники — що далі:** `BOOK-BRIEF.md` для п'ятого проєкту
-  (генерація) і план `PLAN-sotnykova-5.md`; коли запускати пункт у меню
+- **Підручники — що далі:** план `PLAN-sotnykova-5-klas-5-rik.md` і
+  перші 2–3 модулі в п'ятому проєкті (бриф — `BOOK-BRIEF.md`, з
+  2026-10-22); коли запускати пункт у меню
   (`NAV_SHOW_PIDRUCHNYKY`); чи міняти позиціонування головної («DEUTSCH ·
   7–9 КЛАС», «Усе, що видається учням…») під ширшу аудиторію; аркуш для
   друку (ті самі вправи на A4, без ключа — на статичному сайті ключ не
