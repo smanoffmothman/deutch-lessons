@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalter Hund: Kuchen ohne Backen · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Essen & Trinken</span>
+        <h1>Kalter Hund: Kuchen ohne Backen</h1>
+        <p class="sub">«Холодний пес» — це не тварина, а шоколадний торт із печива, який не треба пекти. І за ним стоїть дуже вдала реклама 1920-х років.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Küchenwörter</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Reihenfolge</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Ein Hund zum Essen?</h2>
+      <div class="card">
+        <p>Was glaubst du: Was ist ein „Kalter Hund“? Kennst du einen Kuchen, den man nicht backen muss?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай (або обговоріть у парі): що може означати назва «Kalter Hund» («холодний пес»)? Чи знаєш ти десерт, який не треба пекти? Можливо, у твоїй родині готують щось подібне?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Ein Hund im Kühlschrank? Keine Sorge: Der „Kalte Hund“ ist ein Kuchen aus Schokolade und Keksen – und in Deutschland sehr beliebt.</p>
+
+          <p>Warum heißt der Kuchen so? Man muss ihn nicht backen. Man legt Kekse und eine Schokomasse in eine Form, und im <span class="gl" data-key data-uk="холодильник" data-lemma="der Kühlschrank, -ä-e">Kühlschrank</span> wird alles <span class="gl" data-uk="твердий" data-lemma="fest">fest</span>. Das ist ganz einfach – auch für Anfänger in der Küche.</p>
+
+          <p>Die Geschichte des Kuchens beginnt mit einem Keks: 1891 hat die Firma Bahlsen aus Hannover den Leibniz-Keks <span class="gl" data-uk="винаходити" data-lemma="erfinden (erfand, hat erfunden)">erfunden</span>. Den Namen hat der kleine <span class="gl" data-key data-uk="печиво (одне)" data-lemma="der Keks, -e">Keks</span> vom Philosophen Gottfried Wilhelm Leibniz, der lange in Hannover gelebt hat. In den 1920er-Jahren <span class="gl" data-uk="публікувати, випускати" data-lemma="herausgeben (gab heraus, hat herausgegeben)">gab</span> Bahlsen ein Rezept für einen „Schokoladenkuchen aus Leibniz-Keks“ <span class="gl" data-uk="публікувати, випускати" data-note="друга частина дієслова herausgeben" data-lemma="herausgeben (gab heraus, hat herausgegeben)">heraus</span>. Eine clevere <span class="gl" data-uk="реклама" data-lemma="die Werbung">Werbung</span>: Für den Kuchen braucht man nämlich viele Kekse!</p>
+
+          <figure class="mat-fig" style="max-width:300px;margin-left:auto;margin-right:auto">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Butterkeks.jpg/960px-Butterkeks.jpg" alt="Ein Leibniz-Butterkeks." width="960" height="838" loading="lazy">
+            <figcaption>Ein Leibniz-Butterkeks. Foto: Rainer Zenz, <a href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Butterkeks.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>In Westdeutschland denken viele beim Kalten Hund an die Zeit des Wirtschaftswunders. Und bis heute ist er ein Klassiker.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>„Wirtschaftswunder“ nennt man die Zeit in den 1950er-Jahren, als es der Wirtschaft in Westdeutschland nach dem Zweiten Weltkrieg sehr schnell wieder besser ging.</p>
+          </aside>
+
+          <h3>Das Rezept</h3>
+
+          <p>Für eine <span class="gl" data-uk="прямокутна форма для випічки" data-lemma="die Kastenform, -en">Kastenform</span> braucht man diese <span class="gl" data-key data-uk="інгредієнт" data-lemma="die Zutat, -en">Zutaten</span>:</p>
+          <ul>
+            <li>250 g <span class="gl" data-uk="кокосовий жир" data-lemma="das Kokosfett">Kokosfett</span></li>
+            <li>200 g <span class="gl" data-uk="цукрова пудра" data-lemma="der Puderzucker">Puderzucker</span></li>
+            <li>2 Eier</li>
+            <li>40 g Kakaopulver</li>
+            <li>1 <span class="gl" data-uk="столова ложка" data-lemma="der Esslöffel, - (EL)">Esslöffel</span> Kaffeepulver</li>
+            <li>1 <span class="gl" data-uk="дрібка" data-lemma="die Prise, -n">Prise</span> Salz</li>
+            <li>25 Butterkekse</li>
+          </ul>
+          <p>Im klassischen Rezept kommt noch ein Esslöffel Rum dazu – für Kinder lässt man ihn einfach weg.</p>
+
+          <ol>
+            <li>Das Kokosfett in einem <span class="gl" data-uk="каструля" data-lemma="der Topf, -ö-e">Topf</span> langsam <span class="gl" data-key data-uk="розтоплювати" data-lemma="schmelzen (schmolz, hat geschmolzen)">schmelzen</span> und ein bisschen <span class="gl" data-uk="охолоджуватися" data-lemma="abkühlen">abkühlen</span> lassen.</li>
+            <li>Puderzucker, Eier, Kakao, Kaffeepulver und Salz in einer <span class="gl" data-uk="миска" data-lemma="die Schüssel, -n">Schüssel</span> glatt <span class="gl" data-key data-uk="розмішувати" data-lemma="rühren">rühren</span>.</li>
+            <li>Das flüssige Fett langsam dazugeben und rühren, bis eine glatte Schokomasse entsteht.</li>
+            <li>Die Kastenform mit Backpapier auslegen.</li>
+            <li>Immer <span class="gl" data-uk="по черзі" data-lemma="abwechselnd">abwechselnd</span> eine <span class="gl" data-key data-uk="шар" data-lemma="die Schicht, -en">Schicht</span> Schokomasse und eine Schicht Kekse in die Form geben. Ganz oben liegen Kekse.</li>
+            <li>Wer möchte, legt noch Nüsse auf den Kuchen.</li>
+            <li>Die Form mindestens drei Stunden in den Kühlschrank stellen.</li>
+            <li>Den Kuchen aus der Form nehmen und in dünne <span class="gl" data-uk="скибка, шматочок" data-lemma="die Scheibe, -n">Scheiben</span> schneiden – etwa einen halben Zentimeter dick.</li>
+          </ol>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Kalter_Hund_2009_PD_IMG_5205.JPG/960px-Kalter_Hund_2009_PD_IMG_5205.JPG" alt="Kalter Hund: Schichten aus Keksen und Schokolade." width="960" height="640" loading="lazy">
+            <figcaption>Kalter Hund: Schichten aus Keksen und Schokolade. Foto: Politikaner, <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Kalter_Hund_2009_PD_IMG_5205.JPG" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">Обери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wörter aus der Küche</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub3-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>Kühlschrank</span><span>schmelzen</span><span>Schüssel</span><span>Scheiben</span><span>Zutaten</span></div>
+        <div id="ub3b-list">
+          <div class="fill-item"><span class="num">1)</span> Für den Kuchen brauchst du nur sieben <input type="text" class="blank-input inline" data-ans="Zutaten">.</div>
+          <div class="fill-item"><span class="num">2)</span> Zuerst musst du das Fett im Topf <input type="text" class="blank-input inline" data-ans="schmelzen">.</div>
+          <div class="fill-item"><span class="num">3)</span> Rühre Zucker, Eier und Kakao in einer <input type="text" class="blank-input inline" data-ans="Schüssel">.</div>
+          <div class="fill-item"><span class="num">4)</span> Der Kuchen muss drei Stunden im <input type="text" class="blank-input inline wide" data-ans="Kühlschrank"> bleiben.</div>
+          <div class="fill-item"><span class="num">5)</span> Zum Schluss schneidest du den Kuchen in dünne <input type="text" class="blank-input inline" data-ans="Scheiben">.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub3b-check">Prüfen</button>
+          <button class="btn secondary" id="ub3b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub3b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Was macht man zuerst?</h2>
+      <p class="lead">Розстав кроки рецепта в правильному порядку. Натискай речення по черзі; натиснеш на вже поставлене — воно повернеться вниз.</p>
+      <div class="card" id="ub4-seq"></div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (4–6 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Gibt es in der Ukraine einen ähnlichen Kuchen oder ein Dessert ohne Backen? Wie heißt es, und was braucht man dafür?</label>
+          <textarea id="ub5-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Schreibe ein einfaches Rezept für dein Lieblingsessen: Zutaten und drei bis fünf Schritte.</label>
+          <textarea id="ub5-b" rows="6"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Bei uns gibt es … · Man braucht … · Zuerst …, dann …, danach …, zum Schluss … · Das schmeckt …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Der Kalte Hund ist ein Kuchen aus Keksen und Schokolade, den man nicht backt, sondern im Kühlschrank fest werden lässt. Den Leibniz-Keks gibt es seit 1891; die Firma Bahlsen aus Hannover hat ihn nach dem Philosophen Leibniz benannt. In Westdeutschland erinnert der Kuchen viele an die Zeit des Wirtschaftswunders.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          «Холодний пес» — торт із печива й шоколаду, який не печуть, а залишають застигати в холодильнику. Печиво Leibniz існує з 1891 року; фірма Bahlsen із Ганновера назвала його на честь філософа Лейбніца. У Західній Німеччині цей торт багатьом нагадує часи «економічного дива».
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "kalter-hund";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Was ist ein „Kalter Hund“?",
+     opts: ["Ein Kuchen aus Keksen und Schokolade",
+            "Ein Hund, der im Winter draußen schläft",
+            "Ein kaltes Getränk mit Kakao"],
+     correct: "Ein Kuchen aus Keksen und Schokolade"},
+    {q: "Warum heißt der Kuchen „kalt“?",
+     opts: ["Weil man ihn nicht backt, sondern im Kühlschrank fest werden lässt",
+            "Weil man ihn nur im Winter isst",
+            "Weil man ihn mit Eis serviert"],
+     correct: "Weil man ihn nicht backt, sondern im Kühlschrank fest werden lässt"},
+    {q: "Warum war das Rezept von Bahlsen eine clevere Werbung?",
+     opts: ["Weil man für den Kuchen viele Leibniz-Kekse braucht",
+            "Weil das Rezept im Fernsehen gezeigt wurde",
+            "Weil der Kuchen ganz ohne Kekse gemacht wird"],
+     correct: "Weil man für den Kuchen viele Leibniz-Kekse braucht"}
+  ]);
+
+  buildRF('ub2-rf', [
+    {s: "Den Kalten Hund muss man eine Stunde im Ofen backen.", a: "f"},
+    {s: "Die Firma Bahlsen kommt aus Hannover.", a: "r"},
+    {s: "Den Leibniz-Keks gibt es seit 1891.", a: "r"},
+    {s: "Den Kalten Hund gibt es nur in Deutschland.", a: "n"},
+    {s: "Für das Rezept braucht man zwei Eier.", a: "r"},
+    {s: "Ganz oben in der Form liegt Schokomasse.", a: "f"},
+    {s: "Der Kuchen muss mindestens drei Stunden in den Kühlschrank.", a: "r"}
+  ]);
+
+  buildMatch('ub3', [
+    ["der Topf", "каструля"],
+    ["die Schüssel", "миска"],
+    ["rühren", "розмішувати"],
+    ["die Schicht", "шар"],
+    ["abwechselnd", "по черзі"],
+    ["die Prise", "дрібка"]
+  ]);
+  wireBlanks('ub3b');
+
+  buildSequence('ub4-seq', [
+    "Das Kokosfett im Topf schmelzen.",
+    "Zucker, Eier, Kakao, Kaffee und Salz in einer Schüssel rühren.",
+    "Das flüssige Fett langsam dazugeben.",
+    "Schokomasse und Kekse abwechselnd in die Form geben.",
+    "Den Kuchen drei Stunden in den Kühlschrank stellen.",
+    "Den Kuchen in dünne Scheiben schneiden."
+  ]);
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🍫','🍪','🧊','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

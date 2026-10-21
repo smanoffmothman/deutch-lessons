@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eine Stadt mit allen Sinnen · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Essen & Trinken</span>
+        <h1>Eine Stadt mit allen Sinnen</h1>
+        <p class="sub">Сендвіч у Торонто, радянсько-в'єтнамська кухня НДР у Берліні й гриби біля шведського еко-готелю: як гастротури стали глобальним трендом — і чому не всім подобаються платформи-посередники.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Wo ist das?</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Deine Tour</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Reisen durch den Magen</h2>
+      <div class="card">
+        <p>Probierst du auf Reisen gern lokale Gerichte? Woran erinnerst du dich bei einer Reise am stärksten – an Sehenswürdigkeiten oder an das Essen? Würdest du für eine geführte Tour zum Essen bezahlen?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай (або обговоріть у парі): що ти найкраще пам'ятаєш з подорожей — пам'ятки чи їжу? Чи пробуєш ти місцеві страви? Як гадаєш, чи варто платити 60–150 євро за екскурсію, на якій куштуєш їжу в різних місцях міста?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Eine Stadt nicht nur ansehen, sondern schmecken: Kulinarische <span class="gl" data-key data-uk="екскурсія містом" data-lemma="die Stadtführung, -en">Stadtführungen</span>, sogenannte <span class="gl" data-key data-uk="гастрономічна екскурсія" data-lemma="die Foodtour, -en">Foodtouren</span>, sind weltweit <span class="gl" data-uk="затребуваний, популярний" data-lemma="gefragt">gefragt</span>. Wer mitmacht, lernt ein <span class="gl" data-uk="квартал, район" data-lemma="das Viertel, -">Viertel</span> über seine Spezialitäten kennen – und meistens auch die Menschen, die sie herstellen.</p>
+
+          <h3>Ein Bissen Toronto</h3>
+
+          <p>Ein Beispiel ist Kevin Durkee in Toronto. Mit seinem Unternehmen führt er seit 2010 Gäste über den St. Lawrence Market, eine <span class="gl" data-uk="критий ринок" data-lemma="die Markthalle, -n">Markthalle</span> aus dem Jahr 1850 mit über 120 <span class="gl" data-uk="прилавок, ятка" data-lemma="der Stand, -ä-e">Ständen</span>. Gleich zu Beginn gibt es ein Sandwich mit Ei und einer dünnen Scheibe <span class="gl" data-uk="солонина, засолене м'ясо" data-lemma="das Pökelfleisch">Pökelfleisch</span>, eine lokale <span class="gl" data-uk="спогад, відгомін" data-lemma="die Reminiszenz, -en">Reminiszenz</span> an den amerikanischen Frühstücksburger. Danach folgen Senf in allen <span class="gl" data-uk="смак (різновид)" data-lemma="die Geschmacksrichtung, -en">Geschmacksrichtungen</span>, <span class="gl" data-uk="устриця" data-lemma="die Auster, -n">Austern</span>, Lachs und Käse. Zum Schluss: ein Pastel de Nata – ein portugiesisches <span class="gl" data-uk="виріб із листкового тіста" data-lemma="das Blätterteiggebäck">Blätterteiggebäck</span>, das in Toronto dank einer großen portugiesischen <span class="gl" data-uk="громада, спільнота" data-lemma="die Gemeinschaft, -en">Gemeinschaft</span> als Spezialität der Stadt <span class="gl" data-uk="вважатися" data-lemma="gelten als (galt, hat gegolten)">gilt</span>.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/St._Lawrence_Market_stalls.jpg/960px-St._Lawrence_Market_stalls.jpg" alt="Stände im St. Lawrence Market in Toronto." width="960" height="638" loading="lazy">
+            <figcaption>Stände im St. Lawrence Market in Toronto. Foto: stu_spivack, <a href="https://creativecommons.org/licenses/by-sa/2.0" target="_blank" rel="noopener">CC BY-SA 2.0</a>, <a href="https://commons.wikimedia.org/wiki/File:St._Lawrence_Market_stalls.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Bevor Durkee in die Gastronomie ging, hat er bei Walt Disney gearbeitet. Dort hat er gelernt, wie wichtig besondere Momente sind. Ein guter Guide brauche vor allem eines: die <span class="gl" data-uk="здатність, уміння" data-lemma="die Fähigkeit, -en">Fähigkeit</span>, schnell eine <span class="gl" data-uk="зв'язок, контакт" data-lemma="die Verbindung, -en">Verbindung</span> zur Gruppe aufzubauen.</p>
+
+          <h3>Vom Nischenangebot zum Massenprodukt</h3>
+
+          <p>Neu ist die Idee nicht. Seit den späten 1990er-Jahren gibt es Foodtouren, <span class="gl" data-uk="спочатку" data-lemma="zunächst">zunächst</span> vor allem in den USA; Anfang der 2000er-Jahre <span class="gl" data-uk="перекинутися, поширитися" data-lemma="überschwappen (auf/nach)">schwappte</span> der Trend nach Europa über. Gleichzeitig wurde das Angebot <span class="gl" data-uk="різноманітний" data-lemma="vielfältig">vielfältiger</span>: In Dubai etwa starteten zwei Schwestern 2013 die erste Foodtour am Golf, um die lokale Küche <span class="gl" data-uk="поза, по той бік" data-lemma="jenseits (+ Gen.)">jenseits</span> von Luxushotels und <span class="gl" data-uk="показний, хвальковитий" data-lemma="protzig">protzigen</span> Restaurants sichtbar zu machen. In Bangkok oder Hanoi sind nächtliche Streetfood-Touren besonders beliebt.</p>
+
+          <p>Dass die Touren so <span class="gl" data-key data-uk="популярний" data-lemma="beliebt">beliebt</span> geworden sind, liegt auch am Internet. Plattformen wie GetYourGuide machen sie weltweit <span class="gl" data-uk="доступний" data-lemma="zugänglich">zugänglich</span> und helfen den <span class="gl" data-key data-uk="постачальник послуг" data-lemma="der Anbieter, -">Anbietern</span>, ihre Programme zu <span class="gl" data-uk="продавати, просувати на ринку" data-lemma="vermarkten">vermarkten</span>; oft sind sie direkt in die Buchungsseiten von Fluggesellschaften und Hotels eingebaut. Heute gibt es kaum eine Stadt ohne fertige Routen. Wo man früher selbst recherchierte, klickt man heute einmal – den Rest erledigen andere. Bezahlt wird <span class="gl" data-uk="заздалегідь" data-lemma="vorab">vorab</span>, meist zwischen 60 und 150 Euro. Ob das ein hilfreicher Service ist oder eine teuer erkaufte <span class="gl" data-uk="позбавлення самостійності, «опіка»" data-lemma="die Entmündigung">Entmündigung</span>, ist <span class="gl" data-uk="справа смаку" data-lemma="die Geschmackssache">Geschmackssache</span>.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>In der DDR arbeiteten ab den 1970er-Jahren viele sogenannte <span class="gl" data-uk="робітник за міждержавною угодою" data-note="так у НДР називали робітників із соціалістичних країн" data-lemma="der Vertragsarbeiter, -">Vertragsarbeiter</span> aus Vietnam, Kuba, Mosambik und anderen sozialistischen Ländern. Viele Vietnamesinnen und Vietnamesen blieben nach 1990 in Deutschland – auch deshalb gibt es heute besonders in Berlin so viele vietnamesische Restaurants.</p>
+          </aside>
+
+          <h3>Essen als Entscheidung</h3>
+
+          <p>Nicht alle Guides arbeiten gern mit großen Plattformen. Der Koch, Autor und Guide Itay Novik bietet mit seiner Firma Elements of Food Touren in Berlin und Mailand an. Plattformen <span class="gl" data-uk="відхиляти, відмовлятися" data-lemma="ablehnen">lehnt</span> er ab, weil sie hohe <span class="gl" data-uk="комісія (відсоток від продажу)" data-lemma="die Provision, -en">Provisionen</span> verlangen, und weil er es schöner findet, wenn seine Gäste direkt bei ihm buchen. Ihm geht es um mehr als Essen: Die Menschen sollen darüber nachdenken, was sie essen, und ihre <span class="gl" data-uk="можливість вибору" data-lemma="die Wahlmöglichkeit, -en">Wahlmöglichkeiten</span> kennen. Deshalb nimmt er vor allem kleine, <span class="gl" data-uk="яким керує сам власник" data-lemma="inhabergeführt">inhabergeführte</span> Läden in seine Touren auf. Für ihn ist das, was man isst, immer auch eine politische Entscheidung.</p>
+
+          <p>Für eine große kulinarische Tradition ist Berlin nicht unbedingt bekannt. Novik konzentriert sich deshalb auf die besten Produkte der Region – und auf Geschichten. In seiner Tour „Red Sauce &amp; Shashlik“ erzählt er, wie sowjetische, vietnamesische und kubanische <span class="gl" data-key data-uk="іммігрант" data-lemma="der Einwanderer, -">Einwanderer</span> die <span class="gl" data-key data-uk="культура харчування" data-lemma="die Esskultur, -en">Esskultur</span> der DDR <span class="gl" data-uk="формувати, впливати" data-lemma="prägen">geprägt</span> haben. Seine Tour durch Kreuzberg ist von arabischer, türkischer und italienischer Küche geprägt.</p>
+
+          <h3>Ein teurer Trend – und eine stille Alternative</h3>
+
+          <p>Laut einer Studie der Hotelkette Hilton reist etwa jeder fünfte Tourist <span class="gl" data-uk="цілеспрямовано" data-lemma="gezielt">gezielt</span>, um neue Restaurants oder kulinarische <span class="gl" data-key data-uk="враження, досвід" data-lemma="das Erlebnis, -se">Erlebnisse</span> zu entdecken. Entsprechend wächst das Angebot – auch für Reiche: Eine Genusswoche im Piemont mit einem Drei-Sterne-Koch kostet fast 10 000 Dollar, eine Vietnamreise mit einem bekannten Fernsehkoch sogar 15 000 Dollar.</p>
+
+          <p>Es geht aber auch ganz anders, vor allem auf dem Land. Etwa eine Autostunde nördlich der schwedischen Stadt Umeå entstand Anfang der 2010er-Jahre Granö Beckasin, ein Komplex aus Öko-Hotel, <span class="gl" data-uk="хатинка" data-lemma="die Hütte, -n">Hütten</span> und Baumhäusern. Er wurde vor allem gebaut, um in einer Region, die von <span class="gl" data-uk="відтік населення" data-lemma="die Abwanderung">Abwanderung</span> geprägt ist, Arbeitsplätze zu schaffen. Produktmanager Christopher Storm erklärt, dass viele Stadtmenschen den <span class="gl" data-uk="зв'язок, стосунок" data-lemma="der Bezug (zu + Dat.)">Bezug</span> zur Natur verloren haben und sich genau nach dieser Erfahrung <span class="gl" data-uk="прагнути, тужити" data-lemma="sich sehnen (nach + Dat.)">sehnen</span>. Hier kochen die Gäste über offenem Feuer, sammeln Pilze und gehen auf <span class="gl" data-uk="прогулянка зі збиранням трав" data-lemma="die Kräuterwanderung, -en">Kräuterwanderungen</span>. Dabei erfahren sie, welche Pflanzen man früher gegen Krankheiten nutzte. Man isst weniger als bei einer Foodtour in der Stadt – lernt dafür aber viel Überraschendes.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Pastel_de_nata_%2818616473070%29.jpg/960px-Pastel_de_nata_%2818616473070%29.jpg" alt="Pastel de Nata – portugiesisches Blätterteiggebäck." width="960" height="640" loading="lazy">
+            <figcaption>Pastel de Nata – portugiesisches Blätterteiggebäck. Foto: fw42, <a href="https://creativecommons.org/licenses/by/2.0" target="_blank" rel="noopener">CC BY 2.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Pastel_de_nata_(18616473070).jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Обери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) У якому абзаці про це йдеться? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Wo ist das?</h2>
+      <p class="lead">Розсортуй деталі з тексту за місцями.</p>
+      <div class="card" id="ub2-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub3-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>Anbieter</span><span>Provision</span><span>vermarkten</span><span>geprägt</span><span>Abwanderung</span><span>beliebt</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> Viele junge Leute ziehen in die Stadt – die <input type="text" class="blank-input inline wide" data-ans="Abwanderung"> ist auf dem Land ein großes Problem.</div>
+          <div class="fill-item"><span class="num">2)</span> Die Plattform verlangt von jedem Ticket eine hohe <input type="text" class="blank-input inline" data-ans="Provision">.</div>
+          <div class="fill-item"><span class="num">3)</span> Kleine <input type="text" class="blank-input inline" data-ans="Anbieter"> haben oft kein Geld für Werbung.</div>
+          <div class="fill-item"><span class="num">4)</span> Im Internet kann man eine Tour weltweit <input type="text" class="blank-input inline wide" data-ans="vermarkten">.</div>
+          <div class="fill-item"><span class="num">5)</span> Die Küche in Kreuzberg ist stark von Einwanderern <input type="text" class="blank-input inline" data-ans="geprägt">.</div>
+          <div class="fill-item"><span class="num">6)</span> Nächtliche Streetfood-Touren sind in Asien besonders <input type="text" class="blank-input inline" data-ans="beliebt">.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Deine eigene Foodtour</h2>
+      <p class="lead">Напиши німецькою. Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Plane eine Foodtour durch deine Stadt (120–150 Wörter): Welche drei bis vier Stationen gibt es? Was probieren die Gäste, und welche Geschichte erzählst du dazu?</label>
+          <textarea id="ub5-a" rows="9"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Itay Novik meint, was man isst, sei immer auch eine politische Entscheidung. Stimmst du zu? Begründe deine Meinung.</label>
+          <textarea id="ub5-b" rows="6"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Unsere Tour beginnt … · An der zweiten Station probieren wir … · Dazu erzähle ich, dass … · Ich stimme (nicht) zu, denn … · Wer …, unterstützt …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Foodtouren gibt es seit den späten 1990er-Jahren, heute fast in jeder Stadt. In Berlin erzählen sie auch Geschichte: Einwanderer aus der Sowjetunion, Vietnam und Kuba haben die Esskultur der DDR geprägt, in Kreuzberg prägen türkische, arabische und italienische Küche das Viertel. Wer bei kleinen, inhabergeführten Läden isst, unterstützt die Menschen im Viertel.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Гастротури існують з кінця 1990-х, а нині є майже в кожному місті. У Берліні вони розповідають і про історію: іммігранти з СРСР, В'єтнаму й Куби вплинули на кухню НДР, а в Кройцберзі обличчя району визначають турецька, арабська й італійська кухні. Хто їсть у маленьких закладах, якими керують самі власники, підтримує людей свого району.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "foodtouren";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Um kulinarische Touren als weltweiten Trend – mit Vorteilen und Kritik",
+            "Um die besten Restaurants in Berlin und Mailand",
+            "Um ein neues Kochbuch mit Rezepten aus aller Welt"],
+     correct: "Um kulinarische Touren als weltweiten Trend – mit Vorteilen und Kritik"},
+    {q: "Warum lehnt Itay Novik Plattformen wie GetYourGuide ab?",
+     opts: ["Weil sie hohe Provisionen verlangen und er direkten Kontakt zu den Gästen mag",
+            "Weil seine Touren dort zu billig verkauft werden",
+            "Weil die Plattformen keine Touren in Berlin anbieten"],
+     correct: "Weil sie hohe Provisionen verlangen und er direkten Kontakt zu den Gästen mag"},
+    {q: "Was ist das Besondere an Granö Beckasin?",
+     opts: ["Man erlebt dort die Natur und lernt viel, isst aber weniger als in der Stadt.",
+            "Dort gibt es die teuerste Foodtour der Welt.",
+            "Dort kochen nur berühmte Fernsehköche."],
+     correct: "Man erlebt dort die Natur und lernt viel, isst aber weniger als in der Stadt."}
+  ]);
+  buildMatch('ub1h', [
+    ["Was ein Guide von Disney gelernt hat", "Absatz 2"],
+    ["Ein Klick – und alles ist gebucht", "Absatz 4"],
+    ["Geschichte auf dem Teller", "Absatz 6"],
+    ["Kochen über offenem Feuer", "Absatz 8"],
+    ["Vom Golf bis nach Hanoi", "Absatz 3"],
+    ["Essen ist politisch", "Absatz 5"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5", "Absatz 6", "Absatz 7", "Absatz 8"], lead: true});
+
+  buildSort('ub2-sort', {
+    buckets: ["Toronto", "Berlin", "Schweden"],
+    items: [
+      {t: "eine Markthalle von 1850", b: "Toronto"},
+      {t: "Pastel de Nata", b: "Toronto"},
+      {t: "ein früherer Disney-Mitarbeiter", b: "Toronto"},
+      {t: "die Tour „Red Sauce & Shashlik“", b: "Berlin"},
+      {t: "Esskultur der DDR", b: "Berlin"},
+      {t: "eine Tour durch Kreuzberg", b: "Berlin"},
+      {t: "Baumhäuser und Hütten", b: "Schweden"},
+      {t: "Pilze sammeln und Kräuterwanderungen", b: "Schweden"},
+      {t: "neue Arbeitsplätze auf dem Land", b: "Schweden"}
+    ]
+  });
+
+  buildRF('ub3-rf', [
+    {s: "Kevin Durkee führt seine Touren seit 2010.", a: "r"},
+    {s: "Foodtouren wurden zuerst in Europa populär.", a: "f"},
+    {s: "Eine Foodtour kostet meistens zwischen 60 und 150 Euro.", a: "r"},
+    {s: "Itay Novik hat früher in einem Sterne-Restaurant gekocht.", a: "n"},
+    {s: "Berlin ist für eine große kulinarische Tradition berühmt.", a: "f"},
+    {s: "Etwa jeder fünfte Reisende sucht gezielt kulinarische Erlebnisse.", a: "r"},
+    {s: "Granö Beckasin liegt direkt in der Stadt Umeå.", a: "f"}
+  ]);
+
+  buildMatch('ub4', [
+    ["die Provision", "комісія (відсоток від продажу)"],
+    ["inhabergeführt", "яким керує сам власник"],
+    ["die Abwanderung", "відтік населення"],
+    ["prägen", "формувати, впливати"],
+    ["die Entmündigung", "позбавлення самостійності, «опіка»"],
+    ["protzig", "показний, хвальковитий"]
+  ]);
+  wireBlanks('ub4b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🥪','🧭','🍄','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

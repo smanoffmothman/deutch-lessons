@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clubs sind Kultur · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Kultur & Medien</span>
+        <h1>Clubs sind Kultur</h1>
+        <p class="sub">Досі музичний клуб у Німеччині за законом був таким самим місцем розваг, як зала ігрових автоматів. 2026 року уряд вирішив це змінити — і для власників клубів це велика перемога.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Kultur oder Vergnügen?</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Und du?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Was ist Kultur?</h2>
+      <div class="card">
+        <p>Was ist für dich Kultur: nur Theater, Museen und Konzerte – oder auch ein Club, in dem man tanzt? Was weißt du über die Clubs in Berlin?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай (або обговоріть у парі): що для тебе культура — лише театр, музеї й концерти чи також клуб, де танцюють під музику діджеїв? Чому, на твою думку, Берлін відомий своїми клубами?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Musikclubs in Deutschland sollen offiziell als Orte der Kultur gelten – genau wie Theater oder Kinos. Das hat die Bundesregierung 2026 beschlossen.</p>
+
+          <p>Lange Zeit galten Clubs nach dem <span class="gl" data-key data-uk="закон" data-lemma="das Gesetz, -e">Gesetz</span> als „<span class="gl" data-key data-uk="розважальний заклад" data-lemma="die Vergnügungsstätte, -n">Vergnügungsstätten</span>“. In diese Gruppe gehören auch <span class="gl" data-uk="зала ігрових автоматів" data-lemma="die Spielhalle, -n">Spielhallen</span> und <span class="gl" data-uk="букмекерська контора" data-lemma="das Wettbüro, -s">Wettbüros</span>. Nach einer langen politischen <span class="gl" data-uk="дискусія" data-lemma="die Diskussion, -en">Diskussion</span> hat die <span class="gl" data-uk="федеральний уряд" data-lemma="die Bundesregierung, -en">Bundesregierung</span> eine <span class="gl" data-uk="зміна" data-lemma="die Änderung, -en">Änderung</span> im Baugesetzbuch <span class="gl" data-uk="ухвалювати" data-lemma="beschließen (beschloss, hat beschlossen)">beschlossen</span>. Danach sollen Musikclubs nicht mehr als Vergnügungsstätten, sondern als <span class="gl" data-key data-uk="місце культури" data-lemma="der Kulturort, -e">Kulturorte</span> gelten.</p>
+
+          <p>Das ist für die Clubs sehr wichtig. Denn mit der neuen Regel dürfen sie leichter auch in der Innenstadt und in <span class="gl" data-key data-uk="житловий район" data-lemma="das Wohngebiet, -e">Wohngebieten</span> öffnen. Viele Jahre haben die <span class="gl" data-key data-uk="власник (клубу)" data-lemma="der Betreiber, -">Betreiber</span> der Clubs für diese Änderung <span class="gl" data-uk="боротися" data-lemma="kämpfen (für + Akk.)">gekämpft</span>. Sie hatten nämlich ein großes Problem: Es wurde immer schwieriger, einen guten <span class="gl" data-uk="місце розташування" data-lemma="der Standort, -e">Standort</span> für einen Club zu finden.</p>
+
+
+
+          <p>Besonders bekannt für seine Clubs ist Berlin: Die Stadt ist auf der ganzen Welt für ihre Techno-Szene berühmt. Nach dem Mauerfall 1989 standen in Ost-Berlin viele alte Gebäude <span class="gl" data-uk="порожній" data-lemma="leer">leer</span>, und in Fabriken, Kellern und Kraftwerken <span class="gl" data-uk="виникати, з'являтися" data-lemma="entstehen (entstand, ist entstanden)">entstanden</span> neue Clubs. Einer der berühmtesten ist das Berghain in einem ehemaligen <span class="gl" data-uk="теплоелектростанція" data-lemma="das Heizkraftwerk, -e">Heizkraftwerk</span>. Viele Touristen kommen extra zum Tanzen nach Berlin.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Heizkraftwerk-Ruedersdorfer-Str-Berlin-Friedrichshain-Berghain-Panorama-Bar-Lab-Oratory-06-2018a.jpg/960px-Heizkraftwerk-Ruedersdorfer-Str-Berlin-Friedrichshain-Berghain-Panorama-Bar-Lab-Oratory-06-2018a.jpg" alt="Das Berghain in Berlin-Friedrichshain, ein ehemaliges Heizkraftwerk." width="960" height="830" loading="lazy">
+            <figcaption>Das Berghain in Berlin-Friedrichshain, ein ehemaliges Heizkraftwerk. Foto: Gunnar Klack, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Heizkraftwerk-Ruedersdorfer-Str-Berlin-Friedrichshain-Berghain-Panorama-Bar-Lab-Oratory-06-2018a.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Das <b>Baugesetzbuch</b> ist ein Gesetz für ganz Deutschland. Es regelt zum Beispiel, was man wo bauen darf: Wohnhäuser, Geschäfte, Fabriken – oder eben Clubs. Die Stadt plant ihre Gebiete nach diesen Regeln.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Обери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub1-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Kulturort oder Vergnügungsstätte?</h2>
+      <p class="lead">Як це тепер за законом? Розклади картки за текстом.</p>
+      <div class="card" id="ub2-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub3-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>Gesetz</span><span>Standort</span><span>Wohngebiet</span><span>gekämpft</span><span>Betreiber</span></div>
+        <div id="ub3b-list">
+          <div class="fill-item"><span class="num">1)</span> Ein neues <input type="text" class="blank-input inline" data-ans="Gesetz"> macht Clubs zu Kulturorten.</div>
+          <div class="fill-item"><span class="num">2)</span> Die <input type="text" class="blank-input inline" data-ans="Betreiber"> der Clubs freuen sich über die Änderung.</div>
+          <div class="fill-item"><span class="num">3)</span> Sie haben viele Jahre dafür <input type="text" class="blank-input inline" data-ans="gekämpft">.</div>
+          <div class="fill-item"><span class="num">4)</span> Ein guter <input type="text" class="blank-input inline" data-ans="Standort"> für einen Club ist schwer zu finden.</div>
+          <div class="fill-item"><span class="num">5)</span> In einem <input type="text" class="blank-input inline wide" data-ans="Wohngebiet"> wohnen viele Menschen.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub3b-check">Prüfen</button>
+          <button class="btn secondary" id="ub3b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub3b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Und du?</h2>
+      <p class="lead">Напиши відповіді німецькою (4–6 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub4-a">1. Sind Clubs für dich Kultur? Warum (nicht)?</label>
+          <textarea id="ub4-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub4-b">2. Ein Club öffnet in deiner Straße. Findest du das gut? Was sagen die Nachbarn?</label>
+          <textarea id="ub4-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Für mich ist … Kultur, weil … · Einerseits …, andererseits … · Die Nachbarn haben Angst vor … · Ich fände es gut / nicht gut, dass …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>2026 hat die Bundesregierung beschlossen: Musikclubs sollen offiziell Kulturorte sein und keine Vergnügungsstätten mehr wie Spielhallen oder Wettbüros. Dann dürfen sie leichter in der Innenstadt und in Wohngebieten öffnen. Berlin ist weltweit für seine Techno-Clubs bekannt.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          2026 року уряд Німеччини вирішив, що музичні клуби мають офіційно вважатися місцями культури, а не розважальними закладами, як зали ігрових автоматів чи букмекерські контори. Тоді їм буде легше відкриватися в місті й у житлових районах. Берлін відомий на весь світ своїми техно-клубами.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "musikclubs-kulturorte";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Was ist neu?",
+     opts: ["Musikclubs sollen nach dem Gesetz als Kulturorte gelten.",
+            "Musikclubs sollen um Mitternacht schließen.",
+            "In Wohngebieten sollen Musikclubs verboten werden."],
+     correct: "Musikclubs sollen nach dem Gesetz als Kulturorte gelten."}
+  ]);
+  buildRF('ub1-rf', [
+    {s: "Früher waren Clubs nach dem Gesetz Vergnügungsstätten.", a: "r"},
+    {s: "Die Änderung kam sehr schnell und ohne Diskussion.", a: "f"},
+    {s: "Nach dem Mauerfall entstanden in alten Gebäuden in Ost-Berlin neue Clubs.", a: "r"},
+    {s: "Mit der neuen Regel dürfen Clubs auch in Wohngebieten öffnen.", a: "r"},
+    {s: "Die Clubbetreiber waren gegen die Änderung.", a: "f"},
+    {s: "In Deutschland gibt es genau 500 Musikclubs.", a: "n"}
+  ]);
+
+  buildSort('ub2-sort', {
+    buckets: ["Kulturort", "Vergnügungsstätte"],
+    items: [
+      {t: "der Musikclub", b: "Kulturort"},
+      {t: "das Theater", b: "Kulturort"},
+      {t: "das Kino", b: "Kulturort"},
+      {t: "die Spielhalle", b: "Vergnügungsstätte"},
+      {t: "das Wettbüro", b: "Vergnügungsstätte"}
+    ]
+  });
+
+  buildMatch('ub3', [
+    ["die Vergnügungsstätte", "розважальний заклад"],
+    ["die Spielhalle", "зала ігрових автоматів"],
+    ["der Kulturort", "місце культури"],
+    ["die Änderung", "зміна"],
+    ["kämpfen für", "боротися"]
+  ]);
+  wireBlanks('ub3b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🎧','🎶','🏙️','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

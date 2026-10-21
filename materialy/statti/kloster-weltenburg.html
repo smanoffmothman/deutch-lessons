@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ein paar Tage bei den Mönchen · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Reisen & Städte</span>
+        <h1>Ein paar Tage bei den Mönchen</h1>
+        <p class="sub">Туман над Дунаєм, дзвони й товсті стіни: у баварському монастирі Вельтенбург дев'ятеро ченців приймають гостей, які шукають тиші.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Mönche oder Gäste?</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und du?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Urlaub im Kloster?</h2>
+      <div class="card">
+        <p>Wie stellst du dir das Leben in einem Kloster vor? Warum möchten manche Menschen ihren Urlaub dort verbringen – ohne selbst Mönch oder Nonne zu sein?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай (або обговоріть у парі): яким ти уявляєш життя в монастирі? Чому люди можуть хотіти провести відпустку саме там? Чи знаєш ти монастирі в Україні, куди приїжджають туристи?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Morgennebel über der Donau, Glockenläuten, dicke Mauern: Immer mehr Menschen verbringen ihre Ferien in einem <span class="gl" data-key data-uk="монастир" data-lemma="das Kloster, -ö-">Kloster</span>. Eines der bekanntesten Ziele in Bayern ist die Benediktinerabtei Weltenburg bei Kelheim.</p>
+
+          <h3>Ein Ort zwischen Felsen</h3>
+
+          <p>Weltenburg liegt an einer Stelle, an der die Donau eine große <span class="gl" data-uk="петля, вигин" data-lemma="die Schleife, -n">Schleife</span> macht – fast wie ein Fragezeichen – und sich danach durch ein mächtiges <span class="gl" data-uk="вапняковий масив" data-lemma="das Kalksteinmassiv, -e">Kalksteinmassiv</span> <span class="gl" data-uk="протискатися" data-lemma="sich zwängen">zwängt</span>. Diese enge <span class="gl" data-uk="ущелина" data-lemma="die Schlucht, -en">Schlucht</span> heißt Weltenburger Enge oder Donaudurchbruch. Schon 1840 <span class="gl" data-uk="брати під охорону" data-lemma="unter Schutz stellen">stellte</span> König Ludwig I. die Landschaft <span class="gl" data-uk="брати під охорону" data-note="друга частина звороту unter Schutz stellen" data-lemma="unter Schutz stellen">unter Schutz</span>, um sie vor den Veränderungen des beginnenden Industriezeitalters zu <span class="gl" data-uk="вберігати, захищати" data-lemma="bewahren (vor + Dat.)">bewahren</span>. Davon profitieren bis heute Turmfalken und Uhus, die in den Felswänden <span class="gl" data-uk="гніздитися" data-lemma="nisten">nisten</span>.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Kloster_Weltenburg_Luftbild.jpg/960px-Kloster_Weltenburg_Luftbild.jpg" alt="Das Kloster Weltenburg an der Donau aus der Luft." width="960" height="686" loading="lazy">
+            <figcaption>Das Kloster Weltenburg an der Donau aus der Luft. Foto: SimonWaldherr, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Kloster_Weltenburg_Luftbild.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Auch die Besucherinnen und Besucher profitieren: Im Sommer fahren sie mit <span class="gl" data-uk="прогулянковий пароплав" data-lemma="das Ausflugsschiff, -e">Ausflugsschiffen</span> oder Kanus durch die Enge und <span class="gl" data-uk="дивуватися, захоплено розглядати" data-lemma="bestaunen">bestaunen</span> die hohen, <span class="gl" data-uk="незабудований" data-lemma="unbebaut">unbebauten</span> Felswände über <span class="gl" data-uk="буйний, пишний" data-lemma="üppig">üppigen</span> Wäldern. Im Kloster selbst lohnt sich ein Blick in die Kirche St. Georg, die fast alle nur „Asamkirche“ nennen, und im Biergarten sitzt man unter Kastanien.</p>
+
+          <h3>Die älteste Klosterbrauerei der Welt</h3>
+
+          <p>Weltenburg ist Sitz der ältesten <span class="gl" data-key data-uk="монастирська броварня" data-lemma="die Klosterbrauerei, -en">Klosterbrauerei</span> der Welt: Schon um das Jahr 1050 wurde hier Bier <span class="gl" data-uk="варити (пиво)" data-lemma="brauen">gebraut</span>. Rund eine halbe Million Menschen besuchen die <span class="gl" data-key data-uk="абатство" data-lemma="die Abtei, -en">Abtei</span> jedes Jahr – und das Kloster verdient damit auch sein Geld. Nach den Regeln der Benediktiner soll ein Kloster nämlich von der Arbeit der eigenen Hände leben – heute heißt das auch: Es will den Kirchensteuerzahlern nicht <span class="gl" data-uk="бути тягарем для когось" data-lemma="jemandem zur Last fallen (fiel, ist gefallen)">zur Last fallen</span>. Wahrscheinlich brauten Benediktiner schon im sechsten Jahrhundert Bier, nicht nur für ihre <span class="gl" data-uk="брат по ордену" data-lemma="der Mitbruder, -ü-">Mitbrüder</span>, sondern auch zum Verkauf. Inzwischen gehört die Brauerei zu einem großen Familienunternehmen, gebraut wird aber weiter am alten <span class="gl" data-uk="місце виробництва" data-lemma="der Standort, -e">Standort</span>.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Die Benediktiner sind einer der ältesten Orden in Europa. Sie folgen der <span class="gl" data-uk="статут, правило" data-lemma="die Regel, -n">Regel</span> des heiligen Benedikt von Nursia aus dem 6. Jahrhundert. Ihr Motto ist „Ora et labora“ – lateinisch für „Bete und arbeite“.</p>
+          </aside>
+
+          <h3>Erst beten, dann arbeiten</h3>
+
+          <p>2026 leben neun <span class="gl" data-key data-uk="чернець" data-lemma="der Mönch, -e">Mönche</span> in Weltenburg, und jeder hat mehrere Aufgaben: Es gibt einen <span class="gl" data-uk="бджоляр" data-lemma="der Imker, -">Imker</span>, einen <span class="gl" data-uk="столяр" data-lemma="der Schreiner, -">Schreiner</span>, einen Hotelmanager und einen Haustechniker; außerdem kümmern sich die Mönche als Seelsorger um vier <span class="gl" data-uk="парафія, громада" data-lemma="die Gemeinde, -n">Gemeinden</span>. Im inneren Bereich des Klosters, den Gäste nicht betreten dürfen, putzen die Brüder selbst. Was zählt, sind <span class="gl" data-uk="послух" data-lemma="der Gehorsam">Gehorsam</span>, <span class="gl" data-uk="смирення" data-lemma="die Demut">Demut</span>, Schweigen – und „Ora et labora“, genau in dieser <span class="gl" data-uk="послідовність, порядок" data-lemma="die Reihenfolge, -n">Reihenfolge</span>: Vor der Arbeit kommt das <span class="gl" data-uk="молитва" data-lemma="das Gebet, -e">Gebet</span>.</p>
+
+          <p>Eines der <span class="gl" data-key data-uk="обітниця" data-lemma="das Gelübde, -">Gelübde</span>, die Benediktiner <span class="gl" data-uk="складати (обітницю)" data-lemma="ein Gelübde ablegen">ablegen</span>, heißt „Stabilitas loci“, die Ortsbeständigkeit: Wer in ein Kloster eintritt, verlässt es nie wieder. Frater Matthias, der im Kloster die Tagungen organisiert, stammt aus dem nahen Kelheim. Mit der Gegend ist er tief verbunden – dieses Versprechen fällt ihm also nicht schwer.</p>
+
+          <h3>Stille statt Programm</h3>
+
+          <p>Die Gäste müssen solche Versprechen natürlich nicht geben. Im <span class="gl" data-key data-uk="гостьовий будинок" data-lemma="das Gästehaus, -ä-er">Gästehaus</span> St. Georg gibt es 57 Zimmer für rund 100 Personen und acht <span class="gl" data-uk="конференц-зала" data-lemma="der Tagungsraum, -ä-e">Tagungsräume</span>. Die Zimmer sind <span class="gl" data-uk="простий, скромний" data-lemma="schlicht">schlicht</span>, aber nicht <span class="gl" data-uk="убогий, аскетичний" data-lemma="karg">karg</span>; das Bad sieht aus, als wäre es gerade erst renoviert worden – dabei ist das schon Jahre her. Niemand muss fünfmal am Tag zum Gebet gehen. Trotzdem hat der Tag eine feste Struktur: Gefrühstückt wird an einem ruhigen Buffet im Erdgeschoss der <span class="gl" data-uk="резиденція настоятеля" data-lemma="die Prälatur, -en">Prälatur</span>, ein ruhiges Buffet, und zwischendurch läuten immer wieder die Glocken.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Donaudurchbruch_bei_Kloster_Weltenburg_%28Weltenburger_Enge%29.JPG/960px-Donaudurchbruch_bei_Kloster_Weltenburg_%28Weltenburger_Enge%29.JPG" alt="Der Donaudurchbruch bei Kloster Weltenburg." width="960" height="640" loading="lazy">
+            <figcaption>Der Donaudurchbruch bei Kloster Weltenburg. Foto: Guido Radig, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Donaudurchbruch_bei_Kloster_Weltenburg_(Weltenburger_Enge).JPG" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Das Schönste aber ist die Ruhe – vor allem am Abend, wenn die <span class="gl" data-uk="натовпи туристів" data-note="тут з іронією" data-lemma="die Ausflugshorden (Pl.)">Ausflugshorden</span> weg sind und der Biergarten geschlossen hat. Dann hört man durch die dicken Wände kaum noch etwas von der Welt, nur das <span class="gl" data-uk="шум (води)" data-lemma="das Rauschen">Rauschen</span> der Donau. Und vielleicht fragt man sich kurz, ob man selbst so leben könnte. Nicht für immer – aber <span class="gl" data-uk="якийсь час" data-lemma="für eine Weile">für eine Weile</span> schon.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) У якому абзаці про це йдеться? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub3-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>Gelübde</span><span>schlicht</span><span>Reihenfolge</span><span>bewahren</span><span>Schlucht</span><span>Rauschen</span></div>
+        <div id="ub3b-list">
+          <div class="fill-item"><span class="num">1)</span> Ludwig I. wollte die Landschaft vor der Industrie <input type="text" class="blank-input inline" data-ans="bewahren">.</div>
+          <div class="fill-item"><span class="num">2)</span> Die Donau fließt durch eine enge <input type="text" class="blank-input inline" data-ans="Schlucht">.</div>
+          <div class="fill-item"><span class="num">3)</span> „Stabilitas loci“ ist ein <input type="text" class="blank-input inline" data-ans="Gelübde">: Der Mönch bleibt für immer im Kloster.</div>
+          <div class="fill-item"><span class="num">4)</span> Erst beten, dann arbeiten – die <input type="text" class="blank-input inline wide" data-ans="Reihenfolge"> ist wichtig.</div>
+          <div class="fill-item"><span class="num">5)</span> Die Zimmer haben keinen Luxus, sie sind <input type="text" class="blank-input inline" data-ans="schlicht">.</div>
+          <div class="fill-item"><span class="num">6)</span> Am Abend hört man nur das <input type="text" class="blank-input inline" data-ans="Rauschen"> des Flusses.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub3b-check">Prüfen</button>
+          <button class="btn secondary" id="ub3b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub3b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Mönche oder Gäste?</h2>
+      <p class="lead">Що стосується ченців, а що — гостей монастиря? Розклади картки за текстом.</p>
+      <div class="card" id="ub4-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und du?</h2>
+      <p class="lead">Напиши відповіді німецькою (5–7 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Würdest du ein paar Tage im Gästehaus eines Klosters verbringen? Was würde dir gefallen, was würde dir fehlen?</label>
+          <textarea id="ub5-a" rows="6"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Gibt es in der Ukraine ein Kloster oder einen anderen ruhigen Ort, den viele Menschen besuchen? Beschreibe ihn und vergleiche mit Weltenburg.</label>
+          <textarea id="ub5-b" rows="6"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Mir würde gefallen, dass … · Fehlen würde mir … · Für ein paar Tage ja, aber … · In der Ukraine gibt es …, das ähnlich / ganz anders ist, weil …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Das Kloster Weltenburg liegt am Donaudurchbruch in Bayern und hat die älteste Klosterbrauerei der Welt. Die Benediktiner leben nach dem Motto „Ora et labora“ – erst beten, dann arbeiten – und bleiben ihr Leben lang in ihrem Kloster. Gäste können im Gästehaus wohnen und die Ruhe genießen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Монастир Вельтенбург стоїть біля Дунайського прориву в Баварії, і в ньому найстаріша монастирська броварня у світі. Бенедиктинці живуть за гаслом «Ora et labora» — спершу молитва, потім праця — і залишаються у своєму монастирі на все життя. Гості можуть жити в гостьовому будинку й насолоджуватися тишею.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "kloster-weltenburg";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Um ein Kloster an der Donau, in dem man Ruhe finden kann",
+            "Um die Geschichte des Bierbrauens in ganz Deutschland",
+            "Um eine Bootstour von Kelheim nach Regensburg"],
+     correct: "Um ein Kloster an der Donau, in dem man Ruhe finden kann"}
+  ]);
+  buildMatch('ub1h', [
+    ["Ein König schützt die Landschaft", "Absatz 1"],
+    ["Warum das Kloster Geld verdienen muss", "Absatz 3"],
+    ["Ein Versprechen fürs ganze Leben", "Absatz 5"],
+    ["Wie die Zimmer für Gäste aussehen", "Absatz 6"],
+    ["Viele Berufe hinter Klostermauern", "Absatz 4"],
+    ["Abends wird es still", "Absatz 7"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5", "Absatz 6", "Absatz 7"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "Die Landschaft um Weltenburg steht schon seit dem 19. Jahrhundert unter Schutz.", a: "r"},
+    {s: "In Weltenburg braut man seit etwa tausend Jahren Bier.", a: "r"},
+    {s: "Das Kloster bekommt sein ganzes Geld aus der Kirchensteuer.", a: "f"},
+    {s: "2026 leben in Weltenburg über fünfzig Mönche.", a: "f"},
+    {s: "Die Mönche kochen jeden Tag selbst für die Gäste.", a: "n"},
+    {s: "Benediktiner bleiben ihr Leben lang in ihrem Kloster.", a: "r"},
+    {s: "Gäste müssen fünfmal am Tag zum Gebet gehen.", a: "f"},
+    {s: "Das Gästehaus hat auch einen Wellnessbereich.", a: "n"}
+  ]);
+
+  buildMatch('ub3', [
+    ["das Gelübde", "обітниця"],
+    ["die Demut", "смирення"],
+    ["schlicht", "простий, скромний"],
+    ["nisten", "гніздитися"],
+    ["jemandem zur Last fallen", "бути тягарем для когось"],
+    ["für eine Weile", "якийсь час"],
+    ["der Imker", "бджоляр"]
+  ]);
+  wireBlanks('ub3b');
+
+  buildSort('ub4-sort', {
+    buckets: ["die Mönche", "die Gäste"],
+    items: [
+      {t: "legen Gelübde ab", b: "die Mönche"},
+      {t: "verlassen das Kloster nie wieder", b: "die Mönche"},
+      {t: "betreuen vier Gemeinden", b: "die Mönche"},
+      {t: "putzen im inneren Bereich selbst", b: "die Mönche"},
+      {t: "wohnen ein paar Tage im Gästehaus", b: "die Gäste"},
+      {t: "müssen nicht zum Gebet gehen", b: "die Gäste"},
+      {t: "frühstücken am Buffet in der Prälatur", b: "die Gäste"},
+      {t: "fahren mit dem Schiff durch die Enge", b: "die Gäste"}
+    ]
+  });
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['⛪','🌫️','🔔','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

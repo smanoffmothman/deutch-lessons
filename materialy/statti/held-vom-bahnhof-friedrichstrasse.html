@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ein Held wider Willen · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Kultur & Medien</span>
+        <h1>Ein Held wider Willen</h1>
+        <p class="sub">1985 поїзд із 127 пасажирами нібито проїхав зі Східного Берліна на Захід — і через 30 років власник маленького відеопрокату стає національним героєм. Останній фільм Вольфганга Бекера, автора «Good Bye, Lenin!».</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Die Handlung</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Deine Meinung</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Wahrheit oder gute Geschichte?</h2>
+      <div class="card">
+        <p>Was verraten die Lieblingsfilme eines Menschen über ihn? Kann eine erfundene Geschichte „sich richtig anfühlen“, obwohl sie nicht stimmt? Was weißt du über die Berliner Mauer und die Zeit vor 1989?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай (або обговоріть у парі): що можуть розповісти про людину її улюблені фільми? Чи буває так, що вигадана історія здається правдивішою за справжню? Що ти знаєш про Берлінський мур і про те, як люди намагалися перетнути кордон між Сходом і Заходом?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Ein Videothekar aus Prenzlauer Berg, eine <span class="gl" data-uk="нібито, позірний" data-lemma="angeblich">angebliche</span> <span class="gl" data-key data-uk="масова втеча" data-lemma="die Massenflucht">Massenflucht</span> aus dem Jahr 1985 und ein Reporter, der unbedingt eine große Geschichte braucht: „Der Held vom Bahnhof Friedrichstraße“ ist der letzte Film von Wolfgang Becker – eine Komödie über Erinnerung, Medien und die Frage, was eigentlich wahr ist.</p>
+
+          <h3>Was Lieblingsfilme verraten</h3>
+
+          <p>Man erkennt Micha Hartung schon an seinem Filmgeschmack. Nach seinen Lieblingsfilmen gefragt, nennt die von Charly Hübner gespielte Hauptfigur die „Olsenbande“, Louis de Funès und Sophie Marceau. Die dänischen <span class="gl" data-uk="комедія про шахраїв" data-lemma="die Gaunerkomödie, -n">Gaunerkomödien</span> um die stets <span class="gl" data-uk="кумедно, химерно" data-lemma="skurril">skurril</span> <span class="gl" data-uk="зазнавати невдачі" data-lemma="scheitern">scheiternde</span> Olsenbande waren in der DDR, in Polen und in Ungarn <span class="gl" data-uk="надзвичайно" data-lemma="ungeheuer">ungeheuer</span> populär, im Westen dagegen kaum bekannt. Die Komödien mit Louis de Funès und Sophie Marceau hingegen kannte eine ganze Generation in Ost und West. Diese Mischung verrät, wer Micha ist: ein „<span class="gl" data-key data-uk="«осі», східний німець" data-note="розм., про людей із колишньої НДР" data-lemma="der Ossi, -s">Ossi</span>“, der beim <span class="gl" data-key data-uk="падіння (Берлінського) муру" data-lemma="der Mauerfall">Mauerfall</span> schon erwachsen war.</p>
+
+          <p>Der Film spielt 2019, kurz vor dem 30. Jahrestag des Mauerfalls. Michas <span class="gl" data-uk="відеопрокат" data-lemma="die Videothek, -en">Videothek</span> ist längst ein <span class="gl" data-uk="застарілий" data-lemma="veraltet">veraltetes</span> <span class="gl" data-uk="бізнес-модель" data-lemma="das Geschäftsmodell, -e">Geschäftsmodell</span> und damit der passende <span class="gl" data-uk="засоби до існування, заробіток" data-lemma="der Lebensunterhalt">Lebensunterhalt</span> für einen Mann, dem wenig <span class="gl" data-uk="вдаватися" data-lemma="gelingen (gelang, ist gelungen)">gelingt</span>. In der ersten Szene wacht er im Hinterzimmer seines Ladens auf; der Computer hat noch einen alten Röhrenmonitor, die ganze Einrichtung samt Filmplakaten wirkt wie ein Museum <span class="gl" data-uk="відслужений, списаний" data-lemma="ausgedient">ausgedienter</span> Technik. Als seine Tochter Natalie (Leonie Benesch) mit ihren Kindern vorbeikommt, fragt sie ihn beim Abschied leise und <span class="gl" data-uk="стурбований" data-lemma="besorgt">besorgt</span>, ob er wieder Geld braucht. Die kleine Szene zeigt viel: Micha mag im Leben <span class="gl" data-uk="зазнати невдачі" data-lemma="scheitern">gescheitert</span> sein, aber er ist ein <span class="gl" data-uk="добрий хлопець, порядна людина" data-note="розм." data-lemma="ein guter Kerl">guter Kerl</span>, zu dem seine Tochter <span class="gl" data-uk="бути на чиємусь боці, підтримувати" data-lemma="zu jemandem halten (hielt, hat gehalten)">hält</span>.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/20240815_Bahnhof_Berlin_Friedrichstra%C3%9Fe_02.jpg/960px-20240815_Bahnhof_Berlin_Friedrichstra%C3%9Fe_02.jpg" alt="Der Bahnhof Friedrichstraße an der Spree in Berlin." width="960" height="641" loading="lazy">
+            <figcaption>Der Bahnhof Friedrichstraße an der Spree in Berlin. Foto: Flocci Nivis, <a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener">CC BY 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:20240815_Bahnhof_Berlin_Friedrichstra%C3%9Fe_02.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <h3>Eine Geschichte, die zu gut ist</h3>
+
+          <p>Dann steht Alexander Landmann (Leon Ullrich) vor der Tür, Reporter der fiktiven Zeitung „Fakt“. Er will zum Jubiläum eine große Geschichte und ist dabei auf ein bislang <span class="gl" data-uk="маловідомий, недооцінений" data-lemma="unterbelichtet">unterbelichtetes</span> <span class="gl" data-uk="подія" data-lemma="das Ereignis, -se">Ereignis</span> gestoßen: Im Sommer 1985 soll eine S-Bahn aus dem Osten Berlins mit 127 Fahrgästen im <span class="gl" data-uk="плутанина колій" data-lemma="das Gleisgewirr">Gleisgewirr</span> des Bahnhofs Friedrichstraße <span class="gl" data-uk="несподівано, ненароком" data-lemma="unversehens">unversehens</span> in den Westen gefahren sein – weil Micha, damals <span class="gl" data-uk="заступник (прикм.: заступницький)" data-lemma="stellvertretend">stellvertretender</span> <span class="gl" data-uk="начальник диспетчерського (стрілочного) поста" data-lemma="der Stellwerksleiter, -">Stellwerksleiter</span>, die <span class="gl" data-key data-uk="залізнична стрілка" data-lemma="die Weiche, -n">Weiche</span> so gestellt habe. In Wahrheit war es eher ein glücklicher <span class="gl" data-uk="випадок, збіг обставин" data-lemma="der Zufall, -ä-e">Zufall</span> als eine <span class="gl" data-uk="героїчний вчинок" data-lemma="die Heldentat, -en">Heldentat</span>.</p>
+
+          <p>Landmann will ihn trotzdem groß herausbringen; sein Chefredakteur spricht schon von einem „ostdeutschen Oskar Schindler“. Und Micha, nicht mehr jung und <span class="gl" data-uk="на мілині, без грошей" data-note="розм." data-lemma="knapp bei Kasse sein">knapp bei Kasse</span>, macht mit. Der Reporter <span class="gl" data-key data-uk="вигадувати" data-lemma="erfinden (erfand, hat erfunden)">erfindet</span> kräftig dazu, und bald folgen <span class="gl" data-uk="виступ на телебаченні" data-lemma="der Fernsehauftritt, -e">Fernsehauftritte</span>, eine Einladung zum Bundespräsidenten, Pläne für einen Kinofilm mit Daniel Brühl in der Hauptrolle und schließlich die Ehre einer Rede vor dem Bundestag. Spätestens da wird Micha selbst <span class="gl" data-uk="моторошно, неспокійно" data-lemma="unheimlich">unheimlich</span> zumute. Denn eigentlich war alles etwas anders. Doch ist das schon eine <span class="gl" data-key data-uk="самообман, брехня, на якій будують життя" data-lemma="die Lebenslüge, -n">Lebenslüge</span>? Es fühlte sich eben richtig an …</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Der Bahnhof Friedrichstraße lag zwar in Ost-Berlin, war aber bis 1989 auch ein <span class="gl" data-uk="прикордонний пункт пропуску" data-lemma="der Grenzübergang, -ä-e">Grenzübergang</span> zwischen Ost und West. Hier verabschiedeten sich viele Familien voneinander – die Abfertigungshalle nennen die Berliner deshalb bis heute „<span class="gl" data-uk="«Палац сліз»" data-lemma="der Tränenpalast">Tränenpalast</span>“. Heute ist sie ein Museum über die deutsche Teilung.</p>
+          </aside>
+
+          <h3>Mehr Gefühl als Intrige</h3>
+
+          <p>An der Oberfläche ist der Film eine wilde <span class="gl" data-uk="колаж" data-lemma="die Collage, -n">Collage</span> bekannter Ost-West-Motive, eine <span class="gl" data-uk="комедія про обман" data-lemma="die Betrugskomödie, -n">Betrugskomödie</span> zwischen Stasi-Geschichten und <span class="gl" data-uk="натяк, алюзія" data-lemma="die Anspielung, -en">Anspielungen</span> auf berühmte Medienskandale. Im Inneren aber geht es, wie schon in „Good Bye, Lenin!“, um Gefühle – und zwar um die schwierigen: um das Verhältnis zur eigenen Vergangenheit, zu dem, was man getan oder <span class="gl" data-uk="не зробити, занедбати" data-lemma="unterlassen (unterließ, hat unterlassen)">unterlassen</span> hat, und zu Menschen, von denen man sich verraten und zugleich geliebt fühlte.</p>
+
+          <p>Genau darin lag die Stärke von Wolfgang Becker: in kleinen Details, Gesten und im <span class="gl" data-uk="тон, інтонація" data-lemma="der Tonfall">Tonfall</span>, nicht in einem <span class="gl" data-uk="витончений, хитромудрий" data-lemma="raffiniert">raffinierten</span> Plot. Becker, der 2024 mit 70 Jahren starb, hat nur sechs Filme gedreht, und wirklich bekannt sind eigentlich nur zwei. Doch ihr <span class="gl" data-uk="вплив" data-lemma="der Einfluss, -ü-e">Einfluss</span> ist weit größer als der vieler Regisseure mit langen Filmografien. „Good Bye, Lenin!“ (2003) ist der international erfolgreichste deutsche Film nach der <span class="gl" data-key data-uk="поворот 1989 року, падіння режиму НДР" data-lemma="die Wende">Wende</span>: Er gewann einen Goya in Spanien und einen César in Frankreich und war für einen Golden Globe nominiert. „Das Leben ist eine Baustelle“ (1997) hatte zwar nur etwa eine halbe Million Zuschauer, hat aber im Leben vieler damaliger <span class="gl" data-uk="кіноглядач" data-lemma="der Kinogänger, -">Kinogänger</span> tiefe Spuren hinterlassen – mit Jürgen Vogel und Christiane Paul.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Tr%C3%A4nenpalast_%28Berlin%29-msu-1230-.jpg/960px-Tr%C3%A4nenpalast_%28Berlin%29-msu-1230-.jpg" alt="Der „Tränenpalast“ am Bahnhof Friedrichstraße – heute ein Museum." width="960" height="540" loading="lazy">
+            <figcaption>Der „Tränenpalast“ am Bahnhof Friedrichstraße – heute ein Museum. Foto: Matthias Süßen, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Tr%C3%A4nenpalast_(Berlin)-msu-1230-.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Diese Wirkung reicht bis in seinen letzten Film hinein: Christiane Paul spielt eine Hauptrolle, Jürgen Vogel taucht gegen Ende kurz auf. Die <span class="gl" data-uk="першоджерело, основа" data-lemma="die Vorlage, -n">Vorlage</span> ist der <span class="gl" data-uk="однойменний" data-lemma="gleichnamig">gleichnamige</span> Roman von Maxim Leo aus dem Jahr 2022, der ein Bestseller wurde. Becker beendete die Dreharbeiten kurz vor seinem Tod; ein Team aus Mitarbeitern und <span class="gl" data-uk="соратник, супутник" data-lemma="der Weggefährte, -n">Weggefährten</span> <span class="gl" data-uk="завершувати" data-lemma="vollenden">vollendete</span> den Film. Mit all den kleinen und größeren Auftritten von Schauspielern aus seinen früheren Werken ist er so zu einer melancholisch-herzlichen <span class="gl" data-uk="данина пам'яті, омаж" data-lemma="die Hommage, -n">Hommage</span> an Becker selbst geworden.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Обери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) У якому абзаці про це йдеться? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Die Handlung</h2>
+      <p class="lead">Розстав події фільму в правильному порядку. Натискай речення по черзі; натиснеш на вже поставлене — воно повернеться вниз.</p>
+      <div class="card" id="ub3-seq"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово чи вислів? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>Lebenslüge</span><span>unversehens</span><span>Weiche</span><span>erfindet</span><span>veraltet</span><span>unheimlich</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> Videotheken sind heute ziemlich <input type="text" class="blank-input inline" data-ans="veraltet">.</div>
+          <div class="fill-item"><span class="num">2)</span> Wer die <input type="text" class="blank-input inline" data-ans="Weiche"> falsch stellt, schickt den Zug auf ein anderes Gleis.</div>
+          <div class="fill-item"><span class="num">3)</span> Der Reporter <input type="text" class="blank-input inline" data-ans="erfindet"> viele Details dazu.</div>
+          <div class="fill-item"><span class="num">4)</span> Plötzlich und ohne Plan wird Micha <input type="text" class="blank-input inline wide" data-ans="unversehens"> zum Helden.</div>
+          <div class="fill-item"><span class="num">5)</span> Vor der Rede im Bundestag wird ihm <input type="text" class="blank-input inline wide" data-ans="unheimlich"> zumute.</div>
+          <div class="fill-item"><span class="num">6)</span> Eine Lüge, mit der man jahrelang lebt, nennt man <input type="text" class="blank-input inline wide" data-ans="Lebenslüge">.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Deine Meinung</h2>
+      <p class="lead">Напиши німецькою. Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Micha spielt mit, obwohl die Geschichte nicht ganz stimmt. Ist er ein Lügner, ein Opfer der Medien – oder beides? Schreibe einen kurzen Kommentar (150–180 Wörter).</label>
+          <textarea id="ub5-a" rows="9"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Welche Filme oder Serien kennt in der Ukraine fast jede Generation? Was verraten sie über die Menschen, die sie lieben?</label>
+          <textarea id="ub5-b" rows="6"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Man könnte argumentieren, dass … · Allerdings darf man nicht vergessen, dass … · Die Medien tragen eine Mitverantwortung, weil … · Für mich steht fest, dass …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Der Bahnhof Friedrichstraße war bis 1989 ein Grenzübergang zwischen Ost- und West-Berlin; der „Tränenpalast“ erinnert heute an die Teilung. Wolfgang Becker hat mit „Good Bye, Lenin!“ den international erfolgreichsten deutschen Film nach der Wende gedreht. Sein letzter Film zeigt, wie Medien aus einem Zufall eine Heldengeschichte machen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Вокзал Фрідріхштрасе до 1989 року був пунктом пропуску між Східним і Західним Берліном; «Палац сліз» сьогодні нагадує про поділ. Вольфганг Бекер зняв «Good Bye, Lenin!» — найуспішніший у світі німецький фільм після падіння муру. Його останній фільм показує, як медіа роблять із випадковості героїчну історію.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "held-vom-bahnhof-friedrichstrasse";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Was ist der Text?",
+     opts: ["Eine Filmbesprechung mit Blick auf das Werk des Regisseurs",
+            "Ein historischer Bericht über eine echte Flucht im Jahr 1985",
+            "Ein Interview mit dem Schauspieler Charly Hübner"],
+     correct: "Eine Filmbesprechung mit Blick auf das Werk des Regisseurs"},
+    {q: "Was für ein Mensch ist Micha?",
+     opts: ["Ein eher erfolgloser, aber sympathischer Mann",
+            "Ein selbstbewusster, arroganter Held",
+            "Ein ehrgeiziger Karrieremensch"],
+     correct: "Ein eher erfolgloser, aber sympathischer Mann"},
+    {q: "Was geschah 1985 nach der Geschichte des Films „in Wahrheit“?",
+     opts: ["Es war eher ein glücklicher Zufall als eine bewusste Heldentat.",
+            "Micha hat die Flucht monatelang heimlich geplant.",
+            "Es gab nie einen Zug, alles ist komplett erfunden."],
+     correct: "Es war eher ein glücklicher Zufall als eine bewusste Heldentat."}
+  ]);
+  buildMatch('ub1h', [
+    ["Eine Szene mit der Tochter", "Absatz 2"],
+    ["Vom Videothekar zum nationalen Helden", "Absatz 4"],
+    ["Sechs Filme, große Wirkung", "Absatz 6"],
+    ["Ein Reporter und eine Weiche", "Absatz 3"],
+    ["Ein Abschied von Becker", "Absatz 7"],
+    ["Was Filme über Herkunft sagen", "Absatz 1"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5", "Absatz 6", "Absatz 7"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "Die „Olsenbande“ war im Westen genauso beliebt wie in der DDR.", a: "f"},
+    {s: "Der Film spielt kurz vor dem 30. Jahrestag des Mauerfalls.", a: "r"},
+    {s: "Die Zeitung „Fakt“ gibt es wirklich.", a: "f"},
+    {s: "Micha braucht Geld und macht deshalb bei der Geschichte mit.", a: "r"},
+    {s: "Micha hält am Ende seine Rede im Bundestag.", a: "n"},
+    {s: "Wolfgang Becker hat nur sechs Filme gedreht.", a: "r"},
+    {s: "„Das Leben ist eine Baustelle“ hatte mehrere Millionen Zuschauer.", a: "f"},
+    {s: "Der Film basiert auf einem Roman von Maxim Leo.", a: "r"}
+  ]);
+
+  buildSequence('ub3-seq', [
+    "Im Sommer 1985 fährt eine S-Bahn mit 127 Fahrgästen in den Westen.",
+    "2019 steht der Reporter Landmann vor Michas Videothek.",
+    "Landmann schreibt eine große Geschichte und erfindet viel dazu.",
+    "Micha tritt im Fernsehen auf und wird zum Bundespräsidenten eingeladen.",
+    "Vor der Rede im Bundestag wird Micha selbst unheimlich zumute."
+  ]);
+
+  buildMatch('ub4', [
+    ["unversehens", "несподівано, ненароком"],
+    ["die Weiche", "залізнична стрілка"],
+    ["der Lebensunterhalt", "засоби до існування, заробіток"],
+    ["zu jemandem halten", "бути на чиємусь боці, підтримувати"],
+    ["unterlassen", "не зробити, занедбати"],
+    ["der Tonfall", "тон, інтонація"],
+    ["die Hommage", "данина пам'яті, омаж"]
+  ]);
+  wireBlanks('ub4b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🎬','🚆','📰','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

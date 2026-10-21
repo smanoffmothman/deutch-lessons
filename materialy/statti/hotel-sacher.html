@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>150 Jahre Hotel Sacher · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Geschichte</span>
+        <h1>150 Jahre Hotel Sacher</h1>
+        <p class="sub">Шістнадцятирічний учень кухаря, шоколадний торт і жінка, яка керувала найвідомішим готелем Відня, — історія, що почалася з десерту.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Reihenfolge</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Ein Hotel mit Geschichte</h2>
+      <div class="card">
+        <p>Kennst du ein berühmtes Hotel oder Café? Warum ist es berühmt? Was weißt du über Wien?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай (або обговоріть у парі): чи знаєш ти готель, кав'ярню чи цукерню, відому на всю країну? Чому вона стала відомою? А що ти знаєш про Відень — столицю Австрії?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Ein Hotel, eine Torte und eine Familie: Das Hotel Sacher in Wien kennt man auf der ganzen Welt. 2026 feiert es seinen 150. Geburtstag.</p>
+
+          <p>Die Geschichte beginnt mit einem Dessert. Im Jahr 1832 soll die Küche des Fürsten Metternich für wichtige <span class="gl" data-key data-uk="гість" data-lemma="der Gast, -ä-e">Gäste</span> eine besondere Süßspeise machen. Aber der <span class="gl" data-uk="шеф-кухар" data-lemma="der Chefkoch, -ö-e">Chefkoch</span> ist krank. Deshalb macht der <span class="gl" data-key data-uk="учень (на виробництві)" data-lemma="der Lehrling, -e">Lehrling</span> Franz Sacher die Aufgabe – er ist erst 16 Jahre alt. Er backt eine Torte aus Schokolade und <span class="gl" data-uk="абрикосове варення" data-note="österr. Marille = Aprikose" data-lemma="die Marillenmarmelade">Marillenmarmelade</span>. Seitdem ist die <span class="gl" data-key data-uk="торт «Захер»" data-lemma="die Sachertorte, -n">Sachertorte</span> ein Symbol für Wien.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Sachertorte_in_Vienna.jpg/960px-Sachertorte_in_Vienna.jpg" alt="Sachertorte in Wien." width="960" height="742" loading="lazy">
+            <figcaption>Sachertorte in Wien. Foto: Rizka, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Sachertorte_in_Vienna.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Franz Sachers Sohn Eduard arbeitet auch in der <span class="gl" data-uk="ресторанна справа" data-lemma="die Gastronomie">Gastronomie</span>. 1865 eröffnet er ein <span class="gl" data-uk="магазин делікатесів" data-lemma="das Delikatessengeschäft, -e">Delikatessengeschäft</span> neben dem Haus, in dem später die Wiener Staatsoper ist. Das Geschäft hat <span class="gl" data-uk="успіх" data-lemma="der Erfolg, -e">Erfolg</span>, und Eduard will mehr: 1876 <span class="gl" data-key data-uk="відкривати" data-lemma="eröffnen">eröffnet</span> er im Zentrum von Wien ein Luxushotel – das Hotel Sacher. Die Torte wird das <span class="gl" data-uk="символ, емблема" data-lemma="das Wahrzeichen, -">Wahrzeichen</span> des Hauses.</p>
+
+          <p>1880 heiratet Eduard Anna Fuchs. Bald ist Eduard krank, und Anna <span class="gl" data-uk="брати на себе" data-lemma="übernehmen (übernahm, hat übernommen)">übernimmt</span> die Geschäfte. Nach seinem Tod 1892 <span class="gl" data-key data-uk="керувати" data-lemma="leiten">leitet</span> sie das Hotel allein – und sehr erfolgreich. Der <span class="gl" data-uk="знать, аристократія" data-lemma="der Adel">Adel</span>, Künstler, Musiker und Intellektuelle aus aller Welt treffen sich bei Anna Sacher.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>In Österreich spricht man Deutsch, aber manche Wörter sind anders als in Deutschland. Die <b>Marille</b> heißt in Deutschland Aprikose, das <b>Schlagobers</b> heißt Schlagsahne, und der <b>Paradeiser</b> ist eine Tomate.</p>
+          </aside>
+
+          <p>Nach dem Ersten Weltkrieg und dem Ende der <span class="gl" data-uk="монархія" data-lemma="die Monarchie, -n">Monarchie</span> 1918 kommen schwere Zeiten. Als Anna Sacher 1930 stirbt, hat das Hotel viele <span class="gl" data-uk="борги" data-lemma="die Schulden (Pl.)">Schulden</span>. 1934 kaufen die Familien Gürtler und Siller das Haus und <span class="gl" data-uk="модернізувати, осучаснювати" data-lemma="modernisieren">modernisieren</span> es: Jetzt haben alle Zimmer eine <span class="gl" data-uk="опалення" data-lemma="die Heizung, -en">Heizung</span>, Strom und warmes Wasser. Im Zweiten Weltkrieg bleibt das Hotel fast ohne <span class="gl" data-uk="пошкодження" data-lemma="der Schaden, -ä-">Schäden</span>. Später wohnt hier zum Beispiel die <span class="gl" data-uk="акторка" data-lemma="die Schauspielerin, -nen">Schauspielerin</span> Romy Schneider, als sie die „Sissi“-Filme dreht.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Hotel_Sacher_Vienna_by_TheTokl_-_05.jpg/960px-Hotel_Sacher_Vienna_by_TheTokl_-_05.jpg" alt="Das Hotel Sacher in Wien." width="960" height="640" loading="lazy">
+            <figcaption>Das Hotel Sacher in Wien. Foto: Tobias Kleinlercher, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Hotel_Sacher_Vienna_by_TheTokl_-_05.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Heute hat das Hotel 86 Zimmer und 63 Suiten. Viele Suiten haben Namen von Opern, zum Beispiel „Carmen“ oder „Die Zauberflöte“. Es gibt auch ein Hotel Sacher in Salzburg und eins in Seefeld in Tirol, dazu Cafés Sacher in Innsbruck und Graz. Aber die berühmte Torte isst man am liebsten im Original – in Wien.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub3-list"></div>
+
+      <p class="lead">б) Австрійські слова з рамки «Gut zu wissen»: як вони звучать у Німеччині?</p>
+      <div class="card" id="ub3c-list"></div>
+
+      <p class="lead">в) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>Lehrling</span><span>eröffnet</span><span>leitet</span><span>Schulden</span><span>Gäste</span></div>
+        <div id="ub3b-list">
+          <div class="fill-item"><span class="num">1)</span> Franz Sacher ist erst 16 und noch ein <input type="text" class="blank-input inline" data-ans="Lehrling">.</div>
+          <div class="fill-item"><span class="num">2)</span> 1876 <input type="text" class="blank-input inline" data-ans="eröffnet"> Eduard Sacher sein Hotel.</div>
+          <div class="fill-item"><span class="num">3)</span> Nach 1892 <input type="text" class="blank-input inline" data-ans="leitet"> Anna Sacher das Hotel allein.</div>
+          <div class="fill-item"><span class="num">4)</span> 1930 hat das Hotel viele <input type="text" class="blank-input inline" data-ans="Schulden">.</div>
+          <div class="fill-item"><span class="num">5)</span> Im Hotel wohnen berühmte <input type="text" class="blank-input inline" data-ans="Gäste">.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub3b-check">Prüfen</button>
+          <button class="btn secondary" id="ub3b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub3b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Was kam zuerst?</h2>
+      <p class="lead">Розстав події в тому порядку, у якому вони відбувалися. Натискай речення по черзі; натиснеш на вже поставлене — воно повернеться вниз.</p>
+      <div class="card" id="ub4-seq"></div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (4–6 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Gibt es in deiner Stadt oder in der Ukraine ein berühmtes Hotel, Café oder einen bekannten Kuchen? Erzähle davon.</label>
+          <textarea id="ub5-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Du bist in Wien und hast einen Tag Zeit. Möchtest du ins Hotel Sacher gehen und die Torte probieren? Warum (nicht)?</label>
+          <textarea id="ub5-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>In meiner Stadt gibt es … · Es ist berühmt, weil … · Ich möchte (nicht) …, denn … · Am liebsten esse ich …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Die Sachertorte gibt es seit 1832, das Hotel Sacher in Wien seit 1876. Anna Sacher hat das Hotel lange allein und sehr erfolgreich geleitet. In Österreich sagt man Marille statt Aprikose und Schlagobers statt Schlagsahne.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Торт «Захер» існує з 1832 року, готель «Захер» у Відні — з 1876-го. Анна Захер довго сама й дуже успішно керувала готелем. В Австрії кажуть Marille замість Aprikose (абрикос) і Schlagobers замість Schlagsahne (збиті вершки).
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "hotel-sacher";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Um die Geschichte eines berühmten Hotels in Wien",
+            "Um ein Rezept für eine Schokoladentorte",
+            "Um die Arbeit in einem modernen Hotel"],
+     correct: "Um die Geschichte eines berühmten Hotels in Wien"}
+  ]);
+  buildMatch('ub1h', [
+    ["Eine Frau leitet das Hotel", "Absatz 3"],
+    ["Ein Lehrling erfindet eine Torte", "Absatz 1"],
+    ["Das Hotel Sacher heute", "Absatz 5"],
+    ["Vom Delikatessengeschäft zum Luxushotel", "Absatz 2"],
+    ["Schwere Zeiten und neue Besitzer", "Absatz 4"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "Franz Sacher ist 1832 schon Chefkoch.", a: "f"},
+    {s: "In der Sachertorte ist Marillenmarmelade.", a: "r"},
+    {s: "Eduard Sacher eröffnet das Hotel im Zentrum von Wien.", a: "r"},
+    {s: "Anna und Eduard Sacher haben fünf Kinder.", a: "n"},
+    {s: "Nach 1918 geht es dem Hotel sehr gut.", a: "f"},
+    {s: "Im Zweiten Weltkrieg bleibt das Hotel fast ohne Schäden.", a: "r"},
+    {s: "Romy Schneider wohnt im Hotel, als sie Filme dreht.", a: "r"},
+    {s: "Das Hotel hat heute mehr Suiten als Zimmer.", a: "f"}
+  ]);
+
+  buildMatch('ub3', [
+    ["der Lehrling", "учень (на виробництві)"],
+    ["der Gast", "гість"],
+    ["leiten", "керувати"],
+    ["die Schulden", "борги"],
+    ["der Erfolg", "успіх"],
+    ["die Heizung", "опалення"]
+  ]);
+  buildMatch('ub3c', [
+    ["die Marille", "die Aprikose"],
+    ["das Schlagobers", "die Schlagsahne"],
+    ["der Paradeiser", "die Tomate"]
+  ]);
+  wireBlanks('ub3b');
+
+  buildSequence('ub4-seq', [
+    "Franz Sacher backt als Lehrling eine Torte für Metternichs Gäste.",
+    "Eduard Sacher eröffnet ein Delikatessengeschäft.",
+    "Das Hotel Sacher öffnet im Zentrum von Wien.",
+    "Anna Sacher leitet das Hotel allein.",
+    "Die Familien Gürtler und Siller kaufen das Hotel.",
+    "Das Hotel feiert seinen 150. Geburtstag."
+  ]);
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🏨','🍫','🎻','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

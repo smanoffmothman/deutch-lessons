@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Besser schlafen mit der Smartwatch? · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Wissenschaft & Technik</span>
+        <h1>Besser schlafen mit der Smartwatch?</h1>
+        <p class="sub">Годинник на руці щоночі малює графік твого сну. Але чи можна йому вірити? Німецький сомнолог пояснює, що вміють фітнес-браслети — і чого не вміють.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Labor oder Uhr?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und du?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Wie gut schläfst du?</h2>
+      <div class="card">
+        <p>Wie viele Stunden schläfst du normalerweise? Trägst du oder jemand in deiner Familie eine Smartwatch oder ein Fitnessarmband? Was zeigt das Gerät über den Schlaf an?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай (або обговоріть у парі): скільки годин ти зазвичай спиш? Чи носиш ти (або хтось у родині) смарт-годинник чи фітнес-браслет? Як гадаєш, чи точно такий пристрій знає, як ти спав(-ла)?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Viele Menschen tragen nachts eine Smartwatch oder ein Fitnessarmband und schauen morgens als Erstes auf ihre Schlafkurve. Aber können solche <span class="gl" data-key data-uk="«носимий» пристрій (смарт-годинник, браслет)" data-lemma="das Wearable, -s">Wearables</span> den Schlaf wirklich verbessern? Der Schlafmediziner Dieter Riemann ist skeptisch.</p>
+
+          <h3>Eine Idee aus der Forschung</h3>
+
+          <p>Ganz neu ist die Idee nicht, erklärt Riemann. Schon vor rund 40 Jahren bekamen Patienten und <span class="gl" data-uk="учасник дослідження" data-lemma="der Proband, -en">Probanden</span> in Studien sogenannte Aktigraphen um das Handgelenk – ziemlich <span class="gl" data-uk="громіздкий, масивний" data-lemma="klobig">klobige</span> <span class="gl" data-key data-uk="вимірювальний прилад" data-lemma="das Messgerät, -e">Messgeräte</span>, die vor allem Bewegung und <span class="gl" data-key data-uk="частота серцевих скорочень, пульс" data-lemma="die Herzfrequenz, -en">Herzfrequenz</span> aufzeichneten. Für Mediziner und Forscher ist es bis heute spannend, den Schlaf zu <span class="gl" data-uk="вимірювати" data-lemma="vermessen (vermaß, hat vermessen)">vermessen</span>.</p>
+
+          <p>Einen echten Vorteil haben die Geräte am Arm: Sie messen den Schlaf nicht nur in ein oder zwei Nächten im <span class="gl" data-key data-uk="лабораторія сну" data-lemma="das Schlaflabor, -s">Schlaflabor</span>, sondern über einen langen Zeitraum. So lassen sich individuelle <span class="gl" data-uk="закономірність, патерн" data-lemma="das Muster, -">Muster</span> erkennen, und man kann prüfen, ob die eigene <span class="gl" data-uk="самооцінка" data-lemma="die Selbsteinschätzung, -en">Selbsteinschätzung</span> stimmt. Riemann hat schon erlebt, dass Menschen <span class="gl" data-uk="стверджувати" data-lemma="behaupten">behaupteten</span>, sie gingen immer um zehn Uhr ins Bett – und die Messungen zeigten, dass sie abends viel öfter lange aktiv waren, als sie dachten.</p>
+
+          <h3>Ungenauer als das Labor</h3>
+
+          <p>Ob man mit Wearables auch die Qualität des Schlafs bestimmen kann? Nur <span class="gl" data-uk="частково, з обмеженнями" data-lemma="bedingt">bedingt</span>, sagt der Experte. Aus Bewegung und Herzfrequenz kann man zwar auf die <span class="gl" data-uk="фаза сну" data-lemma="das Schlafstadium, -stadien">Schlafstadien</span> schließen, aber nicht so genau wie im Labor. Dort misst man zusätzlich mit einem EEG die <span class="gl" data-uk="мозкові хвилі" data-lemma="die Hirnwelle, -n">Hirnwellen</span> – denn das Wesentliche beim Schlaf passiert im Kopf.</p>
+
+          <p>Die bunten Kurven der Geräte <span class="gl" data-uk="збігатися" data-lemma="übereinstimmen">stimmen</span> nur zu etwa 75 bis 80 Prozent mit den Messungen im Labor <span class="gl" data-uk="збігатися" data-note="друга частина дієслова übereinstimmen" data-lemma="übereinstimmen">überein</span>. Wearables sind Lifestyle-Produkte und keine medizinischen Geräte; sie bieten höchstens eine <span class="gl" data-uk="приблизний, грубий" data-lemma="grob">grobe</span> Orientierung. Und die 80 Prozent gelten nur für gesunde Schläfer. Bei Menschen mit <span class="gl" data-key data-uk="розлад сну" data-lemma="die Schlafstörung, -en">Schlafstörungen</span> sind die Ergebnisse noch ungenauer. Nicht ohne Grund steht im <span class="gl" data-uk="дрібний шрифт (у договорі, інструкції)" data-lemma="das Kleingedruckte">Kleingedruckten</span>, dass man <span class="gl" data-uk="у разі сумніву" data-lemma="im Zweifelsfall">im Zweifelsfall</span> einen Arzt <span class="gl" data-uk="звертатися (до лікаря), радитися" data-lemma="jemanden zurate ziehen (zog, hat gezogen)">zurate ziehen</span> soll.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>In einem Schlaflabor verbringt man eine oder mehrere Nächte in einem Zimmer, das wie ein Schlafzimmer aussieht. Sensoren am Kopf und am Körper messen dabei zum Beispiel Hirnwellen, Atmung und Herzschlag. Ärzte schicken Patienten dorthin, wenn sie eine Schlafstörung vermuten.</p>
+          </aside>
+
+          <h3>Mehr Stress statt mehr Schlaf</h3>
+
+          <p>Können die Geräte Menschen mit Schlafproblemen helfen? Riemann sagt klar: Nein. Sie zeigen die Schlafdauer oft zu lang oder zu kurz an. Außerdem setzt die ständige Kontrolle viele Menschen unter Druck – und dann schlafen sie noch schlechter ein und durch.</p>
+
+          <p>Ganz gegen Wearables ist der Mediziner trotzdem nicht. Er selbst hatte einmal ein Gerät, um seine <span class="gl" data-uk="кількість кроків" data-lemma="die Schrittzahl, -en">Schrittzahl</span> zu prüfen, und fand das gut. Auch beim Sport können die Geräte nützliche <span class="gl" data-uk="орієнтир, підказка" data-lemma="der Anhaltspunkt, -e">Anhaltspunkte</span> liefern. Vielleicht erkennt ein Gerät sogar einmal gefährliche <span class="gl" data-uk="зупинка дихання (уві сні)" data-lemma="der Atemaussetzer, -">Atemaussetzer</span>, und der Mensch geht daraufhin zum Arzt – doch das sind seltene <span class="gl" data-uk="поодинокий випадок" data-lemma="der Einzelfall, -ä-e">Einzelfälle</span>. Sein Fazit: Besser schlafen kann man mit diesen Geräten nicht.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Обери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) У якому абзаці про це йдеться? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Schlaflabor oder Wearable?</h2>
+      <p class="lead">Що, за словами пана Рімана, стосується лабораторії сну, а що — годинника чи браслета?</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово чи вислів? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>Messgerät</span><span>Schlafstörungen</span><span>Muster</span><span>behauptet</span><span>grobe</span><span>zurate ziehen</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> Wer nachts oft wach liegt, hat vielleicht <input type="text" class="blank-input inline wide" data-ans="Schlafstörungen">.</div>
+          <div class="fill-item"><span class="num">2)</span> Mein Bruder <input type="text" class="blank-input inline" data-ans="behauptet">, dass er nie vor Mitternacht müde ist.</div>
+          <div class="fill-item"><span class="num">3)</span> Die Uhr zeigt nur eine <input type="text" class="blank-input inline" data-ans="grobe"> Orientierung, keine genaue Diagnose.</div>
+          <div class="fill-item"><span class="num">4)</span> Ein Thermometer ist ein einfaches <input type="text" class="blank-input inline wide" data-ans="Messgerät">.</div>
+          <div class="fill-item"><span class="num">5)</span> Nach vielen Nächten sieht man ein klares <input type="text" class="blank-input inline" data-ans="Muster">.</div>
+          <div class="fill-item"><span class="num">6)</span> Bei ernsten Problemen sollte man einen Arzt <input type="text" class="blank-input inline wide" data-ans="zurate ziehen|zu Rate ziehen">.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und du?</h2>
+      <p class="lead">Напиши відповіді німецькою (5–7 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Würdest du deinen Schlaf mit einer Smartwatch kontrollieren? Nenne Vorteile und Nachteile und beziehe dich auf die Argumente aus dem Text.</label>
+          <textarea id="ub5-a" rows="7"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Was hilft dir, gut zu schlafen? Gib einer Freundin oder einem Freund drei Tipps für einen besseren Schlaf.</label>
+          <textarea id="ub5-b" rows="6"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Ein Vorteil ist, dass … · Ein Nachteil ist, dass … · Laut Dieter Riemann … · Mir hilft es, wenn … · Ich würde dir raten, …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Smartwatches und Fitnessarmbänder messen Bewegung und Herzfrequenz, aber keine Hirnwellen. Ihre Schlafkurven stimmen nur zu etwa 75 bis 80 Prozent mit dem Schlaflabor überein. Für eine Diagnose geht man zum Arzt und ins Schlaflabor – und wer seinen Schlaf ständig kontrolliert, schläft oft schlechter.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Смарт-годинники й фітнес-браслети вимірюють рухи й пульс, але не мозкові хвилі. Їхні графіки сну збігаються з даними лабораторії лише приблизно на 75–80 %. Для діагнозу треба йти до лікаря й до лабораторії сну — а хто постійно контролює свій сон, часто спить гірше.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "schlaf-tracking";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Was ist die Hauptaussage des Schlafmediziners?",
+     opts: ["Wearables liefern höchstens eine grobe Orientierung, besser schlafen kann man damit nicht.",
+            "Wearables sind heute so genau wie ein Schlaflabor.",
+            "Wearables sind gefährlich und sollten verboten werden."],
+     correct: "Wearables liefern höchstens eine grobe Orientierung, besser schlafen kann man damit nicht."},
+    {q: "Was ist laut Riemann der größte Vorteil der Geräte?",
+     opts: ["Sie messen den Schlaf über einen langen Zeitraum.",
+            "Sie messen die Hirnwellen sehr genau.",
+            "Sie ersetzen den Besuch beim Arzt."],
+     correct: "Sie messen den Schlaf über einen langen Zeitraum."}
+  ]);
+  buildMatch('ub1h', [
+    ["Die Vorgänger der heutigen Geräte", "Absatz 1"],
+    ["Warum das Labor genauer ist", "Absatz 3"],
+    ["Wer ständig kontrolliert, schläft schlechter", "Absatz 5"],
+    ["Wann ein Gerät doch nützlich sein kann", "Absatz 6"],
+    ["Selbsteinschätzung und Wirklichkeit", "Absatz 2"],
+    ["Prozente und das Kleingedruckte", "Absatz 4"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5", "Absatz 6"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "Schon vor etwa 40 Jahren hat man in Studien Messgeräte am Arm benutzt.", a: "r"},
+    {s: "Die ersten Messgeräte waren sehr klein und elegant.", a: "f"},
+    {s: "Manche Menschen gehen später ins Bett, als sie selbst glauben.", a: "r"},
+    {s: "Wearables messen mit einem EEG die Hirnwellen.", a: "f"},
+    {s: "Bei Menschen mit Schlafstörungen sind die Geräte noch ungenauer.", a: "r"},
+    {s: "Riemann empfiehlt eine bestimmte Smartwatch-Marke.", a: "n"},
+    {s: "Riemann hat selbst nie ein Wearable benutzt.", a: "f"},
+    {s: "Viele Menschen schlafen besser, wenn sie ihren Schlaf kontrollieren.", a: "f"}
+  ]);
+
+  buildSort('ub3-sort', {
+    buckets: ["Schlaflabor", "Wearable"],
+    items: [
+      {t: "misst die Hirnwellen mit einem EEG", b: "Schlaflabor"},
+      {t: "misst meist nur ein oder zwei Nächte", b: "Schlaflabor"},
+      {t: "ist genauer bei der Bestimmung der Schlafstadien", b: "Schlaflabor"},
+      {t: "dort stellt man eine medizinische Diagnose", b: "Schlaflabor"},
+      {t: "misst über einen langen Zeitraum", b: "Wearable"},
+      {t: "stimmt zu etwa 75–80 Prozent mit dem Labor überein", b: "Wearable"},
+      {t: "ist ein Lifestyle-Produkt", b: "Wearable"},
+      {t: "kann beim Sport Anhaltspunkte liefern", b: "Wearable"}
+    ]
+  });
+
+  buildMatch('ub4', [
+    ["bedingt", "частково, з обмеженнями"],
+    ["im Zweifelsfall", "у разі сумніву"],
+    ["klobig", "громіздкий, масивний"],
+    ["der Einzelfall", "поодинокий випадок"],
+    ["die Selbsteinschätzung", "самооцінка"],
+    ["das Kleingedruckte", "дрібний шрифт (у договорі, інструкції)"]
+  ]);
+  wireBlanks('ub4b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['😴','⌚','🧠','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

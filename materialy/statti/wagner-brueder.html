@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zwei Brüder, ein Team · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Sport & Freizeit</span>
+        <h1>Zwei Brüder, ein Team</h1>
+        <p class="sub">Почали в Берліні, у 2026 році грали в одній команді НБА, а зі збірною Німеччини 2023 року разом стали чемпіонами світу. Історія баскетболістів Моріца і Франца Вагнерів.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Zahlen</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Und du?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Basketball</h2>
+      <div class="card">
+        <p>Spielst du gern Basketball oder schaust du gern Spiele an? Kennst du die NBA? Hast du Geschwister, mit denen du zusammen Sport machst?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай (або обговоріть у парі): чи граєш ти в баскетбол або дивишся матчі? Що ти знаєш про НБА? Як гадаєш, чи легко братам грати в одній команді?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Moritz und Franz Wagner sind Brüder – und sie spielen in derselben <span class="gl" data-uk="команда" data-lemma="die Mannschaft, -en">Mannschaft</span> in der besten Basketball-Liga der Welt.</p>
+
+          <p>Moritz Wagner ist 1997 geboren, sein Bruder Franz 2001. Die beiden kommen aus Berlin, aus dem <span class="gl" data-key data-uk="район (міста)" data-lemma="der Stadtteil, -e">Stadtteil</span> Prenzlauer Berg. Dort hat ihre <span class="gl" data-uk="кар'єра" data-lemma="die Karriere, -n">Karriere</span> begonnen. <span class="gl" data-uk="спочатку" data-lemma="zuerst">Zuerst</span> haben sie beide bei Alba Berlin gespielt, einem der bekanntesten <span class="gl" data-key data-uk="баскетбольний клуб" data-lemma="der Basketballverein, -e">Basketballvereine</span> in Deutschland. Der Club spielt in der Basketball-Bundesliga, der <span class="gl" data-uk="найвищий" data-lemma="hoch (höher, am höchsten)">höchsten</span> <span class="gl" data-key data-uk="ліга" data-lemma="die Liga, Ligen">Liga</span> in Deutschland.</p>
+
+          <p>Später sind die Brüder in die USA <span class="gl" data-uk="переходити (до іншої команди, країни)" data-lemma="wechseln">gewechselt</span>. 2026 spielen beide für die Orlando Magic in der NBA. Für Basketballspieler ist das die größte <span class="gl" data-uk="сцена" data-lemma="die Bühne, -n">Bühne</span> der Welt. Franz Wagner hat dort einen sehr gut bezahlten <span class="gl" data-key data-uk="контракт, договір" data-lemma="der Vertrag, -ä-e">Vertrag</span> bekommen – einen der höchsten, die je ein deutscher Spieler hatte.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Alba_Berlin_game.jpg/960px-Alba_Berlin_game.jpg" alt="Ein Spiel von Alba Berlin in der Basketball-Bundesliga." width="960" height="467" loading="lazy">
+            <figcaption>Ein Spiel von Alba Berlin in der Basketball-Bundesliga. Foto: Ericof, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Alba_Berlin_game.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Auch für Deutschland spielen die beiden zusammen. Mit der <span class="gl" data-key data-uk="збірна (країни)" data-lemma="die Nationalmannschaft, -en">Nationalmannschaft</span> wurden sie 2023 <span class="gl" data-uk="чемпіон світу" data-lemma="der Weltmeister, -">Weltmeister</span>. Das war ein großer <span class="gl" data-uk="успіх" data-lemma="der Erfolg, -e">Erfolg</span>, denn Deutschland hatte vorher noch nie eine Basketball-Weltmeisterschaft gewonnen. 2025 kam noch ein <span class="gl" data-uk="титул" data-lemma="der Titel, -">Titel</span> dazu: Deutschland wurde auch <span class="gl" data-uk="чемпіон Європи" data-lemma="der Europameister, -">Europameister</span>. Franz war dabei, Moritz leider nicht – er war <span class="gl" data-uk="травмований" data-lemma="verletzt (verletzen)">verletzt</span>.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Die NBA (National Basketball Association) ist die Profi-Liga in den USA und Kanada. Orlando liegt im US-Bundesstaat Florida. Der bekannteste deutsche NBA-Spieler war lange Dirk Nowitzki – er hat mit den Dallas Mavericks 2011 die Meisterschaft gewonnen.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Обери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub1-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Was passt zusammen?</h2>
+      <p class="lead">Що означає кожне число чи назва в тексті?</p>
+      <div class="card" id="ub2-list"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub3-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>Verein</span><span>Weltmeister</span><span>Vertrag</span><span>Nationalmannschaft</span><span>Liga</span></div>
+        <div id="ub3b-list">
+          <div class="fill-item"><span class="num">1)</span> Alba Berlin ist ein bekannter <input type="text" class="blank-input inline" data-ans="Verein">.</div>
+          <div class="fill-item"><span class="num">2)</span> Die NBA ist die beste <input type="text" class="blank-input inline" data-ans="Liga"> der Welt.</div>
+          <div class="fill-item"><span class="num">3)</span> Franz hat einen neuen <input type="text" class="blank-input inline" data-ans="Vertrag"> unterschrieben.</div>
+          <div class="fill-item"><span class="num">4)</span> Die beiden spielen auch in der deutschen <input type="text" class="blank-input inline wide" data-ans="Nationalmannschaft">.</div>
+          <div class="fill-item"><span class="num">5)</span> 2023 wurde Deutschland zum ersten Mal <input type="text" class="blank-input inline wide" data-ans="Weltmeister"> im Basketball.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub3b-check">Prüfen</button>
+          <button class="btn secondary" id="ub3b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub3b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Und du?</h2>
+      <p class="lead">Напиши відповіді німецькою (4–6 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub4-a">1. Welchen Sport machst du gern? Mit wem spielst oder trainierst du?</label>
+          <textarea id="ub4-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub4-b">2. Möchtest du mit deinem Bruder, deiner Schwester oder deinem besten Freund in einem Team spielen? Warum (nicht)?</label>
+          <textarea id="ub4-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Ich spiele gern … · Ich trainiere … Mal pro Woche · Das wäre toll / schwierig, weil … · Ein Vorteil ist …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Moritz und Franz Wagner kommen aus Berlin und haben bei Alba Berlin angefangen. 2026 spielen sie zusammen für die Orlando Magic in der NBA. Mit Deutschland wurden sie 2023 zusammen Weltmeister. 2025 wurde Deutschland auch Europameister – mit Franz, aber ohne den verletzten Moritz.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Моріц і Франц Вагнери родом із Берліна, починали в клубі «Альба Берлін». 2026 року вони разом грали за «Орландо Меджик» у НБА. Зі збірною Німеччини вони 2023 року стали чемпіонами світу. 2025 року Німеччина виграла й чемпіонат Європи — з Францом, але без травмованого Моріца.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "wagner-brueder";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text?",
+     opts: ["Um zwei Brüder, die erfolgreich Basketball spielen",
+            "Um einen neuen Basketballverein in Berlin",
+            "Um ein Basketballspiel zwischen Deutschland und den USA"],
+     correct: "Um zwei Brüder, die erfolgreich Basketball spielen"}
+  ]);
+  buildRF('ub1-rf', [
+    {s: "Franz ist älter als Moritz.", a: "f"},
+    {s: "Die Brüder kommen aus Berlin.", a: "r"},
+    {s: "2026 spielen beide für die Orlando Magic.", a: "r"},
+    {s: "Die Brüder wohnen in Orlando in einem Haus.", a: "n"},
+    {s: "Deutschland war schon vor 2023 oft Basketball-Weltmeister.", a: "f"}
+  ]);
+
+  buildMatch('ub2', [
+    ["1997", "Moritz kommt zur Welt."],
+    ["2001", "Franz kommt zur Welt."],
+    ["2023", "Die Brüder werden Weltmeister."],
+    ["2025", "Deutschland wird Europameister – ohne Moritz."],
+    ["Alba Berlin", "ihr erster Verein"],
+    ["Orlando Magic", "ihr Team in der NBA"]
+  ], {lead: true});
+
+  buildMatch('ub3', [
+    ["der Stadtteil", "район (міста)"],
+    ["wechseln", "переходити (до іншої команди, країни)"],
+    ["die Bühne", "сцена"],
+    ["der Erfolg", "успіх"],
+    ["der Europameister", "чемпіон Європи"]
+  ]);
+  wireBlanks('ub3b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🏀','🏆','🥇','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
