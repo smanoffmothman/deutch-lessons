@@ -16,7 +16,13 @@
    <script src="data/glossary-data.js"></script>
    <script src="data/grammar-data.js"></script>
    <script src="data/materials-data.js"></script>
+   <script src="data/pidruchnyky-data.js"></script>
    <script src="assets/home.js"></script>
+
+   Плитка «Підручники» (з 2026-10-22) прихована, доки в PIDRUCHNYKY немає
+   жодного розділу з opublikovano; лічильник на ній — кількість таких
+   розділів. У лічильники hero підручники НЕ входять (hero — про уроки
+   для класів).
    ================================================================= */
 
 (function(){
@@ -26,6 +32,7 @@
   const glossary  = typeof GLOSSARY      !== 'undefined' ? GLOSSARY      : [];
   const grammar   = typeof GRAMMAR       !== 'undefined' ? GRAMMAR       : [];
   const materials = typeof MATERIALS     !== 'undefined' ? MATERIALS     : [];
+  const books     = typeof PIDRUCHNYKY   !== 'undefined' ? PIDRUCHNYKY   : [];
 
   const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
@@ -47,6 +54,19 @@
     gramatyka: gramReady.length ? [gramReady.length, plural(gramReady.length, 'тема', 'теми', 'тем') + ' граматики', plural(gramReady.length, 'тема', 'теми', 'тем')] : null,
     materialy: articles.length  ? [articles.length,  plural(articles.length, 'стаття', 'статті', 'статей')] : null
   };
+
+  // розділи підручників з онлайн-вправами (будь-яка глибина дерева)
+  let bookUnits = 0;
+  (function walk(nodes){ (nodes || []).forEach(n => {
+    if(n && n.typ && n.typ !== 'bez-storinky' && n.opublikovano > 0) bookUnits++;
+    if(n && n.dity) walk(n.dity);
+  }); })(books.reduce((a, b) => a.concat(b.rozdily || []), []));
+  const booksTile = document.querySelector('.home-tile.t-books');
+  if(booksTile && bookUnits){
+    booksTile.hidden = false;
+    const c = booksTile.querySelector('[data-count="pidruchnyky"]');
+    if(c){ c.textContent = books.length + ' ' + plural(books.length, 'книжка', 'книжки', 'книжок') + ' · ' + bookUnits + ' ' + plural(bookUnits, 'розділ', 'розділи', 'розділів'); c.hidden = false; }
+  }
 
   const statsEl = document.getElementById('homeStats');
   if(statsEl){

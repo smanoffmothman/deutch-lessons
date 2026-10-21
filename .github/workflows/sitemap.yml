@@ -1,5 +1,5 @@
 # Після кожного завантаження на GitHub:
-#   1) вписує в уроки, теми й статті пошукові теги (опис, картка посилання) —
+#   1) вписує в уроки, теми, статті й сторінки підручників пошукові теги (опис, картка посилання) —
 #      скрипт .github/scripts/build_seo.py, дані з data/*.js;
 #   2) оновлює sitemap.xml (карту сайту) — .github/scripts/build_sitemap.py.
 # Вручну нічого робити не треба. Запустити вручну: Actions → sitemap → Run workflow.
@@ -29,10 +29,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-      - name: Пошукові теги в уроках, темах і статтях
+      - name: Пошукові теги в уроках, темах, статтях і підручниках
         run: |
           python3 .github/scripts/build_seo.py
-          git add -A lessons gramatyka/temy materialy/statti
+          git add -A lessons gramatyka/temy materialy/statti pidruchnyky
           git diff --cached --quiet || git commit -m "робот: пошукові теги оновлено автоматично"
       - name: Зібрати sitemap.xml
         run: |

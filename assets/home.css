@@ -144,6 +144,24 @@
 .t-glossary { --accent:#B07A1E; }
 .t-grammar  { --accent:var(--brick); }
 .t-materials{ --accent:var(--forest); }
+.t-books    { --accent:#5B5346; }
+
+/* «Підручники» — плитка на всю ширину під чотирма (з 2026-10-22): іконка,
+   текст і підвал в один рядок, щоб п'ята плитка не стала «сиротою» */
+.home-tile.t-books{
+  grid-column:1 / -1;
+  display:grid; grid-template-columns:44px minmax(0,1fr) auto; column-gap:16px; align-items:center;
+}
+.home-tile.t-books .ti{ grid-row:1 / span 2; margin:0; }
+.home-tile.t-books h3{ margin:0 0 2px; }
+.home-tile.t-books p{ margin:0; }
+.home-tile.t-books .tf{ grid-column:3; grid-row:1 / span 2; border-top:none; padding-top:0; margin:0; }
+.home-tile.t-books[hidden]{ display:none; } /* після display:grid вище — інакше hidden не діє */
+@media (max-width:520px){
+  .home-tile.t-books{ grid-template-columns:44px minmax(0,1fr); align-items:start; }
+  .home-tile.t-books p{ margin:0 0 10px; }
+  .home-tile.t-books .tf{ grid-column:1 / -1; grid-row:auto; border-top:1px dashed var(--line); padding-top:12px; }
+}
 
 /* ---------- Нове на сайті ---------- */
 .home-news{ margin:44px 0 0; }

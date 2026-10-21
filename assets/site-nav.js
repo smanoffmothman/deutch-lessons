@@ -9,7 +9,7 @@
    <script src="ШЛЯХ/assets/site-nav.js"></script>
    <script>
      renderSiteNav('siteNav', { root: '../../../', active: null });
-     // active: 'klasy' | 'glosariy' | 'gramatyka' | 'materialy' | null
+     // active: 'klasy' | 'glosariy' | 'gramatyka' | 'materialy' | 'pidruchnyky' | null
      // root: відносний шлях НАЗАД до кореня сайту (де лежить index.html)
    </script>
 
@@ -132,6 +132,13 @@ function ensureStats(){
   (document.head || document.documentElement).appendChild(s);
 }
 
+/* Розділ «Підручники» (з 2026-10-22) у меню: поки false — пункту в меню
+   немає, але сторінки pidruchnyky/ відкриваються за прямим посиланням
+   (щоб подивитись перед запуском). Перемкнути на true, коли опубліковано
+   перші розділи — і пункт з'явиться на всіх сторінках сайту одразу.
+   Плитка на головній вмикається сама (home.js), без цього прапорця. */
+var NAV_SHOW_PIDRUCHNYKY = false;
+
 function injectNavMenuCss(){
   if(document.getElementById('siteNavMenuCss')) return;
   const st = document.createElement('style');
@@ -152,6 +159,8 @@ function renderSiteNav(containerId, opts){
     {key: 'gramatyka', label: 'Граматика', href: root + 'gramatyka/index.html'},
     {key: 'materialy', label: 'Матеріали', href: root + 'materialy/index.html'}
   ];
+  if(NAV_SHOW_PIDRUCHNYKY || active === 'pidruchnyky')
+    links.push({key: 'pidruchnyky', label: 'Підручники', href: root + 'pidruchnyky/index.html'});
 
   const linksHtml = links.map(l =>
     '<a class="nav-link' + (l.key === active ? ' active' : '') + '" href="' + l.href + '"'

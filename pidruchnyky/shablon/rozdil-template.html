@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[Lektion 1, Modul A: Meine Familie] — [Німецька мова 5 клас Сотникова] · DeutschHeft</title>
+<!-- =================================================================
+     ШАБЛОН сторінки розділу підручника. Копію клади в
+     pidruchnyky/<id книжки>/<id розділу>.html — глибина та сама, тож
+     шляхи "../../" уже правильні, їх НЕ міняти. Назва файлу = id розділу
+     з data/pidruchnyky-data.js.
+     Правила наповнення — BOOK-BRIEF.md. Коротко:
+     - <title>: «<Розділ> — <назва книжки коротко для пошуку> · DeutschHeft».
+       Пошукові теги НЕ писати — їх ставить робот з pidruchnyky-data.js.
+     - Вправи ВЛАСНІ, на лексику й граматику розділу. Тексти, вправи,
+       малюнки й аудіо підручника НЕ копіювати.
+     - Набір вкладок залежить від typ розділу:
+         vpravy       Wörter → Üb. 1…N → Fertig!            (як нижче)
+         chytannya    Wörter → Text → Üb. 1…N → Fertig!     (див. коментар «TEXT»)
+         gramatyka    Üb. 1…N → Fertig! (вкладку Wörter можна лишити:
+                      без слів вона ховається сама)
+         povtorennya  як vpravy; слова всього Lektion підтягнуться самі
+     - Вкладка Wörter малюється сама з data/slova/<id книжки>.js; якщо
+       слів для розділу немає — ховається.
+     ================================================================= -->
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+<!-- хлібні крихти малює initBookUnit() внизу — з даних pidruchnyky-data.js -->
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <!-- бейдж і h1 потрапляють у звіт-PDF і в назву його файлу -->
+        <span class="hero-badge">[СОТНИКОВА · 5 КЛАС]</span>
+        <h1>[Lektion 1 · Modul A: Meine Familie]</h1>
+        <p class="sub">[1–2 речення українською: що тренуємо в цьому розділі. Назву підручника НЕ повторювати — вона в бейджах нижче.]</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <!-- TEXT (лише typ "chytannya"): <button class="tab-btn" data-tab="text">Text</button> -->
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · [назва]</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · [назва]</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · [назва]</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER: малюється сама (список, ★ «мої слова», картки) ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед вправами. Натисни «Картки ▶», щоб перевірити себе.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT (лише typ "chytannya") — ВЛАСНИЙ текст, не з підручника =====
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">[Назва тексту]</h2>
+      <article class="mat-text" id="matText">
+        <p>… <span class="gl" data-uk="переклад" data-lemma="das Wort, -ö-er">Wort</span> …</p>
+      </article>
+    </section>
+    Переклад по тапу, A− A+ і кнопка «📄 Text» на вкладках з вправами
+    вмикаються самі, як у статтях (material-reader.js). -->
+
+    <!-- ===== ВЛАСНЕ АУДІО (за потреби, у будь-якій вкладці) =====
+         Файл: pidruchnyky/<id книжки>/audio/<id розділу>-1.mp3 (моно, 64 кбіт/с).
+         Лише до НАШИХ текстів; аудіо підручника — посиланням на видавця.
+    <div class="player">
+      <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+      <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+      <span class="label" id="time1">0:00</span>
+    </div>
+    <audio id="audio1" preload="none" src="audio/[id розділу]-1.mp3"></audio>
+    <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+    і в скрипті:  wirePlayer('audio1', 'play1', 'seek1', 'time1'); -->
+
+    <!-- ===== Üb. 1: квіз (buildQuiz) ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">[Назва вправи]</h2>
+      <p class="lead">[Інструкція українською]</p>
+      <div class="card" id="ub1-quiz"></div>
+    </section>
+
+    <!-- ===== Üb. 2: пропуски — поля й випадні списки (wireBlanks) ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">[Назва вправи]</h2>
+      <p class="lead">[Інструкція українською]</p>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> Das ist meine
+          <select class="blank inline" data-ans="Mutter"><option value="">—</option><option>Mutter</option><option>Vater</option><option>Bruder</option></select>.</div>
+        <div class="fill-item"><span class="num">2)</span> Mein Onkel ist der Bruder von meinem
+          <input type="text" class="blank-input inline" data-ans="Vater|Papa">.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: зіставлення (buildMatch) — або buildOrder / buildSort / buildRF ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">[Назва вправи]</h2>
+      <p class="lead">[Інструкція українською]</p>
+      <div class="card" id="ub3-list"></div>
+    </section>
+
+    <!-- ===== FERTIG: без ДЗ. Звіт для вчителя з'являється сам перед footer.end-card ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <!-- граматика з розділу «Граматика» (поле gram розділу) — ховається, якщо немає -->
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <!-- аудіо видавця — посилання (з pidruchnyky-data.js), ховається, якщо немає -->
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/[id книжки].js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "..."; // TODO: id книжки = назва папки
+  const KN_UNIT = "..."; // TODO: id розділу = назва цього файлу без .html
+
+  // Üb. 1: квіз
+  buildQuiz('ub1-quiz', [
+    {q: "Die Mutter von meiner Mutter ist meine …", opts: ["Oma", "Tante", "Cousine"], correct: "Oma"},
+  ]);
+
+  // Üb. 2: пропуски (id за домовленістю: <key>-list / -check / -reset / -score)
+  wireBlanks('ub2');
+
+  // Üb. 3: зіставлення
+  buildMatch('ub3', [
+    ["der Onkel", "дядько"],
+    ["die Tante", "тітка"],
+    ["die Geschwister", "брати й сестри"]
+  ]);
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📗', '✏️', '⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  // ЗАВЖДИ останнім рядком: крихти, бейджі, Wörter, аудіо, граматика, «Далі», прогрес
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
