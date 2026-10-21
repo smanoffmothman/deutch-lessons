@@ -69,8 +69,8 @@ const PIDRUCHNYKY = [
     audio: null, // у «Ранку» за QR-кодами — інтерактивний додаток лише до перших Lektion, без окремих аудіо
     rozdily: [
       { id: "l1", label: "1", nazva: "Leute, die ich mag", storinky: "5–26", dity: [
-        { id: "l1-a", label: "A", nazva: "Meine Familie", storinky: "6–10", typ: "vpravy" },
-        { id: "l1-b", label: "B", nazva: "Berufe", storinky: "11–15", typ: "vpravy" },
+        { id: "l1-a", label: "A", nazva: "Meine Familie", storinky: "6–10", typ: "vpravy", gram: ["possessivartikel"], opublikovano: 1 },
+        { id: "l1-b", label: "B", nazva: "Berufe", storinky: "11–15", typ: "vpravy", gram: ["wechselpraepositionen"], opublikovano: 2 },
         { id: "l1-c", label: "C", nazva: "Beste Freunde", storinky: "16–21", typ: "vpravy" },
         { id: "l1-d", label: "D", nazva: "Wiederholung", storinky: "22–23", typ: "povtorennya" },
         { id: "l1-e", label: "E", nazva: "Geschichtenzeit", storinky: "24", typ: "chytannya" },
