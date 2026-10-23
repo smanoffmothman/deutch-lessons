@@ -317,7 +317,8 @@ summary.module-head:focus-visible{ outline:2px solid var(--mustard); outline-off
 .mat-prog{ display:inline-flex; align-items:center; gap:6px; font-weight:700; color:var(--teal-deep); font-variant-numeric:tabular-nums; }
 .mat-prog .bar{ width:54px; height:6px; border-radius:6px; background:var(--paper-2); overflow:hidden; }
 .mat-prog .bar span{ display:block; height:100%; background:var(--teal); }
-/* прапорці (ті самі, що й у material-style.css — тут для сторінки-списку) */
+/* прапорці — ЄДИНЕ місце для всіх сторінок (список статей, статті, головна);
+   новий код країни: прапорець тут + назва в MAT_LANDS (site.js) і MAT_LAND (material-reader.js) */
 .flag{ display:inline-block; width:18px; height:12px; border-radius:2px; flex:none; box-shadow:0 0 0 1px rgba(0,0,0,.15); background:#999; }
 .flag-DE{ background:linear-gradient(#000 0 33.3%, #DD0000 0 66.6%, #FFCE00 0); }
 .flag-AT{ background:linear-gradient(#C8102E 0 33.3%, #fff 0 66.6%, #C8102E 0); }
@@ -325,6 +326,7 @@ summary.module-head:focus-visible{ outline:2px solid var(--mustard); outline-off
 .flag-LI{ background:linear-gradient(#002B7F 0 50%, #CE1126 0); }
 .flag-LU{ background:linear-gradient(#EF3340 0 33.3%, #fff 0 66.6%, #00A3E0 0); }
 .flag-EU{ background:#003399; }
+.flag-UA{ background:linear-gradient(#0057B7 0 50%, #FFD700 0); }
 @media (prefers-reduced-motion: reduce){
   .mat-card{ transition:none; }
   .mat-card:hover{ transform:none; }
