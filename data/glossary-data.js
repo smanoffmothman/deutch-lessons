@@ -967,5 +967,17 @@ const GLOSSARY = [
   {de: "besorgen (Preise besorgen)", uk: "дістати, придбати (придбати призи)", klas: "7", modul: "C", lektion: 3},
   {de: "der Terminkalender (die Terminkalender)", uk: "календар справ, щоденник планів", klas: "7", modul: "C", lektion: 3},
   {de: "Ohne Frage!", uk: "Безперечно! Аякже!", klas: "7", modul: "C", lektion: 3},
-  {de: "Wer ist dafür? – Ich bin dafür. / Ich bin dagegen.", uk: "Хто за? — Я за. / Я проти.", klas: "7", modul: "C", lektion: 3}
+  {de: "Wer ist dafür? – Ich bin dafür. / Ich bin dagegen.", uk: "Хто за? — Я за. / Я проти.", klas: "7", modul: "C", lektion: 3},
+  {de: "die Arbeitsgemeinschaft (die AG, die AGs)", uk: "гурток (у школі)", klas: "7", modul: "C", lektion: 4},
+  {de: "die Theater-AG (die Theater-AGs)", uk: "театральний гурток", klas: "7", modul: "C", lektion: 4},
+  {de: "die Naturschutz-AG (die Naturschutz-AGs)", uk: "гурток охорони природи", klas: "7", modul: "C", lektion: 4},
+  {de: "jonglieren", uk: "жонглювати", klas: "7", modul: "C", lektion: 4},
+  {de: "auf dem Seil tanzen", uk: "ходити (танцювати) по канату", klas: "7", modul: "C", lektion: 4},
+  {de: "erkunden (die Umwelt erkunden)", uk: "досліджувати (досліджувати довкілля)", klas: "7", modul: "C", lektion: 4},
+  {de: "beobachten (das Wetter beobachten)", uk: "спостерігати (за погодою)", klas: "7", modul: "C", lektion: 4},
+  {de: "bearbeiten (Bilder am Computer bearbeiten)", uk: "обробляти (фото на комп'ютері)", klas: "7", modul: "C", lektion: 4},
+  {de: "nähen (Kleidung nähen)", uk: "шити (одяг)", klas: "7", modul: "C", lektion: 4},
+  {de: "die Werkstatt (die Werkstätten)", uk: "майстерня", klas: "7", modul: "C", lektion: 4},
+  {de: "inszenieren (ein Stück inszenieren)", uk: "ставити (виставу, п'єсу)", klas: "7", modul: "C", lektion: 4},
+  {de: "die Aufführung (die Aufführungen)", uk: "вистава, виступ", klas: "7", modul: "C", lektion: 4}
 ];

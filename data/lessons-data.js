@@ -874,5 +874,16 @@ const LESSONS = [
     nove: true,
     gram: ["verben-dass-infinitiv", "modalverben", "trennbare-verben", "fragen"],
     dz: "Einladungsplakat: Gestalte (auf Papier oder digital) ein Plakat für eine Schulveranstaltung, die du selbst organisieren möchtest (z. B. eine Talentshow, ein Kostümfest, ein Schachturnier). 1) Schreib auf das Plakat die Antworten auf die fünf Fragen aus Üb. 3: Was? Wann? Wer darf teilnehmen? Was braucht man? Wo findet die Veranstaltung statt? (z. B. „Wann? – Ende November, am Samstag“). 2) Schreib darunter 3–4 Sätze, warum man mitmachen soll. Benutze mindestens zwei Infinitive mit zu – davon einen mit einem trennbaren Verb (z. B. „Es ist spannend, an einer Talentshow teilzunehmen!“, „Wir haben vor, eine Jury zu wählen.“). 3) Die letzte Zeile ist eine Frage an die Klasse: „Möchtet ihr mitmachen? Wer ist dafür?“ Mal ein Bild dazu. Nächstes Mal hängen wir die Plakate auf, und jeder trägt sich bei zwei Veranstaltungen ein."
+  },
+  {
+    klas: "7",
+    modul: "C",
+    lektion: 4,
+    nazva: "Besuchst du eine AG?",
+    opys: "Шкільні гуртки (AGs): слухаємо й повторюємо назви гуртків (die Theater-AG, die Koch-AG, die Naturschutz-AG…), зіставляємо гуртки з тим, що в них роблять, розповідаємо «In einer … lernt man … Da kann man auch …» і коментуємо, які гуртки є в нашій школі, а про які ми мріємо (Wir träumen davon, … zu …).",
+    file: "klas-7/modul-c/lektion-4.html",
+    nove: true,
+    gram: ["satzstellung-hauptsatz", "modalverben", "verben-dass-infinitiv", "artikel-gebrauch"],
+    dz: "AG-Umfrage und AG-Rätsel: 1) Frag drei Personen (Mitschüler, Geschwister, Eltern oder Großeltern): „Besuchst du eine AG? / Hast du früher eine AG besucht? Was macht man da?“ und „Welche AG möchtest du gern besuchen?“ Notiere die Antworten in einer Tabelle: Name – AG – Was macht man da? 2) Schreib zu jeder Person zwei Sätze, z. B. „Mein Opa hat eine Technik-AG besucht. In einer Technik-AG lernt man Flugmodelle konstruieren.“ oder „Meine Schwester träumt davon, eine Mode-AG zu besuchen.“ Benutze mindestens einmal „Da kann man auch …“ und einmal „träumen davon, … zu …“. 3) AG-Rätsel: Beschreib eine AG in drei Sätzen, ohne ihren Namen zu nennen: „In dieser AG lernt man … Da kann man auch … Man braucht …“ Schreib die Lösung mit Artikel auf die Rückseite (z. B. die Wetter-AG). Nächstes Mal raten die anderen: Welche AG ist das?"
   }
 ];
