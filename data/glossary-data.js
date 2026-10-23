@@ -955,5 +955,17 @@ const GLOSSARY = [
   {de: "das Kunstmuseum (die Kunstmuseen)", uk: "художній музей", klas: "7", modul: "C", lektion: 2},
   {de: "die Wanderroute (die Wanderrouten)", uk: "маршрут походу", klas: "7", modul: "C", lektion: 2},
   {de: "die Einzelheit (alle Einzelheiten besprechen)", uk: "деталь, подробиця (обговорити всі деталі)", klas: "7", modul: "C", lektion: 2},
-  {de: "blöd", uk: "дурний, безглуздий (розм.)", klas: "7", modul: "C", lektion: 2}
+  {de: "blöd", uk: "дурний, безглуздий (розм.)", klas: "7", modul: "C", lektion: 2},
+  {de: "der Trainingsanzug (die Trainingsanzüge)", uk: "спортивний костюм", klas: "7", modul: "C", lektion: 3},
+  {de: "das Schulstadion (die Schulstadien)", uk: "шкільний стадіон", klas: "7", modul: "C", lektion: 3},
+  {de: "die Turnhalle (die Turnhallen)", uk: "спортивна зала", klas: "7", modul: "C", lektion: 3},
+  {de: "die Aula (die Aulen)", uk: "актова зала", klas: "7", modul: "C", lektion: 3},
+  {de: "der Schulhof (die Schulhöfe)", uk: "шкільне подвір'я", klas: "7", modul: "C", lektion: 3},
+  {de: "die Modenschau (die Modenschauen)", uk: "показ мод", klas: "7", modul: "C", lektion: 3},
+  {de: "die Talentshow (die Talentshows)", uk: "шоу талантів", klas: "7", modul: "C", lektion: 3},
+  {de: "das Kostüm (die Kostüme)", uk: "костюм (карнавальний, сценічний)", klas: "7", modul: "C", lektion: 3},
+  {de: "besorgen (Preise besorgen)", uk: "дістати, придбати (придбати призи)", klas: "7", modul: "C", lektion: 3},
+  {de: "der Terminkalender (die Terminkalender)", uk: "календар справ, щоденник планів", klas: "7", modul: "C", lektion: 3},
+  {de: "Ohne Frage!", uk: "Безперечно! Аякже!", klas: "7", modul: "C", lektion: 3},
+  {de: "Wer ist dafür? – Ich bin dafür. / Ich bin dagegen.", uk: "Хто за? — Я за. / Я проти.", klas: "7", modul: "C", lektion: 3}
 ];

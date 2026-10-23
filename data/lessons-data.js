@@ -863,5 +863,16 @@ const LESSONS = [
     nove: true,
     gram: ["verben-dass-infinitiv", "modalverben", "trennbare-verben"],
     dz: "Klassenchat „Unser Wochenende“: Schreib einen Chat (8–10 Nachrichten) in eurer Klassengruppe: Drei oder vier Mitschüler planen ein gemeinsames Wochenende – wie Biancas Klasse. 1) Jede Person macht einen Vorschlag mit „vorschlagen“, „vorhaben“ oder „Ich finde es toll / super / interessant, … zu …“. 2) Benutze mindestens vier Infinitive mit zu – davon mindestens einen mit einem trennbaren Verb (z. B. teilzunehmen, mitzumachen, einzuladen) – und mindestens zwei Sätze mit einem Modalverb ohne zu (z. B. „Wir können im Wald zelten.“). 3) Die letzte Nachricht sagt, was ihr beschlossen habt: „Wir haben beschlossen, … zu …“. Unterstreiche alle Infinitive mit zu. Nächstes Mal lesen wir eure Chats in Gruppen vor – welche Klasse hat den besten Plan?"
+    },
+  {
+    klas: "7",
+    modul: "C",
+    lektion: 3,
+    nazva: "Schulfeste: Wer macht mit?",
+    opys: "Шкільні свята й заходи: аудіодіалог Ріти й Деніса про спортивні змагання, обговорення ідей для власного свята (Ich schlage vor, … zu … / Ich bin dafür), запитання Was? Wann? Wer? Wo? і коментар до календаря Луїзи з інфінітивом із zu та без zu.",
+    file: "klas-7/modul-c/lektion-3.html",
+    nove: true,
+    gram: ["verben-dass-infinitiv", "modalverben", "trennbare-verben", "fragen"],
+    dz: "Einladungsplakat: Gestalte (auf Papier oder digital) ein Plakat für eine Schulveranstaltung, die du selbst organisieren möchtest (z. B. eine Talentshow, ein Kostümfest, ein Schachturnier). 1) Schreib auf das Plakat die Antworten auf die fünf Fragen aus Üb. 3: Was? Wann? Wer darf teilnehmen? Was braucht man? Wo findet die Veranstaltung statt? (z. B. „Wann? – Ende November, am Samstag“). 2) Schreib darunter 3–4 Sätze, warum man mitmachen soll. Benutze mindestens zwei Infinitive mit zu – davon einen mit einem trennbaren Verb (z. B. „Es ist spannend, an einer Talentshow teilzunehmen!“, „Wir haben vor, eine Jury zu wählen.“). 3) Die letzte Zeile ist eine Frage an die Klasse: „Möchtet ihr mitmachen? Wer ist dafür?“ Mal ein Bild dazu. Nächstes Mal hängen wir die Plakate auf, und jeder trägt sich bei zwei Veranstaltungen ein."
   }
 ];
