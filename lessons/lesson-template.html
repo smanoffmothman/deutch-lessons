@@ -151,6 +151,26 @@
     </section>
     -->
 
+    <!-- ===== НОВІ ФОРМАТИ ВПРАВ (з 2026-10-23) — приклад; бери 2–4 доречні для теми =====
+         Розмітка для КОЖНОГО однакова: порожня картка з id, усе інше (кнопки,
+         лічильник, бал, звіт-PDF, ä ö ü ß) малює сама функція. Параметри —
+         у коментарях над функціями в lesson-interactions.js, вибір формату —
+         README, «Типи вправ».
+
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">[Назва вправи]</h2>
+      <p class="lead">[Інструкція українською]</p>
+      <div class="card" id="ub5-bank"></div>
+    </section>
+
+    у скрипті сторінки — одне з:
+      buildWordBank('ub5-bank', {text: "Meine [Oma] wohnt auf dem Land. Sie ist schon [Rentnerin].", extra: ["Büro"]});
+      buildTransform('ub5-tr', [{s: "Ich spiele Fußball.", task: "Perfekt", ans: "Ich habe Fußball gespielt."}]);
+      buildFixError('ub5-fix', [{s: "Ich besuche mein Onkel.", wrong: 2, fix: "meinen"}, {s: "Lena liebt ihren Bruder.", ok: true}]);
+      buildTable('ub5-tab', {head: ["", "Nominativ", "Akkusativ"], rows: [["der", "mein Bruder", "[meinen] Bruder"]]});
+    -->
+
     <!-- ===== ПРИКІНЦЕВА ПАНЕЛЬ ===== -->
     <section class="panel" id="panel-ende">
       <h2 class="panel-title">Fertig!</h2>

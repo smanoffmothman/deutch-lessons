@@ -272,7 +272,19 @@ function normAns(s, keepCase){
   let v = String(s || '').replace(/[‘’]/g, "'").replace(/\s+/g, ' ').trim().replace(/[.!?]+$/, '').trim();
   return keepCase ? v : v.toLowerCase();
 }
+/* data-case="sent" (з 2026-10-23) — режим «ціле речення» (buildTransform):
+   регістр важливий, КРІМ першої літери; пробіли навколо ком і перед . ! ?
+   не важливі; кінцевий . ! ? ігнорується, як і скрізь. */
+function normSent(s){
+  let v = normAns(s, true).replace(/\s*([,;:])\s*/g, '$1 ').replace(/\s+([.!?])/g, '$1').trim();
+  return v.charAt(0).toLowerCase() + v.slice(1);
+}
 function blankIsCorrect(el){
+  if(el.getAttribute('data-case') === 'sent'){
+    const v = normSent(el.value);
+    if(v === '') return null;
+    return (el.dataset.ans || '').split('|').some(a => normSent(a) === v);
+  }
   const keepCase = el.hasAttribute('data-case');
   const val = normAns(el.value, keepCase);
   if(val === '') return null; // порожньо — ще не відповідав
@@ -609,6 +621,369 @@ function buildSort(containerId, data){
   });
 }
 
+/* =====================================================================
+   НОВІ ФОРМАТИ ВПРАВ — етап 1 (з 2026-10-23, ТЗ «нові формати вправ»)
+   buildWordBank · buildTransform · buildFixError · buildTable
+   Спільне для всіх: один виклик — одна вправа; кнопки й лічильник малює
+   сама функція (у HTML — лише порожній <div class="card" id="…">);
+   зараховується ПЕРША спроба кожного пункту, правильна відповідь не
+   показується; enableTestMode поважається; усе потрапляє у звіт-PDF;
+   лише тапи, без перетягування; текстові поля отримують панель ä ö ü ß.
+   Довідник «який формат коли брати» — README, розділ «Типи вправ».
+   ===================================================================== */
+
+// Prüfen / Zurücksetzen / лічильник під вправою з полями .blank-input
+// (рахує й перевіряє та сама checkBlanks, тож анти-чіт і звіт — як у wireBlanks)
+function wireBlankBox(containerId){
+  const wrap = document.getElementById(containerId);
+  if(!wrap) return;
+  if(isScored(containerId)) setTotal(blanksIn(containerId).length);
+  const bar = document.createElement('div');
+  bar.className = 'check-bar';
+  bar.innerHTML = '<button class="btn" type="button">Prüfen</button><button class="btn secondary" type="button">Zurücksetzen</button><span class="score-pill"></span>';
+  const [c, r] = bar.querySelectorAll('.btn');
+  const score = bar.querySelector('.score-pill');
+  score.id = containerId + '-score';
+  wrap.appendChild(bar);
+  const check = () => checkBlanks(containerId, score.id, containerId);
+  c.addEventListener('click', check);
+  if(isLocked(containerId)) r.style.display = 'none';
+  else r.addEventListener('click', () => resetBlanks(containerId, score.id, containerId));
+  // Enter у полі = Prüfen (зручно на телефоні)
+  wrap.addEventListener('keydown', e => { if(e.key === 'Enter' && e.target.matches('input.blank-input')){ e.preventDefault(); check(); } });
+}
+// "[a|b]" у тексті → {gap: ["a","b"]}; решта — {t: "текст"}
+function exParseGaps(text){
+  const out = [];
+  let last = 0;
+  String(text).replace(/\[([^\]]+)\]/g, (m, inner, pos) => {
+    if(pos > last) out.push({t: text.slice(last, pos)});
+    out.push({gap: inner.split('|').map(s => s.trim())});
+    last = pos + m.length;
+  });
+  if(last < text.length) out.push({t: text.slice(last)});
+  return out;
+}
+
+/* ---------- A2. Текст з банком слів (buildWordBank) ----------
+   Над текстом — слова-картки; учень тапає пропуск, потім картку (або
+   навпаки: картку, потім пропуск). Після вставки сам виділяється наступний
+   порожній пропуск — можна просто тапати картки по черзі. Тап по
+   заповненому пропуску повертає слово в набір. Кожна картка — один раз.
+     buildWordBank('ub2-bank', {
+       text: "Meine [Oma] wohnt auf dem Land. Sie ist schon [Rentnerin].\n\nIm [Garten] …",
+       extra: ["Zwilling", "Büro"]
+     });
+   - text — пропуски в [квадратних дужках]; [Oma|Großmutter] — кілька
+     правильних, на картці буде перше. Порожній рядок (\n\n) = новий абзац.
+   - extra — (необов'язково) зайві картки-дистрактори.
+   Prüfen / Zurücksetzen і лічильник — як у пропусках; зараховується перша
+   перевірка кожного заповненого пропуску. Кожен пропуск = +1. */
+function buildWordBank(containerId, data){
+  const wrap = document.getElementById(containerId);
+  if(!wrap) return;
+  const scored = isScored(containerId), lockedMode = isLocked(containerId);
+  wrap.classList.add('wbank-ex');
+  wrap.innerHTML = '<p class="sort-tip">Натисни пропуск, а потім слово (або навпаки). Натиснеш на вставлене слово — воно повернеться.</p>'
+    + '<div class="wb-bank"></div><div class="wb-text"></div>'
+    + '<div class="check-bar"><button class="btn" type="button">Prüfen</button><button class="btn secondary" type="button">Zurücksetzen</button><span class="score-pill"></span></div>';
+  const bank = wrap.querySelector('.wb-bank'), textEl = wrap.querySelector('.wb-text');
+  const [checkBtn, resetBtn] = wrap.querySelectorAll('.check-bar .btn');
+  const scoreEl = wrap.querySelector('.score-pill');
+  if(lockedMode) resetBtn.style.display = 'none';
+
+  const gaps = [];
+  String(data.text || '').split(/\n\s*\n/).forEach(par => {
+    const p = document.createElement('p');
+    exParseGaps(par.trim()).forEach(part => {
+      if(part.t != null){ p.appendChild(document.createTextNode(part.t)); return; }
+      const g = document.createElement('button');
+      g.type = 'button'; g.className = 'wb-gap'; g.setAttribute('aria-label', 'Пропуск ' + (gaps.length + 1));
+      g.dataset.ans = part.gap.join('|');
+      p.appendChild(g);
+      gaps.push({el: g, ans: part.gap, card: null});
+    });
+    textEl.appendChild(p);
+  });
+  if(scored) setTotal(gaps.length);
+
+  let selGap = null, selCard = null, counted = 0;
+  const words = gaps.map(g => g.ans[0]).concat(data.extra || []);
+  const cards = shuffleArray(words).map(w => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'word-chip'; b.textContent = w; b.dataset.w = w;
+    bank.appendChild(b);
+    return b;
+  });
+  const gapOf = el => gaps.find(g => g.el === el);
+  function selectGap(g){
+    if(selGap) selGap.el.classList.remove('sel');
+    selGap = g;
+    if(g) g.el.classList.add('sel');
+  }
+  function selectCard(c){
+    if(selCard) selCard.classList.remove('picked');
+    selCard = c;
+    if(c) c.classList.add('picked');
+  }
+  function unplace(g){
+    if(!g.card) return;
+    g.card.hidden = false; g.card = null;
+    g.el.textContent = ''; delete g.el.dataset.w;
+    g.el.classList.remove('filled', 'correct', 'wrong');
+  }
+  function place(g, card){
+    unplace(g);
+    g.card = card; card.hidden = true; card.classList.remove('picked');
+    g.el.textContent = card.dataset.w; g.el.dataset.w = card.dataset.w;
+    g.el.classList.add('filled');
+    selectCard(null);
+    // далі — наступний порожній пропуск (після цього, потім з початку)
+    const i = gaps.indexOf(g);
+    const next = gaps.slice(i + 1).concat(gaps.slice(0, i)).find(x => !x.card && !x.el.disabled);
+    selectGap(next || null);
+  }
+  gaps.forEach(g => g.el.addEventListener('click', () => {
+    if(g.el.disabled) return;
+    if(selCard){ place(g, selCard); return; }
+    if(g.card){ unplace(g); selectGap(g); return; }
+    selectGap(selGap === g ? null : g);
+  }));
+  cards.forEach(c => c.addEventListener('click', () => {
+    if(selGap){ place(selGap, c); return; }
+    selectCard(selCard === c ? null : c);
+  }));
+
+  checkBtn.addEventListener('click', () => {
+    let correct = 0;
+    gaps.forEach(g => {
+      g.el.classList.remove('correct', 'wrong');
+      if(g.card){
+        const ok = g.ans.some(a => normAns(a, true) === normAns(g.card.dataset.w, true));
+        g.el.classList.add(ok ? 'correct' : 'wrong');
+        if(!('firstOk' in g.el.dataset)){ g.el.dataset.firstVal = g.card.dataset.w; g.el.dataset.firstOk = ok ? '1' : '0'; } // для звіту
+        if(lockedMode) g.el.disabled = true;
+      }
+      if(g.el.dataset.firstOk === '1') correct++;
+    });
+    scoreEl.textContent = correct + ' / ' + gaps.length + ' richtig (1. Versuch zählt)';
+    if(correct > counted){ if(scored) markDone(correct - counted); counted = correct; }
+    selectGap(null); selectCard(null);
+  });
+  resetBtn.addEventListener('click', () => {
+    if(lockedMode) return;
+    gaps.forEach(g => { unplace(g); delete g.el.dataset.firstVal; delete g.el.dataset.firstOk; });
+    selectGap(null); selectCard(null);
+    scoreEl.textContent = '';
+    if(counted > 0){ if(scored){ progress.done -= counted; renderProgress(); } counted = 0; }
+  });
+}
+
+/* ---------- A6. Перетворення речення (buildTransform) ----------
+   Дано речення + завдання («Perfekt», «denn», «заміни на займенник»);
+   учень пише ЦІЛЕ речення в поле на всю ширину.
+     buildTransform('ub4-tr', [
+       {s: "Ich spiele Fußball.", task: "Perfekt", ans: "Ich habe Fußball gespielt."},
+       {s: "Ich bleibe zu Hause. Ich bin krank.", task: "з'єднай через «denn»",
+        ans: "Ich bleibe zu Hause, denn ich bin krank."},
+       {s: "Gestern …", task: "…", ans: "варіант 1|варіант 2", hint: "Почни з «Gestern»"}
+     ]);
+   - ans — правильне речення; кілька варіантів через "|" (інший порядок слів,
+     скорочення тощо — напиши всі, які зарахуєш).
+   - task, hint — (необов'язково) можна з HTML (<b>…</b>).
+   Порівняння: регістр важливий, крім першої літери; зайві пробіли, пробіли
+   біля ком і кінцевий . ! ? не важливі; кома всередині — ВАЖЛИВА.
+   Перевірка — Prüfen або Enter. Кожне речення = +1, перша спроба. */
+function buildTransform(containerId, items){
+  const wrap = document.getElementById(containerId);
+  if(!wrap) return;
+  wrap.classList.add('tr-ex');
+  items.forEach((it, i) => {
+    const d = document.createElement('div');
+    d.className = 'fill-item tr-item';
+    d.innerHTML = '<p class="tr-src"><span class="num">' + (i + 1) + '.</span> <span class="tr-s"></span>'
+      + (it.task ? ' <span class="tr-task">→ ' + it.task + '</span>' : '') + '</p>'
+      + (it.hint ? ' <p class="order-hint">' + it.hint + '</p>' : '')
+      + ' <input type="text" class="blank-input tr-input" autocomplete="off" autocapitalize="sentences" spellcheck="false" placeholder="Schreib den Satz …">';
+    d.querySelector('.tr-s').textContent = it.s;
+    const inp = d.querySelector('input');
+    inp.dataset.ans = it.ans;
+    inp.setAttribute('data-case', 'sent');
+    inp.setAttribute('aria-label', 'Речення ' + (i + 1));
+    wrap.appendChild(d);
+  });
+  wireBlankBox(containerId);
+}
+
+/* ---------- A5. Знайди й виправ помилку (buildFixError) ----------
+   Учень тапає слово з помилкою → з'являється поле → вписує правильну форму.
+   Речення без помилки — кнопка «Fehlerfrei» (вона є біля КОЖНОГО речення,
+   щоб не підказувати).
+     buildFixError('ub3-fix', [
+       {s: "Ich besuche mein Onkel.", wrong: 2, fix: "meinen"},
+       {s: "Lena liebt ihren Bruder.", ok: true},
+       {s: "Gestern ich habe Fußball gespielt.", wrong: 1, fix: "habe ich", hint: "порядок слів"}
+     ]);
+   - wrong — номер слова з помилкою, рахуючи з 0 (розділові знаки не рахуються:
+     «Ich(0) besuche(1) mein(2) Onkel(3).»);
+   - fix — правильна форма; варіанти через "|"; може бути кілька слів;
+     регістр важливий (для першого слова речення — ні);
+   - ok: true — речення без помилки; hint — (необов'язково) підказка.
+   Бал (+1 за речення) — лише якщо ПЕРШИЙ тап влучив і ПЕРША спроба
+   виправлення правильна (або одразу «Fehlerfrei» для правильного речення). */
+function buildFixError(containerId, items){
+  const wrap = document.getElementById(containerId);
+  if(!wrap) return;
+  const scored = isScored(containerId), lockedMode = isLocked(containerId);
+  if(scored) setTotal(items.length);
+  wrap.classList.add('fix-ex');
+  wrap.innerHTML = '<p class="sort-tip">Натисни слово з помилкою і впиши, як правильно. Якщо помилки немає — «Fehlerfrei».</p>';
+  let solvedFirst = 0;
+  const scoreEl = document.createElement('span');
+  scoreEl.className = 'score-pill';
+  const updScore = () => { scoreEl.textContent = solvedFirst + ' / ' + items.length + ' richtig (1. Versuch zählt)'; };
+
+  items.forEach((it, qi) => {
+    const div = document.createElement('div');
+    div.className = 'fix-item';
+    div.dataset.s = it.s;
+    div.innerHTML = (it.hint ? '<p class="order-hint">' + it.hint + '</p>' : '')
+      + '<p class="fix-line"><span class="num">' + (qi + 1) + ')</span> </p>'
+      + '<div class="fix-tools"><button type="button" class="btn small secondary fix-ok">Fehlerfrei ✓</button>'
+      + '<span class="fix-field" hidden><input type="text" class="blank-input inline wide" autocomplete="off" spellcheck="false" placeholder="richtig: …">'
+      + '<button type="button" class="btn small fix-go">OK</button></span></div>'
+      + '<p class="feedback"></p>';
+    const line = div.querySelector('.fix-line'), fb = div.querySelector('.feedback');
+    const okBtn = div.querySelector('.fix-ok'), field = div.querySelector('.fix-field');
+    const inp = field.querySelector('input'), goBtn = field.querySelector('.fix-go');
+    inp.dataset.ans = it.fix || '';
+    inp.setAttribute('data-case', it.wrong === 0 ? 'sent' : ''); // перше слово речення — без огляду на велику літеру
+    inp.setAttribute('aria-label', 'Виправлення, речення ' + (qi + 1));
+
+    const toks = [];
+    it.s.split(/\s+/).forEach((piece, k, arr) => {
+      const m = piece.match(/^([„“"'(«]*)(.*?)([.,!?;:»“"')…]*)$/);
+      if(m[1]) line.appendChild(document.createTextNode(m[1]));
+      if(m[2]){
+        const b = document.createElement('button');
+        b.type = 'button'; b.className = 'fx-tok'; b.textContent = m[2];
+        b.dataset.i = toks.length;
+        toks.push(b);
+        line.appendChild(b);
+      }
+      line.appendChild(document.createTextNode(m[3] + (k < arr.length - 1 ? ' ' : '')));
+    });
+
+    let found = false, done = false, pendingOk = false;
+    const say = (t, ok) => { fb.textContent = t; fb.className = 'feedback ' + (ok ? 'ok' : 'bad'); };
+    function setFirst(desc, ok){
+      if('firstOk' in div.dataset) return;
+      div.dataset.first = desc; div.dataset.firstOk = ok ? '1' : '0'; // для звіту вчителю
+      if(ok){ if(scored) markDone(1); solvedFirst++; updScore(); }
+    }
+    function close(solved){
+      done = true;
+      div.classList.add(solved ? 'is-solved' : 'is-closed');
+      toks.forEach(t => t.disabled = true); okBtn.disabled = true; inp.disabled = true; goBtn.disabled = true;
+    }
+    toks.forEach(t => t.addEventListener('click', () => {
+      if(done || found) return;
+      const i = +t.dataset.i;
+      if(!it.ok && i === it.wrong){
+        found = true; pendingOk = !('firstOk' in div.dataset);
+        t.classList.add('found'); okBtn.hidden = true; field.hidden = false;
+        div.dataset.found = t.textContent;
+        say('Gefunden! Wie ist es richtig?', true);
+        inp.focus();
+        return;
+      }
+      setFirst('«' + t.textContent + '»', false);
+      t.classList.add('miss'); setTimeout(() => t.classList.remove('miss'), 900);
+      if(lockedMode){ say('Leider falsch ✗', false); close(false); }
+      else say('Hier ist kein Fehler — such weiter.', false);
+    }));
+    okBtn.addEventListener('click', () => {
+      if(done || found) return;
+      if(it.ok){ setFirst('Fehlerfrei', true); say('Richtig! ✓ Der Satz ist fehlerfrei.', true); close(true); return; }
+      setFirst('Fehlerfrei', false);
+      if(lockedMode){ say('Leider falsch ✗', false); close(false); }
+      else say('Doch — hier ist ein Fehler.', false);
+    });
+    function tryFix(){
+      if(done) return;
+      const res = blankIsCorrect(inp);
+      if(res === null) return;
+      const desc = '«' + div.dataset.found + '» → «' + inp.value.trim() + '»';
+      inp.classList.remove('correct', 'wrong');
+      inp.classList.add(res ? 'correct' : 'wrong');
+      if(pendingOk){ pendingOk = false; setFirst(desc, res); }
+      else setFirst(desc, false);
+      if(res){ say('Richtig! ✓', true); close(true); }
+      else if(lockedMode){ say('Leider falsch ✗', false); close(false); }
+      else say('Noch nicht richtig — versuch es noch mal.', false);
+    }
+    goBtn.addEventListener('click', tryFix);
+    inp.addEventListener('keydown', e => { if(e.key === 'Enter'){ e.preventDefault(); tryFix(); } });
+    wrap.appendChild(div);
+  });
+  const bar = document.createElement('div');
+  bar.className = 'check-bar';
+  bar.appendChild(scoreEl); updScore();
+  wrap.appendChild(bar);
+}
+
+/* ---------- B3. Таблиця для заповнення (buildTable) ----------
+   Таблиця відмінювання / дієвідмінювання: у клітинках — текст, поле або
+   текст з полем усередині. Пропуск — [квадратні дужки], як у банку слів.
+     buildTable('ub2-tab', {
+       head: ["", "Nominativ", "Akkusativ"],
+       rows: [["der", "mein Bruder", "[meinen] Bruder"],
+              ["die", "[meine] Schwester", "meine Schwester"]]
+     });
+   - head — (необов'язково) шапка; rows — рядки; перший стовпчик жирний.
+   - [a|b] — кілька правильних; case: true — регістр важливий (типово — ні).
+   - caption — (необов'язково) підпис над таблицею.
+   Prüfen / Zurücksetzen малює функція; перевірка й бал — як у wireBlanks.
+   На вузькому екрані прокручується сама таблиця, а не сторінка. */
+function buildTable(containerId, data){
+  const wrap = document.getElementById(containerId);
+  if(!wrap) return;
+  wrap.classList.add('tb-ex');
+  const box = document.createElement('div');
+  box.className = 'tb-wrap';
+  const table = document.createElement('table');
+  table.className = 'gtable tb-table';
+  if(data.caption){ const c = table.createCaption(); c.textContent = data.caption; }
+  if(data.head){
+    const tr = table.createTHead().insertRow();
+    data.head.forEach(h => { const th = document.createElement('th'); th.textContent = h; tr.appendChild(th); });
+  }
+  const body = table.createTBody();
+  let n = 0;
+  (data.rows || []).forEach(row => {
+    const tr = body.insertRow();
+    row.forEach((cellText, ci) => {
+      const td = tr.insertCell();
+      if(ci === 0) td.className = 'tb-rh';
+      const parts = exParseGaps(String(cellText));
+      const alone = parts.length === 1 && parts[0].gap;
+      parts.forEach(part => {
+        if(part.t != null){ td.appendChild(document.createTextNode(part.t)); return; }
+        const inp = document.createElement('input');
+        inp.type = 'text'; inp.className = 'blank-input' + (alone ? '' : ' inline');
+        inp.autocomplete = 'off'; inp.spellcheck = false;
+        inp.dataset.ans = part.gap.join('|');
+        if(data.case) inp.setAttribute('data-case', '');
+        inp.setAttribute('aria-label', 'Поле ' + (++n));
+        td.appendChild(inp);
+      });
+    });
+  });
+  box.appendChild(table);
+  wrap.appendChild(box);
+  wireBlankBox(containerId);
+}
+
 /* ---------- Аудіоплеєр (Üb. Hören) ---------- */
 function wirePlayer(audioId, playId, seekId, timeId){
   const audio = document.getElementById(audioId);
@@ -939,6 +1314,38 @@ function rpTokens(box){
   return {html: 'Позначено: ' + list + (checked ? '' : ' <span class="rp-note">(не перевірено)</span>')
     + (missed > 0 ? ' <span class="rp-muted">· не знайдено: ' + missed + '</span>' : ''), ok: ok, n: need.length, empty: 0};
 }
+// buildWordBank: текст з відповідями учня на місці пропусків, абзац = рядок звіту
+function rpWordBank(wrap){
+  let ok = 0, n = 0, empty = 0;
+  const paras = Array.from(wrap.querySelectorAll('.wb-text p')).map(p => {
+    const states = [];
+    const clone = p.cloneNode(true);
+    p.querySelectorAll('.wb-gap').forEach(g => {
+      n++;
+      const cur = g.dataset.w || '';
+      if('firstOk' in g.dataset){
+        const good = g.dataset.firstOk === '1'; if(good) ok++;
+        const later = cur && cur !== g.dataset.firstVal ? 'потім: ' + cur : '';
+        states.push(rpAns(g.dataset.firstVal, good ? 'ok' : 'bad', later));
+      } else if(cur) states.push(rpAns(cur, 'open', 'не перевірено'));
+      else { states.push(RP_GAP); empty++; }
+    });
+    clone.querySelectorAll('.wb-gap').forEach((g, i) => g.replaceWith(document.createTextNode('\u0001' + i + '\u0002')));
+    return rpEsc(clone.textContent.replace(/\s+/g, ' ').trim()).replace(/\u0001(\d+)\u0002/g, (m, i) => states[+i]);
+  });
+  return {html: paras[0] || '', more: paras.slice(1), ok: ok, n: n, empty: empty};
+}
+// buildFixError: речення → що учень позначив / як виправив з першої спроби
+function rpFix(div){
+  const pre = rpEsc(rpText(div.querySelector('.fix-line .num'))) + ' ' + rpEsc(div.dataset.s || '') + ' → ';
+  if(!('firstOk' in div.dataset)){
+    if(div.dataset.found) return {html: pre + rpAns('«' + div.dataset.found + '» → …', 'open', 'не дописано'), ok: 0, n: 1, empty: 0};
+    return {html: pre + RP_GAP, ok: 0, n: 1, empty: 1};
+  }
+  const good = div.dataset.firstOk === '1';
+  const later = !good && div.classList.contains('is-solved') ? 'потім виправив(-ла)' : '';
+  return {html: pre + rpAns(div.dataset.first, good ? 'ok' : 'bad', later), ok: good ? 1 : 0, n: 1, empty: 0};
+}
 function rpFieldLabel(el){
   const qa = el.closest('.qa');
   const lbl = (qa && qa.querySelector('label')) || (el.id && document.querySelector('label[for="' + el.id + '"]'));
@@ -987,12 +1394,15 @@ function rpCollectPanel(panel){
   const rows = [];
   const seen = new Set();
   let lastCard = null;
-  const sel = '.quiz-q, .order-item, .sort-ex, textarea, input.blank-input, select.blank, .tok, input[type="text"]';
+  const sel = '.quiz-q, .order-item, .sort-ex, .wbank-ex, .fix-item, textarea, input.blank-input, select.blank, .tok, input[type="text"]';
   panel.querySelectorAll(sel).forEach(el => {
     if(el.closest('.report-card') || rpHidden(el, panel)) return;
     let key = el, row = null;
     if(el.matches('.sort-ex')) row = rpSort(el);
     else if(el.closest('.sort-ex')) return;
+    else if(el.matches('.wbank-ex')) row = rpWordBank(el);
+    else if(el.matches('.fix-item')) row = rpFix(el);
+    else if(el.closest('.fix-ex')) return; // поле виправлення — уже в рядку речення
     else if(el.matches('.quiz-q')) row = rpQuiz(el);
     else if(el.matches('.order-item')) row = rpOrder(el);
     else if(el.matches('textarea')) row = rpTextarea(el);
