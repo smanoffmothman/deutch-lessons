@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Haben es Gesellige leichter? · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Gesellschaft</span>
+        <h1>Haben es Gesellige leichter?</h1>
+        <p class="sub">Тиха загадковість чи відкритість і балакучість — хто легше знаходить пару? Шведські психологи перевірили це на даних майже чотирьох тисяч людей.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Eher extra- oder introvertiert?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und du?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Was glaubst du?</h2>
+      <div class="card">
+        <p>Finden gesellige Menschen leichter einen Partner oder eine Partnerin? Wähle zuerst selbst – die Lösung steht im Text:</p>
+        <p><b>A</b> Ja. Wer extravertiert ist, hat bei der Partnersuche einen Vorteil.<br>
+           <b>B</b> Nein. Die Persönlichkeit spielt dafür keine Rolle.<br>
+           <b>C</b> Ja, aber nicht für alle: Der Vorteil gilt vor allem für Männer.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Спершу вгадай: A, B чи C? Запам'ятай свою відповідь і перевір її в тексті. А ще подумай: ти більше любиш гамірні компанії чи спокій і кількох близьких друзів?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Still in der Ecke stehen oder mitten im Gespräch sein? Viele glauben, dass ruhige, <span class="gl" data-uk="загадковий, таємничий" data-lemma="geheimnisvoll">geheimnisvolle</span> Menschen besonders <span class="gl" data-uk="привабливий" data-lemma="anziehend">anziehend</span> wirken. Andererseits ist klar: Wer nie auf andere <span class="gl" data-uk="підходити до когось, ініціювати контакт" data-lemma="zugehen (ging zu, ist zugegangen) auf + Akk.">zugeht</span>, lernt auch kaum jemanden kennen. Wer hat es also bei der <span class="gl" data-key data-uk="пошук пари" data-lemma="die Partnersuche">Partnersuche</span> leichter?</p>
+
+          <p>Psychologen beschreiben Menschen oft mit dem Begriff <span class="gl" data-key data-uk="екстраверсія" data-lemma="die Extraversion">Extraversion</span>. <span class="gl" data-key data-uk="екстраверт" data-lemma="der/die Extravertierte, -n">Extravertierte</span> sind <span class="gl" data-key data-uk="товариський, компанійський" data-lemma="gesellig">gesellig</span> und <span class="gl" data-uk="балакучий" data-lemma="gesprächig">gesprächig</span>, sie gehen gern auf Partys und knüpfen schnell Kontakte. <span class="gl" data-key data-uk="інтроверт" data-lemma="der/die Introvertierte, -n">Introvertierte</span> brauchen dagegen mehr Ruhe. Sie verbringen ihre Zeit lieber mit wenigen guten Freunden und sind in großen Gruppen oft <span class="gl" data-uk="стриманий" data-lemma="zurückhaltend">zurückhaltend</span> oder auch <span class="gl" data-key data-uk="сором'язливий" data-lemma="schüchtern">schüchtern</span>. Man sagt auch: Extravertierte <span class="gl" data-uk="набиратися (сил, енергії)" data-lemma="tanken">tanken</span> Energie, wenn sie unter Menschen sind; Introvertierte erholen sich am besten allein. Beides ist ganz normal, und die meisten Menschen liegen irgendwo dazwischen.</p>
+
+          <p>Die beiden Begriffe sind übrigens schon über hundert Jahre alt. Bekannt gemacht hat sie der Schweizer <span class="gl" data-uk="психіатр" data-lemma="der Psychiater, -">Psychiater</span> Carl Gustav Jung, und zwar 1921 in seinem Buch „Psychologische Typen“. Jung lebte und arbeitete viele Jahre in Küsnacht bei Zürich. Heute gehören seine Begriffe zur <span class="gl" data-uk="повсякденна мова" data-lemma="die Alltagssprache">Alltagssprache</span> – auch im Deutschen.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/K%C3%BCsnacht_-_Wohnhaus_von_C._G._Jung%2C_Seestrasse_228_2011-08-26_15-00-52_ShiftN.jpg/960px-K%C3%BCsnacht_-_Wohnhaus_von_C._G._Jung%2C_Seestrasse_228_2011-08-26_15-00-52_ShiftN.jpg" alt="Das Wohnhaus von C. G. Jung in Küsnacht (Schweiz)." width="960" height="640" loading="lazy">
+            <figcaption>Das Wohnhaus von C. G. Jung in Küsnacht (Schweiz). Foto: Roland zh, <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/wiki/File:K%C3%BCsnacht_-_Wohnhaus_von_C._G._Jung,_Seestrasse_228_2011-08-26_15-00-52_ShiftN.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Ein Forschungsteam aus Schweden wollte wissen, ob die Persönlichkeit bei der Partnersuche eine Rolle spielt. Dafür <span class="gl" data-uk="аналізувати, опрацьовувати" data-lemma="auswerten">werteten</span> die Forschenden die Daten von 3780 Erwachsenen aus drei Ländern <span class="gl" data-uk="аналізувати, опрацьовувати" data-lemma="auswerten">aus</span>: aus Australien, Dänemark und Schweden. Sie verglichen, wie <span class="gl" data-uk="екстравертний" data-lemma="extravertiert">extravertiert</span> die Menschen waren und ob sie in einer <span class="gl" data-key data-uk="стосунки" data-lemma="die Beziehung, -en">Beziehung</span> lebten.</p>
+
+          <p>Das Ergebnis: Extravertierte Menschen fanden tatsächlich leichter einen Partner oder eine Partnerin. Allerdings war der <span class="gl" data-uk="ефект, вплив" data-lemma="der Effekt, -e">Effekt</span> bei Männern deutlich stärker als bei Frauen. Schüchterne Frauen hatten bei der Partnersuche kaum <span class="gl" data-uk="недолік, невигода" data-lemma="der Nachteil, -e">Nachteile</span>, schüchterne Männer dagegen schon. Die richtige Antwort im Test ist also C.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>In der Psychologie beschreibt man die Persönlichkeit oft mit den „Big Five“, fünf großen <span class="gl" data-uk="риса, ознака" data-lemma="das Merkmal, -e">Merkmalen</span>: Offenheit, <span class="gl" data-uk="сумлінність" data-lemma="die Gewissenhaftigkeit">Gewissenhaftigkeit</span>, Extraversion, <span class="gl" data-uk="доброзичливість, поступливість" data-lemma="die Verträglichkeit">Verträglichkeit</span> und Neurotizismus. Übrigens schreibt man im Deutschen sowohl „extravertiert“ als auch „extrovertiert“ – beides ist richtig.</p>
+          </aside>
+
+          <p>Die Studie zeigte noch etwas Interessantes. In Familien war die <span class="gl" data-uk="задоволеність" data-lemma="die Zufriedenheit">Zufriedenheit</span> am höchsten, wenn die Männer extravertiert und die Frauen <span class="gl" data-uk="доброзичливий, поступливий" data-lemma="verträglich">verträglich</span> waren. Verträgliche Menschen sind freundlich, hilfsbereit und können gut Kompromisse schließen.</p>
+
+          <p>Heißt das, dass ruhige Menschen <span class="gl" data-uk="мати погані шанси" data-note="розм.: досл. «мати погані карти»" data-lemma="schlechte Karten haben">schlechte Karten haben</span>? Nein. Solche Studien beschreiben <span class="gl" data-uk="середнє значення" data-lemma="der Durchschnitt, -e">Durchschnitte</span> von vielen tausend Menschen, nicht das Leben eines einzelnen Menschen. Auch Introvertierte finden Freunde und Partner – vielleicht nicht auf der lautesten Party, sondern im Sportverein, in der Bibliothek oder bei einem langen Gespräch zu zweit. Und wer in großen Gruppen still ist, ist im kleinen Kreis oft ein besonders guter <span class="gl" data-uk="слухач" data-lemma="der Zuhörer, -">Zuhörer</span>.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Відповідай на питання до тексту.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Eher extravertiert oder eher introvertiert?</h2>
+      <p class="lead">Розсортуй описи: що більше пасує до екстраверта, а що — до інтроверта? Натисни на картку, потім на кошик.</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+      <p class="lead">б) Коротко про головне: встав слова з набору в текст. Одне слово зайве.</p>
+      <div class="card" id="ub4b-bank"></div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und du?</h2>
+      <p class="lead">Напиши німецькою. Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card" id="ub5-w"></div>
+      <div class="card">
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Ich bin eher … · In großen Gruppen fühle ich mich … · Neue Freunde finde ich am leichtesten, wenn … · Ich glaube (nicht), dass …, weil …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Eine Studie aus Schweden mit Daten aus Australien, Dänemark und Schweden zeigt: Extravertierte finden im Durchschnitt leichter einen Partner – vor allem Männer. Für schüchterne Frauen gibt es kaum Nachteile. Psychologen beschreiben die Persönlichkeit oft mit den „Big Five“, und im Deutschen sind „extravertiert“ und „extrovertiert“ beide richtig. Bekannt gemacht hat die Begriffe 1921 der Schweizer Psychiater Carl Gustav Jung.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Шведське дослідження з даними з Австралії, Данії та Швеції показало: екстравертам у середньому легше знайти пару — особливо чоловікам. Сором'язливим жінкам це майже не заважає. Психологи часто описують особистість за «Великою п'ятіркою» рис, а в німецькій правильні обидва написання — «extravertiert» і «extrovertiert». Самі поняття 1921 року популяризував швейцарський психіатр Карл Густав Юнг.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "gesellige-menschen-partnersuche";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Welche Antwort aus „Vor dem Lesen“ ist laut Studie richtig?",
+     opts: ["C: Gesellige haben einen Vorteil, vor allem Männer",
+            "A: Gesellige haben einen Vorteil, Männer und Frauen gleich",
+            "B: Die Persönlichkeit spielt keine Rolle"],
+     correct: "C: Gesellige haben einen Vorteil, vor allem Männer"},
+    {q: "Was will der letzte Absatz zeigen?",
+     opts: ["Eine Studie beschreibt Durchschnitte – auch ruhige Menschen finden Partner",
+            "Introvertierte sollten öfter auf große Partys gehen",
+            "Die Studie aus Schweden war falsch"],
+     correct: "Eine Studie beschreibt Durchschnitte – auch ruhige Menschen finden Partner"}
+  ]);
+  buildMatch('ub1h', [
+    ["Zwei Typen von Menschen", "Absatz 1"],
+    ["Begriffe aus der Schweiz", "Absatz 2"],
+    ["Daten aus drei Ländern", "Absatz 3"],
+    ["Ein Vorteil – aber nicht für alle", "Absatz 4"],
+    ["Zufriedene Familien", "Absatz 5"],
+    ["Kein Grund zur Sorge", "Absatz 6"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5", "Absatz 6"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "Introvertierte verbringen ihre Zeit lieber mit wenigen guten Freunden.", a: "r"},
+    {s: "Die Studie stammt aus Dänemark.", a: "f"},
+    {s: "In der Studie wurden Daten von über 3000 Erwachsenen ausgewertet.", a: "r"},
+    {s: "Schüchterne Frauen hatten bei der Partnersuche große Nachteile.", a: "f"},
+    {s: "Die Teilnehmer waren zwischen 20 und 40 Jahre alt.", a: "n"},
+    {s: "Carl Gustav Jung hat die Begriffe „extravertiert“ und „introvertiert“ bekannt gemacht.", a: "r"},
+    {s: "Verträgliche Menschen können gut Kompromisse schließen.", a: "r"},
+    {s: "Laut Text sind die meisten Menschen entweder ganz extravertiert oder ganz introvertiert.", a: "f"}
+  ]);
+
+  buildSort('ub3-sort', {
+    buckets: ["eher extravertiert", "eher introvertiert"],
+    items: [
+      {t: "gesprächig", b: "eher extravertiert"},
+      {t: "knüpft schnell Kontakte", b: "eher extravertiert"},
+      {t: "geht gern auf Partys", b: "eher extravertiert"},
+      {t: "zurückhaltend", b: "eher introvertiert"},
+      {t: "braucht mehr Ruhe", b: "eher introvertiert"},
+      {t: "lieber wenige gute Freunde", b: "eher introvertiert"}
+    ]
+  });
+
+  buildMatch('ub4', [
+    ["gesellig", "товариський, компанійський"],
+    ["schüchtern", "сором'язливий"],
+    ["zurückhaltend", "стриманий"],
+    ["der Nachteil", "недолік, невигода"],
+    ["die Zufriedenheit", "задоволеність"],
+    ["auswerten", "аналізувати, опрацьовувати"]
+  ]);
+  buildWordBank('ub4b-bank', {
+    text: "Forschende aus Schweden haben Daten von 3780 Erwachsenen [ausgewertet]. Sie wollten wissen, ob [gesellige] Menschen leichter einen Partner finden. Das Ergebnis: Extravertierte haben einen Vorteil, vor allem Männer. [Schüchterne] Frauen haben dagegen kaum [Nachteile]. Solche Studien beschreiben aber nur den [Durchschnitt].",
+    extra: ["Beziehung"]
+  });
+
+  buildWriting('ub5-w', {
+    prompt: "Bist du eher extravertiert, eher introvertiert oder irgendwo dazwischen? Wie und wo findest du am leichtesten neue Freunde? (60–90 Wörter)",
+    words: "60-90",
+    must: ["eher", "weil"],
+    check: ["Ich beschreibe mich selbst mit Wörtern aus dem Text", "Ich nenne einen Ort oder eine Situation, wo ich Freunde finde"]
+  });
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📰','🗣️','🤝','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
