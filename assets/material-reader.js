@@ -437,7 +437,7 @@ function buildSequence(containerId, data){
    - переклад слів, панель над текстом, шухляда, вкладка Wörter;
    - збереження прогресу: trackProgress('mat:' + id) (його показує сторінка
      materialy/ на картці статті). */
-const MAT_LAND = {DE: 'Deutschland', AT: 'Österreich', CH: 'Schweiz', LI: 'Liechtenstein', LU: 'Luxemburg', EU: 'Europa'};
+const MAT_LAND = {DE: 'Deutschland', AT: 'Österreich', CH: 'Schweiz', LI: 'Liechtenstein', LU: 'Luxemburg', EU: 'Europa', UA: 'Ukraine'};
 function matFlag(code){
   // прапорці намальовані CSS (емодзі-прапорців Windows не показує)
   return '<span class="flag flag-' + matEsc(code) + '" title="' + matEsc(MAT_LAND[code] || code) + '" aria-label="' + matEsc(MAT_LAND[code] || code) + '"></span>';

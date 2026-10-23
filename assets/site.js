@@ -286,7 +286,7 @@ function renderGlossary(){
      — окремим списком під статтями, без фільтрів.
    Прапорці — CSS (.flag-DE …), бо емодзі-прапорців Windows не показує. */
 const MAT_LEVELS = ['A2', 'B1', 'B2', 'C1', 'C2'];
-const MAT_LANDS = {DE: 'Німеччина', AT: 'Австрія', CH: 'Швейцарія', LI: 'Ліхтенштейн', LU: 'Люксембург', EU: 'Європа'};
+const MAT_LANDS = {DE: 'Німеччина', AT: 'Австрія', CH: 'Швейцарія', LI: 'Ліхтенштейн', LU: 'Люксембург', EU: 'Європа', UA: 'Україна'};
 function matIsArticle(m){ return m && m.typ === 'stattya'; }
 function articleCountLabel(n){ // 1 стаття, 2–4 статті, 5+ статей, 21 стаття
   const m10 = n % 10, m100 = n % 100;
