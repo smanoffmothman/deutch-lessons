@@ -984,6 +984,424 @@ function buildTable(containerId, data){
   wireBlankBox(containerId);
 }
 
+/* =====================================================================
+   НОВІ ФОРМАТИ ВПРАВ — етап 2 (з 2026-10-23)
+   buildChat · buildCTest · buildWriting (+ атрибути textarea) ·
+   buildMemory · buildScramble. Ті самі спільні правила, що й в етапі 1.
+   ===================================================================== */
+const exReducedMotion = () => window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---------- A1. Діалог-чат (buildChat) ----------
+   Репліки бульбашками: ліворуч співрозмовник, праворуч учень. На кроці
+   учня — 2–3 варіанти; вибір доречної → бульбашка, діалог іде далі.
+   Недоречна: червоний відгук, можна вибрати ще (бал — перша спроба);
+   діалог не продовжується, поки не обрано доречну.
+     buildChat('ub4-chat', {
+       partner: "Kellnerin",
+       steps: [
+         {them: "Guten Tag! Was möchtest du trinken?", audio: "audio/kellnerin-1.mp3"},
+         {you: ["Einen Apfelsaft, bitte.", "Ich bin zwölf.", "Tschüss!"], correct: 0},
+         {them: "Gern. Und zum Essen?"},
+         {you: ["Eine Pizza Margherita, bitte.", "Danke, gut."], correct: 0, hint: "замов їжу"}
+       ]
+     });
+   - them — репліка співрозмовника; кілька {them} поспіль — кілька бульбашок.
+   - audio — (необов'язково) mp3 до репліки: "файл.mp3" або фрагмент
+     спільного файлу {src: "dialog.mp3", from: 3.2, to: 6.8} (секунди) —
+     біля бульбашки з'явиться ▶.
+   - you — варіанти (перемішуються самі), correct — номер доречного з 0.
+   - hint — (необов'язково) підказка українською над варіантами.
+   - me — (необов'язково) як підписати учня (типово «Du»).
+   Контрольна: одна спроба на крок; після невдалої діалог іде далі, а
+   бульбашка учня лишається червоною — доречна репліка не показується.
+   Кожен крок учня = +1. */
+function buildChat(containerId, data){
+  const wrap = document.getElementById(containerId);
+  if(!wrap) return;
+  const scored = isScored(containerId), lockedMode = isLocked(containerId);
+  const steps = data.steps || [];
+  const youSteps = steps.filter(s => s.you);
+  if(scored) setTotal(youSteps.length);
+  wrap.classList.add('chat-ex');
+  wrap.innerHTML = '<div class="chat-head"><span class="chat-ava" aria-hidden="true"></span><b></b></div>'
+    + '<div class="chat-log" aria-live="polite"></div><div class="chat-opts-box"><p class="order-hint" hidden></p><div class="chat-opts"></div><p class="feedback"></p></div>'
+    + '<div class="check-bar"><span class="score-pill"></span></div>';
+  const partner = data.partner || 'Partner';
+  wrap.querySelector('.chat-head b').textContent = partner;
+  wrap.querySelector('.chat-ava').textContent = partner.charAt(0).toUpperCase();
+  const log = wrap.querySelector('.chat-log'), optsBox = wrap.querySelector('.chat-opts-box');
+  const opts = wrap.querySelector('.chat-opts'), fb = optsBox.querySelector('.feedback'), hintEl = optsBox.querySelector('.order-hint');
+  const scoreEl = wrap.querySelector('.score-pill');
+  // для звіту: по кроку учня — що сказав співрозмовник перед ним і перша спроба
+  wrap._chat = []; wrap._chatTotal = youSteps.length;
+  let solvedFirst = 0, lastThem = '';
+  const updScore = () => { scoreEl.textContent = solvedFirst + ' / ' + youSteps.length + ' richtig (1. Versuch zählt)'; };
+  updScore();
+
+  function playClip(a, btn){
+    const src = typeof a === 'string' ? a : a.src;
+    const audio = playClip.audio || (playClip.audio = new Audio());
+    if(audio._src !== src){ audio.src = src; audio._src = src; }
+    audio.pause();
+    audio.ontimeupdate = (typeof a === 'object' && a.to != null) ? () => { if(audio.currentTime >= a.to) audio.pause(); } : null;
+    audio.currentTime = (typeof a === 'object' && a.from) || 0;
+    audio.play().catch(() => { btn.textContent = '⚠'; btn.title = 'Аудіо не завантажилось'; });
+  }
+  function bubble(who, text, step){
+    const m = document.createElement('div');
+    m.className = 'chat-msg ' + who;
+    const t = document.createElement('span');
+    t.textContent = text;
+    m.appendChild(t);
+    if(step && step.audio){
+      const b = document.createElement('button');
+      b.type = 'button'; b.className = 'chat-play'; b.textContent = '▶'; b.setAttribute('aria-label', 'Послухати');
+      b.addEventListener('click', () => playClip(step.audio, b));
+      m.insertBefore(b, t);
+    }
+    log.appendChild(m);
+    log.scrollTop = log.scrollHeight;
+    return m;
+  }
+  let i = 0;
+  function next(){
+    while(i < steps.length && steps[i].them != null){
+      const s = steps[i++];
+      lastThem = s.them;
+      bubble('them', s.them, s);
+    }
+    if(i >= steps.length){ optsBox.hidden = true; wrap.classList.add('is-done'); return; }
+    ask(steps[i++]);
+  }
+  function ask(s){
+    const rec = {prompt: lastThem, first: null, firstOk: null};
+    wrap._chat.push(rec);
+    opts.innerHTML = ''; fb.textContent = ''; fb.className = 'feedback';
+    hintEl.hidden = !s.hint; hintEl.innerHTML = s.hint || '';
+    optsBox.hidden = false;
+    let done = false;
+    shuffleArray(s.you.map((t, k) => k)).forEach(k => {
+      const b = document.createElement('button');
+      b.type = 'button'; b.className = 'opt-btn'; b.textContent = s.you[k];
+      b.addEventListener('click', () => {
+        if(done) return;
+        const ok = k === s.correct;
+        if(rec.first === null){
+          rec.first = s.you[k]; rec.firstOk = ok;
+          if(ok){ if(scored) markDone(1); solvedFirst++; updScore(); }
+        }
+        if(ok || lockedMode){
+          done = true;
+          const m = bubble('me', s.you[k]);
+          if(!ok) m.classList.add('wrong');
+          rec.solved = ok;
+          optsBox.hidden = true;
+          setTimeout(next, exReducedMotion() ? 0 : 450);
+        } else {
+          b.classList.add('wrong'); b.disabled = true;
+          fb.textContent = 'Passt nicht — probier eine andere Antwort.'; fb.className = 'feedback bad';
+        }
+      });
+      opts.appendChild(b);
+    });
+  }
+  next();
+}
+
+/* ---------- A7. C-Test (buildCTest) ----------
+   У словах тексту сховано частину — учень дописує.
+     buildCTest('ub6-ct', {
+       text: "Meine {Fam|ilie} ist groß. Ich habe zwei {Brüder} und eine {Schw|ester}.",
+       mode: "half"
+     });
+   - {Fam|ilie} — видима частина | схована; варіанти схованої через "/":
+     {Fam|ilie/ilien}.
+   - {Brüder} — без "|": ховається автоматично за mode:
+     "half" (типово, класичний C-Test — сховано другу половину слова, для
+     непарної довжини — більшу) або "first" (видно лише першу літеру).
+   - Порожній рядок (\n\n) = новий абзац.
+   - case: true — регістр важливий (типово — ні).
+   Prüfen / Zurücksetzen — як у пропусках; кожне слово = +1, перша спроба. */
+function buildCTest(containerId, data){
+  const wrap = document.getElementById(containerId);
+  if(!wrap) return;
+  wrap.classList.add('ctest-ex');
+  const mode = data.mode || 'half';
+  const box = document.createElement('div');
+  box.className = 'ct-text';
+  String(data.text || '').split(/\n\s*\n/).forEach(par => {
+    const p = document.createElement('p');
+    let last = 0;
+    const src = par.trim();
+    src.replace(/\{([^}]+)\}/g, (m, inner, pos) => {
+      if(pos > last) p.appendChild(document.createTextNode(src.slice(last, pos)));
+      last = pos + m.length;
+      let vis, hid;
+      if(inner.includes('|')){ [vis, hid] = inner.split('|'); }
+      else {
+        const n = mode === 'first' ? 1 : Math.floor(inner.length / 2);
+        vis = inner.slice(0, n); hid = inner.slice(n);
+      }
+      const w = document.createElement('span');
+      w.className = 'ct-w';
+      w.appendChild(document.createTextNode(vis));
+      const inp = document.createElement('input');
+      inp.type = 'text'; inp.className = 'blank-input ct-in';
+      inp.autocomplete = 'off'; inp.spellcheck = false; inp.setAttribute('autocapitalize', 'off');
+      inp.dataset.ans = hid.split('/').map(x => x.trim()).join('|');
+      if(data.case) inp.setAttribute('data-case', '');
+      const len = Math.max(...hid.split('/').map(x => x.trim().length));
+      inp.style.width = (len + 1.6) + 'ch'; // ширина ≈ довжина схованого (не точна — щоб не підказувати)
+      inp.setAttribute('aria-label', vis + '…');
+      w.appendChild(inp);
+      p.appendChild(w);
+    });
+    if(last < src.length) p.appendChild(document.createTextNode(src.slice(last)));
+    box.appendChild(p);
+  });
+  wrap.appendChild(box);
+  wireBlankBox(containerId);
+}
+
+/* ---------- C6. Письмо з чеклістом ----------
+   Розширення звичайного .qa textarea — атрибутами, без JS у сторінці:
+     <div class="qa">
+       <label for="w1">Напиши листа другові (60–80 слів).</label>
+       <textarea id="w1" rows="8" data-words="60-80"
+         data-must="Lieber/Liebe|Viele Grüße|weil"
+         data-check="Звертання й підпис|Відповів(-ла) на 3 питання|Перевірив(-ла) порядок слів"></textarea>
+     </div>
+   - data-words — мета: "60-80" або "60" (мінімум); лічильник «45 / 60–80 Wörter».
+   - data-must — обов'язкові слова/звороти через "|", варіанти через "/";
+     підсвічуються ✓, щойно учень їх ужив (регістр не важливий).
+   - data-check — чекліст критеріїв через "|", учень відмічає сам.
+   Або одним викликом: buildWriting('ub7-w', {prompt, words, must, check, rows}).
+   Не оцінюється автоматично й у бал не йде; у звіт — текст, кількість
+   слів, що з обов'язкового вжито, і що відмічено в чеклісті. */
+function exWordCount(v){ return (String(v).match(/[\p{L}\p{N}][\p{L}\p{N}'’-]*/gu) || []).length; }
+function exHasPhrase(text, phrase){
+  const esc = phrase.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\s+/g, '\\s+');
+  return new RegExp('(^|[^\\p{L}])' + esc + '(?=$|[^\\p{L}])', 'iu').test(text);
+}
+function initWritingAid(ta){
+  if(ta.dataset.wAid) return;
+  ta.dataset.wAid = '1';
+  const aid = document.createElement('div');
+  aid.className = 'w-aid';
+  let goal = null;
+  if(ta.dataset.words){
+    const m = ta.dataset.words.match(/(\d+)\s*(?:[-–]\s*(\d+))?/);
+    if(m) goal = {min: +m[1], max: m[2] ? +m[2] : null};
+  }
+  const cnt = document.createElement('span');
+  cnt.className = 'w-count';
+  aid.appendChild(cnt);
+  const must = (ta.dataset.must || '').split('|').map(s => s.trim()).filter(Boolean);
+  const mustEls = must.map(item => {
+    const c = document.createElement('span');
+    c.className = 'w-must'; c.textContent = item.split('/').join(' / ');
+    c.dataset.alts = item;
+    aid.appendChild(c);
+    return c;
+  });
+  ta.insertAdjacentElement('afterend', aid);
+  const checks = (ta.dataset.check || '').split('|').map(s => s.trim()).filter(Boolean);
+  if(checks.length){
+    const ul = document.createElement('ul');
+    ul.className = 'w-check';
+    checks.forEach((txt, k) => {
+      const li = document.createElement('li');
+      const id = (ta.id || 'w') + '-chk' + k + '-' + Math.random().toString(36).slice(2, 6);
+      li.innerHTML = '<input type="checkbox"><label></label>';
+      li.querySelector('input').id = id;
+      const lb = li.querySelector('label'); lb.htmlFor = id; lb.textContent = txt;
+      ul.appendChild(li);
+    });
+    aid.insertAdjacentElement('afterend', ul);
+  }
+  function upd(){
+    const v = ta.value;
+    const n = exWordCount(v);
+    if(goal){
+      cnt.textContent = n + ' / ' + goal.min + (goal.max ? '–' + goal.max : '+') + ' Wörter';
+      cnt.className = 'w-count ' + (n < goal.min ? 'under' : (goal.max && n > goal.max ? 'over' : 'ok'));
+    } else cnt.textContent = n + ' Wörter';
+    mustEls.forEach(c => c.classList.toggle('ok', c.dataset.alts.split('/').some(a => exHasPhrase(v, a))));
+  }
+  ta.addEventListener('input', upd);
+  upd();
+}
+function initWritingAids(){
+  document.querySelectorAll('textarea[data-words], textarea[data-must], textarea[data-check]').forEach(initWritingAid);
+}
+function buildWriting(containerId, data){
+  const wrap = document.getElementById(containerId);
+  if(!wrap) return;
+  const qa = document.createElement('div');
+  qa.className = 'qa';
+  const id = containerId + '-text';
+  qa.innerHTML = '<label></label><textarea rows="' + (data.rows || 8) + '"></textarea>';
+  const lb = qa.querySelector('label'), ta = qa.querySelector('textarea');
+  lb.htmlFor = id; lb.innerHTML = data.prompt || '';
+  ta.id = id;
+  const join = v => Array.isArray(v) ? v.join('|') : v;
+  if(data.words) ta.dataset.words = data.words;
+  if(data.must) ta.dataset.must = join(data.must);
+  if(data.check) ta.dataset.check = join(data.check);
+  wrap.appendChild(qa);
+  initWritingAid(ta); // заборону вставки додасть initNoPaste, як усім textarea
+}
+
+/* ---------- C2. Memory (buildMemory) ----------
+   Картки лицем донизу; учень відкриває по дві, шукає пари.
+     buildMemory('ub8-mem', {
+       pairs: [["der Onkel", "дядько"], ["die Tante", "тітка"], ["der Opa", "дідусь"]]
+     });
+   - pairs — пари [a, b]: de ↔ uk, слово ↔ емодзі, форма ↔ форма; 4–8 пар.
+   - scored: false — (необов'язково) не йти в бал, лише гра.
+   Бал: +1, коли всі пари знайдено не більше ніж за 2 × (кількість пар)
+   спроб; інакше — «завершено», без балу. Таймера немає. У звіт —
+   кількість спроб. У контрольній — без змін (це гра, а не перевірка). */
+function buildMemory(containerId, data){
+  const wrap = document.getElementById(containerId);
+  if(!wrap) return;
+  const pairs = data.pairs || [];
+  const scored = data.scored !== false && isScored(containerId);
+  if(scored) setTotal(1);
+  wrap.classList.add('mem-ex');
+  if(data.scored === false) wrap.dataset.noScore = '1'; // лише гра — у звіт не йде
+  wrap.innerHTML = '<p class="sort-tip">Відкривай по дві картки й шукай пари.</p><div class="mem-grid"></div>'
+    + '<div class="check-bar"><span class="score-pill"></span></div>';
+  const grid = wrap.querySelector('.mem-grid'), scoreEl = wrap.querySelector('.score-pill');
+  const limit = pairs.length * 2;
+  let open = [], tries = 0, found = 0, busy = false;
+  wrap.dataset.pairs = pairs.length;
+  const upd = () => {
+    scoreEl.textContent = found === pairs.length
+      ? 'Fertig! ' + tries + (tries === 1 ? ' Versuch' : ' Versuche') + (tries <= limit ? ' ✓' : '')
+      : found + ' / ' + pairs.length + ' Paare · ' + tries + (tries === 1 ? ' Versuch' : ' Versuche');
+  };
+  const cards = [];
+  pairs.forEach((p, k) => [0, 1].forEach(side => cards.push({pair: k, side: side, t: p[side]})));
+  shuffleArray(cards).forEach(c => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'mem-card side-' + c.side;
+    b.innerHTML = '<span class="mem-face"></span>';
+    b.querySelector('.mem-face').textContent = c.t;
+    b.setAttribute('aria-label', 'Картка');
+    b.addEventListener('click', () => {
+      if(busy || b.classList.contains('open')) return;
+      b.classList.add('open'); b.setAttribute('aria-label', c.t);
+      open.push({b: b, c: c});
+      if(open.length < 2) return;
+      tries++;
+      const [x, y] = open;
+      open = [];
+      if(x.c.pair === y.c.pair){
+        x.b.classList.add('matched'); y.b.classList.add('matched');
+        x.b.disabled = y.b.disabled = true;
+        found++;
+        if(found === pairs.length){
+          wrap.dataset.tries = tries; wrap.dataset.firstOk = tries <= limit ? '1' : '0'; // для звіту
+          if(tries <= limit && scored) markDone(1);
+        }
+      } else {
+        busy = true;
+        x.b.classList.add('miss'); y.b.classList.add('miss');
+        setTimeout(() => {
+          [x.b, y.b].forEach(n => { n.classList.remove('open', 'miss'); n.setAttribute('aria-label', 'Картка'); });
+          busy = false;
+        }, exReducedMotion() ? 600 : 950);
+      }
+      upd();
+    });
+    grid.appendChild(b);
+  });
+  upd();
+}
+
+/* ---------- C3. Буквений салат / склади слово (buildScramble) ----------
+   Літери (або частини) слова перемішані — тапами скласти слово. Будова
+   як у buildOrder: тап по поставленій літері повертає її назад.
+     buildScramble('ub9-scr', [
+       {w: "Familie", hint: "сім'я"},
+       {w: "Kinderzimmer", parts: ["Kinder", "zimmer"], pre: "das", hint: "дитяча кімната"},
+       {w: "Geschwister", parts: ["Ge", "schwis", "ter"]}
+     ]);
+   - w — слово (з великої, якщо іменник: перша поставлена картка сама
+     покажеться з великої, у наборі всі — з малої, щоб не підказувати).
+   - parts — (необов'язково) частини замість літер: склади, композит.
+   - pre — (необов'язково) текст перед словом, не перемішується (артикль).
+   - hint — підказка українською; alt — інші правильні написання.
+   Перевірка — щойно всі картки поставлені; перша повна спроба = бал (+1). */
+function buildScramble(containerId, items){
+  const wrap = document.getElementById(containerId);
+  if(!wrap) return;
+  const scored = isScored(containerId), lockedMode = isLocked(containerId);
+  if(scored) setTotal(items.length);
+  wrap.classList.add('scr-ex');
+  let solvedFirst = 0;
+  const scoreEl = document.createElement('span');
+  scoreEl.className = 'score-pill';
+  const updScore = () => { scoreEl.textContent = solvedFirst + ' / ' + items.length + ' richtig (1. Versuch zählt)'; };
+  items.forEach((it, qi) => {
+    const units = (it.parts || Array.from(it.w)).map(u => u.toLowerCase());
+    const answers = [it.w].concat(it.alt || []).map(a => a.toLowerCase());
+    let order = shuffleArray(units.map((u, k) => k));
+    for(let t = 0; t < 8 && units.length > 1 && order.map(k => units[k]).join('') === units.join(''); t++) order = shuffleArray(order);
+    const upperFirst = it.w.charAt(0) !== it.w.charAt(0).toLowerCase();
+    const div = document.createElement('div');
+    div.className = 'order-item scr-item' + (it.parts ? ' scr-parts' : '');
+    div.innerHTML = (it.hint ? '<p class="order-hint">' + it.hint + '</p>' : '')
+      + '<div class="order-line"><span class="num">' + (qi + 1) + ')</span>' + (it.pre ? '<span class="scr-pre"></span>' : '')
+      + '<span class="order-slots" aria-live="polite"></span></div><div class="order-bank"></div><p class="feedback"></p>';
+    if(it.pre) div.querySelector('.scr-pre').textContent = it.pre;
+    const slots = div.querySelector('.order-slots'), bank = div.querySelector('.order-bank'), fb = div.querySelector('.feedback');
+    let firstTryDone = false;
+    const shown = () => Array.from(slots.children).map(b => b.textContent).join('');
+    function refresh(){
+      Array.from(bank.children).forEach(b => { b.textContent = b.dataset.w; });
+      Array.from(slots.children).forEach((b, pos) => { b.textContent = (pos === 0 && upperFirst) ? b.dataset.w.charAt(0).toUpperCase() + b.dataset.w.slice(1) : b.dataset.w; });
+    }
+    function check(){
+      if(bank.children.length){ fb.textContent = ''; fb.className = 'feedback'; div.classList.remove('is-wrong'); return; }
+      const ok = answers.includes(shown().toLowerCase());
+      if(ok){
+        fb.textContent = 'Richtig! ✓'; fb.className = 'feedback ok';
+        div.classList.remove('is-wrong'); div.classList.add('is-solved');
+        slots.querySelectorAll('button').forEach(b => b.disabled = true);
+      } else if(lockedMode){
+        fb.textContent = 'Leider falsch ✗'; fb.className = 'feedback bad';
+        div.classList.add('is-wrong'); slots.querySelectorAll('button').forEach(b => b.disabled = true);
+      } else {
+        fb.textContent = 'Noch nicht — versuch eine andere Reihenfolge.'; fb.className = 'feedback bad';
+        div.classList.add('is-wrong');
+      }
+      if(!firstTryDone){
+        firstTryDone = true;
+        div.dataset.first = (it.pre ? it.pre + ' ' : '') + shown(); div.dataset.firstOk = ok ? '1' : '0'; // для звіту (як buildOrder)
+        if(ok){ if(scored) markDone(1); solvedFirst++; updScore(); }
+      }
+    }
+    order.forEach(k => {
+      const b = document.createElement('button');
+      b.type = 'button'; b.className = 'word-chip';
+      b.dataset.w = units[k]; b.textContent = units[k];
+      b.addEventListener('click', () => {
+        if(div.classList.contains('is-solved') || (lockedMode && div.classList.contains('is-wrong') && !bank.children.length)) return;
+        (b.parentNode === bank ? slots : bank).appendChild(b);
+        refresh(); check();
+      });
+      bank.appendChild(b);
+    });
+    wrap.appendChild(div);
+  });
+  const bar = document.createElement('div');
+  bar.className = 'check-bar';
+  bar.appendChild(scoreEl); updScore();
+  wrap.appendChild(bar);
+}
+
 /* ---------- Аудіоплеєр (Üb. Hören) ---------- */
 function wirePlayer(audioId, playId, seekId, timeId){
   const audio = document.getElementById(audioId);
@@ -1335,6 +1753,32 @@ function rpWordBank(wrap){
   });
   return {html: paras[0] || '', more: paras.slice(1), ok: ok, n: n, empty: empty};
 }
+// buildChat: рядок на кожен крок учня — репліка співрозмовника → вибір першої спроби
+function rpChat(wrap){
+  const recs = wrap._chat || [];
+  const n = wrap._chatTotal || recs.length;
+  const partner = rpText(wrap.querySelector('.chat-head b'));
+  let ok = 0, empty = 0;
+  const lines = recs.map(r => {
+    const pre = r.prompt ? '<span class="rp-muted">' + rpEsc(partner) + ': ' + rpEsc(r.prompt) + '</span> → ' : '';
+    if(r.first === null){ empty++; return pre + RP_GAP; }
+    if(r.firstOk) ok++;
+    return pre + rpAns(r.first, r.firstOk ? 'ok' : 'bad', !r.firstOk && r.solved ? 'потім обрав(-ла) доречну' : '');
+  });
+  while(lines.length < n){ lines.push(RP_GAP); empty++; } // до цих кроків учень не дійшов
+  return {html: lines[0] || RP_GAP, more: lines.slice(1), ok: ok, n: n, empty: empty};
+}
+// buildMemory: завершено чи ні, скільки спроб
+function rpPlural(n, one, few, many){ const d = n % 10, h = n % 100; return d === 1 && h !== 11 ? one : (d >= 2 && d <= 4 && (h < 12 || h > 14) ? few : many); }
+function rpMemory(wrap){
+  const pairs = +wrap.dataset.pairs || 0;
+  if(!('firstOk' in wrap.dataset)){
+    const found = wrap.querySelectorAll('.mem-card.matched').length / 2;
+    return {html: 'Memory: ' + (found ? rpAns('знайдено ' + found + ' з ' + pairs + ' ' + rpPlural(pairs, 'пари', 'пар', 'пар'), 'open', 'не завершено') : RP_GAP), ok: 0, n: 1, empty: found ? 0 : 1};
+  }
+  const good = wrap.dataset.firstOk === '1';
+  return {html: 'Memory: ' + rpAns('усі ' + pairs + ' ' + rpPlural(pairs, 'пару', 'пари', 'пар') + ' за ' + wrap.dataset.tries + ' ' + rpPlural(+wrap.dataset.tries, 'спробу', 'спроби', 'спроб'), good ? 'ok' : 'bad', 'норма — до ' + (pairs * 2)), ok: good ? 1 : 0, n: 1, empty: 0};
+}
 // buildFixError: речення → що учень позначив / як виправив з першої спроби
 function rpFix(div){
   const pre = rpEsc(rpText(div.querySelector('.fix-line .num'))) + ' ' + rpEsc(div.dataset.s || '') + ' → ';
@@ -1363,10 +1807,17 @@ function rpTextarea(el){
   const words = v ? v.split(/\s+/).length : 0;
   const head = (label ? '<span class="rp-q">' + rpEsc(label) + '</span> ' : '')
     + '<span class="rp-note">(' + words + ' ' + rpWords(words) + ')</span>';
-  if(!v) return {html: head + '<div class="rp-text rp-muted">порожньо</div>', ok: 0, n: 0, empty: 0};
+  // письмо з чеклістом (data-words / data-must / data-check)
+  let aid = '';
+  if(el.dataset.words) aid += ' <span class="rp-note">мета: ' + rpEsc(el.dataset.words) + '</span>';
+  const must = (el.dataset.must || '').split('|').map(x => x.trim()).filter(Boolean);
+  if(must.length) aid += '<br><span class="rp-muted">обов\'язкове:</span> ' + must.map(m => rpAns(m.split('/').join(' / '), m.split('/').some(a => exHasPhrase(v, a)) ? 'ok' : 'bad')).join(' ');
+  const chk = el.parentElement ? el.parentElement.querySelectorAll('.w-check li') : [];
+  if(chk.length) aid += '<br><span class="rp-muted">чекліст (відмічає учень):</span> ' + Array.from(chk).map(li => (li.querySelector('input').checked ? '☑ ' : '☐ ') + rpEsc(rpText(li))).join(' · ');
+  if(!v) return {html: head + aid + '<div class="rp-text rp-muted">порожньо</div>', ok: 0, n: 0, empty: 0};
   // довгий текст ріжемо на шматки (~10 рядків), щоб сторінки PDF рвалися між ними
   const chunks = rpChunks(v, 700, 10);
-  return {html: head + '<div class="rp-text">' + rpEsc(chunks[0]) + '</div>',
+  return {html: head + aid + '<div class="rp-text">' + rpEsc(chunks[0]) + '</div>',
     more: chunks.slice(1).map(c => '<div class="rp-text">' + rpEsc(c) + '</div>'), ok: 0, n: 0, empty: 0};
 }
 function rpChunks(text, maxChars, maxLines){
@@ -1394,13 +1845,15 @@ function rpCollectPanel(panel){
   const rows = [];
   const seen = new Set();
   let lastCard = null;
-  const sel = '.quiz-q, .order-item, .sort-ex, .wbank-ex, .fix-item, textarea, input.blank-input, select.blank, .tok, input[type="text"]';
+  const sel = '.quiz-q, .order-item, .sort-ex, .wbank-ex, .fix-item, .chat-ex, .mem-ex, textarea, input.blank-input, select.blank, .tok, input[type="text"]';
   panel.querySelectorAll(sel).forEach(el => {
     if(el.closest('.report-card') || rpHidden(el, panel)) return;
     let key = el, row = null;
     if(el.matches('.sort-ex')) row = rpSort(el);
     else if(el.closest('.sort-ex')) return;
     else if(el.matches('.wbank-ex')) row = rpWordBank(el);
+    else if(el.matches('.chat-ex')) row = rpChat(el);
+    else if(el.matches('.mem-ex')){ if(el.dataset.noScore) return; row = rpMemory(el); }
     else if(el.matches('.fix-item')) row = rpFix(el);
     else if(el.closest('.fix-ex')) return; // поле виправлення — уже в рядку речення
     else if(el.matches('.quiz-q')) row = rpQuiz(el);
@@ -1841,5 +2294,6 @@ function initUmlautKb(){
 
 document.addEventListener('DOMContentLoaded', initTabs);
 document.addEventListener('DOMContentLoaded', initNoPaste);
+document.addEventListener('DOMContentLoaded', initWritingAids);
 document.addEventListener('DOMContentLoaded', initReport);
 document.addEventListener('DOMContentLoaded', initUmlautKb);

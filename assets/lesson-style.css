@@ -496,6 +496,7 @@ input.blank-input.inline.full{ display:block; width:100%; margin:6px 0 0; }
 .wb-bank .word-chip[hidden]{ display:none; }
 .wb-text p{ font-family:var(--serif); font-size:16px; line-height:2.1; margin:0 0 10px; overflow-wrap:anywhere; }
 .wb-gap{
+  -webkit-tap-highlight-color:transparent;
   display:inline-block; min-width:5.5em; min-height:1.7em; vertical-align:baseline;
   margin:0 2px; padding:0 8px; font:inherit; line-height:1.5; color:var(--teal-deep);
   background:#fff; border:1.5px dashed var(--line); border-bottom:2px solid var(--teal);
@@ -555,6 +556,90 @@ input.blank-input.tr-input{ font-family:var(--serif); font-size:16px; padding:9p
   .tb-table td input.blank-input{ min-width:4.2em; padding:4px 5px; font-size:13.5px; }
   .tb-table td input.blank-input.inline{ width:4.8em; margin:0; }
 }
+
+/* ---------- Нові формати вправ, етап 2 (з 2026-10-23) ---------- */
+/* A1. Діалог-чат (buildChat) */
+.chat-ex{ max-width:560px; }
+.chat-head{
+  display:flex; align-items:center; gap:10px; padding:0 0 10px; margin-bottom:10px;
+  border-bottom:1px dashed var(--line); font-size:15px; color:var(--teal-deep);
+}
+.chat-ava{
+  width:34px; height:34px; border-radius:50%; flex:none; display:grid; place-items:center;
+  background:var(--teal); color:#fff; font-family:var(--serif); font-weight:700;
+}
+.chat-log{ display:flex; flex-direction:column; gap:8px; padding:4px 0 6px; }
+.chat-msg{
+  max-width:82%; padding:9px 13px; border-radius:16px; font-size:15px; line-height:1.4;
+  display:flex; align-items:flex-start; gap:8px; overflow-wrap:anywhere;
+  animation:chatIn .25s ease both;
+}
+.chat-msg.them{ align-self:flex-start; background:#fff; border:1px solid var(--line); border-bottom-left-radius:4px; }
+.chat-msg.me{ align-self:flex-end; background:var(--teal-soft); color:var(--teal-deep); border-bottom-right-radius:4px; }
+.chat-msg.me.wrong{ background:var(--brick-soft); color:var(--brick); }
+.chat-play{
+  flex:none; width:26px; height:26px; border-radius:50%; border:1.5px solid var(--teal);
+  background:var(--teal-soft); color:var(--teal-deep); font-size:11px; cursor:pointer; padding:0; line-height:1;
+}
+.chat-opts-box{ margin-top:10px; padding-top:10px; border-top:1px dashed var(--line); }
+.chat-opts-box[hidden]{ display:none; }
+.chat-opts{ display:flex; flex-direction:column; align-items:flex-end; gap:8px; }
+.chat-opts .opt-btn{ text-align:left; max-width:100%; }
+.chat-opts .opt-btn:disabled{ opacity:.75; }
+.chat-opts-box .feedback{ text-align:right; }
+@keyframes chatIn{ from{ opacity:0; transform:translateY(6px); } to{ opacity:1; transform:none; } }
+@media (prefers-reduced-motion: reduce){ .chat-msg{ animation:none; } }
+
+/* A7. C-Test (buildCTest) */
+.ct-text p{ font-family:var(--serif); font-size:16px; line-height:2.1; margin:0 0 10px; }
+.ct-w{ white-space:nowrap; }
+input.blank-input.ct-in{
+  display:inline-block; width:auto; min-width:2.6ch; padding:1px 2px 1px 1px; margin:0;
+  font-family:var(--serif); font-size:16px; vertical-align:baseline;
+  border-width:0 0 2px; border-radius:3px 3px 0 0; border-color:var(--teal); background:#fff;
+}
+input.blank-input.ct-in.correct{ border-color:var(--forest); }
+input.blank-input.ct-in.wrong{ border-color:var(--brick); }
+.ctest-ex .score-pill:empty{ display:none; }
+
+/* C6. Письмо з чеклістом (data-words / data-must / data-check, buildWriting) */
+.w-aid{ display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin-top:8px; font-size:13px; }
+.w-count{ font-weight:700; color:var(--ink-soft); background:var(--paper-2); border-radius:100px; padding:3px 10px; }
+.w-count.ok{ color:var(--forest); background:var(--forest-soft); }
+.w-count.over{ color:#7a5200; background:var(--mustard-soft); }
+.w-must{ border:1.5px dashed var(--line); border-radius:100px; padding:2px 10px; color:var(--ink-soft); font-family:var(--serif); }
+.w-must.ok{ border-style:solid; border-color:var(--forest); color:var(--forest); background:var(--forest-soft); }
+.w-must.ok::after{ content:" ✓"; font-family:var(--sans); font-weight:700; }
+.w-check{ list-style:none; margin:10px 0 0; padding:0; font-size:14px; }
+.w-check li{ display:flex; align-items:flex-start; gap:8px; padding:4px 0; }
+.w-check input{ width:18px; height:18px; margin:2px 0 0; accent-color:var(--teal); flex:none; }
+
+/* C2. Memory (buildMemory) */
+.mem-grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(96px, 1fr)); gap:8px; }
+@media (max-width:420px){ .mem-grid{ grid-template-columns:repeat(3, 1fr); } }
+.mem-card{
+  position:relative; min-height:74px; padding:8px 6px; border-radius:10px; cursor:pointer;
+  border:1.5px solid var(--teal); color:var(--teal-deep); font-family:var(--serif); font-size:14.5px; line-height:1.25;
+  background:var(--teal) repeating-linear-gradient(45deg, rgba(255,255,255,.08) 0 6px, transparent 6px 12px);
+  box-shadow:0 2px 0 rgba(18,62,58,.18); overflow-wrap:anywhere; -webkit-tap-highlight-color:transparent;
+  transition:transform .15s ease, background-color .15s ease;
+}
+.mem-card .mem-face{ visibility:hidden; }
+.mem-card.open{ background:#fff; transform:translateY(-1px); }
+.mem-card.open.side-1{ background:var(--mustard-soft); border-color:var(--mustard); }
+.mem-card.open .mem-face{ visibility:visible; }
+.mem-card.matched{ background:var(--forest-soft); border-color:var(--forest); color:var(--forest); cursor:default; box-shadow:none; }
+.mem-card.open.miss{ border-color:var(--brick); background:var(--brick-soft); color:var(--brick); }
+.mem-card:focus-visible{ outline:2px solid var(--mustard); outline-offset:2px; }
+
+/* C3. Буквений салат (buildScramble) — будова як у buildOrder */
+.scr-item .order-line{ gap:3px; }
+.scr-item .order-bank{ gap:6px; }
+.scr-item .word-chip{ min-width:1.7em; padding:6px 5px; text-align:center; -webkit-tap-highlight-color:transparent; }
+.scr-item.scr-parts .word-chip{ padding:6px 9px; }
+.scr-item .order-slots .word-chip{ margin:0; }
+.scr-item.scr-parts .order-line{ gap:2px; }
+.scr-pre{ font-family:var(--serif); font-size:16px; color:var(--ink-soft); margin-right:4px; }
 
 /* ---------- Вкладка Regel на сторінках граматики (з 2026-09) ----------
    Кожен підрозділ теми = <section class="regel-block" id="...">; зміст над

@@ -169,6 +169,14 @@
       buildTransform('ub5-tr', [{s: "Ich spiele Fußball.", task: "Perfekt", ans: "Ich habe Fußball gespielt."}]);
       buildFixError('ub5-fix', [{s: "Ich besuche mein Onkel.", wrong: 2, fix: "meinen"}, {s: "Lena liebt ihren Bruder.", ok: true}]);
       buildTable('ub5-tab', {head: ["", "Nominativ", "Akkusativ"], rows: [["der", "mein Bruder", "[meinen] Bruder"]]});
+      buildChat('ub5-chat', {partner: "Kellnerin", steps: [{them: "Was möchtest du trinken?"}, {you: ["Einen Apfelsaft, bitte.", "Ich bin zwölf."], correct: 0}]});
+      buildCTest('ub5-ct', {text: "Meine {Fam|ilie} ist groß. Ich habe zwei {Brüder}."});
+      buildMemory('ub5-mem', {pairs: [["der Onkel", "дядько"], ["die Tante", "тітка"], ["der Opa", "дідусь"], ["die Oma", "бабуся"]]});
+      buildScramble('ub5-scr', [{w: "Familie", hint: "сім'я"}, {w: "Kinderzimmer", parts: ["Kinder", "zimmer"], pre: "das"}]);
+      buildWriting('ub5-w', {prompt: "Напиши листа (60–80 слів).", words: "60-80", must: ["Lieber/Liebe", "Viele Grüße"], check: ["Звертання й підпис"]});
+
+    письмо з чеклістом можна й без JS — атрибутами на звичайному textarea:
+      <textarea id="w1" rows="8" data-words="60-80" data-must="Lieber/Liebe|Viele Grüße" data-check="Звертання й підпис|3 питання"></textarea>
     -->
 
     <!-- ===== ПРИКІНЦЕВА ПАНЕЛЬ ===== -->
