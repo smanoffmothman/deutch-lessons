@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scherben mit System · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Wissenschaft &amp; Technik</span>
+        <h1>Scherben mit System</h1>
+        <p class="sub">Німці кажуть: «уламки приносять щастя». А французький учений з'ясував, що тарілка розбивається не як заманеться, а за точною формулою — і так само розпадається навіть крапля води.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Klirr!</h2>
+      <div class="card">
+        <p>Was sagt man bei euch, wenn ein Teller oder eine Tasse kaputtgeht? Was glaubst du: Zerbricht ein Teller jedes Mal ganz anders – oder gibt es dabei eine Regel?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          В Україні кажуть, що посуд б'ється на щастя. А чи помічав(-ла) ти, на які шматки розбивається чашка: кілька великих, кілька середніх і безліч дрібних? Як гадаєш, це випадковість?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">„<span class="gl" data-key data-uk="уламок (посуду)" data-lemma="die Scherbe, -n">Scherben</span> bringen Glück“, sagt man in Deutschland, wenn ein Teller auf den Boden fällt. Ob das stimmt, weiß niemand. Dass beim Zerbrechen aber eine feste Regel gilt, hat ein Forscher aus Frankreich gezeigt.</p>
+
+          <p>Porzellan ist hart, aber empfindlich. In Europa stellte man es zuerst in Meißen in Sachsen her, wo 1710 die erste europäische <span class="gl" data-uk="мануфактура (порцелянова)" data-lemma="die Porzellanmanufaktur, -en">Porzellanmanufaktur</span> gegründet wurde. Wenn Porzellan <span class="gl" data-key data-uk="розбиватися (вщент)" data-lemma="zerschellen (ist zerschellt)">zerschellt</span>, entstehen nicht <span class="gl" data-uk="довільний, будь-який" data-lemma="beliebig">beliebige</span> Stücke. Es gibt immer ein paar große, einige mittelgroße und sehr viele kleine <span class="gl" data-key data-uk="уламок" data-lemma="das Bruchstück, -e">Bruchstücke</span>. Der französische Wissenschaftler Emmanuel Villermaux hat <span class="gl" data-uk="обчислювати" data-lemma="berechnen">berechnet</span>, dass diese <span class="gl" data-uk="розподіл" data-lemma="die Verteilung, -en">Verteilung</span> bei <span class="gl" data-key data-uk="крихкий" data-lemma="spröde">spröden</span> Materialien sehr wahrscheinlich einem festen <span class="gl" data-key data-uk="зразок, закономірність" data-lemma="das Muster, -">Muster</span> folgt.</p>
+
+          <p>Wichtig ist dabei die Form des <span class="gl" data-uk="предмет" data-lemma="der Gegenstand, -ä-e">Gegenstands</span>. Sie steckt als Zahl in seiner <span class="gl" data-uk="формула" data-lemma="die Formel, -n">Formel</span>. Für lange, dünne Gegenstände, zum Beispiel einen Glasstab, liegt diese Zahl bei 1,3. Für Gegenstände, die in alle drei Richtungen gleich groß sind, etwa einen <span class="gl" data-uk="кубик, куб" data-lemma="der Würfel, -">Würfel</span>, liegt sie bei etwa 3,5. Das bedeutet: Je „räumlicher“ ein Gegenstand ist, desto mehr kleine Stücke entstehen, wenn er <span class="gl" data-uk="розскакуватися, розлітатися на шматки" data-lemma="zerspringen (zersprang, ist zersprungen)">zerspringt</span>.</p>
+
+          <p>Das Überraschende: Die Formel gilt für ganz verschiedene Materialien – für Glas genauso wie für <span class="gl" data-uk="мушля" data-lemma="die Muschel, -n">Muscheln</span> und Zuckerwürfel. In Experimenten passte sie sogar zu Wassertropfen, die in kleinere Tropfen <span class="gl" data-uk="розпадатися" data-lemma="zerfallen (zerfiel, ist zerfallen)">zerfallen</span>. Dabei ist Wasser überhaupt nicht spröde. Offenbar gibt es in der Natur eine gemeinsame Regel dafür, wie Dinge in Stücke gehen.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>In Deutschland gibt es vor einer Hochzeit oft einen <span class="gl" data-uk="вечір перед весіллям, коли б'ють посуд" data-lemma="der Polterabend, -e">Polterabend</span>. Freunde und Verwandte bringen altes Geschirr mit und werfen es vor dem Haus auf den Boden – das soll dem Paar Glück bringen. Danach müssen die beiden die Scherben gemeinsam <span class="gl" data-uk="підмітати, змітати" data-lemma="zusammenkehren">zusammenkehren</span>. Glas und Spiegel zerschlägt man dabei aber nicht: Ein zerbrochener Spiegel bedeutet nach altem Aberglauben sieben Jahre Pech.</p>
+          </aside>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Scherben_%28Polterabend%29.jpg/960px-Scherben_%28Polterabend%29.jpg" alt="Scherben nach einem Polterabend." width="960" height="640" loading="lazy">
+            <figcaption>Scherben nach einem Polterabend. Foto: Stefan-Xp, <a href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Scherben_(Polterabend).jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Beim nächsten Polterabend kann man also genau <span class="gl" data-uk="придивлятися" data-lemma="hinschauen">hinschauen</span>: Die Scherben auf dem Boden sind kein reines <span class="gl" data-uk="хаос" data-lemma="das Chaos">Chaos</span>. Ein paar große Stücke, einige mittlere und viele winzige – genau so, wie es die Formel <span class="gl" data-uk="передбачати, прогнозувати" data-lemma="vorhersagen">vorhersagt</span>. Ob sie dann auch Glück bringen, kann die Wissenschaft allerdings nicht berechnen.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Знайди пари: слово — переклад. Відкривай картки по дві.</p>
+      <div class="card" id="ub3-mem"></div>
+      <p class="lead">б) Коротко про головне: встав слова з набору в текст. Одне слово зайве.</p>
+      <div class="card" id="ub3b-bank"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши німецькою. Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card" id="ub4-w"></div>
+      <div class="card">
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Bei uns sagt man, wenn … · Vor einer Hochzeit macht man in der Ukraine … · In Deutschland dagegen … · Ich glaube (nicht) an …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Wenn spröde Dinge zerbrechen, entstehen immer wenige große und viele kleine Stücke – nach einer festen Formel, die sogar für Wassertropfen gilt. In Deutschland sagt man „Scherben bringen Glück“, und beim Polterabend vor der Hochzeit wird altes Geschirr zerschlagen. Das erste europäische Porzellan kam übrigens 1710 aus Meißen in Sachsen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Коли розбиваються крихкі речі, завжди утворюється кілька великих і багато дрібних уламків — за сталою формулою, яка діє навіть для крапель води. У Німеччині кажуть «уламки приносять щастя», а напередодні весілля на «Polterabend» б'ють старий посуд. А першу європейську порцеляну почали робити 1710 року в саксонському Мейсені.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "wie-porzellan-zerbricht";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Dass zerbrechende Dinge nach einer festen Regel in Stücke gehen",
+            "Wie man Porzellan so herstellt, dass es nicht zerbricht",
+            "Warum Scherben wirklich Glück bringen"],
+     correct: "Dass zerbrechende Dinge nach einer festen Regel in Stücke gehen"}
+  ]);
+  buildMatch('ub1h', [
+    ["Große, mittlere und kleine Stücke", "Absatz 1"],
+    ["Die Form entscheidet", "Absatz 2"],
+    ["Eine Regel für alles", "Absatz 3"],
+    ["Ordnung im Chaos", "Absatz 4"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "Beim Zerbrechen entstehen vor allem viele kleine Stücke.", a: "r"},
+    {s: "Emmanuel Villermaux kommt aus Deutschland.", a: "f"},
+    {s: "Ein Würfel zerspringt in mehr kleine Stücke als ein Glasstab.", a: "r"},
+    {s: "Die Formel gilt nur für Glas.", a: "f"},
+    {s: "Villermaux hat auch Tassen aus Plastik getestet.", a: "n"},
+    {s: "Beim Polterabend wirft man vor allem Spiegel auf den Boden.", a: "f"}
+  ]);
+
+  buildMemory('ub3-mem', {
+    pairs: [["die Scherbe", "уламок (посуду)"], ["spröde", "крихкий"], ["das Muster", "закономірність"],
+            ["zerspringen", "розлітатися на шматки"], ["vorhersagen", "передбачати"]]
+  });
+  buildWordBank('ub3b-bank', {
+    text: "Wenn ein Teller [zerschellt], entstehen wenige große und viele kleine [Bruchstücke]. Das folgt einem festen [Muster]. Je räumlicher ein Gegenstand ist, desto mehr kleine Stücke gibt es. Die [Formel] passt sogar zu Wassertropfen.",
+    extra: ["Spiegel"]
+  });
+
+  buildWriting('ub4-w', {
+    prompt: "Was sagt man in der Ukraine, wenn Geschirr kaputtgeht? Kennst du ukrainische Hochzeitsbräuche? Vergleiche mit dem Polterabend in Deutschland. (60–90 Wörter)",
+    words: "60-90",
+    must: ["in der Ukraine", "Polterabend"],
+    check: ["Ich nenne einen ukrainischen Brauch oder Spruch", "Ich vergleiche mit Deutschland"]
+  });
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📰','🍽️','🔢','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

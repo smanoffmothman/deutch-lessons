@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ein Wurm für den Nobelpreis · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Wissenschaft &amp; Technik</span>
+        <h1>Ein Wurm für den Nobelpreis</h1>
+        <p class="sub">Хробачок менш як міліметр завдовжки з компостної купи — і кілька Нобелівських премій. Як прозорий черв'як допоміг зрозуміти, як ростуть і гинуть клітини, навіть у людини.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Chronik</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Deine Meinung</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Kleine Tiere, große Forschung</h2>
+      <div class="card">
+        <p>Mit welchen Tieren arbeiten Forscher im Labor? Warum benutzen sie gerade diese Tiere – und nicht zum Beispiel Elefanten? Was kann man von einem winzigen Wurm über den Menschen lernen?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай (або обговоріть у парі): яких «лабораторних» тварин ти знаєш (миші, мушки…)? Як гадаєш, яким має бути ідеальний піддослідний організм — великим чи малим, складним чи простим?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Ende Oktober 1963 kam in einem Labor der Universität Cambridge ein ungewöhnliches Paket an: <span class="gl" data-uk="пробірка" data-lemma="das Reagenzglas, -ä-er">Reagenzgläser</span> mit winzigen Würmern, per Luftpost aus Kalifornien. Ihre <span class="gl" data-uk="предок" data-lemma="der Vorfahr, -en">Vorfahren</span> hatte man Jahre zuvor auf einem Komposthaufen in Bristol gefunden. Kaum jemand <span class="gl" data-uk="здогадуватися, передчувати" data-lemma="ahnen">ahnte</span>, dass diese Tiere einmal mehrere Nobelpreise <span class="gl" data-uk="приносити, давати результат" data-lemma="einbringen (brachte ein, hat eingebracht)">einbringen</span> würden.</p>
+
+          <p>Der <span class="gl" data-uk="одержувач" data-lemma="der Empfänger, -">Empfänger</span> war der Biologe Sydney Brenner. Er galt als Genie – brillant, <span class="gl" data-uk="нетерплячий" data-lemma="ungeduldig">ungeduldig</span> und manchmal schwierig. Brenner gehörte zu den Ersten, die in Cambridge das Modell der DNA-<span class="gl" data-uk="подвійна спіраль" data-lemma="die Doppelhelix">Doppelhelix</span> gesehen hatten, die dort 1953 entdeckt worden war. Doch er wollte mehr, als nur Gene zu <span class="gl" data-uk="розшифровувати" data-lemma="entschlüsseln">entschlüsseln</span>. Er wollte die alten Rätsel der Biologie lösen: Wie wächst ein Lebewesen? Wie reagiert es? Wie stirbt es? Dafür brauchte er ein echtes Tier – aber eines, das so einfach wie möglich ist.</p>
+
+          <p>Viele Tiere hatte er schon getestet, keines passte. Dann las er vom <span class="gl" data-key data-uk="нематода, круглий черв'як" data-lemma="der Fadenwurm, -ü-er">Fadenwurm</span> Caenorhabditis elegans. Das Tier ist kürzer als ein Millimeter und lebt im Boden. Es hat kein Herz, kein Gehirn, keine Knochen und kein Blut. Das Beste aber: Es ist <span class="gl" data-key data-uk="прозорий" data-lemma="durchsichtig">durchsichtig</span>. Unter dem <span class="gl" data-key data-uk="мікроскоп" data-lemma="das Mikroskop, -e">Mikroskop</span> kann man direkt in seinen Körper schauen. Außerdem sind die Würmer fast alle <span class="gl" data-uk="гермафродит" data-lemma="der Zwitter, -">Zwitter</span>: Sie <span class="gl" data-uk="запліднювати" data-lemma="befruchten">befruchten</span> sich selbst und legen in wenigen Tagen rund 300 Eier. In kurzer Zeit hat man so Tausende <span class="gl" data-uk="однаковий, ідентичний" data-lemma="identisch">identische</span> Tiere.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Varbuss.jpg/960px-Varbuss.jpg" alt="Lebende Fadenwürmer C. elegans; ihre Nervenzellen leuchten grün." width="960" height="634" loading="lazy">
+            <figcaption>Lebende Fadenwürmer C. elegans; ihre Nervenzellen leuchten grün. Foto: Heiti Paves, <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Varbuss.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Brenners Plan war <span class="gl" data-uk="грандіозний, величезний" data-lemma="gewaltig">gewaltig</span>: einen ganzen Organismus vollständig zu <span class="gl" data-uk="вимірювати, описувати до дрібниць" data-lemma="vermessen (vermaß, hat vermessen)">vermessen</span> – bis zu den Genen. Mit seinem Team suchte er nach <span class="gl" data-key data-uk="мутант" data-lemma="die Mutante, -n">Mutanten</span>, also nach Würmern, die anders aussahen oder sich anders bewegten, weil ein Gen kaputt war. Die Idee dahinter kann man mit Autos erklären: Wenn man nicht weiß, wie ein Auto funktioniert, baut man ein Teil aus und schaut, was dann nicht mehr geht. Ein Techniker schnitt tote Würmer in Tausende <span class="gl" data-uk="надтонкий" data-lemma="hauchdünn">hauchdünne</span> Scheiben und fotografierte jede unter dem Elektronenmikroskop. Eine Technikerin verfolgte darauf jede einzelne <span class="gl" data-uk="нервовий шлях, волокно" data-lemma="die Nervenbahn, -en">Nervenbahn</span> – Bild für Bild, oft nur hundert Bilder an einem Tag.</p>
+
+          <p>Den großen <span class="gl" data-uk="прорив" data-lemma="der Durchbruch, -ü-e">Durchbruch</span> schaffte der Chemiker John Sulston. Er legte einen gerade <span class="gl" data-uk="вилуплюватися" data-lemma="schlüpfen (ist geschlüpft)">geschlüpften</span> Wurm unter ein spezielles Mikroskop und konnte sogar in die Zellen hineinsehen. Ein ganzes Wochenende lang beobachtete er, wie sich die Zellen teilten. Dabei fiel ihm auf, dass manche neuen Zellen wieder verschwanden – sie starben wie auf Befehl. Sulston hatte den <span class="gl" data-key data-uk="запрограмована загибель клітини" data-lemma="der programmierte Zelltod">programmierten Zelltod</span> entdeckt. Diesen Vorgang gibt es auch beim Menschen, und er ist zum Beispiel wichtig, um Krankheiten wie Krebs zu verstehen.</p>
+
+          <p>Danach ging es <span class="gl" data-uk="одне за одним, швидко" data-lemma="Schlag auf Schlag">Schlag auf Schlag</span>. 1977 zeigte Sulston, woher jede Zelle des erwachsenen Wurms stammt. 1986 war das komplette Nervensystem mit seinen 302 Nervenzellen <span class="gl" data-uk="нанесений на карту" data-lemma="kartiert">kartiert</span> – der Artikel darüber war 340 Seiten lang. 1998 wurde C. elegans das erste vielzellige Tier, dessen <span class="gl" data-uk="геном, спадковий матеріал" data-lemma="das Erbgut">Erbgut</span> vollständig gelesen war. 2002 bekamen Brenner, Sulston und Robert Horvitz den Nobelpreis für Medizin. Bis heute hilft der Wurm, Krankheiten wie Krebs oder Parkinson zu erforschen, denn viele seiner Gene <span class="gl" data-uk="бути схожим" data-lemma="ähneln + Dat.">ähneln</span> denen des Menschen.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Auch in Deutschland hat ein kleines Labortier zu einem Nobelpreis geführt: Die Biologin Christiane Nüsslein-Volhard, die viele Jahre in Tübingen forschte, untersuchte an der Fruchtfliege Drosophila, wie Gene die Entwicklung eines Embryos <span class="gl" data-uk="керувати" data-lemma="steuern">steuern</span>. 1995 bekam sie dafür den Nobelpreis für Medizin – als eine der wenigen Frauen in diesem Fach.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Die Geschichte des Wurms</h2>
+      <p class="lead">Розстав події в хронологічному порядку. Натискай речення по черзі; натиснеш на вже поставлене — воно повернеться вниз.</p>
+      <div class="card" id="ub3-seq"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+      <p class="lead">б) Чому C. elegans — ідеальна тварина для досліджень? Встав слова з набору. Одне слово зайве.</p>
+      <div class="card" id="ub4b-bank"></div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Deine Meinung</h2>
+      <p class="lead">Напиши німецькою. Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card" id="ub5-w"></div>
+      <div class="card">
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Ich finde Tierversuche …, weil … · Einerseits …, andererseits … · Bei Würmern ist das (nicht) so schlimm wie bei … · Meiner Meinung nach …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Der durchsichtige Fadenwurm C. elegans ist seit 1963 ein wichtiges Labortier. An ihm entdeckte John Sulston den programmierten Zelltod; 2002 gab es dafür den Nobelpreis. Auch in Deutschland führte ein kleines Tier zum Nobelpreis: Christiane Nüsslein-Volhard aus Tübingen bekam ihn 1995 für ihre Forschung an der Fruchtfliege.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Прозора нематода C. elegans з 1963 року — важлива лабораторна тварина. На ній Джон Салстон відкрив запрограмовану загибель клітин; 2002 року за це дали Нобелівську премію. І в Німеччині маленька тварина привела до Нобелівської премії: Крістіане Нюсляйн-Фольгард із Тюбінгена отримала її 1995 року за дослідження плодової мушки.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "fadenwurm-c-elegans";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Wie ein winziger Wurm zu einem der wichtigsten Labortiere der Welt wurde",
+            "Wie man Würmer im Kompost züchtet",
+            "Warum Sydney Brenner kein Nobelpreisträger wurde"],
+     correct: "Wie ein winziger Wurm zu einem der wichtigsten Labortiere der Welt wurde"},
+    {q: "Warum war C. elegans für Brenner ideal?",
+     opts: ["Er ist durchsichtig, einfach gebaut und vermehrt sich schnell",
+            "Er ist groß genug, um ihn mit bloßem Auge zu sehen",
+            "Er hat ein großes Gehirn wie der Mensch"],
+     correct: "Er ist durchsichtig, einfach gebaut und vermehrt sich schnell"}
+  ]);
+  buildMatch('ub1h', [
+    ["Ein ehrgeiziger Biologe", "Absatz 1"],
+    ["Das perfekte Versuchstier", "Absatz 2"],
+    ["Jagd auf Mutanten", "Absatz 3"],
+    ["Zellen, die auf Befehl sterben", "Absatz 4"],
+    ["Vom Wurm zum Nobelpreis", "Absatz 5"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "Die ersten Würmer kamen per Luftpost nach Cambridge.", a: "r"},
+    {s: "C. elegans ist etwa einen Zentimeter lang.", a: "f"},
+    {s: "Der Wurm hat ein Herz, aber kein Gehirn.", a: "f"},
+    {s: "Sulston beobachtete die Zellteilung an einem lebenden Wurm.", a: "r"},
+    {s: "Das Nervensystem von C. elegans hat 302 Nervenzellen.", a: "r"},
+    {s: "Brenner hat selbst Medizin studiert.", a: "n"},
+    {s: "Den Nobelpreis 2002 bekam Brenner allein.", a: "f"}
+  ]);
+
+  buildSequence('ub3-seq', [
+    "In Cambridge wird die Struktur der DNA-Doppelhelix entdeckt.",
+    "Die ersten Würmer kommen per Luftpost in Brenners Labor.",
+    "Sulston zeigt, woher jede Zelle des erwachsenen Wurms stammt.",
+    "Das komplette Nervensystem des Wurms ist kartiert.",
+    "Das gesamte Erbgut von C. elegans ist gelesen.",
+    "Brenner, Sulston und Horvitz bekommen den Nobelpreis."
+  ]);
+
+  buildMatch('ub4', [
+    ["durchsichtig", "прозорий"],
+    ["entschlüsseln", "розшифровувати"],
+    ["der Durchbruch", "прорив"],
+    ["befruchten", "запліднювати"],
+    ["die Mutante", "мутант"],
+    ["das Erbgut", "геном, спадковий матеріал"]
+  ]);
+  buildWordBank('ub4b-bank', {
+    text: "C. elegans ist kürzer als ein [Millimeter]. Er ist [durchsichtig], deshalb kann man unter dem Mikroskop in seinen Körper sehen. Die meisten Würmer sind [Zwitter] und befruchten sich selbst. So hat man schnell Tausende [identische] Tiere.",
+    extra: ["Gehirn"]
+  });
+
+  buildWriting('ub5-w', {
+    prompt: "Forscher arbeiten mit Würmern, Fliegen, Mäusen und anderen Tieren. Findest du das richtig? Wo liegt für dich die Grenze? (80–120 Wörter)",
+    words: "80-120",
+    must: ["einerseits", "andererseits"],
+    check: ["Ich nenne ein Argument dafür und eins dagegen", "Ich sage meine eigene Meinung"]
+  });
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📰','🪱','🔬','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
