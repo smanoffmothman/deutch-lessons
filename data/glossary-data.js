@@ -943,5 +943,17 @@ const GLOSSARY = [
   {de: "der Musikwettbewerb (die Musikwettbewerbe)", uk: "музичний конкурс", klas: "7", modul: "C", lektion: 1},
   {de: "der Sportwettbewerb (die Sportwettbewerbe)", uk: "спортивні змагання", klas: "7", modul: "C", lektion: 1},
   {de: "stattfinden (trennbar) (Morgen findet ein Schulfest statt.)", uk: "відбуватися (про подію)", klas: "7", modul: "C", lektion: 1},
-  {de: "die Jury", uk: "журі", klas: "7", modul: "C", lektion: 1}
+  {de: "die Jury", uk: "журі", klas: "7", modul: "C", lektion: 1},
+  {de: "vorschlagen (trennbar) (er schlägt vor)", uk: "пропонувати", klas: "7", modul: "C", lektion: 2},
+  {de: "der Vorschlag (die Vorschläge)", uk: "пропозиція", klas: "7", modul: "C", lektion: 2},
+  {de: "vorhaben (trennbar) (Wir haben vor, … zu …)", uk: "мати намір, планувати", klas: "7", modul: "C", lektion: 2},
+  {de: "veranstalten", uk: "влаштовувати, проводити (захід)", klas: "7", modul: "C", lektion: 2},
+  {de: "organisieren", uk: "організовувати", klas: "7", modul: "C", lektion: 2},
+  {de: "hoffen (Ich hoffe, das Turnier zu gewinnen.)", uk: "сподіватися", klas: "7", modul: "C", lektion: 2},
+  {de: "zelten", uk: "жити в наметах, ставити намет", klas: "7", modul: "C", lektion: 2},
+  {de: "die Nachbarstadt (die Nachbarstädte)", uk: "сусіднє місто", klas: "7", modul: "C", lektion: 2},
+  {de: "das Kunstmuseum (die Kunstmuseen)", uk: "художній музей", klas: "7", modul: "C", lektion: 2},
+  {de: "die Wanderroute (die Wanderrouten)", uk: "маршрут походу", klas: "7", modul: "C", lektion: 2},
+  {de: "die Einzelheit (alle Einzelheiten besprechen)", uk: "деталь, подробиця (обговорити всі деталі)", klas: "7", modul: "C", lektion: 2},
+  {de: "blöd", uk: "дурний, безглуздий (розм.)", klas: "7", modul: "C", lektion: 2}
 ];

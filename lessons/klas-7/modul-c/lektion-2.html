@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 2 · Modul C · Was unternehmen wir am Wochenende?</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 7'},
+    {label: 'Урок 2: Was unternehmen wir am Wochenende?'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 2 · MODUL C</span>
+        <h1>Was unternehmen wir am Wochenende?</h1>
+        <p class="sub">Позакласні заходи: розповідаємо, у чому беремо участь, читаємо, як клас Б'янки планує вихідні, і вчимося, коли після дієслова потрібне <b>zu</b> (Ich hoffe, das Turnier zu gewinnen), а коли — ні (Wir wollen zelten).</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Erzähl!</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Lesen</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Regel: mit oder ohne zu</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · zu oder nicht?</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Fehlersuche</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== ПАНЕЛЬ: вступ ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Worum geht es heute?</h2>
+      <div class="card">
+        <p>In Modul C sprechen wir über das <em>Schulleben</em>. Letztes Mal hast du viele <em>Schulveranstaltungen</em> kennengelernt. Heute geht es um die Freizeit nach dem Unterricht: Woran nimmst du gern teil? Was kann eine Klasse am Wochenende zusammen unternehmen? Du liest, wie Biancas Klasse ihr Wochenende plant, und lernst eine wichtige Regel: Nach manchen Verben steht der Infinitiv <b>mit zu</b>, nach anderen <b>ohne zu</b>.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          У модулі C говоримо про шкільне життя. Минулого разу ти познайомився(-лася) з багатьма шкільними заходами. Сьогодні — про час після уроків: у чому ти любиш брати участь? Що клас може разом робити у вихідні? Ти прочитаєш, як клас Б'янки планує свої вихідні, і вивчиш важливе правило: після одних дієслів інфінітив стоїть <b>із zu</b>, після інших — <b>без zu</b>.
+        </div>
+      </div>
+
+      <div class="phone">
+        <div class="phone-bar"><span>16:40</span><span>📶 🔋</span></div>
+        <div class="phone-header">Klassenchat 7-B</div>
+        <div class="phone-body">
+          <div class="msg them"><b>Sofia:</b> Was unternehmen wir am Samstag? 🤔</div>
+          <div class="msg them"><b>Denys:</b> Ich schlage vor, ins Kino zu gehen!</div>
+          <div class="msg me"><b>Ich:</b> Ich finde es besser, draußen etwas zu machen. Wir können Fahrrad fahren! 🚲</div>
+          <div class="msg them"><b>Sofia:</b> Gute Idee! Ich hoffe, es regnet nicht. ☀️</div>
+        </div>
+      </div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Корисні вирази з чату</span>
+        <dl>
+          <dt>Was unternehmen wir?</dt><dd>Що будемо робити? Чим займемося?</dd>
+          <dt>Ich schlage vor, ins Kino zu gehen.</dt><dd>Я пропоную піти в кіно. (vorschlagen → schlage … vor)</dd>
+          <dt>Ich finde es besser, … zu machen.</dt><dd>Я вважаю, що краще … зробити.</dd>
+          <dt>Wir können Fahrrad fahren.</dt><dd>Ми можемо покататися на велосипеді. (після können — без zu!)</dd>
+        </dl>
+      </div>
+
+      <div class="card tinted-mustard" style="margin-top:20px;">
+        <p class="section-label" style="margin:0 0 6px;">Ziel der Stunde</p>
+        <p style="margin:0;">Ich kann erzählen, an welchen Veranstaltungen ich teilnehme, Vorschläge für das Wochenende verstehen und machen und weiß, wann ich den Infinitiv <b>mit zu</b> oder <b>ohne zu</b> brauche.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Мета уроку</span>
+          Розповідати, які заходи відбуваються в школі й у чому я беру участь (stattfinden, teilnehmen an, mitmachen bei), розуміти й робити пропозиції щодо вихідних (vorschlagen, vorhaben, Es ist toll, … zu …) і правильно вживати інфінітив із zu та без zu — зокрема з відокремлюваними дієсловами (teil<b>zu</b>nehmen).
+        </div>
+      </div>
+
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Am liebsten nehme ich an Fußballturnieren teil. Und du?</p>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: перевірка домашнього завдання (dz уроку 7-C-1) ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано:
+        <em>„Mein Schuljahr-Kalender: Gestalte (auf Papier oder digital) einen Veranstaltungskalender für deine Klasse. 1) Wähle fünf Monate und schreib zu jedem Monat eine Schulveranstaltung mit Artikel (z. B. „Oktober – das Schulfest“, „Dezember – das Kostümfest“). Zeichne zu jeder Veranstaltung ein kleines Bild oder Symbol. 2) Schreib zu zwei Veranstaltungen je zwei Sätze nach dem Muster: „Im Oktober findet ein Schachturnier statt. Im Rahmen dieser Veranstaltung können wir auch …“ 3) Markiere deine Lieblingsveranstaltung mit ★ und schreib einen Satz dazu: „Ich mag … am meisten, weil …“.“</em>
+      </div>
+
+      <div id="dz-check">
+        <div class="card" style="margin-top:18px;">
+          <p class="section-label" style="margin:0 0 6px;">Teil A · Kalender: Artikel und stattfinden</p>
+          <p class="lead">Звір свій календар: обери артикль (1–6) і впиши обидві частини дієслова <b>stattfinden</b> (7–9). Пам'ятай: префікс <b>statt</b> іде в кінець речення!</p>
+          <div id="hw-list">
+            <div class="fill-item"><span class="num">1)</span> Oktober – <select class="blank inline" data-ans="das" aria-label="Артикль 1"><option value="">—</option><option>der</option><option>die</option><option>das</option></select> Schulfest</div>
+            <div class="fill-item"><span class="num">2)</span> Dezember – <select class="blank inline" data-ans="das" aria-label="Артикль 2"><option value="">—</option><option>der</option><option>die</option><option>das</option></select> Kostümfest</div>
+            <div class="fill-item"><span class="num">3)</span> September – <select class="blank inline" data-ans="der" aria-label="Артикль 3"><option value="">—</option><option>der</option><option>die</option><option>das</option></select> Wandertag</div>
+            <div class="fill-item"><span class="num">4)</span> Mai – <select class="blank inline" data-ans="die" aria-label="Артикль 4"><option value="">—</option><option>der</option><option>die</option><option>das</option></select> Klassenfahrt</div>
+            <div class="fill-item"><span class="num">5)</span> Februar – <select class="blank inline" data-ans="der" aria-label="Артикль 5"><option value="">—</option><option>der</option><option>die</option><option>das</option></select> Malwettbewerb</div>
+            <div class="fill-item"><span class="num">6)</span> März – <select class="blank inline" data-ans="das" aria-label="Артикль 6"><option value="">—</option><option>der</option><option>die</option><option>das</option></select> Schachturnier</div>
+            <div class="fill-item"><span class="num">7)</span> Im November <input type="text" class="blank-input inline" data-ans="findet" aria-label="Пропуск 7a"> eine Tanzshow <input type="text" class="blank-input inline" data-ans="statt" aria-label="Пропуск 7b">.</div>
+            <div class="fill-item"><span class="num">8)</span> Im April <input type="text" class="blank-input inline" data-ans="finden" aria-label="Пропуск 8a"> zwei Sportwettbewerbe <input type="text" class="blank-input inline" data-ans="statt" aria-label="Пропуск 8b">.</div>
+            <div class="fill-item"><span class="num">9)</span> Wann <input type="text" class="blank-input inline" data-ans="findet" aria-label="Пропуск 9a"> die Klassenfahrt <input type="text" class="blank-input inline" data-ans="statt" aria-label="Пропуск 9b">?</div>
+          </div>
+          <div class="check-bar">
+            <button class="btn" id="hw-check" type="button">Prüfen</button>
+            <button class="btn secondary" id="hw-reset" type="button">Zurücksetzen</button>
+            <span class="score-pill" id="hw-score"></span>
+          </div>
+        </div>
+        <div class="card tinted-teal">
+          <p class="section-label" style="margin:0 0 6px;">Teil B · Meine Lieblingsveranstaltung ★</p>
+          <p style="margin:0;">Zeig deinen Kalender und lies deinen ★-Satz vor: <em>„Ich mag das Kostümfest am meisten, weil ich gern tanze.“</em> Die anderen fragen: <em>„Wann findet es statt?“</em></p>
+          <div class="ua-note">
+            <span class="ua-label">🇺🇦 Усно</span>
+            Покажи свій календар і прочитай речення про улюблений захід. Після <b>weil</b> дієслово стоїть у кінці речення. Однокласники ставлять тобі одне запитання зі <b>stattfinden</b>.
+          </div>
+        </div>
+      </div>
+
+      <!-- WÖRTER-CHECK: слова уроку 7-C-1 (LEKTION_PREV_LEKTION = 1) -->
+      <div class="card" id="dz-vocab-wrap" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">Wörter-Check</p>
+        <p class="lead">Перевір слова з минулого уроку.</p>
+        <div id="dz-vocab"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: розповідь про шкільні заходи ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Welche Veranstaltungen finden in deiner Schule statt?</h2>
+      <p class="lead">A) Склади речення з карток — це зразки для твоєї розповіді.</p>
+      <div class="card" id="ub1-order"></div>
+
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Redemittel</span>
+        <dl>
+          <dt>In meiner Schule finden oft / jede Woche / jeden Monat … statt.</dt><dd>У моїй школі часто / щотижня / щомісяця відбуваються …</dd>
+          <dt>zwei- oder dreimal im Schuljahr</dt><dd>двічі-тричі на навчальний рік</dd>
+          <dt>Ich nehme gern an … (+Dat.) teil.</dt><dd>Я охоче беру участь у …</dd>
+          <dt>Meine Mitschüler machen gern bei … (+Dat.) mit.</dt><dd>Мої однокласники охоче долучаються до …</dd>
+        </dl>
+      </div>
+
+      <p class="lead" style="margin-top:20px;">B) А тепер розкажи про свою школу (4–5 речень). Спершу усно в парі, потім запиши. Вставка тексту вимкнена — набирай сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub1-text">In meiner Schule … Ich nehme gern an … teil. Meine Klasse …</label>
+          <textarea id="ub1-text" rows="6" data-words="25-60" data-must="statt|teil|mit"></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 2: читання + зіставлення ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Was unternehmen wir am Wochenende?</h2>
+      <p class="lead">A) Прочитай допис Б'янки. Зверни увагу на виділені дієслова: де перед інфінітивом стоїть <b>zu</b>, а де — ні?</p>
+      <div class="mail-window">
+        <div class="mail-titlebar">Schülerzeitung · Klasse 7b</div>
+        <div class="mail-body">
+          <p>Hallo, ich heiße Bianca und gehe in die Klasse 7b. Wir sind eine aktive Klasse und machen bei vielen Schulveranstaltungen mit. Dieses Wochenende <b>wollen</b> wir wieder etwas zusammen <b>unternehmen</b>. Aber was?</p>
+          <p>Martin <b>schlägt vor</b>, ein kleines Musikfest <b>zu veranstalten</b>. Viele in unserer Klasse <b>können</b> gut <b>singen</b> oder ein Instrument <b>spielen</b>. Trotzdem finden die meisten diese Idee langweilig. Veronika findet es spannender, ein Schachturnier <b>zu organisieren</b> und die Klasse 7a <b>einzuladen</b>. Aber auch diese Idee mit dem Schachturnier finden viele blöd. Michael <b>möchte</b> lieber bei einem Sportwettbewerb <b>mitmachen</b> – das gefällt aber nicht allen.</p>
+          <p>Dann hat unser Lehrer einen Vorschlag: Er <b>empfiehlt</b> uns, in die Nachbarstadt <b>zu fahren</b> und dort ein Kunstmuseum <b>zu besuchen</b>. Wir <b>wollen</b> das Wochenende aber lieber draußen <b>verbringen</b>. Zum Schluss <b>haben</b> wir <b>beschlossen</b>, einen Wandertag im Wald <b>zu organisieren</b>. Wir <b>können</b> zwei Tage lang <b>wandern</b>, <b>zelten</b> und die Natur <b>erkunden</b>. Jetzt <b>haben</b> wir <b>vor</b>, unsere Wanderroute und alle Einzelheiten <b>zu besprechen</b>.</p>
+        </div>
+      </div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Слова до тексту</span>
+        <dl>
+          <dt>vorschlagen (er schlägt vor)</dt><dd>пропонувати</dd>
+          <dt>veranstalten / organisieren</dt><dd>влаштовувати / організовувати</dd>
+          <dt>blöd</dt><dd>дурний, безглуздий (розм.)</dd>
+          <dt>die Nachbarstadt</dt><dd>сусіднє місто</dd>
+          <dt>zelten · die Natur erkunden</dt><dd>жити в наметах · досліджувати природу</dd>
+          <dt>vorhaben (wir haben vor)</dt><dd>мати намір, планувати</dd>
+          <dt>alle Einzelheiten besprechen</dt><dd>обговорити всі деталі</dd>
+        </dl>
+      </div>
+
+      <p class="lead" style="margin-top:20px;">B) Was passt zusammen? Обери до кожного початку (1–8) правильне закінчення (A–H) за змістом тексту.</p>
+      <div class="card tinted-teal">
+        <p style="margin:0 0 4px;"><b>A</b> … ein Musikfest zu veranstalten.</p>
+        <p style="margin:0 0 4px;"><b>B</b> … bei einem Sportwettbewerb mitmachen.</p>
+        <p style="margin:0 0 4px;"><b>C</b> … dieses Wochenende etwas zusammen unternehmen.</p>
+        <p style="margin:0 0 4px;"><b>D</b> … mit dem Schachturnier blöd.</p>
+        <p style="margin:0 0 4px;"><b>E</b> … in der Nachbarstadt ein Kunstmuseum zu besuchen.</p>
+        <p style="margin:0 0 4px;"><b>F</b> … einen Wandertag im Wald zu organisieren.</p>
+        <p style="margin:0 0 4px;"><b>G</b> … die Wanderroute und alle Einzelheiten zu besprechen.</p>
+        <p style="margin:0;"><b>H</b> … ein Schachturnier zu organisieren.</p>
+      </div>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> Biancas Klasse will … <select class="blank inline" data-ans="C" aria-label="Закінчення 1"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option></select></div>
+        <div class="fill-item"><span class="num">2)</span> Martin schlägt vor, … <select class="blank inline" data-ans="A" aria-label="Закінчення 2"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option></select></div>
+        <div class="fill-item"><span class="num">3)</span> Veronika findet es spannender, … <select class="blank inline" data-ans="H" aria-label="Закінчення 3"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option></select></div>
+        <div class="fill-item"><span class="num">4)</span> Viele finden die Idee … <select class="blank inline" data-ans="D" aria-label="Закінчення 4"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option></select></div>
+        <div class="fill-item"><span class="num">5)</span> Michael möchte lieber … <select class="blank inline" data-ans="B" aria-label="Закінчення 5"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option></select></div>
+        <div class="fill-item"><span class="num">6)</span> Der Lehrer empfiehlt, … <select class="blank inline" data-ans="E" aria-label="Закінчення 6"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option></select></div>
+        <div class="fill-item"><span class="num">7)</span> Zum Schluss haben die Kinder beschlossen, … <select class="blank inline" data-ans="F" aria-label="Закінчення 7"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option></select></div>
+        <div class="fill-item"><span class="num">8)</span> Jetzt haben sie vor, … <select class="blank inline" data-ans="G" aria-label="Закінчення 8"><option value="">—</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option>F</option><option>G</option><option>H</option></select></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check" type="button">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset" type="button">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: правило + сортування ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Infinitiv mit und ohne zu</h2>
+      <div class="card">
+        <div style="overflow-x:auto;">
+          <table class="gtable">
+            <tr><th>Infinitiv <b style="color:#fff;">ohne</b> zu</th><th>Infinitiv <b style="color:#fff;">mit</b> zu</th></tr>
+            <tr>
+              <td><strong>1.</strong> nach Modalverben: <i>wollen, möchten, können, dürfen, müssen, sollen</i><p class="beispiel">Unsere Klasse <b>will</b> ein Museum <b>besuchen</b>.</p></td>
+              <td><strong>1.</strong> nach vielen Verben: <i>beginnen, beschließen, empfehlen, hoffen, planen, vergessen, vorhaben, vorschlagen …</i><p class="beispiel">Ich <b>hoffe</b>, das Turnier <b>zu gewinnen</b>.</p><p class="beispiel">Wir <b>haben vor</b>, eine Wanderung <b>zu machen</b>.</p></td>
+            </tr>
+            <tr>
+              <td><strong>2.</strong> nach <i>bleiben, gehen, fahren</i><p class="beispiel">Wir <b>gehen</b> heute <b>schwimmen</b>.</p></td>
+              <td><strong>2.</strong> nach <i>Es ist …</i> / <i>finden es …</i> + Adjektiv (<i>toll, super, wichtig, interessant, langweilig …</i>)<p class="beispiel">Es <b>ist interessant</b>, an einem Quiz <b>teilzunehmen</b>.</p><p class="beispiel">Wir <b>finden es super</b>, Preise <b>zu bekommen</b>.</p></td>
+            </tr>
+          </table>
+        </div>
+        <div class="merke">Відокремлювані дієслова: <b>zu</b> стоїть <b>всередині</b> слова, між префіксом і коренем, і все пишеться разом: teil<b>zu</b>nehmen, mit<b>zu</b>machen, ein<b>zu</b>laden, fern<b>zu</b>sehen.</div>
+        <div class="merke">Після <b>helfen, lernen, lehren</b> можна і з zu, і без нього: Ich helfe dir <b>kochen</b>. = Ich helfe dir, das Konzert <b>zu organisieren</b>.</div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          В українській мові інфінітив ніколи не має «частки»: <i>хочу поїхати</i>, <i>сподіваюся виграти</i>. У німецькій після модальних дієслів (wollen, können …) і після bleiben, gehen, fahren інфінітив — <b>без zu</b>. А після багатьох інших дієслів (hoffen, vorhaben, vorschlagen, beschließen …) і після зворотів <i>Es ist toll / Ich finde es super …</i> — <b>із zu</b>. Інфінітив стоїть у кінці речення, а перед реченням із zu ставимо кому: <i>Ich hoffe<b>,</b> das Turnier zu gewinnen.</i>
+        </div>
+      </div>
+
+      <p class="lead" style="margin-top:20px;">Розсортуй початки речень: після якого буде інфінітив <b>без zu</b>, а після якого — <b>із zu</b>?</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 4: zu чи ні ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Ergänze zu, wo es nötig ist</h2>
+      <p class="lead">Обери <b>zu</b>, якщо воно потрібне, або <b>✗</b>, якщо інфінітив стоїть без zu. У відокремлюваних дієсловах пропуск — усередині слова.</p>
+      <div class="card" id="ub4-list">
+        <div class="fill-item"><span class="num">1)</span> Wir haben vor, an einem Malwettbewerb teil<select class="blank inline" data-ans="zu" aria-label="Пропуск 1"><option value="">—</option><option value="zu">zu</option><option value="x">✗</option></select>nehmen.</div>
+        <div class="fill-item"><span class="num">2)</span> Ich möchte am Wandertag mit<select class="blank inline" data-ans="x" aria-label="Пропуск 2"><option value="">—</option><option value="zu">zu</option><option value="x">✗</option></select>machen.</div>
+        <div class="fill-item"><span class="num">3)</span> Ich habe vergessen, meine Turnschuhe mit<select class="blank inline" data-ans="zu" aria-label="Пропуск 3"><option value="">—</option><option value="zu">zu</option><option value="x">✗</option></select>nehmen.</div>
+        <div class="fill-item"><span class="num">4)</span> Lena schlägt vor, mit der Klasse nach Lwiw <select class="blank inline" data-ans="zu" aria-label="Пропуск 4"><option value="">—</option><option value="zu">zu</option><option value="x">✗</option></select> fahren.</div>
+        <div class="fill-item"><span class="num">5)</span> Wir können eine Tanzshow <select class="blank inline" data-ans="x" aria-label="Пропуск 5"><option value="">—</option><option value="zu">zu</option><option value="x">✗</option></select> organisieren.</div>
+        <div class="fill-item"><span class="num">6)</span> Es ist toll, ein paar Tage im Wald <select class="blank inline" data-ans="zu" aria-label="Пропуск 6"><option value="">—</option><option value="zu">zu</option><option value="x">✗</option></select> zelten.</div>
+        <div class="fill-item"><span class="num">7)</span> Nach dem Unterricht gehen wir Fußball <select class="blank inline" data-ans="x" aria-label="Пропуск 7"><option value="">—</option><option value="zu">zu</option><option value="x">✗</option></select> spielen.</div>
+        <div class="fill-item"><span class="num">8)</span> Es ist wichtig, alle Einzelheiten <select class="blank inline" data-ans="zu" aria-label="Пропуск 8"><option value="">—</option><option value="zu">zu</option><option value="x">✗</option></select> besprechen.</div>
+        <div class="fill-item"><span class="num">9)</span> Ich finde es langweilig, den ganzen Abend fern<select class="blank inline" data-ans="zu" aria-label="Пропуск 9"><option value="">—</option><option value="zu">zu</option><option value="x">✗</option></select>sehen.</div>
+        <div class="fill-item"><span class="num">10)</span> Unsere Klasse will ein Schachturnier <select class="blank inline" data-ans="x" aria-label="Пропуск 10"><option value="">—</option><option value="zu">zu</option><option value="x">✗</option></select> veranstalten.</div>
+        <div class="fill-item"><span class="num">11)</span> Wir hoffen, den ersten Preis <select class="blank inline" data-ans="zu" aria-label="Пропуск 11"><option value="">—</option><option value="zu">zu</option><option value="x">✗</option></select> bekommen.</div>
+        <div class="fill-item"><span class="num">12)</span> Kannst du mir helfen, die Aula <select class="blank inline" data-ans="zu|x" aria-label="Пропуск 12"><option value="">—</option><option value="zu">zu</option><option value="x">✗</option></select> schmücken?</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub4-check" type="button">Prüfen</button>
+        <button class="btn secondary" id="ub4-reset" type="button">Zurücksetzen</button>
+        <span class="score-pill" id="ub4-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5: знайди й виправ помилку ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Fehlersuche: Was stimmt nicht?</h2>
+      <p class="lead">Так написали учні 7a у своєму чаті. У деяких реченнях бракує <b>zu</b> або воно стоїть не там. Натисни слово з помилкою і впиши правильний варіант (одним чи двома словами). Якщо помилки немає — «Fehlerfrei».</p>
+      <div class="card" id="ub5-fix"></div>
+    </section>
+
+    <!-- ===== ПРИКІНЦЕВА ПАНЕЛЬ ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Klassenchat „Unser Wochenende“: Schreib einen Chat (8–10 Nachrichten) in eurer Klassengruppe: Drei oder vier Mitschüler planen ein gemeinsames Wochenende – wie Biancas Klasse. 1) Jede Person macht einen Vorschlag mit „vorschlagen“, „vorhaben“ oder „Ich finde es toll / super / interessant, … zu …“. 2) Benutze mindestens vier Infinitive mit zu – davon mindestens einen mit einem trennbaren Verb (z. B. teilzunehmen, mitzumachen, einzuladen) – und mindestens zwei Sätze mit einem Modalverb ohne zu (z. B. „Wir können im Wald zelten.“). 3) Die letzte Nachricht sagt, was ihr beschlossen habt: „Wir haben beschlossen, … zu …“. Unterstreiche alle Infinitive mit zu. Nächstes Mal lesen wir eure Chats in Gruppen vor – welche Klasse hat den besten Plan?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Чат класу «Наші вихідні»: напиши листування (8–10 повідомлень) у групі свого класу: троє-четверо однокласників планують спільні вихідні — як клас Б'янки. 1) Кожен робить пропозицію з «vorschlagen», «vorhaben» або «Ich finde es toll / super / interessant, … zu …». 2) Ужий щонайменше чотири інфінітиви із zu — серед них хоча б один з відокремлюваним дієсловом (напр. teilzunehmen, mitzumachen, einzuladen) — і щонайменше два речення з модальним дієсловом без zu (напр. «Wir können im Wald zelten.»). 3) В останньому повідомленні — що ви вирішили: «Wir haben beschlossen, … zu …». Підкресли всі інфінітиви із zu. Наступного уроку прочитаємо ваші чати в групах — у якого класу найкращий план?
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Wörter zum Lernen</p>
+        <div class="chip-row" id="vocabChips"></div>
+      </div>
+
+      <div class="card" id="lessonGramWrap">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="lessonGram"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../data/glossary-data.js"></script>
+<script src="../../../data/lessons-data.js"></script>
+<script src="../../../data/grammar-data.js"></script>
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  const LEKTION_KLAS = "7", LEKTION_MODUL = "C", LEKTION_LEKTION = 2;
+  const LEKTION_PREV_LEKTION = 1;
+
+  (function renderLessonVocab(){
+    const box = document.getElementById('vocabChips');
+    if (!box || typeof GLOSSARY === 'undefined') return;
+    const words = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_LEKTION
+    );
+    if (words.length === 0){
+      box.innerHTML = '<p class="empty-note">Слова для цього уроку ще не додані в глосарій.</p>';
+      return;
+    }
+    box.innerHTML = words.map(w =>
+      '<span class="chip static">' + w.de + ' — ' + w.uk + '</span>'
+    ).join('');
+  })();
+
+  // ===== Граматика до цього уроку у вкладці Fertig (поле gram у lessons-data.js) =====
+  (function renderLessonGrammar(){
+    const wrap = document.getElementById('lessonGramWrap');
+    const box = document.getElementById('lessonGram');
+    if (!wrap || !box) return;
+    const hide = () => { wrap.style.display = 'none'; };
+    if (typeof LESSONS === 'undefined' || typeof GRAMMAR === 'undefined') return hide();
+    const me = LESSONS.find(l => l.klas === LEKTION_KLAS && l.modul === LEKTION_MODUL && l.lektion === LEKTION_LEKTION);
+    const topics = ((me && me.gram) || []).map(id => GRAMMAR.find(t => t.id === id)).filter(t => t && t.opublikovano > 0);
+    if (topics.length === 0) return hide();
+    // корінь сайту беремо з того самого шляху, яким підключено grammar-data.js —
+    // тож окремо міняти шлях тут при копіюванні шаблону не треба
+    const src = document.querySelector('script[src$="data/grammar-data.js"]').getAttribute('src');
+    const root = src.slice(0, src.length - 'data/grammar-data.js'.length);
+    box.innerHTML = topics.map(t =>
+      '<a class="gram-link" href="' + root + 'gramatyka/temy/' + t.id + '.html">'
+      + '<span class="k">' + t.uk + '</span>' + t.tema + '</a>'
+    ).join('');
+  })();
+
+  // ===== Wörter-Check у вкладці Hausaufgabe (слова ПОПЕРЕДНЬОГО уроку) =====
+  // Використовує ті самі спільні функції, що й Üb.1 (buildQuiz) та
+  // Fertig! (shuffleArray) — нового коду в lesson-interactions.js не було.
+
+  // ---------- Груба евристика частини мови за виглядом "de" ----------
+  // Потрібна лише для того, щоб варіанти-пастки у Wörter-Check були тієї
+  // самої частини мови, що й правильна відповідь (інакше учень вгадує за
+  // формою слова — "це іменник чи дієслово?" — а не за значенням). Це
+  // евристика за текстом рядка, а не лінгвістичний аналізатор, і вона не
+  // вимагає жодного нового поля в даних GLOSSARY.
+  function guessPos(de){
+    var base = (de || '').replace(/\([^)]*\)/g, '').trim();
+    if(/^(der|die|das)(\/(der|die|das))?\s/.test(base)) return 'noun';
+    if(/^sich\s/.test(base)) return 'verb';
+    if(/^am\s/.test(base)) return 'other'; // "am liebsten", "am besten" — прислівникова найвища форма, не дієслово
+    if(/\(\+(Gen|Dat|Akk)\.?\)/.test(de)) return 'prep';
+    var words = base.split(/\s+/);
+    var last = words[words.length - 1];
+    if(/(en|ern|eln)$/.test(last) && last === last.toLowerCase()) return 'verb';
+    return 'other'; // прикметники / прислівники / сталі вирази
+  }
+
+  (function renderDzVocabCheck(){
+    const wrap = document.getElementById('dz-vocab-wrap');
+    const box = document.getElementById('dz-vocab');
+    if (!wrap || !box || typeof GLOSSARY === 'undefined') return;
+    if (!LEKTION_PREV_LEKTION){ wrap.style.display = 'none'; return; }
+
+    const prevWords = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_PREV_LEKTION
+    );
+    if (prevWords.length < 3){ wrap.style.display = 'none'; return; }
+
+    const pool = shuffleArray(prevWords).slice(0, 6); // 5–6 слів на перевірку
+    const quizData = pool.map(w => {
+      // Пастки — тієї самої частини мови, що й правильне слово (guessPos вище),
+      // інакше учень вгадує за формою відповіді, а не за її значенням.
+      const pos = guessPos(w.de);
+      let sameKind = GLOSSARY.filter(g => g.uk !== w.uk && guessPos(g.de) === pos);
+      if(sameKind.length < 2) sameKind = GLOSSARY.filter(g => g.uk !== w.uk); // запасний варіант, якщо слів цієї частини мови замало
+      const distractors = shuffleArray(sameKind).slice(0, 2).map(g => g.uk);
+      return { q: w.de, opts: [w.uk, ...distractors], correct: w.uk };
+    });
+    buildQuiz('dz-vocab', quizData);
+  })();
+
+  // Hausaufgabe: артиклі + stattfinden
+  wireBlanks('hw');
+
+  // Üb. 1: речення з карток
+  buildOrder('ub1-order', [
+    {words: ["in meiner Schule", "finden", "oft", "Schulfeste", "statt"], end: ".", hint: "У моїй школі часто відбуваються шкільні свята.",
+     alt: ["oft finden in meiner Schule Schulfeste statt"]},
+    {words: ["ich", "nehme", "gern", "an Sportwettbewerben", "teil"], end: ".", hint: "Я охоче беру участь у спортивних змаганнях.",
+     alt: ["gern nehme ich an Sportwettbewerben teil"]},
+    {words: ["zweimal im Schuljahr", "findet", "bei uns", "ein Kostümfest", "statt"], end: ".", hint: "Двічі на рік у нас відбувається костюмоване свято.",
+     alt: ["bei uns findet zweimal im Schuljahr ein Kostümfest statt"]},
+    {words: ["meine Klasse", "nimmt", "auch", "an einem Schachturnier", "teil"], end: ".", hint: "Мій клас теж бере участь у шаховому турнірі."},
+    {words: ["meine Mitschüler", "machen", "gern", "beim Musikwettbewerb", "mit"], end: ".", hint: "Мої однокласники охоче беруть участь у музичному конкурсі.",
+     alt: ["gern machen meine Mitschüler beim Musikwettbewerb mit"]}
+  ]);
+
+  // Üb. 2: зіставлення (A–H)
+  wireBlanks('ub2');
+
+  // Üb. 3: сортування mit / ohne zu
+  buildSort('ub3-sort', {
+    buckets: ["ohne zu", "mit zu"],
+    items: [
+      {t: "Wir wollen …", b: "ohne zu"},
+      {t: "Ich kann …", b: "ohne zu"},
+      {t: "Du musst …", b: "ohne zu"},
+      {t: "Sie möchte …", b: "ohne zu"},
+      {t: "Wir gehen heute …", b: "ohne zu"},
+      {t: "Tim bleibt …", b: "ohne zu"},
+      {t: "Ich hoffe, …", b: "mit zu"},
+      {t: "Wir haben vor, …", b: "mit zu"},
+      {t: "Er schlägt vor, …", b: "mit zu"},
+      {t: "Ich habe vergessen, …", b: "mit zu"},
+      {t: "Es ist wichtig, …", b: "mit zu"},
+      {t: "Wir finden es toll, …", b: "mit zu"}
+    ]
+  });
+
+  // Üb. 4: zu чи ✗
+  wireBlanks('ub4');
+
+  // Üb. 5: знайди й виправ помилку
+  buildFixError('ub5-fix', [
+    {s: "Ich hoffe, das Turnier gewinnen.", wrong: 4, fix: "zu gewinnen"},
+    {s: "Martin schlägt vor, ein Konzert zu veranstalten.", ok: true},
+    {s: "Wir haben vor, an der Wanderung zumitmachen.", wrong: 6, fix: "mitzumachen"},
+    {s: "Hast du Lust, beim Schulfest mitzumachen?", ok: true},
+    {s: "Es ist interessant, ein Museum besuchen.", wrong: 5, fix: "zu besuchen"},
+    {s: "Veronika findet es super, an einem Quiz zuteilnehmen.", wrong: 7, fix: "teilzunehmen"},
+    {s: "Wir haben beschlossen, alle Mitschüler einzuladen.", ok: true}
+  ]);
+
+  // Фінальна панель зі штампами
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🎵','♟️','🏃','🏕️','🖼️']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
