@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wie klingt lecker? · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Essen &amp; Trinken</span>
+        <h1>Wie klingt lecker?</h1>
+        <p class="sub">Чому в літаку так смакує томатний сік, а розмоклі пластівці — ні? Оксфордський психолог доводить: ми «їмо» не лише язиком, а й вухами та очима.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Süßer oder nicht?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Mein Restaurant</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Mit allen Sinnen essen</h2>
+      <div class="card">
+        <p>Schmecken Chips besser, wenn sie laut knuspern? Hörst du beim Essen gern Musik? Was glaubst du: Kann die Farbe eines Tellers verändern, wie süß ein Dessert schmeckt?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай (або обговоріть у парі): чи впливає на смак їжі музика в кафе, колір тарілки чи хрускіт? Як гадаєш, чому розмоклі пластівці здаються несмачними, хоча складаються з того самого?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Warum bestellen im Flugzeug so viele Passagiere ausgerechnet Tomatensaft? Lange <span class="gl" data-uk="вважати відповідальним, звинувачувати" data-lemma="verantwortlich machen (für + Akk.)">machte</span> man die trockene Kabinenluft oder den <span class="gl" data-uk="тиск повітря" data-lemma="der Luftdruck">Luftdruck</span> dafür <span class="gl" data-uk="вважати відповідальним, звинувачувати" data-lemma="verantwortlich machen (für + Akk.)">verantwortlich</span>. Der britische Psychologe Charles Spence hatte eine andere Idee – und die führt mitten in eine spannende Forschungsrichtung.</p>
+
+          <p>Spence forscht an der University of Oxford und gilt als bekanntester Experte für „Food Sound“, also für den Einfluss von Geräuschen auf das Essen. Seine Grundidee: <span class="gl" data-key data-uk="смак" data-lemma="der Geschmack, -ä-e">Geschmack</span> ist kein rein chemischer <span class="gl" data-uk="чуття, відчуття" data-lemma="der Sinn, -e">Sinn</span>. Was wir schmecken, <span class="gl" data-uk="виникати" data-lemma="entstehen (entstand, ist entstanden)">entsteht</span> aus einem <span class="gl" data-uk="взаємодія" data-lemma="das Zusammenspiel">Zusammenspiel</span> von Hören, Sehen, Fühlen und <span class="gl" data-uk="очікування" data-lemma="die Erwartung, -en">Erwartung</span>.</p>
+
+          <p>Im Fall des Tomatensafts vermutete Spence, dass der Lärm der <span class="gl" data-uk="двигун (літака)" data-lemma="das Triebwerk, -e">Triebwerke</span> unseren Geschmackssinn <span class="gl" data-uk="пригнічувати, приглушувати" data-lemma="unterdrücken">unterdrückt</span> – und dass die Passagiere das mit dem <span class="gl" data-key data-uk="пряний, насичений" data-lemma="würzig">würzigen</span> Geschmack der Tomate <span class="gl" data-uk="компенсувати, протидіяти" data-lemma="ausgleichen (glich aus, hat ausgeglichen)">ausgleichen</span>. 2015 bestätigten Forscher der Cornell University in den USA diese These. Ihre Testpersonen hörten über Kopfhörer Fluglärm und probierten dabei verschiedene Flüssigkeiten. Am besten <span class="gl" data-uk="мати результат (добрий/поганий)" data-lemma="abschneiden (schnitt ab, hat abgeschnitten)">schnitt</span> eine <span class="gl" data-uk="розчин" data-lemma="die Lösung, -en">Lösung</span> mit einem <span class="gl" data-uk="підсилювач смаку" data-lemma="der Geschmacksverstärker, -">Geschmacksverstärker</span> <span class="gl" data-uk="мати результат (добрий/поганий)" data-lemma="abschneiden (schnitt ab, hat abgeschnitten)">ab</span>, die ähnlich würzig schmeckt wie Tomate.</p>
+
+          <p>Auch Musik verändert, wie Essen schmeckt. In Spences Labor sollen Testpersonen zu einem Gericht passende Musik zusammenstellen. Erstaunlich oft wählen sie dasselbe: Zu scharfem Essen passt schnelle, laute Musik mit hohen Tönen. Bei Schokolade betont klassische Musik eher die <span class="gl" data-uk="гіркота" data-lemma="die Bitterkeit">Bitterkeit</span>, schnelle hohe Musik die <span class="gl" data-uk="солодкість" data-lemma="die Süße">Süße</span>. Bis zu zehn Prozent süßer oder bitterer wirkt ein Lebensmittel so. Das könnte sogar Krankenhäusern helfen: Wer sein Essen durch Musik als süßer <span class="gl" data-key data-uk="сприймати, відчувати" data-lemma="empfinden (empfand, hat empfunden)">empfindet</span>, braucht weniger Zucker.</p>
+
+          <p>In Restaurants gilt: Je lauter und schneller die Musik, desto schneller essen und trinken die Gäste – und desto mehr Geld geben sie aus. Wird es aber zu laut, leidet der Geschmack wie im Flugzeug. Passt die Musik zum Ort, etwa italienische Musik in einer Pizzeria, wirkt alles <span class="gl" data-uk="гармонійний, доречний" data-lemma="stimmig">stimmig</span>, und man isst mehr. Doch Spence warnt vor zu großen Erwartungen: Aus schlechtem Essen macht auch die beste Musik kein Festessen.</p>
+
+          <p>Wichtig ist auch das Geräusch des Essens selbst. In einem Versuch bissen Testpersonen in Chips, während Kopfhörer das <span class="gl" data-key data-uk="хрускіт" data-lemma="das Knuspergeräusch, -e">Knuspergeräusch</span> lauter oder leiser machten. Je lauter es <span class="gl" data-uk="хрустіти" data-lemma="knuspern">knusperte</span>, desto besser schmeckten die Chips. Das erklärt auch, warum niemand <span class="gl" data-uk="розмоклий" data-lemma="durchgeweicht">durchgeweichte</span> Cornflakes mag, obwohl sie genauso <span class="gl" data-uk="поживний" data-lemma="nahrhaft">nahrhaft</span> sind. Spence hat dazu eine Vermutung: Eine frische Karotte enthält viele Nährstoffe und <span class="gl" data-uk="хрумтіти, тріщати" data-lemma="knacken">knackt</span> besonders laut. Vielleicht <span class="gl" data-uk="віддавати перевагу" data-lemma="bevorzugen">bevorzugen</span> wir deshalb ganz unbewusst knackiges Essen – beweisen lässt sich das aber noch nicht.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Auch deutsche Firmen testen den Klang ihrer Produkte. Beim Kekshersteller Bahlsen aus Hannover gibt es im Labor sogar einen „Knacktest“ für den Butterkeks. Den bekanntesten Bahlsen-Keks, den Leibniz-Butterkeks mit seinen 52 „Zähnen“ am Rand, gibt es seit 1891 – benannt ist er nach dem Philosophen Gottfried Wilhelm Leibniz, der in Hannover lebte.</p>
+          </aside>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Butterkeks.jpg/960px-Butterkeks.jpg" alt="Ein Leibniz-Butterkeks." width="960" height="838" loading="lazy">
+            <figcaption>Ein Leibniz-Butterkeks. Foto: Rainer Zenz, <a href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Butterkeks.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Und schließlich isst auch das Auge mit. Forscher aus Oxford fanden heraus, dass Menschen von roten Tellern deutlich kleinere Portionen essen – vielleicht, weil wir Rot mit Gefahr <span class="gl" data-uk="пов'язувати, асоціювати" data-lemma="verbinden (verband, hat verbunden)">verbinden</span>. Ein Erdbeerdessert schmeckt auf einem weißen Teller süßer als auf einem schwarzen. Mit schwerem <span class="gl" data-key data-uk="столові прибори" data-lemma="das Besteck">Besteck</span> wirkt Essen <span class="gl" data-uk="якісний, високоякісний" data-lemma="hochwertig">hochwertiger</span>: Die Testpersonen hätten dafür sogar 15 Prozent mehr bezahlt. Nur Joghurt schmeckt vom Plastiklöffel besser. Und heiße Schokolade? Die mochten die Testpersonen am liebsten aus einem orangefarbenen <span class="gl" data-uk="кухоль, чашка" data-lemma="der Becher, -">Becher</span>.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Was verändert den Geschmack?</h2>
+      <p class="lead">Що, за текстом, робить їжу смачнішою або солодшою, а що — навпаки? Натисни на картку, потім на кошик.</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+      <p class="lead">б) Коротко про головне: встав слова з набору в текст. Одне слово зайве.</p>
+      <div class="card" id="ub4b-bank"></div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Mein Restaurant</h2>
+      <p class="lead">Напиши німецькою. Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card" id="ub5-w"></div>
+      <div class="card">
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>In meinem Café gibt es … · Die Teller sind …, weil … · Im Hintergrund läuft …, denn … · So schmeckt das Essen … · Laut dem Text …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Geschmack entsteht nicht nur auf der Zunge: Geräusche, Musik, Farben und sogar das Gewicht des Bestecks verändern, wie uns Essen schmeckt. Knuspriges wirkt leckerer, Fluglärm dämpft den Geschmack, und auf weißen Tellern schmecken Desserts süßer. Auch in Deutschland testen Firmen wie Bahlsen aus Hannover den Klang ihrer Kekse.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Смак виникає не лише на язиці: звуки, музика, кольори й навіть вага столових приборів змінюють те, як смакує їжа. Хрустке здається смачнішим, шум літака приглушує смак, а десерти на білих тарілках солодші. У Німеччині звук свого печива перевіряють навіть фірми на кшталт Bahlsen із Ганновера.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "wie-klingt-lecker";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Was ist die Hauptaussage des Textes?",
+     opts: ["Was wir hören und sehen, verändert, wie uns Essen schmeckt",
+            "Tomatensaft ist im Flugzeug gesünder als am Boden",
+            "Restaurants sollten keine Musik spielen"],
+     correct: "Was wir hören und sehen, verändert, wie uns Essen schmeckt"},
+    {q: "Warum trinken viele Menschen im Flugzeug Tomatensaft – laut Spence?",
+     opts: ["Weil der Lärm den Geschmack dämpft und Tomate sehr würzig ist",
+            "Weil die Luft im Flugzeug sehr trocken ist",
+            "Weil Tomatensaft im Flugzeug billiger ist"],
+     correct: "Weil der Lärm den Geschmack dämpft und Tomate sehr würzig ist"}
+  ]);
+  buildMatch('ub1h', [
+    ["Mehr als ein chemischer Sinn", "Absatz 1"],
+    ["Das Rätsel des Tomatensafts", "Absatz 2"],
+    ["Die passende Musik zum Essen", "Absatz 3"],
+    ["Laute Musik, schnelle Gäste", "Absatz 4"],
+    ["Je lauter, desto leckerer", "Absatz 5"],
+    ["Das Auge isst mit", "Absatz 6"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5", "Absatz 6"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "Charles Spence arbeitet an der University of Oxford.", a: "r"},
+    {s: "Die Studie zum Tomatensaft fand im Flugzeug statt.", a: "f"},
+    {s: "Zu scharfem Essen passt laut Testpersonen ruhige, tiefe Musik.", a: "f"},
+    {s: "Bei sehr lauter Musik schmeckt man das Essen schlechter.", a: "r"},
+    {s: "Durchgeweichte Cornflakes haben weniger Nährstoffe als knusprige.", a: "f"},
+    {s: "Spence hat bewiesen, dass wir knackiges Essen wegen der Nährstoffe bevorzugen.", a: "f"},
+    {s: "Spence trinkt im Flugzeug selbst gern Tomatensaft.", a: "n"},
+    {s: "Von roten Tellern essen Menschen kleinere Portionen.", a: "r"}
+  ]);
+
+  buildSort('ub3-sort', {
+    buckets: ["wirkt leckerer oder süßer", "wirkt weniger lecker oder süß"],
+    items: [
+      {t: "lautes Knuspern beim Chips-Essen", b: "wirkt leckerer oder süßer"},
+      {t: "schnelle Musik mit hohen Tönen (Schokolade)", b: "wirkt leckerer oder süßer"},
+      {t: "Erdbeerdessert auf einem weißen Teller", b: "wirkt leckerer oder süßer"},
+      {t: "schweres Besteck", b: "wirkt leckerer oder süßer"},
+      {t: "Fluglärm", b: "wirkt weniger lecker oder süß"},
+      {t: "durchgeweichte Cornflakes", b: "wirkt weniger lecker oder süß"},
+      {t: "Erdbeerdessert auf einem schwarzen Teller", b: "wirkt weniger lecker oder süß"},
+      {t: "sehr laute Musik im Restaurant", b: "wirkt weniger lecker oder süß"}
+    ]
+  });
+
+  buildMatch('ub4', [
+    ["der Geschmack", "смак"],
+    ["würzig", "пряний, насичений"],
+    ["unterdrücken", "пригнічувати, приглушувати"],
+    ["das Besteck", "столові прибори"],
+    ["bevorzugen", "віддавати перевагу"],
+    ["stimmig", "гармонійний, доречний"]
+  ]);
+  buildWordBank('ub4b-bank', {
+    text: "Im Flugzeug [unterdrückt] der Lärm den Geschmack, deshalb trinken viele Tomatensaft – er ist sehr [würzig]. Chips schmecken besser, wenn sie laut [knuspern]. Desserts wirken auf weißen Tellern [süßer]. Mit schwerem [Besteck] wirkt das Essen hochwertiger.",
+    extra: ["bitterer"]
+  });
+
+  buildWriting('ub5-w', {
+    prompt: "Du eröffnest ein kleines Café. Welche Musik, welche Teller und welches Besteck wählst du – und warum? Nutze mindestens zwei Ergebnisse aus dem Text. (80–120 Wörter)",
+    words: "80-120",
+    must: ["weil", "Musik"],
+    check: ["Ich nutze mindestens zwei Ergebnisse aus dem Text", "Ich begründe meine Entscheidungen"]
+  });
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📰','🎧','🍪','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
