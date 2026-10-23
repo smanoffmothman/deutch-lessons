@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Die Vermessung der Tiefe · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Natur &amp; Umwelt</span>
+        <h1>Die Vermessung der Tiefe</h1>
+        <p class="sub">Марс нанесено на карту повністю, а дно наших океанів — лише на чверть. Як науковці з Бремена, Бремергафена й Кіля разом із цілим світом складають карту морських глибин — і навіщо вона потрібна.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Reihenfolge</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Deine Meinung</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Was liegt unter dem Meer?</h2>
+      <div class="card">
+        <p>Wie tief ist das Meer an der tiefsten Stelle? Was glaubst du: Kennen wir den Meeresboden besser oder schlechter als die Oberfläche des Mars? Wofür könnte eine genaue Karte des Meeresbodens nützlich sein?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай (або обговоріть у парі): як можна виміряти глибину моря, якщо туди не проникає світло? І кому потрібна точна карта морського дна — науковцям, морякам, ще комусь?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Der Sturm vor der Küste Kalabriens ist so heftig, dass die Forscher an Bord der „Meteor“ keine Geräte ins Wasser lassen können. Doch einen Tag einfach verlieren? Das kann sich die Expedition nicht leisten. Also gibt der Fahrtleiter, der Bremer Geologe Gerhard Bohrmann, eine andere Aufgabe aus: Das Schiff fährt Streifen für Streifen über das Meer – und <span class="gl" data-key data-uk="наносити на карту, картографувати" data-lemma="kartieren">kartiert</span> den Boden.</p>
+
+          <p>Auf den Bildschirmen entsteht dabei ein Bild der Landschaft in 1600 Metern Tiefe: Rinnen, <span class="gl" data-uk="ущелина" data-lemma="die Schlucht, -en">Schluchten</span> und zwei Vulkankegel. Kaum ein Mensch hat diese Welt je gesehen. Die Meere bedecken rund 71 Prozent der Erde, im Durchschnitt sind sie fast 4000 Meter tief, an der tiefsten Stelle rund elf Kilometer. Und doch wissen wir über den <span class="gl" data-key data-uk="морське дно" data-lemma="der Meeresboden, -ö-">Meeresboden</span> weniger als über den Mars. Der Grund: Wasser <span class="gl" data-uk="поглинати" data-lemma="schlucken">schluckt</span> das Licht. Spätestens in 1000 Metern Tiefe ist es völlig dunkel, Kameras sehen nichts mehr. Den Mars dagegen haben Sonden längst vollständig und genau fotografiert.</p>
+
+          <p>Dabei hängt unser Alltag stark vom Meeresboden ab. Fast 600 <span class="gl" data-uk="підводний" data-lemma="unterseeisch">unterseeische</span> Kabelsysteme mit einer Länge von fast 1,5 Millionen Kilometern verbinden die Kontinente – ohne sie gäbe es kein schnelles Internet. Wer Kabel, Pipelines oder Windparks bauen will, muss das <span class="gl" data-uk="місцевість, рельєф" data-lemma="das Gelände">Gelände</span> genau kennen. Schiffe und U-Boote brauchen Karten, um nicht gegen unbekannte Berge zu fahren. Klimaforscher wollen verstehen, wie die Landschaft am Boden die <span class="gl" data-uk="течія" data-lemma="die Strömung, -en">Strömungen</span> lenkt. Und die Industrie interessiert sich für <span class="gl" data-key data-uk="корисні копалини" data-lemma="die Bodenschätze (Pl.)">Bodenschätze</span> in der <span class="gl" data-key data-uk="глибоководдя" data-lemma="die Tiefsee">Tiefsee</span>: In 3000 bis 6000 Metern Tiefe liegen <span class="gl" data-uk="залізомарганцева конкреція" data-lemma="die Manganknolle, -n">Manganknollen</span>, etwa so groß wie Kartoffeln. Sie enthalten unter anderem Kobalt, Nickel und Kupfer – Metalle, die man für Akkus von E-Autos und Handys braucht.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Manganese-nodule-05_hg.jpg/960px-Manganese-nodule-05_hg.jpg" alt="Eine Manganknolle aus dem Pazifik." width="960" height="884" loading="lazy">
+            <figcaption>Eine Manganknolle aus dem Pazifik. Foto: Hannes Grobe, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Manganese-nodule-05_hg.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Schon vor mehr als 4000 Jahren maßen die Ägypter die Wassertiefe mit einem Seil, an dem ein Stein hing. Das britische Schiff „Challenger“ <span class="gl" data-uk="вирушати" data-lemma="aufbrechen (brach auf, ist aufgebrochen)">brach</span> 1872 zur ersten großen Forschungsreise um die ganze Welt <span class="gl" data-uk="вирушати" data-lemma="aufbrechen (brach auf, ist aufgebrochen)">auf</span> und <span class="gl" data-uk="вимірювати" data-lemma="messen (maß, hat gemessen)">maß</span> im Pazifik eine Tiefe von 8184 Metern – ganz in der Nähe des Marianengrabens, der tiefsten Stelle aller Meere. 1925 startete dann in Wilhelmshaven die erste deutsche „Meteor“ zu einer Expedition in den Südatlantik, die mehr als zwei Jahre dauerte. An Bord war eine neue Erfindung: das <span class="gl" data-key data-uk="ехолот" data-lemma="das Echolot, -e">Echolot</span> des deutschen Physikers Alexander Behm. Mit rund 67 000 Messungen zeigten die Forscher zum ersten Mal den Mittelatlantischen Rücken, die längste <span class="gl" data-uk="гірський хребет" data-lemma="die Gebirgskette, -n">Gebirgskette</span> der Erde.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Die Küsten Deutschlands vermisst das Bundesamt für Seeschifffahrt und Hydrographie (BSH) regelmäßig mit fünf Schiffen – eine Fläche fast so groß wie Bayern. Die Nordsee kommt öfter dran als die Ostsee, denn <span class="gl" data-uk="приплив і відплив" data-lemma="Ebbe und Flut">Ebbe und Flut</span> verändern dort ständig die Fahrrinnen. Die Nordsee ist im Durchschnitt nur 95 Meter tief, die Ostsee noch flacher.</p>
+          </aside>
+
+          <p>Heute arbeitet man mit einem Fächerecholot. Es schickt Hunderte <span class="gl" data-uk="звукова хвиля" data-lemma="die Schallwelle, -n">Schallwellen</span> gleichzeitig fächerförmig nach unten und misst, wie lange das <span class="gl" data-uk="відлуння, ехо" data-lemma="das Echo, -s">Echo</span> zurück braucht. Daraus berechnet ein Computer die Tiefe und die Form des Bodens. In 4000 Metern Tiefe <span class="gl" data-uk="охоплювати, фіксувати" data-lemma="erfassen">erfasst</span> ein Schiff so einen Streifen von bis zu 16 Kilometern Breite. Das klingt viel – im Vergleich zur riesigen Fläche der Ozeane ist es aber nur ein winziger <span class="gl" data-uk="фрагмент, ділянка" data-lemma="der Ausschnitt, -e">Ausschnitt</span>.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Research_ship_Meteor.jpg/960px-Research_ship_Meteor.jpg" alt="Das deutsche Forschungsschiff Meteor in Bremerhaven." width="960" height="720" loading="lazy">
+            <figcaption>Das deutsche Forschungsschiff Meteor in Bremerhaven. Foto: Tvabutzku1234, gemeinfrei, <a href="https://commons.wikimedia.org/wiki/File:Research_ship_Meteor.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Das will das internationale Projekt „Seabed 2030“ ändern. Sein Ziel: bis 2030 den gesamten Meeresboden zu vermessen und alle Daten frei zugänglich zu machen. Als es 2017 begann, waren erst sechs Prozent der Meere genau kartiert, Anfang 2026 schon 27 Prozent. Eigene Schiffe hat das Projekt nicht. Es sammelt Daten von Forschungsinstituten, Fischern, Containerschiffen, Kreuzfahrtschiffen und sogar von Robben in der Antarktis, die man mit <span class="gl" data-uk="передавач" data-lemma="der Sender, -">Sendern</span> ausgestattet hat. Der texanische Millionär Victor Vescovo hat allein Daten von rund drei Millionen Quadratkilometern <span class="gl" data-uk="дарувати, жертвувати" data-lemma="spenden">gespendet</span> – eine Fläche achtmal so groß wie Deutschland.</p>
+
+          <p>Deutsche Institute spielen dabei eine wichtige Rolle. Das Alfred-Wegener-Institut in Bremerhaven <span class="gl" data-uk="опікуватися, відповідати за" data-lemma="betreuen">betreut</span> das Südpolarmeer und die Antarktis. Am GEOMAR in Kiel plant die Forscherin Anne-Cathrin Wölfl die langen Fahrten von drei deutschen Forschungsschiffen so, dass sie unterwegs möglichst durch Gebiete fahren, die noch niemand vermessen hat. Allein, sagt sie, kann niemand dieses Ziel erreichen – nur wenn alle an einem <span class="gl" data-uk="тягнути в один бік, діяти спільно" data-lemma="an einem Strang ziehen">Strang ziehen</span>.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Das Alfred-Wegener-Institut ist nach dem Meteorologen und Polarforscher Alfred Wegener benannt. 1912 stellte er die Theorie vor, dass alle Kontinente einmal zusammenhingen und dann <span class="gl" data-uk="розходитися, дрейфувати" data-lemma="auseinanderdriften (ist auseinandergedriftet)">auseinanderdrifteten</span>. Viele Kollegen nahmen ihn nicht ernst. Wegener starb 1930 auf einer Expedition in Grönland. Erst als man in den 1950er-Jahren den Meeresboden genauer untersuchte, wurde seine Idee <span class="gl" data-uk="визнаний" data-lemma="anerkannt">anerkannt</span>.</p>
+          </aside>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Alfred-Wegener-Institut_-_Bremerhaven_02.jpg/960px-Alfred-Wegener-Institut_-_Bremerhaven_02.jpg" alt="Das Alfred-Wegener-Institut in Bremerhaven." width="960" height="674" loading="lazy">
+            <figcaption>Das Alfred-Wegener-Institut in Bremerhaven. Foto: H. Zell, <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Alfred-Wegener-Institut_-_Bremerhaven_02.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Von Seil bis Satellit</h2>
+      <p class="lead">Розстав етапи вимірювання морських глибин у хронологічному порядку. Натискай речення по черзі; натиснеш на вже поставлене — воно повернеться вниз.</p>
+      <div class="card" id="ub3-seq"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+      <p class="lead">б) Як працює ехолот? Встав слова з набору. Одне слово зайве.</p>
+      <div class="card" id="ub4b-bank"></div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Deine Meinung</h2>
+      <p class="lead">Напиши німецькою. Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card" id="ub5-w"></div>
+      <div class="card">
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Einerseits …, andererseits … · Ein Vorteil ist, dass … · Ich befürchte, dass … · Meiner Meinung nach sollte man …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Den Meeresboden kennen wir schlechter als den Mars. Das Projekt „Seabed 2030“ will ihn bis 2030 vollständig kartieren; Anfang 2026 waren 27 Prozent geschafft. Deutsche Institute in Bremen, Bremerhaven und Kiel helfen mit. Schon 1925 entdeckte die deutsche „Meteor“ mit dem Echolot den Mittelatlantischen Rücken – und das Alfred-Wegener-Institut trägt den Namen des Forschers, der die Kontinentaldrift vorhersagte.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Морське дно ми знаємо гірше, ніж Марс. Проєкт «Seabed 2030» хоче до 2030 року повністю нанести його на карту; на початку 2026-го було зроблено 27 відсотків. Допомагають німецькі інститути з Бремена, Бремергафена й Кіля. Ще 1925 року німецьке судно «Метеор» за допомогою ехолота виявило Серединно-Атлантичний хребет, а Інститут Альфреда Вегенера названо на честь дослідника, який передбачив дрейф континентів.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "vermessung-der-ozeane";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Wie und warum der Meeresboden weltweit genau vermessen wird",
+            "Wie gefährlich Stürme für Forschungsschiffe sind",
+            "Warum man auf dem Mars nach Wasser sucht"],
+     correct: "Wie und warum der Meeresboden weltweit genau vermessen wird"},
+    {q: "Warum kennen wir den Mars besser als den Meeresboden?",
+     opts: ["Weil Wasser das Licht schluckt und Kameras in der Tiefe nichts sehen",
+            "Weil der Mars näher an der Erde liegt als die Tiefsee",
+            "Weil niemand Geld für Meeresforschung ausgibt"],
+     correct: "Weil Wasser das Licht schluckt und Kameras in der Tiefe nichts sehen"}
+  ]);
+  buildMatch('ub1h', [
+    ["Weniger bekannt als der Mars", "Absatz 1"],
+    ["Wozu wir genaue Karten brauchen", "Absatz 2"],
+    ["Vom Seil zum Echolot", "Absatz 3"],
+    ["Schall statt Licht", "Absatz 4"],
+    ["Ein Projekt für die ganze Welt", "Absatz 5"],
+    ["Forschung aus Deutschland", "Absatz 6"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5", "Absatz 6"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "Wegen des Sturms konnte die „Meteor“ keine Geräte ins Wasser lassen.", a: "r"},
+    {s: "Die Meere sind im Durchschnitt etwa elf Kilometer tief.", a: "f"},
+    {s: "Manganknollen enthalten Metalle, die man für Akkus braucht.", a: "r"},
+    {s: "Die „Challenger“ war ein deutsches Forschungsschiff.", a: "f"},
+    {s: "Die erste deutsche „Meteor“ zeigte zum ersten Mal den Mittelatlantischen Rücken.", a: "r"},
+    {s: "„Seabed 2030“ hat eine eigene Flotte von Forschungsschiffen.", a: "f"},
+    {s: "Die Daten von „Seabed 2030“ sollen frei zugänglich sein.", a: "r"},
+    {s: "Anne-Cathrin Wölfl war selbst an Bord der „Meteor“.", a: "n"}
+  ]);
+
+  buildSequence('ub3-seq', [
+    "Die Ägypter messen die Wassertiefe mit einem Seil und einem Stein.",
+    "Die „Challenger“ misst im Pazifik eine Tiefe von 8184 Metern.",
+    "Die erste deutsche „Meteor“ fährt mit einem Echolot in den Südatlantik.",
+    "Das Projekt „Seabed 2030“ beginnt; sechs Prozent der Meere sind genau kartiert.",
+    "Mehr als ein Viertel des Meeresbodens ist genau kartiert."
+  ]);
+
+  buildMatch('ub4', [
+    ["kartieren", "наносити на карту, картографувати"],
+    ["der Meeresboden", "морське дно"],
+    ["die Bodenschätze", "корисні копалини"],
+    ["die Strömung", "течія"],
+    ["spenden", "дарувати, жертвувати"],
+    ["an einem Strang ziehen", "тягнути в один бік, діяти спільно"]
+  ]);
+  buildWordBank('ub4b-bank', {
+    text: "Ein Fächerecholot schickt Hunderte [Schallwellen] gleichzeitig zum Boden. Dann misst es, wie lange das [Echo] zurück braucht. Ein Computer berechnet daraus die [Tiefe] und die Form des Bodens. So entsteht nach und nach eine [Karte] des Meeresbodens.",
+    extra: ["Licht"]
+  });
+
+  buildWriting('ub5-w', {
+    prompt: "Manche Firmen wollen Metalle aus der Tiefsee holen, zum Beispiel aus Manganknollen. Was spricht dafür, was dagegen? Was ist deine Meinung? (80–120 Wörter)",
+    words: "80-120",
+    must: ["einerseits/ein Vorteil", "andererseits/ein Nachteil"],
+    check: ["Ich nenne mindestens ein Argument dafür und eins dagegen", "Ich schreibe meine eigene Meinung"]
+  });
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📰','🌊','🗺️','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
