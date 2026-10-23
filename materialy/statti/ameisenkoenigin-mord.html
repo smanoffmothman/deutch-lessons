@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mord im Ameisenstaat · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Natur &amp; Umwelt</span>
+        <h1>Mord im Ameisenstaat</h1>
+        <p class="sub">Чужа королева пробирається в мурашник, бризкає хімією — і йде. А свою королеву вбивають її ж робітниці. Як працює ця підступна змова?</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Reihenfolge</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Deine Meinung</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Wer regiert im Ameisenhaufen?</h2>
+      <div class="card">
+        <p>Was weißt du über Ameisen? Wer legt die Eier, und wer macht die Arbeit? Was glaubst du: Können Ameisen ihre eigene Königin angreifen?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Пригадай, як влаштований мурашник: хто в ньому королева, хто робітниці? Як гадаєш, як мурахи впізнають «своїх» і «чужих»?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Ein Eindringling, ein Gift und ein Mord, den andere ausführen müssen – das klingt nach einem Krimi. Doch es passiert in der Natur, genauer gesagt: in manchen Ameisennestern.</p>
+
+          <p>Ein Ameisenvolk funktioniert wie ein kleiner Staat. Im Zentrum steht die <span class="gl" data-key data-uk="королева" data-lemma="die Königin, -nen">Königin</span>. Sie legt die Eier, aus denen alle anderen Tiere <span class="gl" data-uk="вилуплюватися" data-lemma="schlüpfen (ist geschlüpft)">schlüpfen</span>. Die <span class="gl" data-key data-uk="робітниця" data-lemma="die Arbeiterin, -nen">Arbeiterinnen</span> – alles Weibchen – suchen Futter, bauen das <span class="gl" data-key data-uk="гніздо" data-lemma="das Nest, -er">Nest</span>, kümmern sich um den <span class="gl" data-uk="потомство" data-lemma="der Nachwuchs">Nachwuchs</span> und <span class="gl" data-uk="захищати, обороняти" data-lemma="verteidigen">verteidigen</span> das Volk gegen Feinde.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Gelbe_Wiesenameise_03.jpg/960px-Gelbe_Wiesenameise_03.jpg" alt="Geflügelte Königinnen der Gelben Wiesenameise sammeln sich zum Paarungsflug." width="960" height="720" loading="lazy">
+            <figcaption>Geflügelte Königinnen der Gelben Wiesenameise sammeln sich zum Paarungsflug. Foto: Dat doris, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Gelbe_Wiesenameise_03.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Unter den Königinnen geht es allerdings nicht immer friedlich zu. Forscher wissen schon lange, dass bei manchen Arten eine junge Königin in ein fremdes Nest <span class="gl" data-uk="проникати, вдиратися" data-lemma="eindringen (drang ein, ist eingedrungen)">eindringt</span>. Dort <span class="gl" data-uk="душити" data-lemma="erdrosseln">erdrosselt</span> sie die Königin, die schon da ist, und übernimmt deren Staat. Die Arbeiterinnen versorgen dann die neue Herrscherin.</p>
+
+          <p>Zwei <span class="gl" data-uk="любитель мурах" data-lemma="der Ameisenliebhaber, -">Ameisenliebhaber</span> haben einen noch <span class="gl" data-uk="підступний" data-lemma="hinterhältig">hinterhältigeren</span> Plan beobachtet. Bei einigen Arten dringt die fremde Königin zwar ebenfalls in das Nest ein. Sie kämpft aber nicht selbst. Stattdessen <span class="gl" data-uk="оббризкувати" data-lemma="besprühen">besprüht</span> sie die Königin des Nestes mit einer <span class="gl" data-key data-uk="хімічна речовина" data-lemma="die Chemikalie, -n">Chemikalie</span> aus ihrem <span class="gl" data-uk="черевце (у комах)" data-lemma="der Hinterleib, -er">Hinterleib</span> und zieht sich wieder zurück. Den Rest <span class="gl" data-uk="виконувати, доводити до кінця" data-lemma="erledigen">erledigen</span> die Arbeiterinnen: Sie greifen ihre eigene Königin an und töten sie.</p>
+
+          <p>Warum tun sie das? Der Ökologe Keizo Takasuka hat das <span class="gl" data-uk="явище" data-lemma="das Phänomen, -e">Phänomen</span> untersucht. Er vermutet, dass es am <span class="gl" data-key data-uk="запах" data-lemma="der Geruch, -ü-e">Geruch</span> liegt. Ameisen erkennen sich vor allem über Duftstoffe. Riecht die eigene Königin plötzlich fremd, halten die Arbeiterinnen sie offenbar für eine <span class="gl" data-key data-uk="загроза" data-lemma="die Bedrohung, -en">Bedrohung</span> – und <span class="gl" data-uk="позбуватися" data-lemma="beseitigen">beseitigen</span> sie. So wird der Weg frei für die fremde Königin.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>In deutschen Wäldern sieht man oft große Hügel aus Nadeln und kleinen Ästen: die Nester der Roten Waldameise. Sie sind in Deutschland gesetzlich <span class="gl" data-uk="охоронюваний" data-lemma="geschützt">geschützt</span> – man darf die Hügel nicht zerstören. Waldameisen gelten als wichtige Helfer im Wald, weil sie viele Schädlinge fressen.</p>
+          </aside>
+
+          <p>Für uns Menschen klingt das <span class="gl" data-uk="жорстокий" data-lemma="grausam">grausam</span>. In der Natur ist es aber eine erfolgreiche <span class="gl" data-uk="стратегія" data-lemma="die Strategie, -n">Strategie</span>: Die fremde Königin muss kaum etwas riskieren und bekommt trotzdem ein ganzes Volk, das für sie arbeitet.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Der Plan der fremden Königin</h2>
+      <p class="lead">Розстав кроки «змови» в правильному порядку. Натискай речення по черзі; натиснеш на вже поставлене — воно повернеться вниз.</p>
+      <div class="card" id="ub3-seq"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Знайди пари: слово — переклад. Відкривай картки по дві.</p>
+      <div class="card" id="ub4-mem"></div>
+      <p class="lead">б) Допиши слова з тексту (сховано частину кожного слова).</p>
+      <div class="card" id="ub4b-ct"></div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Deine Meinung</h2>
+      <p class="lead">Напиши німецькою. Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card" id="ub5-w"></div>
+      <div class="card">
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Mich hat überrascht, dass … · Ich finde es (nicht) grausam, weil … · Ein anderes Tier, das …, ist … · In der Natur …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Bei manchen Ameisenarten besprüht eine fremde Königin die Königin eines Nestes mit einer Chemikalie. Weil diese dann fremd riecht, töten die eigenen Arbeiterinnen sie. Ameisen erkennen sich vor allem am Geruch. In Deutschland sind die Hügel der Roten Waldameise gesetzlich geschützt.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          У деяких видів мурах чужа королева обприскує королеву мурашника хімічною речовиною. Оскільки та починає пахнути чужою, її вбивають власні робітниці. Мурахи впізнають одна одну передусім за запахом. У Німеччині мурашники рудої лісової мурахи охороняються законом.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "ameisenkoenigin-mord";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Wie eine fremde Ameisenkönigin die Arbeiterinnen dazu bringt, ihre eigene Königin zu töten",
+            "Wie Ameisen ihr Nest bauen",
+            "Warum Ameisen für den Wald nützlich sind"],
+     correct: "Wie eine fremde Ameisenkönigin die Arbeiterinnen dazu bringt, ihre eigene Königin zu töten"}
+  ]);
+  buildMatch('ub1h', [
+    ["Ein kleiner Staat", "Absatz 1"],
+    ["Der bekannte Weg: selbst töten", "Absatz 2"],
+    ["Ein noch gemeinerer Plan", "Absatz 3"],
+    ["Alles eine Frage des Geruchs", "Absatz 4"],
+    ["Grausam, aber erfolgreich", "Absatz 5"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "Die Königin legt die Eier.", a: "r"},
+    {s: "Die Arbeiterinnen sind Männchen.", a: "f"},
+    {s: "Bei manchen Arten tötet die fremde Königin die alte Königin selbst.", a: "r"},
+    {s: "Beim neuen Plan kämpft die fremde Königin lange mit der alten Königin.", a: "f"},
+    {s: "Die fremde Königin stammt immer aus einem Nachbarnest.", a: "n"},
+    {s: "Ameisen erkennen sich vor allem über Duftstoffe.", a: "r"}
+  ]);
+
+  buildSequence('ub3-seq', [
+    "Die fremde Königin dringt in das Nest ein.",
+    "Sie besprüht die Königin des Nestes mit einer Chemikalie.",
+    "Sie zieht sich wieder zurück.",
+    "Die Arbeiterinnen riechen den fremden Geruch.",
+    "Die Arbeiterinnen töten ihre eigene Königin."
+  ]);
+
+  buildMemory('ub4-mem', {
+    pairs: [["die Königin", "королева"], ["die Arbeiterin", "робітниця"], ["der Geruch", "запах"],
+            ["die Bedrohung", "загроза"], ["eindringen", "проникати"], ["hinterhältig", "підступний"]]
+  });
+  buildCTest('ub4b-ct', {
+    text: "Im Ameisenstaat legt die {Kön|igin} die Eier. Die {Arbeit|erinnen} suchen Futter. Eine fremde Königin dringt in das {Ne|st} ein und besprüht die Königin mit einer {Chemi|kalie}. Wegen des fremden {Geru|chs} töten die Arbeiterinnen ihre Königin."
+  });
+
+  buildWriting('ub5-w', {
+    prompt: "Was hat dich an dieser Geschichte am meisten überrascht? Kennst du ein anderes Tier mit einer ungewöhnlichen oder „gemeinen“ Strategie? (60–90 Wörter)",
+    words: "60-90",
+    must: ["überrascht", "weil"],
+    check: ["Ich nenne, was mich überrascht hat", "Ich beschreibe ein anderes Tier"]
+  });
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📰','🐜','👑','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
