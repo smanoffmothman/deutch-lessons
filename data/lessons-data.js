@@ -852,5 +852,16 @@ const LESSONS = [
     nove: true,
     gram: ["deklination-nomen", "trennbare-verben"],
     dz: "Mein Schuljahr-Kalender: Gestalte (auf Papier oder digital) einen Veranstaltungskalender für deine Klasse. 1) Wähle fünf Monate und schreib zu jedem Monat eine Schulveranstaltung mit Artikel (z. B. „Oktober – das Schulfest“, „Dezember – das Kostümfest“). Zeichne zu jeder Veranstaltung ein kleines Bild oder Symbol. 2) Schreib zu zwei Veranstaltungen je zwei Sätze nach dem Muster: „Im Oktober findet ein Schachturnier statt. Im Rahmen dieser Veranstaltung können wir auch …“ 3) Markiere deine Lieblingsveranstaltung mit ★ und schreib einen Satz dazu: „Ich mag … am meisten, weil …“. Nächstes Mal vergleichen wir eure Kalender und machen einen gemeinsamen Klassenkalender."
+  },
+  {
+    klas: "7",
+    modul: "C",
+    lektion: 2,
+    nazva: "Was unternehmen wir am Wochenende?",
+    opys: "Позакласні заходи: розповідаємо, у чому беремо участь (stattfinden, teilnehmen an, mitmachen bei), читаємо, як клас Б'янки планує вихідні, і вчимося вживати інфінітив із zu та без zu (Ich hoffe, … zu gewinnen / Wir wollen zelten), зокрема teilzunehmen, mitzumachen.",
+    file: "klas-7/modul-c/lektion-2.html",
+    nove: true,
+    gram: ["verben-dass-infinitiv", "modalverben", "trennbare-verben"],
+    dz: "Klassenchat „Unser Wochenende“: Schreib einen Chat (8–10 Nachrichten) in eurer Klassengruppe: Drei oder vier Mitschüler planen ein gemeinsames Wochenende – wie Biancas Klasse. 1) Jede Person macht einen Vorschlag mit „vorschlagen“, „vorhaben“ oder „Ich finde es toll / super / interessant, … zu …“. 2) Benutze mindestens vier Infinitive mit zu – davon mindestens einen mit einem trennbaren Verb (z. B. teilzunehmen, mitzumachen, einzuladen) – und mindestens zwei Sätze mit einem Modalverb ohne zu (z. B. „Wir können im Wald zelten.“). 3) Die letzte Nachricht sagt, was ihr beschlossen habt: „Wir haben beschlossen, … zu …“. Unterstreiche alle Infinitive mit zu. Nächstes Mal lesen wir eure Chats in Gruppen vor – welche Klasse hat den besten Plan?"
   }
 ];
