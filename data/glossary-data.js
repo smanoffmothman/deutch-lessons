@@ -931,5 +931,17 @@ const GLOSSARY = [
   {de: "entstehen (ist entstanden)", uk: "виникати, з'являтися (Die Szene ist in England entstanden.)", klas: "9", modul: "B", lektion: 6},
   {de: "das Hindernis (die Hindernisse)", uk: "перешкода (Hindernisse überwinden — долати перешкоди)", klas: "9", modul: "B", lektion: 6},
   {de: "was für ein? (Was für eine Frisur hat er?)", uk: "який? що за? — питання про властивість, тип", klas: "9", modul: "B", lektion: 6},
-  {de: "welcher, welche, welches? (Welcher Szene gehörst du an?)", uk: "який саме? котрий? — питання про вибір з групи", klas: "9", modul: "B", lektion: 6}
+  {de: "welcher, welche, welches? (Welcher Szene gehörst du an?)", uk: "який саме? котрий? — питання про вибір з групи", klas: "9", modul: "B", lektion: 6},
+  {de: "die Schulveranstaltung (die Schulveranstaltungen)", uk: "шкільний захід", klas: "7", modul: "C", lektion: 1},
+  {de: "das Schulfest (die Schulfeste)", uk: "шкільне свято", klas: "7", modul: "C", lektion: 1},
+  {de: "die Klassenfahrt (die Klassenfahrten)", uk: "поїздка класом (на кілька днів)", klas: "7", modul: "C", lektion: 1},
+  {de: "der Wandertag (die Wandertage)", uk: "день піших прогулянок, шкільний похід", klas: "7", modul: "C", lektion: 1},
+  {de: "das Kostümfest (die Kostümfeste)", uk: "костюмоване свято, карнавал", klas: "7", modul: "C", lektion: 1},
+  {de: "die Tanzshow (die Tanzshows)", uk: "танцювальне шоу", klas: "7", modul: "C", lektion: 1},
+  {de: "das Schachturnier (die Schachturniere)", uk: "шаховий турнір", klas: "7", modul: "C", lektion: 1},
+  {de: "der Malwettbewerb (die Malwettbewerbe)", uk: "конкурс малюнків", klas: "7", modul: "C", lektion: 1},
+  {de: "der Musikwettbewerb (die Musikwettbewerbe)", uk: "музичний конкурс", klas: "7", modul: "C", lektion: 1},
+  {de: "der Sportwettbewerb (die Sportwettbewerbe)", uk: "спортивні змагання", klas: "7", modul: "C", lektion: 1},
+  {de: "stattfinden (trennbar) (Morgen findet ein Schulfest statt.)", uk: "відбуватися (про подію)", klas: "7", modul: "C", lektion: 1},
+  {de: "die Jury", uk: "журі", klas: "7", modul: "C", lektion: 1}
 ];

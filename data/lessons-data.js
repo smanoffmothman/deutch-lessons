@@ -841,5 +841,16 @@ const LESSONS = [
     nove: true,
     gram: ["fragen", "adjektivdeklination"],
     dz: "Geheimes Interview: Wähle eine Jugendszene aus Üb. 1 – aber nicht Goths oder Punks (z. B. Skater, Traceure, Cosplayer, Hippies, Hip-Hopper). 1) Schreib ein kurzes Interview wie in Üb. 4 mit einem erfundenen Jugendlichen aus dieser Szene: Name, Alter und mindestens vier Fragen mit Antworten (z. B. typische Merkmale, Kleidung und Frisur, Musik, Hobbys, Entstehung der Szene). 2) Mindestens zwei Fragen beginnen mit „Was für (ein) …?“ und mindestens zwei mit „Welch- …?“ – in verschiedenen Kasus (z. B. „Was für Kleidung tragt ihr?“, „Welchen Musikstil hört ihr am liebsten?“, „Mit welchen Freunden trefft ihr euch?“). Unterstreiche die Endungen. 3) Nenne den Namen der Szene im Interview nicht! Nächstes Mal lesen wir die Interviews vor, und die Klasse rät: Welche Jugendszene ist das?"
+  },
+  {
+    klas: "7",
+    modul: "C",
+    lektion: 1,
+    nazva: "In der Schule ist immer etwas los",
+    opys: "Вступ до модуля «Шкільне життя»: шкільні заходи (das Schulfest, der Wettbewerb, die Klassenfahrt, der Wandertag…) з аудіо, їхня множина, пропущені літери на слух, опис події за зразком «Ich glaube, auf Bild … ist …» і сортування: навчання чи шкільний захід?",
+    file: "klas-7/modul-c/lektion-1.html",
+    nove: true,
+    gram: ["deklination-nomen", "trennbare-verben"],
+    dz: "Mein Schuljahr-Kalender: Gestalte (auf Papier oder digital) einen Veranstaltungskalender für deine Klasse. 1) Wähle fünf Monate und schreib zu jedem Monat eine Schulveranstaltung mit Artikel (z. B. „Oktober – das Schulfest“, „Dezember – das Kostümfest“). Zeichne zu jeder Veranstaltung ein kleines Bild oder Symbol. 2) Schreib zu zwei Veranstaltungen je zwei Sätze nach dem Muster: „Im Oktober findet ein Schachturnier statt. Im Rahmen dieser Veranstaltung können wir auch …“ 3) Markiere deine Lieblingsveranstaltung mit ★ und schreib einen Satz dazu: „Ich mag … am meisten, weil …“. Nächstes Mal vergleichen wir eure Kalender und machen einen gemeinsamen Klassenkalender."
   }
 ];
