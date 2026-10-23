@@ -874,7 +874,7 @@ const MATERIALS = [
     riven: "B2", krayina: ["EU", "CH"], temy: ["Gesellschaft", "Sprache"],
     dzherelo: { nazva: "P.M.", nomer: "4/2026", storinky: "16" },
     dodano: "2026-10", file: "statti/gesellige-menschen-partnersuche.html" },
-  { id: "tschernobyl-40-jahre", typ: "stattya", nazva: "Tschernobyl: Was die Strahlung mit Menschen macht",
+  { id: "tschernobyl-40-jahre", typ: "stattya", nazva: "Tschornobyl: Was die Strahlung mit Menschen macht",
     opys: "Рак щитоподібної залози, раннє старіння і дикі тварини в зоні відчуження: що науковці знають про наслідки Чорнобиля через 40 років.",
     riven: "C1", krayina: ["UA", "EU", "DE"], temy: ["Wissenschaft & Technik", "Geschichte"],
     dzherelo: { nazva: "P.M.", nomer: "4/2026", storinky: "82–91" },
