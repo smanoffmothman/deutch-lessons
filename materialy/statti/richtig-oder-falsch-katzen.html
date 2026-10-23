@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stimmt das? Drei Behauptungen im Check · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Wissenschaft &amp; Technik</span>
+        <h1>Stimmt das? Drei Behauptungen im Check</h1>
+        <p class="sub">Коти частіше нявкають до чоловіків? Сп'яніти можна без жодного ковтка алкоголю? Нерівність з'явилася лише в середньовіччі? Перевіряємо три твердження.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wer hat was erforscht?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Dein Faktencheck</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Was glaubst du?</h2>
+      <div class="card">
+        <p>Lies die drei Behauptungen und rate: richtig oder falsch? Die Antworten stehen im Text.</p>
+        <p><b>1</b> Katzen miauen bei Männern mehr als bei Frauen.<br>
+           <b>2</b> Betrunken wird man nur von Alkohol.<br>
+           <b>3</b> Große Unterschiede zwischen Arm und Reich gibt es erst seit dem Mittelalter.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Спершу вгадай: правда чи ні? Запиши свої відповіді й перевір їх після читання.
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Manche Behauptungen klingen absurd und sind trotzdem wahr, andere klingen logisch und sind falsch. Drei Beispiele aus der Forschung – und was Wissenschaftler dazu herausgefunden haben.</p>
+
+          <h3>1. Katzen miauen bei Männern mehr – richtig</h3>
+
+          <p>Darauf deutet zumindest eine Studie der Bilkent-Universität in der Türkei hin. Die Forschenden baten Katzenbesitzer, ihre Tiere zu filmen, wenn sie nach Hause kamen. Dann <span class="gl" data-uk="аналізувати, опрацьовувати" data-lemma="auswerten">werteten</span> sie die Videos <span class="gl" data-uk="аналізувати, опрацьовувати" data-lemma="auswerten">aus</span>. In den ersten 100 Sekunden der <span class="gl" data-uk="привітання, зустріч" data-lemma="die Begrüßung, -en">Begrüßung</span> miauten die Katzen bei Männern im Durchschnitt 4,3-mal, bei Frauen nur 1,8-mal.</p>
+
+          <p>Eine mögliche Erklärung: Frauen sprechen mehr mit ihren Tieren und erkennen besser, was ihre Katze <span class="gl" data-uk="потребувати" data-lemma="brauchen">braucht</span>. Bei Männern müssen die Katzen sich vielleicht mehr <span class="gl" data-uk="намагатися, докладати зусиль" data-lemma="sich anstrengen">anstrengen</span>, um überhaupt <span class="gl" data-key data-uk="увага" data-lemma="die Aufmerksamkeit">Aufmerksamkeit</span> zu bekommen – also miauen sie öfter.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Meowing_Cat.jpg/960px-Meowing_Cat.jpg" alt="Eine Katze miaut." width="960" height="720" loading="lazy">
+            <figcaption>Eine Katze miaut. Foto: கவிஸ்ரீ, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en" target="_blank" rel="noopener">CC0</a>, <a href="https://commons.wikimedia.org/wiki/File:Meowing_Cat.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <h3>2. Nur Alkohol macht betrunken – falsch</h3>
+
+          <p>Es gibt eine seltene Krankheit, bei der Menschen <span class="gl" data-key data-uk="п'яний" data-lemma="betrunken">betrunken</span> sind, ohne einen Schluck Alkohol getrunken zu haben: das <span class="gl" data-uk="синдром автопивоварні" data-note="досл. «синдром власної пивоварні»" data-lemma="das Eigenbrauer-Syndrom">Eigenbrauer-Syndrom</span>. Lange <span class="gl" data-uk="припускати" data-lemma="vermuten">vermuteten</span> Ärzte, dass zu viele <span class="gl" data-uk="дріжджовий грибок" data-lemma="der Hefepilz, -e">Hefepilze</span> im Darm den Alkohol herstellen. Forscher der University of California San Diego haben eine andere Ursache gefunden.</p>
+
+          <p>Sie verglichen Proben von Kranken und Gesunden. Bei den Kranken <span class="gl" data-uk="перетворювати" data-lemma="umwandeln">wandelten</span> bestimmte <span class="gl" data-key data-uk="кишкова бактерія" data-lemma="das Darmbakterium, Darmbakterien">Darmbakterien</span>, zum Beispiel Escherichia coli, Kohlenhydrate in sehr großen Mengen in Alkohol <span class="gl" data-uk="перетворювати" data-lemma="umwandeln">um</span>. Die Mediziner hoffen, die Krankheit künftig besser behandeln zu können – etwa indem sie diesen Prozess bei den Bakterien <span class="gl" data-uk="блокувати" data-lemma="blockieren">blockieren</span>.</p>
+
+          <h3>3. Ungleichheit gibt es seit dem Mittelalter – falsch</h3>
+
+          <p>Unterschiede zwischen Arm und Reich sind viel älter. Forschende der Washington State University untersuchten mehr als 47 000 Häuser in archäologischen <span class="gl" data-uk="місце знахідки, розкопки" data-lemma="die Fundstätte, -n">Fundstätten</span>. Ein größeres Haus werteten sie als Zeichen für mehr <span class="gl" data-key data-uk="статки, майно" data-lemma="das Vermögen">Vermögen</span>. In den ersten Bauerndörfern waren die Häuser noch fast gleich groß. Etwa 1500 Jahre nach dem Beginn des <span class="gl" data-key data-uk="землеробство" data-lemma="der Ackerbau">Ackerbaus</span> in der Jungsteinzeit wuchs die <span class="gl" data-key data-uk="нерівність" data-lemma="die Ungleichheit">Ungleichheit</span> jedoch. Manche Erfindungen, etwa <span class="gl" data-uk="зрошувальна система" data-lemma="das Bewässerungssystem, -e">Bewässerungssysteme</span>, <span class="gl" data-uk="посилювати" data-lemma="verstärken">verstärkten</span> die Unterschiede, andere, wie die Herstellung von Eisen, <span class="gl" data-uk="зменшувати" data-lemma="verringern">verringerten</span> sie wieder.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>„Faktencheck“ ist auch in deutschen Medien ein wichtiges Wort geworden. Viele Zeitungen und Sender prüfen in eigenen Rubriken, ob Aussagen von Politikern oder Meldungen aus dem Internet stimmen. Ein bekanntes Beispiel ist der „Faktenfinder“ der ARD-Tagesschau.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Відповідай на питання до тексту.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Яке пояснення пасує до якого твердження?</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wer hat was erforscht?</h2>
+      <p class="lead">Яка установа що досліджувала? Зістав.</p>
+      <div class="card" id="ub3-list"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Знайди пари: слово — переклад. Відкривай картки по дві.</p>
+      <div class="card" id="ub4-mem"></div>
+      <p class="lead">б) Коротко про головне: встав слова з набору в текст. Одне слово зайве.</p>
+      <div class="card" id="ub4b-bank"></div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Dein Faktencheck</h2>
+      <p class="lead">Напиши німецькою. Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card" id="ub5-w"></div>
+      <div class="card">
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Viele Leute glauben, dass … · Das stimmt (nicht), denn … · Eine Studie zeigt, dass … · Ich habe gelesen, dass …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Katzen miauen bei Männern öfter, betrunken kann man auch ohne Alkohol werden (durch Darmbakterien), und Ungleichheit gab es schon in der Jungsteinzeit. Einen „Faktencheck“ machen auch deutsche Medien regelmäßig – zum Beispiel der „Faktenfinder“ der Tagesschau.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Коти частіше нявкають до чоловіків, сп'яніти можна й без алкоголю (через кишкові бактерії), а нерівність існувала вже в новому кам'яному віці. Перевірку фактів регулярно роблять і німецькі медіа — наприклад, рубрика «Faktenfinder» програми Tagesschau.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "richtig-oder-falsch-katzen";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Welche der drei Behauptungen aus „Vor dem Lesen“ ist richtig?",
+     opts: ["Katzen miauen bei Männern mehr.",
+            "Nur Alkohol macht betrunken.",
+            "Ungleichheit gibt es erst seit dem Mittelalter."],
+     correct: "Katzen miauen bei Männern mehr."}
+  ]);
+  buildMatch('ub1h', [
+    ["Katzen miauen bei Männern mehr.", "Sie wollen Aufmerksamkeit bekommen."],
+    ["Nur Alkohol macht betrunken.", "Darmbakterien können Alkohol herstellen."],
+    ["Ungleichheit gibt es seit dem Mittelalter.", "Schon in der Jungsteinzeit gab es größere und kleinere Häuser."]
+  ], {lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "Die Katzenstudie kommt aus der Türkei.", a: "r"},
+    {s: "Bei Frauen miauten die Katzen öfter als bei Männern.", a: "f"},
+    {s: "Die Forscher zählten das Miauen in den ersten 100 Sekunden der Begrüßung.", a: "r"},
+    {s: "Das Eigenbrauer-Syndrom ist eine häufige Krankheit.", a: "f"},
+    {s: "Laut der neuen Studie sind Bakterien die Ursache des Eigenbrauer-Syndroms.", a: "r"},
+    {s: "Die Forscher in den USA untersuchten auch Häuser in Deutschland.", a: "n"},
+    {s: "Die Herstellung von Eisen verringerte die Ungleichheit.", a: "r"}
+  ]);
+
+  buildMatch('ub3', [
+    ["Bilkent-Universität (Türkei)", "Katzen und ihre Besitzer"],
+    ["University of California San Diego", "das Eigenbrauer-Syndrom"],
+    ["Washington State University", "Häuser in alten Siedlungen"]
+  ]);
+
+  buildMemory('ub4-mem', {
+    pairs: [["betrunken", "п'яний"], ["die Aufmerksamkeit", "увага"], ["das Vermögen", "статки, майно"],
+            ["die Ungleichheit", "нерівність"], ["der Ackerbau", "землеробство"], ["vermuten", "припускати"]]
+  });
+  buildWordBank('ub4b-bank', {
+    text: "Katzen miauen bei Männern öfter, um [Aufmerksamkeit] zu bekommen. Beim Eigenbrauer-Syndrom ist man [betrunken], ohne Alkohol zu trinken. Schuld sind bestimmte [Darmbakterien]. Und die [Ungleichheit] zwischen Arm und Reich begann schon etwa 1500 Jahre nach dem Beginn des [Ackerbaus].",
+    extra: ["Mittelalters"]
+  });
+
+  buildWriting('ub5-w', {
+    prompt: "Wähle eine Behauptung, die viele Menschen glauben (z. B. „Karotten sind gut für die Augen“, „Man nutzt nur 10 % des Gehirns“). Was weißt du darüber? Ist sie richtig oder falsch – und woher weißt du das? (60–90 Wörter)",
+    words: "60-90",
+    must: ["glauben", "stimmt"],
+    check: ["Ich nenne die Behauptung", "Ich erkläre, woher ich meine Information habe"]
+  });
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📰','🐈','🔍','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
