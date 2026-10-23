@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vom Winde verweht: Samen, die messen · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Wissenschaft &amp; Technik</span>
+        <h1>Vom Winde verweht: Samen, die messen</h1>
+        <p class="sub">Крихітні роботи у формі насіння клена, герані чи кульбаби розлітаються з вітром, вимірюють температуру й забруднення ґрунту, а потім просто розкладаються. Європейські науковці, серед них і з Саарбрюккена, готують їх до виходу на ринок.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Vorbild Natur</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · So wird gemessen</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Deine Meinung</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Von der Natur lernen</h2>
+      <div class="card">
+        <p>Hast du als Kind Ahornsamen „fliegen“ lassen oder eine Pusteblume weggepustet? Wie verbreiten Pflanzen ihre Samen? Und was glaubst du: Was könnte ein Roboter in Form eines Samens auf einem Feld tun?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Пригадай «гвинтокрилі» насінини клена чи «парашутики» кульбаби. Як рослини розносять насіння? Як гадаєш, навіщо фермерові крихітні роботи, схожі на насінини?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Sie sehen aus wie <span class="gl" data-key data-uk="насінина, насіння" data-lemma="der Samen, -">Samen</span>, sie fliegen wie Samen, und sie landen wie Samen. Nur <span class="gl" data-uk="проростати" data-lemma="keimen">keimen</span> können sie nicht – denn es sind winzige Roboter.</p>
+
+          <p>Künstliche Intelligenz verändert auch die <span class="gl" data-key data-uk="сільське господарство" data-lemma="die Landwirtschaft">Landwirtschaft</span>. Wie gut ist der Boden? Wie wird das Wetter? Wie viel <span class="gl" data-uk="добриво" data-lemma="das Düngemittel, -">Düngemittel</span> braucht ein Feld wirklich? Wer diese Fragen mit Daten beantwortet, bevor er sät, kann höhere <span class="gl" data-uk="урожай, врожайність" data-lemma="der Ertrag, -ä-e">Erträge</span> erzielen, die Umwelt <span class="gl" data-uk="берегти, щадити" data-lemma="schonen">schonen</span> und Kosten sparen. Man nennt das „Precision Farming“ oder Präzisionslandwirtschaft. Das Problem: Dafür braucht man ein dichtes Netz von Messpunkten – und das ist auf großen Flächen oder in <span class="gl" data-uk="важкодоступний" data-lemma="schwer zugänglich">schwer zugänglichen</span> Regionen kaum zu schaffen.</p>
+
+          <p>Hier setzt das europäische Forschungsprojekt I-Seed an. Es startete 2021, die EU-Kommission <span class="gl" data-uk="фінансувати" data-lemma="finanzieren">finanzierte</span> es mit rund vier Millionen Euro. Sechs Forschungseinrichtungen machen mit, darunter Institute aus den Niederlanden und Malta sowie das Leibniz-Institut für Neue Materialien (INM) in Saarbrücken. Die Leitung hat das Istituto Italiano di Tecnologia (IIT) in Genua, wo die Bio-Robotikerin Barbara Mazzolai das Projekt <span class="gl" data-uk="очолювати, керувати" data-lemma="leiten">leitet</span>. Ihr Ziel: Messlücken bei Luft und Boden schließen. Besonders wichtig ist die oberste Bodenschicht, denn dort zeigt sich, wie stark ein Gebiet mit <span class="gl" data-key data-uk="шкідлива речовина, забруднювач" data-lemma="der Schadstoff, -e">Schadstoffen</span> <span class="gl" data-uk="забруднений, обтяжений" data-lemma="belastet">belastet</span> ist.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Maple_seed_pods_Fcb981.JPG/960px-Maple_seed_pods_Fcb981.JPG" alt="Früchte des Spitzahorns." width="960" height="638" loading="lazy">
+            <figcaption>Früchte des Spitzahorns: Jeder Samen hat einen Flügel und dreht sich beim Fallen wie ein kleiner Propeller. Foto: Fcb981, <a href="https://creativecommons.org/licenses/by/2.5" target="_blank" rel="noopener">CC BY 2.5</a>, <a href="https://commons.wikimedia.org/wiki/File:Maple_seed_pods_Fcb981.JPG" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Als <span class="gl" data-key data-uk="взірець, прообраз" data-lemma="das Vorbild, -er">Vorbild</span> dienen echte Pflanzensamen. Bis 2026 sind fünf <span class="gl" data-key data-uk="прототип" data-lemma="der Prototyp, -en">Prototypen</span> entstanden. Am weitesten ist das Modell „Acer“, das den Ahornsamen <span class="gl" data-uk="імітувати" data-lemma="nachahmen (ahmte nach, hat nachgeahmt)">nachahmt</span>: Es kommt aus dem 3D-Drucker, besteht aus <span class="gl" data-uk="придатний для компостування" data-lemma="kompostierbar">kompostierbarem</span> Material und <span class="gl" data-uk="плавно опускатися, планерувати" data-lemma="gleiten (glitt, ist geglitten)">gleitet</span> kreiselnd zu Boden, leicht genug, um vom Wind weit verteilt zu werden. Ein anderer Prototyp ist dem Samen der Geranie nachempfunden. Kommt er mit Wasser in Berührung, etwa bei Regen, beginnt er sich zu drehen und <span class="gl" data-uk="вкручуватися, вгвинчуватися" data-lemma="sich bohren (in + Akk.)">bohrt sich</span> selbst in die Erde – eine hauchdünne Schicht aus Zellulose nimmt die Feuchtigkeit auf und <span class="gl" data-uk="згинати" data-lemma="verbiegen (verbog, hat verbogen)">verbiegt</span> seine borstenartigen Fortsätze. Wieder andere erinnern an den Löwenzahn und fliegen besonders weit. Geplant sind außerdem Samen nach dem Vorbild von Wasserpflanzen, die die Wasserqualität prüfen, und ein Modell, das wie eine Bohne Wurzeln schlägt und lange im Boden misst.</p>
+
+          <p>Das Erstaunliche: Die Robotersamen haben weder eine Batterie noch Elektronik an Bord. Sie senden keine Daten, sondern arbeiten rein <span class="gl" data-uk="пасивно" data-lemma="passiv">passiv</span>. Tobias Kraus, Chemiker und Abteilungsleiter am INM in Saarbrücken, vergleicht das Prinzip mit einem Schwangerschaftstest. In der Mitte jedes Samens liegt eine winzige runde Fläche, nicht größer als ein Stecknadelkopf. Eine Drohne fliegt in etwa zwanzig Metern Höhe darüber und <span class="gl" data-uk="освітлювати, спрямовувати промінь" data-lemma="anstrahlen (strahlte an, hat angestrahlt)">strahlt</span> sie mit einem Laser <span class="gl" data-uk="освітлювати, спрямовувати промінь" data-lemma="anstrahlen (strahlte an, hat angestrahlt)">an</span>. Daraufhin leuchtet die Fläche in einer bestimmten Farbe – und diese Farbe verrät zum Beispiel die Bodentemperatur. Komplizierter ist die Messung von <span class="gl" data-uk="ртуть" data-lemma="das Quecksilber">Quecksilber</span>: Winzige Goldteilchen fangen das giftige Metall ein und verändern dabei Farbe und Leuchtkraft. Das Verfahren heißt Fluoreszenz-LiDAR.</p>
+
+          <p>Herkömmliche Sensoren mit Batterie und Motor müsste man nach dem Einsatz wieder einsammeln, sonst bliebe überall <span class="gl" data-key data-uk="електронні відходи" data-lemma="der Elektroschrott">Elektroschrott</span> liegen. Die I-Seeds dagegen bestehen größtenteils aus Biokunststoffen wie Zellulose oder Gelatine und sind <span class="gl" data-key data-uk="біологічно розкладний" data-lemma="biologisch abbaubar">biologisch abbaubar</span>. Je nach Wetter <span class="gl" data-uk="зникати, розкладатися" data-lemma="sich zersetzen">zersetzen</span> sie sich innerhalb weniger Monate oder in ein bis zwei Jahren. Kleine Mengen an Oxiden oder einer Beschichtung aus Gold oder Silber bleiben zwar übrig, verändern den Boden laut Kraus aber kaum. Und wenn ein Tier einen Robotersamen frisst? Auch das, so die Forscher, würde keinen Schaden <span class="gl" data-uk="завдавати" data-lemma="anrichten (richtete an, hat angerichtet)">anrichten</span>.</p>
+
+          <p>Ganz ohne Probleme ging die Entwicklung allerdings nicht. Eine frühe Version des Acer flog so naturgetreu, dass der Luftstrom der Drohne sie beim Anflug wieder <span class="gl" data-uk="здіймати (вихором)" data-lemma="aufwirbeln (wirbelte auf, hat aufgewirbelt)">aufwirbelte</span>. Die Lösung war ein kleiner <span class="gl" data-uk="гачок із зазубриною" data-lemma="der Widerhaken, -">Widerhaken</span>, der den Samen am Boden festhält. Außerdem müssen die Samen mit der richtigen Seite nach oben landen. Legt sich ein Blatt über die Messfläche, kann die Drohne nichts mehr ablesen. Deshalb denken die Forscher über Alternativen nach, etwa Magnete – ähnlich wie beim kontaktlosen Bezahlen mit der Karte.</p>
+
+          <p>Zwischen 2028 und 2030 sollen die smarten Samen auf den Markt kommen. Einfache Exemplare zur Temperaturmessung könnten in der Herstellung nur wenige Cent bis höchstens einen Euro pro Stück kosten; dazu kämen Drohnen und Computer für die Auswertung. Landwirte könnten dann nur dort düngen oder Pestizide <span class="gl" data-uk="вносити (на поле)" data-lemma="ausbringen (brachte aus, hat ausgebracht)">ausbringen</span>, wo es wirklich nötig ist. Barbara Mazzolai denkt schon weiter: Man könnte die Roboter mit echtem <span class="gl" data-uk="посівний матеріал, насіння" data-lemma="das Saatgut">Saatgut</span> beladen und damit Wälder in abgelegenen oder sogar gefährlichen Gebieten <span class="gl" data-uk="відновлювати ліс, заліснювати" data-lemma="wieder aufforsten (forstete auf, hat aufgeforstet)">wieder aufforsten</span>.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Dandelion_seed_head_%28Taraxacum_officinale%29.jpg/960px-Dandelion_seed_head_%28Taraxacum_officinale%29.jpg" alt="Eine Pusteblume." width="960" height="670" loading="lazy">
+            <figcaption>Eine „Pusteblume“: Die Samen des Löwenzahns fliegen an kleinen Schirmchen mit dem Wind davon. Foto: Avenue, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Dandelion_seed_head_(Taraxacum_officinale).jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Wenn Technik Ideen aus der Natur übernimmt, spricht man von <b>Bionik</b> – ein Wort aus „Biologie“ und „Technik“. Ein berühmtes deutsches Beispiel ist der Lotuseffekt: Der Bonner Botaniker Wilhelm Barthlott fand heraus, warum Wasser und Schmutz von den Blättern der Lotuspflanze einfach abperlen. Nach diesem Vorbild gibt es heute zum Beispiel selbstreinigende Fassadenfarben.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери відповіді.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Vorbild Natur</h2>
+      <p class="lead">Яка властивість належить якому прототипу? Натисни на картку, потім на кошик.</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">So wird gemessen</h2>
+      <p class="lead">Розстав кроки в правильному порядку: від запуску до результату.</p>
+      <div class="card" id="ub4-seq"></div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub5-list"></div>
+      <p class="lead">б) Встав слова з набору в текст. Одне слово зайве.</p>
+      <div class="card" id="ub5b-bank"></div>
+    </section>
+
+    <!-- ===== Üb. 6 ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">Deine Meinung</h2>
+      <p class="lead">Напиши німецькою. Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card" id="ub6-w"></div>
+      <div class="card">
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Ein großer Vorteil ist, dass … · Andererseits muss man bedenken, dass … · Ich könnte mir vorstellen, dass … · Meiner Meinung nach …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Im EU-Projekt I-Seed entwickeln Forschende aus Genua, Saarbrücken und anderen Städten winzige Robotersamen nach dem Vorbild von Ahorn, Geranie und Löwenzahn. Sie messen ohne Batterie zum Beispiel Temperatur oder Quecksilber im Boden; eine Drohne liest die Werte mit einem Laser aus. Danach bauen sich die Samen selbst ab. Solche Ideen aus der Natur nennt man Bionik.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          У проєкті ЄС I-Seed науковці з Генуї, Саарбрюккена та інших міст створюють крихітні роботи-насінини за зразком клена, герані й кульбаби. Без батарейки вони вимірюють, наприклад, температуру чи вміст ртуті в ґрунті, а дрон зчитує дані лазером. Потім насінини самі розкладаються. Такі запозичені в природи ідеї називають біонікою.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "robotersamen";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Wozu dienen die Robotersamen vor allem?",
+     opts: ["Sie sammeln Daten über Boden und Luft",
+            "Sie ersetzen echtes Saatgut auf den Feldern",
+            "Sie vertreiben Schädlinge von den Pflanzen"],
+     correct: "Sie sammeln Daten über Boden und Luft"},
+    {q: "Was ist das Besondere an der Technik?",
+     opts: ["Die Samen brauchen keine Batterie und bauen sich selbst ab",
+            "Die Samen senden ihre Daten per Funk an das Handy des Bauern",
+            "Die Samen werden nach dem Einsatz von Robotern eingesammelt"],
+     correct: "Die Samen brauchen keine Batterie und bauen sich selbst ab"}
+  ]);
+  buildMatch('ub1h', [
+    ["Daten für das Feld", "Absatz 1"],
+    ["Ein europäisches Projekt", "Absatz 2"],
+    ["Fünf Modelle nach dem Vorbild der Natur", "Absatz 3"],
+    ["Messen ohne Strom", "Absatz 4"],
+    ["Kein Müll auf dem Acker", "Absatz 5"],
+    ["Pannen und Lösungen", "Absatz 6"],
+    ["Ein Blick in die Zukunft", "Absatz 7"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5", "Absatz 6", "Absatz 7"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "Das Projekt I-Seed begann 2021 und wurde von der EU-Kommission finanziert.", a: "r"},
+    {s: "Das Projekt wird vom Leibniz-Institut in Saarbrücken geleitet.", a: "f"},
+    {s: "Die Robotersamen senden ihre Messwerte selbst an einen Computer.", a: "f"},
+    {s: "Die Drohne fliegt beim Auslesen in etwa zwanzig Metern Höhe.", a: "r"},
+    {s: "Die Samen bauen sich je nach Wetter in Monaten bis zwei Jahren ab.", a: "r"},
+    {s: "In Deutschland werden die Robotersamen schon auf vielen Feldern eingesetzt.", a: "f"},
+    {s: "Die ersten Tests fanden auf Feldern in Malta statt.", a: "n"}
+  ]);
+
+  buildSort('ub3-sort', {
+    buckets: ["Vorbild Ahorn", "Vorbild Geranie", "Vorbild Löwenzahn"],
+    items: [
+      {t: "gleitet kreiselnd zu Boden", b: "Vorbild Ahorn"},
+      {t: "kommt aus dem 3D-Drucker und ist am weitesten entwickelt", b: "Vorbild Ahorn"},
+      {t: "bekam einen Widerhaken", b: "Vorbild Ahorn"},
+      {t: "bohrt sich bei Regen selbst in die Erde", b: "Vorbild Geranie"},
+      {t: "hat eine dünne Schicht aus Zellulose, die Feuchtigkeit aufnimmt", b: "Vorbild Geranie"},
+      {t: "ist besonders leicht und fliegt sehr weit", b: "Vorbild Löwenzahn"}
+    ]
+  });
+
+  buildSequence('ub4-seq', [
+    "Eine Drohne verteilt die Robotersamen über dem Feld.",
+    "Die Samen schweben mit dem Wind zu Boden.",
+    "Am Boden beginnen sie zu messen, zum Beispiel die Temperatur.",
+    "Später fliegt eine Drohne darüber und strahlt die Samen mit einem Laser an.",
+    "Die Messfläche leuchtet in einer bestimmten Farbe.",
+    "Aus der Farbe lesen die Forscher die Daten ab."
+  ]);
+
+  buildMatch('ub5', [
+    ["der Ertrag", "урожай, врожайність"],
+    ["der Schadstoff", "шкідлива речовина"],
+    ["das Vorbild", "взірець, прообраз"],
+    ["das Quecksilber", "ртуть"],
+    ["der Elektroschrott", "електронні відходи"],
+    ["das Saatgut", "посівний матеріал"],
+    ["aufforsten", "заліснювати"]
+  ]);
+  buildWordBank('ub5b-bank', {
+    text: "Die Robotersamen haben echte Pflanzensamen als [Vorbild]. Sie messen zum Beispiel, wie stark der Boden mit [Schadstoffen] belastet ist. Eine [Drohne] liest die Daten mit einem Laser aus. Weil die Samen biologisch [abbaubar] sind, bleibt kein [Elektroschrott] auf dem Feld.",
+    extra: ["Batterie"]
+  });
+
+  buildWriting('ub6-w', {
+    prompt: "Würdest du als Landwirt(in) Robotersamen einsetzen? Wäge Vorteile und mögliche Probleme ab und begründe deine Meinung. Du kannst auch eine eigene Idee nennen, wo man solche Samen noch einsetzen könnte. (100–150 Wörter)",
+    words: "100-150",
+    must: ["Vorteil", "biologisch abbaubar"],
+    check: ["Ich nenne mindestens zwei Vorteile und ein Problem", "Ich begründe meine Meinung"]
+  });
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📰','🌱','🚁','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

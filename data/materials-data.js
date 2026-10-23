@@ -964,4 +964,9 @@ const MATERIALS = [
     riven: "B1", krayina: ["DE"], temy: ["Wissenschaft & Technik"],
     dzherelo: { nazva: "P.M.", nomer: "4/2026", storinky: "50" },
     dodano: "2026-10", file: "statti/planet-waechst-rekord.html" },
+  { id: "robotersamen", typ: "stattya", nazva: "Vom Winde verweht: Samen, die messen",
+    opys: "Крихітні роботи у формі насіння клена, герані й кульбаби вимірюють температуру та забруднення ґрунту без батарейки, а потім самі розкладаються. Проєкт ЄС I-Seed за участі науковців із Саарбрюккена.",
+    riven: "C1", krayina: ["EU", "DE"], temy: ["Wissenschaft & Technik", "Natur & Umwelt"],
+    dzherelo: { nazva: "P.M.", nomer: "4/2026", storinky: "72–77" },
+    dodano: "2026-10", file: "statti/robotersamen.html" },
 ];
