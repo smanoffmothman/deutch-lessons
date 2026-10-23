@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ein Wort für Arm und Hand · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Sprache</span>
+        <h1>Ein Wort für Arm und Hand</h1>
+        <p class="sub">Німці кажуть «Arm» і «Hand», а українці — просто «рука». Мовознавиця з Лейпцига порівняла назви частин тіла в понад тисячі мов. Що вона з'ясувала?</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Ein Wort oder zwei?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Hand oder Arm?</h2>
+      <div class="card">
+        <p>Wie heißen auf Ukrainisch „Arm“ und „Hand“? Und „Finger“ und „Zehe“? Gibt es für jedes deutsche Wort ein eigenes ukrainisches Wort? Was glaubst du: Ist das in allen Sprachen gleich?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Порівняй: німецькою «Arm» і «Hand», «Finger» і «Zehe» — а як українською? Чи завжди одній німецькій назві частини тіла відповідає одна українська?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Arm, Hand, Finger, Bein, Fuß, Zehe – auf Deutsch hat fast jeder <span class="gl" data-key data-uk="частина тіла" data-lemma="der Körperteil, -e">Körperteil</span> sein eigenes Wort. Das wirkt ganz natürlich. Doch ein Blick in andere Sprachen zeigt: Es geht auch anders. Genau damit <span class="gl" data-uk="займатися чимось" data-lemma="sich beschäftigen mit + Dat.">beschäftigt sich</span> die <span class="gl" data-uk="мовознавиця, лінгвістка" data-lemma="die Sprachwissenschaftlerin, -nen">Sprachwissenschaftlerin</span> Annika Tjuka.</p>
+
+          <p>Tjuka hat am Max-Planck-Institut für evolutionäre Anthropologie in Leipzig ihre <span class="gl" data-key data-uk="дисертація" data-lemma="die Doktorarbeit, -en">Doktorarbeit</span> geschrieben. Ihr Thema: Wie unterscheiden sich die <span class="gl" data-key data-uk="значення слова" data-lemma="die Wortbedeutung, -en">Wortbedeutungen</span> in verschiedenen Sprachen? Dafür hat sie eine große <span class="gl" data-uk="база даних" data-lemma="die Datenbank, -en">Datenbank</span> aufgebaut, in der die <span class="gl" data-uk="властивість" data-lemma="die Eigenschaft, -en">Eigenschaften</span> von Wörtern aus 39 Sprachen gesammelt sind. Für ihre Arbeit bekam sie die Otto-Hahn-Medaille 2025.</p>
+
+          <p>Besonders interessant ist ihre Forschung zu Körperteilen. Tjuka hat die <span class="gl" data-key data-uk="назва, позначення" data-lemma="die Bezeichnung, -en">Bezeichnungen</span> für Körperteile in 1028 Sprachen verglichen. Dabei hat sie zwei <span class="gl" data-uk="науковий напрям" data-lemma="die Forschungsrichtung, -en">Forschungsrichtungen</span> <span class="gl" data-uk="поєднувати" data-lemma="verbinden (verband, hat verbunden)">verbunden</span>: die Psychologie und die Sprachwissenschaft. Sie wollte wissen, welche Eigenschaften Körperteile haben – zum Beispiel ihre Form oder ihre Funktion – und wie das die Wörter in einer Sprache <span class="gl" data-uk="впливати на щось" data-lemma="beeinflussen">beeinflusst</span>.</p>
+
+          <p>Die Unterschiede sind groß. Das Deutsche <span class="gl" data-uk="розрізняти" data-lemma="unterscheiden (unterschied, hat unterschieden)">unterscheidet</span> zwischen „Arm“ und „Hand“. Im Vietnamesischen dagegen gibt es dafür nur ein Wort: „tay“. Im Hebräischen bezeichnet ein und dasselbe Wort sowohl den Finger als auch die <span class="gl" data-key data-uk="палець ноги" data-lemma="die Zehe, -n">Zehe</span>. Was für Deutsche zwei klar <span class="gl" data-uk="окремий, відокремлений" data-lemma="getrennt">getrennte</span> Dinge sind, ist für Menschen mit einer anderen <span class="gl" data-uk="рідна мова" data-lemma="die Muttersprache, -n">Muttersprache</span> oft nur eins.</p>
+
+          <figure class="mat-fig" style="max-width:300px;margin-left:auto;margin-right:auto">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Albrecht_D%C3%BCrer_-_Betende_H%C3%A4nde%2C_1508.jpg/960px-Albrecht_D%C3%BCrer_-_Betende_H%C3%A4nde%2C_1508.jpg" alt="Hände in der Kunst: „Betende Hände“ von Albrecht Dürer, 1508." width="960" height="1404" loading="lazy">
+            <figcaption>Hände in der Kunst: „Betende Hände“ von Albrecht Dürer, 1508. Foto: Albrecht Dürer, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Albrecht_D%C3%BCrer_-_Betende_H%C3%A4nde,_1508.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Auch das Ukrainische gehört zu diesen Sprachen: Mit „рука“ (ruka) meint man meistens den ganzen Arm <span class="gl" data-uk="разом із" data-lemma="mitsamt + Dat.">mitsamt</span> der Hand, und „палець“ (palez) ist sowohl der Finger als auch die Zehe. Wer genau sein will, sagt „палець на нозі“, also „Finger am Fuß“. Deutschlernende aus der Ukraine müssen deshalb gut <span class="gl" data-uk="бути уважним" data-lemma="aufpassen">aufpassen</span>: Auf Deutsch hat man an den Füßen keine Finger, sondern Zehen.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Die Otto-Hahn-Medaille ist ein Preis der Max-Planck-Gesellschaft für junge Forschende mit einer besonders guten Doktorarbeit. Sie ist nach dem Chemiker Otto Hahn benannt, der 1938 in Berlin die <span class="gl" data-uk="поділ ядра" data-lemma="die Kernspaltung">Kernspaltung</span> entdeckte und dafür den Nobelpreis bekam.</p>
+          </aside>
+
+          <p>Warum ist so eine Forschung wichtig? Sie zeigt, wie Sprache <span class="gl" data-uk="формуватися" data-lemma="geprägt werden (von + Dat.)">geprägt wird</span>: einerseits von Dingen, die alle Menschen <span class="gl" data-uk="мати спільне" data-lemma="gemeinsam haben">gemeinsam haben</span> – jeder Mensch hat zwei Arme und zehn Finger. Andererseits von der Kultur, in der eine Sprache gesprochen wird. Wer eine <span class="gl" data-uk="іноземна мова" data-lemma="die Fremdsprache, -n">Fremdsprache</span> lernt, lernt also nicht nur neue Wörter, sondern auch einen neuen Blick auf die Welt – sogar auf den eigenen Körper.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Ein Wort oder zwei?</h2>
+      <p class="lead">У якій мові, за текстом, для пари «Arm/Hand» або «Finger/Zehe» є ДВА окремі слова, а в якій — ОДНЕ? Натисни на картку, потім на кошик.</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+      <p class="lead">б) Допиши слова з тексту (сховано частину кожного слова).</p>
+      <div class="card" id="ub4b-ct"></div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши німецькою. Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card" id="ub5-w"></div>
+      <div class="card">
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Auf Ukrainisch gibt es nur ein Wort für … · Im Deutschen unterscheidet man zwischen … und … · Am Anfang habe ich oft … verwechselt. · Das zeigt, dass …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Die Sprachwissenschaftlerin Annika Tjuka hat am Max-Planck-Institut in Leipzig Körperteil-Wörter in 1028 Sprachen verglichen und dafür die Otto-Hahn-Medaille 2025 bekommen. Das Deutsche trennt „Arm“ und „Hand“, „Finger“ und „Zehe“ – das Ukrainische, das Vietnamesische oder das Hebräische oft nicht. Sprache zeigt also, wie Menschen die Welt sehen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Мовознавиця Анніка Тюка в Інституті Макса Планка в Лейпцигу порівняла назви частин тіла в 1028 мовах і отримала за це медаль Отто Гана 2025 року. Німецька розрізняє «Arm» і «Hand», «Finger» і «Zehe» — а українська, в'єтнамська чи іврит часто ні. Тож мова показує, як люди бачать світ.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "annika-tjuka-koerperteile";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Wie verschiedene Sprachen Körperteile benennen – und was das über Sprache zeigt",
+            "Wie man im Deutschunterricht Körperteile am besten lernt",
+            "Warum das Vietnamesische eine schwere Sprache ist"],
+     correct: "Wie verschiedene Sprachen Körperteile benennen – und was das über Sprache zeigt"}
+  ]);
+  buildMatch('ub1h', [
+    ["Eine Doktorarbeit über Wortbedeutungen", "Absatz 1"],
+    ["1028 Sprachen im Vergleich", "Absatz 2"],
+    ["Ein Wort, zwei Körperteile", "Absatz 3"],
+    ["Vorsicht, Finger am Fuß!", "Absatz 4"],
+    ["Mehr als nur Wörter", "Absatz 5"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "Annika Tjuka hat ihre Doktorarbeit in Leipzig geschrieben.", a: "r"},
+    {s: "Ihre Datenbank enthält Wörter aus 1028 Sprachen.", a: "f"},
+    {s: "Tjuka hat Psychologie und Sprachwissenschaft verbunden.", a: "r"},
+    {s: "Im Vietnamesischen gibt es ein Wort für Arm und Hand.", a: "r"},
+    {s: "Im Hebräischen gibt es zwei verschiedene Wörter für Finger und Zehe.", a: "f"},
+    {s: "Tjuka spricht selbst Vietnamesisch.", a: "n"},
+    {s: "Laut Text prägt nur die Kultur die Sprache, nicht der menschliche Körper.", a: "f"}
+  ]);
+
+  buildSort('ub3-sort', {
+    buckets: ["zwei Wörter", "ein Wort"],
+    items: [
+      {t: "Deutsch: Arm / Hand", b: "zwei Wörter"},
+      {t: "Deutsch: Finger / Zehe", b: "zwei Wörter"},
+      {t: "Vietnamesisch: Arm / Hand", b: "ein Wort"},
+      {t: "Hebräisch: Finger / Zehe", b: "ein Wort"},
+      {t: "Ukrainisch: Arm / Hand", b: "ein Wort"},
+      {t: "Ukrainisch: Finger / Zehe", b: "ein Wort"}
+    ]
+  });
+
+  buildMatch('ub4', [
+    ["der Körperteil", "частина тіла"],
+    ["die Bezeichnung", "назва, позначення"],
+    ["die Eigenschaft", "властивість"],
+    ["unterscheiden", "розрізняти"],
+    ["beeinflussen", "впливати на щось"],
+    ["die Zehe", "палець ноги"]
+  ]);
+  buildCTest('ub4b-ct', {
+    text: "Annika Tjuka ist {Sprach|wissenschaftlerin}. Sie hat die {Bezeich|nungen} für Körperteile in 1028 Sprachen {vergl|ichen}. Das Deutsche {unter|scheidet} zwischen Arm und Hand. Im Ukrainischen ist „палець“ sowohl der {Fin|ger} als auch die {Ze|he}."
+  });
+
+  buildWriting('ub5-w', {
+    prompt: "Welche Wörter im Deutschen und im Ukrainischen passen nicht genau zusammen? Denk an Körperteile, aber auch an andere Wörter (z. B. Familie, Farben, Zeit). Beschreibe zwei Beispiele. (60–100 Wörter)",
+    words: "60-100",
+    must: ["auf Ukrainisch", "im Deutschen"],
+    check: ["Ich nenne mindestens zwei Beispiele", "Ich erkläre den Unterschied"]
+  });
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📰','✋','🌍','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

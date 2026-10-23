@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hunger macht schlechte Laune – aber nicht immer · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Essen &amp; Trinken</span>
+        <h1>Hunger macht schlechte Laune – aber nicht immer</h1>
+        <p class="sub">Голодний — значить злий? Науковці з Тюбінгена й Бонна з'ясували: псує настрій не сам низький цукор у крові, а дещо інше.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Die Studie</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und du?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Hungrig und gereizt?</h2>
+      <div class="card">
+        <p>Wie fühlst du dich, wenn du lange nichts gegessen hast? Bist du dann müde, nervös oder sogar wütend? Merkst du immer sofort, dass der Grund Hunger ist?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Пригадай: як змінюється твій настрій, коли ти голодний(-а)? Чи завжди ти одразу розумієш, що причина — саме голод? Англійською для цього є жартівливе слово «hangry» (hungry + angry).
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Der Bus ist zu spät, die Freundin antwortet nicht, und plötzlich <span class="gl" data-uk="дратувати" data-note="розм." data-lemma="nerven">nervt</span> einfach alles. Dass viele Menschen <span class="gl" data-key data-uk="у поганому настрої" data-lemma="schlecht gelaunt">schlecht gelaunt</span> sind, wenn sie Hunger haben, ist bekannt. Aber warum eigentlich? Forscher der Universitäten Tübingen und Bonn haben eine überraschende Antwort gefunden.</p>
+
+          <p>Lange dachte man, dass die schlechte Laune direkt vom Körper kommt: Wer nichts isst, bekommt zu wenig <span class="gl" data-uk="поживна речовина" data-lemma="der Nährstoff, -e">Nährstoffe</span>, der <span class="gl" data-key data-uk="рівень цукру в крові" data-lemma="der Blutzuckerspiegel, -">Blutzuckerspiegel</span> <span class="gl" data-uk="знижуватися, падати" data-lemma="sinken (sank, ist gesunken)">sinkt</span> – und die <span class="gl" data-uk="настрій" data-lemma="die Stimmung, -en">Stimmung</span> gleich mit. Ganz so einfach ist es aber nicht. Entscheidend ist nach der neuen Studie etwas anderes: ob man den Hunger <span class="gl" data-uk="свідомо" data-lemma="bewusst">bewusst</span> <span class="gl" data-key data-uk="сприймати, відчувати" data-lemma="wahrnehmen (nahm wahr, hat wahrgenommen)">wahrnimmt</span>.</p>
+
+          <p>Für die Studie trugen 90 gesunde Erwachsene vier Wochen lang einen kleinen Sensor am Arm, der ständig ihren Blutzucker maß. Solche Sensoren benutzen sonst vor allem Menschen mit <span class="gl" data-uk="діабет" data-lemma="der Diabetes">Diabetes</span>. Gleichzeitig gaben die <span class="gl" data-uk="учасник досліду" data-lemma="der Proband, -en">Probanden</span> mehrmals am Tag in einer Handy-App an, wie hungrig sie waren und wie es ihnen ging.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Abbott_Freestyle_Libre_3_Glukosesensor_in_situ-1145.jpg/960px-Abbott_Freestyle_Libre_3_Glukosesensor_in_situ-1145.jpg" alt="Ein Glukosesensor an einem Oberarm." width="960" height="720" loading="lazy">
+            <figcaption>Ein Glukosesensor an einem Oberarm. Foto: Raimond Spekking, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Abbott_Freestyle_Libre_3_Glukosesensor_in_situ-1145.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Das Ergebnis: Manche Teilnehmer fühlten sich zwar <span class="gl" data-uk="безсилий, кволий" data-lemma="kraftlos">kraftlos</span>, merkten aber nicht, dass Hunger die <span class="gl" data-key data-uk="причина" data-lemma="die Ursache, -n">Ursache</span> war. Schlechte Laune hatten sie trotzdem nicht. <span class="gl" data-uk="дратівливий, у поганому настрої" data-lemma="gereizt">Gereizt</span> waren nur diejenigen, die ihren Hunger deutlich <span class="gl" data-uk="відчувати" data-lemma="spüren">spürten</span>.</p>
+
+          <p>Noch etwas zeigte die Studie: Menschen, die gut in ihren Körper <span class="gl" data-uk="прислухатися (до себе)" data-lemma="hineinhorchen (in + Akk.)">hineinhorchen</span> und Gefühle wie Hunger richtig <span class="gl" data-uk="розпізнавати, класифікувати" data-lemma="einordnen">einordnen</span> können, sind insgesamt <span class="gl" data-key data-uk="врівноважений" data-lemma="ausgeglichen">ausgeglichener</span>. Das klingt zuerst wie ein <span class="gl" data-uk="суперечність" data-lemma="der Widerspruch, -ü-e">Widerspruch</span>, ist aber logisch. Wer weiß, dass seine schlechte Laune vom Hunger kommt, kann etwas dagegen tun: zuerst etwas essen – und erst danach mit anderen <span class="gl" data-uk="сваритися" data-lemma="streiten (stritt, hat gestritten)">streiten</span>.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Tübingen am Neckar ist eine typische Universitätsstadt in Baden-Württemberg: Die Universität wurde 1477 gegründet, und viele Einwohner studieren oder arbeiten dort. Bonn am Rhein war von 1949 bis 1990 die Hauptstadt der Bundesrepublik Deutschland. Heute ist Berlin die Hauptstadt, aber in Bonn sitzen noch immer mehrere Bundesministerien.</p>
+          </aside>
+
+          <p>Fachleute nennen die Fähigkeit, Signale aus dem eigenen Körper wahrzunehmen, <span class="gl" data-uk="інтероцепція (відчуття внутрішнього стану тіла)" data-lemma="die Interozeption">Interozeption</span>. Dazu gehört zum Beispiel, den eigenen <span class="gl" data-uk="серцебиття" data-lemma="der Herzschlag, -ä-e">Herzschlag</span>, Durst oder eben Hunger zu spüren. Laut den Forschern ist dieses Wissen auch für die Medizin wichtig, etwa für die Erforschung von <span class="gl" data-uk="хвороба обміну речовин" data-lemma="die Stoffwechselkrankheit, -en">Stoffwechselkrankheiten</span> wie Diabetes. Für den Alltag heißt es: Wer plötzlich alles schrecklich findet, sollte sich kurz fragen, wann er zuletzt gegessen hat.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Die Studie in Zahlen und Fakten</h2>
+      <p class="lead">Зістав питання з відповідями з тексту.</p>
+      <div class="card" id="ub3-list"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Знайди пари: слово — переклад. Відкривай картки по дві.</p>
+      <div class="card" id="ub4-mem"></div>
+      <p class="lead">б) Коротко про головне: встав слова з набору в текст. Одне слово зайве.</p>
+      <div class="card" id="ub4b-bank"></div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und du?</h2>
+      <p class="lead">Напиши німецькою. Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card" id="ub5-w"></div>
+      <div class="card">
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Wenn ich Hunger habe, werde ich … · Ich merke (nicht) sofort, dass … · Dann hilft mir … · In der Schule esse ich meistens …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Schlechte Laune entsteht laut einer Studie aus Tübingen und Bonn nicht durch den niedrigen Blutzucker selbst, sondern dadurch, dass man den Hunger bewusst spürt. Wer seinen Körper gut wahrnimmt (Interozeption), ist ausgeglichener. Tübingen ist eine alte Universitätsstadt, Bonn war von 1949 bis 1990 die Hauptstadt der Bundesrepublik.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          За дослідженням з Тюбінгена й Бонна, поганий настрій спричиняє не сам низький цукор у крові, а те, що людина свідомо відчуває голод. Хто добре відчуває сигнали свого тіла (інтероцепція), той урівноваженіший. Тюбінген — старовинне університетське місто, а Бонн у 1949–1990 роках був столицею ФРН.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "hunger-macht-schlechte-laune";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Was ist laut der Studie der Grund für schlechte Laune bei Hunger?",
+     opts: ["Dass man den Hunger bewusst spürt",
+            "Dass der Blutzucker zu niedrig ist",
+            "Dass man zu wenig geschlafen hat"],
+     correct: "Dass man den Hunger bewusst spürt"}
+  ]);
+  buildMatch('ub1h', [
+    ["Eine alte Erklärung", "Absatz 1"],
+    ["Sensor und App", "Absatz 2"],
+    ["Kraftlos, aber nicht gereizt", "Absatz 3"],
+    ["Wer sich kennt, bleibt ruhiger", "Absatz 4"],
+    ["Signale aus dem Körper", "Absatz 5"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "An der Studie nahmen 90 Menschen mit Diabetes teil.", a: "f"},
+    {s: "Die Teilnehmer trugen den Sensor vier Wochen lang.", a: "r"},
+    {s: "Alle Teilnehmer, die sich kraftlos fühlten, waren auch schlecht gelaunt.", a: "f"},
+    {s: "Die Teilnehmer bekamen für die Studie Geld.", a: "n"},
+    {s: "Wer seinen Körper gut wahrnimmt, ist laut Studie ausgeglichener.", a: "r"},
+    {s: "Interozeption bedeutet, Signale aus dem eigenen Körper wahrzunehmen.", a: "r"}
+  ]);
+
+  buildMatch('ub3', [
+    ["Wie viele Personen nahmen teil?", "90 gesunde Erwachsene"],
+    ["Wie lange dauerte die Studie?", "vier Wochen"],
+    ["Was trugen die Teilnehmer am Arm?", "einen Sensor für den Blutzucker"],
+    ["Wie gaben sie ihre Stimmung an?", "in einer Handy-App"],
+    ["Woher kamen die Forscher?", "aus Tübingen und Bonn"]
+  ], {lead: true});
+
+  buildMemory('ub4-mem', {
+    pairs: [["die Ursache", "причина"], ["wahrnehmen", "сприймати"], ["ausgeglichen", "врівноважений"],
+            ["kraftlos", "безсилий"], ["gereizt", "дратівливий"], ["der Widerspruch", "суперечність"]]
+  });
+  buildWordBank('ub4b-bank', {
+    text: "Viele Menschen sind [schlecht gelaunt], wenn sie Hunger haben. Die Studie zeigt aber: Nicht der niedrige [Blutzuckerspiegel] ist der Grund, sondern ob man den Hunger bewusst [wahrnimmt]. Wer seinen Körper gut kennt, ist [ausgeglichener]. Die Fähigkeit, Körpersignale zu spüren, heißt [Interozeption].",
+    extra: ["Diabetes"]
+  });
+
+  buildWriting('ub5-w', {
+    prompt: "Wie verändert sich deine Laune, wenn du Hunger hast? Merkst du es sofort? Was hilft dir? Gib einem Freund oder einer Freundin zwei Tipps. (60–90 Wörter)",
+    words: "60-90",
+    must: ["wenn", "Tipp"],
+    check: ["Ich beschreibe meine eigene Erfahrung", "Ich gebe zwei Tipps"]
+  });
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📰','🍎','😤','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
