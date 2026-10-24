@@ -157,6 +157,16 @@
       buildScramble('ub5-scr', [{w: "Familie", hint: "сім'я"}, {w: "Kinderzimmer", parts: ["Kinder", "zimmer"], pre: "das"}]);
       buildWriting('ub5-w', {prompt: "Напиши листа (60–80 слів).", words: "60-80", must: ["Lieber/Liebe", "Viele Grüße"], check: ["Звертання й підпис"]});
 
+      buildSpeak('ub5-speak', [{say: "Ich heiße Anna.", uk: "Мене звати Анна."}, {say: "Ich bin zwölf|Ich bin 12", prompt: "Скажи, скільки тобі років (12)."}]);
+      buildClock('ub5-uhr', [{time: "15:15", opts: ["Viertel nach drei", "halb vier"], correct: "Viertel nach drei"}, {time: "7:30"}, {set: "Viertel vor acht", time: "7:45"}]);
+      buildHotspot('ub5-map', {svg: 'deutschland', tasks: [{q: "Wo liegt Hamburg?", zone: "hamburg"}, {q: "Wo fließt der Rhein?", zone: "rhein"}]});
+      buildPicture('ub5-pic', [{q: "der Apfel", opts: ["🍎", "🍌", "🍐"], correct: "🍎"}, {pic: "☔", opts: ["Es regnet.", "Es schneit."], correct: "Es regnet."}]);
+
+    карта для buildHotspot довантажується сама; щоб працювало й у превʼю, підключи її
+    ще одним тегом script ПЕРЕД lesson-interactions.js (шлях — як до assets/ цієї сторінки):
+      assets/svg/deutschland.js   або   assets/svg/ukraine.js
+    id зон (землі, області, міста, річки) — README, «Типи вправ» → «Карти для buildHotspot».
+
     письмо з чеклістом можна й без JS — атрибутами на звичайному textarea:
       <textarea id="w1" rows="8" data-words="60-80" data-must="Lieber/Liebe|Viele Grüße" data-check="Звертання й підпис|3 питання"></textarea>
     -->
