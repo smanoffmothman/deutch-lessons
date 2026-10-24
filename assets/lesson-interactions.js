@@ -2992,7 +2992,31 @@ function initUmlautKb(){
   });
 }
 
+/* ---------- Широкі таблиці не розпирають сторінку (з 2026-10-24) ----------
+   Проблема: на телефоні (360–390 px) таблиці .gtable з довгими німецькими
+   словами (Regel граматики, уроки) були ширші за екран — уся сторінка
+   їхала вбік (41 сторінка з 348). Тепер кожна .gtable, що ще не в .tb-wrap,
+   загортається в .tb-wrap (overflow-x:auto): не влазить — прокручується
+   лише таблиця. HTML сторінок і шаблони не змінювались; таблиці, які
+   малює buildTable, і так у .tb-wrap. */
+function initTableScroll(){
+  document.querySelectorAll('.gtable').forEach(t => {
+    if(t.closest('.tb-wrap, .rp-stage, #dmuReportPrint')) return;
+    const w = document.createElement('div');
+    w.className = 'tb-wrap';
+    t.parentNode.insertBefore(w, t);
+    w.appendChild(t);
+  });
+  const upd = w => w.classList.toggle('more-right', w.scrollWidth > w.clientWidth + 1 && w.scrollLeft + w.clientWidth < w.scrollWidth - 2);
+  const all = () => document.querySelectorAll('.tb-wrap').forEach(upd);
+  document.querySelectorAll('.tb-wrap').forEach(w => w.addEventListener('scroll', () => upd(w), {passive: true}));
+  window.addEventListener('resize', all);
+  document.addEventListener('click', e => { if(e.target.closest && e.target.closest('.tab-btn, [data-tab]')) setTimeout(all, 50); }); // прихована вкладка стала видимою
+  all();
+}
+
 document.addEventListener('DOMContentLoaded', initTabs);
+document.addEventListener('DOMContentLoaded', initTableScroll);
 document.addEventListener('DOMContentLoaded', initNoPaste);
 document.addEventListener('DOMContentLoaded', initWritingAids);
 document.addEventListener('DOMContentLoaded', initReport);
