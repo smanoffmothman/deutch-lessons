@@ -1,0 +1,68 @@
+# Робот озвучення: **/audio/*.ssml → mp3 поруч (Azure Speech, тариф Free F0).
+# Скрипт — .github/scripts/tts.py. Озвучує лише нові або змінені сценарії
+# (data/tts-lock.json), веде лічильник символів за місяць (data/tts-usage.json).
+# Запустити вручну: Actions → tts → Run workflow.
+# Секрети: AZURE_SPEECH_KEY, AZURE_SPEECH_REGION; змінна (необов'язково): TTS_MONTHLY_LIMIT.
+name: tts
+
+on:
+  push:
+    branches: [main]
+    paths: ['**/audio/*.ssml']
+  workflow_dispatch:
+    inputs:
+      path:
+        description: 'Шлях до .ssml (або теки) — перегенерувати примусово. Порожньо — лише нові/змінені.'
+        required: false
+        default: ''
+      voices:
+        description: 'Голоси: показати список німецьких голосів у підсумку запуску'
+        type: boolean
+        required: false
+        default: false
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: tts
+  cancel-in-progress: false
+
+jobs:
+  tts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Налаштувати git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+      - name: Озвучити сценарії
+        id: tts
+        env:
+          AZURE_SPEECH_KEY: ${{ secrets.AZURE_SPEECH_KEY }}
+          AZURE_SPEECH_REGION: ${{ secrets.AZURE_SPEECH_REGION }}
+          TTS_MONTHLY_LIMIT: ${{ vars.TTS_MONTHLY_LIMIT }}
+          TTS_FORCE_PATH: ${{ github.event.inputs.path }}
+          TTS_LIST_VOICES: ${{ github.event.inputs.voices }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set +e
+          python3 .github/scripts/tts.py
+          echo "rc=$?" >> "$GITHUB_OUTPUT"
+      - name: Закомітити mp3 і лічильники
+        if: always()
+        run: |
+          git add -A -- '*.mp3'
+          for f in data/tts-lock.json data/tts-usage.json; do [ -f "$f" ] && git add "$f"; done
+          if git diff --cached --quiet; then echo "без змін"; exit 0; fi
+          git commit -q -m "робот: аудіо озвучено (${{ steps.tts.outputs.files || 0 }} файлів, ${{ steps.tts.outputs.chars || 0 }} символів)"
+          for i in 1 2 3; do
+            git pull --rebase -q origin main && git push && exit 0
+            sleep 5
+          done
+          exit 1
+      - name: Результат
+        if: always()
+        run: test "${{ steps.tts.outputs.rc }}" = "0"
