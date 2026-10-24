@@ -71,6 +71,14 @@ def fmt(n):
     return f'{n:,}'.replace(',', ' ')
 
 
+def files_word(n):
+    if n % 10 == 1 and n % 100 != 11:
+        return 'файл'
+    if 2 <= n % 10 <= 4 and not 12 <= n % 100 <= 14:
+        return 'файли'
+    return 'файлів'
+
+
 def load_json(path):
     try:
         with open(path, encoding='utf-8') as f:
@@ -281,7 +289,7 @@ def main():
             ok_all = False
 
     say()
-    say(f'Озвучено: {done_files} файлів, {fmt(done_chars)} символів.')
+    say(f'Озвучено: {done_files} {files_word(done_files)}, {fmt(done_chars)} символів.')
     say(f'**За місяць ({MONTH}): {fmt(used)} / {fmt(LIMIT)}**')
     annotate('notice', f'За місяць ({MONTH}): {fmt(used)} / {fmt(LIMIT)} символів')
 
@@ -290,7 +298,7 @@ def main():
             f.write('\n'.join(summary_lines) + '\n')
     if OUTPUT:
         with open(OUTPUT, 'a', encoding='utf-8') as f:
-            f.write(f'files={done_files}\nchars={done_chars}\n')
+            f.write(f'files={done_files} {files_word(done_files)}\nchars={done_chars}\n')
     return 0 if ok_all else 1
 
 
