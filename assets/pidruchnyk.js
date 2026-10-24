@@ -224,6 +224,159 @@ function renderBookHub(bookId, opts){
     const t = document.getElementById(a.getAttribute('href').slice(1));
     if(t){ e.preventDefault(); t.scrollIntoView({behavior: 'smooth', block: 'start'}); }
   }));
+  if(ready.length) knMyWords(book, root, toc);
+}
+
+/* ---------- 2а. «Мої слова» на хабі книжки (з 2026-10-24, ТЗ C5) ----------
+   Збирає ★-слова з УСІХ розділів книжки (localStorage
+   dmu:mat-stars:kn:<книга>/<розділ> — їх ставить вкладка Wörter у
+   розділах) і дає їх повторити: картки, квіз «переклад з 4 варіантів»,
+   список з кнопкою «прибрати». Переклади — з data/slova/<книга>.js, файл
+   довантажується сам; HTML хаба не змінюється (картка стає перед змістом).
+   У бал і звіт не йде — це тренажер. */
+const KN_STARS_PREFIX = 'dmu:mat-stars:';
+const KN_TEXT_WORDS_PREFIX = 'dmu:kn-text-words:'; // {de: uk} слів з тексту розділу; пише initBookUnit
+function knStarred(book){
+  const map = new Map(); // de -> [id розділів, де стоїть ★]
+  knPages(book).forEach(x => {
+    let arr = [];
+    try { arr = JSON.parse(localStorage.getItem(KN_STARS_PREFIX + 'kn:' + book.id + '/' + x.node.id)) || []; } catch(_) {}
+    arr.forEach(de => { if(!map.has(de)) map.set(de, []); map.get(de).push(x.node.id); });
+  });
+  return map;
+}
+function knUnstar(book, de, units){
+  units.forEach(u => {
+    const k = KN_STARS_PREFIX + 'kn:' + book.id + '/' + u;
+    try { localStorage.setItem(k, JSON.stringify((JSON.parse(localStorage.getItem(k)) || []).filter(x => x !== de))); } catch(_) {}
+  });
+}
+function knLoadSlova(book, root){
+  return new Promise(res => {
+    if(window.SLOVA && window.SLOVA[book.id]) return res(window.SLOVA[book.id]);
+    const s = document.createElement('script');
+    s.src = root + 'data/slova/' + encodeURIComponent(book.id) + '.js';
+    s.onload = () => res((window.SLOVA && window.SLOVA[book.id]) || []);
+    s.onerror = () => res(null);
+    document.head.appendChild(s);
+  });
+}
+function knShuffle(a){ a = a.slice(); for(let i = a.length - 1; i > 0; i--){ const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+function knMyWords(book, root, before){
+  let card = document.getElementById('knMyWords');
+  if(!card){
+    card = document.createElement('section');
+    card.id = 'knMyWords'; card.className = 'card kn-mywords';
+    before.parentNode.insertBefore(card, before);
+  }
+  const ui = {mode: null, rev: false, all: []};
+  function words(){
+    const map = knStarred(book);
+    const norm = x => String(x).replace(/\s+/g, ' ').trim();
+    const dict = new Map((window.SLOVA && window.SLOVA[book.id] || []).map(w => [norm(w.de), w.uk]));
+    knPages(book).forEach(x => { // + слова з власних текстів розділів
+      try { Object.entries(JSON.parse(localStorage.getItem(KN_TEXT_WORDS_PREFIX + book.id + '/' + x.node.id)) || {}).forEach(([de, uk]) => { if(!dict.has(norm(de))) dict.set(norm(de), uk); }); } catch(_) {}
+    });
+    return Array.from(map.entries()).map(([de, units]) => ({de: de, uk: dict.get(norm(de)) || '', units: units}));
+  }
+  function head(list){
+    const n = list.length;
+    if(!n) return '<p class="section-label">★ Мої слова</p><p class="kn-mw-empty">Познач ☆ слова у вкладці <b>Wörter</b> будь-якого розділу — вони зберуться тут, і їх можна буде повторити картками й квізом.</p>';
+    const units = new Set(); list.forEach(w => w.units.forEach(u => units.add(u)));
+    return '<p class="section-label">★ Мої слова</p><p class="kn-mw-sum"><b>' + n + '</b> ' + knPlural(n, 'слово', 'слова', 'слів')
+      + ' з ' + units.size + ' ' + knPlural(units.size, 'розділу', 'розділів', 'розділів') + ' — повтори їх перед контрольною.</p>'
+      + '<div class="kn-mw-tools"><button type="button" class="btn small" data-m="cards">Картки</button>'
+      + '<button type="button" class="btn small" data-m="quiz">Квіз</button>'
+      + '<button type="button" class="btn small secondary" data-m="list">Список</button>'
+      + '<button type="button" class="btn small secondary kn-mw-dir" aria-pressed="' + ui.rev + '">' + (ui.rev ? 'UA → DE' : 'DE → UA') + '</button></div>'
+      + '<div class="kn-mw-body"></div>';
+  }
+  function render(){
+    const list = words().filter(w => w.uk || ui.mode === 'list');
+    ui.all = words();
+    card.innerHTML = head(ui.all);
+    if(!ui.all.length) return;
+    card.querySelectorAll('[data-m]').forEach(b => {
+      b.classList.toggle('is-on', b.dataset.m === ui.mode);
+      b.addEventListener('click', () => { ui.mode = b.dataset.m; render(); });
+    });
+    card.querySelector('.kn-mw-dir').addEventListener('click', () => { ui.rev = !ui.rev; render(); });
+    const body = card.querySelector('.kn-mw-body');
+    if(ui.mode === 'list') renderList(body);
+    else if(ui.mode === 'cards') renderCards(body, list);
+    else if(ui.mode === 'quiz') renderQuiz(body, list);
+  }
+  const front = w => ui.rev ? w.uk : w.de, back = w => ui.rev ? w.de : w.uk;
+  function renderList(body){
+    body.innerHTML = '<ul class="kn-mw-list">' + ui.all.map((w, i) => '<li><span class="kn-mw-de">' + knEsc(w.de) + '</span><span class="kn-mw-uk">' + (w.uk ? knEsc(w.uk) : '<i class="kn-mw-nouk">переклад з\'явиться, коли ще раз відкриєш розділ</i>') + '</span>'
+      + '<button type="button" class="kn-mw-x" data-i="' + i + '" aria-label="Прибрати з моїх слів">★</button></li>').join('') + '</ul>';
+    body.querySelectorAll('.kn-mw-x').forEach(b => b.addEventListener('click', () => { const w = ui.all[+b.dataset.i]; knUnstar(book, w.de, w.units); render(); }));
+  }
+  function renderCards(body, list){
+    let queue = knShuffle(list), done = 0;
+    const total = list.length;
+    function show(){
+      if(!queue.length){
+        body.innerHTML = '<p class="kn-mw-done">✓ Усі ' + total + ' ' + knPlural(total, 'слово', 'слова', 'слів') + ' пройдено!</p><button type="button" class="btn small">Ще раз ↻</button>';
+        body.querySelector('button').addEventListener('click', () => renderCards(body, list));
+        return;
+      }
+      const w = queue[0];
+      body.innerHTML = '<p class="kn-mw-count">' + done + ' / ' + total + ' знаю</p>'
+        + '<button type="button" class="kn-mw-card"><span class="kn-mw-front"></span><span class="kn-mw-back" hidden></span><span class="kn-mw-hint">натисни, щоб перевернути</span></button>'
+        + '<div class="kn-mw-tools kn-mw-ans" hidden><button type="button" class="btn small kn-mw-yes">Знаю ✓</button><button type="button" class="btn small secondary kn-mw-no">Ще раз ↻</button></div>';
+      const c = body.querySelector('.kn-mw-card');
+      c.querySelector('.kn-mw-front').textContent = front(w);
+      c.querySelector('.kn-mw-back').textContent = back(w);
+      c.addEventListener('click', () => {
+        c.classList.add('flipped'); c.querySelector('.kn-mw-back').hidden = false; c.querySelector('.kn-mw-hint').hidden = true;
+        body.querySelector('.kn-mw-ans').hidden = false;
+      });
+      body.querySelector('.kn-mw-yes').addEventListener('click', () => { queue.shift(); done++; show(); });
+      body.querySelector('.kn-mw-no').addEventListener('click', () => { queue.push(queue.shift()); show(); });
+    }
+    show();
+  }
+  function renderQuiz(body, list){
+    const pool = Array.from(new Set((window.SLOVA && window.SLOVA[book.id] || []).map(w => ui.rev ? w.de : w.uk).filter(Boolean)));
+    let queue = knShuffle(list), firstOk = 0;
+    const tried = new Set(), total = list.length;
+    function show(){
+      if(!queue.length){
+        body.innerHTML = '<p class="kn-mw-done">✓ Готово: ' + firstOk + ' з ' + total + ' з першої спроби.</p><button type="button" class="btn small">Ще раз ↻</button>';
+        body.querySelector('button').addEventListener('click', () => renderQuiz(body, list));
+        return;
+      }
+      const w = queue[0], ans = back(w);
+      const opts = knShuffle([ans].concat(knShuffle(pool.filter(x => x !== ans)).slice(0, 3)));
+      body.innerHTML = '<p class="kn-mw-count">Залишилось: ' + queue.length + '</p><p class="kn-mw-q"></p><div class="kn-mw-opts"></div>';
+      body.querySelector('.kn-mw-q').textContent = front(w);
+      const box = body.querySelector('.kn-mw-opts');
+      let busy = false;
+      opts.forEach(o => {
+        const b = document.createElement('button');
+        b.type = 'button'; b.className = 'opt-btn'; b.textContent = o;
+        b.addEventListener('click', () => {
+          if(busy) return; busy = true;
+          const ok = o === ans;
+          if(!tried.has(w.de)){ tried.add(w.de); if(ok) firstOk++; }
+          if(ok){ b.classList.add('correct'); queue.shift(); }
+          else {
+            b.classList.add('wrong');
+            box.querySelectorAll('.opt-btn').forEach(x => { if(x.textContent === ans) x.classList.add('correct'); });
+            queue.push(queue.shift()); // повториться наприкінці
+          }
+          setTimeout(show, ok ? 450 : 1300);
+        });
+        box.appendChild(b);
+      });
+    }
+    show();
+  }
+  knLoadSlova(book, root).then(render);
+  // ★ могли змінити в іншій вкладці або повернувшись «Назад» — оновити
+  window.addEventListener('pageshow', e => { if(e.persisted) render(); });
+  document.addEventListener('visibilitychange', () => { if(!document.hidden && !ui.mode) render(); });
 }
 
 /* Аудіо видавця: лише посилання на сторінку видавця (НЕ файл у плеєрі).
@@ -348,6 +501,12 @@ function initBookUnit(bookId, unitId, opts){
   // (у тексті розділу "chytannya" слова можуть бути й самі по собі — span.gl)
   const reader = typeof renderWords === 'function';
   if(reader){ mat.id = 'kn:' + bookId + '/' + unitId; loadStars(); }
+  // переклади слів з ВЛАСНОГО тексту розділу (їх немає в data/slova) — для «Моїх слів» на хабі
+  if(reader && realText){
+    const known = new Set(words.map(w => w.de)), extra = {};
+    realText.querySelectorAll('.gl').forEach(el => { const k = glKey(el); if(el.dataset.uk && !known.has(k)) extra[k] = el.dataset.uk; });
+    try { if(Object.keys(extra).length) localStorage.setItem(KN_TEXT_WORDS_PREFIX + bookId + '/' + unitId, JSON.stringify(extra)); } catch(_) {}
+  }
   const hasWords = reader && (words.length || (realText && realText.querySelector('.gl')));
   if(hasWords){
     if(words.length) knInjectWords(words);

@@ -2066,6 +2066,462 @@ function buildPicture(containerId, items){
   });
 }
 
+/* =====================================================================
+   НОВІ ФОРМАТИ ВПРАВ — етап 4 (з 2026-10-24)
+   buildCrossword · buildWordGrid · buildBlitz
+   Сітки генеруються автоматично на сторінці; той самий набір слів у тій
+   самій вправі (id) — завжди та сама сітка (seed = id + слова).
+   ===================================================================== */
+// детермінований генератор випадкових чисел (mulberry32), seed — рядок
+function exRng(str){
+  let h = 1779033703 ^ str.length;
+  for(let i = 0; i < str.length; i++){ h = Math.imul(h ^ str.charCodeAt(i), 3432918353); h = h << 13 | h >>> 19; }
+  let a = (Math.imul(h ^ h >>> 16, 2246822507) ^ Math.imul(h ^ h >>> 13, 3266489909)) >>> 0;
+  return function(){
+    a |= 0; a = a + 0x6D2B79F5 | 0;
+    let t = Math.imul(a ^ a >>> 15, 1 | a);
+    t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+    return ((t ^ t >>> 14) >>> 0) / 4294967296;
+  };
+}
+function exShuffleSeeded(arr, rnd){
+  const a = arr.slice();
+  for(let i = a.length - 1; i > 0; i--){ const j = Math.floor(rnd() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
+  return a;
+}
+// ВЕЛИКІ літери, але ß лишається ß (toUpperCase дав би SS — інша довжина слова)
+function exUp(s){ return Array.from(String(s)).map(c => c === 'ß' ? 'ß' : c.toUpperCase()).join(''); }
+// пари слів: [["Apfel", "яблуко"], {w: "Birne", clue: "груша"}] → [{w, clue}]
+function exPairs(list){
+  return (list || []).map(p => Array.isArray(p) ? {w: String(p[0]).trim(), clue: String(p[1] == null ? '' : p[1])} : {w: String(p.w || p.de).trim(), clue: String(p.clue || p.uk || '')});
+}
+
+/* ---------- C1. Кросворд (buildCrossword) ----------
+   Сітка будується сама зі списку слів з підказками.
+     buildCrossword('ub6-kw', [
+       ["Apfel", "яблуко (der)"], ["Birne", "груша (die)"], ["Banane", "банан (die)"],
+       ["Kirsche", "вишня (die)"], ["Erdbeere", "полуниця (die)"]
+     ]);
+   - перший елемент — слово для сітки: ОДНЕ слово, лише літери (без артикля,
+     пробілів і дефісів — артикль пиши в підказці); регістр не важливий;
+     ä ö ü ß — окремі літери (ß не замінюється на SS);
+   - другий — підказка (українською або німецьке визначення).
+   Підходить 6–12 слів по 3–12 літер. Слово, яке не вдалося вписати в
+   сітку (немає спільних літер), пропускається — у консолі буде попередження;
+   тоді заміни слово.
+   Учень тапає клітинку (ще раз — інший напрямок) або підказку в списку й
+   пише літери; курсор іде далі сам; ä ö ü ß — з панелі. «Prüfen» —
+   кожне повністю заповнене слово перевіряється; зараховується перша
+   перевірка кожного слова (+1 за слово); колір — для цілих слів, не для
+   окремих літер. У контрольній — перевірені слова закриваються. */
+function cwLayout(words, rnd){
+  let best = null;
+  for(let attempt = 0; attempt < 40; attempt++){
+    // перша спроба — від найдовшого слова; далі — довжина + випадковий зсув
+    const order = words.map(w => ({w: w, k: w.w.length + (attempt ? rnd() * 4 : 0)})).sort((a, b) => b.k - a.k).map(x => x.w);
+    const cells = new Map(); // "r,c" -> {ch, dirs}
+    const placed = [], skipped = [];
+    const get = (r, c) => cells.get(r + ',' + c);
+    function fits(L, r, c, dir){
+      const dr = dir === 'd' ? 1 : 0, dc = dir === 'a' ? 1 : 0;
+      if(get(r - dr, c - dc) || get(r + dr * L.length, c + dc * L.length)) return -1;
+      let cross = 0;
+      for(let k = 0; k < L.length; k++){
+        const rr = r + dr * k, cc = c + dc * k, cell = get(rr, cc);
+        if(cell){
+          if(cell.ch !== L[k] || cell.dirs.includes(dir)) return -1;
+          cross++;
+        } else if(get(rr + dc, cc + dr) || get(rr - dc, cc - dr)) return -1; // сусід збоку
+      }
+      return cross;
+    }
+    function put(wd, L, r, c, dir){
+      const dr = dir === 'd' ? 1 : 0, dc = dir === 'a' ? 1 : 0;
+      for(let k = 0; k < L.length; k++){
+        const key = (r + dr * k) + ',' + (c + dc * k);
+        const cell = cells.get(key) || {ch: L[k], dirs: ''};
+        cell.dirs += dir; cells.set(key, cell);
+      }
+      placed.push({wd: wd, L: L, r: r, c: c, dir: dir});
+    }
+    const bounds = () => {
+      let a = Infinity, b = Infinity, x = -Infinity, y = -Infinity;
+      cells.forEach((v, k) => { const [r, c] = k.split(',').map(Number); a = Math.min(a, r); b = Math.min(b, c); x = Math.max(x, r); y = Math.max(y, c); });
+      return {r0: a, c0: b, r1: x, c1: y};
+    };
+    order.forEach((wd, idx) => {
+      const L = Array.from(exUp(wd.w));
+      if(idx === 0){ put(wd, L, 0, 0, rnd() < 0.5 ? 'a' : 'd'); return; }
+      const cands = [];
+      placed.forEach(p => {
+        p.L.forEach((ch, i) => {
+          L.forEach((ch2, j) => {
+            if(ch !== ch2) return;
+            const dir = p.dir === 'a' ? 'd' : 'a';
+            const r = p.dir === 'a' ? p.r - j : p.r + i, c = p.dir === 'a' ? p.c + i : p.c - j;
+            const cross = fits(L, r, c, dir);
+            if(cross > 0) cands.push({r: r, c: c, dir: dir, cross: cross});
+          });
+        });
+      });
+      if(!cands.length){ skipped.push(wd); return; }
+      const B = bounds();
+      cands.forEach(k => {
+        const r1 = k.dir === 'd' ? k.r + L.length - 1 : k.r, c1 = k.dir === 'a' ? k.c + L.length - 1 : k.c;
+        const w = Math.max(B.c1, c1) - Math.min(B.c0, k.c) + 1, h = Math.max(B.r1, r1) - Math.min(B.r0, k.r) + 1;
+        k.score = k.cross * 30 - w * h * 0.6 - Math.max(0, w - 13) * 40 - Math.abs(w - h) * 2 + rnd() * 6;
+      });
+      cands.sort((x, y) => y.score - x.score);
+      put(wd, L, cands[0].r, cands[0].c, cands[0].dir);
+    });
+    const B = bounds(), W = B.c1 - B.c0 + 1, H = B.r1 - B.r0 + 1;
+    const score = placed.length * 1000 - W * H - Math.max(0, W - 13) * 60;
+    if(!best || score > best.score){
+      best = {score: score, W: W, H: H, skipped: skipped,
+        placed: placed.map(p => ({wd: p.wd, L: p.L, r: p.r - B.r0, c: p.c - B.c0, dir: p.dir}))};
+    }
+    if(!skipped.length && W <= 13 && attempt > 8) break;
+  }
+  return best;
+}
+function buildCrossword(containerId, data){
+  const wrap = document.getElementById(containerId);
+  if(!wrap) return;
+  const list = exPairs(Array.isArray(data) ? data : data.words).filter(p => {
+    const ok = /^[\p{L}]+$/u.test(p.w) && p.w.length >= 2;
+    if(!ok) console.warn('buildCrossword: слово «' + p.w + '» пропущено — лише літери, одне слово');
+    return ok;
+  });
+  const lay = cwLayout(list, exRng(containerId + '|' + list.map(p => p.w).join(',')));
+  lay.skipped.forEach(p => console.warn('buildCrossword: «' + p.w + '» не вписалось у сітку — заміни слово'));
+  const scored = isScored(containerId), lockedMode = isLocked(containerId);
+  // нумерація: зліва направо, згори донизу; спільний номер, якщо два слова починаються в одній клітинці
+  const starts = Array.from(new Set(lay.placed.map(p => p.r + ',' + p.c))).sort((a, b) => {
+    const [ra, ca] = a.split(',').map(Number), [rb, cb] = b.split(',').map(Number); return ra - rb || ca - cb; });
+  const words = lay.placed.map(p => ({...p, n: starts.indexOf(p.r + ',' + p.c) + 1, cells: [], first: null, firstOk: null, ok: false}))
+    .sort((a, b) => (a.dir === b.dir ? 0 : a.dir === 'a' ? -1 : 1) || a.n - b.n);
+  if(scored) setTotal(words.length);
+  wrap.classList.add('cw-ex');
+  wrap.innerHTML = '<p class="cw-clue-bar" aria-live="polite"></p><div class="cw-scroll"><div class="cw-grid"></div></div>'
+    + '<div class="cw-lists"><div><p class="cw-h">Waagerecht →</p><ol class="cw-list" data-dir="a"></ol></div><div><p class="cw-h">Senkrecht ↓</p><ol class="cw-list" data-dir="d"></ol></div></div>'
+    + '<div class="check-bar"><button class="btn" type="button">Prüfen</button><button class="btn secondary" type="button">Zurücksetzen</button><span class="score-pill"></span></div>';
+  const grid = wrap.querySelector('.cw-grid'), bar = wrap.querySelector('.cw-clue-bar');
+  const [checkBtn, resetBtn] = wrap.querySelectorAll('.check-bar .btn'), scoreEl = wrap.querySelector('.score-pill');
+  if(lockedMode) resetBtn.style.display = 'none';
+  grid.style.setProperty('--cols', lay.W);
+  const cellMap = new Map();
+  for(let r = 0; r < lay.H; r++) for(let c = 0; c < lay.W; c++){
+    const d = document.createElement('div');
+    d.className = 'cw-void';
+    grid.appendChild(d);
+    cellMap.set(r + ',' + c, {el: d, words: []});
+  }
+  words.forEach(wd => {
+    wd.L.forEach((ch, k) => {
+      const r = wd.r + (wd.dir === 'd' ? k : 0), c = wd.c + (wd.dir === 'a' ? k : 0);
+      const cell = cellMap.get(r + ',' + c);
+      if(!cell.inp){
+        cell.el.className = 'cw-cell';
+        const inp = document.createElement('input');
+        inp.type = 'text'; inp.className = 'cw-in'; inp.autocomplete = 'off'; inp.spellcheck = false;
+        inp.setAttribute('autocapitalize', 'characters'); inp.setAttribute('inputmode', 'text');
+        inp.dataset.ch = ch; inp.dataset.r = r; inp.dataset.c = c;
+        cell.el.appendChild(inp); cell.inp = inp;
+      }
+      cell.words.push(wd); wd.cells.push(cell);
+    });
+    const head = wd.cells[0];
+    if(!head.el.querySelector('.cw-num')){ const s = document.createElement('span'); s.className = 'cw-num'; s.textContent = wd.n; head.el.appendChild(s); }
+    const li = document.createElement('li');
+    li.value = wd.n; li.innerHTML = '<button type="button" class="cw-clue"></button>';
+    li.querySelector('.cw-clue').textContent = wd.wd.clue + ' (' + wd.L.length + ')';
+    li.querySelector('.cw-clue').addEventListener('click', () => { cur = wd; const e = wd.cells.find(x => !x.inp.value) || wd.cells[0]; e.inp.focus(); });
+    wrap.querySelector('.cw-list[data-dir="' + wd.dir + '"]').appendChild(li);
+    wd.li = li;
+  });
+  wrap.querySelectorAll('.cw-list').forEach(ol => { if(!ol.children.length) ol.parentElement.hidden = true; });
+  // розмір клітинки — під ширину контейнера (20–36 px), інакше — прокрутка самої сітки
+  function sizeGrid(){
+    const w = wrap.querySelector('.cw-scroll').clientWidth || 300;
+    grid.style.setProperty('--cw', Math.max(22, Math.min(36, Math.floor((w - 2) / lay.W))) + 'px');
+  }
+  sizeGrid(); window.addEventListener('resize', sizeGrid);
+  document.addEventListener('click', e => { if(e.target.closest && e.target.closest('.tab-btn')) setTimeout(sizeGrid, 30); });
+
+  let cur = words[0], counted = 0;
+  const cellOf = inp => cellMap.get(inp.dataset.r + ',' + inp.dataset.c);
+  function highlight(active){
+    grid.querySelectorAll('.cw-on, .cw-act').forEach(x => x.classList.remove('cw-on', 'cw-act'));
+    if(!cur) return;
+    cur.cells.forEach(x => x.el.classList.add('cw-on'));
+    if(active) cellOf(active).el.classList.add('cw-act');
+    bar.innerHTML = '<b>' + cur.n + ' ' + (cur.dir === 'a' ? '→' : '↓') + '</b> <span></span>';
+    bar.querySelector('span').textContent = cur.wd.clue;
+    wrap.querySelectorAll('.cw-list li').forEach(li => li.classList.toggle('is-cur', li === cur.li));
+  }
+  let lastFocus = null;
+  grid.addEventListener('focusin', e => {
+    const inp = e.target; if(!inp.classList.contains('cw-in')) return;
+    const cell = cellOf(inp);
+    if(!cell.words.includes(cur)) cur = cell.words.find(w => w.dir === (cur && cur.dir)) || cell.words[0];
+    highlight(inp);
+    setTimeout(() => { if(document.activeElement === inp){ try { inp.select(); } catch(_) {} } }, 0); // лише якщо курсор ще тут: select() інакше повертає фокус назад
+  });
+  grid.addEventListener('click', e => {
+    const inp = e.target.closest('.cw-cell') && e.target.closest('.cw-cell').querySelector('.cw-in');
+    if(!inp) return;
+    const cell = cellOf(inp);
+    if(lastFocus === inp && cell.words.length > 1){ cur = cell.words.find(w => w !== cur) || cur; highlight(inp); }
+    lastFocus = inp;
+    if(document.activeElement !== inp) inp.focus();
+  });
+  function move(inp, step){
+    if(!cur) return;
+    const i = cur.cells.findIndex(x => x.inp === inp);
+    const nx = cur.cells[i + step];
+    if(nx){ nx.inp.focus(); lastFocus = nx.inp; }
+  }
+  grid.addEventListener('input', e => {
+    const inp = e.target; if(!inp.classList.contains('cw-in')) return;
+    const v = Array.from(inp.value.replace(/[^\p{L}]/gu, ''));
+    inp.value = v.length ? exUp(v[v.length - 1]) : '';
+    cellOf(inp).el.classList.remove('ok', 'bad');
+    if(inp.value) move(inp, 1);
+  });
+  grid.addEventListener('keydown', e => {
+    const inp = e.target; if(!inp.classList.contains('cw-in')) return;
+    if(e.key === 'Backspace' && !inp.value){ e.preventDefault(); move(inp, -1); const i = cur.cells.findIndex(x => x.inp === document.activeElement); if(i >= 0 && !cur.cells[i].inp.disabled) cur.cells[i].inp.value = ''; }
+    else if(e.key === 'Enter'){ e.preventDefault(); check(); }
+    else if(/^Arrow/.test(e.key)){
+      e.preventDefault();
+      const dr = e.key === 'ArrowDown' ? 1 : e.key === 'ArrowUp' ? -1 : 0, dc = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      let r = +inp.dataset.r + dr, c = +inp.dataset.c + dc;
+      const nx = cellMap.get(r + ',' + c);
+      if(nx && nx.inp){ cur = nx.words.find(w => w.dir === (dr ? 'd' : 'a')) || nx.words[0]; nx.inp.focus(); }
+    }
+  });
+  function check(){
+    let correct = 0;
+    words.forEach(wd => {
+      const typed = wd.cells.map(x => x.inp.value).join('');
+      if(typed.length === wd.L.length){
+        const ok = typed === wd.L.join('');
+        if(wd.first === null){ wd.first = typed; wd.firstOk = ok; } // для звіту
+        wd.ok = ok; wd.checked = true;
+      } else { wd.ok = false; wd.checked = false; }
+      if(wd.firstOk) correct++;
+    });
+    cellMap.forEach(cell => {
+      if(!cell.inp) return;
+      cell.el.classList.remove('ok', 'bad');
+      if(cell.words.some(w => w.ok)) cell.el.classList.add('ok');
+      else if(cell.words.some(w => w.checked && !w.ok)) cell.el.classList.add('bad');
+    });
+    words.forEach(wd => wd.li.classList.toggle('is-ok', wd.ok));
+    if(lockedMode) words.forEach(wd => { if(wd.checked) wd.cells.forEach(x => x.inp.disabled = true); });
+    scoreEl.textContent = correct + ' / ' + words.length + ' richtig (1. Versuch zählt)';
+    if(correct > counted){ if(scored) markDone(correct - counted); counted = correct; }
+  }
+  checkBtn.addEventListener('click', check);
+  resetBtn.addEventListener('click', () => {
+    if(lockedMode) return;
+    cellMap.forEach(cell => { if(cell.inp){ cell.inp.value = ''; cell.el.classList.remove('ok', 'bad'); } });
+    words.forEach(wd => { wd.first = null; wd.firstOk = null; wd.ok = false; wd.checked = false; wd.li.classList.remove('is-ok'); });
+    scoreEl.textContent = '';
+    if(counted > 0){ if(scored){ progress.done -= counted; renderProgress(); } counted = 0; }
+  });
+  wrap._cw = words;
+  highlight(null);
+}
+
+/* ---------- C1. Знайди слова в сітці (buildWordGrid) ----------
+   Сітка літер генерується сама; учень тапає ПЕРШУ, потім ОСТАННЮ літеру
+   слова (ще раз по першій — скасувати).
+     buildWordGrid('ub7-such', {
+       words: [["Apfel", "яблуко"], ["Birne", "груша"], ["Kiwi", "ківі"]],
+       show: "uk"              // список: "uk" (типово — шукай німецьке слово за перекладом), "de" або "both"
+     });
+   - слова — одне слово, лише літери, до 12 літер; 5–10 слів.
+   - dirs — (необов'язково) "hv" (типово: → і ↓) або "hvd" (+ діагональ ↘).
+   Слова лише в прямому напрямку (не задом наперед). Кожне знайдене слово
+   = +1; помилкові виділення не штрафуються, але їх кількість іде у звіт. */
+function wgBuild(list, dirs, rnd){
+  const ds = [[0, 1], [1, 0]].concat(dirs.includes('d') ? [[1, 1]] : []);
+  const longest = Math.max.apply(null, list.map(p => Array.from(p.L).length));
+  const letters = list.reduce((a, p) => a + p.L.length, 0);
+  for(let N = Math.max(longest, Math.ceil(Math.sqrt(letters * 2.2)), 6); N <= 16; N++){
+    for(let attempt = 0; attempt < 30; attempt++){
+      const g = Array.from({length: N}, () => Array(N).fill(''));
+      const pos = [];
+      let ok = true;
+      for(const p of list.slice().sort((a, b) => b.L.length - a.L.length)){
+        const L = Array.from(p.L);
+        let placed = false;
+        for(let t = 0; t < 200 && !placed; t++){
+          const [dr, dc] = ds[Math.floor(rnd() * ds.length)];
+          const r = Math.floor(rnd() * (N - dr * (L.length - 1))), c = Math.floor(rnd() * (N - dc * (L.length - 1)));
+          if(L.every((ch, k) => { const x = g[r + dr * k][c + dc * k]; return !x || x === ch; })){
+            L.forEach((ch, k) => { g[r + dr * k][c + dc * k] = ch; });
+            pos.push({p: p, r: r, c: c, dr: dr, dc: dc});
+            placed = true;
+          }
+        }
+        if(!placed){ ok = false; break; }
+      }
+      if(!ok) continue;
+      const fill = 'EEEEEEENNNNIIIISSSSRRRRAAAATTTTDDDHHHUUULLLCCGGMMOOBBWWFFKKZZPPVÄÖÜJ';
+      for(let r = 0; r < N; r++) for(let c = 0; c < N; c++) if(!g[r][c]) g[r][c] = fill[Math.floor(rnd() * fill.length)];
+      return {N: N, g: g, pos: pos};
+    }
+  }
+  return null;
+}
+function buildWordGrid(containerId, data){
+  const wrap = document.getElementById(containerId);
+  if(!wrap) return;
+  const list = exPairs(data.words || data).filter(p => /^[\p{L}]+$/u.test(p.w) && p.w.length <= 16).map(p => ({...p, L: exUp(p.w)}));
+  const show = data.show || 'uk';
+  const res = wgBuild(list, data.dirs || 'hv', exRng(containerId + '|' + list.map(p => p.w).join(',')));
+  if(!res){ wrap.innerHTML = '<p class="feedback bad">Не вдалося скласти сітку — забагато або задовгі слова.</p>'; return; }
+  const scored = isScored(containerId);
+  if(scored) setTotal(list.length);
+  wrap.classList.add('wg-ex');
+  wrap.innerHTML = '<p class="sort-tip">Знайди слова: натисни першу, а потім останню літеру слова (→ або ↓' + ((data.dirs || '').includes('d') ? ' або ↘' : '') + ').</p>'
+    + '<div class="wg-wrap"><div class="wg-grid" role="grid"></div></div><ul class="wg-list"></ul>'
+    + '<p class="feedback" aria-live="polite"></p><div class="check-bar"><span class="score-pill"></span></div>';
+  const grid = wrap.querySelector('.wg-grid'), ul = wrap.querySelector('.wg-list'), fb = wrap.querySelector('.feedback'), scoreEl = wrap.querySelector('.score-pill');
+  grid.style.setProperty('--n', res.N);
+  const cells = [];
+  res.g.forEach((row, r) => row.forEach((ch, c) => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'wg-cell'; b.textContent = ch; b.dataset.r = r; b.dataset.c = c;
+    grid.appendChild(b); cells.push(b);
+  }));
+  const cellAt = (r, c) => cells[r * res.N + c];
+  const state = {found: 0, wrong: 0};
+  const items = list.map(p => {
+    const li = document.createElement('li');
+    li.className = 'wg-item';
+    li.textContent = show === 'de' ? p.w : show === 'both' ? p.w + ' — ' + p.clue : p.clue;
+    ul.appendChild(li);
+    return {p: p, li: li, found: false};
+  });
+  wrap._wg = {items: items, state: state};
+  const upd = () => { scoreEl.textContent = state.found + ' / ' + list.length + ' gefunden'; };
+  upd();
+  let start = null, colorN = 0;
+  grid.addEventListener('click', e => {
+    const b = e.target.closest('.wg-cell'); if(!b) return;
+    if(!start){ start = b; b.classList.add('wg-start'); fb.textContent = ''; return; }
+    if(start === b){ b.classList.remove('wg-start'); start = null; return; }
+    const r0 = +start.dataset.r, c0 = +start.dataset.c, r1 = +b.dataset.r, c1 = +b.dataset.c;
+    start.classList.remove('wg-start');
+    const dr = Math.sign(r1 - r0), dc = Math.sign(c1 - c0), len = Math.max(Math.abs(r1 - r0), Math.abs(c1 - c0)) + 1;
+    const line = (r0 === r1 || c0 === c1 || Math.abs(r1 - r0) === Math.abs(c1 - c0));
+    start = null;
+    let path = [];
+    if(line) for(let k = 0; k < len; k++) path.push(cellAt(r0 + dr * k, c0 + dc * k));
+    const word = path.map(x => x.textContent).join('');
+    const hit = line && items.find(it => !it.found && it.p.L === word);
+    if(hit){
+      hit.found = true; state.found++;
+      const col = 'wg-c' + (colorN++ % 5);
+      path.forEach(x => x.classList.add('wg-found', col));
+      hit.li.classList.add('is-found');
+      if(show === 'uk') hit.li.textContent = hit.p.clue + ' — ' + hit.p.w;
+      fb.textContent = 'Gefunden! ✓'; fb.className = 'feedback ok';
+      if(scored) markDone(1);
+      upd();
+      if(state.found === list.length){ fb.textContent = 'Alle Wörter gefunden! ✓'; wrap.classList.add('is-done'); }
+    } else {
+      state.wrong++;
+      (path.length ? path : [b]).forEach(x => { x.classList.add('wg-miss'); setTimeout(() => x.classList.remove('wg-miss'), 600); });
+      fb.textContent = line ? 'Kein Wort aus der Liste — versuch es noch mal.' : 'Nur gerade Linien: → oder ↓' + ((data.dirs || '').includes('d') ? ' oder ↘' : '') + '.';
+      fb.className = 'feedback bad';
+    }
+  });
+}
+
+/* ---------- C4. Бліц-раунд (buildBlitz) ----------
+   Швидкий квіз на час: слово → переклад з 3 варіантів, скільки встигнеш.
+     buildBlitz('ub8-blitz', {
+       pairs: [["der Apfel", "яблуко"], ["die Birne", "груша"], …],   // 8+ пар
+       seconds: 60,          // (необов'язково) тривалість, типово 60
+       dir: "de-uk"          // або "uk-de"
+     });
+   У бал НЕ йде (лише мотивація); рекорд зберігається в браузері учня;
+   у звіт — рядок «X richtig, Y Fehler in 60 s (Rekord: Z)».
+   Неправильний вибір — правильний варіант коротко підсвічується (це
+   тренування, не перевірка). Слова повторюються по колу. */
+function buildBlitz(containerId, data){
+  const wrap = document.getElementById(containerId);
+  if(!wrap) return;
+  const pairs = exPairs(data.pairs || data).filter(p => p.w && p.clue);
+  const secs = data.seconds || 60, rev = data.dir === 'uk-de';
+  const key = 'dmu:blitz:' + location.pathname + '#' + containerId;
+  const readBest = () => { try { return +localStorage.getItem(key) || 0; } catch(_) { return 0; } };
+  const st = {played: false, ok: 0, bad: 0, best: readBest(), timer: null};
+  wrap._blitz = st;
+  wrap.classList.add('bz-ex');
+  wrap.innerHTML = '<div class="bz-start"><p class="bz-intro">⚡ <b>' + secs + ' Sekunden:</b> скільки слів устигнеш перекласти?</p>'
+    + '<p class="bz-best"></p><button type="button" class="btn bz-go">Start ▶</button></div>'
+    + '<div class="bz-run" hidden><div class="bz-top"><span class="bz-time"></span><span class="bz-count"></span></div>'
+    + '<div class="bz-bar"><span></span></div><p class="bz-word"></p><div class="bz-opts"></div></div>';
+  const startBox = wrap.querySelector('.bz-start'), run = wrap.querySelector('.bz-run');
+  const bestEl = wrap.querySelector('.bz-best'), goBtn = wrap.querySelector('.bz-go');
+  const timeEl = wrap.querySelector('.bz-time'), countEl = wrap.querySelector('.bz-count'), barEl = wrap.querySelector('.bz-bar span');
+  const wordEl = wrap.querySelector('.bz-word'), opts = wrap.querySelector('.bz-opts');
+  const showBest = () => { bestEl.textContent = st.best ? 'Rekord: ' + st.best + ' richtig' : ''; };
+  showBest();
+  let queue = [], endAt = 0, busy = false;
+  function next(){
+    if(!queue.length) queue = shuffleArray(pairs);
+    const p = queue.pop();
+    const ask = rev ? p.clue : p.w, ans = rev ? p.w : p.clue;
+    const others = shuffleArray(pairs.filter(x => (rev ? x.w : x.clue) !== ans)).slice(0, 2).map(x => rev ? x.w : x.clue);
+    wordEl.textContent = ask;
+    opts.innerHTML = '';
+    shuffleArray([ans].concat(others)).forEach(o => {
+      const b = document.createElement('button');
+      b.type = 'button'; b.className = 'opt-btn bz-opt'; b.textContent = o;
+      b.addEventListener('click', () => {
+        if(busy) return;
+        busy = true;
+        const ok = o === ans;
+        if(ok){ st.ok++; b.classList.add('correct'); }
+        else { st.bad++; b.classList.add('wrong'); opts.querySelectorAll('.bz-opt').forEach(x => { if(x.textContent === ans) x.classList.add('correct'); }); }
+        countEl.textContent = '✓ ' + st.ok + '   ✗ ' + st.bad;
+        setTimeout(() => { busy = false; if(Date.now() < endAt) next(); }, ok ? 180 : 650);
+      });
+      opts.appendChild(b);
+    });
+  }
+  function tick(){
+    const left = Math.max(0, endAt - Date.now());
+    timeEl.textContent = Math.ceil(left / 1000) + ' s';
+    barEl.style.width = (left / (secs * 1000) * 100) + '%';
+    if(left <= 0) finish();
+  }
+  function finish(){
+    clearInterval(st.timer); st.timer = null;
+    st.played = true;
+    if(st.ok > st.best){ st.best = st.ok; try { localStorage.setItem(key, String(st.best)); } catch(_) {} }
+    run.hidden = true; startBox.hidden = false;
+    wrap.querySelector('.bz-intro').innerHTML = '⚡ <b>' + st.ok + ' richtig</b> in ' + secs + ' s' + (st.bad ? ' · ' + st.bad + ' Fehler' : '') + (st.ok && st.ok >= st.best ? ' — <b>neuer Rekord!</b>' : '');
+    showBest();
+    goBtn.textContent = 'Noch einmal ↻';
+  }
+  goBtn.addEventListener('click', () => {
+    if(pairs.length < 3) return;
+    st.ok = 0; st.bad = 0; busy = false; queue = [];
+    countEl.textContent = '✓ 0   ✗ 0';
+    startBox.hidden = true; run.hidden = false;
+    endAt = Date.now() + secs * 1000;
+    next(); tick();
+    st.timer = setInterval(tick, 200);
+  });
+}
+
 /* ---------- Аудіоплеєр (Üb. Hören) ---------- */
 function wirePlayer(audioId, playId, seekId, timeId){
   const audio = document.getElementById(audioId);
@@ -2473,6 +2929,35 @@ function rpHotspot(wrap){
   if(!rows.length) return null;
   return {html: rows[0].h, more: rows.slice(1).map(r => r.h), ok: rows.reduce((a, r) => a + r.ok, 0), n: rows.length, empty: rows.reduce((a, r) => a + r.e, 0)};
 }
+// buildCrossword: номер і підказка → слово першої перевірки
+function rpCrossword(wrap){
+  const rows = (wrap._cw || []).map(wd => {
+    const pre = '<span class="rp-q">' + wd.n + (wd.dir === 'a' ? ' →' : ' ↓') + '</span> ' + rpEsc(wd.wd.clue) + ': ';
+    if(wd.first === null){
+      const part = wd.cells.map(x => x.inp.value || '·').join('');
+      return {h: pre + (/[^·]/.test(part) ? rpAns(part, 'open', 'не перевірено') : RP_GAP), ok: 0, e: /[^·]/.test(part) ? 0 : 1};
+    }
+    return {h: pre + rpAns(wd.first, wd.firstOk ? 'ok' : 'bad', !wd.firstOk && wd.ok ? 'потім правильно' : ''), ok: wd.firstOk ? 1 : 0, e: 0};
+  });
+  if(!rows.length) return null;
+  return {html: rows[0].h, more: rows.slice(1).map(r => r.h), ok: rows.reduce((a, r) => a + r.ok, 0), n: rows.length, empty: rows.reduce((a, r) => a + r.e, 0)};
+}
+// buildWordGrid: знайдені слова; ненайдені — лише підказкою (не саме слово)
+function rpWordGrid(wrap){
+  const g = wrap._wg; if(!g) return null;
+  const found = g.items.filter(i => i.found), miss = g.items.filter(i => !i.found);
+  let html = 'Знайдено ' + found.length + ' з ' + g.items.length + ': ' + (found.length ? found.map(i => rpAns(i.p.w, 'ok')).join(' ') : RP_GAP);
+  if(miss.length) html += '<br><span class="rp-muted">не знайдено: ' + miss.map(i => rpEsc(i.p.clue || '…')).join(', ') + '</span>';
+  if(g.state.wrong) html += ' <span class="rp-note">(помилкових виділень: ' + g.state.wrong + ')</span>';
+  return {html: html, ok: found.length, n: g.items.length, empty: 0};
+}
+// buildBlitz: у бал не йде — лише результат
+function rpBlitz(wrap){
+  const st = wrap._blitz; if(!st) return null;
+  const html = '⚡ Бліц: ' + (st.played ? '<b>' + st.ok + ' правильно</b>, ' + st.bad + ' помилок' : '<span class="rp-muted">не проходив(-ла)</span>')
+    + (st.best ? ' <span class="rp-note">(рекорд у цьому браузері: ' + st.best + ')</span>' : '');
+  return {html: html, ok: 0, n: 0, empty: 0};
+}
 // buildFixError: речення → що учень позначив / як виправив з першої спроби
 function rpFix(div){
   const pre = rpEsc(rpText(div.querySelector('.fix-line .num'))) + ' ' + rpEsc(div.dataset.s || '') + ' → ';
@@ -2539,7 +3024,7 @@ function rpCollectPanel(panel){
   const rows = [];
   const seen = new Set();
   let lastCard = null;
-  const sel = '.quiz-q, .order-item, .sort-ex, .wbank-ex, .fix-item, .chat-ex, .mem-ex, .spk-item, .clk-item, .hs-ex, textarea, input.blank-input, select.blank, .tok, input[type="text"]';
+  const sel = '.quiz-q, .order-item, .sort-ex, .wbank-ex, .fix-item, .chat-ex, .mem-ex, .spk-item, .clk-item, .hs-ex, .cw-ex, .wg-ex, .bz-ex, textarea, input.blank-input, select.blank, .tok, input[type="text"]';
   panel.querySelectorAll(sel).forEach(el => {
     if(el.closest('.report-card') || rpHidden(el, panel)) return;
     let key = el, row = null;
@@ -2553,6 +3038,10 @@ function rpCollectPanel(panel){
     else if(el.matches('.clk-item')) row = rpClock(el);
     else if(el.closest('.clk-item')) return; // поле часу — уже в рядку годинника
     else if(el.matches('.hs-ex')){ row = rpHotspot(el); if(!row) return; }
+    else if(el.matches('.cw-ex')){ row = rpCrossword(el); if(!row) return; }
+    else if(el.closest('.cw-ex')) return; // клітинки кросворда — уже в рядках слів
+    else if(el.matches('.wg-ex')){ row = rpWordGrid(el); if(!row) return; }
+    else if(el.matches('.bz-ex')){ row = rpBlitz(el); if(!row) return; }
     else if(el.closest('.fix-ex')) return; // поле виправлення — уже в рядку речення
     else if(el.matches('.quiz-q')) row = rpQuiz(el);
     else if(el.matches('.order-item')) row = rpOrder(el);
@@ -2745,7 +3234,7 @@ function initReport(){
   if(!ende) return;
   // є хоч одна вправа (з 2026-10-24 — і нових форматів: раніше сторінка лише з банком слів, чатом чи Memory лишалась без звіту)
   if(!document.querySelector('.panel .quiz-q, .panel .blank-input, .panel select.blank, .panel textarea, .panel .tok, .panel .order-item, .panel .sort-ex, '
-    + '.panel .wbank-ex, .panel .fix-ex, .panel .chat-ex, .panel .mem-ex, .panel .spk-item:not(.spk-off), .panel .clk-item, .panel .hs-ex')) return;
+    + '.panel .wbank-ex, .panel .fix-ex, .panel .chat-ex, .panel .mem-ex, .panel .spk-item:not(.spk-off), .panel .clk-item, .panel .hs-ex, .panel .cw-ex, .panel .wg-ex, .panel .bz-ex')) return;
 
   let card = document.getElementById('dmuReport');
   if(!card){

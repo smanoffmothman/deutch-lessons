@@ -59,6 +59,7 @@ a.kn-chip:hover{ background:rgba(245,239,222,.22); }
 
 /* ---------- Аудіо видавця і примітка ---------- */
 .kn-audio-card{ display:flex; }
+.kn-audio-card[hidden]{ display:none; } /* (2026-10-24) без цього порожня картка була видна на хабі книжки без аудіо */
 .kn-audio{ display:flex; align-items:flex-start; gap:10px; font-size:14px; line-height:1.5; }
 .kn-audio-ico{ font-size:20px; line-height:1.2; }
 .kn-audio a{ color:var(--teal); font-weight:700; word-break:break-word; }
@@ -68,6 +69,46 @@ a.kn-chip:hover{ background:rgba(245,239,222,.22); }
 
 /* власне аудіо (синтез мовлення) — підпис під плеєром */
 .kn-tts-note{ font-size:12px; color:var(--ink-soft); margin:6px 0 0; }
+
+/* ---------- «Мої слова» на хабі книжки (з 2026-10-24) ---------- */
+.kn-mywords{ margin:0 0 22px; }
+.kn-mywords .section-label{ margin:0 0 4px; }
+.kn-mw-empty, .kn-mw-sum{ font-size:14px; color:var(--ink-soft); margin:0 0 10px; }
+.kn-mw-tools{ display:flex; flex-wrap:wrap; gap:6px; }
+.kn-mw-tools .btn.is-on{ box-shadow:0 0 0 2px var(--mustard); }
+.kn-mw-dir{ margin-left:auto; }
+.kn-mw-body:not(:empty){ margin-top:14px; padding-top:12px; border-top:1px dashed var(--line); }
+.kn-mw-list{ list-style:none; margin:0; padding:0; }
+.kn-mw-list li{ display:flex; align-items:center; gap:10px; padding:7px 0; border-bottom:1px dashed var(--line); font-size:14.5px; }
+.kn-mw-list li:last-child{ border-bottom:none; }
+.kn-mw-de{ flex:1 1 45%; font-family:var(--serif); font-weight:600; color:var(--teal-deep); min-width:0; }
+.kn-mw-uk{ flex:1 1 45%; min-width:0; }
+.kn-mw-nouk{ font-size:12.5px; color:var(--ink-soft); }
+.kn-mw-x{ flex:none; background:none; border:none; font-size:18px; color:var(--mustard); cursor:pointer; padding:2px 6px; }
+.kn-mw-x:hover{ color:var(--brick); }
+.kn-mw-count{ font-size:13px; font-weight:700; color:var(--ink-soft); margin:0 0 8px; }
+.kn-mw-card{
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; width:100%; max-width:420px; min-height:150px;
+  margin:0 auto 12px; padding:18px; background:#fff; border:1.5px solid var(--line); border-radius:14px; cursor:pointer; font:inherit; color:var(--ink);
+  -webkit-tap-highlight-color:transparent;
+}
+.kn-mw-card:hover{ border-color:var(--teal); }
+.kn-mw-card.flipped{ background:var(--forest-soft); border-color:var(--forest); }
+.kn-mw-front{ font-family:var(--serif); font-size:24px; font-weight:700; color:var(--teal-deep); text-align:center; }
+.kn-mw-back{ font-size:18px; text-align:center; }
+.kn-mw-back[hidden], .kn-mw-hint[hidden], .kn-mw-ans[hidden]{ display:none; }
+.kn-mw-hint{ font-size:12px; color:var(--ink-soft); }
+.kn-mw-ans{ justify-content:center; }
+.kn-mw-q{ font-family:var(--serif); font-size:22px; font-weight:700; color:var(--teal-deep); text-align:center; margin:0 0 12px; }
+.kn-mw-opts{ display:grid; gap:8px; max-width:420px; margin:0 auto; }
+.kn-mw-opts .opt-btn{ font-size:15px; padding:10px 14px; }
+.kn-mw-done{ font-weight:700; color:var(--forest); margin:0 0 10px; }
+@media (max-width:600px){
+  .kn-mw-list li{ flex-wrap:wrap; gap:2px 10px; }
+  .kn-mw-de{ flex:1 1 calc(100% - 44px); }
+  .kn-mw-uk{ order:3; flex-basis:100%; color:var(--ink-soft); }
+  .kn-mw-dir{ margin-left:0; }
+}
 
 /* ---------- Далі / Назад ---------- */
 .kn-nav{ display:flex; flex-wrap:wrap; gap:8px; align-items:stretch; }
