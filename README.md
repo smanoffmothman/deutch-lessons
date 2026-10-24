@@ -16,7 +16,8 @@ site/
 │   ├── material-reader.js          ← сторінки статей: переклад по тапу, текст у шухляді, Wörter, нові вправи
 │   ├── material-style.css          ← дизайн сторінок статей
 │   ├── pidruchnyk.js               ← «Підручники»: список книжок, хаб книжки, сторінка розділу
-│   └── pidruchnyk.css              ← дизайн розділу «Підручники»
+│   ├── pidruchnyk.css              ← дизайн розділу «Підручники»
+│   └── svg/                        ← карти для buildHotspot (deutschland.js, ukraine.js)
 ├── data/
 │   ├── lessons-data.js             ← ЄДИНИЙ файл з усіма уроками (масив LESSONS)
 │   ├── modules-data.js             ← теми модулів (MODULE_THEMES), окремо від уроків
@@ -370,16 +371,54 @@ site/
 | **Письмо з чеклістом** | `buildWriting` або `textarea[data-words/-must/-check]` | лист, опис, розповідь з метою за обсягом і обов'язковими зворотами | — (у бал не йде; це підтримка, а не оцінка) |
 | **Memory** | `buildMemory` | закріплення 4–8 слів, пари форм; розминка | контрольна; понад 8 пар (на телефоні тісно) |
 | **Буквений салат / склади слово** | `buildScramble` | правопис нових слів, композити, склади | довгі слова понад ~11 літер (на телефоні переносяться) |
+| **Говоріння (розпізнавання мови)** | `buildSpeak` | вимова слів і фраз розділу, короткі відповіді вголос | довгі речення (> ~12 слів), числа без варіанта цифрами; як єдина перевірка теми (на iPhone/Firefox вправа без балу) |
+| **Годинник** | `buildClock` | Uhrzeit: прочитати, написати, поставити стрілки; розпорядок дня | — |
+| **Карта / активні зони** | `buildHotspot` | географія (землі, області, міста, річки), Deutschlandreise | дрібні об'єкти, яких немає на карті (див. список зон нижче) |
+| **Вибір картинки** | `buildPicture` | конкретна лексика (їжа, одяг, погода, тварини), молодші класи, «Was hörst du?» з аудіо | абстрактні слова, для яких картинка двозначна |
 | Правда/неправда | `buildRF` | розуміння тексту | — (лише статті й підручники) |
 | Зіставлення | `buildMatch` | слово ↔ переклад, початок ↔ кінець | — (лише статті й підручники) |
 | Розстав по порядку | `buildSequence` | послідовність подій тексту | — (лише статті й підручники) |
 
-Жирним — нові формати етапів 1–2 (з 2026-10-23). Далі за ТЗ
-(`TZ-novi-formaty-vprav.md`): розпізнавання мови, годинник, карта,
-картинки; кросворд, бліц, «Мої слова»; диктант — після робота озвучення.
+Жирним — нові формати етапів 1–3 (з 2026-10-23). Далі за ТЗ
+(`TZ-novi-formaty-vprav.md`): кросворд, бліц, «Мої слова»; потім диктант
+(робот озвучення вже працює).
 
 Бал: Memory дає +1 лише за всі пари не більше ніж за 2 × (кількість пар)
 спроб (`scored: false` — лише гра); письмо з чеклістом у бал не йде.
+
+### Карти для buildHotspot
+
+Власні карти в `assets/svg/` (JS-файли зі вбудованим SVG, щоб працювали і
+з диска, і в превʼю), зібрані з даних Natural Earth (суспільне надбання)
+скриптом `build-hotspot-maps.py` (Knowledge техпідтримки). Вручну не
+редагувати. Крим і Севастополь — у складі України. Назви — німецькою
+(`data-name`) і українською (`data-uk`, для `label: 'uk'`).
+
+- **`deutschland`** — землі: `baden-wuerttemberg`, `bayern`, `berlin`,
+  `brandenburg`, `bremen`, `hamburg`, `hessen`, `mecklenburg-vorpommern`,
+  `niedersachsen`, `nordrhein-westfalen`, `rheinland-pfalz`, `saarland`,
+  `sachsen`, `sachsen-anhalt`, `schleswig-holstein`, `thueringen`.
+  Річки: `rhein`, `donau`, `elbe`, `oder`, `weser`, `main`, `mosel`, `ems`,
+  `inn`. Міста: `berlin`, `hamburg`, `muenchen`, `koeln`, `frankfurt`,
+  `stuttgart`, `duesseldorf`, `leipzig`, `dresden`, `hannover`, `bremen`,
+  `nuernberg`, `kiel`, `luebeck`, `rostock`, `schwerin`, `potsdam`,
+  `magdeburg`, `erfurt`, `mainz`, `saarbruecken`, `heidelberg`, `freiburg`
+  (Wiesbaden немає: 9 км від Mainz — пальцем не розрізнити).
+- **`ukraine`** — області: `oblast-` + `wolhynien`, `riwne`, `schytomyr`,
+  `kyjiw`, `tschernihiw`, `sumy`, `charkiw`, `luhansk`, `donezk`,
+  `saporischschja`, `cherson`, `mykolajiw`, `odesa`, `dnipropetrowsk`,
+  `poltawa`, `tscherkassy`, `kirowohrad`, `winnyzja`, `chmelnyzkyj`,
+  `ternopil`, `lwiw`, `iwano-frankiwsk`, `transkarpatien`, `tscherniwzi`;
+  а також `krim`, `kyjiw` (місто), `sewastopol`. Річки: `dnipro-fluss`,
+  `dnister`, `desna`, `suedlicher-bug`, `siwerskyj-donez`, `prypjat`,
+  `donau`. Міста: `kyjiw`, `lwiw`, `charkiw`, `odesa`, `dnipro`,
+  `saporischschja`, `donezk`, `luhansk`, `mykolajiw`, `cherson`, `poltawa`,
+  `tschernihiw`, `sumy`, `schytomyr`, `winnyzja`, `tscherkassy`,
+  `kropywnyzkyj`, `chmelnyzkyj`, `ternopil`, `iwano-frankiwsk`,
+  `tscherniwzi`, `uschhorod`, `riwne`, `luzk`, `simferopol`, `sewastopol`.
+- Місто й земля з тим самим id (`berlin`, `hamburg`, `bremen`, `kyjiw`,
+  `sewastopol`) — зараховується будь-яке; саме одне — поле `kind`.
+- Нове місто чи річка — у проєкті техпідтримки (перезбирання карти).
 
 ## Звіт для вчителя (PDF для Google Classroom)
 

@@ -991,6 +991,29 @@ function buildTable(containerId, data){
    ===================================================================== */
 const exReducedMotion = () => window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+/* Програти mp3 або фрагмент спільного mp3 (buildChat, buildPicture).
+   a = "audio/x.mp3" або {src: "audio/dialog.mp3", from: 3.2, to: 6.8} (секунди).
+   Один плеєр на сторінку: новий запуск зупиняє попередній. */
+function exPlayClip(a, btn){
+  const src = typeof a === 'string' ? a : a.src;
+  const from = (typeof a === 'object' && a.from) || 0, to = (typeof a === 'object' && a.to != null) ? a.to : null;
+  const audio = exPlayClip.audio || (exPlayClip.audio = new Audio());
+  audio.pause();
+  if(audio._src !== src){ audio.src = src; audio._src = src; }
+  audio.ontimeupdate = to != null ? () => { if(audio.currentTime >= to) audio.pause(); } : null;
+  const go = () => {
+    try { audio.currentTime = from; } catch(_) {}
+    audio.play().catch(() => { if(btn){ btn.textContent = '⚠'; btn.title = 'Аудіо не завантажилось'; } });
+  };
+  // позицію фрагмента можна ставити лише після завантаження метаданих
+  if(audio.readyState >= 1) go();
+  else {
+    audio.addEventListener('loadedmetadata', go, {once: true});
+    audio.addEventListener('error', () => { if(btn){ btn.textContent = '⚠'; btn.title = 'Аудіо не завантажилось'; } }, {once: true});
+    audio.load();
+  }
+}
+
 /* ---------- A1. Діалог-чат (buildChat) ----------
    Репліки бульбашками: ліворуч співрозмовник, праворуч учень. На кроці
    учня — 2–3 варіанти; вибір доречної → бульбашка, діалог іде далі.
@@ -1038,15 +1061,7 @@ function buildChat(containerId, data){
   const updScore = () => { scoreEl.textContent = solvedFirst + ' / ' + youSteps.length + ' richtig (1. Versuch zählt)'; };
   updScore();
 
-  function playClip(a, btn){
-    const src = typeof a === 'string' ? a : a.src;
-    const audio = playClip.audio || (playClip.audio = new Audio());
-    if(audio._src !== src){ audio.src = src; audio._src = src; }
-    audio.pause();
-    audio.ontimeupdate = (typeof a === 'object' && a.to != null) ? () => { if(audio.currentTime >= a.to) audio.pause(); } : null;
-    audio.currentTime = (typeof a === 'object' && a.from) || 0;
-    audio.play().catch(() => { btn.textContent = '⚠'; btn.title = 'Аудіо не завантажилось'; });
-  }
+  const playClip = exPlayClip;
   function bubble(who, text, step){
     const m = document.createElement('div');
     m.className = 'chat-msg ' + who;
@@ -1400,6 +1415,655 @@ function buildScramble(containerId, items){
   bar.className = 'check-bar';
   bar.appendChild(scoreEl); updScore();
   wrap.appendChild(bar);
+}
+
+/* =====================================================================
+   НОВІ ФОРМАТИ ВПРАВ — етап 3 (з 2026-10-24)
+   buildSpeak · buildClock · buildHotspot (+ карти assets/svg/) · buildPicture
+   Ті самі спільні правила, що й в етапах 1–2.
+   ===================================================================== */
+// тека assets/ — звідси buildHotspot сам довантажує карти (assets/svg/<назва>.js)
+const LI_ASSETS = (document.currentScript && document.currentScript.src) ? document.currentScript.src.replace(/[^/]*$/, '') : '';
+
+/* ---------- A3. Говоріння з розпізнаванням мови (buildSpeak) ----------
+   Учень натискає 🎤 і вимовляє фразу; браузер розпізнає мовлення (de-DE),
+   функція порівнює почуте з цільовим текстом і показує, що почув браузер.
+     buildSpeak('ub5-speak', [
+       {say: "Meine Großeltern wohnen in Lwiw.", uk: "Мої бабуся й дідусь живуть у Львові."},
+       {say: "Ich habe einen Bruder|Ich hab einen Bruder", prompt: "Скажи, що в тебе є брат."},
+       {say: "Ich bin zwölf|Ich bin 12"}
+     ]);
+   - say — що сказати; кілька допустимих варіантів через "|". Числа браузер
+     часто пише цифрами — додай варіант з цифрами ("zwölf|12").
+   - uk — (необов'язково) переклад під фразою.
+   - prompt — (необов'язково) завдання замість фрази: тоді say НЕ
+     показується (учень сам будує фразу), а після трьох невдач — теж ні.
+   - третій аргумент (необов'язково): {min: 0.8} — частка слів фрази, яку
+     треба вимовити (типово 80 %), {tries: 3} — кількість спроб.
+   Порівняння: без регістру й розділових знаків, ß = ss; зайвими можуть
+   бути щонайбільше ~30 % слів (мінімум одне).
+   БАЛ: +1, якщо фразу розпізнано в межах 3 спроб (і в контрольній теж) —
+   помилка розпізнавання часто не помилка учня (шум, мікрофон), а
+   підглянути відповідь тут нема де. «Нічого не почуто» й збій зв'язку
+   спробу не забирають. У звіт — що почув браузер у кожній спробі.
+   Браузери: Chrome, Edge, Android — так; Safari — частково; Firefox — ні.
+   Без підтримки (або якщо мікрофон заборонено) — блок «Скажи вголос» зі
+   зразком, без балу (ці пункти не рахуються в загальну кількість). */
+function spkWords(s){
+  return String(s || '').toLowerCase().replace(/ß/g, 'ss').replace(/[’'`-]/g, ' ')
+    .replace(/[^\p{L}\p{N}\s]/gu, ' ').split(/\s+/).filter(Boolean);
+}
+function spkLcs(a, b){
+  const dp = Array(b.length + 1).fill(0);
+  for(let i = 1; i <= a.length; i++){
+    let prev = 0;
+    for(let j = 1; j <= b.length; j++){
+      const tmp = dp[j];
+      dp[j] = a[i - 1] === b[j - 1] ? prev + 1 : Math.max(dp[j], dp[j - 1]);
+      prev = tmp;
+    }
+  }
+  return dp[b.length];
+}
+// чи збігається почуте (heard) з одним із варіантів цілі (target "a|b")
+function spkMatch(target, heard, min){
+  const h = spkWords(heard);
+  if(!h.length) return false;
+  return String(target).split('|').some(alt => {
+    const t = spkWords(alt);
+    if(!t.length) return false;
+    const l = spkLcs(t, h);
+    return l / t.length >= (min || 0.8) && (h.length - l) <= Math.max(1, Math.round(t.length * 0.3));
+  });
+}
+const spkState = {rec: null}; // одне розпізнавання на сторінку за раз
+function buildSpeak(containerId, items, opts){
+  const wrap = document.getElementById(containerId);
+  if(!wrap) return;
+  opts = opts || {};
+  const tries = opts.tries || 3, min = opts.min || 0.8;
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  wrap.classList.add('spk-ex');
+  const first = s => String(s).split('|')[0].trim();
+
+  // без підтримки — «Скажи вголос», без балу
+  function renderOff(note){
+    wrap.innerHTML = '<p class="spk-off-note">' + note + '</p>';
+    items.forEach((it, i) => {
+      const d = document.createElement('div');
+      d.className = 'spk-item spk-off';
+      d.innerHTML = '<p class="spk-text"><span class="num">' + (i + 1) + ')</span> <span class="spk-say"></span></p>'
+        + (it.uk && !it.prompt ? '<p class="spk-uk"></p>' : '')
+        + (it.prompt ? '<button type="button" class="btn small secondary spk-sample">Зразок</button><p class="spk-sample-text" hidden></p>' : '');
+      d.querySelector('.spk-say').textContent = it.prompt || first(it.say);
+      if(d.querySelector('.spk-uk')) d.querySelector('.spk-uk').textContent = it.uk;
+      if(it.prompt){
+        d.querySelector('.spk-sample-text').textContent = first(it.say);
+        d.querySelector('.spk-sample').addEventListener('click', e => { d.querySelector('.spk-sample-text').hidden = false; e.currentTarget.remove(); });
+      }
+      wrap.appendChild(d);
+    });
+  }
+  if(!SR){
+    renderOff('🗣 Скажи кожну фразу вголос. <span class="spk-small">(Твій браузер не вміє розпізнавати мовлення — тут найкраще працюють Chrome, Edge або телефон з Android. Тоді ця вправа перевірятиметься автоматично.)</span>');
+    return;
+  }
+
+  const scored = isScored(containerId);
+  if(scored) setTotal(items.length);
+  wrap.innerHTML = '<p class="spk-privacy">🎤 Натисни «Sprich» і скажи фразу німецькою. Мовлення розпізнає сервіс твого браузера (Google або Apple); наш сайт запис не отримує й не зберігає.</p>';
+  let solvedFirst = 0, blocked = false;
+  const scoreEl = document.createElement('span');
+  scoreEl.className = 'score-pill';
+  const updScore = () => { scoreEl.textContent = solvedFirst + ' / ' + items.length + ' richtig'; };
+  const recs = [];
+
+  items.forEach((it, i) => {
+    const d = document.createElement('div');
+    d.className = 'spk-item';
+    d.innerHTML = (it.hint ? '<p class="order-hint">' + it.hint + '</p>' : '')
+      + '<p class="spk-text"><span class="num">' + (i + 1) + ')</span> <span class="spk-say"></span></p>'
+      + (it.uk && !it.prompt ? '<p class="spk-uk"></p>' : '')
+      + '<div class="spk-tools"><button type="button" class="btn spk-mic"><span aria-hidden="true">🎤</span> Sprich</button><span class="spk-tries"></span></div>'
+      + '<p class="spk-heard" aria-live="polite"></p><p class="feedback"></p>';
+    const sayEl = d.querySelector('.spk-say');
+    if(it.prompt){ sayEl.textContent = it.prompt; sayEl.classList.add('is-prompt'); } else sayEl.textContent = first(it.say);
+    if(d.querySelector('.spk-uk')) d.querySelector('.spk-uk').textContent = it.uk;
+    const mic = d.querySelector('.spk-mic'), triesEl = d.querySelector('.spk-tries');
+    const heardEl = d.querySelector('.spk-heard'), fb = d.querySelector('.feedback');
+    const rec = {item: it, heard: [], ok: false, done: false};
+    recs.push(rec); d._spk = rec;
+    const say = (t, ok) => { fb.textContent = t; fb.className = 'feedback' + (ok === true ? ' ok' : ok === false ? ' bad' : ''); };
+    const updTries = () => { triesEl.textContent = rec.done ? '' : 'Versuch ' + Math.min(rec.heard.length + 1, tries) + ' / ' + tries; };
+    updTries();
+
+    function finish(ok){
+      rec.done = true; rec.ok = ok;
+      d.classList.add(ok ? 'is-solved' : 'is-closed');
+      mic.disabled = true; updTries();
+      if(ok){ if(scored) markDone(1); solvedFirst++; updScore(); }
+    }
+    mic.addEventListener('click', () => {
+      if(rec.done || blocked) return;
+      if(spkState.rec){ try { spkState.rec.abort(); } catch(_) {} }
+      const r = new SR();
+      spkState.rec = r;
+      r.lang = 'de-DE'; r.interimResults = false; r.continuous = false; r.maxAlternatives = 5;
+      let got = false;
+      d.classList.add('is-listening'); mic.innerHTML = '<span aria-hidden="true">●</span> Ich höre zu …';
+      say('');
+      r.onresult = e => {
+        got = true;
+        const alts = Array.from(e.results[0] || []).map(a => a.transcript.trim()).filter(Boolean);
+        if(!alts.length) return;
+        const hit = alts.find(a => spkMatch(it.say, a, min));
+        const shown = hit || alts[0];
+        rec.heard.push(shown);
+        heardEl.innerHTML = 'Gehört: «<span></span>»';
+        heardEl.querySelector('span').textContent = shown;
+        if(hit){ say('Richtig! ✓', true); finish(true); }
+        else if(rec.heard.length >= tries){ say('Leider nicht erkannt ✗', false); finish(false); }
+        else { say('Noch nicht — sprich deutlich und versuch es noch mal.', false); updTries(); }
+      };
+      r.onerror = e => {
+        got = true;
+        const err = e.error;
+        if(err === 'not-allowed' || err === 'service-not-allowed'){ blockAll(); return; }
+        if(err === 'no-speech') say('Нічого не почуто — натисни 🎤 і говори одразу.', false);
+        else if(err === 'audio-capture') say('Мікрофон не знайдено.', false);
+        else if(err === 'network') say('Немає зв\'язку з сервісом розпізнавання — перевір інтернет і спробуй ще раз.', false);
+        else if(err !== 'aborted') say('Не вийшло розпізнати — спробуй ще раз.', false);
+      };
+      r.onend = () => {
+        d.classList.remove('is-listening');
+        if(!rec.done) mic.innerHTML = '<span aria-hidden="true">🎤</span> Sprich';
+        else mic.innerHTML = rec.ok ? '✓' : '✗';
+        if(spkState.rec === r) spkState.rec = null;
+        if(!got && !rec.done) say('Нічого не почуто — натисни 🎤 і говори одразу.', false);
+      };
+      try { r.start(); } catch(_) { d.classList.remove('is-listening'); mic.innerHTML = '<span aria-hidden="true">🎤</span> Sprich'; }
+    });
+    wrap.appendChild(d);
+  });
+  // мікрофон заборонено: ще не пройдені фрази — «скажи вголос», з загальної кількості їх прибираємо
+  function blockAll(){
+    if(blocked) return;
+    blocked = true;
+    const left = recs.filter(r => !r.done && !r.heard.length).length;
+    wrap.querySelectorAll('.spk-item').forEach(el => {
+      if(!el._spk.done && !el._spk.heard.length){ el.classList.add('spk-off'); el.querySelector('.spk-mic').disabled = true; }
+    });
+    const note = document.createElement('p');
+    note.className = 'feedback bad';
+    note.textContent = 'Доступ до мікрофона заборонено. Дозволь його в налаштуваннях сайту в браузері й онови сторінку — або просто скажи фрази вголос.';
+    wrap.insertBefore(note, wrap.children[1] || null);
+    if(scored && left){ progress.total -= left; renderProgress(); }
+  }
+  const bar = document.createElement('div');
+  bar.className = 'check-bar';
+  bar.appendChild(scoreEl); updScore();
+  wrap.appendChild(bar);
+}
+
+/* ---------- B1. Годинник (buildClock) ----------
+   Аналоговий годинник (SVG). Три види пунктів, можна змішувати:
+     buildClock('ub3-uhr', [
+       {time: "15:15", opts: ["Viertel nach drei", "Viertel vor drei", "halb vier"], correct: "Viertel nach drei"},
+       {time: "7:30"},                                  // учень пише час сам
+       {set: "Viertel vor acht", time: "7:45"}         // учень ставить стрілки
+     ]);
+   - time — час "H:MM" (0–23 год).
+   - opts + correct — вибір з варіантів (як квіз; перемішуються самі).
+   - лише time (без opts) — учень пише час. Зараховується САМО будь-яке
+     правильне написання: розмовне («Viertel nach drei», «viertel vier»,
+     «zehn vor halb vier», «drei Uhr» / «drei»), офіційне («fünfzehn Uhr
+     fünfzehn», «drei Uhr fünfzehn») і цифрами («15:15», «3.15»). Свої
+     варіанти — ans: "…|…"; лише свої (без автоматичних) — auto: false.
+     Розмовні форми — для кратних 5 хвилин.
+   - set — завдання словами; учень ставить стрілки кнопками −1 h / +1 h /
+     −5 min / +5 min і натискає «Prüfen». Годинник 12-годинний: 15:15 = 3:15.
+     step: 1 — кнопки ±1 хв замість ±5.
+   - hint — (необов'язково) підказка.
+   Кожен пункт = +1, перша спроба; у контрольній — одна спроба. */
+const CLK_NUM = ['null', 'eins', 'zwei', 'drei', 'vier', 'fünf', 'sechs', 'sieben', 'acht', 'neun', 'zehn', 'elf', 'zwölf',
+  'dreizehn', 'vierzehn', 'fünfzehn', 'sechzehn', 'siebzehn', 'achtzehn', 'neunzehn'];
+function clkNumWord(n){
+  if(n < 20) return CLK_NUM[n];
+  const tens = ['', '', 'zwanzig', 'dreißig', 'vierzig', 'fünfzig'][Math.floor(n / 10)], u = n % 10;
+  return u ? (u === 1 ? 'ein' : CLK_NUM[u]) + 'und' + tens : tens;
+}
+function clkParse(t){ const m = String(t).match(/(\d{1,2})\s*[:.]\s*(\d{2})/); return m ? {H: +m[1] % 24, M: +m[2] % 60} : {H: 0, M: 0}; }
+function clkFmt(H, M){ return H + ':' + String(M).padStart(2, '0'); }
+// усі правильні написання часу (розмовне, офіційне, цифри)
+function clkVariants(H, M){
+  const v = [];
+  const h12 = H % 12 || 12, next = h12 % 12 + 1;
+  const hw = n => CLK_NUM[n];
+  const offH = h => h === 1 ? 'ein' : clkNumWord(h);
+  [H, h12, (H === 0 && M === 0) ? 24 : -1].filter((x, i, a) => x >= 0 && a.indexOf(x) === i).forEach(h => {
+    v.push(clkFmt(h, M));
+    v.push(offH(h) + ' Uhr' + (M ? ' ' + clkNumWord(M) : ''));
+  });
+  if(M % 5 === 0){
+    const c = {
+      0: [h12 === 1 ? 'ein Uhr' : hw(h12) + ' Uhr', hw(h12)],
+      5: ['fünf nach ' + hw(h12)], 10: ['zehn nach ' + hw(h12)],
+      15: ['Viertel nach ' + hw(h12), 'viertel ' + hw(next)],
+      20: ['zwanzig nach ' + hw(h12), 'zehn vor halb ' + hw(next)],
+      25: ['fünf vor halb ' + hw(next)], 30: ['halb ' + hw(next)], 35: ['fünf nach halb ' + hw(next)],
+      40: ['zwanzig vor ' + hw(next), 'zehn nach halb ' + hw(next)],
+      45: ['Viertel vor ' + hw(next), 'drei viertel ' + hw(next), 'dreiviertel ' + hw(next)],
+      50: ['zehn vor ' + hw(next)], 55: ['fünf vor ' + hw(next)]
+    }[M];
+    v.push.apply(v, c);
+  }
+  if(M === 0 && (H === 0 || H === 24)) v.push('Mitternacht');
+  if(M === 0 && H === 12) v.push('Mittag');
+  return v;
+}
+function clkNorm(s){
+  let v = normAns(s);
+  const m = v.match(/^(\d{1,2})\s*[:.h]\s*(\d{2})(\s*uhr)?$/) || v.match(/^(\d{1,2})()\s*uhr$/);
+  if(m) v = (+m[1]) + ':' + (m[2] || '00');
+  return v;
+}
+function clkSvg(){
+  const NS = 'http://www.w3.org/2000/svg';
+  const svg = document.createElementNS(NS, 'svg');
+  svg.setAttribute('viewBox', '0 0 200 200'); svg.setAttribute('class', 'clk-face'); svg.setAttribute('aria-hidden', 'true');
+  let s = '<circle cx="100" cy="100" r="94" class="clk-rim"/>';
+  for(let i = 0; i < 60; i++){
+    const a = i * 6 * Math.PI / 180, r1 = 88, r2 = i % 5 ? 84 : 77;
+    s += '<line class="' + (i % 5 ? 'clk-tick' : 'clk-tick5') + '" x1="' + (100 + r1 * Math.sin(a)).toFixed(1) + '" y1="' + (100 - r1 * Math.cos(a)).toFixed(1)
+      + '" x2="' + (100 + r2 * Math.sin(a)).toFixed(1) + '" y2="' + (100 - r2 * Math.cos(a)).toFixed(1) + '"/>';
+  }
+  for(let n = 1; n <= 12; n++){
+    const a = n * 30 * Math.PI / 180;
+    s += '<text class="clk-num" x="' + (100 + 64 * Math.sin(a)).toFixed(1) + '" y="' + (100 - 64 * Math.cos(a) + 6).toFixed(1) + '">' + n + '</text>';
+  }
+  s += '<line class="clk-h" x1="100" y1="100" x2="100" y2="54"/><line class="clk-m" x1="100" y1="100" x2="100" y2="24"/><circle class="clk-c" cx="100" cy="100" r="5"/>';
+  svg.innerHTML = s;
+  return svg;
+}
+function clkSet(svg, mins){ // mins — хвилини від 0:00
+  const m = ((mins % 720) + 720) % 720;
+  svg.querySelector('.clk-h').setAttribute('transform', 'rotate(' + (m * 0.5) + ' 100 100)');
+  svg.querySelector('.clk-m').setAttribute('transform', 'rotate(' + ((m % 60) * 6) + ' 100 100)');
+}
+function buildClock(containerId, items){
+  const wrap = document.getElementById(containerId);
+  if(!wrap) return;
+  const scored = isScored(containerId), lockedMode = isLocked(containerId);
+  if(scored) setTotal(items.length);
+  wrap.classList.add('clk-ex');
+  let solvedFirst = 0;
+  const scoreEl = document.createElement('span');
+  scoreEl.className = 'score-pill';
+  const updScore = () => { scoreEl.textContent = solvedFirst + ' / ' + items.length + ' richtig (1. Versuch zählt)'; };
+  const grid = document.createElement('div');
+  grid.className = 'clk-grid';
+  wrap.appendChild(grid);
+
+  items.forEach((it, qi) => {
+    const t = clkParse(it.time);
+    const mode = it.set ? 'set' : (it.opts ? 'opts' : 'write');
+    const div = document.createElement('div');
+    div.className = 'clk-item clk-' + mode;
+    div.innerHTML = '<p class="clk-head"><span class="num">' + (qi + 1) + ')</span> <span class="clk-prompt"></span></p>'
+      + (it.hint ? '<p class="order-hint">' + it.hint + '</p>' : '');
+    const prompt = div.querySelector('.clk-prompt');
+    prompt.textContent = mode === 'set' ? it.set : (mode === 'opts' ? 'Wie spät ist es?' : 'Wie spät ist es? Schreib die Uhrzeit.');
+    const svg = clkSvg();
+    div.appendChild(svg);
+    const fb = document.createElement('p'); fb.className = 'feedback';
+    let done = false;
+    const say = (txt, ok) => { fb.textContent = txt; fb.className = 'feedback ' + (ok ? 'ok' : 'bad'); };
+    function record(desc, ok){
+      if('firstOk' in div.dataset) return;
+      div.dataset.first = desc; div.dataset.firstOk = ok ? '1' : '0'; // для звіту вчителю
+      if(ok){ if(scored) markDone(1); solvedFirst++; updScore(); }
+    }
+    const close = solved => { done = true; div.classList.add(solved ? 'is-solved' : 'is-closed'); div.querySelectorAll('button, input').forEach(b => b.disabled = true); };
+
+    if(mode === 'set'){
+      let cur = 0; clkSet(svg, cur);
+      const step = it.step || 5;
+      const tools = document.createElement('div');
+      tools.className = 'clk-tools';
+      [['−1 h', -60], ['+1 h', 60], ['−' + step + ' min', -step], ['+' + step + ' min', step]].forEach(([lbl, d]) => {
+        const b = document.createElement('button');
+        b.type = 'button'; b.className = 'btn small secondary clk-adj'; b.textContent = lbl;
+        b.addEventListener('click', () => { if(done) return; cur = (cur + d + 720) % 720; clkSet(svg, cur); fb.textContent = ''; });
+        tools.appendChild(b);
+      });
+      const go = document.createElement('button');
+      go.type = 'button'; go.className = 'btn small clk-go'; go.textContent = 'Prüfen';
+      go.addEventListener('click', () => {
+        if(done) return;
+        const ok = cur === (t.H * 60 + t.M) % 720;
+        record(clkFmt(Math.floor(cur / 60) || 12, cur % 60), ok);
+        if(ok){ say('Richtig! ✓', true); close(true); }
+        else if(lockedMode){ say('Leider falsch ✗', false); close(false); }
+        else say('Noch nicht — stell die Uhr anders.', false);
+      });
+      tools.appendChild(go);
+      div.appendChild(tools);
+    } else {
+      clkSet(svg, t.H * 60 + t.M);
+      svg.setAttribute('aria-hidden', 'false'); svg.setAttribute('role', 'img'); svg.setAttribute('aria-label', 'Uhr');
+      if(mode === 'opts'){
+        const box = document.createElement('div');
+        box.className = 'quiz-opts clk-opts';
+        shuffleArray(it.opts).forEach(o => {
+          const b = document.createElement('button');
+          b.type = 'button'; b.className = 'opt-btn'; b.textContent = o;
+          b.addEventListener('click', () => {
+            if(done) return;
+            const ok = o === it.correct;
+            box.querySelectorAll('.opt-btn').forEach(x => x.classList.remove('wrong'));
+            b.classList.add(ok ? 'correct' : 'wrong');
+            record(o, ok);
+            if(ok){ say('Richtig! ✓', true); close(true); }
+            else if(lockedMode){ say('Leider falsch ✗', false); close(false); }
+            else say('Nicht ganz — versuch es noch mal.', false);
+          });
+          box.appendChild(b);
+        });
+        div.appendChild(box);
+      } else {
+        const accept = (it.ans ? String(it.ans).split('|') : []).concat(it.auto === false ? [] : clkVariants(t.H, t.M)).map(clkNorm);
+        const row = document.createElement('div');
+        row.className = 'clk-write';
+        row.innerHTML = '<input type="text" class="blank-input clk-in" autocomplete="off" spellcheck="false" placeholder="Es ist …" aria-label="Uhrzeit">'
+          + '<button type="button" class="btn small">OK</button>';
+        const inp = row.querySelector('input'), ok = row.querySelector('button');
+        const check = () => {
+          if(done) return;
+          let v = inp.value.trim().replace(/^es ist\s+/i, '');
+          if(!v) return;
+          const good = accept.includes(clkNorm(v));
+          inp.classList.remove('correct', 'wrong'); inp.classList.add(good ? 'correct' : 'wrong');
+          record(inp.value.trim(), good);
+          if(good){ say('Richtig! ✓', true); close(true); }
+          else if(lockedMode){ say('Leider falsch ✗', false); close(false); }
+          else say('Noch nicht richtig — versuch es noch mal.', false);
+        };
+        ok.addEventListener('click', check);
+        inp.addEventListener('keydown', e => { if(e.key === 'Enter'){ e.preventDefault(); check(); } });
+        div.appendChild(row);
+      }
+    }
+    div.appendChild(fb);
+    grid.appendChild(div);
+  });
+  const bar = document.createElement('div');
+  bar.className = 'check-bar';
+  bar.appendChild(scoreEl); updScore();
+  wrap.appendChild(bar);
+}
+
+/* ---------- B2. Зображення з активними зонами (buildHotspot) ----------
+   Карта (або інша SVG-основа) + завдання «Klick auf …»: учень тапає зону.
+     buildHotspot('ub3-map', {
+       svg: 'deutschland',
+       tasks: [{q: "Wo liegt Hamburg?", zone: "hamburg"}, {q: "Wo liegt Bayern?", zone: "bayern"},
+               {q: "Wo fließt der Rhein?", zone: "rhein"}]
+     });
+   - svg — 'deutschland' або 'ukraine' (власні карти в assets/svg/, див.
+     README «Типи вправ» → список зон); файл карти довантажується сам. Для
+     превʼю в проєктах генерації краще підключити його явно ще одним
+     <script> (assets/svg/deutschland.js) ПЕРЕД lesson-interactions.js.
+     Можна й своє: 'шлях/до/файлу.svg' (лише на сайті, не з диска) або
+     рядок '<svg …>'. Зони в SVG — елементи з class="hs-zone",
+     data-zone="id", data-name="назва" (+ data-uk); міста — <g class="hs-zone
+     hs-city" transform="translate(x y)">, річки — class="hs-zone hs-river".
+   - tasks — по одному завданню на екрані; zone — id зони (для міста й землі
+     з тим самим ім'ям, напр. hamburg, — зараховується будь-яке з двох);
+     kind — (необов'язково) 'city' | 'region' | 'river', якщо треба саме
+     місто чи саме землю: {q: "Wo liegt das Bundesland Hamburg?", zone: "hamburg", kind: "region"}.
+   - label — підпис знайденої зони: 'de' (типово), 'uk' або 'none'.
+   Міста легко влучити пальцем: зараховується найближче місто до точки
+   дотику. Точки міст видно, лише якщо серед завдань є місто (або
+   cities: true). Неправильний тап — зона блимає червоним і показує свою
+   назву; правильна НЕ показується. Після 3 невдач з'являється «Далі ›».
+   Кожне завдання = +1, перша спроба; у контрольній — одна спроба. */
+const hsMaps = {};
+function hsLoadMap(name){
+  if(/^\s*</.test(name)) return Promise.resolve(name);
+  if(hsMaps[name]) return hsMaps[name];
+  hsMaps[name] = new Promise((res, rej) => {
+    if(window.HOTSPOT_SVG && window.HOTSPOT_SVG[name]) return res(window.HOTSPOT_SVG[name]);
+    if(/\.svg(\?|#|$)/i.test(name)) return fetch(name).then(r => r.ok ? r.text() : Promise.reject(new Error(r.status))).then(res, rej);
+    if(!LI_ASSETS) return rej(new Error('assets?'));
+    const s = document.createElement('script');
+    s.src = LI_ASSETS + 'svg/' + encodeURIComponent(name) + '.js';
+    s.onload = () => (window.HOTSPOT_SVG && window.HOTSPOT_SVG[name]) ? res(window.HOTSPOT_SVG[name]) : rej(new Error('empty'));
+    s.onerror = () => rej(new Error('load'));
+    document.head.appendChild(s);
+  });
+  hsMaps[name].catch(() => { delete hsMaps[name]; });
+  return hsMaps[name];
+}
+function buildHotspot(containerId, data){
+  const wrap = document.getElementById(containerId);
+  if(!wrap) return;
+  const tasks = data.tasks || [];
+  const scored = isScored(containerId), lockedMode = isLocked(containerId);
+  if(scored) setTotal(tasks.length);
+  const label = data.label || 'de';
+  wrap.classList.add('hs-ex');
+  wrap.innerHTML = '<div class="hs-task"><span class="hs-step"></span> <b class="hs-q"></b></div>'
+    + '<div class="hs-stage"><p class="hs-loading">Karte wird geladen …</p></div>'
+    + '<div class="hs-under"><p class="feedback" aria-live="polite"></p><button type="button" class="btn small secondary hs-skip" hidden>Weiter ›</button></div>'
+    + '<div class="check-bar"><span class="score-pill"></span></div>';
+  const stage = wrap.querySelector('.hs-stage'), qEl = wrap.querySelector('.hs-q'), stepEl = wrap.querySelector('.hs-step');
+  const fb = wrap.querySelector('.feedback'), skip = wrap.querySelector('.hs-skip'), scoreEl = wrap.querySelector('.score-pill');
+  // для звіту: по завданню — що тапнув учень першою спробою
+  wrap._hs = tasks.map(t => ({q: t.q, first: null, firstOk: null, solved: false}));
+  let solvedFirst = 0, cur = 0, misses = 0, svg = null;
+  const updScore = () => { scoreEl.textContent = solvedFirst + ' / ' + tasks.length + ' richtig (1. Versuch zählt)'; };
+  updScore();
+  const say = (t, ok) => { fb.textContent = t; fb.className = 'feedback' + (ok === true ? ' ok' : ok === false ? ' bad' : ''); };
+  const nameOf = el => (label === 'uk' && el.dataset.uk) ? el.dataset.uk : (el.dataset.name || el.dataset.zone);
+
+  function addLabel(el){
+    if(label === 'none' || el.querySelector && el._hsLabel) return;
+    let x, y, anchor = 'middle';
+    if(el.classList.contains('hs-city')){
+      x = +el.dataset.x + 8; y = +el.dataset.y + 4; anchor = 'start';
+      const vb = svg.viewBox.baseVal;
+      if(x > vb.width * 0.78){ x = +el.dataset.x - 8; anchor = 'end'; }
+    } else if(el.classList.contains('hs-river')){
+      const p = el.querySelector('path'); const L = p.getTotalLength(); const pt = p.getPointAtLength(L * 0.45);
+      x = pt.x + 6; y = pt.y - 6; anchor = 'start';
+    } else {
+      const b = el.getBBox(); x = b.x + b.width / 2; y = b.y + b.height / 2 + 4;
+    }
+    const t = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    t.setAttribute('class', 'hs-label'); t.setAttribute('x', x.toFixed(1)); t.setAttribute('y', y.toFixed(1)); t.setAttribute('text-anchor', anchor);
+    t.textContent = nameOf(el);
+    svg.appendChild(t);
+    el._hsLabel = t;
+  }
+  const zonesById = id => svg ? Array.from(svg.querySelectorAll('.hs-zone')).filter(z => z.dataset.zone === id) : [];
+  function kindOf(id, kind){
+    if(kind) return kind === 'region' ? 'area' : kind;
+    const z = zonesById(id);
+    if(z.some(e => e.classList.contains('hs-city'))) return 'city';
+    if(z.some(e => e.classList.contains('hs-river'))) return 'river';
+    return 'area';
+  }
+  function show(){
+    misses = 0; skip.hidden = true;
+    if(cur >= tasks.length){
+      qEl.textContent = 'Fertig!'; stepEl.textContent = '';
+      wrap.classList.add('is-done'); stage.className = 'hs-stage';
+      return;
+    }
+    stepEl.textContent = (cur + 1) + ' / ' + tasks.length;
+    qEl.textContent = tasks[cur].q;
+    stage.className = 'hs-stage hs-mode-' + kindOf(tasks[cur].zone, tasks[cur].kind) + (stage.classList.contains('hs-no-cities') ? ' hs-no-cities' : '');
+  }
+  // точка дотику в координатах SVG
+  function svgPoint(e){
+    const p = svg.createSVGPoint(); p.x = e.clientX; p.y = e.clientY;
+    return p.matrixTransform(svg.getScreenCTM().inverse());
+  }
+  function resolve(e){
+    const kind = kindOf(tasks[cur].zone, tasks[cur].kind);
+    if(kind === 'city'){
+      const pt = svgPoint(e);
+      let best = null, bd = Infinity;
+      svg.querySelectorAll('.hs-city').forEach(c => {
+        const d = Math.hypot(+c.dataset.x - pt.x, +c.dataset.y - pt.y);
+        if(d < bd){ bd = d; best = c; }
+      });
+      const R = svg.viewBox.baseVal.width * 0.06; // ≈ 36 одиниць на карті шириною 600
+      if(best && bd <= R) return best;
+    }
+    const el = e.target.closest && e.target.closest('.hs-zone');
+    return el && svg.contains(el) ? el : null;
+  }
+  function onTap(e){
+    if(cur >= tasks.length) return;
+    const el = resolve(e);
+    if(!el) return; // тап по морю / поза картою — не спроба
+    const task = tasks[cur], r = wrap._hs[cur];
+    const want = kindOf(task.zone, task.kind);
+    const elKind = el.classList.contains('hs-city') ? 'city' : el.classList.contains('hs-river') ? 'river' : 'area';
+    // місто й земля з однаковим id (hamburg, berlin…) — зараховується будь-яке, якщо kind не задано
+    const ok = el.dataset.zone === task.zone && (!task.kind || elKind === want);
+    if(r.first === null){
+      r.first = nameOf(el); r.firstOk = ok;
+      if(ok){ if(scored) markDone(1); solvedFirst++; updScore(); }
+    }
+    if(ok){
+      r.solved = true;
+      zonesById(task.zone).forEach(z => z.classList.add('hs-found'));
+      addLabel(el);
+      say('Richtig! ✓', true);
+      cur++;
+      setTimeout(show, exReducedMotion() ? 200 : 700);
+    } else {
+      el.classList.add('hs-miss'); setTimeout(() => el.classList.remove('hs-miss'), 800);
+      if(lockedMode){
+        say('Leider falsch ✗', false);
+        cur++; setTimeout(show, 900);
+      } else {
+        misses++;
+        say('Nein, das ist ' + nameOf(el) + '. Versuch es noch mal.', false);
+        if(misses >= 3) skip.hidden = false;
+      }
+    }
+  }
+  skip.addEventListener('click', () => { say(''); cur++; show(); });
+
+  hsLoadMap(data.svg).then(src => {
+    stage.innerHTML = src;
+    svg = stage.querySelector('svg');
+    if(!svg) throw new Error('no svg');
+    const needCity = data.cities || tasks.some(t => kindOf(t.zone, t.kind) === 'city');
+    if(!needCity) stage.classList.add('hs-no-cities');
+    wrap.classList.toggle('hs-no-cities', !needCity);
+    svg.addEventListener('click', onTap);
+    show();
+  }).catch(() => {
+    stage.innerHTML = '<p class="feedback bad">Карта не завантажилась. Онови сторінку.</p>';
+    if(scored){ progress.total -= tasks.length; renderProgress(); }
+    wrap._hs = [];
+  });
+}
+
+/* ---------- B4. Вибір картинки (buildPicture) ----------
+   Слово чи речення → вибрати одну з 3–4 картинок; або навпаки — картинка
+   → вибрати слово; або аудіо → картинка («Was hörst du?»).
+     buildPicture('ub2-pic', [
+       {q: "der Apfel", opts: ["🍎", "🍌", "🍐"], correct: "🍎"},
+       {pic: "☔", opts: ["Es regnet.", "Es schneit.", "Die Sonne scheint."], correct: "Es regnet."},
+       {audio: "audio/l2-c-wetter.mp3", opts: ["☀️", "🌧️", "❄️"], correct: "🌧️"},
+       {q: "die Jacke", opts: [{src: "../../assets/pics/jacke.svg", alt: "Jacke"}, …], correct: "Jacke"}
+     ]);
+   - q — слово/речення; pic — картинка-завдання; audio — mp3 або фрагмент
+     {src, from, to} (кнопка ▶). Можна поєднувати (audio + q).
+   - opts — емодзі, текст або власні картинки {src, alt}; перемішуються
+     самі. correct — той самий рядок (для картинки — її alt або src).
+   - Власні картинки — лише свої або з вільною ліцензією, у assets/pics/.
+   Емодзі на різних пристроях виглядають трохи по-різному — це нормально.
+   Кожен пункт = +1, перша спроба; у контрольній — одна спроба. */
+function picIsImg(o){ return typeof o === 'object' || /\.(svg|png|jpe?g|webp|gif)(\?|$)/i.test(String(o)); }
+function picKey(o){ return typeof o === 'object' ? (o.alt || o.src) : String(o); }
+function picFill(el, o, big){
+  if(picIsImg(o)){
+    const img = document.createElement('img');
+    img.src = typeof o === 'object' ? o.src : o; img.alt = typeof o === 'object' ? (o.alt || '') : ''; img.loading = 'lazy';
+    el.appendChild(img);
+  } else {
+    const span = document.createElement('span');
+    span.className = /[\p{Extended_Pictographic}]/u.test(o) && String(o).length <= 8 ? 'pic-emoji' : 'pic-word';
+    span.textContent = o;
+    el.appendChild(span);
+  }
+  if(big) el.classList.add('pic-big');
+}
+function buildPicture(containerId, items){
+  const wrap = document.getElementById(containerId);
+  if(!wrap) return;
+  const scored = isScored(containerId), lockedMode = isLocked(containerId);
+  if(scored) setTotal(items.length);
+  wrap.classList.add('pic-ex');
+  items.forEach((it, qi) => {
+    const div = document.createElement('div');
+    div.className = 'quiz-q pic-q';
+    const qp = document.createElement('div');
+    qp.className = 'q-text pic-prompt';
+    qp.appendChild(Object.assign(document.createElement('span'), {className: 'num', textContent: (qi + 1) + '. '}));
+    if(it.audio){
+      const b = document.createElement('button');
+      b.type = 'button'; b.className = 'pic-play'; b.setAttribute('aria-label', 'Послухати'); // ▶ — з CSS, щоб не потрапляв у текст звіту
+      b.addEventListener('click', () => exPlayClip(it.audio, b));
+      qp.appendChild(b);
+    }
+    if(it.pic){ const p = document.createElement('span'); p.className = 'pic-task'; picFill(p, it.pic, true); qp.appendChild(p); }
+    if(it.q){ const s = document.createElement('span'); s.className = 'pic-q-text'; s.textContent = it.q; qp.appendChild(s); }
+    if(!it.q && !it.pic && it.audio){ const s = document.createElement('span'); s.className = 'pic-q-text'; s.textContent = 'Was hörst du?'; qp.appendChild(s); }
+    div.appendChild(qp);
+    const box = document.createElement('div');
+    const imgOpts = it.opts.some(picIsImg) || it.opts.every(o => /[\p{Extended_Pictographic}]/u.test(String(o)) && String(o).length <= 8);
+    box.className = 'quiz-opts pic-opts' + (imgOpts ? ' pic-tiles' : '') + (it.opts.length === 4 ? ' pic-4' : '');
+    const fb = document.createElement('p'); fb.className = 'feedback';
+    let firstTryDone = false;
+    const correctKey = typeof it.correct === 'object' ? picKey(it.correct) : String(it.correct);
+    shuffleArray(it.opts).forEach(o => {
+      const b = document.createElement('button');
+      b.type = 'button'; b.className = 'opt-btn pic-opt';
+      picFill(b, o, false);
+      const key = picKey(o);
+      if(picIsImg(o)) b.setAttribute('aria-label', key);
+      b.addEventListener('click', () => {
+        if(div.dataset.solved) return;
+        const ok = key === correctKey || (typeof o === 'object' && o.src === correctKey);
+        box.querySelectorAll('.opt-btn').forEach(x => x.classList.remove('wrong'));
+        if(ok){
+          b.classList.add('correct'); fb.textContent = 'Richtig! ✓'; fb.className = 'feedback ok';
+          box.querySelectorAll('.opt-btn').forEach(x => x.disabled = true); div.dataset.solved = '1';
+        } else if(lockedMode){
+          b.classList.add('wrong'); fb.textContent = 'Leider falsch ✗'; fb.className = 'feedback bad';
+          box.querySelectorAll('.opt-btn').forEach(x => x.disabled = true); div.dataset.solved = '1';
+        } else {
+          b.classList.add('wrong'); fb.textContent = 'Nicht ganz — versuch es noch mal.'; fb.className = 'feedback bad';
+        }
+        if(!firstTryDone){
+          firstTryDone = true;
+          div.dataset.first = key; div.dataset.firstOk = ok ? '1' : '0'; // для звіту (як у квізі)
+          if(ok && scored) markDone(1);
+        }
+      });
+      box.appendChild(b);
+    });
+    div.appendChild(box);
+    div.appendChild(fb);
+    wrap.appendChild(div);
+  });
 }
 
 /* ---------- Аудіоплеєр (Üb. Hören) ---------- */
@@ -1779,6 +2443,36 @@ function rpMemory(wrap){
   const good = wrap.dataset.firstOk === '1';
   return {html: 'Memory: ' + rpAns('усі ' + pairs + ' ' + rpPlural(pairs, 'пару', 'пари', 'пар') + ' за ' + wrap.dataset.tries + ' ' + rpPlural(+wrap.dataset.tries, 'спробу', 'спроби', 'спроб'), good ? 'ok' : 'bad', 'норма — до ' + (pairs * 2)), ok: good ? 1 : 0, n: 1, empty: 0};
 }
+// buildSpeak: фраза (або завдання) → що почув браузер у кожній спробі
+function rpSpeak(d){
+  const r = d._spk;
+  const it = r.item;
+  const pre = rpEsc(rpText(d.querySelector('.spk-text .num'))) + ' ' + rpEsc(it.prompt || String(it.say).split('|')[0].trim()) + ' → ';
+  if(!r.heard.length) return {html: pre + RP_GAP, ok: 0, n: 1, empty: 1};
+  const parts = r.heard.map((h, i) => rpAns(h, (r.ok && i === r.heard.length - 1) ? 'ok' : 'bad'));
+  const note = r.ok ? (r.heard.length > 1 ? r.heard.length + '-а спроба' : '') : (r.done ? 'не розпізнано' : 'не завершено');
+  return {html: pre + parts.join(' → ') + (note ? ' <span class="rp-note">(' + rpEsc(note) + ')</span>' : ''), ok: r.ok ? 1 : 0, n: 1, empty: 0};
+}
+// buildClock: годинник / завдання → відповідь першої спроби (часу на годиннику не пишемо — це й є відповідь)
+function rpClock(div){
+  const num = rpText(div.querySelector('.clk-head .num'));
+  const what = div.classList.contains('clk-set') ? '«' + rpText(div.querySelector('.clk-prompt')) + '» — постав стрілки' : 'годинник';
+  const pre = rpEsc(num + ' ' + what) + ' → ';
+  if(!('firstOk' in div.dataset)) return {html: pre + RP_GAP, ok: 0, n: 1, empty: 1};
+  const ok = div.dataset.firstOk === '1';
+  const later = !ok && div.classList.contains('is-solved') ? 'потім правильно' : '';
+  return {html: pre + rpAns(div.dataset.first, ok ? 'ok' : 'bad', later), ok: ok ? 1 : 0, n: 1, empty: 0};
+}
+// buildHotspot: завдання → яку зону тапнув учень першою спробою
+function rpHotspot(wrap){
+  const rows = (wrap._hs || []).map(r => {
+    const pre = '<span class="rp-q">' + rpEsc(r.q) + '</span> → ';
+    if(r.first === null) return {h: pre + RP_GAP, ok: 0, e: 1};
+    return {h: pre + rpAns(r.first, r.firstOk ? 'ok' : 'bad', !r.firstOk && r.solved ? 'потім знайшов(-ла)' : ''), ok: r.firstOk ? 1 : 0, e: 0};
+  });
+  if(!rows.length) return null;
+  return {html: rows[0].h, more: rows.slice(1).map(r => r.h), ok: rows.reduce((a, r) => a + r.ok, 0), n: rows.length, empty: rows.reduce((a, r) => a + r.e, 0)};
+}
 // buildFixError: речення → що учень позначив / як виправив з першої спроби
 function rpFix(div){
   const pre = rpEsc(rpText(div.querySelector('.fix-line .num'))) + ' ' + rpEsc(div.dataset.s || '') + ' → ';
@@ -1845,7 +2539,7 @@ function rpCollectPanel(panel){
   const rows = [];
   const seen = new Set();
   let lastCard = null;
-  const sel = '.quiz-q, .order-item, .sort-ex, .wbank-ex, .fix-item, .chat-ex, .mem-ex, textarea, input.blank-input, select.blank, .tok, input[type="text"]';
+  const sel = '.quiz-q, .order-item, .sort-ex, .wbank-ex, .fix-item, .chat-ex, .mem-ex, .spk-item, .clk-item, .hs-ex, textarea, input.blank-input, select.blank, .tok, input[type="text"]';
   panel.querySelectorAll(sel).forEach(el => {
     if(el.closest('.report-card') || rpHidden(el, panel)) return;
     let key = el, row = null;
@@ -1855,6 +2549,10 @@ function rpCollectPanel(panel){
     else if(el.matches('.chat-ex')) row = rpChat(el);
     else if(el.matches('.mem-ex')){ if(el.dataset.noScore) return; row = rpMemory(el); }
     else if(el.matches('.fix-item')) row = rpFix(el);
+    else if(el.matches('.spk-item')){ if(el.classList.contains('spk-off') || !el._spk) return; row = rpSpeak(el); }
+    else if(el.matches('.clk-item')) row = rpClock(el);
+    else if(el.closest('.clk-item')) return; // поле часу — уже в рядку годинника
+    else if(el.matches('.hs-ex')){ row = rpHotspot(el); if(!row) return; }
     else if(el.closest('.fix-ex')) return; // поле виправлення — уже в рядку речення
     else if(el.matches('.quiz-q')) row = rpQuiz(el);
     else if(el.matches('.order-item')) row = rpOrder(el);
@@ -2045,7 +2743,9 @@ function initReport(){
   if(document.body.hasAttribute('data-no-report')) return;
   const ende = document.getElementById('panel-ende');
   if(!ende) return;
-  if(!document.querySelector('.panel .quiz-q, .panel .blank-input, .panel select.blank, .panel textarea, .panel .tok, .panel .order-item, .panel .sort-ex')) return;
+  // є хоч одна вправа (з 2026-10-24 — і нових форматів: раніше сторінка лише з банком слів, чатом чи Memory лишалась без звіту)
+  if(!document.querySelector('.panel .quiz-q, .panel .blank-input, .panel select.blank, .panel textarea, .panel .tok, .panel .order-item, .panel .sort-ex, '
+    + '.panel .wbank-ex, .panel .fix-ex, .panel .chat-ex, .panel .mem-ex, .panel .spk-item:not(.spk-off), .panel .clk-item, .panel .hs-ex')) return;
 
   let card = document.getElementById('dmuReport');
   if(!card){

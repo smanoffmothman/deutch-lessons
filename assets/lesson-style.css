@@ -641,6 +641,110 @@ input.blank-input.ct-in.wrong{ border-color:var(--brick); }
 .scr-item.scr-parts .order-line{ gap:2px; }
 .scr-pre{ font-family:var(--serif); font-size:16px; color:var(--ink-soft); margin-right:4px; }
 
+/* ---------- Нові формати вправ, етап 3 (з 2026-10-24) ---------- */
+/* A3. Говоріння (buildSpeak) */
+.spk-privacy, .spk-off-note{ font-size:13px; color:var(--ink-soft); margin:0 0 10px; }
+.spk-small{ display:block; font-size:12.5px; margin-top:4px; }
+.spk-item{ padding:12px 0; border-bottom:1px dashed var(--line); }
+.spk-item:last-of-type{ border-bottom:none; }
+.spk-text{ margin:0 0 4px; font-family:var(--serif); font-size:17px; color:var(--teal-deep); }
+.spk-text .num{ font-weight:700; color:var(--brick); }
+.spk-say.is-prompt{ font-family:var(--sans); font-size:15px; color:var(--ink); font-weight:600; }
+.spk-uk{ margin:0 0 8px; font-size:13.5px; color:var(--ink-soft); }
+.spk-tools{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-top:6px; }
+.spk-tries{ font-size:12.5px; color:var(--ink-soft); font-weight:600; }
+.spk-heard{ margin:6px 0 0; font-size:14px; color:var(--ink-soft); min-height:0; }
+.spk-heard span{ font-family:var(--serif); color:var(--ink); }
+.spk-item .feedback{ margin:4px 0 0; }
+.spk-item.is-listening .spk-mic{ background:var(--brick); animation:spkPulse 1.1s ease-in-out infinite; }
+.spk-item.is-solved .spk-mic{ background:var(--forest); opacity:1; }
+.spk-item.is-closed .spk-mic{ background:var(--ink-soft); }
+.spk-item.spk-off .spk-tools{ display:none; }
+.spk-sample{ margin-top:4px; }
+.spk-sample-text{ margin:6px 0 0; font-family:var(--serif); color:var(--teal-deep); background:var(--teal-soft); border-radius:8px; padding:6px 10px; }
+.spk-sample-text[hidden]{ display:none; }
+@keyframes spkPulse{ 0%,100%{ box-shadow:0 0 0 0 rgba(177,78,62,.45); } 50%{ box-shadow:0 0 0 8px rgba(177,78,62,0); } }
+
+/* B1. Годинник (buildClock) */
+.clk-grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(230px, 1fr)); gap:14px; }
+.clk-item{ background:#fff; border:1px solid var(--line); border-radius:12px; padding:12px; display:flex; flex-direction:column; align-items:center; }
+.clk-head{ align-self:stretch; margin:0 0 6px; font-weight:600; font-size:14.5px; }
+.clk-head .num{ font-family:var(--serif); font-weight:700; color:var(--brick); }
+.clk-set .clk-prompt{ font-family:var(--serif); font-size:17px; color:var(--teal-deep); }
+.clk-item .order-hint{ align-self:stretch; }
+.clk-face{ width:100%; max-width:170px; height:auto; display:block; margin:2px auto 8px; }
+.clk-rim{ fill:var(--card); stroke:var(--teal-deep); stroke-width:4; }
+.clk-tick{ stroke:var(--ink-soft); stroke-width:1.2; }
+.clk-tick5{ stroke:var(--teal-deep); stroke-width:3; stroke-linecap:round; }
+.clk-num{ font-family:var(--serif); font-size:17px; font-weight:700; fill:var(--ink); text-anchor:middle; }
+.clk-h{ stroke:var(--teal-deep); stroke-width:7; stroke-linecap:round; transition:transform .25s ease; }
+.clk-m{ stroke:var(--brick); stroke-width:4; stroke-linecap:round; transition:transform .25s ease; }
+.clk-c{ fill:var(--teal-deep); }
+.clk-tools{ display:grid; grid-template-columns:1fr 1fr; gap:6px; width:100%; max-width:220px; }
+.clk-tools .clk-go{ grid-column:1 / -1; padding:8px 12px; font-size:13.5px; }
+.clk-opts{ justify-content:center; }
+.clk-write{ display:flex; gap:6px; align-self:stretch; }
+.clk-write input.blank-input{ flex:1; min-width:0; }
+.clk-item .feedback{ margin:6px 0 0; min-height:1em; text-align:center; }
+.clk-item.is-solved{ border-color:var(--forest); background:var(--forest-soft); }
+.clk-item.is-solved .clk-rim{ fill:#fff; }
+@media (prefers-reduced-motion: reduce){ .clk-h, .clk-m{ transition:none; } .spk-item.is-listening .spk-mic{ animation:none; } }
+
+/* B2. Карта / зображення з активними зонами (buildHotspot) */
+.hs-task{ font-size:16px; margin:0 0 8px; min-height:1.6em; }
+.hs-step{ display:inline-block; font-size:12px; font-weight:700; color:var(--teal-deep); background:var(--teal-soft); border-radius:100px; padding:2px 9px; margin-right:6px; vertical-align:2px; }
+.hs-q{ font-family:var(--serif); font-size:18px; color:var(--ink); }
+.hs-step:empty{ display:none; }
+.hs-ex.is-done .hs-q{ color:var(--forest); }
+.hs-stage{ max-width:560px; margin:0 auto; background:var(--teal-soft); border-radius:12px; padding:6px; }
+.hs-stage svg{ width:100%; height:auto; display:block; -webkit-tap-highlight-color:transparent; user-select:none; -webkit-user-select:none; }
+.hs-loading{ text-align:center; color:var(--ink-soft); padding:40px 0; margin:0; }
+.hs-region{ fill:var(--card); stroke:var(--teal); stroke-width:.9; stroke-linejoin:round; cursor:pointer; transition:fill .15s ease; }
+.hs-stage.hs-mode-area .hs-region:hover{ fill:var(--mustard-soft); }
+.hs-outline{ fill:none; stroke:var(--teal-deep); stroke-width:2; stroke-linejoin:round; pointer-events:none; }
+.hs-river-hit{ fill:none; stroke:transparent; stroke-width:16; stroke-linecap:round; cursor:pointer; }
+.hs-river-line{ fill:none; stroke:#4F8FC0; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; pointer-events:none; }
+.hs-city circle{ fill:var(--brick); stroke:#fff; stroke-width:1.6; cursor:pointer; }
+.hs-city.hs-cap circle{ fill:var(--teal-deep); stroke:var(--mustard); stroke-width:2.4; }
+.hs-stage:not(.hs-mode-city) .hs-city, .hs-stage:not(.hs-mode-river) .hs-river, .hs-stage.hs-mode-river .hs-region{ pointer-events:none; }
+.hs-stage.hs-mode-river .hs-river:hover .hs-river-line{ stroke-width:3.2; }
+.hs-no-cities .hs-city{ display:none; }
+.hs-region.hs-found{ fill:var(--forest-soft); stroke:var(--forest); }
+.hs-river.hs-found .hs-river-line{ stroke:var(--forest); stroke-width:3.4; }
+.hs-city.hs-found circle{ fill:var(--forest); r:6; }
+.hs-region.hs-miss{ fill:var(--brick-soft); }
+.hs-river.hs-miss .hs-river-line{ stroke:var(--brick); stroke-width:3.4; }
+.hs-city.hs-miss circle{ fill:var(--mustard); }
+.hs-label{
+  font-family:var(--sans); font-size:13px; font-weight:700; fill:var(--teal-deep); pointer-events:none;
+  paint-order:stroke; stroke:#fff; stroke-width:3.5px; stroke-linejoin:round;
+}
+.hs-under{ display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap; min-height:2em; }
+.hs-under .feedback{ margin:8px 0 0; }
+.hs-skip[hidden]{ display:none; }
+@media (prefers-reduced-motion: reduce){ .hs-region{ transition:none; } }
+
+/* B4. Вибір картинки (buildPicture) — на основі квізу (.quiz-q) */
+.pic-prompt{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+.pic-prompt .num{ font-family:var(--serif); font-weight:700; color:var(--brick); }
+.pic-q-text{ font-family:var(--serif); font-size:18px; color:var(--teal-deep); font-weight:600; }
+.pic-play::before{ content:"▶"; }
+.pic-task{ display:inline-flex; align-items:center; justify-content:center; width:84px; height:84px; background:#fff; border:1px solid var(--line); border-radius:12px; }
+.pic-task .pic-emoji{ font-size:52px; line-height:1; }
+.pic-task img{ max-width:72px; max-height:72px; }
+.pic-play{
+  width:40px; height:40px; border-radius:50%; border:none; cursor:pointer; flex:none;
+  background:var(--mustard); color:var(--ink); font-size:15px; box-shadow:0 2px 0 rgba(0,0,0,.12);
+}
+.pic-tiles{ display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:10px; max-width:420px; }
+.pic-tiles.pic-4{ grid-template-columns:repeat(4, minmax(0, 1fr)); }
+@media (max-width:420px){ .pic-tiles.pic-4{ grid-template-columns:repeat(2, minmax(0, 1fr)); max-width:220px; } }
+.pic-tiles .pic-opt{ aspect-ratio:1; display:flex; align-items:center; justify-content:center; padding:6px; border-radius:12px; }
+.pic-opt, .pic-play{ -webkit-tap-highlight-color:transparent; }
+.pic-opt .pic-emoji{ font-size:44px; line-height:1; }
+.pic-opt img{ max-width:100%; max-height:76px; object-fit:contain; }
+.pic-opt .pic-word{ font-family:var(--serif); font-size:15px; }
+
 /* ---------- Вкладка Regel на сторінках граматики (з 2026-09) ----------
    Кожен підрозділ теми = <section class="regel-block" id="...">; зміст над
    блоками (.regel-toc) будується автоматично (site.js → initGrammarPage). */
