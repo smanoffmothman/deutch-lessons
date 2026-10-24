@@ -80,7 +80,7 @@ const PIDRUCHNYKY = [
       { id: "l2", label: "2", nazva: "Lerne was, so kannst du was", storinky: "27–48", dity: [
         { id: "l2-a", label: "A", nazva: "Stundenplan", storinky: "28–33", typ: "vpravy", gram: ["modalverben", "zahlwoerter"], opublikovano: 6 },
         { id: "l2-b", label: "B", nazva: "In der Deutschstunde", storinky: "34–38", typ: "vpravy", gram: ["imperativ"], opublikovano: 7 },
-        { id: "l2-c", label: "C", nazva: "Mein Tagesablauf", storinky: "39–43", typ: "vpravy" },
+        { id: "l2-c", label: "C", nazva: "Mein Tagesablauf", storinky: "39–43", typ: "vpravy", gram: ["reflexive-verben"], opublikovano: 8 },
         { id: "l2-d", label: "D", nazva: "Wiederholung", storinky: "44–45", typ: "povtorennya" },
         { id: "l2-e", label: "E", nazva: "Geschichtenzeit", storinky: "46", typ: "chytannya" },
         { id: "l2-f", label: "F", nazva: "Projektarbeit", storinky: "47", typ: "bez-storinky" },
