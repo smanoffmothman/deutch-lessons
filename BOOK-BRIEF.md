@@ -244,13 +244,18 @@ Schritte). Інтерактивні додатки, «онлайн-підтри�
 
 | Що тренуємо | Підходять |
 |---|---|
-| нова лексика | `buildQuiz`, `buildMatch`, `buildMemory` (розминка), `buildScramble` (правопис) |
+| нова лексика | `buildQuiz`, `buildMatch`, `buildPicture` (емодзі/картинки), `buildMemory` (розминка), `buildScramble` (правопис) |
 | лексика в контексті | `buildWordBank`, `buildCTest` (повторення), пропуски `wireBlanks` |
 | форми (відмінки, дієвідмінювання) | `wireBlanks`, `buildTable`, `buildSort` |
 | речення цілим (часи, сполучники, порядок слів) | `buildTransform`, `buildOrder` |
 | типові помилки | `buildFixError`, токени `checkTokens` |
 | мовленнєва ситуація (кафе, магазин, знайомство) | `buildChat` |
 | розуміння тексту / діалогу | `buildRF`, `buildQuiz`, `buildSequence` |
+| час, розпорядок | `buildClock` (вибрати / написати / поставити стрілки) |
+| географія, місце, план, кімната | `buildHotspot` (мапи Німеччини й України — `assets/svg/`) |
+| вимова (у Sprechen) | `buildSpeak` (🎤, розпізнавання мови; вкладку `sprechen` — у `exclude` тесту) |
+| правопис на слух (у Hören) | `buildDictation` (окремий `.ssml` на фразу + `-slow`) |
+| повторення, мотивація (Wiederholung, Geschichtenzeit) | `buildCrossword`, `buildWordGrid`, `buildBlitz` |
 | письмо | `buildWriting` / `textarea[data-words/-must/-check]` (вкладка Schreiben) |
 
 Анти-чіт скрізь однаковий: зараховується перша спроба, відповідь не

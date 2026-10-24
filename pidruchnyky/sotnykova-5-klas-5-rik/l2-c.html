@@ -156,8 +156,8 @@
     <section class="panel" id="panel-ub1">
       <p class="section-label">Üb. 1</p>
       <h2 class="panel-title">Wie spät ist es?</h2>
-      <p class="lead">Вибери, як сказати цей час у розмові.</p>
-      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">Годинник показує час. Спершу вибери, як його сказати, потім напиши сам(а) (можна розмовно, офіційно або цифрами), а наприкінці постав стрілки кнопками й натисни «Prüfen».</p>
+      <div class="card" id="ub1-uhr"></div>
     </section>
 
     <!-- ===== Üb. 2: таблиця зворотних займенників ===== -->
@@ -196,7 +196,7 @@
     <section class="panel" id="panel-hoeren">
       <p class="section-label">Hören</p>
       <h2 class="panel-title">Kino am Samstag</h2>
-      <p class="lead">Софія й Артем домовляються піти в кіно. Слухай уважно, о котрій що відбувається (можна двічі). Текст розмови відкривається внизу — але спершу спробуй без нього.</p>
+      <p class="lead">Софія й Артем домовляються піти в кіно. Слухай уважно, о котрій що відбувається (можна двічі). Текст розмови відкривається під запитаннями — але спершу спробуй без нього. Нижче — диктант.</p>
       <div class="player">
         <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
         <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
@@ -222,6 +222,11 @@
           <b>Artem:</b> Ich mich auch. Bis Samstag!
         </div>
       </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Diktat</p>
+        <p>Послухай кожне речення (скільки завгодно разів, 🐢 — повільніше) і запиши його. Стеж за великою літерою в іменниках.</p>
+        <div id="hoeren-dikt"></div>
+      </div>
     </section>
 
     <!-- ===== SPRECHEN ===== -->
@@ -229,6 +234,10 @@
       <p class="section-label">Sprechen</p>
       <h2 class="panel-title">Erzähl mal!</h2>
       <p class="lead">Відповідай уголос — сам(а) або з партнером. Лише потім відкрий зразок і порівняй. Зразок — один з можливих варіантів.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
       <div class="card" data-no-report>
         <div class="qa">
           <label>1. Wie ist dein Tagesablauf an einem Schultag? Nenne mindestens fünf Uhrzeiten.</label>
@@ -306,6 +315,10 @@
         <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
         <div id="test-fix"></div>
       </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Die Uhr</p>
+        <div id="test-uhr"></div>
+      </div>
     </section>
 
     <section class="panel" id="panel-ende">
@@ -344,7 +357,7 @@
   const KN_UNIT = "l2-c";
 
   // Тест — режим контрольної; тренувальні вкладки не йдуть у бал
-  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'ub5', 'hoeren']});
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'ub5', 'hoeren', 'sprechen']});
 
   wirePlayer('audio1', 'play1', 'seek1', 'time1');
   wirePlayer('audio2', 'play2', 'seek2', 'time2');
@@ -362,16 +375,18 @@
     {s: "Paul geht um halb zehn schlafen.", a: "f"}
   ]);
 
-  // Üb. 1: котра година
-  buildQuiz('ub1-quiz', [
-    {q: "🕖 7:15", opts: ["Viertel nach sieben", "Viertel vor sieben", "halb acht"], correct: "Viertel nach sieben"},
-    {q: "🕣 8:30", opts: ["halb neun", "halb acht", "acht nach halb"], correct: "halb neun"},
-    {q: "🕙 9:45", opts: ["Viertel vor zehn", "Viertel nach neun", "Viertel vor neun"], correct: "Viertel vor zehn"},
-    {q: "🕐 13:00", opts: ["Punkt eins", "halb eins", "Viertel nach eins"], correct: "Punkt eins"},
-    {q: "🕙 10:20", opts: ["zwanzig nach zehn", "zwanzig vor zehn", "zehn nach zwanzig"], correct: "zwanzig nach zehn"},
-    {q: "🕖 6:50", opts: ["zehn vor sieben", "zehn nach sechs", "zehn vor sechs"], correct: "zehn vor sieben"},
-    {q: "🕟 16:25", opts: ["fünf vor halb fünf", "fünf nach halb fünf", "fünf vor halb vier"], correct: "fünf vor halb fünf"},
-    {q: "🕡 18:35", opts: ["fünf nach halb sieben", "fünf vor halb sieben", "fünf nach halb sechs"], correct: "fünf nach halb sieben"}
+  // Üb. 1: годинник
+  buildClock('ub1-uhr', [
+    {time: "7:15", opts: ["Viertel nach sieben", "Viertel vor sieben", "halb acht"], correct: "Viertel nach sieben"},
+    {time: "8:30", opts: ["halb neun", "halb acht", "acht nach halb"], correct: "halb neun"},
+    {time: "9:45", opts: ["Viertel vor zehn", "Viertel nach neun", "Viertel vor neun"], correct: "Viertel vor zehn"},
+    {time: "4:25", opts: ["fünf vor halb fünf", "fünf nach halb fünf", "fünf vor halb vier"], correct: "fünf vor halb fünf"},
+    {time: "6:50"},
+    {time: "10:20"},
+    {time: "2:30"},
+    {set: "Viertel nach sechs — Ninas Wecker klingelt.", time: "6:15"},
+    {set: "fünf vor halb acht — Paul läuft zum Bus.", time: "7:25"},
+    {set: "halb zehn — Nina geht schlafen.", time: "9:30"}
   ]);
 
   // Üb. 2: таблиця
@@ -420,6 +435,15 @@
     ]
   });
 
+  // Sprechen: розпізнавання мови
+  buildSpeak('sprechen-speak', [
+    {say: "Ich ziehe mich schnell an.", uk: "Я швидко одягаюся."},
+    {say: "Wir treffen uns im Park.", uk: "Ми зустрічаємося в парку."},
+    {say: "Beeil dich!", uk: "Поспішай!"},
+    {say: "Ich freue mich auf das Wochenende.", uk: "Я чекаю на вихідні (радію їм)."},
+    {say: "Wie spät ist es?", uk: "Котра година?"}
+  ]);
+
   // Hören
   buildQuiz('hoeren-quiz', [
     {q: "Wann hat Artem am Samstag Training?", opts: ["von zehn bis eins", "von eins bis vier", "am Abend"], correct: "von zehn bis eins"},
@@ -429,6 +453,15 @@
     {q: "Was muss Artem nach dem Training noch machen?", opts: ["sich duschen und essen", "Hausaufgaben machen", "seine Oma besuchen"], correct: "sich duschen und essen"},
     {q: "Wann ist der Film zu Ende?", opts: ["um 18:20", "um 18:30", "um 17:20"], correct: "um 18:20"},
     {q: "Warum muss Sofia um halb sieben zu Hause sein?", opts: ["Ihre Oma kommt zu Besuch.", "Sie hat Training.", "Sie muss Hausaufgaben machen."], correct: "Ihre Oma kommt zu Besuch."}
+  ]);
+
+  // Hören: диктант
+  buildDictation('hoeren-dikt', [
+    {audio: "audio/l2-c-d1.mp3", slow: "audio/l2-c-d1-slow.mp3", ans: "Ich stehe um halb sieben auf."},
+    {audio: "audio/l2-c-d2.mp3", slow: "audio/l2-c-d2-slow.mp3", ans: "Der Unterricht beginnt um acht.|Der Unterricht beginnt um acht Uhr.|Der Unterricht beginnt um 8.|Der Unterricht beginnt um 8 Uhr."},
+    {audio: "audio/l2-c-d3.mp3", slow: "audio/l2-c-d3-slow.mp3", ans: "Wir treffen uns um Viertel nach vier."},
+    {audio: "audio/l2-c-d4.mp3", slow: "audio/l2-c-d4-slow.mp3", ans: "Paul muss sich beeilen."},
+    {audio: "audio/l2-c-d5.mp3", slow: "audio/l2-c-d5-slow.mp3", ans: "Am Abend sehe ich fern."}
   ]);
 
   // Test
@@ -445,6 +478,11 @@
     {s: "Wir treffen uns um vier.", ok: true},
     {s: "Er zieht dich schnell an.", wrong: 2, fix: "sich"},
     {s: "Ihr kämmt sich die Haare.", wrong: 2, fix: "euch"}
+  ]);
+
+  buildClock('test-uhr', [
+    {time: "11:45"},
+    {set: "zwanzig nach drei", time: "3:20"}
   ]);
 
   // Зразки: показати / сховати
