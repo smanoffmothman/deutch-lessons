@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 1, Modul D: Wiederholung — Німецька мова 5 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 5 КЛАС</span>
+        <h1>Lektion 1 · Modul D: Wiederholung</h1>
+        <p class="sub">Повторення всього Lektion 1 «Leute, die ich mag»: родина, професії, друзі; mein / meinen, sein / ihr, im / in der, als + професія, Dativ і Akkusativ, слабка відміна — і підсумковий тест на весь Lektion.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · C-Test</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Frage und Antwort</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Ein Brief</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Fehler</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Sätze umbauen</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER — усі слова Lektion 1 (збираються самі) ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Усі слова Lektion 1</h2>
+      <p class="lead">Тут зібрано слова всіх модулів Lektion 1. Перевір себе в «Картки ▶» і познач ☆ ті, які ще не пам'ятаєш, — їх варто повторити перед тестом.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: C-Test ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Nina stellt sich vor</h2>
+      <p class="lead">У деяких словах сховано другу половину. Допиши слова — усі вони з Lektion 1.</p>
+      <div class="card" id="ub1-ct"></div>
+    </section>
+
+    <!-- ===== Üb. 2: зіставлення питання ↔ відповідь ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Frage und Antwort</h2>
+      <p class="lead">Знайди відповідь до кожного запитання. Зверни увагу на питальні слова: wo? wem? mit wem? was?</p>
+      <div class="card" id="ub2-list"></div>
+    </section>
+
+    <!-- ===== Üb. 3: банк слів ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Ein Brief von Taras</h2>
+      <p class="lead">Тарас пише другові з Німеччини. Встав слова з набору — два слова зайві.</p>
+      <div class="card" id="ub3-bank"></div>
+    </section>
+
+    <!-- ===== Üb. 4: знайди помилку ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Finde den Fehler</h2>
+      <p class="lead">У більшості речень є одна помилка — у займеннику, артиклі, професії чи закінченні. Деякі речення правильні.</p>
+      <div class="card" id="ub4-fix"></div>
+    </section>
+
+    <!-- ===== Üb. 5: перетворення речення ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Sätze umbauen</h2>
+      <p class="lead">Перебудуй речення так, як сказано після стрілки «→», і напиши його цілим.</p>
+      <div class="card" id="ub5-tr"></div>
+    </section>
+
+    <!-- ===== SPRECHEN ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Das bin ich!</h2>
+      <p class="lead">Підсумкове говоріння на весь Lektion. Відповідай уголос — сам(а) або з партнером, і лише потім відкрий зразок.</p>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Stell deine Familie vor: drei Personen — Name, Alter, Beruf, wo er/sie arbeitet.</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Mein Vater heißt Ihor, er ist 42. Er ist Mechaniker von Beruf und arbeitet in einer Werkstatt. Meine Mutter Natalija ist 39, sie arbeitet als Verkäuferin im Supermarkt. Mein Opa ist 70, er ist schon Rentner.</div>
+        </div>
+        <div class="qa">
+          <label>2. Beschreib deinen besten Freund / deine beste Freundin für jemanden, der ihn / sie nicht kennt.</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Meine beste Freundin heißt Vika. Sie ist zwölf und wohnt in meinem Haus. Vika ist klug, ehrlich und sehr lustig. Mit ihr kann ich über alles sprechen. Wir sind dicke Freundinnen!</div>
+        </div>
+        <div class="qa">
+          <label>3. Interview: Stell deinem Partner / deiner Partnerin 5 Fragen — über Familie, Berufe und Freunde.</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Hast du Geschwister? Was sind deine Eltern von Beruf? Wo arbeitet deine Mutter? Was möchtest du werden? Mit wem spielst du am liebsten?</div>
+        </div>
+        <div class="qa">
+          <label>4. Wer ist für dich ein Held / eine Heldin in deiner Familie oder unter deinen Freunden? Warum?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Meine Oma ist meine Heldin. Sie ist Ärztin von Beruf und hilft vielen Menschen. Sie ist hilfsbereit und nie mürrisch, auch nach der Arbeit.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — режим контрольної, на весь Lektion ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Test zu Lektion 1</h2>
+      <p class="lead">Підсумковий тест на весь Lektion 1: 16 завдань. Кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Ich besuche am Sonntag
+          <select class="blank inline" data-ans="meinen"><option value="">—</option><option>mein</option><option>meine</option><option>meinen</option></select> Opa.</div>
+        <div class="fill-item"><span class="num">8)</span> Anna und
+          <select class="blank inline" data-ans="ihr"><option value="">—</option><option>sein</option><option>ihr</option><option>ihre</option></select> Bruder spielen Tennis.</div>
+        <div class="fill-item"><span class="num">9)</span> Meine Tante arbeitet
+          <select class="blank inline" data-ans="in der"><option value="">—</option><option>im</option><option>in der</option></select> Apotheke.</div>
+        <div class="fill-item"><span class="num">10)</span> Er ist
+          <select class="blank inline" data-ans="Koch"><option value="">—</option><option>Koch</option><option>ein Koch</option><option>Köchin</option></select> von Beruf.</div>
+        <div class="fill-item"><span class="num">11)</span> Ich vertraue
+          <select class="blank inline" data-ans="meiner"><option value="">—</option><option>meine</option><option>meiner</option><option>meinen</option></select> Freundin.</div>
+        <div class="fill-item"><span class="num">12)</span> Wir fragen
+          <select class="blank inline" data-ans="den Nachbarn"><option value="">—</option><option>den Nachbar</option><option>den Nachbarn</option><option>dem Nachbarn</option></select>.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">13–16) Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-5-klas-5-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-5-klas-5-rik";
+  const KN_UNIT = "l1-d";
+
+  // Тест — режим контрольної; тренувальні вкладки не йдуть у бал
+  enableTestMode({exclude: ['ub1', 'ub2', 'ub3', 'ub4', 'ub5']});
+
+  // Üb. 1: C-Test
+  buildCTest('ub1-ct', {
+    text: "Ich heiße Nina und bin zwölf. Meine {Familie} ist nicht sehr groß. Mein {Vater} ist Busfahrer, und meine {Mutter} arbeitet als {Ärztin} im {Krankenhaus}. Ich habe keine {Geschwister}, ich bin ein {Einzelkind}.\n\nAber ich habe eine {Cousine}, Lara. Sie ist meine beste {Freundin}. Wir {vertrauen} einander und haben viel {Spaß}. Lara ist {lustig} und sehr {hilfsbereit}. Später möchte sie {Tierärztin} werden.",
+    mode: "half"
+  });
+
+  // Üb. 2: питання ↔ відповідь
+  buildMatch('ub2', [
+    ["Wie viele Personen seid ihr in der Familie?", "Wir sind zu viert."],
+    ["Was ist deine Mutter von Beruf?", "Sie ist Apothekerin."],
+    ["Wo arbeitet dein Vater?", "In einer Werkstatt."],
+    ["Hast du Geschwister?", "Nein, ich bin ein Einzelkind."],
+    ["Was möchtest du werden?", "Programmierer."],
+    ["Wie ist deine beste Freundin?", "Ehrlich und sehr lustig."],
+    ["Mit wem spielst du oft Fußball?", "Mit meinem Nachbarn Tom."],
+    ["Wem vertraust du?", "Meiner Oma."]
+  ], {lead: true});
+
+  // Üb. 3: банк слів
+  buildWordBank('ub3-bank', {
+    text: "Hallo Jonas,\n\nheute erzähle ich dir von meinen [Großeltern]. Mein Opa ist schon [Rentner], aber er arbeitet jeden Tag im Garten. Meine Oma kocht super und [kümmert] sich um unseren Hund.\n\nMeine Tante ist nicht [verheiratet], sie ist [ledig]. Sie arbeitet als [Köchin] in einem Restaurant. Mein Cousin Ben und ich sind [dicke] Freunde. Manchmal [streiten] wir, aber nie lange.\n\nUnd dein Bruder? Ist er immer noch [sauer] auf dich?\n\nViele Grüße\nTaras",
+    extra: ["Einzelkind", "treu"]
+  });
+
+  // Üb. 4: знайди помилку
+  buildFixError('ub4-fix', [
+    {s: "Das ist meine Bruder Max.", wrong: 2, fix: "mein"},
+    {s: "Lena liebt seinen Hund.", wrong: 2, fix: "ihren"},
+    {s: "Meine Mutter ist Lehrer von Beruf.", wrong: 3, fix: "Lehrerin"},
+    {s: "Kennst du den Jungen?", ok: true},
+    {s: "Ich helfe meinen Oma.", wrong: 2, fix: "meiner"},
+    {s: "Wir spielen mit unseren Freunde.", wrong: 4, fix: "Freunden"},
+    {s: "Ich möchte Tierärztin werden.", ok: true},
+    {s: "Ich besuche oft mein Onkel.", wrong: 3, fix: "meinen"}
+  ]);
+
+  // Üb. 5: перетворення речення
+  buildTransform('ub5-tr', [
+    {s: "Das ist mein Opa.", task: "Ich besuche …", ans: "Ich besuche meinen Opa."},
+    {s: "Max ist Koch.", task: "Max → <b>Maria</b>", ans: "Maria ist Köchin.|Maria ist Koechin."},
+    {s: "Ich spiele mit meiner Schwester.", task: "<b>meine Brüder</b> (Pl.)", ans: "Ich spiele mit meinen Brüdern."},
+    {s: "Ich bin Ärztin.", task: "<b>Ich möchte …</b>", ans: "Ich möchte Ärztin werden."},
+    {s: "Lena hat einen Hund.", task: "<b>Lena liebt …</b>", ans: "Lena liebt ihren Hund."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Die Schwester von meiner Mutter ist meine …", opts: ["Tante", "Cousine", "Oma"], correct: "Tante"},
+    {q: "Paul hat keine Geschwister. Er ist ein …", opts: ["Einzelkind", "Zwilling", "Rentner"], correct: "Einzelkind"},
+    {q: "Eine Programmiererin …", opts: ["schreibt Computerprogramme", "behandelt Tiere", "backt Brot"], correct: "schreibt Computerprogramme"},
+    {q: "Wo arbeitet ein Landwirt?", opts: ["auf einem Bauernhof", "in einer Apotheke", "im Theater"], correct: "auf einem Bauernhof"},
+    {q: "Mein Freund sagt immer die Wahrheit. Er ist …", opts: ["ehrlich", "stur", "mürrisch"], correct: "ehrlich"},
+    {q: "Ben und Tim machen alles zusammen. Sie sind …", opts: ["dicke Freunde", "sauer", "ledig"], correct: "dicke Freunde"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Frau Koch ist Ärztin von Beruf.", ok: true},
+    {s: "Sie arbeitet in einer Krankenhaus.", wrong: 3, fix: "einem"},
+    {s: "Mein Bruder arbeitet als Köchin.", wrong: 4, fix: "Koch"},
+    {s: "Max hilft seinem Bruder.", ok: true}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['👨‍👩‍👧', '🩺', '🤝', '🏆']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
