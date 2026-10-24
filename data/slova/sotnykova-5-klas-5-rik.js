@@ -115,4 +115,18 @@
   {de: "sauer sein auf (+ Akk.)", uk: "сердитися на когось", r: "l1-c", note: "розм.: Ich bin sauer auf Ben."},
   {de: "Quatsch!", uk: "Дурниці! Нісенітниця!", r: "l1-c", note: "розм."},
   {de: "unter vier Augen sprechen", uk: "говорити віч-на-віч", r: "l1-c"},
+  // ---- Lektion 1 · Modul E: Geschichtenzeit ----
+  {de: "der Held, -en", uk: "герой", r: "l1-e", note: "слабка відміна: den Helden"},
+  {de: "der Feuerwehrmann, -ä-er / die Feuerwehrfrau, -en", uk: "пожежник / пожежниця", r: "l1-e"},
+  {de: "die Feuerwehr, -en", uk: "пожежна служба", r: "l1-e"},
+  {de: "die Leiter, -n", uk: "драбина", r: "l1-e"},
+  {de: "der Baum, -ä-e", uk: "дерево", r: "l1-e"},
+  {de: "klettern", uk: "лізти, видиратися", r: "l1-e", note: "auf einen Baum klettern"},
+  {de: "Angst haben (vor + Dat.)", uk: "боятися (чогось)", r: "l1-e"},
+  {de: "der Hof, -ö-e", uk: "двір", r: "l1-e", note: "im Hof spielen"},
+  {de: "der Stock, Stockwerke", uk: "поверх", r: "l1-e", note: "im dritten Stock — на четвертому поверсі (рахують без першого!)"},
+  {de: "klingeln", uk: "дзвонити (у двері)", r: "l1-e", note: "bei Herrn Brandt klingeln"},
+  {de: "plötzlich", uk: "раптом", r: "l1-e"},
+  {de: "mürrisch", uk: "буркотливий, похмурий", r: "l1-e"},
+  {de: "einsam", uk: "самотній", r: "l1-e"},
 ];
