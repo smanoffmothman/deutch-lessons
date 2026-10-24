@@ -158,6 +158,6 @@
   {de: "können (kann)", uk: "могти, уміти", r: "l2-a", note: "Ich kann gut rechnen."},
   {de: "dürfen (darf)", uk: "мати дозвіл, могти (можна)", r: "l2-a", note: "Darf ich das Fenster öffnen? — Можна відчинити вікно?"},
   {de: "müssen (muss)", uk: "мусити, бути змушеним", r: "l2-a", note: "Ich muss Hausaufgaben machen."},
-  {de: "sollen (soll)", uk: "мати (за чиїмсь дорученням), бути повинним", r: "l2-a", note: "Die Lehrerin sagt, wir sollen das lesen."},
+  {de: "sollen (soll)", uk: "бути повинним (за чиїмсь дорученням чи порадою)", r: "l2-a", note: "Die Lehrerin sagt, wir sollen das lesen. — Учителька каже, щоб ми це прочитали."},
   {de: "der / die / das erste, zweite, dritte", uk: "перший, другий, третій", r: "l2-a", note: "erste, zweite, dritte, vierte, fünfte, sechste, siebte"},
 ];
