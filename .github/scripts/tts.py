@@ -187,9 +187,13 @@ def list_voices():
     url = f'https://{REGION}.tts.speech.microsoft.com/cognitiveservices/voices/list'
     status, data, hdrs = http('GET', url, {'Ocp-Apim-Subscription-Key': KEY, 'User-Agent': 'deutschheft-tts'})
     if status != 200:
-        say(f'Список голосів не отримано: {error_text(status, data, hdrs)}')
+        msg = f'Список голосів не отримано: {error_text(status, data, hdrs)}'
+        say(msg)
+        annotate('error', msg)
         return False
     voices = [v for v in json.loads(data) if v.get('Locale', '').startswith('de-')]
+    hd = [v.get('ShortName', '') for v in voices if 'HD' in v.get('ShortName', '')]
+    annotate('notice', f'Голоси de-* у регіоні {REGION}: {len(voices)}; HD: ' + (', '.join(hd) or 'немає'))
     say(f'### Німецькі голоси в регіоні {REGION} ({len(voices)})')
     say()
     say('| Голос | Стать | Тип | Стилі | Ролі |')
