@@ -254,6 +254,13 @@ p{margin:0 0 12px;}
 }
 .player .label{font-size:12.5px; opacity:.85; padding-right:10px; white-space:nowrap;}
 .player input[type=range]{flex:1; accent-color:var(--mustard);}
+/* (2026-10-24) на вузькому екрані повзунок і підпис стискаються — інакше плеєр
+   (кнопка + підпис + повзунок 129 px + час) розпирав сторінку на 360 px */
+.player{max-width:min(420px, 100%);}
+.player input[type=range]{flex:1 1 70px; min-width:56px; width:auto;}
+.player .label{min-width:0; overflow:hidden; text-overflow:ellipsis;}
+.player > span{flex:none;}
+.player > span.label{flex:0 1 auto;}
 .audio-fallback{margin:8px 0 4px;}
 .audio-error-msg{font-size:13px; color:var(--brick); font-weight:600;}
 
@@ -744,6 +751,22 @@ input.blank-input.ct-in.wrong{ border-color:var(--brick); }
 .pic-opt .pic-emoji{ font-size:44px; line-height:1; }
 .pic-opt img{ max-width:100%; max-height:76px; object-fit:contain; }
 .pic-opt .pic-word{ font-family:var(--serif); font-size:15px; }
+
+/* ---------- Широкі таблиці на телефоні (з 2026-10-24) ----------
+   Кожну .gtable lesson-interactions.js (initTableScroll) сам загортає в
+   .tb-wrap — якщо таблиця не влазить, прокручується вона, а не вся сторінка.
+   Клас .more-right — праворуч ще є стовпчики: край плавно згасає (як у
+   вкладок). На телефоні — трохи менші відступи. Автоматичні переноси
+   (hyphens) свідомо НЕ вмикаємо: браузерний словник ділить німецькі слова
+   неправильно («Ta-ge-sab-lauf»), а сайт учить німецьку. */
+.tb-wrap.more-right{
+  -webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent);
+          mask-image:linear-gradient(90deg,#000 calc(100% - 28px),transparent);
+}
+@media (max-width:560px){
+  .gtable{ font-size:13.5px; }
+  .gtable th, .gtable td{ padding:7px 8px; }
+}
 
 /* ---------- Вкладка Regel на сторінках граматики (з 2026-09) ----------
    Кожен підрозділ теми = <section class="regel-block" id="...">; зміст над
