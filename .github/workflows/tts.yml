@@ -55,9 +55,9 @@ jobs:
         if: always()
         run: |
           git add -A -- '*.mp3'
-          for f in data/tts-lock.json data/tts-usage.json; do [ -f "$f" ] && git add "$f"; done
+          for f in data/tts-lock.json data/tts-usage.json; do if [ -f "$f" ]; then git add "$f"; fi; done
           if git diff --cached --quiet; then echo "без змін"; exit 0; fi
-          git commit -q -m "робот: аудіо озвучено (${{ steps.tts.outputs.files || 0 }} файлів, ${{ steps.tts.outputs.chars || 0 }} символів)"
+          git commit -q -m "робот: аудіо озвучено (${{ steps.tts.outputs.files }}, ${{ steps.tts.outputs.chars }} символів)"
           for i in 1 2 3; do
             git pull --rebase -q origin main && git push && exit 0
             sleep 5
