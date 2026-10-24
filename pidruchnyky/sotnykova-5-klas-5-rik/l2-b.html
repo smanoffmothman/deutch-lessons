@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 2, Modul B: In der Deutschstunde — Німецька мова 5 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 5 КЛАС</span>
+        <h1>Lektion 2 · Modul B: In der Deutschstunde</h1>
+        <p class="sub">Повний урок про урок німецької: класні слова й вирази, наказовий спосіб (Imperativ) для du, ihr і Sie, ввічливі прохання до вчителя — з веселим оповіданням, аудіюванням, чатом, говорінням, письмом і тестом.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Memory</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · du / ihr / Sie</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Tabelle</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Sätze umbauen</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Chat</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власне оповідання ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Robo, der neue Lehrer</h2>
+      <p class="lead">Учителька німецької захворіла, і замість неї урок веде… робот. Послухай і прочитай; торкнися виділеного слова, щоб побачити переклад. Зверни увагу, як Робо віддає команди. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l2-b-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Am Montag kommt Frau Bauer, unsere Deutschlehrerin, nicht in die Schule. Sie ist krank. Aber wir haben trotzdem <span class="gl" data-uk="урок німецької" data-lemma="die Deutschstunde, -n">Deutschstunde</span> — mit Robo! Robo ist ein kleiner Roboter. Er steht auf dem Lehrertisch und spricht mit einer lustigen Stimme.</p>
+        <p>„Guten Morgen, Klasse 5b! Setzt euch bitte! Öffnet eure <span class="gl" data-uk="підручник" data-lemma="das Lehrbuch, -ü-er">Lehrbücher</span> auf Seite zwanzig!“ Alle lachen. Dann sagt Robo: „Tim, sei bitte <span class="gl" data-uk="тихо, тихий" data-lemma="leise">leise</span>! <span class="gl" data-uk="читати вголос" data-lemma="vorlesen (liest vor)">Lies</span> den Text <span class="gl" data-uk="голосно, голосний" data-lemma="laut">laut</span> vor!“ Tim liest. Er liest <span class="gl" data-uk="повільно, повільний" data-lemma="langsam">langsam</span>, aber gut. „Super, Tim! Und jetzt <span class="gl" data-uk="перекладати" data-lemma="übersetzen">übersetzt</span> den Text, Kinder!“</p>
+        <p>Nach zehn Minuten sagt Lisa: „Robo, ich <span class="gl" data-uk="розуміти" data-lemma="verstehen">verstehe</span> die <span class="gl" data-uk="правило" data-lemma="die Regel, -n">Regel</span> nicht. <span class="gl" data-uk="пояснювати" data-lemma="erklären">Erklär</span> sie bitte <span class="gl" data-uk="ще раз" data-lemma="noch einmal">noch einmal</span>!“ Robo erklärt die Regel — dreimal, viermal, fünfmal. Er wird nie müde.</p>
+        <p>Dann spielen wir ein Spiel. Robo ruft: „Steht auf! Springt! Klatscht in die Hände! Singt ein <span class="gl" data-uk="пісня" data-lemma="das Lied, -er">Lied</span> auf Deutsch!“ So viel Spaß im <span class="gl" data-uk="уроки, навчання (в класі)" data-lemma="der Unterricht">Unterricht</span> — das ist ganz neu für uns!</p>
+        <p>Am Ende der Stunde kommt der Schulleiter, Herr Klein, in die Klasse. Robo sagt sofort: „Guten Tag, Herr Klein! <span class="gl" data-uk="сідати, займати місце" data-lemma="Platz nehmen (nimmt Platz)">Nehmen Sie</span> bitte <span class="gl" data-uk="сідати, займати місце" data-lemma="Platz nehmen (nimmt Platz)">Platz</span>! Hören Sie: Die Kinder singen jetzt für Sie!“</p>
+        <p>Herr Klein lacht. „Danke, Robo. Aber morgen kommt Frau Bauer zurück.“ Wir sind ein bisschen traurig. Robo ist toll. Aber Frau Bauer erzählt die besten Geschichten — und in der Pause macht sie uns Kakao. Das kann kein Roboter!</p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">Der Imperativ: Lies! Lest! Lesen Sie!</h2>
+      <p class="lead">Наказовий спосіб — щоб попросити, порадити чи наказати. У німецькій три форми: для одного «ти» (du), для кількох «ви» (ihr) і ввічлива для «Ви» (Sie).</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. Як утворити</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th></th><th>звідки</th><th>приклад</th></tr>
+          <tr><td class="gender">du</td><td>форма du без <b>-st</b> і без du</td><td>du komm<strong>st</strong> → <strong>Komm!</strong> · du schreib<strong>st</strong> → <strong>Schreib!</strong></td></tr>
+          <tr><td class="gender">ihr</td><td>форма ihr без ihr</td><td>ihr kommt → <strong>Kommt!</strong> · ihr lest → <strong>Lest!</strong></td></tr>
+          <tr><td class="gender">Sie</td><td>дієслово + Sie</td><td><strong>Kommen Sie!</strong> · <strong>Lesen Sie!</strong></td></tr>
+        </table></div>
+        <div class="merke">Зміна <b>e → i / ie</b> в du-формі <b>залишається</b>: du liest → <b>Lies!</b>, du sprichst → <b>Sprich!</b>, du nimmst → <b>Nimm!</b>, du hilfst → <b>Hilf!</b><br>Умлаут <b>a → ä</b> — <b>зникає</b>: du fährst → <b>Fahr!</b>, du schläfst → <b>Schlaf!</b></div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. Особливі випадки</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th></th><th>du</th><th>ihr</th></tr>
+          <tr><td>sein</td><td><strong>Sei!</strong></td><td><strong>Seid!</strong></td></tr>
+          <tr><td>antworten</td><td>Antwort<strong>e</strong>!</td><td>Antwortet!</td></tr>
+          <tr><td>aufstehen</td><td>Steh <strong>auf</strong>!</td><td>Steht <strong>auf</strong>!</td></tr>
+        </table></div>
+        <p>Sie: <strong>Seien Sie!</strong> · Antworten Sie! · Stehen Sie <strong>auf</strong>!</p>
+        <div class="merke">Дієслова на <b>-t / -d</b> (antworten, arbeiten, finden) у du-формі отримують <b>-e</b>: Antworte! Arbeite! Відокремлювана частина йде в <b>кінець</b>: Mach das Buch <b>auf</b>! Lies den Text <b>vor</b>!</div>
+        <p><b>bitte</b> стоїть після дієслова або в кінці: <i>Lies bitte den Text! · Lies den Text, bitte!</i></p>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. du чи Sie?</p>
+        <div class="merke">Як і в українській: другові, однокласникові, мамі — <b>du</b> (ти); кільком друзям чи класу — <b>ihr</b> (ви); учителеві, сусідові, незнайомій дорослій людині — <b>Sie</b> (Ви), навіть якщо людина одна.</div>
+        <p class="section-label" style="margin:14px 0 8px;">Типові помилки</p>
+        <p>✗ Liest bitte den Text! <i>(до одного друга)</i> → ✓ <b>Lies</b> bitte den Text!</p>
+        <p>✗ Fährst langsam! → ✓ <b>Fahr</b> langsam!</p>
+        <p>✗ Bist leise! → ✓ <b>Sei</b> leise!</p>
+        <p>✗ Sie kommen bitte! → ✓ <b>Kommen Sie</b> bitte!</p>
+        <p>✗ Frau Bauer, erklär das bitte! → ✓ Frau Bauer, <b>erklären Sie</b> das bitte!</p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: Memory ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Wörter aus der Deutschstunde</h2>
+      <p class="lead">Розминка: відкривай по дві картки й шукай пари «німецьке слово — переклад». Знайдеш усе за кілька спроб — отримаєш бал.</p>
+      <div class="card" id="ub1-mem"></div>
+    </section>
+
+    <!-- ===== Üb. 2: розсортуй du / ihr / Sie ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">du, ihr oder Sie?</h2>
+      <p class="lead">До кого звертаються? Розклади команди: до одного друга (du), до кількох (ihr) чи ввічливо (Sie).</p>
+      <div class="card" id="ub2-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 3: таблиця форм ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Die Tabelle</h2>
+      <p class="lead">Заповни таблицю наказових форм. Знак оклику писати не треба.</p>
+      <div class="card" id="ub3-tab"></div>
+    </section>
+
+    <!-- ===== Üb. 4: перетворення речення ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Sätze umbauen</h2>
+      <p class="lead">Зроби з речення прохання чи команду (Imperativ) і напиши його цілим, зі знаком оклику.</p>
+      <div class="card" id="ub4-tr"></div>
+    </section>
+
+    <!-- ===== Üb. 5: діалог-чат ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Online-Deutschkurs</h2>
+      <p class="lead">У тебе онлайн-урок з репетиторкою пані Маєр. Звертайся до неї ввічливо — на Sie. Вибирай доречну репліку; діалог піде далі, коли відповідь підходить.</p>
+      <div class="card" id="ub5-chat"></div>
+    </section>
+
+    <!-- ===== HÖREN ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Ein Projekt in der Deutschstunde</h2>
+      <p class="lead">Пані Краус пояснює класу новий проєкт, а Пауль ставить запитання. Послухай (можна двічі) і дай відповіді. Текст розмови відкривається внизу — але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l2-b-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Frau Kraus:</b> So, Kinder, hört bitte zu! Wir machen ein Projekt: „Mein Lieblingslied auf Deutsch“.<br>
+          <b>Paul:</b> Was sollen wir machen, Frau Kraus?<br>
+          <b>Frau Kraus:</b> Arbeitet zu dritt. Sucht ein Lied auf Deutsch und übersetzt den Text ins Ukrainische.<br>
+          <b>Paul:</b> Dürfen wir das Lied auch singen?<br>
+          <b>Frau Kraus:</b> Natürlich! Singt es in der Stunde, das ist super. Aber übt zu Hause!<br>
+          <b>Paul:</b> Und wann ist die Präsentation?<br>
+          <b>Frau Kraus:</b> Am Freitag in zwei Wochen. Paul, schreib das bitte an die Tafel!<br>
+          <b>Paul:</b> Okay. Präsentation — Freitag in zwei Wochen.<br>
+          <b>Frau Kraus:</b> Danke. Und noch etwas: Schreibt zehn neue Vokabeln aus dem Lied auf Karten und lernt sie zusammen.<br>
+          <b>Paul:</b> Entschuldigung, wie viele Vokabeln?<br>
+          <b>Frau Kraus:</b> Zehn, Paul. Zehn Vokabeln pro Gruppe. Und seid kreativ — malt auch Bilder zu den Wörtern!<br>
+          <b>Paul:</b> Cool! Können wir mit dem Computer arbeiten?<br>
+          <b>Frau Kraus:</b> Ja. Ihr dürft im Computerraum arbeiten, am Mittwoch in der fünften Stunde.
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Erzähl mal!</h2>
+      <p class="lead">Відповідай уголос — сам(а) або з партнером. Лише потім відкрий зразок і порівняй. Зразок — один з можливих варіантів.</p>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Was machst du gern in der Deutschstunde? Was nicht so gern?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">In der Deutschstunde singe ich gern Lieder und spiele gern Dialoge. Grammatik übe ich nicht so gern, aber sie ist wichtig.</div>
+        </div>
+        <div class="qa">
+          <label>2. Du bist der Lehrer / die Lehrerin. Gib der Klasse vier Anweisungen (ihr-Form).</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Kinder, öffnet bitte eure Bücher! Lest den Text auf Seite zwölf! Schreibt fünf neue Vokabeln ins Heft! Und seid bitte leise!</div>
+        </div>
+        <div class="qa">
+          <label>3. Dein Freund lernt Ukrainisch. Gib ihm drei Tipps (du-Form).</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Hör ukrainische Lieder! Sieh Trickfilme auf Ukrainisch! Und sprich viel mit mir — ich helfe dir!</div>
+        </div>
+        <div class="qa">
+          <label>4. Du verstehst die Lehrerin nicht. Bitte sie höflich um Hilfe (Sie-Form).</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Entschuldigung, Frau Bauer, ich verstehe die Regel nicht. Erklären Sie sie bitte noch einmal! Und sprechen Sie bitte etwas langsamer.</div>
+        </div>
+        <div class="qa">
+          <label>5. Welche Fremdsprachen lernst du? Wie findest du sie?</label>
+          <button class="btn secondary" type="button" data-reveal="spr5">Muster zeigen</button>
+          <div class="reveal" id="spr5">Ich lerne Englisch und Deutsch. Englisch finde ich leicht. Deutsch ist schwerer, aber die Aussprache finde ich schön.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Du bist Robo!</h2>
+      <p class="lead">Уяви, що ти — Робо і завтра ведеш урок німецької. Напиши план своєї веселої Deutschstunde — 50–70 слів: що ти скажеш класу (ihr), одному учневі (du) і директорові (Sie).</p>
+      <div class="card">
+        <p class="beispiel">Guten Morgen, Klasse! · Öffnet … · Lest … · Tim, sei bitte … · Steht auf und … · Herr Klein, nehmen Sie bitte Platz! · Hören Sie …</p>
+        <div class="qa">
+          <label for="schreiben-text">Robos Plan</label>
+          <textarea id="schreiben-text" rows="8" placeholder="Guten Morgen, Klasse! …"
+            data-words="50-70"
+            data-must="bitte|Sie|!"
+            data-check="Щонайменше 3 команди класу (ihr)|Щонайменше 1 команда одному учневі (du)|Ввічливе звертання до директора (Sie)|Дієслово — на першому місці"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Guten Morgen, Klasse 5b! Setzt euch bitte! Heute machen wir ein Quiz. Nehmt ein Blatt Papier und schreibt eure Namen! Max, sei bitte leise und hör zu! Lena, lies die erste Frage vor! Jetzt steht alle auf und singt ein Lied! Oh, guten Tag, Herr Klein! Nehmen Sie bitte Platz! Spielen Sie auch mit? Hören Sie: Die Fragen sind sehr lustig!</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">6)</span> Max, (lesen)
+          <select class="blank inline" data-ans="lies"><option value="">—</option><option>lies</option><option>liest</option><option>lest</option></select> bitte den Text!</div>
+        <div class="fill-item"><span class="num">7)</span> Kinder, (öffnen)
+          <select class="blank inline" data-ans="öffnet"><option value="">—</option><option>öffne</option><option>öffnet</option><option>öffnen Sie</option></select> die Bücher!</div>
+        <div class="fill-item"><span class="num">8)</span> Frau Wolf, (sprechen)
+          <select class="blank inline" data-ans="sprechen Sie"><option value="">—</option><option>sprich</option><option>sprecht</option><option>sprechen Sie</option></select> bitte langsamer!</div>
+        <div class="fill-item"><span class="num">9)</span> Lena, (sein)
+          <select class="blank inline" data-ans="sei"><option value="">—</option><option>bist</option><option>sei</option><option>seid</option></select> bitte aufmerksam!</div>
+        <div class="fill-item"><span class="num">10)</span> Tim, (fahren)
+          <select class="blank inline" data-ans="fahr"><option value="">—</option><option>fahr</option><option>fähr</option><option>fährst</option></select> nicht so schnell!</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-5-klas-5-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-5-klas-5-rik";
+  const KN_UNIT = "l2-b";
+
+  // Тест — режим контрольної; тренувальні вкладки не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'ub5', 'hoeren']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Frau Bauer ist am Montag krank.", a: "r"},
+    {s: "Robo ist ein großer Roboter.", a: "f"},
+    {s: "Tim liest den Text laut vor.", a: "r"},
+    {s: "Lisa versteht die Regel sofort.", a: "f"},
+    {s: "Robo erklärt die Regel mehrmals.", a: "r"},
+    {s: "Die Kinder singen ein Lied auf Englisch.", a: "f"},
+    {s: "Robo spricht mit Herrn Klein höflich.", a: "r"},
+    {s: "Die Kinder möchten Robo jeden Tag als Lehrer haben.", a: "f"},
+    {s: "In der Pause macht Frau Bauer den Kindern Kakao.", a: "r"}
+  ]);
+
+  // Üb. 1: Memory
+  buildMemory('ub1-mem', {pairs: [
+    ["die Tafel", "дошка"],
+    ["das Lehrbuch", "підручник"],
+    ["die Übung", "вправа"],
+    ["übersetzen", "перекладати"],
+    ["erklären", "пояснювати"],
+    ["die Aussprache", "вимова"]
+  ]});
+
+  // Üb. 2: du / ihr / Sie
+  buildSort('ub2-sort', {
+    buckets: ["du", "ihr", "Sie"],
+    items: [
+      {t: "Lies!", b: "du"},
+      {t: "Hilf mir!", b: "du"},
+      {t: "Sei leise!", b: "du"},
+      {t: "Lest!", b: "ihr"},
+      {t: "Helft mir!", b: "ihr"},
+      {t: "Seid leise!", b: "ihr"},
+      {t: "Lesen Sie!", b: "Sie"},
+      {t: "Helfen Sie mir!", b: "Sie"},
+      {t: "Seien Sie leise!", b: "Sie"}
+    ]
+  });
+
+  // Üb. 3: таблиця
+  buildTable('ub3-tab', {
+    head: ["", "du", "ihr", "Sie"],
+    rows: [
+      ["kommen", "[komm|komme]", "[kommt]", "kommen Sie"],
+      ["schreiben", "schreib", "[schreibt]", "[schreiben Sie]"],
+      ["lesen", "[lies]", "lest", "[lesen Sie]"],
+      ["sprechen", "[sprich]", "[sprecht]", "sprechen Sie"],
+      ["fahren", "[fahr|fahre]", "fahrt", "[fahren Sie]"],
+      ["antworten", "[antworte]", "[antwortet]", "antworten Sie"],
+      ["sein", "[sei]", "[seid]", "[seien Sie]"]
+    ]
+  });
+
+  // Üb. 4: перетворення речення
+  buildTransform('ub4-tr', [
+    {s: "Du liest den Text.", task: "Imperativ (du)", ans: "Lies den Text!"},
+    {s: "Ihr öffnet die Bücher.", task: "Imperativ (ihr)", ans: "Öffnet die Bücher!"},
+    {s: "Sie sprechen langsam.", task: "Imperativ (Sie)", ans: "Sprechen Sie langsam!"},
+    {s: "Du bist leise.", task: "Imperativ (du)", ans: "Sei leise!"},
+    {s: "Du hilfst mir.", task: "Imperativ (du)", ans: "Hilf mir!"},
+    {s: "Ihr schreibt die Wörter an die Tafel.", task: "Imperativ (ihr)", ans: "Schreibt die Wörter an die Tafel!"},
+    {s: "Du machst das Fenster auf.", task: "Imperativ (du)", ans: "Mach das Fenster auf!|Mache das Fenster auf!"}
+  ]);
+
+  // Üb. 5: діалог-чат
+  buildChat('ub5-chat', {
+    partner: "Frau Meyer",
+    steps: [
+      {them: "Hallo! Schön, dich zu sehen. Heute lesen wir eine kurze Geschichte. Bist du bereit?"},
+      {you: ["Ja, ich bin bereit!", "Sei bereit!", "Nein, Sie sind bereit."], correct: 0},
+      {them: "Gut. Also: Es war einmal ein kleiner Drache, der wollte fliegen, aber …"},
+      {you: ["Entschuldigung, sprechen Sie bitte langsamer!", "Sprich bitte langsamer!", "Sprecht bitte schneller!"], correct: 0, hint: "ввічливо, на Sie"},
+      {them: "Oh, natürlich. Es war einmal ein kleiner Drache. Er wollte fliegen."},
+      {you: ["Danke! Was bedeutet „Drache“? Erklären Sie das bitte!", "Erklär mir das, Frau Meyer!", "Erklärt das Wort!"], correct: 0},
+      {them: "Ein Drache ist ein Fantasietier mit Flügeln — дракон. Jetzt lies du bitte den ersten Satz!"},
+      {you: ["Okay: „Es war einmal ein kleiner Drache.“", "Lesen Sie den Satz!", "Nein, lest ihr!"], correct: 0},
+      {them: "Super! Deine Aussprache ist sehr gut. Bis nächste Woche!"},
+      {you: ["Vielen Dank! Auf Wiedersehen, Frau Meyer!", "Tschüss, Alter!", "Gute Nacht, Robo!"], correct: 0}
+    ]
+  });
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Was ist das Thema des Projekts?", opts: ["ein Lied auf Deutsch", "ein deutsches Märchen", "ein Video über die Schule"], correct: "ein Lied auf Deutsch"},
+    {q: "Wie sollen die Kinder arbeiten?", opts: ["zu dritt", "zu zweit", "allein"], correct: "zu dritt"},
+    {q: "Was sollen sie übersetzen?", opts: ["den Liedtext", "ein Gedicht", "einen Brief"], correct: "den Liedtext"},
+    {q: "Wann ist die Präsentation?", opts: ["am Freitag in zwei Wochen", "am Montag", "morgen"], correct: "am Freitag in zwei Wochen"},
+    {q: "Was schreibt Paul an die Tafel?", opts: ["den Termin der Präsentation", "zehn Vokabeln", "seinen Namen"], correct: "den Termin der Präsentation"},
+    {q: "Wie viele Vokabeln schreibt jede Gruppe auf Karten?", opts: ["zehn", "zwölf", "zwanzig"], correct: "zehn"},
+    {q: "Wann dürfen sie im Computerraum arbeiten?", opts: ["am Mittwoch in der fünften Stunde", "am Freitag in der ersten Stunde", "jeden Tag"], correct: "am Mittwoch in der fünften Stunde"}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Was schreibt man an die Tafel?", opts: ["Wörter und Sätze", "Lieder", "Pausen"], correct: "Wörter und Sätze"},
+    {q: "Was sagt man zu einer Lehrerin?", opts: ["Erklären Sie das bitte!", "Erklär das bitte!", "Erklärt das bitte!"], correct: "Erklären Sie das bitte!"},
+    {q: "Ein Wort aus einer Sprache in eine andere bringen — das heißt …", opts: ["übersetzen", "vorlesen", "zuhören"], correct: "übersetzen"},
+    {q: "Ich verstehe das nicht. Sag es bitte …", opts: ["noch einmal", "leise", "nie"], correct: "noch einmal"},
+    {q: "Welche Form ist richtig?", opts: ["Nimm Platz!", "Nehm Platz!", "Nimmst Platz!"], correct: "Nimm Platz!"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Kinder, hört bitte zu!", ok: true},
+    {s: "Max, liest bitte laut!", wrong: 1, fix: "lies"},
+    {s: "Herr Klein, nimm bitte Platz!", wrong: 2, fix: "nehmen Sie"},
+    {s: "Bist bitte leise!", wrong: 0, fix: "Sei"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🤖', '📖', '🎵', '✏️']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
