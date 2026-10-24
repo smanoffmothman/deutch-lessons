@@ -2522,6 +2522,58 @@ function buildBlitz(containerId, data){
   });
 }
 
+/* =====================================================================
+   НОВІ ФОРМАТИ ВПРАВ — етап 5 (з 2026-10-24)
+   ===================================================================== */
+/* ---------- A4. Диктант на слух (buildDictation) ----------
+   Учень слухає фразу (скільки завгодно разів) і пише її.
+     buildDictation('ub6-dikt', [
+       {audio: "audio/l2-a-d1.mp3", ans: "Ich gehe gern in die Schule.", slow: "audio/l2-a-d1-slow.mp3"},
+       {audio: {src: "audio/l2-a-d.mp3", from: 4.2, to: 7.9}, ans: "Heute haben wir Mathe|Heute haben wir Mathematik"},
+       {audio: "audio/l2-a-d3.mp3", ans: "Stundenplan", hint: "одне слово (іменник)"}
+     ]);
+   - audio — mp3 фрази або фрагмент спільного mp3 {src, from, to} (секунди).
+     Робот озвучення: окремий сценарій на фразу (audio/<розділ>-d1.ssml →
+     -d1.mp3) — фрагменти спільного файлу вимагають знати час, а він
+     з'являється лише після озвучення.
+   - slow — (необов'язково) повільніша версія (той самий текст з
+     <prosody rate="-30%">) — кнопка 🐢.
+   - ans — правильний запис; варіанти через "|".
+   - hint — (необов'язково) підказка українською (НЕ сам текст).
+   - case — (необов'язково) 'sent' | 'strict'. Типово: речення (є пробіл) —
+     регістр першої літери, пробіли, пробіли біля ком і кінцевий . ! ? не
+     важливі, а коми всередині й регістр решти слів — ВАЖЛИВІ (іменники!);
+     одне слово — регістр важливий повністю (Stundenplan ≠ stundenplan).
+   Prüfen / Zurücksetzen і лічильник — як у пропусках; перша перевірка
+   кожної фрази = бал (+1); у контрольній — одна спроба. Enter = Prüfen. */
+function buildDictation(containerId, items){
+  const wrap = document.getElementById(containerId);
+  if(!wrap) return;
+  wrap.classList.add('dk-ex');
+  items.forEach((it, i) => {
+    const one = !/\s/.test(String(it.ans).split('|')[0].trim());
+    const d = document.createElement('div');
+    d.className = 'fill-item dk-item';
+    d.innerHTML = '<div class="dk-head"><span class="num">' + (i + 1) + ')</span> '
+      + '<button type="button" class="dk-play" aria-label="Послухати"><span aria-hidden="true">▶</span> Hören</button>'
+      + (it.slow ? '<button type="button" class="dk-play dk-slow" aria-label="Послухати повільно"><span aria-hidden="true">🐢</span> langsam</button>' : '')
+      + (it.hint ? ' <span class="dk-hint"></span>' : '') + ' </div>'
+      + ' <input type="text" class="blank-input dk-in" autocomplete="off" autocapitalize="sentences" spellcheck="false" placeholder="' + (one ? 'Schreib das Wort …' : 'Schreib den Satz …') + '">';
+    if(it.hint) d.querySelector('.dk-hint').textContent = it.hint;
+    const [play, slow] = d.querySelectorAll('.dk-play');
+    const toInput = () => { if(!(window.matchMedia && matchMedia('(pointer:coarse)').matches)) d.querySelector('.dk-in').focus({preventScroll: true}); }; // на телефоні клавіатура не вискакує сама
+    play.addEventListener('click', () => { exPlayClip(it.audio, play); toInput(); });
+    if(it.slow) slow.addEventListener('click', () => { exPlayClip(it.slow, slow); toInput(); });
+    const inp = d.querySelector('input');
+    inp.dataset.ans = it.ans;
+    const mode = it.case || (one ? 'strict' : 'sent');
+    inp.setAttribute('data-case', mode === 'sent' ? 'sent' : '');
+    inp.setAttribute('aria-label', 'Диктант, фраза ' + (i + 1));
+    wrap.appendChild(d);
+  });
+  wireBlankBox(containerId);
+}
+
 /* ---------- Аудіоплеєр (Üb. Hören) ---------- */
 function wirePlayer(audioId, playId, seekId, timeId){
   const audio = document.getElementById(audioId);

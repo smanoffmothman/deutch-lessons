@@ -821,6 +821,22 @@ input.blank-input.ct-in.wrong{ border-color:var(--brick); }
 .bz-opt{ font-size:15px; padding:11px 14px; }
 @media (prefers-reduced-motion: reduce){ .bz-bar span{ transition:none; } }
 
+/* ---------- Нові формати вправ, етап 5 (з 2026-10-24) ---------- */
+/* A4. Диктант на слух (buildDictation) */
+.dk-item{ padding:10px 0 12px; border-bottom:1px dashed var(--line); margin:0; }
+.dk-item:last-of-type{ border-bottom:none; }
+.dk-head{ display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:8px; }
+.dk-play{
+  display:inline-flex; align-items:center; gap:6px; border:none; cursor:pointer; border-radius:100px;
+  padding:7px 14px; font-family:var(--sans); font-weight:700; font-size:13.5px;
+  background:var(--mustard); color:var(--ink); box-shadow:0 2px 0 rgba(0,0,0,.12); -webkit-tap-highlight-color:transparent;
+}
+.dk-play.dk-slow{ background:var(--paper-2); }
+.dk-play:active{ transform:translateY(1px); box-shadow:none; }
+.dk-hint{ font-size:13px; color:var(--ink-soft); }
+input.blank-input.dk-in{ font-family:var(--serif); font-size:16px; padding:9px 11px; }
+.dk-ex .score-pill:empty{ display:none; }
+
 /* ---------- Широкі таблиці на телефоні (з 2026-10-24) ----------
    Кожну .gtable lesson-interactions.js (initTableScroll) сам загортає в
    .tb-wrap — якщо таблиця не влазить, прокручується вона, а не вся сторінка.
