@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 3, Modul C: In den Ferien — Німецька мова 5 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 5 КЛАС</span>
+        <h1>Lektion 3 · Modul C: In den Ferien</h1>
+        <p class="sub">Повний урок про канікули: де й як ми їх провели — перфект неправильних дієслів (Ich bin geschwommen. Ich habe gelesen.) — з листом і радіоінтерв'ю з озвученням, картинками, кросвордом, говорінням, письмом і тестом.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Bilder</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Lücken</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Kreuzworträtsel</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Sätze bauen</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Meine Sommerferien</h2>
+      <p class="lead">Тарас пише своєму німецькому другові Максу, як провів літо. Послухай і прочитай; торкнися виділеного слова, щоб побачити переклад. Зверни увагу на форми на <b>-en</b>: gefahren, geschwommen, gesungen. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l3-c-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Lieber Max,</p>
+        <p>vielen Dank für deine E-Mail und die Fotos von der Ostsee! Jetzt erzähle ich dir von meinen <span class="gl" data-uk="літні канікули" data-lemma="die Sommerferien (Pl.)">Sommerferien</span>.</p>
+        <p>Im Juli bin ich mit meiner Familie in die Karpaten <span class="gl" data-uk="їхати" data-lemma="fahren (fährt), ist gefahren">gefahren</span>. Wir haben zehn Tage in einem kleinen Dorf im <span class="gl" data-uk="гори" data-lemma="das Gebirge, -">Gebirge</span> <span class="gl" data-uk="проводити (час)" data-lemma="verbringen, hat verbracht">verbracht</span>. Jeden Morgen sind wir früh <span class="gl" data-uk="вставати" data-lemma="aufstehen">aufgestanden</span> und gewandert. Einmal sind wir auf den höchsten Berg der Ukraine <span class="gl" data-uk="лізти, видиратися" data-lemma="klettern">geklettert</span> — 2061 Meter! Am Nachmittag sind wir im <span class="gl" data-uk="річка" data-lemma="der Fluss, -ü-e">Fluss</span> <span class="gl" data-uk="плавати" data-lemma="schwimmen, ist geschwommen">geschwommen</span>, und Papa hat <span class="gl" data-uk="рибалити" data-lemma="angeln">geangelt</span>. Abends haben wir am <span class="gl" data-uk="вогонь, багаття" data-lemma="das Feuer, -">Feuer</span> gesessen, und mein Onkel hat Gitarre gespielt. Wir haben viele Lieder gesungen.</p>
+        <p>Im August bin ich ins <span class="gl" data-uk="табір відпочинку" data-lemma="das Ferienlager, -">Ferienlager</span> am <span class="gl" data-uk="море" data-lemma="das Meer, -e">Meer</span> gefahren, nach Odessa. Dort habe ich viele Kinder aus dem <span class="gl" data-uk="закордон" data-lemma="das Ausland">Ausland</span> <span class="gl" data-uk="знайомитися (з кимось)" data-lemma="kennenlernen, hat kennengelernt">kennengelernt</span> — aus Polen, Litauen und sogar aus Kanada. Wir haben Englisch und ein bisschen Deutsch gesprochen! Wir haben am <span class="gl" data-uk="пляж" data-lemma="der Strand, -ä-e">Strand</span> <span class="gl" data-uk="жити в наметі, ставити намет" data-lemma="zelten">gezeltet</span>, und ich bin jeden Tag <span class="gl" data-uk="пірнати" data-lemma="tauchen">getaucht</span>. Einmal habe ich sogar Delfine gesehen!</p>
+        <p>Die Ferien haben mir sehr gut <span class="gl" data-uk="подобатися" data-lemma="gefallen (gefällt), hat gefallen (+ Dat.)">gefallen</span>. Nur ein Problem: Ich habe kein Buch gelesen! 😄</p>
+        <p>Und du? Wie hast du die <span class="gl" data-uk="канікули" data-lemma="die Ferien (Pl.)">Ferien</span> verbracht? Bist du lange an der Ostsee <span class="gl" data-uk="залишатися" data-lemma="bleiben, ist geblieben">geblieben</span>? Schreib bald!</p>
+        <p>Viele Grüße<br>dein Taras</p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">Perfekt: Ich bin geschwommen. Ich habe gelesen.</h2>
+      <p class="lead">Рамка та сама, що в модулі B: <b>haben / sein</b> на 2-му місці + <b>Partizip II</b> у кінці. Але в неправильних (сильних) дієслів Partizip II закінчується на <b>-en</b>, а корінь часто змінюється: schwimmen → ge<b>schwomm</b>en. Таке правилом не виведеш — ці форми треба запам'ятати.</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. Partizip II на -en</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>як утворюється</th><th>приклади</th></tr>
+          <tr><td><strong>ge</strong>- + корінь + -<strong>en</strong><br>(корінь не змінюється)</td><td>fahren → <strong>ge</strong>fahr<strong>en</strong>, lesen → <strong>ge</strong>les<strong>en</strong>, sehen → <strong>ge</strong>seh<strong>en</strong>, laufen → <strong>ge</strong>lauf<strong>en</strong></td></tr>
+          <tr><td><strong>ge</strong>- + <strong>інший</strong> корінь + -<strong>en</strong></td><td>schwimmen → ge<strong>schwomm</strong>en, singen → ge<strong>sung</strong>en, treffen → ge<strong>troff</strong>en, schreiben → ge<strong>schrieb</strong>en, bleiben → ge<strong>blieb</strong>en, fliegen → ge<strong>flog</strong>en, gehen → ge<strong>gang</strong>en, sitzen → ge<strong>sess</strong>en</td></tr>
+          <tr><td>без ge- (be-, ver-…)</td><td>bekommen → bekommen, verstehen → verstanden</td></tr>
+          <tr><td>префікс + <strong>ge</strong> + …<strong>en</strong></td><td>aufstehen → auf<strong>ge</strong>standen, einladen → ein<strong>ge</strong>laden, fernsehen → fern<strong>ge</strong>sehen</td></tr>
+        </table></div>
+        <div class="merke">Учи дієслово одразу <b>трьома формами</b>: fahren — fährt — <b>ist gefahren</b>, lesen — liest — <b>hat gelesen</b>. Повний список — у таблиці неправильних дієслів наприкінці підручника (с. 161) і в «Grammatik zum Nachschlagen» у кінці уроку.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. Змішані: інший корінь, але -t</p>
+        <p class="beispiel">bringen → ge<b>brach</b>t · verbringen → <b>verbrach</b>t · mitbringen → mitge<b>brach</b>t · denken → ge<b>dach</b>t · kennen → ge<b>kann</b>t</p>
+        <div class="merke"><b>kennenlernen</b> — відокремлюване: Ich habe viele Kinder <b>kennengelernt</b>.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. haben чи sein?</p>
+        <p>Правило з модуля B не змінюється: <b>sein</b> — рух і зміна стану, <b>haben</b> — усе інше.</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>sein</th><th>haben</th></tr>
+          <tr><td><strong>ist</strong> gefahren, geflogen, gegangen, gelaufen, geschwommen, gekommen</td><td><strong>hat</strong> gelesen, gesehen, geschrieben, getroffen, gesungen, gesessen</td></tr>
+          <tr><td><strong>ist</strong> aufgestanden (зміна стану)<br><strong>ist</strong> geblieben (виняток!)</td><td><strong>hat</strong> geholfen, gegessen, getrunken, geschlafen</td></tr>
+        </table></div>
+        <div class="merke"><b>bleiben</b> — це не рух, але перфект з <b>sein</b>: Wir <b>sind</b> zu Hause <b>geblieben</b>. Запам'ятай як виняток.</div>
+        <p class="section-label" style="margin:14px 0 8px;">Типові помилки</p>
+        <p>✗ Ich habe ein Buch gelest. → ✓ Ich habe ein Buch <b>gelesen</b>. <i>(сильне дієслово → -en)</i></p>
+        <p>✗ Wir haben ans Meer gefahren. → ✓ Wir <b>sind</b> ans Meer gefahren. <i>(рух → sein)</i></p>
+        <p>✗ Ich habe meine Freunde getrefft. → ✓ Ich habe meine Freunde <b>getroffen</b>.</p>
+        <p>✗ Ich habe zu Hause gebleibt. → ✓ Ich <b>bin</b> zu Hause <b>geblieben</b>.</p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: картинки ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Was macht man in den Ferien?</h2>
+      <p class="lead">Вибери картинку до кожного заняття.</p>
+      <div class="card" id="ub1-pic"></div>
+    </section>
+
+    <!-- ===== Üb. 2: пропуски ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">haben / sein + Partizip II</h2>
+      <p class="lead">Впиши допоміжне дієслово (haben чи sein у правильній формі) і Partizip II дієслова з дужок. На початку речення — з великої літери.</p>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> (schwimmen) In den Sommerferien <input type="text" class="blank-input inline" data-ans="ist"> Claudia viel im Fluss <input type="text" class="blank-input inline" data-ans="geschwommen">.</div>
+        <div class="fill-item"><span class="num">2)</span> (gehen, sehen) Seid ihr am Samstag ins Kino <input type="text" class="blank-input inline" data-ans="gegangen">? Was <input type="text" class="blank-input inline" data-ans="habt"> ihr <input type="text" class="blank-input inline" data-ans="gesehen">?</div>
+        <div class="fill-item"><span class="num">3)</span> (bleiben, singen) Wir <input type="text" class="blank-input inline" data-ans="sind"> zu Hause <input type="text" class="blank-input inline" data-ans="geblieben"> und <input type="text" class="blank-input inline" data-ans="haben"> Karaoke <input type="text" class="blank-input inline" data-ans="gesungen">.</div>
+        <div class="fill-item"><span class="num">4)</span> (treffen) Am Abend <input type="text" class="blank-input inline" data-ans="habe"> ich meine Freunde <input type="text" class="blank-input inline" data-ans="getroffen">.</div>
+        <div class="fill-item"><span class="num">5)</span> (laufen) In den Winterferien <input type="text" class="blank-input inline" data-ans="sind"> Leon und seine Schwester viel Ski <input type="text" class="blank-input inline" data-ans="gelaufen">.</div>
+        <div class="fill-item"><span class="num">6)</span> (fliegen) Im Mai <input type="text" class="blank-input inline" data-ans="sind"> die Meiers nach Italien <input type="text" class="blank-input inline" data-ans="geflogen">.</div>
+        <div class="fill-item"><span class="num">7)</span> (schreiben) Lukas <input type="text" class="blank-input inline" data-ans="hat"> seinem Freund in der Ukraine eine E-Mail <input type="text" class="blank-input inline" data-ans="geschrieben">.</div>
+        <div class="fill-item"><span class="num">8)</span> (aufstehen) Um wie viel Uhr <input type="text" class="blank-input inline" data-ans="bist"> du heute <input type="text" class="blank-input inline" data-ans="aufgestanden">?</div>
+        <div class="fill-item"><span class="num">9)</span> (verbringen) Wo <input type="text" class="blank-input inline" data-ans="hast"> du die Ferien <input type="text" class="blank-input inline" data-ans="verbracht">?</div>
+        <div class="fill-item"><span class="num">10)</span> (lesen) Im Ferienlager <input type="text" class="blank-input inline" data-ans="habe"> ich zwei Bücher <input type="text" class="blank-input inline" data-ans="gelesen">.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: кросворд ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Kreuzworträtsel: Partizip II</h2>
+      <p class="lead">Впиши в кросворд Partizip II. Підказка показує інфінітив і допоміжне дієслово.</p>
+      <div class="card" id="ub3-kw"></div>
+    </section>
+
+    <!-- ===== Üb. 4: склади речення ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Sätze bauen</h2>
+      <p class="lead">Натискай на слова в правильному порядку: haben / sein — на 2-му місці (у питанні — на 1-му чи після питального слова), Partizip II — у кінці.</p>
+      <div class="card" id="ub4-order"></div>
+    </section>
+
+    <!-- ===== HÖREN ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Radio „Schulfunk“: Und eure Ferien?</h2>
+      <p class="lead">Шкільне радіо першого вересня розпитує трьох учнів про канікули. Послухай (можна двічі) і дай відповіді. Текст інтерв'ю відкривається внизу — але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l3-c-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Reporterin:</b> Hallo! Hier ist Radio „Schulfunk“. Die Ferien sind vorbei. Wo habt ihr sie verbracht? Wie heißt du?<br>
+          <b>Leon:</b> Ich heiße Leon. Ich bin mit meinen Eltern nach Spanien geflogen. Wir sind zwei Wochen am Meer geblieben.<br>
+          <b>Reporterin:</b> Toll! Und was hast du da gemacht?<br>
+          <b>Leon:</b> Ich bin jeden Tag geschwommen und getaucht. Und ich habe viel Eis gegessen!<br>
+          <b>Reporterin:</b> Und du?<br>
+          <b>Emma:</b> Ich heiße Emma. Ich bin nicht ins Ausland gefahren. Ich habe die Ferien bei meinen Großeltern auf dem Bauernhof verbracht.<br>
+          <b>Reporterin:</b> Hat es dir gefallen?<br>
+          <b>Emma:</b> Ja, sehr! Ich habe den Großeltern geholfen und jeden Tag die Tiere gefüttert. Und abends habe ich viele Bücher gelesen.<br>
+          <b>Reporterin:</b> Und wer bist du?<br>
+          <b>Paul:</b> Ich bin Paul. Ich bin ins Ferienlager im Gebirge gefahren. Wir haben gezeltet und am Feuer gesessen. Ich habe viele neue Freunde kennengelernt.<br>
+          <b>Reporterin:</b> Und was hat dir am besten gefallen?<br>
+          <b>Paul:</b> Die Nachtwanderung! Wir sind um Mitternacht durch den Wald gegangen. Das hat Spaß gemacht!<br>
+          <b>Reporterin:</b> Danke euch! Und willkommen zurück in der Schule!
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Erzähl von deinen Ferien!</h2>
+      <p class="lead">Спершу вимов фрази в 🎤, потім відповідай уголос на запитання й порівнюй зі зразком.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Wo hast du deine letzten Ferien verbracht? Mit wem?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">In den Sommerferien bin ich zu meiner Oma aufs Land gefahren. Ich habe dort drei Wochen mit meinem Cousin verbracht.</div>
+        </div>
+        <div class="qa">
+          <label>2. Was hast du in den Ferien gemacht? Nenne vier Sachen.</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Ich bin im Fluss geschwommen und habe mit Opa geangelt. Ich habe Pilze gesammelt und viele Bücher gelesen.</div>
+        </div>
+        <div class="qa">
+          <label>3. Lawinenspiel „Unsere Ferien“ (у групі): повтори, що сказали попередні, і додай своє речення.</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Olena ist ans Meer gefahren, Ihor hat seine Freunde getroffen, und ich bin im Gebirge gewandert.</div>
+        </div>
+        <div class="qa">
+          <label>4. Was kann man in den Winterferien machen? Und in den Sommerferien?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">In den Winterferien kann man rodeln, Schlittschuh laufen und einen Schneemann bauen. In den Sommerferien kann man baden, angeln und zelten.</div>
+        </div>
+        <div class="qa">
+          <label>5. Spielt das Radio-Interview zu zweit: A — Reporter/in, B — erzählt von den Ferien.</label>
+          <button class="btn secondary" type="button" data-reveal="spr5">Muster zeigen</button>
+          <div class="reveal" id="spr5">A: Wo hast du die Ferien verbracht? — B: Im Ferienlager am See. — A: Was hast du da gemacht? — B: Wir haben gezeltet und sind viel geschwommen. — A: Hat es dir gefallen? — B: Ja, sehr!</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Eine Antwort an Taras</h2>
+      <p class="lead">Уяви, що ти Макс (або Маша). Напиши Тарасові відповідь на 50–80 слів: де ти провів(-ла) канікули, з ким, що робив(-ла), що сподобалося найбільше; наприкінці постав йому одне запитання. Використай щонайменше три неправильні дієслова в перфекті.</p>
+      <div class="card">
+        <p class="beispiel">Lieber Taras, vielen Dank für … · In den Ferien bin ich … gefahren / geblieben · Ich habe … verbracht / gelesen / getroffen · Das hat mir gut gefallen. · Viele Grüße</p>
+        <div class="qa">
+          <label for="schreiben-text">Meine Antwort</label>
+          <textarea id="schreiben-text" rows="9" placeholder="Lieber Taras, …"
+            data-words="50-80"
+            data-must="Lieber Taras|Ferien|Grüße"
+            data-check="Звертання й підпис|Де і з ким провів(-ла) канікули|Що робив(-ла)|Що сподобалося найбільше|Одне запитання Тарасові|Три неправильні дієслова в перфекті"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Lieber Taras, vielen Dank für deine E-Mail! Deine Ferien in den Karpaten klingen super. Ich bin in den Sommerferien nicht ins Ausland gefahren. Ich habe drei Wochen bei meinen Großeltern am See verbracht. Ich bin jeden Tag geschwommen und habe mit Opa geangelt. Abends haben wir am Feuer gesessen. Ich habe auch viele Bücher gelesen! Das hat mir sehr gut gefallen. Bist du schon einmal geflogen? Viele Grüße, dein Max</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">6)</span> Wir
+          <select class="blank inline" data-ans="sind"><option value="">—</option><option>sind</option><option>haben</option><option>ist</option></select> zwei Wochen am Meer geblieben.</div>
+        <div class="fill-item"><span class="num">7)</span> Hast du deine Freunde
+          <select class="blank inline" data-ans="getroffen"><option value="">—</option><option>getroffen</option><option>getrefft</option><option>getreffen</option></select>?</div>
+        <div class="fill-item"><span class="num">8)</span> Im Ferienlager hat Taras viele Kinder
+          <select class="blank inline" data-ans="kennengelernt"><option value="">—</option><option>kennengelernt</option><option>gekennenlernt</option><option>kennengelernen</option></select>.</div>
+        <div class="fill-item"><span class="num">9)</span> Die Ferien haben mir sehr gut
+          <select class="blank inline" data-ans="gefallen"><option value="">—</option><option>gefallen</option><option>gefällt</option><option>gefallt</option></select>.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-5-klas-5-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-5-klas-5-rik";
+  const KN_UNIT = "l3-c";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Taras ist im Juli in die Karpaten gefahren.", a: "r"},
+    {s: "Die Familie hat zwei Wochen im Gebirge verbracht.", a: "f"},
+    {s: "Sie sind auf den höchsten Berg der Ukraine geklettert.", a: "r"},
+    {s: "Taras’ Mama hat im Fluss geangelt.", a: "f"},
+    {s: "Abends haben sie am Feuer Lieder gesungen.", a: "r"},
+    {s: "Im Ferienlager hat Taras Kinder aus Kanada kennengelernt.", a: "r"},
+    {s: "Im Ferienlager haben die Kinder nur Ukrainisch gesprochen.", a: "f"},
+    {s: "Taras hat im Meer Delfine gesehen.", a: "r"},
+    {s: "Taras hat in den Ferien viele Bücher gelesen.", a: "f"}
+  ]);
+
+  // Üb. 1: картинки
+  buildPicture('ub1-pic', [
+    {q: "angeln", opts: ["🎣", "🤿", "⛺"], correct: "🎣"},
+    {q: "zelten", opts: ["⛺", "🏨", "🏠"], correct: "⛺"},
+    {q: "tauchen", opts: ["🤿", "🎣", "🚣"], correct: "🤿"},
+    {q: "einen Schneemann bauen", opts: ["⛄", "🏰", "🧱"], correct: "⛄"},
+    {q: "rodeln", opts: ["🛷", "⛷️", "🚲"], correct: "🛷"},
+    {q: "Schlittschuh laufen", opts: ["⛸️", "🛼", "⛷️"], correct: "⛸️"},
+    {q: "Pilze sammeln", opts: ["🍄", "🌸", "🍓"], correct: "🍄"},
+    {q: "sich am Strand sonnen", opts: ["🏖️", "⛰️", "🌧️"], correct: "🏖️"},
+    {q: "im Gebirge wandern", opts: ["🏔️", "🏝️", "🏙️"], correct: "🏔️"}
+  ]);
+
+  // Üb. 2: haben/sein + Partizip II
+  wireBlanks('ub2');
+
+  // Üb. 3: кросворд
+  buildCrossword('ub3-kw', [
+    ["gefahren", "fahren → ist …"],
+    ["geschwommen", "schwimmen → ist …"],
+    ["gelesen", "lesen → hat …"],
+    ["getroffen", "treffen → hat …"],
+    ["geblieben", "bleiben → ist …"],
+    ["geflogen", "fliegen → ist …"],
+    ["geschrieben", "schreiben → hat …"],
+    ["verbracht", "verbringen → hat …"],
+    ["gesungen", "singen → hat …"]
+  ]);
+
+  // Üb. 4: склади речення
+  buildOrder('ub4-order', [
+    {words: ["Ich", "bin", "in den Ferien", "ans Meer", "gefahren"], end: ".", alt: ["In den Ferien bin ich ans Meer gefahren"]},
+    {words: ["Wir", "haben", "am Feuer", "Lieder", "gesungen"], end: ".", alt: ["Am Feuer haben wir Lieder gesungen"]},
+    {words: ["Hast", "du", "deine Freunde", "getroffen"], end: "?"},
+    {words: ["Taras", "hat", "viele Kinder", "kennengelernt"], end: ".", gross: true},
+    {words: ["Wo", "hast", "du", "die Ferien", "verbracht"], end: "?"},
+    {words: ["Um sieben", "sind", "wir", "aufgestanden"], end: ".", alt: ["Wir sind um sieben aufgestanden"]}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "In den Ferien bin ich ans Meer gefahren.", uk: "На канікулах я їздив(-ла) на море."},
+    {say: "Ich habe viele Bücher gelesen.", uk: "Я прочитав(-ла) багато книжок."},
+    {say: "Wir haben am Feuer Lieder gesungen.", uk: "Ми співали пісні біля багаття."},
+    {say: "Wo hast du die Ferien verbracht?", uk: "Де ти провів(-ла) канікули?"}
+  ]);
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Wohin ist Leon geflogen?", opts: ["nach Spanien", "nach Italien", "nach Polen"], correct: "nach Spanien"},
+    {q: "Wie lange ist Leon am Meer geblieben?", opts: ["zwei Wochen", "zehn Tage", "einen Monat"], correct: "zwei Wochen"},
+    {q: "Was hat Leon viel gegessen?", opts: ["Eis", "Pizza", "Fisch"], correct: "Eis"},
+    {q: "Wo hat Emma die Ferien verbracht?", opts: ["auf dem Bauernhof", "am Meer", "im Ferienlager"], correct: "auf dem Bauernhof"},
+    {q: "Was hat Emma gemacht?", opts: ["Sie hat den Großeltern geholfen.", "Sie ist getaucht.", "Sie hat gezeltet."], correct: "Sie hat den Großeltern geholfen."},
+    {q: "Wohin ist Paul gefahren?", opts: ["ins Ferienlager im Gebirge", "ans Meer", "zu den Großeltern"], correct: "ins Ferienlager im Gebirge"},
+    {q: "Was hat Paul am besten gefallen?", opts: ["die Nachtwanderung", "das Essen", "das Schwimmen"], correct: "die Nachtwanderung"}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Wir sind ans Meer … .", opts: ["gefahren", "gefahrt", "fahren"], correct: "gefahren"},
+    {q: "Ich habe ein Buch … .", opts: ["gelesen", "gelest", "geliesen"], correct: "gelesen"},
+    {q: "Wo … du die Ferien verbracht?", opts: ["hast", "bist", "hat"], correct: "hast"},
+    {q: "Partizip II von „aufstehen“:", opts: ["aufgestanden", "aufgesteht", "geaufstanden"], correct: "aufgestanden"},
+    {q: "Was bedeutet „das Gebirge“?", opts: ["гори", "озеро", "пляж"], correct: "гори"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Ich habe nach Italien geflogen.", wrong: 1, fix: "bin"},
+    {s: "Wir haben Lieder gesingt.", wrong: 3, fix: "gesungen"},
+    {s: "Bist du zu Hause geblieben?", ok: true},
+    {s: "Lena hat einen Brief geschreibt.", wrong: 4, fix: "geschrieben"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['⛺', '🏖️', '🏔️', '🎣']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
