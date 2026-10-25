@@ -218,4 +218,17 @@
   {de: "müde", uk: "втомлений, сонний", r: "l2-c"},
   {de: "der Frühaufsteher, - / die Frühaufsteherin, -nen", uk: "«жайворонок» (той, хто рано встає)", r: "l2-c"},
   {de: "der Langschläfer, - / die Langschläferin, -nen", uk: "«сова», той, хто довго спить", r: "l2-c"},
+  // ---- Lektion 2 · Modul E: Geschichtenzeit ----
+  {de: "aufwachen", uk: "прокидатися", r: "l2-e", note: "Max wacht um acht auf."},
+  {de: "kaputt", uk: "зламаний, зіпсований", r: "l2-e"},
+  {de: "die Socke, -n", uk: "шкарпетка", r: "l2-e"},
+  {de: "der Rucksack, -ä-e", uk: "рюкзак", r: "l2-e"},
+  {de: "niemand", uk: "ніхто", r: "l2-e", note: "In der Küche ist niemand."},
+  {de: "leer", uk: "порожній", r: "l2-e"},
+  {de: "komisch", uk: "дивний; смішний", r: "l2-e"},
+  {de: "egal", uk: "байдуже, однаково", r: "l2-e", note: "Das ist mir egal. — Мені байдуже."},
+  {de: "es eilig haben", uk: "поспішати, квапитися", r: "l2-e", note: "Warum hast du es so eilig?"},
+  {de: "stehen bleiben", uk: "зупинитися", r: "l2-e", note: "Max bleibt stehen."},
+  {de: "zuerst", uk: "спочатку", r: "l2-e"},
+  {de: "der Pfannkuchen, -", uk: "млинець", r: "l2-e"},
 ];
