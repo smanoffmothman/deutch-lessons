@@ -226,18 +226,17 @@
   // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
   enableTestMode({exclude: ['ub1', 'ub2', 'ub3', 'ub4', 'ub5', 'ub6', 'sprechen']});
 
-  // Üb. 1: бліц
-  buildBlitz('ub1-blitz', {
-    pairs: [
-      ["der Stundenplan", "розклад уроків"], ["die Pause", "перерва"], ["das Heft", "зошит"],
-      ["das Federmäppchen", "пенал"], ["die Tafel", "дошка"], ["das Lehrbuch", "підручник"],
-      ["übersetzen", "перекладати"], ["erklären", "пояснювати"], ["üben", "вправлятися"],
-      ["der Wecker", "будильник"], ["aufstehen", "вставати"], ["sich anziehen", "одягатися"],
-      ["sich beeilen", "поспішати"], ["frühstücken", "снідати"], ["müde", "втомлений"],
-      ["die Hausaufgabe", "домашнє завдання"]
-    ],
-    seconds: 60, dir: "de-uk"
+  // Üb. 1: бліц — усі слова Lektion 2 з файлу слів (без однакових перекладів)
+  const blitzPairs = [], blitzSeen = new Set();
+  ((window.SLOVA && window.SLOVA[KN_BOOK]) || []).filter(w => /^l2-/.test(w.r)).forEach(w => {
+    const de = w.de.split(' / ')[0].split(',')[0].replace(/\s*\(.*?\)/g, '').trim();
+    const uk = w.uk.split(' / ')[0].trim();
+    const key = uk.split(/[,;]/)[0].trim().toLowerCase();
+    if (!de || /^(der|die|das)$/i.test(de) || blitzSeen.has(key)) return;
+    blitzSeen.add(key);
+    blitzPairs.push([de, uk]);
   });
+  buildBlitz('ub1-blitz', {pairs: blitzPairs, seconds: 60, dir: "de-uk"});
 
   // Üb. 2: кросворд
   buildCrossword('ub2-kw', [
