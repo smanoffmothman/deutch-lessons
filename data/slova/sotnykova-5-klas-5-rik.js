@@ -388,4 +388,15 @@
   {de: "zu Besuch gehen", uk: "іти в гості", r: "l4-b"},
   {de: "Einen guten Rutsch!", uk: "Щасливо зустріти Новий рік!", r: "l4-b", note: "Danke, gleichfalls! — Дякую, і вам також!"},
   {de: "die Kutja", uk: "кутя", r: "l4-b"},
+  // ---- Lektion 4 · Modul D: Geschichtenzeit ----
+  {de: "der Kalender, -", uk: "календар; щоденник", r: "l4-d"},
+  {de: "die Überraschung, -en", uk: "сюрприз, несподіванка", r: "l4-d", note: "eine Überraschungsparty machen"},
+  {de: "der Luftballon, -s", uk: "повітряна кулька", r: "l4-d"},
+  {de: "die Torte, -n", uk: "торт", r: "l4-d", note: "die Schokoladentorte"},
+  {de: "fertig", uk: "готовий", r: "l4-d", note: "Alles ist fertig."},
+  {de: "das Wohnzimmer, -", uk: "вітальня", r: "l4-d"},
+  {de: "hinter (+ Dat.)", uk: "за, позаду (де?)", r: "l4-d", note: "hinter dem Sofa"},
+  {de: "Alles Gute zum Geburtstag!", uk: "З днем народження!", r: "l4-d"},
+  {de: "verwechseln", uk: "переплутати", r: "l4-d", note: "Sie haben das Datum verwechselt."},
+  {de: "trotzdem", uk: "все одно, попри це", r: "l4-d"},
 ];
