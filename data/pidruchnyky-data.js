@@ -97,7 +97,7 @@ const PIDRUCHNYKY = [
       ] },
       { id: "l4", label: "4", nazva: "Feiern bringt Freude", storinky: "67–82", dity: [
         { id: "l4-a", label: "A", nazva: "Lieblingsfeste", storinky: "68–72", typ: "vpravy", gram: ["zahlwoerter", "konjunktionen-position-null"], opublikovano: 16 },
-        { id: "l4-b", label: "B", nazva: "Weihnachten und Silvester", storinky: "73–77", typ: "vpravy" },
+        { id: "l4-b", label: "B", nazva: "Weihnachten und Silvester", storinky: "73–77", typ: "vpravy", gram: ["praep-dativ"], opublikovano: 17 },
         { id: "l4-c", label: "C", nazva: "Wiederholung", storinky: "78–79", typ: "povtorennya" },
         { id: "l4-d", label: "D", nazva: "Geschichtenzeit", storinky: "80", typ: "chytannya" },
         { id: "l4-e", label: "E", nazva: "Projektarbeit", storinky: "81", typ: "bez-storinky" },
