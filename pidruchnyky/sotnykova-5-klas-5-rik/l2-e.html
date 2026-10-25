@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 2, Modul E: Geschichtenzeit — Німецька мова 5 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 5 КЛАС</span>
+        <h1>Lektion 2 · Modul E: Geschichtenzeit</h1>
+        <p class="sub">Власне оповідання з озвученням «Ein ganz normaler Montag?» — про хлопця, який дуже поспішав до школи. Читаємо, розуміємо, переказуємо й пишемо від імені героя.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Reihenfolge</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · richtig / falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wer sagt das?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Kurz erzählt</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова до оповідання</h2>
+      <p class="lead">Спершу переглянь нові слова — тоді оповідання читатиметься легко.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zur Geschichte</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власне оповідання ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Ein ganz normaler Montag?</h2>
+      <p class="lead">Послухай і прочитай оповідання. Торкнися виділеного слова, щоб побачити переклад.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l2-e-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Max <span class="gl" data-uk="прокидатися" data-lemma="aufwachen">wacht auf</span>. Die Sonne scheint schon hell ins Zimmer. Er schaut auf den <span class="gl" data-uk="будильник" data-lemma="der Wecker, -">Wecker</span>: Viertel nach acht! „Oh nein! Mein Wecker ist <span class="gl" data-uk="зламаний, зіпсований" data-lemma="kaputt">kaputt</span>!“ Der Unterricht beginnt um acht, und die erste Stunde ist Mathe. Heute schreiben sie eine Testarbeit!</p>
+        <p>Max springt aus dem Bett. Er wäscht sich nicht, er kämmt sich nicht — keine Zeit! Er <span class="gl" data-uk="одягатися" data-lemma="sich anziehen">zieht sich</span> schnell <span class="gl" data-uk="одягатися" data-lemma="sich anziehen">an</span>: die Hose, den Pulli und nur eine <span class="gl" data-uk="шкарпетка" data-lemma="die Socke, -n">Socke</span>. Dann nimmt er seinen <span class="gl" data-uk="рюкзак" data-lemma="der Rucksack, -ä-e">Rucksack</span>. Das Federmäppchen? Wo ist es? <span class="gl" data-uk="байдуже, однаково" data-lemma="egal">Egal</span>!</p>
+        <p>In der Küche ist <span class="gl" data-uk="ніхто" data-lemma="niemand">niemand</span>. „<span class="gl" data-uk="дивний; смішний" data-lemma="komisch">Komisch</span>“, denkt Max. „Wo sind Mama und Papa?“ Er läuft auf die Straße. Die Straße ist <span class="gl" data-uk="порожній" data-lemma="leer">leer</span>. Kein Bus, keine Kinder, keine Autos. Nur ein alter Mann mit einem Hund.</p>
+        <p>„Entschuldigung, wie spät ist es?“, fragt Max. „Halb neun“, sagt der Mann. „Warum <span class="gl" data-uk="поспішати, квапитися" data-lemma="es eilig haben">hast</span> du es so <span class="gl" data-uk="поспішати, квапитися" data-lemma="es eilig haben">eilig</span>?“ — „Ich muss zur Schule! Wir schreiben heute eine Testarbeit!“ Der Mann lacht: „Heute? Heute ist doch Samstag!“</p>
+        <p>Max <span class="gl" data-uk="зупинитися" data-lemma="stehen bleiben">bleibt stehen</span>. Samstag! Keine Schule, keine Testarbeit, kein Mathe. Langsam geht er nach Hause. Jetzt steht Mama in der Küche und macht <span class="gl" data-uk="млинець" data-lemma="der Pfannkuchen, -">Pfannkuchen</span>. „Guten Morgen, mein Schatz! Wo kommst du denn her?“</p>
+        <p>Max lacht. „Das erzähle ich dir beim Frühstück. Aber <span class="gl" data-uk="спочатку" data-lemma="zuerst">zuerst</span> wasche ich mich — und ich ziehe die zweite Socke an!“</p>
+      </article>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: порядок подій ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Was passiert zuerst?</h2>
+      <p class="lead">Розстав події оповідання в правильному порядку: натискай речення одне за одним.</p>
+      <div class="card" id="ub1-seq"></div>
+    </section>
+
+    <!-- ===== Üb. 2: richtig / falsch ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig oder falsch?</h2>
+      <p class="lead">Чи правильні твердження? Якщо в тексті про це нічого не сказано — «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3: хто це каже ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wer sagt das?</h2>
+      <p class="lead">Хто з героїв оповідання каже ці слова?</p>
+      <div class="card" id="ub3-list"></div>
+    </section>
+
+    <!-- ===== Üb. 4: переказ з банком слів ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Kurz erzählt</h2>
+      <p class="lead">Короткий переказ оповідання. Встав слова з набору — одне слово зайве.</p>
+      <div class="card" id="ub4-bank"></div>
+    </section>
+
+    <!-- ===== SPRECHEN ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Was meinst du?</h2>
+      <p class="lead">Відповідай уголос — сам(а) або з партнером, і лише потім відкрий зразок.</p>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Erzähl die Geschichte kurz nach — in 4–5 Sätzen.</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Max wacht um Viertel nach acht auf. Er denkt, er ist zu spät, und zieht sich schnell an — nur mit einer Socke. Er läuft auf die Straße, aber dort ist niemand. Ein Mann sagt: „Heute ist Samstag!“ Max geht nach Hause und frühstückt mit Mama.</div>
+        </div>
+        <div class="qa">
+          <label>2. Was macht Max falsch? Gib ihm drei Tipps (du-Form).</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Max, schau zuerst auf den Kalender! Stell den Wecker jeden Abend! Und zieh beide Socken an!</div>
+        </div>
+        <div class="qa">
+          <label>3. Kennst du auch eine komische Situation am Morgen? Erzähl im Präsens.</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Einmal ziehe ich am Morgen zwei verschiedene Schuhe an — einen roten und einen blauen. In der Schule lachen alle. Ich lache auch!</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Max schreibt an Tim</h2>
+      <p class="lead">Увечері Макс пише другові Тімові про свій «понеділок». Напиши повідомлення від імені Макса — 40–60 слів: коли він прокинувся, що зробив, що сказав чоловік на вулиці і як закінчився ранок.</p>
+      <div class="card">
+        <p class="beispiel">Hallo Tim! Stell dir vor: … · Mein Wecker … · Ich ziehe mich … an · Ein Mann sagt: … · Zum Glück …</p>
+        <div class="qa">
+          <label for="schreiben-text">Max' Nachricht</label>
+          <textarea id="schreiben-text" rows="7" placeholder="Hallo Tim! Stell dir vor: …"
+            data-words="40-60"
+            data-must="Wecker|Samstag|mich"
+            data-check="Привітання і підпис|Котра година була вранці|Що сказав чоловік|Як закінчився ранок"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Hallo Tim! Stell dir vor: Heute Morgen ist es Viertel nach acht, und mein Wecker ist kaputt! Ich denke, ich bin zu spät für die Testarbeit. Ich ziehe mich schnell an — mit nur einer Socke! — und laufe auf die Straße. Ein Mann sagt: „Heute ist doch Samstag!“ Zum Glück macht Mama Pfannkuchen. Bis Montag! Max</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-5-klas-5-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-5-klas-5-rik";
+  const KN_UNIT = "l2-e";
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+
+  // Üb. 1: порядок подій
+  buildSequence('ub1-seq', [
+    "Max wacht auf: Es ist Viertel nach acht.",
+    "Er zieht sich schnell an — mit nur einer Socke.",
+    "In der Küche ist niemand.",
+    "Auf der Straße fragt Max einen Mann nach der Uhrzeit.",
+    "Der Mann sagt: Heute ist Samstag.",
+    "Max geht langsam nach Hause.",
+    "Mama macht Pfannkuchen."
+  ]);
+
+  // Üb. 2: richtig / falsch / steht nicht im Text
+  buildRF('ub2-rf', [
+    {s: "Max wacht um Viertel nach acht auf.", a: "r"},
+    {s: "Die erste Stunde ist Deutsch.", a: "f"},
+    {s: "Max wäscht sich und kämmt sich.", a: "f"},
+    {s: "Max findet sein Federmäppchen nicht.", a: "r"},
+    {s: "Auf der Straße sind viele Kinder.", a: "f"},
+    {s: "Der Hund des Mannes heißt Bello.", a: "n"},
+    {s: "Heute ist Samstag.", a: "r"},
+    {s: "Max' Schwester isst auch Pfannkuchen.", a: "n"},
+    {s: "Am Ende lacht Max.", a: "r"}
+  ]);
+
+  // Üb. 3: хто каже
+  buildMatch('ub3', [
+    ["„Oh nein! Mein Wecker ist kaputt!“", "Max"],
+    ["„Warum hast du es so eilig?“", "der Mann"],
+    ["„Heute ist doch Samstag!“", "der Mann"],
+    ["„Wo kommst du denn her?“", "Mama"],
+    ["„Ich ziehe die zweite Socke an!“", "Max"]
+  ], {lead: true, options: ["Max", "der Mann", "Mama"]});
+
+  // Üb. 4: переказ
+  buildWordBank('ub4-bank', {
+    text: "Max [wacht] um Viertel nach acht auf. Sein Wecker ist [kaputt]. Er hat es sehr [eilig] und zieht nur eine [Socke] an. In der Küche ist [niemand], und die Straße ist [leer]. Ein Mann sagt: Heute ist [Samstag]! Zu Hause macht Mama [Pfannkuchen].",
+    extra: ["Montag"]
+  });
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['⏰', '🧦', '🏃', '🥞']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 2, Modul D: Wiederholung — Німецька мова 5 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 5 КЛАС</span>
+        <h1>Lektion 2 · Modul D: Wiederholung</h1>
+        <p class="sub">Повторення всього Lektion 2 «Lerne was, so kannst du was»: шкільні предмети й речі, модальні дієслова, наказовий спосіб, котра година, зворотні дієслова — з бліцом, кросвордом, годинником, чатом і підсумковим тестом на весь Lektion.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Blitz</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Kreuzworträtsel</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Die Uhr</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Fehler</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Sätze umbauen</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Chat</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER — усі слова Lektion 2 (збираються самі) ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Усі слова Lektion 2</h2>
+      <p class="lead">Тут зібрано слова всіх модулів Lektion 2. Перевір себе в «Картки ▶» і познач ☆ ті, які ще не пам'ятаєш, — їх варто повторити перед тестом.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: бліц ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Blitz: 60 Sekunden</h2>
+      <p class="lead">Розминка на швидкість: скільки слів Lektion 2 ти перекладеш за 60 секунд? У бал не йде — це гра. Спробуй побити власний рекорд!</p>
+      <div class="card" id="ub1-blitz"></div>
+    </section>
+
+    <!-- ===== Üb. 2: кросворд ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Kreuzworträtsel: Schule</h2>
+      <p class="lead">Торкнися клітинки чи підказки й пиши слово (ще раз по клітинці — інший напрямок). Артиклі писати не треба. ä ö ü — з панелі внизу.</p>
+      <div class="card" id="ub2-kw"></div>
+    </section>
+
+    <!-- ===== Üb. 3: годинник ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Die Uhr</h2>
+      <p class="lead">Котра година? Вибери, напиши або постав стрілки.</p>
+      <div class="card" id="ub3-uhr"></div>
+    </section>
+
+    <!-- ===== Üb. 4: знайди помилку ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Finde den Fehler</h2>
+      <p class="lead">Помилки з усього Lektion 2: модальні дієслова, наказовий спосіб, зворотні займенники, порядкові числівники. Деякі речення правильні.</p>
+      <div class="card" id="ub4-fix"></div>
+    </section>
+
+    <!-- ===== Üb. 5: перетворення речення ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Sätze umbauen</h2>
+      <p class="lead">Перебудуй речення так, як сказано після стрілки «→», і напиши його цілим.</p>
+      <div class="card" id="ub5-tr"></div>
+    </section>
+
+    <!-- ===== Üb. 6: чат ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">Der neue Mitschüler</h2>
+      <p class="lead">У вашому класі новенький — Йонас з Мюнхена. Він питає в месенджері про школу. Вибирай доречну відповідь.</p>
+      <div class="card" id="ub6-chat"></div>
+    </section>
+
+    <!-- ===== SPRECHEN ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Sprich mal!</h2>
+      <p class="lead">Спершу вимов фрази в 🎤, потім відповідай уголос на запитання й порівнюй зі зразком.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Was ist dein Lieblingsfach? Was kannst und was musst du da machen?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Mein Lieblingsfach ist Sport. Da können wir Fußball und Volleyball spielen. Wir müssen aber auch viel laufen — das finde ich anstrengend.</div>
+        </div>
+        <div class="qa">
+          <label>2. Nenne drei Regeln in deiner Schule: Was darf man, was muss man, was soll man nicht?</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">In der Pause darf man auf den Schulhof gehen. Man muss pünktlich sein. Und im Unterricht soll man nicht mit dem Handy spielen.</div>
+        </div>
+        <div class="qa">
+          <label>3. Wie ist dein Montag? Erzähl mit Uhrzeiten — vom Wecker bis zum Schlafen.</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Am Montag klingelt mein Wecker um Viertel vor sieben. Ich stehe auf, wasche mich und ziehe mich an. Von acht bis halb zwei habe ich Unterricht. Nachmittags treffe ich mich mit Freunden, und um zehn gehe ich schlafen.</div>
+        </div>
+        <div class="qa">
+          <label>4. Du bist die Lehrerin. Gib der Klasse drei Anweisungen — und einem Schüler eine.</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Kinder, öffnet die Bücher! Lest den Text auf Seite zehn und schreibt die Vokabeln ins Heft! Max, sei bitte leise!</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — на весь Lektion ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Test zu Lektion 2</h2>
+      <p class="lead">Підсумковий тест на весь Lektion 2: 16 завдань. Кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">6)</span> Ich
+          <select class="blank inline" data-ans="muss"><option value="">—</option><option>muss</option><option>musst</option><option>müssen</option></select> heute die Wörter wiederholen.</div>
+        <div class="fill-item"><span class="num">7)</span> Max, (lesen)
+          <select class="blank inline" data-ans="lies"><option value="">—</option><option>lies</option><option>liest</option><option>lest</option></select> bitte laut!</div>
+        <div class="fill-item"><span class="num">8)</span> Wir treffen
+          <select class="blank inline" data-ans="uns"><option value="">—</option><option>sich</option><option>uns</option><option>euch</option></select> um vier.</div>
+        <div class="fill-item"><span class="num">9)</span> Die
+          <select class="blank inline" data-ans="dritte"><option value="">—</option><option>dritte</option><option>dreite</option><option>drittste</option></select> Stunde ist Musik.</div>
+        <div class="fill-item"><span class="num">10)</span> Frau Wolf, (helfen)
+          <select class="blank inline" data-ans="helfen Sie"><option value="">—</option><option>hilf</option><option>helft</option><option>helfen Sie</option></select> mir bitte!</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Die Uhr</p>
+        <div id="test-uhr"></div>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-5-klas-5-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-5-klas-5-rik";
+  const KN_UNIT = "l2-d";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['ub1', 'ub2', 'ub3', 'ub4', 'ub5', 'ub6', 'sprechen']});
+
+  // Üb. 1: бліц
+  buildBlitz('ub1-blitz', {
+    pairs: [
+      ["der Stundenplan", "розклад уроків"], ["die Pause", "перерва"], ["das Heft", "зошит"],
+      ["das Federmäppchen", "пенал"], ["die Tafel", "дошка"], ["das Lehrbuch", "підручник"],
+      ["übersetzen", "перекладати"], ["erklären", "пояснювати"], ["üben", "вправлятися"],
+      ["der Wecker", "будильник"], ["aufstehen", "вставати"], ["sich anziehen", "одягатися"],
+      ["sich beeilen", "поспішати"], ["frühstücken", "снідати"], ["müde", "втомлений"],
+      ["die Hausaufgabe", "домашнє завдання"]
+    ],
+    seconds: 60, dir: "de-uk"
+  });
+
+  // Üb. 2: кросворд
+  buildCrossword('ub2-kw', [
+    ["Mathe", "математика"],
+    ["Erdkunde", "географія"],
+    ["Kunst", "мистецтво, малювання (предмет)"],
+    ["Werken", "трудове навчання"],
+    ["Tafel", "дошка (die)"],
+    ["Heft", "зошит (das)"],
+    ["Pause", "перерва (die)"],
+    ["Kleber", "клей (der)"],
+    ["Wecker", "будильник (der)"],
+    ["Regel", "правило (die)"]
+  ]);
+
+  // Üb. 3: годинник
+  buildClock('ub3-uhr', [
+    {time: "7:45", opts: ["Viertel vor acht", "Viertel nach acht", "Viertel vor sieben"], correct: "Viertel vor acht"},
+    {time: "12:30", opts: ["halb eins", "halb zwölf", "zwölf nach halb"], correct: "halb eins"},
+    {time: "3:10"},
+    {time: "5:35"},
+    {set: "zwanzig vor neun", time: "8:40"},
+    {set: "fünf nach halb elf", time: "10:35"}
+  ]);
+
+  // Üb. 4: знайди помилку
+  buildFixError('ub4-fix', [
+    {s: "Er kannt sehr gut rechnen.", wrong: 1, fix: "kann"},
+    {s: "Kinder, öffnet bitte die Bücher!", ok: true},
+    {s: "Max, liest bitte den Text!", wrong: 1, fix: "lies"},
+    {s: "Wir treffen sich im Park.", wrong: 2, fix: "uns"},
+    {s: "Die dreite Stunde ist Englisch.", wrong: 1, fix: "dritte"},
+    {s: "Ich muss heute Mathe üben.", ok: true},
+    {s: "Frau Bauer, erklär das bitte!", wrong: 2, fix: "erklären Sie"},
+    {s: "Ich ziehe dich schnell an.", wrong: 2, fix: "mich"}
+  ]);
+
+  // Üb. 5: перетворення
+  buildTransform('ub5-tr', [
+    {s: "Ich übe heute Deutsch.", task: "<b>müssen</b>", ans: "Ich muss heute Deutsch üben."},
+    {s: "Du liest den Text.", task: "<b>Imperativ</b> (du)", ans: "Lies den Text!"},
+    {s: "Ich wasche mich.", task: "<b>er</b>", ans: "Er wäscht sich."},
+    {s: "Darf ich das Fenster öffnen?", task: "<b>wir</b>", ans: "Dürfen wir das Fenster öffnen?"},
+    {s: "Ihr seid leise.", task: "<b>Imperativ</b> (ihr)", ans: "Seid leise!"}
+  ]);
+
+  // Üb. 6: чат
+  buildChat('ub6-chat', {
+    partner: "Jonas",
+    steps: [
+      {them: "Hi! Ich bin neu in der Klasse. Wann beginnt morgen der Unterricht?"},
+      {you: ["Um acht. Die erste Stunde ist Englisch.", "Um acht. Die einste Stunde ist Englisch.", "Am acht Uhr."], correct: 0},
+      {them: "Danke! Darf man in der Pause auf den Schulhof gehen?"},
+      {you: ["Ja, man darf. Und im Winter muss man sogar raus!", "Ja, man darfst.", "Nein, man darf nicht schlafen."], correct: 0},
+      {them: "Und was soll ich für Kunst mitbringen?"},
+      {you: ["Bring Buntstifte und Kleber mit!", "Bringst Buntstifte mit!", "Bringen Buntstifte mit!"], correct: 0, hint: "наказовий спосіб, du"},
+      {them: "Okay. Ich habe ein Problem: Ich verstehe Mathe nicht so gut."},
+      {you: ["Kein Problem, ich kann dir helfen!", "Kein Problem, ich muss dich helfen!", "Kein Problem, hilf mir!"], correct: 0},
+      {them: "Super, danke! Wann treffen wir uns?"},
+      {you: ["Morgen um halb vier in der Bibliothek?", "Morgen um halb vier in der Nacht?", "Gestern um halb vier?"], correct: 0},
+      {them: "Perfekt! Bis morgen! 🙂"},
+      {you: ["Bis morgen!", "Gute Besserung!", "Guten Appetit!"], correct: 0}
+    ]
+  });
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Darf ich das Fenster öffnen?", uk: "Можна відчинити вікно?"},
+    {say: "Erklären Sie das bitte noch einmal!", uk: "Поясніть це, будь ласка, ще раз!"},
+    {say: "Ich muss mich beeilen.", uk: "Мені треба поспішати."},
+    {say: "Die erste Stunde ist Mathe.", uk: "Перший урок — математика."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Wo schreibt die Lehrerin die neuen Wörter?", opts: ["an die Tafel", "in die Pause", "auf den Wecker"], correct: "an die Tafel"},
+    {q: "„Darf ich …?“ heißt auf Ukrainisch:", opts: ["Можна …?", "Мушу …?", "Умію …?"], correct: "Можна …?"},
+    {q: "Die Ärztin sagt: „Trink viel Wasser!“ Ich … viel Wasser trinken.", opts: ["soll", "darf", "kann"], correct: "soll"},
+    {q: "Was ist „Viertel vor drei“?", opts: ["2:45", "3:15", "3:45"], correct: "2:45"},
+    {q: "Wer morgens lange schläft, ist ein …", opts: ["Langschläfer", "Frühaufsteher", "Stundenplan"], correct: "Langschläfer"}
+  ]);
+  wireBlanks('test');
+  buildClock('test-uhr', [
+    {time: "9:15"},
+    {set: "zehn vor zwölf", time: "11:50"}
+  ]);
+  buildFixError('test-fix', [
+    {s: "Du müsst die Regel lernen.", wrong: 1, fix: "musst"},
+    {s: "Lena kämmt sich die Haare.", ok: true},
+    {s: "Bist bitte leise!", wrong: 0, fix: "Sei"},
+    {s: "In Freitag haben wir Sport.", wrong: 0, fix: "Am"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📚', '⏰', '🤖', '🏆']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
