@@ -90,8 +90,8 @@ const PIDRUCHNYKY = [
         { id: "l3-a", label: "A", nazva: "Interessen und Hobbys", storinky: "50–53", typ: "vpravy", gram: ["trennbare-verben", "untrennbare-verben"], opublikovano: 11 },
         { id: "l3-b", label: "B", nazva: "Am Wochenende", storinky: "54–57", typ: "vpravy", gram: ["perfekt-plusquamperfekt"], opublikovano: 12 },
         { id: "l3-c", label: "C", nazva: "In den Ferien", storinky: "58–61", typ: "vpravy", gram: ["perfekt-plusquamperfekt", "starke-verben"], opublikovano: 13 },
-        { id: "l3-d", label: "D", nazva: "Wiederholung", storinky: "62–63", typ: "povtorennya" },
-        { id: "l3-e", label: "E", nazva: "Geschichtenzeit", storinky: "64", typ: "chytannya" },
+        { id: "l3-d", label: "D", nazva: "Wiederholung", storinky: "62–63", typ: "povtorennya", gram: ["trennbare-verben", "perfekt-plusquamperfekt", "starke-verben"], opublikovano: 14 },
+        { id: "l3-e", label: "E", nazva: "Geschichtenzeit", storinky: "64", typ: "chytannya", opublikovano: 15 },
         { id: "l3-f", label: "F", nazva: "Projektarbeit", storinky: "65", typ: "bez-storinky" },
         { id: "l3-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "66", typ: "bez-storinky" }
       ] },

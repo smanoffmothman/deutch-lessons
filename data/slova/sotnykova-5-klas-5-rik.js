@@ -318,4 +318,16 @@
   {de: "Pilze sammeln", uk: "збирати гриби", r: "l3-c"},
   {de: "kennenlernen, hat kennengelernt", uk: "знайомитися (з кимось)", r: "l3-c", note: "Ich habe viele Kinder kennengelernt."},
   {de: "gefallen (gefällt), hat gefallen (+ Dat.)", uk: "подобатися", r: "l3-c", note: "Die Ferien haben mir gut gefallen."},
+  // ---- Lektion 3 · Modul E: Geschichtenzeit ----
+  {de: "Mir ist langweilig.", uk: "мені нудно", r: "l3-e"},
+  {de: "die Idee, -n", uk: "ідея", r: "l3-e", note: "Ich habe eine Idee!"},
+  {de: "probieren", uk: "пробувати, куштувати", r: "l3-e"},
+  {de: "der Boden, -ö-", uk: "підлога; земля", r: "l3-e", note: "auf dem Boden sitzen"},
+  {de: "falsch", uk: "неправильно, фальшиво", r: "l3-e", note: "falsch singen"},
+  {de: "die Wolle", uk: "вовна, пряжа", r: "l3-e"},
+  {de: "der Balkon, -e", uk: "балкон", r: "l3-e"},
+  {de: "der Vogel, -ö-", uk: "птах, пташка", r: "l3-e"},
+  {de: "erkennen", uk: "впізнавати, розпізнавати", r: "l3-e"},
+  {de: "die Kamera, -s", uk: "фотоапарат, камера", r: "l3-e"},
+  {de: "stolz auf (+ Akk.)", uk: "гордий", r: "l3-e", note: "Oma ist stolz auf ihn."},
 ];
