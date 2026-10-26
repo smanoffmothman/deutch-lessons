@@ -81,7 +81,7 @@
     <section class="panel" id="panel-text">
       <p class="section-label">Text</p>
       <h2 class="panel-title">Wie ist das Wetter bei euch?</h2>
-      <p class="lead">Соломія з Києва відповідає Луїзі з Гамбурга й порівнює погоду в обох містах. Послухай і прочитай; торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <p class="lead">Соломія з Києва відповідає Греті з Гамбурга й порівнює погоду в обох містах. Послухай і прочитай; торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
       <div class="player">
         <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
         <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
@@ -90,7 +90,7 @@
       <audio id="audio1" preload="none" src="audio/l8-b-1.mp3"></audio>
       <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
       <article class="mat-text" id="matText">
-        <p>Liebe Luisa,</p>
+        <p>Liebe Greta,</p>
         <p>wie geht's dir? Bei uns in Kyjiw ist jetzt goldener <span class="gl" data-uk="осінь" data-lemma="der Herbst, -e">Herbst</span>! Die <span class="gl" data-uk="листок, аркуш" data-lemma="das Blatt, -ä-er">Blätter</span> auf den Bäumen sind gelb, rot und braun. Am Tag <span class="gl" data-uk="світити" data-lemma="scheinen">scheint</span> die Sonne, und das Thermometer zeigt fünfzehn <span class="gl" data-uk="градус" data-lemma="der Grad, -e">Grad</span>. Am Morgen ist es aber schon <span class="gl" data-uk="прохолодний" data-lemma="kühl">kühl</span>, und manchmal gibt es <span class="gl" data-uk="туман" data-lemma="der Nebel, -">Nebel</span>.</p>
         <p>Du hast geschrieben, dass es in Hamburg jeden Tag regnet und sehr <span class="gl" data-uk="вітряний" data-lemma="windig">windig</span> ist. Bei uns regnet es nicht so oft wie bei euch. Aber im <span class="gl" data-uk="зима" data-lemma="der Winter, -">Winter</span> ist es in Kyjiw viel kälter als in Hamburg! Im Januar gibt es oft <span class="gl" data-uk="мороз" data-lemma="der Frost, -ö-e">Frost</span> — minus zehn Grad oder noch kälter —, und es <span class="gl" data-uk="іти (про сніг)" data-lemma="schneien">schneit</span> viel. Dann gehe ich mit meinem Bruder rodeln. Das ist toll!</p>
         <p>Im <span class="gl" data-uk="літо" data-lemma="der Sommer, -">Sommer</span> ist es bei uns wärmer als bei euch, manchmal sind es über dreißig Grad. Dann fahren wir an den Dnipro und baden. Manchmal gibt es ein <span class="gl" data-uk="гроза" data-lemma="das Gewitter, -">Gewitter</span>: Es <span class="gl" data-uk="блискати (про блискавку)" data-lemma="blitzen">blitzt</span> und <span class="gl" data-uk="гриміти" data-lemma="donnern">donnert</span>, und ich habe ein bisschen Angst.</p>
@@ -199,8 +199,8 @@
     <!-- ===== Üb. 5: чат ===== -->
     <section class="panel" id="panel-ub5">
       <p class="section-label">Üb. 5</p>
-      <h2 class="panel-title">Gewitter in den Karpaten</h2>
-      <p class="lead">Петрик поїхав з дядьком у гори, а там негода. Підтримай його й дай пораду: вибирай доречну й правильну відповідь.</p>
+      <h2 class="panel-title">Gewitter in Lwiw</h2>
+      <p class="lead">Іван поїхав з класом до Львова, а там негода. Підтримай його й дай пораду: вибирай доречну й правильну відповідь.</p>
       <div class="card" id="ub5-chat"></div>
     </section>
 
@@ -251,9 +251,9 @@
           <div class="reveal" id="spr3">Am liebsten habe ich den Sommer, denn es ist warm und sonnig. Ich kann im Fluss baden, zelten und Rad fahren. Den Herbst mag ich nicht so gern, denn es regnet oft.</div>
         </div>
         <div class="qa">
-          <label>4. Luisa ist mit ihrer Familie am Meer, aber es regnet jeden Tag. Gib ihr Tipps.</label>
+          <label>4. Greta macht Ferien bei ihrer Oma auf dem Land, aber es ist kalt und neblig. Gib ihr Tipps.</label>
           <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
-          <div class="reveal" id="spr4">Oh, das ist unangenehm! Geht doch ins Museum oder ins Kino! Ihr könnt auch eine Ausstellung besuchen oder einkaufen gehen. Und nehmt einen Regenschirm mit!</div>
+          <div class="reveal" id="spr4">Oh, das ist unangenehm! Zieh dich warm an und geh mit deiner Oma spazieren! Ihr könnt auch zusammen Kuchen backen oder Tee trinken und Bücher lesen.</div>
         </div>
       </div>
     </section>
@@ -357,7 +357,7 @@
     {s: "Im Sommer baden Solomija und ihre Familie im Dnipro.", a: "r"},
     {s: "Solomija hat keine Angst vor Gewitter.", a: "f"},
     {s: "Solomija hat den Frühling am liebsten.", a: "r"},
-    {s: "Luisa hat den Winter am liebsten.", a: "n"}
+    {s: "Greta hat den Winter am liebsten.", a: "n"}
   ]);
 
   // Üb. 1: погода
@@ -406,17 +406,17 @@
 
   // Üb. 5: чат
   buildChat('ub5-chat', {
-    partner: "Petryk",
+    partner: "Iwan",
     steps: [
-      {them: "Hallo! Ich bin mit meinem Onkel in den Karpaten. 🏔️"},
+      {them: "Hallo! Ich bin mit meiner Klasse in Lwiw. 🏰"},
       {you: ["Super! Ist das Wetter schön?", "Super! Ist das Wetter schöner wie bei uns?", "Super! Ist es Wetter schön?"], correct: 0},
       {them: "Von wegen! Es blitzt und donnert, und es regnet stark. 😩"},
-      {you: ["Oh, das ist unangenehm! Bleibt lieber im Haus!", "Oh, das ist unangenehm! Bleiben lieber im Haus!", "Super, dann geht doch wandern!"], correct: 0},
+      {you: ["Oh, das ist unangenehm! Bleibt lieber im Hotel!", "Oh, das ist unangenehm! Bleiben lieber im Hotel!", "Super, dann geht doch wandern!"], correct: 0},
       {them: "Und was machen wir den ganzen Tag?"},
-      {you: ["Spielt Karten oder lest Bücher!", "Spielen Karten oder lesen Bücher!", "Spielst Karten oder liest Bücher!"], correct: 0},
+      {you: ["Besucht ein Museum oder trinkt heiße Schokolade!", "Besuchen ein Museum oder trinken heiße Schokolade!", "Besuchst ein Museum oder trinkst heiße Schokolade!"], correct: 0},
       {them: "Gute Idee! Und wie ist das Wetter bei euch?"},
       {you: ["Es regnet nicht, aber es ist kälter als gestern.", "Es regnet nicht, aber es ist kälter wie gestern.", "Es ist regnet nicht, aber kalt."], correct: 0},
-      {them: "Morgen scheint bei uns die Sonne. Dann wandern wir! ☀️"},
+      {them: "Morgen scheint die Sonne. Dann machen wir eine Stadtrundfahrt! ☀️"},
       {you: ["Viel Spaß und gutes Wetter!", "Gute Besserung!", "Guten Appetit!"], correct: 0}
     ]
   });

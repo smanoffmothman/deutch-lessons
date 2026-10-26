@@ -107,14 +107,14 @@
     <section class="panel" id="panel-gram">
       <p class="section-label">Grammatik</p>
       <h2 class="panel-title">Nebensätze mit dass und ob</h2>
-      <p class="lead"><b>dass</b> — «що», <b>ob</b> — «чи». Вони відкривають підрядне речення, і в ньому змінене дієслово йде <b>в самий кінець</b>. В українській порядок не змінюється («Ян пише, що Дрезден великий»), а в німецькій — так.</p>
+      <p class="lead"><b>dass</b> — «що», <b>ob</b> — «чи». Вони відкривають підрядне речення, і в ньому змінене дієслово йде <b>в самий кінець</b>. В українській порядок не змінюється («Ерік пише, що Дрезден великий»), а в німецькій — так.</p>
 
       <div class="card">
         <p class="section-label" style="margin:0 0 8px;">1. Порядок слів</p>
         <div class="tb-wrap"><table class="gtable">
           <tr><th>головне речення</th><th>підрядне речення: … дієслово в кінці</th></tr>
-          <tr><td>Jan schreibt,</td><td><strong>dass</strong> Dresden groß <strong>ist</strong>.</td></tr>
-          <tr><td>Luisa sagt,</td><td><strong>dass</strong> sie die Reise gern <strong>mitmacht</strong>.</td></tr>
+          <tr><td>Erik schreibt,</td><td><strong>dass</strong> Dresden groß <strong>ist</strong>.</td></tr>
+          <tr><td>Greta sagt,</td><td><strong>dass</strong> sie die Reise gern <strong>mitmacht</strong>.</td></tr>
           <tr><td>Ich möchte wissen,</td><td><strong>ob</strong> Berlin euch gefallen <strong>hat</strong>.</td></tr>
           <tr><td>Weißt du,</td><td><strong>ob</strong> man hier Postkarten kaufen <strong>kann</strong>?</td></tr>
         </table></div>
@@ -175,8 +175,8 @@
     <!-- ===== Üb. 5: чат ===== -->
     <section class="panel" id="panel-ub5">
       <p class="section-label">Üb. 5</p>
-      <h2 class="panel-title">Weißt du, wo Jan ist?</h2>
-      <p class="lead">Ти — Луїза. Петрик пише тобі в месенджері. Вибирай доречну відповідь.</p>
+      <h2 class="panel-title">Weißt du, wo Erik ist?</h2>
+      <p class="lead">Ти — Грета. Іван пише тобі в месенджері. Вибирай доречну відповідь.</p>
       <div class="card" id="ub5-chat"></div>
     </section>
 
@@ -375,7 +375,7 @@
 
   // Üb. 3: склади речення
   buildOrder('ub3-order', [
-    {words: ["Jan schreibt,", "dass", "Dresden", "sehr schön", "ist"], end: ".", gross: true},
+    {words: ["Erik schreibt,", "dass", "Dresden", "sehr schön", "ist"], end: ".", gross: true},
     {words: ["Ich habe gelesen,", "dass", "Berlin", "viele Museen", "hat"], end: ".", gross: true},
     {words: ["Ich möchte wissen,", "ob", "man", "Postkarten", "kaufen", "kann"], end: ".", gross: true},
     {words: ["Weißt du,", "dass", "Dresden", "an der Elbe", "liegt"], end: "?", gross: true},
@@ -389,20 +389,20 @@
     {s: "Dresden hat viele Museen.", task: "<b>Ich habe gelesen, dass …</b>", ans: "Ich habe gelesen, dass Dresden viele Museen hat."},
     {s: "Dresden liegt an der Elbe.", task: "<b>Ich habe schon gehört, dass …</b>", ans: "Ich habe schon gehört, dass Dresden an der Elbe liegt."},
     {s: "Kann man in Dresden in einem Hotel wohnen?", task: "<b>Ich möchte gern wissen, ob …</b>", ans: "Ich möchte gern wissen, ob man in Dresden in einem Hotel wohnen kann."},
-    {s: "Hat Jan Dresden gefallen?", task: "<b>Ich möchte gern wissen, ob …</b>", ans: "Ich möchte gern wissen, ob Jan Dresden gefallen hat.|Ich möchte gern wissen, ob Dresden Jan gefallen hat."},
+    {s: "Hat Erik Dresden gefallen?", task: "<b>Ich möchte gern wissen, ob …</b>", ans: "Ich möchte gern wissen, ob Erik Dresden gefallen hat.|Ich möchte gern wissen, ob Dresden Erik gefallen hat."},
     {s: "Kann man hier Postkarten kaufen?", task: "<b>Ich möchte gern fragen, ob …</b>", ans: "Ich möchte gern fragen, ob man hier Postkarten kaufen kann."}
   ]);
 
   // Üb. 5: чат
   buildChat('ub5-chat', {
-    partner: "Petryk",
+    partner: "Iwan",
     steps: [
-      {them: "Hallo, Luisa! Weißt du, wo Jan ist?"},
-      {you: ["Hallo! Tut mir leid, Petryk! Ich weiß es nicht.", "Hallo! Gute Besserung, Petryk!", "Hallo! Ich weiß, ob Jan ist."], correct: 0},
+      {them: "Hallo, Greta! Weißt du, wo Erik ist?"},
+      {you: ["Hallo! Tut mir leid, Iwan! Ich weiß es nicht.", "Hallo! Gute Besserung, Iwan!", "Hallo! Ich weiß, ob Erik ist."], correct: 0},
       {them: "Okay. Schade!"},
-      {you: ["Weißt du was, ich kann Jan anrufen und fragen.", "Weißt du was, ich kann Jan anrufe und frage.", "Weißt du was, Jan kann mich nicht."], correct: 0},
+      {you: ["Weißt du was, ich kann Erik anrufen und fragen.", "Weißt du was, ich kann Erik anrufe und frage.", "Weißt du was, Erik kann mich nicht."], correct: 0},
       {them: "Das ist sehr lieb von dir. Danke!"},
-      {you: ["Ich habe mit Jan gesprochen. Er sagt, dass er ein Video macht.", "Ich habe mit Jan gesprochen. Er sagt, dass er macht ein Video.", "Ich habe mit Jan gesprochen. Er sagt, ob er ein Video macht."], correct: 0},
+      {you: ["Ich habe mit Erik gesprochen. Er sagt, dass er ein Video macht.", "Ich habe mit Erik gesprochen. Er sagt, dass er macht ein Video.", "Ich habe mit Erik gesprochen. Er sagt, ob er ein Video macht."], correct: 0},
       {them: "Was für ein Video?"},
       {you: ["Über Berlin. Unsere Klasse hat eine Reise nach Berlin gemacht.", "Über Berlin. Unsere Klasse hat eine Reise nach Berlin gemacht hat.", "Über Berlin. Unsere Klasse ist eine Reise nach Berlin gemacht."], correct: 0},
       {them: "Wow! Ich möchte auch nach Berlin fahren! 🤩"},
@@ -431,7 +431,7 @@
 
   // Test
   buildQuiz('test-quiz', [
-    {q: "Jan schreibt, dass Dresden sehr schön … .", opts: ["ist", "sein", "ist es"], correct: "ist"},
+    {q: "Erik schreibt, dass Dresden sehr schön … .", opts: ["ist", "sein", "ist es"], correct: "ist"},
     {q: "Ich weiß nicht, … dir Berlin gefallen hat.", opts: ["ob", "dass", "denn"], correct: "ob"},
     {q: "Was ist die Hauptstadt von Deutschland?", opts: ["Berlin", "München", "Bonn"], correct: "Berlin"},
     {q: "Dresden liegt …", opts: ["an der Elbe", "am Rhein", "an der Donau"], correct: "an der Elbe"},
@@ -441,7 +441,7 @@
   buildFixError('test-fix', [
     {s: "Ich frage, dass das Museum heute offen ist.", wrong: 2, fix: "ob"},
     {s: "Weißt du, ob der Zug heute fährt?", ok: true},
-    {s: "Luisa sagt, ob die Reise super ist.", wrong: 2, fix: "dass"},
+    {s: "Greta sagt, ob die Reise super ist.", wrong: 2, fix: "dass"},
     {s: "Ich habe nicht gewusst, dass Berlin so groß sind.", wrong: 8, fix: "ist"}
   ]);
 
