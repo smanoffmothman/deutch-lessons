@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 7, Modul D: Wiederholung — Німецька мова 5 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 5 КЛАС</span>
+        <h1>Lektion 7 · Modul D: Wiederholung</h1>
+        <p class="sub">Повторення всього Lektion 7 «Entdecke die Welt!»: транспорт і mit + Dativ, nach / in, порівняння, речення з dass і ob, Німеччина й Україна. Є бліц, кросворд «Reisen», гра «Ich habe nicht gewusst», пошук помилок і підсумковий тест на весь Lektion.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Blitz</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Reisen</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wie? Wohin?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Ich habe nicht gewusst</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Fehler</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER — усі слова Lektion 7 (збираються самі) ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Усі слова Lektion 7</h2>
+      <p class="lead">Тут зібрано слова всіх модулів Lektion 7. Перевір себе в «Картки ▶» і познач ☆ ті, які ще не пам'ятаєш, — їх варто повторити перед тестом.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: бліц ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Blitz: 60 Sekunden</h2>
+      <p class="lead">Розминка на швидкість: скільки слів Lektion 7 ти перекладеш за 60 секунд? У бал не йде — це гра. Спробуй побити власний рекорд!</p>
+      <div class="card" id="ub1-blitz"></div>
+    </section>
+
+    <!-- ===== Üb. 2: кросворд ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Kreuzworträtsel: Reisen</h2>
+      <p class="lead">Що спадає на думку, коли говоримо про подорожі? Розгадай кросворд — підказки українською.</p>
+      <div class="card" id="ub2-kw"></div>
+    </section>
+
+    <!-- ===== Üb. 3: mit / nach / in, порівняння ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wie? Wohin? Was ist besser?</h2>
+      <p class="lead">Вибери правильну форму: mit + Dativ, nach чи in, вищий і найвищий ступінь.</p>
+      <div class="card" id="ub3-list">
+        <div class="fill-item"><span class="num">1)</span> Wir fahren
+          <select class="blank inline" data-ans="mit dem"><option value="">—</option><option>mit der</option><option>mit dem</option><option>mit den</option></select> Zug nach Lwiw.</div>
+        <div class="fill-item"><span class="num">2)</span> Ich fahre gern
+          <select class="blank inline" data-ans="mit der"><option value="">—</option><option>mit die</option><option>mit dem</option><option>mit der</option></select> U-Bahn.</div>
+        <div class="fill-item"><span class="num">3)</span> Im Sommer fliegt meine Familie
+          <select class="blank inline" data-ans="in die"><option value="">—</option><option>in die</option><option>nach</option><option>nach der</option></select> Türkei.</div>
+        <div class="fill-item"><span class="num">4)</span> Oleh fährt mit seinen Eltern
+          <select class="blank inline" data-ans="nach"><option value="">—</option><option>in die</option><option>in</option><option>nach</option></select> Polen.</div>
+        <div class="fill-item"><span class="num">5)</span> Ich reise gern
+          <select class="blank inline" data-ans="mit meiner"><option value="">—</option><option>mit meinem</option><option>mit meiner</option><option>mit meine</option></select> Schwester.</div>
+        <div class="fill-item"><span class="num">6)</span> Das Flugzeug ist
+          <select class="blank inline" data-ans="schneller als"><option value="">—</option><option>schneller wie</option><option>schneller als</option><option>schnell als</option></select> der Zug.</div>
+        <div class="fill-item"><span class="num">7)</span> Mit dem Fahrrad zu fahren ist
+          <select class="blank inline" data-ans="am gesündesten"><option value="">—</option><option>am gesündesten</option><option>am gesundsten</option><option>der gesündeste</option></select>.</div>
+        <div class="fill-item"><span class="num">8)</span> Der Fernsehturm in Berlin ist
+          <select class="blank inline" data-ans="höher"><option value="">—</option><option>hocher</option><option>höher</option><option>höcher</option></select> als der Reichstag.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4: гра «Ich habe nicht gewusst» ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Spiel: Ich habe nicht gewusst, dass …</h2>
+      <p class="lead">Як у грі з підручника: перетвори факт на речення «Ich habe nicht gewusst, dass …». Не забудь: дієслово — в кінці!</p>
+      <div class="card" id="ub4-tr"></div>
+    </section>
+
+    <!-- ===== Üb. 5: знайди помилку ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Finde den Fehler</h2>
+      <p class="lead">Помилки з усього Lektion 7: mit + Dativ, порівняння, dass / ob, множина. Деякі речення правильні.</p>
+      <div class="card" id="ub5-fix"></div>
+    </section>
+
+    <!-- ===== SPRECHEN ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Sprich mal!</h2>
+      <p class="lead">Спершу вимов фрази в 🎤, потім відповідай уголос на запитання й порівнюй зі зразком.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Umfrage: Wohin möchtest du am liebsten in der Ukraine fahren? Mit welchem Verkehrsmittel?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">A: Wohin möchtest du am liebsten in der Ukraine fahren? — B: Nach Iwano-Frankiwsk und dann in die Karpaten. — A: Mit welchem Verkehrsmittel möchtest du fahren? — B: Mit dem Zug, denn er ist bequem und nicht so teuer.</div>
+        </div>
+        <div class="qa">
+          <label>2. Dein Freund möchte dich besuchen. Erzähle über deinen Heimatort: Wo liegt er? Wie kann man hinkommen? Was kann man sehen? Was soll man mitnehmen?</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Mein Heimatort ist Poltawa. Er liegt in der Mitte der Ukraine. Von Kyjiw kann man mit dem Zug kommen. Bei uns gibt es viele Parks, ein Theater und Museen. Nimm bequeme Schuhe mit, denn wir gehen viel spazieren!</div>
+        </div>
+        <div class="qa">
+          <label>3. Wie war die Klassenfahrt nach Berlin? Erzähle im Perfekt.</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Wir sind mit dem Zug nach Berlin gefahren. Wir haben in einem Hotel übernachtet. Wir haben das Brandenburger Tor besichtigt und sind auf den Fernsehturm gefahren. Ich habe viele Postkarten gekauft.</div>
+        </div>
+        <div class="qa">
+          <label>4. Spiel: Sag drei Sätze mit „Ich habe nicht gewusst, dass …“ über Deutschland oder die Ukraine.</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Ich habe nicht gewusst, dass Deutschland neun Nachbarländer hat. Ich habe nicht gewusst, dass die U-Bahn-Station Arsenalna so tief ist. Ich habe nicht gewusst, dass Dresden an der Elbe liegt.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — на весь Lektion ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Test zu Lektion 7</h2>
+      <p class="lead">Підсумковий тест на весь Lektion 7: 16 завдань. Кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Wir fahren
+          <select class="blank inline" data-ans="mit dem"><option value="">—</option><option>mit der</option><option>mit dem</option><option>mit</option></select> Bus zur Schule.</div>
+        <div class="fill-item"><span class="num">8)</span> Ich möchte
+          <select class="blank inline" data-ans="in die"><option value="">—</option><option>nach</option><option>in</option><option>in die</option></select> Schweiz fahren.</div>
+        <div class="fill-item"><span class="num">9)</span> Der Zug ist
+          <select class="blank inline" data-ans="bequemer"><option value="">—</option><option>bequemer</option><option>mehr bequem</option><option>am bequem</option></select> als der Bus.</div>
+        <div class="fill-item"><span class="num">10)</span> Ich weiß, dass Lwiw im Westen der Ukraine
+          <select class="blank inline" data-ans="liegt"><option value="">—</option><option>liegen</option><option>liegt</option><option>gelegen</option></select>.</div>
+        <div class="fill-item"><span class="num">11)</span> Ich möchte wissen,
+          <select class="blank inline" data-ans="ob"><option value="">—</option><option>dass</option><option>denn</option><option>ob</option></select> das Hotel billig ist.</div>
+        <div class="fill-item"><span class="num">12)</span> In Kyjiw gibt es viele
+          <select class="blank inline" data-ans="Denkmäler"><option value="">—</option><option>Denkmals</option><option>Denkmäler</option><option>Denkmale</option></select>.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-5-klas-5-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-5-klas-5-rik";
+  const KN_UNIT = "l7-d";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['ub1', 'ub2', 'ub3', 'ub4', 'ub5', 'sprechen']});
+
+  // Üb. 1: бліц — усі слова Lektion 7 з файлу слів (без однакових перекладів)
+  const blitzPairs = [], blitzSeen = new Set();
+  ((window.SLOVA && window.SLOVA[KN_BOOK]) || []).filter(w => /^l7-/.test(w.r)).forEach(w => {
+    const de = w.de.split(' / ')[0].split(',')[0].replace(/\s*\(.*?\)/g, '').trim();
+    const uk = w.uk.split(' / ')[0].trim();
+    const key = uk.split(/[,;]/)[0].trim().toLowerCase();
+    if (!de || de.length > 28 || /^(der|die|das)$/i.test(de) || blitzSeen.has(key)) return;
+    blitzSeen.add(key);
+    blitzPairs.push([de, uk]);
+  });
+  buildBlitz('ub1-blitz', {pairs: blitzPairs, seconds: 60, dir: "de-uk"});
+
+  // Üb. 2: кросворд «Reisen»
+  buildCrossword('ub2-kw', [
+    ["Fahrkarte", "квиток (на транспорт)"],
+    ["Reiseziel", "мета (пункт) подорожі"],
+    ["Hotel", "готель"],
+    ["Zug", "потяг"],
+    ["Postkarte", "листівка (поштова)"],
+    ["Landschaft", "краєвид"],
+    ["Insel", "острів"],
+    ["Museum", "музей"],
+    ["Tourist", "турист"]
+  ]);
+
+  // Üb. 3
+  wireBlanks('ub3');
+
+  // Üb. 4: «Ich habe nicht gewusst, dass …»
+  buildTransform('ub4-tr', [
+    {s: "Deutschland hat neun Nachbarländer.", task: "<b>Ich habe nicht gewusst, dass …</b>", ans: "Ich habe nicht gewusst, dass Deutschland neun Nachbarländer hat."},
+    {s: "Der Fernsehturm in Berlin ist sehr hoch.", task: "<b>Ich habe nicht gewusst, dass …</b>", ans: "Ich habe nicht gewusst, dass der Fernsehturm in Berlin sehr hoch ist."},
+    {s: "Lwiw hat eine bekannte Oper.", task: "<b>Ich habe nicht gewusst, dass …</b>", ans: "Ich habe nicht gewusst, dass Lwiw eine bekannte Oper hat."},
+    {s: "Dresden liegt an der Elbe.", task: "<b>Ich habe nicht gewusst, dass …</b>", ans: "Ich habe nicht gewusst, dass Dresden an der Elbe liegt."},
+    {s: "Odesa liegt am Schwarzen Meer.", task: "<b>Ich habe nicht gewusst, dass …</b>", ans: "Ich habe nicht gewusst, dass Odesa am Schwarzen Meer liegt."},
+    {s: "Eine Reise mit dem Fahrrad ist gesund.", task: "<b>Ich habe nicht gewusst, dass …</b>", ans: "Ich habe nicht gewusst, dass eine Reise mit dem Fahrrad gesund ist."},
+    {s: "Berlin hat viele Sehenswürdigkeiten.", task: "<b>Ich habe nicht gewusst, dass …</b>", ans: "Ich habe nicht gewusst, dass Berlin viele Sehenswürdigkeiten hat."}
+  ]);
+
+  // Üb. 5: знайди помилку
+  buildFixError('ub5-fix', [
+    {s: "Wir fahren mit das Auto.", wrong: 3, fix: "dem"},
+    {s: "Ich fliege in die Türkei.", ok: true},
+    {s: "Der Zug ist schneller wie der Bus.", wrong: 4, fix: "als"},
+    {s: "Jan schreibt, dass Dresden schön sind.", wrong: 5, fix: "ist"},
+    {s: "Weißt du, ob das Museum heute offen ist?", ok: true},
+    {s: "Ich frage, dass man hier übernachten kann.", wrong: 2, fix: "ob"},
+    {s: "In Kyjiw gibt es viele Museums.", wrong: 5, fix: "Museen"},
+    {s: "Am liebsten reise ich mit meinen Eltern.", ok: true}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Am liebsten fahre ich mit dem Zug.", uk: "Найбільше я люблю їздити потягом."},
+    {say: "Das Flugzeug ist schneller als das Schiff.", uk: "Літак швидший за корабель."},
+    {say: "Ich habe nicht gewusst, dass Kyjiw so alt ist.", uk: "Я не знав(-ла), що Київ такий старий."},
+    {say: "Norden, Osten, Süden, Westen, zu Haus ist es am besten.", uk: "В гостях добре, а вдома краще."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Wohin fährst du im Sommer? — … Österreich.", opts: ["Nach", "In die", "Mit"], correct: "Nach"},
+    {q: "Welches Verkehrsmittel ist am umweltfreundlichsten?", opts: ["das Fahrrad", "das Flugzeug", "das Auto"], correct: "das Fahrrad"},
+    {q: "Die Hauptstadt von Deutschland ist …", opts: ["Berlin", "Bonn", "München"], correct: "Berlin"},
+    {q: "Kyjiw liegt am …", opts: ["Dnipro", "Rhein", "Dnister"], correct: "Dnipro"},
+    {q: "Ich weiß nicht, … Jan heute kommt.", opts: ["ob", "dass", "denn"], correct: "ob"},
+    {q: "„Tut mir leid!“ — це …", opts: ["Мені шкода!", "Ласкаво просимо!", "Щасливої дороги!"], correct: "Мені шкода!"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Ich fahre mit die U-Bahn.", wrong: 3, fix: "der"},
+    {s: "Lwiw ist größer als Uschhorod.", ok: true},
+    {s: "Kyjiw ist älter wie Lwiw.", wrong: 3, fix: "als"},
+    {s: "Wir haben im Hotel geübernachtet.", wrong: 4, fix: "übernachtet"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🚆', '🗺️', '🏰', '🏆']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>

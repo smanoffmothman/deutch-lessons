@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 7, Modul E: Geschichtenzeit — Німецька мова 5 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 5 КЛАС</span>
+        <h1>Lektion 7 · Modul E: Geschichtenzeit</h1>
+        <p class="sub">Власне оповідання з озвученням «Zwölf Tage Ukraine» — про шкільну подорож за маршрутом із підручника: Київ, Львів, Луцьк, Карпати й Івано-Франківськ, а ще про шоколадку, яка не доїхала до мами. Читаємо, розуміємо, переказуємо й складаємо власний маршрут.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Reihenfolge</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · richtig / falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wer sagt das?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Kurz erzählt</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова до оповідання</h2>
+      <p class="lead">Спершу переглянь нові слова — тоді оповідання читатиметься легко.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zur Geschichte</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власне оповідання ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Zwölf Tage Ukraine</h2>
+      <p class="lead">Послухай і прочитай оповідання. Торкнися виділеного слова, щоб побачити переклад.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l7-e-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Ich heiße Taras und wohne in Poltawa. Im Juni hat unsere Klasse eine Reise durch die Ukraine gemacht — zwölf Tage lang! Unsere Lehrerin, Frau Melnyk, hat die <span class="gl" data-uk="маршрут подорожі" data-lemma="die Reiseroute, -n">Reiseroute</span> geplant.</p>
+        <p>Zuerst sind wir mit dem Bus nach Kyjiw gefahren. Dort haben wir eine <span class="gl" data-uk="екскурсія містом (автобусом)" data-lemma="die Stadtrundfahrt, -en">Stadtrundfahrt</span> gemacht und die Sophienkathedrale gesehen. Danach sind wir ins Café gegangen. Mein Freund Marko hat drei Stück Kuchen gegessen. „Reisen macht <span class="gl" data-uk="голодний" data-lemma="hungrig">hungrig</span>!“, hat er gesagt.</p>
+        <p>Dann sind wir mit dem <span class="gl" data-uk="нічний потяг" data-lemma="der Nachtzug, -ü-e">Nachtzug</span> nach Lwiw gefahren. In Lwiw haben wir drei Tage verbracht. Die Altstadt ist so malerisch! Wir sind auf den Rathausturm <span class="gl" data-uk="підніматися, сходити (вгору)" data-lemma="steigen, ist gestiegen">gestiegen</span>, und oben hat Olja gerufen: „Ich sehe die ganze Stadt!“ In einem Schokoladengeschäft hat Marko eine große Tafel Schokolade für seine Mama gekauft.</p>
+        <p>Von Lwiw sind wir mit dem Bus nach Luzk gefahren. Dort haben wir das alte <span class="gl" data-uk="замок, палац" data-lemma="das Schloss, -ö-er">Schloss</span> besucht. Es heißt Lubart-<span class="gl" data-uk="фортеця, замок" data-lemma="die Burg, -en">Burg</span> und ist über 600 Jahre alt. „Hier möchte ich wohnen, wie eine <span class="gl" data-uk="принцеса" data-lemma="die Prinzessin, -nen">Prinzessin</span>!“, hat Olja gesagt.</p>
+        <p>Danach sind wir in die Karpaten gefahren. Vier Tage haben wir in einem Ferienlager gewohnt. Wir sind viel gewandert, und am Abend haben wir am <span class="gl" data-uk="багаття" data-lemma="das Lagerfeuer, -">Lagerfeuer</span> gesungen. Von weitem haben wir die Howerla gesehen, den höchsten Berg der Ukraine. „Nächstes Mal steigen wir hinauf!“, hat Frau Melnyk <span class="gl" data-uk="обіцяти" data-lemma="versprechen (verspricht), hat versprochen">versprochen</span>.</p>
+        <p>Zum Schluss sind wir zwei Tage in Iwano-Frankiwsk geblieben. Am letzten Abend hat Marko seinen Rucksack aufgemacht — und die Schokolade für seine Mama ist weg! Marko ist ganz rot geworden. „Oh nein, ich habe sie im Nachtzug gegessen!“ Alle haben gelacht. Olja hat ihm ihre Schokolade gegeben: „Für deine Mama — nicht für dich!“</p>
+        <p>Wir sind müde, aber glücklich nach Hause gefahren. Diese Reise <span class="gl" data-uk="забувати" data-lemma="vergessen (vergisst), hat vergessen">vergesse</span> ich nie!</p>
+      </article>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: порядок подій ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Die Reiseroute</h2>
+      <p class="lead">Розстав події подорожі в правильному порядку: натискай речення одне за одним.</p>
+      <div class="card" id="ub1-seq"></div>
+    </section>
+
+    <!-- ===== Üb. 2: richtig / falsch ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig oder falsch?</h2>
+      <p class="lead">Чи правильні твердження? Якщо в тексті про це нічого не сказано — «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3: хто це каже ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wer sagt das?</h2>
+      <p class="lead">Хто з героїв оповідання каже ці слова?</p>
+      <div class="card" id="ub3-list"></div>
+    </section>
+
+    <!-- ===== Üb. 4: переказ з банком слів ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Kurz erzählt</h2>
+      <p class="lead">Короткий переказ оповідання. Встав слова з набору — одне слово зайве.</p>
+      <div class="card" id="ub4-bank"></div>
+    </section>
+
+    <!-- ===== SPRECHEN ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Erzählt die Reise!</h2>
+      <p class="lead">Відповідай уголос — сам(а) або з партнером, і лише потім відкрий зразок.</p>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Erzähle die Reise von Taras' Klasse: Wohin sind sie gefahren? Womit? Wie lange sind sie geblieben?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Zuerst sind sie mit dem Bus nach Kyjiw gefahren. Dann sind sie mit dem Nachtzug nach Lwiw gefahren und drei Tage geblieben. Von Lwiw sind sie mit dem Bus nach Luzk gefahren. Danach haben sie vier Tage in einem Ferienlager in den Karpaten gewohnt. Zum Schluss sind sie zwei Tage in Iwano-Frankiwsk geblieben.</div>
+        </div>
+        <div class="qa">
+          <label>2. Möchtest du diese Reise mitmachen? Warum (nicht)? Sag es mit „denn“.</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Ich finde diese Reise durch die Ukraine spannend und möchte sie mitmachen, denn ich möchte die Lubart-Burg sehen und in den Karpaten wandern. Und ihr?</div>
+        </div>
+        <div class="qa">
+          <label>3. Welcher Ort aus der Geschichte gefällt dir am besten? Warum?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Am besten gefällt mir Lwiw, denn die Altstadt ist sehr malerisch. Ich möchte auch auf den Rathausturm steigen und Schokolade kaufen — für meine Mama, nicht für mich!</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Unsere Reiseroute durch die Ukraine</h2>
+      <p class="lead">Склади власний маршрут подорожі Україною (як у вправі 1 підручника) і розкажи його як історію в Perfekt: хто їде, коли, куди, яким транспортом, скільки днів, що оглядали й що робили. 50–70 слів.</p>
+      <div class="card">
+        <p class="beispiel">Unsere Klasse hat im … eine Reise nach … gemacht. · Zuerst sind wir mit dem … nach … gefahren. · Dort haben wir … besucht. · Wir sind … Tage geblieben. · Zum Schluss … · Diese Reise …</p>
+        <div class="qa">
+          <label for="schreiben-text">Unsere Reise</label>
+          <textarea id="schreiben-text" rows="8" placeholder="Unsere Klasse hat …"
+            data-words="50-70"
+            data-must="sind|haben|mit"
+            data-check="Хто й коли|Куди (2–3 місця)|Яким транспортом|Скільки днів|Що оглядали й робили|Perfekt: sind gefahren, haben besucht"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Unsere Klasse hat im Mai eine Reise in den Süden der Ukraine gemacht. Zuerst sind wir mit dem Zug nach Odesa gefahren. Dort haben wir die Potemkinsche Treppe und die Oper besucht. Wir sind zwei Tage geblieben und haben am Meer gebadet. Dann sind wir mit dem Bus nach Mykolajiw gefahren und haben den Zoo besucht. Zum Schluss haben wir Eis gegessen. Diese Reise ist super gewesen!</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-5-klas-5-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-5-klas-5-rik";
+  const KN_UNIT = "l7-e";
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+
+  // Üb. 1: порядок подій
+  buildSequence('ub1-seq', [
+    "Die Klasse macht in Kyjiw eine Stadtrundfahrt.",
+    "Marko isst im Café drei Stück Kuchen.",
+    "Die Kinder fahren mit dem Nachtzug nach Lwiw.",
+    "Marko kauft Schokolade für seine Mama.",
+    "Die Klasse besucht die Lubart-Burg in Luzk.",
+    "Die Kinder singen am Lagerfeuer in den Karpaten.",
+    "Olja gibt Marko ihre Schokolade."
+  ]);
+
+  // Üb. 2: richtig / falsch / steht nicht im Text
+  buildRF('ub2-rf', [
+    {s: "Die Reise dauert zwölf Tage.", a: "r"},
+    {s: "Taras hat die Reiseroute geplant.", a: "f"},
+    {s: "Von Poltawa nach Kyjiw fährt die Klasse mit dem Bus.", a: "r"},
+    {s: "In Lwiw bleibt die Klasse zwei Tage.", a: "f"},
+    {s: "Olja hat Angst auf dem Rathausturm.", a: "n"},
+    {s: "Die Lubart-Burg ist über 600 Jahre alt.", a: "r"},
+    {s: "Die Kinder steigen auf die Howerla.", a: "f"},
+    {s: "In den Karpaten wohnen die Kinder in einem Hotel.", a: "f"},
+    {s: "Marko hat die Schokolade im Nachtzug gegessen.", a: "r"}
+  ]);
+
+  // Üb. 3: хто каже
+  buildMatch('ub3', [
+    ["„Reisen macht hungrig!“", "Marko"],
+    ["„Ich sehe die ganze Stadt!“", "Olja"],
+    ["„Hier möchte ich wohnen, wie eine Prinzessin!“", "Olja"],
+    ["„Nächstes Mal steigen wir hinauf!“", "Frau Melnyk"],
+    ["„Oh nein, ich habe sie im Nachtzug gegessen!“", "Marko"],
+    ["„Für deine Mama — nicht für dich!“", "Olja"],
+    ["„Diese Reise vergesse ich nie!“", "Taras"]
+  ], {lead: true, options: ["Taras", "Olja", "Frau Melnyk", "Marko"]});
+
+  // Üb. 4: переказ
+  buildWordBank('ub4-bank', {
+    text: "Taras und seine Klasse machen eine [Reise] durch die Ukraine. In Kyjiw machen sie eine [Stadtrundfahrt]. Mit dem [Nachtzug] fahren sie nach Lwiw. Dort steigen sie auf den Rathausturm, und Marko kauft [Schokolade] für seine Mama. In Luzk besuchen sie ein altes [Schloss]. In den Karpaten wohnen sie in einem [Ferienlager] und singen am [Lagerfeuer]. Am Ende ist die Schokolade weg: Marko hat sie [gegessen]!",
+    extra: ["Flugzeug"]
+  });
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🚌', '🏰', '🏕️', '🍫']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
