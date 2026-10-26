@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 5, Modul C: Wiederholung — Німецька мова 5 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 5 КЛАС</span>
+        <h1>Lektion 5 · Modul C: Wiederholung</h1>
+        <p class="sub">Повторення всього Lektion 5 «Kleider machen Leute»: одяг і мода, покупки, множина, прикметники в Akkusativ, welcher / dieser / jener — з бліцом, сортуванням, порадами в чаті, пошуком помилок і підсумковим тестом на весь Lektion.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Blitz</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Winter / Sommer</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Plural + Endung</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Tipps</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Fehler</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER — усі слова Lektion 5 (збираються самі) ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Усі слова Lektion 5</h2>
+      <p class="lead">Тут зібрано слова всіх модулів Lektion 5. Перевір себе в «Картки ▶» і познач ☆ ті, які ще не пам'ятаєш, — їх варто повторити перед тестом.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: бліц ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Blitz: 60 Sekunden</h2>
+      <p class="lead">Розминка на швидкість: скільки слів Lektion 5 ти перекладеш за 60 секунд? У бал не йде — це гра. Спробуй побити власний рекорд!</p>
+      <div class="card" id="ub1-blitz"></div>
+    </section>
+
+    <!-- ===== Üb. 2: розсортуй ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Winterkleidung oder Sommerkleidung?</h2>
+      <p class="lead">Розклади речі: що носять узимку, а що влітку?</p>
+      <div class="card" id="ub2-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 3: множина + закінчення ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Plural und Endungen</h2>
+      <p class="lead">Допиши закінчення прикметника (у першому полі) і множину іменника з дужок (у другому). Згадай: без артикля — <b>-e</b>, після meine / deine — <b>-en</b>.</p>
+      <div class="card" id="ub3-list">
+        <div class="fill-item"><span class="num">1)</span> (das Kleid) Karin hat zwei <span style="white-space:nowrap">hübsch<input type="text" class="blank-input inline" data-ans="e" style="width:3.2em"></span> <input type="text" class="blank-input inline" data-ans="Kleider">.</div>
+        <div class="fill-item"><span class="num">2)</span> (das Hemd) Ich habe einige <span style="white-space:nowrap">kariert<input type="text" class="blank-input inline" data-ans="e" style="width:3.2em"></span> <input type="text" class="blank-input inline" data-ans="Hemden">.</div>
+        <div class="fill-item"><span class="num">3)</span> (der Rock) Meine <span style="white-space:nowrap">modisch<input type="text" class="blank-input inline" data-ans="en" style="width:3.2em"></span> <input type="text" class="blank-input inline" data-ans="Röcke|Roecke"> sehen cool aus.</div>
+        <div class="fill-item"><span class="num">4)</span> (das T-Shirt) Wo sind deine <span style="white-space:nowrap">gemustert<input type="text" class="blank-input inline" data-ans="en" style="width:3.2em"></span> <input type="text" class="blank-input inline" data-ans="T-Shirts">?</div>
+        <div class="fill-item"><span class="num">5)</span> (die Jacke) In diesem Kaufhaus kann man <span style="white-space:nowrap">schön<input type="text" class="blank-input inline" data-ans="e" style="width:3.2em"></span> <input type="text" class="blank-input inline" data-ans="Jacken"> kaufen.</div>
+        <div class="fill-item"><span class="num">6)</span> (der Sportanzug) Sebastian hat zwei <span style="white-space:nowrap">schwarz<input type="text" class="blank-input inline" data-ans="e" style="width:3.2em"></span> <input type="text" class="blank-input inline" data-ans="Sportanzüge|Sportanzuege">.</div>
+        <div class="fill-item"><span class="num">7)</span> (der Pullover) Meine <span style="white-space:nowrap">gestreift<input type="text" class="blank-input inline" data-ans="en" style="width:3.2em"></span> <input type="text" class="blank-input inline" data-ans="Pullover"> sind sehr warm.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4: чат ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Was soll ich anziehen?</h2>
+      <p class="lead">Луїза не знає, що вдягти, і питає в тебе поради. Вибирай доречну пораду без помилки.</p>
+      <div class="card" id="ub4-chat"></div>
+    </section>
+
+    <!-- ===== Üb. 5: знайди помилку ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Finde den Fehler</h2>
+      <p class="lead">Помилки з усього Lektion 5: закінчення прикметників, welch- / dies- / jen-, множина. Деякі речення правильні.</p>
+      <div class="card" id="ub5-fix"></div>
+    </section>
+
+    <!-- ===== SPRECHEN ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Würfelspiel „Kleidung und Mode“</h2>
+      <p class="lead">Спершу заспівай / вимов фрази в 🎤, потім відповідай на запитання з гри з кубиком і порівнюй зі зразком.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Was trägst du im Winter? Und im Sommer?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Im Winter trage ich meine gelbe Jacke, eine warme Mütze und meine braunen Stiefel. Im Sommer trage ich meine blauen Shorts, ein weißes T-Shirt und Sandalen.</div>
+        </div>
+        <div class="qa">
+          <label>2. Beschreibe deine Garderobe: Was hast du? Was trägst du am liebsten?</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">In meinem Schrank habe ich drei Jeans, fünf T-Shirts, zwei Pullover und einen Sportanzug. Am liebsten trage ich meinen grünen Kapuzenpulli, denn er ist bequem.</div>
+        </div>
+        <div class="qa">
+          <label>3. Beschreibe, wie deine Mitspieler/innen heute aussehen.</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Marta trägt heute ein kariertes Hemd und eine schwarze Hose. Sie sieht sehr elegant aus. Denys trägt einen blauen Pulli und weiße Turnschuhe.</div>
+        </div>
+        <div class="qa">
+          <label>4. Wähle eine Person: die Mutter ist Ärztin, der Bruder ist Pilot, der Onkel ist Tischler. Was hat sie/er heute vor? Was zieht sie/er an?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Meine Mutter ist Ärztin. Heute arbeitet sie im Krankenhaus. Sie zieht ihren weißen Kittel und bequeme weiße Schuhe an. Am Abend zieht sie ihr schönes blaues Kleid an und geht ins Theater.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — на весь Lektion ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Test zu Lektion 5</h2>
+      <p class="lead">Підсумковий тест на весь Lektion 5: 16 завдань. Кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Sie trägt ein
+          <select class="blank inline" data-ans="gestreiftes"><option value="">—</option><option>gestreiftes</option><option>gestreiften</option><option>gestreifte</option></select> Kleid.</div>
+        <div class="fill-item"><span class="num">8)</span> Ich nehme
+          <select class="blank inline" data-ans="diesen"><option value="">—</option><option>diesen</option><option>dieser</option><option>dieses</option></select> Mantel.</div>
+        <div class="fill-item"><span class="num">9)</span> Meine Jacke ist
+          <select class="blank inline" data-ans="warm"><option value="">—</option><option>warm</option><option>warme</option><option>warmen</option></select>.</div>
+        <div class="fill-item"><span class="num">10)</span> Hast du
+          <select class="blank inline" data-ans="neue"><option value="">—</option><option>neue</option><option>neuen</option><option>neues</option></select> Turnschuhe?</div>
+        <div class="fill-item"><span class="num">11)</span>
+          <select class="blank inline" data-ans="Welcher"><option value="">—</option><option>Welcher</option><option>Welchen</option><option>Welches</option></select> Pullover gefällt dir?</div>
+        <div class="fill-item"><span class="num">12)</span> Die Hose
+          <select class="blank inline" data-ans="passt"><option value="">—</option><option>passt</option><option>passe</option><option>passen</option></select> mir nicht.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-5-klas-5-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-5-klas-5-rik";
+  const KN_UNIT = "l5-c";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['ub1', 'ub2', 'ub3', 'ub4', 'ub5', 'sprechen']});
+
+  // Üb. 1: бліц — усі слова Lektion 5 з файлу слів (без однакових перекладів)
+  const blitzPairs = [], blitzSeen = new Set();
+  ((window.SLOVA && window.SLOVA[KN_BOOK]) || []).filter(w => /^l5-/.test(w.r)).forEach(w => {
+    const de = w.de.split(' / ')[0].split(',')[0].replace(/\s*\(.*?\)/g, '').trim();
+    const uk = w.uk.split(' / ')[0].trim();
+    const key = uk.split(/[,;]/)[0].trim().toLowerCase();
+    if (!de || /^(der|die|das)$/i.test(de) || blitzSeen.has(key)) return;
+    blitzSeen.add(key);
+    blitzPairs.push([de, uk]);
+  });
+  buildBlitz('ub1-blitz', {pairs: blitzPairs, seconds: 60, dir: "de-uk"});
+
+  // Üb. 2: зима / літо
+  buildSort('ub2-sort', {
+    buckets: ["Winterkleidung ❄️", "Sommerkleidung ☀️"],
+    items: [
+      {t: "die Mütze", b: "Winterkleidung ❄️"},
+      {t: "der Schal", b: "Winterkleidung ❄️"},
+      {t: "die Handschuhe", b: "Winterkleidung ❄️"},
+      {t: "die Stiefel", b: "Winterkleidung ❄️"},
+      {t: "die Winterjacke", b: "Winterkleidung ❄️"},
+      {t: "der Mantel", b: "Winterkleidung ❄️"},
+      {t: "die Shorts", b: "Sommerkleidung ☀️"},
+      {t: "die Sandalen", b: "Sommerkleidung ☀️"},
+      {t: "das Sommerkleid", b: "Sommerkleidung ☀️"},
+      {t: "der Sonnenhut", b: "Sommerkleidung ☀️"},
+      {t: "die Badehose", b: "Sommerkleidung ☀️"}
+    ]
+  });
+
+  // Üb. 3: множина + закінчення
+  wireBlanks('ub3');
+
+  // Üb. 4: чат
+  buildChat('ub4-chat', {
+    partner: "Luisa",
+    steps: [
+      {them: "Hilfe! Ich gehe heute Abend ins Café. Was soll ich anziehen? 🤔"},
+      {you: ["Zieh deinen blauen Rock und deine weiße Bluse an!", "Zieh deinen blaue Rock und deine weiße Bluse an!", "Zieh dein blauen Rock an!"], correct: 0},
+      {them: "Gute Idee! Und morgen gehen wir ins Konzert."},
+      {you: ["Dann zieh dein schwarzes Kleid an — das ist elegant.", "Dann zieh deinen schwarzes Kleid an.", "Dann zieh deine Sportanzug an."], correct: 0},
+      {them: "Und am Sonntag fahren wir Rad. Welche Schuhe soll ich tragen?"},
+      {you: ["Trag deine bequemen Turnschuhe!", "Trag deine bequeme Turnschuhe!", "Trag deinen Stiefel im Kleid!"], correct: 0},
+      {them: "Und wenn es kalt ist?"},
+      {you: ["Zieh deinen warmen Pullover an!", "Zieh dein warmen Pullover an!", "Zieh deine Shorts an!"], correct: 0},
+      {them: "Danke für die Tipps! 😊"},
+      {you: ["Gern! Du siehst bestimmt super aus!", "Gute Besserung!", "Frohe Ostern!"], correct: 0}
+    ]
+  });
+
+  // Üb. 5: знайди помилку
+  buildFixError('ub5-fix', [
+    {s: "Sie trägt einen kariertes Rock.", wrong: 3, fix: "karierten"},
+    {s: "Ich ziehe mein neues Kleid an.", ok: true},
+    {s: "Welches Jacke gefällt dir?", wrong: 0, fix: "Welche"},
+    {s: "Mein Pulli ist blauer.", wrong: 3, fix: "blau"},
+    {s: "Ich nehme jenen Mantel in Grau.", ok: true},
+    {s: "Wo sind meine schwarze Schuhe?", wrong: 3, fix: "schwarzen"},
+    {s: "Ich kaufe diesen T-Shirt.", wrong: 2, fix: "dieses"},
+    {s: "Die Schuhe passen mir gut.", ok: true}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Grün, grün, grün sind alle meine Kleider.", uk: "Зелений, зелений, зелений — увесь мій одяг. (народна пісня)"},
+    {say: "Im Winter trage ich meine warme Jacke.", uk: "Узимку я ношу свою теплу куртку."},
+    {say: "Welchen Pullover meinst du?", uk: "Який светр ти маєш на увазі?"},
+    {say: "Zieh deinen blauen Rock an!", uk: "Одягни свою синю спідницю!"}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Ich trage gern meinen … Schal.", opts: ["roten", "rote", "rotes"], correct: "roten"},
+    {q: "… Hose möchtest du anprobieren?", opts: ["Welche", "Welchen", "Welches"], correct: "Welche"},
+    {q: "Der Plural von „der Rock“:", opts: ["die Röcke", "die Rocke", "die Röcken"], correct: "die Röcke"},
+    {q: "Wo kauft man Puppen?", opts: ["in der Spielwarenabteilung", "im Supermarkt", "in der Möbelabteilung"], correct: "in der Spielwarenabteilung"},
+    {q: "Was trägt man im Winter?", opts: ["eine warme Mütze", "Sandalen", "Shorts"], correct: "eine warme Mütze"},
+    {q: "„Die Jacke ist im Angebot“ bedeutet:", opts: ["Куртка за акційною ціною.", "Куртка дуже дорога.", "Куртки немає."], correct: "Куртка за акційною ціною."}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Ich trage meine gelben Jacke.", wrong: 3, fix: "gelbe"},
+    {s: "Welchen Schal meinst du?", ok: true},
+    {s: "Diese Hemd ist zu teuer.", wrong: 0, fix: "Dieses"},
+    {s: "Er hat zwei warme Pullovers.", wrong: 4, fix: "Pullover"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['👕', '🧣', '🛍️', '🏆']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
