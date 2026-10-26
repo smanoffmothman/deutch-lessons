@@ -459,4 +459,17 @@
   {de: "bezahlen", uk: "платити", r: "l5-b"},
   {de: "das Taschengeld", uk: "кишенькові гроші", r: "l5-b"},
   {de: "ausgeben (gibt aus) für (+ Akk.)", uk: "витрачати (гроші на щось)", r: "l5-b", note: "Ich gebe mein Taschengeld für Bücher aus."},
+  // ---- Lektion 5 · Modul D: Geschichtenzeit ----
+  {de: "die Reihe, -n", uk: "ряд", r: "l5-d", note: "in der letzten Reihe"},
+  {de: "gleich", uk: "однаковий; такий самий", r: "l5-d", note: "die gleiche Jacke"},
+  {de: "das Logo, -s", uk: "логотип", r: "l5-d"},
+  {de: "sparen", uk: "заощаджувати, збирати гроші", r: "l5-d", note: "Ich spare mein Taschengeld."},
+  {de: "genug", uk: "досить, достатньо", r: "l5-d"},
+  {de: "ansehen (sieht an)", uk: "дивитися на когось", r: "l5-d"},
+  {de: "allein", uk: "сам, на самоті", r: "l5-d"},
+  {de: "die Bank, -ä-e", uk: "лавка", r: "l5-d", note: "Увага: die Bank, -en — банк"},
+  {de: "das Schach", uk: "шахи", r: "l5-d", note: "Schach spielen"},
+  {de: "normal", uk: "звичайний", r: "l5-d"},
+  {de: "wachsen (wächst), ist gewachsen", uk: "рости", r: "l5-d"},
+  {de: "Kleider machen Leute.", uk: "одяг робить людину (прислів'я)", r: "l5-d"},
 ];
