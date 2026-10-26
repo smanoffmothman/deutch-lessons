@@ -104,7 +104,7 @@ const PIDRUCHNYKY = [
         { id: "l4-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "82", typ: "bez-storinky" }
       ] },
       { id: "l5", label: "5", nazva: "Kleider machen Leute", storinky: "83–96", dity: [
-        { id: "l5-a", label: "A", nazva: "Kleidung und Mode", storinky: "84–87", typ: "vpravy" },
+        { id: "l5-a", label: "A", nazva: "Kleidung und Mode", storinky: "84–87", typ: "vpravy", gram: ["adjektivdeklination"], opublikovano: 20 },
         { id: "l5-b", label: "B", nazva: "Kleidung kaufen", storinky: "88–91", typ: "vpravy" },
         { id: "l5-c", label: "C", nazva: "Wiederholung", storinky: "92–93", typ: "povtorennya" },
         { id: "l5-d", label: "D", nazva: "Geschichtenzeit", storinky: "94", typ: "chytannya" },
