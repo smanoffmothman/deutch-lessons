@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 8, Modul C: Wiederholung — Німецька мова 5 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 5 КЛАС</span>
+        <h1>Lektion 8 · Modul C: Wiederholung</h1>
+        <p class="sub">Повторення всього Lektion 8 «Hey Freunde, raus in die Natur!»: природа й тварини, поради в наказовому способі, погода й пори року, порівняння з als і so … wie. Є бліц, пошук слів, «Was passt zusammen?», пошук помилок і підсумковий тест на весь Lektion.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Blitz</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Wörtersuche</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Was passt?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Grammatik</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Fehler</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER — усі слова Lektion 8 (збираються самі) ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Усі слова Lektion 8</h2>
+      <p class="lead">Тут зібрано слова всіх модулів Lektion 8. Перевір себе в «Картки ▶» і познач ☆ ті, які ще не пам'ятаєш, — їх варто повторити перед тестом.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: бліц ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Blitz: 60 Sekunden</h2>
+      <p class="lead">Розминка на швидкість: скільки слів Lektion 8 ти перекладеш за 60 секунд? У бал не йде — це гра. Спробуй побити власний рекорд!</p>
+      <div class="card" id="ub1-blitz"></div>
+    </section>
+
+    <!-- ===== Üb. 2: пошук слів ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Natur und Wetter</h2>
+      <p class="lead">Знайди в сітці вісім слів про природу й погоду. Торкнися першої, потім останньої літери слова. Слова йдуть → і ↓.</p>
+      <div class="card" id="ub2-such"></div>
+    </section>
+
+    <!-- ===== Üb. 3: що до чого ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Was passt zusammen?</h2>
+      <p class="lead">Як у вправі 2 підручника: до кожного опису погоди вибери речення, яке означає те саме.</p>
+      <div class="card" id="ub3-list"></div>
+    </section>
+
+    <!-- ===== Üb. 4: граматика ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Imperativ, es und Vergleiche</h2>
+      <p class="lead">Вибери правильну форму.</p>
+      <div class="card" id="ub4-list">
+        <div class="fill-item"><span class="num">1)</span> Halten
+          <select class="blank inline" data-ans="Sie"><option value="">—</option><option>Sie</option><option>Ihr</option><option>(ohne)</option></select> bitte den Wald sauber!</div>
+        <div class="fill-item"><span class="num">2)</span> Olja,
+          <select class="blank inline" data-ans="nimm"><option value="">—</option><option>nehm</option><option>nimm</option><option>nimmst</option></select> deinen Müll mit!</div>
+        <div class="fill-item"><span class="num">3)</span> Kinder,
+          <select class="blank inline" data-ans="fahrt"><option value="">—</option><option>fährt</option><option>fahren</option><option>fahrt</option></select> mehr Rad!</div>
+        <div class="fill-item"><span class="num">4)</span> Max,
+          <select class="blank inline" data-ans="sei"><option value="">—</option><option>sei</option><option>bist</option><option>seid</option></select> im Wald leise!</div>
+        <div class="fill-item"><span class="num">5)</span> Im Winter
+          <select class="blank inline" data-ans="schneit es"><option value="">—</option><option>es schneit</option><option>schneit</option><option>schneit es</option></select> oft.</div>
+        <div class="fill-item"><span class="num">6)</span> Im Herbst
+          <select class="blank inline" data-ans="gibt es"><option value="">—</option><option>gibt es</option><option>ist es</option><option>es gibt</option></select> oft Nebel.</div>
+        <div class="fill-item"><span class="num">7)</span> Im März ist es
+          <select class="blank inline" data-ans="kälter als"><option value="">—</option><option>kälter wie</option><option>kalter als</option><option>kälter als</option></select> im August.</div>
+        <div class="fill-item"><span class="num">8)</span> Heute ist es so sonnig
+          <select class="blank inline" data-ans="wie"><option value="">—</option><option>als</option><option>wie</option><option>so</option></select> am Wochenende.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub4-check">Prüfen</button>
+        <button class="btn secondary" id="ub4-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub4-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5: знайди помилку ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Was ist falsch? Korrigiere.</h2>
+      <p class="lead">Помилки з усього Lektion 8: множина, наказовий спосіб, es-речення, порівняння. Деякі речення правильні.</p>
+      <div class="card" id="ub5-fix"></div>
+    </section>
+
+    <!-- ===== SPRECHEN ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Sprich mal!</h2>
+      <p class="lead">Спершу вимов фрази в 🎤, потім відповідай уголос на запитання й порівнюй зі зразком.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Was ist deine Lieblingsjahreszeit? Warum? Was machst du dann gern?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Meine Lieblingsjahreszeit ist der Winter, denn es schneit oft. Im Winter laufe ich gern Ski und gehe rodeln. — Und was ist Luisas Lieblingsjahreszeit? — Auch der Winter!</div>
+        </div>
+        <div class="qa">
+          <label>2. Vergleiche das Wetter: im Sommer und im Winter, im März und im August.</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Im Sommer ist es wärmer als im Winter, und die Tage sind länger. Im März ist es nicht so warm wie im August. Im August ist es oft heiß, im März regnet es oft und manchmal schneit es noch.</div>
+        </div>
+        <div class="qa">
+          <label>3. Beschreibe das Wetter heute. Was ziehst du an?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Heute ist es kühl und windig. Am Himmel sind viele Wolken, und vielleicht regnet es am Nachmittag. Ich ziehe eine warme Jacke an und nehme einen Regenschirm mit.</div>
+        </div>
+        <div class="qa">
+          <label>4. Ihr macht einen Ausflug in den Wald. Gib deiner Klasse drei Tipps.</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Bleibt auf dem Weg! Werft keinen Müll weg, nehmt alles mit nach Hause! Seid leise, dann seht ihr vielleicht ein Reh oder einen Specht.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — на весь Lektion ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Test zu Lektion 8</h2>
+      <p class="lead">Підсумковий тест на весь Lektion 8: 16 завдань. Кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Im Wald leben viele
+          <select class="blank inline" data-ans="Tiere"><option value="">—</option><option>Tieren</option><option>Tiers</option><option>Tiere</option></select>.</div>
+        <div class="fill-item"><span class="num">8)</span>
+          <select class="blank inline" data-ans="Sparen Sie"><option value="">—</option><option>Sie sparen</option><option>Sparen Sie</option><option>Spart Sie</option></select> bitte Wasser!</div>
+        <div class="fill-item"><span class="num">9)</span> Jan,
+          <select class="blank inline" data-ans="wirf"><option value="">—</option><option>wirf</option><option>werft</option><option>wirfst</option></select> keinen Müll weg!</div>
+        <div class="fill-item"><span class="num">10)</span> Heute
+          <select class="blank inline" data-ans="regnet es"><option value="">—</option><option>es regnet</option><option>regnet es</option><option>regnet</option></select> stark.</div>
+        <div class="fill-item"><span class="num">11)</span> Im Juni sind die Tage länger
+          <select class="blank inline" data-ans="als"><option value="">—</option><option>als</option><option>wie</option><option>so</option></select> im Dezember.</div>
+        <div class="fill-item"><span class="num">12)</span> Im Oktober ist es nicht so warm
+          <select class="blank inline" data-ans="wie"><option value="">—</option><option>als</option><option>wie</option><option>so</option></select> im Juli.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-5-klas-5-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-5-klas-5-rik";
+  const KN_UNIT = "l8-c";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['ub1', 'ub2', 'ub3', 'ub4', 'ub5', 'sprechen']});
+
+  // Üb. 1: бліц — усі слова Lektion 8 з файлу слів (без однакових перекладів)
+  const blitzPairs = [], blitzSeen = new Set();
+  ((window.SLOVA && window.SLOVA[KN_BOOK]) || []).filter(w => /^l8-/.test(w.r)).forEach(w => {
+    const de = w.de.split(' / ')[0].split(',')[0].replace(/\s*\(.*?\)/g, '').trim();
+    const uk = w.uk.split(' / ')[0].trim();
+    const key = uk.split(/[,;]/)[0].trim().toLowerCase();
+    if (!de || de.length > 28 || /^(der|die|das)$/i.test(de) || blitzSeen.has(key)) return;
+    blitzSeen.add(key);
+    blitzPairs.push([de, uk]);
+  });
+  buildBlitz('ub1-blitz', {pairs: blitzPairs, seconds: 60, dir: "de-uk"});
+
+  // Üb. 2: пошук слів
+  buildWordGrid('ub2-such', {
+    words: [
+      ["Wald", "ліс"],
+      ["Wiese", "лука"],
+      ["Fuchs", "лис"],
+      ["Igel", "їжак"],
+      ["Nebel", "туман"],
+      ["Frost", "мороз"],
+      ["Herbst", "осінь"],
+      ["Sommer", "літо"]
+    ],
+    show: "uk"
+  });
+
+  // Üb. 3: що до чого
+  buildMatch('ub3', [
+    ["Es gibt Nebel.", "Es ist neblig."],
+    ["Es weht ein starker Wind.", "Es ist windig."],
+    ["Die Sonne scheint hell.", "Es ist heiter."],
+    ["Es gibt viel Schnee.", "Es schneit stark."],
+    ["Es donnert und blitzt, es regnet stark.", "Es gibt ein Gewitter."],
+    ["Das Thermometer zeigt minus 20 Grad.", "Es ist frostig."],
+    ["Am Himmel sind viele Wolken.", "Es ist wolkig."]
+  ], {lead: true});
+
+  // Üb. 4
+  wireBlanks('ub4');
+
+  // Üb. 5: знайди помилку
+  buildFixError('ub5-fix', [
+    {s: "Im Wald gibt es viele Baume.", wrong: 5, fix: "Bäume"},
+    {s: "Paul wandert gern im Wald.", ok: true},
+    {s: "Werft Sie bitte keinen Müll weg!", wrong: 0, fix: "Werfen"},
+    {s: "Kinder, seid bitte leise!", ok: true},
+    {s: "Im Herbst ist es oft neblich.", wrong: 5, fix: "neblig"},
+    {s: "Heute ist es kälter wie gestern.", wrong: 4, fix: "als"},
+    {s: "Die Zugspitze ist hocher als die Howerla.", wrong: 3, fix: "höher"},
+    {s: "Im Frühling blühen die Bäume.", ok: true}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Halten Sie bitte den Wald sauber!", uk: "Будь ласка, тримайте ліс у чистоті!"},
+    {say: "Im Winter schneit es oft.", uk: "Узимку часто йде сніг."},
+    {say: "Heute ist es wärmer als gestern.", uk: "Сьогодні тепліше, ніж учора."},
+    {say: "Der Frühling bringt Blumen, der Winter den Schnee.", uk: "Весна приносить квіти, а зима — сніг."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Der Plural von „der Baum“:", opts: ["die Bäume", "die Baume", "die Bäumen"], correct: "die Bäume"},
+    {q: "Welches Tier lebt im Wald?", opts: ["das Reh", "der Delfin", "das Kamel"], correct: "das Reh"},
+    {q: "Es blitzt und donnert. Das ist …", opts: ["ein Gewitter", "Nebel", "Frost"], correct: "ein Gewitter"},
+    {q: "Die Nordsee ist …", opts: ["ein Meer", "ein See", "ein Fluss"], correct: "ein Meer"},
+    {q: "Der Komparativ von „warm“:", opts: ["wärmer", "warmer", "mehr warm"], correct: "wärmer"},
+    {q: "Im Herbst …", opts: ["sind die Blätter bunt", "blühen die Bäume", "baden wir im See"], correct: "sind die Blätter bunt"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Es gibt Frost und es schneit.", ok: true},
+    {s: "Bleiben auf dem Weg, Kinder!", wrong: 0, fix: "Bleibt"},
+    {s: "Im April ist es wärmer wie im März.", wrong: 5, fix: "als"},
+    {s: "In unserer Gegend leben viele Fuchse.", wrong: 5, fix: "Füchse"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🌲', '⛅', '🦔', '🏆']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
