@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 7, Modul C: Willkommen in der Ukraine — Німецька мова 5 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 5 КЛАС</span>
+        <h1>Lektion 7 · Modul C: Willkommen in der Ukraine</h1>
+        <p class="sub">Повний урок про Україну й Київ: факти про країну, пам'ятки столиці, загадки про Львів та Одесу, множина назв будівель і повторення dass / ob / denn. Є лист і екскурсія з озвученням, мапа України, говоріння, письмо й тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Landkarte</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Kyjiw</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Plural</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Stimmt das?</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Rätsel</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Willkommen in Kyjiw!</h2>
+      <p class="lead">Соломія з Києва пише німецькій подрузі Луїзі про Україну і своє місто. Послухай і прочитай; торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l7-c-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Liebe Luisa,</p>
+        <p>du hast gefragt, ob ich dir etwas über meine <span class="gl" data-uk="батьківщина" data-lemma="die Heimat">Heimat</span> erzählen kann. Gern! Die Ukraine liegt im Osten Europas. Sie ist sehr groß: über 600 000 Quadratkilometer. Im Süden liegen das Schwarze Meer und das Asowsche Meer, im Westen die Karpaten. Der längste Fluss der Ukraine ist der Dnipro. Unser Geld heißt Hrywnja, und unser Nationalfeiertag ist der Unabhängigkeitstag am 24. August.</p>
+        <p>Ich wohne in Kyjiw. Kyjiw ist die Hauptstadt der Ukraine und liegt am Dnipro. Die Stadt ist sehr alt — sie hat eine <span class="gl" data-uk="історія" data-lemma="die Geschichte, -n">Geschichte</span> von über 1500 Jahren.</p>
+        <p>Mein Lieblingsort ist die Sophienkathedrale. Man hat sie im 11. <span class="gl" data-uk="століття" data-lemma="das Jahrhundert, -e">Jahrhundert</span> gebaut, und sie hat goldene Kuppeln. Nicht weit davon steht das Goldene <span class="gl" data-uk="ворота, брама" data-lemma="das Tor, -e">Tor</span>. Früher ist das ein Stadttor gewesen, heute ist da ein <span class="gl" data-uk="музей" data-lemma="das Museum, Museen">Museum</span>.</p>
+        <p>Sehr <span class="gl" data-uk="мальовничий" data-lemma="malerisch">malerisch</span> ist der Andreassteig. Diese alte Straße führt von der Andreaskirche nach unten zum Stadtteil Podil. Dort verkaufen Künstler Bilder und Souvenirs. Die Hauptstraße von Kyjiw heißt Chreschtschatyk. Sie ist breit und grün, und hier gibt es viele Geschäfte, Cafés und <span class="gl" data-uk="кінотеатр" data-lemma="das Kino, -s">Kinos</span>.</p>
+        <p>Weißt du, dass wir auch eine <span class="gl" data-uk="метро" data-lemma="die U-Bahn, -en">U-Bahn</span> haben? Die Station Arsenalna liegt 105 Meter tief! Das ist eine der tiefsten U-Bahn-Stationen der Welt.</p>
+        <p>Ich bin <span class="gl" data-uk="впевнений" data-lemma="sicher">sicher</span>, dass dir Kyjiw gefällt. Komm doch bald zu mir, dann zeige ich dir meine Stadt!</p>
+        <p>Viele Grüße<br>deine Solomija</p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">Wiederholung: denn, dass, ob · Plural</h2>
+      <p class="lead">Нової граматики в модулі немає — повторюємо те, що знадобиться, щоб розповідати про місто: <b>denn</b> («бо»), <b>dass</b> і <b>ob</b>, а ще множину назв будівель.</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. denn чи dass?</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>сполучник</th><th>де дієслово</th></tr>
+          <tr><td><strong>denn</strong> — бо</td><td>…, denn ich <strong>finde</strong> das Gebäude herrlich. <i>(звичайний порядок: дієслово друге)</i></td></tr>
+          <tr><td><strong>dass</strong> — що</td><td>…, dass Kyjiw am Dnipro <strong>liegt</strong>. <i>(дієслово в кінці)</i></td></tr>
+          <tr><td><strong>ob</strong> — чи</td><td>…, ob das Museum heute offen <strong>ist</strong>. <i>(дієслово в кінці)</i></td></tr>
+        </table></div>
+        <div class="merke">Після <b>denn</b> порядок слів не змінюється: Die Universität gefällt mir, denn ich <b>finde</b> sie schön. Після <b>dass</b> і <b>ob</b> змінене дієслово — в кінці.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. Множина: що є в місті</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>закінчення</th><th>приклади</th></tr>
+          <tr><td>-n / -en</td><td>die Kirche → die Kirche<strong>n</strong>, die Fabrik → die Fabrik<strong>en</strong></td></tr>
+          <tr><td>-s</td><td>das Kino → die Kino<strong>s</strong>, das Hotel → die Hotel<strong>s</strong></td></tr>
+          <tr><td>без закінчення</td><td>das Theater → die Theater</td></tr>
+          <tr><td>¨-er</td><td>das Denkmal → die Denkm<strong>ä</strong>l<strong>er</strong></td></tr>
+          <tr><td>-um → -en</td><td>das Muse<strong>um</strong> → die Muse<strong>en</strong>, das Stadi<strong>on</strong> → die Stadi<strong>en</strong></td></tr>
+        </table></div>
+        <div class="merke">Артикль у множині завжди <b>die</b>. Множину вчи разом зі словом — у словнику вона записана так: das Denkmal, <b>-ä-er</b>.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: мапа ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Die Landkarte der Ukraine</h2>
+      <p class="lead">Торкнися на мапі потрібного міста, річки чи області.</p>
+      <div class="card" id="ub1-map"></div>
+    </section>
+
+    <!-- ===== Üb. 2: пам'ятки Києва ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Sehenswürdigkeiten Kyjiws</h2>
+      <p class="lead">Що це за пам'ятка? Вибери назву.</p>
+      <div class="card" id="ub2-list"></div>
+    </section>
+
+    <!-- ===== Üb. 3: множина ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Was gibt es in der Stadt?</h2>
+      <p class="lead">Напиши множину. Підказки — у вкладці «Grammatik».</p>
+      <div class="card" id="ub3-tab"></div>
+    </section>
+
+    <!-- ===== Üb. 4: правда чи ні ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Stimmt das?</h2>
+      <p class="lead">Прочитай факти про Україну. Розклади: «Das stimmt» чи «Das stimmt nicht»? Натисни картку, потім кошик.</p>
+      <div class="card" id="ub4-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 5: загадки ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Zwei Städte, zwei Rätsel</h2>
+      <p class="lead">Встав слова в загадки й відгадай міста. Натисни пропуск, потім картку зі словом. Три картки зайві.</p>
+      <div class="card" id="ub5-bank"></div>
+    </section>
+
+    <!-- ===== HÖREN ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Eine Stadtführung durch Kyjiw</h2>
+      <p class="lead">Гідеса Оксана проводить екскурсію для німецьких школярів. Послухай (можна двічі). Спершу розстав пам'ятки в тому порядку, в якому група їх відвідує, потім дай відповіді на запитання. Текст розмови відкривається внизу — але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l7-c-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-seq"></div>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Oksana:</b> Guten Morgen, liebe Gäste! Willkommen in Kyjiw! Ich heiße Oksana, ich bin heute eure Reiseführerin. Wir stehen jetzt vor dem Goldenen Tor. Das ist ein altes Stadttor, heute ist hier ein Museum.<br>
+          <b>Max:</b> Wie alt ist das Tor?<br>
+          <b>Oksana:</b> Man hat es im elften Jahrhundert gebaut. Gehen wir weiter! Nur zehn Minuten zu Fuß, und wir sind an der Sophienkathedrale. Seht ihr die goldenen Kuppeln?<br>
+          <b>Mia:</b> Wow, herrlich! Darf ich die Kuppeln fotografieren?<br>
+          <b>Oksana:</b> Natürlich! Jetzt gehen wir zur Andreaskirche. Von hier führt der Andreassteig nach unten. Dort kann man Souvenirs kaufen.<br>
+          <b>Mia:</b> Ich möchte Postkarten für meine Oma kaufen!<br>
+          <b>Oksana:</b> Das könnt ihr am Nachmittag machen. Jetzt fahren wir mit der U-Bahn zum Chreschtschatyk. Das ist unsere Hauptstraße.<br>
+          <b>Max:</b> Ist sie lang?<br>
+          <b>Oksana:</b> Etwas über einen Kilometer. Dann gehen wir zur Werchowna Rada — hier arbeitet unser Parlament. Und am Ende sehen wir die Schewtschenko-Universität. Das Gebäude ist ganz rot!<br>
+          <b>Max:</b> Warum ist es rot?<br>
+          <b>Oksana:</b> Das ist eine lange Geschichte. Die erzähle ich euch beim Mittagessen!
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Meine Heimat</h2>
+      <p class="lead">Спершу прислів'я в 🎤. Потім відповідай уголос на запитання й порівнюй зі зразком.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprichwörter</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Interview: Luisa fragt dich über die Ukraine (Lage, Hauptstadt, Geld, Flüsse, Meere, Nationalfeiertag). Antworte.</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">— Ich möchte bitte fragen: Wo liegt die Ukraine? — Im Osten Europas. — Ich möchte gerne wissen: Wie heißt die Hauptstadt? — Kyjiw. — Sag bitte: Welche Flüsse gibt es da? — Den Dnipro, den Dnister, die Desna und andere. — Wann ist euer Nationalfeiertag? — Am 24. August.</div>
+        </div>
+        <div class="qa">
+          <label>2. Welche Sehenswürdigkeit Kyjiws gefällt dir? Warum? (…, denn …)</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Die Andreaskirche gefällt mir sehr gut, denn ich finde sie herrlich. Die Sophienkathedrale gefällt mir auch, denn sie ist sehr alt und hat goldene Kuppeln.</div>
+        </div>
+        <div class="qa">
+          <label>3. Was möchtest du in Kyjiw sehen und machen?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">In Kyjiw möchte ich das Goldene Tor besuchen, denn ich mag alte Gebäude. Ich möchte auch auf dem Andreassteig spazieren gehen, die Kuppeln der Sophienkathedrale fotografieren und mit der U-Bahn fahren.</div>
+        </div>
+        <div class="qa">
+          <label>4. Stimmt das? „In Kyjiw gibt es keine U-Bahn.“ — „Kyjiw hat eine lange Geschichte.“ Reagiere.</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Nein, das stimmt nicht. In Kyjiw gibt es eine U-Bahn, und die Station Arsenalna ist sehr tief. — Ja, das stimmt. Ich bin sicher, dass Kyjiw über 1500 Jahre alt ist.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Tipps für eine Reise in meinen Heimatort</h2>
+      <p class="lead">Група німецьких школярів хоче приїхати в Україну й побувати у твоєму рідному місті чи селі (вправа 13 підручника). Напиши їм поради на 60–90 слів: де твоє місто, як доїхати, що подивитися, що скуштувати чи купити, як провести вільний час.</p>
+      <div class="card">
+        <p class="beispiel">Unser Heimatort liegt in … · Zuerst könnt ihr mit dem Zug nach … fahren. · Dort könnt ihr … besuchen. · Bei uns gibt es … · Zum Schluss könnt ihr … · Gute Reise!</p>
+        <div class="qa">
+          <label for="schreiben-text">Meine Tipps</label>
+          <textarea id="schreiben-text" rows="9" placeholder="Liebe Freunde, unser Heimatort liegt …"
+            data-words="60-90"
+            data-must="könnt|mit"
+            data-check="Де твоє місто чи село|Як доїхати|Що подивитися|Що скуштувати чи купити|Вільний час|«Gute Reise!» у кінці"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Liebe Freunde, unser Heimatort heißt Kamjanez-Podilskyj und liegt im Westen der Ukraine. Zuerst könnt ihr mit dem Zug nach Kyjiw fahren. Dort könnt ihr die Sophienkathedrale besuchen und auf dem Chreschtschatyk spazieren gehen. Dann könnt ihr zu uns mit dem Bus kommen. Bei uns gibt es eine sehr alte Burg und eine malerische Altstadt. Da könnt ihr viele Fotos machen und Souvenirs kaufen. Zum Schluss könnt ihr in einem Café Warenyky essen. Gute Reise!</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">6)</span> In Kyjiw gibt es viele
+          <select class="blank inline" data-ans="Kinos"><option value="">—</option><option>Kinos</option><option>Kinoen</option><option>Kino</option></select>.</div>
+        <div class="fill-item"><span class="num">7)</span> Ich bin sicher,
+          <select class="blank inline" data-ans="dass"><option value="">—</option><option>dass</option><option>ob</option><option>denn</option></select> Kyjiw eine lange Geschichte hat.</div>
+        <div class="fill-item"><span class="num">8)</span> Die Universität gefällt mir, denn
+          <select class="blank inline" data-ans="ich finde sie schön"><option value="">—</option><option>ich finde sie schön</option><option>ich sie schön finde</option><option>finde ich sie schön</option></select>.</div>
+        <div class="fill-item"><span class="num">9)</span> König Danylo hat Lwiw im 13. Jahrhundert
+          <select class="blank inline" data-ans="gegründet"><option value="">—</option><option>gegründet</option><option>gründet</option><option>gegründen</option></select>.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-5-klas-5-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/svg/ukraine.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-5-klas-5-rik";
+  const KN_UNIT = "l7-c";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'ub5', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Die Ukraine liegt im Westen Europas.", a: "f"},
+    {s: "Im Süden der Ukraine liegen zwei Meere.", a: "r"},
+    {s: "Das Geld in der Ukraine heißt Euro.", a: "f"},
+    {s: "Kyjiw liegt am Dnister.", a: "f"},
+    {s: "Die Sophienkathedrale hat man im 11. Jahrhundert gebaut.", a: "r"},
+    {s: "Im Goldenen Tor ist heute ein Museum.", a: "r"},
+    {s: "Kyjiw hat keine U-Bahn.", a: "f"},
+    {s: "Luisa hat Solomija schon in Kyjiw besucht.", a: "n"}
+  ]);
+
+  // Üb. 1: мапа
+  buildHotspot('ub1-map', {svg: 'ukraine', tasks: [
+    {q: "Wo liegt Kyjiw?", zone: "kyjiw"},
+    {q: "Wo liegt Lwiw?", zone: "lwiw"},
+    {q: "Wo liegt Odesa?", zone: "odesa"},
+    {q: "Wo liegt Charkiw?", zone: "charkiw"},
+    {q: "Wo liegt Uschhorod?", zone: "uschhorod"},
+    {q: "Wo fließt der Dnipro?", zone: "dnipro-fluss"},
+    {q: "Wo fließt der Dnister?", zone: "dnister"},
+    {q: "Wo liegt die Krim?", zone: "krim"}
+  ]});
+
+  // Üb. 2: пам'ятки
+  buildMatch('ub2', [
+    ["eine Kirche aus dem 11. Jahrhundert mit goldenen Kuppeln", "die Sophienkathedrale"],
+    ["ein altes Stadttor, heute ein Museum", "das Goldene Tor"],
+    ["eine Kirche oben am Andreassteig", "die Andreaskirche"],
+    ["die Hauptstraße von Kyjiw", "der Chreschtschatyk"],
+    ["Hier arbeitet das Parlament.", "die Werchowna Rada"],
+    ["ein großes rotes Gebäude, hier studiert man", "die Schewtschenko-Universität"],
+    ["ein Hetman auf einem Pferd", "das Bohdan-Chmelnyzkyj-Denkmal"]
+  ], {options: ["die Sophienkathedrale", "das Goldene Tor", "die Andreaskirche", "der Chreschtschatyk", "die Werchowna Rada", "die Schewtschenko-Universität", "das Bohdan-Chmelnyzkyj-Denkmal"]});
+
+  // Üb. 3: множина
+  buildTable('ub3-tab', {
+    head: ["Singular", "Plural"],
+    rows: [
+      ["die Kirche", "die [Kirchen]"],
+      ["das Kino", "die [Kinos]"],
+      ["das Stadion", "die [Stadien]"],
+      ["das Theater", "die [Theater]"],
+      ["das Denkmal", "die [Denkmäler]"],
+      ["das Museum", "die [Museen]"],
+      ["die Fabrik", "die [Fabriken]"],
+      ["die Schule", "die [Schulen]"]
+    ]
+  });
+
+  // Üb. 4: правда чи ні
+  buildSort('ub4-sort', {
+    buckets: ["Das stimmt.", "Das stimmt nicht."],
+    items: [
+      {t: "Kyjiw liegt am Dnipro.", b: "Das stimmt."},
+      {t: "Kyjiw liegt am Dnister.", b: "Das stimmt nicht."},
+      {t: "In Kyjiw gibt es keine U-Bahn.", b: "Das stimmt nicht."},
+      {t: "In Kyjiw gibt es viele Schulen und Universitäten.", b: "Das stimmt."},
+      {t: "Die Sophienkathedrale hat man im 9. Jahrhundert gebaut.", b: "Das stimmt nicht."},
+      {t: "Kyjiw hat keine Museen.", b: "Das stimmt nicht."},
+      {t: "Kyjiw hat eine lange Geschichte.", b: "Das stimmt."},
+      {t: "Lwiw liegt im Westen der Ukraine.", b: "Das stimmt."},
+      {t: "Odesa liegt am Schwarzen Meer.", b: "Das stimmt."},
+      {t: "Charkiw liegt im Westen der Ukraine.", b: "Das stimmt nicht."}
+    ]
+  });
+
+  // Üb. 5: загадки
+  buildWordBank('ub5-bank', {
+    text: "Rätsel 1. Diese Großstadt liegt im [Westen] der Ukraine. Sie ist alt und hat eine reiche [Geschichte]: König Danylo hat sie im 13. [Jahrhundert] gegründet. Besonders [malerisch] ist die Altstadt. In der [Oper] kann man Ballett sehen. Das ist [Lwiw].\n\nRätsel 2. Diese Stadt liegt am Schwarzen [Meer] und ist eine [Hafenstadt]. Sie ist auch ein [Kurort]: Viele Ukrainer erholen sich hier gern. Die Potemkinsche [Treppe] führt von der Altstadt zum Meer. Das ist [Odesa].",
+    extra: ["Osten", "Fabrik", "Charkiw"]
+  });
+
+  // Hören
+  buildSequence('hoeren-seq', [
+    "das Goldene Tor",
+    "die Sophienkathedrale",
+    "die Andreaskirche",
+    "der Chreschtschatyk",
+    "die Werchowna Rada",
+    "die Schewtschenko-Universität"
+  ]);
+  buildQuiz('hoeren-quiz', [
+    {q: "Was ist heute im Goldenen Tor?", opts: ["ein Museum", "ein Café", "eine Schule"], correct: "ein Museum"},
+    {q: "Wann hat man das Goldene Tor gebaut?", opts: ["im 11. Jahrhundert", "im 13. Jahrhundert", "im 18. Jahrhundert"], correct: "im 11. Jahrhundert"},
+    {q: "Wie lange geht man vom Tor zur Sophienkathedrale?", opts: ["zehn Minuten", "eine Stunde", "zwei Minuten"], correct: "zehn Minuten"},
+    {q: "Was möchte Mia kaufen?", opts: ["Postkarten für ihre Oma", "ein Bild für ihre Mutter", "Souvenirs für Max"], correct: "Postkarten für ihre Oma"},
+    {q: "Wie kommt die Gruppe zum Chreschtschatyk?", opts: ["mit der U-Bahn", "mit dem Bus", "zu Fuß"], correct: "mit der U-Bahn"},
+    {q: "Welche Farbe hat das Gebäude der Universität?", opts: ["rot", "gelb", "weiß"], correct: "rot"}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Norden, Osten, Süden, Westen, zu Haus ist es am besten.", uk: "В гостях добре, а вдома краще."},
+    {say: "Heimat mein, was kann besser sein?", uk: "Рідний краю, що може бути кращим?"},
+    {say: "Bei sich zu Hause ist der Hund am stolzesten.", uk: "Удома й собака — пан."},
+    {say: "Wer sich überall zu Hause fühlt, ist nirgends daheim.", uk: "Хто всюди вдома, той ніде не вдома."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Kyjiw liegt am …", opts: ["Dnipro", "Dnister", "Rhein"], correct: "Dnipro"},
+    {q: "Das Geld in der Ukraine heißt …", opts: ["die Hrywnja", "der Euro", "der Dollar"], correct: "die Hrywnja"},
+    {q: "Der Plural von „das Museum“ ist …", opts: ["die Museen", "die Museums", "die Museumen"], correct: "die Museen"},
+    {q: "Welche Stadt liegt am Schwarzen Meer?", opts: ["Odesa", "Lwiw", "Charkiw"], correct: "Odesa"},
+    {q: "„Das stimmt nicht.“ bedeutet:", opts: ["Це неправда.", "Це правда.", "Я не знаю."], correct: "Це неправда."}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "In Kyjiw gibt es viele Denkmals.", wrong: 5, fix: "Denkmäler"},
+    {s: "Odesa liegt am Schwarzen Meer.", ok: true},
+    {s: "Ich weiß nicht, dass das Museum heute offen ist.", wrong: 3, fix: "ob"},
+    {s: "Kyjiw ist die Hauptstadt der Ukraine und liegt am Dnister.", wrong: 9, fix: "Dnipro"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🇺🇦', '⛪', '🗺️', '🌻']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
