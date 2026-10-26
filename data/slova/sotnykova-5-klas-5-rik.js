@@ -741,4 +741,12 @@
   {de: "Von wegen!", uk: "Аж ніяк! Де там!", r: "l8-b"},
   {de: "so … wie", uk: "так(ий) … як", r: "l8-b", note: "so warm wie gestern"},
   {de: "als", uk: "ніж (при порівнянні)", r: "l8-b", note: "wärmer als gestern"},
+  {de: "das Aprilwetter", uk: "квітнева (мінлива) погода", r: "l8-d", note: "April, April, der macht, was er will!"},
+  {de: "der Ski, -er", uk: "лижа", r: "l8-d", note: "Ski laufen — кататися на лижах"},
+  {de: "dunkel", uk: "темний", r: "l8-d"},
+  {de: "die Wolke, -n", uk: "хмара", r: "l8-d"},
+  {de: "springen, ist gesprungen", uk: "стрибати", r: "l8-d"},
+  {de: "sich schütteln", uk: "струшуватися, обтрушуватися", r: "l8-d"},
+  {de: "nass", uk: "мокрий", r: "l8-d"},
+  {de: "schmutzig", uk: "брудний", r: "l8-d"},
 ];

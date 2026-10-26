@@ -132,8 +132,8 @@ const PIDRUCHNYKY = [
       { id: "l8", label: "8", nazva: "Hey Freunde, raus in die Natur!", storinky: "135–148", dity: [
         { id: "l8-a", label: "A", nazva: "Die Natur erkunden", storinky: "136–139", typ: "vpravy", gram: ["imperativ"], opublikovano: 34 },
         { id: "l8-b", label: "B", nazva: "Jahreszeiten und Wetter", storinky: "140–143", typ: "vpravy", gram: ["komparation"], opublikovano: 35 },
-        { id: "l8-c", label: "C", nazva: "Wiederholung", storinky: "144–145", typ: "povtorennya" },
-        { id: "l8-d", label: "D", nazva: "Geschichtenzeit", storinky: "146", typ: "chytannya" },
+        { id: "l8-c", label: "C", nazva: "Wiederholung", storinky: "144–145", typ: "povtorennya", gram: ["imperativ", "komparation"], opublikovano: 36 },
+        { id: "l8-d", label: "D", nazva: "Geschichtenzeit", storinky: "146", typ: "chytannya", opublikovano: 37 },
         { id: "l8-e", label: "E", nazva: "Projektarbeit", storinky: "147", typ: "bez-storinky" },
         { id: "l8-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "148", typ: "bez-storinky" }
       ] }
