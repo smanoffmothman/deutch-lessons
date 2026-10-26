@@ -136,6 +136,11 @@ const PIDRUCHNYKY = [
         { id: "l8-d", label: "D", nazva: "Geschichtenzeit", storinky: "146", typ: "chytannya", opublikovano: 37 },
         { id: "l8-e", label: "E", nazva: "Projektarbeit", storinky: "147", typ: "bez-storinky" },
         { id: "l8-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "148", typ: "bez-storinky" }
+      ] },
+      { id: "anhang", label: "", nazva: "Anhang", storinky: "149–192", dity: [
+        { id: "anhang-grammatik", label: "", nazva: "Grammatik", storinky: "149–160", typ: "bez-storinky" },
+        { id: "anhang-verben", label: "", nazva: "Unregelmäßige Verben", storinky: "161–162", typ: "gramatyka", gram: ["starke-verben", "perfekt-plusquamperfekt"], opublikovano: 38 },
+        { id: "anhang-woerter", label: "", nazva: "Deutsch-Ukrainisches Wörterverzeichnis", storinky: "163–192", typ: "bez-storinky" }
       ] }
     ]
   }
