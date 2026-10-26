@@ -114,7 +114,7 @@ const PIDRUCHNYKY = [
       { id: "l6", label: "6", nazva: "Guten Appetit!", storinky: "97–114", dity: [
         { id: "l6-a", label: "A", nazva: "Lieblingsessen", storinky: "98–101", typ: "vpravy", gram: ["artikel-gebrauch"], opublikovano: 24 },
         { id: "l6-b", label: "B", nazva: "Leckere Spezialitäten", storinky: "102–105", typ: "vpravy", gram: ["artikel-gebrauch"], opublikovano: 25 },
-        { id: "l6-c", label: "C", nazva: "Cafébesuch", storinky: "106–109", typ: "vpravy" },
+        { id: "l6-c", label: "C", nazva: "Cafébesuch", storinky: "106–109", typ: "vpravy", opublikovano: 26 },
         { id: "l6-d", label: "D", nazva: "Wiederholung", storinky: "110–111", typ: "povtorennya" },
         { id: "l6-e", label: "E", nazva: "Geschichtenzeit", storinky: "112", typ: "chytannya" },
         { id: "l6-f", label: "F", nazva: "Projektarbeit", storinky: "113", typ: "bez-storinky" },
