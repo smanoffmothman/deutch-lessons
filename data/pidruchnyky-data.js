@@ -124,8 +124,8 @@ const PIDRUCHNYKY = [
         { id: "l7-a", label: "A", nazva: "Reiseziele und Verkehr", storinky: "116–120", typ: "vpravy", gram: ["praep-dativ", "komparation"], opublikovano: 29 },
         { id: "l7-b", label: "B", nazva: "Deutschlandreise", storinky: "121–125", typ: "vpravy", gram: ["nebensaetze", "indirekte-fragesaetze"], opublikovano: 30 },
         { id: "l7-c", label: "C", nazva: "Willkommen in der Ukraine", storinky: "126–129", typ: "vpravy", opublikovano: 31 },
-        { id: "l7-d", label: "D", nazva: "Wiederholung", storinky: "130–131", typ: "povtorennya" },
-        { id: "l7-e", label: "E", nazva: "Geschichtenzeit", storinky: "132", typ: "chytannya" },
+        { id: "l7-d", label: "D", nazva: "Wiederholung", storinky: "130–131", typ: "povtorennya", gram: ["praep-dativ", "nebensaetze"], opublikovano: 32 },
+        { id: "l7-e", label: "E", nazva: "Geschichtenzeit", storinky: "132", typ: "chytannya", opublikovano: 33 },
         { id: "l7-f", label: "F", nazva: "Projektarbeit", storinky: "133", typ: "bez-storinky" },
         { id: "l7-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "134", typ: "bez-storinky" }
       ] },
