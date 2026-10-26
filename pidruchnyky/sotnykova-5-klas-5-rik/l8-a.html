@@ -407,6 +407,8 @@
     text: "Lieber Jan,\n\ndanke für die tollen Fotos! Rehe und Wildschweine gibt es bei uns auch. Ich wohne in der [Gegend] von Tschernihiw, im Norden der Ukraine. Hier gibt es viele [Wälder], Seen und Flüsse. Im Wald leben Füchse, [Hasen] und Eichhörnchen. Am Fluss lebt sogar ein [Biber]: Er baut sein Haus aus Holz! Im Sommer gehe ich mit meinem Opa auf die [Wiese], und wir hören die Vögel. Mein Opa sagt immer: „[Wirf] keinen Müll weg und [sei] im Wald leise!“\n\nViele Grüße\nPetryk",
     extra: ["Steppe", "Delfin"]
   });
+  // підпис листа («Viele Grüße» / ім'я) — з нового рядка
+  document.querySelectorAll('#ub5-bank p').forEach(p => { p.style.whiteSpace = 'pre-line'; });
 
   // Hören
   buildQuiz('hoeren-quiz', [

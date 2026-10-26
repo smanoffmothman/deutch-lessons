@@ -234,6 +234,8 @@
     text: "Hallo Jonas,\n\nheute erzähle ich dir von meinen [Großeltern]. Mein Opa ist schon [Rentner], aber er arbeitet jeden Tag im Garten. Meine Oma kocht super und [kümmert] sich um unseren Hund.\n\nMeine Tante ist nicht [verheiratet], sie ist [ledig]. Sie arbeitet als [Köchin] in einem Restaurant. Mein Cousin Ben und ich sind [dicke] Freunde. Manchmal [streiten] wir, aber nie lange.\n\nUnd dein Bruder? Ist er immer noch [sauer] auf dich?\n\nViele Grüße\nTaras",
     extra: ["Einzelkind", "treu"]
   });
+  // підпис листа («Viele Grüße» / ім'я) — з нового рядка
+  document.querySelectorAll('#ub3-bank p').forEach(p => { p.style.whiteSpace = 'pre-line'; });
 
   // Üb. 4: знайди помилку
   buildFixError('ub4-fix', [
