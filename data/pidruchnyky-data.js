@@ -121,7 +121,7 @@ const PIDRUCHNYKY = [
         { id: "l6-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "114", typ: "bez-storinky" }
       ] },
       { id: "l7", label: "7", nazva: "Entdecke die Welt!", storinky: "115–134", dity: [
-        { id: "l7-a", label: "A", nazva: "Reiseziele und Verkehr", storinky: "116–120", typ: "vpravy" },
+        { id: "l7-a", label: "A", nazva: "Reiseziele und Verkehr", storinky: "116–120", typ: "vpravy", gram: ["praep-dativ", "komparation"], opublikovano: 29 },
         { id: "l7-b", label: "B", nazva: "Deutschlandreise", storinky: "121–125", typ: "vpravy" },
         { id: "l7-c", label: "C", nazva: "Willkommen in der Ukraine", storinky: "126–129", typ: "vpravy" },
         { id: "l7-d", label: "D", nazva: "Wiederholung", storinky: "130–131", typ: "povtorennya" },
