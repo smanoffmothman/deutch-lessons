@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 8, Modul B: Jahreszeiten und Wetter — Німецька мова 5 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 5 КЛАС</span>
+        <h1>Lektion 8 · Modul B: Jahreszeiten und Wetter</h1>
+        <p class="sub">Урок про пори року й погоду: es regnet, es ist kalt, es gibt Frost, а ще порівняння зі so … wie та als (Heute ist es wärmer als gestern). Є лист і прогноз погоди з озвученням, чат, говоріння, письмо й тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Wetter</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Jahreszeiten</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · als oder wie?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Vergleiche</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Chat</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Wie ist das Wetter bei euch?</h2>
+      <p class="lead">Соломія з Києва відповідає Луїзі з Гамбурга й порівнює погоду в обох містах. Послухай і прочитай; торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l8-b-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Liebe Luisa,</p>
+        <p>wie geht's dir? Bei uns in Kyjiw ist jetzt goldener <span class="gl" data-uk="осінь" data-lemma="der Herbst, -e">Herbst</span>! Die <span class="gl" data-uk="листок, аркуш" data-lemma="das Blatt, -ä-er">Blätter</span> auf den Bäumen sind gelb, rot und braun. Am Tag <span class="gl" data-uk="світити" data-lemma="scheinen">scheint</span> die Sonne, und das Thermometer zeigt fünfzehn <span class="gl" data-uk="градус" data-lemma="der Grad, -e">Grad</span>. Am Morgen ist es aber schon <span class="gl" data-uk="прохолодний" data-lemma="kühl">kühl</span>, und manchmal gibt es <span class="gl" data-uk="туман" data-lemma="der Nebel, -">Nebel</span>.</p>
+        <p>Du hast geschrieben, dass es in Hamburg jeden Tag regnet und sehr <span class="gl" data-uk="вітряний" data-lemma="windig">windig</span> ist. Bei uns regnet es nicht so oft wie bei euch. Aber im <span class="gl" data-uk="зима" data-lemma="der Winter, -">Winter</span> ist es in Kyjiw viel kälter als in Hamburg! Im Januar gibt es oft <span class="gl" data-uk="мороз" data-lemma="der Frost, -ö-e">Frost</span> — minus zehn Grad oder noch kälter —, und es <span class="gl" data-uk="іти (про сніг)" data-lemma="schneien">schneit</span> viel. Dann gehe ich mit meinem Bruder rodeln. Das ist toll!</p>
+        <p>Im <span class="gl" data-uk="літо" data-lemma="der Sommer, -">Sommer</span> ist es bei uns wärmer als bei euch, manchmal sind es über dreißig Grad. Dann fahren wir an den Dnipro und baden. Manchmal gibt es ein <span class="gl" data-uk="гроза" data-lemma="das Gewitter, -">Gewitter</span>: Es <span class="gl" data-uk="блискати (про блискавку)" data-lemma="blitzen">blitzt</span> und <span class="gl" data-uk="гриміти" data-lemma="donnern">donnert</span>, und ich habe ein bisschen Angst.</p>
+        <p>Meine Lieblingsjahreszeit ist der <span class="gl" data-uk="весна" data-lemma="der Frühling, -e">Frühling</span>. Im März <span class="gl" data-uk="танути" data-lemma="tauen">taut</span> der Schnee, im April <span class="gl" data-uk="цвісти" data-lemma="blühen">blühen</span> die Bäume, und die Vögel kommen zurück. Und welche <span class="gl" data-uk="пора року" data-lemma="die Jahreszeit, -en">Jahreszeit</span> hast du am liebsten?</p>
+        <p>Viele Grüße<br>deine Solomija</p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">Es regnet · so warm wie · wärmer als</h2>
+      <p class="lead">Про погоду німці говорять безособовими реченнями з <b>es</b> — так само, як ми кажемо «дощить», «холодно». А щоб порівняти погоду, потрібні <b>so … wie</b> і <b>… als</b>.</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. Безособові речення з es</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>схема</th><th>приклади</th></tr>
+          <tr><td>es + дієслово</td><td>Es <strong>regnet</strong>. Es <strong>schneit</strong>. Es <strong>blitzt</strong> und <strong>donnert</strong>.</td></tr>
+          <tr><td>es ist + прикметник</td><td>Es <strong>ist kalt</strong>. Es <strong>ist</strong> sonnig / windig / neblig.</td></tr>
+          <tr><td>es gibt + Akkusativ</td><td>Es <strong>gibt</strong> Frost / Nebel / <strong>ein</strong> Gewitter.</td></tr>
+        </table></div>
+        <div class="merke"><b>es</b> не можна пропустити, хоча в українській слова «воно» немає: «Холодно» = Es ist kalt. Якщо речення починається з часу, es стає після дієслова: <b>Im Winter schneit es</b> oft. <b>Heute ist es</b> kalt.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. Порівняння: so … wie та … als</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>коли</th><th>як</th></tr>
+          <tr><td>однаково</td><td>Heute ist es <strong>so</strong> warm <strong>wie</strong> gestern.</td></tr>
+          <tr><td>по-різному</td><td>Heute ist es wärm<strong>er als</strong> gestern.</td></tr>
+          <tr><td>не однаково</td><td>Im Herbst ist es <strong>nicht so</strong> kalt <strong>wie</strong> im Winter.</td></tr>
+        </table></div>
+        <div class="merke">Після <b>so</b> — завжди <b>wie</b>, після вищого ступеня (-er) — завжди <b>als</b>. Помилка «wärmer <s>wie</s>» — типова, хоча так інколи кажуть у розмові.</div>
+        <p class="section-label" style="margin:14px 0 8px;">З умлаутом і особливі</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>прикметник</th><th>вищий ступінь</th></tr>
+          <tr><td>warm · kalt</td><td>w<strong>ä</strong>rmer · k<strong>ä</strong>lter</td></tr>
+          <tr><td>lang · kurz</td><td>l<strong>ä</strong>nger · k<strong>ü</strong>rzer</td></tr>
+          <tr><td>hoch · gut · gern</td><td><strong>höher</strong> · <strong>besser</strong> · <strong>lieber</strong></td></tr>
+        </table></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: погода ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Wie ist das Wetter?</h2>
+      <p class="lead">Вибери картинку до кожного речення.</p>
+      <div class="card" id="ub1-pic"></div>
+    </section>
+
+    <!-- ===== Üb. 2: пори року ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Was passt zu welcher Jahreszeit?</h2>
+      <p class="lead">Розклади речення за порами року. Натисни картку, потім кошик.</p>
+      <div class="card" id="ub2-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 3: als / wie ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">als oder wie?</h2>
+      <p class="lead">Вибери als або wie.</p>
+      <div class="card" id="ub3-list">
+        <div class="fill-item"><span class="num">1)</span> Am Morgen ist es kühler
+          <select class="blank inline" data-ans="als"><option value="">—</option><option>wie</option><option>als</option></select> am Abend.</div>
+        <div class="fill-item"><span class="num">2)</span> Im Sommer sind die Tage länger
+          <select class="blank inline" data-ans="als"><option value="">—</option><option>als</option><option>wie</option></select> die Nächte.</div>
+        <div class="fill-item"><span class="num">3)</span> In diesem Winter ist es so kalt
+          <select class="blank inline" data-ans="wie"><option value="">—</option><option>als</option><option>wie</option></select> im letzten.</div>
+        <div class="fill-item"><span class="num">4)</span> Heute ist das Wetter so schön
+          <select class="blank inline" data-ans="wie"><option value="">—</option><option>wie</option><option>als</option></select> gestern.</div>
+        <div class="fill-item"><span class="num">5)</span> Kannst du so gut Ski laufen
+          <select class="blank inline" data-ans="wie"><option value="">—</option><option>als</option><option>wie</option></select> deine Schwester?</div>
+        <div class="fill-item"><span class="num">6)</span> Ich habe den Sommer lieber
+          <select class="blank inline" data-ans="als"><option value="">—</option><option>als</option><option>wie</option></select> den Winter.</div>
+        <div class="fill-item"><span class="num">7)</span> Im Mai ist es meistens wärmer
+          <select class="blank inline" data-ans="als"><option value="">—</option><option>wie</option><option>als</option></select> im April.</div>
+        <div class="fill-item"><span class="num">8)</span> Im Herbst ist es nicht so heiß
+          <select class="blank inline" data-ans="wie"><option value="">—</option><option>wie</option><option>als</option></select> im Sommer.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4: порівняння ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Vergleiche das Wetter</h2>
+      <p class="lead">Подивися на дані й напиши речення-порівняння з поданим прикметником: <b>so … wie</b>, якщо однаково, або вищий ступінь з <b>als</b>, якщо по-різному.</p>
+      <div class="card" id="ub4-tr"></div>
+    </section>
+
+    <!-- ===== Üb. 5: чат ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Gewitter in den Karpaten</h2>
+      <p class="lead">Петрик поїхав з дядьком у гори, а там негода. Підтримай його й дай пораду: вибирай доречну й правильну відповідь.</p>
+      <div class="card" id="ub5-chat"></div>
+    </section>
+
+    <!-- ===== HÖREN ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Der Wetterbericht</h2>
+      <p class="lead">Послухай прогноз погоди для Німеччини на завтра (можна двічі) і дай відповіді. Текст відкривається внизу — але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l8-b-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          Und jetzt das Wetter für morgen, Mittwoch. Im Norden ist es wolkig und windig, und es regnet oft. Die Temperaturen: zwölf bis vierzehn Grad. Im Osten scheint am Vormittag die Sonne, aber am Nachmittag gibt es Gewitter. Im Süden gibt es am Morgen Nebel, dann ist es sonnig und warm — bis zwanzig Grad. Dort ist es morgen am wärmsten. In den Alpen schneit es schon: Auf den hohen Bergen liegt Schnee. Und am Wochenende? Da ist es überall kälter als morgen, und in der Nacht gibt es Frost. Also: Nehmt eure warmen Jacken mit!
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Sprich über das Wetter</h2>
+      <p class="lead">Спершу рядки народної пісні з підручника в 🎤. Потім відповідай уголос на запитання й порівнюй зі зразком.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Es war eine Mutter, die hatte vier Kinder</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Wähle eine Jahreszeit und beschreibe das Wetter.</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Im Winter ist es kalt. Es schneit oft, und es gibt Frost. Manchmal ist es frostig und sonnig — das finde ich schön! Im Winter kann man rodeln und Ski laufen.</div>
+        </div>
+        <div class="qa">
+          <label>2. Vergleiche das Wetter: heute und gestern, im Mai und im Juni.</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Heute ist es kälter als gestern. Gestern hat die Sonne geschienen, heute regnet es. Im Juni ist es wärmer als im Mai, und die Tage sind länger.</div>
+        </div>
+        <div class="qa">
+          <label>3. Welche Jahreszeit hast du am liebsten? Warum?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Am liebsten habe ich den Sommer, denn es ist warm und sonnig. Ich kann im Fluss baden, zelten und Rad fahren. Den Herbst mag ich nicht so gern, denn es regnet oft.</div>
+        </div>
+        <div class="qa">
+          <label>4. Luisa ist mit ihrer Familie am Meer, aber es regnet jeden Tag. Gib ihr Tipps.</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Oh, das ist unangenehm! Geht doch ins Museum oder ins Kino! Ihr könnt auch eine Ausstellung besuchen oder einkaufen gehen. Und nehmt einen Regenschirm mit!</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Ein Rätsel über eine Jahreszeit</h2>
+      <p class="lead">Напиши загадку про пору року (як у вправах 6–7 підручника), 40–60 слів: яка погода, що буває в природі, що можна робити. Назву пори року не пиши — нехай друзі відгадають! Використай хоча б одне порівняння (als або so … wie).</p>
+      <div class="card">
+        <p class="beispiel">In dieser Jahreszeit ist es … · Es regnet / schneit … · Es gibt … · Es ist wärmer / kälter als im … · Man kann … · Welche Jahreszeit ist das?</p>
+        <div class="qa">
+          <label for="schreiben-text">Mein Rätsel</label>
+          <textarea id="schreiben-text" rows="8" placeholder="In dieser Jahreszeit ist es …"
+            data-words="40-60"
+            data-must="es|als|Man"
+            data-check="Погода (es ist …, es regnet …)|Що буває в природі|Що можна робити|Порівняння з als або so … wie|Назва пори року не згадана"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">In dieser Jahreszeit ist es kühl, und es regnet oft. Am Morgen gibt es Nebel. Es ist nicht so warm wie im Sommer, aber wärmer als im Winter. Die Blätter auf den Bäumen sind gelb, rot und braun. Man kann im Wald Pilze sammeln und Drachen steigen lassen. Die Kinder gehen wieder in die Schule. Welche Jahreszeit ist das?</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">6)</span> Im Sommer sind die Tage länger
+          <select class="blank inline" data-ans="als"><option value="">—</option><option>wie</option><option>so</option><option>als</option></select> im Winter.</div>
+        <div class="fill-item"><span class="num">7)</span> Heute
+          <select class="blank inline" data-ans="ist es"><option value="">—</option><option>es ist</option><option>ist es</option><option>ist</option></select> sehr windig.</div>
+        <div class="fill-item"><span class="num">8)</span> Im April
+          <select class="blank inline" data-ans="regnet es"><option value="">—</option><option>regnet es</option><option>es regnet</option><option>regnet</option></select> oft.</div>
+        <div class="fill-item"><span class="num">9)</span> Im Juli ist es
+          <select class="blank inline" data-ans="wärmer"><option value="">—</option><option>warmer</option><option>mehr warm</option><option>wärmer</option></select> als im Mai.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-5-klas-5-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-5-klas-5-rik";
+  const KN_UNIT = "l8-b";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'ub5', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "In Kyjiw ist jetzt Herbst.", a: "r"},
+    {s: "Am Morgen ist es in Kyjiw warm.", a: "f"},
+    {s: "In Hamburg regnet es oft.", a: "r"},
+    {s: "Im Winter ist es in Hamburg kälter als in Kyjiw.", a: "f"},
+    {s: "Im Januar geht Solomija mit ihrem Bruder rodeln.", a: "r"},
+    {s: "Im Sommer baden Solomija und ihre Familie im Dnipro.", a: "r"},
+    {s: "Solomija hat keine Angst vor Gewitter.", a: "f"},
+    {s: "Solomija hat den Frühling am liebsten.", a: "r"},
+    {s: "Luisa hat den Winter am liebsten.", a: "n"}
+  ]);
+
+  // Üb. 1: погода
+  buildPicture('ub1-pic', [
+    {q: "Es regnet.", opts: ["🌧️", "❄️", "☀️"], correct: "🌧️"},
+    {q: "Es schneit.", opts: ["🌫️", "🌨️", "⛈️"], correct: "🌨️"},
+    {q: "Es gibt ein Gewitter.", opts: ["⛈️", "💨", "🌧️"], correct: "⛈️"},
+    {q: "Es ist sonnig.", opts: ["☁️", "🌫️", "☀️"], correct: "☀️"},
+    {q: "Es ist wolkig.", opts: ["☁️", "☀️", "🌨️"], correct: "☁️"},
+    {q: "Es ist windig.", opts: ["🌧️", "💨", "☀️"], correct: "💨"},
+    {q: "Es gibt Nebel.", opts: ["⛈️", "☁️", "🌫️"], correct: "🌫️"},
+    {q: "Es ist frostig.", opts: ["🥶", "🥵", "😴"], correct: "🥶"}
+  ]);
+
+  // Üb. 2: пори року
+  buildSort('ub2-sort', {
+    buckets: ["Frühling 🌷", "Sommer ☀️", "Herbst 🍂", "Winter ❄️"],
+    items: [
+      {t: "Der Schnee taut.", b: "Frühling 🌷"},
+      {t: "Die Bäume blühen.", b: "Frühling 🌷"},
+      {t: "Die Vögel kommen zurück.", b: "Frühling 🌷"},
+      {t: "Es ist heiß.", b: "Sommer ☀️"},
+      {t: "Man kann im See baden.", b: "Sommer ☀️"},
+      {t: "Die Ferien sind lang.", b: "Sommer ☀️"},
+      {t: "Die Blätter sind bunt.", b: "Herbst 🍂"},
+      {t: "Man sammelt Pilze.", b: "Herbst 🍂"},
+      {t: "Die Schule beginnt.", b: "Herbst 🍂"},
+      {t: "Es gibt Frost.", b: "Winter ❄️"},
+      {t: "Man kann rodeln.", b: "Winter ❄️"},
+      {t: "Die Tage sind sehr kurz.", b: "Winter ❄️"}
+    ]
+  });
+
+  // Üb. 3
+  wireBlanks('ub3');
+
+  // Üb. 4: порівняння
+  buildTransform('ub4-tr', [
+    {s: "heute: 20 °C · gestern: 20 °C", task: "warm", ans: "Heute ist es so warm wie gestern."},
+    {s: "im Januar: −5 °C · im Dezember: 0 °C", task: "kalt", ans: "Im Januar ist es kälter als im Dezember."},
+    {s: "im Mai: 18 °C · im April: 12 °C", task: "warm", ans: "Im Mai ist es wärmer als im April."},
+    {s: "die Tage im Juni: 17 Stunden · im Dezember: 8 Stunden", task: "lang", ans: "Im Juni sind die Tage länger als im Dezember.|Die Tage im Juni sind länger als im Dezember."},
+    {s: "die Zugspitze: 2962 m · die Howerla: 2061 m", task: "hoch", ans: "Die Zugspitze ist höher als die Howerla."},
+    {s: "heute: viel Wind · gestern: viel Wind", task: "windig", ans: "Heute ist es so windig wie gestern."}
+  ]);
+
+  // Üb. 5: чат
+  buildChat('ub5-chat', {
+    partner: "Petryk",
+    steps: [
+      {them: "Hallo! Ich bin mit meinem Onkel in den Karpaten. 🏔️"},
+      {you: ["Super! Ist das Wetter schön?", "Super! Ist das Wetter schöner wie bei uns?", "Super! Ist es Wetter schön?"], correct: 0},
+      {them: "Von wegen! Es blitzt und donnert, und es regnet stark. 😩"},
+      {you: ["Oh, das ist unangenehm! Bleibt lieber im Haus!", "Oh, das ist unangenehm! Bleiben lieber im Haus!", "Super, dann geht doch wandern!"], correct: 0},
+      {them: "Und was machen wir den ganzen Tag?"},
+      {you: ["Spielt Karten oder lest Bücher!", "Spielen Karten oder lesen Bücher!", "Spielst Karten oder liest Bücher!"], correct: 0},
+      {them: "Gute Idee! Und wie ist das Wetter bei euch?"},
+      {you: ["Es regnet nicht, aber es ist kälter als gestern.", "Es regnet nicht, aber es ist kälter wie gestern.", "Es ist regnet nicht, aber kalt."], correct: 0},
+      {them: "Morgen scheint bei uns die Sonne. Dann wandern wir! ☀️"},
+      {you: ["Viel Spaß und gutes Wetter!", "Gute Besserung!", "Guten Appetit!"], correct: 0}
+    ]
+  });
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Wie ist das Wetter im Norden?", opts: ["wolkig, windig, es regnet oft", "sonnig und warm", "es schneit"], correct: "wolkig, windig, es regnet oft"},
+    {q: "Wie warm ist es im Norden?", opts: ["12 bis 14 Grad", "20 Grad", "2 bis 4 Grad"], correct: "12 bis 14 Grad"},
+    {q: "Was gibt es im Osten am Nachmittag?", opts: ["Gewitter", "Nebel", "Schnee"], correct: "Gewitter"},
+    {q: "Wo ist es morgen am wärmsten?", opts: ["im Süden", "im Norden", "in den Alpen"], correct: "im Süden"},
+    {q: "Wo schneit es schon?", opts: ["in den Alpen", "im Osten", "im Norden"], correct: "in den Alpen"},
+    {q: "Was gibt es am Wochenende in der Nacht?", opts: ["Frost", "Gewitter", "Nebel"], correct: "Frost"}
+  ]);
+
+  // Sprechen: 🎤 (Volkslied)
+  buildSpeak('sprechen-speak', [
+    {say: "Es war eine Mutter, die hatte vier Kinder, den Frühling, den Sommer, den Herbst und den Winter.", uk: "Була собі мати, мала четверо дітей: весну, літо, осінь і зиму."},
+    {say: "Der Frühling bringt Blumen, der Sommer bringt Klee, der Herbst, der bringt Trauben, der Winter den Schnee.", uk: "Весна приносить квіти, літо — конюшину, осінь — виноград, а зима — сніг."},
+    {say: "Heute ist es wärmer als gestern.", uk: "Сьогодні тепліше, ніж учора."},
+    {say: "Im Herbst ist es nicht so kalt wie im Winter.", uk: "Восени не так холодно, як узимку."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Im Winter … es oft.", opts: ["schneit", "schneien", "Schnee"], correct: "schneit"},
+    {q: "Heute ist es so warm … gestern.", opts: ["wie", "als", "so"], correct: "wie"},
+    {q: "Der Komparativ von „kalt“:", opts: ["kälter", "kalter", "mehr kalt"], correct: "kälter"},
+    {q: "Es gibt …", opts: ["Nebel", "neblig", "nebelt"], correct: "Nebel"},
+    {q: "Was passt zum Herbst?", opts: ["Die Blätter sind bunt.", "Die Bäume blühen.", "Man kann rodeln."], correct: "Die Blätter sind bunt."}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Heute ist es so kalt als gestern.", wrong: 5, fix: "wie"},
+    {s: "Im Winter schneit es oft.", ok: true},
+    {s: "Im Mai ist es warmer als im April.", wrong: 4, fix: "wärmer"},
+    {s: "Es gibt ein Gewitter und es blitz.", wrong: 6, fix: "blitzt"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🌷', '☀️', '🍂', '❄️']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
