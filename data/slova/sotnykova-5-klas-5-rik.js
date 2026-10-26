@@ -560,4 +560,17 @@
   {de: "vegetarisch", uk: "вегетаріанський", r: "l6-c"},
   {de: "das Mehl", uk: "борошно", r: "l6-c"},
   {de: "das Salz", uk: "сіль", r: "l6-c"},
+  // ---- Lektion 6 · Modul E: Geschichtenzeit ----
+  {de: "der Muttertag", uk: "День матері", r: "l6-e", note: "у другу неділю травня"},
+  {de: "der Kuss, -ü-e", uk: "поцілунок", r: "l6-e"},
+  {de: "die Umarmung, -en", uk: "обійми", r: "l6-e"},
+  {de: "der Obstsalat, -e", uk: "фруктовий салат", r: "l6-e"},
+  {de: "der Teig, -e", uk: "тісто", r: "l6-e"},
+  {de: "die Banane, -n", uk: "банан", r: "l6-e"},
+  {de: "die Orange, -n", uk: "апельсин", r: "l6-e"},
+  {de: "die Schürze, -n", uk: "фартух", r: "l6-e"},
+  {de: "Willkommen!", uk: "Ласкаво просимо!", r: "l6-e"},
+  {de: "Igitt!", uk: "Фу!", r: "l6-e"},
+  {de: "salzig", uk: "солоний", r: "l6-e"},
+  {de: "statt", uk: "замість", r: "l6-e", note: "Salz statt Zucker"},
 ];
