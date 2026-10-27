@@ -6,20 +6,6 @@
 <title>Lektion 9 · Modul B · Jugend und Freizeit</title>
 <link rel="stylesheet" href="../../../assets/lesson-style.css">
 <link rel="stylesheet" href="../../../assets/site.css">
-<!-- seo: цей блок оновлює робот (.github/scripts/build_seo.py) з data/*.js — вручну не редагувати -->
-<meta name="description" content="Захоплення молоді: складні іменники з Jugend- (die Jugendorganisation, das Jugendorchester, der Jugendclub…) з аудіоконтролем, словосполучення про дозвілля (einen Kurs besuchen, Sport treiben, zum Na…">
-<link rel="canonical" href="https://deutschheft.com.ua/lessons/klas-9/modul-b/lektion-9.html">
-<meta property="og:type" content="article">
-<meta property="og:site_name" content="DeutschHeft">
-<meta property="og:locale" content="uk_UA">
-<meta property="og:title" content="Lektion 9 · Modul B · Jugend und Freizeit">
-<meta property="og:description" content="Захоплення молоді: складні іменники з Jugend- (die Jugendorganisation, das Jugendorchester, der Jugendclub…) з аудіоконтролем, словосполучення про дозвілля (einen Kurs besuchen, Sport treiben, zum Na…">
-<meta property="og:url" content="https://deutschheft.com.ua/lessons/klas-9/modul-b/lektion-9.html">
-<meta property="og:image" content="https://deutschheft.com.ua/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<!-- /seo -->
 </head>
 <body>
 
@@ -361,7 +347,33 @@
       return { q: w.de, opts: [w.uk, ...distractors], correct: w.uk };
     });
     buildQuiz('dz-vocab', quizData);
+    spreadQuizAnswers('dz-vocab', quizData.map(x => x.correct));
   })();
+
+  // ===== Рівномірне розміщення правильних відповідей у квізах =====
+  // buildQuiz перемішує варіанти випадково, і правильна відповідь може
+  // кілька разів поспіль опинитися на тому самому місці. Тут після
+  // рендеру правильна кнопка ставиться на позиції, розподілені порівну
+  // (1-ша, 2-га, 3-тя … у випадковому порядку, без трьох однакових поспіль).
+  function spreadQuizAnswers(containerId, correctList){
+    const qs = document.querySelectorAll('#' + containerId + ' .quiz-q');
+    if (!qs.length) return;
+    const n = qs[0].querySelectorAll('.opt-btn').length;
+    let pos = [];
+    for (let t = 0; t < 50; t++){
+      pos = shuffleArray(Array.from({length: qs.length}, (_, i) => i % n));
+      if (!pos.some((p, i) => i >= 2 && p === pos[i-1] && p === pos[i-2])) break;
+    }
+    qs.forEach((q, i) => {
+      const box = q.querySelector('.quiz-opts');
+      const btns = Array.from(box.querySelectorAll('.opt-btn'));
+      const right = btns.find(b => b.textContent === correctList[i]);
+      if (!right) return;
+      const others = shuffleArray(btns.filter(b => b !== right));
+      others.splice(Math.min(pos[i], others.length), 0, right);
+      others.forEach(b => box.appendChild(b));
+    });
+  }
 
   // Hausaufgabe: допис Іллі — знайди й виправ помилку
   buildFixError('dz-fix', [
@@ -392,16 +404,18 @@
   setupAudio('audio1', AUDIO1_B64, 'audio/mpeg');
   wirePlayer('audio1', 'play1', 'seek1', 'time1');
 
-  // Üb. 1: A — складні іменники з артиклем; B — значення (позиції правильних: 2, 1, 3, 3, 1, 2)
+  // Üb. 1: A — складні іменники з артиклем; B — значення (правильні розкладає spreadQuizAnswers)
   wireBlanks('ub1');
-  buildQuiz('ub1-quiz', [
+  const ub1Quiz = [
     {q: "Hier spielen Jugendliche zusammen Musikinstrumente und üben neue Musikstücke.", opts: ["die Jugenddisko", "das Jugendorchester", "der Jugendsportverein"], correct: "das Jugendorchester"},
     {q: "Hier trainieren Jugendliche an Turngeräten und treiben verschiedene Sportarten.", opts: ["der Jugendsportverein", "die Jugendtanzgruppe", "der Jugendclub"], correct: "der Jugendsportverein"},
     {q: "Hier lernen Jugendliche tanzen und treten mit einem Tanzprogramm auf.", opts: ["das Jugendorchester", "der Jugendreiseverband", "die Jugendtanzgruppe"], correct: "die Jugendtanzgruppe"},
     {q: "Dieser Verband organisiert Reisen und Wanderungen für Jugendliche.", opts: ["die Jugendorganisation", "die Jugenddisko", "der Jugendreiseverband"], correct: "der Jugendreiseverband"},
     {q: "Hier tanzen Jugendliche am Abend zu lauter Musik.", opts: ["die Jugenddisko", "der Jugendverein", "das Jugendorchester"], correct: "die Jugenddisko"},
     {q: "Hier treffen sich Jugendliche, spielen Billard oder Tischtennis und singen Karaoke.", opts: ["die Jugendtanzgruppe", "der Jugendclub", "der Jugendreiseverband"], correct: "der Jugendclub"}
-  ]);
+  ];
+  buildQuiz('ub1-quiz', ub1Quiz);
+  spreadQuizAnswers('ub1-quiz', ub1Quiz.map(x => x.correct));
 
   // Üb. 2: словосполучення — випадні списки
   wireBlanks('ub2');
