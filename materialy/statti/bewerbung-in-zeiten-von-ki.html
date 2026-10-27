@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bewerben, wenn die KI mitliest · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Arbeit &amp; Schule</span>
+        <h1>Bewerben, wenn die KI mitliest</h1>
+        <p class="sub">Твоє резюме може першою прочитати не людина, а програма — і відкинути його через невдалий формат. Що радять німецькі кадровики тим, хто шукає роботу зараз?</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wer sagt das?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Tipps</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Schreiben</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Die erste Bewerbung</h2>
+      <div class="card">
+        <p>Hast du dich schon einmal beworben – für einen Ferienjob, ein Praktikum oder einen Platz in einem Kurs? Was gehört deiner Meinung nach in eine gute Bewerbung? Und sollte man dafür KI benutzen?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай: що ти написав(ла) б про себе, якби подавався (подавалася) на літню роботу чи стажування? Чи чесно писати резюме або лист за допомогою ШІ?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Wer 2025 in Deutschland eine neue <span class="gl" data-key data-uk="посада, робоче місце" data-lemma="die Stelle, -n">Stelle</span> gesucht hat, hatte weniger <span class="gl" data-uk="вибір" data-lemma="die Auswahl">Auswahl</span> als früher: Laut Arbeitsagentur und Jobportalen wurden rund 20 Prozent weniger Stellen <span class="gl" data-uk="оголошувати (вакансію)" data-lemma="ausschreiben (schrieb aus, hat ausgeschrieben)">ausgeschrieben</span> als 2024. Umso wichtiger ist eine gute <span class="gl" data-key data-uk="заява про прийом на роботу; подання" data-lemma="die Bewerbung, -en">Bewerbung</span>. Drei Fachleute geben Tipps – auch für die Zeit der künstlichen Intelligenz.</p>
+
+          <h3>Keine Angst vor Lücken</h3>
+
+          <p>Regina Flake vom Institut der deutschen Wirtschaft rät, sich nicht <span class="gl" data-uk="відлякувати" data-lemma="abschrecken">abschrecken</span> zu lassen, wenn man nicht alle <span class="gl" data-uk="вимога" data-lemma="die Anforderung, -en">Anforderungen</span> einer <span class="gl" data-key data-uk="оголошення про вакансію" data-lemma="die Stellenanzeige, -n">Stellenanzeige</span> <span class="gl" data-uk="виконувати, відповідати (вимогам)" data-lemma="erfüllen">erfüllt</span>. Eine Anzeige ist zuerst eine Liste von Wünschen. Besonders Frauen entscheiden sich ihrer Erfahrung nach oft zu schnell gegen eine Bewerbung. Flake empfiehlt Ehrlichkeit: Man kann offen schreiben, welche <span class="gl" data-uk="компетенція, уміння" data-lemma="die Kompetenz, -en">Kompetenz</span> noch fehlt – und dass man sie gern lernen möchte.</p>
+
+          <p>Auch der Ort spielt eine Rolle. Ein Beispiel: In Essen kommen im <span class="gl" data-uk="галузь, сфера" data-lemma="der Bereich, -e">Bereich</span> Bauelektrik auf 100 <span class="gl" data-key data-uk="місце для професійного навчання" data-lemma="die Ausbildungsstelle, -n">Ausbildungsstellen</span> 210 Bewerberinnen und Bewerber, im nahen Oberhausen nur 81. Wer bereit ist zu <span class="gl" data-uk="їздити на роботу з іншого міста" data-lemma="pendeln">pendeln</span>, hat also manchmal bessere Chancen.</p>
+
+          <h3>Kurz, klar und ohne Floskeln</h3>
+
+          <p>Marcus Riecker vom Bundesverband der Personalmanager*innen findet ein <span class="gl" data-key data-uk="супровідний лист" data-lemma="das Anschreiben, -">Anschreiben</span> weiterhin sinnvoll. Es sollte aber nur eine Seite lang sein und schnell <span class="gl" data-uk="переходити до суті" data-lemma="auf den Punkt kommen">auf den Punkt kommen</span>: Warum bin genau ich die Richtige für diese Aufgabe? Den <span class="gl" data-key data-uk="резюме, автобіографія" data-lemma="der Lebenslauf, -äu-e">Lebenslauf</span> noch einmal zu erzählen, ist überflüssig. Langweilige <span class="gl" data-uk="шаблонна фраза, порожні слова" data-lemma="die Floskel, -n">Floskeln</span> wie „Ich bin teamfähig“ schreibt fast jeder.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Woman_Filling_Out_a_Job_Application_-_38856854561.jpg/960px-Woman_Filling_Out_a_Job_Application_-_38856854561.jpg" alt="Eine Frau füllt ein Bewerbungsformular aus." width="960" height="641" loading="lazy">
+            <figcaption>Eine Frau füllt ein Bewerbungsformular aus. Foto: amtec_photos, <a href="https://creativecommons.org/licenses/by-sa/2.0" target="_blank" rel="noopener">CC BY-SA 2.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Woman_Filling_Out_a_Job_Application_-_38856854561.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Beim Lebenslauf muss man heute an Maschinen denken: Manche Firmen lassen Bewerbungen zuerst von einer KI <span class="gl" data-uk="аналізувати" data-lemma="analysieren">analysieren</span>. Ist die Datei schlecht <span class="gl" data-uk="підготувати, оформити" data-lemma="aufbereiten">aufbereitet</span>, wird sie vielleicht <span class="gl" data-uk="відсіювати" data-lemma="aussortieren">aussortiert</span>, bevor ein Mensch sie sieht. Riecker empfiehlt eine klare Tabelle mit der aktuellen Stelle ganz oben. Manche Programme lesen nur zwei Seiten, das Wichtigste gehört also nach vorn.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Zu einer klassischen Bewerbung in Deutschland gehören das Anschreiben, ein <span class="gl" data-uk="у вигляді таблиці" data-lemma="tabellarisch">tabellarischer</span> Lebenslauf und Zeugnisse. Man kann sich auch <span class="gl" data-uk="за власною ініціативою" data-lemma="initiativ">initiativ</span> bewerben – bei einer Firma, die gerade gar keine Stelle anbietet. Bis zur Antwort braucht man Geduld: Im Durchschnitt dauert ein Bewerbungsprozess in Deutschland sechs bis acht Wochen.</p>
+          </aside>
+
+          <h3>Mensch gegen Maschine?</h3>
+
+          <p>Philipp Hölzle von der Beratungsfirma Kienbaum beobachtet, dass deutsche Firmen KI im <span class="gl" data-uk="підбір персоналу" data-lemma="das Recruiting">Recruiting</span> noch <span class="gl" data-uk="стриманий, обережний" data-lemma="verhalten">verhalten</span> <span class="gl" data-uk="використовувати" data-lemma="einsetzen">einsetzen</span>. Einen einfachen ChatGPT-Text erkennt aber jede Personalerin sofort. Weil niemand mehr weiß, ob ein Mensch oder eine Maschine ein Anschreiben geschrieben hat, wird es nach Hölzles Meinung immer unwichtiger. Manche <span class="gl" data-uk="обманювати, перехитрити" data-lemma="austricksen">tricksen</span> die Maschinen sogar aus: Sie verstecken in ihren Unterlagen Lob über sich selbst in weißer Schrift, die nur die KI „liest“ – und das funktioniert laut Hölzle erschreckend gut.</p>
+
+          <h3>Der erste Eindruck</h3>
+
+          <p>Wer zum <span class="gl" data-key data-uk="співбесіда" data-lemma="das Vorstellungsgespräch, -e">Vorstellungsgespräch</span> eingeladen wird, sollte antworten – und <span class="gl" data-uk="відмовляти, скасовувати" data-lemma="absagen">absagen</span>, wenn er kein Interesse mehr hat. Einfach nicht mehr zu reagieren, also Ghosting, ist laut Riecker auf beiden Seiten ein Problem. Drei bis fünf gute Fragen zum Job reichen, und wer die neuesten Nachrichten der Firma kennt, zeigt echtes Interesse.</p>
+
+          <p>Für junge Leute mit Hochschulabschluss ist der Start gerade schwer: Bei den unter 30-Jährigen ist die <span class="gl" data-uk="рівень безробіття" data-lemma="die Arbeitslosenquote, -n">Arbeitslosenquote</span> seit 2022 von 1,9 auf 4,1 Prozent gestiegen. Die Fachleute raten deshalb, flexibel zu sein und im ersten Gespräch nicht gleich nach der Viertagewoche zu fragen. Fehlt noch Erfahrung, helfen Praktika.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Про що йдеться в абзаці? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wer sagt das?</h2>
+      <p class="lead">Хто з експертів так вважає? Натисни думку, потім ім'я.</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Gute Idee oder lieber nicht?</h2>
+      <p class="lead">Що радять експерти з тексту, а від чого застерігають? Розсортуй.</p>
+      <div class="card" id="ub4-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово або вислів? Обери пояснення.</p>
+      <div class="card" id="ub5-list"></div>
+      <p class="lead">б) Встав слова в пораду для друга.</p>
+      <div class="card" id="ub5-bank"></div>
+    </section>
+
+    <!-- ===== Üb. 6 ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">Schreiben</h2>
+      <p class="lead">Напиши німецькою. Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub6-a">1. Ein kurzes Anschreiben: Du bewirbst dich für einen Ferienjob in einem Café oder einer Bibliothek. Warum passt du gut? Sei konkret – ohne Floskeln wie „Ich bin teamfähig“! (60–90 Wörter)</label>
+          <textarea id="ub6-a" rows="8" data-words="60-90" data-must="Sehr geehrte|Mit freundlichen Grüßen" data-check="Für welche Stelle bewirbst du dich?|Ein konkretes Beispiel statt einer Floskel|Was du noch lernen möchtest"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub6-b">2. Einige Bewerber tricksen die KI mit versteckter Schrift aus. Ist das fair? Was meinst du? (4–6 Sätze)</label>
+          <textarea id="ub6-b" rows="5" data-words="40"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>hiermit bewerbe ich mich um …, In meiner Freizeit … ich …, deshalb …, Ich habe noch keine Erfahrung mit …, aber …, Ich finde das (nicht) fair, weil …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Zu einer deutschen Bewerbung gehören meist ein Anschreiben, ein tabellarischer Lebenslauf und Zeugnisse. Das Anschreiben ist kurz und konkret, der Lebenslauf klar gegliedert – denn oft liest zuerst eine KI. Man muss nicht alle Anforderungen erfüllen: Ehrlichkeit und Lust zu lernen zählen. Und Geduld braucht man auch – im Durchschnitt sechs bis acht Wochen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Німецька заява на роботу зазвичай складається із супровідного листа, резюме-таблиці та свідоцтв. Лист — короткий і конкретний, резюме — чітко структуроване, бо часто першою його читає програма. Не обов'язково відповідати всім вимогам: важать чесність і бажання вчитися. А ще потрібне терпіння — у середньому шість–вісім тижнів.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "bewerbung-in-zeiten-von-ki";
+
+  // Üb. 1а
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Wie man sich heute in Deutschland gut bewirbt – auch wenn KI im Spiel ist",
+            "Wie man mit KI ein perfektes Anschreiben schreiben lässt",
+            "Warum es in Deutschland bald keine Bewerbungen mehr gibt"],
+     correct: "Wie man sich heute in Deutschland gut bewirbt – auch wenn KI im Spiel ist"}
+  ]);
+  // Üb. 1б: тема абзацу
+  buildMatch('ub1h', [
+    ["Man muss nicht alles können, was in der Anzeige steht.", "Absatz 1"],
+    ["In einer anderen Stadt sind die Chancen manchmal besser.", "Absatz 2"],
+    ["So schreibt man ein gutes Anschreiben.", "Absatz 3"],
+    ["Ein Lebenslauf, den auch ein Programm lesen kann.", "Absatz 4"],
+    ["Wie Firmen und Bewerber KI benutzen.", "Absatz 5"],
+    ["Tipps für das Vorstellungsgespräch.", "Absatz 6"],
+    ["Ein schwieriger Start für junge Leute.", "Absatz 7"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5", "Absatz 6", "Absatz 7"], lead: true});
+
+  // Üb. 2
+  buildRF('ub2-rf', [
+    {s: "2025 gab es in Deutschland mehr freie Stellen als 2024.", a: "f"},
+    {s: "Regina Flake meint, dass Frauen sich oft zu schnell gegen eine Bewerbung entscheiden.", a: "r"},
+    {s: "In Oberhausen gibt es mehr Bewerber für Bauelektrik als in Essen.", a: "f"},
+    {s: "Marcus Riecker findet, dass ein Anschreiben höchstens eine Seite lang sein sollte.", a: "r"},
+    {s: "Im Lebenslauf steht die aktuelle Stelle ganz unten.", a: "f"},
+    {s: "Die meisten deutschen Firmen lassen nur noch KI über Bewerbungen entscheiden.", a: "f"},
+    {s: "Philipp Hölzle hat selbst ein Programm für Bewerbungen entwickelt.", a: "n"},
+    {s: "Bei jungen Akademikern unter 30 ist die Arbeitslosenquote seit 2022 gestiegen.", a: "r"}
+  ]);
+
+  // Üb. 3: хто що каже
+  buildSort('ub3-sort', {
+    buckets: ["Regina Flake", "Marcus Riecker", "Philipp Hölzle"],
+    items: [
+      {t: "Eine Stellenanzeige ist zuerst eine Liste von Wünschen.", b: "Regina Flake"},
+      {t: "Man darf offen sagen, welche Kompetenz noch fehlt.", b: "Regina Flake"},
+      {t: "Ein Anschreiben ist weiterhin sinnvoll.", b: "Marcus Riecker"},
+      {t: "Ghosting ist auf beiden Seiten ein Problem.", b: "Marcus Riecker"},
+      {t: "Deutsche Firmen setzen KI noch vorsichtig ein.", b: "Philipp Hölzle"},
+      {t: "Das Anschreiben wird immer unwichtiger.", b: "Philipp Hölzle"}
+    ]
+  });
+
+  // Üb. 4: поради
+  buildSort('ub4-sort', {
+    buckets: ["gute Idee", "lieber nicht"],
+    items: [
+      {t: "sich bewerben, auch wenn eine Kompetenz noch fehlt", b: "gute Idee"},
+      {t: "die aktuelle Stelle oben in den Lebenslauf schreiben", b: "gute Idee"},
+      {t: "das Wichtigste im Lebenslauf nach vorn schreiben", b: "gute Idee"},
+      {t: "die neuesten Nachrichten der Firma lesen", b: "gute Idee"},
+      {t: "im Anschreiben den ganzen Lebenslauf noch einmal erzählen", b: "lieber nicht"},
+      {t: "„Ich bin teamfähig und kommuniziere gut“ schreiben", b: "lieber nicht"},
+      {t: "auf eine Einladung zum Gespräch einfach nicht antworten", b: "lieber nicht"},
+      {t: "im ersten Gespräch gleich nach der Viertagewoche fragen", b: "lieber nicht"}
+    ]
+  });
+
+  // Üb. 5а
+  buildMatch('ub5', [
+    ["auf den Punkt kommen", "schnell das Wichtigste sagen"],
+    ["die Stellenanzeige", "Text, in dem eine Firma einen Job anbietet"],
+    ["aussortieren", "aus einer Gruppe herausnehmen, nicht weiter beachten"],
+    ["pendeln", "regelmäßig zwischen Wohnort und Arbeitsort fahren"],
+    ["die Floskel", "ein Satz ohne echten Inhalt"],
+    ["die Anforderung", "etwas, das eine Firma von Bewerbern erwartet"]
+  ]);
+  // Üb. 5б
+  buildWordBank('ub5-bank', {
+    text: "Lieber Max, du hast eine interessante [Stellenanzeige] gefunden? Super! Schreib ein kurzes [Anschreiben] – nur eine Seite. Im [Lebenslauf] steht deine aktuelle Arbeit oben.\n\nKeine Angst, wenn du nicht alle [Anforderungen] erfüllst. Und wenn du zum [Vorstellungsgespräch] eingeladen wirst: Antworte schnell und bereite drei bis fünf Fragen vor!",
+    extra: ["Arbeitslosenquote", "Floskel"]
+  });
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📄','🤖','✉️','🤝','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

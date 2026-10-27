@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wer nicht fragt, bleibt fremd · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Arbeit &amp; Schule</span>
+        <h1>Wer nicht fragt, bleibt fremd</h1>
+        <p class="sub">Американка відповідала на робочі листи навіть у вихідні — і отримала від шефа не похвалу, а зустріч «для розмови». Що в німецькому офісі вважають працьовитістю, а що — поганою організацією?</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Typisch deutsch?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Arbeiten in einer anderen Kultur</h2>
+      <div class="card">
+        <p>Stell dir vor, du beginnst einen neuen Job in Deutschland. Was glaubst du: Wird Kritik dort eher direkt oder eher vorsichtig geäußert? Was macht deiner Meinung nach einen guten, fleißigen Mitarbeiter aus?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай (або обговоріть у парі): як у нас зазвичай критикують роботу — прямо чи обережно, «між рядків»? І чи добре, коли людина відповідає на робочі листи ввечері й у вихідні?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Wer in ein anderes Land zieht, lernt eine neue Sprache – und <span class="gl" data-uk="помічати" data-lemma="merken">merkt</span> oft erst später, dass auch die Arbeitswelt ihre eigene „Grammatik“ hat. Die <span class="gl" data-uk="кар'єрна коучка" data-lemma="die Career-Coachin, -nen">Career-Coachin</span> Jessica Schüller bereitet Menschen aus dem Ausland in <span class="gl" data-uk="семінар, курс" data-lemma="das Seminar, -e">Seminaren</span> auf den deutschen Berufsalltag vor. Ihr wichtigster Rat klingt einfach: fragen, fragen, fragen.</p>
+
+          <p>Schüller unterscheidet zwischen zwei Arten von Kulturen. In manchen Ländern muss man ständig zwischen den Zeilen lesen: Was meint mein <span class="gl" data-uk="співрозмовник" data-lemma="das Gegenüber, -">Gegenüber</span> eigentlich? In anderen sagen die Menschen <span class="gl" data-uk="більш-менш, загалом" data-lemma="weitgehend">weitgehend</span> genau das, was sie meinen. Deutschland gehört klar zur zweiten Gruppe. Für viele, die neu ins Land kommen, ist das eine große <span class="gl" data-key data-uk="перелаштування, звикання" data-lemma="die Umstellung, -en">Umstellung</span>. Dass die Deutschen als <span class="gl" data-key data-uk="прямий, відвертий" data-lemma="direkt">direkt</span> gelten, hat also seinen Grund.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Die Begriffe <i>Low-Context-</i> und <i>High-Context-Kultur</i> hat der US-amerikanische <span class="gl" data-uk="антрополог" data-lemma="der Anthropologe, -n">Anthropologe</span> Edward T. Hall <span class="gl" data-uk="запроваджувати (термін)" data-note="тут: вигадати й поширити поняття" data-lemma="prägen">geprägt</span>. In einer Low-Context-Kultur steckt die Information vor allem in den Worten selbst – Deutschland gilt als typisches Beispiel. In einer High-Context-Kultur sind Tonfall, Beziehung und Situation oft wichtiger als das, was wörtlich gesagt wird.</p>
+          </aside>
+
+          <p>Direktheit bedeutet in Deutschland aber nicht <span class="gl" data-uk="неввічливість" data-lemma="die Unhöflichkeit, -en">Unhöflichkeit</span>. Dahinter steht eine starke <span class="gl" data-key data-uk="орієнтація на справу" data-note="коли важить сама робота, а не особа" data-lemma="die Sachorientierung">Sachorientierung</span>: Kritik <span class="gl" data-uk="бути спрямованим на" data-lemma="sich richten an">richtet sich</span> an die Arbeit, nicht an den Menschen – und Arbeit kann man <span class="gl" data-uk="покращувати" data-lemma="verbessern">verbessern</span>. Deshalb ist <span class="gl" data-key data-uk="зворотний зв'язок, відгук" data-lemma="das Feedback, -s">Feedback</span> in Schüllers Workshops das Thema Nummer eins. Mit dem eigentlichen <span class="gl" data-uk="фахова галузь" data-lemma="das Fachgebiet, -e">Fachgebiet</span>, sagt sie, haben ihre Kundinnen und Kunden selten Probleme – schwierig sind die <span class="gl" data-uk="неписаний" data-lemma="ungeschrieben">ungeschriebenen</span> Regeln am Arbeitsplatz.</p>
+
+          <h3>Fleißig oder schlecht organisiert?</h3>
+
+          <p>Wie <span class="gl" data-uk="підступний" data-lemma="tückisch">tückisch</span> diese Regeln sein können, zeigen zwei Beispiele aus ihrer Praxis. Eine Amerikanerin bekam eine Stelle in Norddeutschland und wollte von Anfang an zeigen, was sie kann. Sie beantwortete E-Mails <span class="gl" data-uk="цілодобово" data-lemma="rund um die Uhr">rund um die Uhr</span> und arbeitete auch am Wochenende. Statt eines Lobs bekam sie einen Termin bei ihrem Chef. Er erklärte ihr, dass man in seinem Team auf <span class="gl" data-key data-uk="баланс між роботою і життям" data-lemma="die Work-Life-Balance">Work-Life-Balance</span> achtet. Wer ständig arbeitet, <span class="gl" data-uk="створювати враження" data-lemma="den Eindruck erwecken">erweckt</span> hier nämlich schnell den <span class="gl" data-uk="враження" data-lemma="der Eindruck, -ü-e">Eindruck</span>, dass er seine Aufgaben in der normalen Arbeitszeit nicht <span class="gl" data-uk="встигати, впоратися" data-lemma="schaffen">schafft</span>. Was in den USA als <span class="gl" data-uk="працьовитий" data-lemma="fleißig">fleißig</span> gilt, wirkt in Deutschland eher wie schlechte <span class="gl" data-uk="організація" data-lemma="die Organisation">Organisation</span>.</p>
+
+          <p>Im zweiten Fall hatte ein Mann aus den USA ein Vorstellungsgespräch in Berlin. Um seine <span class="gl" data-uk="мотивація" data-lemma="die Motivation">Motivation</span> zu zeigen, bot er an, schon am nächsten Montag anzufangen – er würde einfach übers Wochenende <span class="gl" data-uk="перелетіти" data-lemma="herüberfliegen (flog herüber, ist herübergeflogen)">herüberfliegen</span>. Das Berliner Team reagierte <span class="gl" data-uk="приголомшений, шокований" data-lemma="geschockt">geschockt</span>: Wer seinen jetzigen Arbeitgeber so schnell verlässt, dem fehlt offenbar die <span class="gl" data-uk="лояльність, вірність" data-lemma="die Loyalität">Loyalität</span>. Den Job bekam er nicht.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>In Deutschland kann man einen Job normalerweise nicht von heute auf morgen <span class="gl" data-uk="звільнятися, розривати договір" data-lemma="kündigen">kündigen</span>. Das Gesetz schreibt eine <span class="gl" data-key data-uk="строк попередження про звільнення" data-lemma="die Kündigungsfrist, -en">Kündigungsfrist</span> vor – die gesetzliche Grundfrist beträgt vier Wochen, und je länger man in einer Firma arbeitet, desto länger kann sie werden. Wer verspricht, sofort anzufangen, wirkt deshalb schnell unzuverlässig.</p>
+          </aside>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Highlight_Towers_Munich%2C_February_2017_-01.jpg/960px-Highlight_Towers_Munich%2C_February_2017_-01.jpg" alt="Die Highlight Towers – Bürotürme in München." width="960" height="676" loading="lazy">
+            <figcaption>Die Highlight Towers – Bürotürme in München. Foto: Martin Falbisoner, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Highlight_Towers_Munich,_February_2017_-01.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <h3>Ähnliche Filme, andere Büros</h3>
+
+          <p>Warum passieren solche <span class="gl" data-uk="непорозуміння" data-lemma="das Missverständnis, -se">Missverständnisse</span> gerade zwischen westlichen Ländern? Weil man dort leicht glaubt, sich ohnehin zu verstehen, meint Schüller: Man hört dieselbe Musik, sieht dieselben Filme und lacht über dieselben Witze. Im Privatleben stimmt das oft. In der Arbeitswelt aber liegen manchmal Welten dazwischen. Die Arbeitskultur ist für sie fast eine <span class="gl" data-uk="додатковий" data-lemma="zusätzlich">zusätzliche</span> Sprache – mit Vokabeln, aber auch mit <span class="gl" data-uk="невербальний" data-lemma="nonverbal">nonverbalen</span> Signalen. Wer sie nicht kennt, sollte nachfragen. Denn die Chefin hat vielleicht nie im Ausland gearbeitet und weiß gar nicht, dass jemand aus einem anderen Land mehr Erklärungen braucht.</p>
+
+          <p>Was ist nun typisch für die deutsche Arbeitskultur? Nach Schüllers Erfahrung wird sehr <span class="gl" data-uk="цілеспрямовано" data-lemma="zielgerichtet">zielgerichtet</span> gearbeitet: Man bewirbt sich weniger um einen Platz in einem Unternehmen als um eine klar beschriebene Aufgabe. Was in der <span class="gl" data-uk="опис посади" data-lemma="die Stellenbeschreibung, -en">Stellenbeschreibung</span> steht, wird erledigt – und am Ende des Tages soll sichtbar sein, was man <span class="gl" data-uk="досягати" data-lemma="leisten">geleistet</span> hat. Gleichzeitig erwartet man <span class="gl" data-key data-uk="власна ініціатива" data-lemma="die Eigeninitiative">Eigeninitiative</span>: Wer fertig ist, geht selbst zum Chef und fragt nach neuen Aufgaben, statt zu warten.</p>
+
+          <p>Professionell zu wirken, hängt dabei auch an kleinen Dingen. Im Online-Meeting sollte der <span class="gl" data-uk="фон" data-lemma="der Hintergrund, -ü-e">Hintergrund</span> neutral sein. Und bei E-Mails lohnt es sich, darauf zu achten, wie die Kolleginnen und Kollegen einander <span class="gl" data-uk="звертатися до когось" data-lemma="ansprechen (sprach an, hat angesprochen)">ansprechen</span>: mit „Hallo Herr May“, „Lieber Herr May“ oder „Sehr geehrter Herr May“. Das ist von Firma zu Firma verschieden – und genau deshalb gilt auch hier: lieber einmal mehr fragen.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Kommt das im deutschen Büro gut an?</h2>
+      <p class="lead">Розсортуй: як, за словами Джесіки Шюллер, сприймуть таку поведінку в німецькій фірмі? Натисни картку, потім кошик.</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає вислів? Обери пояснення.</p>
+      <div class="card" id="ub4-list"></div>
+      <p class="lead">б) Встав слова в короткий переказ тексту.</p>
+      <div class="card" id="ub4-bank"></div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (5–7 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Ist die Arbeitskultur in der Ukraine eher „direkt“ oder eher „zwischen den Zeilen“? Nenne ein Beispiel aus deiner Familie, deiner Schule oder einem Job.</label>
+          <textarea id="ub5-a" rows="6" data-words="60"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. E-Mails am Sonntag beantworten: fleißig oder schlecht organisiert? Was meinst du?</label>
+          <textarea id="ub5-b" rows="6" data-words="60"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>In der Ukraine ist es üblich, dass …, Im Gegensatz zu Deutschland …, Meiner Erfahrung nach …, Einerseits …, andererseits …, Ich halte es für (un)professionell, wenn …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Deutschland gilt als Low-Context-Kultur: Man sagt meist direkt, was man meint, und Kritik richtet sich an die Sache, nicht an die Person. Wer ständig Überstunden macht, wirkt eher schlecht organisiert als fleißig. Gefragt sind klare Ergebnisse, Eigeninitiative – und viele Fragen, wenn man eine Regel nicht kennt.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Німеччину вважають культурою «низького контексту»: зазвичай кажуть прямо, що мають на увазі, а критикують роботу, а не людину. Хто постійно перепрацьовує, виглядає радше погано організованим, ніж працьовитим. Цінують чіткі результати, власну ініціативу — і запитання, коли якесь правило незнайоме.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "arbeitskultur-in-deutschland";
+
+  // Üb. 1а
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Welche ungeschriebenen Regeln es in der deutschen Arbeitswelt gibt und wie man sie lernt",
+            "Wie man in Deutschland schnell einen gut bezahlten Job findet",
+            "Warum Deutsche im Privatleben weniger direkt sind als Amerikaner"],
+     correct: "Welche ungeschriebenen Regeln es in der deutschen Arbeitswelt gibt und wie man sie lernt"},
+    {q: "Welchen Rat gibt Jessica Schüller vor allem?",
+     opts: ["Lieber zu viel nachfragen als zu wenig",
+            "Möglichst viele Überstunden machen",
+            "Kritik im Büro am besten ignorieren"],
+     correct: "Lieber zu viel nachfragen als zu wenig"}
+  ]);
+  // Üb. 1б: заголовки ↔ абзаци
+  buildMatch('ub1h', [
+    ["Zwei Arten von Kulturen", "Absatz 1"],
+    ["Kritik an der Sache, nicht an der Person", "Absatz 2"],
+    ["Zu viel Arbeit macht keinen guten Eindruck", "Absatz 3"],
+    ["Ein zu schneller Start", "Absatz 4"],
+    ["Privat ähnlich, im Büro verschieden", "Absatz 5"],
+    ["Aufgaben erledigen und selbst aktiv werden", "Absatz 6"],
+    ["Kleine Details, großer Effekt", "Absatz 7"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5", "Absatz 6", "Absatz 7"], lead: true});
+
+  // Üb. 2
+  buildRF('ub2-rf', [
+    {s: "Laut Text sagen Menschen in Deutschland meistens direkt, was sie meinen.", a: "r"},
+    {s: "Die meisten Kundinnen und Kunden von Jessica Schüller haben Probleme in ihrem Fachgebiet.", a: "f"},
+    {s: "Die Amerikanerin bekam für ihre Arbeit am Wochenende ein Lob vom Chef.", a: "f"},
+    {s: "Jessica Schüller hat selbst mehrere Jahre in den USA gearbeitet.", a: "n"},
+    {s: "Der Bewerber in Berlin bekam den Job nicht.", a: "r"},
+    {s: "Laut Text verstehen sich westliche Länder im Arbeitsleben automatisch gut.", a: "f"},
+    {s: "Wer mit seinen Aufgaben fertig ist, sollte selbst nach neuer Arbeit fragen.", a: "r"},
+    {s: "In allen deutschen Firmen schreibt man in E-Mails „Sehr geehrter Herr …“.", a: "f"}
+  ]);
+
+  // Üb. 3
+  buildSort('ub3-sort', {
+    buckets: ["kommt gut an", "kommt eher schlecht an"],
+    items: [
+      {t: "nachfragen, wenn man eine Regel nicht versteht", b: "kommt gut an"},
+      {t: "fertig sein und den Chef nach neuen Aufgaben fragen", b: "kommt gut an"},
+      {t: "Kritik an der Arbeit sachlich annehmen", b: "kommt gut an"},
+      {t: "im Online-Meeting einen neutralen Hintergrund wählen", b: "kommt gut an"},
+      {t: "nachts und am Wochenende E-Mails beantworten", b: "kommt eher schlecht an"},
+      {t: "den alten Job verlassen und sofort nächste Woche anfangen", b: "kommt eher schlecht an"},
+      {t: "warten, bis jemand eine neue Aufgabe gibt", b: "kommt eher schlecht an"},
+      {t: "Kritik an der Präsentation als persönlichen Angriff verstehen", b: "kommt eher schlecht an"}
+    ]
+  });
+
+  // Üb. 4а
+  buildMatch('ub4', [
+    ["zwischen den Zeilen lesen", "verstehen, was jemand meint, aber nicht sagt"],
+    ["rund um die Uhr", "die ganze Zeit, auch nachts"],
+    ["den Eindruck erwecken", "so wirken, als ob …"],
+    ["die Eigeninitiative", "etwas tun, ohne dass jemand darum bittet"],
+    ["die Kündigungsfrist", "Zeit zwischen der Kündigung und dem letzten Arbeitstag"],
+    ["zielgerichtet arbeiten", "mit einem klaren Ziel arbeiten"]
+  ]);
+  // Üb. 4б
+  buildWordBank('ub4-bank', {
+    text: "Wer neu in Deutschland arbeitet, braucht oft eine große [Umstellung]. Die Menschen sind sehr [direkt], doch Kritik betrifft die Arbeit und nicht die Person. Schüller spricht von [Sachorientierung].\n\nWer immer arbeitet, wirkt nicht automatisch [fleißig]: Man achtet auf eine gute [Work-Life-Balance]. Wichtig sind auch [Loyalität] gegenüber dem Arbeitgeber und [Eigeninitiative] im Team.",
+    extra: ["Unhöflichkeit", "Urlaub"]
+  });
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['💼','🗣️','⏰','❓','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
