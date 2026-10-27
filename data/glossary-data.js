@@ -1015,5 +1015,17 @@ const GLOSSARY = [
   {de: "zaubern", uk: "чаклувати, показувати фокуси", klas: "8", modul: "B", lektion: 10},
   {de: "die Zauberschule (die Zauberschulen)", uk: "школа магії (фокусів)", klas: "8", modul: "B", lektion: 10},
   {de: "verblüffen", uk: "приголомшити, вразити", klas: "8", modul: "B", lektion: 10},
-  {de: "adrenalinsüchtig", uk: "залежний від адреналіну", klas: "8", modul: "B", lektion: 10}
+  {de: "adrenalinsüchtig", uk: "залежний від адреналіну", klas: "8", modul: "B", lektion: 10},
+  {de: "der Vertreter / die Vertreterin (die Vertreter)", uk: "представник / представниця (Vertreter einer Jugendszene)", klas: "9", modul: "B", lektion: 7},
+  {de: "das Lebensgefühl", uk: "світовідчуття, стиль життя (Hip-Hop ist ein Lebensgefühl.)", klas: "9", modul: "B", lektion: 7},
+  {de: "die Werte (Pl.) (Respekt und Kreativität sind wichtige Werte.)", uk: "цінності (повага й творчість — важливі цінності)", klas: "9", modul: "B", lektion: 7},
+  {de: "die Authentizität", uk: "справжність, автентичність", klas: "9", modul: "B", lektion: 7},
+  {de: "die Bewegung (eine weltweite Bewegung)", uk: "рух (всесвітній рух)", klas: "9", modul: "B", lektion: 7},
+  {de: "die Großstadt (die Großstädte)", uk: "велике місто, мегаполіс", klas: "9", modul: "B", lektion: 7},
+  {de: "die Entstehung (der Szene)", uk: "виникнення, походження (субкультури)", klas: "9", modul: "B", lektion: 7},
+  {de: "sich identifizieren (mit + Dat.)", uk: "ототожнювати себе (з кимось / чимось)", klas: "9", modul: "B", lektion: 7},
+  {de: "der Treffpunkt (die Treffpunkte)", uk: "місце зустрічей", klas: "9", modul: "B", lektion: 7},
+  {de: "die Verbundenheit mit der Natur", uk: "єдність із природою", klas: "9", modul: "B", lektion: 7},
+  {de: "aufwendig (aufwendige Kostüme)", uk: "складний, вигадливий (вигадливі костюми)", klas: "9", modul: "B", lektion: 7},
+  {de: "selbstgemacht", uk: "саморобний, зроблений власноруч", klas: "9", modul: "B", lektion: 7}
 ];
