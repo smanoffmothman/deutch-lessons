@@ -1039,5 +1039,17 @@ const GLOSSARY = [
   {de: "einige (Einige interessieren sich für …)", uk: "деякі, кілька", klas: "9", modul: "B", lektion: 8},
   {de: "recherchieren", uk: "шукати інформацію, досліджувати (тему)", klas: "9", modul: "B", lektion: 8},
   {de: "die Ausdrucksform (die Ausdrucksformen)", uk: "форма (спосіб) самовираження", klas: "9", modul: "B", lektion: 8},
-  {de: "mit Vergnügen", uk: "із задоволенням", klas: "9", modul: "B", lektion: 8}
+  {de: "mit Vergnügen", uk: "із задоволенням", klas: "9", modul: "B", lektion: 8},
+  {de: "die Jugendorganisation (die Jugendorganisationen)", uk: "молодіжна організація", klas: "9", modul: "B", lektion: 9},
+  {de: "der Jugendsportverein (die Jugendsportvereine)", uk: "молодіжний спортивний клуб", klas: "9", modul: "B", lektion: 9},
+  {de: "das Jugendorchester (die Jugendorchester)", uk: "молодіжний оркестр", klas: "9", modul: "B", lektion: 9},
+  {de: "die Jugendtanzgruppe (die Jugendtanzgruppen)", uk: "молодіжний танцювальний гурт", klas: "9", modul: "B", lektion: 9},
+  {de: "der Jugendreiseverband (die Jugendreiseverbände)", uk: "молодіжна туристична спілка", klas: "9", modul: "B", lektion: 9},
+  {de: "der Jugendclub (die Jugendclubs)", uk: "молодіжний клуб", klas: "9", modul: "B", lektion: 9},
+  {de: "beitragen zu (+Dat.) (trennbar) (zum Naturschutz beitragen)", uk: "робити внесок (в охорону природи)", klas: "9", modul: "B", lektion: 9},
+  {de: "der Schutz bedrohter Tier- und Pflanzenarten", uk: "захист зникаючих видів тварин і рослин", klas: "9", modul: "B", lektion: 9},
+  {de: "an Turngeräten trainieren", uk: "тренуватися на гімнастичних снарядах", klas: "9", modul: "B", lektion: 9},
+  {de: "Kampfsport machen", uk: "займатися бойовими мистецтвами", klas: "9", modul: "B", lektion: 9},
+  {de: "mit dem Tanzprogramm auftreten (trennbar)", uk: "виступати з танцювальною програмою", klas: "9", modul: "B", lektion: 9},
+  {de: "am politischen Leben teilnehmen (trennbar)", uk: "брати участь у політичному житті", klas: "9", modul: "B", lektion: 9}
 ];
