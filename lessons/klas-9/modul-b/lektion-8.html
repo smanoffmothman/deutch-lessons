@@ -109,18 +109,12 @@
     <section class="panel" id="panel-ub1">
       <p class="section-label">Üb. 1</p>
       <h2 class="panel-title">Chat-Detektiv: Was stimmt hier nicht?</h2>
-      <p class="lead">Ой! Телефон Аліни «зглючив», і в чаті з Луїзою, який ми читали минулого уроку, підмінилися слова. Спершу <b>з пам'яті</b>: торкнися слова, яке тут не так, і впиши, як було в оригіналі. Якщо повідомлення правильне — «Fehlerfrei».</p>
-
-      <div class="mail-window">
-        <div class="mail-titlebar">📱 15:43 · Luisa · ⚠️ Fehler im Chat</div>
-        <div class="mail-body" id="ub1-fix"></div>
-      </div>
-
-      <p class="lead" style="margin-top:18px;">A тепер відкрий справжній чат — перевір себе і виконай завдання нижче.</p>
+      <p class="lead"><b>Крок 1.</b> Пригадай чат Луїзи й Аліни: прочитай його дуже уважно — у тебе <b>одна хвилина</b>. Потім чат сховається, а телефон Аліни «зглючить»…</p>
       <div class="check-bar">
-        <button class="btn secondary" id="ub1-open" type="button" aria-expanded="false">📱 Originalchat öffnen</button>
+        <button class="btn" id="ub1-ready" type="button">▶ Ich bin bereit!</button>
+        <span class="score-pill" id="ub1-timer" aria-live="polite">⏱ 1:00</span>
       </div>
-      <div id="ub1-chat" hidden>
+      <div id="ub1-chat">
         <div class="mail-window">
           <div class="mail-titlebar">📱 15:43 · Luisa · Original</div>
           <div class="mail-body">
@@ -134,23 +128,35 @@
         </div>
       </div>
 
-      <p class="lead" style="margin-top:18px;">Bestimme, ob die Sätze dem Inhalt des Chats entsprechen: richtig oder falsch? Перше речення — приклад.</p>
-      <div class="card" id="ub1-list">
-        <div class="fill-item"><span class="num">1)</span> Luisa und Alina chatten über Mode. → <b>falsch</b> <span style="opacity:.7;">(Beispiel)</span></div>
-        <div class="fill-item"><span class="num">2)</span> Luisa schreibt, dass sie im Unterricht Jugendinitiativen diskutiert haben. → <select class="blank inline" data-ans="falsch" aria-label="Satz 2"><option value="">—</option><option>richtig</option><option>falsch</option></select></div>
-        <div class="fill-item"><span class="num">3)</span> Luisa berichtet, dass sie viel Neues über Jugendsubkulturen erfahren hat. → <select class="blank inline" data-ans="richtig" aria-label="Satz 3"><option value="">—</option><option>richtig</option><option>falsch</option></select></div>
-        <div class="fill-item"><span class="num">4)</span> Alina findet das Thema interessant. → <select class="blank inline" data-ans="richtig" aria-label="Satz 4"><option value="">—</option><option>richtig</option><option>falsch</option></select></div>
-        <div class="fill-item"><span class="num">5)</span> Einige Mitschüler/innen von Alina haben selbst ihre Szenen präsentiert. → <select class="blank inline" data-ans="falsch" aria-label="Satz 5"><option value="">—</option><option>richtig</option><option>falsch</option></select></div>
-        <div class="fill-item"><span class="num">6)</span> Ein Junge hat einen Film über Cosplayer vorbereitet. → <select class="blank inline" data-ans="falsch" aria-label="Satz 6"><option value="">—</option><option>richtig</option><option>falsch</option></select></div>
-        <div class="fill-item"><span class="num">7)</span> Luisas Klasse arbeitet nun am Projekt „Jugendsubkulturen international“. → <select class="blank inline" data-ans="richtig" aria-label="Satz 7"><option value="">—</option><option>richtig</option><option>falsch</option></select></div>
-        <div class="fill-item"><span class="num">8)</span> Luisa will mehr über Jugendszenen in der Ukraine erfahren und bittet Alina um Hilfe. → <select class="blank inline" data-ans="richtig" aria-label="Satz 8"><option value="">—</option><option>richtig</option><option>falsch</option></select></div>
-      </div>
-      <div class="check-bar">
-        <button class="btn" id="ub1-check">Prüfen</button>
-        <button class="btn secondary" id="ub1-reset">Zurücksetzen</button>
-        <span class="score-pill" id="ub1-score"></span>
-      </div>
 
+      <div id="ub1-step2" hidden>
+        <p class="lead" style="margin-top:18px;"><b>Крок 2.</b> Ой! У чаті підмінилися слова. Тепер <b>з пам'яті</b>: торкнися слова, яке тут не так, і впиши, як було в оригіналі. Якщо повідомлення правильне — «Fehlerfrei».</p>
+        <div class="mail-window">
+          <div class="mail-titlebar">📱 15:43 · Luisa · ⚠️ Fehler im Chat</div>
+          <div class="mail-body" id="ub1-fix"></div>
+        </div>
+
+        <p class="lead" style="margin-top:18px;"><b>Крок 3.</b> Відкрий справжній чат ще раз — перевір себе — і виконай завдання: richtig oder falsch?</p>
+        <div class="check-bar">
+          <button class="btn secondary" id="ub1-open" type="button" aria-expanded="false">📱 Originalchat öffnen</button>
+        </div>
+        <p class="lead" style="margin-top:18px;">Bestimme, ob die Sätze dem Inhalt des Chats entsprechen: richtig oder falsch? Перше речення — приклад.</p>
+        <div class="card" id="ub1-list">
+          <div class="fill-item"><span class="num">1)</span> Luisa und Alina chatten über Mode. → <b>falsch</b> <span style="opacity:.7;">(Beispiel)</span></div>
+          <div class="fill-item"><span class="num">2)</span> Luisa schreibt, dass sie im Unterricht Jugendinitiativen diskutiert haben. → <select class="blank inline" data-ans="falsch" aria-label="Satz 2"><option value="">—</option><option>richtig</option><option>falsch</option></select></div>
+          <div class="fill-item"><span class="num">3)</span> Luisa berichtet, dass sie viel Neues über Jugendsubkulturen erfahren hat. → <select class="blank inline" data-ans="richtig" aria-label="Satz 3"><option value="">—</option><option>richtig</option><option>falsch</option></select></div>
+          <div class="fill-item"><span class="num">4)</span> Alina findet das Thema interessant. → <select class="blank inline" data-ans="richtig" aria-label="Satz 4"><option value="">—</option><option>richtig</option><option>falsch</option></select></div>
+          <div class="fill-item"><span class="num">5)</span> Einige Mitschüler/innen von Alina haben selbst ihre Szenen präsentiert. → <select class="blank inline" data-ans="falsch" aria-label="Satz 5"><option value="">—</option><option>richtig</option><option>falsch</option></select></div>
+          <div class="fill-item"><span class="num">6)</span> Ein Junge hat einen Film über Cosplayer vorbereitet. → <select class="blank inline" data-ans="falsch" aria-label="Satz 6"><option value="">—</option><option>richtig</option><option>falsch</option></select></div>
+          <div class="fill-item"><span class="num">7)</span> Luisas Klasse arbeitet nun am Projekt „Jugendsubkulturen international“. → <select class="blank inline" data-ans="richtig" aria-label="Satz 7"><option value="">—</option><option>richtig</option><option>falsch</option></select></div>
+          <div class="fill-item"><span class="num">8)</span> Luisa will mehr über Jugendszenen in der Ukraine erfahren und bittet Alina um Hilfe. → <select class="blank inline" data-ans="richtig" aria-label="Satz 8"><option value="">—</option><option>richtig</option><option>falsch</option></select></div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub1-check">Prüfen</button>
+          <button class="btn secondary" id="ub1-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub1-score"></span>
+        </div>
+      </div>
       <div class="ua-note">
         <span class="ua-label">🇺🇦 Корисні слова</span>
         <b>die Jugendinitiative</b> — молодіжна ініціатива · <b>erfahren</b> — дізнаватися · <b>berichten</b> — розповідати, повідомляти ·
@@ -416,12 +422,30 @@
     {s: "Luisa: Ich möchte gern Jugendszenen in Deutschland präsentieren.", wrong: 6, fix: "der Ukraine"},
     {s: "Alina: Natürlich helfe ich dir mit Vergnügen.", ok: true}
   ]);
-  document.getElementById('ub1-open').addEventListener('click', e => {
-    const box = document.getElementById('ub1-chat');
-    box.hidden = !box.hidden;
-    e.currentTarget.setAttribute('aria-expanded', String(!box.hidden));
-    e.currentTarget.textContent = box.hidden ? '📱 Originalchat öffnen' : '📱 Originalchat schließen';
-  });
+  // Крок 1: хвилина на читання (таймер стартує, коли учень відкрив вкладку), потім чат ховається
+  (function ub1Flow(){
+    const chat = document.getElementById('ub1-chat'), step2 = document.getElementById('ub1-step2');
+    const ready = document.getElementById('ub1-ready'), timer = document.getElementById('ub1-timer');
+    const openBtn = document.getElementById('ub1-open');
+    let left = 60, tick = null;
+    const show = () => { timer.textContent = '⏱ ' + Math.floor(left / 60) + ':' + String(left % 60).padStart(2, '0'); };
+    const hideChat = () => {
+      if (tick) { clearInterval(tick); tick = null; }
+      chat.hidden = true; ready.hidden = true; timer.hidden = true; step2.hidden = false;
+      step2.scrollIntoView({behavior: 'smooth', block: 'start'});
+    };
+    document.querySelector('[data-tab="ub1"]').addEventListener('click', () => {
+      if (tick || ready.hidden) return;
+      tick = setInterval(() => { left--; show(); if (left <= 0) hideChat(); }, 1000);
+    });
+    ready.addEventListener('click', hideChat);
+    openBtn.addEventListener('click', () => {
+      chat.hidden = !chat.hidden;
+      openBtn.setAttribute('aria-expanded', String(!chat.hidden));
+      openBtn.textContent = chat.hidden ? '📱 Originalchat öffnen' : '📱 Originalchat schließen';
+      if (!chat.hidden) openBtn.closest('.check-bar').after(chat);
+    });
+  })();
   wireBlanks('ub1');
 
   // Üb. 2: діалог опитування + речення з weil
