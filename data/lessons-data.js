@@ -929,5 +929,16 @@ const LESSONS = [
     nove: true,
     gram: ["verben-dass-infinitiv", "nebensaetze", "fragen"],
     dz: "Projekt „Jugendsubkulturen international“: Hilf Luisa! 1) Wähle eine Jugendszene, die es in der Ukraine gibt (z. B. Skater, Hip-Hopper, Cosplayer, Gamer, K-Pop-Fans, Traceure), und mach einen Steckbrief wie die Tabelle in Üb. 2: Name der Szene, Aussehen, Entstehung, Hauptideen, Musikstil – in Stichworten. 2) Frag eine Person aus deinem Umfeld (Freund/in, Geschwister, Eltern), was sie über diese Szene denkt, und schreib zwei Sätze mit „dass“ (z. B. „Mein Bruder hat gesagt, dass Skater sehr mutig sind.“). 3) Schreib Luisa eine Antwort im Chat oder per E-Mail (70–90 Wörter): Stell die Szene vor, benutze die Informationen aus deinem Steckbrief und deine zwei dass-Sätze und stell Luisa eine Frage mit „Was für …?“ oder „Welch- …?“. Nächstes Mal machen wir eine kleine Ausstellung „Jugendszenen in der Ukraine“."
+  },
+  {
+    klas: "9",
+    modul: "B",
+    lektion: 8,
+    nazva: "Wie drückst du dich aus?",
+    opys: "Спосіб самовираження: перевіряємо зміст чату Луїзи й Аліни (richtig / falsch), проводимо в класі опитування про молодіжні субкультури (sich interessieren für, angehören, finden …, weil …), коментуємо його результати (die meisten, einige, Interesse zeigen an) і пишемо Луїзі лист про субкультури в Україні.",
+    file: "klas-9/modul-b/lektion-8.html",
+    nove: true,
+    gram: ["verben-praepositionalobjekt", "rektion-verben", "kausalsaetze", "indefinitpronomen"],
+    dz: "Mein Stil, meine Szene – ein Post: Stell dir vor, du machst einen Post für die Seite „Jugendsubkulturen international“ von Luisas Klasse. 1) Zeichne ein „Foto“ oder klebe ein Bild ein: Wie drückst du dich aus – durch Kleidung, Musik, Sport, Kunst oder ein Hobby? 2) Schreib darunter einen Text (6–8 Sätze): Wofür interessierst du dich? Gehörst du einer Jugendszene an oder nicht? Wie drückst du dich aus? Benutze mindestens einmal „sich interessieren für“, einmal „angehören + Dativ“ (z. B. „Ich gehöre keiner Szene an.“) und zwei weil-Sätze (z. B. „Ich trage gern weite Hoodies, weil sie bequem sind.“). 3) Schreib drei Hashtags (z. B. #Skater #meinStil #Kyjiw). 4) Schreib unter deinen Post zwei Kommentare von Mitschülern mit „Ich finde … spannend / cool / ungewöhnlich, weil …“. Nächstes Mal hängen wir die Posts auf und kommentieren sie in der Klasse."
   }
 ];
