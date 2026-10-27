@@ -991,5 +991,17 @@ const GLOSSARY = [
   {de: "einverstanden sein (mit +Dat.)", uk: "погоджуватися (з кимось / чимось)", klas: "8", modul: "B", lektion: 8},
   {de: "anderer Meinung sein (Wir sind ganz anderer Meinung.)", uk: "бути іншої думки (Ми зовсім іншої думки.)", klas: "8", modul: "B", lektion: 8},
   {de: "unterwegs", uk: "в дорозі, поза домом", klas: "8", modul: "B", lektion: 8},
-  {de: "beispielsweise", uk: "наприклад", klas: "8", modul: "B", lektion: 8}
+  {de: "beispielsweise", uk: "наприклад", klas: "8", modul: "B", lektion: 8},
+  {de: "die Gemeinsamkeit (die Gemeinsamkeiten)", uk: "спільна риса (Was haben wir gemeinsam?)", klas: "8", modul: "B", lektion: 9},
+  {de: "der Unterschied (die Unterschiede)", uk: "відмінність, різниця", klas: "8", modul: "B", lektion: 9},
+  {de: "enge Freunde (Pl.)", uk: "близькі друзі", klas: "8", modul: "B", lektion: 9},
+  {de: "sich gut verstehen (Wir verstehen uns super.)", uk: "добре ладнати, порозумітися (Ми чудово ладнаємо.)", klas: "8", modul: "B", lektion: 9},
+  {de: "nicht …, sondern … (nicht für Fotografie, sondern für Computerspiele)", uk: "не …, а … (не фотографією, а комп'ютерними іграми)", klas: "8", modul: "B", lektion: 9},
+  {de: "trotzdem", uk: "попри це, все одно", klas: "8", modul: "B", lektion: 9},
+  {de: "die Website (die Websites)", uk: "вебсайт, сайт", klas: "8", modul: "B", lektion: 9},
+  {de: "antworten (auf +Akk.) (auf eine E-Mail antworten)", uk: "відповідати (на лист)", klas: "8", modul: "B", lektion: 9},
+  {de: "dauern (Die Post dauert lange.)", uk: "тривати (Пошта йде довго.)", klas: "8", modul: "B", lektion: 9},
+  {de: "Liebe Grüße", uk: "З найкращими побажаннями (підпис у листі)", klas: "8", modul: "B", lektion: 9},
+  {de: "der Comic (die Comics)", uk: "комікс", klas: "8", modul: "B", lektion: 9},
+  {de: "die Sprechblase (die Sprechblasen)", uk: "«бульбашка» з репліками в коміксі", klas: "8", modul: "B", lektion: 9}
 ];

@@ -896,5 +896,16 @@ const LESSONS = [
     nove: true,
     gram: ["verben-praepositionalobjekt", "fragen", "reflexive-verben"],
     dz: "Was haben wir gemeinsam? 1) Mach ein Interview mit einem Freund / einer Freundin (oder einem Familienmitglied): Stell mindestens fünf Fragen aus Üb. 3 (z. B. „Wofür interessierst du dich?“, „Womit beschäftigst du dich in deiner Freizeit?“, „Was macht ihr gern zusammen?“). 2) Zeichne zwei Kreise, die sich überschneiden (ein Venn-Diagramm): links – nur deine Interessen und Hobbys, rechts – nur seine / ihre, in der Mitte – eure gemeinsamen Interessen (mindestens drei). 3) Schreib darunter 6–8 Sätze: Was habt ihr gemeinsam, und worin seid ihr verschieden? Benutze mindestens zweimal „sich interessieren für“ oder „sich beschäftigen mit“, einmal „wir … beide …“ (z. B. „Wir interessieren uns beide für Fotografie.“) und einen Satz mit „aber“ (z. B. „Ich spiele gern Volleyball, aber Oleh findet Sport langweilig.“). 4) Schreib zum Schluss eine Frage an die Klasse mit wo(r)- + Präposition (z. B. „Wovon träumt ihr?“). Nächstes Mal vergleichen wir eure Diagramme: Welche Interessen hat unsere ganze Klasse gemeinsam?"
+  },
+  {
+    klas: "8",
+    modul: "B",
+    lektion: 9,
+    nazva: "Тематична контрольна робота: Meine Freunde und ich",
+    opys: "Тематична контрольна робота за Модуль B «Я і мої друзі» (режим контрольної, бали рахуються автоматично): лексика дружби, захоплень і листування, множина іменників і присвійні артиклі, wo(r)- / da(r)- і дієслова з прийменниками, закінчення прикметників, порядок слів (weil, da, dass, wenn), читання листа Клари з Граца й лист-відповідь.",
+    file: "klas-8/modul-b/lektion-9.html",
+    nove: true,
+    gram: ["deklination-nomen", "possessivartikel", "verben-praepositionalobjekt", "rektion-verben", "adjektivdeklination", "kausalsaetze", "verben-dass-infinitiv", "konditionalsaetze", "modalverben", "trennbare-verben", "fragen"],
+    dz: "1) Fehleranalyse: Schau dir deinen Bericht zur Kontrollarbeit an. Wähle drei Aufgaben aus verschiedenen Übungen, bei denen du einen Fehler gemacht hast oder unsicher warst, und schreib sie richtig ins Heft – jeweils mit einer kurzen Regel auf Ukrainisch (z. B. „mit + Dativ: mit meinem kleinen Bruder“). 2) Mach einen Comic „Wie wir uns kennengelernt haben“ (4 Bilder) über dich und deinen besten Freund / deine beste Freundin – gezeichnet oder mit Fotos. Wo und wann habt ihr euch kennengelernt? Was macht ihr gern zusammen? Schreib in die Sprechblasen mindestens eine Frage mit wo(r)- (z. B. „Wofür interessierst du dich?“) und eine Antwort mit da(r)- (z. B. „Ich träume davon, …“), einen Satz mit „weil“ und einen Satz mit „sein“ oder „ihr“ (z. B. „Ihr Hobby ist Tanzen.“). Nächstes Mal machen wir eine Comic-Galerie in der Klasse."
   }
 ];

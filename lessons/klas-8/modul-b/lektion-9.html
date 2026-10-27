@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 9 · Modul B · Тематична контрольна робота</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 8'},
+    {label: 'Урок 9: Тематична контрольна робота'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 9 · MODUL B</span>
+        <h1>Kontrollarbeit: Meine Freunde und ich</h1>
+        <p class="sub">Тематична контрольна робота за Модуль B «Я і мої друзі»: лексика, граматика, читання й лист — усе, що ми вивчили за 8 уроків.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Plural &amp; sein / ihr</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · wo(r)- / da(r)-</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Adjektive</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Satzbau</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Lesen</button>
+    <button class="tab-btn" data-tab="ub7">Üb. 7 · E-Mail</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== ПАНЕЛЬ: вступ ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Worum geht es heute?</h2>
+      <div class="card">
+        <p>Heute schreiben wir die Kontrollarbeit zum Modul B „Meine Freunde und ich“. Du zeigst, was du in den letzten Wochen gelernt hast: Wörter zu Freundschaft, Interessen und Briefwechsel, Possessivartikel und den Plural der Nomen, Fragen mit wo(r)- und Antworten mit da(r)-, Verben mit Präpositionen, Adjektivendungen und Sätze mit „weil“, „da“, „dass“ und „wenn“. Am Ende liest du eine E-Mail von Clara aus Graz und schreibst ihr selbst eine Antwort.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Сьогодні пишемо контрольну роботу за Модуль B «Я і мої друзі». Ти показуєш, чого навчився(-лася) за останні тижні: слова про дружбу, захоплення й листування, присвійні артиклі й множину іменників, запитання з wo(r)- і відповіді з da(r)-, дієслова з прийменниками, закінчення прикметників і речення з «weil», «da», «dass» та «wenn». Наприкінці читаєш лист Клари з Граца й сам(а) пишеш їй відповідь.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Was wird geprüft?</p>
+        <table class="gtable">
+          <tr><th>Übung</th><th>Thema</th><th>Aus Lektion</th></tr>
+          <tr><td>Üb. 1</td><td>Wortschatz: Freundschaft, Briefwechsel, Statistik; per Post oder per Mail?</td><td>1–8</td></tr>
+          <tr><td>Üb. 2</td><td>Plural der Nomen, Possessivartikel (mein, sein, ihr, euer …)</td><td>1, 4, 6</td></tr>
+          <tr><td>Üb. 3</td><td>wo(r)- / da(r)- und Präposition + Pronomen, widmen + Dativ, sich interessieren für + Akkusativ</td><td>2, 3, 8</td></tr>
+          <tr><td>Üb. 4</td><td>Adjektivendungen in einer Anzeige</td><td>6</td></tr>
+          <tr><td>Üb. 5</td><td>Satzbau: weil, da, dass, wenn, man muss + Infinitiv, Perfekt, W-Fragen</td><td>3, 5, 7, 8</td></tr>
+          <tr><td>Üb. 6</td><td>Leseverstehen: Richtig oder falsch?</td><td>Modul B</td></tr>
+          <tr><td>Üb. 7</td><td>Schreiben: Antwort-E-Mail an Clara</td><td>Modul B</td></tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">So funktioniert die Kontrollarbeit</p>
+        <p>Arbeite allein und ohne Hefte. Nur dein erster Versuch zählt. Die Übungen 1–6 prüft der Computer, die E-Mail in Übung 7 bewertet dein Lehrer / deine Lehrerin.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Як працює контрольна</span>
+          Працюй самостійно, без зошитів і підручника. <b>Кожну відповідь можна дати лише один раз.</b> Щойно ти натиснув(-ла) варіант або «Prüfen», відповідь блокується: зелений — правильно, червоний — неправильно, змінити її вже не можна (правильна відповідь не показується). Порожні поля лишаються відкритими — їх можна заповнити й перевірити пізніше. Тому спершу подумай, а потім натискай.<br><br>
+          Вправи 1–6 перевіряє комп'ютер, лист у вправі 7 оцінює вчитель(-ка). Перевірка домашнього завдання — це розминка, вона <b>не входить</b> в оцінку. Таблицю переведення балів в оцінку знайдеш у вкладці «Fertig!». <b>Не натискай «Von vorn beginnen» і не оновлюй сторінку</b> до кінця роботи — усі відповіді зітруться.<br><br>
+          Орієнтовний час: Üb. 1–2 — приблизно по 5 хв, Üb. 3–6 — по 4 хв, Üb. 7 — 8–10 хв.
+        </div>
+      </div>
+
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Ein Freund in der Not … bleibt ruhig! Lies jede Aufgabe genau – du schaffst das. Viel Erfolg!</p>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: перевірка ДЗ (поле dz уроку 8) ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: <i>„Was haben wir gemeinsam? 1) Mach ein Interview mit einem Freund / einer Freundin (oder einem Familienmitglied): Stell mindestens fünf Fragen aus Üb. 3 (z. B. „Wofür interessierst du dich?“, „Womit beschäftigst du dich in deiner Freizeit?“, „Was macht ihr gern zusammen?“). 2) Zeichne zwei Kreise, die sich überschneiden (ein Venn-Diagramm): links – nur deine Interessen und Hobbys, rechts – nur seine / ihre, in der Mitte – eure gemeinsamen Interessen (mindestens drei). 3) Schreib darunter 6–8 Sätze: Was habt ihr gemeinsam, und worin seid ihr verschieden? Benutze mindestens zweimal „sich interessieren für“ oder „sich beschäftigen mit“, einmal „wir … beide …“ (z. B. „Wir interessieren uns beide für Fotografie.“) und einen Satz mit „aber“ (z. B. „Ich spiele gern Volleyball, aber Oleh findet Sport langweilig.“). 4) Schreib zum Schluss eine Frage an die Klasse mit wo(r)- + Präposition (z. B. „Wovon träumt ihr?“). Nächstes Mal vergleichen wir eure Diagramme: Welche Interessen hat unsere ganze Klasse gemeinsam?“</i><br><br>
+        <b>Крок 1 (2–3 хв, усно):</b> покажіть діаграми в парах. Назвіть одну спільну рису (Gemeinsamkeit) і одну відмінність (Unterschied): «Wir interessieren uns beide für …, aber …». Поставте класу свої запитання з wo(r)- — що з'ясували: які інтереси спільні для всього класу?<br>
+        <b>Крок 2:</b> перевір себе на тексті Олени нижче — це така сама робота, як твоя. Обери правильне слово в кожному реченні.<br><br>
+        ℹ️ Це розминка перед контрольною: тут (і у Wörter-Check) можна виправляти помилки, і результат <b>не входить</b> в оцінку за контрольну.
+      </div>
+
+      <div class="card" id="dz-list" style="margin-top:16px;">
+        <p class="section-label" style="margin:0 0 8px;">Olena und Marko: Was haben wir gemeinsam? ⭕⭕</p>
+        <div class="fill-item">
+          <span class="num">1)</span> Marko und ich interessieren
+          <select class="blank inline" data-ans="uns"><option value="">—</option><option>euch</option><option>uns</option><option>sich</option></select>
+          beide für Fotografie.
+        </div>
+        <div class="fill-item">
+          <span class="num">2)</span> Wir hören
+          <select class="blank inline" data-ans="beide"><option value="">—</option><option>beide</option><option>einander</option><option>zusammen mit</option></select>
+          gern Rap und gehen oft zusammen ins Konzert.
+        </div>
+        <div class="fill-item">
+          <span class="num">3)</span> Marko beschäftigt sich gern
+          <select class="blank inline" data-ans="mit"><option value="">—</option><option>für</option><option>von</option><option>mit</option></select>
+          Computerspielen.
+        </div>
+        <div class="fill-item">
+          <span class="num">4)</span> Ich interessiere mich mehr
+          <select class="blank inline" data-ans="für"><option value="">—</option><option>für</option><option>mit</option><option>an</option></select>
+          Tanzen.
+        </div>
+        <div class="fill-item">
+          <span class="num">5)</span> Ich spiele gern Volleyball,
+          <select class="blank inline" data-ans="aber"><option value="">—</option><option>weil</option><option>dass</option><option>aber</option></select>
+          Marko findet Sport langweilig.
+        </div>
+        <div class="fill-item">
+          <span class="num">6)</span> Meine Frage an die Klasse:
+          <select class="blank inline" data-ans="Wovon"><option value="">—</option><option>Wovon</option><option>Von wem</option><option>Wofür</option></select>
+          träumt ihr? – Von einer Reise nach Berlin!
+        </div>
+        <div class="fill-item">
+          <span class="num">7)</span>
+          <select class="blank inline" data-ans="Womit"><option value="">—</option><option>Mit wem</option><option>Womit</option><option>Damit</option></select>
+          beschäftigt ihr euch zusammen? – Mit Musik.
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="dz-check">Prüfen</button>
+        <button class="btn secondary" id="dz-reset">Zurücksetzen</button>
+        <span class="score-pill" id="dz-score"></span>
+      </div>
+
+      <div class="card" id="dz-vocab-wrap" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">Wörter-Check</p>
+        <p class="lead">Перевір слова з минулого уроку.</p>
+        <div id="dz-vocab"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: Wortschatz (квіз + сортування) ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1 · Wortschatz</p>
+      <h2 class="panel-title">Was passt?</h2>
+      <p class="lead">Teil A: Wähle das passende Wort.</p>
+      <div class="ua-note">
+        Обери слово, яке підходить за змістом. Після першого натискання питання блокується — змінити відповідь не можна.
+      </div>
+      <div class="card" style="margin-top:16px;">
+        <div id="ub1-quiz"></div>
+      </div>
+
+      <p class="lead">Teil B: Per Post oder per Mail?</p>
+      <div class="ua-note">
+        Що робиш, коли надсилаєш паперовий лист (per Post), а що — коли пишеш e-mail (per Mail)? Натисни картку, потім назву групи. Поки не натиснув(-ла) «Prüfen», картки можна переставляти; після перевірки розкладені картки блокуються.
+      </div>
+      <div class="card" style="margin-top:16px;">
+        <div id="ub1-sort"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 2: Plural + Possessivartikel ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2 · Grammatik</p>
+      <h2 class="panel-title">Plural und Possessivartikel</h2>
+      <p class="lead">Teil A: Schreib die Pluralform.</p>
+      <div class="ua-note">
+        Впиши форму множини іменника (артикль <i>die</i> уже стоїть). Іменник пишемо з великої літери, не забувай про умлаут (ä ö ü), якщо він потрібен.<br>Після «Prüfen» заповнені поля блокуються; порожні можна заповнити й перевірити пізніше.
+      </div>
+      <div class="card" style="margin-top:16px;">
+        <div id="ub2-tab"></div>
+      </div>
+
+      <p class="lead">Teil B: Sein, ihr, euer …? Wähle den richtigen Possessivartikel.</p>
+      <div class="ua-note">
+        Подивись, про кого йдеться: <i>er → sein</i>, <i>sie → ihr</i>, <i>du → dein</i>, <i>ihr → euer</i>, <i>wir → unser</i>. Не забувай про закінчення: <i>ihre Freundin</i>, <i>mit ihren Freunden</i>.<br>Після «Prüfen» заповнені поля блокуються; порожні можна заповнити й перевірити пізніше.
+      </div>
+      <div class="card" id="ub2-list" style="margin-top:16px;">
+        <div class="fill-item">
+          <span class="num">1)</span> Das ist Taras.
+          <select class="blank inline" data-ans="Sein"><option value="">—</option><option>Ihr</option><option>Sein</option><option>Mein</option></select>
+          bester Freund heißt Oleh.
+        </div>
+        <div class="fill-item">
+          <span class="num">2)</span> Lena hat eine Brieffreundin in Wien.
+          <select class="blank inline" data-ans="Ihre"><option value="">—</option><option>Ihre</option><option>Seine</option><option>Ihr</option></select>
+          Brieffreundin heißt Mia.
+        </div>
+        <div class="fill-item">
+          <span class="num">3)</span> Jonas, wofür interessiert sich
+          <select class="blank inline" data-ans="dein"><option value="">—</option><option>sein</option><option>euer</option><option>dein</option></select>
+          Freund?
+        </div>
+        <div class="fill-item">
+          <span class="num">4)</span> Anna und Bastian, wo wohnt
+          <select class="blank inline" data-ans="eure"><option value="">—</option><option>euer</option><option>eure</option><option>ihre</option></select>
+          Brieffreundin?
+        </div>
+        <div class="fill-item">
+          <span class="num">5)</span> Am Wochenende treffen wir
+          <select class="blank inline" data-ans="unsere"><option value="">—</option><option>unsere</option><option>unser</option><option>eure</option></select>
+          Freunde im Park.
+        </div>
+        <div class="fill-item">
+          <span class="num">6)</span> Leonie verbringt viel Zeit mit
+          <select class="blank inline" data-ans="ihren"><option value="">—</option><option>seinen</option><option>ihre</option><option>ihren</option></select>
+          besten Freunden.
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: wo(r)- / da(r)-, Präposition + Pronomen, widmen / sich interessieren für ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3 · Grammatik</p>
+      <h2 class="panel-title">Wofür? – Dafür! Für wen? – Für ihn!</h2>
+      <p class="lead">Wähle das richtige Wort oder schreib die richtige Form.</p>
+      <div class="ua-note">
+        1–2 і 5: річ чи людина? Про речі й ідеї питаємо <i>wo(r)- + прийменник</i> (wofür, womit), про людей — <i>прийменник + wen / wem</i> (für wen, mit wem); у відповіді про людину — <i>прийменник + займенник</i> (an ihn). 3, 4, 8: впиши <i>da(r)- + прийменник</i> (одним словом). 6, 7, 9: артикль після <i>widmen</i> (Dativ) і <i>sich interessieren für</i> (Akkusativ).<br>Після «Prüfen» заповнені поля блокуються; порожні можна заповнити й перевірити пізніше.
+      </div>
+      <div class="card" id="ub3-list" style="margin-top:16px;">
+        <div class="fill-item">
+          <span class="num">1)</span>
+          <select class="blank inline" data-ans="Wofür"><option value="">—</option><option>Für wen</option><option>Wofür</option><option>Worauf</option></select>
+          interessierst du dich? – Für Fotografie.
+        </div>
+        <div class="fill-item">
+          <span class="num">2)</span>
+          <select class="blank inline" data-ans="Mit wem"><option value="">—</option><option>Womit</option><option>Wovon</option><option>Mit wem</option></select>
+          chattest du oft? – Mit meiner Brieffreundin aus Graz.
+        </div>
+        <div class="fill-item">
+          <span class="num">3)</span> Worüber sprecht ihr? – Wir sprechen
+          <input type="text" class="blank-input inline" data-ans="darüber" aria-label="da(r) + über">, wie wir die Ferien verbringen. (über)
+        </div>
+        <div class="fill-item">
+          <span class="num">4)</span> Wartest du auf Susannas Brief? – Ja, ich warte schon lange
+          <input type="text" class="blank-input inline" data-ans="darauf" aria-label="da(r) + auf">. (auf)
+        </div>
+        <div class="fill-item">
+          <span class="num">5)</span> Denkst du oft an deinen Brieffreund? – Ja, ich denke oft
+          <select class="blank inline" data-ans="an ihn"><option value="">—</option><option>daran</option><option>an ihn</option><option>woran</option></select>.
+        </div>
+        <div class="fill-item">
+          <span class="num">6)</span> Meine Freizeit widme ich
+          <select class="blank inline" data-ans="dem"><option value="">—</option><option>den</option><option>der</option><option>dem</option></select>
+          Sport.
+        </div>
+        <div class="fill-item">
+          <span class="num">7)</span> Niklas interessiert sich für
+          <select class="blank inline" data-ans="die"><option value="">—</option><option>die</option><option>der</option><option>dem</option></select>
+          Musik.
+        </div>
+        <div class="fill-item">
+          <span class="num">8)</span> Wovon träumst du? – Ich träume
+          <input type="text" class="blank-input inline" data-ans="davon" aria-label="da(r) + von">, Brieffreunde in Deutschland zu finden. (von)
+        </div>
+        <div class="fill-item">
+          <span class="num">9)</span> Lea widmet ihre Freizeit
+          <select class="blank inline" data-ans="den"><option value="">—</option><option>die</option><option>den</option><option>der</option></select>
+          Tieren.
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4: Adjektivendungen ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4 · Grammatik</p>
+      <h2 class="panel-title">Tim sucht einen Brieffreund</h2>
+      <p class="lead">Lies Tims Anzeige und wähle die richtige Adjektivendung.</p>
+      <div class="ua-note">
+        Подивись на артикль перед прикметником (або на його відсутність), рід, число й відмінок іменника — і обери закінчення <i>-e, -en, -er</i> чи <i>-es</i>. Пам'ятай: <i>mit</i> вимагає Dativ, а після <i>ich habe / ich suche / ich lese</i> — Akkusativ.<br>Після «Prüfen» заповнені поля блокуються; порожні можна заповнити й перевірити пізніше.
+      </div>
+      <div class="mail-window" style="margin-top:16px;">
+        <div class="mail-titlebar">Brieffreunde gesucht! · Anzeige</div>
+        <div class="mail-fields">Von: <b>Tim, 14</b> · Hamburg</div>
+        <div class="mail-body" id="ub4-list">
+          <p style="margin:0 0 8px;">Hallo! Ich heiße Tim, bin 14 und wohne in Hamburg.</p>
+          <div class="fill-item"><span class="num">1)</span> Hamburg ist eine groß<select class="blank inline" data-ans="e" aria-label="Endung"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Stadt im Norden von Deutschland.</div>
+          <div class="fill-item"><span class="num">2)</span> Ich habe kurz<select class="blank inline" data-ans="e" aria-label="Endung"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Haare …</div>
+          <div class="fill-item"><span class="num">3)</span> … und grün<select class="blank inline" data-ans="e" aria-label="Endung"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Augen.</div>
+          <div class="fill-item"><span class="num">4)</span> Ich besuche ein modern<select class="blank inline" data-ans="es" aria-label="Endung"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Gymnasium.</div>
+          <div class="fill-item"><span class="num">5)</span> Mein best<select class="blank inline" data-ans="er" aria-label="Endung"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Freund heißt Jonas.</div>
+          <div class="fill-item"><span class="num">6)</span> Mit meinem klein<select class="blank inline" data-ans="en" aria-label="Endung"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Bruder spiele ich oft Fußball.</div>
+          <div class="fill-item"><span class="num">7)</span> Am Abend lese ich gern spannend<select class="blank inline" data-ans="e" aria-label="Endung"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Krimis.</div>
+          <div class="fill-item"><span class="num">8)</span> Ich suche einen nett<select class="blank inline" data-ans="en" aria-label="Endung"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Brieffreund aus der Ukraine.</div>
+          <div class="fill-item"><span class="num">9)</span> Hoffentlich haben wir ähnlich<select class="blank inline" data-ans="e" aria-label="Endung"><option value="">—</option><option value="e">-e</option><option value="en">-en</option><option value="er">-er</option><option value="es">-es</option></select> Interessen. Schreib mir!</div>
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub4-check">Prüfen</button>
+        <span class="score-pill" id="ub4-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5: Satzbau (buildOrder) ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5 · Satzbau</p>
+      <h2 class="panel-title">Bilde Sätze</h2>
+      <p class="lead">Klicke die Wörter in der richtigen Reihenfolge an.</p>
+      <div class="ua-note">
+        Натискай картки по черзі, щоб скласти речення. Поки речення не складене повністю, поставлену картку можна повернути назад (натисни на неї ще раз). Щойно стоять усі картки — речення перевіряється й блокується. Пам'ятай: після <i>weil, da, dass, wenn</i> дієслово стоїть у кінці; після речення з <i>wenn</i> / <i>da</i> на початку — спершу дієслово, потім підмет; у Perfekt і з модальним дієсловом інфінітив чи Partizip II — у кінці.
+      </div>
+      <div class="card" style="margin-top:16px;">
+        <div id="ub5-order"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 6: Lesen (Richtig / Falsch) ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6 · Leseverstehen</p>
+      <h2 class="panel-title">Eine E-Mail aus Graz</h2>
+      <p class="lead">Lies Claras E-Mail. Sind die Aussagen richtig oder falsch?</p>
+      <div class="ua-note">
+        Клара з Граца (Австрія) знайшла твоє оголошення на сайті для друзів по листуванню і написала тобі. Прочитай лист і визнач, чи твердження правильні (Richtig) чи неправильні (Falsch). Текст можна перечитувати скільки завгодно, але відповідь на кожне твердження — лише одна, вона одразу блокується.
+      </div>
+
+      <div class="mail-window" style="margin-top:16px;">
+        <div class="mail-titlebar">Posteingang · Neue Nachricht</div>
+        <div class="mail-fields">Von: <b>Clara Huber</b> · Betreff: Hallo aus Graz! 📷</div>
+        <div class="mail-body">
+          <p>Hallo!</p>
+          <p>Ich heiße Clara, bin 14 Jahre alt und wohne mit meinen Eltern und meinem kleinen Bruder in Graz. Das ist eine schöne Stadt in Österreich. Deine Anzeige habe ich auf einer Website für Brieffreunde gefunden. Du interessierst dich für Fotografie – ich auch! Am liebsten fotografiere ich Landschaften. Außerdem widme ich meine Freizeit dem Tanzen.</p>
+          <p>Meine beste Freundin heißt Mia. Wir sind seit der ersten Klasse befreundet – also schon acht Jahre! Mia hat lange rote Haare und ist sehr gutherzig. Sie interessiert sich nicht für Fotografie, sondern für Computerspiele. Trotzdem verstehen wir uns super. „Gleich und Gleich gesellt sich gern“ – das stimmt also nicht immer!</p>
+          <p>Letzte Woche haben wir in unserer Klasse eine Umfrage durchgeführt: Wie viele Freunde hast du? Die Hälfte meiner Mitschüler hat drei oder vier enge Freunde. Ein Viertel hat auch virtuelle Freunde, die sie nur aus dem Internet kennen. Ich habe schon zwei Brieffreundinnen: Lucía aus Spanien und Emma aus Kanada.</p>
+          <p>Briefe auf Papier schreibe ich nur zu Weihnachten, weil die Post so lange dauert. Sonst schicke ich lieber E-Mails – mit Fotos im Anhang. Und du? Worüber schreibst du am liebsten? Ich warte auf deine Antwort!</p>
+          <p style="margin:0;">Liebe Grüße<br>Clara</p>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:20px;">
+        <div id="ub6-quiz"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 7: Schreiben (оцінює вчитель) ===== -->
+    <section class="panel" id="panel-ub7">
+      <p class="section-label">Üb. 7 · Schreiben</p>
+      <h2 class="panel-title">Antworte Clara!</h2>
+      <p class="lead">Schreib Clara eine Antwort-E-Mail (8–10 Sätze).</p>
+      <div class="card tinted-mustard">
+        <p style="margin:0 0 8px;"><b>In deiner E-Mail:</b></p>
+        <p style="margin:0;">
+          ✔ bedankst du dich für die E-Mail und stellst dich kurz vor (Name, Alter, Wohnort);<br>
+          ✔ beschreibst du dein Aussehen mit zwei Adjektiven mit richtiger Endung (z. B. kurze blonde Haare);<br>
+          ✔ erzählst du über deinen besten Freund / deine beste Freundin: Wie heißt er / sie? Seit wann seid ihr befreundet? Wofür interessiert er / sie sich?<br>
+          ✔ schreibst du, wofür du dich interessierst oder wem du deine Freizeit widmest;<br>
+          ✔ beantwortest du Claras Frage: Schreibst du lieber Briefe oder E-Mails? – mit „weil“;<br>
+          ✔ stellst du Clara am Ende eine Frage mit wo(r)- + Präposition (z. B. „Wovon träumst du?“).
+        </p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Напиши Кларі лист-відповідь на 8–10 речень. У листі: подякуй за лист і коротко представся (ім'я, вік, місто); опиши свою зовнішність двома прикметниками з правильним закінченням; розкажи про свого найкращого друга / найкращу подругу: як звати, відколи ви дружите, чим він / вона цікавиться; напиши, чим цікавишся ти або чому присвячуєш вільний час; дай відповідь на запитання Клари, що ти пишеш охочіше — листи чи e-mail, — реченням з «weil»; наприкінці постав Кларі запитання з wo(r)- + прийменник.<br><br>
+          ⚠️ Вставляти текст у поле не можна — набирай сам(а). Під полем видно кількість слів і чи вжив(-ла) ти обов'язкові звороти. Текст нікуди не надсилається автоматично: він потрапить у звіт для вчителя (вкладка «Fertig!»), або перепиши його в зошит. Цю вправу оцінює вчитель — <b>до 3 балів</b> (див. таблицю у вкладці «Fertig!»).
+        </div>
+      </div>
+      <div class="mail-window">
+        <div class="mail-titlebar">Antworten</div>
+        <div class="mail-fields">An: <b>Clara Huber</b> · Betreff: AW: Hallo aus Graz!</div>
+        <div class="mail-body">
+          <div class="qa" style="margin:0;">
+            <label for="ub7-text">Liebe Clara, …</label>
+            <textarea id="ub7-text" rows="12" data-words="60-110" data-must="Liebe Clara|weil|Liebe Grüße/Viele Grüße" placeholder="Liebe Clara, vielen Dank für deine E-Mail! …"></textarea>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ПРИКІНЦЕВА ПАНЕЛЬ ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>1) Fehleranalyse: Schau dir deinen Bericht zur Kontrollarbeit an. Wähle drei Aufgaben aus verschiedenen Übungen, bei denen du einen Fehler gemacht hast oder unsicher warst, und schreib sie richtig ins Heft – jeweils mit einer kurzen Regel auf Ukrainisch (z. B. „mit + Dativ: mit meinem kleinen Bruder“). 2) Mach einen Comic „Wie wir uns kennengelernt haben“ (4 Bilder) über dich und deinen besten Freund / deine beste Freundin – gezeichnet oder mit Fotos. Wo und wann habt ihr euch kennengelernt? Was macht ihr gern zusammen? Schreib in die Sprechblasen mindestens eine Frage mit wo(r)- (z. B. „Wofür interessierst du dich?“) und eine Antwort mit da(r)- (z. B. „Ich träume davon, …“), einen Satz mit „weil“ und einen Satz mit „sein“ oder „ihr“ (z. B. „Ihr Hobby ist Tanzen.“). Nächstes Mal machen wir eine Comic-Galerie in der Klasse.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          1) Аналіз помилок: переглянь свій звіт до контрольної роботи. Обери три завдання з різних вправ, у яких ти помилився(-лася) або вагався(-лася), і запиши їх правильно в зошит — до кожного коротке правило українською (напр. «mit + Dativ: mit meinem kleinen Bruder»). 2) Створи комікс «Як ми познайомилися» (4 малюнки) про себе й свого найкращого друга / свою найкращу подругу — намальований або з фото. Де й коли ви познайомилися? Що любите робити разом? Напиши в «бульбашках» щонайменше одне запитання з wo(r)- (напр. «Wofür interessierst du dich?») і одну відповідь з da(r)- (напр. «Ich träume davon, …»), одне речення з «weil» і одне речення з «sein» або «ihr» (напр. «Ihr Hobby ist Tanzen.»). Наступного уроку влаштуємо в класі галерею коміксів.
+        </div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Deine Note</p>
+        <p>Hier siehst du dein Ergebnis für die Übungen 1–6 – in Prozent und in Punkten. Für die E-Mail (Üb. 7) gibt dein Lehrer / deine Lehrerin noch bis zu 3 Punkte.</p>
+        <div id="testResult"></div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Твоя оцінка</span>
+          Відсоток і бали за вправи 1–6 рахуються автоматично (максимум 9) — твій рядок у таблиці підсвічено. Невиконані завдання рахуються як неправильні. Перевірка ДЗ і Wörter-Check сюди не входять. До цього додаються бали вчителя за лист (максимум 3): <b>9 + 3 = 12 балів</b>.<br>
+          Лист оцінюється так: 3 — є всі 6 пунктів плану, помилки майже не заважають розумінню; 2 — є 4–5 пунктів або багато граматичних помилок; 1 — є 2–3 пункти, текст короткий; 0 — лист не написано.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Wörter zum Lernen</p>
+        <div class="chip-row" id="vocabChips"></div>
+      </div>
+
+      <div class="card" id="lessonGramWrap">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="lessonGram"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../data/glossary-data.js"></script>
+<script src="../../../data/lessons-data.js"></script>
+<script src="../../../data/grammar-data.js"></script>
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  // ===== Слова цього уроку у вкладці Fertig =====
+  const LEKTION_KLAS = "8", LEKTION_MODUL = "B", LEKTION_LEKTION = 9;
+  const LEKTION_PREV_LEKTION = 8;
+
+  // Контрольна робота: одна відповідь без виправлень, вкладка Hausaufgabe
+  // (розминка + Wörter-Check) не входить у результат.
+  enableTestMode();
+
+  (function renderLessonVocab(){
+    const box = document.getElementById('vocabChips');
+    if (!box || typeof GLOSSARY === 'undefined') return;
+    const words = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_LEKTION
+    );
+    if (words.length === 0){
+      box.innerHTML = '<p class="empty-note">Слова для цього уроку ще не додані в глосарій.</p>';
+      return;
+    }
+    box.innerHTML = words.map(w =>
+      '<span class="chip static">' + w.de + ' — ' + w.uk + '</span>'
+    ).join('');
+  })();
+
+  // ===== Граматика до цього уроку у вкладці Fertig (поле gram у lessons-data.js) =====
+  (function renderLessonGrammar(){
+    const wrap = document.getElementById('lessonGramWrap');
+    const box = document.getElementById('lessonGram');
+    if (!wrap || !box) return;
+    const hide = () => { wrap.style.display = 'none'; };
+    if (typeof LESSONS === 'undefined' || typeof GRAMMAR === 'undefined') return hide();
+    const me = LESSONS.find(l => l.klas === LEKTION_KLAS && l.modul === LEKTION_MODUL && l.lektion === LEKTION_LEKTION);
+    const topics = ((me && me.gram) || []).map(id => GRAMMAR.find(t => t.id === id)).filter(t => t && t.opublikovano > 0);
+    if (topics.length === 0) return hide();
+    const src = document.querySelector('script[src$="data/grammar-data.js"]').getAttribute('src');
+    const root = src.slice(0, src.length - 'data/grammar-data.js'.length);
+    box.innerHTML = topics.map(t =>
+      '<a class="gram-link" href="' + root + 'gramatyka/temy/' + t.id + '.html">'
+      + '<span class="k">' + t.uk + '</span>' + t.tema + '</a>'
+    ).join('');
+  })();
+
+  // ===== Wörter-Check у вкладці Hausaufgabe (слова ПОПЕРЕДНЬОГО уроку) =====
+  function guessPos(de){
+    var base = (de || '').replace(/\([^)]*\)/g, '').trim();
+    if(/^(der|die|das)(\/(der|die|das))?\s/.test(base)) return 'noun';
+    if(/^sich\s/.test(base)) return 'verb';
+    if(/^am\s/.test(base)) return 'other'; // "am liebsten", "am besten" — прислівникова найвища форма, не дієслово
+    if(/\(\+(Gen|Dat|Akk)\.?\)/.test(de)) return 'prep';
+    var words = base.split(/\s+/);
+    var last = words[words.length - 1];
+    if(/(en|ern|eln)$/.test(last) && last === last.toLowerCase()) return 'verb';
+    return 'other'; // прикметники / прислівники / сталі вирази
+  }
+
+  (function renderDzVocabCheck(){
+    const wrap = document.getElementById('dz-vocab-wrap');
+    const box = document.getElementById('dz-vocab');
+    if (!wrap || !box || typeof GLOSSARY === 'undefined') return;
+    if (!LEKTION_PREV_LEKTION){ wrap.style.display = 'none'; return; }
+
+    const prevWords = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_PREV_LEKTION
+    );
+    if (prevWords.length < 3){ wrap.style.display = 'none'; return; }
+
+    const pool = shuffleArray(prevWords).slice(0, 6);
+    const quizData = pool.map(w => {
+      const pos = guessPos(w.de);
+      let sameKind = GLOSSARY.filter(g => g.uk !== w.uk && guessPos(g.de) === pos);
+      if(sameKind.length < 2) sameKind = GLOSSARY.filter(g => g.uk !== w.uk);
+      const distractors = shuffleArray(sameKind).slice(0, 2).map(g => g.uk);
+      return { q: w.de, opts: [w.uk, ...distractors], correct: w.uk };
+    });
+    buildQuiz('dz-vocab', quizData);
+  })();
+
+  // Hausaufgabe: розминка-перевірка (діаграма Олени й Марка)
+  wireBlanks('dz');
+
+  // Üb. 1 · Teil A: квіз з лексики (позиції correct: 1,2,3,1,3,2,1,2)
+  const ub1Data = [
+    {q: "Bevor man den Brief in den Briefkasten einwirft, muss man eine … aufkleben.", opts: ["Briefmarke", "Tastatur", "Datei"], correct: "Briefmarke"},
+    {q: "Ein Foto kann man mit der E-Mail als … schicken.", opts: ["Umschlag", "Anhang", "Bildschirm"], correct: "Anhang"},
+    {q: "Freunde, die man nur aus dem Internet kennt, sind … Freunde.", opts: ["gutherzige", "ähnliche", "virtuelle"], correct: "virtuelle"},
+    {q: "50 Prozent der Befragten – das ist …", opts: ["die Hälfte", "ein Viertel", "jeder Zehnte"], correct: "die Hälfte"},
+    {q: "Sophie wohnt in Dresden, ich wohne in Kyjiw. Wir schreiben einander oft – wir stehen im …", opts: ["Verein", "Erfolg", "Briefwechsel"], correct: "Briefwechsel"},
+    {q: "Taras und ich kennen uns seit fünf Jahren. Wir sind seit fünf Jahren …", opts: ["verloren", "befreundet", "unterwegs"], correct: "befreundet"},
+    {q: "Lukas trainiert zweimal pro Woche im Fußballverein, er ist dort …", opts: ["Mitglied", "Befragter", "Kunde"], correct: "Mitglied"},
+    {q: "Kurze blonde Haare und blaue Augen – so beschreibt man das …", opts: ["Interesse", "Aussehen", "Talent"], correct: "Aussehen"}
+  ];
+  buildQuiz('ub1-quiz', ub1Data);
+
+  // Üb. 1 · Teil B: per Post oder per Mail?
+  buildSort('ub1-sort', {
+    buckets: ["per Post", "per Mail"],
+    items: [
+      {t: "eine Briefmarke aufkleben", b: "per Post"},
+      {t: "den Brief in den Briefumschlag stecken", b: "per Post"},
+      {t: "die Adresse auf den Umschlag schreiben", b: "per Post"},
+      {t: "den Brief in den Briefkasten einwerfen", b: "per Post"},
+      {t: "den Computer einschalten", b: "per Mail"},
+      {t: "den Text auf der Tastatur tippen", b: "per Mail"},
+      {t: "ein Foto als Anhang schicken", b: "per Mail"},
+      {t: "die E-Mail-Adresse schreiben", b: "per Mail"}
+    ]
+  });
+
+  // Üb. 2 · Teil A: множина (таблиця, регістр важливий — іменники з великої)
+  buildTable('ub2-tab', {
+    head: ["Singular", "Plural"],
+    case: true,
+    rows: [
+      ["der Brief", "die [Briefe]"],
+      ["der Briefumschlag", "die [Briefumschläge]"],
+      ["der Briefkasten", "die [Briefkästen]"],
+      ["die Briefmarke", "die [Briefmarken]"],
+      ["die Datei", "die [Dateien]"],
+      ["der Bildschirm", "die [Bildschirme]"]
+    ]
+  });
+
+  // Üb. 2 · Teil B, Üb. 3, Üb. 4: пропуски й випадні списки
+  wireBlanks('ub2');
+  wireBlanks('ub3');
+  wireBlanks('ub4');
+
+  // Üb. 5: склади речення
+  buildOrder('ub5-order', [
+    { words: ["Ich", "schreibe", "lieber", "E-Mails,", "weil", "das", "schneller", "geht"], end: ".",
+      alt: ["Lieber schreibe ich E-Mails, weil das schneller geht"],
+      hint: "Підрядне речення з weil" },
+    { words: ["Da", "Sophie", "Krimis", "liebt,", "liest", "sie", "viel"], end: ".",
+      hint: "Почни з «Da …» (= weil)" },
+    { words: ["Ich", "finde", "es", "gut,", "dass", "wir", "einander", "oft", "schreiben"], end: ".",
+      hint: "Підрядне речення з dass" },
+    { words: ["Wenn", "ich", "Zeit", "habe,", "chatte", "ich", "mit meinen Freunden"], end: ".",
+      hint: "Почни з «Wenn …»" },
+    { words: ["Zuerst", "muss", "man", "eine Briefmarke", "aufkleben"], end: ".",
+      alt: ["Man muss zuerst eine Briefmarke aufkleben"],
+      hint: "man + Modalverb, відокремлюване дієслово" },
+    { words: ["Wir", "haben", "uns", "im Sportverein", "kennengelernt"], end: ".",
+      alt: ["Im Sportverein haben wir uns kennengelernt"],
+      hint: "Perfekt" },
+    { words: ["Womit", "beschäftigst", "du", "dich", "in der Freizeit"], end: "?",
+      hint: "W-Frage з wo(r)-" }
+  ]);
+
+  // Üb. 6: Richtig / Falsch (позиції correct: 2,1,2,1,1,2,2,1 — порядок у opts чергується)
+  const ub6Data = [
+    {q: "Clara wohnt in Deutschland.", opts: ["Richtig", "Falsch"], correct: "Falsch"},
+    {q: "Clara und du habt ein gemeinsames Interesse.", opts: ["Richtig", "Falsch"], correct: "Richtig"},
+    {q: "Clara und Mia sind erst seit einem Jahr befreundet.", opts: ["Richtig", "Falsch"], correct: "Falsch"},
+    {q: "Mia interessiert sich auch für Fotografie.", opts: ["Falsch", "Richtig"], correct: "Falsch"},
+    {q: "In Claras Klasse hat die Hälfte der Schüler drei oder vier enge Freunde.", opts: ["Richtig", "Falsch"], correct: "Richtig"},
+    {q: "25 Prozent von Claras Mitschülern haben auch virtuelle Freunde.", opts: ["Falsch", "Richtig"], correct: "Richtig"},
+    {q: "Clara schreibt jede Woche Briefe auf Papier.", opts: ["Richtig", "Falsch"], correct: "Falsch"},
+    {q: "Clara schickt ihre Fotos lieber im Anhang einer E-Mail.", opts: ["Richtig", "Falsch"], correct: "Richtig"}
+  ];
+  buildQuiz('ub6-quiz', ub6Data);
+
+  // Фінальна панель зі штампами (іконки — на тему модуля «Я і мої друзі»)
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🤝','✉️','📮','💬','🏆']);
+    renderTestResult('testResult', { label: 'Üb. 1–6', extra: { label: 'E-Mail (Üb. 7)', max: 3 } });
+  });
+  document.getElementById('restart-all').addEventListener('click', () => {
+    if (confirm('Усі відповіді зітруться. Почати спочатку?')) location.reload();
+  });
+</script>
+</body>
+</html>
