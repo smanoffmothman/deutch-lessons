@@ -940,5 +940,16 @@ const LESSONS = [
     nove: true,
     gram: ["verben-praepositionalobjekt", "rektion-verben", "kausalsaetze", "indefinitpronomen"],
     dz: "Mein Stil, meine Szene – ein Post: Stell dir vor, du machst einen Post für die Seite „Jugendsubkulturen international“ von Luisas Klasse. 1) Zeichne ein „Foto“ oder klebe ein Bild ein: Wie drückst du dich aus – durch Kleidung, Musik, Sport, Kunst oder ein Hobby? 2) Schreib darunter einen Text (6–8 Sätze): Wofür interessierst du dich? Gehörst du einer Jugendszene an oder nicht? Wie drückst du dich aus? Benutze mindestens einmal „sich interessieren für“, einmal „angehören + Dativ“ (z. B. „Ich gehöre keiner Szene an.“) und zwei weil-Sätze (z. B. „Ich trage gern weite Hoodies, weil sie bequem sind.“). 3) Schreib drei Hashtags (z. B. #Skater #meinStil #Kyjiw). 4) Schreib unter deinen Post zwei Kommentare von Mitschülern mit „Ich finde … spannend / cool / ungewöhnlich, weil …“. Nächstes Mal hängen wir die Posts auf und kommentieren sie in der Klasse."
+  },
+  {
+    klas: "9",
+    modul: "B",
+    lektion: 9,
+    nazva: "Захоплення молоді: Jugend und Freizeit",
+    opys: "Захоплення молоді: складні іменники з Jugend- (die Jugendorganisation, das Jugendorchester, der Jugendclub…) з аудіоконтролем, словосполучення про дозвілля (einen Kurs besuchen, Sport treiben, zum Naturschutz beitragen), що можна робити в молодіжних клубах і організаціях та інфінітив із zu (teilzunehmen, aufzutreten).",
+    file: "klas-9/modul-b/lektion-9.html",
+    nove: true,
+    gram: ["verben-dass-infinitiv", "trennbare-verben", "deklination-nomen", "modalverben"],
+    dz: "Mitglieder gesucht! Gestalte (auf Papier oder digital) einen Werbeflyer für eine Jugendorganisation in deiner Stadt – eine echte oder eine erfundene (z. B. einen Jugendsportverein, ein Jugendorchester, eine Jugendtanzgruppe, einen Jugendclub oder eine Jugendorganisation für den Umweltschutz). 1) Gib der Organisation einen Namen und schreib dazu: Wo und wann trefft ihr euch? Wer kann Mitglied werden? 2) Schreib 4–5 Sätze, was man bei euch machen kann – mit mindestens vier Wortverbindungen aus der Stunde (z. B. an Turngeräten trainieren, neue Musikstücke üben, mit dem Tanzprogramm auftreten, zum Naturschutz beitragen). 3) Lade die Leser ein: Schreib mindestens drei Sätze mit Infinitiv mit zu, davon mindestens einen mit einem trennbaren Verb (z. B. „Hast du Lust, bei uns mitzumachen?“, „Es macht Spaß, an Umweltschutzaktionen teilzunehmen!“, „Vergiss nicht, deine Freunde mitzubringen!“). Unterstreiche alle Infinitive mit zu. Mal ein Bild dazu. Nächstes Mal hängen wir die Flyer auf, und jeder wählt eine Organisation, bei der er gern mitmachen möchte."
   }
 ];
