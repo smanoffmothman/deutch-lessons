@@ -1027,5 +1027,17 @@ const GLOSSARY = [
   {de: "der Treffpunkt (die Treffpunkte)", uk: "місце зустрічей", klas: "9", modul: "B", lektion: 7},
   {de: "die Verbundenheit mit der Natur", uk: "єдність із природою", klas: "9", modul: "B", lektion: 7},
   {de: "aufwendig (aufwendige Kostüme)", uk: "складний, вигадливий (вигадливі костюми)", klas: "9", modul: "B", lektion: 7},
-  {de: "selbstgemacht", uk: "саморобний, зроблений власноруч", klas: "9", modul: "B", lektion: 7}
+  {de: "selbstgemacht", uk: "саморобний, зроблений власноруч", klas: "9", modul: "B", lektion: 7},
+  {de: "die Jugendinitiative (die Jugendinitiativen)", uk: "молодіжна ініціатива", klas: "9", modul: "B", lektion: 8},
+  {de: "erfahren (viel Neues erfahren)", uk: "дізнаватися (дізнатися багато нового)", klas: "9", modul: "B", lektion: 8},
+  {de: "berichten über (+Akk.)", uk: "розповідати, повідомляти (про щось)", klas: "9", modul: "B", lektion: 8},
+  {de: "Interesse zeigen an (+Dat.)", uk: "виявляти інтерес до (чогось)", klas: "9", modul: "B", lektion: 8},
+  {de: "kein Interesse haben (Ich habe kein Interesse dafür.)", uk: "не цікавитися (Мене це не цікавить.)", klas: "9", modul: "B", lektion: 8},
+  {de: "beeindruckend", uk: "вражаючий, вражаюче", klas: "9", modul: "B", lektion: 8},
+  {de: "doof (ugs.)", uk: "безглуздий, нудний (розм.)", klas: "9", modul: "B", lektion: 8},
+  {de: "die meisten (Die meisten Schüler zeigen Interesse an …)", uk: "більшість (більшість учнів …)", klas: "9", modul: "B", lektion: 8},
+  {de: "einige (Einige interessieren sich für …)", uk: "деякі, кілька", klas: "9", modul: "B", lektion: 8},
+  {de: "recherchieren", uk: "шукати інформацію, досліджувати (тему)", klas: "9", modul: "B", lektion: 8},
+  {de: "die Ausdrucksform (die Ausdrucksformen)", uk: "форма (спосіб) самовираження", klas: "9", modul: "B", lektion: 8},
+  {de: "mit Vergnügen", uk: "із задоволенням", klas: "9", modul: "B", lektion: 8}
 ];

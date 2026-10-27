@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 8 · Modul B · Wie drückst du dich aus?</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 9'},
+    {label: 'Урок 8: Wie drückst du dich aus?'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 8 · MODUL B</span>
+        <h1>Wie drückst du dich aus?</h1>
+        <p class="sub">Спосіб самовираження: перевіряємо зміст чату Луїзи й Аліни, проводимо в класі опитування про молодіжні субкультури, коментуємо його результати й пишемо Луїзі відповідь.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Richtig oder falsch?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Umfrage</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Ergebnisse</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Antwort an Luisa</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== ПАНЕЛЬ: вступ ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Kleidung, Musik, Hobbys – so zeigen wir, wer wir sind</h2>
+      <div class="card">
+        <p>Jeder Mensch drückt sich anders aus: durch Kleidung und Frisur, durch Musik, Sport, Kunst oder durch eine Jugendszene. Heute lesen wir noch einmal den Chat von Luisa und Alina und prüfen, was stimmt. Dann machen wir eine Umfrage in der Klasse: Wofür interessiert ihr euch? Wie findet ihr verschiedene Jugendszenen? Gehört jemand von euch einer Szene an? Zum Schluss kommentieren wir die Ergebnisse und schreiben Luisa eine Antwort.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Кожна людина виражає себе по-своєму: через одяг і зачіску, через музику, спорт, мистецтво або через молодіжну субкультуру. Сьогодні ще раз прочитаємо чат Луїзи й Аліни та перевіримо, що в ньому правда. Потім проведемо опитування в класі: чим ви цікавитеся? Як ви ставитеся до різних субкультур? Чи належить хтось із вас до якоїсь субкультури? Наприкінці прокоментуємо результати й напишемо Луїзі відповідь.
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Heute lernst du</p>
+        <p style="margin:0;">• nach Interessen fragen — <i>Interessierst du dich <b>für</b> Cosplay? Gehörst du <b>einer</b> Jugendszene an?</i><br>
+           • deine Meinung begründen — <i>Ich finde Parkour spannend, <b>weil</b> man über Hindernisse <b>springt</b>.</i><br>
+           • Ergebnisse einer Umfrage kommentieren — <i><b>Die meisten</b> zeigen Interesse <b>an der</b> Gamer-Szene. <b>Einige</b> interessieren sich für K-Pop.</i><br>
+           • über Jugendszenen in der Ukraine berichten</p>
+      </div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Ich drücke mich am liebsten mit Musik aus. Und du – mit Kleidung, Sport oder Kunst?</p>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: перевірка ДЗ (dz уроку 9-B-7: Projekt „Jugendsubkulturen international“) ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: обрати молодіжну субкультуру, яка є в Україні, і скласти анкету (назва, зовнішність, виникнення, головні ідеї, музика); розпитати когось із оточення й написати два речення з <b>dass</b>; написати Луїзі відповідь у чаті чи e-mail (70–90 слів) і поставити їй питання з <b>Was für …?</b> або <b>Welch- …?</b><br><br>
+        Зачитайте 2–3 відповіді Луїзі — клас слухає: яку субкультуру представлено? А тепер розминка: Ольга теж написала Луїзі, але в її чернетці є помилки. Торкнися слова з помилкою і виправ його. Якщо речення правильне — натисни «Fehlerfrei».
+      </div>
+      <div class="card" id="dz-fix" style="margin-top:16px;"></div>
+
+      <div class="card" id="dz-vocab-wrap" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">Wörter-Check</p>
+        <p class="lead">Перевір слова з минулого уроку.</p>
+        <div id="dz-vocab"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: richtig / falsch до чату ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Richtig oder falsch?</h2>
+      <p class="lead">Прочитай ще раз чат Луїзи й Аліни. Визнач, чи відповідають речення змісту чату. Перше речення — приклад.</p>
+
+      <div class="mail-window">
+        <div class="mail-titlebar">💬 Chat · Luisa</div>
+        <div class="mail-body">
+          <p><b>Luisa:</b> Hallo Alina, wie geht's? Vor Kurzem haben wir im Unterricht über Jugendsubkulturen in Deutschland diskutiert. Ich habe viel Neues erfahren.</p>
+          <p><b>Alina:</b> Hi Luisa, das ist wirklich ein spannendes Thema.</p>
+          <p><b>Luisa:</b> Ja, stimmt. Einige von meinen Mitschülern gehören zu verschiedenen Szenen und haben diese selbst präsentiert. Ein Junge hat sogar einen kurzen Film über Skater gebracht. Den haben wir uns mit großem Interesse angesehen.</p>
+          <p><b>Alina:</b> Das kann ich mir gut vorstellen.</p>
+          <p><b>Luisa:</b> Und jetzt arbeiten wir am Projekt „Jugendsubkulturen international“. Ich möchte gern Jugendszenen in der Ukraine präsentieren. Kannst du mir irgendwelche Informationen geben?</p>
+          <p style="margin:0;"><b>Alina:</b> Natürlich helfe ich dir mit Vergnügen.</p>
+        </div>
+      </div>
+
+      <p class="lead" style="margin-top:18px;">A) Richtig oder falsch?</p>
+      <div class="card" id="ub1-list">
+        <div class="fill-item"><span class="num">1)</span> Luisa und Alina chatten über Mode. → <b>falsch</b> <span style="opacity:.7;">(Beispiel)</span></div>
+        <div class="fill-item"><span class="num">2)</span> Luisa schreibt, dass sie im Unterricht Jugendinitiativen diskutiert haben. → <select class="blank inline" data-ans="falsch" aria-label="Satz 2"><option value="">—</option><option>richtig</option><option>falsch</option></select></div>
+        <div class="fill-item"><span class="num">3)</span> Luisa berichtet, dass sie viel Neues über Jugendsubkulturen erfahren hat. → <select class="blank inline" data-ans="richtig" aria-label="Satz 3"><option value="">—</option><option>richtig</option><option>falsch</option></select></div>
+        <div class="fill-item"><span class="num">4)</span> Alina findet das Thema interessant. → <select class="blank inline" data-ans="richtig" aria-label="Satz 4"><option value="">—</option><option>richtig</option><option>falsch</option></select></div>
+        <div class="fill-item"><span class="num">5)</span> Einige Mitschüler/innen von Alina haben selbst ihre Szenen präsentiert. → <select class="blank inline" data-ans="falsch" aria-label="Satz 5"><option value="">—</option><option>richtig</option><option>falsch</option></select></div>
+        <div class="fill-item"><span class="num">6)</span> Ein Junge hat einen Film über Cosplayer vorbereitet. → <select class="blank inline" data-ans="falsch" aria-label="Satz 6"><option value="">—</option><option>richtig</option><option>falsch</option></select></div>
+        <div class="fill-item"><span class="num">7)</span> Luisas Klasse arbeitet nun am Projekt „Jugendsubkulturen international“. → <select class="blank inline" data-ans="richtig" aria-label="Satz 7"><option value="">—</option><option>richtig</option><option>falsch</option></select></div>
+        <div class="fill-item"><span class="num">8)</span> Luisa will mehr über Jugendszenen in der Ukraine erfahren und bittet Alina um Hilfe. → <select class="blank inline" data-ans="richtig" aria-label="Satz 8"><option value="">—</option><option>richtig</option><option>falsch</option></select></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub1-check">Prüfen</button>
+        <button class="btn secondary" id="ub1-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub1-score"></span>
+      </div>
+
+      <p class="lead" style="margin-top:18px;">B) Виправ неправильні речення: впиши одне слово з чату.</p>
+      <div class="card" id="ub1b-list">
+        <div class="fill-item"><span class="num">1)</span> Luisa und Alina chatten über <input type="text" class="blank-input inline wide" data-ans="Jugendsubkulturen|Jugendszenen|Subkulturen" data-case aria-label="Wort 1">.</div>
+        <div class="fill-item"><span class="num">2)</span> Luisa schreibt, dass sie im Unterricht <input type="text" class="blank-input inline wide" data-ans="Jugendsubkulturen|Subkulturen|Jugendszenen" data-case aria-label="Wort 2"> diskutiert haben.</div>
+        <div class="fill-item"><span class="num">5)</span> Einige Mitschüler/innen von <input type="text" class="blank-input inline" data-ans="Luisa" data-case aria-label="Wort 3"> haben selbst ihre Szenen präsentiert.</div>
+        <div class="fill-item"><span class="num">6)</span> Ein Junge hat einen Film über <input type="text" class="blank-input inline" data-ans="Skater" data-case aria-label="Wort 4"> gebracht.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub1b-check">Prüfen</button>
+        <button class="btn secondary" id="ub1b-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub1b-score"></span>
+      </div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Корисні слова</span>
+        <b>die Jugendinitiative</b> — молодіжна ініціатива · <b>erfahren</b> — дізнаватися · <b>berichten</b> — розповідати, повідомляти ·
+        <b>um Hilfe bitten</b> — просити про допомогу · <b>mit Vergnügen</b> — із задоволенням. Іменники пиши з великої літери.
+      </div>
+    </section>
+
+    <!-- ===== Üb. 2: опитування — мовні кліше ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Macht eine Umfrage über Jugendszenen</h2>
+      <p class="lead">A) Міа розпитує Тараса для опитування. Доповни діалог: впиши слово або обери з випадного списку.</p>
+
+      <div class="mail-window">
+        <div class="mail-titlebar">🎤 Umfrage · Mia und Taras</div>
+        <div class="mail-body" id="ub2-list">
+          <div class="fill-item"><span class="num">1)</span> <b>Mia:</b> Interessierst du <input type="text" class="blank-input inline" data-ans="dich" aria-label="Lücke 1"> für Jugendszenen?</div>
+          <div class="fill-item"><span class="num">2)</span> <b>Taras:</b> Ja, ich interessiere mich <select class="blank inline" data-ans="für" aria-label="Lücke 2"><option value="">—</option><option>an</option><option>für</option><option>mit</option></select> Cosplay.</div>
+          <div class="fill-item"><span class="num">3)</span> <b>Mia:</b> Wie <input type="text" class="blank-input inline" data-ans="findest" aria-label="Lücke 3"> du Cosplay?</div>
+          <div class="fill-item"><span class="num">4)</span> <b>Taras:</b> Ich finde Cosplay spannend, weil die Kostüme so kreativ <input type="text" class="blank-input inline" data-ans="sind" aria-label="Lücke 4">.</div>
+          <div class="fill-item"><span class="num">5)</span> <b>Mia:</b> Und Parkour? — <b>Taras:</b> Parkour finde ich doof, weil es zu gefährlich <input type="text" class="blank-input inline" data-ans="ist" aria-label="Lücke 5">.</div>
+          <div class="fill-item"><span class="num">6)</span> <b>Mia:</b> <select class="blank inline" data-ans="Gehörst" aria-label="Lücke 6"><option value="">—</option><option>Gehöre</option><option>Gehörst</option><option>Gehört</option></select> du einer Jugendszene an?</div>
+          <div class="fill-item"><span class="num">7)</span> <b>Taras:</b> Nein, ich gehöre <select class="blank inline" data-ans="keiner" aria-label="Lücke 7"><option value="">—</option><option>keine</option><option>keinen</option><option>keiner</option></select> Szene an.</div>
+          <div class="fill-item"><span class="num">8)</span> <b>Taras:</b> Aber meine Schwester gehört <select class="blank inline" data-ans="der" aria-label="Lücke 8"><option value="">—</option><option>die</option><option>der</option><option>den</option></select> Cosplay-Szene an.</div>
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Зверни увагу</span>
+        <b>sich interessieren für + Akk.</b> — цікавитися чимось · <b>angehören + Dat.</b> — належати до (einer Szene, keiner Szene, der Szene) ·
+        у реченні з <b>weil</b> дієслово стоїть у самому кінці: <i>…, weil die Kostüme kreativ <b>sind</b>.</i>
+      </div>
+
+      <p class="lead" style="margin-top:18px;">B) Склади речення з <b>weil</b> — так у опитуванні пояснюють свою думку.</p>
+      <div class="card" id="ub2-order"></div>
+
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Jetzt ihr! · Umfrage in der Klasse</p>
+        <p style="margin:0 0 8px;">Розпитайте 4–5 однокласників за цими кліше й запишіть відповіді в таблицю в зошиті: <i>Name – Interesse – Meinung – Vertreter/in?</i></p>
+        <p style="margin:0;"><b>A:</b> Interessierst du dich für …?<br>
+           <b>B:</b> Ja, ich interessiere mich für … / Nein, ich habe kein Interesse dafür.<br>
+           <b>A:</b> Wie findest du …?<br>
+           <b>B:</b> … finde ich spannend / interessant / beeindruckend / cool / ungewöhnlich / doof, weil …<br>
+           <b>A:</b> Gehörst du einer Jugendszene an?<br>
+           <b>B:</b> Ja, ich gehöre der …-Szene an. / Nein, ich gehöre keiner Szene an.</p>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: коментуємо результати ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Kommentiert die Ergebnisse</h2>
+      <p class="lead">Ось результати опитування в класі 9-B (26 учнів). Спершу зрозумій таблицю, потім прокоментуй її.</p>
+
+      <div class="card">
+        <table class="gtable">
+          <tr><th>Jugendszene</th><th>Zeigen Interesse</th><th>Vertreter/innen in der Klasse</th></tr>
+          <tr><td>🎮 Gamer</td><td>18</td><td>3</td></tr>
+          <tr><td>🎤 Hip-Hop</td><td>12</td><td>2</td></tr>
+          <tr><td>🛹 Skater</td><td>9</td><td>2</td></tr>
+          <tr><td>🎭 Cosplay</td><td>6</td><td>1</td></tr>
+          <tr><td>💜 K-Pop</td><td>5</td><td>0</td></tr>
+          <tr><td>🧗 Parkour (Traceure)</td><td>3</td><td>0</td></tr>
+          <tr><td>🖤 Goths</td><td>2</td><td>0</td></tr>
+        </table>
+      </div>
+
+      <p class="lead">A) Що показує опитування?</p>
+      <div class="card" id="ub3-quiz"></div>
+
+      <p class="lead" style="margin-top:18px;">B) Прокоментуй результати: впиши слово або обери з випадного списку.</p>
+      <div class="card" id="ub3-list">
+        <div class="fill-item"><span class="num">1)</span> Die <input type="text" class="blank-input inline" data-ans="meisten" aria-label="Lücke 1"> Schüler/innen zeigen Interesse an der Gamer-Szene.</div>
+        <div class="fill-item"><span class="num">2)</span> Zwölf Schüler/innen zeigen Interesse <select class="blank inline" data-ans="an" aria-label="Lücke 2a"><option value="">—</option><option>an</option><option>auf</option><option>für</option></select> <select class="blank inline" data-ans="der" aria-label="Lücke 2b"><option value="">—</option><option>die</option><option>der</option><option>den</option></select> Hip-Hop-Szene.</div>
+        <div class="fill-item"><span class="num">3)</span> <select class="blank inline" data-ans="Einige" aria-label="Lücke 3"><option value="">—</option><option>Die meisten</option><option>Einige</option><option>Keine</option></select> interessieren sich für Cosplay.</div>
+        <div class="fill-item"><span class="num">4)</span> Fünf Schüler/innen interessieren sich <select class="blank inline" data-ans="für" aria-label="Lücke 4a"><option value="">—</option><option>an</option><option>für</option><option>mit</option></select> <select class="blank inline" data-ans="die" aria-label="Lücke 4b"><option value="">—</option><option>die</option><option>der</option><option>den</option></select> K-Pop-Szene.</div>
+        <div class="fill-item"><span class="num">5)</span> Goths finden wir ungewöhnlich, weil sie immer schwarze Kleidung <input type="text" class="blank-input inline" data-ans="tragen" aria-label="Lücke 5">.</div>
+        <div class="fill-item"><span class="num">6)</span> Skater finden wir beeindruckend, weil sie tolle Tricks <input type="text" class="blank-input inline" data-ans="machen|zeigen|können" aria-label="Lücke 6">.</div>
+        <div class="fill-item"><span class="num">7)</span> In unserer Klasse gibt es drei Vertreter/innen <select class="blank inline" data-ans="der" aria-label="Lücke 7"><option value="">—</option><option>die</option><option>der</option><option>den</option></select> Gamer-Szene.</div>
+        <div class="fill-item"><span class="num">8)</span> In unserer Klasse gibt es <select class="blank inline" data-ans="keine" aria-label="Lücke 8"><option value="">—</option><option>kein</option><option>keine</option><option>keinen</option></select> Vertreter/innen der K-Pop-Szene.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Зверни увагу</span>
+        <b>Interesse zeigen an + Dat.</b> (an der Szene), але <b>sich interessieren für + Akk.</b> (für die Szene) ·
+        <b>die meisten</b> — більшість · <b>einige</b> — деякі · <b>Vertreter/innen der Szene</b> — представники субкультури (Genitiv).
+      </div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Und eure Klasse? Zählt eure Ergebnisse aus Üb. 2 zusammen und kommentiert sie mit diesen Sätzen!</p>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4: лист Луїзі ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Schreib eine Antwort an Luisa</h2>
+      <p class="lead">Розкажи Луїзі про молодіжні субкультури в Україні (використай свою анкету з домашнього завдання) і про результати опитування в нашому класі (Üb. 2–3).</p>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Plan</p>
+        <p style="margin:0;">1. Anrede und Einleitung — <i>Liebe Luisa, ich möchte dir gerne helfen und über Jugendsubkulturen in der Ukraine schreiben.</i><br>
+           2. 2–3 Jugendszenen in der Ukraine — <i>Bei uns gibt es viele … Typisch für sie ist …</i><br>
+           3. Ergebnisse der Umfrage — <i>Die meisten Schüler/innen zeigen Interesse an … Einige interessieren sich für … In unserer Klasse gibt es Vertreter/innen der …</i><br>
+           4. Deine Meinung mit weil — <i>… finde ich spannend, weil …</i><br>
+           5. Eine Frage an Luisa und Gruß — <i>Welche Szene ist bei euch am beliebtesten? Viele Grüße, …</i></p>
+      </div>
+      <div class="card" id="ub4-w"></div>
+      <div class="ua-note">
+        Вставка тексту в це поле вимкнена — набирай лист сам. Лічильник під полем показує кількість слів, а зелені позначки — які обов'язкові звороти ти вже вжив(-ла).
+      </div>
+    </section>
+
+    <!-- ===== ПРИКІНЦЕВА ПАНЕЛЬ ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Mein Stil, meine Szene – ein Post: Stell dir vor, du machst einen Post für die Seite „Jugendsubkulturen international“ von Luisas Klasse. 1) Zeichne ein „Foto“ oder klebe ein Bild ein: Wie drückst du dich aus – durch Kleidung, Musik, Sport, Kunst oder ein Hobby? 2) Schreib darunter einen Text (6–8 Sätze): Wofür interessierst du dich? Gehörst du einer Jugendszene an oder nicht? Wie drückst du dich aus? Benutze mindestens einmal „sich interessieren für“, einmal „angehören + Dativ“ (z. B. „Ich gehöre keiner Szene an.“) und zwei weil-Sätze (z. B. „Ich trage gern weite Hoodies, weil sie bequem sind.“). 3) Schreib drei Hashtags (z. B. #Skater #meinStil #Kyjiw). 4) Schreib unter deinen Post zwei Kommentare von Mitschülern mit „Ich finde … spannend / cool / ungewöhnlich, weil …“. Nächstes Mal hängen wir die Posts auf und kommentieren sie in der Klasse.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          «Мій стиль, моя субкультура» — допис: уяви, що ти робиш допис для сторінки «Jugendsubkulturen international» класу Луїзи. 1) Намалюй «фото» або вклей картинку: як ти виражаєш себе — через одяг, музику, спорт, мистецтво чи хобі? 2) Напиши під ним текст (6–8 речень): чим ти цікавишся? Ти належиш до якоїсь молодіжної субкультури чи ні? Як ти виражаєш себе? Ужий щонайменше раз «sich interessieren für», раз «angehören + Dativ» (напр. «Ich gehöre keiner Szene an.») і два речення з weil (напр. «Ich trage gern weite Hoodies, weil sie bequem sind.»). 3) Напиши три хештеги (напр. #Skater #meinStil #Kyjiw). 4) Під дописом напиши два коментарі однокласників зі зворотом «Ich finde … spannend / cool / ungewöhnlich, weil …». Наступного уроку розвісимо дописи й прокоментуємо їх у класі.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Wörter zum Lernen</p>
+        <div class="chip-row" id="vocabChips"></div>
+      </div>
+
+      <div class="card" id="lessonGramWrap">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="lessonGram"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../data/glossary-data.js"></script>
+<script src="../../../data/lessons-data.js"></script>
+<script src="../../../data/grammar-data.js"></script>
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  const LEKTION_KLAS = "9", LEKTION_MODUL = "B", LEKTION_LEKTION = 8;
+  const LEKTION_PREV_LEKTION = 7;
+
+  (function renderLessonVocab(){
+    const box = document.getElementById('vocabChips');
+    if (!box || typeof GLOSSARY === 'undefined') return;
+    const words = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_LEKTION
+    );
+    if (words.length === 0){
+      box.innerHTML = '<p class="empty-note">Слова для цього уроку ще не додані в глосарій.</p>';
+      return;
+    }
+    box.innerHTML = words.map(w =>
+      '<span class="chip static">' + w.de + ' — ' + w.uk + '</span>'
+    ).join('');
+  })();
+
+  // ===== Граматика до цього уроку у вкладці Fertig (поле gram у lessons-data.js) =====
+  (function renderLessonGrammar(){
+    const wrap = document.getElementById('lessonGramWrap');
+    const box = document.getElementById('lessonGram');
+    if (!wrap || !box) return;
+    const hide = () => { wrap.style.display = 'none'; };
+    if (typeof LESSONS === 'undefined' || typeof GRAMMAR === 'undefined') return hide();
+    const me = LESSONS.find(l => l.klas === LEKTION_KLAS && l.modul === LEKTION_MODUL && l.lektion === LEKTION_LEKTION);
+    const topics = ((me && me.gram) || []).map(id => GRAMMAR.find(t => t.id === id)).filter(t => t && t.opublikovano > 0);
+    if (topics.length === 0) return hide();
+    // корінь сайту беремо з того самого шляху, яким підключено grammar-data.js —
+    // тож окремо міняти шлях тут при копіюванні шаблону не треба
+    const src = document.querySelector('script[src$="data/grammar-data.js"]').getAttribute('src');
+    const root = src.slice(0, src.length - 'data/grammar-data.js'.length);
+    box.innerHTML = topics.map(t =>
+      '<a class="gram-link" href="' + root + 'gramatyka/temy/' + t.id + '.html">'
+      + '<span class="k">' + t.uk + '</span>' + t.tema + '</a>'
+    ).join('');
+  })();
+
+  // ===== Wörter-Check у вкладці Hausaufgabe (слова ПОПЕРЕДНЬОГО уроку) =====
+  // Використовує ті самі спільні функції, що й Üb.1 (buildQuiz) та
+  // Fertig! (shuffleArray) — нового коду в lesson-interactions.js не було.
+
+  // ---------- Груба евристика частини мови за виглядом "de" ----------
+  // Потрібна лише для того, щоб варіанти-пастки у Wörter-Check були тієї
+  // самої частини мови, що й правильна відповідь (інакше учень вгадує за
+  // формою слова — "це іменник чи дієслово?" — а не за значенням). Це
+  // евристика за текстом рядка, а не лінгвістичний аналізатор, і вона не
+  // вимагає жодного нового поля в даних GLOSSARY.
+  function guessPos(de){
+    var base = (de || '').replace(/\([^)]*\)/g, '').trim();
+    if(/^(der|die|das)(\/(der|die|das))?\s/.test(base)) return 'noun';
+    if(/^sich\s/.test(base)) return 'verb';
+    if(/^am\s/.test(base)) return 'other'; // "am liebsten", "am besten" — прислівникова найвища форма, не дієслово
+    if(/\(\+(Gen|Dat|Akk)\.?\)/.test(de)) return 'prep';
+    var words = base.split(/\s+/);
+    var last = words[words.length - 1];
+    if(/(en|ern|eln)$/.test(last) && last === last.toLowerCase()) return 'verb';
+    return 'other'; // прикметники / прислівники / сталі вирази
+  }
+
+  (function renderDzVocabCheck(){
+    const wrap = document.getElementById('dz-vocab-wrap');
+    const box = document.getElementById('dz-vocab');
+    if (!wrap || !box || typeof GLOSSARY === 'undefined') return;
+    if (!LEKTION_PREV_LEKTION){ wrap.style.display = 'none'; return; }
+
+    const prevWords = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_PREV_LEKTION
+    );
+    if (prevWords.length < 3){ wrap.style.display = 'none'; return; }
+
+    const pool = shuffleArray(prevWords).slice(0, 6); // 5–6 слів на перевірку
+    const quizData = pool.map(w => {
+      // Пастки — тієї самої частини мови, що й правильне слово (guessPos вище),
+      // інакше учень вгадує за формою відповіді, а не за її значенням.
+      const pos = guessPos(w.de);
+      let sameKind = GLOSSARY.filter(g => g.uk !== w.uk && guessPos(g.de) === pos);
+      if(sameKind.length < 2) sameKind = GLOSSARY.filter(g => g.uk !== w.uk); // запасний варіант, якщо слів цієї частини мови замало
+      const distractors = shuffleArray(sameKind).slice(0, 2).map(g => g.uk);
+      return { q: w.de, opts: [w.uk, ...distractors], correct: w.uk };
+    });
+    buildQuiz('dz-vocab', quizData);
+  })();
+
+  // Hausaufgabe: чернетка Ольги — знайди й виправ помилку
+  buildFixError('dz-fix', [
+    {s: "Bei uns in der Ukraine gibt es viele Skater.", ok: true},
+    {s: "Ich interessiere mich auf Hip-Hop.", wrong: 3, fix: "für"},
+    {s: "Meine Freundin gehört keine Subkultur an.", wrong: 3, fix: "keiner"},
+    {s: "Mein Bruder hat gesagt, dass Skater sehr mutig sind.", ok: true},
+    {s: "Die Hip-Hop-Szene ist in den USA entstehen.", wrong: 6, fix: "entstanden"},
+    {s: "Welches Musikstil hörst du am liebsten?", wrong: 0, fix: "Welchen"},
+    {s: "Ich finde Cosplay spannend, weil die Kostüme sehr schön sind.", ok: true}
+  ]);
+
+  // Üb. 1: richtig / falsch + виправлення
+  wireBlanks('ub1');
+  wireBlanks('ub1b');
+
+  // Üb. 2: діалог опитування + речення з weil
+  wireBlanks('ub2');
+  buildOrder('ub2-order', [
+    {words: ["Ich finde Skater beeindruckend,", "weil", "sie", "tolle Tricks", "machen"], end: "."},
+    {words: ["Ich finde Goths ungewöhnlich,", "weil", "sie", "immer schwarze Kleidung", "tragen"], end: "."},
+    {words: ["Parkour finde ich spannend,", "weil", "man", "über Hindernisse", "springt"], end: ".", gross: true},
+    {words: ["Ich finde Cosplay cool,", "weil", "ich", "mich", "für Anime", "interessiere"], end: "."}
+  ]);
+
+  // Üb. 3: A — розуміння таблиці (позиції правильних: 1, 2, 3, 2)
+  buildQuiz('ub3-quiz', [
+    {q: "Für welche Szene zeigen die meisten Schüler/innen Interesse?", opts: ["für die Gamer-Szene", "für die Goth-Szene", "für die K-Pop-Szene"], correct: "für die Gamer-Szene"},
+    {q: "Welcher Satz passt zur Umfrage?", opts: ["Die meisten finden Goths spannend.", "Einige interessieren sich für Cosplay.", "Es gibt keine Vertreter/innen der Hip-Hop-Szene."], correct: "Einige interessieren sich für Cosplay."},
+    {q: "Wie viele Vertreter/innen von Jugendszenen gibt es in der Klasse insgesamt?", opts: ["drei", "fünf", "acht"], correct: "acht"},
+    {q: "Welche Szene hat Interessenten, aber keine Vertreter/innen in der Klasse?", opts: ["die Skater-Szene", "die K-Pop-Szene", "die Hip-Hop-Szene"], correct: "die K-Pop-Szene"}
+  ]);
+  // Üb. 3: B — коментар до результатів
+  wireBlanks('ub3');
+
+  // Üb. 4: лист Луїзі (у бал не йде, у звіт — текст і чекліст)
+  buildWriting('ub4-w', {
+    prompt: "Liebe Luisa, ich möchte dir gerne helfen und über Jugendsubkulturen in der Ukraine schreiben. … (80–120 Wörter)",
+    words: "80-120",
+    rows: 10,
+    must: ["Liebe Luisa", "interessieren sich für/interessiert sich für/interessiere mich für", "die meisten", "Vertreter", "weil", "Viele Grüße/Liebe Grüße"],
+    check: ["Я розповів(-ла) про 2–3 субкультури в Україні", "Я написав(-ла) результати опитування нашого класу", "Після weil дієслово стоїть у кінці речення", "Я поставив(-ла) Луїзі одне запитання"]
+  });
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🎤','📊','✉️','🎭']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
