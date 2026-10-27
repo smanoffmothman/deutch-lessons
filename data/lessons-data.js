@@ -935,7 +935,7 @@ const LESSONS = [
     modul: "B",
     lektion: 8,
     nazva: "Wie drückst du dich aus?",
-    opys: "Спосіб самовираження: перевіряємо зміст чату Луїзи й Аліни (richtig / falsch), проводимо в класі опитування про молодіжні субкультури (sich interessieren für, angehören, finden …, weil …), коментуємо його результати (die meisten, einige, Interesse zeigen an) і пишемо Луїзі лист про субкультури в Україні.",
+    opys: "Спосіб самовираження: граємо в «детективів» — шукаємо підмінені слова в «зламаному» чаті Луїзи й Аліни та перевіряємо його зміст (richtig / falsch), проводимо в класі опитування про молодіжні субкультури (sich interessieren für, angehören, finden …, weil …), коментуємо його результати (die meisten, einige, Interesse zeigen an) і пишемо Луїзі лист про субкультури в Україні.",
     file: "klas-9/modul-b/lektion-8.html",
     nove: true,
     gram: ["verben-praepositionalobjekt", "rektion-verben", "kausalsaetze", "indefinitpronomen"],
