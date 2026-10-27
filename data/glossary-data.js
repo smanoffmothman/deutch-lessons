@@ -1003,5 +1003,17 @@ const GLOSSARY = [
   {de: "dauern (Die Post dauert lange.)", uk: "тривати (Пошта йде довго.)", klas: "8", modul: "B", lektion: 9},
   {de: "Liebe Grüße", uk: "З найкращими побажаннями (підпис у листі)", klas: "8", modul: "B", lektion: 9},
   {de: "der Comic (die Comics)", uk: "комікс", klas: "8", modul: "B", lektion: 9},
-  {de: "die Sprechblase (die Sprechblasen)", uk: "«бульбашка» з репліками в коміксі", klas: "8", modul: "B", lektion: 9}
+  {de: "die Sprechblase (die Sprechblasen)", uk: "«бульбашка» з репліками в коміксі", klas: "8", modul: "B", lektion: 9},
+  {de: "das Gokartfahren", uk: "картинг, катання на картах", klas: "8", modul: "B", lektion: 10},
+  {de: "der Rennwagen (die Rennwagen)", uk: "гоночний автомобіль", klas: "8", modul: "B", lektion: 10},
+  {de: "die Geschwindigkeit", uk: "швидкість", klas: "8", modul: "B", lektion: 10},
+  {de: "der Adrenalinkick", uk: "викид адреналіну, гострі відчуття", klas: "8", modul: "B", lektion: 10},
+  {de: "benötigen", uk: "потребувати (= brauchen)", klas: "8", modul: "B", lektion: 10},
+  {de: "das Kitesurfen", uk: "кайтсерфінг", klas: "8", modul: "B", lektion: 10},
+  {de: "der Trendsport", uk: "модний вид спорту", klas: "8", modul: "B", lektion: 10},
+  {de: "die Schwerelosigkeit", uk: "невагомість", klas: "8", modul: "B", lektion: 10},
+  {de: "zaubern", uk: "чаклувати, показувати фокуси", klas: "8", modul: "B", lektion: 10},
+  {de: "die Zauberschule (die Zauberschulen)", uk: "школа магії (фокусів)", klas: "8", modul: "B", lektion: 10},
+  {de: "verblüffen", uk: "приголомшити, вразити", klas: "8", modul: "B", lektion: 10},
+  {de: "adrenalinsüchtig", uk: "залежний від адреналіну", klas: "8", modul: "B", lektion: 10}
 ];
