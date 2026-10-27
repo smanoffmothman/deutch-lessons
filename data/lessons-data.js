@@ -918,5 +918,16 @@ const LESSONS = [
     nove: true,
     gram: ["verben-dass-infinitiv", "modalverben", "kausalsaetze", "imperativ"],
     dz: "Chat „Komm mit!“: Schreib einen Messenger-Chat (10–12 Nachrichten) zwischen dir und einem Freund / einer Freundin – auf Papier, wie auf dem Handy-Bildschirm, gern mit Emojis. 1) Du hast eine Anzeige für ein ungewöhnliches Hobby gefunden (aus Üb. 1 oder eure Anzeige aus Üb. 5) und möchtest es zusammen ausprobieren. Erzähl, was man da macht und was man braucht. 2) Dein Freund / Deine Freundin hat Zweifel und nennt zwei Probleme (z. B. „Ich habe Angst, … zu …“, „Ich habe keine Zeit, weil …“) – und du findest für jedes Problem eine Lösung. 3) Benutze mindestens zwei Infinitive mit zu (davon einen mit einem trennbaren Verb, z. B. „Hast du Lust, es auszuprobieren?“), einen Satz mit „weil“ und einen Imperativ (z. B. „Komm mit!“). 4) Am Ende verabredet ihr euch: Wann und wo trefft ihr euch? Nächstes Mal spielen wir die Chats in Paaren vor."
+  },
+  {
+    klas: "9",
+    modul: "B",
+    lektion: 7,
+    nazva: "Wir sind alle verschieden",
+    opys: "Всі ми різні: переказуємо, що сказали гот Алекс і панкерка Міріам (… hat gesagt, dass …), слухаємо інтерв'ю хіп-хопера Джамала й заповнюємо таблицю, розігруємо інтерв'ю зі скейтерами, гіпі й косплеєрами та допомагаємо Луїзі з проєктом про молодіжні субкультури в Україні.",
+    file: "klas-9/modul-b/lektion-7.html",
+    nove: true,
+    gram: ["verben-dass-infinitiv", "nebensaetze", "fragen"],
+    dz: "Projekt „Jugendsubkulturen international“: Hilf Luisa! 1) Wähle eine Jugendszene, die es in der Ukraine gibt (z. B. Skater, Hip-Hopper, Cosplayer, Gamer, K-Pop-Fans, Traceure), und mach einen Steckbrief wie die Tabelle in Üb. 2: Name der Szene, Aussehen, Entstehung, Hauptideen, Musikstil – in Stichworten. 2) Frag eine Person aus deinem Umfeld (Freund/in, Geschwister, Eltern), was sie über diese Szene denkt, und schreib zwei Sätze mit „dass“ (z. B. „Mein Bruder hat gesagt, dass Skater sehr mutig sind.“). 3) Schreib Luisa eine Antwort im Chat oder per E-Mail (70–90 Wörter): Stell die Szene vor, benutze die Informationen aus deinem Steckbrief und deine zwei dass-Sätze und stell Luisa eine Frage mit „Was für …?“ oder „Welch- …?“. Nächstes Mal machen wir eine kleine Ausstellung „Jugendszenen in der Ukraine“."
   }
 ];
