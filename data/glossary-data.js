@@ -979,5 +979,17 @@ const GLOSSARY = [
   {de: "nähen (Kleidung nähen)", uk: "шити (одяг)", klas: "7", modul: "C", lektion: 4},
   {de: "die Werkstatt (die Werkstätten)", uk: "майстерня", klas: "7", modul: "C", lektion: 4},
   {de: "inszenieren (ein Stück inszenieren)", uk: "ставити (виставу, п'єсу)", klas: "7", modul: "C", lektion: 4},
-  {de: "die Aufführung (die Aufführungen)", uk: "вистава, виступ", klas: "7", modul: "C", lektion: 4}
+  {de: "die Aufführung (die Aufführungen)", uk: "вистава, виступ", klas: "7", modul: "C", lektion: 4},
+  {de: "hoffen auf (+Akk.) (Wir hoffen auf deine Unterstützung.)", uk: "сподіватися на (Ми сподіваємося на твою підтримку.)", klas: "8", modul: "B", lektion: 8},
+  {de: "suchen nach (+Dat.) (nach neuen Freunden suchen)", uk: "шукати (шукати нових друзів)", klas: "8", modul: "B", lektion: 8},
+  {de: "es geht um (+Akk.) (In diesem Beitrag geht es um Freundschaft.)", uk: "ідеться про (У цьому дописі йдеться про дружбу.)", klas: "8", modul: "B", lektion: 8},
+  {de: "das soziale Netzwerk (die sozialen Netzwerke)", uk: "соціальна мережа (соціальні мережі)", klas: "8", modul: "B", lektion: 8},
+  {de: "komponieren", uk: "складати музику, писати пісні", klas: "8", modul: "B", lektion: 8},
+  {de: "die Extremsportart (die Extremsportarten)", uk: "екстремальний вид спорту", klas: "8", modul: "B", lektion: 8},
+  {de: "der Charakterzug (die Charakterzüge)", uk: "риса характеру", klas: "8", modul: "B", lektion: 8},
+  {de: "der Musikgeschmack", uk: "музичний смак", klas: "8", modul: "B", lektion: 8},
+  {de: "einverstanden sein (mit +Dat.)", uk: "погоджуватися (з кимось / чимось)", klas: "8", modul: "B", lektion: 8},
+  {de: "anderer Meinung sein (Wir sind ganz anderer Meinung.)", uk: "бути іншої думки (Ми зовсім іншої думки.)", klas: "8", modul: "B", lektion: 8},
+  {de: "unterwegs", uk: "в дорозі, поза домом", klas: "8", modul: "B", lektion: 8},
+  {de: "beispielsweise", uk: "наприклад", klas: "8", modul: "B", lektion: 8}
 ];

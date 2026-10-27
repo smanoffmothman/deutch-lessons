@@ -885,5 +885,16 @@ const LESSONS = [
     nove: true,
     gram: ["satzstellung-hauptsatz", "modalverben", "verben-dass-infinitiv", "artikel-gebrauch"],
     dz: "AG-Umfrage und AG-Rätsel: 1) Frag drei Personen (Mitschüler, Geschwister, Eltern oder Großeltern): „Besuchst du eine AG? / Hast du früher eine AG besucht? Was macht man da?“ und „Welche AG möchtest du gern besuchen?“ Notiere die Antworten in einer Tabelle: Name – AG – Was macht man da? 2) Schreib zu jeder Person zwei Sätze, z. B. „Mein Opa hat eine Technik-AG besucht. In einer Technik-AG lernt man Flugmodelle konstruieren.“ oder „Meine Schwester träumt davon, eine Mode-AG zu besuchen.“ Benutze mindestens einmal „Da kann man auch …“ und einmal „träumen davon, … zu …“. 3) AG-Rätsel: Beschreib eine AG in drei Sätzen, ohne ihren Namen zu nennen: „In dieser AG lernt man … Da kann man auch … Man braucht …“ Schreib die Lösung mit Artikel auf die Rückseite (z. B. die Wetter-AG). Nächstes Mal raten die anderen: Welche AG ist das?"
+  },
+  {
+    klas: "8",
+    modul: "B",
+    lektion: 8,
+    nazva: "Gemeinsame Interessen",
+    opys: "Урок-повторення про хобі й друзів: сортуємо хобі, види спорту й екстремальні види спорту, ставимо запитання з wo(r)- + прийменник (Womit? Wovon? Nach wem?), слухаємо запитання інтерв'ю, розгадуємо лист Мартіни з шифром і дискутуємо, якою має бути ідеальна дружба.",
+    file: "klas-8/modul-b/lektion-8.html",
+    nove: true,
+    gram: ["verben-praepositionalobjekt", "fragen", "reflexive-verben"],
+    dz: "Was haben wir gemeinsam? 1) Mach ein Interview mit einem Freund / einer Freundin (oder einem Familienmitglied): Stell mindestens fünf Fragen aus Üb. 3 (z. B. „Wofür interessierst du dich?“, „Womit beschäftigst du dich in deiner Freizeit?“, „Was macht ihr gern zusammen?“). 2) Zeichne zwei Kreise, die sich überschneiden (ein Venn-Diagramm): links – nur deine Interessen und Hobbys, rechts – nur seine / ihre, in der Mitte – eure gemeinsamen Interessen (mindestens drei). 3) Schreib darunter 6–8 Sätze: Was habt ihr gemeinsam, und worin seid ihr verschieden? Benutze mindestens zweimal „sich interessieren für“ oder „sich beschäftigen mit“, einmal „wir … beide …“ (z. B. „Wir interessieren uns beide für Fotografie.“) und einen Satz mit „aber“ (z. B. „Ich spiele gern Volleyball, aber Oleh findet Sport langweilig.“). 4) Schreib zum Schluss eine Frage an die Klasse mit wo(r)- + Präposition (z. B. „Wovon träumt ihr?“). Nächstes Mal vergleichen wir eure Diagramme: Welche Interessen hat unsere ganze Klasse gemeinsam?"
   }
 ];
