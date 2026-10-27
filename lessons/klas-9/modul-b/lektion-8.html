@@ -56,7 +56,7 @@
   <nav class="tabbar">
     <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
     <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
-    <button class="tab-btn" data-tab="ub1">Üb. 1 · Richtig oder falsch?</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Chat-Detektiv</button>
     <button class="tab-btn" data-tab="ub2">Üb. 2 · Umfrage</button>
     <button class="tab-btn" data-tab="ub3">Üb. 3 · Ergebnisse</button>
     <button class="tab-btn" data-tab="ub4">Üb. 4 · Antwort an Luisa</button>
@@ -105,25 +105,36 @@
       </div>
     </section>
 
-    <!-- ===== Üb. 1: richtig / falsch до чату ===== -->
+    <!-- ===== Üb. 1: Chat-Detektiv (з пам'яті) + richtig / falsch до чату ===== -->
     <section class="panel" id="panel-ub1">
       <p class="section-label">Üb. 1</p>
-      <h2 class="panel-title">Richtig oder falsch?</h2>
-      <p class="lead">Прочитай ще раз чат Луїзи й Аліни. Визнач, чи відповідають речення змісту чату. Перше речення — приклад.</p>
+      <h2 class="panel-title">Chat-Detektiv: Was stimmt hier nicht?</h2>
+      <p class="lead">Ой! Телефон Аліни «зглючив», і в чаті з Луїзою, який ми читали минулого уроку, підмінилися слова. Спершу <b>з пам'яті</b>: торкнися слова, яке тут не так, і впиши, як було в оригіналі. Якщо повідомлення правильне — «Fehlerfrei».</p>
 
       <div class="mail-window">
-        <div class="mail-titlebar">💬 Chat · Luisa</div>
-        <div class="mail-body">
-          <p><b>Luisa:</b> Hallo Alina, wie geht's? Vor Kurzem haben wir im Unterricht über Jugendsubkulturen in Deutschland diskutiert. Ich habe viel Neues erfahren.</p>
-          <p><b>Alina:</b> Hi Luisa, das ist wirklich ein spannendes Thema.</p>
-          <p><b>Luisa:</b> Ja, stimmt. Einige von meinen Mitschülern gehören zu verschiedenen Szenen und haben diese selbst präsentiert. Ein Junge hat sogar einen kurzen Film über Skater gebracht. Den haben wir uns mit großem Interesse angesehen.</p>
-          <p><b>Alina:</b> Das kann ich mir gut vorstellen.</p>
-          <p><b>Luisa:</b> Und jetzt arbeiten wir am Projekt „Jugendsubkulturen international“. Ich möchte gern Jugendszenen in der Ukraine präsentieren. Kannst du mir irgendwelche Informationen geben?</p>
-          <p style="margin:0;"><b>Alina:</b> Natürlich helfe ich dir mit Vergnügen.</p>
+        <div class="mail-titlebar">📱 15:43 · Luisa · ⚠️ Fehler im Chat</div>
+        <div class="mail-body" id="ub1-fix"></div>
+      </div>
+
+      <p class="lead" style="margin-top:18px;">A тепер відкрий справжній чат — перевір себе і виконай завдання нижче.</p>
+      <div class="check-bar">
+        <button class="btn secondary" id="ub1-open" type="button" aria-expanded="false">📱 Originalchat öffnen</button>
+      </div>
+      <div id="ub1-chat" hidden>
+        <div class="mail-window">
+          <div class="mail-titlebar">📱 15:43 · Luisa · Original</div>
+          <div class="mail-body">
+            <p><b>Luisa:</b> Hallo Alina, wie geht's? Vor Kurzem haben wir im Unterricht über Jugendsubkulturen in Deutschland diskutiert. Ich habe viel Neues erfahren.</p>
+            <p><b>Alina:</b> Hi Luisa, das ist wirklich ein spannendes Thema.</p>
+            <p><b>Luisa:</b> Ja, stimmt. Einige von meinen Mitschülern gehören zu verschiedenen Szenen und haben diese selbst präsentiert. Ein Junge hat sogar einen kurzen Film über Skater gebracht. Den haben wir uns mit großem Interesse angesehen.</p>
+            <p><b>Alina:</b> Das kann ich mir gut vorstellen.</p>
+            <p><b>Luisa:</b> Und jetzt arbeiten wir am Projekt „Jugendsubkulturen international“. Ich möchte gern Jugendszenen in der Ukraine präsentieren. Kannst du mir irgendwelche Informationen geben?</p>
+            <p style="margin:0;"><b>Alina:</b> Natürlich helfe ich dir mit Vergnügen.</p>
+          </div>
         </div>
       </div>
 
-      <p class="lead" style="margin-top:18px;">A) Richtig oder falsch?</p>
+      <p class="lead" style="margin-top:18px;">Bestimme, ob die Sätze dem Inhalt des Chats entsprechen: richtig oder falsch? Перше речення — приклад.</p>
       <div class="card" id="ub1-list">
         <div class="fill-item"><span class="num">1)</span> Luisa und Alina chatten über Mode. → <b>falsch</b> <span style="opacity:.7;">(Beispiel)</span></div>
         <div class="fill-item"><span class="num">2)</span> Luisa schreibt, dass sie im Unterricht Jugendinitiativen diskutiert haben. → <select class="blank inline" data-ans="falsch" aria-label="Satz 2"><option value="">—</option><option>richtig</option><option>falsch</option></select></div>
@@ -140,22 +151,14 @@
         <span class="score-pill" id="ub1-score"></span>
       </div>
 
-      <p class="lead" style="margin-top:18px;">B) Виправ неправильні речення: впиши одне слово з чату.</p>
-      <div class="card" id="ub1b-list">
-        <div class="fill-item"><span class="num">1)</span> Luisa und Alina chatten über <input type="text" class="blank-input inline wide" data-ans="Jugendsubkulturen|Jugendszenen|Subkulturen" data-case aria-label="Wort 1">.</div>
-        <div class="fill-item"><span class="num">2)</span> Luisa schreibt, dass sie im Unterricht <input type="text" class="blank-input inline wide" data-ans="Jugendsubkulturen|Subkulturen|Jugendszenen" data-case aria-label="Wort 2"> diskutiert haben.</div>
-        <div class="fill-item"><span class="num">5)</span> Einige Mitschüler/innen von <input type="text" class="blank-input inline" data-ans="Luisa" data-case aria-label="Wort 3"> haben selbst ihre Szenen präsentiert.</div>
-        <div class="fill-item"><span class="num">6)</span> Ein Junge hat einen Film über <input type="text" class="blank-input inline" data-ans="Skater" data-case aria-label="Wort 4"> gebracht.</div>
-      </div>
-      <div class="check-bar">
-        <button class="btn" id="ub1b-check">Prüfen</button>
-        <button class="btn secondary" id="ub1b-reset">Zurücksetzen</button>
-        <span class="score-pill" id="ub1b-score"></span>
-      </div>
       <div class="ua-note">
         <span class="ua-label">🇺🇦 Корисні слова</span>
         <b>die Jugendinitiative</b> — молодіжна ініціатива · <b>erfahren</b> — дізнаватися · <b>berichten</b> — розповідати, повідомляти ·
-        <b>um Hilfe bitten</b> — просити про допомогу · <b>mit Vergnügen</b> — із задоволенням. Іменники пиши з великої літери.
+        <b>um Hilfe bitten</b> — просити про допомогу · <b>mit Vergnügen</b> — із задоволенням
+      </div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Spielt den Chat zu zweit vor: A ist Luisa, B ist Alina. Aber Achtung – A baut einen Fehler ein, B muss ihn hören und korrigieren!</p>
       </div>
     </section>
 
@@ -403,9 +406,23 @@
     {s: "Ich finde Cosplay spannend, weil die Kostüme sehr schön sind.", ok: true}
   ]);
 
-  // Üb. 1: richtig / falsch + виправлення
+  // Üb. 1: A — Chat-Detektiv (з пам'яті), потім оригінал і richtig / falsch
+  buildFixError('ub1-fix', [
+    {s: "Luisa: Hallo Alina, wie geht's? Vor Kurzem haben wir im Unterricht über Jugendinitiativen in Deutschland diskutiert.", wrong: 12, fix: "Jugendsubkulturen"},
+    {s: "Alina: Hi Luisa, das ist wirklich ein langweiliges Thema.", wrong: 7, fix: "spannendes"},
+    {s: "Luisa: Ja, stimmt. Einige von Alinas Mitschülern gehören zu verschiedenen Szenen und haben diese selbst präsentiert.", wrong: 5, fix: "meinen"},
+    {s: "Luisa: Ein Junge hat sogar einen kurzen Film über Cosplayer gebracht.", wrong: 9, fix: "Skater"},
+    {s: "Alina: Das kann ich mir gut vorstellen.", ok: true},
+    {s: "Luisa: Ich möchte gern Jugendszenen in Deutschland präsentieren.", wrong: 6, fix: "der Ukraine"},
+    {s: "Alina: Natürlich helfe ich dir mit Vergnügen.", ok: true}
+  ]);
+  document.getElementById('ub1-open').addEventListener('click', e => {
+    const box = document.getElementById('ub1-chat');
+    box.hidden = !box.hidden;
+    e.currentTarget.setAttribute('aria-expanded', String(!box.hidden));
+    e.currentTarget.textContent = box.hidden ? '📱 Originalchat öffnen' : '📱 Originalchat schließen';
+  });
   wireBlanks('ub1');
-  wireBlanks('ub1b');
 
   // Üb. 2: діалог опитування + речення з weil
   wireBlanks('ub2');
