@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 10 · Modul B · Ungewöhnliche Hobbys</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 8'},
+    {label: 'Урок 10: Розваги у вільний час'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 10 · MODUL B</span>
+        <h1>Ungewöhnliche Hobbys</h1>
+        <p class="sub">Картинг, кайтсерфінг чи школа фокусів? Читаємо оголошення про незвичайні захоплення, добираємо їх для підлітків, беремо інтерв'ю і пишемо власне оголошення.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Die Anzeigen</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Wer passt wohin?</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Lust, … zu …</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Interview</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Unsere Anzeige</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== ПАНЕЛЬ: вступ ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Worum geht es heute?</h2>
+      <div class="card">
+        <p>Fußball, Lesen, Computerspiele – solche Hobbys kennt jeder. Aber es gibt auch ganz ungewöhnliche Freizeitbeschäftigungen: mit kleinen Rennwagen fahren, mit einem Drachen über das Meer fliegen oder zaubern lernen.</p>
+        <p>Heute liest du drei Anzeigen für solche Hobbys. Du überlegst, für wen sie interessant sind, machst ein Interview und schreibst zum Schluss deine eigene Anzeige.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Футбол, читання, комп'ютерні ігри — такі хобі знає кожен. Але є й зовсім незвичайні способи провести вільний час: їздити на маленьких гоночних автомобілях, літати над морем із повітряним змієм або вчитися показувати фокуси.<br>
+          Сьогодні ти прочитаєш три оголошення про такі захоплення. Ти подумаєш, кого вони можуть зацікавити, візьмеш інтерв'ю і наприкінці напишеш власне оголошення.
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Merke: So ist eine Anzeige aufgebaut</p>
+        <table class="gtable">
+          <tr><th>Teil</th><th>Beispiel</th></tr>
+          <tr><td>Überschrift</td><td>Kart-Bahn „Turbo“ – gib Gas!</td></tr>
+          <tr><td>Frage an den Leser</td><td>Liebst du Geschwindigkeit? · Hast du Lust, zaubern zu lernen?</td></tr>
+          <tr><td>Was macht man da?</td><td>Bei uns kannst du … · Im Kurs lernst du …</td></tr>
+          <tr><td>Was braucht man?</td><td>Du benötigst nur … · Du musst … können.</td></tr>
+          <tr><td>Einladung</td><td>Komm zu uns! · Probier es aus!</td></tr>
+        </table>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Оголошення зазвичай починається із <b>заголовка</b> і <b>запитання до читача</b> — воно має зацікавити. Потім ідеться про те, <b>що там роблять</b> і <b>що для цього потрібно</b>, а наприкінці — <b>запрошення</b> в наказовому способі: <i>Komm! Probier es aus! Melde dich an!</i><br>
+          <b>benötigen</b> — те саме, що <i>brauchen</i> (потребувати), тільки офіційніше.
+        </div>
+      </div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Simsalabim! Welches Hobby ist für dich das Richtige? Los geht's!</p>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: перевірка домашнього завдання (dz уроку 8-B-9) ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: 1) Fehleranalyse: Schau dir deinen Bericht zur Kontrollarbeit an. Wähle drei Aufgaben aus verschiedenen Übungen, bei denen du einen Fehler gemacht hast oder unsicher warst, und schreib sie richtig ins Heft – jeweils mit einer kurzen Regel auf Ukrainisch (z. B. „mit + Dativ: mit meinem kleinen Bruder“). 2) Mach einen Comic „Wie wir uns kennengelernt haben“ (4 Bilder) über dich und deinen besten Freund / deine beste Freundin – gezeichnet oder mit Fotos. Wo und wann habt ihr euch kennengelernt? Was macht ihr gern zusammen? Schreib in die Sprechblasen mindestens eine Frage mit wo(r)- (z. B. „Wofür interessierst du dich?“) und eine Antwort mit da(r)- (z. B. „Ich träume davon, …“), einen Satz mit „weil“ und einen Satz mit „sein“ oder „ihr“ (z. B. „Ihr Hobby ist Tanzen.“). Nächstes Mal machen wir eine Comic-Galerie in der Klasse.
+      </div>
+      <div class="card" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">Fehleranalyse: der Comic von Sofiia</p>
+        <p class="lead">У «бульбашках» коміксу Софії є помилки — саме такі, які ти шукав(-ла) у своєму звіті до контрольної. Торкнися слова з помилкою і виправ його. Якщо речення правильне — натисни «Fehlerfrei». Потім перевір так само бульбашки свого коміксу.</p>
+        <div id="dz-fix"></div>
+      </div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Comic-Galerie</span>
+        Розкладіть комікси на партах і пройдіться класом, як у галереї. Біля кожного коміксу залиш на стікері одне запитання з <b>wo(r)-</b> до автора — наприклад, <i>Wofür interessiert ihr euch beide?</i>
+      </div>
+
+      <div class="card" id="dz-vocab-wrap" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">Wörter-Check</p>
+        <p class="lead">Перевір слова з минулого уроку.</p>
+        <div id="dz-vocab"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: три оголошення ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Lies die Anzeigen</h2>
+      <p class="lead">Прочитай три оголошення. Потім добери до кожної картинки оголошення й дай відповіді на запитання.</p>
+
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 4px;">Anzeige A</p>
+        <p style="font-family:var(--serif); font-weight:700; font-size:19px; margin:0 0 8px;">Kart-Bahn „Turbo“ – gib Gas!</p>
+        <p>Liebst du Geschwindigkeit? Dann ist Gokartfahren genau das Richtige für dich! Mit kleinen Rennwagen fährst du über eine Strecke mit vielen Kurven und bekommst einen echten Adrenalinkick. Du benötigst nicht viel: feste Schuhe und einen Helm. Den Helm kannst du bei uns leihen. Mitmachen kann man ab 12 Jahren. Wir haben jeden Tag von 14 bis 20 Uhr geöffnet.</p>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 4px;">Anzeige B</p>
+        <p style="font-family:var(--serif); font-weight:700; font-size:19px; margin:0 0 8px;">Kite-Schule „Windkind“ am Meer</p>
+        <p>Sonne, Wind, Wasser und Strand – das ist deine Welt? Dann probier doch einmal Kitesurfen aus! Mit einem Brett und einem großen Drachen gleitest du über das Wasser und springst sogar in die Luft. Das Gefühl von Schwerelosigkeit ist einfach toll! Viele sagen: Wer es einmal ausprobiert hat, möchte nie wieder aufhören. In unserem Kurs lernst du diesen Trendsport in nur fünf Tagen. Wichtig: Du musst gut schwimmen können.</p>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 4px;">Anzeige C</p>
+        <p style="font-family:var(--serif); font-weight:700; font-size:19px; margin:0 0 8px;">Simsalabim! Zauberschule „Hokuspokus“</p>
+        <p>Möchtest du zaubern lernen? Hast du Lust, deine Freunde mit Tricks zu verblüffen und zu begeistern? Dann komm zu uns! Im Zauberkurs lernst du:</p>
+        <ul style="margin:0 0 10px; padding-left:22px;">
+          <li>Kartentricks,</li>
+          <li>Tricks mit Münzen, Seilen und anderen Alltagsgegenständen,</li>
+          <li>besondere Tricks für eine Show.</li>
+        </ul>
+        <p style="margin:0;">Wir erklären alles Schritt für Schritt. Am Ende des Kurses zeigst du deine Tricks auf unserer Bühne!</p>
+      </div>
+
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Слова до оголошень</span>
+        <b>die Geschwindigkeit</b> — швидкість · <b>der Rennwagen</b> — гоночний автомобіль · <b>der Adrenalinkick</b> — викид адреналіну, гострі відчуття · <b>benötigen</b> — потребувати · <b>der Helm</b> — шолом · <b>leihen</b> — позичати, брати напрокат · <b>der Drachen</b> — повітряний змій · <b>gleiten</b> — ковзати · <b>die Schwerelosigkeit</b> — невагомість · <b>der Trendsport</b> — модний вид спорту · <b>zaubern</b> — чаклувати, показувати фокуси · <b>verblüffen</b> — приголомшити, здивувати · <b>begeistern</b> — захопити, викликати захват · <b>der Alltagsgegenstand</b> — предмет ужитку · <b>die Bühne</b> — сцена.
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Welche Anzeige passt zum Bild?</p>
+        <div id="ub1-pic"></div>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Fragen zu den Anzeigen</p>
+        <div id="ub1-quiz"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 2: хто що обере ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Welche Anzeige passt zu wem?</h2>
+      <p class="lead">Прочитай, що розповідають про себе ці підлітки. Яке оголошення може їх зацікавити? Обери зі списку. Оголошення — у вкладці Üb. 1.</p>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> <b>Jan</b> macht sehr gern Wassersport. Er möchte eine neue, ungewöhnliche Sportart ausprobieren. →
+          <select class="blank inline" data-ans="B" aria-label="Jan: Anzeige"><option value="">—</option><option value="A">A · Gokart</option><option value="B">B · Kitesurfen</option><option value="C">C · Zauberschule</option></select></div>
+        <div class="fill-item"><span class="num">2)</span> <b>Martina</b> ist adrenalinsüchtig. Sie hat schon viele Extremsportarten ausprobiert und sucht neue Erlebnisse – aber am liebsten an Land. →
+          <select class="blank inline" data-ans="A" aria-label="Martina: Anzeige"><option value="">—</option><option value="A">A · Gokart</option><option value="B">B · Kitesurfen</option><option value="C">C · Zauberschule</option></select></div>
+        <div class="fill-item"><span class="num">3)</span> <b>Karin</b> träumt davon, eine richtige Zauberin zu werden – wie in den Harry-Potter-Büchern. →
+          <select class="blank inline" data-ans="C" aria-label="Karin: Anzeige"><option value="">—</option><option value="A">A · Gokart</option><option value="B">B · Kitesurfen</option><option value="C">C · Zauberschule</option></select></div>
+        <div class="fill-item"><span class="num">4)</span> <b>Oleh</b> ist 13 und liebt Geschwindigkeit. Er fährt viel Fahrrad, aber er möchte einmal ein echtes Rennen fahren. →
+          <select class="blank inline" data-ans="A" aria-label="Oleh: Anzeige"><option value="">—</option><option value="A">A · Gokart</option><option value="B">B · Kitesurfen</option><option value="C">C · Zauberschule</option></select></div>
+        <div class="fill-item"><span class="num">5)</span> <b>Sofia</b> hat bald Geburtstag. Sie möchte ihre Gäste mit einer kleinen Show überraschen. →
+          <select class="blank inline" data-ans="C" aria-label="Sofia: Anzeige"><option value="">—</option><option value="A">A · Gokart</option><option value="B">B · Kitesurfen</option><option value="C">C · Zauberschule</option></select></div>
+        <div class="fill-item"><span class="num">6)</span> <b>Lena</b> verbringt jeden Sommer am Meer. Sie schwimmt sehr gut, aber normales Surfen findet sie schon ein bisschen langweilig. →
+          <select class="blank inline" data-ans="B" aria-label="Lena: Anzeige"><option value="">—</option><option value="A">A · Gokart</option><option value="B">B · Kitesurfen</option><option value="C">C · Zauberschule</option></select></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Redemittel: deine Meinung begründen</p>
+        <p class="beispiel">Die Anzeige B <b>kann</b> Jan <b>interessieren</b>, <b>weil</b> er gern Wassersport <b>macht</b>.</p>
+        <p class="beispiel">Ich <b>glaube</b>, <b>dass</b> Gokartfahren für Martina das Richtige <b>ist</b>.</p>
+        <p class="beispiel">Für Karin <b>passt</b> die Zauberschule, <b>denn</b> sie <b>träumt davon</b>, Zauberin <b>zu werden</b>.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Після <b>weil</b> і <b>dass</b> дієслово йде в кінець речення. Після <b>denn</b> порядок слів звичайний (дієслово на 2-му місці).<br>
+          <b>adrenalinsüchtig</b> — той, хто «підсів» на адреналін; <b>das Richtige für …</b> — саме те, що треба для …
+        </div>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Kommentiere</p>
+        <p class="lead">Склади речення-коментарі: натискай слова в правильному порядку. Потім прокоментуй уголос вибір для Олега, Софії та Лени.</p>
+        <div id="ub2-order"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: інфінітив із zu ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Hast du Lust, … zu …?</h2>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Merke: Infinitiv mit zu</p>
+        <table class="gtable">
+          <tr><th>Wendung</th><th>Beispiel</th></tr>
+          <tr><td>Lust haben, … zu …</td><td>Hast du Lust, deine Freunde <b>zu verblüffen</b>?</td></tr>
+          <tr><td>davon träumen, … zu …</td><td>Karin träumt davon, Zauberin <b>zu werden</b>.</td></tr>
+          <tr><td>Angst haben, … zu …</td><td>Ich habe Angst, Gokart <b>zu fahren</b>.</td></tr>
+          <tr><td>vorhaben, … zu …</td><td>Wir haben vor, Kitesurfen <b>auszuprobieren</b>.</td></tr>
+          <tr><td>Es macht Spaß, … zu …</td><td>Es macht Spaß, über das Wasser <b>zu gleiten</b>.</td></tr>
+        </table>
+        <p class="beispiel">Aber: <b>möchten, können, müssen … + Infinitiv OHNE zu</b> — Möchtest du zaubern <b>lernen</b>? Du musst gut schwimmen <b>können</b>.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Після таких зворотів, як <i>Lust haben, Angst haben, davon träumen, vorhaben, es macht Spaß</i>, інфінітив стоїть у кінці речення з часткою <b>zu</b>, а перед ним ставимо кому.<br>
+          У відокремлюваних дієсловах <b>zu</b> стоїть усередині: <i>aus<b>zu</b>probieren, an<b>zu</b>melden, mit<b>zu</b>machen</i>.<br>
+          Після модальних дієслів (<i>möchten, können, müssen, wollen…</i>) і після <i>lernen</i> — інфінітив <b>без zu</b>.
+        </div>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Schreib die Sätze um</p>
+        <p class="lead">Перепиши речення, починаючи з поданих слів. Пиши ціле речення; не забудь кому перед інфінітивом із <b>zu</b>.</p>
+        <div id="ub3-tr"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4: інтерв'ю ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Interview: Welche Hobbys findest du interessant?</h2>
+      <p class="lead">Міла пише статтю для шкільної газети й бере інтерв'ю в Лени. Обирай доречні відповіді Лени.</p>
+      <div class="card" id="ub4-chat"></div>
+
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Jetzt ihr! Spielt Interviews</p>
+        <p class="beispiel">Welche Hobbys findest du interessant? Warum?</p>
+        <p class="beispiel">Hast du schon einmal etwas Ungewöhnliches ausprobiert?</p>
+        <p class="beispiel">Was hast du Lust auszuprobieren? · Wovor hast du Angst?</p>
+        <p class="beispiel">Was braucht man dafür? · Wie viel Zeit kostet das Hobby?</p>
+        <p class="beispiel">Welche Anzeige aus Üb. 1 findest du am spannendsten?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Працюйте в парах: один — «журналіст» шкільної газети, другий відповідає, потім помінятеся. Ставте щонайменше 4 запитання. Відповідайте повними реченнями й обґрунтовуйте: <i>…, weil … · Ich habe Lust, … zu … · Ich habe Angst, … zu …</i>
+        </div>
+      </div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Und ich? Ich träume davon, mit einem Kite über das Meer zu fliegen. Wuff!</p>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5: власне оголошення ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Ein ungewöhnliches Hobby – unsere Anzeige</h2>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Musteranzeige: Parkour</p>
+        <p class="lead">Спершу доповни зразок оголошення словами з карток. Дві картки зайві.</p>
+        <div id="ub5-bank"></div>
+      </div>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-text">Schreib eine Anzeige für ein ungewöhnliches Hobby. (50–80 Wörter)</label>
+          <textarea id="ub5-text" rows="8" data-words="50-80" data-must="Möchtest du/Hast du Lust/Liebst du|Bei uns|Komm" data-check="Überschrift mit dem Namen des Hobbys|Frage an den Leser am Anfang|Was macht man da?|Was braucht man? (Du benötigst …)|Wo und wann?" placeholder="Jonglieren – … !&#10;Hast du Lust, … zu …? …"></textarea>
+        </div>
+        <div class="ua-note">
+          Працюйте в групах по 3–4: оберіть незвичайне хобі (наприклад, жонглювання, геокешинг, скелелазіння, мильні бульбашки-гіганти, фрістайл-футбол), знайдіть про нього кілька фактів і напишіть оголошення за планом зі вкладки Start. Ужий хоча б один інфінітив із <b>zu</b> і запрошення в наказовому способі. Потім представте оголошення класу — хто захоче записатися? Вставка тексту тут вимкнена — набирай текст сам(а).
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ПРИКІНЦЕВА ПАНЕЛЬ ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Chat „Komm mit!“: Schreib einen Messenger-Chat (10–12 Nachrichten) zwischen dir und einem Freund / einer Freundin – auf Papier, wie auf dem Handy-Bildschirm, gern mit Emojis. 1) Du hast eine Anzeige für ein ungewöhnliches Hobby gefunden (aus Üb. 1 oder eure Anzeige aus Üb. 5) und möchtest es zusammen ausprobieren. Erzähl, was man da macht und was man braucht. 2) Dein Freund / Deine Freundin hat Zweifel und nennt zwei Probleme (z. B. „Ich habe Angst, … zu …“, „Ich habe keine Zeit, weil …“) – und du findest für jedes Problem eine Lösung. 3) Benutze mindestens zwei Infinitive mit zu (davon einen mit einem trennbaren Verb, z. B. „Hast du Lust, es auszuprobieren?“), einen Satz mit „weil“ und einen Imperativ (z. B. „Komm mit!“). 4) Am Ende verabredet ihr euch: Wann und wo trefft ihr euch? Nächstes Mal spielen wir die Chats in Paaren vor.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Чат «Ходімо разом!»: напиши переписку в месенджері (10–12 повідомлень) між тобою і другом / подругою — на папері, як на екрані телефона, можна з емодзі. 1) Ти знайшов(-ла) оголошення про незвичайне хобі (з Üb. 1 або ваше оголошення з Üb. 5) і хочеш спробувати його разом. Розкажи, що там роблять і що для цього потрібно. 2) Твій друг / твоя подруга сумнівається й називає дві проблеми (напр. „Ich habe Angst, … zu …“, „Ich habe keine Zeit, weil …“) — а ти для кожної проблеми знаходиш рішення. 3) Ужий щонайменше два інфінітиви з zu (один із них — з відокремлюваним дієсловом, напр. „Hast du Lust, es auszuprobieren?“), одне речення з „weil“ і один наказ (напр. „Komm mit!“). 4) Наприкінці домовтеся про зустріч: коли й де? Наступного разу ми розіграємо ваші чати в парах.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Wörter zum Lernen</p>
+        <div class="chip-row" id="vocabChips"></div>
+      </div>
+
+      <div class="card" id="lessonGramWrap">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="lessonGram"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../data/glossary-data.js"></script>
+<script src="../../../data/lessons-data.js"></script>
+<script src="../../../data/grammar-data.js"></script>
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  // ===== Слова цього уроку у вкладці Fertig =====
+  // Ті самі klas/modul/lektion, що й у рядку цього уроку в lessons-data.js.
+  const LEKTION_KLAS = "8", LEKTION_MODUL = "B", LEKTION_LEKTION = 10;
+  const LEKTION_PREV_LEKTION = 9;
+
+  (function renderLessonVocab(){
+    const box = document.getElementById('vocabChips');
+    if (!box || typeof GLOSSARY === 'undefined') return;
+    const words = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_LEKTION
+    );
+    if (words.length === 0){
+      box.innerHTML = '<p class="empty-note">Слова для цього уроку ще не додані в глосарій.</p>';
+      return;
+    }
+    box.innerHTML = words.map(w =>
+      '<span class="chip static">' + w.de + ' — ' + w.uk + '</span>'
+    ).join('');
+  })();
+
+  // ===== Граматика до цього уроку у вкладці Fertig (поле gram у lessons-data.js) =====
+  (function renderLessonGrammar(){
+    const wrap = document.getElementById('lessonGramWrap');
+    const box = document.getElementById('lessonGram');
+    if (!wrap || !box) return;
+    const hide = () => { wrap.style.display = 'none'; };
+    if (typeof LESSONS === 'undefined' || typeof GRAMMAR === 'undefined') return hide();
+    const me = LESSONS.find(l => l.klas === LEKTION_KLAS && l.modul === LEKTION_MODUL && l.lektion === LEKTION_LEKTION);
+    const topics = ((me && me.gram) || []).map(id => GRAMMAR.find(t => t.id === id)).filter(t => t && t.opublikovano > 0);
+    if (topics.length === 0) return hide();
+    // корінь сайту беремо з того самого шляху, яким підключено grammar-data.js —
+    // тож окремо міняти шлях тут при копіюванні шаблону не треба
+    const src = document.querySelector('script[src$="data/grammar-data.js"]').getAttribute('src');
+    const root = src.slice(0, src.length - 'data/grammar-data.js'.length);
+    box.innerHTML = topics.map(t =>
+      '<a class="gram-link" href="' + root + 'gramatyka/temy/' + t.id + '.html">'
+      + '<span class="k">' + t.uk + '</span>' + t.tema + '</a>'
+    ).join('');
+  })();
+
+  // ===== Wörter-Check у вкладці Hausaufgabe (слова ПОПЕРЕДНЬОГО уроку) =====
+  // Використовує ті самі спільні функції, що й Üb.1 (buildQuiz) та
+  // Fertig! (shuffleArray) — нового коду в lesson-interactions.js не було.
+
+  // ---------- Груба евристика частини мови за виглядом "de" ----------
+  // Потрібна лише для того, щоб варіанти-пастки у Wörter-Check були тієї
+  // самої частини мови, що й правильна відповідь (інакше учень вгадує за
+  // формою слова — "це іменник чи дієслово?" — а не за значенням). Це
+  // евристика за текстом рядка, а не лінгвістичний аналізатор, і вона не
+  // вимагає жодного нового поля в даних GLOSSARY.
+  function guessPos(de){
+    var base = (de || '').replace(/\([^)]*\)/g, '').trim();
+    if(/^(der|die|das)(\/(der|die|das))?\s/.test(base)) return 'noun';
+    if(/^sich\s/.test(base)) return 'verb';
+    if(/^am\s/.test(base)) return 'other'; // "am liebsten", "am besten" — прислівникова найвища форма, не дієслово
+    if(/\(\+(Gen|Dat|Akk)\.?\)/.test(de)) return 'prep';
+    var words = base.split(/\s+/);
+    var last = words[words.length - 1];
+    if(/(en|ern|eln)$/.test(last) && last === last.toLowerCase()) return 'verb';
+    return 'other'; // прикметники / прислівники / сталі вирази
+  }
+
+  (function renderDzVocabCheck(){
+    const wrap = document.getElementById('dz-vocab-wrap');
+    const box = document.getElementById('dz-vocab');
+    if (!wrap || !box || typeof GLOSSARY === 'undefined') return;
+    if (!LEKTION_PREV_LEKTION){ wrap.style.display = 'none'; return; }
+
+    const prevWords = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_PREV_LEKTION
+    );
+    if (prevWords.length < 3){ wrap.style.display = 'none'; return; }
+
+    const pool = shuffleArray(prevWords).slice(0, 6); // 5–6 слів на перевірку
+    const quizData = pool.map(w => {
+      // Пастки — тієї самої частини мови, що й правильне слово (guessPos вище),
+      // інакше учень вгадує за формою відповіді, а не за її значенням.
+      const pos = guessPos(w.de);
+      let sameKind = GLOSSARY.filter(g => g.uk !== w.uk && guessPos(g.de) === pos);
+      if(sameKind.length < 2) sameKind = GLOSSARY.filter(g => g.uk !== w.uk); // запасний варіант, якщо слів цієї частини мови замало
+      const distractors = shuffleArray(sameKind).slice(0, 2).map(g => g.uk);
+      return { q: w.de, opts: [w.uk, ...distractors], correct: w.uk };
+    });
+    buildQuiz('dz-vocab', quizData);
+  })();
+
+  // ===== Hausaufgabe: комікс Софії — знайди й виправ помилку =====
+  buildFixError('dz-fix', [
+    {s: "Wir haben uns im Sommer im Sportlager kennengelernt.", ok: true},
+    {s: "Wovon interessierst du dich?", wrong: 0, fix: "Wofür", hint: "sich interessieren für"},
+    {s: "Am Wochenende spiele ich mit meine Freundin Volleyball.", wrong: 5, fix: "meiner", hint: "mit + Dativ"},
+    {s: "Ich träume dafür, einmal nach Paris zu fahren.", wrong: 2, fix: "davon", hint: "träumen von"},
+    {s: "Wir sind Freunde, weil wir gemeinsame Interessen haben.", ok: true},
+    {s: "Anna ist meine beste Freundin. Sein Hobby ist Malen.", wrong: 5, fix: "Ihr", hint: "чиє хобі? — Анни"},
+    {s: "Wofür freust du dich am meisten?", wrong: 0, fix: "Worauf|Worüber", hint: "sich freuen auf / über"}
+  ]);
+
+  // ===== Üb. 1: картинки + питання до оголошень =====
+  buildPicture('ub1-pic', [
+    {pic: "🪁", opts: ["Anzeige A", "Anzeige B", "Anzeige C"], correct: "Anzeige B"},
+    {pic: "🎩", opts: ["Anzeige A", "Anzeige B", "Anzeige C"], correct: "Anzeige C"},
+    {pic: "🏎️", opts: ["Anzeige A", "Anzeige B", "Anzeige C"], correct: "Anzeige A"}
+  ]);
+  buildQuiz('ub1-quiz', [
+    {q: "In welcher Anzeige braucht man einen Helm?", opts: ["Anzeige B", "Anzeige A", "Anzeige C"], correct: "Anzeige A"},
+    {q: "Wo kann man das Gefühl von Schwerelosigkeit erleben?", opts: ["Anzeige A", "Anzeige C", "Anzeige B"], correct: "Anzeige B"},
+    {q: "Was lernt man im Zauberkurs NICHT?", opts: ["Kartentricks", "Tricks mit Alltagsgegenständen", "Jonglieren mit Feuer"], correct: "Jonglieren mit Feuer"},
+    {q: "Wie lange dauert der Kitesurf-Kurs?", opts: ["fünf Tage", "fünf Wochen", "einen Tag"], correct: "fünf Tage"},
+    {q: "Ab wie viel Jahren kann man auf der Kart-Bahn mitmachen?", opts: ["ab 10 Jahren", "ab 12 Jahren", "ab 16 Jahren"], correct: "ab 12 Jahren"},
+    {q: "Was muss man für das Kitesurfen können?", opts: ["zaubern", "Auto fahren", "gut schwimmen"], correct: "gut schwimmen"},
+    {q: "Was passiert am Ende des Zauberkurses?", opts: ["Man zeigt seine Tricks auf der Bühne.", "Man bekommt einen Helm.", "Man fährt ans Meer."], correct: "Man zeigt seine Tricks auf der Bühne."}
+  ]);
+
+  // ===== Üb. 2: хто що обере + коментар =====
+  wireBlanks('ub2');
+  buildOrder('ub2-order', [
+    { words: ["die Anzeige B", "kann", "Jan", "interessieren,", "weil", "er", "gern", "Wassersport", "macht"], end: ".",
+      alt: ["Jan kann die Anzeige B interessieren, weil er gern Wassersport macht"],
+      hint: "Оголошення B може зацікавити Яна, бо він любить водний спорт." },
+    { words: ["ich", "glaube,", "dass", "Gokartfahren", "für Martina", "das Richtige", "ist"], end: ".",
+      alt: ["Ich glaube, dass für Martina Gokartfahren das Richtige ist"],
+      hint: "Я думаю, що картинг — саме те, що треба Мартині." },
+    { words: ["Karin", "träumt", "davon,", "Zauberin", "zu", "werden"], end: ".", gross: true,
+      hint: "Карін мріє стати чарівницею." }
+  ]);
+
+  // ===== Üb. 3: інфінітив із zu (перетворення речень) =====
+  buildTransform('ub3-tr', [
+    {s: "Karin möchte eine Zauberin werden.", task: "Karin träumt davon, …",
+     ans: "Karin träumt davon, eine Zauberin zu werden.|Karin träumt davon, Zauberin zu werden."},
+    {s: "Jan probiert eine neue Sportart aus.", task: "Jan hat Lust, …",
+     ans: "Jan hat Lust, eine neue Sportart auszuprobieren.", hint: "відокремлюване дієслово: zu — усередині"},
+    {s: "Martina fährt Gokart.", task: "Es macht Martina Spaß, …",
+     ans: "Es macht Martina Spaß, Gokart zu fahren."},
+    {s: "Ich verblüffe meine Freunde mit Tricks.", task: "Ich möchte …",
+     ans: "Ich möchte meine Freunde mit Tricks verblüffen.", hint: "після möchten — без zu"},
+    {s: "Ich springe mit dem Kite in die Luft.", task: "Ich habe ein bisschen Angst, …",
+     ans: "Ich habe ein bisschen Angst, mit dem Kite in die Luft zu springen."},
+    {s: "Du lernst Kitesurfen in fünf Tagen.", task: "Bei uns kannst du …",
+     ans: "Bei uns kannst du Kitesurfen in fünf Tagen lernen.|Bei uns kannst du in fünf Tagen Kitesurfen lernen."},
+    {s: "Wir melden uns für den Zauberkurs an.", task: "Wir haben vor, …",
+     ans: "Wir haben vor, uns für den Zauberkurs anzumelden.", hint: "sich anmelden: uns … anzumelden"}
+  ]);
+
+  // ===== Üb. 4: інтерв'ю для шкільної газети (чат) =====
+  buildChat('ub4-chat', {
+    partner: "Mila",
+    me: "Lena",
+    steps: [
+      {them: "Hallo, Lena! Ich schreibe einen Artikel für unsere Schülerzeitung. Darf ich dir ein paar Fragen stellen?"},
+      {you: ["Ich bin vierzehn Jahre alt.", "Ja, klar! Frag nur.", "Nein, ich habe keine Hobbys."], correct: 1},
+      {them: "Welche Hobbys findest du interessant?"},
+      {you: ["Kitesurfen findet mich interessant.", "Ich finde, dass Kitesurfen.", "Ich finde Kitesurfen spannend, weil ich Wassersport liebe."], correct: 2, hint: "відповідь із weil"},
+      {them: "Hast du das schon einmal ausprobiert?"},
+      {you: ["Nein, noch nicht, aber ich habe große Lust, es auszuprobieren.", "Ja, ich probiere es morgen ausprobiert.", "Nein, ich habe gestern ausprobieren."], correct: 0},
+      {them: "Was braucht man dafür?"},
+      {you: ["Dafür braucht man Kartentricks und einen Zauberstab.", "Man braucht ein Brett, einen Kite und viel Wind.", "Man braucht keine Zeit."], correct: 1},
+      {them: "Und was meinst du: Ist das ein Hobby für alle?"},
+      {you: ["Danke, gut. Und dir?", "Ja, ich heiße Lena.", "Nicht ganz: Man muss gut schwimmen können."], correct: 2},
+      {them: "Super, vielen Dank für das Interview!"}
+    ]
+  });
+
+  // ===== Üb. 5: зразок оголошення (банк слів) =====
+  buildWordBank('ub5-bank', {
+    text: "Parkour – die Stadt ist dein Sportplatz!\n\nLiebst du Bewegung und [Geschwindigkeit]? Möchtest du über Mauern springen und deine Freunde mit coolen Tricks [verblüffen]? Dann ist Parkour genau das Richtige für dich!\n\nDu [benötigst] nicht viel: bequeme Kleidung und feste [Schuhe]. Am Anfang üben wir in der Halle auf weichen Matten, draußen trägst du dann einen [Helm].\n\nIn unserem [Kurs] lernst du alles Schritt für [Schritt]. Hast du Lust, es [auszuprobieren]? Dann komm am Samstag um 10 Uhr in die Sporthalle!",
+    extra: ["Strand", "zaubern"]
+  });
+
+  // Фінальна панель зі штампами (іконки — на тему уроку)
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🏎️','🪁','🎩','📢']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>

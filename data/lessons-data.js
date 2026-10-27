@@ -907,5 +907,16 @@ const LESSONS = [
     nove: true,
     gram: ["deklination-nomen", "possessivartikel", "verben-praepositionalobjekt", "rektion-verben", "adjektivdeklination", "kausalsaetze", "verben-dass-infinitiv", "konditionalsaetze", "modalverben", "trennbare-verben", "fragen"],
     dz: "1) Fehleranalyse: Schau dir deinen Bericht zur Kontrollarbeit an. Wähle drei Aufgaben aus verschiedenen Übungen, bei denen du einen Fehler gemacht hast oder unsicher warst, und schreib sie richtig ins Heft – jeweils mit einer kurzen Regel auf Ukrainisch (z. B. „mit + Dativ: mit meinem kleinen Bruder“). 2) Mach einen Comic „Wie wir uns kennengelernt haben“ (4 Bilder) über dich und deinen besten Freund / deine beste Freundin – gezeichnet oder mit Fotos. Wo und wann habt ihr euch kennengelernt? Was macht ihr gern zusammen? Schreib in die Sprechblasen mindestens eine Frage mit wo(r)- (z. B. „Wofür interessierst du dich?“) und eine Antwort mit da(r)- (z. B. „Ich träume davon, …“), einen Satz mit „weil“ und einen Satz mit „sein“ oder „ihr“ (z. B. „Ihr Hobby ist Tanzen.“). Nächstes Mal machen wir eine Comic-Galerie in der Klasse."
+  },
+  {
+    klas: "8",
+    modul: "B",
+    lektion: 10,
+    nazva: "Ungewöhnliche Hobbys",
+    opys: "Незвичайні захоплення: читаємо оголошення про картинг, кайтсерфінг і школу фокусів, добираємо їх для підлітків і коментуємо вибір (weil, dass), тренуємо інфінітив із zu (Hast du Lust, … auszuprobieren?), беремо інтерв'ю про хобі й пишемо власне оголошення.",
+    file: "klas-8/modul-b/lektion-10.html",
+    nove: true,
+    gram: ["verben-dass-infinitiv", "modalverben", "kausalsaetze", "imperativ"],
+    dz: "Chat „Komm mit!“: Schreib einen Messenger-Chat (10–12 Nachrichten) zwischen dir und einem Freund / einer Freundin – auf Papier, wie auf dem Handy-Bildschirm, gern mit Emojis. 1) Du hast eine Anzeige für ein ungewöhnliches Hobby gefunden (aus Üb. 1 oder eure Anzeige aus Üb. 5) und möchtest es zusammen ausprobieren. Erzähl, was man da macht und was man braucht. 2) Dein Freund / Deine Freundin hat Zweifel und nennt zwei Probleme (z. B. „Ich habe Angst, … zu …“, „Ich habe keine Zeit, weil …“) – und du findest für jedes Problem eine Lösung. 3) Benutze mindestens zwei Infinitive mit zu (davon einen mit einem trennbaren Verb, z. B. „Hast du Lust, es auszuprobieren?“), einen Satz mit „weil“ und einen Imperativ (z. B. „Komm mit!“). 4) Am Ende verabredet ihr euch: Wann und wo trefft ihr euch? Nächstes Mal spielen wir die Chats in Paaren vor."
   }
 ];
