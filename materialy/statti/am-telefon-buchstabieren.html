@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M wie Martha: Telefonieren im Job · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Sprache</span>
+        <h1>M wie Martha: Telefonieren im Job</h1>
+        <p class="sub">Maier, Meier, Mayer чи Meyer? Звучить однаково, пишеться по-різному. Як німці відповідають на дзвінки, домовляються про зустрічі й диктують по буквах.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Buchstabieren</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Zeichen</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Am Telefon</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Und du?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Wie schreibt man das?</h2>
+      <div class="card">
+        <p>Musst du deinen Namen oft buchstabieren? Wie sagst du am Telefon deine E-Mail-Adresse?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Спробуй вимовити по буквах своє прізвище латиницею — так, як у закордонному паспорті. Чи легко це зробити телефоном так, щоб тебе зрозуміли з першого разу?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Am Telefon oder am <span class="gl" data-uk="рецепція" data-lemma="der Empfang">Empfang</span> ist der erste Kontakt sehr wichtig. Diese Sätze helfen.</p>
+
+          <h3>Hallo? Oder Schneider?</h3>
+
+          <p>Im Beruf <span class="gl" data-uk="відповідати (на дзвінок), називатися" data-lemma="sich melden">melden sich</span> viele Menschen mit dem Namen der Firma oder ihrem eigenen Namen und einem kurzen Gruß: „Praxis Dr. Stark, Sie sprechen mit Fabienne, hallo.“ Am besten fragt man in der Firma, was dort normal ist. Privat ist es ganz <span class="gl" data-uk="різний" data-lemma="verschieden">verschieden</span>: Manche sagen nur „Schneider“, andere einfach „Hallo“.</p>
+
+          <p>Wichtige Sätze im Job: „Einen Moment bitte.“ – „Ich <span class="gl" data-key data-uk="з'єднувати (телефоном)" data-lemma="verbinden (verband, hat verbunden)">verbinde</span> Sie.“ – „Frau Calus ist leider nicht <span class="gl" data-key data-uk="досяжний, на зв'язку" data-lemma="erreichbar">erreichbar</span>. Kann ich ihr etwas <span class="gl" data-uk="переказати, передати" data-lemma="ausrichten">ausrichten</span>? Sie <span class="gl" data-key data-uk="передзвонювати" data-lemma="zurückrufen (rief zurück, hat zurückgerufen)">ruft</span> Sie am Nachmittag zurück.“</p>
+
+          <h3>Einen Termin machen</h3>
+
+          <p>Am Telefon macht man oft <span class="gl" data-key data-uk="зустріч, запис (на певний час)" data-lemma="der Termin, -e">Termine</span>. „<span class="gl" data-uk="підходити, бути зручним" data-lemma="passen">Passt</span> Ihnen Donnerstag, der 8. Oktober, um 14.30 Uhr?“ – „Nein, das geht leider nicht. Aber um 16 Uhr hätte ich Zeit.“ Im Beruf sagt man die <span class="gl" data-uk="час (на годиннику)" data-lemma="die Uhrzeit, -en">Uhrzeit</span> meistens offiziell: „vierzehn Uhr dreißig“, privat eher „halb drei“.</p>
+
+          <h3>Maier, Meier, Mayer …</h3>
+
+          <p>Namen und E-Mail-Adressen muss man am Telefon oft <span class="gl" data-key data-uk="вимовляти по буквах" data-lemma="buchstabieren">buchstabieren</span>. In Deutschland kann man Maier, Meier, Mayer, Meyer, Mair oder Mayr heißen – und man hört keinen <span class="gl" data-uk="різниця" data-lemma="der Unterschied, -e">Unterschied</span>! Dafür gibt es ein <span class="gl" data-uk="телефонна абетка" data-lemma="das Buchstabieralphabet, -e">Buchstabieralphabet</span>: A wie Anton, M wie Martha, R wie Richard, Z wie Zeppelin. Das lernt man am besten <span class="gl" data-uk="напам'ять" data-lemma="auswendig">auswendig</span>.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Zeppelin_NT-4871-2.jpg/960px-Zeppelin_NT-4871-2.jpg" alt="Ein Zeppelin NT landet in Friedrichshafen." width="960" height="523" loading="lazy">
+            <figcaption>Z wie Zeppelin: Ein Zeppelin NT landet in Friedrichshafen. Foto: Dietrich Krieger, <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Zeppelin_NT-4871-2.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Für E-Mail-Adressen braucht man auch die Namen der <span class="gl" data-uk="спеціальний символ" data-lemma="das Sonderzeichen, -">Sonderzeichen</span>: Punkt (.), <span class="gl" data-uk="дефіс" data-lemma="der Bindestrich, -e">Bindestrich</span> (-), <span class="gl" data-uk="нижнє підкреслення" data-lemma="der Unterstrich, -e">Unterstrich</span> (_) und das @ – auf Deutsch „at“ oder lustig „<span class="gl" data-uk="«мавпа» (знак @)" data-note="дослівно: мавпа, що вчепилася" data-lemma="der Klammeraffe, -n">Klammeraffe</span>“. Und noch ein Tipp: Am Telefon hört man oft „zwo“ statt „zwei“. So hört man den Unterschied zu „drei“ besser.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Seit 2022 gibt es in Deutschland auch ein neues offizielles Buchstabieralphabet mit Städten: A wie Aachen, L wie Leipzig, N wie Nürnberg, Z wie Zwickau. Die meisten Menschen benutzen aber noch das alte Alphabet mit Namen wie Anton und Ludwig.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub1-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Buchstabieren</h2>
+      <p class="lead">а) Як продиктувати ім'я MAIER? Обери слово до кожної букви (стара буквена абетка).</p>
+      <div class="card" id="ub2-list"></div>
+      <p class="lead">б) Хтось диктує по буквах. Яке слово виходить?</p>
+      <div class="card" id="ub2-quiz"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Sonderzeichen</h2>
+      <p class="lead">Як назвати цей знак телефоном?</p>
+      <div class="card" id="ub3-list"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Am Telefon</h2>
+      <p class="lead">Ти працюєш на рецепції. Обери репліку, яка пасує найкраще.</p>
+      <div class="card" id="ub4-chat"></div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">Встав слова з рамки.</p>
+      <div class="card">
+        <div class="wordbank"><span>verbinde</span><span>erreichbar</span><span>ausrichten</span><span>Termin</span><span>buchstabieren</span></div>
+        <div id="ub5-list">
+          <div class="fill-item"><span class="num">1)</span> Herr Wolf ist heute nicht <input type="text" class="blank-input inline" data-ans="erreichbar">.</div>
+          <div class="fill-item"><span class="num">2)</span> Kann ich ihm etwas <input type="text" class="blank-input inline" data-ans="ausrichten">?</div>
+          <div class="fill-item"><span class="num">3)</span> Einen Moment, ich <input type="text" class="blank-input inline" data-ans="verbinde"> Sie mit Frau Bach.</div>
+          <div class="fill-item"><span class="num">4)</span> Können Sie Ihren Namen bitte <input type="text" class="blank-input inline wide" data-ans="buchstabieren">?</div>
+          <div class="fill-item"><span class="num">5)</span> Ich hätte gern einen <input type="text" class="blank-input inline" data-ans="Termin"> am Montag.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub5-check">Prüfen</button>
+          <button class="btn secondary" id="ub5-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub5-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 6 ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">Und du?</h2>
+      <p class="lead">Напиши німецькою. Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub6-a">1. Buchstabiere deinen Vor- und Nachnamen mit dem deutschen Alphabet. Beispiel: „O wie Otto, L wie Ludwig, …“</label>
+          <textarea id="ub6-a" rows="4" data-words="10"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub6-b">2. Und bei uns? Wie meldet man sich in der Ukraine am Telefon – privat und im Beruf? (3–4 Sätze)</label>
+          <textarea id="ub6-b" rows="4" data-words="25"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Буквена абетка: A Anton, B Berta, C Cäsar, D Dora, E Emil, F Friedrich, G Gustav, H Heinrich, I Ida, J Julius, K Kaufmann, L Ludwig, M Martha, N Nordpol, O Otto, P Paula, Q Quelle, R Richard, S Samuel, T Theodor, U Ulrich, V Viktor, W Wilhelm, X Xanthippe, Y Ypsilon, Z Zeppelin. Звороти: <i>In der Ukraine sagt man …, Im Beruf …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Im Beruf meldet man sich am Telefon mit dem Firmennamen oder dem eigenen Namen. Namen buchstabiert man mit dem Buchstabieralphabet: A wie Anton, M wie Martha. Das @ heißt auch „Klammeraffe“, und am Telefon sagt man oft „zwo“ statt „zwei“.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          На роботі, відповідаючи на дзвінок, називають фірму або своє ім'я. Імена диктують за буквеною абеткою: A wie Anton, M wie Martha. Знак @ німці жартома називають «Klammeraffe», а телефоном часто кажуть «zwo» замість «zwei».
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "am-telefon-buchstabieren";
+
+  // Üb. 1
+  buildRF('ub1-rf', [
+    {s: "Im Beruf meldet man sich oft mit dem Namen der Firma.", a: "r"},
+    {s: "Privat sagen alle Deutschen am Telefon nur „Hallo“.", a: "f"},
+    {s: "Im Beruf sagt man eher „vierzehn Uhr dreißig“ als „halb drei“.", a: "r"},
+    {s: "Maier und Meyer klingen ganz verschieden.", a: "f"},
+    {s: "„Zwo“ hört man besser als „zwei“, weil es anders als „drei“ klingt.", a: "r"},
+    {s: "Viele Firmen haben eine eigene Telefonnummer für Kunden aus dem Ausland.", a: "n"},
+    {s: "Die meisten Menschen benutzen schon das neue Alphabet mit Städten.", a: "f"}
+  ]);
+
+  // Üb. 2а: буква ↔ слово
+  buildMatch('ub2', [
+    ["M", "Martha"],
+    ["A", "Anton"],
+    ["I", "Ida"],
+    ["E", "Emil"],
+    ["R", "Richard"]
+  ], {options: ["Anton", "Emil", "Ida", "Martha", "Richard"]});
+  // Üb. 2б
+  buildQuiz('ub2-quiz', [
+    {q: "„B wie Berta, E wie Emil, R wie Richard, G wie Gustav“", opts: ["Berg", "Burg", "Berk"], correct: "Berg"},
+    {q: "„M wie Martha, E wie Emil, Y wie Ypsilon, E wie Emil, R wie Richard“", opts: ["Meyer", "Meier", "Mayer"], correct: "Meyer"},
+    {q: "„K wie Kaufmann, O wie Otto, C wie Cäsar, H wie Heinrich“", opts: ["Koch", "Kuch", "Kosch"], correct: "Koch"}
+  ]);
+
+  // Üb. 3: знак ↔ назва
+  buildMatch('ub3', [
+    ["@", "Klammeraffe / at"],
+    [".", "Punkt"],
+    ["-", "Bindestrich"],
+    ["_", "Unterstrich"]
+  ], {options: ["Bindestrich", "Klammeraffe / at", "Punkt", "Unterstrich"]});
+
+  // Üb. 4
+  buildChat('ub4-chat', {
+    partner: "Anruferin",
+    steps: [
+      {them: "(Das Telefon klingelt.)"},
+      {you: ["Autohaus Böblingen, Sie sprechen mit Elif Demir, guten Tag!",
+             "Ja? Wer ist da?",
+             "Was wollen Sie?"], correct: 0},
+      {them: "Guten Tag, hier ist Mayr. Ich möchte bitte Herrn Wolf sprechen."},
+      {you: ["Einen Moment bitte, ich verbinde Sie.",
+             "Nein.",
+             "Herr Wolf hat keine Lust."], correct: 0},
+      {them: "(Kurze Pause.) Ist er nicht da?"},
+      {you: ["Herr Wolf ist leider nicht erreichbar. Kann ich ihm etwas ausrichten?",
+             "Keine Ahnung.",
+             "Rufen Sie nie wieder an."], correct: 0},
+      {them: "Ja, er soll mich bitte zurückrufen. Mayr – M, A, Y, R."},
+      {you: ["M wie Martha, A wie Anton, Y wie Ypsilon, R wie Richard. Ist das richtig?",
+             "Meier, okay.",
+             "Das kann ich nicht schreiben."], correct: 0, hint: "перевір прізвище по буквах"}
+    ]
+  });
+
+  // Üb. 5
+  wireBlanks('ub5');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📞','🔤','@','📅','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
