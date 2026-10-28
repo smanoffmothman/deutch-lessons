@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kohle statt Gehalt · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Sprache</span>
+        <h1>Kohle statt Gehalt</h1>
+        <p class="sub">Спитати на співбесіді про «бабки» замість зарплати — і здатися неввічливим, хоча це лише мовна помилка. Психолог пояснює, звідки беруться непорозуміння на роботі і чому мовчати — найгірше.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Vier Ebenen</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Tipps</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Und du?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Gesagt ist nicht verstanden</h2>
+      <div class="card">
+        <p>Erinnerst du dich an ein Missverständnis – in der Schule, in der Familie oder mit Freunden? Was ist passiert, und wie habt ihr es gelöst?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Буває, людина сказала одне, а інша почула зовсім інше. Як гадаєш, у змішаних командах, де люди з різних країн, непорозумінь більше чи менше, ніж у командах, де всі з однієї країни?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Ein Satz, zwei Bedeutungen: <span class="gl" data-key data-uk="непорозуміння" data-lemma="das Missverständnis, -se">Missverständnisse</span> gehören zum Berufsalltag. Für den Kommunikationspsychologen Gerhard Ohrband, der Firmen bei Konflikten berät, sind sie kein Drama – solange man schnell über sie spricht.</p>
+
+          <h3>Jede Nachricht hat vier Seiten</h3>
+
+          <p>Im Büro treffen Menschen mit ganz unterschiedlichen sozialen und fachlichen <span class="gl" data-uk="походження, бекграунд" data-lemma="der Hintergrund, -ü-e">Hintergründen</span> aufeinander. Dass eine Information nicht bei allen gleich ankommt, ist deshalb völlig normal. Ohrband erklärt es so: Jede Nachricht prüfen wir <span class="gl" data-uk="несвідомо" data-lemma="unbewusst">unbewusst</span> auf vier <span class="gl" data-key data-uk="рівень, аспект" data-lemma="die Ebene, -n">Ebenen</span>. Worum geht es? Wie geht es der anderen Person? Was denkt sie über mich? Und was soll ich jetzt tun? Weil diese Ebenen meist gleichzeitig <span class="gl" data-uk="відчуватися, звучати (між рядків)" data-lemma="mitschwingen (schwang mit, hat mitgeschwungen)">mitschwingen</span>, ist eine <span class="gl" data-uk="хибне тлумачення" data-lemma="die Fehlinterpretation, -en">Fehlinterpretation</span> schnell passiert. Gefährlich wird es, wenn kleine Missverständnisse <span class="gl" data-uk="непоміченим" data-lemma="unentdeckt">unentdeckt</span> bleiben – dann kann die Zusammenarbeit leiden.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Die Idee mit den vier Seiten einer Nachricht ist in Deutschland sehr bekannt. Der Hamburger Psychologe Friedemann Schulz von Thun hat sie 1981 als „Kommunikationsquadrat“ beschrieben – auch „Vier-Ohren-Modell“ genannt. Die vier Seiten heißen bei ihm <i>Sachinhalt</i>, <i>Selbstkundgabe</i>, <i>Beziehung</i> und <i>Appell</i>.</p>
+          </aside>
+
+          <h3>Wenn das Sprachgefühl fehlt</h3>
+
+          <p>In einer Fremdsprache kommt noch etwas hinzu: das Gefühl für <span class="gl" data-uk="стиль мовлення" data-lemma="der Sprachstil, -e">Sprachstile</span>. Muttersprachler wechseln <span class="gl" data-uk="інстинктивно" data-lemma="instinktiv">instinktiv</span> zwischen formeller Sprache und <span class="gl" data-key data-uk="розмовна мова" data-lemma="die Umgangssprache">Umgangssprache</span>. Wer Deutsch lernt, hat diese Intuition oft noch nicht – schließlich lernt man die Sprache meist zuerst im Alltag und nicht im Beruf. So kann es passieren, dass jemand im Vorstellungsgespräch nach der „<span class="gl" data-uk="гроші (розм.), «бабки»" data-note="розмовне; дослівно: вугілля" data-lemma="die Kohle">Kohle</span>“ fragt statt nach dem Gehalt. Das Gegenüber sieht darin vielleicht keinen Sprachfehler, sondern eine <span class="gl" data-uk="вада характеру" data-lemma="die Charakterschwäche, -n">Charakterschwäche</span> oder <span class="gl" data-uk="неввічливість" data-lemma="die Unhöflichkeit">Unhöflichkeit</span>. Und weil Kollegen solche Fehler selten <span class="gl" data-uk="виправляти" data-lemma="korrigieren">korrigieren</span>, merkt man es nicht einmal.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Euro_coins_and_banknotes_%28cropped%29.jpg/960px-Euro_coins_and_banknotes_%28cropped%29.jpg" alt="Euro-Scheine und Münzen – umgangssprachlich auch „Kohle“." width="960" height="640" loading="lazy">
+            <figcaption>Euro-Scheine und Münzen – umgangssprachlich auch „Kohle“. Foto: Avij, gemeinfrei, <a href="https://commons.wikimedia.org/wiki/File:Euro_coins_and_banknotes_(cropped).jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Überraschend ist: In internationalen Teams gibt es oft nicht mehr, sondern weniger Probleme. Dort sind sich alle der Unterschiede <span class="gl" data-uk="усвідомлювати (щось)" data-lemma="sich (Dat.) einer Sache bewusst sein">bewusst</span>, sprechen vorsichtiger und fragen öfter nach, ob die Botschaft richtig angekommen ist. In rein deutschsprachigen Gruppen glaubt man dagegen leicht, ohnehin <span class="gl" data-uk="бути на одній хвилі" data-lemma="auf einer Wellenlänge sein">auf einer Wellenlänge</span> zu sein.</p>
+
+          <h3>Vorbeugen und offen ansprechen</h3>
+
+          <p>Was hilft? Ohrband rät, in die Sprache des eigenen Berufs <span class="gl" data-uk="занурюватися" data-lemma="eintauchen in">einzutauchen</span> – etwa mit Fach-Podcasts oder sogar Fernsehserien, in denen Ingenieurinnen oder <span class="gl" data-uk="страховий агент" data-lemma="der Versicherungsvertreter, -">Versicherungsvertreter</span> vorkommen. Vor wichtigen Terminen kann man mögliche Missverständnisse im Kopf <span class="gl" data-uk="прокрутити, програти (подумки)" data-lemma="durchspielen">durchspielen</span>. Auch die <span class="gl" data-uk="внутрішня позиція" data-lemma="die innere Haltung">innere Haltung</span> zählt: Wer selbst unsicher ist, dessen Körpersprache <span class="gl" data-uk="суперечити" data-lemma="widersprechen (widersprach, hat widersprochen)">widerspricht</span> oft seinen Worten. Und es hilft, das Gegenüber einfach zu fragen, was von den eigenen Worten angekommen ist.</p>
+
+          <p>Ist ein Missverständnis schon passiert, sollte man es <span class="gl" data-uk="проактивно" data-lemma="proaktiv">proaktiv</span> <span class="gl" data-key data-uk="порушувати (тему), говорити про щось" data-lemma="ansprechen (sprach an, hat angesprochen)">ansprechen</span> – am besten, indem man den Fehler zuerst bei sich selbst sucht. Ein Satz wie „Ich <span class="gl" data-uk="побоюватися" data-lemma="befürchten">befürchte</span>, ich habe mich <span class="gl" data-uk="двозначно, незрозуміло" data-lemma="missverständlich">missverständlich</span> ausgedrückt“ öffnet das Gespräch, statt eine <span class="gl" data-uk="захисна реакція" data-lemma="die Abwehrhaltung, -en">Abwehrhaltung</span> auszulösen. Der schlechteste Weg ist, aus Angst vor Fehlern gar nichts mehr zu sagen: <span class="gl" data-key data-uk="мовчання" data-lemma="das Schweigen">Schweigen</span> wird schnell als Arroganz oder Desinteresse gedeutet. Besser ist es, Missverständnisse als <span class="gl" data-uk="неминучий" data-lemma="unvermeidlich">unvermeidlich</span> zu akzeptieren und Mut zur Improvisation zu zeigen. So erkennt man Fehler schneller – und macht mit der Zeit weniger.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Яка головна думка тексту? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Vier Seiten einer Nachricht</h2>
+      <p class="lead">Колега каже на нараді: <i>«Der Bericht ist noch nicht fertig.»</i> Яке питання пасує до якого рівня? Зіставлення — за абзацом 1 і «Gut zu wissen».</p>
+      <div class="card" id="ub3-list"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Was rät Gerhard Ohrband?</h2>
+      <p class="lead">Що психолог радить, а від чого застерігає? Розсортуй.</p>
+      <div class="card" id="ub4-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово або вислів? Обери пояснення.</p>
+      <div class="card" id="ub5-list"></div>
+      <p class="lead">б) Встав слова в короткий переказ.</p>
+      <div class="card" id="ub5b-bank"></div>
+    </section>
+
+    <!-- ===== Üb. 6 ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">Und du?</h2>
+      <p class="lead">Напиши відповіді німецькою (5–7 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub6-a">1. Beschreibe ein Missverständnis, das du erlebt hast (auch auf Ukrainisch oder Englisch). Was war der Grund? Wie habt ihr es gelöst?</label>
+          <textarea id="ub6-a" rows="6" data-words="60"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub6-b">2. Ohrband sagt: Schweigen ist der schlechteste Weg. Stimmst du zu? Ist das in der Ukraine genauso?</label>
+          <textarea id="ub6-b" rows="6" data-words="60"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Einmal habe ich … gesagt, aber … hat … verstanden., Der Grund war, dass …, Ich befürchte, ich habe mich missverständlich ausgedrückt., Ich stimme (nicht) zu, weil …, Bei uns …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Jede Nachricht hat vier Seiten – diese Idee des Hamburger Psychologen Schulz von Thun kennt in Deutschland fast jeder. Für Deutschlernende ist der Unterschied zwischen formeller Sprache und Umgangssprache oft schwer: „Kohle“ statt „Gehalt“ wirkt schnell unhöflich. Missverständnisse sollte man offen ansprechen und den Fehler zuerst bei sich suchen – Schweigen ist der schlechteste Weg.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Кожне повідомлення має чотири сторони — цю ідею гамбурзького психолога Шульца фон Туна в Німеччині знає майже кожен. Тим, хто вчить німецьку, часто важко відчути різницю між офіційною й розмовною мовою: «Kohle» замість «Gehalt» звучить неввічливо. Про непорозуміння варто говорити відкрито й спершу шукати помилку в собі — мовчати найгірше.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "missverstaendnisse-im-team";
+
+  // Üb. 1а
+  buildQuiz('ub1-quiz', [
+    {q: "Was ist die Hauptaussage des Textes?",
+     opts: ["Missverständnisse sind normal – wichtig ist, sie früh und offen anzusprechen.",
+            "In internationalen Teams sollte man möglichst wenig sprechen.",
+            "Wer Deutsch lernt, sollte im Büro nur Umgangssprache benutzen."],
+     correct: "Missverständnisse sind normal – wichtig ist, sie früh und offen anzusprechen."}
+  ]);
+  // Üb. 1б
+  buildMatch('ub1h', [
+    ["Mehrere Botschaften gleichzeitig", "Absatz 1"],
+    ["Ein falsches Wort zur falschen Zeit", "Absatz 2"],
+    ["Vielfalt macht vorsichtig", "Absatz 3"],
+    ["Gut vorbereitet ins Gespräch", "Absatz 4"],
+    ["Bloß nicht schweigen", "Absatz 5"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5"], lead: true});
+
+  // Üb. 2
+  buildRF('ub2-rf', [
+    {s: "Laut Ohrband ist es normal, dass Informationen unterschiedlich ankommen.", a: "r"},
+    {s: "Die vier Ebenen einer Nachricht prüfen wir ganz bewusst und nacheinander.", a: "f"},
+    {s: "Deutschlernende lernen die Sprache meistens zuerst im Beruf.", a: "f"},
+    {s: "Kollegen korrigieren solche Stilfehler oft nicht.", a: "r"},
+    {s: "In internationalen Teams gibt es laut Ohrband immer mehr Konflikte.", a: "f"},
+    {s: "Ohrband empfiehlt einen bestimmten Podcast für Ingenieure.", a: "n"},
+    {s: "Schweigen kann als Arroganz verstanden werden.", a: "r"}
+  ]);
+
+  // Üb. 3: питання ↔ рівень
+  buildMatch('ub3', [
+    ["Worum geht es? – Der Bericht ist nicht fertig.", "Sachinhalt"],
+    ["Wie geht es ihm? – Er ist vielleicht gestresst.", "Selbstkundgabe"],
+    ["Was denkt er über mich? – Vielleicht glaubt er, ich mache Druck.", "Beziehung"],
+    ["Was soll ich tun? – Vielleicht soll ich ihm helfen.", "Appell"]
+  ], {options: ["Sachinhalt", "Selbstkundgabe", "Beziehung", "Appell"]});
+
+  // Üb. 4
+  buildSort('ub4-sort', {
+    buckets: ["hilft", "lieber nicht"],
+    items: [
+      {t: "Fach-Podcasts und Serien über den eigenen Beruf hören", b: "hilft"},
+      {t: "mögliche Missverständnisse vorher im Kopf durchspielen", b: "hilft"},
+      {t: "fragen, was von den eigenen Worten angekommen ist", b: "hilft"},
+      {t: "den Fehler zuerst bei sich selbst suchen", b: "hilft"},
+      {t: "aus Angst vor Fehlern gar nichts mehr sagen", b: "lieber nicht"},
+      {t: "ein Missverständnis einfach ignorieren", b: "lieber nicht"},
+      {t: "glauben, dass alle sowieso auf einer Wellenlänge sind", b: "lieber nicht"}
+    ]
+  });
+
+  // Üb. 5а
+  buildMatch('ub5', [
+    ["auf einer Wellenlänge sein", "sich sehr gut verstehen"],
+    ["etwas ansprechen", "über etwas offen zu sprechen beginnen"],
+    ["durchspielen", "genau überlegen, wie etwas ablaufen könnte"],
+    ["unvermeidlich", "so, dass es immer passieren kann"],
+    ["die Abwehrhaltung", "Reaktion, die ein klares Nein zeigt"],
+    ["die Umgangssprache", "Sprache, die man im Alltag spricht"]
+  ]);
+  // Üb. 5б
+  buildWordBank('ub5b-bank', {
+    text: "Wer Deutsch lernt, wechselt nicht immer [instinktiv] zwischen formeller Sprache und [Umgangssprache]. Wer im Vorstellungsgespräch nach der „Kohle“ fragt, wirkt vielleicht unhöflich.\n\nEin [Missverständnis] sollte man deshalb offen [ansprechen]. Denn [Schweigen] wird oft als Arroganz verstanden.",
+    extra: ["Gehalt", "Ebene"]
+  });
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['👂','💬','🌍','🤝','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
