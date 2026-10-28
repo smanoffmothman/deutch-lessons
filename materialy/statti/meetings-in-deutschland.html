@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TOP 1: Das deutsche Meeting · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Arbeit &amp; Schule</span>
+        <h1>TOP 1: Das deutsche Meeting</h1>
+        <p class="sub">Сперечатися — нормально, запізнитися на три хвилини — ні. Що означає «TOP», хто пише протокол і як увічливо сказати «я з цим не згоден»?</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Redemittel</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Im Meeting</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Diskutieren in der Gruppe</h2>
+      <div class="card">
+        <p>Denk an eine Diskussion in deiner Klasse, in einem Verein oder in einer Gruppe. Was passiert, wenn jemand eine Idee nicht gut findet? Sagt er das laut – oder schweigt er lieber?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Як ти зазвичай кажеш, що з чимось не згоден (не згодна)? А що робиш, коли запізнюєшся на урок чи зустріч — довго пояснюєш чи тихо сідаєш на місце?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Meetings in deutschen Firmen dauern manchmal lange, und es wird oft offen diskutiert. Wer neu im Team ist, sollte ein paar Regeln und Sätze kennen.</p>
+
+          <h3>Streiten ist erlaubt</h3>
+
+          <p>Kritik und <span class="gl" data-key data-uk="заперечення" data-lemma="der Widerspruch, -ü-e">Widerspruch</span> sind in einem deutschen Meeting nichts Schlimmes. Viele Menschen sehen darin sogar ein <span class="gl" data-uk="знак, ознака" data-lemma="das Zeichen, -">Zeichen</span> von Interesse und <span class="gl" data-uk="залученість, активна участь" data-lemma="das Engagement">Engagement</span>. Aber Vorsicht: Wer jede Idee <span class="gl" data-uk="відхиляти" data-lemma="ablehnen">ablehnt</span>, kommt nie zu einem <span class="gl" data-key data-uk="результат" data-lemma="das Ergebnis, -se">Ergebnis</span>. Und genau das soll am Ende jedes Meetings stehen.</p>
+
+          <p>Damit die Diskussion nicht im Chaos endet, helfen typische Sätze. Wer <span class="gl" data-uk="погоджуватися" data-lemma="zustimmen">zustimmen</span> will, sagt zum Beispiel: „Da stimme ich dir zu“ oder „Genau so sehe ich das auch“ – oder kurz: „Guter Punkt!“ Wer anderer Meinung ist, bleibt <span class="gl" data-uk="ввічливий" data-lemma="höflich">höflich</span>: „Ich sehe das etwas anders“, „Da habe ich <span class="gl" data-key data-uk="сумніви, побоювання" data-lemma="die Bedenken (Pl.)">Bedenken</span>“ oder ganz vorsichtig: „Hm … ich weiß nicht so recht.“ Und wer eine eigene Idee hat, beginnt mit: „Ich hätte da einen <span class="gl" data-key data-uk="пропозиція" data-lemma="der Vorschlag, -ä-e">Vorschlag</span>“ oder „Wie wäre es, wenn wir …?“</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Konferenzraum_ARD-aktuell.jpg/960px-Konferenzraum_ARD-aktuell.jpg" alt="Ein Konferenzraum bei der Nachrichtenredaktion ARD-aktuell." width="960" height="640" loading="lazy">
+            <figcaption>Ein Konferenzraum bei der Nachrichtenredaktion ARD-aktuell. Foto: New York-air, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Konferenzraum_ARD-aktuell.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <h3>TOP und Protokoll</h3>
+
+          <p>Vor vielen Meetings bekommt man eine <span class="gl" data-uk="порядок денний" data-lemma="die Tagesordnung, -en">Tagesordnung</span>. Die einzelnen Punkte heißen TOP – das ist die <span class="gl" data-uk="скорочення, абревіатура" data-lemma="die Abkürzung, -en">Abkürzung</span> für <span class="gl" data-key data-uk="пункт порядку денного" data-lemma="der Tagesordnungspunkt, -e">Tagesordnungspunkt</span>. Zum Beispiel: TOP 1: Aktuelle Projekte, TOP 2: Budget, und ganz am Ende oft: Offene Fragen.</p>
+
+          <p>Und wer schreibt heute das <span class="gl" data-key data-uk="протокол" data-lemma="das Protokoll, -e">Protokoll</span>? Diese Aufgabe ist nicht sehr <span class="gl" data-uk="популярний, улюблений" data-lemma="beliebt">beliebt</span>. Deshalb <span class="gl" data-uk="змінюватися (по черзі)" data-lemma="wechseln">wechseln</span> sich in vielen Teams alle regelmäßig ab. Meistens schreibt man ein Ergebnisprotokoll. Darin steht, was <span class="gl" data-uk="вирішувати, ухвалювати" data-lemma="beschließen (beschloss, hat beschlossen)">beschlossen</span> wurde und wer was bis wann macht. Ein Verlaufsprotokoll mit jedem Argument und Gegenargument schreibt heute fast niemand mehr.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Ein typischer Satz am Ende eines deutschen Meetings: „Wer macht was bis wann?“ Diese drei Fragen kommen oft auch so ins Protokoll – zum Beispiel als Tabelle mit den Spalten <i>Aufgabe</i>, <i>Wer</i> und <i>Bis wann</i>. So weiß jeder genau, was er zu tun hat.</p>
+          </aside>
+
+          <h3>Drei Minuten zu spät</h3>
+
+          <p><span class="gl" data-uk="пунктуальність" data-lemma="die Pünktlichkeit">Pünktlichkeit</span> ist wichtig – auch drei Minuten <span class="gl" data-uk="запізнення" data-lemma="die Verspätung, -en">Verspätung</span> <span class="gl" data-uk="впадати в око, бути помітним" data-lemma="auffallen (fiel auf, ist aufgefallen)">fallen</span> auf. Wer zu spät kommt, sollte aber keine lange Erklärung geben. Ein kurzes und leises „Entschuldigung“ <span class="gl" data-uk="вистачати" data-lemma="reichen">reicht</span>. Noch besser: still sein, kurz <span class="gl" data-uk="кивати" data-lemma="nicken">nicken</span>, sich setzen – und das <span class="gl" data-uk="закочування очей" data-lemma="das Augenrollen">Augenrollen</span> mancher Kollegen <span class="gl" data-uk="терпіти, зносити" data-lemma="ertragen (ertrug, hat ertragen)">ertragen</span>.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Was sagt man damit?</h2>
+      <p class="lead">Що людина робить цією фразою: погоджується, заперечує чи пропонує? Розсортуй.</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Im Meeting</h2>
+      <p class="lead">Нарада в команді. Обери репліку, яка пасує найкраще.</p>
+      <div class="card" id="ub4-chat"></div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub5-list"></div>
+      <p class="lead">б) Встав слова з рамки.</p>
+      <div class="card">
+        <div class="wordbank"><span>Protokoll</span><span>Vorschlag</span><span>Bedenken</span><span>Ergebnis</span><span>Verspätung</span></div>
+        <div id="ub5b-list">
+          <div class="fill-item"><span class="num">1)</span> Ich hätte da einen <input type="text" class="blank-input inline" data-ans="Vorschlag">: Wir machen das Fest im Garten.</div>
+          <div class="fill-item"><span class="num">2)</span> Hm, da habe ich <input type="text" class="blank-input inline" data-ans="Bedenken">. Was machen wir, wenn es regnet?</div>
+          <div class="fill-item"><span class="num">3)</span> Heute schreibt Lisa das <input type="text" class="blank-input inline" data-ans="Protokoll">.</div>
+          <div class="fill-item"><span class="num">4)</span> Nach zwei Stunden haben wir endlich ein <input type="text" class="blank-input inline" data-ans="Ergebnis">.</div>
+          <div class="fill-item"><span class="num">5)</span> Entschuldigung für die <input type="text" class="blank-input inline" data-ans="Verspätung">!</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub5b-check">Prüfen</button>
+          <button class="btn secondary" id="ub5b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub5b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 6 ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши німецькою. Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub6-a">1. Schreib eine kleine Tagesordnung für ein Klassentreffen: drei TOPs und „Offene Fragen“.</label>
+          <textarea id="ub6-a" rows="5" data-words="15"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub6-b">2. Wie diskutiert man in der Ukraine – in der Schule oder bei der Arbeit deiner Eltern? Wie ist es, wenn jemand zu spät kommt? (4–6 Sätze)</label>
+          <textarea id="ub6-b" rows="5" data-words="40"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>TOP 1: …, Bei uns sagt man oft …, Wer zu spät kommt, …, Anders als in Deutschland …, Ich finde es (nicht) gut, dass …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>In deutschen Meetings darf man widersprechen – Kritik zeigt Interesse. Wichtig ist aber, dass am Ende ein Ergebnis steht. Eine Tagesordnung hat TOPs, und im Protokoll steht: Wer macht was bis wann? Und wer zu spät kommt, entschuldigt sich nur kurz.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          На німецьких нарадах можна заперечувати — критика свідчить про зацікавленість. Але наприкінці має бути результат. Порядок денний складається з «TOP», а в протоколі записують, хто що й до коли робить. Хто запізнився — коротко вибачається й тихо сідає.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "meetings-in-deutschland";
+
+  // Üb. 1а
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Wie Meetings in Deutschland ablaufen und welche Sätze dabei helfen",
+            "Warum Meetings in Deutschland immer sehr kurz sind",
+            "Wie man ein Meeting online organisiert"],
+     correct: "Wie Meetings in Deutschland ablaufen und welche Sätze dabei helfen"}
+  ]);
+  // Üb. 1б
+  buildMatch('ub1h', [
+    ["Kritik zeigt Interesse", "Absatz 1"],
+    ["Zustimmen, widersprechen, vorschlagen", "Absatz 2"],
+    ["Ein Programm für das Meeting", "Absatz 3"],
+    ["Wer schreibt mit?", "Absatz 4"],
+    ["Lieber still als lange Erklärungen", "Absatz 5"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5"], lead: true});
+
+  // Üb. 2
+  buildRF('ub2-rf', [
+    {s: "Viele Deutsche finden Widerspruch im Meeting unhöflich.", a: "f"},
+    {s: "Am Ende eines Meetings soll es ein Ergebnis geben.", a: "r"},
+    {s: "TOP ist die Abkürzung für Tagesordnungspunkt.", a: "r"},
+    {s: "Alle Kollegen schreiben sehr gern das Protokoll.", a: "f"},
+    {s: "Ein Verlaufsprotokoll schreibt man heute nur noch sehr selten.", a: "r"},
+    {s: "In deutschen Meetings gibt es immer Kaffee und Kekse.", a: "n"},
+    {s: "Wer zu spät kommt, sollte lange erklären, warum.", a: "f"}
+  ]);
+
+  // Üb. 3
+  buildSort('ub3-sort', {
+    buckets: ["Zustimmung", "Widerspruch", "Vorschlag"],
+    items: [
+      {t: "Da stimme ich dir zu.", b: "Zustimmung"},
+      {t: "Genau so sehe ich das auch.", b: "Zustimmung"},
+      {t: "Guter Punkt!", b: "Zustimmung"},
+      {t: "Ich sehe das etwas anders.", b: "Widerspruch"},
+      {t: "Da habe ich Bedenken.", b: "Widerspruch"},
+      {t: "Hm … ich weiß nicht so recht.", b: "Widerspruch"},
+      {t: "Ich hätte da einen Vorschlag.", b: "Vorschlag"},
+      {t: "Wie wäre es, wenn wir …?", b: "Vorschlag"}
+    ]
+  });
+
+  // Üb. 4
+  buildChat('ub4-chat', {
+    partner: "Teamleiterin",
+    steps: [
+      {them: "So, TOP 2: das Sommerfest. Wir wollen es im Juli im Büro machen. Was meint ihr?"},
+      {you: ["Hm, da habe ich Bedenken. Im Juli ist es im Büro sehr heiß.",
+             "Das ist die dümmste Idee der Welt!",
+             "Wie spät ist es?"], correct: 0, hint: "ти не згоден (не згодна) — скажи це ввічливо"},
+      {them: "Stimmt, das ist ein Problem. Hast du eine andere Idee?"},
+      {you: ["Ich hätte da einen Vorschlag: Wie wäre es mit einem Picknick im Park?",
+             "Nein.",
+             "Das ist nicht mein TOP."], correct: 0},
+      {them: "Gute Idee! Dann notieren wir im Protokoll: Wer macht was bis wann?"},
+      {you: ["Ich kann bis Freitag einen Park suchen.",
+             "Das Protokoll schreibe ich nie.",
+             "Ich habe Hunger."], correct: 0}
+    ]
+  });
+
+  // Üb. 5а
+  buildMatch('ub5', [
+    ["der Widerspruch", "заперечення"],
+    ["zustimmen", "погоджуватися"],
+    ["die Tagesordnung", "порядок денний"],
+    ["beschließen", "ухвалювати"],
+    ["nicken", "кивати"],
+    ["die Verspätung", "запізнення"]
+  ]);
+  // Üb. 5б
+  wireBlanks('ub5b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📋','🗣️','✍️','⏰','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

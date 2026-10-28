@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aus Mexiko und den USA ins deutsche Büro · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Arbeit &amp; Schule</span>
+        <h1>Aus Mexiko und den USA ins deutsche Büro</h1>
+        <p class="sub">Карлос навчився в Німеччині казати «я цього не знаю», а Діна з Нью-Йорка дивується колегам, які втомлюються, хоча працюють лише до п'ятої.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Wer ist das?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Sätze</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und du?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Kollegen und Freunde</h2>
+      <div class="card">
+        <p>Sind Kollegen auch Freunde? Was glaubst du: Wie ist das in Deutschland?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Чи легко тобі сказати вчителеві або другові «я цього не знаю»? А чи дружать твої батьки з колегами після роботи?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Wie ist es wirklich, in Deutschland zu arbeiten? Zwei Menschen erzählen, was für sie neu war.</p>
+
+          <h3>Carlos González aus Mexiko</h3>
+
+          <p>Carlos arbeitet im <span class="gl" data-uk="відділ кадрів, HR" data-lemma="der Personalbereich, -e">Personalbereich</span>. Zuerst hat er für seine Firma in Mexiko gearbeitet, dann ist er für einen neuen Job in dieser Firma nach Deutschland gekommen. Neues Land, neue Sprache, neue Aufgabe – am Anfang wusste er nicht, wie er das alles <span class="gl" data-uk="впоратися (з чимось)" data-lemma="meistern">meistern</span> soll.</p>
+
+          <p>In Mexiko, erzählt Carlos, sind die Menschen sehr <span class="gl" data-uk="сердечний, теплий" data-lemma="warmherzig">warmherzig</span>. Man möchte, dass sich die anderen gut fühlen. Darum sagt man bei der Arbeit oft nicht offen, was nicht gut ist. In Deutschland ist das anders: Hier bekommt man <span class="gl" data-key data-uk="чесний" data-lemma="ehrlich">ehrliches</span> <span class="gl" data-key data-uk="зворотний зв'язок, відгук" data-lemma="das Feedback, -s">Feedback</span> – und soll es auch den Kollegen geben. Am Anfang war das schwer für ihn. Heute findet er es toll. Er hat nämlich gelernt, auch zu sagen: „Das weiß ich nicht.“ Dafür <span class="gl" data-uk="соромитися" data-lemma="sich schämen">schämt</span> er sich nicht. Er sagt: Wer <span class="gl" data-key data-uk="помилка" data-lemma="der Fehler, -">Fehler</span> zugibt, kann wirklich <span class="gl" data-uk="рости, розвиватися" data-lemma="wachsen (wuchs, ist gewachsen)">wachsen</span>.</p>
+
+          <h3>Deena Sami aus den USA</h3>
+
+          <p>Deena ist in Kalifornien <span class="gl" data-uk="виростати" data-lemma="aufwachsen (wuchs auf, ist aufgewachsen)">aufgewachsen</span> und war lange Journalistin in New York. Dort sind die Menschen direkter als in Kalifornien. Darum war die deutsche Direktheit für sie nicht neu. Neu war etwas anderes: Ihre Kollegen in Deutschland waren <span class="gl" data-uk="у стресі, напружений" data-lemma="gestresst">gestresst</span>, obwohl sie um 17 Uhr <span class="gl" data-key data-uk="кінець робочого дня" data-lemma="der Feierabend, -e">Feierabend</span> hatten. Das hat Deena <span class="gl" data-uk="дивувати" data-lemma="überraschen">überrascht</span>. In New York hat sie oft bis 22 Uhr gearbeitet, manchmal auch am Wochenende. Für sie ist 17 Uhr eine gesunde <span class="gl" data-uk="баланс між роботою й життям" data-lemma="die Work-Life-Balance">Work-Life-Balance</span>.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Midtown_Manhattan_skyline_from_the_One_World_Observatory%2C_New_York_City.jpg/960px-Midtown_Manhattan_skyline_from_the_One_World_Observatory%2C_New_York_City.jpg" alt="Blick auf Manhattan in New York." width="960" height="640" loading="lazy">
+            <figcaption>Blick auf Manhattan in New York. Foto: Christian David, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Midtown_Manhattan_skyline_from_the_One_World_Observatory,_New_York_City.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Noch etwas war anders. In den USA sind viele Kollegen mit der Zeit auch Deenas Freunde geworden. In Deutschland gibt es eine stärkere <span class="gl" data-uk="розділення, межа" data-lemma="die Trennung, -en">Trennung</span> zwischen Arbeit und <span class="gl" data-key data-uk="вільний час" data-lemma="die Freizeit">Freizeit</span>. Deena <span class="gl" data-uk="добре ладнати (з кимось)" data-lemma="sich verstehen mit">versteht sich</span> mit fast allen Kollegen sehr gut – aber gute Freunde zu finden, hat hier viel länger gedauert.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Viele Deutsche trennen Arbeit und Privatleben. Mit Kollegen geht man zusammen in die Kantine, aber am Abend und am Wochenende trifft man lieber Familie und alte Freunde. Freundschaften mit Kollegen gibt es natürlich auch – sie brauchen oft nur mehr Zeit.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Wer ist das?</h2>
+      <p class="lead">а) Про що текст? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Карлос чи Діна? Розсортуй.</p>
+      <div class="card" id="ub1-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub3-list"></div>
+      <p class="lead">б) Встав слова з рамки.</p>
+      <div class="card">
+        <div class="wordbank"><span>Feierabend</span><span>Fehler</span><span>gestresst</span><span>ehrlich</span><span>Freizeit</span></div>
+        <div id="ub3b-list">
+          <div class="fill-item"><span class="num">1)</span> Sie sagt immer die Wahrheit. Sie ist sehr <input type="text" class="blank-input inline" data-ans="ehrlich">.</div>
+          <div class="fill-item"><span class="num">2)</span> Ich habe einen <input type="text" class="blank-input inline" data-ans="Fehler"> gemacht. Entschuldigung!</div>
+          <div class="fill-item"><span class="num">3)</span> Zu viel Arbeit, zu wenig Schlaf – ich bin total <input type="text" class="blank-input inline" data-ans="gestresst">.</div>
+          <div class="fill-item"><span class="num">4)</span> Um 17 Uhr ist <input type="text" class="blank-input inline" data-ans="Feierabend">. Dann gehe ich nach Hause.</div>
+          <div class="fill-item"><span class="num">5)</span> In meiner <input type="text" class="blank-input inline" data-ans="Freizeit"> treffe ich Freunde.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub3b-check">Prüfen</button>
+          <button class="btn secondary" id="ub3b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub3b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Sätze bauen</h2>
+      <p class="lead">Склади речення. Натискай слова й групи слів по черзі.</p>
+      <div class="card" id="ub4-order"></div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und du?</h2>
+      <p class="lead">Напиши німецькою. Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Kannst du leicht sagen: „Das weiß ich nicht“? In der Schule, zu Hause, bei Freunden? (3–5 Sätze)</label>
+          <textarea id="ub5-a" rows="5" data-words="30"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Und bei uns? Sind Kollegen in der Ukraine oft auch Freunde? Frag deine Eltern. (3–5 Sätze)</label>
+          <textarea id="ub5-b" rows="5" data-words="30"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Für mich ist es leicht / schwer, … zu sagen, weil …, Meine Mutter sagt, dass …, In der Ukraine …, In Deutschland dagegen …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>In Deutschland gibt man im Job ehrliches Feedback – und darf auch sagen: „Das weiß ich nicht.“ Feierabend um 17 Uhr ist normal. Arbeit und Freizeit sind oft getrennt, darum werden Kollegen nicht so schnell Freunde.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          У Німеччині на роботі чесно кажуть, що не так, — і можна визнати: «Я цього не знаю». Закінчувати роботу о 17:00 — нормально. Роботу й вільний час часто розділяють, тому колеги не так швидко стають друзями.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "neu-im-job-mexiko-usa";
+
+  // Üb. 1а
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text?",
+     opts: ["Zwei Menschen erzählen, was im deutschen Job neu für sie war",
+            "Zwei Deutsche erzählen von ihrer Arbeit in Mexiko und in den USA",
+            "Eine Journalistin schreibt über Feierabend in Kalifornien"],
+     correct: "Zwei Menschen erzählen, was im deutschen Job neu für sie war"}
+  ]);
+  // Üb. 1б
+  buildSort('ub1-sort', {
+    buckets: ["Carlos", "Deena"],
+    items: [
+      {t: "kommt aus Mexiko", b: "Carlos"},
+      {t: "arbeitet im Personalbereich", b: "Carlos"},
+      {t: "hat schon in Mexiko für seine Firma gearbeitet", b: "Carlos"},
+      {t: "sagt heute: „Das weiß ich nicht.“", b: "Carlos"},
+      {t: "ist in Kalifornien aufgewachsen", b: "Deena"},
+      {t: "war Journalistin in New York", b: "Deena"},
+      {t: "hat oft bis 22 Uhr gearbeitet", b: "Deena"},
+      {t: "hat lange gebraucht, um Freunde zu finden", b: "Deena"}
+    ]
+  });
+
+  // Üb. 2
+  buildRF('ub2-rf', [
+    {s: "Carlos hat in Deutschland bei einer ganz neuen Firma angefangen.", a: "f"},
+    {s: "Ehrliches Feedback war für Carlos am Anfang schwer.", a: "r"},
+    {s: "Carlos schämt sich, wenn er etwas nicht weiß.", a: "f"},
+    {s: "In New York sind die Menschen direkter als in Kalifornien.", a: "r"},
+    {s: "Deena findet Feierabend um 17 Uhr stressig.", a: "f"},
+    {s: "Deena spricht mit ihren Kollegen meistens Englisch.", a: "n"},
+    {s: "In Deutschland hat es länger gedauert, bis Deena gute Freunde hatte.", a: "r"}
+  ]);
+
+  // Üb. 3а
+  buildMatch('ub3', [
+    ["warmherzig", "теплий, сердечний"],
+    ["sich schämen", "соромитися"],
+    ["überraschen", "дивувати"],
+    ["aufwachsen", "виростати"],
+    ["die Trennung", "розділення"],
+    ["meistern", "впоратися"]
+  ]);
+  // Üb. 3б
+  wireBlanks('ub3b');
+
+  // Üb. 4
+  buildOrder('ub4-order', [
+    {words: ["Hier", "bekommt", "man", "ehrliches Feedback"], end: ".",
+     alt: ["Man bekommt hier ehrliches Feedback", "Ehrliches Feedback bekommt man hier"]},
+    {words: ["In New York", "hat", "sie", "oft", "bis 22 Uhr", "gearbeitet"], end: ".",
+     alt: ["Sie hat in New York oft bis 22 Uhr gearbeitet", "Oft hat sie in New York bis 22 Uhr gearbeitet", "Sie hat oft in New York bis 22 Uhr gearbeitet"]},
+    {words: ["Um 17 Uhr", "ist", "Feierabend"], end: ".",
+     alt: ["Feierabend ist um 17 Uhr"], gross: false}
+  ]);
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🇲🇽','🇺🇸','💬','🕔','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
