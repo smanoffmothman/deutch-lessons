@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keine Angst vor dem Anruf · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Sprache</span>
+        <h1>Keine Angst vor dem Anruf</h1>
+        <p class="sub">Телефон дзвонить — і всі вивчені слова кудись зникають. Тренерка з комунікації пояснює, чому розмова іноземною мовою по телефону лякає найбільше і що допомагає, крім зубріння фраз.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Tipps</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Am Telefon</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Und du?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Lieber schreiben oder anrufen?</h2>
+      <div class="card">
+        <p>Telefonierst du gern – auf Ukrainisch, auf Deutsch, auf Englisch? Was ist am Telefon schwieriger als in einem Gespräch von Angesicht zu Angesicht?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Багато людей, навіть рідною мовою, воліють написати повідомлення, ніж подзвонити. А як у тебе? Що допомагає тобі заспокоїтися перед важливою розмовою?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Das Telefon klingelt, auf dem Display steht eine unbekannte Nummer – und plötzlich ist der Kopf leer. Viele Menschen kennen dieses Gefühl, besonders in einer Fremdsprache. Die Kommunikationstrainerin und Autorin Isabel García hilft Menschen, am Telefon sicherer zu werden. Ihre Botschaft: Die Angst ist normal, und man kann etwas gegen sie tun.</p>
+
+          <h3>Nur eine Tonspur</h3>
+
+          <p>Warum fällt Telefonieren überhaupt so schwer? Laut García fehlt uns am Telefon fast alles, was uns im persönlichen Gespräch <span class="gl" data-uk="підтримувати, допомагати" data-lemma="unterstützen">unterstützt</span>. Wer sein <span class="gl" data-uk="співрозмовник" data-lemma="das Gegenüber, -">Gegenüber</span> sieht, nutzt viele <span class="gl" data-uk="канал сприйняття (зір, слух…)" data-lemma="der Sinneskanal, -ä-e">Sinneskanäle</span> gleichzeitig. Mit <span class="gl" data-key data-uk="міміка" data-lemma="die Mimik">Mimik</span> und <span class="gl" data-uk="жести, жестикуляція" data-lemma="die Gestik">Gestik</span> kann man eine Unsicherheit <span class="gl" data-uk="приховувати, маскувати" data-lemma="überspielen">überspielen</span>, und ein Lächeln <span class="gl" data-uk="забезпечувати, давати" data-lemma="verschaffen">verschafft</span> einem ein paar Sekunden Zeit. Am Telefon bleibt nur der Ton. Weil wir nicht wissen, was die andere Person während einer Pause gerade tut, glauben wir, ununterbrochen reden zu müssen. So <span class="gl" data-uk="тиснути на себе, створювати собі стрес" data-lemma="sich unter Druck setzen">setzen</span> wir uns selbst unter <span class="gl" data-key data-uk="тиск, психологічний стрес" data-lemma="der Druck">Druck</span>.</p>
+
+          <p>Dazu kommt, dass die Stimme mehr <span class="gl" data-uk="видавати, зраджувати" data-lemma="verraten (verriet, hat verraten)">verrät</span>, als uns lieb ist. Unter Stress wird sie oft höher und schneller, und das wirkt weniger <span class="gl" data-uk="упевнений, невимушений" data-lemma="souverän">souverän</span>. Ohne Bild kann das Gegenüber außerdem nicht erkennen, ob wir nur nervös oder schon verärgert sind. Missverständnisse sind damit fast <span class="gl" data-uk="запрограмований, неминучий" data-lemma="vorprogrammiert">vorprogrammiert</span>.</p>
+
+          <figure class="mat-fig" style="max-width:300px;margin-left:auto;margin-right:auto">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Fuld-modell-frankfurt.jpg/960px-Fuld-modell-frankfurt.jpg" alt="Das Telefon „Frankfurt“ der Firma Fuld, auch „Bauhaus-Telefon“ genannt." width="960" height="960" loading="lazy">
+            <figcaption>Das Telefon „Frankfurt“ der Firma Fuld, auch „Bauhaus-Telefon“ genannt. Foto: Christos Vittoratos, <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Fuld-modell-frankfurt.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <h3>Der „Endgegner“ Fremdsprache</h3>
+
+          <p>In einer Fremdsprache steigt der <span class="gl" data-key data-uk="рівень стресу" data-lemma="der Stresspegel, -">Stresspegel</span> noch einmal deutlich. Manche erleben ein Telefonat wie den <span class="gl" data-uk="фінальний бос (у грі)" data-note="у відеоіграх — найсильніший суперник наприкінці" data-lemma="der Endgegner, -">Endgegner</span> in einem Computerspiel. Das hat mit unserem Gehirn zu tun: Unter Stress greift es nur auf das zurück, was wir schon sehr lange können. Frisch gelernte Wörter lassen sich dann kaum <span class="gl" data-uk="викликати з пам'яті" data-lemma="abrufen (rief ab, hat abgerufen)">abrufen</span> – selbst solche, die wir eigentlich gut kennen. Die Folge ist ein <span class="gl" data-key data-uk="провал у пам'яті, «ступор»" data-lemma="das Blackout, -s">Blackout</span>. Hinzu kommt, dass das Gehirn kein echtes Multitasking beherrscht. Wer seine ganze Energie für die Wortsuche braucht, hat keine <span class="gl" data-uk="ресурс, можливість" data-lemma="die Kapazität, -en">Kapazität</span> mehr für den Rest des Gesprächs. Und über allem steht die Angst, „dumm“ zu wirken, weil man sich nicht so fein ausdrücken kann wie in der Muttersprache.</p>
+
+          <p>Besonders schwierig sind Akzente und Dialekte: Eine <span class="gl" data-uk="незвичний" data-lemma="ungewohnt">ungewohnte</span> <span class="gl" data-uk="наголос" data-lemma="die Betonung, -en">Betonung</span> kann ein bekanntes Wort völlig fremd klingen lassen. Auch Fachbegriffe aus dem Alltag, die in keinem Lehrbuch stehen, machen Probleme. Und kulturelle Unterschiede spielen mit: Wer aus einem Land kommt, in dem man lauter und impulsiver spricht, klingt am Telefon für deutsche Ohren schnell wie bei einem Angriff. Oft ist auch die andere Seite nicht <span class="gl" data-uk="гнучкий" data-lemma="flexibel">flexibel</span> genug – viele wiederholen einfach denselben Satz, statt ihn mit anderen Worten zu sagen. Sind beide gestresst, <span class="gl" data-uk="загострюватися, розгойдуватися" data-lemma="sich hochschaukeln">schaukelt</span> sich die Situation schnell hoch.</p>
+
+          <h3>Jeden Tag ein bisschen</h3>
+
+          <p>Was also hilft? García setzt auf tägliches, spielerisches Üben: Eine Minute am Tag bringt mehr als eine Stunde pro Woche. Mit einer Sprach-KI kann man im Audiomodus kurze <span class="gl" data-key data-uk="рольова гра" data-lemma="das Rollenspiel, -e">Rollenspiele</span> machen, etwa einen Arzttermin vereinbaren, und das Gespräch danach analysieren. Genauso nützlich sind kleine, „unwichtige“ Anrufe – zum Beispiel die Frage nach den Öffnungszeiten im Schwimmbad. Sie senken die <span class="gl" data-key data-uk="психологічний бар'єр" data-lemma="die Hemmschwelle, -n">Hemmschwelle</span>. Sätze <span class="gl" data-uk="напам'ять" data-lemma="auswendig">auswendig</span> zu lernen, hält sie dagegen für wenig sinnvoll; wichtiger sei es, flexibel reagieren zu können.</p>
+
+          <p>Gegen die <span class="gl" data-uk="заціпеніння від страху" data-lemma="die Schockstarre">Schockstarre</span> empfiehlt die Trainerin Bewegung: Wer beim Telefonieren hin und her geht, <span class="gl" data-uk="розслаблятися" data-lemma="sich entspannen">entspannt sich</span> – und die Gedanken kommen wieder in Fluss. Außerdem lohnt sich ein vorbereiteter „Notfallsatz“ für Pausen, etwa: „Einen Moment bitte, ich suche nach dem richtigen Wort.“ Schon dieser eine Satz nimmt der Stille ihren Schrecken.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Wer in Deutschland ein Telefonat <span class="gl" data-uk="вести (розмову)" data-lemma="führen">führt</span>, meldet sich meist mit dem Nachnamen: „Müller, guten Tag!“ – in Firmen oft zusätzlich mit dem Namen der Firma. Ein einfaches „Hallo?“ wirkt im Beruf eher unprofessionell. Am Ende sagt man „Auf Wiederhören!“, denn am Telefon sieht man sich ja nicht wieder.</p>
+          </aside>
+
+          <h3>Offen sagen, was los ist</h3>
+
+          <p>Soll man zugeben, dass Deutsch nicht die Muttersprache ist? Unbedingt, meint García. Das nimmt beiden Seiten den Druck, und der Gesprächspartner versteht die Situation besser. Es kann sogar einen positiven <span class="gl" data-uk="поворот" data-lemma="der Twist, -s">Twist</span> geben – etwa mit einem Satz wie: „Dieses Gespräch ist mir sehr wichtig, deshalb bin ich ein bisschen aufgeregt.“ Das wirkt stärker als ein <span class="gl" data-uk="виснажливий, важкий" data-lemma="mühsam">mühsames</span> Versteckspiel und schafft schnell eine menschliche <span class="gl" data-uk="рівень стосунків" data-lemma="die Beziehungsebene, -n">Beziehungsebene</span>. Zu seinen <span class="gl" data-uk="слабке місце" data-lemma="die Schwachstelle, -n">Schwachstellen</span> zu stehen, ist für García eine Stärke. Ihr letzter Tipp: jedes schwierige Telefonat einfach als weiteres Training sehen.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Was rät Isabel García?</h2>
+      <p class="lead">Що, за словами тренерки, допомагає, а що — ні? Розсортуй.</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово або вислів? Обери пояснення.</p>
+      <div class="card" id="ub4-list"></div>
+      <p class="lead">б) Встав слова в короткий переказ.</p>
+      <div class="card" id="ub4-bank"></div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Ein Anruf im Schwimmbad</h2>
+      <p class="lead">Невеликий «тренувальний» дзвінок, як радить Гарсія. Обери репліку, яка пасує найкраще.</p>
+      <div class="card" id="ub5-chat"></div>
+    </section>
+
+    <!-- ===== Üb. 6 ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">Und du?</h2>
+      <p class="lead">Напиши відповіді німецькою (5–7 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub6-a">1. Welcher Tipp von Isabel García überzeugt dich am meisten, welcher am wenigsten? Begründe.</label>
+          <textarea id="ub6-a" rows="6" data-words="60"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub6-b">2. Und bei uns? Telefoniert man in der Ukraine anders als in Deutschland – zum Beispiel wie man sich meldet oder wie direkt man spricht?</label>
+          <textarea id="ub6-b" rows="6" data-words="60"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Am meisten überzeugt mich …, weil …, Weniger hilfreich finde ich …, Bei uns meldet man sich meistens mit …, Im Gegensatz zu Deutschland …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Am Telefon fehlen Mimik und Gestik, deshalb ist der Druck besonders hoch – erst recht in einer Fremdsprache. Helfen können tägliches Üben, kleine Alltagsanrufe, Bewegung und ein Notfallsatz für Pausen. In Deutschland meldet man sich mit dem Nachnamen und verabschiedet sich mit „Auf Wiederhören!“.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          По телефону не видно міміки й жестів, тому тиск особливо сильний — а іноземною мовою й поготів. Допомагають щоденні тренування, дрібні побутові дзвінки, рух під час розмови і заготовлена фраза для пауз. У Німеччині, відповідаючи на дзвінок, називають своє прізвище, а прощаються словами «Auf Wiederhören!».
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "telefonieren-ohne-panik";
+
+  // Üb. 1а
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Warum Telefonieren in einer Fremdsprache Stress macht und was dagegen hilft",
+            "Wie man mit einer KI eine neue Sprache in einer Woche lernt",
+            "Warum man im Beruf lieber E-Mails schreiben als telefonieren sollte"],
+     correct: "Warum Telefonieren in einer Fremdsprache Stress macht und was dagegen hilft"}
+  ]);
+  // Üb. 1б
+  buildMatch('ub1h', [
+    ["Ohne Gesicht, ohne Hilfe", "Absatz 1"],
+    ["Was die Stimme verrät", "Absatz 2"],
+    ["Wenn das Gehirn blockiert", "Absatz 3"],
+    ["Fremde Betonung, fremde Sitten", "Absatz 4"],
+    ["Kleine Anrufe, großer Effekt", "Absatz 5"],
+    ["Gehen und ein Satz für den Notfall", "Absatz 6"],
+    ["Schwäche zeigen macht stark", "Absatz 7"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5", "Absatz 6", "Absatz 7"], lead: true});
+
+  // Üb. 2
+  buildRF('ub2-rf', [
+    {s: "Im persönlichen Gespräch kann man Unsicherheit leichter verstecken als am Telefon.", a: "r"},
+    {s: "Unter Stress wird die Stimme meistens tiefer und langsamer.", a: "f"},
+    {s: "Unter Stress vergisst man oft auch Wörter, die man eigentlich kennt.", a: "r"},
+    {s: "Laut García hilft es am meisten, einen Satz einfach noch einmal zu wiederholen.", a: "f"},
+    {s: "García hat selbst lange in einem Callcenter gearbeitet.", a: "n"},
+    {s: "Eine Stunde Training pro Woche ist besser als eine Minute pro Tag.", a: "f"},
+    {s: "García rät, offen zu sagen, dass Deutsch nicht die Muttersprache ist.", a: "r"},
+    {s: "In deutschen Firmen meldet man sich am Telefon oft mit dem Namen der Firma.", a: "r"}
+  ]);
+
+  // Üb. 3
+  buildSort('ub3-sort', {
+    buckets: ["hilft", "hilft wenig"],
+    items: [
+      {t: "jeden Tag eine Minute üben", b: "hilft"},
+      {t: "im Schwimmbad nach den Öffnungszeiten fragen", b: "hilft"},
+      {t: "beim Telefonieren hin und her gehen", b: "hilft"},
+      {t: "sagen, dass man nach dem richtigen Wort sucht", b: "hilft"},
+      {t: "ganze Sätze auswendig lernen", b: "hilft wenig"},
+      {t: "ohne Pause ununterbrochen reden", b: "hilft wenig"},
+      {t: "denselben Satz immer wieder wiederholen", b: "hilft wenig"},
+      {t: "verstecken, dass man kein Muttersprachler ist", b: "hilft wenig"}
+    ]
+  });
+
+  // Üb. 4а
+  buildMatch('ub4', [
+    ["die Hemmschwelle", "innere Grenze, die uns daran hindert, etwas zu tun"],
+    ["überspielen", "so tun, dass andere etwas Unangenehmes nicht merken"],
+    ["sich hochschaukeln", "immer schlimmer werden"],
+    ["auswendig lernen", "so lernen, dass man es ohne Text sagen kann"],
+    ["die Schockstarre", "Zustand, in dem man vor Angst nicht reagieren kann"],
+    ["zu seinen Schwachstellen stehen", "offen zeigen, was man noch nicht so gut kann"]
+  ]);
+  // Üb. 4б
+  buildWordBank('ub4-bank', {
+    text: "Am Telefon fehlen uns [Mimik] und Gestik. Deshalb setzen wir uns schnell unter [Druck]. In einer Fremdsprache steigt der [Stresspegel] noch mehr, und manchmal kommt es zu einem [Blackout].\n\nGegen die Angst helfen kurze [Rollenspiele] und kleine Alltagsanrufe: Sie senken die [Hemmschwelle].",
+    extra: ["Betonung", "Endgegner"]
+  });
+
+  // Üb. 5
+  buildChat('ub5-chat', {
+    partner: "Hallenbad",
+    steps: [
+      {them: "Hallenbad Nord, Schneider, guten Tag!"},
+      {you: ["Guten Tag, hier ist Kovalenko. Ich hätte eine Frage zu Ihren Öffnungszeiten.",
+             "Hallo? Wer ist da?",
+             "Ich will schwimmen."], correct: 0},
+      {them: "Gern. Unter der Woche haben wir von 7 bis 21 Uhr geöffnet, am Wochenende …"},
+      {you: ["Entschuldigung, das ging mir zu schnell. Könnten Sie das bitte wiederholen?",
+             "Was?!",
+             "Ja, ja, alles klar."], correct: 0, hint: "ти не все зрозумів(-ла)"},
+      {them: "Natürlich! Am Wochenende von 9 bis 18 Uhr."},
+      {you: ["Einen Moment bitte, ich suche nach dem richtigen Wort … Gibt es auch eine Sauna?",
+             "Tschüss!",
+             "Ich habe keine Zeit."], correct: 0},
+      {them: "Ja, die Sauna ist jeden Tag ab 10 Uhr offen."},
+      {you: ["Vielen Dank für die Auskunft. Auf Wiederhören!",
+             "Okay, bye.",
+             "Das ist alles falsch."], correct: 0}
+    ]
+  });
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📞','🧠','🚶','💬','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
