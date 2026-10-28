@@ -1020,7 +1020,7 @@ const MATERIALS = [
     dzherelo: { nazva: "Deutsch perfekt", nomer: "12/2026", storinky: "44–45" },
     dodano: "2026-10", file: "statti/meetings-in-deutschland.html" },
   { id: "neu-im-job-mexiko-usa", typ: "stattya", nazva: "Aus Mexiko und den USA ins deutsche Büro",
-    opys: "Карлос з Мексики навчився казати «я цього не знаю», а Діна з Нью-Йорка дивується колегам, які втомлюються до 17:00.",
+    opys: "Карлос з Мексики навчився казати «я цього не знаю», а Діна з Нью-Йорка дивується колегам, які нарікають на стрес, хоча працюють лише до 17:00.",
     riven: "A2", krayina: ["DE"], temy: ["Arbeit & Schule", "Gesellschaft"],
     dzherelo: { nazva: "Deutsch perfekt", nomer: "12/2026", storinky: "52–53" },
     dodano: "2026-10", file: "statti/neu-im-job-mexiko-usa.html" },
