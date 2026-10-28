@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nein sagen – aber freundlich · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Sprache</span>
+        <h1>Nein sagen – aber freundlich</h1>
+        <p class="sub">«Можете зробити це до завтра?» — і ти машинально кажеш «так», хоча думаєш «ні». У Німеччині чесне «ні» вважають ознакою професійності. Головне — як саме його сказати.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Strategien</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Ich statt du</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Und du?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Ja sagen, Nein meinen</h2>
+      <div class="card">
+        <p>Wann hast du zuletzt „Ja“ gesagt, obwohl du eigentlich „Nein“ meintest? Warum war das Nein so schwer?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Чи легко тобі відмовити другові, вчителеві, батькам? Як гадаєш, у Німеччині пряме «ні» звучить грубо чи нормально?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">„Können Sie das bis morgen <span class="gl" data-uk="виконувати, завершувати" data-lemma="erledigen">erledigen</span>?“ – „Äh … ja, klar.“ Viele Menschen sagen in so einer Situation automatisch Ja, obwohl sie eigentlich Nein meinen. Im Berufsalltag ist es aber wichtig, <span class="gl" data-key data-uk="встановлювати межі" data-lemma="Grenzen setzen">Grenzen zu setzen</span>.</p>
+
+          <h3>Ein Nein ist kein Drama</h3>
+
+          <p>In Deutschland gilt ein höflich formuliertes Nein nicht als <span class="gl" data-uk="нахабний, зухвалий" data-lemma="unverschämt">unverschämt</span>. Im Gegenteil: Es zeigt <span class="gl" data-uk="чесність" data-lemma="die Ehrlichkeit">Ehrlichkeit</span>, <span class="gl" data-uk="надійність" data-lemma="die Zuverlässigkeit">Zuverlässigkeit</span> und sogar Professionalität. Wer klar Nein sagt, macht nämlich keine <span class="gl" data-uk="порожній" data-note="тут: без реального змісту" data-lemma="leer">leeren</span> <span class="gl" data-uk="обіцянка" data-lemma="das Versprechen, -">Versprechen</span>, die er später nicht <span class="gl" data-uk="дотримувати (обіцянки)" data-lemma="halten (hielt, hat gehalten)">halten</span> kann. Und wer weiß, dass ein ehrliches Nein willkommen ist, dem fällt es gleich viel leichter.</p>
+
+          <p>Man kann ganz direkt <span class="gl" data-uk="відмовляти" data-lemma="absagen">absagen</span>: „Das schaffe ich heute leider nicht.“ Oder: „Dafür habe ich im Moment leider keine <span class="gl" data-uk="ресурс, можливість (часу)" data-lemma="die Kapazität, -en">Kapazitäten</span>“ – „Im Moment bin ich ziemlich <span class="gl" data-key data-uk="завантажений (роботою)" data-lemma="ausgelastet">ausgelastet</span>.“ Noch besser wirkt ein Nein mit <span class="gl" data-key data-uk="обґрунтування, пояснення причини" data-lemma="die Begründung, -en">Begründung</span>: „Das wird zeitlich schwierig, weil ich schon an Projekt X arbeite.“ Ein <span class="gl" data-key data-uk="зустрічна пропозиція" data-lemma="das Gegenangebot, -e">Gegenangebot</span> macht das Nein noch freundlicher: „Heute <span class="gl" data-uk="вдаватися, виходити" data-lemma="klappen">klappt</span> es nicht mehr, aber nächste Woche kann ich das gern <span class="gl" data-uk="брати на себе" data-lemma="übernehmen (übernahm, hat übernommen)">übernehmen</span>.“ Und wer sich nicht sicher ist, gewinnt Zeit: „Ich prüfe das und melde mich in einer halben Stunde.“</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Aktenordner%2C_stehend.jpg/960px-Aktenordner%2C_stehend.jpg" alt="Aktenordner im Regal." width="960" height="720" loading="lazy">
+            <figcaption>Aktenordner im Regal. Foto: Mattes, gemeinfrei, <a href="https://commons.wikimedia.org/wiki/File:Aktenordner,_stehend.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <h3>Der Ton macht die Musik</h3>
+
+          <p>Dieses deutsche <span class="gl" data-uk="прислів'я" data-lemma="das Sprichwort, -ö-er">Sprichwort</span> bedeutet: Wichtig ist nicht nur, <i>was</i> man sagt, sondern auch, <i>wie</i>. Vergleichen Sie: „Das ist nicht mein Problem.“ Und: „Dafür bin ich leider nicht <span class="gl" data-uk="відповідальний (за щось)" data-lemma="zuständig">zuständig</span>, aber Sie können sich an Herrn Bach <span class="gl" data-uk="звертатися до" data-lemma="sich wenden an (wandte, hat gewandt)">wenden</span>.“ Beide Sätze sagen Nein – aber nur einer klingt nach einem guten Kollegen. Gerade im Berufsalltag ist der Ton also extrem wichtig: Auch ein Nein kann sehr freundlich wirken.</p>
+
+          <h3>Ich statt du</h3>
+
+          <p>Gibt es Probleme im Team, sollte man darüber sprechen. Psychologen empfehlen dafür sogenannte <span class="gl" data-key data-uk="я-повідомлення" data-lemma="die Ich-Botschaft, -en">Ich-Botschaften</span>. Sätze mit „du“ oder „Sie“ klingen schnell wie ein <span class="gl" data-uk="докір" data-lemma="der Vorwurf, -ü-e">Vorwurf</span>: „Nie hörst du mir zu!“ Sätze mit „ich“ wirken weniger aggressiv und <span class="gl" data-uk="розряджати, пом'якшувати" data-lemma="entschärfen">entschärfen</span> den Konflikt: „Ich habe den <span class="gl" data-uk="враження" data-lemma="der Eindruck, -ü-e">Eindruck</span>, dass mein <span class="gl" data-uk="прохання, справа" data-lemma="das Anliegen, -">Anliegen</span> noch nicht ganz angekommen ist.“ Statt „Sie erklären das unverständlich“ sagt man besser: „Ich habe Schwierigkeiten, den <span class="gl" data-uk="послідовність, хід (дій)" data-lemma="der Ablauf, -äu-e">Ablauf</span> <span class="gl" data-uk="зрозуміти, простежити" data-lemma="nachvollziehen (vollzog nach, hat nachvollzogen)">nachzuvollziehen</span>.“</p>
+
+          <h3>Wenn es trotzdem eskaliert</h3>
+
+          <p>Und wenn ein Gespräch <span class="gl" data-uk="попри все" data-lemma="trotz allem">trotz allem</span> in die falsche Richtung läuft? Dann helfen drei Strategien. Erstens: eine Grenze setzen – „Wir können gern darüber sprechen, aber bitte in einem <span class="gl" data-uk="шанобливий" data-lemma="respektvoll">respektvollen</span> Ton.“ Zweitens: eine Pause vorschlagen – „Lassen Sie uns weitersprechen, wenn wir beide etwas <span class="gl" data-uk="відсторонитися, охолонути" data-lemma="Abstand gewinnen">Abstand gewonnen</span> haben.“ Drittens: zurück zur Sache – „Lassen Sie uns bitte bei den Fakten bleiben.“</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Die Ich-Botschaft hat der US-amerikanische Psychologe Thomas Gordon bekannt gemacht. Man benutzt sie nicht nur im Büro, sondern auch in Familien und Schulen, zum Beispiel bei einem Streit: „Ich bin traurig, wenn …“ statt „Du bist gemein!“</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Яка головна думка тексту? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wie sagt man Nein?</h2>
+      <p class="lead">Яка це стратегія? Зістав фразу з назвою.</p>
+      <div class="card" id="ub3-list"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Ich statt du</h2>
+      <p class="lead">а) Докір чи я-повідомлення? Розсортуй.</p>
+      <div class="card" id="ub4-sort"></div>
+      <p class="lead">б) Тепер ти: перетвори докори на я-повідомлення (по одному реченню).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub4-a">„Du kommst immer zu spät!“ →</label>
+          <textarea id="ub4-a" rows="2"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub4-b">„Sie geben mir nie genug Informationen!“ →</label>
+          <textarea id="ub4-b" rows="2"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Почни з <i>Ich habe den Eindruck, dass …, Für mich ist es schwierig, wenn …, Ich würde mir wünschen, dass …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово або вислів? Обери пояснення.</p>
+      <div class="card" id="ub5-list"></div>
+      <p class="lead">б) Встав слова в короткі діалоги.</p>
+      <div class="card" id="ub5-bank"></div>
+    </section>
+
+    <!-- ===== Üb. 6 ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">Und du?</h2>
+      <p class="lead">Напиши відповідь німецькою (6–8 речень). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub6-a">Deine Klassenlehrerin bittet dich, am Samstag beim Schulfest zu helfen. Aber du hast schon andere Pläne. Schreib ihr eine freundliche Absage mit Begründung und Gegenangebot. Wie würde man so ein Nein in der Ukraine formulieren?</label>
+          <textarea id="ub6-a" rows="7" data-words="60" data-check="Ein klares, aber höfliches Nein|Eine Begründung|Ein Gegenangebot"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Vielen Dank für Ihre Anfrage, aber …, Am Samstag habe ich leider schon …, Ich könnte aber gern …, In der Ukraine würde man vielleicht eher …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Im deutschen Berufsalltag ist ein höfliches Nein kein Problem, sondern ein Zeichen von Ehrlichkeit und Zuverlässigkeit. Freundlicher wird es mit Begründung oder Gegenangebot. „Der Ton macht die Musik“: Ich-Botschaften klingen besser als Vorwürfe. Und wenn ein Gespräch eskaliert, helfen eine Grenze, eine Pause oder der Weg zurück zu den Fakten.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          На роботі в Німеччині ввічливе «ні» — не проблема, а ознака чесності й надійності. М'якше воно звучить з поясненням або зустрічною пропозицією. «Тон робить музику»: я-повідомлення звучать краще, ніж докори. А якщо розмова загострюється, допомагають межа, пауза або повернення до фактів.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "hoeflich-nein-sagen";
+
+  // Üb. 1а
+  buildQuiz('ub1-quiz', [
+    {q: "Was ist die Hauptaussage des Textes?",
+     opts: ["Ein höfliches Nein ist im deutschen Job normal – wichtig ist der richtige Ton.",
+            "Im deutschen Job sollte man nie Nein sagen.",
+            "Wer Nein sagt, bekommt in Deutschland schnell Probleme mit dem Chef."],
+     correct: "Ein höfliches Nein ist im deutschen Job normal – wichtig ist der richtige Ton."}
+  ]);
+  // Üb. 1б
+  buildMatch('ub1h', [
+    ["Ehrlich statt leerer Versprechen", "Absatz 1"],
+    ["Direkt, mit Grund oder mit Angebot", "Absatz 2"],
+    ["Zwei Sätze, ein Nein", "Absatz 3"],
+    ["Weniger Vorwurf, mehr Verständnis", "Absatz 4"],
+    ["Drei Wege aus dem Streit", "Absatz 5"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5"], lead: true});
+
+  // Üb. 2
+  buildRF('ub2-rf', [
+    {s: "In Deutschland gilt ein höfliches Nein als unverschämt.", a: "f"},
+    {s: "Ein klares Nein verhindert leere Versprechen.", a: "r"},
+    {s: "Ein Gegenangebot macht ein Nein freundlicher.", a: "r"},
+    {s: "„Das ist nicht mein Problem“ ist eine gute Antwort im Büro.", a: "f"},
+    {s: "Sätze mit „du“ oder „Sie“ wirken schnell wie ein Vorwurf.", a: "r"},
+    {s: "Die meisten deutschen Firmen bieten Kurse zu Ich-Botschaften an.", a: "n"},
+    {s: "Wenn ein Gespräch eskaliert, sollte man laut werden.", a: "f"}
+  ]);
+
+  // Üb. 3
+  buildMatch('ub3', [
+    ["„Das schaffe ich heute leider nicht.“", "direkt"],
+    ["„Das wird schwierig, weil ich schon an Projekt X arbeite.“", "mit Begründung"],
+    ["„Nächste Woche kann ich das gern übernehmen.“", "Gegenangebot"],
+    ["„Ich prüfe das und melde mich in einer halben Stunde.“", "Zeit gewinnen"],
+    ["„Bitte in einem respektvollen Ton.“", "Grenze setzen"],
+    ["„Lassen Sie uns bitte bei den Fakten bleiben.“", "zurück zur Sache"]
+  ], {options: ["direkt", "mit Begründung", "Gegenangebot", "Zeit gewinnen", "Grenze setzen", "zurück zur Sache"]});
+
+  // Üb. 4а
+  buildSort('ub4-sort', {
+    buckets: ["Vorwurf", "Ich-Botschaft"],
+    items: [
+      {t: "Nie hörst du mir zu!", b: "Vorwurf"},
+      {t: "Sie erklären das unverständlich.", b: "Vorwurf"},
+      {t: "Du bist gemein!", b: "Vorwurf"},
+      {t: "Ich habe den Eindruck, dass mein Anliegen noch nicht angekommen ist.", b: "Ich-Botschaft"},
+      {t: "Ich habe Schwierigkeiten, den Ablauf nachzuvollziehen.", b: "Ich-Botschaft"},
+      {t: "Ich bin traurig, wenn …", b: "Ich-Botschaft"}
+    ]
+  });
+
+  // Üb. 5а
+  buildMatch('ub5', [
+    ["ausgelastet sein", "sehr viel zu tun haben"],
+    ["Grenzen setzen", "klar zeigen, was man nicht (mehr) macht"],
+    ["Abstand gewinnen", "innerlich ruhiger werden"],
+    ["unverschämt", "frech, respektlos"],
+    ["der Vorwurf", "Kritik, die eine Person schuldig macht"],
+    ["entschärfen", "weniger gefährlich, weniger heftig machen"]
+  ]);
+  // Üb. 5б
+  buildWordBank('ub5-bank', {
+    text: "– Können Sie mir heute noch helfen? – Tut mir leid, ich bin im Moment total [ausgelastet].\n\n– Dafür bin ich leider nicht [zuständig], aber Frau Bach kann Ihnen helfen.\n\n– So geht das nicht weiter! – Wir können gern reden, aber bitte in einem [respektvollen] Ton.\n\n– Lassen Sie uns morgen weitersprechen, wenn wir beide etwas [Abstand] gewonnen haben.",
+    extra: ["unverschämt", "Vorwurf"]
+  });
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🙅','🎵','💬','🤝','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
