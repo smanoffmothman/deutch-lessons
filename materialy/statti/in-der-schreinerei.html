@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ein Schrank aus Omas Zeiten · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Arbeit &amp; Schule</span>
+        <h1>Ein Schrank aus Omas Zeiten</h1>
+        <p class="sub">Бабусина барокова шафка, вологість і реставратор, у якого все розписано на шість тижнів наперед. Як замовити ремонт у німецького майстра — і чому «халтури» тут ніхто не хоче.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Reihenfolge</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Sprichwörter</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Und du?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Alte Dinge, neue Liebe</h2>
+      <div class="card">
+        <p>Gibt es in deiner Familie ein altes Möbelstück, eine Uhr oder ein anderes Erbstück? Würdest du es reparieren lassen – auch wenn es teuer ist?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай: що ти зробиш зі старою, але дорогою для тебе річчю, якщо вона зіпсується, — викинеш, відремонтуєш сам чи віддаси майстрові?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Ob Haus, Auto oder Möbel – ohne gute <span class="gl" data-key data-uk="ремісник, майстер" data-lemma="der Handwerker, -">Handwerker</span> geht es nicht. Eine Kundin bringt ein besonderes Stück in eine <span class="gl" data-key data-uk="столярна майстерня" data-lemma="die Schreinerei, -en">Schreinerei</span>.</p>
+
+          <h3>Ein Erbstück mit Problemen</h3>
+
+          <p>Frau Lindner hat von ihrer Großmutter ein kleines Schränkchen <span class="gl" data-uk="успадковувати" data-lemma="erben">geerbt</span>. Eine Freundin hat ihr Herrn Eder <span class="gl" data-uk="рекомендувати" data-lemma="empfehlen (empfahl, hat empfohlen)">empfohlen</span>: Er ist Schreiner und <span class="gl" data-uk="реставратор" data-lemma="der Restaurator, -en">Restaurator</span>. Das Schränkchen ist eigentlich noch <span class="gl" data-uk="у доброму стані" data-note="розм." data-lemma="gut in Schuss sein">gut in Schuss</span>, aber die <span class="gl" data-uk="поверхня" data-lemma="die Oberfläche, -n">Oberfläche</span> hat unter <span class="gl" data-uk="вологість" data-lemma="die Feuchtigkeit">Feuchtigkeit</span> <span class="gl" data-uk="страждати (від чогось)" data-lemma="leiden unter (litt, hat gelitten)">gelitten</span>. Allein tragen kann sie es nicht, darum zeigt sie es Herrn Eder direkt in ihrem Auto. Er ist sofort begeistert: ein wunderbares Stück aus dem Barock! Doch er sieht auch das Problem. Das Holz hat sich <span class="gl" data-uk="деформуватися, покоробитися" data-lemma="sich verziehen (verzog, hat verzogen)">verzogen</span>, und die kleinen Holzbilder in der Oberfläche, die <span class="gl" data-uk="інкрустація" data-lemma="die Intarsie, -n">Intarsien</span>, haben sich zum Teil gelöst.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Shaving_wood_%28Unsplash%29.jpg/960px-Shaving_wood_%28Unsplash%29.jpg" alt="Ein Hobel und Holzspäne." width="960" height="583" loading="lazy">
+            <figcaption>Ein Hobel und Holzspäne. Foto: fireskystudios.com, <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en" target="_blank" rel="noopener">CC0</a>, <a href="https://commons.wikimedia.org/wiki/File:Shaving_wood_(Unsplash).jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <h3>Wie lange? Wie teuer?</h3>
+
+          <p>Kann er das reparieren? Natürlich – aber nicht schnell. Frau Lindner hätte das Schränkchen gern schon nächste Woche zurück. Herr Eder muss sie <span class="gl" data-uk="розчаровувати" data-lemma="enttäuschen">enttäuschen</span>: Er hat <span class="gl" data-uk="мати повно роботи" data-lemma="alle Hände voll zu tun haben">alle Hände voll zu tun</span>, sein <span class="gl" data-uk="книга замовлень" data-lemma="das Auftragsbuch, -ü-er">Auftragsbuch</span> ist voll. Sechs Wochen muss sie warten. Sein Kommentar: „Gut Ding will Weile haben.“ Auch der Preis überrascht die Kundin: zwischen 1000 und 1500 Euro. Für die Arbeitszeit allein braucht er viele Stunden, und dazu kommt das Material. Billiger geht es nur mit <span class="gl" data-key data-uk="халтура" data-note="розм." data-lemma="der Pfusch">Pfusch</span> – und den will niemand.</p>
+
+          <p>Bis Anfang nächster Woche schickt Herr Eder einen genauen <span class="gl" data-key data-uk="кошторис" data-lemma="der Kostenvoranschlag, -ä-e">Kostenvoranschlag</span>. Ist Frau Lindner einverstanden, schreibt sie ihm eine <span class="gl" data-key data-uk="підтвердження замовлення" data-lemma="die Auftragsbestätigung, -en">Auftragsbestätigung</span> per Mail. Am Ende bekommt sie die <span class="gl" data-key data-uk="рахунок" data-lemma="die Rechnung, -en">Rechnung</span>. Das Schränkchen bleibt gleich in der <span class="gl" data-uk="майстерня" data-lemma="die Werkstatt, -ä-en">Werkstatt</span>.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Im deutschen Handwerk gibt es rund 130 offiziell anerkannte <span class="gl" data-uk="професія, що потребує професійного навчання" data-lemma="der Ausbildungsberuf, -e">Ausbildungsberufe</span> – mit Holz, Metall, Glas, Papier, Textilien, auf dem Bau und vieles mehr. Die Regeln stehen in der Handwerksordnung. Übrigens: Im Süden und Westen Deutschlands sagt man meist Schreiner, im Norden und Osten Tischler – gemeint ist derselbe Beruf.</p>
+          </aside>
+
+          <h3>Späne gehören dazu</h3>
+
+          <p>Ein altes Sprichwort aus dem Handwerk sagt: „Wo <span class="gl" data-uk="стругати (рубанком)" data-lemma="hobeln">gehobelt</span> wird, da fallen <span class="gl" data-uk="стружка, тріска" data-lemma="der Span, -ä-e">Späne</span>.“ Es bedeutet: Wer arbeitet und etwas schafft, macht auch mal Fehler. Perfekt ist fast nichts.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Von der Anfrage bis zur Rechnung</h2>
+      <p class="lead">Розстав кроки замовлення в правильному порядку. Натискай речення по черзі.</p>
+      <div class="card" id="ub3-seq"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Sprichwörter und Redewendungen</h2>
+      <p class="lead">Що означає вислів? Зістав.</p>
+      <div class="card" id="ub4-list"></div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub5-list"></div>
+      <p class="lead">б) Встав слова в розмову з майстром.</p>
+      <div class="card" id="ub5-bank"></div>
+    </section>
+
+    <!-- ===== Üb. 6 ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">Und du?</h2>
+      <p class="lead">Напиши німецькою. Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub6-a">1. Schreib Herrn Eder als Frau Lindner eine kurze Auftragsbestätigung per Mail. (40–60 Wörter)</label>
+          <textarea id="ub6-a" rows="6" data-words="40-60" data-must="Kostenvoranschlag|Mit freundlichen Grüßen" data-check="Du bist mit dem Preis einverstanden|Du fragst, wann das Schränkchen fertig ist"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub6-b">2. Und bei uns? Lässt man in der Ukraine alte Möbel oft reparieren? Welche Handwerksberufe kennst du? (3–5 Sätze)</label>
+          <textarea id="ub6-b" rows="5" data-words="30"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Sehr geehrter Herr Eder, vielen Dank für …, Ich bin mit dem Preis einverstanden., Wann ist … fertig?, In der Ukraine …, Mein Onkel ist Tischler / Elektriker …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Im deutschen Handwerk gibt es rund 130 Ausbildungsberufe. Gute Handwerker haben oft volle Auftragsbücher – man muss warten. Vor der Arbeit gibt es einen Kostenvoranschlag, dann eine Auftragsbestätigung und am Ende die Rechnung. Schreiner und Tischler sind übrigens derselbe Beruf.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          У німецькому ремеслі близько 130 професій з офіційним навчанням. Хороші майстри часто розписані наперед — доводиться чекати. Спершу складають кошторис, потім клієнт підтверджує замовлення, а наприкінці отримує рахунок. «Schreiner» і «Tischler» — це одна професія, просто в різних регіонах.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "in-der-schreinerei";
+
+  // Üb. 1а
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Wie eine Kundin ein altes Möbelstück beim Handwerker reparieren lässt",
+            "Wie man selbst einen Schrank aus Holz baut",
+            "Warum alte Möbel in Deutschland sehr billig sind"],
+     correct: "Wie eine Kundin ein altes Möbelstück beim Handwerker reparieren lässt"}
+  ]);
+  // Üb. 1б
+  buildMatch('ub1h', [
+    ["Ein Barockstück mit Schäden", "Absatz 1"],
+    ["Geduld und Geld", "Absatz 2"],
+    ["Papiere, Papiere", "Absatz 3"],
+    ["Niemand ist perfekt", "Absatz 4"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4"], lead: true});
+
+  // Üb. 2
+  buildRF('ub2-rf', [
+    {s: "Frau Lindner hat das Schränkchen von ihrer Großmutter geerbt.", a: "r"},
+    {s: "Das Schränkchen ist komplett kaputt.", a: "f"},
+    {s: "Herr Eder kann das Schränkchen schon nächste Woche reparieren.", a: "f"},
+    {s: "Die Reparatur kostet ungefähr 1000 bis 1500 Euro.", a: "r"},
+    {s: "Herr Eder arbeitet seit 30 Jahren als Restaurator.", a: "n"},
+    {s: "Die Kundin bestätigt den Auftrag per Mail.", a: "r"},
+    {s: "Tischler und Schreiner sind zwei verschiedene Berufe.", a: "f"}
+  ]);
+
+  // Üb. 3
+  buildSequence('ub3-seq', [
+    "Die Kundin zeigt dem Schreiner das Schränkchen.",
+    "Der Schreiner sagt, wie lange es dauert und was es ungefähr kostet.",
+    "Er schickt einen genauen Kostenvoranschlag.",
+    "Die Kundin schreibt eine Auftragsbestätigung.",
+    "Der Schreiner repariert das Schränkchen.",
+    "Die Kundin bekommt die Rechnung."
+  ]);
+
+  // Üb. 4
+  buildMatch('ub4', [
+    ["Wo gehobelt wird, da fallen Späne.", "Wer arbeitet, macht auch Fehler."],
+    ["Gut Ding will Weile haben.", "Gute Arbeit braucht Zeit."],
+    ["alle Hände voll zu tun haben", "sehr viel Arbeit haben"],
+    ["gut in Schuss sein", "in gutem Zustand sein"]
+  ]);
+
+  // Üb. 5а
+  buildMatch('ub5', [
+    ["erben", "успадковувати"],
+    ["die Feuchtigkeit", "вологість"],
+    ["enttäuschen", "розчаровувати"],
+    ["die Werkstatt", "майстерня"],
+    ["der Pfusch", "халтура"],
+    ["empfehlen", "рекомендувати"]
+  ]);
+  // Üb. 5б
+  buildWordBank('ub5-bank', {
+    text: "– Guten Tag! Mein Tisch ist alt, aber noch gut in [Schuss]. Können Sie ihn reparieren?\n\n– Gern. Aber ich habe gerade alle Hände voll zu tun. Mein [Auftragsbuch] ist voll.\n\n– Und was kostet das? – Ich schicke Ihnen morgen einen [Kostenvoranschlag]. Und wenn Sie einverstanden sind, schreiben Sie mir eine [Auftragsbestätigung].\n\n– Gut. Hauptsache, kein [Pfusch]!",
+    extra: ["Rechnung", "Späne"]
+  });
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🪵','🔨','📝','⏳','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
