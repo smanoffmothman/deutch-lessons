@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Klartext statt heißer Brei · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Gesellschaft</span>
+        <h1>Klartext statt heißer Brei</h1>
+        <p class="sub">«Презентація була цікава, але задовга!» — для німця це звичайний відгук, для багатьох інших — мало не образа. Як розуміти німецьку прямоту і до чого тут гаряча каша?</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wie direkt?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Redewendungen</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Sandwich</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Und du?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Wie sagt man es am besten?</h2>
+      <div class="card">
+        <p>Eine Mitschülerin hat ein Referat gehalten. Es war interessant, aber viel zu lang. Sagst du ihr das direkt? Oder sagst du lieber nur das Positive?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Як у нас прийнято критикувати — прямо чи м'якше, «обгортаючи» в компліменти? І що ти відповідаєш, коли знайомий питає «Як справи?»: чесно чи просто «нормально»?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">„Ihre Präsentation war interessant, aber <span class="gl" data-uk="загалом" data-lemma="insgesamt">insgesamt</span> zu lang.“ Wer in Deutschland arbeitet, hört solche Sätze früher oder später. Für die meisten Deutschen ist das ganz normales Feedback. Wer aus einer anderen Kultur kommt, findet es oft ziemlich hart.</p>
+
+          <p>Das Klischee stimmt: In deutschen Büros wird gern sehr <span class="gl" data-key data-uk="прямий, відвертий" data-lemma="direkt">direkt</span> gesprochen. Kritik ist dabei nicht als <span class="gl" data-key data-uk="напад" data-note="тут: особиста образа, атака на людину" data-lemma="der Angriff, -e">Angriff</span> gemeint, sondern als <span class="gl" data-uk="внесок" data-lemma="der Beitrag, -ä-e">Beitrag</span>: Die Arbeit soll besser und <span class="gl" data-uk="ефективний" data-lemma="effizient">effizienter</span> werden. Die Deutschen selbst <span class="gl" data-uk="сприймати як, вважати" data-lemma="empfinden als (empfand, hat empfunden)">empfinden</span> das nicht als unfreundlich, sondern einfach als ehrlich.</p>
+
+          <p>Wer neu ist, muss deshalb lernen, zwischen Kritik und <span class="gl" data-uk="відмова, неприйняття" data-lemma="die Ablehnung, -en">Ablehnung</span> zu <span class="gl" data-uk="розрізняти" data-lemma="unterscheiden (unterschied, hat unterschieden)">unterscheiden</span>. Die Präsentation war vielleicht wirklich zu lang – aber der Chef mag einen deshalb nicht weniger. Am besten bleibt man ruhig, <span class="gl" data-uk="дякувати (за щось)" data-lemma="sich bedanken für">bedankt sich</span> für das Feedback und macht es beim nächsten Mal kürzer.</p>
+
+          <h3>Was für ein Brei?</h3>
+
+          <p>Viele Deutsche reden nicht lange <span class="gl" data-key data-uk="ходити довкола та навколо, говорити манівцями" data-note="дослівно: ходити довкола гарячої каші" data-lemma="um den heißen Brei herumreden">um den heißen Brei herum</span>, sondern <span class="gl" data-uk="переходити до суті" data-lemma="zur Sache kommen">kommen</span> schnell zur Sache. In einer E-Mail oder einem Meeting fragt man selten zuerst nach der Familie oder <span class="gl" data-uk="хвалити" data-lemma="loben">lobt</span> die letzte <span class="gl" data-uk="корпоративне свято" data-lemma="die Firmenfeier, -n">Firmenfeier</span>. Man sagt gleich, worum es geht.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Griessbrei.jpg/960px-Griessbrei.jpg" alt="Grießbrei mit Obst." width="960" height="647" loading="lazy">
+            <figcaption>Grießbrei mit Obst. Foto: Alice Wiegand, <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Griessbrei.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Ehrlich sind viele Deutsche auch bei einer ganz einfachen Frage. In vielen Ländern ist „Wie geht's?“ nur eine andere Form von „Hallo“. In Deutschland kann man darauf aber eine <span class="gl" data-uk="напрочуд, несподівано" data-lemma="überraschend">überraschend</span> lange Antwort bekommen – vom schlechten Schlaf über Rückenschmerzen bis zu den Problemen des Sohnes in der Schule. Für Neue ist das ein kleiner <span class="gl" data-uk="культурний шок" data-lemma="der Kulturschock, -s">Kulturschock</span>. Doch für viele Deutsche gilt: Wer eine Frage stellt, bekommt eine Antwort – und zwar eine ehrliche.</p>
+
+          <h3>Kritik mit Stufen</h3>
+
+          <p>Natürlich ist nicht jede Kritik gleich <span class="gl" data-uk="різкий, гострий" data-lemma="scharf">scharf</span>. Sehr direkt klingt zum Beispiel: „Das <span class="gl" data-uk="мати бути (зробленим)" data-note="розм., півд.-нім. і австр.: das gehört … = це треба …" data-lemma="gehören + Partizip II">gehört</span> unbedingt noch einmal <span class="gl" data-uk="переробляти, доопрацьовувати" data-lemma="überarbeiten">überarbeitet</span>!“ Vorsichtiger ist: „Das ist noch <span class="gl" data-key data-uk="такий, що можна покращити" data-lemma="ausbaufähig">ausbaufähig</span>“ oder „Da ist noch <span class="gl" data-uk="є куди рости" data-lemma="Luft nach oben">Luft nach oben</span>.“ Ganz <span class="gl" data-uk="м'який" data-lemma="weich">weich</span> wird es mit dem Konjunktiv: „Vielleicht könnten Sie …“ oder „Eventuell wäre es sinnvoll, …“</p>
+
+          <p>Wer Glück hat, arbeitet mit einer Chefin, die die <span class="gl" data-key data-uk="«метод сендвіча»" data-lemma="die Sandwich-Methode">Sandwich-Methode</span> <span class="gl" data-uk="володіти (чимось), уміти" data-lemma="beherrschen">beherrscht</span>. Die Kritik ist dabei wie Käse und Tomate: Sie liegt zwischen zwei <span class="gl" data-uk="скибка" data-lemma="die Scheibe, -n">Scheiben</span> Lob. Zuerst kommt etwas Positives, zum Beispiel „Ich <span class="gl" data-uk="цінувати" data-lemma="schätzen">schätze</span> sehr, wie schnell Sie sich im Team <span class="gl" data-uk="влитися, прижитися" data-lemma="sich einfinden in (fand ein, hat eingefunden)">eingefunden</span> haben.“ Dann die Kritik: „Mir ist aber <span class="gl" data-uk="впадати в око, помічати" data-lemma="auffallen (fiel auf, ist aufgefallen)">aufgefallen</span>, dass Sie die Mittagspause manchmal deutlich <span class="gl" data-uk="перевищувати (час)" data-lemma="überziehen (überzog, hat überzogen)">überziehen</span>.“ Und zum Schluss wieder etwas Freundliches: „Ich bin sicher, dass Sie das in Zukunft besser machen. Ich freue mich auf die weitere <span class="gl" data-uk="співпраця" data-lemma="die Zusammenarbeit">Zusammenarbeit</span>!“</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Die Form „Das gehört überarbeitet“ (statt „Das muss überarbeitet werden“) hört man vor allem in Süddeutschland und in Österreich. Im Norden klingt sie für viele ungewohnt – verstanden wird sie aber überall.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Яка головна думка тексту? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wie direkt ist das?</h2>
+      <p class="lead">Розсортуй фрази: дуже пряма критика чи обережніша?</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Redewendungen</h2>
+      <p class="lead">а) Що означає вислів? Обери пояснення.</p>
+      <div class="card" id="ub4-list"></div>
+      <p class="lead">б) Доповни короткі діалоги.</p>
+      <div class="card" id="ub4-bank"></div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Ein Feedback-Sandwich</h2>
+      <p class="lead">а) Склади «сендвіч» у правильному порядку. Натискай речення по черзі.</p>
+      <div class="card" id="ub5-seq"></div>
+      <p class="lead">б) Тепер ти: перепиши дуже пряму критику «Ihr Bericht ist voller Fehler. Das gehört komplett überarbeitet!» за методом сендвіча (3–5 речень).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-w">Dein Feedback-Sandwich:</label>
+          <textarea id="ub5-w" rows="5" data-words="35" data-check="Zuerst etwas Positives|Dann die Kritik – sachlich|Zum Schluss etwas Freundliches"></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 6 ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповідь німецькою (6–8 речень). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub6-a">Ist man in der Ukraine eher direkt oder redet man lieber um den heißen Brei herum? Was antwortet man bei uns auf „Wie geht's?“ Und welche Art von Feedback findest du selbst besser?</label>
+          <textarea id="ub6-a" rows="7" data-words="70"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Bei uns ist es üblich, dass …, Im Vergleich zu Deutschland …, Auf „Wie geht's?“ antwortet man meistens …, Mir persönlich ist … lieber, weil …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Deutsche sagen im Beruf oft direkt, was sie denken – Kritik gilt der Sache, nicht der Person. Sie reden nicht um den heißen Brei herum, und auf „Wie geht's?“ antworten sie manchmal ehrlich. Wer vorsichtiger kritisieren will, nimmt Wörter wie „ausbaufähig“, den Konjunktiv oder die Sandwich-Methode.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          На роботі німці часто прямо кажуть, що думають, — і критикують справу, а не людину. Вони не ходять манівцями, а на «Як справи?» інколи відповідають чесно. Щоб критикувати м'якше, кажуть «ausbaufähig», вживають Konjunktiv або «метод сендвіча».
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "deutsche-direktheit";
+
+  // Üb. 1а
+  buildQuiz('ub1-quiz', [
+    {q: "Was ist die Hauptaussage des Textes?",
+     opts: ["Deutsche Direktheit ist meist ehrlich gemeint und kein persönlicher Angriff.",
+            "Deutsche sind im Büro unfreundlich und mögen keine Ausländer.",
+            "Im deutschen Büro darf man nie Kritik äußern."],
+     correct: "Deutsche Direktheit ist meist ehrlich gemeint und kein persönlicher Angriff."}
+  ]);
+  // Üb. 1б
+  buildMatch('ub1h', [
+    ["Kritik soll helfen", "Absatz 1"],
+    ["Kritik ist keine Ablehnung", "Absatz 2"],
+    ["Gleich zur Sache", "Absatz 3"],
+    ["Eine ehrliche Antwort", "Absatz 4"],
+    ["Von hart bis weich", "Absatz 5"],
+    ["Lob – Kritik – Lob", "Absatz 6"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5", "Absatz 6"], lead: true});
+
+  // Üb. 2
+  buildRF('ub2-rf', [
+    {s: "Viele Deutsche finden direkte Kritik einfach ehrlich.", a: "r"},
+    {s: "Wer kritisiert wird, sollte sofort widersprechen.", a: "f"},
+    {s: "In deutschen E-Mails fragt man meistens zuerst nach der Familie.", a: "f"},
+    {s: "Auf „Wie geht's?“ antworten manche Deutsche sehr ausführlich.", a: "r"},
+    {s: "Die meisten deutschen Chefs benutzen die Sandwich-Methode.", a: "n"},
+    {s: "Mit dem Konjunktiv klingt Kritik weicher.", a: "r"},
+    {s: "Die Form „Das gehört überarbeitet“ versteht man nur in Österreich.", a: "f"}
+  ]);
+
+  // Üb. 3
+  buildSort('ub3-sort', {
+    buckets: ["sehr direkt", "vorsichtiger"],
+    items: [
+      {t: "Das gehört unbedingt noch einmal überarbeitet!", b: "sehr direkt"},
+      {t: "Ihre Präsentation war insgesamt zu lang.", b: "sehr direkt"},
+      {t: "Das ist noch ausbaufähig.", b: "vorsichtiger"},
+      {t: "Da ist noch Luft nach oben.", b: "vorsichtiger"},
+      {t: "Vielleicht könnten Sie …", b: "vorsichtiger"},
+      {t: "Eventuell wäre es sinnvoll, …", b: "vorsichtiger"}
+    ]
+  });
+
+  // Üb. 4а
+  buildMatch('ub4', [
+    ["um den heißen Brei herumreden", "nicht sagen, worum es eigentlich geht"],
+    ["zur Sache kommen", "über das eigentliche Thema sprechen"],
+    ["Da ist noch Luft nach oben.", "Das kann noch besser werden."],
+    ["ausbaufähig", "gut, aber man kann noch daran arbeiten"],
+    ["etwas überziehen", "länger machen als erlaubt"]
+  ]);
+  // Üb. 4б
+  buildWordBank('ub4-bank', {
+    text: "– Jetzt red' nicht lange um den heißen [Brei] herum! Komm endlich zur [Sache]!\n\n– Und, wie war mein Vortrag? – Hm … da ist noch [Luft] nach oben.\n\n– Ist das Konzept fertig? – Nicht ganz. Es ist noch [ausbaufähig].\n\n– Dieser Text gehört noch einmal [überarbeitet].",
+    extra: ["Käse", "Angriff"]
+  });
+
+  // Üb. 5а
+  buildSequence('ub5-seq', [
+    "Ich schätze sehr, wie schnell Sie sich im Team eingefunden haben.",
+    "Mir ist aber aufgefallen, dass Sie die Mittagspause manchmal deutlich überziehen.",
+    "Ich bin sicher, dass Sie das in Zukunft besser machen."
+  ]);
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🗣️','🥣','🥪','👍','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
