@@ -1,7 +1,9 @@
 # Після кожного завантаження на GitHub:
 #   1) вписує в уроки, теми, статті й сторінки підручників пошукові теги (опис, картка посилання) —
 #      скрипт .github/scripts/build_seo.py, дані з data/*.js;
-#   2) оновлює sitemap.xml (карту сайту) — .github/scripts/build_sitemap.py.
+#   2) вписує в сторінки-списки (klasy/, gramatyka/, materialy/, pidruchnyky/, хаби книжок) статичний
+#      перелік посилань для пошукових систем — .github/scripts/build_links.py, дані з data/*.js;
+#   3) оновлює sitemap.xml (карту сайту) — .github/scripts/build_sitemap.py.
 # Вручну нічого робити не треба. Запустити вручну: Actions → sitemap → Run workflow.
 name: sitemap
 
@@ -34,6 +36,11 @@ jobs:
           python3 .github/scripts/build_seo.py
           git add -A lessons gramatyka/temy materialy/statti pidruchnyky
           git diff --cached --quiet || git commit -m "робот: пошукові теги оновлено автоматично"
+      - name: Статичні посилання на сторінках-списках
+        run: |
+          python3 .github/scripts/build_links.py
+          git add -A klasy/index.html gramatyka/index.html materialy/index.html pidruchnyky
+          git diff --cached --quiet || git commit -m "робот: статичні посилання оновлено автоматично"
       - name: Зібрати sitemap.xml
         run: |
           python3 .github/scripts/build_sitemap.py
