@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>In der Sprechstunde · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Arbeit &amp; Schule</span>
+        <h1>In der Sprechstunde</h1>
+        <p class="sub">Курсова за два тижні, а план досі сирий. Першокурсник іде на консультацію до професорки — а заразом ми розбираємося, що таке Schein, Audimax і хто такий Hiwi.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Uni-Wörter</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wer bin ich?</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Und du?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Studieren in Deutschland</h2>
+      <div class="card">
+        <p>Möchtest du später studieren – vielleicht sogar in Deutschland? Was weißt du schon über das Studium dort? Welche Wörter rund um die Universität kennst du auf Deutsch?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Що ти знаєш про університет: лекції, семінари, сесія, курсова? Як гадаєш, німецьке студентське життя дуже відрізняється від українського?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Die Universität ist eine eigene Welt – mit eigenen Regeln und einer eigenen Sprache. Ein wichtiger Teil davon ist die <span class="gl" data-key data-uk="консультаційна година (викладача)" data-lemma="die Sprechstunde, -n">Sprechstunde</span>: Dort betreuen Professorinnen und <span class="gl" data-key data-uk="викладач (університету)" data-lemma="der Dozent, -en">Dozenten</span> ihre Studierenden ganz persönlich.</p>
+
+          <h3>Zwei Wochen bis zur Abgabe</h3>
+
+          <p>Liam Doyle studiert im ersten Semester und besucht bei Professorin Haddad ein Seminar über die Herkunft von Wörtern. Für dieses Seminar schreibt er eine <span class="gl" data-key data-uk="курсова (письмова) робота" data-lemma="die Hausarbeit, -en">Hausarbeit</span> über Metaphern. In ihrer Sprechstunde bittet er sie, ihm noch mehr Literatur zu <span class="gl" data-uk="рекомендувати" data-lemma="empfehlen (empfahl, hat empfohlen)">empfehlen</span>. Die Professorin ist erstaunt: Die Abgabe ist schon in zwei Wochen – „da sind Sie ja früh dran!“, sagt sie <span class="gl" data-uk="іронічно" data-lemma="ironisch">ironisch</span>. Liam ist trotzdem optimistisch. Er braucht den <span class="gl" data-key data-uk="залік (документ про успішний курс)" data-lemma="der Schein, -e">Schein</span> für dieses Seminar unbedingt.</p>
+
+          <p>Professorin Haddad gibt ihm eine <span class="gl" data-uk="список літератури" data-lemma="die Literaturliste, -n">Literaturliste</span>. Sie ist eigentlich für ein anderes Thema, aber einige Bücher und Artikel über Metaphern stehen auch darauf. Dann möchte Liam noch seine <span class="gl" data-uk="план, структура (роботи)" data-lemma="die Gliederung, -en">Gliederung</span> zeigen. Die Professorin <span class="gl" data-uk="застерігати, гальмувати" data-note="тут: м'яко нагадати, що не варто перебільшувати" data-lemma="bremsen">bremst</span> ihn ein wenig: Es soll ja keine <span class="gl" data-uk="дисертація" data-lemma="die Dissertation, -en">Dissertation</span> werden! Hat er das <span class="gl" data-key data-uk="додаткове заняття, практикум" data-lemma="das Tutorium, Tutorien">Tutorium</span> zu ihrem Seminar besucht? Ja – dort hat Herr Weber den Stoff aus dem Seminar noch einmal mit den Studierenden durchgearbeitet, und das hat Liam geholfen. Nur hatte er bisher wenig Zeit für die Hausarbeit.</p>
+
+          <p>Am Ende schaut sie sich die Gliederung doch an. Der <span class="gl" data-uk="будова, структура" data-lemma="der Aufbau">Aufbau</span> ist <span class="gl" data-uk="розумний, доцільний" data-lemma="sinnvoll">sinnvoll</span>. Einen Aspekt soll Liam stärker <span class="gl" data-uk="наголошувати" data-lemma="betonen">betonen</span>, einen anderen <span class="gl" data-uk="пропускати, вилучати" data-lemma="weglassen (ließ weg, hat weggelassen)">weglassen</span>, weil er nicht zum Thema gehört. Wichtig ist: sich auf das <span class="gl" data-uk="головне, суть" data-lemma="das Wesentliche">Wesentliche</span> <span class="gl" data-uk="зосереджуватися на" data-lemma="sich konzentrieren auf">konzentrieren</span>. Zum Schluss wünscht sie ihm „frohes Schaffen“ – und erinnert ihn noch einmal an die <span class="gl" data-key data-uk="кінцевий термін здачі" data-lemma="die Abgabefrist, -en">Abgabefrist</span>.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Hanover_Institute_Inorganic_Chemisty_Lecture_Hall.jpg/960px-Hanover_Institute_Inorganic_Chemisty_Lecture_Hall.jpg" alt="Ein Hörsaal im Institut für Anorganische Chemie der Universität Hannover." width="960" height="640" loading="lazy">
+            <figcaption>Ein Hörsaal im Institut für Anorganische Chemie der Universität Hannover. Foto: ChristianSchd, <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Hanover_Institute_Inorganic_Chemisty_Lecture_Hall.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <h3>Kleines Uni-Wörterbuch</h3>
+
+          <p>Wer in Deutschland studiert, muss ein paar Begriffe kennen. Das ganze Gelände einer Universität nennt man <span class="gl" data-uk="кампус, університетська територія" data-lemma="der Campus, -">Campus</span>. In einer <span class="gl" data-key data-uk="лекція" data-lemma="die Vorlesung, -en">Vorlesung</span> spricht vor allem die Dozentin, die Studierenden hören zu und schreiben mit – oft in einem großen <span class="gl" data-uk="лекційна аудиторія" data-lemma="der Hörsaal, -säle">Hörsaal</span>. Der größte Hörsaal einer Uni heißt Audimax. Im Seminar dagegen diskutieren alle mit, halten <span class="gl" data-uk="доповідь" data-lemma="das Referat, -e">Referate</span> und schreiben Hausarbeiten. Im Tutorium übt man den Stoff noch einmal. Eine schriftliche Prüfung heißt <span class="gl" data-uk="письмовий іспит, контрольна" data-lemma="die Klausur, -en">Klausur</span>.</p>
+
+          <p>Auch die Menschen an der Uni haben eigene Namen. Studierende sagen kurz „Prof“. Wer an einer Doktorarbeit schreibt, ist <span class="gl" data-uk="аспірант, докторант" data-lemma="der Doktorand, -en">Doktorand</span> oder Doktorandin. Eine Fakultät leitet ein <span class="gl" data-uk="декан" data-lemma="der Dekan, -e">Dekan</span> oder eine Dekanin. Und dann gibt es noch die Hiwis: Studierende aus höheren Semestern, die als <span class="gl" data-uk="допоміжний працівник" data-lemma="die Hilfskraft, -ä-e">Hilfskräfte</span> einem Professor oder Institut helfen – zum Beispiel bei der Forschung oder als Leiter eines Tutoriums.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>An deutschen Unis gibt es das „akademische Viertel“. Steht im Plan „10 Uhr c. t.“ (lateinisch <i>cum tempore</i>, „mit Zeit“), beginnt die Vorlesung erst um 10.15 Uhr. Bei „s. t.“ (<i>sine tempore</i>, „ohne Zeit“) geht es pünktlich los. Das Studienjahr hat zwei Teile: das Wintersemester und das Sommersemester.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Was ist was an der Uni?</h2>
+      <p class="lead">Зістав слово з поясненням.</p>
+      <div class="card" id="ub3-list"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wer bin ich?</h2>
+      <p class="lead">Хто це про себе розповідає? Обери.</p>
+      <div class="card" id="ub4-list"></div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub5-list"></div>
+      <p class="lead">б) Склади події візиту Ліама в правильному порядку.</p>
+      <div class="card" id="ub5-seq"></div>
+    </section>
+
+    <!-- ===== Üb. 6 ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">Und du?</h2>
+      <p class="lead">Напиши німецькою. Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub6-a">1. Schreib eine kurze E-Mail an eine Professorin: Du möchtest in ihre Sprechstunde kommen, weil du eine Frage zu deinem Referat hast. (50–70 Wörter)</label>
+          <textarea id="ub6-a" rows="7" data-words="50-70" data-must="Sehr geehrte Frau Professorin|Sprechstunde|Mit freundlichen Grüßen" data-check="Wer bist du (Seminar, Semester)?|Was ist deine Frage?|Wann hast du Zeit?"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub6-b">2. Und bei uns? Was ist an ukrainischen Universitäten anders? Gibt es auch Sprechstunden, Tutorien oder ein „akademisches Viertel“? (5–7 Sätze)</label>
+          <textarea id="ub6-b" rows="6" data-words="50"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>ich besuche Ihr Seminar …, Ich hätte eine Frage zu …, Wäre es möglich, dass ich am … in Ihre Sprechstunde komme?, An ukrainischen Universitäten …, Im Unterschied zu Deutschland …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>In der Sprechstunde betreuen Dozenten ihre Studierenden persönlich. In der Vorlesung hört man zu, im Seminar diskutiert man mit, im Tutorium übt man. Für ein Seminar bekommt man einen Schein. Hiwis sind Studierende, die an der Uni mitarbeiten. Und „c. t.“ heißt: Es geht erst eine Viertelstunde später los.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          На консультаціях (Sprechstunde) викладачі працюють зі студентами особисто. На лекції слухають, на семінарі дискутують, на тьюторіумі тренуються. За семінар отримують залік (Schein). Hiwi — студенти, які підпрацьовують в університеті. А «c. t.» означає, що заняття почнеться на чверть години пізніше.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "sprechstunde-an-der-uni";
+
+  // Üb. 1а
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Um einen Besuch in der Sprechstunde und typische Wörter der deutschen Universität",
+            "Um die Geschichte der ältesten deutschen Universität",
+            "Um die Frage, wie man in Deutschland einen Studienplatz bekommt"],
+     correct: "Um einen Besuch in der Sprechstunde und typische Wörter der deutschen Universität"}
+  ]);
+  // Üb. 1б
+  buildMatch('ub1h', [
+    ["Spät dran, aber optimistisch", "Absatz 1"],
+    ["Eine Liste und eine Warnung", "Absatz 2"],
+    ["Das Wesentliche zählt", "Absatz 3"],
+    ["Vorlesung, Seminar, Klausur", "Absatz 4"],
+    ["Wer ist wer?", "Absatz 5"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5"], lead: true});
+
+  // Üb. 2
+  buildRF('ub2-rf', [
+    {s: "Liam studiert schon im fünften Semester.", a: "f"},
+    {s: "Bis zur Abgabe der Hausarbeit sind es noch zwei Wochen.", a: "r"},
+    {s: "Die Professorin findet, dass Liam sehr früh mit der Arbeit beginnt.", a: "f"},
+    {s: "Die Literaturliste ist eigentlich für ein anderes Thema.", a: "r"},
+    {s: "Liam war nicht im Tutorium.", a: "f"},
+    {s: "Professorin Haddad hat selbst ein Buch über Metaphern geschrieben.", a: "n"},
+    {s: "Der größte Hörsaal einer Universität heißt Audimax.", a: "r"},
+    {s: "Bei „10 Uhr s. t.“ beginnt die Vorlesung um 10.15 Uhr.", a: "f"}
+  ]);
+
+  // Üb. 3
+  buildMatch('ub3', [
+    ["die Vorlesung", "Die Dozentin spricht, die Studierenden schreiben mit."],
+    ["das Seminar", "Alle diskutieren mit und halten Referate."],
+    ["das Tutorium", "Hier übt man den Stoff noch einmal."],
+    ["die Klausur", "eine schriftliche Prüfung"],
+    ["die Hausarbeit", "eine längere schriftliche Arbeit zu einem Thema"],
+    ["der Schein", "Nachweis, dass man ein Seminar geschafft hat"]
+  ]);
+
+  // Üb. 4
+  buildMatch('ub4', [
+    ["„Ich schreibe gerade meine Doktorarbeit.“", "Doktorand/-in"],
+    ["„Ich bin im siebten Semester und leite ein Tutorium.“", "Hiwi"],
+    ["„Ich leite die ganze Fakultät.“", "Dekan/-in"],
+    ["„Ich unterrichte an der Uni und biete Sprechstunden an.“", "Dozent/-in"]
+  ], {options: ["Dekan/-in", "Doktorand/-in", "Dozent/-in", "Hiwi"]});
+
+  // Üb. 5а
+  buildMatch('ub5', [
+    ["die Gliederung", "план, структура"],
+    ["die Abgabefrist", "кінцевий термін здачі"],
+    ["betonen", "наголошувати"],
+    ["weglassen", "пропускати"],
+    ["sinnvoll", "доцільний"],
+    ["das Wesentliche", "головне"]
+  ]);
+  // Üb. 5б
+  buildSequence('ub5-seq', [
+    "Liam fragt nach zusätzlicher Literatur.",
+    "Die Professorin erinnert ihn daran, dass die Abgabe bald ist.",
+    "Sie gibt ihm eine Literaturliste.",
+    "Sie schaut sich seine Gliederung an.",
+    "Sie wünscht ihm „frohes Schaffen“."
+  ]);
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🎓','📚','📝','⏰','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
