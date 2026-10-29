@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digga, was geht? Das Deutsch von heute · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Sprache</span>
+        <h1>Digga, was geht? Das Deutsch von heute</h1>
+        <p class="sub">У підручнику — «Guten Tag», у метро — «Hey, was geht?». Хто сьогодні змінює німецьку мову і чому граматичні «помилки» лінгвісти називають ознакою сучасності?</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Sortieren</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Locker oder neutral?</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Sprache im Wandel</h2>
+      <div class="card">
+        <p>Wie begrüßt du deine Freunde – und wie deine Lehrerin? Welche englischen Wörter benutzt du, wenn du Ukrainisch sprichst? Glaubst du, dass Deutsche im Alltag so sprechen wie im Lehrbuch?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай (або обговоріть у парі): чим твоя мова з друзями відрізняється від мови в школі? Які англійські слова ти вживаєш щодня? Як гадаєш, хто найбільше змінює мову — дорослі чи підлітки?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Im Lehrbuch sagt man „Guten Tag“, in der U-Bahn eher „Hey, was geht?“. Sprache <span class="gl" data-key data-uk="змінюватися" data-lemma="sich verändern">verändert sich</span> ständig – und das ist kein Problem, sondern ein Zeichen, dass sie lebt.</p>
+
+          <h3>Zuhören in Bus und Bahn</h3>
+          <p>Jhan Araja kommt von den Philippinen. 2015 ist er der Liebe wegen aus Australien nach Hamburg gezogen. Damals konnte er genau einen deutschen Satz: „Ich habe einen Bruder.“ Heute erklärt er als @filipinoingermany in sozialen Netzwerken, was an der deutschen Sprache und Kultur lustig oder <span class="gl" data-uk="дивний" data-lemma="seltsam">seltsam</span> ist.</p>
+
+          <p>Sein Trick: In Bus und U-Bahn hat er die <span class="gl" data-uk="навушники" data-lemma="der Kopfhörer, -">Kopfhörer</span> herausgenommen und den Leuten <span class="gl" data-uk="слухати (когось)" data-lemma="zuhören (hörte zu, hat zugehört)">zugehört</span>, vor allem Jugendlichen. Leicht war das nicht, denn in der Bahn sprechen Deutsche nicht viel. Aber so hat er die <span class="gl" data-key data-uk="повсякденна мова" data-lemma="die Alltagssprache">Alltagssprache</span> gelernt. Sprachkurse sind für ihn die Basis – doch im echten Leben grüßt kaum jemand mit „Guten Tag“.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/DT5_Hamburg_-_Innenraum_2024.jpg/960px-DT5_Hamburg_-_Innenraum_2024.jpg" alt="Eine U-Bahn in Hamburg von innen." width="960" height="540" loading="lazy">
+            <figcaption>Eine U-Bahn in Hamburg von innen. Foto: MissyWegner, <a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener">CC BY 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:DT5_Hamburg_-_Innenraum_2024.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <h3>Jugendliche als Motor</h3>
+          <p>Der <span class="gl" data-uk="мовознавець, лінгвіст" data-lemma="der Linguist, -en">Linguist</span> Nils Bahlo von der Universität Münster nennt Jugendliche den Motor der Sprache. Ein Beispiel: „Ich <span class="gl" data-uk="клястися" data-lemma="schwören (schwor, hat geschworen)">schwöre</span>, die Wahrheit zu sagen“ klingt sehr offiziell, fast wie vor <span class="gl" data-uk="суд" data-lemma="das Gericht, -e">Gericht</span>. Fragen Jugendliche aber „Schwörst du?“, ist das ganz <span class="gl" data-uk="невимушений" data-lemma="locker">locker</span> gemeint.</p>
+
+          <p>Vieles aus der <span class="gl" data-key data-uk="молодіжна мова, сленг" data-lemma="die Jugendsprache, -n">Jugendsprache</span> verschwindet wieder, manches bleibt: „toll“ und „krass“ waren früher typische Jugendwörter, heute benutzt sie fast jeder. Eine wichtige <span class="gl" data-uk="джерело" data-lemma="die Quelle, -n">Quelle</span> ist das Englische: „Checkst du?“ heißt einfach „Verstehst du?“. Und „Digga“ – wahrscheinlich aus dem Hamburger Hip-Hop, vom Wort „Dicker“ – ist eine <span class="gl" data-uk="звертання" data-lemma="die Anrede, -n">Anrede</span> unter Freunden, so wie „Alter“ oder „Bro“.</p>
+
+          <p>Typisch sind auch kurze Sätze ohne Präposition oder Pronomen: „Gehen wir Kino?“, „Lass treffen!“. Grammatisch ist das falsch. Bahlo sieht darin aber ein Zeichen von <span class="gl" data-uk="сучасність" data-lemma="die Modernität">Modernität</span>. Wichtig ist nur der <span class="gl" data-key data-uk="контекст, ситуація" data-lemma="der Kontext, -e">Kontext</span>. Zum Chef oder zu einer Kundin sagt man so etwas besser nicht.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Jedes Jahr organisiert der Verlag Langenscheidt die Wahl zum „Jugendwort des Jahres“. Online <span class="gl" data-uk="брати участь" data-lemma="mitmachen (machte mit, hat mitgemacht)">mitmachen</span> darf jeder, egal wie alt. Die Kandidaten stellt auch die Tagesschau vor, die bekannteste <span class="gl" data-uk="випуск новин" data-lemma="die Nachrichtensendung, -en">Nachrichtensendung</span> im deutschen Fernsehen.</p>
+          </aside>
+
+          <h3>Neue Wörter, stabile Grammatik</h3>
+          <p>Neue Situationen bringen neue Wörter. In der Corona-Pandemie sind in kurzer Zeit Tausende <span class="gl" data-uk="виникати, з'являтися" data-lemma="entstehen (entstand, ist entstanden)">entstanden</span>, zum Beispiel „Lockdown-Debatte“ oder „Spuckschutz-Wand“. <span class="gl" data-key data-uk="словник" data-lemma="das Wörterbuch, -ü-er">Wörterbücher</span> wie der Duden nehmen immer wieder neue Wörter auf, alte müssen Platz machen. Die Grammatik ändert sich dagegen nur langsam. Ein Beispiel: Heute hört man nicht nur „weil ich Hunger habe“, sondern oft auch „weil ich habe Hunger“.</p>
+
+          <h3>Eine Sprache für alle</h3>
+          <p>Auch die Gesellschaft verändert die Sprache. Früher sagte man zu jeder <span class="gl" data-uk="неодружений, незаміжня" data-lemma="unverheiratet">unverheirateten</span> Frau „Fräulein“ – ein „Herrlein“ gab es nicht. Seit 1972 ist das Wort in offiziellen Texten nicht mehr erlaubt. Lange benutzte man für alle Menschen die männliche Form. Heute beginnt eine Politikerin ihre Rede ganz normal mit „Liebe Bürgerinnen und Bürger“.</p>
+
+          <p>Viele schreiben auch „Polizist*in“ oder „Autor:in“ oder wählen <span class="gl" data-uk="нейтральний" data-lemma="neutral">neutrale</span> Wörter wie „Studierende“. Diese <span class="gl" data-key data-uk="гендерно-інклюзивна мова" data-lemma="die gendergerechte Sprache">gendergerechte Sprache</span> soll alle <span class="gl" data-uk="стать" data-lemma="das Geschlecht, -er">Geschlechter</span> <span class="gl" data-uk="видимий" data-lemma="sichtbar">sichtbar</span> machen. Wie man selbst <span class="gl" data-uk="використовувати гендерно-інклюзивну мову" data-lemma="gendern">gendert</span>, muss jeder für sich <span class="gl" data-uk="вирішувати" data-lemma="entscheiden (entschied, hat entschieden)">entscheiden</span>, sagt die Psychologin Evelyn Ferstl aus Freiburg.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Radfahrer-innen_absteigen.JPG/960px-Radfahrer-innen_absteigen.JPG" alt="Ein Verkehrsschild in Kiel mit Aufkleber: aus „Radfahrer“ wird „Radfahrer*innen“." width="960" height="720" loading="lazy">
+            <figcaption>Ein Verkehrsschild in Kiel mit Aufkleber: aus „Radfahrer“ wird „Radfahrer*innen“. Foto: Coyote III, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Radfahrer-innen_absteigen.JPG" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Für Nils Bahlo ist Sprache immer eine <span class="gl" data-uk="миттєвий знімок" data-lemma="die Momentaufnahme, -n">Momentaufnahme</span>. Das war schon zur Zeit von Goethe und Schiller so: Ihre Texte fanden damals manche Leute <span class="gl" data-uk="низькопробний, поганий" data-lemma="minderwertig">minderwertig</span>.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Woher kommt das?</h2>
+      <p class="lead">Розклади слова й фрази з тексту: це молодіжна мова, слово часів пандемії чи гендерно-інклюзивна мова? Натисни картку, потім кошик.</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>Quelle</span><span>Kontext</span><span>Alltagssprache</span><span>Wörterbücher</span><span>entstanden</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> Im Bus hat Jhan Araja die <input type="text" class="blank-input inline wide" data-ans="Alltagssprache"> gelernt.</div>
+          <div class="fill-item"><span class="num">2)</span> Das Englische ist eine wichtige <input type="text" class="blank-input inline" data-ans="Quelle"> für neue Wörter.</div>
+          <div class="fill-item"><span class="num">3)</span> „Lass treffen!“ passt nicht in jeden <input type="text" class="blank-input inline" data-ans="Kontext">.</div>
+          <div class="fill-item"><span class="num">4)</span> In der Pandemie sind viele neue Wörter <input type="text" class="blank-input inline" data-ans="entstanden">.</div>
+          <div class="fill-item"><span class="num">5)</span> <input type="text" class="blank-input inline wide" data-ans="Wörterbücher"> wie der Duden nehmen neue Wörter auf.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Locker oder neutral?</h2>
+      <p class="lead">Що означає розмовна фраза нейтральною німецькою? Обери пару.</p>
+      <div class="card" id="ub5-list"></div>
+      <div class="card">
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Пам'ятай</span>
+          Розмовні фрази доречні з друзями. У листі до вчительки, у магазині чи з незнайомими дорослими краще говорити нейтрально.
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 6 ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (4–6 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub6-a">1. Welche Wörter aus der Jugendsprache oder aus dem Englischen benutzt du auf Ukrainisch? Was bedeuten sie?</label>
+          <textarea id="ub6-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub6-b">2. Im Ukrainischen gibt es Wörter wie „авторка“ oder „директорка“. Wie findest du solche Wörter? Gibt es ähnliche Diskussionen wie in Deutschland?</label>
+          <textarea id="ub6-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Mit meinen Freunden sage ich oft …, Das bedeutet …, Bei uns heißt das …, Ich finde es gut / nicht so gut, dass …, Ähnlich wie in Deutschland …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 8px;">Das nehme ich mit</p>
+        <p>Alltagsdeutsch klingt oft anders als im Lehrbuch: „Was geht?“, „Checkst du?“, „Digga“. Viele neue Wörter kommen aus der Jugendsprache und aus dem Englischen. Ob ein Ausdruck passt, hängt vom Kontext ab. Außerdem ist Deutsch gendergerechter geworden: „Bürgerinnen und Bürger“, „Studierende“, „Autor:in“.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Повсякденна німецька часто звучить інакше, ніж у підручнику. Багато нових слів приходить з молодіжної мови та з англійської, але чи доречний вислів — залежить від ситуації. А ще німецька стала гендерно-інклюзивнішою: «громадянки й громадяни», «Studierende», «Autor:in».
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "das-deutsch-von-heute";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Wie sich die deutsche Sprache heute verändert – und wer sie verändert",
+            "Warum Jugendliche in Deutschland schlechter Deutsch sprechen als früher",
+            "Wie man in Hamburg am schnellsten einen Sprachkurs findet"],
+     correct: "Wie sich die deutsche Sprache heute verändert – und wer sie verändert"},
+    {q: "Was meint Nils Bahlo mit „Jugendliche sind der Motor der Sprache“?",
+     opts: ["Junge Leute bringen viele neue Wörter und Formen in die Sprache.",
+            "Junge Leute sprechen besonders schnell und laut.",
+            "Junge Leute lernen in der Schule die beste Grammatik."],
+     correct: "Junge Leute bringen viele neue Wörter und Formen in die Sprache."}
+  ]);
+  buildMatch('ub1h', [
+    ["Ein Trick zum Deutschlernen: zuhören", "Absatz 2"],
+    ["Kurze Sätze – falsch, aber modern", "Absatz 5"],
+    ["Neue Wörter aus einer Krise", "Absatz 6"],
+    ["Ein altes Wort für Frauen", "Absatz 7"],
+    ["Stern, Doppelpunkt und neutrale Wörter", "Absatz 8"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5", "Absatz 6", "Absatz 7", "Absatz 8", "Absatz 9"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "Jhan Araja konnte am Anfang nur einen deutschen Satz.", a: "r"},
+    {s: "In Bus und Bahn sprechen Deutsche sehr viel.", a: "f"},
+    {s: "Jhan Araja hat nie einen Sprachkurs gemacht.", a: "f"},
+    {s: "„Toll“ und „krass“ waren früher Wörter der Jugendsprache.", a: "r"},
+    {s: "„Digga“ kommt wahrscheinlich aus dem Hamburger Hip-Hop.", a: "r"},
+    {s: "Das Jugendwort des Jahres wählen nur Schülerinnen und Schüler.", a: "f"},
+    {s: "Der Duden hat im Jahr 2020 über tausend Corona-Wörter aufgenommen.", a: "n"},
+    {s: "Die deutsche Grammatik verändert sich schneller als der Wortschatz.", a: "f"},
+    {s: "Seit 1972 schreibt man in offiziellen Texten nicht mehr „Fräulein“.", a: "r"}
+  ]);
+
+  buildSort('ub3-sort', {
+    buckets: ["Jugendsprache", "Corona-Zeit", "gendergerechte Sprache"],
+    items: [
+      {t: "Digga", b: "Jugendsprache"},
+      {t: "Checkst du?", b: "Jugendsprache"},
+      {t: "Lass treffen!", b: "Jugendsprache"},
+      {t: "Schwörst du?", b: "Jugendsprache"},
+      {t: "Lockdown-Debatte", b: "Corona-Zeit"},
+      {t: "Spuckschutz-Wand", b: "Corona-Zeit"},
+      {t: "Polizist*in", b: "gendergerechte Sprache"},
+      {t: "Studierende", b: "gendergerechte Sprache"},
+      {t: "Liebe Bürgerinnen und Bürger", b: "gendergerechte Sprache"}
+    ]
+  });
+
+  buildMatch('ub4', [
+    ["seltsam", "дивний"],
+    ["zuhören", "слухати (когось)"],
+    ["die Anrede", "звертання"],
+    ["entscheiden", "вирішувати"],
+    ["sichtbar", "видимий"],
+    ["unverheiratet", "неодружений, незаміжня"]
+  ]);
+  wireBlanks('ub4b');
+
+  buildMatch('ub5', [
+    ["Hey, was geht?", "Hallo, wie geht es dir?"],
+    ["Checkst du?", "Verstehst du?"],
+    ["Gehen wir Kino?", "Gehen wir ins Kino?"],
+    ["Lass treffen!", "Lass uns treffen!"],
+    ["Schwörst du?", "Versprichst du das?"]
+  ], {lead: true});
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🗣️','🎧','📖','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
