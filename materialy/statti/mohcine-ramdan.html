@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohcine Ramdan: Sprache klingt, Musik verbindet · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Sprache</span>
+        <h1>Mohcine Ramdan: Sprache klingt, Musik verbindet</h1>
+        <p class="sub">Чому «Schwein» буває щастям, а «Gemütlichkeit» неможливо перекласти одним словом? Лінгвіст і музикант із Марокко — про метафори, час і музику як мову для всіх.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Interview</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Sprache und Musik</h2>
+      <div class="card">
+        <p>Verstehst du Lieder in Sprachen, die du nicht sprichst? Was sagt dir die Melodie? Und gibt es Wörter in deiner Sprache, die man kaum übersetzen kann?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай (або обговоріть у парі): чи можна зрозуміти настрій пісні, не знаючи мови? Які українські слова важко перекласти іншими мовами — наприклад, «затишок» чи «щем»?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Mohcine Ramdan ist Sprachwissenschaftler und Musiker. Er <span class="gl" data-uk="походити" data-lemma="stammen aus">stammt</span> aus Marokko und <span class="gl" data-uk="досліджувати, займатися наукою" data-lemma="forschen">forscht</span> heute an der Ludwig-Maximilians-Universität in München. Für ihn gehören Sprache und Musik eng zusammen – und beide sagen viel darüber, wie Menschen denken.</p>
+
+          <h3>Erst der Klang, dann die Bedeutung</h3>
+          <p>Von der Musik hat Ramdan gelernt, dass Sprache zuerst ein <span class="gl" data-key data-uk="звучання, звук" data-lemma="der Klang, -ä-e">Klang</span> ist. Ein kleines Kind versteht noch kein einziges Wort, aber es hört Melodie und Rhythmus – und merkt sofort, ob jemand freundlich oder <span class="gl" data-uk="розлючений" data-lemma="wütend">wütend</span> spricht. <span class="gl" data-uk="навпаки" data-lemma="umgekehrt">Umgekehrt</span> hat ihm die Sprache gezeigt, dass Musik <span class="gl" data-key data-uk="універсальний, загальний для всіх" data-lemma="universell">universell</span> ist: Ein D oder ein A klingt überall auf der Welt gleich.</p>
+
+          <p>Noten lesen kann Ramdan übrigens nicht. Er nennt sich selbst einen <span class="gl" data-uk="неписьменна людина" data-lemma="der Analphabet, -en">Analphabeten</span> in der Musik. Aufgewachsen ist er mit Musiktraditionen, die man mündlich <span class="gl" data-uk="передавати (далі)" data-lemma="weitergeben (gab weiter, hat weitergegeben)">weitergibt</span>, zum Beispiel mit der Gnawa-Musik. Sie stammt von Menschen, die früher als <span class="gl" data-uk="раб" data-lemma="der Sklave, -n">Sklaven</span> nach Nordafrika <span class="gl" data-uk="насильно вивозити" data-lemma="verschleppen">verschleppt</span> wurden. Wer sie lernen will, setzt sich hin, nimmt ein Instrument in die Hand und hört zu.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Marakech_muzikeus_danseus_gnawas.jpg/960px-Marakech_muzikeus_danseus_gnawas.jpg" alt="Gnawa-Musiker und -Tänzer in Marrakesch." width="960" height="637" loading="lazy">
+            <figcaption>Gnawa-Musiker und -Tänzer in Marrakesch. Foto: Lucyin, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Marakech_muzikeus_danseus_gnawas.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <h3>Vom Müssen zum Wollen</h3>
+          <p>Deutsch war für ihn zuerst eine <span class="gl" data-uk="обов'язок" data-lemma="die Pflicht, -en">Pflicht</span>: In seiner Schule in Marokko stand es auf dem Stundenplan. Nach dem Abitur wusste er nicht, was er studieren sollte. Sein früherer Deutschlehrer <span class="gl" data-uk="радити" data-lemma="raten (riet, hat geraten)">riet</span> ihm zu Germanistik. Ramdan dachte: Nur wenige studieren Deutsch, das öffnet viele Türen. Mit 21 Jahren wollte er aber nicht schon als Lehrer in einem Klassenzimmer landen – also studierte er weiter, auch in Jordanien und in Deutschland. Heute hat er einen Doktortitel und arbeitet am Institut für Deutsch als Fremdsprache in München.</p>
+
+          <h3>Ein Schwein, das Glück bringt</h3>
+          <p>Ein Thema seiner Forschung ist der Vergleich von Sprachen. Viele glauben, dass jedes Wort in einer anderen Sprache ein genaues <span class="gl" data-key data-uk="відповідник, еквівалент" data-lemma="das Äquivalent, -e">Äquivalent</span> hat. Das stimmt aber nicht. Schwer beim Deutschlernen ist für Ramdan deshalb nicht die Grammatik, sondern die <span class="gl" data-uk="уміння, здатність" data-lemma="die Fähigkeit, -en">Fähigkeit</span>, Wörter passend zu benutzen. Sein Beispiel: „Du hast Schwein“ bedeutet auf Deutsch „Du hast Glück“, „Du bist ein Schwein“ ist dagegen eine <span class="gl" data-uk="образа" data-lemma="die Beleidigung, -en">Beleidigung</span>. In arabischen Ländern isst man meist kein Schweinefleisch, ein <span class="gl" data-uk="лайливе слово" data-lemma="das Schimpfwort, -ö-er">Schimpfwort</span> ist „Schwein“ dort aber nicht – man sagt es sogar liebevoll zu kleinen Kindern, so wie Deutsche „Maus“.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>In Deutschland ist das Schwein ein <span class="gl" data-uk="символ щастя, талісман" data-lemma="der Glücksbringer, -">Glücksbringer</span>. Zu Silvester schenkt man sich deshalb oft kleine Schweine aus Marzipan oder Schokolade – sie sollen im neuen Jahr Glück bringen.</p>
+          </aside>
+
+          <p>Noch schwieriger sind <span class="gl" data-uk="абстрактний" data-lemma="abstrakt">abstrakte</span> Wörter wie „Freiheit“ oder „<span class="gl" data-uk="справедливість" data-lemma="die Gerechtigkeit">Gerechtigkeit</span>“. Sie klingen in vielen Sprachen gleich, aber das Konzept dahinter hängt von der Kultur ab. Manche Wörter haben gar kein Äquivalent – Fachleute sprechen dann von einer <span class="gl" data-uk="лексична лакуна (слово, якого немає в іншій мові)" data-lemma="die lexikalische Lücke">lexikalischen Lücke</span>. Ein gutes Beispiel ist „Gemütlichkeit“: Ein gemütlicher Abend bedeutet, dass Licht, Essen und Stimmung perfekt zusammenpassen. Für so ein ganzes Gefühl braucht man in anderen Sprachen mehrere Sätze.</p>
+
+          <p>Hier helfen <span class="gl" data-key data-uk="метафора" data-lemma="die Metapher, -n">Metaphern</span>. Zeit zum Beispiel kann man nicht sehen oder <span class="gl" data-uk="торкатися" data-lemma="anfassen (fasste an, hat angefasst)">anfassen</span>. Darum sprechen wir über sie wie über einen Raum („in einer Minute“, „um 14 Uhr“) oder wie über Geld: Man spart Zeit oder hat keine Zeit. Im Arabischen dagegen kann man Zeit nicht <span class="gl" data-uk="марнувати, витрачати даремно" data-lemma="verschwenden">verschwenden</span>, denn diese Geldmetapher gibt es dort nicht. Wer die Metaphern einer Sprache kennt, fühlt sich in ihr viel sicherer.</p>
+
+          <h3>Brücken aus Musik</h3>
+          <p>Weil Musik für ihn mit Familie und Erinnerungen <span class="gl" data-uk="пов'язаний" data-lemma="verbunden">verbunden</span> ist, hat Ramdan das Musikkollektiv Jisr <span class="gl" data-uk="засновувати" data-lemma="gründen">gegründet</span> – „Jisr“ ist Arabisch und heißt „Brücke“. Am Anfang waren es zwei <span class="gl" data-uk="біженець" data-lemma="der/die Geflüchtete, -n">Geflüchtete</span>, die er zufällig kennengelernt hatte. Heute machen mehr als 100 Musikerinnen und Musiker aus Südasien, Nordafrika und Europa mit. Es geht ihnen nicht nur um Musik, sondern darum, <span class="gl" data-uk="один одному" data-lemma="einander">einander</span> zuzuhören. Gerade in großen Städten, wo viele Kulturen <span class="gl" data-uk="поруч, пліч-о-пліч" data-lemma="nebeneinander">nebeneinander</span> leben, merkt Ramdan: Die Menschen <span class="gl" data-uk="сумувати за, бракувати" data-lemma="vermissen">vermissen</span> so etwas.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери відповіді.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Fragen und Antworten</h2>
+      <p class="lead">Уяви, що це інтерв'ю з Мохсіном Рамданом. Яка відповідь пасує до запитання?</p>
+      <div class="card" id="ub3-list"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Яке пояснення пасує до слова?</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>Klang</span><span>verschwenden</span><span>gegründet</span><span>Pflicht</span><span>vermissen</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> In Marokko war Deutsch für ihn zuerst eine <input type="text" class="blank-input inline" data-ans="Pflicht">.</div>
+          <div class="fill-item"><span class="num">2)</span> Ein Baby versteht keine Wörter, aber es hört den <input type="text" class="blank-input inline" data-ans="Klang"> der Sprache.</div>
+          <div class="fill-item"><span class="num">3)</span> Wir haben kaum Zeit – lass uns keine Minute <input type="text" class="blank-input inline wide" data-ans="verschwenden">!</div>
+          <div class="fill-item"><span class="num">4)</span> Ramdan hat ein Musikkollektiv <input type="text" class="blank-input inline" data-ans="gegründet">.</div>
+          <div class="fill-item"><span class="num">5)</span> Viele Menschen in der Großstadt <input type="text" class="blank-input inline" data-ans="vermissen"> echte Begegnungen.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (5–7 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. „Schwein“ und „Maus“: Welche Tierwörter benutzt man im Ukrainischen positiv, welche negativ? Gibt es Unterschiede zum Deutschen?</label>
+          <textarea id="ub5-a" rows="6"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Wie spricht man im Ukrainischen über Zeit? Kann man Zeit „sparen“ oder „verschwenden“? Nenne Beispiele.</label>
+          <textarea id="ub5-b" rows="6"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Im Ukrainischen sagt man …, Das bedeutet wörtlich …, Anders als im Deutschen …, Genau wie im Deutschen …, Dafür gibt es kein genaues Äquivalent.</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 8px;">Das nehme ich mit</p>
+        <p>Nicht jedes Wort hat in einer anderen Sprache ein genaues Äquivalent: „Gemütlichkeit“ muss man umschreiben, und „Schwein haben“ bedeutet auf Deutsch Glück haben. Über Zeit spricht man im Deutschen oft wie über Raum oder Geld. Musik dagegen versteht man überall – sie kann Brücken zwischen Kulturen bauen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Не кожне слово має точний відповідник в іншій мові: «Gemütlichkeit» доводиться пояснювати кількома словами, а «Schwein haben» німецькою означає «пощастило». Про час німці часто говорять як про простір або гроші. А музику розуміють усюди — вона будує мости між культурами.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "mohcine-ramdan";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Wie Sprache, Kultur und Musik zusammenhängen – erklärt von einem Linguisten und Musiker",
+            "Wie man in Marokko am schnellsten Deutsch lernt",
+            "Warum Gnawa-Musik in Deutschland so populär ist"],
+     correct: "Wie Sprache, Kultur und Musik zusammenhängen – erklärt von einem Linguisten und Musiker"},
+    {q: "Was ist beim Deutschlernen für Ramdan am schwierigsten?",
+     opts: ["Wörter passend zu benutzen",
+            "Die deutsche Grammatik",
+            "Die deutsche Aussprache"],
+     correct: "Wörter passend zu benutzen"}
+  ]);
+  buildMatch('ub1h', [
+    ["Musik ohne Noten", "Absatz 2"],
+    ["Ein Lehrer gibt einen Tipp", "Absatz 3"],
+    ["Ein Tier – zwei Bedeutungen", "Absatz 4"],
+    ["Ein Wort für ein ganzes Gefühl", "Absatz 5"],
+    ["Zeit als Raum und als Geld", "Absatz 6"],
+    ["Musiker aus drei Weltregionen", "Absatz 7"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5", "Absatz 6", "Absatz 7"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "Ein kleines Kind hört, ob jemand freundlich oder wütend spricht.", a: "r"},
+    {s: "Ramdan hat als Kind gelernt, Noten zu lesen.", a: "f"},
+    {s: "Gnawa-Musik lernt man vor allem durch Zuhören.", a: "r"},
+    {s: "Ramdan wollte schon mit 21 Jahren als Deutschlehrer arbeiten.", a: "f"},
+    {s: "Ramdan spielt in seinem Kollektiv Gitarre.", a: "n"},
+    {s: "Im Arabischen ist „Schwein“ kein Schimpfwort.", a: "r"},
+    {s: "Für „Gemütlichkeit“ gibt es in vielen Sprachen ein genaues Äquivalent.", a: "f"},
+    {s: "Das Kollektiv Jisr hat mit zwei Geflüchteten angefangen.", a: "r"}
+  ]);
+
+  buildMatch('ub3', [
+    ["Was haben Sie durch die Musik über Sprache gelernt?", "Dass Sprache zuerst ein Klang ist."],
+    ["Können Sie Noten lesen?", "Nein, in der Musik bin ich ein Analphabet."],
+    ["Warum haben Sie Deutsch studiert?", "Mein früherer Deutschlehrer hat es mir vorgeschlagen."],
+    ["Was ist beim Deutschlernen besonders schwer?", "Nicht die Grammatik, sondern die passenden Wörter."],
+    ["Was ist eine lexikalische Lücke?", "Ein Wort, für das es in einer anderen Sprache kein Äquivalent gibt."],
+    ["Wie groß ist Ihr Kollektiv heute?", "Wir sind mehr als 100 Musikerinnen und Musiker."]
+  ], {lead: true});
+
+  buildMatch('ub4', [
+    ["das Äquivalent", "ein Wort mit genau derselben Bedeutung in einer anderen Sprache"],
+    ["das Schimpfwort", "ein Wort, mit dem man jemanden beleidigt"],
+    ["weitergeben", "etwas, das man selbst bekommen hat, anderen geben"],
+    ["universell", "überall auf der Welt gültig"],
+    ["der Glücksbringer", "ein Ding oder Tier, das Glück bringen soll"]
+  ], {lead: true});
+  wireBlanks('ub4b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🎵','🗣️','🌉','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
