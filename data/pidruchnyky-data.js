@@ -170,7 +170,7 @@ const PIDRUCHNYKY = [
         { id: "l1-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "26", typ: "bez-storinky" }
       ] },
       { id: "l2", label: "2", nazva: "Einkaufen macht Spaß", storinky: "27–50", dity: [
-        { id: "l2-a", label: "A", nazva: "Hier macht man Einkäufe", storinky: "28–33", typ: "vpravy", gram: ["infinitiv-um-zu"] },
+        { id: "l2-a", label: "A", nazva: "Hier macht man Einkäufe", storinky: "28–33", typ: "vpravy", gram: ["infinitiv-um-zu"], opublikovano: 6 },
         { id: "l2-b", label: "B", nazva: "Passt das gut zusammen?", storinky: "34–39", typ: "vpravy", gram: ["fragen", "demonstrativpronomen", "adjektivdeklination"] },
         { id: "l2-c", label: "C", nazva: "Lebensmittel kaufen", storinky: "40–44", typ: "vpravy", gram: ["kausalsaetze"] },
         { id: "l2-d", label: "D", nazva: "Wiederholung", storinky: "45–47", typ: "povtorennya", gram: ["infinitiv-um-zu", "adjektivdeklination", "kausalsaetze"] },
