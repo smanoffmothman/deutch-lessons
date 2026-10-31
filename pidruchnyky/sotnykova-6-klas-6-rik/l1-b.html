@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 1, Modul B: Wir sind alle ganz verschieden — Німецька мова 6 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 6 КЛАС</span>
+        <h1>Lektion 1 · Modul B: Wir sind alle ganz verschieden</h1>
+        <p class="sub">Урок про зовнішність: обличчя, волосся, фігура, зачіска. Закінчення прикметників після ein, kein, mein і без артикля — «ein rundes Gesicht», «mit langen Haaren». Текст і діалог з озвученням, вправи, говоріння, письмо і підсумковий тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Wie sieht er aus?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Endungen</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Im Satz</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Chat</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власний текст + вправа на розуміння ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Zwillinge — aber ganz verschieden</h2>
+      <p class="lead">Ерік пише для шкільної газети про двох однокласниць. Послухай і прочитай. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l1-b-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Für unsere Schülerzeitung schreibe ich diesmal über zwei Mitschülerinnen: Nina und Nora. Die beiden sind <span class="gl" data-uk="близнюк" data-lemma="der Zwilling, -e">Zwillinge</span>, sie sind am selben Tag geboren. Aber sie <span class="gl" data-uk="виглядати" data-lemma="aussehen (sieht aus), hat ausgesehen">sehen</span> ganz <span class="gl" data-uk="різний" data-lemma="verschieden">verschieden</span> <span class="gl" data-uk="виглядати" data-lemma="aussehen (sieht aus), hat ausgesehen">aus</span>. Viele Leute glauben das zuerst nicht!</p>
+        <p>Nina hat lange, <span class="gl" data-uk="прямий, гладкий (про волосся)" data-lemma="glatt">glatte</span>, <span class="gl" data-uk="білявий, світлий (про волосся)" data-lemma="blond">blonde</span> <span class="gl" data-uk="волосина; мн. — волосся" data-lemma="das Haar, -e">Haare</span> und blaue <span class="gl" data-uk="око" data-lemma="das Auge, -n">Augen</span>. Meistens trägt sie einen hohen <span class="gl" data-uk="кінський хвіст (зачіска)" data-lemma="der Pferdeschwanz, -ä-e">Pferdeschwanz</span>. Sie hat ein <span class="gl" data-uk="вузький" data-lemma="schmal">schmales</span> <span class="gl" data-uk="обличчя" data-lemma="das Gesicht, -er">Gesicht</span>, eine <span class="gl" data-uk="прямий" data-lemma="gerade">gerade</span> <span class="gl" data-uk="ніс" data-lemma="die Nase, -n">Nase</span> und viele <span class="gl" data-uk="веснянка" data-lemma="die Sommersprosse, -n">Sommersprossen</span>. Nina ist sehr <span class="gl" data-uk="спортивний" data-lemma="sportlich">sportlich</span>: Sie spielt Volleyball und hat eine <span class="gl" data-uk="стрункий" data-lemma="schlank">schlanke</span>, große <span class="gl" data-uk="фігура" data-lemma="die Figur, -en">Figur</span>.</p>
+        <p>Nora ist einen Kopf kleiner als ihre Schwester. Sie hat kurze, <span class="gl" data-uk="кучерявий" data-lemma="lockig">lockige</span> Haare — und sie sind rot! Nora hat ein <span class="gl" data-uk="круглий" data-lemma="rund">rundes</span> Gesicht, grüne Augen und einen <span class="gl" data-uk="повний; тут: пухкий (про губи, рот)" data-lemma="voll">vollen</span> <span class="gl" data-uk="рот" data-lemma="der Mund, -ü-er">Mund</span>. Sie trägt eine große, runde <span class="gl" data-uk="окуляри" data-lemma="die Brille, -n">Brille</span>.</p>
+        <p>Auch ihr Stil ist anders. Nina mag bequeme Kleidung: ein weites T-Shirt, eine Sporthose und weiße Turnschuhe. Nora trägt gern <span class="gl" data-uk="модний" data-lemma="modisch">modische</span> Sachen, zum Beispiel einen bunten Rock und eine Jacke mit großen Knöpfen. Und jede Woche hat sie eine neue <span class="gl" data-uk="зачіска" data-lemma="die Frisur, -en">Frisur</span>.</p>
+        <p>Und der Charakter? Nina ist laut und lustig, Nora ist ruhig und liest viel. Nur eins haben die zwei gemeinsam: Sie lachen genau gleich — mit geschlossenen Augen und einem lauten „Hahaha!“. Dann sieht jeder: Das sind wirklich Schwestern!</p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">ein rundes Gesicht · mit langen Haaren</h2>
+      <p class="lead">Прикметник <b>перед</b> іменником отримує закінчення. Після ein, kein, mein, dein, sein, ihr, unser, euer прикметник «допомагає» артиклю: де артикль не показує рід, це робить прикметник.</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. Після ein / kein / mein …</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th></th><th>Nominativ</th><th>Akkusativ</th><th>Dativ</th></tr>
+          <tr><td class="gender">der</td><td>ein voll<strong>er</strong> Mund</td><td>einen voll<strong>en</strong> Mund</td><td>einem voll<strong>en</strong> Mund</td></tr>
+          <tr><td class="gender">das</td><td>ein rund<strong>es</strong> Gesicht</td><td>ein rund<strong>es</strong> Gesicht</td><td>einem rund<strong>en</strong> Gesicht</td></tr>
+          <tr><td class="gender">die</td><td>eine schlank<strong>e</strong> Figur</td><td>eine schlank<strong>e</strong> Figur</td><td>einer schlank<strong>en</strong> Figur</td></tr>
+        </table></div>
+        <div class="merke">ein = і der, і das, тому рід показує прикметник: ein voll<b>er</b> Mund (der), ein rund<b>es</b> Gesicht (das). Підказка: закінчення прикметника «повторює» артикль d<b>er</b> / da<b>s</b>.</div>
+        <div class="merke">Dativ — завжди <b>-en</b>: mit einem rund<b>en</b> Gesicht, mit meiner neu<b>en</b> Brille. Genitiv теж <b>-en</b>: die Farbe eines schön<b>en</b> Kleides.</div>
+        <p class="beispiel">Opa hat ein<b>en</b> weiß<b>en</b> Bart. — Das ist kein modisch<b>er</b> Pullover.</p>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. Множина без артикля</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Nominativ</th><th>Akkusativ</th><th>Dativ</th></tr>
+          <tr><td>lang<strong>e</strong> Haare</td><td>lang<strong>e</strong> Haare</td><td>mit lang<strong>en</strong> Haare<strong>n</strong></td></tr>
+          <tr><td>blau<strong>e</strong> Augen</td><td>blau<strong>e</strong> Augen</td><td>mit blau<strong>en</strong> Augen</td></tr>
+        </table></div>
+        <div class="merke">Множина без артикля: Nominativ і Akkusativ — <b>-e</b>, Dativ — <b>-en</b>, і сам іменник у Dativ теж отримує <b>-n</b>: mit lang<b>en</b> Haare<b>n</b>.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. Після sein — без закінчення</p>
+        <div class="merke">Якщо прикметник стоїть <b>після</b> sein, werden, aussehen, закінчення немає: Ihre Haare sind <b>lang</b>. Er sieht <b>sportlich</b> aus. В українській прикметник змінюється завжди («волосся довге»), у німецькій — лише перед іменником.</div>
+        <p class="beispiel">Sie hat <b>lange</b> Haare. → Ihre Haare sind <b>lang</b>.</p>
+        <p class="beispiel">Er hat ein <b>rundes</b> Gesicht. → Sein Gesicht ist <b>rund</b>.</p>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">4. Типові помилки</p>
+        <p>✗ ein runde Gesicht → ✓ ein rund<b>es</b> Gesicht <i>(das: прикметник показує рід)</i></p>
+        <p>✗ Er hat ein voller Mund. → ✓ Er hat ein<b>en</b> voll<b>en</b> Mund. <i>(haben + Akkusativ, der)</i></p>
+        <p>✗ mit lange Haare → ✓ mit lang<b>en</b> Haare<b>n</b> <i>(Dativ множини)</i></p>
+        <p>✗ Ihre Haare sind lange. → ✓ Ihre Haare sind <b>lang</b>. <i>(після sein — без закінчення)</i></p>
+        <p>✗ Sie hat eine Brillen. → ✓ Sie trägt eine <b>Brille</b>. <i>(одні окуляри = die Brille, однина)</i></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: картинки — опис зовнішності ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Wie sieht er / sie aus?</h2>
+      <p class="lead">Подивись на картинку й вибери речення, яке до неї пасує.</p>
+      <div class="card" id="ub1-pic"></div>
+    </section>
+
+    <!-- ===== Üb. 2: таблиця закінчень ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Endungen</h2>
+      <p class="lead">Допиши закінчення прикметника. Перший стовпчик підказує рід і прикметник.</p>
+      <div class="card" id="ub2-tab"></div>
+    </section>
+
+    <!-- ===== Üb. 3: закінчення в реченнях ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Endungen im Satz</h2>
+      <p class="lead">Допиши закінчення. Спершу визнач рід іменника й відмінок: хто? що? (Nominativ), кого? що? (Akkusativ) чи з ким? з чим? (Dativ).</p>
+      <div class="card" id="ub3-list">
+        <div class="fill-item"><span class="num">1)</span> Mein Opa hat einen <span style="white-space:nowrap">weiß<input type="text" class="blank-input inline" data-ans="en" style="width:3.2em"></span> Bart.</div>
+        <div class="fill-item"><span class="num">2)</span> Lotte hat <span style="white-space:nowrap">lang<input type="text" class="blank-input inline" data-ans="e" style="width:3.2em"></span>, <span style="white-space:nowrap">blond<input type="text" class="blank-input inline" data-ans="e" style="width:3.2em"></span> Haare.</div>
+        <div class="fill-item"><span class="num">3)</span> Wer ist das Mädchen mit <span style="white-space:nowrap">rot<input type="text" class="blank-input inline" data-ans="en" style="width:3.2em"></span> Haaren?</div>
+        <div class="fill-item"><span class="num">4)</span> Nina hat ein <span style="white-space:nowrap">schmal<input type="text" class="blank-input inline" data-ans="es" style="width:3.2em"></span> Gesicht.</div>
+        <div class="fill-item"><span class="num">5)</span> Heute trage ich meine <span style="white-space:nowrap">neu<input type="text" class="blank-input inline" data-ans="e" style="width:3.2em"></span> Brille.</div>
+        <div class="fill-item"><span class="num">6)</span> Erik hat eine <span style="white-space:nowrap">sportlich<input type="text" class="blank-input inline" data-ans="e" style="width:3.2em"></span> Figur.</div>
+        <div class="fill-item"><span class="num">7)</span> Das ist kein <span style="white-space:nowrap">modisch<input type="text" class="blank-input inline" data-ans="er" style="width:3.2em"></span> Pullover.</div>
+        <div class="fill-item"><span class="num">8)</span> Daryna wohnt bei einer <span style="white-space:nowrap">nett<input type="text" class="blank-input inline" data-ans="en" style="width:3.2em"></span> Familie in Leipzig.</div>
+        <div class="fill-item"><span class="num">9)</span> Mit deiner <span style="white-space:nowrap">neu<input type="text" class="blank-input inline" data-ans="en" style="width:3.2em"></span> Frisur bist du kaum zu erkennen!</div>
+        <div class="fill-item"><span class="num">10)</span> Unsere Nachbarn haben ein <span style="white-space:nowrap">klein<input type="text" class="blank-input inline" data-ans="es" style="width:3.2em"></span> Baby.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4: чат — опис людини ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wer ist der Neue?</h2>
+      <p class="lead">Грета пише тобі про нового учня в її класі. Вибирай правильну відповідь — зверни увагу на закінчення прикметників.</p>
+      <div class="card" id="ub4-chat"></div>
+    </section>
+
+    <!-- ===== HÖREN — власний діалог, озвучений синтезатором ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Wo ist Lotte?</h2>
+      <p class="lead">Грета в торговому центрі шукає молодшу сестру й описує її працівникові інформаційного пункту. Послухай діалог (можна двічі) і дай відповіді. Текст діалогу — внизу, але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l1-b-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Mitarbeiter:</b> Guten Tag! Kann ich dir helfen?<br>
+          <b>Greta:</b> Ja, bitte! Ich suche meine kleine Schwester. Sie ist plötzlich weg!<br>
+          <b>Mitarbeiter:</b> Keine Panik, wir finden sie. Wie heißt sie, und wie alt ist sie?<br>
+          <b>Greta:</b> Sie heißt Lotte und ist sieben.<br>
+          <b>Mitarbeiter:</b> Gut. Wie sieht sie aus?<br>
+          <b>Greta:</b> Sie ist ziemlich klein und schlank. Sie hat lange, blonde Haare mit zwei Zöpfen.<br>
+          <b>Mitarbeiter:</b> Und welche Augenfarbe hat sie?<br>
+          <b>Greta:</b> Blaue Augen. Und sie hat ein rundes Gesicht mit vielen Sommersprossen.<br>
+          <b>Mitarbeiter:</b> Was trägt sie heute?<br>
+          <b>Greta:</b> Eine rote Jacke, eine blaue Jeans und gelbe Gummistiefel. Ach ja, und sie hat einen kleinen Rucksack — er sieht aus wie ein Hund.<br>
+          <b>Mitarbeiter:</b> Wo hast du sie zuletzt gesehen?<br>
+          <b>Greta:</b> Im Spielzeuggeschäft im zweiten Stock, vor zehn Minuten.<br>
+          <b>Mitarbeiter:</b> Moment, ich mache sofort eine Durchsage. … Achtung, bitte! Wir suchen die kleine Lotte, sieben Jahre alt, mit langen, blonden Haaren und einer roten Jacke. Lotte, deine Schwester wartet am Infoschalter im Erdgeschoss!<br>
+          <b>Greta:</b> Oh, da kommt sie ja! Mit einem riesigen Eis in der Hand!<br>
+          <b>Mitarbeiter:</b> Na siehst du. Alles gut!
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN — 🎤 + говоріння зі зразком ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Wie siehst du aus?</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Beschreibe dich selbst: Haare, Augen, Gesicht, Figur.</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Ich habe kurze, dunkle Haare und braune Augen. Ich habe ein ovales Gesicht und eine kleine Nase. Ich bin nicht sehr groß, aber sportlich.</div>
+        </div>
+        <div class="qa">
+          <label>2. Beschreibe eine Person aus deiner Familie. Wem bist du ähnlich?</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Meine Mutter hat lange, lockige Haare und grüne Augen. Sie ist schlank und trägt eine Brille. Ich bin ihr ähnlich: Ich habe auch lockige Haare.</div>
+        </div>
+        <div class="qa">
+          <label>3. Du holst einen Gast vom Bahnhof ab. Er kennt dich nicht. Sag am Telefon, wie du aussiehst und was du trägst.</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Ich bin ziemlich groß und schlank. Ich habe rote Haare und viele Sommersprossen. Ich trage eine grüne Jacke und eine schwarze Mütze. Ich warte am Ausgang.</div>
+        </div>
+        <div class="qa">
+          <label>4. Was ist für dich eine modische Frisur? Was findest du altmodisch?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Modisch finde ich kurze Haare oder einen hohen Pferdeschwanz. Altmodisch finde ich sehr lange Zöpfe. Aber das ist Geschmackssache!</div>
+        </div>
+        <div class="qa">
+          <label>5. Frag deinen Partner / deine Partnerin über seine / ihre beste Freundin oder seinen / ihren besten Freund: Wie sieht sie / er aus?</label>
+          <button class="btn secondary" type="button" data-reveal="spr5">Muster zeigen</button>
+          <div class="reveal" id="spr5">— Hat dein Freund kurze oder lange Haare? — Kurze, blonde Haare. — Trägt er eine Brille? — Nein. — Ist er groß? — Ja, er ist größer als ich und sehr sportlich.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN — письмо за планом ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">So erkennst du mich!</h2>
+      <p class="lead">Ти їдеш на тиждень до Лейпцига. Грета зустрічатиме тебе на вокзалі, але вона тебе ще не бачила. Напиши їй повідомлення на 50–70 слів за планом:</p>
+      <div class="card">
+        <p>1) привітання; 2) коли приїздить твій потяг; 3) як ти виглядаєш: волосся, очі, зріст, фігура; 4) що в тебе буде на собі (2–3 речі з прикметниками); 5) ще одна прикмета (окуляри, рюкзак, шапка…); 6) прощання.</p>
+        <p class="beispiel">Hallo Greta! · Mein Zug kommt am … um … an. · Ich habe … Haare und … Augen. · Ich trage einen / eine / ein … · Du erkennst mich an … · Bis bald!</p>
+        <div class="qa">
+          <label for="schreiben-text">Deine Nachricht</label>
+          <textarea id="schreiben-text" rows="9" placeholder="Hallo Greta! …"
+            data-words="50-70"
+            data-must="Haare|trage|Bis bald/Viele Grüße/Liebe Grüße"
+            data-check="Коли приїздиш|Волосся й очі з прикметниками|Зріст або фігура|2–3 речі одягу з прикметниками (einen / eine / ein …)|Ще одна прикмета|Прощання"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Hallo Greta!<br>Mein Zug kommt am Samstag um 14:20 Uhr in Leipzig an. So erkennst du mich: Ich bin ziemlich klein und habe lange, dunkle Haare mit einem Pony. Meine Augen sind braun. Ich trage eine gelbe Jacke, eine schwarze Hose und weiße Turnschuhe. Ich habe auch einen großen, blauen Koffer und eine runde Brille. Ich freue mich sehr auf dich!<br>Bis bald!<br>Sofia</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — режим контрольної: одна спроба, лише ця вкладка йде в бал ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Mein Bruder hat ein
+          <select class="blank inline" data-ans="ovales"><option value="">—</option><option>ovale</option><option>ovales</option><option>ovaler</option></select> Gesicht.</div>
+        <div class="fill-item"><span class="num">8)</span> Sie hat
+          <select class="blank inline" data-ans="lockige"><option value="">—</option><option>lockigen</option><option>lockiges</option><option>lockige</option></select> Haare.</div>
+        <div class="fill-item"><span class="num">9)</span> Kennst du den Mann mit dem Hut und einem
+          <select class="blank inline" data-ans="langen"><option value="">—</option><option>langen</option><option>langer</option><option>lange</option></select> Bart?</div>
+        <div class="fill-item"><span class="num">10)</span> Nina ist ein Mädchen mit
+          <select class="blank inline" data-ans="blauen Augen"><option value="">—</option><option>blaue Augen</option><option>blauen Augen</option><option>blauer Augen</option></select>.</div>
+        <div class="fill-item"><span class="num">11)</span> Seine Haare sind
+          <select class="blank inline" data-ans="kurz"><option value="">—</option><option>kurze</option><option>kurzen</option><option>kurz</option></select>.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-6-klas-6-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-6-klas-6-rik";
+  const KN_UNIT = "l1-b";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Nina und Nora sind am selben Tag geboren.", a: "r"},
+    {s: "Die Zwillinge sehen fast gleich aus.", a: "f"},
+    {s: "Nina hat lange, blonde Haare.", a: "r"},
+    {s: "Nina hat keine Sommersprossen.", a: "f"},
+    {s: "Nora ist größer als Nina.", a: "f"},
+    {s: "Nora hat rote, lockige Haare.", a: "r"},
+    {s: "Nora trägt eine Brille.", a: "r"},
+    {s: "Nina trägt gern modische Röcke.", a: "f"},
+    {s: "Die Schwestern lachen genau gleich.", a: "r"}
+  ]);
+
+  // Üb. 1: картинки
+  buildPicture('ub1-pic', [
+    {pic: "👩‍🦱", opts: ["Sie hat glatte Haare.", "Sie hat lockige Haare.", "Sie hat keine Haare."], correct: "Sie hat lockige Haare."},
+    {pic: "👱‍♂️", opts: ["Er hat blonde Haare.", "Er hat schwarze Haare.", "Er hat rote Haare."], correct: "Er hat blonde Haare."},
+    {pic: "👩‍🦰", opts: ["Sie hat weiße Haare.", "Sie hat schwarze Haare.", "Sie hat rote Haare."], correct: "Sie hat rote Haare."},
+    {pic: "🧔", opts: ["Er hat einen Bart.", "Er trägt eine Brille.", "Er hat lange Haare."], correct: "Er hat einen Bart."},
+    {pic: "🤓", opts: ["Er hat einen Bart.", "Er trägt eine Brille.", "Er hat einen Pferdeschwanz."], correct: "Er trägt eine Brille."},
+    {pic: "👩‍🦳", opts: ["Sie hat blonde Haare.", "Sie hat rote Haare.", "Sie hat weiße Haare."], correct: "Sie hat weiße Haare."},
+    {pic: "👨‍🦲", opts: ["Er hat keine Haare.", "Er hat lockige Haare.", "Er hat lange Haare."], correct: "Er hat keine Haare."},
+    {pic: "💇‍♀️", opts: ["Sie bekommt eine neue Frisur.", "Sie kauft eine neue Brille.", "Sie macht Sport."], correct: "Sie bekommt eine neue Frisur."}
+  ]);
+
+  // Üb. 2: таблиця закінчень
+  buildTable('ub2-tab', {
+    head: ["", "Nominativ", "Akkusativ", "Dativ"],
+    rows: [
+      ["der Mund · voll", "ein voll[er] Mund", "einen voll[en] Mund", "einem voll[en] Mund"],
+      ["das Gesicht · rund", "ein rund[es] Gesicht", "ein rund[es] Gesicht", "einem rund[en] Gesicht"],
+      ["die Nase · schmal", "eine schmal[e] Nase", "eine schmal[e] Nase", "einer schmal[en] Nase"],
+      ["die Haare · lang", "lang[e] Haare", "lang[e] Haare", "lang[en] Haaren"]
+    ]
+  });
+
+  // Üb. 3
+  wireBlanks('ub3');
+
+  // Üb. 4: чат
+  buildChat('ub4-chat', {
+    partner: "Greta",
+    steps: [
+      {them: "Hi! Wir haben einen neuen Mitschüler! 😊"},
+      {you: ["Cool! Wie sieht er aus?", "Cool! Wie sieht er an?", "Cool! Wie alt sieht er?"], correct: 0},
+      {them: "Er ist groß und hat kurze, schwarze Haare."},
+      {you: ["Hat er auch einen Bart? 😄", "Hat er auch ein Bart? 😄", "Hat er auch einer Bart? 😄"], correct: 0},
+      {them: "Haha, nein! Er ist doch erst zwölf. Aber er trägt eine coole Brille."},
+      {you: ["Eine runde Brille wie Nora?", "Ein runder Brille wie Nora?", "Eine runden Brille wie Nora?"], correct: 0},
+      {them: "Nein, eine eckige. Und er hat ein sehr nettes Lächeln."},
+      {you: ["Und was trägt er?", "Und was ist er an?", "Und wie trägt er?"], correct: 0},
+      {them: "Heute einen grünen Pulli und eine schwarze Hose."},
+      {you: ["Ein Junge mit einem grünen Pulli? Den habe ich heute gesehen!", "Ein Junge mit einem grüner Pulli? Den habe ich heute gesehen!", "Ein Junge mit einer grünen Pulli? Den habe ich heute gesehen!"], correct: 0},
+      {them: "Er heißt Timur und kommt aus Odesa. Morgen stelle ich ihn dir vor! 👋"}
+    ]
+  });
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Wie alt ist Lotte?", opts: ["sieben", "siebzehn", "sechs"], correct: "sieben"},
+    {q: "Was für Haare hat Lotte?", opts: ["kurze, rote Haare", "lange, blonde Haare", "lange, dunkle Haare"], correct: "lange, blonde Haare"},
+    {q: "Welche Augenfarbe hat Lotte?", opts: ["grün", "braun", "blau"], correct: "blau"},
+    {q: "Was hat Lotte im Gesicht?", opts: ["viele Sommersprossen", "eine Brille", "eine kleine Narbe"], correct: "viele Sommersprossen"},
+    {q: "Welche Farbe hat Lottes Jacke?", opts: ["gelb", "rot", "blau"], correct: "rot"},
+    {q: "Wie sieht Lottes Rucksack aus?", opts: ["wie eine Katze", "wie ein Hund", "wie ein Bär"], correct: "wie ein Hund"},
+    {q: "Wo hat Greta ihre Schwester zuletzt gesehen?", opts: ["im Spielzeuggeschäft", "im Café", "am Infoschalter"], correct: "im Spielzeuggeschäft"},
+    {q: "Was hat Lotte am Ende in der Hand?", opts: ["einen Hund", "ein Eis", "eine Puppe"], correct: "ein Eis"}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Sie hat lange, blonde Haare.", uk: "У неї довге світле волосся."},
+    {say: "Er hat ein rundes Gesicht und einen vollen Mund.", uk: "У нього кругле обличчя і пухкі губи."},
+    {say: "Das Mädchen mit lockigen Haaren ist meine Cousine.", uk: "Дівчинка з кучерявим волоссям — моя двоюрідна сестра."},
+    {say: "Meine Freundin trägt eine große, runde Brille.", uk: "Моя подруга носить великі круглі окуляри."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Nina hat viele kleine braune Punkte im Gesicht. Das sind …", opts: ["Sommersprossen", "Locken", "Lippen"], correct: "Sommersprossen"},
+    {q: "Nora hat keine glatten Haare. Ihre Haare sind …", opts: ["lockig", "schlank", "schmal"], correct: "lockig"},
+    {q: "Wie … du heute aus? Toll!", opts: ["siehst", "bist", "trägst"], correct: "siehst"},
+    {q: "Er hat … Gesicht.", opts: ["ein schmales", "ein schmaler", "eine schmale"], correct: "ein schmales"},
+    {q: "Ich mag Leute mit … Haaren.", opts: ["rote", "roten", "roter"], correct: "roten"},
+    {q: "Opa trägt … Hut.", opts: ["einen schwarzen", "ein schwarzer", "einen schwarze"], correct: "einen schwarzen"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Lotte hat ein rundes Gesicht.", ok: true},
+    {s: "Mein Vater hat einen kurzer Bart.", wrong: 4, fix: "kurzen"},
+    {s: "Sie trägt eine neue Brillen.", wrong: 4, fix: "Brille"},
+    {s: "Ihre Augen sind blaue.", wrong: 3, fix: "blau"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['👩‍🦱', '👓', '💇', '🧔']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
