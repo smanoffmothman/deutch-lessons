@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glatte Wege fürs Fahrrad · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Reisen &amp; Städte</span>
+        <h1>Glatte Wege fürs Fahrrad</h1>
+        <p class="sub">Бруківка трясе, високий бордюр заважає. У Берліні та Мюнхені дороги для велосипедистів роблять рівнішими — і від цього виграють не лише вони.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Berlin oder München?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Mit dem Rad durch die Stadt</h2>
+      <div class="card">
+        <p>Fährst du gern Fahrrad in deiner Stadt? Welche Straßen sind gut für Fahrräder, welche nicht? Was stört dich am meisten?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай: чи зручно їздити велосипедом твоїм містом? Що заважає — бруківка, високі бордюри, машини? Кому ще важко на таких вулицях?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">In manchen deutschen Städten macht <span class="gl" data-key data-uk="їзда на велосипеді" data-lemma="das Radfahren">Radfahren</span> jetzt mehr Spaß. Und es wird auch <span class="gl" data-uk="безпечний" data-lemma="sicher">sicherer</span>.</p>
+
+          <p>In Berlin gibt es viele Straßen mit <span class="gl" data-key data-uk="бруківка" data-lemma="das Kopfsteinpflaster">Kopfsteinpflaster</span>. Die Straße besteht dort aus vielen kleinen Steinen, zum Beispiel aus Granit. Das sieht schön aus, aber für Radfahrer ist es nicht <span class="gl" data-uk="зручний, комфортний" data-lemma="bequem">bequem</span>: Das Fahrrad <span class="gl" data-uk="трясти, підстрибувати" data-lemma="rütteln">rüttelt</span> die ganze Zeit. Kopfsteinpflaster findet man in vielen deutschen Städten, besonders in der <span class="gl" data-uk="старе місто" data-lemma="die Altstadt, -ä-e">Altstadt</span>. Und viele Menschen fahren dort jeden Tag mit dem Rad zur Arbeit oder zur Schule.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Stephanstrasse_Berlin_Steglitz_im_Mai.jpg/960px-Stephanstrasse_Berlin_Steglitz_im_Mai.jpg" alt="Eine Straße mit Kopfsteinpflaster in Berlin-Steglitz." width="960" height="720" loading="lazy">
+            <figcaption>Eine Straße mit Kopfsteinpflaster in Berlin-Steglitz. Foto: SchlurcherBot, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Stephanstrasse_Berlin_Steglitz_im_Mai.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Jetzt hilft eine spezielle <span class="gl" data-uk="машина" data-lemma="die Maschine, -n">Maschine</span>: Sie macht die Straßen an vielen Stellen <span class="gl" data-key data-uk="гладкий, рівний" data-lemma="glatt">glatter</span>. So können die Räder gut fahren. Davon <span class="gl" data-uk="мати користь" data-lemma="profitieren">profitieren</span> nicht nur Radfahrer. Auch Menschen im <span class="gl" data-key data-uk="інвалідний візок" data-lemma="der Rollstuhl, -ü-e">Rollstuhl</span> und Eltern mit <span class="gl" data-key data-uk="дитячий візок" data-lemma="der Kinderwagen, -">Kinderwagen</span> kommen leichter voran. Und noch etwas ist positiv: Die Autos sind auf diesen Straßen <span class="gl" data-uk="тихий" data-lemma="leise">leiser</span>.</p>
+
+          <p>Auch in München passiert etwas. Dort hat die Stadt am Anfang und am Ende von vielen <span class="gl" data-key data-uk="велосипедна доріжка" data-lemma="der Radweg, -e">Radwegen</span> den <span class="gl" data-key data-uk="бордюр" data-lemma="der Bordstein, -e">Bordstein</span> niedriger gemacht. Der Bordstein ist die harte <span class="gl" data-uk="край, ребро" data-lemma="die Kante, -n">Kante</span> zwischen Straße und Gehweg. Ist er hoch, muss man langsam fahren oder sogar <span class="gl" data-uk="злазити (з велосипеда)" data-lemma="absteigen (stieg ab, ist abgestiegen)">absteigen</span>. Ist er niedrig, fährt man einfach weiter.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Wer in Deutschland Fahrrad fährt, muss auf dem Radweg fahren, wenn ein blaues Schild mit einem weißen Fahrrad da ist. Auf dem <span class="gl" data-uk="тротуар" data-lemma="der Gehweg, -e">Gehweg</span> dürfen nur Kinder bis 10 Jahre Rad fahren – Kinder bis 8 Jahre müssen dort sogar fahren.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Berlin oder München?</h2>
+      <p class="lead">Що роблять у Берліні, а що — у Мюнхені? Натисни картку, потім кошик.</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>Radweg</span><span>glatt</span><span>Kinderwagen</span><span>absteigen</span><span>leiser</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> Auf dem <input type="text" class="blank-input inline" data-ans="Radweg"> fahren nur Fahrräder.</div>
+          <div class="fill-item"><span class="num">2)</span> Die neue Straße ist schön <input type="text" class="blank-input inline" data-ans="glatt">.</div>
+          <div class="fill-item"><span class="num">3)</span> Meine Schwester schiebt das Baby im <input type="text" class="blank-input inline wide" data-ans="Kinderwagen">.</div>
+          <div class="fill-item"><span class="num">4)</span> Der Bordstein ist zu hoch, ich muss <input type="text" class="blank-input inline" data-ans="absteigen">.</div>
+          <div class="fill-item"><span class="num">5)</span> Auf glatten Straßen sind die Autos <input type="text" class="blank-input inline" data-ans="leiser">.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (3–5 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Wie ist es in deiner Stadt für Radfahrer? Gibt es Radwege, Kopfsteinpflaster, hohe Bordsteine?</label>
+          <textarea id="ub5-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Du bist Bürgermeister/Bürgermeisterin. Was machst du für Radfahrer, Menschen im Rollstuhl und Eltern mit Kinderwagen?</label>
+          <textarea id="ub5-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>In meiner Stadt gibt es (keine) …, Das Problem ist …, Ich würde …, Wichtig ist, dass …, Dann können alle …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 8px;">Das nehme ich mit</p>
+        <p>In Berlin macht eine Maschine Straßen mit Kopfsteinpflaster glatter. In München hat die Stadt die Bordsteine an vielen Radwegen niedriger gemacht. Das hilft Radfahrern, aber auch Menschen im Rollstuhl und Eltern mit Kinderwagen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          У Берліні спеціальна машина робить бруківку рівнішою. У Мюнхені місто знизило бордюри на багатьох велодоріжках. Це допомагає велосипедистам, а також людям на візках і батькам з дитячими колясками.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "glatter-radfahren";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text?",
+     opts: ["Berlin und München machen Wege für Radfahrer besser.",
+            "In Berlin und München darf man nicht mehr Rad fahren.",
+            "Berlin und München bauen neue Straßen nur für Autos."],
+     correct: "Berlin und München machen Wege für Radfahrer besser."}
+  ]);
+  buildMatch('ub1h', [
+    ["Steine, die rütteln", "Absatz 1"],
+    ["Gut für viele Menschen", "Absatz 2"],
+    ["Niedrigere Kanten", "Absatz 3"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "In Berlin gibt es viele Straßen mit Kopfsteinpflaster.", a: "r"},
+    {s: "Auf Kopfsteinpflaster fährt man sehr bequem Rad.", a: "f"},
+    {s: "Eine Maschine macht die Straßen glatter.", a: "r"},
+    {s: "Die Arbeit kostet zehn Millionen Euro.", a: "n"},
+    {s: "Auf glatten Straßen sind die Autos lauter.", a: "f"},
+    {s: "In München hat man die Bordsteine höher gemacht.", a: "f"},
+    {s: "Auch Menschen im Rollstuhl profitieren davon.", a: "r"}
+  ]);
+
+  buildSort('ub3-sort', {
+    buckets: ["Berlin", "München"],
+    items: [
+      {t: "Straßen mit Kopfsteinpflaster werden glatter.", b: "Berlin"},
+      {t: "Eine spezielle Maschine arbeitet auf der Straße.", b: "Berlin"},
+      {t: "Die Bordsteine an Radwegen werden niedriger.", b: "München"},
+      {t: "Am Anfang und Ende von Radwegen ist die Kante kleiner.", b: "München"}
+    ]
+  });
+
+  buildMatch('ub4', [
+    ["sicher", "безпечний"],
+    ["bequem", "зручний, комфортний"],
+    ["der Rollstuhl", "інвалідний візок"],
+    ["der Bordstein", "бордюр"],
+    ["der Gehweg", "тротуар"]
+  ]);
+  wireBlanks('ub4b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🚲','🛣️','♿','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
