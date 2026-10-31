@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 2, Modul B: Passt das gut zusammen? — Німецька мова 6 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 6 КЛАС</span>
+        <h1>Lektion 2 · Modul B: Passt das gut zusammen?</h1>
+        <p class="sub">Урок про одяг: кольори, візерунки, тканини, що кому личить і що до чого пасує. Питання welcher? і was für ein?, прикметник після der / dieser — «der rote Rock», «den roten Rock». Текст і діалог з озвученням, вправи, говоріння, письмо і підсумковий тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Kleidung</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Im Geschäft</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · der rote Rock</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Sätze umbauen</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власний текст + вправа на розуміння ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Second Hand — mein neues Hobby</h2>
+      <p class="lead">Дарина пише в блозі, як вони з Гретою ходили в секонд-хенд. Послухай і прочитай. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l2-b-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Letzten Samstag waren Greta und ich im Second-Hand-Laden „Kleiderkiste“ in der Nähe unserer Schule. Dort verkauft man <span class="gl" data-uk="вживаний, ношений" data-lemma="gebraucht">gebrauchte</span> <span class="gl" data-uk="одяг" data-lemma="die Kleidung">Kleidung</span>. Sie ist günstig und oft fast neu. Und das ist gut für die Umwelt!</p>
+        <p>Greta hat sofort eine Jeansjacke gefunden. „Welche Jacke findest du besser — diese hellblaue oder die dunkle da?“, hat sie gefragt. „Die hellblaue Jacke <span class="gl" data-uk="личити, пасувати (комусь)" data-lemma="stehen (+ Dat.)">steht</span> dir besser!“, habe ich gesagt. Sie hat nur fünf Euro gekostet.</p>
+        <p>Ich habe lange gesucht. Was für einen <span class="gl" data-uk="светр" data-lemma="der Pullover, -">Pullover</span> brauche ich? Einen warmen, denn im Winter ist es in Leipzig oft kalt. Am Ende habe ich einen <span class="gl" data-uk="в'язаний" data-lemma="gestrickt">gestrickten</span> Pullover aus <span class="gl" data-uk="вовна" data-lemma="die Wolle">Wolle</span> gefunden — grau mit roten <span class="gl" data-uk="смужка" data-lemma="der Streifen, -">Streifen</span>. Der <span class="gl" data-uk="смугастий" data-lemma="gestreift">gestreifte</span> Pullover <span class="gl" data-uk="пасувати до чогось" data-lemma="passen zu (+ Dat.)">passt</span> super <span class="gl" data-uk="пасувати до чогось" data-lemma="passen zu (+ Dat.)">zu</span> meiner schwarzen Jeans.</p>
+        <p>Dann hat Greta ein <span class="gl" data-uk="сукня" data-lemma="das Kleid, -er">Kleid</span> entdeckt: ein langes, <span class="gl" data-uk="у квіточку" data-lemma="geblümt">geblümtes</span> Kleid aus <span class="gl" data-uk="шовк" data-lemma="die Seide">Seide</span>. „Das ist doch altmodisch!“, habe ich gelacht. Aber Greta hat das Kleid in der <span class="gl" data-uk="примірочна" data-lemma="die Umkleidekabine, -n">Umkleidekabine</span> anprobiert, und es hat ihr wirklich gut gestanden. „Vintage ist jetzt modern!“, hat sie gesagt. Gekauft hat sie das Kleid aber nicht — es war zu lang.</p>
+        <p>Zum Schluss haben wir noch etwas für Erik gefunden: eine lustige <span class="gl" data-uk="картатий, у клітинку" data-lemma="kariert">karierte</span> <span class="gl" data-uk="шапка" data-lemma="die Mütze, -n">Mütze</span>. Welche Farbe? Natürlich <span class="gl" data-uk="бузковий, фіолетовий" data-lemma="lila">Lila</span> — das ist seine Lieblingsfarbe! Für alle drei Sachen haben wir zusammen nur fünfzehn Euro bezahlt.</p>
+        <p>Jetzt gehe ich jeden Monat in die „Kleiderkiste“. Mein Tipp: Nehmt euch Zeit — und eine gute Freundin. Sie sagt euch ehrlich, was euch steht!</p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">welcher? was für ein? · der rote Rock</h2>
+      <p class="lead">Два питання — «який?» — і прикметник після означеного артикля. Плюс два корисні дієслова: stehen і passen.</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. Welch-? або Was für ein?</p>
+        <div class="merke"><b>Welch-?</b> — який саме? Вибираємо з того, що бачимо: <i>Welche Jacke nimmst du — die blaue oder die rote?</i></div>
+        <div class="merke"><b>Was für ein?</b> — який? що за? Питаємо про якість: <i>Was für eine Jacke brauchst du? — Eine warme.</i></div>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th></th><th>Nom.</th><th>Akk.</th><th>Dat.</th></tr>
+          <tr><td class="gender">der</td><td>welch<strong>er</strong></td><td>welch<strong>en</strong></td><td>welch<strong>em</strong></td></tr>
+          <tr><td class="gender">das</td><td>welch<strong>es</strong></td><td>welch<strong>es</strong></td><td>welch<strong>em</strong></td></tr>
+          <tr><td class="gender">die</td><td>welch<strong>e</strong></td><td>welch<strong>e</strong></td><td>welch<strong>er</strong></td></tr>
+          <tr><td class="gender">Pl.</td><td>welch<strong>e</strong></td><td>welch<strong>e</strong></td><td>welch<strong>en</strong></td></tr>
+        </table></div>
+        <div class="merke">welch- і dieser мають закінчення, як артикль der / das / die. У <b>was für ein</b> змінюється лише <b>ein</b>: Was für ein<b>en</b> Rock? Was für ein<b>e</b> Mütze? У множині — без ein: Was für Schuhe?</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. Прикметник після der / dieser / welcher</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th></th><th>Nom.</th><th>Akk.</th><th>Dat.</th></tr>
+          <tr><td class="gender">der</td><td>der rot<strong>e</strong></td><td>den rot<strong>en</strong></td><td>dem rot<strong>en</strong></td></tr>
+          <tr><td class="gender">das</td><td>das rot<strong>e</strong></td><td>das rot<strong>e</strong></td><td>dem rot<strong>en</strong></td></tr>
+          <tr><td class="gender">die</td><td>die rot<strong>e</strong></td><td>die rot<strong>e</strong></td><td>der rot<strong>en</strong></td></tr>
+          <tr><td class="gender">Pl.</td><td>die rot<strong>en</strong></td><td>die rot<strong>en</strong></td><td>den rot<strong>en</strong></td></tr>
+        </table></div>
+        <div class="merke">Артикль уже показує рід, тому прикметнику досить <b>-e</b> або <b>-en</b>. <b>-e</b> — лише в п'яти місцях: Nominativ однини (der / das / die) і Akkusativ das / die. Усе інше — <b>-en</b>.</div>
+        <p class="beispiel">Die blau<b>e</b> Jacke gefällt mir. — Ich nehme den blau<b>en</b> Schal. — Mit dies<b>em</b> warm<b>en</b> Pullover ist mir nicht kalt.</p>
+        <div class="merke">Кольори <b>rosa, lila, orange</b> не змінюються: ein rosa Kleid, die lila Mütze. Можна й так: das Kleid <b>in Rosa</b>.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. stehen і passen zu</p>
+        <p class="beispiel">Die Jacke <b>steht dir</b> gut. — Куртка тобі личить. <i>(stehen + Dativ: кому?)</i></p>
+        <p class="beispiel">Der Schal <b>passt zu</b> dem Mantel. — Шарф пасує до пальта. <i>(passen zu + Dativ: до чого?)</i></p>
+        <div class="merke">В українській «личить <b>тобі</b>» — теж давальний відмінок. А «пасує <b>до</b>» = <b>zu</b> + Dativ: zu mein<b>er</b> Jeans, zu dem / zu<b>m</b> Mantel.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">4. Типові помилки</p>
+        <p>✗ Ich nehme der rote Schal. → ✓ Ich nehme <b>den</b> rot<b>en</b> Schal. <i>(Akkusativ, der)</i></p>
+        <p>✗ die blauen Jacke → ✓ die blau<b>e</b> Jacke <i>(Nominativ однини — -e)</i></p>
+        <p>✗ Was für ein Pullover brauchst du? → ✓ Was für ein<b>en</b> Pullover brauchst du? <i>(Akkusativ)</i></p>
+        <p>✗ Die Jacke steht dich gut. → ✓ Die Jacke steht <b>dir</b> gut. <i>(stehen + Dativ)</i></p>
+        <p>✗ ein lilanes Kleid → ✓ ein <b>lila</b> Kleid <i>(lila без закінчення)</i></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: картинки — одяг ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Kleidung</h2>
+      <p class="lead">Вибери картинку до слова.</p>
+      <div class="card" id="ub1-pic"></div>
+    </section>
+
+    <!-- ===== Üb. 2: чат у магазині ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Im Geschäft</h2>
+      <p class="lead">Ти купуєш куртку. Вибирай доречну відповідь продавчині — зверни увагу на welch- / was für ein і закінчення.</p>
+      <div class="card" id="ub2-chat"></div>
+    </section>
+
+    <!-- ===== Üb. 3: закінчення після означеного артикля ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">der rote Rock · den roten Rock</h2>
+      <p class="lead">Допиши закінчення прикметника замість «…». Перед виразом — відмінок: Nom. — хто? що?, Akk. — кого? що?, Dat. — з ким? з чим? / до чого?</p>
+      <div class="card" id="ub3-tab"></div>
+    </section>
+
+    <!-- ===== Üb. 4: перетворення ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Sätze umbauen</h2>
+      <p class="lead">Перепиши речення за завданням. Пиши ціле речення.</p>
+      <div class="card" id="ub4-tr"></div>
+    </section>
+
+    <!-- ===== HÖREN — власний діалог, озвучений синтезатором ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Ein Geschenk für Oma</h2>
+      <p class="lead">Ерік шукає в магазині подарунок для бабусі Урсули. Послухай діалог (можна двічі) і дай відповіді. Текст діалогу — внизу, але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l2-b-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Verkäuferin:</b> Guten Tag! Kann ich dir helfen?<br>
+          <b>Erik:</b> Ja, bitte. Ich suche ein Geschenk für meine Oma. Sie hat am Samstag Geburtstag.<br>
+          <b>Verkäuferin:</b> Wie schön! Was für ein Geschenk suchst du denn?<br>
+          <b>Erik:</b> Vielleicht einen Schal. Meiner Oma ist im Winter immer kalt.<br>
+          <b>Verkäuferin:</b> Dann empfehle ich einen Schal aus Wolle. Welche Farben mag deine Oma?<br>
+          <b>Erik:</b> Sie trägt oft Blau und Grau. Rosa mag sie gar nicht.<br>
+          <b>Verkäuferin:</b> Schau mal: Dieser blaue Schal ist aus Wolle und sehr weich. Oder hier, der graue mit den weißen Streifen.<br>
+          <b>Erik:</b> Hm, der gestreifte gefällt mir. Was kostet er?<br>
+          <b>Verkäuferin:</b> Neunzehn Euro neunzig.<br>
+          <b>Erik:</b> Oh, das ist ein bisschen teuer. Ich habe nur fünfzehn Euro.<br>
+          <b>Verkäuferin:</b> Dann vielleicht diesen karierten Schal aus Baumwolle? Er kostet zwölf Euro.<br>
+          <b>Erik:</b> Nein, Baumwolle ist zu dünn für den Winter. Haben Sie auch Handschuhe?<br>
+          <b>Verkäuferin:</b> Ja, hier: gestrickte Handschuhe aus Wolle, in Blau, für vierzehn Euro.<br>
+          <b>Erik:</b> Perfekt! Die passen gut zu Omas blauem Mantel. Ich nehme sie.<br>
+          <b>Verkäuferin:</b> Soll ich sie als Geschenk einpacken?<br>
+          <b>Erik:</b> Ja, gern! Vielen Dank!
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN — 🎤 + говоріння зі зразком ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Was ziehst du an?</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Was trägst du heute? Beschreibe deine Kleidung: Farbe, Muster, Material.</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Heute trage ich eine blaue Jeans, ein weißes T-Shirt aus Baumwolle und einen grauen, gestrickten Pullover. Dazu trage ich schwarze Turnschuhe.</div>
+        </div>
+        <div class="qa">
+          <label>2. Welche Kleidung trägst du am liebsten? Welche Farbe steht dir gut?</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Am liebsten trage ich bequeme Sachen: Jeans und Kapuzenpullis. Grün steht mir gut, sagt meine Mutter. Gelb steht mir gar nicht.</div>
+        </div>
+        <div class="qa">
+          <label>3. Du bist im Geschäft. Frag die Verkäuferin nach einem Pullover: Farbe, Größe, Preis.</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Entschuldigung, haben Sie diesen Pullover auch in Blau? Welche Größe ist das? Kann ich ihn anprobieren? Wo ist die Umkleidekabine? Was kostet der Pullover?</div>
+        </div>
+        <div class="qa">
+          <label>4. Dein Freund / deine Freundin probiert eine Jacke an. Sag ehrlich, wie sie ihm / ihr steht.</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Die rote Jacke steht dir super! Sie passt auch gut zu deiner schwarzen Hose. Aber die gelbe Jacke ist zu groß — die steht dir nicht so gut.</div>
+        </div>
+        <div class="qa">
+          <label>5. Was hältst du von Second Hand? Kaufst du gebrauchte Kleidung? Warum (nicht)?</label>
+          <button class="btn secondary" type="button" data-reveal="spr5">Muster zeigen</button>
+          <div class="reveal" id="spr5">Ich finde Second Hand gut, denn die Kleidung ist günstig, und das ist gut für die Umwelt. Manchmal findet man dort ganz besondere Sachen. Ich habe dort schon eine tolle Jacke gekauft.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN — письмо за планом ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Hilfe, was ziehe ich an?</h2>
+      <p class="lead">Дарина кличе тебе на вечірку-сюрприз до дня народження Грети — у неділю, у саду. Напиши подрузі / другові повідомлення на 60–80 слів: що ти одягнеш, і попроси поради.</p>
+      <div class="card">
+        <p>1) звертання; 2) куди ти йдеш і коли; 3) які дві речі ти вибираєш — з кольором, візерунком або тканиною; 4) що до чого пасує (passen zu); 5) запитання з welch- або was für ein; 6) прощання.</p>
+        <p class="beispiel">Hallo …! · Am Sonntag gehe ich zu Gretas Überraschungsparty. · Ich möchte den / die / das … anziehen. · Passt der / die / das … zu …? · Welche Schuhe …? Was für eine Jacke …? · Bis bald!</p>
+        <div class="qa">
+          <label for="schreiben-text">Deine Nachricht</label>
+          <textarea id="schreiben-text" rows="10" placeholder="Hallo …!&#10;Am Sonntag …"
+            data-words="60-80"
+            data-must="passt/passen|Welche/Welcher/Welches/Was für|Bis bald/Viele Grüße/Liebe Grüße"
+            data-check="Куди й коли|Дві речі з кольором / візерунком / тканиною|Що до чого пасує (passen zu)|Запитання з welch- або was für ein|Прощання"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Hallo Mila!<br>Am Sonntag gehe ich zu Gretas Überraschungsparty im Garten. Ich habe zwei Ideen: das grüne Kleid aus Baumwolle oder meine weiße Jeans mit dem gestreiften T-Shirt. Passt das grüne Kleid zu meinen weißen Turnschuhen? Und was für eine Jacke nehme ich für den Abend? Welches Outfit findest du besser? Bitte schreib mir ehrlich!<br>Bis bald!<br>Sofia</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — режим контрольної: одна спроба, лише ця вкладка йде в бал ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span>
+          <select class="blank inline" data-ans="Welchen"><option value="">—</option><option>Welcher</option><option>Welchen</option><option>Welches</option></select> Rock nimmst du — den langen oder den kurzen?</div>
+        <div class="fill-item"><span class="num">8)</span> Ich nehme den
+          <select class="blank inline" data-ans="kurzen"><option value="">—</option><option>kurze</option><option>kurzer</option><option>kurzen</option></select> Rock.</div>
+        <div class="fill-item"><span class="num">9)</span> Die gelbe Mütze steht
+          <select class="blank inline" data-ans="dir"><option value="">—</option><option>dich</option><option>dir</option><option>du</option></select> gut!</div>
+        <div class="fill-item"><span class="num">10)</span> Der Schal passt gut zu der
+          <select class="blank inline" data-ans="grauen"><option value="">—</option><option>graue</option><option>grauen</option><option>grauer</option></select> Jacke.</div>
+        <div class="fill-item"><span class="num">11)</span> Wie findest du dieses
+          <select class="blank inline" data-ans="lila"><option value="">—</option><option>lilane</option><option>lilas</option><option>lila</option></select> T-Shirt?</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-6-klas-6-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-6-klas-6-rik";
+  const KN_UNIT = "l2-b";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Im Second-Hand-Laden verkauft man neue Kleidung.", a: "f"},
+    {s: "Greta hat eine Jeansjacke gefunden.", a: "r"},
+    {s: "Daryna findet, die dunkle Jacke steht Greta besser.", a: "f"},
+    {s: "Daryna braucht einen warmen Pullover für den Winter.", a: "r"},
+    {s: "Darynas Pullover ist grau mit roten Streifen.", a: "r"},
+    {s: "Das geblümte Kleid ist aus Wolle.", a: "f"},
+    {s: "Greta hat das Kleid nicht gekauft, denn es war zu lang.", a: "r"},
+    {s: "Eriks Lieblingsfarbe ist Lila.", a: "r"},
+    {s: "Die drei Sachen haben zusammen fünfzig Euro gekostet.", a: "f"}
+  ]);
+
+  // Üb. 1: картинки
+  buildPicture('ub1-pic', [
+    {q: "das Kleid", opts: ["👗", "👖", "🧣"], correct: "👗"},
+    {q: "der Schal", opts: ["🧤", "🧣", "👔"], correct: "🧣"},
+    {q: "die Handschuhe", opts: ["🧤", "👢", "🧢"], correct: "🧤"},
+    {q: "die Stiefel", opts: ["👟", "🩳", "👢"], correct: "👢"},
+    {q: "das Hemd mit Krawatte", opts: ["👚", "👔", "🧥"], correct: "👔"},
+    {q: "der Mantel", opts: ["🧥", "👗", "🩳"], correct: "🧥"},
+    {q: "die Shorts", opts: ["👖", "🩳", "🧦"], correct: "🩳"},
+    {q: "die Mütze", opts: ["🧣", "🧦", "🧢"], correct: "🧢"}
+  ]);
+
+  // Üb. 2: чат у магазині
+  buildChat('ub2-chat', {
+    partner: "Verkäuferin",
+    steps: [
+      {them: "Guten Tag! Kann ich dir helfen?"},
+      {you: ["Ja, bitte. Ich brauche eine Jacke.", "Ja, bitte. Ich brauche ein Jacke.", "Ja, bitte. Ich brauche einen Jacke."], correct: 0},
+      {them: "Was für eine Jacke suchst du?"},
+      {you: ["Eine warme Jacke für den Winter.", "Die warme Jacke für den Winter.", "Ein warmer Jacke für den Winter."], correct: 0},
+      {them: "Hier sind zwei: eine rote und eine blaue. Welche gefällt dir?"},
+      {you: ["Die blaue Jacke gefällt mir.", "Die blauen Jacke gefällt mir.", "Der blaue Jacke gefällt mir."], correct: 0},
+      {them: "Möchtest du sie anprobieren? Die Umkleidekabine ist dort."},
+      {you: ["Gern! … Passt sie gut zu dieser Hose?", "Gern! … Passt sie gut zu diese Hose?", "Gern! … Passt sie gut zu diesen Hose?"], correct: 0},
+      {them: "Ja, und die Farbe steht dir sehr gut!"},
+      {you: ["Danke! Ich nehme die blaue Jacke.", "Danke! Ich nehme der blauen Jacke.", "Danke! Ich nehme die blauen Jacke."], correct: 0},
+      {them: "Prima! Die Kasse ist da vorne. 👋"}
+    ]
+  });
+
+  // Üb. 3: закінчення (одне поле в рядку)
+  buildTable('ub3-tab', {
+    head: ["Fall · Wortgruppe", "Endung"],
+    rows: [
+      ["Nom. · der rot… Rock", "[e]"],
+      ["Akk. · den rot… Rock", "[en]"],
+      ["Dat. · mit dem rot… Rock", "[en]"],
+      ["Nom. · das gestreift… Hemd", "[e]"],
+      ["Akk. · das gestreift… Hemd", "[e]"],
+      ["Nom. · die warm… Mütze", "[e]"],
+      ["Dat. · zu der warm… Mütze", "[en]"],
+      ["Nom. · diese neu… Schuhe", "[en]"],
+      ["Akk. · welchen blau… Schal?", "[en]"],
+      ["Dat. · in diesem kariert… Mantel", "[en]"]
+    ]
+  });
+
+  // Üb. 4: перетворення
+  buildTransform('ub4-tr', [
+    {s: "Wie findest du den Pullover? Er ist grün.", task: "одним реченням: <b>den grünen …</b>", ans: "Wie findest du den grünen Pullover?"},
+    {s: "Ich nehme die Bluse. Sie ist weiß.", task: "одним реченням", ans: "Ich nehme die weiße Bluse."},
+    {s: "Das Kleid gefällt mir. Es ist lang.", task: "одним реченням", ans: "Das lange Kleid gefällt mir."},
+    {s: "die Jacke · dir · gut · stehen", task: "склади речення (Präsens)", ans: "Die Jacke steht dir gut."},
+    {s: "der Schal · zu · der Mantel · passen", task: "склади речення (Präsens)", ans: "Der Schal passt zu dem Mantel.|Der Schal passt zum Mantel."},
+    {s: "Ich brauche einen Rock. (Питай про якість.)", task: "постав запитання з <b>was für</b>", ans: "Was für einen Rock brauchst du?"}
+  ]);
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Für wen sucht Erik ein Geschenk?", opts: ["für seine Mutter", "für seine Oma", "für Greta"], correct: "für seine Oma"},
+    {q: "Wann hat sie Geburtstag?", opts: ["am Samstag", "am Sonntag", "heute"], correct: "am Samstag"},
+    {q: "Welche Farbe mag die Oma nicht?", opts: ["Blau", "Grau", "Rosa"], correct: "Rosa"},
+    {q: "Welcher Schal gefällt Erik?", opts: ["der blaue", "der gestreifte", "der rosa"], correct: "der gestreifte"},
+    {q: "Warum nimmt Erik den gestreiften Schal nicht?", opts: ["Er ist zu teuer.", "Er ist zu dünn.", "Er ist zu kurz."], correct: "Er ist zu teuer."},
+    {q: "Was findet Erik an dem karierten Schal nicht gut?", opts: ["die Farbe", "Baumwolle ist zu dünn.", "der Preis"], correct: "Baumwolle ist zu dünn."},
+    {q: "Was kauft Erik am Ende?", opts: ["einen Schal aus Wolle", "eine Mütze", "Handschuhe aus Wolle"], correct: "Handschuhe aus Wolle"},
+    {q: "Wozu passen die Handschuhe?", opts: ["zu Omas blauem Mantel", "zu Omas grauer Mütze", "zu Eriks Jacke"], correct: "zu Omas blauem Mantel"}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Welche Jacke findest du besser?", uk: "Яка куртка тобі більше подобається?"},
+    {say: "Was für einen Pullover brauchst du?", uk: "Який светр тобі потрібен?"},
+    {say: "Die blaue Mütze steht dir sehr gut.", uk: "Синя шапка тобі дуже личить."},
+    {say: "Der gestreifte Schal passt gut zu dem grauen Mantel.", uk: "Смугастий шарф добре пасує до сірого пальта."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Ein Pullover mit Streifen ist …", opts: ["kariert", "gestreift", "geblümt"], correct: "gestreift"},
+    {q: "Ein Kleid mit Blumen ist …", opts: ["geblümt", "gestrickt", "einfarbig"], correct: "geblümt"},
+    {q: "Wo probiert man im Geschäft Kleidung an?", opts: ["an der Kasse", "in der Umkleidekabine", "im Schaufenster"], correct: "in der Umkleidekabine"},
+    {q: "… Schuhe möchtest du? — Bequeme Turnschuhe.", opts: ["Was für", "Welcher", "Was für ein"], correct: "Was für"},
+    {q: "Mir gefällt das … Hemd.", opts: ["weißen", "weiße", "weißes"], correct: "weiße"},
+    {q: "Seide, Wolle, Baumwolle — das sind …", opts: ["Farben", "Materialien", "Muster"], correct: "Materialien"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Die rote Jacke steht dir gut.", ok: true},
+    {s: "Ich kaufe der blauen Schal.", wrong: 2, fix: "den"},
+    {s: "Was für ein Rock brauchst du?", wrong: 2, fix: "einen"},
+    {s: "Das T-Shirt passt gut zu den grünen Hose.", wrong: 5, fix: "der"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['👗', '🧣', '🧤', '🛍️']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
