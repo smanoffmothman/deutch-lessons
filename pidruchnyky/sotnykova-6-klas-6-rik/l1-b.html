@@ -110,11 +110,12 @@
       <div class="card">
         <p class="section-label" style="margin:0 0 8px;">1. Після ein / kein / mein …</p>
         <div class="tb-wrap"><table class="gtable">
-          <tr><th></th><th>Nominativ</th><th>Akkusativ</th><th>Dativ</th></tr>
-          <tr><td class="gender">der</td><td>ein voll<strong>er</strong> Mund</td><td>einen voll<strong>en</strong> Mund</td><td>einem voll<strong>en</strong> Mund</td></tr>
-          <tr><td class="gender">das</td><td>ein rund<strong>es</strong> Gesicht</td><td>ein rund<strong>es</strong> Gesicht</td><td>einem rund<strong>en</strong> Gesicht</td></tr>
-          <tr><td class="gender">die</td><td>eine schlank<strong>e</strong> Figur</td><td>eine schlank<strong>e</strong> Figur</td><td>einer schlank<strong>en</strong> Figur</td></tr>
+          <tr><th></th><th>Nom.</th><th>Akk.</th><th>Dat.</th></tr>
+          <tr><td class="gender">der</td><td>ein voll<strong>er</strong></td><td>einen voll<strong>en</strong></td><td>einem voll<strong>en</strong></td></tr>
+          <tr><td class="gender">das</td><td>ein rund<strong>es</strong></td><td>ein rund<strong>es</strong></td><td>einem rund<strong>en</strong></td></tr>
+          <tr><td class="gender">die</td><td>eine schlank<strong>e</strong></td><td>eine schlank<strong>e</strong></td><td>einer schlank<strong>en</strong></td></tr>
         </table></div>
+        <p class="beispiel">ein voll<b>er</b> Mund · ein rund<b>es</b> Gesicht · eine schlank<b>e</b> Figur</p>
         <div class="merke">ein = і der, і das, тому рід показує прикметник: ein voll<b>er</b> Mund (der), ein rund<b>es</b> Gesicht (das). Підказка: закінчення прикметника «повторює» артикль d<b>er</b> / da<b>s</b>.</div>
         <div class="merke">Dativ — завжди <b>-en</b>: mit einem rund<b>en</b> Gesicht, mit meiner neu<b>en</b> Brille. Genitiv теж <b>-en</b>: die Farbe eines schön<b>en</b> Kleides.</div>
         <p class="beispiel">Opa hat ein<b>en</b> weiß<b>en</b> Bart. — Das ist kein modisch<b>er</b> Pullover.</p>
@@ -123,7 +124,7 @@
       <div class="card">
         <p class="section-label" style="margin:0 0 8px;">2. Множина без артикля</p>
         <div class="tb-wrap"><table class="gtable">
-          <tr><th>Nominativ</th><th>Akkusativ</th><th>Dativ</th></tr>
+          <tr><th>Nom.</th><th>Akk.</th><th>Dat.</th></tr>
           <tr><td>lang<strong>e</strong> Haare</td><td>lang<strong>e</strong> Haare</td><td>mit lang<strong>en</strong> Haare<strong>n</strong></td></tr>
           <tr><td>blau<strong>e</strong> Augen</td><td>blau<strong>e</strong> Augen</td><td>mit blau<strong>en</strong> Augen</td></tr>
         </table></div>
@@ -162,7 +163,7 @@
     <section class="panel" id="panel-ub2">
       <p class="section-label">Üb. 2</p>
       <h2 class="panel-title">Endungen</h2>
-      <p class="lead">Допиши закінчення прикметника. Перший стовпчик підказує рід і прикметник.</p>
+      <p class="lead">Допиши закінчення прикметника замість «…». Перед виразом — відмінок: Nom. — хто? що?, Akk. — кого? що?, Dat. — з ким? з чим?</p>
       <div class="card" id="ub2-tab"></div>
     </section>
 
@@ -390,12 +391,20 @@
 
   // Üb. 2: таблиця закінчень
   buildTable('ub2-tab', {
-    head: ["", "Nominativ", "Akkusativ", "Dativ"],
+    head: ["Fall · Wortgruppe", "Endung"],
     rows: [
-      ["der Mund · voll", "ein voll[er] Mund", "einen voll[en] Mund", "einem voll[en] Mund"],
-      ["das Gesicht · rund", "ein rund[es] Gesicht", "ein rund[es] Gesicht", "einem rund[en] Gesicht"],
-      ["die Nase · schmal", "eine schmal[e] Nase", "eine schmal[e] Nase", "einer schmal[en] Nase"],
-      ["die Haare · lang", "lang[e] Haare", "lang[e] Haare", "lang[en] Haaren"]
+      ["Nom. · ein voll… Mund", "[er]"],
+      ["Nom. · ein rund… Gesicht", "[es]"],
+      ["Nom. · eine groß… Nase", "[e]"],
+      ["Nom. · lang… Haare", "[e]"],
+      ["Akk. · einen voll… Mund", "[en]"],
+      ["Akk. · ein rund… Gesicht", "[es]"],
+      ["Akk. · eine groß… Nase", "[e]"],
+      ["Akk. · lang… Haare", "[e]"],
+      ["Dat. · mit einem voll… Mund", "[en]"],
+      ["Dat. · mit einem rund… Gesicht", "[en]"],
+      ["Dat. · mit einer groß… Nase", "[en]"],
+      ["Dat. · mit lang… Haaren", "[en]"]
     ]
   });
 
