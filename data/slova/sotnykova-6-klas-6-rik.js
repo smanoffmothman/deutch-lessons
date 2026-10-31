@@ -107,4 +107,17 @@
   {de: "sich versöhnen", uk: "миритися", r: "l1-c"},
   {de: "auf die Nerven gehen (+ Dat.)", uk: "діяти на нерви", r: "l1-c", note: "Das geht mir auf die Nerven!"},
   {de: "sich langweilen", uk: "нудьгувати", r: "l1-c", note: "Mit dir langweile ich mich nie."},
+  // ---- Lektion 1 · Modul E: Geschichtenzeit ----
+  {de: "die Schultüte, -n", uk: "подарунковий конус першокласника", r: "l1-e", note: "у Німеччині першокласники отримують великий паперовий конус із солодощами"},
+  {de: "flüstern", uk: "шепотіти", r: "l1-e"},
+  {de: "unmöglich", uk: "неможливо", r: "l1-e"},
+  {de: "umziehen (zieht um), ist umgezogen", uk: "переїжджати (на нове місце)", r: "l1-e", note: "Wir sind nach Leipzig umgezogen."},
+  {de: "sich aus den Augen verlieren", uk: "загубити одне одного, втратити зв'язок", r: "l1-e"},
+  {de: "damals", uk: "тоді, у той час", r: "l1-e"},
+  {de: "sich verabreden (mit + Dat.)", uk: "домовлятися про зустріч", r: "l1-e", note: "Ich habe mich mit Greta im Café verabredet."},
+  {de: "wiedererkennen (erkennt wieder)", uk: "упізнати (після довгої перерви)", r: "l1-e"},
+  {de: "weinen", uk: "плакати", r: "l1-e"},
+  {de: "gleichzeitig", uk: "одночасно", r: "l1-e"},
+  {de: "seitdem", uk: "відтоді", r: "l1-e"},
+  {de: "die Note, -n", uk: "оцінка", r: "l1-e", note: "у Німеччині 1 — найкраща, 6 — найгірша"},
 ];

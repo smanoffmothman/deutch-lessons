@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 1, Modul D: Wiederholung — Німецька мова 6 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 6 КЛАС</span>
+        <h1>Lektion 1 · Modul D: Wiederholung</h1>
+        <p class="sub">Повторення всього Lektion 1: родичі й Genitiv, дати, зовнішність, риси характеру і закінчення прикметників. Гра на швидкість, кросворд, вправи, говоріння і тест на весь Lektion.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Blitz</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Kreuzworträtsel</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Sortieren</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Fehler</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Chat</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER — усі слова Lektion 1 (збираються самі) ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Усі слова Lektion 1</h2>
+      <p class="lead">Тут зібрано слова всіх модулів Lektion 1. Перевір себе в «Картки ▶» і познач ☆ ті, які ще не пам'ятаєш, — їх варто повторити перед тестом.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: бліц ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Blitz: 60 Sekunden</h2>
+      <p class="lead">Розминка на швидкість: скільки слів Lektion 1 ти перекладеш за 60 секунд? У бал не йде — це гра. Спробуй побити власний рекорд!</p>
+      <div class="card" id="ub1-blitz"></div>
+    </section>
+
+    <!-- ===== Üb. 2: кросворд ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Kreuzworträtsel: Familie und Freunde</h2>
+      <p class="lead">Торкнися клітинки чи підказки й пиши слово (ще раз по клітинці — інший напрямок). Артиклі писати не треба. ä ö ü — з панелі внизу.</p>
+      <div class="card" id="ub2-kw"></div>
+    </section>
+
+    <!-- ===== Üb. 3: сортування ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Familie, Aussehen oder Charakter?</h2>
+      <p class="lead">Розклади слова по трьох кошиках: натисни слово, потім кошик.</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 4: знайди помилку ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Finde den Fehler</h2>
+      <p class="lead">Граматика всього Lektion: Genitiv, дати, закінчення прикметників. Знайди помилку й виправ її — або натисни «Fehlerfrei».</p>
+      <div class="card" id="ub4-fix"></div>
+    </section>
+
+    <!-- ===== Üb. 5: чат ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Ein Familienfoto</h2>
+      <p class="lead">Дарина бачить фото твоєї родини й розпитує. Вибирай правильну відповідь.</p>
+      <div class="card" id="ub5-chat"></div>
+    </section>
+
+    <!-- ===== SPRECHEN ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Sprich mal!</h2>
+      <p class="lead">Спершу вимов фрази в 🎤, потім відповідай уголос на запитання й порівнюй зі зразком.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Stell eine Person aus deiner Familie vor: Wer ist das (mit Genitiv)? Wann ist sie geboren? Wie sieht sie aus?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Das ist mein Onkel Taras, der Bruder meiner Mutter. Er ist am 7. Juni 1988 geboren. Er ist groß, hat kurze, dunkle Haare und einen kleinen Bart.</div>
+        </div>
+        <div class="qa">
+          <label>2. Beschreibe deinen besten Freund / deine beste Freundin: Aussehen, Charakter, gemeinsame Hobbys.</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Meine beste Freundin heißt Anja. Sie hat lange, lockige Haare und eine runde Brille. Sie ist klug, ehrlich und sehr humorvoll. Wir zeichnen gern zusammen und gehen oft spazieren.</div>
+        </div>
+        <div class="qa">
+          <label>3. Welche Leute magst du, welche nicht? Nenne je zwei Eigenschaften.</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Mir gefallen zuverlässige und großzügige Leute. Ich mag keine streitsüchtigen und unehrlichen Menschen.</div>
+        </div>
+        <div class="qa">
+          <label>4. Wem in deiner Familie bist du ähnlich — im Aussehen und im Charakter?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Im Aussehen bin ich meinem Vater ähnlich: Ich habe seine blauen Augen und seine Nase. Aber im Charakter bin ich wie meine Oma — ruhig und ein bisschen schüchtern.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — на весь Lektion ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Test zu Lektion 1</h2>
+      <p class="lead">Підсумковий тест на весь Lektion 1: 18 завдань. Кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">9)</span> Das ist das Zimmer des
+          <select class="blank inline" data-ans="Jungen"><option value="">—</option><option>Junges</option><option>Junge</option><option>Jungen</option></select>.</div>
+        <div class="fill-item"><span class="num">10)</span> Mit deiner
+          <select class="blank inline" data-ans="neuen"><option value="">—</option><option>neue</option><option>neuen</option><option>neuer</option></select> Frisur siehst du toll aus!</div>
+        <div class="fill-item"><span class="num">11)</span> Ich mag keine
+          <select class="blank inline" data-ans="unehrlichen"><option value="">—</option><option>unehrlichen</option><option>unehrliche</option><option>unehrlicher</option></select> Leute.</div>
+        <div class="fill-item"><span class="num">12)</span> Mir
+          <select class="blank inline" data-ans="gefallen"><option value="">—</option><option>gefällt</option><option>gefallen</option><option>gefalle</option></select> lustige Menschen.</div>
+        <div class="fill-item"><span class="num">13)</span> Opa ist am
+          <select class="blank inline" data-ans="zweiten"><option value="">—</option><option>zwei</option><option>zweite</option><option>zweiten</option></select> März geboren.</div>
+        <div class="fill-item"><span class="num">14)</span> Ich vertraue
+          <select class="blank inline" data-ans="meiner"><option value="">—</option><option>meine</option><option>meinen</option><option>meiner</option></select> Schwester.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-6-klas-6-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-6-klas-6-rik";
+  const KN_UNIT = "l1-d";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['ub1', 'ub2', 'ub3', 'ub4', 'ub5', 'sprechen']});
+
+  // Üb. 1: бліц — усі слова Lektion 1 з файлу слів (без однакових перекладів)
+  const blitzPairs = [], blitzSeen = new Set();
+  ((window.SLOVA && window.SLOVA[KN_BOOK]) || []).filter(w => /^l1-/.test(w.r)).forEach(w => {
+    const de = w.de.split(' / ')[0].split(',')[0].replace(/\s*\(.*?\)/g, '').trim();
+    const uk = w.uk.split(' / ')[0].trim();
+    const key = uk.split(/[,;]/)[0].trim().toLowerCase();
+    if (!de || /^(der|die|das)$/i.test(de) || blitzSeen.has(key)) return;
+    blitzSeen.add(key);
+    blitzPairs.push([de, uk]);
+  });
+  buildBlitz('ub1-blitz', {pairs: blitzPairs, seconds: 60, dir: "de-uk"});
+
+  // Üb. 2: кросворд
+  buildCrossword('ub2-kw', [
+    ["Neffe", "племінник (der)"],
+    ["Nichte", "племінниця (die)"],
+    ["Enkel", "онук (der)"],
+    ["Cousine", "двоюрідна сестра (die)"],
+    ["Hochzeit", "весілля (die)"],
+    ["Brille", "окуляри (die)"],
+    ["Nase", "ніс (die)"],
+    ["lockig", "кучерявий"],
+    ["treu", "вірний"],
+    ["faul", "лінивий"],
+    ["ehrlich", "чесний"],
+    ["Geheimnis", "таємниця (das)"]
+  ]);
+
+  // Üb. 3: сортування
+  buildSort('ub3-sort', {
+    buckets: ["Familie 👨‍👩‍👧", "Aussehen 👀", "Charakter 💭"],
+    items: [
+      {t: "der Neffe", b: "Familie 👨‍👩‍👧"},
+      {t: "die Enkelin", b: "Familie 👨‍👩‍👧"},
+      {t: "die Uroma", b: "Familie 👨‍👩‍👧"},
+      {t: "die Nichte", b: "Familie 👨‍👩‍👧"},
+      {t: "die Sommersprossen", b: "Aussehen 👀"},
+      {t: "der Pferdeschwanz", b: "Aussehen 👀"},
+      {t: "der Bart", b: "Aussehen 👀"},
+      {t: "lockig", b: "Aussehen 👀"},
+      {t: "geizig", b: "Charakter 💭"},
+      {t: "hilfsbereit", b: "Charakter 💭"},
+      {t: "schüchtern", b: "Charakter 💭"},
+      {t: "zuverlässig", b: "Charakter 💭"}
+    ]
+  });
+
+  // Üb. 4: знайди помилку
+  buildFixError('ub4-fix', [
+    {s: "Das ist das Auto meines Onkel.", wrong: 5, fix: "Onkels"},
+    {s: "Lotte hat lange, blonde Haare.", ok: true},
+    {s: "Er hat ein runder Gesicht.", wrong: 3, fix: "rundes"},
+    {s: "Ich mag keine streitsüchtige Leute.", wrong: 3, fix: "streitsüchtigen"},
+    {s: "Meine Oma ist in 1957 geboren.", wrong: 3, fix: "im Jahr", hint: "рік без in"},
+    {s: "Das Zimmer des Nachbars ist groß.", wrong: 3, fix: "Nachbarn"},
+    {s: "Mir gefällt nette Leute.", wrong: 1, fix: "gefallen"},
+    {s: "Wir vertrauen unserem Lehrer.", ok: true},
+    {s: "Sie trägt eine neue Brille.", ok: true}
+  ]);
+
+  // Üb. 5: чат
+  buildChat('ub5-chat', {
+    partner: "Daryna",
+    steps: [
+      {them: "Hi! Ich habe dein Familienfoto gesehen. 📸 Wer ist der Mann mit dem Bart?"},
+      {you: ["Das ist mein Onkel, der Bruder meiner Mutter.", "Das ist mein Onkel, der Bruder meines Mutter.", "Das ist mein Onkel, der Bruder meine Mutter."], correct: 0},
+      {them: "Und das Mädchen mit langen, roten Haaren?"},
+      {you: ["Meine Cousine Kira. Sie ist 2015 geboren.", "Meine Cousine Kira. Sie ist in 2015 geboren.", "Meine Cousine Kira. Sie ist am 2015 geboren."], correct: 0},
+      {them: "Sie sieht nett aus! Wie ist sie?"},
+      {you: ["Sie ist lustig und hilfsbereit, aber ein bisschen faul.", "Sie ist lustige und hilfsbereite, aber ein bisschen faul.", "Sie hat lustig und hilfsbereit."], correct: 0},
+      {them: "Und wem bist du ähnlich?"},
+      {you: ["Ich bin meinem Vater ähnlich.", "Ich bin mein Vater ähnlich.", "Ich bin meinen Vater ähnlich."], correct: 0},
+      {them: "Sind auch Freunde von dir auf dem Foto?"},
+      {you: ["Nein, auf dem Foto sind nur meine Verwandten.", "Nein, auf dem Foto ist nur meine Verwandten.", "Nein, auf dem Foto sind nur mein Verwandten."], correct: 0},
+      {them: "Schönes Foto! Schick es mir bitte!"},
+      {you: ["Klar, mache ich!", "Gute Besserung!", "Herzlichen Glückwunsch!"], correct: 0}
+    ]
+  });
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Die Tochter meines Onkels ist meine Cousine.", uk: "Дочка мого дядька — моя двоюрідна сестра."},
+    {say: "Sie hat ein rundes Gesicht und lockige Haare.", uk: "У неї кругле обличчя і кучеряве волосся."},
+    {say: "Ich mag keine egoistischen Leute.", uk: "Я не люблю егоїстичних людей."},
+    {say: "Mein Opa ist neunzehnhundertsechsundfünfzig geboren.|Mein Opa ist 1956 geboren.", uk: "Мій дідусь народився в 1956 році."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Der Sohn meiner Schwester ist mein …", opts: ["Enkel", "Neffe", "Cousin"], correct: "Neffe"},
+    {q: "Die Mutter meiner Oma ist meine …", opts: ["Tante", "Enkelin", "Uroma"], correct: "Uroma"},
+    {q: "Sie hat viele kleine braune Punkte im Gesicht. Das sind …", opts: ["Sommersprossen", "Locken", "Zöpfe"], correct: "Sommersprossen"},
+    {q: "Er teilt nie etwas. Er ist …", opts: ["großzügig", "geizig", "treu"], correct: "geizig"},
+    {q: "Das ist das Fahrrad … Bruders.", opts: ["meiner", "mein", "meines"], correct: "meines"},
+    {q: "1999 — so sagt man das Jahr:", opts: ["neunzehnhundertneunundneunzig", "neunzehnneunundneunzig", "tausendneunhundertneunundneunzig"], correct: "neunzehnhundertneunundneunzig"},
+    {q: "Mein Opa hat … Bart.", opts: ["ein langer", "einen langer", "einen langen"], correct: "einen langen"},
+    {q: "Wir haben viele … Interessen.", opts: ["gemeinsame", "gemeinsamen", "gemeinsamer"], correct: "gemeinsame"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Unser Nachbar hat ein kleines Baby.", ok: true},
+    {s: "Sie hat eine schlanker Figur.", wrong: 3, fix: "schlanke"},
+    {s: "Ich bin meiner Mutter ähnlich.", ok: true},
+    {s: "Die Eltern meines Mutter wohnen in Kyjiw.", wrong: 2, fix: "meiner"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['👨‍👩‍👧‍👦', '👓', '🤝', '🏆']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>

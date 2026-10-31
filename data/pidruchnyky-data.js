@@ -164,8 +164,8 @@ const PIDRUCHNYKY = [
         { id: "l1-a", label: "A", nazva: "Meine Verwandten", storinky: "6–11", typ: "vpravy", gram: ["deklination-nomen", "n-deklination", "zahlwoerter"], opublikovano: 1 },
         { id: "l1-b", label: "B", nazva: "Wir sind alle ganz verschieden", storinky: "12–16", typ: "vpravy", gram: ["adjektivdeklination"], opublikovano: 2 },
         { id: "l1-c", label: "C", nazva: "Meine Freunde", storinky: "17–21", typ: "vpravy", gram: ["adjektivdeklination"], opublikovano: 3 },
-        { id: "l1-d", label: "D", nazva: "Wiederholung", storinky: "22–23", typ: "povtorennya", gram: ["deklination-nomen", "adjektivdeklination", "zahlwoerter"] },
-        { id: "l1-e", label: "E", nazva: "Geschichtenzeit", storinky: "24", typ: "chytannya" },
+        { id: "l1-d", label: "D", nazva: "Wiederholung", storinky: "22–23", typ: "povtorennya", gram: ["deklination-nomen", "adjektivdeklination", "zahlwoerter"], opublikovano: 4 },
+        { id: "l1-e", label: "E", nazva: "Geschichtenzeit", storinky: "24", typ: "chytannya", opublikovano: 5 },
         { id: "l1-f", label: "F", nazva: "Projektarbeit", storinky: "25", typ: "bez-storinky" },
         { id: "l1-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "26", typ: "bez-storinky" }
       ] },
