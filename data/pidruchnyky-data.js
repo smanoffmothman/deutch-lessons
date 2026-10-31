@@ -143,5 +143,97 @@ const PIDRUCHNYKY = [
         { id: "anhang-woerter", label: "", nazva: "Deutsch-Ukrainisches Wörterverzeichnis", storinky: "163–192", typ: "bez-storinky" }
       ] }
     ]
+  },
+  {
+    id: "sotnykova-6-klas-6-rik",
+    nazva: "Німецька мова (6-й рік навчання)",
+    nazvaDe: "Deutsch (6. Lernjahr)",
+    nazvaKorotko: "Сотникова, Гоголєва · 6 клас",
+    pidnazva: "підручник для 6 класу (з аудіосупроводом), 6-й рік навчання",
+    klas: "6 клас",
+    riven: null,
+    avtory: ["Світлана Сотникова", "Ганна Гоголєва"],
+    vydavnytstvo: "Ранок",
+    rik: 2023,
+    isbn: "978-617-09-8234-6",
+    aliasy: ["Сотникова 6 клас", "Сотникова Гоголєва 6 клас", "німецька мова 6 клас Сотникова", "Deutsch 6 Sotnykova"],
+    rivni: ["Lektion", "Modul"],
+    audio: null,
+    rozdily: [
+      { id: "l1", label: "1", nazva: "Familie und Freunde", storinky: "5–26", dity: [
+        { id: "l1-a", label: "A", nazva: "Meine Verwandten", storinky: "6–11", typ: "vpravy", gram: ["deklination-nomen", "n-deklination", "zahlwoerter"], opublikovano: 1 },
+        { id: "l1-b", label: "B", nazva: "Wir sind alle ganz verschieden", storinky: "12–16", typ: "vpravy", gram: ["adjektivdeklination"] },
+        { id: "l1-c", label: "C", nazva: "Meine Freunde", storinky: "17–21", typ: "vpravy", gram: ["adjektivdeklination"] },
+        { id: "l1-d", label: "D", nazva: "Wiederholung", storinky: "22–23", typ: "povtorennya", gram: ["deklination-nomen", "adjektivdeklination", "zahlwoerter"] },
+        { id: "l1-e", label: "E", nazva: "Geschichtenzeit", storinky: "24", typ: "chytannya" },
+        { id: "l1-f", label: "F", nazva: "Projektarbeit", storinky: "25", typ: "bez-storinky" },
+        { id: "l1-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "26", typ: "bez-storinky" }
+      ] },
+      { id: "l2", label: "2", nazva: "Einkaufen macht Spaß", storinky: "27–50", dity: [
+        { id: "l2-a", label: "A", nazva: "Hier macht man Einkäufe", storinky: "28–33", typ: "vpravy", gram: ["infinitiv-um-zu"] },
+        { id: "l2-b", label: "B", nazva: "Passt das gut zusammen?", storinky: "34–39", typ: "vpravy", gram: ["fragen", "demonstrativpronomen", "adjektivdeklination"] },
+        { id: "l2-c", label: "C", nazva: "Lebensmittel kaufen", storinky: "40–44", typ: "vpravy", gram: ["kausalsaetze"] },
+        { id: "l2-d", label: "D", nazva: "Wiederholung", storinky: "45–47", typ: "povtorennya", gram: ["infinitiv-um-zu", "adjektivdeklination", "kausalsaetze"] },
+        { id: "l2-e", label: "E", nazva: "Geschichtenzeit", storinky: "48", typ: "chytannya" },
+        { id: "l2-f", label: "F", nazva: "Projektarbeit", storinky: "49", typ: "bez-storinky" },
+        { id: "l2-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "50", typ: "bez-storinky" }
+      ] },
+      { id: "l3", label: "3", nazva: "Essen und Trinken", storinky: "51–72", dity: [
+        { id: "l3-a", label: "A", nazva: "Das schmeckt gut", storinky: "52–57", typ: "vpravy", gram: ["adjektivdeklination"] },
+        { id: "l3-b", label: "B", nazva: "Internationale Küche", storinky: "58–61", typ: "vpravy", gram: ["adjektivdeklination"] },
+        { id: "l3-c", label: "C", nazva: "Wir gehen essen", storinky: "62–66", typ: "vpravy", gram: ["indefinitpronomen", "kausalsaetze"] },
+        { id: "l3-d", label: "D", nazva: "Wiederholung", storinky: "67–69", typ: "povtorennya", gram: ["adjektivdeklination", "indefinitpronomen"] },
+        { id: "l3-e", label: "E", nazva: "Geschichtenzeit", storinky: "70", typ: "chytannya" },
+        { id: "l3-f", label: "F", nazva: "Projektarbeit", storinky: "71", typ: "bez-storinky" },
+        { id: "l3-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "72", typ: "bez-storinky" }
+      ] },
+      { id: "l4", label: "4", nazva: "Sport ist gesund", storinky: "73–88", dity: [
+        { id: "l4-a", label: "A", nazva: "Wir machen Sport", storinky: "74–78", typ: "vpravy", gram: ["infinitiv-um-zu", "perfekt-plusquamperfekt"] },
+        { id: "l4-b", label: "B", nazva: "Lieblingssportarten", storinky: "79–83", typ: "vpravy" },
+        { id: "l4-c", label: "C", nazva: "Wiederholung", storinky: "84–85", typ: "povtorennya", gram: ["infinitiv-um-zu", "perfekt-plusquamperfekt"] },
+        { id: "l4-d", label: "D", nazva: "Geschichtenzeit", storinky: "86", typ: "chytannya" },
+        { id: "l4-e", label: "E", nazva: "Projektarbeit", storinky: "87", typ: "bez-storinky" },
+        { id: "l4-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "88", typ: "bez-storinky" }
+      ] },
+      { id: "l5", label: "5", nazva: "Unser Schulleben", storinky: "89–108", dity: [
+        { id: "l5-a", label: "A", nazva: "Nach den Winterferien", storinky: "90–93", typ: "vpravy", gram: ["perfekt-plusquamperfekt"] },
+        { id: "l5-b", label: "B", nazva: "Schule und Schulfächer", storinky: "94–98", typ: "vpravy", gram: ["indefinitpronomen"] },
+        { id: "l5-c", label: "C", nazva: "In den Stunden", storinky: "99–103", typ: "vpravy", gram: ["finalsaetze", "infinitiv-um-zu"] },
+        { id: "l5-d", label: "D", nazva: "Wiederholung", storinky: "104–105", typ: "povtorennya", gram: ["perfekt-plusquamperfekt", "indefinitpronomen", "finalsaetze"] },
+        { id: "l5-e", label: "E", nazva: "Geschichtenzeit", storinky: "106", typ: "chytannya" },
+        { id: "l5-f", label: "F", nazva: "Projektarbeit", storinky: "107", typ: "bez-storinky" },
+        { id: "l5-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "108", typ: "bez-storinky" }
+      ] },
+      { id: "l6", label: "6", nazva: "Reiselust und Abenteuer", storinky: "109–128", dity: [
+        { id: "l6-a", label: "A", nazva: "Verkehr und Reiseziele", storinky: "110–114", typ: "vpravy", gram: ["praep-dativ", "wechselpraepositionen"] },
+        { id: "l6-b", label: "B", nazva: "Reisevorbereitungen", storinky: "115–119", typ: "vpravy", gram: ["praep-akkusativ"] },
+        { id: "l6-c", label: "C", nazva: "Reiseeindrücke", storinky: "120–123", typ: "vpravy", gram: ["tempusformen", "starke-verben"] },
+        { id: "l6-d", label: "D", nazva: "Wiederholung", storinky: "124–125", typ: "povtorennya", gram: ["praep-dativ", "praep-akkusativ", "tempusformen"] },
+        { id: "l6-e", label: "E", nazva: "Geschichtenzeit", storinky: "126", typ: "chytannya" },
+        { id: "l6-f", label: "F", nazva: "Projektarbeit", storinky: "127", typ: "bez-storinky" },
+        { id: "l6-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "128", typ: "bez-storinky" }
+      ] },
+      { id: "l7", label: "7", nazva: "Herzlich willkommen in Deutschland", storinky: "129–144", dity: [
+        { id: "l7-a", label: "A", nazva: "Deutschland — Land und Leute", storinky: "130–133", typ: "vpravy" },
+        { id: "l7-b", label: "B", nazva: "Wir reisen nach Berlin", storinky: "134–139", typ: "vpravy", gram: ["temporalsaetze"] },
+        { id: "l7-c", label: "C", nazva: "Wiederholung", storinky: "140–141", typ: "povtorennya", gram: ["temporalsaetze", "tempusformen"] },
+        { id: "l7-d", label: "D", nazva: "Geschichtenzeit", storinky: "142", typ: "chytannya" },
+        { id: "l7-e", label: "E", nazva: "Projektarbeit", storinky: "143", typ: "bez-storinky" },
+        { id: "l7-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "144", typ: "bez-storinky" }
+      ] },
+      { id: "l8", label: "8", nazva: "Die Ukraine", storinky: "145–158", dity: [
+        { id: "l8-a", label: "A", nazva: "Sehenswertes in der Ukraine", storinky: "146–149", typ: "vpravy" },
+        { id: "l8-b", label: "B", nazva: "Unsere Hauptstadt", storinky: "150–153", typ: "vpravy", gram: ["praep-akkusativ"] },
+        { id: "l8-c", label: "C", nazva: "Wiederholung", storinky: "154–155", typ: "povtorennya", gram: ["praep-akkusativ", "temporalsaetze"] },
+        { id: "l8-d", label: "D", nazva: "Geschichtenzeit", storinky: "156", typ: "chytannya" },
+        { id: "l8-e", label: "E", nazva: "Projektarbeit", storinky: "157", typ: "bez-storinky" },
+        { id: "l8-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "158", typ: "bez-storinky" }
+      ] },
+      { id: "anhang", label: "", nazva: "Anhang", storinky: "159–191", dity: [
+        { id: "anhang-grammatik", label: "", nazva: "Grammatik", storinky: "159–168", typ: "bez-storinky" },
+        { id: "anhang-woerter", label: "", nazva: "Deutsch-Ukrainisches Wörterverzeichnis", storinky: "169–191", typ: "bez-storinky" },
+        { id: "anhang-verben", label: "", nazva: "Unregelmäßige Verben", typ: "gramatyka", gram: ["starke-verben", "tempusformen"] }
+      ] }
+    ]
   }
 ];
