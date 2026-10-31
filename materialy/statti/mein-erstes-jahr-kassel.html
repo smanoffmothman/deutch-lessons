@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mit Musik in Kassel angekommen · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Alltag</span>
+        <h1>Mit Musik in Kassel angekommen</h1>
+        <p class="sub">Холод, незнайомі запахи й люди, які чекають на червоне світло: так починалося життя Лубани з Сирії в Касселі. Допоміг їй… університетський хор.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Syrien oder Deutschland?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und du?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Neu in einem anderen Land</h2>
+      <div class="card">
+        <p>Was ist am Anfang in einem neuen Land schwer? Was kann helfen, schnell Freunde zu finden und die Sprache gut zu lernen?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай: що допомагає звикнути до нового міста чи країни? Хобі, нові друзі, мовні курси? Що тебе здивувало б у Німеччині найбільше?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Lubana Alkatlabee ist 31 Jahre alt und kommt aus Syrien. Seit Februar 2022 lebt sie in Kassel. Dort macht sie ihren Master im <span class="gl" data-uk="будівельна інженерія" data-lemma="das Bauingenieurwesen">Bauingenieurwesen</span>.</p>
+
+          <p>Lubana wollte mehr vom Leben. In Syrien hatte sie wegen des <span class="gl" data-uk="війна" data-lemma="der Krieg, -e">Krieges</span> wenig Möglichkeiten. Ihr Bruder wohnte schon in Kassel, deshalb ist sie auch dorthin <span class="gl" data-uk="переїжджати" data-lemma="ziehen (zog, ist gezogen)">gezogen</span>. Sie hat ein <span class="gl" data-uk="віза" data-lemma="das Visum, Visa">Visum</span> für Studierende bekommen.</p>
+
+          <p>Der Anfang war nicht leicht. Es war kalt, und das Essen hat ganz anders gerochen als zu Hause. Überrascht hat sie auch, dass die Menschen an roten <span class="gl" data-key data-uk="світлофор" data-lemma="die Ampel, -n">Ampeln</span> warten. Komisch fand sie eine Situation beim Essen: In Deutschland <span class="gl" data-uk="сякатися" data-lemma="sich die Nase putzen">putzen sich</span> manche Menschen am Tisch die Nase. In Syrien steht man dafür auf.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Kassel%2C_Bergpark_Wilhelmsh%C3%B6he%2C_Blick_zum_Herkules_und_zum_Jussow-Tempel.jpg/960px-Kassel%2C_Bergpark_Wilhelmsh%C3%B6he%2C_Blick_zum_Herkules_und_zum_Jussow-Tempel.jpg" alt="Der Bergpark Wilhelmshöhe in Kassel mit dem Herkules." width="960" height="737" loading="lazy">
+            <figcaption>Der Bergpark Wilhelmshöhe in Kassel mit dem Herkules. Foto: Dguendel, <a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener">CC BY 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Kassel,_Bergpark_Wilhelmsh%C3%B6he,_Blick_zum_Herkules_und_zum_Jussow-Tempel.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Deutsch hatte Lubana schon in Syrien angefangen. In Kassel hat sie eine Sprachschule besucht. Die Lehrerinnen waren toll: Sie haben den Schülern Lust gemacht, die Stadt kennenzulernen, und es gab viele <span class="gl" data-uk="спільний" data-lemma="gemeinsam">gemeinsame</span> Aktivitäten.</p>
+
+          <p>Sehr wichtig war für sie die Musik. Lubana hat angefangen, im <span class="gl" data-key data-uk="університетський хор" data-lemma="der Uni-Chor, -ö-e">Uni-Chor</span> zu singen. Noten lesen konnte sie nicht – aber das war egal, sie hatte viel Spaß. Im Chor hat sie Leute kennengelernt und oft Deutsch gesprochen. Heute spricht sie Deutsch auf dem <span class="gl" data-uk="рівень (знання мови)" data-lemma="das Sprachniveau, -s">Sprachniveau</span> C1. Ihr Tipp: <span class="gl" data-key data-uk="відкритість" data-lemma="die Offenheit">Offenheit</span> ist das Wichtigste für die <span class="gl" data-key data-uk="інтеграція" data-lemma="die Integration">Integration</span>.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Kassel liegt in Hessen und hat knapp 200 000 Einwohner. Bekannt ist die Stadt für die documenta, eine große <span class="gl" data-uk="виставка мистецтва" data-lemma="die Kunstausstellung, -en">Kunstausstellung</span>, und für den Bergpark Wilhelmshöhe – er ist UNESCO-Welterbe. Und Kassel ist die Hauptstadt der <span class="gl" data-uk="єнот" data-lemma="der Waschbär, -en">Waschbären</span>: Pro Hektar lebt dort ungefähr einer!</p>
+          </aside>
+
+          <p>Lubana sieht viele <span class="gl" data-key data-uk="відмінність" data-lemma="der Unterschied, -e">Unterschiede</span> zwischen den Kulturen. In Deutschland lebt man individueller und freier: Man <span class="gl" data-uk="вирішувати" data-lemma="entscheiden (entschied, hat entschieden)">entscheidet</span> selbst und nicht für die Familie. In Syrien gibt es dafür mehr <span class="gl" data-uk="згуртованість, взаємопідтримка" data-lemma="der Zusammenhalt">Zusammenhalt</span>. Heute hat Lubana Freundinnen und Freunde in Kassel und kann sich gut auf Deutsch <span class="gl" data-uk="висловлюватися" data-lemma="sich ausdrücken">ausdrücken</span>. Nach dem Studium möchte sie in Deutschland bleiben und arbeiten.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Syrien oder Deutschland?</h2>
+      <p class="lead">Що, за словами Лубани, типово для Сирії, а що — для Німеччини? Натисни картку, потім кошик.</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>Ampel</span><span>Uni-Chor</span><span>gezogen</span><span>Unterschiede</span><span>Offenheit</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> Lubana ist zu ihrem Bruder nach Kassel <input type="text" class="blank-input inline" data-ans="gezogen">.</div>
+          <div class="fill-item"><span class="num">2)</span> In Deutschland warten die Leute an der roten <input type="text" class="blank-input inline" data-ans="Ampel">.</div>
+          <div class="fill-item"><span class="num">3)</span> Im <input type="text" class="blank-input inline" data-ans="Uni-Chor"> hat sie neue Freunde gefunden.</div>
+          <div class="fill-item"><span class="num">4)</span> Zwischen den Kulturen gibt es viele <input type="text" class="blank-input inline wide" data-ans="Unterschiede">.</div>
+          <div class="fill-item"><span class="num">5)</span> Für die Integration ist <input type="text" class="blank-input inline" data-ans="Offenheit"> sehr wichtig.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und du?</h2>
+      <p class="lead">Напиши відповіді німецькою (4–6 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Lubana hat mit Musik Freunde gefunden. Welches Hobby würde dir in einem neuen Land helfen? Warum?</label>
+          <textarea id="ub5-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Was ist in der Ukraine anders als in Deutschland – zum Beispiel beim Essen, auf der Straße oder in der Familie?</label>
+          <textarea id="ub5-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Mir würde … helfen, weil …, Dort kann man Leute kennenlernen., Bei uns … dagegen …, In Deutschland …, aber in der Ukraine …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 8px;">Das nehme ich mit</p>
+        <p>Lubana aus Syrien studiert in Kassel. Geholfen haben ihr eine gute Sprachschule und der Uni-Chor – dort hat sie Freunde gefunden und viel Deutsch gesprochen. Kassel liegt in Hessen und ist bekannt für die documenta, den Bergpark Wilhelmshöhe und viele Waschbären.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Лубана з Сирії навчається в Касселі. Їй допомогли хороша мовна школа й університетський хор — там вона знайшла друзів і багато говорила німецькою. Кассель розташований у Гессені й відомий виставкою documenta, гірським парком Вільгельмсгее та численними єнотами.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "mein-erstes-jahr-kassel";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text?",
+     opts: ["Wie eine Frau aus Syrien in Kassel angekommen ist – mit Hilfe der Musik",
+            "Wie man in Kassel eine Wohnung findet",
+            "Warum in Kassel so viele Waschbären leben"],
+     correct: "Wie eine Frau aus Syrien in Kassel angekommen ist – mit Hilfe der Musik"}
+  ]);
+  buildMatch('ub1h', [
+    ["Warum Kassel?", "Absatz 1"],
+    ["Erste Eindrücke", "Absatz 2"],
+    ["Lernen in der Sprachschule", "Absatz 3"],
+    ["Singen hilft", "Absatz 4"],
+    ["Zwei Kulturen", "Absatz 5"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "Lubana ist 2022 nach Kassel gekommen.", a: "r"},
+    {s: "In Kassel hatte sie keine Familie.", a: "f"},
+    {s: "Am Anfang war es in Kassel kalt.", a: "r"},
+    {s: "Lubana hat erst in Deutschland angefangen, Deutsch zu lernen.", a: "f"},
+    {s: "Im Chor singt Lubana auch arabische Lieder.", a: "n"},
+    {s: "Lubana konnte schon in Syrien Noten lesen.", a: "f"},
+    {s: "Nach dem Studium möchte sie in Deutschland arbeiten.", a: "r"}
+  ]);
+
+  buildSort('ub3-sort', {
+    buckets: ["eher in Syrien", "eher in Deutschland"],
+    items: [
+      {t: "Man steht auf, wenn man sich die Nase putzen muss.", b: "eher in Syrien"},
+      {t: "Man entscheidet oft für die Familie.", b: "eher in Syrien"},
+      {t: "Es gibt mehr sozialen Zusammenhalt.", b: "eher in Syrien"},
+      {t: "Man wartet an der roten Ampel.", b: "eher in Deutschland"},
+      {t: "Man lebt individueller und freier.", b: "eher in Deutschland"},
+      {t: "Man putzt sich am Tisch die Nase.", b: "eher in Deutschland"}
+    ]
+  });
+
+  buildMatch('ub4', [
+    ["der Krieg", "війна"],
+    ["gemeinsam", "спільний"],
+    ["das Sprachniveau", "рівень (знання мови)"],
+    ["sich ausdrücken", "висловлюватися"],
+    ["der Zusammenhalt", "згуртованість, взаємопідтримка"]
+  ]);
+  wireBlanks('ub4b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🎶','🦝','🏛️','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
