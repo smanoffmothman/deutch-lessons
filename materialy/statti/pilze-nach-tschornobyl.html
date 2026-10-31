@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pilze 40 Jahre nach Tschornobyl · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Natur &amp; Umwelt</span>
+        <h1>Pilze 40 Jahre nach Tschornobyl</h1>
+        <p class="sub">Аварія на ЧАЕС сталася за понад тисячу кілометрів від Баварії, але гриби там досі радіоактивні. Чи можна їх їсти сьогодні — і чому продавати їх можна не всі?</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Zahlen</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Pilze sammeln</h2>
+      <div class="card">
+        <p>Sammelt deine Familie im Herbst Pilze? Was weißt du über die Katastrophe von Tschornobyl 1986? Was glaubst du: Warum kann sie noch heute für Pilze in Deutschland wichtig sein?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          26 квітня 1986 року на Чорнобильській АЕС вибухнув реактор. Радіоактивна хмара пройшла над великою частиною Європи. Як гадаєш, чому гриби накопичують радіацію довше, ніж, наприклад, овочі з городу?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Im April 1986 explodierte in Tschornobyl in der Ukraine ein Reaktor. 40 Jahre später gibt es in Deutschland eine gute <span class="gl" data-uk="новина" data-lemma="die Nachricht, -en">Nachricht</span>: Wer selbst Pilze im Wald sammelt, kann sie wieder ohne Sorge essen.</p>
+
+          <p>Das sagt das <span class="gl" data-key data-uk="Федеральне відомство з радіаційного захисту" data-lemma="das Bundesamt für Strahlenschutz">Bundesamt für Strahlenschutz</span>. Diese <span class="gl" data-uk="відомство, установа" data-lemma="die Behörde, -n">Behörde</span> <span class="gl" data-uk="захищати" data-lemma="schützen">schützt</span> Menschen und Umwelt vor den Gefahren der <span class="gl" data-key data-uk="радіоактивність" data-lemma="die Radioaktivität">Radioaktivität</span>. Ihre Fachleute <span class="gl" data-uk="вимірювати" data-lemma="messen (maß, hat gemessen)">messen</span> regelmäßig, wie viel <span class="gl" data-uk="цезій-137" data-lemma="das Cäsium-137">Cäsium-137</span> in Pilzen steckt. Die <span class="gl" data-uk="одиниця вимірювання" data-lemma="die Maßeinheit, -en">Maßeinheit</span> dafür heißt Becquerel. Ihr Ergebnis: Wenn man normale <span class="gl" data-uk="кількість" data-lemma="die Menge, -n">Mengen</span> isst, gibt es kein <span class="gl" data-uk="ризик" data-lemma="das Risiko, Risiken">Risiko</span> mehr für die Gesundheit.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/NSG_Schwarze_Heide_-_Maronen-R%C3%B6hrling_%28Imleria_badia%29_%281%29.jpg/960px-NSG_Schwarze_Heide_-_Maronen-R%C3%B6hrling_%28Imleria_badia%29_%281%29.jpg" alt="Ein Maronen-Röhrling – ein beliebter Speisepilz." width="960" height="638" loading="lazy">
+            <figcaption>Ein Maronen-Röhrling – ein beliebter Speisepilz. Foto: Ragnar1904, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:NSG_Schwarze_Heide_-_Maronen-R%C3%B6hrling_(Imleria_badia)_(1).jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Ganz <span class="gl" data-uk="зникати" data-lemma="verschwinden (verschwand, ist verschwunden)">verschwunden</span> ist die Radioaktivität aber nicht. Vor allem in Süddeutschland sind manche Pilze noch immer <span class="gl" data-key data-uk="забруднений (радіацією)" data-lemma="belastet">belastet</span>. Bei einigen hat man mehr als 2000 Becquerel pro Kilogramm gemessen. Das klingt viel – doch vor fünf Jahren waren die Werte noch doppelt so hoch.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Warum gerade der Süden? Ende April 1986 zog die radioaktive <span class="gl" data-uk="хмара" data-lemma="die Wolke, -n">Wolke</span> über Europa. Wo es damals stark regnete – zum Beispiel in Teilen Bayerns –, kam besonders viel Cäsium auf den Boden. Cäsium-137 hat eine <span class="gl" data-uk="період напіврозпаду" data-lemma="die Halbwertszeit, -en">Halbwertszeit</span> von etwa 30 Jahren: Erst nach dieser Zeit ist die Hälfte davon <span class="gl" data-uk="розпадатися" data-lemma="zerfallen (zerfiel, ist zerfallen)">zerfallen</span>. Im Waldboden bleibt es lange, und Pilze <span class="gl" data-uk="поглинати, вбирати" data-lemma="aufnehmen (nahm auf, hat aufgenommen)">nehmen</span> es besonders gut auf.</p>
+          </aside>
+
+          <p>Für den Handel gibt es eine klare Regel: Pilze mit mehr als 600 Becquerel Cäsium-137 pro Kilogramm darf man nicht verkaufen. Diese <span class="gl" data-uk="межа, граничне значення" data-lemma="der Grenzwert, -e">Grenzwerte</span> gelten aber nur für den Markt. Wer Pilze im Wald sammelt und sie selbst isst, muss sich nicht an sie halten. Für alle Pilzfans gilt trotzdem: lieber nicht jeden Tag ein großes Pilzgericht, sondern <span class="gl" data-key data-uk="у міру, помірно" data-lemma="in Maßen">in Maßen</span>.</p>
+
+          <p>Pilze sind übrigens nicht die einzigen „Speicher“ für Cäsium. Auch <span class="gl" data-uk="дикий кабан" data-lemma="das Wildschwein, -e">Wildschweine</span> aus manchen Regionen Süddeutschlands sind noch belastet. Sie <span class="gl" data-uk="рити, длубатися" data-lemma="wühlen">wühlen</span> im Waldboden nach Futter und fressen dabei auch Pilze, die unter der Erde wachsen. Deshalb <span class="gl" data-uk="перевіряти" data-lemma="kontrollieren">kontrollieren</span> Jäger in diesen Regionen ihr Fleisch, bevor sie es verkaufen.</p>
+
+          <p>Für Ukrainerinnen und Ukrainer ist Tschornobyl bis heute ein <span class="gl" data-uk="болісний" data-lemma="schmerzhaft">schmerzhaftes</span> Thema. Die Messungen in Deutschland zeigen, wie weit die <span class="gl" data-uk="наслідок" data-lemma="die Folge, -n">Folgen</span> der Katastrophe <span class="gl" data-uk="сягати, простягатися" data-lemma="reichen">reichen</span>: bis in die Wälder Bayerns – mehr als 1000 Kilometer entfernt.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Die Zahlen im Text</h2>
+      <p class="lead">Що означає кожне число? З'єднай.</p>
+      <div class="card" id="ub3-list"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>messen</span><span>belastet</span><span>Grenzwert</span><span>Mengen</span><span>verschwunden</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> Fachleute <input type="text" class="blank-input inline" data-ans="messen"> die Radioaktivität in Pilzen.</div>
+          <div class="fill-item"><span class="num">2)</span> Manche Pilze in Süddeutschland sind noch immer <input type="text" class="blank-input inline" data-ans="belastet">.</div>
+          <div class="fill-item"><span class="num">3)</span> Für den Verkauf liegt der <input type="text" class="blank-input inline" data-ans="Grenzwert"> bei 600 Becquerel pro Kilogramm.</div>
+          <div class="fill-item"><span class="num">4)</span> In normalen <input type="text" class="blank-input inline" data-ans="Mengen"> kann man die Pilze essen.</div>
+          <div class="fill-item"><span class="num">5)</span> Die Radioaktivität ist noch nicht ganz <input type="text" class="blank-input inline wide" data-ans="verschwunden">.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (4–6 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Sammelt man in der Ukraine gern Pilze? Wer in deiner Familie macht das, und wo? Welche Pilze kennst du?</label>
+          <textarea id="ub5-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Was hast du in der Schule oder in deiner Familie über Tschornobyl gehört? Erzähl kurz auf Deutsch.</label>
+          <textarea id="ub5-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Bei uns sammelt man …, Mein Opa / meine Mutter geht im Herbst …, Ich kenne …, Ich habe gehört, dass …, 1986 ist in Tschornobyl …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 8px;">Das nehme ich mit</p>
+        <p>40 Jahre nach Tschornobyl kann man selbst gesammelte Pilze in Deutschland in normalen Mengen wieder essen. Vor allem in Süddeutschland sind manche Pilze aber noch radioaktiv belastet. Pilze mit mehr als 600 Becquerel Cäsium-137 pro Kilogramm darf man nicht verkaufen. Cäsium-137 hat eine Halbwertszeit von etwa 30 Jahren.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Через 40 років після Чорнобиля самостійно зібрані гриби в Німеччині знову можна їсти в звичайній кількості. Проте особливо на півдні країни деякі гриби досі радіоактивні. Продавати гриби, у яких понад 600 бекерелів цезію-137 на кілограм, заборонено. Період напіврозпаду цезію-137 — близько 30 років.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "pilze-nach-tschornobyl";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Was ist die wichtigste Information im Text?",
+     opts: ["Selbst gesammelte Pilze kann man in Deutschland in normalen Mengen wieder essen.",
+            "In Deutschland darf man keine Pilze mehr im Wald sammeln.",
+            "Pilze aus Bayern sind heute gar nicht mehr radioaktiv."],
+     correct: "Selbst gesammelte Pilze kann man in Deutschland in normalen Mengen wieder essen."}
+  ]);
+  buildMatch('ub1h', [
+    ["Eine Behörde gibt Entwarnung", "Absatz 1"],
+    ["Weniger als früher, aber nicht null", "Absatz 2"],
+    ["Regeln für den Verkauf", "Absatz 3"],
+    ["Auch Tiere im Wald sind belastet", "Absatz 4"],
+    ["Folgen weit weg von der Ukraine", "Absatz 5"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "Der Reaktor in Tschornobyl ist 1986 explodiert.", a: "r"},
+    {s: "Das Bundesamt für Strahlenschutz misst die Radioaktivität in Pilzen.", a: "r"},
+    {s: "In Norddeutschland sind die Pilze stärker belastet als im Süden.", a: "f"},
+    {s: "Vor fünf Jahren waren die Werte in Pilzen niedriger als heute.", a: "f"},
+    {s: "Pilze mit über 600 Becquerel pro Kilogramm darf man nicht verkaufen.", a: "r"},
+    {s: "Wer Pilze für sich selbst sammelt, muss sie im Labor testen lassen.", a: "f"},
+    {s: "Der Maronen-Röhrling ist der Pilz mit den höchsten Werten.", a: "n"},
+    {s: "Wildschweine fressen im Waldboden auch Pilze.", a: "r"}
+  ]);
+
+  buildMatch('ub3', [
+    ["1986", "das Jahr der Katastrophe"],
+    ["40", "Jahre seit der Katastrophe"],
+    ["600", "Becquerel pro Kilogramm: Grenzwert für den Verkauf"],
+    ["2000", "Becquerel pro Kilogramm: in manchen Pilzen im Süden gemessen"],
+    ["30", "Jahre: Halbwertszeit von Cäsium-137"]
+  ], {lead: true});
+
+  buildMatch('ub4', [
+    ["die Menge", "кількість"],
+    ["das Risiko", "ризик"],
+    ["die Maßeinheit", "одиниця вимірювання"],
+    ["die Halbwertszeit", "період напіврозпаду"],
+    ["in Maßen", "у міру, помірно"],
+    ["schmerzhaft", "болісний"]
+  ]);
+  wireBlanks('ub4b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🍄','🌲','🔬','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>

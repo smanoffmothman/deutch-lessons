@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abschied von einem Rucksack · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Alltag</span>
+        <h1>Abschied von einem Rucksack</h1>
+        <p class="sub">Сигнальний свисток, батончик і місце для огірків: іронічна колонка про те, чому німці навіть до офісу вирушають, наче в експедицію в Гімалаї.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Ironie</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und du?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Was ist in deiner Tasche?</h2>
+      <div class="card">
+        <p>Was hast du jeden Tag dabei? Trägst du lieber einen Rucksack oder eine Tasche? Und was glaubst du: Warum sieht man in Deutschland so viele Erwachsene mit Rucksack – sogar im Büro?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай: що ти завжди носиш із собою? Колонка — це короткий особистий текст із гумором та іронією. Звертай увагу, де авторка жартує, а де говорить серйозно.
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Der Umzug von Hamburg nach Bayern? Kein Problem. Kinder bekommen? Auch zu <span class="gl" data-uk="впоратися, подужати" data-lemma="schaffen">schaffen</span>. Den schwersten <span class="gl" data-key data-uk="прощання" data-lemma="der Abschied, -e">Abschied</span> ihres Lebens erlebte die Kolumnistin Claudia May an einem ganz anderen Punkt: als sie sich von ihrem alten Rucksack <span class="gl" data-uk="розлучатися, розставатися" data-lemma="sich trennen von">trennen</span> musste.</p>
+
+          <p>Fast zehn Jahre lang war der Tagesrucksack ihr <span class="gl" data-uk="вірний" data-lemma="treu">treuer</span> <span class="gl" data-uk="супутник" data-lemma="der Begleiter, -">Begleiter</span> durch die Großstädte der Welt. Gebaut war er eigentlich für kurze Bergtouren – am Gurt hing sogar eine <span class="gl" data-uk="сигнальний свисток" data-lemma="die Signalpfeife, -n">Signalpfeife</span> für den Notfall. Trotzdem hatte der <span class="gl" data-uk="виробник" data-lemma="der Hersteller, -">Hersteller</span> auch ein Fach für den Laptop eingebaut. Für die Autorin ist das ein <span class="gl" data-uk="доказ" data-lemma="der Beweis, -e">Beweis</span>: Diese Firma versteht die deutsche <span class="gl" data-key data-uk="душа" data-lemma="die Seele, -n">Seele</span>. Denn die Deutschen wollen vor allem eins – auf alles <span class="gl" data-key data-uk="підготовлений" data-lemma="vorbereitet">vorbereitet</span> sein.</p>
+
+          <p>So machte sie sich jeden Morgen in München auf den Weg, <span class="gl" data-uk="споряджений, екіпірований" data-lemma="ausgerüstet">ausgerüstet</span> wie für eine Expedition in den Himalaya: mit Funktionsjacke und <span class="gl" data-uk="енергетичний батончик" data-lemma="der Energieriegel, -">Energieriegel</span>. Nur dass das Ziel nicht der Mount Everest war, sondern ihr Schreibtisch – wofür sie natürlich das Laptopfach brauchte.</p>
+
+          <p>Elegant ist das nicht, <span class="gl" data-uk="визнавати" data-lemma="zugeben (gab zu, hat zugegeben)">gibt</span> sie zu. Ihre italienischen Kolleginnen und Kollegen würden nie auf die Idee kommen, ein <span class="gl" data-uk="стильний, елегантний" data-lemma="stilvoll">stilvolles</span> Büro-Outfit mit einem Rucksack zu kombinieren. Die Autorin fragt sich allerdings, wie sie in ihren kleinen Handtaschen all die Dinge <span class="gl" data-uk="вміщати, розміщувати" data-lemma="unterbringen (brachte unter, hat untergebracht)">unterbringen</span>, die man im Laufe des Tages brauchen könnte. Und was tun sie, wenn sie spontan einen <span class="gl" data-uk="великі закупи" data-lemma="der Großeinkauf, -ä-e">Großeinkauf</span> machen?</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Lastenrad_Obersendling_M%C3%BCnchen_2022.jpg/960px-Lastenrad_Obersendling_M%C3%BCnchen_2022.jpg" alt="Ein Lastenrad in München." width="960" height="720" loading="lazy">
+            <figcaption>Ein Lastenrad in München. Foto: Wikitarisch, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Lastenrad_Obersendling_M%C3%BCnchen_2022.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Ihr Rucksack dagegen <span class="gl" data-uk="витримувати, справлятися" data-lemma="schaffen">schafft</span> alles: Er nimmt große Mengen Lebensmittel auf, und eine lange <span class="gl" data-uk="огірок" data-lemma="die Gurke, -n">Gurke</span> lässt sich einfach außen <span class="gl" data-uk="прив'язувати ременем" data-lemma="festschnallen (schnallte fest, hat festgeschnallt)">festschnallen</span>. Vor allem bleiben die Hände frei. Theoretisch, schreibt sie, könnte sie damit sogar gegen einen Yeti kämpfen. In München ist die Gefahr allerdings eine andere: Radfahrer, die mit ihren <span class="gl" data-key data-uk="вантажний велосипед" data-lemma="das Lastenfahrrad, -ä-er">Lastenfahrrädern</span> – voller Einkäufe und gern mit zwei, drei Kindern an Bord – durch die Stadt <span class="gl" data-uk="мчати" data-lemma="rasen">rasen</span>. Wer so einem „<span class="gl" data-uk="лінкор, бойовий корабель" data-note="тут іронічно: про великий вантажний велосипед" data-lemma="das Schlachtschiff, -e">Schlachtschiff</span>“ im Weg steht, <span class="gl" data-uk="мати погані шанси" data-note="розм. вислів" data-lemma="schlechte Karten haben">hat schlechte Karten</span>. Mit freien Händen kann sie sich wenigstens schnell in einen Hauseingang retten.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>„<span class="gl" data-uk="функціональний (спортивний, туристичний) одяг" data-lemma="die Funktionskleidung">Funktionskleidung</span>“ – also wetterfeste Outdoor-Jacken, Wanderschuhe und Rucksäcke – sieht man in Deutschland auch mitten in der Stadt. Im Ausland gilt dieser praktische Stil oft als typisch deutsch, ähnlich wie Sandalen mit Socken.</p>
+          </aside>
+
+          <p>Doch nach vielen Jahren war der Rucksack einfach kaputt. Für einen Moment sah die Autorin ihre große Chance: endlich ein modischer Mensch werden! Jemand, der mit leichtem <span class="gl" data-uk="багаж" data-lemma="das Gepäck">Gepäck</span> durchs Leben geht, nicht für jedes Wetter und jeden <span class="gl" data-uk="напад голоду" data-lemma="der Hungeranfall, -ä-e">Hungeranfall</span> plant und darauf <span class="gl" data-uk="довіряти" data-lemma="vertrauen">vertraut</span>, dass man den Alltag in der Großstadt auch ohne Signalpfeife <span class="gl" data-uk="долати, справлятися з" data-lemma="bewältigen">bewältigt</span>.</p>
+
+          <p>Und was hat sie dann bestellt? Natürlich wieder einen Rucksack. Immerhin ist der neue kleiner, in verschiedenen <span class="gl" data-uk="відтінок бузкового" data-lemma="der Lilaton, -ö-e">Lilatönen</span> <span class="gl" data-uk="бути витриманим у (кольорі)" data-lemma="gehalten sein in">gehalten</span> und hat weder Gurkengurte noch Signalpfeife. Für ihre <span class="gl" data-uk="за її мірками" data-lemma="für jemandes Verhältnisse">Verhältnisse</span> ist das schon fast eine Revolution. Mehr italienische Eleganz war aus ihrer deutschen Seele <span class="gl" data-uk="поки що" data-lemma="vorerst">vorerst</span> nicht herauszuholen.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери відповіді.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Ernst oder ironisch?</h2>
+      <p class="lead">Колонка повна іронії. Що авторка каже серйозно (це факт), а що — з гумором і перебільшенням? Натисни картку, потім кошик.</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Яке пояснення пасує до слова?</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>Abschied</span><span>vorbereitet</span><span>unterbringen</span><span>Gepäck</span><span>vorerst</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> Der <input type="text" class="blank-input inline" data-ans="Abschied"> von alten Dingen fällt manchmal schwer.</div>
+          <div class="fill-item"><span class="num">2)</span> Mit Regenjacke und Snack ist sie auf alles <input type="text" class="blank-input inline wide" data-ans="vorbereitet">.</div>
+          <div class="fill-item"><span class="num">3)</span> Wie soll ich das alles in dieser kleinen Tasche <input type="text" class="blank-input inline wide" data-ans="unterbringen">?</div>
+          <div class="fill-item"><span class="num">4)</span> Sie möchte mit leichtem <input type="text" class="blank-input inline" data-ans="Gepäck"> reisen.</div>
+          <div class="fill-item"><span class="num">5)</span> Einen Rucksack braucht sie <input type="text" class="blank-input inline" data-ans="vorerst"> noch.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und du?</h2>
+      <p class="lead">Напиши відповіді німецькою. Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Schreib eine kleine Kolumne (80–120 Wörter) über einen Gegenstand, von dem du dich nicht trennen kannst – gern mit etwas Ironie!</label>
+          <textarea id="ub5-a" rows="7" data-words="80-120"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Und bei uns? Tragen Erwachsene in der Ukraine im Büro oder in der Stadt einen Rucksack? Was ist bei uns „typisch“ – praktisch oder elegant?</label>
+          <textarea id="ub5-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Seit Jahren begleitet mich …, Ohne … gehe ich nie aus dem Haus., Ich gebe zu, dass …, Bei uns sieht man oft …, Viele finden es wichtiger, dass …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 8px;">Das nehme ich mit</p>
+        <p>Viele Deutsche wollen auf alles vorbereitet sein – deshalb tragen sie oft auch in der Stadt praktische Rucksäcke und Funktionskleidung. In München fahren viele Menschen mit dem Lastenfahrrad einkaufen. Eine Kolumne ist ein kurzer, persönlicher Text, oft mit Humor und Ironie.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Багато німців хочуть бути готовими до всього, тому навіть у місті носять практичні рюкзаки й функціональний одяг. У Мюнхені чимало людей їздять по покупки на вантажних велосипедах. Колонка — це короткий особистий текст, часто з гумором та іронією.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "rucksack-kolumne";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es in der Kolumne vor allem?",
+     opts: ["Eine Autorin trennt sich von ihrem alten Rucksack – und kauft doch wieder einen.",
+            "Eine Autorin testet die besten Rucksäcke für Bergtouren im Himalaya.",
+            "Eine Autorin erklärt, warum Italiener keine Rucksäcke kaufen dürfen."],
+     correct: "Eine Autorin trennt sich von ihrem alten Rucksack – und kauft doch wieder einen."},
+    {q: "Welchen Ton hat der Text?",
+     opts: ["ironisch und humorvoll", "wütend und kritisch", "traurig und ernst"],
+     correct: "ironisch und humorvoll"}
+  ]);
+  buildMatch('ub1h', [
+    ["Ein Fach, das alles verrät", "Absatz 1"],
+    ["Mit Expeditionsausrüstung ins Büro", "Absatz 2"],
+    ["Eleganz aus Italien", "Absatz 3"],
+    ["Gefahr auf zwei Rädern", "Absatz 4"],
+    ["Ein Traum vom neuen Leben", "Absatz 5"],
+    ["Eine kleine Revolution", "Absatz 6"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5", "Absatz 6"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "Die Autorin ist von Hamburg nach Bayern gezogen.", a: "r"},
+    {s: "Sie hatte ihren alten Rucksack fast zwanzig Jahre lang.", a: "f"},
+    {s: "Der alte Rucksack war ursprünglich für Bergtouren gedacht.", a: "r"},
+    {s: "Die Autorin war selbst schon im Himalaya.", a: "n"},
+    {s: "Ihre italienischen Kollegen tragen im Büro gern Rucksäcke.", a: "f"},
+    {s: "Mit dem Rucksack hat sie beim Einkaufen die Hände frei.", a: "r"},
+    {s: "Der neue Rucksack hat wieder eine Signalpfeife.", a: "f"},
+    {s: "Der neue Rucksack ist kleiner als der alte.", a: "r"}
+  ]);
+
+  buildSort('ub3-sort', {
+    buckets: ["ernst gemeint (Fakt)", "ironisch / übertrieben"],
+    items: [
+      {t: "Am Gurt des Rucksacks hing eine Signalpfeife.", b: "ernst gemeint (Fakt)"},
+      {t: "Der Rucksack hatte ein Laptopfach.", b: "ernst gemeint (Fakt)"},
+      {t: "Der alte Rucksack war nach vielen Jahren kaputt.", b: "ernst gemeint (Fakt)"},
+      {t: "Der neue Rucksack ist lila.", b: "ernst gemeint (Fakt)"},
+      {t: "Mit dem Rucksack könnte sie gegen einen Yeti kämpfen.", b: "ironisch / übertrieben"},
+      {t: "Sie geht wie zu einer Himalaya-Expedition ins Büro.", b: "ironisch / übertrieben"},
+      {t: "Lastenfahrräder sind „Schlachtschiffe“.", b: "ironisch / übertrieben"},
+      {t: "Der Abschied vom Rucksack war schwerer als der Umzug.", b: "ironisch / übertrieben"}
+    ]
+  });
+
+  buildMatch('ub4', [
+    ["ausgerüstet", "mit allem, was man braucht"],
+    ["stilvoll", "elegant, mit gutem Geschmack"],
+    ["bewältigen", "eine schwierige Aufgabe schaffen"],
+    ["vertrauen", "glauben, dass etwas gut geht"],
+    ["die Seele", "das Innere eines Menschen: Gefühle und Charakter"]
+  ], {lead: true});
+  wireBlanks('ub4b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🎒','🥒','🏔️','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
