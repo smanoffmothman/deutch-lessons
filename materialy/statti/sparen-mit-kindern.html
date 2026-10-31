@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mit Kindern sparen – so geht's · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Alltag</span>
+        <h1>Mit Kindern sparen – so geht's</h1>
+        <p class="sub">Дитина в Німеччині коштує в середньому 763 євро на місяць. Але є блошині ринки, безкоштовні бібліотеки, вільний вхід у день народження й поїзди, де діти їдуть задарма.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wo spart man?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Kinder sind teuer?</h2>
+      <div class="card">
+        <p>Was kostet ein Kind? Denk an Kleidung, Spielsachen, Bücher, Ausflüge … Wo kann eine Familie Geld sparen?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай (або обговоріть у парі): на що родина витрачає найбільше грошей на дітей? Де можна заощадити — на одязі, книжках, поїздках?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">„Kinder sind teuer“, sagen viele. Nach Zahlen des Statistischen Bundesamts geben Eltern in Deutschland <span class="gl" data-uk="у середньому" data-lemma="durchschnittlich">durchschnittlich</span> 763 Euro im Monat für ein Kind aus. Die Zahl ist von 2018 – neuere gibt es nicht. Aber: <span class="gl" data-key data-uk="заощаджувати" data-lemma="sparen">Sparen</span> ist möglich!</p>
+
+          <h3>Kleidung und Spielsachen</h3>
+          <p>Kinder <span class="gl" data-uk="рости" data-lemma="wachsen (wuchs, ist gewachsen)">wachsen</span> schnell. Darum kaufen viele Eltern <span class="gl" data-uk="вживаний, секонд-хенд" data-lemma="secondhand">secondhand</span> – auf Internetportalen oder auf Plattformen für Nachbarn. Im Frühling und im Herbst gibt es außerdem viele <span class="gl" data-key data-uk="блошиний ринок" data-lemma="der Flohmarkt, -ä-e">Flohmärkte</span> für Kindersachen. Kleine <span class="gl" data-uk="папірець, записка" data-lemma="der Zettel, -">Zettel</span> an Ampeln und Laternen sagen, wo und wann. Tipp: früh hingehen! Die schönsten Sachen sind schnell weg.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/L%C3%BCneburg_Kinderflohmarkt.jpg/960px-L%C3%BCneburg_Kinderflohmarkt.jpg" alt="Ein Kinderflohmarkt in Lüneburg, von oben gesehen." width="960" height="720" loading="lazy">
+            <figcaption>Ein Kinderflohmarkt in Lüneburg, von oben gesehen. Foto: Andreas Praefcke, <a href="https://creativecommons.org/licenses/by/3.0" target="_blank" rel="noopener">CC BY 3.0</a>, <a href="https://commons.wikimedia.org/wiki/File:L%C3%BCneburg_Kinderflohmarkt.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>In Städten stehen manchmal Kartons vor dem Haus. Darauf steht: „Zu <span class="gl" data-uk="віддавати безкоштовно, дарувати" data-lemma="verschenken">verschenken</span>“. Oft ist das nur alter Kram – aber manchmal findet man einen kleinen <span class="gl" data-uk="скарб" data-lemma="der Schatz, -ä-e">Schatz</span>.</p>
+
+          <h3>Bücher, Spiele und Feste</h3>
+          <p>In vielen Orten gibt es <span class="gl" data-key data-uk="книжкова шафа (для обміну книжками)" data-lemma="der Bücherschrank, -ä-e">Bücherschränke</span> auf der Straße: Man stellt ein Buch hinein oder nimmt eins mit – kostenlos. Auch die <span class="gl" data-key data-uk="бібліотека" data-lemma="die Bibliothek, -en">Bibliothek</span> ist super: Bis 18 Jahre ist der <span class="gl" data-uk="читацький квиток" data-lemma="der Büchereiausweis, -e">Büchereiausweis</span> oft gratis. Man kann dort nicht nur Bücher, sondern auch Filme, Spiele und Hörspiele <span class="gl" data-uk="позичати" data-lemma="ausleihen (lieh aus, hat ausgeliehen)">ausleihen</span>. Oft gibt es auch Kino, Lesungen oder Gaming-Nachmittage. In Familienzentren treffen Eltern andere Eltern, und Kinder spielen zusammen.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/%C3%96ffentlicher_B%C3%BCcherschrank_%28Walld%C3%BCrn%29.jpg/960px-%C3%96ffentlicher_B%C3%BCcherschrank_%28Walld%C3%BCrn%29.jpg" alt="Ein öffentlicher Bücherschrank in Walldürn." width="960" height="720" loading="lazy">
+            <figcaption>Ein öffentlicher Bücherschrank in Walldürn. Foto: Granpar, <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/wiki/File:%C3%96ffentlicher_B%C3%BCcherschrank_(Walld%C3%BCrn).jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Hat ein Kind Geburtstag? Dann ist in manchen Freizeitparks und Indoorspielplätzen der <span class="gl" data-key data-uk="вхід (плата за вхід)" data-lemma="der Eintritt">Eintritt</span> frei. Babys und kleine Kinder zahlen im Zoo, im Schwimmbad oder im Museum meistens sowieso nichts. Mit einem Familienpass der Stadt ist vieles billiger – das steht auf der Website der Stadt.</p>
+
+          <h3>Günstig unterwegs</h3>
+          <p>In den Fernzügen der Deutschen Bahn fahren Kinder bis 14 Jahre mit einem Erwachsenen <span class="gl" data-key data-uk="безкоштовно" data-lemma="kostenlos">kostenlos</span>. Fahren Kinder von 6 bis 14 Jahren allein, bekommen sie 50 Prozent <span class="gl" data-uk="знижка" data-lemma="der Rabatt, -e">Rabatt</span>. In Bus und Straßenbahn fahren Kinder oft bis zum sechsten Geburtstag gratis. Und in manchen Städten kann man sogar ein <span class="gl" data-uk="вантажний велосипед" data-lemma="das Lastenrad, -ä-er">Lastenrad</span> kostenlos ausleihen.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Für jedes Kind bekommen Eltern in Deutschland <span class="gl" data-uk="допомога на дитину" data-lemma="das Kindergeld">Kindergeld</span>: 2026 sind das 259 Euro im Monat, bis das Kind 18 ist. Nach der Geburt gibt es außerdem <span class="gl" data-uk="батьківська допомога" data-lemma="das Elterngeld">Elterngeld</span> für Mütter und Väter, die weniger oder gar nicht arbeiten, weil sie sich um das Baby kümmern.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wo spart man?</h2>
+      <p class="lead">Куди належить порада: одяг та іграшки, вільний час чи поїздки? Натисни картку, потім кошик.</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>Flohmarkt</span><span>ausleihen</span><span>Eintritt</span><span>kostenlos</span><span>verschenken</span></div>
+        <div id="ub4b-list">
+          <div class="fill-item"><span class="num">1)</span> Am Samstag gehen wir auf den <input type="text" class="blank-input inline" data-ans="Flohmarkt"> und kaufen Kinderkleidung.</div>
+          <div class="fill-item"><span class="num">2)</span> In der Bibliothek kann man Filme <input type="text" class="blank-input inline" data-ans="ausleihen">.</div>
+          <div class="fill-item"><span class="num">3)</span> Am Geburtstag ist der <input type="text" class="blank-input inline" data-ans="Eintritt"> in den Freizeitpark manchmal frei.</div>
+          <div class="fill-item"><span class="num">4)</span> Kinder unter sechs fahren im Bus oft <input type="text" class="blank-input inline" data-ans="kostenlos|gratis">.</div>
+          <div class="fill-item"><span class="num">5)</span> Wir haben zu viele Spielsachen. Wir wollen ein paar <input type="text" class="blank-input inline" data-ans="verschenken">.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4b-check">Prüfen</button>
+          <button class="btn secondary" id="ub4b-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4b-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (3–5 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Welcher Spartipp aus dem Text gefällt dir am besten? Warum?</label>
+          <textarea id="ub5-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Wie sparen Familien in der Ukraine? Gibt es bei uns auch Flohmärkte, Bücherschränke oder günstige Tickets für Kinder?</label>
+          <textarea id="ub5-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Mir gefällt …, weil …, Bei uns gibt es auch …, In der Ukraine kann man …, Kinder zahlen bei uns …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 8px;">Das nehme ich mit</p>
+        <p>Familien in Deutschland können viel sparen: Kleidung vom Flohmarkt, Bücher aus dem Bücherschrank und der Bibliothek, freier Eintritt am Geburtstag. In den Fernzügen der Bahn fahren Kinder bis 14 Jahre mit einem Erwachsenen kostenlos. Außerdem bekommen Eltern Kindergeld.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Німецькі родини можуть чимало заощадити: одяг із блошиного ринку, книжки з вуличної книжкової шафи й бібліотеки, вільний вхід у день народження. У поїздах далекого сполучення діти до 14 років із дорослим їдуть безкоштовно. А ще батьки отримують допомогу на дитину (Kindergeld).
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "sparen-mit-kindern";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text?",
+     opts: ["Wie Familien mit Kindern in Deutschland Geld sparen können",
+            "Warum Kinder in Deutschland so viel Taschengeld bekommen",
+            "Wo man in Deutschland die teuersten Spielsachen kauft"],
+     correct: "Wie Familien mit Kindern in Deutschland Geld sparen können"}
+  ]);
+  buildMatch('ub1h', [
+    ["Früh zum Flohmarkt!", "Absatz 1"],
+    ["Ein Karton vor der Tür", "Absatz 2"],
+    ["Lesen, spielen, Leute treffen", "Absatz 3"],
+    ["Ein Geschenk zum Geburtstag", "Absatz 4"],
+    ["Mit Zug und Rad", "Absatz 5"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "Die Zahl 763 Euro ist ganz neu.", a: "f"},
+    {s: "Flohmärkte für Kindersachen gibt es vor allem im Frühling und im Herbst.", a: "r"},
+    {s: "In den Kartons „Zu verschenken“ ist immer nur Müll.", a: "f"},
+    {s: "Bis 18 Jahre ist der Büchereiausweis oft kostenlos.", a: "r"},
+    {s: "Im Zoo bekommen Kinder ein Eis gratis.", a: "n"},
+    {s: "Kinder bis 14 Jahre fahren mit einem Erwachsenen im Fernzug kostenlos.", a: "r"},
+    {s: "Kinder, die allein im Fernzug fahren, zahlen den vollen Preis.", a: "f"}
+  ]);
+
+  buildSort('ub3-sort', {
+    buckets: ["Kleidung & Spielsachen", "Freizeit", "Unterwegs"],
+    items: [
+      {t: "Secondhand kaufen", b: "Kleidung & Spielsachen"},
+      {t: "auf einen Kinderflohmarkt gehen", b: "Kleidung & Spielsachen"},
+      {t: "Kartons „Zu verschenken“", b: "Kleidung & Spielsachen"},
+      {t: "Hörspiele in der Bibliothek ausleihen", b: "Freizeit"},
+      {t: "freier Eintritt am Geburtstag", b: "Freizeit"},
+      {t: "Familienpass der Stadt", b: "Freizeit"},
+      {t: "Kinder fahren mit Erwachsenen gratis Zug", b: "Unterwegs"},
+      {t: "ein Lastenrad kostenlos ausleihen", b: "Unterwegs"}
+    ]
+  });
+
+  buildMatch('ub4', [
+    ["durchschnittlich", "у середньому"],
+    ["der Zettel", "папірець, записка"],
+    ["der Schatz", "скарб"],
+    ["der Rabatt", "знижка"],
+    ["das Kindergeld", "допомога на дитину"]
+  ]);
+  wireBlanks('ub4b');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🧸','📚','🚆','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
