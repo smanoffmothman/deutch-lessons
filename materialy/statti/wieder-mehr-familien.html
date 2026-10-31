@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wieder mehr Familien · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Gesellschaft</span>
+        <h1>Wieder mehr Familien</h1>
+        <p class="sub">Тридцять років у Німеччині ставало дедалі менше сімей — і раптом тенденція змінилася. Чому? Відповідь пов'язана з міграцією.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Zahlen</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== VOR DEM LESEN ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Was ist eine Familie?</h2>
+      <div class="card">
+        <p>Wer gehört zu deiner Familie? Wie viele Kinder haben Familien in deiner Stadt? Waren Familien früher größer als heute?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай: скільки дітей було в родинах твоїх бабусь і дідусів, а скільки — у твоїх батьків? Як гадаєш, чому сім'ї стали меншими?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Eine gute <span class="gl" data-uk="новина" data-lemma="die Nachricht, -en">Nachricht</span> aus der Statistik: In Deutschland leben wieder mehr Menschen in einer Familie. Viele Jahre lang war es genau <span class="gl" data-uk="навпаки" data-lemma="umgekehrt">umgekehrt</span>.</p>
+
+          <p>1996 lebten noch 57 Prozent der Menschen in einer Familie. 2015 waren es nur noch 48 Prozent. 2025 ist die Zahl wieder <span class="gl" data-key data-uk="зростати" data-lemma="steigen (stieg, ist gestiegen)">gestiegen</span>: auf 49 Prozent – also fast jeder zweite Mensch in Deutschland. Der Unterschied zu 2015 ist klein, aber wichtig: Der lange <span class="gl" data-uk="тенденція" data-lemma="der Trend, -s">Trend</span> nach unten ist zu Ende. Das <span class="gl" data-uk="повідомляти" data-lemma="mitteilen (teilte mit, hat mitgeteilt)">teilt</span> das <span class="gl" data-key data-uk="Федеральне статистичне відомство" data-lemma="das Statistische Bundesamt">Statistische Bundesamt</span> <span class="gl" data-uk="повідомляти" data-lemma="mitteilen (teilte mit, hat mitgeteilt)">mit</span>.</p>
+
+          <p>Warum gab es so lange immer weniger Familien? Nach dem Zweiten Weltkrieg wurden besonders viele Kinder geboren. Man nennt sie die <span class="gl" data-key data-uk="бебі-бумери" data-lemma="die Babyboomer (Pl.)">Babyboomer</span>. Als diese Menschen <span class="gl" data-uk="дорослий" data-lemma="erwachsen">erwachsen</span> waren, haben sie selbst weniger Kinder bekommen – auch wegen der <span class="gl" data-uk="протизаплідна пігулка" data-lemma="die Pille">Pille</span>.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Spielplatz_S%C3%A4gm%C3%BCllermatte_-_Lichtental_01.jpg/960px-Spielplatz_S%C3%A4gm%C3%BCllermatte_-_Lichtental_01.jpg" alt="Ein Spielplatz in Baden-Baden." width="960" height="470" loading="lazy">
+            <figcaption>Ein Spielplatz in Baden-Baden. Foto: H. Zell, <a href="https://creativecommons.org/licenses/by-sa/3.0" target="_blank" rel="noopener">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Spielplatz_S%C3%A4gm%C3%BCllermatte_-_Lichtental_01.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Und warum gibt es jetzt wieder mehr Familien? Sehr wichtig ist die <span class="gl" data-key data-uk="імміграція, прибуття в країну" data-lemma="die Zuwanderung">Zuwanderung</span>. Menschen, die nach Deutschland kommen, sind oft jünger. Sie bekommen öfter Kinder – und meistens auch mehr Kinder. 2025 hatte jede dritte Familie in Deutschland eine <span class="gl" data-key data-uk="міграційне походження" data-lemma="die Migrationsgeschichte, -n">Migrationsgeschichte</span>: Das heißt: Jemand in der Familie ist nach Deutschland <span class="gl" data-uk="іммігрувати, переселитися" data-lemma="einwandern (wanderte ein, ist eingewandert)">eingewandert</span>.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Was ist eine Familie? In der deutschen Statistik ist das eine <span class="gl" data-uk="домогосподарство" data-lemma="der Haushalt, -e">Haushalt</span> mit Eltern und Kindern – zum Beispiel Mutter, Vater und Kind, aber auch eine Mutter oder ein Vater allein mit Kind. Ein Paar ohne Kinder ist in dieser Statistik keine Familie.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Die Zahlen im Text</h2>
+      <p class="lead">З'єднай рік із часткою людей, які тоді жили в сім'ї.</p>
+      <div class="card" id="ub3-list"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">Встав слова з рамки у правильній формі.</p>
+      <div class="card">
+        <div class="wordbank"><span>gestiegen</span><span>Zuwanderung</span><span>erwachsen</span><span>Babyboomer</span><span>Nachricht</span></div>
+        <div id="ub4-list">
+          <div class="fill-item"><span class="num">1)</span> Das ist eine gute <input type="text" class="blank-input inline" data-ans="Nachricht">!</div>
+          <div class="fill-item"><span class="num">2)</span> Die Zahl der Familien ist 2025 wieder <input type="text" class="blank-input inline" data-ans="gestiegen">.</div>
+          <div class="fill-item"><span class="num">3)</span> Die <input type="text" class="blank-input inline" data-ans="Babyboomer"> sind nach dem Krieg geboren.</div>
+          <div class="fill-item"><span class="num">4)</span> Mit 18 Jahren ist man in Deutschland <input type="text" class="blank-input inline" data-ans="erwachsen">.</div>
+          <div class="fill-item"><span class="num">5)</span> Durch die <input type="text" class="blank-input inline wide" data-ans="Zuwanderung"> gibt es mehr junge Menschen.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4-check">Prüfen</button>
+          <button class="btn secondary" id="ub4-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5 ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (3–5 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Stell deine Familie vor: Wer gehört dazu? Wie viele Geschwister hast du?</label>
+          <textarea id="ub5-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Wie viele Kinder haben Familien in der Ukraine heute meistens? War das bei deinen Großeltern anders?</label>
+          <textarea id="ub5-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Zu meiner Familie gehören …, Ich habe einen Bruder / eine Schwester / keine Geschwister., Bei uns haben viele Familien …, Meine Oma hatte …, Früher …, heute …</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <!-- ===== FERTIG ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 8px;">Das nehme ich mit</p>
+        <p>Lange lebten in Deutschland immer weniger Menschen in Familien: 1996 waren es 57 Prozent, 2015 nur 48 Prozent. 2025 waren es wieder 49 Prozent. Ein Grund ist die Zuwanderung: Jede dritte Familie hat eine Migrationsgeschichte.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Довгий час у Німеччині дедалі менше людей жили в сім'ях: 1996 року — 57 %, 2015 року — лише 48 %. 2025 року їх знову стало 49 %. Одна з причин — імміграція: кожна третя сім'я має міграційне походження.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "wieder-mehr-familien";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Was ist die wichtigste Information im Text?",
+     opts: ["In Deutschland leben wieder mehr Menschen in Familien.",
+            "In Deutschland gibt es keine Familien mit Kindern mehr.",
+            "Familien in Deutschland haben heute fünf Kinder."],
+     correct: "In Deutschland leben wieder mehr Menschen in Familien."}
+  ]);
+  buildMatch('ub1h', [
+    ["Die Zahlen von 1996 bis 2025", "Absatz 1"],
+    ["Warum gab es weniger Familien?", "Absatz 2"],
+    ["Warum gibt es wieder mehr?", "Absatz 3"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "1996 lebten mehr Menschen in Familien als 2015.", a: "r"},
+    {s: "Die Zahl ist von 2015 bis 2025 immer weiter gefallen.", a: "f"},
+    {s: "Nach dem Zweiten Weltkrieg wurden besonders viele Kinder geboren.", a: "r"},
+    {s: "Die Babyboomer haben selbst sehr viele Kinder bekommen.", a: "f"},
+    {s: "Zugewanderte Menschen sind oft jünger.", a: "r"},
+    {s: "Die meisten Zugewanderten kommen aus Spanien.", a: "n"},
+    {s: "2025 hatte jede zweite Familie eine Migrationsgeschichte.", a: "f"}
+  ]);
+
+  buildMatch('ub3', [
+    ["1996", "57 Prozent"],
+    ["2015", "48 Prozent"],
+    ["2025", "49 Prozent"]
+  ]);
+
+  wireBlanks('ub4');
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['👨‍👩‍👧','📊','🏡','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
