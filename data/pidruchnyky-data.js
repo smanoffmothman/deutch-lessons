@@ -189,7 +189,7 @@ const PIDRUCHNYKY = [
       ] },
       { id: "l4", label: "4", nazva: "Sport ist gesund", storinky: "73–88", dity: [
         { id: "l4-a", label: "A", nazva: "Wir machen Sport", storinky: "74–78", typ: "vpravy", gram: ["infinitiv-um-zu", "perfekt-plusquamperfekt"], opublikovano: 16 },
-        { id: "l4-b", label: "B", nazva: "Lieblingssportarten", storinky: "79–83", typ: "vpravy" },
+        { id: "l4-b", label: "B", nazva: "Lieblingssportarten", storinky: "79–83", typ: "vpravy", opublikovano: 17 },
         { id: "l4-c", label: "C", nazva: "Wiederholung", storinky: "84–85", typ: "povtorennya", gram: ["infinitiv-um-zu", "perfekt-plusquamperfekt"] },
         { id: "l4-d", label: "D", nazva: "Geschichtenzeit", storinky: "86", typ: "chytannya" },
         { id: "l4-e", label: "E", nazva: "Projektarbeit", storinky: "87", typ: "bez-storinky" },
