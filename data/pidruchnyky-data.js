@@ -182,8 +182,8 @@ const PIDRUCHNYKY = [
         { id: "l3-a", label: "A", nazva: "Das schmeckt gut", storinky: "52–57", typ: "vpravy", gram: ["adjektivdeklination"], opublikovano: 11 },
         { id: "l3-b", label: "B", nazva: "Internationale Küche", storinky: "58–61", typ: "vpravy", gram: ["adjektivdeklination"], opublikovano: 12 },
         { id: "l3-c", label: "C", nazva: "Wir gehen essen", storinky: "62–66", typ: "vpravy", gram: ["indefinitpronomen", "kausalsaetze"], opublikovano: 13 },
-        { id: "l3-d", label: "D", nazva: "Wiederholung", storinky: "67–69", typ: "povtorennya", gram: ["adjektivdeklination", "indefinitpronomen"] },
-        { id: "l3-e", label: "E", nazva: "Geschichtenzeit", storinky: "70", typ: "chytannya" },
+        { id: "l3-d", label: "D", nazva: "Wiederholung", storinky: "67–69", typ: "povtorennya", gram: ["adjektivdeklination", "indefinitpronomen"], opublikovano: 14 },
+        { id: "l3-e", label: "E", nazva: "Geschichtenzeit", storinky: "70", typ: "chytannya", opublikovano: 15 },
         { id: "l3-f", label: "F", nazva: "Projektarbeit", storinky: "71", typ: "bez-storinky" },
         { id: "l3-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "72", typ: "bez-storinky" }
       ] },
