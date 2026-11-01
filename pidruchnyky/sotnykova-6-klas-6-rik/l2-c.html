@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 2, Modul C: Lebensmittel kaufen — Німецька мова 6 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 6 КЛАС</span>
+        <h1>Lektion 2 · Modul C: Lebensmittel kaufen</h1>
+        <p class="sub">Урок про покупки в супермаркеті: відділи, кількості й ціни, список покупок. Причина з weil — «weil ich Milch brauche»: дієслово в кінці. Текст і діалог з озвученням, вправи, говоріння, письмо і підсумковий тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Abteilungen</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Mengen und Preise</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · weil</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortfolge</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власний текст + вправа на розуміння ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Der vergessene Einkaufszettel</h2>
+      <p class="lead">Ерік розповідає, як він купував продукти на сирники для вечірки Грети. Послухай і прочитай. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l2-c-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Für Gretas Überraschungsparty wollen Daryna und ich Syrnyky machen — kleine ukrainische Pfannkuchen aus <span class="gl" data-uk="сир (кисломолочний)" data-lemma="der Quark">Quark</span>. Das Rezept ist von Darynas Oma. Daryna schreibt mir einen <span class="gl" data-uk="список покупок" data-lemma="der Einkaufszettel, -">Einkaufszettel</span>, und ich gehe allein in den Supermarkt, weil sie noch zum Tanzkurs muss.</p>
+        <p>Im Supermarkt merke ich: Der Zettel ist weg! Ich habe ihn zu Hause <span class="gl" data-uk="забувати" data-lemma="vergessen (vergisst), hat vergessen">vergessen</span>, weil ich so schnell gelaufen bin. Ich rufe Daryna nicht an, weil sie gerade tanzt. Also muss ich mich selbst erinnern.</p>
+        <p>Zuerst gehe ich in die <span class="gl" data-uk="відділ молочних продуктів" data-lemma="die Milchabteilung, -en">Milchabteilung</span>. Quark brauche ich bestimmt, weil Syrnyky aus Quark sind. Ich nehme ein <span class="gl" data-uk="кілограм" data-lemma="das Kilo, -(s)">Kilo</span> — oder waren es nur fünfhundert <span class="gl" data-uk="грам" data-lemma="das Gramm">Gramm</span>? Egal, ich nehme lieber mehr. Daneben liegen die <span class="gl" data-uk="яйце" data-lemma="das Ei, -er">Eier</span>. Ich kaufe gleich zehn Stück.</p>
+        <p>Dann suche ich das <span class="gl" data-uk="борошно" data-lemma="das Mehl">Mehl</span>, aber ich kann es nicht finden. Ein Verkäufer hilft mir: „Das Mehl ist in der dritten <span class="gl" data-uk="ряд" data-lemma="die Reihe, -n">Reihe</span> links, neben dem <span class="gl" data-uk="цукор" data-lemma="der Zucker">Zucker</span>.“ Zucker! Den brauche ich auch. Ich nehme eine <span class="gl" data-uk="пачка, упаковка" data-lemma="die Packung, -en">Packung</span> Mehl und eine Packung Zucker. An der Kasse <span class="gl" data-uk="платити" data-lemma="bezahlen">bezahle</span> ich neun Euro achtzig.</p>
+        <p>Zu Hause liegt der Zettel auf dem Tisch: „500 g Quark, 2 Eier, 4 Löffel Mehl, 2 Löffel Zucker, <span class="gl" data-uk="родзинка" data-lemma="die Rosine, -n">Rosinen</span>.“ Oh nein! Ich habe viel zu viel gekauft, und die Rosinen <span class="gl" data-uk="бракувати, не вистачати" data-lemma="fehlen">fehlen</span>!</p>
+        <p>Daryna lacht nur: „Kein Problem! Dann machen wir eben doppelt so viele Syrnyky. Ohne Rosinen schmecken sie auch.“ Und wirklich: Auf der Party waren alle Syrnyky in zehn Minuten weg!</p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">weil: дієслово в кінці</h2>
+      <p class="lead">Чому? — <b>Warum?</b> Причину передає підрядне речення з <b>weil</b> (бо, тому що). Головне правило: у реченні з weil відмінюване дієслово стоїть <b>у самому кінці</b>.</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. Порядок слів</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Головне речення</th><th>weil … дієслово</th></tr>
+          <tr><td>Ich gehe einkaufen,</td><td>weil ich Milch <strong>brauche</strong>.</td></tr>
+          <tr><td>Erik kauft Quark,</td><td>weil er Syrnyky backen <strong>will</strong>.</td></tr>
+          <tr><td>Der Zettel ist weg,</td><td>weil ich ihn vergessen <strong>habe</strong>.</td></tr>
+          <tr><td>Mama ist müde,</td><td>weil sie lange <strong>einkauft</strong>.</td></tr>
+        </table></div>
+        <div class="merke"><b>weil</b> — одразу після коми, далі підмет, а відмінюване дієслово — в самому кінці. З модальним дієсловом — інфінітив + <b>will / muss / kann</b>. У Perfekt — Partizip + <b>habe / bin</b>. Відокремлюваний префікс знову «приклеюється»: weil sie <b>einkauft</b>.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. weil чи denn?</p>
+        <p class="beispiel">Ich kaufe Zucker, <b>denn</b> ich backe einen Kuchen. <i>(denn — звичайний порядок слів)</i></p>
+        <p class="beispiel">Ich kaufe Zucker, <b>weil</b> ich einen Kuchen <b>backe</b>. <i>(weil — дієслово в кінці)</i></p>
+        <div class="merke">Значення однакове — «бо, тому що». Різниця лише в порядку слів. Відповідь на <b>Warum?</b> зазвичай починається з <b>Weil …</b>: — Warum gehst du in den Supermarkt? — <b>Weil</b> ich Brot <b>brauche</b>.</div>
+        <div class="merke">В українській «бо» і «тому що» не змінюють порядку слів. У німецькій після weil треба «відправити» дієслово в кінець.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. Скільки? — Mengen</p>
+        <p class="beispiel">eine <b>Tafel</b> Schokolade · eine <b>Flasche</b> Wasser · eine <b>Packung</b> Mehl · ein <b>Becher</b> Jogurt · ein <b>Kilo</b> Äpfel · 500 <b>Gramm</b> Quark · ein <b>Liter</b> Milch</p>
+        <div class="merke">Після слів кількості — <b>без артикля</b> і без «з»: ein Kilo Äpfel (кілограм яблук). Gramm, Kilo, Liter у множині не змінюються: zwei Kilo, 500 Gramm.</div>
+        <p class="beispiel">2,49 € = zwei Euro neunundvierzig · Was <b>kostet</b> der Quark? — Was <b>kosten</b> die Eier?</p>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">4. Типові помилки</p>
+        <p>✗ …, weil ich brauche Milch. → ✓ …, weil ich Milch <b>brauche</b>.</p>
+        <p>✗ …, weil er will Quark kaufen. → ✓ …, weil er Quark kaufen <b>will</b>.</p>
+        <p>✗ …, weil ich habe ihn vergessen. → ✓ …, weil ich ihn vergessen <b>habe</b>.</p>
+        <p>✗ …, weil sie kauft ein. → ✓ …, weil sie <b>einkauft</b>.</p>
+        <p>✗ zwei Kilos Äpfel → ✓ zwei <b>Kilo</b> Äpfel</p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: сортування за відділами ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">In welcher Abteilung?</h2>
+      <p class="lead">Розклади продукти по відділах супермаркету: натисни продукт, потім відділ.</p>
+      <div class="card" id="ub1-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 2: кількості й ціни ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Mengen und Preise</h2>
+      <p class="lead">Вибери правильне слово кількості або правильно прочитай ціну.</p>
+      <div class="card" id="ub2-quiz"></div>
+    </section>
+
+    <!-- ===== Üb. 3: weil — перетворення ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Warum? — Weil …</h2>
+      <p class="lead">З'єднай два речення через <b>weil</b>. Пиши ціле речення з комою. Дієслово — в кінець!</p>
+      <div class="card" id="ub3-tr"></div>
+    </section>
+
+    <!-- ===== Üb. 4: порядок слів ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortfolge mit weil</h2>
+      <p class="lead">Склади речення з карток. Почни з підмета (хто?), а причину — після коми з weil.</p>
+      <div class="card" id="ub4-order"></div>
+    </section>
+
+    <!-- ===== HÖREN — власний діалог, озвучений синтезатором ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Papa, eine Frage!</h2>
+      <p class="lead">Грета в супермаркеті телефонує татові, бо дещо зі списку покупок не знаходить. Послухай діалог (можна двічі) і дай відповіді. Текст діалогу — внизу, але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l2-c-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Greta:</b> Papa, ich bin im Supermarkt. Ich habe eine Frage.<br>
+          <b>Papa:</b> Ja, was ist los?<br>
+          <b>Greta:</b> Auf dem Zettel steht Vollkornbrot, aber es gibt keins mehr.<br>
+          <b>Papa:</b> Dann nimm sechs Brötchen. Die mag Lotte sowieso lieber.<br>
+          <b>Greta:</b> Okay. Und Milch? Eine Flasche oder zwei?<br>
+          <b>Papa:</b> Zwei, bitte, weil Oma morgen zum Frühstück kommt.<br>
+          <b>Greta:</b> Gut. Die Butter ist heute im Sonderangebot. Eine Packung kostet nur einen Euro neunundvierzig. Soll ich zwei nehmen?<br>
+          <b>Papa:</b> Ja, super! Butter brauchen wir immer.<br>
+          <b>Greta:</b> Und wo finde ich die Nüsse? Ich suche schon zehn Minuten.<br>
+          <b>Papa:</b> Keine Ahnung. Frag doch eine Verkäuferin.<br>
+          <b>Greta:</b> Moment … Die Frau sagt: in der fünften Reihe rechts, neben den Rosinen.<br>
+          <b>Papa:</b> Prima. Kaufst du auch Schokolade?<br>
+          <b>Greta:</b> Natürlich! Eine Tafel für Lotte, weil sie heute in Mathe eine Eins bekommen hat.<br>
+          <b>Papa:</b> Wie schön! Dann nimm zwei Tafeln — eine ist für dich.<br>
+          <b>Greta:</b> Danke, Papa! Bis gleich!
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN — 🎤 + говоріння зі зразком ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Im Supermarkt</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Du findest im Supermarkt etwas nicht. Frag einen Verkäufer höflich.</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Entschuldigung, können Sie mir bitte helfen? Ich suche den Zucker, aber ich kann ihn nicht finden. — Danke schön!</div>
+        </div>
+        <div class="qa">
+          <label>2. Warum gehst du heute einkaufen? Nenne drei Gründe mit weil.</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Ich gehe heute einkaufen, weil wir keine Milch mehr haben. Ich kaufe auch Äpfel, weil ich einen Apfelkuchen backen will. Und ich kaufe Schokolade, weil ich sie sehr gern mag.</div>
+        </div>
+        <div class="qa">
+          <label>3. Was steht auf deinem Einkaufszettel für ein Picknick? Nenne Mengen.</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Für das Picknick brauchen wir ein Kilo Äpfel, eine Flasche Wasser, zwei Flaschen Saft, sechs Brötchen, 200 Gramm Käse und eine Tafel Schokolade.</div>
+        </div>
+        <div class="qa">
+          <label>4. Spielt einen Dialog an der Kasse: Was kostet das? Wie viel bezahlst du?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">— Guten Tag! Das macht sieben Euro vierzig. — Hier sind zehn Euro. — Danke, und zwei Euro sechzig zurück. Brauchen Sie eine Tüte? — Nein, danke, ich habe eine Tasche.</div>
+        </div>
+        <div class="qa">
+          <label>5. Hast du schon einmal etwas beim Einkaufen vergessen? Erzähl.</label>
+          <button class="btn secondary" type="button" data-reveal="spr5">Muster zeigen</button>
+          <div class="reveal" id="spr5">Ja! Einmal hat mich meine Mutter in den Supermarkt geschickt. Ich habe alles gekauft, nur das Brot habe ich vergessen, weil ich keinen Einkaufszettel hatte. Ich musste noch einmal gehen.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN — письмо за планом ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Kannst du bitte einkaufen?</h2>
+      <p class="lead">Увечері в тебе гості, а ти ще в школі. Напиши старшому братові або сестрі повідомлення на 50–70 слів: попроси купити продукти.</p>
+      <div class="card">
+        <p>1) звертання й прохання; 2) що купити — 4–5 продуктів з кількістю (eine Packung, ein Kilo…); 3) навіщо або чому — двічі з weil; 4) де лежать гроші; 5) подяка й підпис.</p>
+        <p class="beispiel">Hallo …! Kannst du bitte einkaufen? · Wir brauchen … · eine Flasche / eine Packung / ein Kilo … · …, weil … · Das Geld liegt … · Danke! Dein / Deine …</p>
+        <div class="qa">
+          <label for="schreiben-text">Deine Nachricht</label>
+          <textarea id="schreiben-text" rows="9" placeholder="Hallo …! Kannst du bitte einkaufen? …"
+            data-words="50-70"
+            data-must="weil|Danke"
+            data-check="Прохання|4–5 продуктів з кількістю|Двічі weil (дієслово в кінці!)|Де гроші|Подяка й підпис"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Hallo Andrij! Kannst du bitte nach der Uni einkaufen? Wir brauchen eine Packung Nudeln, 500 Gramm Käse, ein Kilo Tomaten und zwei Flaschen Saft, weil heute Abend meine Freunde kommen. Kauf bitte auch eine Tafel Schokolade, weil Kira Schokolade liebt. Das Geld liegt auf dem Tisch in der Küche. Danke, du bist der beste Bruder!<br>Deine Olena</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — режим контрольної: одна спроба, лише ця вкладка йде в бал ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Ich kaufe Mehl, weil ich einen Kuchen
+          <select class="blank inline" data-ans="backen will"><option value="">—</option><option>will backen</option><option>backen will</option><option>backen</option></select>.</div>
+        <div class="fill-item"><span class="num">8)</span> Wir brauchen Milch, weil Oma morgen
+          <select class="blank inline" data-ans="kommt"><option value="">—</option><option>kommt</option><option>kommen</option><option>kommt sie</option></select>.</div>
+        <div class="fill-item"><span class="num">9)</span> Er geht noch einmal los, weil er die Butter
+          <select class="blank inline" data-ans="vergessen hat"><option value="">—</option><option>hat vergessen</option><option>vergessen hat</option><option>vergessen</option></select>.</div>
+        <div class="fill-item"><span class="num">10)</span> Ich nehme zwei
+          <select class="blank inline" data-ans="Kilo"><option value="">—</option><option>Kilos</option><option>Kilo</option><option>Kiloe</option></select> Kartoffeln.</div>
+        <div class="fill-item"><span class="num">11)</span> Was
+          <select class="blank inline" data-ans="kosten"><option value="">—</option><option>kostet</option><option>kosten</option><option>kostest</option></select> die Eier?</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-6-klas-6-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-6-klas-6-rik";
+  const KN_UNIT = "l2-c";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Syrnyky macht man aus Quark.", a: "r"},
+    {s: "Daryna und Erik gehen zusammen in den Supermarkt.", a: "f"},
+    {s: "Erik hat den Einkaufszettel zu Hause vergessen.", a: "r"},
+    {s: "Erik ruft Daryna im Supermarkt an.", a: "f"},
+    {s: "Erik kauft zehn Eier.", a: "r"},
+    {s: "Das Mehl ist neben dem Zucker.", a: "r"},
+    {s: "Erik hat an der Kasse zwanzig Euro bezahlt.", a: "f"},
+    {s: "Erik hat die Rosinen vergessen.", a: "r"},
+    {s: "Daryna ist böse auf Erik.", a: "f"}
+  ]);
+
+  // Üb. 1: сортування за відділами
+  buildSort('ub1-sort', {
+    buckets: ["Milchprodukte 🥛", "Backwaren 🥖", "Obst und Gemüse 🍎", "Süßwaren 🍫"],
+    items: [
+      {t: "der Quark", b: "Milchprodukte 🥛"},
+      {t: "der Jogurt", b: "Milchprodukte 🥛"},
+      {t: "die Sahne", b: "Milchprodukte 🥛"},
+      {t: "das Vollkornbrot", b: "Backwaren 🥖"},
+      {t: "die Brötchen", b: "Backwaren 🥖"},
+      {t: "der Apfelkuchen", b: "Backwaren 🥖"},
+      {t: "die Gurken", b: "Obst und Gemüse 🍎"},
+      {t: "die Birnen", b: "Obst und Gemüse 🍎"},
+      {t: "die Kartoffeln", b: "Obst und Gemüse 🍎"},
+      {t: "die Bonbons", b: "Süßwaren 🍫"},
+      {t: "die Gummibärchen", b: "Süßwaren 🍫"},
+      {t: "die Schokolade", b: "Süßwaren 🍫"}
+    ]
+  });
+
+  // Üb. 2: кількості й ціни
+  buildQuiz('ub2-quiz', [
+    {q: "eine … Schokolade", opts: ["Tafel", "Flasche", "Becher"], correct: "Tafel"},
+    {q: "eine … Mineralwasser", opts: ["Packung", "Flasche", "Tafel"], correct: "Flasche"},
+    {q: "ein … Jogurt", opts: ["Becher", "Tafel", "Liter"], correct: "Becher"},
+    {q: "eine … Mehl", opts: ["Flasche", "Tafel", "Packung"], correct: "Packung"},
+    {q: "zwei … Äpfel", opts: ["Kilos", "Kilo", "Kilogramme"], correct: "Kilo"},
+    {q: "3,49 € — so sagt man:", opts: ["drei Euro neunundvierzig", "drei Euros neunundvierzig", "dreiundvierzig Euro neun"], correct: "drei Euro neunundvierzig"},
+    {q: "0,99 € — so sagt man:", opts: ["neunundneunzig Euro", "neunundneunzig Cent", "null Euro neun"], correct: "neunundneunzig Cent"},
+    {q: "„Was … die Butter?“", opts: ["kostet", "kosten", "kauft"], correct: "kostet"}
+  ]);
+
+  // Üb. 3: weil
+  buildTransform('ub3-tr', [
+    {s: "Ich gehe in den Supermarkt. Ich brauche Milch.", task: "з <b>weil</b>", ans: "Ich gehe in den Supermarkt, weil ich Milch brauche."},
+    {s: "Mama kauft Mehl. Sie will einen Kuchen backen.", task: "з <b>weil</b>", ans: "Mama kauft Mehl, weil sie einen Kuchen backen will."},
+    {s: "Erik ist traurig. Er hat den Zettel vergessen.", task: "з <b>weil</b>", ans: "Erik ist traurig, weil er den Zettel vergessen hat."},
+    {s: "Wir kaufen viel Butter. Sie ist heute im Sonderangebot.", task: "з <b>weil</b>", ans: "Wir kaufen viel Butter, weil sie heute im Sonderangebot ist."},
+    {s: "Lotte bekommt Schokolade, denn sie hat eine Eins bekommen.", task: "заміни <b>denn</b> на <b>weil</b>", ans: "Lotte bekommt Schokolade, weil sie eine Eins bekommen hat."},
+    {s: "Warum gehst du einkaufen? (Wir haben kein Brot mehr.)", task: "відповідай з <b>Weil …</b>", ans: "Weil wir kein Brot mehr haben."}
+  ]);
+
+  // Üb. 4: порядок слів
+  buildOrder('ub4-order', [
+    {words: ["ich", "kaufe", "Äpfel,", "weil", "ich", "Obst", "mag"], end: "."},
+    {words: ["Oma", "geht", "einkaufen,", "weil", "sie", "Brot", "braucht"], end: ".", gross: true},
+    {words: ["wir", "kaufen", "Saft,", "weil", "wir", "eine Party", "machen"], end: "."},
+    {words: ["Erik", "geht", "zurück,", "weil", "er", "die Rosinen", "vergessen", "hat"], end: ".", gross: true},
+    {words: ["Greta", "nimmt", "zwei Tafeln,", "weil", "Papa", "es", "erlaubt"], end: ".", gross: true}
+  ]);
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Was gibt es im Supermarkt nicht mehr?", opts: ["Brötchen", "Vollkornbrot", "Milch"], correct: "Vollkornbrot"},
+    {q: "Was soll Greta stattdessen nehmen?", opts: ["sechs Brötchen", "zwei Brote", "einen Kuchen"], correct: "sechs Brötchen"},
+    {q: "Warum braucht die Familie zwei Flaschen Milch?", opts: ["Oma kommt zum Frühstück.", "Lotte trinkt viel Milch.", "Milch ist im Sonderangebot."], correct: "Oma kommt zum Frühstück."},
+    {q: "Was ist heute im Sonderangebot?", opts: ["die Milch", "die Butter", "die Schokolade"], correct: "die Butter"},
+    {q: "Was kostet eine Packung Butter?", opts: ["1,49 €", "4,19 €", "1,94 €"], correct: "1,49 €"},
+    {q: "Wo sind die Nüsse?", opts: ["in der fünften Reihe rechts", "in der dritten Reihe links", "an der Kasse"], correct: "in der fünften Reihe rechts"},
+    {q: "Warum bekommt Lotte Schokolade?", opts: ["Sie hat Geburtstag.", "Sie hat eine Eins in Mathe.", "Sie ist krank."], correct: "Sie hat eine Eins in Mathe."},
+    {q: "Wie viele Tafeln Schokolade kauft Greta?", opts: ["eine", "zwei", "drei"], correct: "zwei"}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Entschuldigung, ich kann das Mehl nicht finden.", uk: "Перепрошую, я не можу знайти борошно."},
+    {say: "Ich kaufe Quark, weil ich Syrnyky machen will.", uk: "Я купую сир, бо хочу зробити сирники."},
+    {say: "Eine Tafel Schokolade kostet einen Euro neunundneunzig.|Eine Tafel Schokolade kostet 1,99 Euro.", uk: "Плитка шоколаду коштує один євро дев'яносто дев'ять."},
+    {say: "Ich habe den Einkaufszettel zu Hause vergessen.", uk: "Я забув / забула список покупок удома."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Jogurt und Quark findet man in der …", opts: ["Milchabteilung", "Backwarenabteilung", "Getränkeabteilung"], correct: "Milchabteilung"},
+    {q: "Eine Liste für den Einkauf ist ein …", opts: ["Einkaufswagen", "Einkaufszettel", "Sonderangebot"], correct: "Einkaufszettel"},
+    {q: "Die Butter ist heute billiger. Sie ist im …", opts: ["Sonderangebot", "Einkaufszettel", "Kilo"], correct: "Sonderangebot"},
+    {q: "Auf dem Einkaufszettel … „2 Eier“.", opts: ["steht", "liegt", "kostet"], correct: "steht"},
+    {q: "Warum lachst du? — …", opts: ["Weil der Film lustig ist.", "Weil der Film ist lustig.", "Denn der Film lustig ist."], correct: "Weil der Film lustig ist."},
+    {q: "5,20 € — so sagt man:", opts: ["fünf Euro zwanzig", "fünfundzwanzig Euro", "zwanzig Euro fünf"], correct: "fünf Euro zwanzig"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Ich gehe einkaufen, weil wir keinen Käse haben.", ok: true},
+    {s: "Mama backt einen Kuchen, weil Oma heute kommen.", wrong: 7, fix: "kommt"},
+    {s: "Ich kaufe drei Kilos Kartoffeln.", wrong: 3, fix: "Kilo"},
+    {s: "Ich kaufe Quark, weil ich Syrnyky backen möchten.", wrong: 7, fix: "möchte"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🛒', '🥚', '🧈', '🍫']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
