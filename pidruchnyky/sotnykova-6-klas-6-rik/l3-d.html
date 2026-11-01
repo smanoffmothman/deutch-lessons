@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 3, Modul D: Wiederholung — Німецька мова 6 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 6 КЛАС</span>
+        <h1>Lektion 3 · Modul D: Wiederholung</h1>
+        <p class="sub">Повторення всього Lektion 3: смаки, продукти, національні кухні й рецепти, кафе й ресторан, прикметники без артикля і після ein, jeder / alle, man. Гра на швидкість, кросворд, аудіювання з меню, говоріння і тест на весь Lektion.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Blitz</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Sortieren</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Kreuzworträtsel</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Hören</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Fehler</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Chat</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER — усі слова Lektion 3 (збираються самі) ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Усі слова Lektion 3</h2>
+      <p class="lead">Тут зібрано слова всіх модулів Lektion 3. Перевір себе в «Картки ▶» і познач ☆ ті, які ще не пам'ятаєш, — їх варто повторити перед тестом.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: бліц ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Blitz: 60 Sekunden</h2>
+      <p class="lead">Розминка на швидкість: скільки слів Lektion 3 ти перекладеш за 60 секунд? У бал не йде — це гра. Спробуй побити власний рекорд!</p>
+      <div class="card" id="ub1-blitz"></div>
+    </section>
+
+    <!-- ===== Üb. 2: сортування ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Was gehört wohin?</h2>
+      <p class="lead">Розклади продукти за групами: випічка, молочні продукти, овочі й фрукти, напої.</p>
+      <div class="card" id="ub2-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 3: кросворд ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Kreuzworträtsel</h2>
+      <p class="lead">Смаки, кухня і кафе: впиши німецькі слова за перекладом. ä ö ü ß — з панелі внизу.</p>
+      <div class="card" id="ub3-kw"></div>
+    </section>
+
+    <!-- ===== Üb. 4: HÖREN — власний діалог, озвучений синтезатором ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4 · Hören</p>
+      <h2 class="panel-title">Im Restaurant</h2>
+      <p class="lead">Дарина з мамою вечеряють у ресторані. Мама ще погано говорить німецькою, тож замовляє Дарина. Подивись меню, послухай діалог (можна двічі) і дай відповіді. Текст діалогу — внизу, але спершу спробуй без нього.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Speisekarte</p>
+        <div class="tb-wrap">
+          <table class="gtable">
+            <tbody>
+              <tr><th colspan="2">Vorspeisen und Salate</th></tr>
+              <tr><td>Tomatensuppe mit Basilikum</td><td>3,90 €</td></tr>
+              <tr><td>Gemüsesalat</td><td>4,50 €</td></tr>
+              <tr><th colspan="2">Hauptgerichte</th></tr>
+              <tr><td>Schnitzel mit Bratkartoffeln</td><td>9,80 €</td></tr>
+              <tr><td>Pasta mit Tomatensoße</td><td>7,50 €</td></tr>
+              <tr><td>Pfannkuchen mit Apfelmus</td><td>5,20 €</td></tr>
+              <tr><th colspan="2">Nachtisch</th></tr>
+              <tr><td>Apfelkuchen (ein Stück)</td><td>2,80 €</td></tr>
+              <tr><td>Eis (drei Kugeln)</td><td>3,60 €</td></tr>
+              <tr><th colspan="2">Getränke</th></tr>
+              <tr><td>Apfelsaft</td><td>2,40 €</td></tr>
+              <tr><td>Tee mit Zitrone</td><td>1,90 €</td></tr>
+              <tr><td>Mineralwasser</td><td>1,90 €</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l3-d-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="ub4-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Kellner:</b> Guten Abend! Hier ist die Speisekarte. Möchtet ihr schon etwas trinken?<br>
+          <b>Daryna:</b> Guten Abend! Ja, für mich einen Apfelsaft und für meine Mama einen Tee mit Zitrone, bitte.<br>
+          <b>Kellner:</b> Gern. Und was möchtet ihr essen?<br>
+          <b>Daryna:</b> Meine Mama spricht noch nicht so gut Deutsch, ich bestelle für sie. Ist die Tomatensuppe scharf?<br>
+          <b>Kellner:</b> Nein, gar nicht. Sie ist mit frischem Basilikum.<br>
+          <b>Daryna:</b> Gut, dann eine Tomatensuppe für meine Mama. Und für mich das Schnitzel mit Bratkartoffeln.<br>
+          <b>Kellner:</b> Möchtest du auch einen Salat dazu?<br>
+          <b>Daryna:</b> Nein, danke. Ich habe keine Lust auf Salat.<br>
+          <b>Kellner:</b> So, hat es euch geschmeckt?<br>
+          <b>Daryna:</b> Die Suppe war sehr lecker, sagt meine Mama. Aber die Bratkartoffeln waren ein bisschen salzig.<br>
+          <b>Kellner:</b> Oh, das tut mir leid! Möchtet ihr noch einen Nachtisch? Heute haben wir frischen Apfelkuchen.<br>
+          <b>Daryna:</b> Ja, gern! Zwei Stück Apfelkuchen, bitte.<br>
+          <b>Kellner:</b> Sehr gern. Kommt sofort.<br>
+          <b>Daryna:</b> Entschuldigung, wir möchten bitte bezahlen.<br>
+          <b>Kellner:</b> Zusammen? Das macht dreiundzwanzig Euro sechzig.<br>
+          <b>Daryna:</b> Hier sind fünfundzwanzig Euro. Stimmt so!<br>
+          <b>Kellner:</b> Vielen Dank! Einen schönen Abend noch!
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5: знайди помилку ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Finde den Fehler</h2>
+      <p class="lead">Граматика всього Lektion: закінчення прикметників без артикля і після ein, jeder / alle, man, schmecken + Dativ, Lust auf. Знайди помилку й виправ її — або натисни «Fehlerfrei».</p>
+      <div class="card" id="ub5-fix"></div>
+    </section>
+
+    <!-- ===== Üb. 6: чат ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">Kochabend bei Daryna</h2>
+      <p class="lead">Дарина кличе тебе на вечір готування. Обирай правильні відповіді в чаті.</p>
+      <div class="card" id="ub6-chat"></div>
+    </section>
+
+    <!-- ===== SPRECHEN ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Sprich mal!</h2>
+      <p class="lead">Спершу вимов фрази в 🎤, потім відповідай уголос на запитання й порівнюй зі зразком.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Was isst und trinkst du gern zum Frühstück, zum Mittagessen und zum Abendessen? Wie schmeckt es?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Zum Frühstück esse ich gern Müsli mit frischem Obst und trinke heißen Kakao. Zum Mittagessen esse ich in der Schulmensa, meistens Suppe oder Nudeln. Zum Abendessen mag ich Brot mit Käse. Am liebsten esse ich aber Mamas Pfannkuchen — sie sind süß und sehr lecker.</div>
+        </div>
+        <div class="qa">
+          <label>2. Beschreibe ein Gericht aus deiner Familie: Was ist das? Welche Zutaten braucht man? Wie macht man es?</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Das sind Syrnyky — kleine Pfannkuchen aus Quark. Für dieses Gericht braucht man Quark, Eier, Mehl und etwas Zucker. Man mischt alles, macht kleine Puffer und brät sie in heißem Öl. Man isst Syrnyky mit saurer Sahne oder mit Honig.</div>
+        </div>
+        <div class="qa">
+          <label>3. Du bist mit einem Freund oder einer Freundin im Restaurant (Speisekarte in Üb. 4). Bestellt Essen und Trinken und bezahlt.</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">— Was nimmst du? — Ich habe Lust auf Pasta mit Tomatensoße. Und du? — Ich nehme das Schnitzel mit Bratkartoffeln. — Und was trinken wir? — Zwei Apfelsaft, bitte. … — Wir möchten bitte bezahlen. — Zusammen? Das macht zweiundzwanzig Euro zehn. — Hier sind dreiundzwanzig Euro. Stimmt so!</div>
+        </div>
+        <div class="qa">
+          <label>4. Dein Freund schlägt Sushi vor, aber du hast keine Lust. Sag, warum, und mach einen anderen Vorschlag.</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Lieber nicht. Ich habe keine Lust auf Sushi, weil ich rohen Fisch nicht mag. Ich schlage vor, wir gehen in die Pizzeria am Markt. Dort findet jeder etwas: Pizza, Pasta und frische Salate. Bist du einverstanden?</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — на весь Lektion ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Test zu Lektion 3</h2>
+      <p class="lead">Підсумковий тест на весь Lektion 3: 18 завдань. Кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">9)</span> Ich esse gern Brot mit
+          <select class="blank inline" data-ans="frischer"><option value="">—</option><option>frische</option><option>frischer</option><option>frischem</option></select> Butter.</div>
+        <div class="fill-item"><span class="num">10)</span> Am Morgen trinke ich
+          <select class="blank inline" data-ans="heißen"><option value="">—</option><option>heißer</option><option>heißes</option><option>heißen</option></select> Kakao.</div>
+        <div class="fill-item"><span class="num">11)</span>
+          <select class="blank inline" data-ans="Jedes"><option value="">—</option><option>Jeder</option><option>Jedes</option><option>Jede</option></select> Gericht hier ist lecker.</div>
+        <div class="fill-item"><span class="num">12)</span> In Deutschland
+          <select class="blank inline" data-ans="isst"><option value="">—</option><option>essen</option><option>esst</option><option>isst</option></select> man oft Kartoffeln.</div>
+        <div class="fill-item"><span class="num">13)</span> Ich nehme ein
+          <select class="blank inline" data-ans="großes"><option value="">—</option><option>großes</option><option>großer</option><option>großen</option></select> Stück Torte.</div>
+        <div class="fill-item"><span class="num">14)</span> Er bestellt einen
+          <select class="blank inline" data-ans="grünen"><option value="">—</option><option>grüner</option><option>grünes</option><option>grünen</option></select> Salat.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-6-klas-6-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-6-klas-6-rik";
+  const KN_UNIT = "l3-d";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['ub1', 'ub2', 'ub3', 'ub4', 'ub5', 'ub6', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+
+  // Üb. 1: бліц — усі слова Lektion 3 з файлу слів (без однакових перекладів)
+  const blitzPairs = [], blitzSeen = new Set();
+  ((window.SLOVA && window.SLOVA[KN_BOOK]) || []).filter(w => /^l3-/.test(w.r)).forEach(w => {
+    const de = w.de.split(' / ')[0].split(',')[0].replace(/\s*\(.*?\)/g, '').trim();
+    const uk = w.uk.split(' / ')[0].trim();
+    const key = uk.split(/[,;]/)[0].trim().toLowerCase();
+    if (!de || /^(der|die|das)$/i.test(de) || blitzSeen.has(key)) return;
+    blitzSeen.add(key);
+    blitzPairs.push([de, uk]);
+  });
+  buildBlitz('ub1-blitz', {pairs: blitzPairs, seconds: 60, dir: "de-uk"});
+
+  // Üb. 2: сортування
+  buildSort('ub2-sort', {
+    buckets: ["Backwaren 🥐", "Milchprodukte 🧀", "Obst und Gemüse 🥕", "Getränke 🥤"],
+    items: [
+      {t: "das Brötchen", b: "Backwaren 🥐"},
+      {t: "die Brezel", b: "Backwaren 🥐"},
+      {t: "der Apfelkuchen", b: "Backwaren 🥐"},
+      {t: "das Gebäck", b: "Backwaren 🥐"},
+      {t: "der Quark", b: "Milchprodukte 🧀"},
+      {t: "der Käse", b: "Milchprodukte 🧀"},
+      {t: "der Jogurt", b: "Milchprodukte 🧀"},
+      {t: "die saure Sahne", b: "Milchprodukte 🧀"},
+      {t: "die Zwiebel", b: "Obst und Gemüse 🥕"},
+      {t: "die Birne", b: "Obst und Gemüse 🥕"},
+      {t: "die Zitrone", b: "Obst und Gemüse 🥕"},
+      {t: "der Knoblauch", b: "Obst und Gemüse 🥕"},
+      {t: "der Apfelsaft", b: "Getränke 🥤"},
+      {t: "das Mineralwasser", b: "Getränke 🥤"},
+      {t: "der Kakao", b: "Getränke 🥤"},
+      {t: "die Limo", b: "Getränke 🥤"}
+    ]
+  });
+
+  // Üb. 3: кросворд
+  buildCrossword('ub3-kw', [
+    ["süß", "солодкий"],
+    ["sauer", "кислий"],
+    ["scharf", "гострий"],
+    ["bitter", "гіркий"],
+    ["salzig", "солоний"],
+    ["Senf", "гірчиця (der)"],
+    ["Honig", "мед (der)"],
+    ["Teig", "тісто (der)"],
+    ["Rezept", "рецепт (das)"],
+    ["Kellner", "офіціант (der)"],
+    ["Nachtisch", "десерт (der)"],
+    ["Waffel", "вафельний ріжок (die)"]
+  ]);
+
+  // Üb. 4: Hören
+  buildQuiz('ub4-quiz', [
+    {q: "Was trinkt Daryna?", opts: ["Apfelsaft", "Tee mit Zitrone", "Mineralwasser"], correct: "Apfelsaft"},
+    {q: "Warum bestellt Daryna für ihre Mama?", opts: ["Mama spricht noch nicht so gut Deutsch.", "Mama ist sehr müde.", "Mama hat keinen Hunger."], correct: "Mama spricht noch nicht so gut Deutsch."},
+    {q: "Wie ist die Tomatensuppe?", opts: ["nicht scharf, mit frischem Basilikum", "sehr scharf", "kalt und sauer"], correct: "nicht scharf, mit frischem Basilikum"},
+    {q: "Was isst Daryna?", opts: ["Pasta mit Tomatensoße", "Schnitzel mit Bratkartoffeln", "Gemüsesalat"], correct: "Schnitzel mit Bratkartoffeln"},
+    {q: "Warum nimmt Daryna keinen Salat?", opts: ["Er ist zu teuer.", "Es gibt heute keinen Salat.", "Sie hat keine Lust auf Salat."], correct: "Sie hat keine Lust auf Salat."},
+    {q: "Was war nicht ganz so gut?", opts: ["Die Bratkartoffeln waren ein bisschen salzig.", "Die Suppe war kalt.", "Der Tee war bitter."], correct: "Die Bratkartoffeln waren ein bisschen salzig."},
+    {q: "Was bestellen sie zum Nachtisch?", opts: ["Eis mit drei Kugeln", "zwei Stück Apfelkuchen", "Pfannkuchen mit Apfelmus"], correct: "zwei Stück Apfelkuchen"},
+    {q: "Wie viel kostet alles zusammen?", opts: ["23,60 €", "25,00 €", "21,80 €"], correct: "23,60 €"}
+  ]);
+
+  // Üb. 5: знайди помилку
+  buildFixError('ub5-fix', [
+    {s: "Ich trinke gern kalte Milch mit Honig.", ok: true},
+    {s: "Wir essen Brot mit frischen Käse.", wrong: 4, fix: "frischem"},
+    {s: "Die Suppe schmeckt mich zu salzig.", wrong: 3, fix: "mir"},
+    {s: "Jedes Kinder bekommt ein Stück Torte.", wrong: 1, fix: "Kind"},
+    {s: "Ich habe keine Lust auf Fisch.", ok: true},
+    {s: "Man brät die Kartoffeln in heißen Öl.", wrong: 5, fix: "heißem"},
+    {s: "Alle Gäste ist zufrieden.", wrong: 2, fix: "sind"},
+    {s: "Das ist eine typisch ukrainische Spezialität.", ok: true},
+    {s: "Ich möchte ein grünen Salat.", wrong: 2, fix: "einen"}
+  ]);
+
+  // Üb. 6: чат
+  buildChat('ub6-chat', {
+    partner: "Daryna",
+    steps: [
+      {them: "Hi! Mama und ich machen am Samstag einen Kochabend. Kommst du? 🍲"},
+      {you: ["Gern! Darauf habe ich große Lust.", "Gern! Dafür habe ich große Lust.", "Gern! Darauf habe ich groß Lust."], correct: 0},
+      {them: "Wir kochen Borschtsch. Magst du Rote Bete?"},
+      {you: ["Ja, sehr! Sie schmeckt mir süß und lecker.", "Ja, sehr! Sie schmeckt mich süß und lecker.", "Ja, sehr! Ich schmecke sie süß und lecker."], correct: 0},
+      {them: "Super! Was können wir noch machen? Hast du eine Idee?"},
+      {you: ["Ich schlage Kartoffelsalat vor. Den macht man mit Essig und Öl.", "Ich vorschlage Kartoffelsalat. Den macht man mit Essig und Öl.", "Ich schlage Kartoffelsalat vor. Den machen man mit Essig und Öl."], correct: 0},
+      {them: "Gute Idee! Und was bringst du mit?"},
+      {you: ["Ich bringe frisches Brot aus der Bäckerei mit.", "Ich bringe frischen Brot aus der Bäckerei mit.", "Ich mitbringe frisches Brot aus der Bäckerei."], correct: 0},
+      {them: "Toll! Und zum Nachtisch? Eis vielleicht? 🍦"},
+      {you: ["Ja, alle Kinder mögen Eis! Ich nehme Vanille.", "Ja, jede Kinder mögen Eis! Ich nehme Vanille.", "Ja, alle Kinder mag Eis! Ich nehme Vanille."], correct: 0},
+      {them: "Dann bis Samstag um sechs! 👋"}
+    ]
+  });
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Hast du Lust auf Pfannkuchen?", uk: "Хочеш млинців?"},
+    {say: "Die Suppe schmeckt mir sehr gut.", uk: "Суп мені дуже смакує."},
+    {say: "Für die Soße mischt man Essig und Öl.", uk: "Для соусу змішують оцет і олію."},
+    {say: "Wir möchten bitte bezahlen.", uk: "Ми хотіли б розрахуватися."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Honig schmeckt …", opts: ["bitter", "süß", "salzig"], correct: "süß"},
+    {q: "Eis mit drei Kugeln bekommt man in der …", opts: ["Eisdiele", "Metzgerei", "Drogerie"], correct: "Eisdiele"},
+    {q: "Für die Soße mischt man Essig und …", opts: ["Mehl", "Öl", "Zucker"], correct: "Öl"},
+    {q: "Im Restaurant liest man zuerst die …", opts: ["Speisekarte", "Schüssel", "Kugel"], correct: "Speisekarte"},
+    {q: "Sushi ist eine typisch … Spezialität.", opts: ["japanisch", "japanischen", "japanische"], correct: "japanische"},
+    {q: "… Kinder in meiner Klasse mögen Pizza.", opts: ["Jeder", "Alle", "Jedes"], correct: "Alle"},
+    {q: "Hast du Lust … ein Eis?", opts: ["für", "an", "auf"], correct: "auf"},
+    {q: "Wie schmeckt … der Kuchen?", opts: ["dir", "dich", "du"], correct: "dir"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Zum Nachtisch bestelle ich ein Stück Apfelkuchen.", ok: true},
+    {s: "Wir trinken heißen Tee mit frische Zitrone.", wrong: 5, fix: "frischer"},
+    {s: "In jedem Stadt gibt es eine Pizzeria.", wrong: 1, fix: "jeder"},
+    {s: "Man schneiden die Zwiebeln klein.", wrong: 1, fix: "schneidet"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🥐', '🧀', '🍽️', '🏆']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
