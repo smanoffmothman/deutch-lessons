@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 3, Modul C: Wir gehen essen — Німецька мова 6 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 6 КЛАС</span>
+        <h1>Lektion 3 · Modul C: Wir gehen essen</h1>
+        <p class="sub">Урок про те, куди піти поїсти: кафе, піцерія, кафе-морозиво, кондитерська. Як запропонувати, погодитися й відмовитися, як замовити й розрахуватися. Займенники jeder, jede, jedes і alle, «Lust auf …». Текст і діалог з озвученням, вправи, говоріння, письмо і підсумковий тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Lokale</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · jeder / alle</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Vorschläge</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Sätze umbauen</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власний текст + вправа на розуміння ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Wohin gehen wir heute?</h2>
+      <p class="lead">Грета розповідає, як її родина вибирала, куди піти поїсти на татів день народження. Послухай і прочитай. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l3-c-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Am Samstag hat Papa Geburtstag gehabt. Er hat gesagt: „Heute koche ich nicht. Heute gehen wir alle essen!“ Aber wohin? In unserer Familie hat <span class="gl" data-uk="кожен, кожна, кожне" data-lemma="jeder, jede, jedes">jeder</span> einen anderen Geschmack.</p>
+        <p>Lotte hat sofort gerufen: „In die <span class="gl" data-uk="піцерія" data-lemma="die Pizzeria, -s">Pizzeria</span>! Ich habe <span class="gl" data-uk="мати бажання, хотіти (чогось)" data-lemma="Lust haben auf (+ Akk.)">Lust auf</span> Pizza mit Ananas!“ Aber Pizza haben wir letzte Woche gegessen. Mama hat lieber die <span class="gl" data-uk="суші-бар" data-lemma="die Sushi-Bar, -s">Sushi-Bar</span> am Markt <span class="gl" data-uk="пропонувати" data-lemma="vorschlagen (schlägt vor), hat vorgeschlagen">vorgeschlagen</span>, weil sie Fisch liebt. Doch Lotte isst keinen <span class="gl" data-uk="сирий" data-lemma="roh">rohen</span> Fisch.</p>
+        <p>Ich habe Appetit auf einen Burger gehabt und das <span class="gl" data-uk="заклад швидкого харчування" data-lemma="das Schnellrestaurant, -s">Schnellrestaurant</span> vorgeschlagen. „Da isst man nicht <span class="gl" data-uk="здоровий, корисний" data-lemma="gesund">gesund</span>“, hat Mama gesagt. Und Papa? Sein Wunsch: in Ruhe einen Kaffee trinken und ein Stück <span class="gl" data-uk="торт" data-lemma="die Torte, -n">Torte</span> in der <span class="gl" data-uk="кондитерська" data-lemma="die Konditorei, -en">Konditorei</span> essen.</p>
+        <p>Wir haben eine halbe Stunde <span class="gl" data-uk="обговорювати, сперечатися" data-lemma="diskutieren">diskutiert</span>. Dann hat Oma Christa angerufen und die beste Idee gehabt: „Geht doch in den Food Court im Kaufhaus! Dort gibt es für jeden etwas.“</p>
+        <p>Und sie hat recht gehabt! Im Food Court gibt es sieben <span class="gl" data-uk="заклад (кафе, ресторан)" data-lemma="das Lokal, -e">Lokale</span>. Jeder hat bekommen, was er sich gewünscht hat: Lotte ihre Pizza, Mama Sushi, ich einen Gemüseburger und Papa Kaffee mit Apfelkuchen. Wir haben <span class="gl" data-uk="усі, всі" data-lemma="alle (Pl.)">alle</span> zusammen an einem großen Tisch gesessen. Zum <span class="gl" data-uk="десерт" data-lemma="der Nachtisch, -e">Nachtisch</span> sind wir in die <span class="gl" data-uk="кафе-морозиво" data-lemma="die Eisdiele, -n">Eisdiele</span> nebenan gegangen, und jeder hat zwei <span class="gl" data-uk="кулька (морозива)" data-lemma="die Kugel, -n">Kugeln</span> bekommen.</p>
+        <p>Papa hat gelacht: „Das ist mein bester Geburtstag! Ich habe nicht gekocht, ich muss nicht <span class="gl" data-uk="мити посуд" data-lemma="abwaschen (wäscht ab), hat abgewaschen">abwaschen</span>, und alle sind <span class="gl" data-uk="задоволений" data-lemma="zufrieden">zufrieden</span>!“</p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">jeder, jede, jedes · alle · Lust auf …</h2>
+      <p class="lead">«Кожен» німецькою — <b>jeder / jede / jedes</b>, а у множині «усі» — <b>alle</b>. Закінчення в них такі самі, як в означеного артикля.</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. jeder · jede · jedes · alle</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th></th><th>Nom.</th><th>Akk.</th><th>Dat.</th></tr>
+          <tr><td class="gender">der</td><td>jed<strong>er</strong></td><td>jed<strong>en</strong></td><td>jed<strong>em</strong></td></tr>
+          <tr><td class="gender">das</td><td>jed<strong>es</strong></td><td>jed<strong>es</strong></td><td>jed<strong>em</strong></td></tr>
+          <tr><td class="gender">die</td><td>jed<strong>e</strong></td><td>jed<strong>e</strong></td><td>jed<strong>er</strong></td></tr>
+          <tr><td class="gender">Pl.</td><td>all<strong>e</strong></td><td>all<strong>e</strong></td><td>all<strong>en</strong></td></tr>
+        </table></div>
+        <div class="merke"><b>jeder</b> — лише в однині: jed<b>es</b> Kind, jed<b>en</b> Tag, in jed<b>er</b> Stadt. Для множини — <b>alle</b>: alle Kinder, in all<b>en</b> Städten. Прикметник після jeder / alle — як після der: jeder groß<b>e</b> Supermarkt, alle neu<b>en</b> Lokale.</div>
+        <p class="beispiel">Jeder hat einen anderen Geschmack. — Im Food Court gibt es für jeden etwas. — Alle sind zufrieden.</p>
+        <div class="merke">«Кожен» без іменника — <b>jeder</b> (у загальному значенні, «кожна людина»). «Усі» без іменника — <b>alle</b> (з дієсловом у множині!): Alle <b>sind</b> da.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. Lust haben auf + Akkusativ</p>
+        <p class="beispiel">Ich habe <b>Lust auf</b> ein<b>en</b> Burger. = Ich habe <b>Appetit auf</b> einen Burger.</p>
+        <p class="beispiel">Ich habe <b>Lust</b>, ins Kino <b>zu gehen</b>. — Ich habe <b>keine Lust</b>.</p>
+        <div class="merke">«Мені хочеться піци» = Ich habe Lust <b>auf</b> Pizza. Після auf тут — Akkusativ. Заперечення — <b>keine</b> Lust (не «nicht Lust»).</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. Запропонувати, погодитися, відмовитися</p>
+        <p class="beispiel"><b>Gehen wir</b> in die Eisdiele! · <b>Wollen wir</b> Pizza essen? · <b>Ich schlage vor</b>, wir gehen ins Café.</p>
+        <p class="beispiel">Gute Idee! · Einverstanden! · Na klar!</p>
+        <p class="beispiel">Nein, lieber nicht. · Ich habe keine Lust auf Sushi, weil ich keinen rohen Fisch mag.</p>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">4. Типові помилки</p>
+        <p>✗ jede Kinder → ✓ <b>alle</b> Kinder <i>(jeder — лише однина)</i></p>
+        <p>✗ in jeder Lokal → ✓ in jed<b>em</b> Lokal <i>(das, Dativ)</i></p>
+        <p>✗ Ich habe Lust für Pizza. → ✓ Ich habe Lust <b>auf</b> Pizza.</p>
+        <p>✗ Ich habe nicht Lust. → ✓ Ich habe <b>keine</b> Lust.</p>
+        <p>✗ Alle ist zufrieden. → ✓ Alle <b>sind</b> zufrieden.</p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: картинки — заклади ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Wohin gehen wir essen?</h2>
+      <p class="lead">Куди піти, якщо хочеться цього? Вибери заклад до картинки.</p>
+      <div class="card" id="ub1-pic"></div>
+    </section>
+
+    <!-- ===== Üb. 2: jeder / alle ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">jeder, jede, jedes oder alle?</h2>
+      <p class="lead">Впиши правильну форму замість «…». У дужках — відмінок і рід. Множина — завжди alle.</p>
+      <div class="card" id="ub2-tab"></div>
+    </section>
+
+    <!-- ===== Üb. 3: чат — пропозиції ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wollen wir essen gehen?</h2>
+      <p class="lead">Ерік пропонує тобі піти поїсти після школи. Вибирай доречну й правильну відповідь.</p>
+      <div class="card" id="ub3-chat"></div>
+    </section>
+
+    <!-- ===== Üb. 4: перетворення ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Sätze umbauen</h2>
+      <p class="lead">Перепиши речення за завданням. Пиши ціле речення.</p>
+      <div class="card" id="ub4-tr"></div>
+    </section>
+
+    <!-- ===== HÖREN — власний діалог, озвучений синтезатором ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">In der Eisdiele</h2>
+      <p class="lead">Ерік пильнує маленьку Лотте й веде її в кафе-морозиво. Послухай діалог з офіціанткою (можна двічі) і дай відповіді. Текст діалогу — внизу, але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l3-c-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Kellnerin:</b> Hallo! Was darf es sein?<br>
+          <b>Erik:</b> Hallo! Wir möchten zwei Eisbecher. Haben Sie eine Eiskarte?<br>
+          <b>Kellnerin:</b> Ja, hier bitte. Heute haben wir auch eine neue Sorte: Mango mit Joghurt.<br>
+          <b>Erik:</b> Lecker! Für mich bitte drei Kugeln: Schokolade, Mango und Vanille.<br>
+          <b>Kellnerin:</b> Mit Sahne?<br>
+          <b>Erik:</b> Ja, gern. Und für die Kleine zwei Kugeln Erdbeere, aber ohne Sahne, bitte. Sie mag keine Sahne.<br>
+          <b>Kellnerin:</b> Kein Problem. Im Becher oder in der Waffel?<br>
+          <b>Erik:</b> Sie möchte eine Waffel. Ich nehme einen Becher.<br>
+          <b>Kellnerin:</b> Und möchtet ihr etwas trinken?<br>
+          <b>Erik:</b> Zwei Gläser Wasser, bitte.<br>
+          <b>Kellnerin:</b> So, bitte schön. Guten Appetit!<br>
+          <b>Erik:</b> Danke! … Entschuldigung, wir möchten bitte bezahlen.<br>
+          <b>Kellnerin:</b> Zusammen? Das macht neun Euro zwanzig.<br>
+          <b>Erik:</b> Hier sind zehn Euro. Stimmt so!<br>
+          <b>Kellnerin:</b> Vielen Dank! Tschüss, ihr zwei!
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN — 🎤 + говоріння зі зразком ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Essen gehen</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Wohin gehst du gern essen? Warum?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Ich gehe am liebsten in die Pizzeria neben unserer Schule, weil die Pizza dort sehr lecker und nicht teuer ist. Im Sommer gehe ich auch oft in die Eisdiele.</div>
+        </div>
+        <div class="qa">
+          <label>2. Mach einen Vorschlag: Wohin gehen wir heute? Dein Partner stimmt zu oder lehnt ab.</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">— Wollen wir heute in die Sushi-Bar gehen? — Nein, lieber nicht. Ich habe keine Lust auf Fisch. — Dann gehen wir ins Café? Dort gibt es tollen Kuchen. — Gute Idee! Einverstanden.</div>
+        </div>
+        <div class="qa">
+          <label>3. Du bist im Café. Bestelle etwas zu essen und zu trinken und bezahle.</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Ich möchte bitte ein Stück Käsekuchen und eine heiße Schokolade. … Entschuldigung, ich möchte bitte bezahlen. — Das macht fünf Euro achtzig. — Hier sind sechs Euro. Stimmt so!</div>
+        </div>
+        <div class="qa">
+          <label>4. Was gibt es in jeder Stadt in der Ukraine? Was gibt es nicht überall?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">In jeder Stadt gibt es Cafés, Pizzerien und Schnellrestaurants. In allen großen Städten gibt es auch Sushi-Bars. Aber nicht in jedem Dorf gibt es eine Konditorei.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN — письмо за планом ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Mein Tipp: ein Lokal in meiner Stadt</h2>
+      <p class="lead">Маттео з родиною приїздить на тиждень у твоє місто й питає, де смачно поїсти. Напиши йому повідомлення на 60–80 слів за планом:</p>
+      <div class="card">
+        <p>1) привітання; 2) один-два заклади: як називаються й де вони; 3) що там можна з'їсти й випити — з прикметниками; 4) чому ти їх радиш (weil); 5) щось для кожного в його родині (jeder / alle); 6) прощання.</p>
+        <p class="beispiel">Hallo Matteo! · Ich empfehle euch … · Es liegt im Zentrum / neben … · Dort gibt es … · … ist super, weil … · Dort findet jeder etwas: … · Alle … · Guten Appetit und bis bald!</p>
+        <div class="qa">
+          <label for="schreiben-text">Deine Nachricht</label>
+          <textarea id="schreiben-text" rows="10" placeholder="Hallo Matteo! …"
+            data-words="60-80"
+            data-must="weil|jeder/jede/jedes/jeden/jedem/alle"
+            data-check="Один-два заклади й де вони|Що там їсти й пити (з прикметниками)|Чому радиш (weil)|jeder / alle|Прощання"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Hallo Matteo!<br>Ich empfehle euch das Café „Mlyn“ im Zentrum, direkt neben dem Park. Dort gibt es ukrainische Spezialitäten: heißen Borschtsch, knusprige Deruny und süße Mlynzi. Ich gehe sehr gern dorthin, weil alles frisch und nicht teuer ist. Dort findet jeder etwas: Für deinen Vater gibt es starken Kaffee, für deine kleine Schwester leckeres Eis. Alle Kellner sind sehr freundlich. Guten Appetit und bis bald!<br>Oksana</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — режим контрольної: одна спроба, лише ця вкладка йде в бал ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span>
+          <select class="blank inline" data-ans="Jeden"><option value="">—</option><option>Jeder</option><option>Jeden</option><option>Alle</option></select> Tag essen wir in der Schulmensa.</div>
+        <div class="fill-item"><span class="num">8)</span>
+          <select class="blank inline" data-ans="Alle"><option value="">—</option><option>Jede</option><option>Jeder</option><option>Alle</option></select> Kinder essen gern Eis.</div>
+        <div class="fill-item"><span class="num">9)</span> In
+          <select class="blank inline" data-ans="jedem"><option value="">—</option><option>jedem</option><option>jeder</option><option>jedes</option></select> Kaufhaus gibt es ein Café.</div>
+        <div class="fill-item"><span class="num">10)</span> Ich habe Lust
+          <select class="blank inline" data-ans="auf"><option value="">—</option><option>für</option><option>auf</option><option>zu</option></select> eine Pizza.</div>
+        <div class="fill-item"><span class="num">11)</span> Ich habe heute
+          <select class="blank inline" data-ans="keine"><option value="">—</option><option>nicht</option><option>keine</option><option>kein</option></select> Lust auf Sushi.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-6-klas-6-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-6-klas-6-rik";
+  const KN_UNIT = "l3-c";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Papa möchte an seinem Geburtstag nicht kochen.", a: "r"},
+    {s: "Lotte möchte in die Sushi-Bar.", a: "f"},
+    {s: "Mama mag Fisch sehr gern.", a: "r"},
+    {s: "Mama findet das Schnellrestaurant gesund.", a: "f"},
+    {s: "Papa möchte Kaffee trinken und Torte essen.", a: "r"},
+    {s: "Die Familie hat zwei Stunden diskutiert.", a: "f"},
+    {s: "Die Idee mit dem Food Court ist von Oma Christa.", a: "r"},
+    {s: "Greta hat einen Fleischburger gegessen.", a: "f"},
+    {s: "Zum Nachtisch hat jeder Eis bekommen.", a: "r"}
+  ]);
+
+  // Üb. 1: заклади
+  buildPicture('ub1-pic', [
+    {pic: "🍦", opts: ["in die Eisdiele", "in die Metzgerei", "in die Sushi-Bar"], correct: "in die Eisdiele"},
+    {pic: "🍣", opts: ["in die Konditorei", "in die Sushi-Bar", "ins Schnellrestaurant"], correct: "in die Sushi-Bar"},
+    {pic: "🍕", opts: ["in die Pizzeria", "in die Eisdiele", "in die Konditorei"], correct: "in die Pizzeria"},
+    {pic: "🎂", opts: ["in die Sushi-Bar", "ins Schnellrestaurant", "in die Konditorei"], correct: "in die Konditorei"},
+    {pic: "🍔", opts: ["ins Schnellrestaurant", "in die Konditorei", "in die Eisdiele"], correct: "ins Schnellrestaurant"},
+    {pic: "☕", opts: ["in die Sushi-Bar", "ins Café", "in die Pizzeria"], correct: "ins Café"},
+    {pic: "🏫", opts: ["in die Schulmensa", "in die Eisdiele", "in die Pizzeria"], correct: "in die Schulmensa"}
+  ]);
+
+  // Üb. 2: jeder / alle (одне поле в рядку)
+  buildTable('ub2-tab', {
+    head: ["Wortgruppe", "Form"],
+    rows: [
+      ["… Tag (Akk., der)", "[jeden]"],
+      ["… Kind (Nom., das)", "[jedes]"],
+      ["in … Stadt (Dat., die)", "[jeder]"],
+      ["in … Lokal (Dat., das)", "[jedem]"],
+      ["… Kinder (Nom., Pl.)", "[alle]"],
+      ["für … Gast (Akk., der)", "[jeden]"],
+      ["mit … Freunden (Dat., Pl.)", "[allen]"],
+      ["… Woche (Akk., die)", "[jede]"],
+      ["in … Restaurant (Dat., das)", "[jedem]"],
+      ["… Kellner (Nom., der)", "[jeder]"]
+    ]
+  });
+
+  // Üb. 3: чат
+  buildChat('ub3-chat', {
+    partner: "Erik",
+    steps: [
+      {them: "Hey! Wollen wir nach der Schule etwas essen gehen? 😋"},
+      {you: ["Gute Idee! Ich habe großen Hunger.", "Gute Idee! Ich habe große Lust für Essen.", "Gute Idee! Ich habe nicht Lust."], correct: 0},
+      {them: "Gehen wir in die Sushi-Bar am Markt?"},
+      {you: ["Lieber nicht. Ich habe keine Lust auf Fisch.", "Lieber nicht. Ich habe nicht Lust auf Fisch.", "Lieber nicht. Ich habe keine Lust für Fisch."], correct: 0},
+      {them: "Okay. Und was schlägst du vor?"},
+      {you: ["Ich schlage vor, wir gehen in die Pizzeria.", "Ich vorschlage, wir gehen in die Pizzeria.", "Ich schlage vor, wir gehen in der Pizzeria."], correct: 0},
+      {them: "In die Pizzeria? Dort ist es immer so voll!"},
+      {you: ["Ja, weil die Pizza dort super ist. Alle gehen gern dorthin.", "Ja, weil die Pizza dort ist super. Alle gehen gern dorthin.", "Ja, weil die Pizza dort super ist. Alle geht gern dorthin."], correct: 0},
+      {them: "Stimmt. Und jeder bekommt dort ein Glas Wasser gratis."},
+      {you: ["Na klar! Treffen wir uns um zwei vor der Schule?", "Na klar! Treffen wir uns um zwei in der Schule vor?", "Na klar! Treffen wir um zwei vor der Schule uns?"], correct: 0},
+      {them: "Einverstanden! Bis später! 🍕"}
+    ]
+  });
+
+  // Üb. 4: перетворення
+  buildTransform('ub4-tr', [
+    {s: "Ich gehe in die Eisdiele. Ich habe Lust auf Eis.", task: "з <b>weil</b>", ans: "Ich gehe in die Eisdiele, weil ich Lust auf Eis habe."},
+    {s: "Jedes Kind bekommt eine Kugel Eis.", task: "у множині: <b>Alle …</b>", ans: "Alle Kinder bekommen eine Kugel Eis."},
+    {s: "In allen Städten gibt es ein Café.", task: "в однині: <b>In jeder …</b>", ans: "In jeder Stadt gibt es ein Café."},
+    {s: "Ich möchte einen Burger essen.", task: "з <b>Lust auf</b>", ans: "Ich habe Lust auf einen Burger."},
+    {s: "Wir gehen in die Konditorei.", task: "запропонуй: <b>Gehen wir …!</b>", ans: "Gehen wir in die Konditorei!"},
+    {s: "Ich habe Lust auf Sushi.", task: "заперечення", ans: "Ich habe keine Lust auf Sushi."}
+  ]);
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Was möchten Erik und Lotte?", opts: ["zwei Eisbecher", "zwei Stück Kuchen", "Pizza"], correct: "zwei Eisbecher"},
+    {q: "Welche neue Sorte gibt es heute?", opts: ["Mango mit Joghurt", "Banane mit Schokolade", "Kirsche mit Vanille"], correct: "Mango mit Joghurt"},
+    {q: "Wie viele Kugeln nimmt Erik?", opts: ["zwei", "drei", "vier"], correct: "drei"},
+    {q: "Welche Sorte nimmt Lotte?", opts: ["Erdbeere", "Vanille", "Mango"], correct: "Erdbeere"},
+    {q: "Warum bekommt Lotte keine Sahne?", opts: ["Sie mag keine Sahne.", "Es gibt keine Sahne.", "Sahne ist zu teuer."], correct: "Sie mag keine Sahne."},
+    {q: "Wie bekommt Lotte ihr Eis?", opts: ["im Becher", "in der Waffel", "im Glas"], correct: "in der Waffel"},
+    {q: "Was trinken die beiden?", opts: ["Wasser", "Saft", "Kakao"], correct: "Wasser"},
+    {q: "Wie viel Geld gibt Erik der Kellnerin?", opts: ["9,20 €", "10 €", "12 €"], correct: "10 €"}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Ich habe Lust auf eine Pizza.", uk: "Мені хочеться піци."},
+    {say: "Gehen wir lieber in die Eisdiele!", uk: "Ходімо краще в кафе-морозиво!"},
+    {say: "In jeder Stadt gibt es ein Café.", uk: "У кожному місті є кафе."},
+    {say: "Wir möchten bitte bezahlen.", uk: "Ми хотіли б розрахуватися."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Torten und Kuchen kauft man in der …", opts: ["Konditorei", "Sushi-Bar", "Schulmensa"], correct: "Konditorei"},
+    {q: "Nach dem Essen gibt es noch etwas Süßes. Das ist der …", opts: ["Nachtisch", "Vorschlag", "Geschmack"], correct: "Nachtisch"},
+    {q: "Sushi ist oft mit … Fisch.", opts: ["rohem", "rohen", "roher"], correct: "rohem"},
+    {q: "Was sagt man, wenn man einverstanden ist?", opts: ["Gute Idee!", "Lieber nicht.", "Keine Lust."], correct: "Gute Idee!"},
+    {q: "Was sagt man im Café am Ende?", opts: ["Ich möchte bitte bezahlen.", "Ich möchte bitte kochen.", "Ich möchte bitte abwaschen."], correct: "Ich möchte bitte bezahlen."},
+    {q: "„Stimmt so!“ bedeutet:", opts: ["Решти не треба!", "Усе правильно, дякую за відповідь.", "Рахунок неправильний."], correct: "Решти не треба!"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Alle Kinder mögen Eis.", ok: true},
+    {s: "Jede Kinder bekommen ein Eis.", wrong: 0, fix: "Alle"},
+    {s: "Ich habe Lust für einen Burger.", wrong: 3, fix: "auf"},
+    {s: "In jeder Restaurant gibt es eine Speisekarte.", wrong: 1, fix: "jedem"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🍕', '🍣', '🍦', '🎂']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
