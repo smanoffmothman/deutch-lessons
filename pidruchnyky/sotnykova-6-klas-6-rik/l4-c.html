@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 4, Modul C: Wiederholung — Німецька мова 6 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 6 КЛАС</span>
+        <h1>Lektion 4 · Modul C: Wiederholung</h1>
+        <p class="sub">Повторення всього Lektion 4: види спорту, місця й спорядження, команда й змагання, Perfekt з haben і sein, um … zu, gern – lieber – am liebsten. Гра на швидкість, кросворд, шкільне радіо, говоріння і тест на весь Lektion.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Blitz</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Sortieren</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Kreuzworträtsel</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Hören</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Fehler</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Sätze umbauen</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER — усі слова Lektion 4 (збираються самі) ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Усі слова Lektion 4</h2>
+      <p class="lead">Тут зібрано слова всіх модулів Lektion 4. Перевір себе в «Картки ▶» і познач ☆ ті, які ще не пам'ятаєш, — їх варто повторити перед тестом.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: бліц ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Blitz: 60 Sekunden</h2>
+      <p class="lead">Розминка на швидкість: скільки слів Lektion 4 ти перекладеш за 60 секунд? У бал не йде — це гра. Спробуй побити власний рекорд!</p>
+      <div class="card" id="ub1-blitz"></div>
+    </section>
+
+    <!-- ===== Üb. 2: сортування ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Welche Gruppe?</h2>
+      <p class="lead">Розклади види спорту за групами: з м'ячем, зимові, єдиноборства, на воді.</p>
+      <div class="card" id="ub2-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 3: кросворд ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Kreuzworträtsel</h2>
+      <p class="lead">Спорт, змагання й спорядження: впиши німецькі слова за перекладом. ä ö ü ß — з панелі внизу.</p>
+      <div class="card" id="ub3-kw"></div>
+    </section>
+
+    <!-- ===== Üb. 4: HÖREN — власний діалог, озвучений синтезатором ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4 · Hören</p>
+      <h2 class="panel-title">Die Sportnews der 6b</h2>
+      <p class="lead">Ніна й Макс ведуть у шкільному радіо спортивні новини свого класу. Послухай випуск (можна двічі) і дай відповіді. Текст — внизу, але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l4-c-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="ub4-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Nina:</b> Hallo und willkommen bei den Sportnews der Klasse sechs b! Hier ist Nina …<br>
+          <b>Max:</b> … und Max! Zuerst Fußball. Am Dienstag hat unsere Klasse gegen die sechs a gespielt. Leider haben wir zwei zu drei verloren.<br>
+          <b>Nina:</b> Aber unser Torwart Erik hat super gespielt! Mehr darüber lest ihr in der Schülerzeitung.<br>
+          <b>Max:</b> Jetzt zum Schwimmen. Ayla hat am Mittwoch an einem Wettbewerb im Schwimmbad teilgenommen. Sie ist hundert Meter geschwommen und hat eine Goldmedaille gewonnen!<br>
+          <b>Nina:</b> Herzlichen Glückwunsch, Ayla! Auch Timur hat am Wochenende ein Turnier gehabt: Taekwondo. Er ist Zweiter geworden.<br>
+          <b>Max:</b> Toll! Und noch eine Nachricht: Daryna und Greta machen jetzt einen Kletterkurs. Sie trainieren jeden Mittwoch in der Kletterhalle.<br>
+          <b>Nina:</b> Greta sagt: „Am Anfang war es schwer, aber jetzt klettern wir schon ganz nach oben.“<br>
+          <b>Max:</b> Und hier ist unsere Frage der Woche: Welche Sportart möchtet ihr in der Schule lernen?<br>
+          <b>Nina:</b> Die meisten haben gesagt: Klettern! Auf Platz zwei ist Tischtennis.<br>
+          <b>Max:</b> Zum Schluss ein Tipp: Ab Freitag ist die Eisbahn im Park wieder offen. Um vier Uhr fahren viele aus unserer Klasse hin, um Schlittschuh zu laufen. Kommt mit!<br>
+          <b>Nina:</b> Und Erik sagt: „Diesmal falle ich nicht hin!“ Das waren die Sportnews. Tschüss!<br>
+          <b>Max:</b> Bis nächste Woche!
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5: знайди помилку ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Finde den Fehler</h2>
+      <p class="lead">Граматика всього Lektion: Perfekt з haben або sein, um … zu, рід складених слів, lieber … als, Akkusativ після brauchen. Знайди помилку й виправ її — або натисни «Fehlerfrei».</p>
+      <div class="card" id="ub5-fix"></div>
+    </section>
+
+    <!-- ===== Üb. 6: перетворення ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">Sätze umbauen</h2>
+      <p class="lead">Перепиши речення за завданням. Пиши ціле речення.</p>
+      <div class="card" id="ub6-tr"></div>
+    </section>
+
+    <!-- ===== SPRECHEN ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Sprich mal!</h2>
+      <p class="lead">Спершу вимов фрази в 🎤, потім відповідай уголос на запитання й порівнюй зі зразком.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Wo warst du am Wochenende? Was hast du dort gemacht?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Am Samstag war ich im Schwimmbad. Ich bin eine Stunde geschwommen und vom Turm gesprungen. Am Sonntag war ich mit meinem Vater auf dem Sportplatz. Wir haben Fußball gespielt und sind zehn Runden gelaufen.</div>
+        </div>
+        <div class="qa">
+          <label>2. Welchen Sport machst du im Sommer, welchen im Winter? Was machst du am liebsten?</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Im Sommer fahre ich gern Rad und schwimme im See. Im Winter laufe ich Schlittschuh, aber lieber fahre ich Ski. Am liebsten spiele ich aber Basketball, weil ich in einer Mannschaft spiele.</div>
+        </div>
+        <div class="qa">
+          <label>3. Welche Sportarten siehst du gern im Fernsehen? Welche findest du langweilig?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Am liebsten sehe ich Fußball im Fernsehen, besonders die Spiele der Nationalmannschaft. Im Winter sehe ich auch gern Skisprung und Eiskunstlauf. Golf finde ich langweilig, weil dort nicht viel passiert.</div>
+        </div>
+        <div class="qa">
+          <label>4. Du möchtest einen Sportkurs machen. Welchen? Wann findet er statt? Warum möchtest du mitmachen?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Ich möchte einen Tenniskurs machen. Er findet jeden Dienstag und Donnerstag um fünf Uhr im Sportzentrum statt. Ich möchte mitmachen, weil Tennis schnell und spannend ist und weil meine Freundin auch dort trainiert.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — на весь Lektion ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Test zu Lektion 4</h2>
+      <p class="lead">Підсумковий тест на весь Lektion 4: 18 завдань. Кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">9)</span> Gestern
+          <select class="blank inline" data-ans="bin"><option value="">—</option><option>habe</option><option>bin</option><option>ist</option></select> ich zwei Stunden gewandert.</div>
+        <div class="fill-item"><span class="num">10)</span> Lotte
+          <select class="blank inline" data-ans="hat"><option value="">—</option><option>ist</option><option>hat</option><option>habe</option></select> lange Eiskunstlauf trainiert.</div>
+        <div class="fill-item"><span class="num">11)</span> Wir gehen ins Stadion, um
+          <select class="blank inline" data-ans="zu laufen"><option value="">—</option><option>laufen</option><option>zu gelaufen</option><option>zu laufen</option></select>.</div>
+        <div class="fill-item"><span class="num">12)</span> Erik ruft an, um
+          <select class="blank inline" data-ans="mitzumachen"><option value="">—</option><option>zu mitmachen</option><option>mitzumachen</option><option>mitmachen</option></select>.</div>
+        <div class="fill-item"><span class="num">13)</span> 
+          <select class="blank inline" data-ans="Das"><option value="">—</option><option>Der</option><option>Die</option><option>Das</option></select> Tischtennis ist mein Lieblingssport.</div>
+        <div class="fill-item"><span class="num">14)</span> Im Winter fahre ich
+          <select class="blank inline" data-ans="lieber"><option value="">—</option><option>mehr gern</option><option>lieber</option><option>gerner</option></select> Snowboard als Ski.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-6-klas-6-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-6-klas-6-rik";
+  const KN_UNIT = "l4-c";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['ub1', 'ub2', 'ub3', 'ub4', 'ub5', 'ub6', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+
+  // Üb. 1: бліц — усі слова Lektion 4 з файлу слів (без однакових перекладів)
+  const blitzPairs = [], blitzSeen = new Set();
+  ((window.SLOVA && window.SLOVA[KN_BOOK]) || []).filter(w => /^l4-/.test(w.r)).forEach(w => {
+    const de = w.de.split(' / ')[0].split(',')[0].replace(/\s*\(.*?\)/g, '').trim();
+    const uk = w.uk.split(' / ')[0].trim();
+    const key = uk.split(/[,;]/)[0].trim().toLowerCase();
+    if (!de || /^(der|die|das)$/i.test(de) || blitzSeen.has(key)) return;
+    blitzSeen.add(key);
+    blitzPairs.push([de, uk]);
+  });
+  buildBlitz('ub1-blitz', {pairs: blitzPairs, seconds: 60, dir: "de-uk"});
+
+  // Üb. 2: сортування
+  buildSort('ub2-sort', {
+    buckets: ["Ballsport ⚽", "Wintersport ❄️", "Kampfsport 🥊", "Wassersport 🌊"],
+    items: [
+      {t: "der Basketball", b: "Ballsport ⚽"},
+      {t: "der Handball", b: "Ballsport ⚽"},
+      {t: "der Volleyball", b: "Ballsport ⚽"},
+      {t: "der Fußball", b: "Ballsport ⚽"},
+      {t: "der Skisprung", b: "Wintersport ❄️"},
+      {t: "der Eiskunstlauf", b: "Wintersport ❄️"},
+      {t: "das Snowboarden", b: "Wintersport ❄️"},
+      {t: "das Skifahren", b: "Wintersport ❄️"},
+      {t: "das Boxen", b: "Kampfsport 🥊"},
+      {t: "das Fechten", b: "Kampfsport 🥊"},
+      {t: "das Judo", b: "Kampfsport 🥊"},
+      {t: "das Taekwondo", b: "Kampfsport 🥊"},
+      {t: "das Schwimmen", b: "Wassersport 🌊"},
+      {t: "das Segeln", b: "Wassersport 🌊"},
+      {t: "das Surfen", b: "Wassersport 🌊"},
+      {t: "das Rudern", b: "Wassersport 🌊"}
+    ]
+  });
+
+  // Üb. 3: кросворд
+  buildCrossword('ub3-kw', [
+    ["Mannschaft", "команда (die)"],
+    ["Torwart", "воротар (der)"],
+    ["Schläger", "ракетка (der)"],
+    ["Netz", "сітка (das)"],
+    ["Helm", "шолом (der)"],
+    ["Seil", "мотузка (das)"],
+    ["Medaille", "медаль (die)"],
+    ["Turnier", "турнір (das)"],
+    ["Kurs", "гурток (der)"],
+    ["Pferd", "кінь (das)"],
+    ["Eisbahn", "ковзанка (die)"],
+    ["gewinnen", "перемагати"]
+  ]);
+
+  // Üb. 4: Hören
+  buildQuiz('ub4-quiz', [
+    {q: "Gegen wen hat die 6b Fußball gespielt?", opts: ["gegen die 6a", "gegen eine Schule aus Halle", "gegen die 7b"], correct: "gegen die 6a"},
+    {q: "Wie ist das Spiel ausgegangen?", opts: ["3:2 für die 6b", "2:3 — die 6b hat verloren", "2:2"], correct: "2:3 — die 6b hat verloren"},
+    {q: "Wer hat super gespielt?", opts: ["der Torwart Erik", "Max", "Timur"], correct: "der Torwart Erik"},
+    {q: "Was hat Ayla gewonnen?", opts: ["eine Silbermedaille", "eine Goldmedaille", "ein Turnier im Tischtennis"], correct: "eine Goldmedaille"},
+    {q: "Welchen Platz hat Timur gemacht?", opts: ["den ersten", "den zweiten", "den dritten"], correct: "den zweiten"},
+    {q: "Wann trainieren Daryna und Greta?", opts: ["jeden Mittwoch", "jeden Freitag", "am Wochenende"], correct: "jeden Mittwoch"},
+    {q: "Welche Sportart möchten die meisten in der Schule lernen?", opts: ["Tischtennis", "Klettern", "Reiten"], correct: "Klettern"},
+    {q: "Warum fahren viele am Freitag in den Park?", opts: ["um Fußball zu spielen", "um Schlittschuh zu laufen", "um zu klettern"], correct: "um Schlittschuh zu laufen"}
+  ]);
+
+  // Üb. 5: знайди помилку
+  buildFixError('ub5-fix', [
+    {s: "Wir sind am Wochenende Rad gefahren.", ok: true},
+    {s: "Ich habe im See geschwommen.", wrong: 1, fix: "bin"},
+    {s: "Erik hat auf der Eisbahn hingefallen.", wrong: 1, fix: "ist"},
+    {s: "Ich gehe ins Schwimmbad, um zu trainieren.", ok: true},
+    {s: "Wir fahren in die Kletterhalle, um zu klettert.", wrong: 7, fix: "klettern"},
+    {s: "Die Eishockey ist in Kanada sehr beliebt.", wrong: 0, fix: "Das"},
+    {s: "Ich spiele lieber Tennis wie Volleyball.", wrong: 4, fix: "als"},
+    {s: "Für diesen Sport braucht man ein Schläger.", wrong: 5, fix: "einen"},
+    {s: "Iwan hat an einem Turnier teilgenommen.", ok: true}
+  ]);
+
+  // Üb. 6: перетворення
+  buildTransform('ub6-tr', [
+    {s: "Ayla schwimmt hundert Meter.", task: "у <b>Perfekt</b>", ans: "Ayla ist hundert Meter geschwommen."},
+    {s: "Unsere Mannschaft gewinnt das Spiel.", task: "у <b>Perfekt</b>", ans: "Unsere Mannschaft hat das Spiel gewonnen."},
+    {s: "Timur trainiert jeden Tag.", task: "у <b>Perfekt</b>", ans: "Timur hat jeden Tag trainiert."},
+    {s: "Ich gehe in die Turnhalle. Ich will Volleyball spielen.", task: "з <b>um … zu</b>", ans: "Ich gehe in die Turnhalle, um Volleyball zu spielen."},
+    {s: "Greta fährt in die Kletterhalle. Sie will am Kurs teilnehmen.", task: "з <b>um … zu</b>", ans: "Greta fährt in die Kletterhalle, um am Kurs teilzunehmen."},
+    {s: "Tennis spiele ich gern. Basketball spiele ich noch lieber.", task: "одним реченням: <b>Ich spiele lieber … als …</b>", ans: "Ich spiele lieber Basketball als Tennis."}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Am Wochenende bin ich Rad gefahren.", uk: "На вихідних я катався (каталася) на велосипеді."},
+    {say: "Ich gehe ins Schwimmbad, um zu trainieren.", uk: "Я йду в басейн, щоб потренуватися."},
+    {say: "Am liebsten spiele ich Basketball.", uk: "Найбільше я люблю грати в баскетбол."},
+    {say: "Leider hat unsere Mannschaft verloren.", uk: "На жаль, наша команда програла."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Beim Klettern braucht man ein …", opts: ["Seil", "Netz", "Tor"], correct: "Seil"},
+    {q: "Zum Reiten braucht man ein …", opts: ["Pferd", "Boot", "Netz"], correct: "Pferd"},
+    {q: "Schlittschuh läuft man auf der …", opts: ["Turnhalle", "Eisbahn", "Kletterhalle"], correct: "Eisbahn"},
+    {q: "Ein Kurs für … ist für Leute ohne Erfahrung.", opts: ["Anfänger", "Trainer", "Torwarte"], correct: "Anfänger"},
+    {q: "Fußball, Handball und Volleyball sind …", opts: ["Kampfsportarten", "Wintersportarten", "Ballsportarten"], correct: "Ballsportarten"},
+    {q: "Beim Fußball steht der … im Tor.", opts: ["Torwart", "Trainer", "Fan"], correct: "Torwart"},
+    {q: "Das Spiel endet 1:4 gegen uns. Wir haben …", opts: ["gewonnen", "verloren", "geworfen"], correct: "verloren"},
+    {q: "Was bedeutet „stattfinden“?", opts: ["відбуватися", "брати участь", "перемагати"], correct: "відбуватися"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Greta hat zwölf Punkte gemacht.", ok: true},
+    {s: "Wir sind gestern Volleyball gespielt.", wrong: 1, fix: "haben"},
+    {s: "Am liebste schwimme ich im Meer.", wrong: 1, fix: "liebsten"},
+    {s: "Ayla hat eine Medaille gewinnt.", wrong: 4, fix: "gewonnen"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['⚽', '🏊', '⛸️', '🏆']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>

@@ -385,4 +385,17 @@
   {de: "Snowboard fahren (fährt), ist gefahren", uk: "кататися на сноуборді", r: "l4-b"},
   {de: "segeln, ist gesegelt", uk: "ходити під вітрилом", r: "l4-b"},
   {de: "träumen von (+ Dat.)", uk: "мріяти (про щось)", r: "l4-b", note: "Lotte träumt von einer Medaille."},
+  // ---- Lektion 4 · Modul D: Geschichtenzeit ----
+  {de: "blass", uk: "блідий", r: "l4-d"},
+  {de: "fangen (fängt), hat gefangen", uk: "ловити, піймати", r: "l4-d"},
+  {de: "die Augen schließen, hat geschlossen", uk: "заплющувати очі", r: "l4-d"},
+  {de: "stark", uk: "сильний", r: "l4-d"},
+  {de: "der Fan, -s", uk: "уболівальник, фанат", r: "l4-d"},
+  {de: "ein Tor schießen, hat geschossen", uk: "забивати гол", r: "l4-d", note: "Matteo hat ein Tor geschossen."},
+  {de: "pfeifen, hat gepfiffen", uk: "свистіти", r: "l4-d"},
+  {de: "der Schiedsrichter, -", uk: "суддя (у спорті)", r: "l4-d"},
+  {de: "der Elfmeter, -", uk: "пенальті", r: "l4-d", note: "буквально «одинадцятиметровий» — удар з 11 метрів"},
+  {de: "halten (hält), hat gehalten", uk: "тримати; відбити (м'яч)", r: "l4-d", note: "Erik hat den Elfmeter gehalten. — Ерік відбив пенальті."},
+  {de: "verwirrt", uk: "розгублений", r: "l4-d"},
+  {de: "Na und?", uk: "Ну то й що?", r: "l4-d"},
 ];
