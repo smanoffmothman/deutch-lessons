@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 3, Modul A: Das schmeckt gut — Німецька мова 6 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 6 КЛАС</span>
+        <h1>Lektion 3 · Modul A: Das schmeckt gut</h1>
+        <p class="sub">Урок про їжу й смаки: солодкий, кислий, солоний, гіркий, гострий, сніданок, обід і вечеря. Прикметник без артикля — «heißer Tee», «mit frischem Obst» — і дієслово schmecken. Текст і діалог з озвученням, вправи, говоріння, письмо і підсумковий тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Wie schmeckt das?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · heißer Tee</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Bei Oma</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Sätze umbauen</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власний текст + вправа на розуміння ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Der große Geschmackstest</h2>
+      <p class="lead">Грета розповідає, як вони з Еріком і Лотте влаштували вдома дегустацію наосліп. Послухай і прочитай. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l3-a-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Letzten Sonntag war es draußen kalt und nass, und Lotte hat sich gelangweilt. Da habe ich eine Idee gehabt: ein <span class="gl" data-uk="смак" data-lemma="der Geschmack, -ä-e">Geschmacks</span>test! Lotte bekommt ein Tuch über die Augen und muss <span class="gl" data-uk="вгадувати" data-lemma="raten (rät), hat geraten">raten</span>: Was isst sie gerade? Erik war auch bei uns und hat mitgemacht.</p>
+        <p>Zuerst hat Lotte ein Stück <span class="gl" data-uk="лимон" data-lemma="die Zitrone, -n">Zitrone</span> bekommen. „Iiih, das ist <span class="gl" data-uk="кислий" data-lemma="sauer">sauer</span>!“, hat sie gerufen. Dann haben wir ihr eine <span class="gl" data-uk="солоний огірок" data-lemma="die Salzgurke, -n">Salzgurke</span> gegeben. „<span class="gl" data-uk="солоний" data-lemma="salzig">Salzig</span> und ein bisschen sauer — eine Gurke!“ Richtig!</p>
+        <p>Danach haben wir Bitterschokolade probiert. Lotte hat gedacht, das ist Kaffee! Sie mag nur <span class="gl" data-uk="солодкий" data-lemma="süß">süße</span> Milchschokolade, <span class="gl" data-uk="гіркий" data-lemma="bitter">bittere</span> Schokolade findet sie schrecklich. Erik hat gelacht: „Für mich kann Schokolade gar nicht bitter genug sein!“</p>
+        <p>Dann hat Erik einen Trick versucht. Er hat Lotte ein Stück Brot mit <span class="gl" data-uk="гострий, пекучий" data-lemma="scharf">scharfem</span> <span class="gl" data-uk="гірчиця" data-lemma="der Senf">Senf</span> gegeben. Lotte hat gehustet und schnell ein Glas kaltes Wasser getrunken. „Das ist zu scharf! Erik, du bist gemein!“ Erik hat sich entschuldigt und ihr einen Löffel <span class="gl" data-uk="мед" data-lemma="der Honig">Honig</span> gegeben. „Hmm, süß und <span class="gl" data-uk="смачний" data-lemma="lecker">lecker</span>!“</p>
+        <p>Zum Schluss war ich dran. Lotte hat mir eine Suppe aus dem <span class="gl" data-uk="холодильник" data-lemma="der Kühlschrank, -ä-e">Kühlschrank</span> gegeben: kalte Tomatensuppe mit <span class="gl" data-uk="свіжий" data-lemma="frisch">frischem</span> Basilikum. Kalte Suppe — bestimmt nicht gut, habe ich gedacht. Aber sie hat super <span class="gl" data-uk="бути смачним; мати смак" data-lemma="schmecken (+ Dat.)">geschmeckt</span>! Das war Gazpacho, eine spanische Suppe. Mama hat sie am Samstag gekocht.</p>
+        <p>Unser Ergebnis: Lotte hat sieben von zehn Sachen erraten, Erik nur fünf. Und ich habe gelernt: Man muss alles <span class="gl" data-uk="пробувати, куштувати" data-lemma="probieren">probieren</span>. Manchmal schmeckt etwas ganz anders, als man denkt!</p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">heißer Tee · mit frischem Obst</h2>
+      <p class="lead">Коли перед прикметником немає ні артикля, ні займенника (heißer Tee, kalte Milch), прикметник бере на себе «роботу» артикля: його закінчення показує рід і відмінок.</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. Прикметник без артикля</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th></th><th>Nom.</th><th>Akk.</th><th>Dat. (mit)</th></tr>
+          <tr><td class="gender">der</td><td>heiß<strong>er</strong> Tee</td><td>heiß<strong>en</strong> Tee</td><td>heiß<strong>em</strong> Tee</td></tr>
+          <tr><td class="gender">das</td><td>frisch<strong>es</strong> Obst</td><td>frisch<strong>es</strong> Obst</td><td>frisch<strong>em</strong> Obst</td></tr>
+          <tr><td class="gender">die</td><td>kalt<strong>e</strong> Milch</td><td>kalt<strong>e</strong> Milch</td><td>kalt<strong>er</strong> Milch</td></tr>
+          <tr><td class="gender">Pl.</td><td>süß<strong>e</strong> Äpfel</td><td>süß<strong>e</strong> Äpfel</td><td>süß<strong>en</strong> Äpfeln</td></tr>
+        </table></div>
+        <div class="merke">Закінчення прикметника — як у означеного артикля: d<b>er</b> → heiß<b>er</b>, da<b>s</b> → frisch<b>es</b>, d<b>em</b> → frisch<b>em</b>, die → kalt<b>e</b>. Так само після <b>viele, einige, wenige</b>: viele süß<b>e</b> Äpfel.</div>
+        <p class="beispiel">Ich trinke gern heiß<b>en</b> Tee mit frisch<b>er</b> Zitrone. — Brot mit scharf<b>em</b> Senf mag Lotte nicht.</p>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. schmecken</p>
+        <p class="beispiel">Die Suppe <b>schmeckt</b> gut. — Die Äpfel <b>schmecken</b> süß. <i>(однина / множина — за тим, що смакує)</i></p>
+        <p class="beispiel">Schmeckt <b>dir</b> der Kuchen? — Ja, er schmeckt <b>mir</b> sehr! <i>(кому? — Dativ)</i></p>
+        <div class="merke">«Мені смакує» = <b>Es schmeckt mir</b>. Не плутай: <b>Ich schmecke</b> — це «я на смак…». Без прикметника <i>Das schmeckt!</i> = «Смачно!», а <i>Das schmeckt nicht.</i> = «Несмачно».</div>
+        <div class="merke"><b>zu</b> + прикметник = занадто: zu scharf, zu salzig. <b>versalzen</b> = пересолений.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. Типові помилки</p>
+        <p>✗ Ich trinke gern heiße Tee. → ✓ Ich trinke gern heiß<b>en</b> Tee. <i>(Akkusativ, der)</i></p>
+        <p>✗ Brot mit scharfen Senf → ✓ Brot mit scharf<b>em</b> Senf <i>(mit + Dativ, der → -em)</i></p>
+        <p>✗ frische Obst → ✓ frisch<b>es</b> Obst <i>(das → -es)</i></p>
+        <p>✗ Ich schmecke die Suppe gut. → ✓ Die Suppe schmeckt <b>mir</b> gut.</p>
+        <p>✗ Die Äpfel schmeckt süß. → ✓ Die Äpfel schmeck<b>en</b> süß. <i>(множина)</i></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: картинки — смаки ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Wie schmeckt das?</h2>
+      <p class="lead">Яке воно на смак? Вибери слово до картинки.</p>
+      <div class="card" id="ub1-pic"></div>
+    </section>
+
+    <!-- ===== Üb. 2: закінчення без артикля ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">heißer Tee · heißen Tee · mit heißem Tee</h2>
+      <p class="lead">Допиши закінчення прикметника замість «…». Перед виразом — відмінок: Nom. — хто? що?, Akk. — кого? що?, Dat. — з чим?</p>
+      <div class="card" id="ub2-tab"></div>
+    </section>
+
+    <!-- ===== Üb. 3: чат за обідом ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Mittagessen bei Oma Christa</h2>
+      <p class="lead">Ти обідаєш у бабусі Грети. Вона питає, чи смачно. Вибирай доречну й граматично правильну відповідь.</p>
+      <div class="card" id="ub3-chat"></div>
+    </section>
+
+    <!-- ===== Üb. 4: перетворення ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Sätze umbauen</h2>
+      <p class="lead">Перепиши речення за завданням. Пиши ціле речення.</p>
+      <div class="card" id="ub4-tr"></div>
+    </section>
+
+    <!-- ===== HÖREN — власний діалог, озвучений синтезатором ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Essen bei Oma auf dem Land</h2>
+      <p class="lead">Іван гостює в бабусі в селі. Дарина телефонує йому з Лейпцига. Послухай діалог (можна двічі) і дай відповіді. Текст діалогу — внизу, але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l3-a-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Daryna:</b> Hallo, Iwan! Was machst du gerade? Du kaust ja!<br>
+          <b>Iwan:</b> Hallo, Daryna! Ich bin bei Oma auf dem Land. Wir essen gerade zu Mittag.<br>
+          <b>Daryna:</b> Lecker! Was gibt es denn?<br>
+          <b>Iwan:</b> Zuerst Borschtsch mit saurer Sahne, dann Warenyky mit Kartoffeln. Oma kocht einfach am besten!<br>
+          <b>Daryna:</b> Oh, ich vermisse Warenyky! Hier in Leipzig gibt es keine.<br>
+          <b>Iwan:</b> Was isst man denn in Deutschland? Nur Würstchen?<br>
+          <b>Daryna:</b> Nein, nicht nur! Ich mag zum Beispiel Brezeln. Sie sind weich und salzig.<br>
+          <b>Iwan:</b> Und was magst du nicht?<br>
+          <b>Daryna:</b> Sauerkraut. Es ist mir zu sauer. Und Currywurst ist mir zu scharf.<br>
+          <b>Iwan:</b> Haha, und ich esse gern scharfes Essen! Oma macht immer eine scharfe Soße mit Knoblauch.<br>
+          <b>Daryna:</b> Und was trinkt ihr zum Essen?<br>
+          <b>Iwan:</b> Kaltes Kompott aus Kirschen. Es ist süß und ein bisschen sauer.<br>
+          <b>Daryna:</b> Mmm! Grüß deine Oma von mir. Sag ihr: Ihre Warenyky sind die besten!<br>
+          <b>Iwan:</b> Mache ich. Und im Sommer kommst du zu uns und probierst sie selbst!
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN — 🎤 + говоріння зі зразком ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Was schmeckt dir?</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Was isst du zum Frühstück, zu Mittag und zu Abend?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Zum Frühstück esse ich Müsli mit frischem Obst. Zu Mittag esse ich in der Schule Suppe oder Nudeln. Zu Abend gibt es bei uns oft Brot mit Käse und warmen Tee.</div>
+        </div>
+        <div class="qa">
+          <label>2. Was schmeckt dir gut, was schmeckt dir nicht? Warum?</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Pizza mit Käse schmeckt mir sehr gut. Fisch schmeckt mir nicht, weil er mir zu salzig ist. Bittere Schokolade mag ich auch nicht — ich esse lieber Milchschokolade.</div>
+        </div>
+        <div class="qa">
+          <label>3. Nenne je ein Lebensmittel: süß, sauer, salzig, bitter, scharf.</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Honig ist süß. Zitronen sind sauer. Chips sind salzig. Kaffee ohne Zucker ist bitter. Und Senf oder Paprika ist scharf.</div>
+        </div>
+        <div class="qa">
+          <label>4. Du isst bei Freunden, aber die Suppe ist versalzen. Was sagst du höflich?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Danke, die Suppe ist sehr warm und gut, aber für mich ein bisschen zu salzig. Kann ich bitte noch etwas Brot haben?</div>
+        </div>
+        <div class="qa">
+          <label>5. Macht einen Geschmackstest zu zweit: Einer beschreibt ein Essen, der andere rät.</label>
+          <button class="btn secondary" type="button" data-reveal="spr5">Muster zeigen</button>
+          <div class="reveal" id="spr5">— Es ist gelb, sauer und man trinkt es oft mit Tee. — Ist das eine Zitrone? — Richtig! Jetzt du. — Es ist braun, süß und man isst es gern mit Brot. — Honig? — Genau!</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN — письмо за планом ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Mein Lieblingsessen</h2>
+      <p class="lead">Іван пише Дарині про бабусині вареники. Дарина питає й тебе: «А яка твоя улюблена страва?» Напиши їй повідомлення на 60–80 слів за планом:</p>
+      <div class="card">
+        <p>1) привітання; 2) твоя улюблена страва і хто її готує; 3) з чим її їдять — двічі «mit + прикметник без артикля» (mit frischem …, mit saurer …); 4) яка вона на смак; 5) що ти зовсім не любиш і чому (zu …); 6) запитання до Дарини й прощання.</p>
+        <p class="beispiel">Hallo Daryna! · Mein Lieblingsessen ist … · Meine Mutter / Mein Opa kocht … · Man isst es mit frischem … / mit saurer … · Es schmeckt … · … mag ich nicht, denn es ist mir zu … · Und was …?</p>
+        <div class="qa">
+          <label for="schreiben-text">Deine Nachricht</label>
+          <textarea id="schreiben-text" rows="10" placeholder="Hallo Daryna! …"
+            data-words="60-80"
+            data-must="schmeckt/schmecken|mit|zu"
+            data-check="Улюблена страва й хто готує|Двічі mit + прикметник без артикля|Смак (süß, salzig, sauer …)|Що не любиш і чому (zu …)|Запитання до Дарини"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Hallo Daryna!<br>Mein Lieblingsessen sind Pfannkuchen. Mein Opa macht sie jeden Sonntag. Wir essen sie mit frischem Obst oder mit saurer Sahne. Sie schmecken süß und sehr lecker! Ich esse oft fünf Stück. Fisch mag ich gar nicht, denn er ist mir zu salzig. Und scharfe Soßen esse ich auch nicht gern. Was isst du am liebsten in Leipzig?<br>Viele Grüße<br>Mark</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — режим контрольної: одна спроба, лише ця вкладка йде в бал ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Ich trinke gern
+          <select class="blank inline" data-ans="kalten"><option value="">—</option><option>kalter</option><option>kalten</option><option>kaltes</option></select> Saft. <i>(der Saft)</i></div>
+        <div class="fill-item"><span class="num">8)</span> Zum Frühstück esse ich Müsli mit
+          <select class="blank inline" data-ans="frischem"><option value="">—</option><option>frischem</option><option>frisches</option><option>frischen</option></select> Obst.</div>
+        <div class="fill-item"><span class="num">9)</span>
+          <select class="blank inline" data-ans="Heiße"><option value="">—</option><option>Heiß</option><option>Heißer</option><option>Heiße</option></select> Schokolade schmeckt im Winter super.</div>
+        <div class="fill-item"><span class="num">10)</span> Schmeckt
+          <select class="blank inline" data-ans="dir"><option value="">—</option><option>dich</option><option>dir</option><option>du</option></select> die Suppe?</div>
+        <div class="fill-item"><span class="num">11)</span> Die Zitronen
+          <select class="blank inline" data-ans="schmecken"><option value="">—</option><option>schmeckt</option><option>schmecke</option><option>schmecken</option></select> sauer.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-6-klas-6-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-6-klas-6-rik";
+  const KN_UNIT = "l3-a";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Am Sonntag war das Wetter schön.", a: "f"},
+    {s: "Lotte muss mit einem Tuch über den Augen raten.", a: "r"},
+    {s: "Die Zitrone findet Lotte sauer.", a: "r"},
+    {s: "Lotte mag bittere Schokolade sehr gern.", a: "f"},
+    {s: "Erik isst gern bittere Schokolade.", a: "r"},
+    {s: "Das Brot mit Senf war für Lotte zu scharf.", a: "r"},
+    {s: "Nach dem Senf bekommt Lotte einen Löffel Zucker.", a: "f"},
+    {s: "Die kalte Suppe hat Greta gut geschmeckt.", a: "r"},
+    {s: "Erik hat mehr Sachen erraten als Lotte.", a: "f"}
+  ]);
+
+  // Üb. 1: смаки
+  buildPicture('ub1-pic', [
+    {pic: "🍋", opts: ["süß", "sauer", "scharf"], correct: "sauer"},
+    {pic: "🍯", opts: ["süß", "bitter", "salzig"], correct: "süß"},
+    {pic: "🌶️", opts: ["sauer", "süß", "scharf"], correct: "scharf"},
+    {pic: "🥨", opts: ["bitter", "salzig", "sauer"], correct: "salzig"},
+    {pic: "☕", opts: ["süß", "scharf", "bitter"], correct: "bitter"},
+    {q: "das Spiegelei", opts: ["🍳", "🥚", "🍞"], correct: "🍳"},
+    {q: "das Brathähnchen", opts: ["🐟", "🍗", "🥩"], correct: "🍗"},
+    {q: "die Bratkartoffeln", opts: ["🥔", "🍟", "🥕"], correct: "🥔"}
+  ]);
+
+  // Üb. 2: закінчення без артикля (одне поле в рядку)
+  buildTable('ub2-tab', {
+    head: ["Fall · Wortgruppe", "Endung"],
+    rows: [
+      ["Nom. · heiß… Tee", "[er]"],
+      ["Akk. · heiß… Tee", "[en]"],
+      ["Dat. · mit heiß… Tee", "[em]"],
+      ["Nom. · frisch… Obst", "[es]"],
+      ["Dat. · mit frisch… Obst", "[em]"],
+      ["Nom. · kalt… Milch", "[e]"],
+      ["Dat. · mit kalt… Milch", "[er]"],
+      ["Akk. · süß… Äpfel (Pl.)", "[e]"],
+      ["Dat. · mit süß… Äpfeln (Pl.)", "[en]"],
+      ["Akk. · scharf… Senf", "[en]"]
+    ]
+  });
+
+  // Üb. 3: чат
+  buildChat('ub3-chat', {
+    partner: "Oma Christa",
+    steps: [
+      {them: "So, Kinder, das Essen ist fertig! Heute gibt es Gemüsesuppe und Bratkartoffeln. 🍲"},
+      {you: ["Danke! Das riecht toll!", "Danke! Das schmeckt mich!", "Danke! Ich schmecke gut!"], correct: 0},
+      {them: "Wie schmeckt dir die Suppe?"},
+      {you: ["Sie schmeckt mir sehr gut!", "Sie schmeckt mich sehr gut!", "Ich schmecke sie sehr gut!"], correct: 0},
+      {them: "Ist sie nicht zu salzig?"},
+      {you: ["Nein, gar nicht. Sie ist genau richtig.", "Nein, gar nicht. Sie ist versalzen.", "Nein, gar nicht. Sie ist zu salzig."], correct: 0},
+      {them: "Und möchtest du etwas trinken?"},
+      {you: ["Ja, gern. Kalten Apfelsaft, bitte.", "Ja, gern. Kalter Apfelsaft, bitte.", "Ja, gern. Kaltes Apfelsaft, bitte."], correct: 0},
+      {them: "Natürlich! Und zum Nachtisch gibt es Pfannkuchen mit frischem Obst."},
+      {you: ["Lecker! Pfannkuchen mit frischem Obst esse ich am liebsten!", "Lecker! Pfannkuchen mit frischen Obst esse ich am liebsten!", "Lecker! Pfannkuchen mit frisches Obst esse ich am liebsten!"], correct: 0},
+      {them: "Guten Appetit! 😊"}
+    ]
+  });
+
+  // Üb. 4: перетворення
+  buildTransform('ub4-tr', [
+    {s: "Der Tee ist heiß. Ich trinke den Tee gern.", task: "одним реченням, без артикля: <b>Ich trinke gern …</b>", ans: "Ich trinke gern heißen Tee."},
+    {s: "Das Obst ist frisch. Ich esse Jogurt mit dem Obst.", task: "одним реченням, без артикля: <b>… mit frischem …</b>", ans: "Ich esse Jogurt mit frischem Obst."},
+    {s: "Die Schokolade ist bitter. Lotte mag die Schokolade nicht.", task: "одним реченням, без артикля", ans: "Lotte mag keine bittere Schokolade.|Lotte mag bittere Schokolade nicht."},
+    {s: "Die Suppe ist kalt. Ich esse die Suppe nicht gern.", task: "почни з <b>Kalte Suppe …</b>", ans: "Kalte Suppe esse ich nicht gern."},
+    {s: "Der Kuchen ist lecker. (mir)", task: "з <b>schmecken</b>", ans: "Der Kuchen schmeckt mir.|Der Kuchen schmeckt mir gut."},
+    {s: "Die Soße ist sehr scharf. (für mich)", task: "з <b>zu</b>", ans: "Die Soße ist mir zu scharf.|Die Soße ist für mich zu scharf."}
+  ]);
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Wo ist Iwan?", opts: ["bei Oma auf dem Land", "in Leipzig", "im Restaurant"], correct: "bei Oma auf dem Land"},
+    {q: "Was isst Iwan zuerst?", opts: ["Warenyky", "Borschtsch mit saurer Sahne", "Würstchen"], correct: "Borschtsch mit saurer Sahne"},
+    {q: "Womit sind die Warenyky?", opts: ["mit Kirschen", "mit Kartoffeln", "mit Quark"], correct: "mit Kartoffeln"},
+    {q: "Wie findet Daryna Brezeln?", opts: ["weich und salzig", "süß und hart", "zu scharf"], correct: "weich und salzig"},
+    {q: "Warum mag Daryna kein Sauerkraut?", opts: ["Es ist zu sauer.", "Es ist zu scharf.", "Es ist zu süß."], correct: "Es ist zu sauer."},
+    {q: "Wie findet Daryna Currywurst?", opts: ["zu sauer", "zu scharf", "zu salzig"], correct: "zu scharf"},
+    {q: "Was trinkt man bei Iwans Oma?", opts: ["heißen Tee", "kaltes Kompott", "Apfelsaft"], correct: "kaltes Kompott"},
+    {q: "Was schlägt Iwan vor?", opts: ["Daryna kommt im Sommer zu ihnen.", "Oma schickt Warenyky nach Leipzig.", "Daryna kocht selbst Borschtsch."], correct: "Daryna kommt im Sommer zu ihnen."}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Wie schmeckt dir die Suppe?", uk: "Як тобі суп?"},
+    {say: "Die Zitrone ist sauer, und der Honig ist süß.", uk: "Лимон кислий, а мед солодкий."},
+    {say: "Ich esse gern Müsli mit frischem Obst.", uk: "Я люблю мюслі зі свіжими фруктами."},
+    {say: "Der Senf ist mir zu scharf.", uk: "Гірчиця для мене занадто гостра."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Eine Zitrone schmeckt …", opts: ["süß", "sauer", "bitter"], correct: "sauer"},
+    {q: "Die Suppe hat zu viel Salz. Sie ist …", opts: ["versalzen", "bitter", "frisch"], correct: "versalzen"},
+    {q: "Was ist scharf?", opts: ["Honig", "Senf", "Milch"], correct: "Senf"},
+    {q: "Wo liegen Milch und Butter zu Hause?", opts: ["im Kühlschrank", "im Spiegelei", "in der Tasse"], correct: "im Kühlschrank"},
+    {q: "Ich mag Kaffee ohne Zucker. Er ist …", opts: ["bitter", "salzig", "süß"], correct: "bitter"},
+    {q: "„Das schmeckt!“ bedeutet:", opts: ["Das ist lecker.", "Das ist zu scharf.", "Das ist kalt."], correct: "Das ist lecker."}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Ich esse gern frisches Brot.", ok: true},
+    {s: "Wir trinken heiße Tee mit Zitrone.", wrong: 2, fix: "heißen"},
+    {s: "Lotte isst Brot mit scharfen Senf.", wrong: 4, fix: "scharfem"},
+    {s: "Die Suppe schmeckt mich gut.", wrong: 3, fix: "mir"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🍋', '🍯', '🌶️', '🍫']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
