@@ -206,4 +206,18 @@
   {de: "die Währung, -en", uk: "валюта", r: "l2-c", note: "der Euro, die Hrywnja"},
   {de: "vergessen (vergisst), hat vergessen", uk: "забувати", r: "l2-c"},
   {de: "fehlen", uk: "бракувати, не вистачати", r: "l2-c", note: "Die Rosinen fehlen. — Бракує родзинок."},
+  // ---- Lektion 2 · Modul E: Geschichtenzeit ----
+  {de: "das Päckchen, -", uk: "пакунок, посилка", r: "l2-e"},
+  {de: "der Glitzer", uk: "блискітки", r: "l2-e"},
+  {de: "die Schleife, -n", uk: "бантик", r: "l2-e"},
+  {de: "der Kassenbon, -s", uk: "чек", r: "l2-e"},
+  {de: "umtauschen (tauscht um)", uk: "обмінювати (покупку)", r: "l2-e", note: "Kann ich das Kleid umtauschen?"},
+  {de: "nicken", uk: "кивати", r: "l2-e"},
+  {de: "rot werden", uk: "червоніти", r: "l2-e", note: "Greta wird rot."},
+  {de: "eigentlich", uk: "взагалі-то, насправді", r: "l2-e"},
+  {de: "die Trainingsjacke, -n", uk: "спортивна куртка, олімпійка", r: "l2-e"},
+  {de: "genauso viel wie", uk: "стільки ж, скільки", r: "l2-e"},
+  {de: "Angst haben (vor + Dat.)", uk: "боятися", r: "l2-e", note: "Ich habe Angst vor Hunden."},
+  {de: "verwechseln", uk: "плутати, переплутати", r: "l2-e"},
+  {de: "Macht nichts!", uk: "нічого страшного", r: "l2-e"},
 ];

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 2, Modul E: Geschichtenzeit — Німецька мова 6 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 6 КЛАС</span>
+        <h1>Lektion 2 · Modul E: Geschichtenzeit</h1>
+        <p class="sub">Оповідання «Rosa? Nein, danke!» з озвученням — про невдалий подарунок, обмін у магазині й переплутані посилки. Вправи на розуміння, говоріння і письмо.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Reihenfolge</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · richtig / falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wer sagt das?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Kurz erzählt</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова до оповідання</h2>
+      <p class="lead">Спершу переглянь нові слова — тоді оповідання читатиметься легко.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zur Geschichte</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власне оповідання ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Rosa? Nein, danke!</h2>
+      <p class="lead">Послухай і прочитай оповідання. Торкнися виділеного слова, щоб побачити переклад.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l2-e-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Zum Geburtstag hat Greta von Tante Ines aus Hamburg ein <span class="gl" data-uk="пакунок, посилка" data-lemma="das Päckchen, -">Päckchen</span> bekommen. Darin war ein Kleid — rosa, mit <span class="gl" data-uk="блискітки" data-lemma="der Glitzer">Glitzer</span> und vielen <span class="gl" data-uk="бантик" data-lemma="die Schleife, -n">Schleifen</span>. Greta hat „Danke!“ gesagt und gelächelt. Aber Rosa mag sie gar nicht, und Kleider trägt sie fast nie. Außerdem war das Kleid zu klein.</p>
+        <p>„Kein Problem“, hat Mama gesagt. „Der <span class="gl" data-uk="чек" data-lemma="der Kassenbon, -s">Kassenbon</span> liegt im Päckchen, und das Geschäft gibt es auch in Leipzig. Du kannst das Kleid <span class="gl" data-uk="обмінювати (покупку)" data-lemma="umtauschen (tauscht um)">umtauschen</span>.“</p>
+        <p>Am Montag geht Greta mit Daryna ins Kaufhaus. An der Kasse fragt sie: „Kann ich dieses Kleid umtauschen? Es ist mir zu klein.“ Die Verkäuferin schaut auf den Kassenbon und <span class="gl" data-uk="кивати" data-lemma="nicken">nickt</span>: „Natürlich. Möchtest du das gleiche Kleid eine Nummer größer?“ Greta <span class="gl" data-uk="червоніти" data-lemma="rot werden">wird rot</span>. „Ähm … <span class="gl" data-uk="взагалі-то, насправді" data-lemma="eigentlich">eigentlich</span> lieber etwas anderes.“</p>
+        <p>Die Mädchen gehen durch das Geschäft. Daryna hält eine gelbe Bluse hoch: „Welche Farben magst du denn?“ — „Blau oder Grün. Und ich brauche etwas Sportliches, weil ich jeden Tag Basketball spiele.“ In der Sportabteilung finden sie eine dunkelblaue <span class="gl" data-uk="спортивна куртка, олімпійка" data-lemma="die Trainingsjacke, -n">Trainingsjacke</span>. Greta probiert sie an. „Die steht dir super!“, sagt Daryna. Und die Jacke kostet <span class="gl" data-uk="стільки ж, скільки" data-lemma="genauso viel wie">genauso viel wie</span> das Kleid!</p>
+        <p>Am Abend ruft Greta Tante Ines an. Sie <span class="gl" data-uk="боятися" data-lemma="Angst haben (vor + Dat.)">hat</span> ein bisschen <span class="gl" data-uk="боятися" data-lemma="Angst haben (vor + Dat.)">Angst</span>: Ist die Tante jetzt traurig? Aber Tante Ines lacht laut: „Ach, Greta! Das Kleid war gar nicht für dich! Ich habe zwei Päckchen gepackt und sie <span class="gl" data-uk="плутати, переплутати" data-lemma="verwechseln">verwechselt</span>. Das Kleid war für die kleine Tochter meiner Nachbarin. Dein Geschenk liegt noch hier: ein Basketball!“</p>
+        <p>Jetzt hat Greta zwei Basketbälle — einen von Erik und Daryna und einen von Tante Ines. „<span class="gl" data-uk="нічого страшного" data-lemma="Macht nichts!">Macht nichts</span>“, sagt sie. „Einen schenke ich Lotte. Dann kann sie endlich mit mir trainieren!“</p>
+      </article>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: розстав по порядку ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Was passiert zuerst?</h2>
+      <p class="lead">Розстав події оповідання в правильному порядку: натискай речення одне за одним.</p>
+      <div class="card" id="ub1-seq"></div>
+    </section>
+
+    <!-- ===== Üb. 2: richtig / falsch / steht nicht im Text ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig oder falsch?</h2>
+      <p class="lead">Чи правильні твердження? Якщо в тексті про це нічого не сказано — «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 3: хто це каже ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wer sagt das?</h2>
+      <p class="lead">Хто з героїв оповідання каже ці слова?</p>
+      <div class="card" id="ub3-list"></div>
+    </section>
+
+    <!-- ===== Üb. 4: переказ ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Kurz erzählt</h2>
+      <p class="lead">Короткий переказ оповідання. Встав слова з набору — одне слово зайве.</p>
+      <div class="card" id="ub4-bank"></div>
+    </section>
+
+    <!-- ===== SPRECHEN ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Was meinst du?</h2>
+      <p class="lead">Відповідай уголос — сам(а) або з партнером, і лише потім відкрий зразок.</p>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Erzähl die Geschichte kurz nach — aus der Sicht von Daryna.</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Greta hat von ihrer Tante ein rosa Kleid bekommen, aber es war zu klein. Am Montag sind wir zusammen ins Kaufhaus gegangen, um das Kleid umzutauschen. Greta hat eine dunkelblaue Trainingsjacke genommen. Am Abend haben wir erfahren: Die Tante hat die Päckchen verwechselt!</div>
+        </div>
+        <div class="qa">
+          <label>2. Hast du schon einmal ein Geschenk bekommen, das dir nicht gefallen hat? Was hast du gemacht?</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Ja, einmal habe ich einen Pullover mit einem großen Bären bekommen. Er war mir zu kindisch. Ich habe trotzdem „Danke“ gesagt. Jetzt trage ich ihn nur zu Hause.</div>
+        </div>
+        <div class="qa">
+          <label>3. Wie findest du Greta? Hat sie richtig gehandelt? Warum (nicht)?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Ich finde Greta höflich und ehrlich. Sie hat „Danke“ gesagt und ihre Tante nicht beleidigt. Ich finde es gut, dass sie die Tante am Abend angerufen hat, weil man über so etwas offen sprechen soll.</div>
+        </div>
+        <div class="qa">
+          <label>4. Du möchtest im Geschäft etwas umtauschen. Spielt den Dialog mit der Verkäuferin.</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">— Guten Tag! Kann ich diese Hose umtauschen? Sie ist mir zu groß. — Haben Sie den Kassenbon? — Ja, hier bitte. — Möchten Sie die gleiche Hose eine Nummer kleiner? — Ja, gern. — Hier, bitte. Die Umkleidekabine ist dort hinten.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Danke, Tante Ines!</h2>
+      <p class="lead">Через тиждень Грета отримує від тітки Інес баскетбольний м'яч. Напиши від імені Грети повідомлення-подяку тітці — 40–60 слів: подяка за м'яч, що сталося з сукнею, що Грета купила замість неї і що зробить з другим м'ячем.</p>
+      <div class="card">
+        <p class="beispiel">Liebe Tante Ines, · vielen Dank für … · Das Kleid habe ich … · Stattdessen habe ich … · Jetzt habe ich zwei … · Einen …</p>
+        <div class="qa">
+          <label for="schreiben-text">Gretas Nachricht</label>
+          <textarea id="schreiben-text" rows="7" placeholder="Liebe Tante Ines, …"
+            data-words="40-60"
+            data-must="Danke/danke|Basketball|Jacke"
+            data-check="Звертання|Подяка за м'яч|Що сталося з сукнею|Що купила замість неї|Що зробить із другим м'ячем|Підпис"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Liebe Tante Ines,<br>vielen Dank für den tollen Basketball! Das rosa Kleid habe ich im Kaufhaus umgetauscht, weil es zu klein war. Stattdessen habe ich eine dunkelblaue Trainingsjacke genommen. Sie steht mir super! Jetzt habe ich zwei Basketbälle. Einen schenke ich Lotte, dann können wir zusammen trainieren.<br>Liebe Grüße<br>deine Greta</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-6-klas-6-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-6-klas-6-rik";
+  const KN_UNIT = "l2-e";
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+
+  // Üb. 1: порядок подій
+  buildSequence('ub1-seq', [
+    "Greta bekommt ein Päckchen von Tante Ines.",
+    "Mama sagt: Du kannst das Kleid umtauschen.",
+    "Greta und Daryna gehen ins Kaufhaus.",
+    "Die Verkäuferin schaut auf den Kassenbon.",
+    "Greta probiert eine Trainingsjacke an.",
+    "Greta ruft Tante Ines an.",
+    "Greta will einen Basketball Lotte schenken."
+  ]);
+
+  // Üb. 2: richtig / falsch / steht nicht im Text
+  buildRF('ub2-rf', [
+    {s: "Tante Ines wohnt in Hamburg.", a: "r"},
+    {s: "Das Kleid war zu groß.", a: "f"},
+    {s: "Greta trägt gern Kleider.", a: "f"},
+    {s: "Der Kassenbon war im Päckchen.", a: "r"},
+    {s: "Die Verkäuferin war unfreundlich.", a: "f"},
+    {s: "Daryna findet die gelbe Bluse sehr schön.", a: "n"},
+    {s: "Die Trainingsjacke ist dunkelblau.", a: "r"},
+    {s: "Tante Ines ist traurig und böse.", a: "f"},
+    {s: "Lotte spielt schon lange Basketball.", a: "n"}
+  ]);
+
+  // Üb. 3: хто це каже
+  buildMatch('ub3', [
+    ["„Du kannst das Kleid umtauschen.“", "Mama"],
+    ["„Möchtest du das gleiche Kleid eine Nummer größer?“", "die Verkäuferin"],
+    ["„Ähm … eigentlich lieber etwas anderes.“", "Greta"],
+    ["„Welche Farben magst du denn?“", "Daryna"],
+    ["„Die steht dir super!“", "Daryna"],
+    ["„Ich habe zwei Päckchen gepackt und sie verwechselt.“", "Tante Ines"],
+    ["„Einen schenke ich Lotte.“", "Greta"]
+  ], {lead: true, options: ["Greta", "Daryna", "Mama", "die Verkäuferin", "Tante Ines"]});
+
+  // Üb. 4: переказ
+  buildWordBank('ub4-bank', {
+    text: "Greta bekommt von Tante Ines ein rosa [Kleid]. Es ist zu [klein], und Rosa mag Greta nicht. Mit dem [Kassenbon] geht sie ins Kaufhaus, um das Kleid [umzutauschen]. Sie nimmt eine dunkelblaue [Trainingsjacke], weil sie gern Sport macht. Am Abend erfährt sie: Die Tante hat die Päckchen [verwechselt]. Gretas richtiges Geschenk ist ein [Basketball].",
+    extra: ["Bluse"]
+  });
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🎁', '👗', '🏀', '😄']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
