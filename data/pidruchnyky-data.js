@@ -180,7 +180,7 @@ const PIDRUCHNYKY = [
       ] },
       { id: "l3", label: "3", nazva: "Essen und Trinken", storinky: "51–72", dity: [
         { id: "l3-a", label: "A", nazva: "Das schmeckt gut", storinky: "52–57", typ: "vpravy", gram: ["adjektivdeklination"], opublikovano: 11 },
-        { id: "l3-b", label: "B", nazva: "Internationale Küche", storinky: "58–61", typ: "vpravy", gram: ["adjektivdeklination"] },
+        { id: "l3-b", label: "B", nazva: "Internationale Küche", storinky: "58–61", typ: "vpravy", gram: ["adjektivdeklination"], opublikovano: 12 },
         { id: "l3-c", label: "C", nazva: "Wir gehen essen", storinky: "62–66", typ: "vpravy", gram: ["indefinitpronomen", "kausalsaetze"] },
         { id: "l3-d", label: "D", nazva: "Wiederholung", storinky: "67–69", typ: "povtorennya", gram: ["adjektivdeklination", "indefinitpronomen"] },
         { id: "l3-e", label: "E", nazva: "Geschichtenzeit", storinky: "70", typ: "chytannya" },
