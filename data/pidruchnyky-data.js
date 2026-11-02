@@ -208,8 +208,8 @@ const PIDRUCHNYKY = [
         { id: "l6-a", label: "A", nazva: "Verkehr und Reiseziele", storinky: "110–114", typ: "vpravy", gram: ["praep-dativ", "wechselpraepositionen"], opublikovano: 25 },
         { id: "l6-b", label: "B", nazva: "Reisevorbereitungen", storinky: "115–119", typ: "vpravy", gram: ["praep-akkusativ"], opublikovano: 26 },
         { id: "l6-c", label: "C", nazva: "Reiseeindrücke", storinky: "120–123", typ: "vpravy", gram: ["tempusformen", "starke-verben"], opublikovano: 27 },
-        { id: "l6-d", label: "D", nazva: "Wiederholung", storinky: "124–125", typ: "povtorennya", gram: ["praep-dativ", "praep-akkusativ", "tempusformen"] },
-        { id: "l6-e", label: "E", nazva: "Geschichtenzeit", storinky: "126", typ: "chytannya" },
+        { id: "l6-d", label: "D", nazva: "Wiederholung", storinky: "124–125", typ: "povtorennya", gram: ["praep-dativ", "praep-akkusativ", "tempusformen"], opublikovano: 28 },
+        { id: "l6-e", label: "E", nazva: "Geschichtenzeit", storinky: "126", typ: "chytannya", opublikovano: 29 },
         { id: "l6-f", label: "F", nazva: "Projektarbeit", storinky: "127", typ: "bez-storinky" },
         { id: "l6-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "128", typ: "bez-storinky" }
       ] },
