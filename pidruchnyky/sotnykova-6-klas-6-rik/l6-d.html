@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 6, Modul D: Wiederholung — Німецька мова 6 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 6 КЛАС</span>
+        <h1>Lektion 6 · Modul D: Wiederholung</h1>
+        <p class="sub">Повторення всього Lektion 6: транспорт, мета подорожі, багаж, розклад і вокзал, враження від поїздки; mit + Dativ, Wo? / Wohin?, für / ohne, Präteritum. Гра на швидкість, кросворд, запізнення потяга, говоріння і тест на весь Lektion.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Blitz</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Sortieren</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Kreuzworträtsel</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Hören</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Fehler</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Sätze umbauen</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER — усі слова Lektion 6 (збираються самі) ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Усі слова Lektion 6</h2>
+      <p class="lead">Тут зібрано слова всіх модулів Lektion 6. Перевір себе в «Картки ▶» і познач ☆ ті, які ще не пам'ятаєш, — їх варто повторити перед тестом.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: бліц ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Blitz: 60 Sekunden</h2>
+      <p class="lead">Розминка на швидкість: скільки слів Lektion 6 ти перекладеш за 60 секунд? У бал не йде — це гра. Спробуй побити власний рекорд!</p>
+      <div class="card" id="ub1-blitz"></div>
+    </section>
+
+    <!-- ===== Üb. 2: сортування ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Wo? oder Wohin?</h2>
+      <p class="lead">Розклади вирази: де ми є (Wo? — Dativ) чи куди ми їдемо (Wohin? — Akkusativ або nach).</p>
+      <div class="card" id="ub2-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 3: кросворд ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Kreuzworträtsel</h2>
+      <p class="lead">Транспорт, багаж і подорожі: впиши німецькі слова за перекладом. ä ö ü ß — з панелі внизу.</p>
+      <div class="card" id="ub3-kw"></div>
+    </section>
+
+    <!-- ===== Üb. 4: HÖREN — власний діалог, озвучений синтезатором ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4 · Hören</p>
+      <h2 class="panel-title">Verspätung!</h2>
+      <p class="lead">Липень. Іван і Катерина їдуть до Дарини в Лейпциг — і перед Берліном чують оголошення в потязі. Послухай (можна двічі) і дай відповіді. Текст — внизу, але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l6-d-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="ub4-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Durchsage:</b> Meine Damen und Herren, in wenigen Minuten erreichen wir Berlin Hauptbahnhof. Wegen einer Störung haben wir heute leider fünfundzwanzig Minuten Verspätung. Wir bitten um Entschuldigung.<br>
+          <b>Iwan:</b> Fünfundzwanzig Minuten! Kateryna, schaffen wir noch den Bus nach Leipzig?<br>
+          <b>Kateryna:</b> Der Bus fährt um vierzehn Uhr dreißig ab. Und wir kommen jetzt erst um vierzehn Uhr zehn an.<br>
+          <b>Iwan:</b> Dann haben wir nur zwanzig Minuten! Und der Busbahnhof ist nicht hier am Hauptbahnhof, oder?<br>
+          <b>Kateryna:</b> Nein, er ist am Funkturm. Mit der S-Bahn dauert das etwa zwanzig Minuten.<br>
+          <b>Iwan:</b> Oh nein. Das schaffen wir nicht!<br>
+          <b>Kateryna:</b> Ruhig, Iwan. Ich schaue mal im Handy nach … Um fünfzehn Uhr achtzehn fährt ein Zug nach Leipzig. Der ist sogar schneller als der Bus.<br>
+          <b>Iwan:</b> Aber unsere Fahrkarten sind doch für den Bus.<br>
+          <b>Kateryna:</b> Ich kaufe neue Fahrkarten am Automaten. Das ist teurer, aber dann sind wir früher bei Daryna.<br>
+          <b>Iwan:</b> Ich schreibe Daryna sofort, damit sie uns am Hauptbahnhof abholt und nicht am Busbahnhof.<br>
+          <b>Kateryna:</b> Gute Idee. Und vergiss deinen Rucksack nicht!<br>
+          <b>Iwan:</b> Keine Sorge. Ohne meinen Rucksack gehe ich nirgendwohin!
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5: знайди помилку ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Finde den Fehler</h2>
+      <p class="lead">Граматика всього Lektion: mit + Dativ, Wo? / Wohin?, für / ohne + Akkusativ, Präteritum. Знайди помилку й виправ її — або натисни «Fehlerfrei».</p>
+      <div class="card" id="ub5-fix"></div>
+    </section>
+
+    <!-- ===== Üb. 6: перетворення ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">Sätze umbauen</h2>
+      <p class="lead">Перепиши речення за завданням. Пиши ціле речення.</p>
+      <div class="card" id="ub6-tr"></div>
+    </section>
+
+    <!-- ===== SPRECHEN ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Sprich mal!</h2>
+      <p class="lead">Спершу вимов фрази в 🎤, потім відповідай уголос на запитання й порівнюй зі зразком.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Beschreibe deine letzte Reise im Präteritum: wohin, mit wem, womit, wie lange, was du gesehen hast.</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Im Sommer war ich in Lwiw. Ich fuhr dorthin zusammen mit meiner Mutter. Wir fuhren mit dem Zug, die Reise dauerte sechs Stunden. In Lwiw besuchten wir die Altstadt, tranken Kaffee und aßen Schokolade. Am Abend gingen wir auf den Burgberg. Die Aussicht war wunderschön.</div>
+        </div>
+        <div class="qa">
+          <label>2. Du fährst für eine Woche auf eine einsame Insel. Welche fünf Sachen nimmst du mit? Warum?</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Ich nehme ein Zelt mit, denn ohne Zelt kann ich nicht schlafen. Dann brauche ich eine Taschenlampe und Streichhölzer für das Lagerfeuer. Eine große Flasche Wasser ist auch wichtig. Und für die langen Abende nehme ich ein gutes Buch mit.</div>
+        </div>
+        <div class="qa">
+          <label>3. Wie kommst du von deiner Stadt ans Meer oder in die Berge? Womit fährst du? Wie lange dauert die Reise?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Von Kyjiw in die Karpaten fahre ich mit dem Nachtzug. Der Zug fährt um einundzwanzig Uhr ab und kommt am Morgen in Iwano-Frankiwsk an. Dann fahren wir mit dem Bus weiter in die Berge. Die ganze Reise dauert etwa vierzehn Stunden.</div>
+        </div>
+        <div class="qa">
+          <label>4. Wo warst du schon? Wohin möchtest du unbedingt einmal reisen?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Ich war schon in Polen, in Österreich und am Schwarzen Meer. Einmal möchte ich unbedingt nach Island reisen, weil ich Vulkane und Gletscher sehen will. Und ich möchte auch in die USA fliegen.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — на весь Lektion ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Test zu Lektion 6</h2>
+      <p class="lead">Підсумковий тест на весь Lektion 6: 18 завдань. Кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">9)</span> Wir fahren
+          <select class="blank inline" data-ans="mit dem"><option value="">—</option><option>mit der</option><option>mit dem</option><option>mit den</option></select> Bus.</div>
+        <div class="fill-item"><span class="num">10)</span> Ayla fliegt
+          <select class="blank inline" data-ans="in die"><option value="">—</option><option>nach</option><option>in der</option><option>in die</option></select> Türkei.</div>
+        <div class="fill-item"><span class="num">11)</span> Im Sommer waren wir
+          <select class="blank inline" data-ans="am"><option value="">—</option><option>ans</option><option>am</option><option>an</option></select> Meer.</div>
+        <div class="fill-item"><span class="num">12)</span> Ohne
+          <select class="blank inline" data-ans="meine"><option value="">—</option><option>meiner</option><option>meinen</option><option>meine</option></select> Jacke gehe ich nicht.</div>
+        <div class="fill-item"><span class="num">13)</span> Gestern
+          <select class="blank inline" data-ans="fuhren"><option value="">—</option><option>fahrten</option><option>fuhrten</option><option>fuhren</option></select> wir nach Dresden.</div>
+        <div class="fill-item"><span class="num">14)</span> Wir
+          <select class="blank inline" data-ans="konnten"><option value="">—</option><option>könnten</option><option>konnten</option><option>kannten</option></select> in der Nacht nicht schlafen.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-6-klas-6-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-6-klas-6-rik";
+  const KN_UNIT = "l6-d";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['ub1', 'ub2', 'ub3', 'ub4', 'ub5', 'ub6', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+
+  // Üb. 1: бліц — усі слова Lektion 6 з файлу слів (без однакових перекладів)
+  const blitzPairs = [], blitzSeen = new Set();
+  ((window.SLOVA && window.SLOVA[KN_BOOK]) || []).filter(w => /^l6-/.test(w.r)).forEach(w => {
+    const de = w.de.split(' / ')[0].split(',')[0].replace(/\s*\(.*?\)/g, '').trim();
+    const uk = w.uk.split(' / ')[0].trim();
+    const key = uk.split(/[,;]/)[0].trim().toLowerCase();
+    if (!de || /^(der|die|das)$/i.test(de) || blitzSeen.has(key)) return;
+    blitzSeen.add(key);
+    blitzPairs.push([de, uk]);
+  });
+  buildBlitz('ub1-blitz', {pairs: blitzPairs, seconds: 60, dir: "de-uk"});
+
+  // Üb. 2: Wo? / Wohin?
+  buildSort('ub2-sort', {
+    buckets: ["Wo? 📍", "Wohin? ➡️"],
+    items: [
+      {t: "in der Schweiz", b: "Wo? 📍"},
+      {t: "am Meer", b: "Wo? 📍"},
+      {t: "auf der Insel", b: "Wo? 📍"},
+      {t: "in den Bergen", b: "Wo? 📍"},
+      {t: "in Italien", b: "Wo? 📍"},
+      {t: "in den USA", b: "Wo? 📍"},
+      {t: "in die Schweiz", b: "Wohin? ➡️"},
+      {t: "ans Meer", b: "Wohin? ➡️"},
+      {t: "auf die Insel", b: "Wohin? ➡️"},
+      {t: "in die Berge", b: "Wohin? ➡️"},
+      {t: "nach Italien", b: "Wohin? ➡️"},
+      {t: "in die USA", b: "Wohin? ➡️"}
+    ]
+  });
+
+  // Üb. 3: кросворд
+  buildCrossword('ub3-kw', [
+    ["Fahrkarte", "квиток (die)"],
+    ["Gleis", "колія (das)"],
+    ["Koffer", "валіза (der)"],
+    ["Zelt", "намет (das)"],
+    ["Rucksack", "рюкзак (der)"],
+    ["Insel", "острів (die)"],
+    ["Fähre", "пором (die)"],
+    ["Zug", "потяг (der)"],
+    ["Gipfel", "вершина (der)"],
+    ["Felsen", "скеля (der)"],
+    ["Aussicht", "краєвид (die)"],
+    ["Verspätung", "запізнення (die)"]
+  ]);
+
+  // Üb. 4: Hören
+  buildQuiz('ub4-quiz', [
+    {q: "Wohin fährt der Zug?", opts: ["nach Berlin Hauptbahnhof", "nach Leipzig", "nach Dresden"], correct: "nach Berlin Hauptbahnhof"},
+    {q: "Wie viel Verspätung hat der Zug?", opts: ["zehn Minuten", "fünfundzwanzig Minuten", "eine Stunde"], correct: "fünfundzwanzig Minuten"},
+    {q: "Wann fährt der Bus nach Leipzig ab?", opts: ["um 14:10 Uhr", "um 14:30 Uhr", "um 15:18 Uhr"], correct: "um 14:30 Uhr"},
+    {q: "Wo ist der Busbahnhof?", opts: ["im Hauptbahnhof", "am Funkturm", "am Flughafen"], correct: "am Funkturm"},
+    {q: "Warum schaffen sie den Bus nicht?", opts: ["Die S-Bahn zum Busbahnhof braucht etwa zwanzig Minuten.", "Der Bus ist schon voll.", "Sie haben keine Fahrkarten."], correct: "Die S-Bahn zum Busbahnhof braucht etwa zwanzig Minuten."},
+    {q: "Womit fahren sie nach Leipzig?", opts: ["mit dem Zug", "mit dem Taxi", "mit dem nächsten Bus"], correct: "mit dem Zug"},
+    {q: "Wo kauft Kateryna die neuen Fahrkarten?", opts: ["am Schalter", "am Automaten", "im Bus"], correct: "am Automaten"},
+    {q: "Wo soll Daryna sie abholen?", opts: ["am Busbahnhof", "am Hauptbahnhof", "an der S-Bahn"], correct: "am Hauptbahnhof"}
+  ]);
+
+  // Üb. 5: знайди помилку
+  buildFixError('ub5-fix', [
+    {s: "Wir fuhren mit dem Zug nach Dresden.", ok: true},
+    {s: "Ich fahre mit die Straßenbahn.", wrong: 3, fix: "der"},
+    {s: "Im Sommer fliegen wir in Spanien.", wrong: 4, fix: "nach"},
+    {s: "Ich war schon in die Schweiz.", wrong: 4, fix: "der"},
+    {s: "Ohne mein Rucksack reise ich nicht.", wrong: 1, fix: "meinen"},
+    {s: "Am Abend saßen wir am Lagerfeuer.", ok: true},
+    {s: "Das Geschenk ist für dir.", wrong: 4, fix: "dich"},
+    {s: "Der Zug fahrte pünktlich ab.", wrong: 2, fix: "fuhr"},
+    {s: "Gestern müssten wir früh aufstehen.", wrong: 1, fix: "mussten"}
+  ]);
+
+  // Üb. 6: перетворення
+  buildTransform('ub6-tr', [
+    {s: "Wir fahren mit dem Zug.", task: "у <b>Präteritum</b>", ans: "Wir fuhren mit dem Zug."},
+    {s: "Erik kann nicht schlafen.", task: "у <b>Präteritum</b>", ans: "Erik konnte nicht schlafen."},
+    {s: "Ich war schon in Italien.", task: "Wohin? <b>Ich möchte wieder … fahren.</b>", ans: "Ich möchte wieder nach Italien fahren."},
+    {s: "Wir fahren in die Berge.", task: "Wo? <b>Wir sind …</b>", ans: "Wir sind in den Bergen."},
+    {s: "Ich fahre zur Schule. (die U-Bahn)", task: "з <b>mit</b>", ans: "Ich fahre mit der U-Bahn zur Schule."},
+    {s: "Ich brauche meinen Koffer.", task: "почни з <b>Ohne … reise ich nicht.</b>", ans: "Ohne meinen Koffer reise ich nicht."}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Im Sommer fuhren wir mit dem Zug ans Meer.", uk: "Улітку ми їздили потягом на море."},
+    {say: "Ohne meinen Rucksack reise ich nicht.", uk: "Без свого рюкзака я не подорожую."},
+    {say: "Der Zug hat zwanzig Minuten Verspätung.", uk: "Потяг запізнюється на двадцять хвилин."},
+    {say: "Ich war schon in der Schweiz.", uk: "Я вже був (була) у Швейцарії."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Unter der Erde fährt die …", opts: ["U-Bahn", "Fähre", "Straßenbahn"], correct: "U-Bahn"},
+    {q: "Fahrkarten kauft man am …", opts: ["Automaten", "Gleis", "Gipfel"], correct: "Automaten"},
+    {q: "Der Zug kommt zu spät. Er hat …", opts: ["Verbindung", "Verspätung", "Aussicht"], correct: "Verspätung"},
+    {q: "Billig übernachten kann man in einer …", opts: ["Jugendherberge", "Fähre", "Brücke"], correct: "Jugendherberge"},
+    {q: "Für eine Reise in die Berge braucht man …", opts: ["einen Badeanzug", "Wanderschuhe", "einen Sonnenschirm"], correct: "Wanderschuhe"},
+    {q: "Auf eine Insel fährt man oft mit der …", opts: ["U-Bahn", "Fähre", "S-Bahn"], correct: "Fähre"},
+    {q: "Präteritum von „sehen“ (er):", opts: ["sehte", "sah", "sieht"], correct: "sah"},
+    {q: "Was bedeutet „umsteigen“?", opts: ["пересідати", "виходити", "відправлятися"], correct: "пересідати"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Wir wohnten in einer Jugendherberge.", ok: true},
+    {s: "Die Fahrkarte ist für mein Bruder.", wrong: 4, fix: "meinen"},
+    {s: "Er sehte einen Igel.", wrong: 1, fix: "sah"},
+    {s: "Wir fahren mit das Schiff.", wrong: 3, fix: "dem"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🚂', '🧳', '🗺️', '🏆']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>

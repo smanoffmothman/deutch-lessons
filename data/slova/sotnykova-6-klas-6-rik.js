@@ -569,4 +569,18 @@
   {de: "schlafen (schläft), schlief, hat geschlafen", uk: "спати", r: "l6-c"},
   {de: "scheinen, schien, hat geschienen", uk: "світити (про сонце)", r: "l6-c", note: "Die Sonne schien."},
   {de: "denken, dachte, hat gedacht", uk: "думати", r: "l6-c"},
+  // ---- Lektion 6 · Modul E: Geschichtenzeit ----
+  {de: "das Halsband, -ä-er", uk: "нашийник", r: "l6-e"},
+  {de: "der Bahnsteig, -e", uk: "перон", r: "l6-e"},
+  {de: "die Leine, -n", uk: "повідець", r: "l6-e"},
+  {de: "erschrecken (erschrickt), erschrak, ist erschrocken", uk: "злякатися", r: "l6-e", note: "Krümel erschrak."},
+  {de: "weglaufen (läuft weg), lief weg, ist weggelaufen", uk: "втікати", r: "l6-e"},
+  {de: "der Schalter, -", uk: "каса, віконце", r: "l6-e", note: "der Fahrkartenschalter — квиткова каса"},
+  {de: "der Zugbegleiter, - / die Zugbegleiterin, -nen", uk: "провідник / провідниця (у потязі)", r: "l6-e"},
+  {de: "der Fahrgast, -ä-e", uk: "пасажир", r: "l6-e"},
+  {de: "der Sitz, -e", uk: "сидіння", r: "l6-e"},
+  {de: "zurück", uk: "назад", r: "l6-e", note: "zurückbringen — привезти назад"},
+  {de: "der Aufkleber, -", uk: "наліпка", r: "l6-e"},
+  {de: "erleichtert", uk: "полегшено (з полегшенням)", r: "l6-e"},
+  {de: "die Abenteuerreise, -n", uk: "пригодницька подорож", r: "l6-e"},
 ];
