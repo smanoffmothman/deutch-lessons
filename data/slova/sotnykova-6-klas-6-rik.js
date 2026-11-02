@@ -476,4 +476,16 @@
   {de: "die Bibliothek, -en", uk: "бібліотека", r: "l5-c"},
   {de: "leihen, hat geliehen", uk: "позичати", r: "l5-c"},
   {de: "Viel Erfolg! — Danke, gleichfalls!", uk: "Успіху! — Дякую, і тобі!", r: "l5-c"},
+  // ---- Lektion 5 · Modul E: Geschichtenzeit ----
+  {de: "der Rollentausch", uk: "обмін ролями", r: "l5-e"},
+  {de: "sich melden, hat sich gemeldet", uk: "зголошуватися", r: "l5-e", note: "Daryna hat sich sofort gemeldet."},
+  {de: "übernehmen (übernimmt), hat übernommen", uk: "брати на себе", r: "l5-e"},
+  {de: "vorbereiten (bereitet vor), hat vorbereitet", uk: "готувати, підготувати", r: "l5-e"},
+  {de: "das Plakat, -e", uk: "плакат", r: "l5-e"},
+  {de: "zittern", uk: "тремтіти", r: "l5-e"},
+  {de: "zwinkern", uk: "підморгувати", r: "l5-e"},
+  {de: "zuhören (hört zu), hat zugehört", uk: "слухати (уважно)", r: "l5-e", note: "Alle hören gut zu."},
+  {de: "einschlafen (schläft ein), ist eingeschlafen", uk: "засинати", r: "l5-e"},
+  {de: "verzweifelt", uk: "у відчаї", r: "l5-e"},
+  {de: "das Tagebuch, -ü-er", uk: "щоденник", r: "l5-e"},
 ];
