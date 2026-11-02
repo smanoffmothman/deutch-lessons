@@ -205,7 +205,7 @@ const PIDRUCHNYKY = [
         { id: "l5-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "108", typ: "bez-storinky" }
       ] },
       { id: "l6", label: "6", nazva: "Reiselust und Abenteuer", storinky: "109–128", dity: [
-        { id: "l6-a", label: "A", nazva: "Verkehr und Reiseziele", storinky: "110–114", typ: "vpravy", gram: ["praep-dativ", "wechselpraepositionen"] },
+        { id: "l6-a", label: "A", nazva: "Verkehr und Reiseziele", storinky: "110–114", typ: "vpravy", gram: ["praep-dativ", "wechselpraepositionen"], opublikovano: 25 },
         { id: "l6-b", label: "B", nazva: "Reisevorbereitungen", storinky: "115–119", typ: "vpravy", gram: ["praep-akkusativ"] },
         { id: "l6-c", label: "C", nazva: "Reiseeindrücke", storinky: "120–123", typ: "vpravy", gram: ["tempusformen", "starke-verben"] },
         { id: "l6-d", label: "D", nazva: "Wiederholung", storinky: "124–125", typ: "povtorennya", gram: ["praep-dativ", "praep-akkusativ", "tempusformen"] },

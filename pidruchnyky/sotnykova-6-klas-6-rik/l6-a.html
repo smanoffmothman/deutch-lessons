@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 6, Modul A: Verkehr und Reiseziele — Німецька мова 6 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 6 КЛАС</span>
+        <h1>Lektion 6 · Modul A: Verkehr und Reiseziele</h1>
+        <p class="sub">Транспорт і мандрівки: чим їхати й куди. mit + Dativ (mit dem Zug, mit der Straßenbahn), Wo? / Wohin? з країнами (in Italien — nach Italien, in der Schweiz — in die Schweiz). Клас 6b вибирає поїздку, Іван планує подорож до Лейпцига, вправи, говоріння, письмо і тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Verkehrsmittel</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Wo? Wohin?</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Chat</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Sätze umbauen</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власний текст + вправа на розуміння ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Wohin fährt die 6b?</h2>
+      <p class="lead">Клас 6b вибирає, куди поїхати в травні на класну поїздку. Розповідає Грета. Послухай і прочитай. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l6-a-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Im Mai macht unsere Klasse eine <span class="gl" data-uk="класна поїздка (подорож класом)" data-lemma="die Klassenfahrt, -en">Klassenfahrt</span> — drei Tage, ohne Eltern! Heute hat Frau Schulz gefragt: „Wohin möchtet ihr fahren?“ Natürlich hatte jeder eine andere Idee.</p>
+        <p>Matteo war sofort begeistert: „Nach Italien! Wir fahren mit dem <span class="gl" data-uk="нічний потяг" data-lemma="der Nachtzug, -ü-e">Nachtzug</span> und wachen am <span class="gl" data-uk="море" data-lemma="das Meer, -e">Meer</span> auf!“ Ayla hat vorgeschlagen, in die Türkei zu fliegen. Frau Schulz hat gelacht: „Mit dem <span class="gl" data-uk="літак" data-lemma="das Flugzeug, -e">Flugzeug</span>? Das ist für eine Klassenfahrt zu teuer.“</p>
+        <p>Erik war für eine <span class="gl" data-uk="острів" data-lemma="die Insel, -n">Insel</span>: Rügen in der Ostsee. „Wir fahren mit dem Bus bis an die <span class="gl" data-uk="узбережжя" data-lemma="die Küste, -n">Küste</span> und dann mit der <span class="gl" data-uk="пором" data-lemma="die Fähre, -n">Fähre</span>. Auf der Insel kann man überall Rad fahren!“ Timur hat gerufen: „Langweilig! Ich will auf den Mond — mit einem <span class="gl" data-uk="космічний корабель" data-lemma="das Raumschiff, -e">Raumschiff</span>!“ Alle haben gelacht.</p>
+        <p>Dann war ich dran. „Ich schlage die Sächsische Schweiz vor. Das ist nicht weit von Leipzig. Mit dem <span class="gl" data-uk="потяг" data-lemma="der Zug, -ü-e">Zug</span> sind wir in einer Stunde in Dresden, und von dort fahren wir mit der <span class="gl" data-uk="міська електричка" data-lemma="die S-Bahn, -en">S-Bahn</span> weiter. In den <span class="gl" data-uk="гора" data-lemma="der Berg, -e">Bergen</span> können wir wandern und klettern.“ Daryna hat sofort genickt: Klettern ist ja unser Hobby.</p>
+        <p>Am Ende haben wir <span class="gl" data-uk="голосувати" data-lemma="abstimmen (stimmt ab), hat abgestimmt">abgestimmt</span>. Italien hat vier <span class="gl" data-uk="голос (на виборах)" data-lemma="die Stimme, -n">Stimmen</span> bekommen, Rügen sieben, der Mond eine — von Timur natürlich. Und die Sächsische Schweiz? Zwölf Stimmen! Im Mai fahren wir also in die Berge. Ich kann es kaum erwarten!</p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">mit dem Zug · Wo? in Italien · Wohin? nach Italien</h2>
+      <p class="lead">Як сказати, <b>чим</b> ми їдемо, <b>де</b> ми були і <b>куди</b> їдемо? Тут допомагають прийменники mit, in, nach, an, auf.</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. mit + Dativ: Womit fahren wir?</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Nominativ</th><th>mit + Dativ</th></tr>
+          <tr><td>der Zug, der Bus</td><td>mit d<strong>em</strong> Zug, mit d<strong>em</strong> Bus</td></tr>
+          <tr><td>das Flugzeug, das Taxi</td><td>mit d<strong>em</strong> Flugzeug, mit d<strong>em</strong> Taxi</td></tr>
+          <tr><td>die Straßenbahn, die Fähre</td><td>mit d<strong>er</strong> Straßenbahn, mit d<strong>er</strong> Fähre</td></tr>
+          <tr><td>das Pferd, das Kamel</td><td><strong>auf</strong> d<strong>em</strong> Pferd, <strong>auf</strong> d<strong>em</strong> Kamel</td></tr>
+        </table></div>
+        <div class="merke">Після <b>mit</b> — завжди <b>Dativ</b>: der/das → d<b>em</b>, die → d<b>er</b>. Але: <b>zu Fuß</b> gehen — йти пішки (без mit!).</div>
+        <p class="beispiel">Wir fahren <b>mit dem</b> Zug nach Dresden und dann <b>mit der</b> S-Bahn weiter.</p>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. Länder: Wo? und Wohin?</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Wo?</th><th>Wohin?</th></tr>
+          <tr><td><strong>in</strong> Italien, <strong>in</strong> Polen</td><td><strong>nach</strong> Italien, <strong>nach</strong> Polen</td></tr>
+          <tr><td><strong>in der</strong> Schweiz, <strong>in der</strong> Türkei</td><td><strong>in die</strong> Schweiz, <strong>in die</strong> Türkei</td></tr>
+          <tr><td><strong>in den</strong> USA, <strong>in den</strong> Niederlanden</td><td><strong>in die</strong> USA, <strong>in die</strong> Niederlande</td></tr>
+          <tr><td><strong>am</strong> Meer, <strong>an der</strong> Küste</td><td><strong>ans</strong> Meer, <strong>an die</strong> Küste</td></tr>
+          <tr><td><strong>auf der</strong> Insel, <strong>in den</strong> Bergen</td><td><strong>auf die</strong> Insel, <strong>in die</strong> Berge</td></tr>
+        </table></div>
+        <div class="merke">Більшість країн — без артикля: <b>in</b> Italien / <b>nach</b> Italien. Країни з артиклем (die Schweiz, die Türkei, die Ukraine, die USA) — <b>in der</b> (Wo?) і <b>in die</b> (Wohin?). Wo? → Dativ, Wohin? → Akkusativ.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. Типові помилки</p>
+        <p>✗ mit das Fahrrad → ✓ mit <b>dem</b> Fahrrad</p>
+        <p>✗ mit die Straßenbahn → ✓ mit <b>der</b> Straßenbahn</p>
+        <p>✗ Ich fahre in Spanien. → ✓ Ich fahre <b>nach</b> Spanien.</p>
+        <p>✗ Ich war in die Schweiz. → ✓ Ich war in <b>der</b> Schweiz.</p>
+        <p>✗ nach die Türkei → ✓ <b>in die</b> Türkei</p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: картинки ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Womit fahren wir?</h2>
+      <p class="lead">Вибери правильну відповідь до картинки — зверни увагу на артикль після mit.</p>
+      <div class="card" id="ub1-pic"></div>
+    </section>
+
+    <!-- ===== Üb. 2: Wo? Wohin? ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Wo? oder Wohin?</h2>
+      <p class="lead">Впиши прийменник (і артикль, якщо треба) разом із назвою. Приклад: Wohin? · Polen → <b>nach Polen</b>.</p>
+      <div class="card" id="ub2-tab"></div>
+    </section>
+
+    <!-- ===== Üb. 3: чат ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wohin reist du gern?</h2>
+      <p class="lead">Маттео трохи засмучений, що Італія не перемогла. Вибирай доречну й правильну відповідь.</p>
+      <div class="card" id="ub3-chat"></div>
+    </section>
+
+    <!-- ===== Üb. 4: перетворення ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Sätze umbauen</h2>
+      <p class="lead">Перепиши речення за завданням. Пиши ціле речення.</p>
+      <div class="card" id="ub4-tr"></div>
+    </section>
+
+    <!-- ===== HÖREN — власний діалог, озвучений синтезатором ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Iwan kommt nach Leipzig</h2>
+      <p class="lead">Іван дзвонить Дарині з київського метро — і в нього новина. Послухай розмову (можна двічі) і дай відповіді. Текст діалогу — внизу, але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l6-a-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Daryna:</b> Hallo Iwan! Wie geht's? Bist du schon zu Hause?<br>
+          <b>Iwan:</b> Hallo! Nein, ich sitze noch in der U-Bahn. Ich fahre jeden Tag zwanzig Minuten mit der U-Bahn zur Schule.<br>
+          <b>Daryna:</b> Zwanzig Minuten? Ich fahre nur zehn Minuten mit der Straßenbahn.<br>
+          <b>Iwan:</b> Leipzig hat viele Straßenbahnen, oder?<br>
+          <b>Daryna:</b> Ja, sehr viele! Aber keine U-Bahn. Nur die S-Bahn fährt unter der Stadt.<br>
+          <b>Iwan:</b> Hör mal, ich habe eine Neuigkeit: Im Juli komme ich dich in Leipzig besuchen! Zusammen mit Kateryna.<br>
+          <b>Daryna:</b> Wirklich? Wie super! Und wie kommt ihr nach Leipzig?<br>
+          <b>Iwan:</b> Zuerst fahren wir mit dem Nachtzug nach Przemyśl in Polen. Dort steigen wir um und fahren mit dem Zug nach Berlin.<br>
+          <b>Daryna:</b> Und von Berlin?<br>
+          <b>Iwan:</b> Von Berlin nach Leipzig fahren wir mit dem Bus. Das ist billiger.<br>
+          <b>Daryna:</b> Wie lange dauert die Reise?<br>
+          <b>Iwan:</b> Fast einen ganzen Tag. Aber im Zug lese ich viel und schlafe.<br>
+          <b>Daryna:</b> Ich hole euch vom Busbahnhof ab. Und dann fahren wir zusammen in die Sächsische Schweiz!<br>
+          <b>Iwan:</b> Klettern? Mit dir? Na klar!
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN — 🎤 + говоріння зі зразком ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Unterwegs</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Wie kommst du zur Schule? Wie lange dauert der Weg?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Ich fahre jeden Morgen mit dem Bus zur Schule. Der Weg dauert fünfzehn Minuten. Im Frühling und im Sommer fahre ich lieber mit dem Fahrrad. Manchmal bringt mich Papa mit dem Auto.</div>
+        </div>
+        <div class="qa">
+          <label>2. Wo warst du schon? Wohin möchtest du gern reisen?</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Ich war schon in Polen und in der Slowakei. Im Sommer war ich mit meiner Familie am Meer. Ich möchte gern nach Japan reisen, weil ich die japanische Kultur interessant finde. Und einmal möchte ich in die USA fliegen.</div>
+        </div>
+        <div class="qa">
+          <label>3. Welches Verkehrsmittel magst du am liebsten? Warum?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Am liebsten fahre ich mit dem Zug. Im Zug kann man lesen, Musik hören und aus dem Fenster schauen. Mit dem Flugzeug geht es schneller, aber es ist teuer. Und im Bus wird mir manchmal schlecht.</div>
+        </div>
+        <div class="qa">
+          <label>4. Deine Klasse plant eine Klassenfahrt. Mach einen Vorschlag: Wohin? Womit? Was macht ihr dort?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Ich schlage die Karpaten vor. Wir fahren mit dem Nachtzug nach Lwiw und dann mit dem Bus in die Berge. Dort können wir wandern, im Fluss baden und am Abend am Lagerfeuer sitzen. Das ist nicht teuer und macht allen Spaß.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN — письмо за планом ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Mein Vorschlag für die Klassenfahrt</h2>
+      <p class="lead">Твій клас теж планує поїздку. Напиши в чат класу свою пропозицію — 60–80 слів за планом:</p>
+      <div class="card">
+        <p>1) привітання; 2) куди ти пропонуєш поїхати (nach / in die / ans / auf die …); 3) чим туди добиратися (mit dem / mit der …); 4) що там можна робити; 5) чому це добра ідея (weil); 6) запитання до класу.</p>
+        <p class="beispiel">Hallo zusammen! · Ich schlage … vor. · Wir fahren mit dem … nach … und dann mit der … · Dort können wir … · Das ist eine gute Idee, weil … · Was meint ihr?</p>
+        <div class="qa">
+          <label for="schreiben-text">Deine Nachricht</label>
+          <textarea id="schreiben-text" rows="10" placeholder="Hallo zusammen! …"
+            data-words="60-80"
+            data-must="mit dem/mit der|weil"
+            data-check="Привітання|Куди їхати|Чим добиратися (mit + Dativ)|Що там робити|Чому добра ідея (weil)|Запитання до класу"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Hallo zusammen!<br>Ich schlage eine Fahrt nach Odesa ans Meer vor. Wir fahren mit dem Nachtzug nach Odesa und dann mit der Straßenbahn zum Strand. Dort können wir schwimmen, Volleyball spielen und am Abend am Meer spazieren gehen. Wir können auch das Opernhaus besuchen. Das ist eine gute Idee, weil die Fahrt nicht so teuer ist und weil alle das Meer lieben. Was meint ihr?</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — режим контрольної: одна спроба, лише ця вкладка йде в бал ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Ich fahre
+          <select class="blank inline" data-ans="mit dem"><option value="">—</option><option>mit der</option><option>mit dem</option><option>mit den</option></select> Zug nach Dresden.</div>
+        <div class="fill-item"><span class="num">8)</span> Wir fahren
+          <select class="blank inline" data-ans="mit der"><option value="">—</option><option>mit dem</option><option>mit die</option><option>mit der</option></select> Straßenbahn.</div>
+        <div class="fill-item"><span class="num">9)</span> Matteos Familie fährt im Sommer
+          <select class="blank inline" data-ans="nach"><option value="">—</option><option>in</option><option>nach</option><option>zu</option></select> Italien.</div>
+        <div class="fill-item"><span class="num">10)</span> Ayla war schon
+          <select class="blank inline" data-ans="in der"><option value="">—</option><option>in die</option><option>in der</option><option>nach der</option></select> Türkei.</div>
+        <div class="fill-item"><span class="num">11)</span> Im August fahren wir
+          <select class="blank inline" data-ans="ans"><option value="">—</option><option>am</option><option>ans</option><option>an</option></select> Meer.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-6-klas-6-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-6-klas-6-rik";
+  const KN_UNIT = "l6-a";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Die Klassenfahrt dauert drei Tage.", a: "r"},
+    {s: "Die Eltern fahren auch mit.", a: "f"},
+    {s: "Matteo möchte mit dem Nachtzug nach Italien fahren.", a: "r"},
+    {s: "Frau Schulz findet das Flugzeug zu teuer.", a: "r"},
+    {s: "Rügen ist eine Insel in der Nordsee.", a: "f"},
+    {s: "Timur meint seinen Vorschlag ernst.", a: "f"},
+    {s: "Die Sächsische Schweiz ist nicht weit von Leipzig.", a: "r"},
+    {s: "Rügen hat die meisten Stimmen bekommen.", a: "f"},
+    {s: "Im Mai fährt die Klasse in die Berge.", a: "r"}
+  ]);
+
+  // Üb. 1: mit + Dativ
+  buildPicture('ub1-pic', [
+    {pic: "🚂", opts: ["mit dem Zug", "mit der Zug", "mit den Zug"], correct: "mit dem Zug"},
+    {pic: "🚋", opts: ["mit dem Straßenbahn", "mit der Straßenbahn", "mit die Straßenbahn"], correct: "mit der Straßenbahn"},
+    {pic: "✈️", opts: ["mit das Flugzeug", "mit der Flugzeug", "mit dem Flugzeug"], correct: "mit dem Flugzeug"},
+    {pic: "⛴️", opts: ["mit der Fähre", "mit dem Fähre", "mit die Fähre"], correct: "mit der Fähre"},
+    {pic: "🚇", opts: ["mit dem U-Bahn", "mit der U-Bahn", "mit den U-Bahn"], correct: "mit der U-Bahn"},
+    {pic: "🚕", opts: ["mit dem Taxi", "mit der Taxi", "mit das Taxi"], correct: "mit dem Taxi"},
+    {pic: "🐪", opts: ["mit dem Kamel", "auf dem Kamel", "auf der Kamel"], correct: "auf dem Kamel"},
+    {pic: "🚶", opts: ["mit dem Fuß", "zu Fuß", "mit Fuß"], correct: "zu Fuß"}
+  ]);
+
+  // Üb. 2: Wo? / Wohin? (одне поле в рядку)
+  buildTable('ub2-tab', {
+    head: ["Frage · Ziel", "Antwort"],
+    rows: [
+      ["Wo? · Italien", "[in Italien]"],
+      ["Wohin? · Italien", "[nach Italien]"],
+      ["Wo? · die Schweiz", "[in der Schweiz]"],
+      ["Wohin? · die Schweiz", "[in die Schweiz]"],
+      ["Wo? · die Türkei", "[in der Türkei]"],
+      ["Wohin? · die USA", "[in die USA]"],
+      ["Wo? · die USA", "[in den USA]"],
+      ["Wohin? · das Meer", "[ans Meer]"],
+      ["Wo? · das Meer", "[am Meer]"],
+      ["Wohin? · die Insel", "[auf die Insel]"]
+    ]
+  });
+
+  // Üb. 3: чат
+  buildChat('ub3-chat', {
+    partner: "Matteo",
+    steps: [
+      {them: "Schade, Italien hat nur vier Stimmen bekommen 😕"},
+      {you: ["Ja, schade. Aber vielleicht fährst du im Sommer nach Italien?", "Ja, schade. Aber vielleicht fährst du im Sommer in Italien?", "Ja, schade. Aber vielleicht fährst du im Sommer nach dem Italien?"], correct: 0},
+      {them: "Ja, wir fahren zu meinen Großeltern nach Neapel."},
+      {you: ["Fliegt ihr, oder fahrt ihr mit dem Zug?", "Fliegt ihr, oder fahrt ihr mit den Zug?", "Fliegt ihr, oder fahrt ihr mit der Zug?"], correct: 0},
+      {them: "Mit dem Auto. Das dauert zwei Tage! 🚗 Und du? Wo warst du schon?"},
+      {you: ["Ich war schon in der Schweiz und in Polen.", "Ich war schon in die Schweiz und in Polen.", "Ich war schon nach der Schweiz und nach Polen."], correct: 0},
+      {them: "Cool! Und wohin möchtest du mal reisen?"},
+      {you: ["Ich möchte gern in die USA reisen.", "Ich möchte gern nach den USA reisen.", "Ich möchte gern in den USA reisen."], correct: 0},
+      {them: "Und wie kommen wir im Mai in die Sächsische Schweiz?"},
+      {you: ["Zuerst mit dem Zug und dann mit der S-Bahn.", "Zuerst mit den Zug und dann mit die S-Bahn.", "Zuerst mit dem Zug und dann mit dem S-Bahn."], correct: 0},
+      {them: "Super, ich freue mich! 🏔️"}
+    ]
+  });
+
+  // Üb. 4: перетворення
+  buildTransform('ub4-tr', [
+    {s: "Ich fahre zur Schule. (der Bus)", task: "з <b>mit</b>", ans: "Ich fahre mit dem Bus zur Schule."},
+    {s: "Opa fährt in die Stadt. (die Straßenbahn)", task: "з <b>mit</b>", ans: "Opa fährt mit der Straßenbahn in die Stadt."},
+    {s: "Ich war schon in Österreich.", task: "Wohin? <b>Ich möchte wieder … fahren.</b>", ans: "Ich möchte wieder nach Österreich fahren."},
+    {s: "Wir fahren in die Schweiz.", task: "Wo? <b>Wir waren …</b>", ans: "Wir waren in der Schweiz."},
+    {s: "Ayla war in der Türkei.", task: "Wohin? <b>Ayla ist … geflogen.</b>", ans: "Ayla ist in die Türkei geflogen."},
+    {s: "Wir fahren ans Meer.", task: "Wo? <b>Wir sind …</b>", ans: "Wir sind am Meer."}
+  ]);
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Wie fährt Iwan zur Schule?", opts: ["mit dem Bus", "mit der U-Bahn", "mit dem Fahrrad"], correct: "mit der U-Bahn"},
+    {q: "Wie lange fährt Daryna zur Schule?", opts: ["zehn Minuten", "zwanzig Minuten", "eine Stunde"], correct: "zehn Minuten"},
+    {q: "Was gibt es in Leipzig nicht?", opts: ["Straßenbahnen", "eine S-Bahn", "eine U-Bahn"], correct: "eine U-Bahn"},
+    {q: "Wann kommt Iwan nach Leipzig?", opts: ["im Mai", "im Juli", "im August"], correct: "im Juli"},
+    {q: "Mit wem kommt Iwan?", opts: ["mit Marko", "mit Kateryna", "mit seinen Eltern"], correct: "mit Kateryna"},
+    {q: "Wo steigen sie um?", opts: ["in Przemyśl", "in Berlin", "in Dresden"], correct: "in Przemyśl"},
+    {q: "Warum fahren sie von Berlin mit dem Bus?", opts: ["Der Bus ist schneller.", "Der Bus ist billiger.", "Es gibt keinen Zug."], correct: "Der Bus ist billiger."},
+    {q: "Was macht Iwan im Zug?", opts: ["Er liest und schläft.", "Er spielt Karten.", "Er lernt Deutsch."], correct: "Er liest und schläft."}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Ich fahre mit der Straßenbahn zur Schule.", uk: "Я їжджу до школи трамваєм."},
+    {say: "Im Sommer fahren wir ans Meer.", uk: "Улітку ми їдемо на море."},
+    {say: "Ich war schon in der Schweiz.", uk: "Я вже був (була) у Швейцарії."},
+    {say: "Ich möchte gern in die USA reisen.", uk: "Я хотів (хотіла) б поїхати до США."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Unter der Erde fährt die …", opts: ["Straßenbahn", "U-Bahn", "Fähre"], correct: "U-Bahn"},
+    {q: "Auf eine Insel fährt man oft mit der …", opts: ["Fähre", "U-Bahn", "S-Bahn"], correct: "Fähre"},
+    {q: "In der Wüste reitet man oft auf einem …", opts: ["Schiff", "Kamel", "Raumschiff"], correct: "Kamel"},
+    {q: "Eine Reise mit der ganzen Klasse ist eine …", opts: ["Klassenfahrt", "Stimme", "Küste"], correct: "Klassenfahrt"},
+    {q: "Rügen ist eine … in der Ostsee.", opts: ["Wüste", "Insel", "Küste"], correct: "Insel"},
+    {q: "Was bedeutet „abstimmen“?", opts: ["голосувати", "подорожувати", "пересідати"], correct: "голосувати"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Wir waren im Sommer in der Schweiz.", ok: true},
+    {s: "Ich möchte in Spanien reisen.", wrong: 2, fix: "nach"},
+    {s: "Erik fährt mit das Fahrrad.", wrong: 3, fix: "dem"},
+    {s: "Wir fahren nach die Berge.", wrong: 2, fix: "in"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🚂', '⛴️', '🏔️', '🗺️']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
