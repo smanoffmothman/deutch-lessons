@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 6, Modul C: Reiseeindrücke — Німецька мова 6 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 6 КЛАС</span>
+        <h1>Lektion 6 · Modul C: Reiseeindrücke</h1>
+        <p class="sub">Враження від подорожі. Präteritum: правильні дієслова (machte), модальні (konnte, musste), неправильні (fuhr, kam, sah) і відокремлювані (kam an). Звіт Дарини про класну поїздку, Ерік розповідає бабусі про нічну пригоду, вправи, говоріння, письмо і тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Infinitiv → Präteritum</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Formen</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Sätze umbauen</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Lückentext</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власний текст + вправа на розуміння ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Drei Tage in der Sächsischen Schweiz</h2>
+      <p class="lead">Дарина пише для шкільної газети звіт про класну поїздку — у Präteritum, як і годиться для письмової розповіді. Послухай і прочитай. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l6-c-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Am Montag um sieben Uhr zweiundzwanzig fuhr unser Zug endlich ab — mit zehn Minuten Verspätung und mit Eriks Wanderschuhen. In Dresden stiegen wir in die S-Bahn um, und um neun Uhr kamen wir in Bad Schandau an. Es regnete, aber das war uns egal.</p>
+        <p>Wir wohnten in einer <span class="gl" data-uk="молодіжний хостел" data-lemma="die Jugendherberge, -n">Jugendherberge</span> direkt an der Elbe. Die Zimmer waren klein, aber <span class="gl" data-uk="затишний" data-lemma="gemütlich">gemütlich</span>. Ich schlief mit Greta, Ayla und den Zwillingen in einem Zimmer. Am ersten Abend wollte natürlich niemand schlafen. Wir erzählten <span class="gl" data-uk="страшна історія" data-lemma="die Gruselgeschichte, -n">Gruselgeschichten</span>, bis Frau Schulz an die Tür <span class="gl" data-uk="стукати" data-lemma="klopfen">klopfte</span>.</p>
+        <p>Am Dienstag schien die Sonne. Wir wanderten zur Bastei, einer <span class="gl" data-uk="відомий, славетний" data-lemma="berühmt">berühmten</span> <span class="gl" data-uk="міст" data-lemma="die Brücke, -n">Brücke</span> zwischen hohen <span class="gl" data-uk="скеля" data-lemma="der Felsen, -">Felsen</span>. Der Weg war <span class="gl" data-uk="крутий" data-lemma="steil">steil</span>, und Timur musste oft eine Pause machen. Aber oben hatten wir eine fantastische <span class="gl" data-uk="краєвид" data-lemma="die Aussicht, -en">Aussicht</span>: Die Elbe sah aus wie ein silbernes Band.</p>
+        <p>Am Nachmittag durften wir endlich klettern! Ein <span class="gl" data-uk="гірський провідник" data-lemma="der Bergführer, -">Bergführer</span> zeigte uns, wie man das Seil richtig hält. Greta und ich kletterten als Erste nach oben — unser Kletterkurs in Leipzig half uns sehr. Erik hatte zuerst Angst, aber dann kam er bis zur Mitte. Alle <span class="gl" data-uk="плескати в долоні" data-lemma="klatschen">klatschten</span>.</p>
+        <p>Am Mittwoch fuhren wir mit dem Schiff auf der Elbe nach Dresden und von dort mit dem Zug nach Hause. Im Zug schliefen fast alle. Ich dachte an die Felsen, an das <span class="gl" data-uk="багаття" data-lemma="das Lagerfeuer, -">Lagerfeuer</span> am letzten Abend und an Lottes Schokolade — die aßen wir nämlich alle zusammen auf dem <span class="gl" data-uk="вершина" data-lemma="der Gipfel, -">Gipfel</span>. Was für ein <span class="gl" data-uk="пригода" data-lemma="das Abenteuer, -">Abenteuer</span>! Die beste Klassenfahrt überhaupt!</p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">Präteritum</h2>
+      <p class="lead"><b>Präteritum</b> — минулий час для письмових розповідей: звітів, казок, листів-оповідань. У розмові частіше Perfekt, але <b>war, hatte</b> і модальні (konnte, musste, wollte) кажуть і в розмові.</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. Слабкі (правильні) дієслова: -te-</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Person</th><th>machen</th><th>arbeiten</th></tr>
+          <tr><td>ich</td><td>mach<strong>te</strong></td><td>arbeit<strong>ete</strong></td></tr>
+          <tr><td>du</td><td>mach<strong>test</strong></td><td>arbeit<strong>etest</strong></td></tr>
+          <tr><td>er / sie / es</td><td>mach<strong>te</strong></td><td>arbeit<strong>ete</strong></td></tr>
+          <tr><td>wir</td><td>mach<strong>ten</strong></td><td>arbeit<strong>eten</strong></td></tr>
+          <tr><td>ihr</td><td>mach<strong>tet</strong></td><td>arbeit<strong>etet</strong></td></tr>
+          <tr><td>sie / Sie</td><td>mach<strong>ten</strong></td><td>arbeit<strong>eten</strong></td></tr>
+        </table></div>
+        <div class="merke">Основа на <b>-t / -d</b> отримує <b>-ete-</b>: arbeitete, wartete, badete. <b>ich</b> і <b>er</b> мають однакову форму: ich machte = er machte.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. Модальні дієслова — без умлаута!</p>
+        <p class="beispiel">können → <b>konnte</b> · müssen → <b>musste</b> · dürfen → <b>durfte</b> · wollen → <b>wollte</b> · sollen → <b>sollte</b> · mögen → <b>mochte</b></p>
+        <p class="beispiel">Timur <b>musste</b> oft eine Pause machen. — Am Nachmittag <b>durften</b> wir klettern.</p>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. Сильні (неправильні) дієслова — нова основа</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Infinitiv</th><th>Präteritum (er)</th></tr>
+          <tr><td>sein · haben</td><td><strong>war</strong> · <strong>hatte</strong></td></tr>
+          <tr><td>fahren · kommen · gehen</td><td><strong>fuhr</strong> · <strong>kam</strong> · <strong>ging</strong></td></tr>
+          <tr><td>sehen · essen · schlafen</td><td><strong>sah</strong> · <strong>aß</strong> · <strong>schlief</strong></td></tr>
+          <tr><td>scheinen · helfen · denken</td><td><strong>schien</strong> · <strong>half</strong> · <strong>dachte</strong></td></tr>
+        </table></div>
+        <div class="merke">У сильних дієслів <b>ich</b> і <b>er</b> — без закінчення: ich fuhr, er fuhr. Далі: du fuhr<b>st</b>, wir fuhr<b>en</b>, ihr fuhr<b>t</b>, sie fuhr<b>en</b>. Форми — у таблиці неправильних дієслів, їх треба вчити.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">4. Відокремлювані дієслова</p>
+        <p class="beispiel">abfahren → der Zug <b>fuhr</b> … <b>ab</b> · ankommen → wir <b>kamen</b> … <b>an</b> · umsteigen → wir <b>stiegen</b> … <b>um</b> · einkaufen → sie <b>kaufte</b> … <b>ein</b></p>
+        <div class="merke">Як і в Präsens, префікс іде в кінець речення.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">5. Типові помилки</p>
+        <p>✗ er fuhrt → ✓ er <b>fuhr</b></p>
+        <p>✗ wir müssten → ✓ wir <b>mussten</b> <i>(без умлаута!)</i></p>
+        <p>✗ sie schlafte → ✓ sie <b>schlief</b></p>
+        <p>✗ wir ankamen um neun → ✓ wir <b>kamen</b> um neun <b>an</b></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: відповідність ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Was passt zusammen?</h2>
+      <p class="lead">Вибери для кожного інфінітива його форму Präteritum (er / sie / es).</p>
+      <div class="card" id="ub1-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2: форми ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Präteritum bilden</h2>
+      <p class="lead">Утвори форму Präteritum для цієї особи. Приклад: machen · ich → <b>machte</b>. У відокремлюваних дієслів пиши обидві частини: <b>kam an</b>.</p>
+      <div class="card" id="ub2-tab"></div>
+    </section>
+
+    <!-- ===== Üb. 3: перетворення ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Erzähl es im Präteritum</h2>
+      <p class="lead">Перепиши речення в Präteritum. Пиши ціле речення.</p>
+      <div class="card" id="ub3-tr"></div>
+    </section>
+
+    <!-- ===== Üb. 4: текст з пропусками ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Der letzte Abend</h2>
+      <p class="lead">Що було в останній вечір поїздки? Встав дієслова в Präteritum з набору — одне зайве. Спершу натисни на пропуск, потім на слово.</p>
+      <div class="card" id="ub4-bank"></div>
+    </section>
+
+    <!-- ===== HÖREN — власний діалог, озвучений синтезатором ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Ein Bär vor dem Fenster?</h2>
+      <p class="lead">Ерік розповідає бабусі Урсулі про поїздку — і про одну дуже страшну ніч. Послухай (можна двічі) і дай відповіді. Текст — внизу, але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l6-c-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Oma Ursula:</b> Erik, mein Schatz! Wie war die Klassenfahrt?<br>
+          <b>Erik:</b> Super, Oma! Am Dienstag sind wir zur Bastei gewandert, und dann bin ich geklettert — bis zur Mitte!<br>
+          <b>Oma Ursula:</b> Bis zur Mitte? Du? Das ist ja toll! Hattest du keine Angst?<br>
+          <b>Erik:</b> Doch, am Anfang schon. Aber Daryna sagte: Schau nach oben, nicht nach unten!<br>
+          <b>Oma Ursula:</b> Ein kluges Mädchen. Und was habt ihr am Abend gemacht?<br>
+          <b>Erik:</b> Am letzten Abend hatten wir ein Lagerfeuer. Herr Brandt spielte Gitarre, und wir sangen Lieder.<br>
+          <b>Oma Ursula:</b> Wie schön! Das haben wir früher auch gemacht.<br>
+          <b>Erik:</b> Und dann, in der Nacht, hörten Timur und ich ein Geräusch vor dem Fenster. Es raschelte und knackte.<br>
+          <b>Oma Ursula:</b> Oje! Was war das?<br>
+          <b>Erik:</b> Timur dachte, das ist ein Bär! Wir konnten gar nicht mehr schlafen. Um zwei Uhr nahmen wir die Taschenlampe und gingen leise hinaus.<br>
+          <b>Oma Ursula:</b> Und?<br>
+          <b>Erik:</b> Es war ein Igel! Er fraß unsere Chips. Wir hatten die Tüte draußen vergessen.<br>
+          <b>Oma Ursula:</b> Ein gefährlicher Igel! Und hat Frau Schulz etwas gemerkt?<br>
+          <b>Erik:</b> Zum Glück nicht. Aber am Morgen waren wir sehr müde. Im Zug haben wir dann den ganzen Weg geschlafen.
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN — 🎤 + говоріння зі зразком ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Es war einmal eine Reise …</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Erzähle von deiner schönsten Reise — im Präteritum: wohin, womit, was du gesehen und gemacht hast.</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Letzten Sommer fuhr ich mit meinen Eltern in die Karpaten. Wir fuhren mit dem Nachtzug und kamen am Morgen an. Wir wohnten in einem kleinen Holzhaus. Jeden Tag wanderten wir in den Bergen. Einmal sahen wir sogar einen Hirsch! Am letzten Abend saßen wir am Lagerfeuer. Das war eine tolle Reise.</div>
+        </div>
+        <div class="qa">
+          <label>2. Erzähle die Klassenfahrt kurz nach — aus der Sicht von Timur.</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Am Montag fuhren wir mit dem Zug in die Sächsische Schweiz. Wir wohnten in einer Jugendherberge. Am Dienstag wanderten wir zur Bastei. Der Weg war sehr steil, und ich musste oft eine Pause machen. Aber die Aussicht war super! In der Nacht hörte ich ein Geräusch und dachte, das ist ein Bär. Es war aber nur ein Igel.</div>
+        </div>
+        <div class="qa">
+          <label>3. Was war auf einer Reise einmal lustig, gefährlich oder komisch?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Einmal fuhren wir mit dem Auto ans Meer. Unterwegs merkten wir: Unser Hund war nicht im Auto! Wir mussten zurückfahren. Der Hund saß ganz ruhig vor dem Haus und wartete auf uns. Alle lachten.</div>
+        </div>
+        <div class="qa">
+          <label>4. Wo übernachtest du lieber: im Hotel, in einer Jugendherberge oder im Zelt? Warum?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Am liebsten übernachte ich im Zelt, weil man dann ganz nah an der Natur ist. Eine Jugendherberge finde ich auch gut: Sie ist billig, und man trifft viele junge Leute. Ein Hotel ist bequem, aber für mich zu langweilig.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN — письмо за планом ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Mein Reisebericht</h2>
+      <p class="lead">Напиши для шкільної газети звіт про поїздку чи екскурсію (справжню або вигадану) — 60–80 слів у <b>Präteritum</b> за планом:</p>
+      <div class="card">
+        <p>1) куди, коли й з ким ви їздили; 2) чим добиралися й коли приїхали; 3) де жили; 4) що бачили й робили (2–3 речення); 5) що було найкращим або найсмішнішим; 6) враження наприкінці.</p>
+        <p class="beispiel">Im Mai fuhr unsere Klasse nach … · Wir fuhren mit … und kamen um … an. · Wir wohnten in … · Am ersten Tag … / Danach … · Am schönsten war … · Das war …!</p>
+        <div class="qa">
+          <label for="schreiben-text">Mein Reisebericht</label>
+          <textarea id="schreiben-text" rows="10" placeholder="Im Mai fuhr unsere Klasse …"
+            data-words="60-80"
+            data-must="war/waren|fuhr/fuhren"
+            data-check="Куди, коли, з ким|Транспорт і прибуття|Де жили|Що бачили й робили|Найкраще або найсмішніше|Враження|Präteritum"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Im Oktober fuhr unsere Klasse für zwei Tage nach Kamjanez-Podilskyj. Wir fuhren mit dem Bus und kamen am Mittag an. Wir wohnten in einem kleinen Hotel im Zentrum. Am ersten Tag besuchten wir die alte Festung. Ein Führer erzählte uns viele Geschichten über Ritter. Am Abend aßen wir Pizza und spielten Karten. Am lustigsten war der Hund des Hotels: Er schlief immer in unserem Zimmer! Das war eine tolle Reise.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — режим контрольної: одна спроба, лише ця вкладка йде в бал ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Gestern
+          <select class="blank inline" data-ans="regnete"><option value="">—</option><option>regnet</option><option>regnete</option><option>regnetete</option></select> es den ganzen Tag.</div>
+        <div class="fill-item"><span class="num">8)</span> Wir
+          <select class="blank inline" data-ans="mussten"><option value="">—</option><option>müssten</option><option>mussten</option><option>mussen</option></select> früh aufstehen.</div>
+        <div class="fill-item"><span class="num">9)</span> Um neun Uhr
+          <select class="blank inline" data-ans="kamen"><option value="">—</option><option>kommten</option><option>kamten</option><option>kamen</option></select> wir in Bad Schandau an.</div>
+        <div class="fill-item"><span class="num">10)</span> Am Abend
+          <select class="blank inline" data-ans="war"><option value="">—</option><option>war</option><option>wurde</option><option>ist</option></select> ich sehr müde.</div>
+        <div class="fill-item"><span class="num">11)</span> Ihr
+          <select class="blank inline" data-ans="hattet"><option value="">—</option><option>hattest</option><option>hattet</option><option>hatten</option></select> viel Spaß auf der Reise.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-6-klas-6-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-6-klas-6-rik";
+  const KN_UNIT = "l6-c";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Der Zug fuhr pünktlich um sieben Uhr zwölf ab.", a: "f"},
+    {s: "In Bad Schandau regnete es.", a: "r"},
+    {s: "Die Klasse wohnte in einem großen Hotel.", a: "f"},
+    {s: "Am ersten Abend erzählten die Mädchen Gruselgeschichten.", a: "r"},
+    {s: "Am Dienstag wanderte die Klasse zur Bastei.", a: "r"},
+    {s: "Für Timur war der Weg leicht.", a: "f"},
+    {s: "Erik kletterte bis ganz nach oben.", a: "f"},
+    {s: "Die Klasse fuhr mit dem Schiff nach Dresden.", a: "r"},
+    {s: "Lottes Schokolade aßen alle auf dem Gipfel.", a: "r"}
+  ]);
+
+  // Üb. 1: інфінітив → Präteritum
+  buildMatch('ub1', [
+    ["fahren", "fuhr"],
+    ["gehen", "ging"],
+    ["kommen", "kam"],
+    ["sehen", "sah"],
+    ["schlafen", "schlief"],
+    ["essen", "aß"],
+    ["sein", "war"],
+    ["haben", "hatte"],
+    ["können", "konnte"],
+    ["helfen", "half"]
+  ], {lead: true, options: ["aß", "fuhr", "ging", "half", "hatte", "kam", "konnte", "sah", "schlief", "war"]});
+
+  // Üb. 2: форми (одне поле в рядку)
+  buildTable('ub2-tab', {
+    head: ["Verb · Person", "Präteritum"],
+    rows: [
+      ["machen · ich", "[machte]"],
+      ["arbeiten · er", "[arbeitete]"],
+      ["wandern · wir", "[wanderten]"],
+      ["können · du", "[konntest]"],
+      ["müssen · sie (Sg.)", "[musste]"],
+      ["fahren · ich", "[fuhr]"],
+      ["kommen · wir", "[kamen]"],
+      ["sehen · ihr", "[saht]"],
+      ["ankommen · der Zug", "[kam an]"],
+      ["sein · wir", "[waren]"]
+    ]
+  });
+
+  // Üb. 3: перетворення
+  buildTransform('ub3-tr', [
+    {s: "Wir wohnen in einer Jugendherberge.", task: "у <b>Präteritum</b>", ans: "Wir wohnten in einer Jugendherberge."},
+    {s: "Die Sonne scheint.", task: "у <b>Präteritum</b>", ans: "Die Sonne schien."},
+    {s: "Timur muss oft eine Pause machen.", task: "у <b>Präteritum</b>", ans: "Timur musste oft eine Pause machen."},
+    {s: "Wir fahren mit dem Schiff nach Dresden.", task: "у <b>Präteritum</b>", ans: "Wir fuhren mit dem Schiff nach Dresden."},
+    {s: "Der Zug kommt um neun Uhr an.", task: "у <b>Präteritum</b>", ans: "Der Zug kam um neun Uhr an."},
+    {s: "Erik hat Angst.", task: "у <b>Präteritum</b>", ans: "Erik hatte Angst."}
+  ]);
+
+  // Üb. 4: текст з пропусками
+  buildWordBank('ub4-bank', {
+    text: "Am letzten Abend [machten] wir ein Lagerfeuer. Herr Brandt [spielte] Gitarre, und wir [sangen] Lieder. Frau Schulz [brachte] Würstchen und Brot. Es [war] warm, und am Himmel [sahen] wir viele Sterne. Um zehn Uhr [mussten] alle ins Bett.",
+    extra: ["fuhren"]
+  });
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Wie weit ist Erik geklettert?", opts: ["bis ganz nach oben", "bis zur Mitte", "gar nicht"], correct: "bis zur Mitte"},
+    {q: "Wer gab Erik einen Tipp?", opts: ["Daryna", "Greta", "der Bergführer"], correct: "Daryna"},
+    {q: "Was machte Herr Brandt am Lagerfeuer?", opts: ["Er erzählte Geschichten.", "Er spielte Gitarre.", "Er grillte Würstchen."], correct: "Er spielte Gitarre."},
+    {q: "Was hörten Erik und Timur in der Nacht?", opts: ["Musik", "ein Geräusch vor dem Fenster", "Frau Schulz"], correct: "ein Geräusch vor dem Fenster"},
+    {q: "Was dachte Timur?", opts: ["Das ist ein Bär.", "Das ist ein Hund.", "Das ist Max."], correct: "Das ist ein Bär."},
+    {q: "Um wie viel Uhr gingen die Jungen hinaus?", opts: ["um Mitternacht", "um zwei Uhr", "um fünf Uhr"], correct: "um zwei Uhr"},
+    {q: "Wer war draußen?", opts: ["ein Igel", "ein Fuchs", "eine Katze"], correct: "ein Igel"},
+    {q: "Was fraß das Tier?", opts: ["Lottes Schokolade", "die Chips der Jungen", "Brot"], correct: "die Chips der Jungen"}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Wir fuhren mit dem Zug nach Dresden.", uk: "Ми їхали потягом до Дрездена."},
+    {say: "Am Abend saßen wir am Lagerfeuer.", uk: "Увечері ми сиділи біля багаття."},
+    {say: "In der Nacht konnte ich nicht schlafen.", uk: "Уночі я не міг (не могла) заснути."},
+    {say: "Oben hatten wir eine tolle Aussicht.", uk: "Нагорі в нас був чудовий краєвид."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Präteritum von „fahren“ (er):", opts: ["fahrte", "fuhr", "fuhrte"], correct: "fuhr"},
+    {q: "Präteritum von „können“ (ich):", opts: ["konnte", "könnte", "kannte"], correct: "konnte"},
+    {q: "Präteritum von „gehen“ (er):", opts: ["gehte", "gang", "ging"], correct: "ging"},
+    {q: "Billig übernachten kann man in einer …", opts: ["Jugendherberge", "Brücke", "Aussicht"], correct: "Jugendherberge"},
+    {q: "Der höchste Punkt eines Berges ist der …", opts: ["Felsen", "Gipfel", "Bergführer"], correct: "Gipfel"},
+    {q: "Was bedeutet „die Aussicht“?", opts: ["краєвид", "пригода", "багаття"], correct: "краєвид"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Am Dienstag schien die Sonne.", ok: true},
+    {s: "Erik fuhrt mit dem Zug nach Hause.", wrong: 1, fix: "fuhr"},
+    {s: "Die Kinder schlafte im Zug.", wrong: 2, fix: "schliefen"},
+    {s: "Wir könnten nicht schlafen, weil es laut war.", wrong: 1, fix: "konnten"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🏔️', '🔥', '🦔', '⛴️']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
