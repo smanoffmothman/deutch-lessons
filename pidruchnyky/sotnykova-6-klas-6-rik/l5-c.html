@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 5, Modul C: In den Stunden — Німецька мова 6 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 6 КЛАС</span>
+        <h1>Lektion 5 · Modul C: In den Stunden</h1>
+        <p class="sub">Що ми робимо на уроках і навіщо вчимося. Речення мети: um … zu чи damit; що можна й чого не можна в школі (sollen, dürfen). Грета пояснює Лотте, навіщо школа, Дарина питає вчителя про контрольну, вправи, говоріння, письмо і тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · In den Stunden</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · um oder damit?</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Sätze verbinden</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Chat</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власний текст + вправа на розуміння ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Lottes große Frage</h2>
+      <p class="lead">Маленька Лотте не розуміє, навіщо ходити до школи, і Грета намагається їй пояснити. Послухай і прочитай. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l5-c-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Gestern Abend ist Lotte mit einem traurigen Gesicht in mein Zimmer gekommen. „Greta, warum muss ich eigentlich in die Schule gehen? Ich will lieber den ganzen Tag spielen!“ In der Schule hat sie heute ein Diktat geschrieben und viele <span class="gl" data-uk="помилка" data-lemma="der Fehler, -">Fehler</span> gemacht.</p>
+        <p>Ich habe kurz nachgedacht. „Wir gehen in die Schule, <span class="gl" data-uk="щоб (той самий підмет)" data-lemma="um … zu (+ Inf.)">um</span> viel <span class="gl" data-uk="щоб (той самий підмет)" data-lemma="um … zu (+ Inf.)">zu</span> lernen. Du lernst lesen, <span class="gl" data-uk="щоб (різні підмети)" data-lemma="damit">damit</span> Mama dir nicht jedes Buch vorlesen muss. Dann kannst du allein alle Pferdebücher lesen!“ Lotte hat genickt. Sie liebt Pferde.</p>
+        <p>„Und warum müssen wir Diktate schreiben?“ — „Damit ihr ohne Fehler schreiben könnt. Die Lehrerin <span class="gl" data-uk="диктувати" data-lemma="diktieren">diktiert</span>, und ihr schreibt, um die Wörter gut zu lernen.“ — „Aber ich habe sieben Fehler gemacht!“ — „Das ist nicht schlimm. Man muss eben üben.“</p>
+        <p>Dann habe ich ihr meinen Trick gezeigt: Ich schreibe schwierige Wörter auf kleine <span class="gl" data-uk="картка (для слів)" data-lemma="die Karteikarte, -n">Karteikarten</span> und hänge sie an den Kühlschrank. So sehe ich sie jeden Tag und <span class="gl" data-uk="повторювати" data-lemma="wiederholen, hat wiederholt">wiederhole</span> sie ganz ohne Mühe. Lotte war <span class="gl" data-uk="у захваті" data-lemma="begeistert">begeistert</span>. Sie hat sofort selbst Karten gemacht: „Fahrrad“, „Pferd“, „Schokolade“.</p>
+        <p>Heute hängen am Kühlschrank zwanzig bunte Karten. Mama hat gelacht: „Öffne ich den Kühlschrank jetzt, um Milch zu holen, oder um Deutsch zu lernen?“ Und Lotte hat <span class="gl" data-uk="гордий" data-lemma="stolz (auf + Akk.)">stolz</span> gesagt: „Ich lerne jetzt <span class="gl" data-uk="старанний, працьовитий" data-lemma="fleißig">fleißig</span>, damit Frau Lindner mich <span class="gl" data-uk="хвалити" data-lemma="loben">lobt</span>!“</p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">Finalsatz: um … zu oder damit?</h2>
+      <p class="lead">«Навіщо? Для чого?» — на це відповідає <b>Finalsatz</b> (речення мети). Німецькою є два способи: <b>um … zu</b> і <b>damit</b>. Вибір залежить від того, хто виконує дію.</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. Той самий підмет → um … zu</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Два речення</th><th>Одне речення</th></tr>
+          <tr><td><b>Ich</b> lerne viel. <b>Ich</b> will gute Noten bekommen.</td><td>Ich lerne viel, <strong>um</strong> gute Noten <strong>zu</strong> bekommen.</td></tr>
+          <tr><td><b>Wir</b> gehen in die Bibliothek. <b>Wir</b> wollen Bücher leihen.</td><td>Wir gehen in die Bibliothek, <strong>um</strong> Bücher <strong>zu</strong> leihen.</td></tr>
+        </table></div>
+        <div class="merke">Підмет в обох частинах однаковий — у другій частині його немає. <b>zu</b> + інфінітив — у кінці. Модальне дієслово (wollen, möchten) зникає.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. Різні підмети → damit</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Два речення</th><th>Одне речення</th></tr>
+          <tr><td><b>Die Lehrerin</b> erklärt die Regel. <b>Wir</b> sollen sie verstehen.</td><td>Die Lehrerin erklärt die Regel, <strong>damit</strong> wir sie <strong>verstehen</strong>.</td></tr>
+          <tr><td><b>Lotte</b> lernt fleißig. <b>Frau Lindner</b> soll sie loben.</td><td>Lotte lernt fleißig, <strong>damit</strong> Frau Lindner sie <strong>lobt</strong>.</td></tr>
+        </table></div>
+        <div class="merke">Після <b>damit</b> — повне підрядне речення: свій підмет, а дієслово в <b>кінці</b> (як після weil). sollen / wollen тут зазвичай не повторюють.</div>
+        <p class="beispiel"><b>Damit</b> ihr die Regel gut versteht, erkläre ich sie noch einmal. — <b>Um</b> gute Noten <b>zu</b> bekommen, übt Daryna viel.</p>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. Was soll, muss, darf man in der Schule?</p>
+        <p class="beispiel">Die Schüler <b>sollen</b> pünktlich kommen. — Man <b>muss</b> die Hausaufgaben machen.</p>
+        <p class="beispiel">In der Pause <b>darf</b> man spielen. — Im Unterricht <b>darf</b> man <b>nicht</b> essen. — In der Bibliothek <b>kann</b> man Bücher leihen.</p>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">4. Типові помилки</p>
+        <p>✗ Ich komme früh, damit pünktlich zu sein. → ✓ Ich komme früh, <b>um</b> pünktlich zu sein.</p>
+        <p>✗ Er erklärt alles, um wir es verstehen. → ✓ Er erklärt alles, <b>damit</b> wir es verstehen.</p>
+        <p>✗ …, damit wir können besser sprechen. → ✓ …, damit wir besser sprechen <b>können</b>.</p>
+        <p>✗ …, um zu ein Buch leihen. → ✓ …, um ein Buch <b>zu leihen</b>.</p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: сортування ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Was machen wir in den Stunden?</h2>
+      <p class="lead">Що ми робимо на якому уроці? Розклади.</p>
+      <div class="card" id="ub1-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 2: um або damit ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">um oder damit?</h2>
+      <p class="lead">Впиши <b>um</b> або <b>damit</b>. Підказка: дивись, чи є в другій частині свій підмет і чи є zu.</p>
+      <div class="card" id="ub2-tab"></div>
+    </section>
+
+    <!-- ===== Üb. 3: перетворення ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Sätze verbinden</h2>
+      <p class="lead">З'єднай два речення в одне — з <b>um … zu</b> або з <b>damit</b>. Пиши ціле речення.</p>
+      <div class="card" id="ub3-tr"></div>
+    </section>
+
+    <!-- ===== Üb. 4: чат ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Lernen wir zusammen?</h2>
+      <p class="lead">Тимур просить тебе допомогти підготуватися до контрольної. Вибирай доречну й правильну відповідь.</p>
+      <div class="card" id="ub4-chat"></div>
+    </section>
+
+    <!-- ===== HÖREN — власний діалог, озвучений синтезатором ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Wie bereite ich mich vor?</h2>
+      <p class="lead">Після уроку Дарина питає пана Брандта, як підготуватися до контрольної з німецької. Послухай розмову (можна двічі) і дай відповіді. Текст діалогу — внизу, але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l5-c-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Daryna:</b> Herr Brandt, haben Sie kurz Zeit? Ich habe eine Frage zur Klassenarbeit.<br>
+          <b>Herr Brandt:</b> Natürlich, Daryna. Was möchtest du wissen?<br>
+          <b>Daryna:</b> Was kommt in der Arbeit dran?<br>
+          <b>Herr Brandt:</b> Ein kurzes Diktat, Grammatik, vor allem das Perfekt, und ein kleiner Aufsatz über deine Ferien.<br>
+          <b>Daryna:</b> Und wie kann ich mich am besten vorbereiten?<br>
+          <b>Herr Brandt:</b> Lies jeden Tag zehn Minuten laut, um deine Aussprache zu üben. Und schreib die Partizipien auf Karteikarten, damit du sie oft wiederholst.<br>
+          <b>Daryna:</b> Das macht Gretas kleine Schwester auch! Ihre Karten hängen am Kühlschrank.<br>
+          <b>Herr Brandt:</b> Eine sehr gute Idee! Und noch ein Tipp: Arbeite mit einer Partnerin. Erzählt euch gegenseitig von euren Ferien, damit ihr Ideen für den Aufsatz sammelt.<br>
+          <b>Daryna:</b> Darf ich ein Wörterbuch benutzen?<br>
+          <b>Herr Brandt:</b> Beim Aufsatz ja, beim Diktat natürlich nicht.<br>
+          <b>Daryna:</b> Und wann schreiben wir die Arbeit?<br>
+          <b>Herr Brandt:</b> Nächsten Donnerstag, in der zweiten Stunde.<br>
+          <b>Daryna:</b> Danke! Dann übe ich am Wochenende mit Greta.<br>
+          <b>Herr Brandt:</b> Gute Idee. Viel Erfolg!<br>
+          <b>Daryna:</b> Danke, und einen schönen Tag noch!
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN — 🎤 + говоріння зі зразком ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Warum lernen wir?</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Warum gehst du in die Schule? Sag mindestens drei Sätze mit um … zu und damit.</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Ich gehe in die Schule, um viel zu wissen und meine Freunde zu treffen. Ich lerne fleißig, damit meine Eltern stolz auf mich sind. Und ich lerne Deutsch, um später in Deutschland studieren zu können.</div>
+        </div>
+        <div class="qa">
+          <label>2. Was macht ihr meistens in der Deutschstunde? Was machst du gern, was nicht?</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">In der Deutschstunde lesen wir Texte, lernen neue Wörter und spielen Dialoge. Manchmal sehen wir Videos. Am liebsten spiele ich Dialoge, weil das lustig ist. Diktate schreibe ich nicht so gern.</div>
+        </div>
+        <div class="qa">
+          <label>3. Was soll, was darf und was darf man nicht in deiner Schule?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Die Schüler sollen pünktlich kommen und die Hausaufgaben machen. In der Pause darf man auf dem Schulhof spielen. Im Unterricht darf man nicht essen und nicht abschreiben. Das Handy muss in der Tasche bleiben.</div>
+        </div>
+        <div class="qa">
+          <label>4. Wie lernst du neue Wörter? Gib einem Freund zwei Tipps.</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Schreib neue Wörter auf Karteikarten, um sie jeden Tag zu wiederholen. Und sprich die Wörter laut, damit du die Aussprache nicht vergisst. Mir helfen auch kleine Bilder neben den Wörtern.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN — письмо за планом ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Meine Lerntipps für Lotte</h2>
+      <p class="lead">Лотте попросила й тебе дати поради, як краще вчитися. Напиши їй на 60–80 слів за планом:</p>
+      <div class="card">
+        <p>1) привітання; 2) навіщо ходити до школи (um … zu); 3) дві-три поради, як вчити слова й правила (um … zu / damit); 4) що треба й чого не можна робити на уроці (sollen, dürfen); 5) побажання успіху; 6) прощання.</p>
+        <p class="beispiel">Liebe Lotte! · Wir gehen in die Schule, um … zu … · Schreib …, damit du … · Lies …, um … zu … · Im Unterricht sollst du … / darfst du nicht … · Viel Erfolg! · Dein / Deine …</p>
+        <div class="qa">
+          <label for="schreiben-text">Deine Tipps</label>
+          <textarea id="schreiben-text" rows="10" placeholder="Liebe Lotte! …"
+            data-words="60-80"
+            data-must="um|zu|damit"
+            data-check="Привітання|Навіщо школа (um … zu)|Дві-три поради|damit|sollen / dürfen|Побажання й прощання"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Liebe Lotte!<br>Wir gehen in die Schule, um viel Neues zu lernen und Freunde zu finden. Hier sind meine Tipps: Lies jeden Abend ein bisschen, um schneller zu lesen. Schreib schwierige Wörter dreimal, damit du sie nicht vergisst. Frag die Lehrerin, wenn du etwas nicht verstehst. Im Unterricht sollst du gut zuhören, und du darfst nicht abschreiben. Viel Erfolg beim nächsten Diktat!<br>Dein Andrij</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — режим контрольної: одна спроба, лише ця вкладка йде в бал ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Ich lerne viel,
+          <select class="blank inline" data-ans="um"><option value="">—</option><option>damit</option><option>um</option><option>weil</option></select> gute Noten zu bekommen.</div>
+        <div class="fill-item"><span class="num">8)</span> Mama hilft mir,
+          <select class="blank inline" data-ans="damit"><option value="">—</option><option>um</option><option>damit</option><option>zu</option></select> ich die Aufgabe verstehe.</div>
+        <div class="fill-item"><span class="num">9)</span> Wir gehen in die Bibliothek, um Bücher
+          <select class="blank inline" data-ans="zu leihen"><option value="">—</option><option>leihen</option><option>zu leihen</option><option>geliehen</option></select>.</div>
+        <div class="fill-item"><span class="num">10)</span> Der Lehrer spricht langsam, damit alle ihn
+          <select class="blank inline" data-ans="verstehen"><option value="">—</option><option>zu verstehen</option><option>versteht</option><option>verstehen</option></select>.</div>
+        <div class="fill-item"><span class="num">11)</span> Im Unterricht
+          <select class="blank inline" data-ans="darf"><option value="">—</option><option>dürfen</option><option>darf</option><option>darfst</option></select> man nicht essen.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-6-klas-6-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-6-klas-6-rik";
+  const KN_UNIT = "l5-c";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Lotte war gestern Abend traurig.", a: "r"},
+    {s: "Lotte möchte lieber den ganzen Tag spielen.", a: "r"},
+    {s: "Lotte hat im Diktat keine Fehler gemacht.", a: "f"},
+    {s: "Lotte liebt Bücher über Pferde.", a: "r"},
+    {s: "Greta findet sieben Fehler sehr schlimm.", a: "f"},
+    {s: "Greta schreibt schwierige Wörter auf Karteikarten.", a: "r"},
+    {s: "Die Karten hängen an Lottes Bett.", a: "f"},
+    {s: "Lotte hat selbst Karten gemacht.", a: "r"},
+    {s: "Lottes Lehrerin heißt Frau Schulz.", a: "f"}
+  ]);
+
+  // Üb. 1: сортування
+  buildSort('ub1-sort', {
+    buckets: ["Deutschstunde 📖", "Mathestunde ➗", "Sportstunde ⚽", "Kunststunde 🎨"],
+    items: [
+      {t: "Dialoge spielen", b: "Deutschstunde 📖"},
+      {t: "Texte übersetzen", b: "Deutschstunde 📖"},
+      {t: "die Aussprache üben", b: "Deutschstunde 📖"},
+      {t: "rechnen", b: "Mathestunde ➗"},
+      {t: "Formeln lernen", b: "Mathestunde ➗"},
+      {t: "Aufgaben lösen", b: "Mathestunde ➗"},
+      {t: "laufen und springen", b: "Sportstunde ⚽"},
+      {t: "am Reck turnen", b: "Sportstunde ⚽"},
+      {t: "Volleyball spielen", b: "Sportstunde ⚽"},
+      {t: "zeichnen", b: "Kunststunde 🎨"},
+      {t: "basteln", b: "Kunststunde 🎨"},
+      {t: "Plakate malen", b: "Kunststunde 🎨"}
+    ]
+  });
+
+  // Üb. 2: um / damit (одне поле в рядку)
+  buildTable('ub2-tab', {
+    head: ["Satz", "um / damit"],
+    rows: [
+      ["Ich lerne viel, … gute Noten zu bekommen.", "[um]"],
+      ["Die Lehrerin erklärt die Regel noch einmal, … wir sie verstehen.", "[damit]"],
+      ["Wir gehen in die Bibliothek, … Bücher zu leihen.", "[um]"],
+      ["Greta hilft Lotte, … sie weniger Fehler macht.", "[damit]"],
+      ["Daryna liest laut, … ihre Aussprache zu üben.", "[um]"],
+      ["Mama kauft Karteikarten, … Lotte Wörter lernen kann.", "[damit]"],
+      ["Erik steht früh auf, … pünktlich zu sein.", "[um]"],
+      ["Herr Brandt spricht langsam, … alle ihn verstehen.", "[damit]"]
+    ]
+  });
+
+  // Üb. 3: перетворення
+  buildTransform('ub3-tr', [
+    {s: "Ich übe viel. Ich will ohne Fehler schreiben.", task: "з <b>um … zu</b>", ans: "Ich übe viel, um ohne Fehler zu schreiben."},
+    {s: "Der Lehrer zeigt ein Video. Die Schüler sollen das Thema besser verstehen.", task: "з <b>damit</b>", ans: "Der Lehrer zeigt ein Video, damit die Schüler das Thema besser verstehen."},
+    {s: "Lotte schreibt Wörter auf Karten. Sie will die Wörter wiederholen.", task: "з <b>um … zu</b>", ans: "Lotte schreibt Wörter auf Karten, um die Wörter zu wiederholen.|Lotte schreibt Wörter auf Karten, um sie zu wiederholen."},
+    {s: "Ich mache alle Hausaufgaben. Meine Eltern sollen zufrieden sein.", task: "з <b>damit</b>", ans: "Ich mache alle Hausaufgaben, damit meine Eltern zufrieden sind."},
+    {s: "Wir gehen in die Turnhalle. Wir wollen Volleyball spielen.", task: "з <b>um … zu</b>", ans: "Wir gehen in die Turnhalle, um Volleyball zu spielen."},
+    {s: "Kommst du zu mir? Wir sollen zusammen Englisch üben.", task: "з <b>damit</b>", ans: "Kommst du zu mir, damit wir zusammen Englisch üben?"}
+  ]);
+
+  // Üb. 4: чат
+  buildChat('ub4-chat', {
+    partner: "Timur",
+    steps: [
+      {them: "Hi! Am Donnerstag schreiben wir die Deutscharbeit 😬 Kannst du mir helfen?"},
+      {you: ["Klar! Komm morgen zu mir, damit wir zusammen üben.", "Klar! Komm morgen zu mir, um wir zusammen üben.", "Klar! Komm morgen zu mir, damit wir üben zusammen."], correct: 0},
+      {them: "Super! Was soll ich mitbringen?"},
+      {you: ["Bring dein Heft mit, um die Regeln zu wiederholen.", "Bring dein Heft mit, um die Regeln wiederholen.", "Bring dein Heft mit, damit die Regeln zu wiederholen."], correct: 0},
+      {them: "Wie lernst du eigentlich die Partizipien?"},
+      {you: ["Ich schreibe sie auf Karten, damit ich sie jeden Tag sehe.", "Ich schreibe sie auf Karten, damit ich sehe sie jeden Tag.", "Ich schreibe sie auf Karten, um ich sie jeden Tag sehe."], correct: 0},
+      {them: "Gute Idee! Und darf man beim Diktat ein Wörterbuch benutzen?"},
+      {you: ["Nein, beim Diktat darf man kein Wörterbuch benutzen.", "Nein, beim Diktat dürfen man kein Wörterbuch benutzen.", "Nein, beim Diktat darf man kein Wörterbuch zu benutzen."], correct: 0},
+      {them: "Okay. Dann bis morgen um vier!"},
+      {you: ["Bis morgen! Und viel Erfolg!", "Bis morgen! Und viel Erfolge!", "Bis morgen! Und vielen Erfolg zu!"], correct: 0},
+      {them: "Danke, gleichfalls! 😊"}
+    ]
+  });
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Worüber spricht Daryna mit Herrn Brandt?", opts: ["über die Klassenarbeit", "über einen Ausflug", "über ihre Noten"], correct: "über die Klassenarbeit"},
+    {q: "Was kommt NICHT in der Arbeit dran?", opts: ["ein Diktat", "ein Aufsatz", "ein Gedicht"], correct: "ein Gedicht"},
+    {q: "Welche Grammatik ist besonders wichtig?", opts: ["das Perfekt", "die Adjektive", "um … zu"], correct: "das Perfekt"},
+    {q: "Warum soll Daryna jeden Tag laut lesen?", opts: ["um schneller zu schreiben", "um ihre Aussprache zu üben", "damit Mama zuhört"], correct: "um ihre Aussprache zu üben"},
+    {q: "Wozu soll sie Karteikarten schreiben?", opts: ["damit sie die Partizipien oft wiederholt", "damit Greta sie liest", "um sie zu verkaufen"], correct: "damit sie die Partizipien oft wiederholt"},
+    {q: "Wann darf man ein Wörterbuch benutzen?", opts: ["beim Diktat", "beim Aufsatz", "nie"], correct: "beim Aufsatz"},
+    {q: "Wann schreibt die Klasse die Arbeit?", opts: ["am Montag in der ersten Stunde", "nächsten Donnerstag in der zweiten Stunde", "am Freitag in der vierten Stunde"], correct: "nächsten Donnerstag in der zweiten Stunde"},
+    {q: "Mit wem übt Daryna am Wochenende?", opts: ["mit Greta", "mit Erik", "mit ihrer Mama"], correct: "mit Greta"}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Ich gehe in die Schule, um viel zu lernen.", uk: "Я ходжу до школи, щоб багато навчитися."},
+    {say: "Die Lehrerin erklärt die Regel, damit wir sie verstehen.", uk: "Учителька пояснює правило, щоб ми його зрозуміли."},
+    {say: "Im Unterricht darf man nicht essen.", uk: "На уроці не можна їсти."},
+    {say: "Viel Erfolg bei der Klassenarbeit!", uk: "Успіху на контрольній!"}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "„pünktlich“ означає:", opts: ["вчасно", "старанно", "голосно"], correct: "вчасно"},
+    {q: "Wer viel und gut arbeitet, ist …", opts: ["fleißig", "pünktlich", "begeistert"], correct: "fleißig"},
+    {q: "Im Test vom Nachbarn kopieren heißt …", opts: ["wiederholen", "abschreiben", "erklären"], correct: "abschreiben"},
+    {q: "Die Lehrerin sagt: „Super gemacht!“ Sie … die Kinder.", opts: ["lobt", "diktiert", "benutzt"], correct: "lobt"},
+    {q: "Den Lernstoff noch einmal lernen heißt: ihn …", opts: ["abschreiben", "aufsagen", "wiederholen"], correct: "wiederholen"},
+    {q: "„Viel Erfolg!“ — „Danke, …!“", opts: ["gleichfalls", "pünktlich", "stolz"], correct: "gleichfalls"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Ich übe viel, um ohne Fehler zu schreiben.", ok: true},
+    {s: "Ich komme früh, damit pünktlich zu sein.", wrong: 3, fix: "um"},
+    {s: "Die Lehrerin erklärt alles, um wir es verstehen.", wrong: 4, fix: "damit"},
+    {s: "Er geht in die Bibliothek, um ein Buch zu leiht.", wrong: 9, fix: "leihen"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📝', '🗂️', '⭐', '🎓']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
