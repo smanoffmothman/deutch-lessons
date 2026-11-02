@@ -196,7 +196,7 @@ const PIDRUCHNYKY = [
         { id: "l4-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "88", typ: "bez-storinky" }
       ] },
       { id: "l5", label: "5", nazva: "Unser Schulleben", storinky: "89–108", dity: [
-        { id: "l5-a", label: "A", nazva: "Nach den Winterferien", storinky: "90–93", typ: "vpravy", gram: ["perfekt-plusquamperfekt"] },
+        { id: "l5-a", label: "A", nazva: "Nach den Winterferien", storinky: "90–93", typ: "vpravy", gram: ["perfekt-plusquamperfekt"], opublikovano: 20 },
         { id: "l5-b", label: "B", nazva: "Schule und Schulfächer", storinky: "94–98", typ: "vpravy", gram: ["indefinitpronomen"] },
         { id: "l5-c", label: "C", nazva: "In den Stunden", storinky: "99–103", typ: "vpravy", gram: ["finalsaetze", "infinitiv-um-zu"] },
         { id: "l5-d", label: "D", nazva: "Wiederholung", storinky: "104–105", typ: "povtorennya", gram: ["perfekt-plusquamperfekt", "indefinitpronomen", "finalsaetze"] },
