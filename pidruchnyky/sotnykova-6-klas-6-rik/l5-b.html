@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 5, Modul B: Schule und Schulfächer — Німецька мова 6 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 6 КЛАС</span>
+        <h1>Lektion 5 · Modul B: Schule und Schulfächer</h1>
+        <p class="sub">Шкільні предмети, розклад і оцінки. Неозначені займенники: alle, fast alle, die meisten, viele, einige, wenige, niemand, keiner; повторення weil. Дарина порівнює школи в Лейпцигу й Харкові, Ерік і Грета обговорюють новий розклад, вправи, говоріння, письмо і тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Fächer</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Von alle bis niemand</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wie viele?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · weil</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власний текст + вправа на розуміння ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Meine Schule in Leipzig</h2>
+      <p class="lead">Дарина порівнює свою школу в Лейпцигу зі школою в Харкові. Послухай і прочитай. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l5-b-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Seit einem Jahr gehe ich in Leipzig zur Schule. Am Anfang war alles neu: die <span class="gl" data-uk="шкільний предмет" data-lemma="das Schulfach, -ä-er">Fächer</span>, die Lehrer, sogar die <span class="gl" data-uk="оцінка" data-lemma="die Note, -n">Noten</span>. In Charkiw war die Zwölf die beste Note, hier ist es die Eins!</p>
+        <p>In der 6b haben wir dreizehn Fächer. Mathe, Deutsch und Englisch stehen fast jeden Tag auf dem <span class="gl" data-uk="розклад уроків" data-lemma="der Stundenplan, -ä-e">Stundenplan</span>. Neu für mich war Ethik: Dort diskutieren wir über Freundschaft und Gerechtigkeit. Und in <span class="gl" data-uk="географія" data-lemma="die Erdkunde">Erdkunde</span> lernen wir gerade viel über Europa.</p>
+        <p>Was sind die Lieblingsfächer in unserer Klasse? Ich habe nicht gezählt, aber ich weiß: <span class="gl" data-uk="майже всі" data-lemma="fast alle">Fast alle</span> mögen Sport. <span class="gl" data-uk="більшість" data-lemma="die meisten">Die meisten</span> Jungen spielen in der <span class="gl" data-uk="перерва" data-lemma="die Pause, -n">Pause</span> Fußball, und <span class="gl" data-uk="багато (хто)" data-lemma="viele">viele</span> Mädchen auch. <span class="gl" data-uk="деякі, кілька" data-lemma="einige">Einige</span> finden <span class="gl" data-uk="образотворче мистецтво" data-lemma="die Kunst">Kunst</span> am schönsten — Greta <span class="gl" data-uk="малювати (олівцем)" data-lemma="zeichnen">zeichnet</span> zum Beispiel super. Mathe mögen nur <span class="gl" data-uk="небагато (хто)" data-lemma="wenige">wenige</span>. Erik sagt, Mathe ist sein <span class="gl" data-uk="улюблений предмет" data-lemma="das Lieblingsfach, -ä-er">Lieblingsfach</span>, weil er gern <span class="gl" data-uk="логічний" data-lemma="logisch">logische</span> Aufgaben löst. Aber er ist wirklich der Einzige!</p>
+        <p>Mein Lieblingsfach ist Deutsch. Ich weiß, das klingt komisch, denn Deutsch ist für mich eine <span class="gl" data-uk="іноземна мова" data-lemma="die Fremdsprache, -n">Fremdsprache</span>. Aber Herr Brandt erzählt so spannend über Bücher! <span class="gl" data-uk="ніхто" data-lemma="niemand">Niemand</span> schläft in seinem <span class="gl" data-uk="уроки, навчання" data-lemma="der Unterricht">Unterricht</span>.</p>
+        <p>Und was ist in beiden Schulen gleich? <span class="gl" data-uk="ніхто (з нас)" data-lemma="keiner">Keiner</span> mag Montag in der ersten Stunde! Und alle warten auf die große Pause.</p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">alle, die meisten, einige … niemand</h2>
+      <p class="lead">Щоб розповісти, <b>скільки людей</b> щось любить, не називаючи точних чисел, потрібні неозначені займенники — від «усі» до «ніхто».</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. Від 100 % до 0 %</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Wort</th><th>Bedeutung</th></tr>
+          <tr><td><strong>alle</strong></td><td>усі (100 %)</td></tr>
+          <tr><td><strong>fast alle</strong></td><td>майже всі</td></tr>
+          <tr><td><strong>die meisten</strong></td><td>більшість</td></tr>
+          <tr><td><strong>viele</strong></td><td>багато</td></tr>
+          <tr><td><strong>einige</strong></td><td>деякі, кілька</td></tr>
+          <tr><td><strong>wenige</strong></td><td>небагато</td></tr>
+          <tr><td><strong>niemand / keiner</strong></td><td>ніхто (0 %)</td></tr>
+        </table></div>
+        <div class="merke">alle, fast alle, die meisten, viele, einige, wenige — з дієсловом у <b>множині</b>: Die meisten <b>mögen</b> Sport. <b>niemand</b> і <b>keiner</b> — в <b>однині</b>: Niemand <b>mag</b> Montag.</div>
+        <p class="beispiel">Fast alle mögen Sport. — Die meisten Jungen spielen Fußball. — Mathe mögen nur wenige.</p>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. З іменником і без</p>
+        <p class="beispiel"><b>Viele</b> Schüler mögen Kunst. = <b>Viele</b> mögen Kunst.</p>
+        <p class="beispiel"><b>Die meisten</b> Mädchen spielen auch Fußball. — <b>Einige</b> von uns lesen gern.</p>
+        <p class="beispiel"><b>Kein</b> Schüler mag Montag. = <b>Keiner</b> mag Montag. = <b>Niemand</b> mag Montag.</p>
+        <div class="merke">Перед іменником — <b>kein</b> (kein Schüler, keine Schülerin). Без іменника — <b>keiner</b> («ніхто з нас»). <b>die meisten</b> — завжди з артиклем die.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. Чому? — weil (повторення)</p>
+        <p class="beispiel">Mein Lieblingsfach ist Kunst, <b>weil</b> ich gern <b>zeichne</b>.</p>
+        <p class="beispiel">Erik mag Mathe, <b>weil</b> er gern logische Aufgaben <b>löst</b>.</p>
+        <div class="merke">Після <b>weil</b> дієслово стоїть у <b>кінці</b> речення, перед weil — кома.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">4. Типові помилки</p>
+        <p>✗ Niemand haben die Aufgabe gelöst. → ✓ Niemand <b>hat</b> …</p>
+        <p>✗ Meisten Schüler mögen Sport. → ✓ <b>Die meisten</b> Schüler …</p>
+        <p>✗ Wenig Schüler mögen Mathe. → ✓ <b>Wenige</b> Schüler …</p>
+        <p>✗ Kein mag Montag. → ✓ <b>Keiner</b> mag Montag.</p>
+        <p>✗ …, weil ich zeichne gern. → ✓ …, weil ich gern <b>zeichne</b>.</p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: картинки — предмети ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Welches Fach ist das?</h2>
+      <p class="lead">Вибери шкільний предмет до картинки.</p>
+      <div class="card" id="ub1-pic"></div>
+    </section>
+
+    <!-- ===== Üb. 2: порядок ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Von „alle“ bis „niemand“</h2>
+      <p class="lead">Розстав слова по порядку: від найбільшої кількості (100 %) до найменшої (0 %). Натискай одне за одним.</p>
+      <div class="card" id="ub2-seq"></div>
+    </section>
+
+    <!-- ===== Üb. 3: скільки? ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">In der 6b sind 24 Kinder</h2>
+      <p class="lead">У класі 24 учні. Подивись на число й вибери слово — і правильну форму дієслова.</p>
+      <div class="card" id="ub3-quiz"></div>
+    </section>
+
+    <!-- ===== Üb. 4: порядок слів ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Warum ist das dein Lieblingsfach?</h2>
+      <p class="lead">Склади речення з weil: натискай слова в правильному порядку.</p>
+      <div class="card" id="ub4-order"></div>
+    </section>
+
+    <!-- ===== HÖREN — власний діалог, озвучений синтезатором ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Der neue Stundenplan</h2>
+      <p class="lead">Ерік і Грета роздивляються новий розклад уроків на друге півріччя. Послухай розмову (можна двічі) і дай відповіді. Текст діалогу — внизу, але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l5-b-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Greta:</b> Erik, hast du schon den neuen Stundenplan gesehen?<br>
+          <b>Erik:</b> Ja! Am Montag haben wir in den ersten zwei Stunden Mathe. Super!<br>
+          <b>Greta:</b> Super? Das findest nur du super. Danach haben wir noch Deutsch, Englisch und Geschichte.<br>
+          <b>Erik:</b> Und am Dienstag beginnen wir mit zwei Stunden Sport. Das magst du doch, oder?<br>
+          <b>Greta:</b> Na klar! Der Dienstag ist mein Lieblingstag. Aber in der letzten Stunde haben wir Musik.<br>
+          <b>Erik:</b> Oh nein, Musik. Ich kann überhaupt nicht singen. Das ist nicht mein Fach.<br>
+          <b>Greta:</b> Am Mittwoch haben wir eine Doppelstunde Kunst. Da können wir lange malen.<br>
+          <b>Erik:</b> Hm, für mich sind zwei Stunden Kunst sehr lang. Aber guck mal: Am Donnerstag haben wir ein neues Fach. Informatik!<br>
+          <b>Greta:</b> Echt? Wer unterrichtet das?<br>
+          <b>Erik:</b> Herr Wolf. Er ist neu an unserer Schule. Wir lernen programmieren!<br>
+          <b>Greta:</b> Cool. Und der Freitag ist kurz: nur vier Stunden. Um halb zwölf ist Schluss.<br>
+          <b>Erik:</b> Perfekt. Dann können wir am Freitag nach der Schule klettern gehen.<br>
+          <b>Greta:</b> Klettern ist doch am Mittwoch! Am Freitag gehen wir lieber Eis essen.
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN — 🎤 + говоріння зі зразком ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Meine Schule</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Welche Fächer hast du? Was ist dein Lieblingsfach? Warum?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Ich habe vierzehn Fächer, zum Beispiel Mathe, Ukrainisch, Englisch, Deutsch, Geschichte und Biologie. Mein Lieblingsfach ist Biologie, weil ich Tiere und Pflanzen sehr interessant finde. Unsere Biologielehrerin zeigt uns oft spannende Videos.</div>
+        </div>
+        <div class="qa">
+          <label>2. Beschreibe deinen Stundenplan für Montag.</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Am Montag habe ich sechs Stunden. In der ersten Stunde habe ich Ukrainisch, dann Mathe. In der dritten Stunde haben wir Deutsch. Nach der großen Pause kommen Geschichte, Sport und Musik. Um zwei Uhr ist Schluss.</div>
+        </div>
+        <div class="qa">
+          <label>3. Was mögen alle, die meisten, einige und wenige in deiner Klasse? Wer mag nichts davon?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">In meiner Klasse mögen fast alle Sport. Die meisten finden auch Informatik toll. Einige mögen Kunst, weil sie gern malen. Physik mögen nur wenige, weil sie sehr schwer ist. Und niemand mag Diktate!</div>
+        </div>
+        <div class="qa">
+          <label>4. Welches Fach findest du schwer? Was machst du, um es besser zu verstehen?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Mathe finde ich schwer, besonders die Textaufgaben. Ich übe zu Hause jeden Tag ein bisschen. Manchmal hilft mir meine Schwester, und ich sehe Erklärvideos im Internet, um die Regeln besser zu verstehen.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN — письмо за планом ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Und wie ist deine Schule?</h2>
+      <p class="lead">Дарина питає: «Und wie ist deine Schule? Welche Fächer mögt ihr?» Напиши їй відповідь на 60–80 слів за планом:</p>
+      <div class="card">
+        <p>1) привітання; 2) скільки в тебе предметів і які; 3) твій улюблений предмет — і чому (weil); 4) які предмети подобаються всім / більшості / небагатьом у твоєму класі; 5) які оцінки в українській школі; 6) прощання.</p>
+        <p class="beispiel">Hallo Daryna! · Ich habe … Fächer: … · Mein Lieblingsfach ist …, weil … · In meiner Klasse mögen fast alle … · Die meisten … · Nur wenige … · Bei uns ist die beste Note die Zwölf. · Viele Grüße</p>
+        <div class="qa">
+          <label for="schreiben-text">Deine Antwort</label>
+          <textarea id="schreiben-text" rows="10" placeholder="Hallo Daryna! …"
+            data-words="60-80"
+            data-must="weil|alle/meisten/viele/einige/wenige/niemand/keiner"
+            data-check="Привітання|Скільки предметів і які|Улюблений предмет + weil|Займенники: alle, die meisten, wenige …|Оцінки в Україні|Прощання"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Hallo Daryna!<br>Ich habe fünfzehn Fächer, zum Beispiel Ukrainisch, Mathe, Englisch, Deutsch und Informatik. Mein Lieblingsfach ist Geschichte, weil ich gern über alte Zeiten lese. In meiner Klasse mögen fast alle Sport. Die meisten finden auch Informatik spannend. Nur wenige mögen Physik, weil sie schwer ist. Bei uns ist die beste Note die Zwölf, wie in Charkiw. Wie findest du die Noten in Deutschland?<br>Viele Grüße<br>Marta</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — режим контрольної: одна спроба, лише ця вкладка йде в бал ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Fast alle Schüler
+          <select class="blank inline" data-ans="mögen"><option value="">—</option><option>mag</option><option>mögen</option><option>magst</option></select> Sport.</div>
+        <div class="fill-item"><span class="num">8)</span> Niemand
+          <select class="blank inline" data-ans="schreibt"><option value="">—</option><option>schreiben</option><option>schreibst</option><option>schreibt</option></select> gern Diktate.</div>
+        <div class="fill-item"><span class="num">9)</span> 
+          <select class="blank inline" data-ans="Die meisten"><option value="">—</option><option>Meisten</option><option>Die meisten</option><option>Die meiste</option></select> Kinder haben ein Handy.</div>
+        <div class="fill-item"><span class="num">10)</span> Mein Lieblingsfach ist Bio, weil ich Tiere
+          <select class="blank inline" data-ans="liebe"><option value="">—</option><option>liebe</option><option>lieben</option><option>liebst</option></select>.</div>
+        <div class="fill-item"><span class="num">11)</span> 
+          <select class="blank inline" data-ans="Keiner"><option value="">—</option><option>Kein</option><option>Keine</option><option>Keiner</option></select> von uns mag Montag.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-6-klas-6-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-6-klas-6-rik";
+  const KN_UNIT = "l5-b";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Daryna geht seit einem Jahr in Leipzig zur Schule.", a: "r"},
+    {s: "In Deutschland ist die Zwölf die beste Note.", a: "f"},
+    {s: "Die 6b hat dreizehn Fächer.", a: "r"},
+    {s: "Ethik hatte Daryna schon in Charkiw.", a: "f"},
+    {s: "Fast alle in der Klasse mögen Sport.", a: "r"},
+    {s: "Viele Kinder in der 6b mögen Mathe.", a: "f"},
+    {s: "Greta kann gut zeichnen.", a: "r"},
+    {s: "Darynas Lieblingsfach ist Deutsch.", a: "r"},
+    {s: "In Herrn Brandts Unterricht schlafen einige Schüler.", a: "f"}
+  ]);
+
+  // Üb. 1: предмети
+  buildPicture('ub1-pic', [
+    {pic: "➗", opts: ["Mathe", "Musik", "Ethik"], correct: "Mathe"},
+    {pic: "🎨", opts: ["Geschichte", "Kunst", "Sport"], correct: "Kunst"},
+    {pic: "🎵", opts: ["Musik", "Informatik", "Erdkunde"], correct: "Musik"},
+    {pic: "🌍", opts: ["Biologie", "Erdkunde", "Deutsch"], correct: "Erdkunde"},
+    {pic: "🌱", opts: ["Biologie", "Mathe", "Kunst"], correct: "Biologie"},
+    {pic: "🏛️", opts: ["Englisch", "Geschichte", "Musik"], correct: "Geschichte"},
+    {pic: "💻", opts: ["Informatik", "Sport", "Ethik"], correct: "Informatik"},
+    {pic: "🇬🇧", opts: ["Deutsch", "Englisch", "Erdkunde"], correct: "Englisch"}
+  ]);
+
+  // Üb. 2: від 100 % до 0 %
+  buildSequence('ub2-seq', [
+    "alle",
+    "fast alle",
+    "die meisten",
+    "viele",
+    "einige",
+    "wenige",
+    "niemand"
+  ]);
+
+  // Üb. 3: скільки? (24 учні)
+  buildQuiz('ub3-quiz', [
+    {q: "24 von 24 Kindern warten auf die Pause. → … Kinder warten auf die Pause.", opts: ["Alle", "Viele", "Einige"], correct: "Alle"},
+    {q: "23 von 24 mögen Sport. → … mögen Sport.", opts: ["Wenige", "Fast alle", "Einige"], correct: "Fast alle"},
+    {q: "18 von 24 haben ein Haustier. → … haben ein Haustier.", opts: ["Die meisten", "Wenige", "Niemand"], correct: "Die meisten"},
+    {q: "4 von 24 spielen ein Instrument. → Nur … spielen ein Instrument.", opts: ["alle", "wenige", "die meisten"], correct: "wenige"},
+    {q: "0 von 24 mögen Montag. → Niemand … Montag.", opts: ["mag", "mögen", "magst"], correct: "mag"},
+    {q: "6 von 24 lesen gern. → Einige … gern.", opts: ["liest", "lesen", "lest"], correct: "lesen"},
+    {q: "0 von 24 haben die Aufgabe gelöst. → … hat die Aufgabe gelöst.", opts: ["Kein", "Keiner", "Keine"], correct: "Keiner"}
+  ]);
+
+  // Üb. 4: порядок слів з weil
+  buildOrder('ub4-order', [
+    {words: ["mein", "Lieblingsfach", "ist", "Kunst,", "weil", "ich", "gern", "zeichne"], end: "."},
+    {words: ["Erik", "mag", "Mathe,", "weil", "er", "gern", "Aufgaben", "löst"], end: ".", gross: true},
+    {words: ["ich", "lerne", "Englisch,", "weil", "ich", "nach London", "fahren", "will"], end: "."},
+    {words: ["Greta", "freut", "sich", "auf", "Dienstag,", "weil", "sie", "Sport", "hat"], end: ".", gross: true},
+    {words: ["Daryna", "mag", "Deutsch,", "weil", "Herr Brandt", "spannend", "erzählt"], end: ".", gross: true}
+  ]);
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Was hat die 6b am Montag in den ersten zwei Stunden?", opts: ["Mathe", "Sport", "Kunst"], correct: "Mathe"},
+    {q: "Womit beginnt der Dienstag?", opts: ["mit Musik", "mit zwei Stunden Sport", "mit Geschichte"], correct: "mit zwei Stunden Sport"},
+    {q: "Warum mag Erik Musik nicht?", opts: ["Er kann nicht singen.", "Der Lehrer ist streng.", "Die Stunde ist zu früh."], correct: "Er kann nicht singen."},
+    {q: "Wann hat die Klasse eine Doppelstunde Kunst?", opts: ["am Montag", "am Mittwoch", "am Freitag"], correct: "am Mittwoch"},
+    {q: "Welches Fach ist neu?", opts: ["Ethik", "Informatik", "Erdkunde"], correct: "Informatik"},
+    {q: "Wer unterrichtet das neue Fach?", opts: ["Herr Wolf", "Herr Brandt", "Frau Schulz"], correct: "Herr Wolf"},
+    {q: "Wann ist am Freitag Schluss?", opts: ["um halb zwölf", "um eins", "um halb drei"], correct: "um halb zwölf"},
+    {q: "Was machen Greta und Erik am Freitag nach der Schule?", opts: ["Sie gehen klettern.", "Sie gehen Eis essen.", "Sie machen Hausaufgaben."], correct: "Sie gehen Eis essen."}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Mein Lieblingsfach ist Kunst, weil ich gern zeichne.", uk: "Мій улюблений предмет — мистецтво, бо я люблю малювати."},
+    {say: "Die meisten Schüler mögen Sport.", uk: "Більшість учнів любить фізкультуру."},
+    {say: "Niemand mag Montag in der ersten Stunde.", uk: "Ніхто не любить понеділка на першому уроці."},
+    {say: "Am Dienstag haben wir zwei Stunden Mathe.", uk: "У вівторок у нас два уроки математики."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "In welchem Fach rechnet man?", opts: ["Kunst", "Mathe", "Musik"], correct: "Mathe"},
+    {q: "Über alte Zeiten lernt man in …", opts: ["Geschichte", "Erdkunde", "Informatik"], correct: "Geschichte"},
+    {q: "Englisch ist für uns eine …", opts: ["Fremdsprache", "Note", "Pause"], correct: "Fremdsprache"},
+    {q: "In Deutschland ist die beste Note die …", opts: ["Sechs", "Eins", "Zwölf"], correct: "Eins"},
+    {q: "Alle Stunden der Woche stehen auf dem …", opts: ["Lieblingsfach", "Stundenplan", "Unterricht"], correct: "Stundenplan"},
+    {q: "Was bedeutet „wenige“?", opts: ["небагато", "ніхто", "більшість"], correct: "небагато"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Die meisten Mädchen spielen auch Fußball.", ok: true},
+    {s: "Niemand haben die Aufgabe gelöst.", wrong: 1, fix: "hat"},
+    {s: "Wenig Schüler mögen Mathe.", wrong: 0, fix: "Wenige"},
+    {s: "Alle Kinder wartet auf die Pause.", wrong: 2, fix: "warten"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📚', '🎨', '➗', '🏫']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
