@@ -1018,3 +1018,50 @@ html.umlaut-open body{padding-bottom:110px;}
 @media (pointer:coarse){ .umlaut-tip{display:block;} }
 @media (prefers-reduced-motion: reduce){ .umlaut-kb{animation:none;} .umlaut-key{transition:none;} }
 @media print{ .umlaut-kb{display:none !important;} }
+
+/* =================================================================
+   МЕТОДИЧНІ БЛОКИ УРОКУ (з 2026-11-03): buildLernziele, buildHook
+   ================================================================= */
+.sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0;}
+/* «Heute lernst du» на Start і рядки самооцінки в Fertig! */
+.lz-list{list-style:none; margin:0; padding:0;}
+.lz-list li{position:relative; padding:6px 0 6px 30px; border-bottom:1px dashed var(--line);}
+.lz-list li:last-child{border-bottom:none;}
+.lz-list li::before{content:"✓"; position:absolute; left:4px; top:5px; width:20px; height:20px; border-radius:50%;
+  background:var(--teal-soft); color:var(--teal); font-weight:800; font-size:12px; text-align:center; line-height:20px;}
+.lz-de{display:block; font-weight:600;}
+.lz-uk{display:block; font-size:13.5px; color:var(--ink-soft);}
+.sc-row{padding:12px 0; border-top:1px dashed var(--line);}
+.sc-q{margin:0 0 8px;}
+.sc-opts{display:flex; flex-wrap:wrap; gap:8px;}
+.sc-btn{display:inline-flex; align-items:center; gap:6px; background:#fff; border:1.5px solid var(--line); border-radius:100px;
+  padding:6px 12px 6px 8px; font-family:var(--sans); font-size:13.5px; color:var(--ink); cursor:pointer; transition:all .12s ease;}
+.sc-btn:hover{border-color:var(--teal);}
+.sc-btn:focus-visible{outline:2px solid var(--mustard); outline-offset:2px;}
+.sc-dot{font-size:16px; line-height:1;}
+.sc-g[aria-pressed="true"]{background:var(--forest-soft); border-color:var(--forest); color:var(--forest); font-weight:700;}
+.sc-y[aria-pressed="true"]{background:var(--mustard-soft); border-color:var(--mustard); color:#7A5413; font-weight:700;}
+.sc-r[aria-pressed="true"]{background:var(--brick-soft); border-color:var(--brick); color:var(--brick); font-weight:700;}
+.sc-row[data-k] .sc-btn[aria-pressed="false"]{opacity:.55;}
+/* Хук входу на Start */
+.hook-card{border-left:5px solid var(--mustard);}
+.hook-label{display:flex; align-items:center; gap:8px; margin:0 0 10px !important;}
+.hook-tag{background:var(--mustard); color:#fff; font-family:var(--sans); font-weight:800; font-size:11px; letter-spacing:.06em;
+  text-transform:uppercase; padding:2px 8px; border-radius:100px;}
+.hook-title{font-family:var(--hand); font-size:24px; color:var(--teal-deep); line-height:1;}
+.hook-q{display:flex; align-items:center; gap:14px; margin:0 0 12px;}
+.hook-q .hook-pic{flex:none;}
+.hook-q-de{margin:0; font-weight:700; font-size:17px;}
+.hook-q-uk{margin:2px 0 0; font-size:13.5px; color:var(--ink-soft);}
+.hook-words{display:flex; flex-wrap:wrap; gap:8px;}
+.hook-qa textarea{min-height:0;}
+.hook-fakt{margin-top:10px;}
+.hook-fakt-de{margin:4px 0 0; font-weight:600;}
+.hook-fakt .ua-note{margin-top:8px;}
+.hook-card .fix-ex > .check-bar{margin-bottom:0;}
+@media (max-width:560px){
+  .hook-q{gap:10px;}
+  .hook-q .pic-task{width:64px; height:64px;}
+  .hook-q .pic-task .pic-emoji{font-size:38px;}
+  .sc-btn{font-size:13px; padding:6px 10px 6px 7px;}
+}

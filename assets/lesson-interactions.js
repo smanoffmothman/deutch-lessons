@@ -34,7 +34,7 @@ function showTab(name, tabs, panels){
   tabs.forEach(t => t.setAttribute('aria-selected', t.dataset.tab === name ? 'true' : 'false'));
   panels.forEach(p => p.classList.toggle('active', p.id === 'panel-' + name));
   syncTabbar(true);
-  if(name === 'ende') reportOnFertig(); // звіт для вчителя: підвантажити PDF-бібліотеки заздалегідь
+  if(name === 'ende'){ reportOnFertig(); hookOnFertig(); } // звіт для вчителя: підвантажити PDF-бібліотеки заздалегідь; результат прогнозу
   window.scrollTo({top: 0, behavior: 'smooth'});
 }
 /* Панель вкладок на телефоні — один рядок з прокруткою (див. lesson-style.css).
@@ -160,8 +160,11 @@ function enableTestMode(opts){
 }
 // чи йде вправа в цьому контейнері в загальний результат
 function isScored(containerId){
-  if(!testMode.on) return true;
   const el = document.getElementById(containerId);
+  // розминка (з 2026-11-03): вправа всередині [data-warmup] — напр. хук входу
+  // buildHook — не йде ні в бал, ні в літак, і не закривається в контрольній
+  if(el && el.closest('[data-warmup]')) return false;
+  if(!testMode.on) return true;
   return !(el && testMode.exclude.some(p => el.closest('#' + p)));
 }
 // чи діє в цьому контейнері правило "одна відповідь — без виправлень"
@@ -2574,6 +2577,251 @@ function buildDictation(containerId, items){
   wireBlankBox(containerId);
 }
 
+/* =====================================================================
+   МЕТОДИЧНІ БЛОКИ УРОКУ (з 2026-11-03)
+   buildLernziele — «Heute lernst du» на Start + самооцінка-світлофор у Fertig!
+   buildHook      — хук входу на Start (один на урок, тип міняється від уроку
+                    до уроку): prognose · undu · fehler · fakt
+   Обидва — НЕ в бал і не в літак (самооцінка йде у звіт-PDF окремим блоком,
+   хук — ні: це розминка). Правила вибору — STYLE-BRIEF, «Ich kann» і «Хук входу».
+   ===================================================================== */
+
+/* ---------- Цілі уроку + самооцінка (buildLernziele) ----------
+   Ті самі 2–3 твердження показуються двічі: на Start — що учень навчиться,
+   у Fertig! — «Як у тебе вийшло?» зі світлофором 🟢 🟡 🔴.
+     buildLernziele('lz-start', 'lz-check', [
+       {de: "Ich kann sagen, was ich zum Frühstück esse.", uk: "Я можу сказати, що я їм на сніданок."},
+       {de: "Ich kann Speisen mit dem richtigen Artikel nennen.", uk: "…"}
+     ]);
+   - перший / другий аргумент — id порожніх div на Start і в Fertig!
+     (кожен можна пропустити: null);
+   - de — завжди «Ich kann …» (дієслово наприкінці!), uk — переклад.
+   Вибір учня запам'ятовується в браузері (localStorage
+   'dmu:selfcheck:<шлях сторінки>') і йде у звіт-PDF блоком
+   «Selbsteinschätzung». У бал не йде. */
+const SC_LEVELS = [
+  {k: 'g', icon: '🟢', de: 'Das kann ich gut.', uk: 'вмію добре'},
+  {k: 'y', icon: '🟡', de: 'Ich übe noch.', uk: 'ще тренуюсь'},
+  {k: 'r', icon: '🔴', de: 'Das ist noch schwer.', uk: 'поки важко'}
+];
+function buildLernziele(startId, checkId, items){
+  items = (items || []).map(it => typeof it === 'string' ? {de: it} : it).filter(it => it && it.de);
+  if(!items.length) return;
+  const start = startId && document.getElementById(startId);
+  if(start){
+    start.classList.add('card', 'lz-card');
+    start.innerHTML = '<p class="section-label" style="margin:0 0 6px;">Heute lernst du</p><ul class="lz-list"></ul>';
+    const ul = start.querySelector('ul');
+    items.forEach(it => {
+      const li = document.createElement('li');
+      li.innerHTML = '<span class="lz-de"></span>' + (it.uk ? '<span class="lz-uk"></span>' : '');
+      li.querySelector('.lz-de').textContent = it.de;
+      if(it.uk) li.querySelector('.lz-uk').textContent = it.uk;
+      ul.appendChild(li);
+    });
+  }
+  const box = checkId && document.getElementById(checkId);
+  if(!box) return;
+  const key = 'dmu:selfcheck:' + location.pathname;
+  let saved = {};
+  try { saved = JSON.parse(localStorage.getItem(key)) || {}; } catch(_) {}
+  box.classList.add('card', 'sc-ex');
+  box.innerHTML = '<p class="section-label" style="margin:0 0 6px;">Wie gut kannst du das jetzt?</p>'
+    + '<p class="lead" style="font-size:15px; margin:0 0 10px;">Оціни себе чесно — це не оцінка, а підказка тобі й учителеві, що повторити.</p>';
+  items.forEach((it, i) => {
+    const row = document.createElement('div');
+    row.className = 'sc-row';
+    row.dataset.de = it.de;
+    row.innerHTML = '<p class="sc-q"><span class="lz-de"></span>' + (it.uk ? '<span class="lz-uk"></span>' : '') + '</p><div class="sc-opts" role="group"></div>';
+    row.querySelector('.lz-de').textContent = it.de;
+    if(it.uk) row.querySelector('.lz-uk').textContent = it.uk;
+    row.querySelector('.sc-opts').setAttribute('aria-label', it.de);
+    SC_LEVELS.forEach(l => {
+      const b = document.createElement('button');
+      b.type = 'button'; b.className = 'sc-btn sc-' + l.k; b.dataset.k = l.k;
+      b.setAttribute('aria-pressed', 'false');
+      b.innerHTML = '<span class="sc-dot" aria-hidden="true">' + l.icon + '</span><span class="sc-lbl"></span>';
+      b.querySelector('.sc-lbl').textContent = l.de;
+      b.title = l.uk;
+      b.addEventListener('click', () => pick(l.k));
+      row.querySelector('.sc-opts').appendChild(b);
+    });
+    function pick(k){
+      row.dataset.k = k;
+      row.querySelectorAll('.sc-btn').forEach(b => b.setAttribute('aria-pressed', b.dataset.k === k ? 'true' : 'false'));
+      saved[i] = k;
+      try { localStorage.setItem(key, JSON.stringify(saved)); } catch(_) {}
+    }
+    if(saved[i] && SC_LEVELS.some(l => l.k === saved[i])) pick(saved[i]);
+    box.appendChild(row);
+  });
+}
+// рядки звіту-PDF для самооцінки (rpBuildUnits)
+function rpSelfCheck(){
+  const rows = Array.from(document.querySelectorAll('.sc-ex .sc-row'));
+  if(!rows.length) return null;
+  return {title: 'Selbsteinschätzung (самооцінка учня)', ok: 0, n: 0, rows: rows.map(r => {
+    const l = SC_LEVELS.find(x => x.k === r.dataset.k);
+    return {html: rpEsc(r.dataset.de) + ' → ' + (l ? '<b>' + l.icon + ' ' + rpEsc(l.de) + '</b> <span class="rp-note">(' + rpEsc(l.uk) + ')</span>' : '<span class="rp-muted">не оцінено</span>'), ok: 0, n: 0, empty: 0};
+  })};
+}
+
+/* ---------- Хук входу (buildHook) ----------
+   Одна коротка розминка на початку уроку, у вкладці Start. Тип міняється від
+   уроку до уроку (правило ротації — STYLE-BRIEF; тип записується в поле hook
+   рядка уроку в lessons-data.js). У бал, у літак і у звіт не йде; працює
+   однаково в класі й удома.
+     buildHook('hook', {type: 'prognose', pic: '🥐', q: "Worum geht es heute?",
+       words: [{w: "das Frühstück", in: true}, {w: "der Bahnhof"}, {w: "das Müsli", in: true}, …]});
+     buildHook('hook', {type: 'undu', q: "Was isst du gern zum Frühstück?", uk: "Що ти любиш їсти на сніданок?", words: "10"});
+     buildHook('hook', {type: 'fehler', items: [{s: "Ich habe gestern ins Kino gegangen.", wrong: 1, fix: "bin"}, {s: "…", ok: true}]});
+     buildHook('hook', {type: 'fakt', pic: '🥨', q: "Wie viele Brotsorten gibt es in Deutschland?",
+       opts: ["etwa 30", "etwa 300", "über 3000"], correct: "über 3000",
+       fakt: "In Deutschland gibt es über 3000 Brotsorten.", uk: "У Німеччині понад 3000 сортів хліба."});
+   Типи:
+   - prognose — «Was meinst du?»: картинка/емодзі (pic, необов'язково) і
+     6–8 слів; учень обирає ті, що, на його думку, будуть в уроці (скільки —
+     pick, типово = кількість слів з in: true). Відповідь НЕ показується
+     одразу: у Fertig! сама з'являється картка «Deine Prognose» — що вгадав.
+   - undu — «Und du?»: питання про самого учня + поле для 1–2 речень
+     (words — мета за словами, як data-words; uk — переклад питання).
+     Вставка заборонена, ä ö ü ß є — як у всіх textarea.
+   - fehler — «Finde den Fehler»: 2–3 речення з типовою помилкою з МИНУЛОЇ
+     граматики; items — точно як у buildFixError.
+   - fakt — «Wusstest du?»: питання-здогадка (opts + correct) про країни
+     DACH; після першого ж вибору показується факт (fakt + uk) — тут це не
+     перевірка, а цікавинка. pic — необов'язково.
+   - title — (необов'язково) свій заголовок замість стандартного. */
+const HOOK_TITLES = {prognose: 'Was meinst du?', undu: 'Und du?', fehler: 'Finde den Fehler', fakt: 'Wusstest du?'};
+const hookState = {prognose: null};
+function buildHook(containerId, data){
+  const wrap = document.getElementById(containerId);
+  if(!wrap || !data || !HOOK_TITLES[data.type]) return;
+  wrap.setAttribute('data-warmup', '');
+  wrap.classList.add('card', 'hook-card', 'hook-' + data.type);
+  wrap.innerHTML = '<p class="section-label hook-label"><span class="hook-tag">Einstieg</span> <span class="hook-title"></span></p><div class="hook-body"></div>';
+  wrap.querySelector('.hook-title').textContent = data.title || HOOK_TITLES[data.type];
+  const body = wrap.querySelector('.hook-body');
+  const qBlock = (q, uk) => {
+    const d = document.createElement('div');
+    d.className = 'hook-q';
+    if(data.pic){ const p = document.createElement('span'); p.className = 'pic-task hook-pic'; picFill(p, data.pic, true); d.appendChild(p); }
+    const t = document.createElement('div');
+    t.innerHTML = '<p class="hook-q-de"></p>' + (uk ? '<p class="hook-q-uk"></p>' : '');
+    t.querySelector('.hook-q-de').textContent = q;
+    if(uk) t.querySelector('.hook-q-uk').textContent = uk;
+    d.appendChild(t);
+    body.appendChild(d);
+  };
+
+  if(data.type === 'prognose'){
+    const words = (data.words || []).map(x => typeof x === 'string' ? {w: x} : x);
+    const need = data.pick || words.filter(x => x.in).length || 3;
+    qBlock(data.q || 'Worum geht es heute?', data.uk || 'Як думаєш: які ' + need + ' слова будуть у сьогоднішньому уроці? Обери — наприкінці побачиш, чи вгадав(-ла).');
+    const pool = document.createElement('div');
+    pool.className = 'hook-words';
+    const fb = document.createElement('p'); fb.className = 'feedback';
+    const st = {picked: new Set(), words: words, locked: false};
+    hookState.prognose = st;
+    shuffleArray(words.map((x, i) => i)).forEach(i => {
+      const b = document.createElement('button');
+      b.type = 'button'; b.className = 'word-chip'; b.textContent = words[i].w;
+      b.setAttribute('aria-pressed', 'false');
+      b.addEventListener('click', () => {
+        if(st.locked) return;
+        if(st.picked.has(i)) st.picked.delete(i);
+        else if(st.picked.size < need) st.picked.add(i);
+        else { fb.textContent = 'Обери лише ' + need + ' — зніми інше слово.'; fb.className = 'feedback bad'; return; }
+        b.classList.toggle('picked', st.picked.has(i));
+        b.setAttribute('aria-pressed', st.picked.has(i) ? 'true' : 'false');
+        fb.textContent = st.picked.size === need ? 'Gut! Am Ende der Lektion siehst du, ob du richtig getippt hast. 🤞' : st.picked.size + ' / ' + need;
+        fb.className = 'feedback' + (st.picked.size === need ? ' ok' : '');
+      });
+      pool.appendChild(b);
+    });
+    body.appendChild(pool);
+    body.appendChild(fb);
+  }
+
+  else if(data.type === 'undu'){
+    const id = containerId + '-text';
+    qBlock(data.q || '', data.uk);
+    const qa = document.createElement('div');
+    qa.className = 'qa hook-qa';
+    qa.innerHTML = '<label class="sr-only"></label><textarea rows="' + (data.rows || 3) + '" placeholder="Ich …"></textarea>';
+    qa.querySelector('label').htmlFor = id; qa.querySelector('label').textContent = data.q || 'Und du?';
+    const ta = qa.querySelector('textarea'); ta.id = id;
+    if(data.words) ta.dataset.words = data.words;
+    body.appendChild(qa);
+    initWritingAid(ta); guardNoPaste(ta); // initNoPaste/initWritingAids могли вже відпрацювати
+    if(!data.words) { const a = qa.querySelector('.w-aid'); if(a) a.remove(); }
+  }
+
+  else if(data.type === 'fehler'){
+    if(data.q) qBlock(data.q, data.uk);
+    const inner = document.createElement('div');
+    inner.id = containerId + '-fix';
+    body.appendChild(inner);
+    buildFixError(inner.id, data.items || []); // усередині [data-warmup] — не в бал
+  }
+
+  else if(data.type === 'fakt'){
+    qBlock(data.q || '', data.q_uk);
+    const box = document.createElement('div');
+    box.className = 'quiz-opts';
+    const res = document.createElement('div');
+    res.className = 'hook-fakt'; res.hidden = true;
+    res.innerHTML = '<p class="feedback"></p><p class="hook-fakt-de"></p>' + (data.uk ? '<div class="ua-note"><span class="ua-label">🇺🇦 Українською</span> <span class="hook-fakt-uk"></span></div>' : '');
+    res.querySelector('.hook-fakt-de').textContent = data.fakt || '';
+    if(data.uk) res.querySelector('.hook-fakt-uk').textContent = data.uk;
+    shuffleArray(data.opts || []).forEach(o => {
+      const b = document.createElement('button');
+      b.type = 'button'; b.className = 'opt-btn'; b.textContent = o;
+      b.addEventListener('click', () => {
+        if(!res.hidden) return;
+        const ok = o === data.correct;
+        box.querySelectorAll('.opt-btn').forEach(x => { x.disabled = true; if(x.textContent === data.correct) x.classList.add('correct'); });
+        if(!ok) b.classList.add('wrong');
+        const fb = res.querySelector('.feedback');
+        fb.textContent = ok ? 'Richtig getippt! ✓' : 'Überraschung! 😮';
+        fb.className = 'feedback ' + (ok ? 'ok' : 'bad');
+        res.hidden = false;
+      });
+      box.appendChild(b);
+    });
+    body.appendChild(box);
+    body.appendChild(res);
+  }
+}
+// у Fertig!: картка «Deine Prognose» (лише якщо в уроці є хук prognose)
+function hookOnFertig(){
+  const st = hookState.prognose;
+  const ende = document.getElementById('panel-ende');
+  if(!st || !ende) return;
+  let card = document.getElementById('hookResult');
+  if(!card){
+    card = document.createElement('div');
+    card.id = 'hookResult'; card.className = 'card tinted-teal hook-result';
+    card.setAttribute('data-no-report', '');
+    const title = ende.querySelector('.panel-title');
+    if(title) title.insertAdjacentElement('afterend', card); else ende.prepend(card);
+  }
+  const ins = st.words.map((x, i) => i).filter(i => st.words[i].in);
+  const hit = Array.from(st.picked).filter(i => st.words[i].in);
+  let html = '<p class="section-label" style="margin:0 0 6px;">Deine Prognose</p>';
+  if(!st.picked.size){
+    html += '<p style="margin:0 0 8px;">На початку уроку ти не робив(-ла) прогнозу. Ось слова, які справді були в уроці:</p>';
+  } else {
+    html += '<p style="margin:0 0 8px;"><b>' + hit.length + ' von ' + st.picked.size + '</b> richtig getippt' + (hit.length === st.picked.size ? ' — super! 🎯' : '.') + '</p><div class="chip-row" style="margin:0 0 8px;">'
+      + Array.from(st.picked).map(i => '<span class="word-chip ' + (st.words[i].in ? 'correct' : 'wrong') + '">' + rpEsc(st.words[i].w) + (st.words[i].in ? ' ✓' : ' ✗') + '</span>').join('') + '</div>';
+    const missed = ins.filter(i => !st.picked.has(i));
+    if(missed.length) html += '<p style="margin:0 0 6px;">Також були в уроці:</p>';
+    else return void (card.innerHTML = html);
+  }
+  html += '<div class="chip-row" style="margin:0;">' + ins.filter(i => !st.picked.has(i)).map(i => '<span class="chip static">' + rpEsc(st.words[i].w) + '</span>').join('') + '</div>';
+  card.innerHTML = html;
+}
+
 /* ---------- Аудіоплеєр (Üb. Hören) ---------- */
 function wirePlayer(audioId, playId, seekId, timeId){
   const audio = document.getElementById(audioId);
@@ -3158,6 +3406,9 @@ function rpBuildUnits(name){
     total += n; okAll += ok;
     blocks.push({title: title, rows: rows, ok: ok, n: n});
   });
+  // самооцінка «Ich kann …» у Fertig! (buildLernziele) — у бал не йде, але вчителю корисна
+  const sc = rpSelfCheck();
+  if(sc) blocks.push(sc);
 
   const when = new Date().toLocaleString('uk-UA', {day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit'});
   const pct = total ? Math.floor(okAll / total * 100) : 0;
