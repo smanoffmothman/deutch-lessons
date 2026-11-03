@@ -68,6 +68,23 @@
           [Те саме пояснення українською]
         </div>
       </div>
+
+      <!-- =================================================================
+           ХУК ВХОДУ (з 2026-11-03): одна коротка розминка — buildHook('hook', …)
+           у скрипті внизу. Тип (prognose / undu / fehler / fakt) — під тему
+           уроку; два уроки поспіль у модулі НЕ мають однакового типу. Тип
+           записується в поле hook рядка уроку в lessons-data.js. У бал і звіт
+           не йде. Правила — STYLE-BRIEF, «Хук входу».
+           ================================================================= -->
+      <div id="hook"></div>
+
+      <!-- =================================================================
+           ЦІЛІ УРОКУ «Heute lernst du» (з 2026-11-03): 2–3 твердження
+           «Ich kann …». Пишуться ОДИН раз — у константі LERNZIELE внизу;
+           buildLernziele малює їх тут і світлофор самооцінки в Fertig!.
+           ================================================================= -->
+      <div id="lz-start"></div>
+
       <div class="dog-tip">
         <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
         <p class="bubble">Hallo! Ich begleite dich durch diese Lektion. Los geht's!</p>
@@ -92,18 +109,19 @@
       <div id="dz-check"></div>
 
       <!-- =================================================================
-           WÖRTER-CHECK: коротка перевірка слів ПОПЕРЕДНЬОГО уроку (5–6 слів),
+           WÖRTER-CHECK: коротка перевірка слів (6 слів): до 4 — з ПОПЕРЕДНЬОГО
+           уроку модуля, решта — з 2–5 уроків тому цього класу (інтервальне
+           повторення, з 2026-11-03; для уроку №1 модуля — лише старші слова),
            одразу під перевіркою самого ДЗ, у тій самій вкладці Hausaufgabe.
            Дані НЕ дублюються і не пишуться вручну — це той самий GLOSSARY,
            відфільтрований за klas/modul/LEKTION_PREV_LEKTION (див. скрипт
            внизу файлу, renderDzVocabCheck). Вправа генерується стандартним
            buildQuiz(), нічого нового в lesson-interactions.js не додається.
-           Якщо це урок №1 модуля (LEKTION_PREV_LEKTION = 0) або слів
-           попереднього уроку в глосарії ще < 3 — блок сам ховається.
+           Якщо разом набирається < 3 слів — блок сам ховається.
            ================================================================= -->
       <div class="card" id="dz-vocab-wrap" style="margin-top:18px;">
         <p class="section-label" style="margin:0 0 6px;">Wörter-Check</p>
-        <p class="lead">Перевір слова з минулого уроку.</p>
+        <p class="lead">Перевір слова з минулих уроків.</p>
         <div id="dz-vocab"></div>
       </div>
     </section>
@@ -196,6 +214,12 @@
     <!-- ===== ПРИКІНЦЕВА ПАНЕЛЬ ===== -->
     <section class="panel" id="panel-ende">
       <h2 class="panel-title">Fertig!</h2>
+      <!-- Сюди сама стає картка «Deine Prognose», якщо хук уроку — prognose. -->
+
+      <!-- САМООЦІНКА (з 2026-11-03): світлофор до тих самих «Ich kann …»,
+           що й на Start (LERNZIELE). Малює buildLernziele, у звіт-PDF іде сама. -->
+      <div id="lz-check"></div>
+
       <div class="card tinted-mustard">
         <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
         <p>[Що саме задано додому — це саме той текст, який підеш вписувати
@@ -255,6 +279,26 @@
   // одна відповідь без виправлень, вкладка Hausaufgabe не входить у результат.
   // Деталі — STYLE-BRIEF, розділ "Контрольні роботи".
   // enableTestMode();
+
+  // ===== Цілі уроку «Ich kann …» (Start) + самооцінка-світлофор (Fertig!) =====
+  // 2–3 твердження, що учень ЗМОЖЕ ЗРОБИТИ після уроку (дія, а не тема):
+  // «Ich kann …» + дієслово наприкінці. Див. STYLE-BRIEF, «Ich kann».
+  const LERNZIELE = [
+    {de: "Ich kann [що саме вмію після уроку].", uk: "Я можу [те саме українською]."},
+    {de: "Ich kann […].", uk: "Я можу […]."}
+  ];
+  buildLernziele('lz-start', 'lz-check', LERNZIELE);
+
+  // ===== Хук входу у вкладці Start — ОДИН на урок (тип = поле hook у lessons-data.js) =====
+  // Обери тип під тему й НЕ той, що в попередньому уроці модуля (STYLE-BRIEF, «Хук входу»):
+  buildHook('hook', {type: 'prognose', pic: '🥐', q: "Worum geht es heute?",
+    words: [{w: "[слово з уроку]", in: true}, {w: "[слово з уроку]", in: true}, {w: "[слово з уроку]", in: true},
+            {w: "[чуже слово]"}, {w: "[чуже слово]"}, {w: "[чуже слово]"}]});
+  // buildHook('hook', {type: 'undu', q: "Was isst du gern zum Frühstück?", uk: "Що ти любиш їсти на сніданок?", words: "8"});
+  // buildHook('hook', {type: 'fehler', items: [{s: "Ich habe gestern ins Kino gegangen.", wrong: 1, fix: "bin"}, {s: "Wir sind nach Hause gefahren.", ok: true}]});
+  // buildHook('hook', {type: 'fakt', pic: '🥨', q: "Wie viele Brotsorten gibt es in Deutschland?",
+  //   opts: ["etwa 30", "etwa 300", "über 3000"], correct: "über 3000",
+  //   fakt: "In Deutschland gibt es über 3000 Brotsorten.", uk: "У Німеччині понад 3000 сортів хліба."});
 
   (function renderLessonVocab(){
     const box = document.getElementById('vocabChips');
@@ -317,14 +361,28 @@
     const wrap = document.getElementById('dz-vocab-wrap');
     const box = document.getElementById('dz-vocab');
     if (!wrap || !box || typeof GLOSSARY === 'undefined') return;
-    if (!LEKTION_PREV_LEKTION){ wrap.style.display = 'none'; return; }
-
-    const prevWords = GLOSSARY.filter(w =>
+    const same = (w, l) => w.klas === l.klas && w.modul === l.modul && w.lektion === l.lektion;
+    const prevWords = LEKTION_PREV_LEKTION ? GLOSSARY.filter(w =>
       w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_PREV_LEKTION
-    );
-    if (prevWords.length < 3){ wrap.style.display = 'none'; return; }
+    ) : [];
 
-    const pool = shuffleArray(prevWords).slice(0, 6); // 5–6 слів на перевірку
+    // Інтервальне повторення (з 2026-11-03): ще 2+ слова з уроків 2–5 тому
+    // (той самий клас, порядок — як у LESSONS, тож і з попереднього модуля).
+    // Слово, яке бачили давніше, краще закріплюється, ніж повторення «вчорашнього».
+    let olderWords = [];
+    if (typeof LESSONS !== 'undefined'){
+      const mine = LESSONS.filter(l => l.klas === LEKTION_KLAS);
+      const idx = mine.findIndex(l => l.modul === LEKTION_MODUL && l.lektion === LEKTION_LEKTION);
+      if (idx > 0){
+        const older = mine.slice(Math.max(0, idx - 5), idx)
+          .filter(l => !(l.modul === LEKTION_MODUL && l.lektion === LEKTION_PREV_LEKTION));
+        olderWords = GLOSSARY.filter(w => older.some(l => same(w, l)));
+      }
+    }
+    const fromPrev = shuffleArray(prevWords).slice(0, olderWords.length ? 4 : 6);
+    const pool = shuffleArray(fromPrev.concat(shuffleArray(olderWords).slice(0, 6 - fromPrev.length)));
+    if (pool.length < 3){ wrap.style.display = 'none'; return; }
+
     const quizData = pool.map(w => {
       // Пастки — тієї самої частини мови, що й правильне слово (guessPos вище),
       // інакше учень вгадує за формою відповіді, а не за її значенням.
