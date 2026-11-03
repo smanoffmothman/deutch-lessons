@@ -132,12 +132,12 @@ function ensureStats(){
   (document.head || document.documentElement).appendChild(s);
 }
 
-/* Розділ «Підручники» (з 2026-10-22) у меню: поки false — пункту в меню
-   немає, але сторінки pidruchnyky/ відкриваються за прямим посиланням
-   (щоб подивитись перед запуском). Перемкнути на true, коли опубліковано
-   перші розділи — і пункт з'явиться на всіх сторінках сайту одразу.
+/* Розділ «Підручники» (з 2026-10-22) у меню. Запущено 2026-11-03: true —
+   пункт «Підручники» є в хедері й у меню ☰ на всіх сторінках сайту.
+   false — пункт ховається (крім сторінок самих підручників), а сторінки
+   pidruchnyky/ лишаються доступні за прямим посиланням.
    Плитка на головній вмикається сама (home.js), без цього прапорця. */
-var NAV_SHOW_PIDRUCHNYKY = false;
+var NAV_SHOW_PIDRUCHNYKY = true;
 
 function injectNavMenuCss(){
   if(document.getElementById('siteNavMenuCss')) return;
