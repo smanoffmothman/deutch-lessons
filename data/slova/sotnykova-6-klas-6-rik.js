@@ -688,4 +688,14 @@
   {de: "gründen", uk: "засновувати", r: "l8-b", note: "Man hat die Universität 1834 gegründet."},
   {de: "die Standseilbahn, -en", uk: "фунікулер", r: "l8-b"},
   {de: "die Rundfahrt, -en", uk: "екскурсійна поїздка", r: "l8-b"},
+  // ---- Lektion 8 · Modul D: Geschichtenzeit ----
+  {de: "das Projekt, -e", uk: "проєкт", r: "l8-d"},
+  {de: "wählen", uk: "вибирати", r: "l8-d"},
+  {de: "das Interview, -s", uk: "інтерв'ю", r: "l8-d"},
+  {de: "der Stift, -e", uk: "ручка, олівець", r: "l8-d"},
+  {de: "breit", uk: "широкий", r: "l8-d"},
+  {de: "die Sonnenblume, -n", uk: "соняшник", r: "l8-d"},
+  {de: "hängen, hing, hat gehangen", uk: "висіти", r: "l8-d", note: "Das Plakat hing im Flur."},
+  {de: "schicken", uk: "надсилати", r: "l8-d"},
+  {de: "das Herz, -en", uk: "серце", r: "l8-d"},
 ];
