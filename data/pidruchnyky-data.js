@@ -235,5 +235,97 @@ const PIDRUCHNYKY = [
         { id: "anhang-verben", label: "", nazva: "Unregelmäßige Verben", typ: "gramatyka", gram: ["starke-verben", "tempusformen"], opublikovano: 38 }
       ] }
     ]
+  },
+  {
+    id: "sotnykova-7-klas-7-rik",
+    nazva: "Німецька мова (7-й рік навчання)",
+    nazvaDe: "Deutsch (7. Lernjahr)",
+    nazvaKorotko: "Сотникова, Гоголєва · 7 клас",
+    pidnazva: "підручник для 7 класу (з аудіосупроводом), 7-й рік навчання",
+    klas: "7 клас",
+    riven: null,
+    avtory: ["Світлана Сотникова", "Ганна Гоголєва"],
+    vydavnytstvo: "Ранок",
+    rik: 2024,
+    isbn: "978-617-09-8763-1",
+    aliasy: ["Сотникова 7 клас", "Сотникова Гоголєва 7 клас", "німецька мова 7 клас Сотникова", "Deutsch 7 Sotnykova"],
+    rivni: ["Lektion", "Modul"],
+    audio: null,
+    rozdily: [
+      { id: "l1", label: "1", nazva: "Familie und Haushalt", storinky: "5–26", dity: [
+        { id: "l1-a", label: "A", nazva: "Familienferien", storinky: "6–11", typ: "vpravy", gram: ["wechselpraepositionen", "praep-dativ"], opublikovano: 1 },
+        { id: "l1-b", label: "B", nazva: "Ich mache im Haushalt mit", storinky: "12–16", typ: "vpravy", gram: ["trennbare-verben"] },
+        { id: "l1-c", label: "C", nazva: "Familientraditionen", storinky: "17–21", typ: "vpravy", gram: ["futur"] },
+        { id: "l1-d", label: "D", nazva: "Wiederholung", storinky: "22–23", typ: "povtorennya", gram: ["wechselpraepositionen", "praep-dativ", "futur"] },
+        { id: "l1-e", label: "E", nazva: "Geschichtenzeit", storinky: "24", typ: "chytannya" },
+        { id: "l1-f", label: "F", nazva: "Projektarbeit", storinky: "25", typ: "bez-storinky" },
+        { id: "l1-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "26", typ: "bez-storinky" }
+      ] },
+      { id: "l2", label: "2", nazva: "Der Appetit kommt beim Essen", storinky: "27–44", dity: [
+        { id: "l2-a", label: "A", nazva: "Einkaufen und kochen", storinky: "28–31", typ: "vpravy", gram: ["artikel-gebrauch", "indefinitpronomen"] },
+        { id: "l2-b", label: "B", nazva: "Wir lernen kochen", storinky: "32–36", typ: "vpravy", gram: ["konditionalsaetze"] },
+        { id: "l2-c", label: "C", nazva: "Wir decken den Tisch", storinky: "37–39", typ: "vpravy", gram: ["legen-liegen", "wechselpraepositionen"] },
+        { id: "l2-d", label: "D", nazva: "Wiederholung", storinky: "40–41", typ: "povtorennya", gram: ["artikel-gebrauch", "konditionalsaetze", "wechselpraepositionen"] },
+        { id: "l2-e", label: "E", nazva: "Geschichtenzeit", storinky: "42", typ: "chytannya" },
+        { id: "l2-f", label: "F", nazva: "Projektarbeit", storinky: "43", typ: "bez-storinky" },
+        { id: "l2-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "44", typ: "bez-storinky" }
+      ] },
+      { id: "l3", label: "3", nazva: "In der Schule ist immer etwas los", storinky: "45–60", dity: [
+        { id: "l3-a", label: "A", nazva: "Schulveranstaltungen", storinky: "46–50", typ: "vpravy", gram: ["verben-dass-infinitiv", "modalverben"] },
+        { id: "l3-b", label: "B", nazva: "Besuchst du eine AG?", storinky: "51–55", typ: "vpravy", gram: ["verben-dass-infinitiv"] },
+        { id: "l3-c", label: "C", nazva: "Wiederholung", storinky: "56–57", typ: "povtorennya", gram: ["verben-dass-infinitiv"] },
+        { id: "l3-d", label: "D", nazva: "Geschichtenzeit", storinky: "58", typ: "chytannya" },
+        { id: "l3-e", label: "E", nazva: "Projektarbeit", storinky: "59", typ: "bez-storinky" },
+        { id: "l3-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "60", typ: "bez-storinky" }
+      ] },
+      { id: "l4", label: "4", nazva: "Mit Freude am Sport hat man Erfolg", storinky: "61–84", dity: [
+        { id: "l4-a", label: "A", nazva: "Sportarten", storinky: "62–66", typ: "vpravy", gram: ["fragen", "komparation"] },
+        { id: "l4-b", label: "B", nazva: "Auf die Plätze, fertig, los!", storinky: "67–73", typ: "vpravy", gram: ["verben-dass-infinitiv"] },
+        { id: "l4-c", label: "C", nazva: "Profisport", storinky: "74–78", typ: "vpravy", gram: ["zahlwoerter", "tempusformen"] },
+        { id: "l4-d", label: "D", nazva: "Wiederholung", storinky: "79–81", typ: "povtorennya", gram: ["fragen", "verben-dass-infinitiv", "zahlwoerter"] },
+        { id: "l4-e", label: "E", nazva: "Geschichtenzeit", storinky: "82", typ: "chytannya" },
+        { id: "l4-f", label: "F", nazva: "Projektarbeit", storinky: "83", typ: "bez-storinky" },
+        { id: "l4-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "84", typ: "bez-storinky" }
+      ] },
+      { id: "l5", label: "5", nazva: "Theater und Kino", storinky: "85–102", dity: [
+        { id: "l5-a", label: "A", nazva: "Im Theater", storinky: "86–91", typ: "vpravy", gram: ["wechselpraepositionen"] },
+        { id: "l5-b", label: "B", nazva: "Wir gehen ins Kino", storinky: "92–96", typ: "vpravy", gram: ["konjunktionen-position-null"] },
+        { id: "l5-c", label: "C", nazva: "Wiederholung", storinky: "97–99", typ: "povtorennya", gram: ["wechselpraepositionen", "konjunktionen-position-null"] },
+        { id: "l5-d", label: "D", nazva: "Geschichtenzeit", storinky: "100", typ: "chytannya" },
+        { id: "l5-e", label: "E", nazva: "Projektarbeit", storinky: "101", typ: "bez-storinky" },
+        { id: "l5-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "102", typ: "bez-storinky" }
+      ] },
+      { id: "l6", label: "6", nazva: "Der Gesunde weiß nicht, wie reich er ist", storinky: "103–118", dity: [
+        { id: "l6-a", label: "A", nazva: "Ich brauche einen Termin", storinky: "104–108", typ: "vpravy", gram: ["kausalsaetze", "praep-dativ"] },
+        { id: "l6-b", label: "B", nazva: "Arztempfehlungen", storinky: "109–113", typ: "vpravy", gram: ["verben-dass-infinitiv"] },
+        { id: "l6-c", label: "C", nazva: "Wiederholung", storinky: "114–115", typ: "povtorennya", gram: ["kausalsaetze", "verben-dass-infinitiv"] },
+        { id: "l6-d", label: "D", nazva: "Geschichtenzeit", storinky: "116", typ: "chytannya" },
+        { id: "l6-e", label: "E", nazva: "Projektarbeit", storinky: "117", typ: "bez-storinky" },
+        { id: "l6-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "118", typ: "bez-storinky" }
+      ] },
+      { id: "l7", label: "7", nazva: "Reiseziel: Deutschland", storinky: "119–138", dity: [
+        { id: "l7-a", label: "A", nazva: "Reisen planen und machen", storinky: "120–124", typ: "vpravy", gram: ["indefinitpronomen", "artikel-gebrauch"] },
+        { id: "l7-b", label: "B", nazva: "Schöne Städte Deutschlands", storinky: "125–128", typ: "vpravy" },
+        { id: "l7-c", label: "C", nazva: "Willkommen in Berlin", storinky: "129–133", typ: "vpravy", gram: ["indefinitpronomen"] },
+        { id: "l7-d", label: "D", nazva: "Wiederholung", storinky: "134–135", typ: "povtorennya", gram: ["indefinitpronomen", "artikel-gebrauch"] },
+        { id: "l7-e", label: "E", nazva: "Geschichtenzeit", storinky: "136", typ: "chytannya" },
+        { id: "l7-f", label: "F", nazva: "Projektarbeit", storinky: "137", typ: "bez-storinky" },
+        { id: "l7-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "138", typ: "bez-storinky" }
+      ] },
+      { id: "l8", label: "8", nazva: "Heimat mein — was kann besser sein", storinky: "139–154", dity: [
+        { id: "l8-a", label: "A", nazva: "Die Ukraine — mein Heimatland", storinky: "140–143", typ: "vpravy", gram: ["komparation", "indirekte-fragesaetze"] },
+        { id: "l8-b", label: "B", nazva: "Sehenswertes in Kyjiw", storinky: "144–149", typ: "vpravy", gram: ["konjunktionen-position-eins"] },
+        { id: "l8-c", label: "C", nazva: "Wiederholung", storinky: "150–151", typ: "povtorennya", gram: ["komparation", "konjunktionen-position-eins"] },
+        { id: "l8-d", label: "D", nazva: "Geschichtenzeit", storinky: "152", typ: "chytannya" },
+        { id: "l8-e", label: "E", nazva: "Projektarbeit", storinky: "153", typ: "bez-storinky" },
+        { id: "l8-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "154", typ: "bez-storinky" }
+      ] },
+      { id: "anhang", label: "", nazva: "Anhang", storinky: "155–191", dity: [
+        { id: "anhang-grammatik", label: "", nazva: "Grammatik", storinky: "155–170", typ: "bez-storinky" },
+        { id: "anhang-zu-infinitiv", label: "", nazva: "Verben mit zu + Infinitiv", typ: "gramatyka", gram: ["verben-dass-infinitiv"] },
+        { id: "anhang-verben", label: "", nazva: "Unregelmäßige Verben", storinky: "171–173", typ: "gramatyka", gram: ["starke-verben", "tempusformen"] },
+        { id: "anhang-woerter", label: "", nazva: "Deutsch-Ukrainisches Wörterverzeichnis", storinky: "174–191", typ: "bez-storinky" }
+      ] }
+    ]
   }
 ];
