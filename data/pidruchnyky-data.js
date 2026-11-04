@@ -232,7 +232,7 @@ const PIDRUCHNYKY = [
       { id: "anhang", label: "", nazva: "Anhang", storinky: "159–191", dity: [
         { id: "anhang-grammatik", label: "", nazva: "Grammatik", storinky: "159–168", typ: "bez-storinky" },
         { id: "anhang-woerter", label: "", nazva: "Deutsch-Ukrainisches Wörterverzeichnis", storinky: "169–191", typ: "bez-storinky" },
-        { id: "anhang-verben", label: "", nazva: "Unregelmäßige Verben", typ: "gramatyka", gram: ["starke-verben", "tempusformen"] }
+        { id: "anhang-verben", label: "", nazva: "Unregelmäßige Verben", typ: "gramatyka", gram: ["starke-verben", "tempusformen"], opublikovano: 38 }
       ] }
     ]
   }
