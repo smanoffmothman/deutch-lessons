@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 1, Modul A: Familienferien — Німецька мова 7 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 7 КЛАС</span>
+        <h1>Lektion 1 · Modul A: Familienferien</h1>
+        <p class="sub">Урок про сімейні канікули: море, гори, озеро, село чи закордон. Прийменники на питання Wo? і Wohin? (am Meer — ans Meer) і прийменники з Dativ. Текст і діалог з озвученням, вправи, говоріння, письмо і підсумковий тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Ferienorte</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Wo oder wohin?</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Präpositionen</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Postkarte</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власний текст + вправа на розуміння ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Eine Woche auf dem Hausboot</h2>
+      <p class="lead">Послухай і прочитай, як Грета провела літні канікули з родиною. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l1-a-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Hallo! Ich bin Greta und gehe jetzt in die Klasse 7b. Normalerweise <span class="gl" data-uk="проводити (час)" data-lemma="verbringen, hat verbracht">verbringt</span> meine Familie die Sommerferien am <span class="gl" data-uk="море" data-lemma="das Meer, -e">Meer</span> oder im <span class="gl" data-uk="гори, гірський масив" data-lemma="das Gebirge, -">Gebirge</span>. Aber dieses Jahr war alles anders: Im August haben wir eine Woche auf einem <span class="gl" data-uk="плавучий будинок (човен для житла)" data-lemma="das Hausboot, -e">Hausboot</span> gewohnt! Die Idee war von Opa Helmut. Er <span class="gl" data-uk="ходити під вітрилом" data-lemma="segeln">segelt</span> seit dreißig Jahren und fühlt sich auf dem Wasser wie zu Hause.</p>
+        <p>Wir sind mit dem Auto von Leipzig in den Norden gefahren, an die Mecklenburgische <span class="gl" data-uk="край озер (озерний край)" data-lemma="die Seenplatte, -n">Seenplatte</span>. Dort gibt es über tausend <span class="gl" data-uk="озеро" data-lemma="der See, -n">Seen</span>! In der Stadt Waren hat uns ein Mann vom <span class="gl" data-uk="прокат човнів" data-lemma="der Bootsverleih, -e">Bootsverleih</span> alles erklärt, und dann ging es los: von See zu See, durch Kanäle und an <span class="gl" data-uk="мальовничий" data-lemma="malerisch">malerischen</span> Dörfern vorbei.</p>
+        <p>Jeden Morgen bin ich mit Papa ins Wasser <span class="gl" data-uk="стрибати" data-lemma="springen (springt), ist gesprungen">gesprungen</span> — brr, das war kalt! Nach dem Frühstück sind wir weitergefahren. Mittags haben wir oft am <span class="gl" data-uk="берег (річки, озера)" data-lemma="das Ufer, -">Ufer</span> gehalten. Lotte und ich sind dann in den <span class="gl" data-uk="ліс" data-lemma="der Wald, -ä-er">Wald</span> gelaufen und haben <span class="gl" data-uk="чорниця" data-lemma="die Blaubeere, -n">Blaubeeren</span> gesammelt. Krümel war natürlich immer dabei. Abends haben wir auf dem Dach des Bootes gesessen und die Sterne beobachtet. So schön kann man sich nur in der Natur <span class="gl" data-uk="відпочивати, розслаблятися" data-lemma="sich entspannen">entspannen</span>!</p>
+        <p>Nur am vierten Tag hat es von morgens bis abends geregnet. Mama fand den Tag <span class="gl" data-uk="страшенно нудний" data-lemma="todlangweilig">todlangweilig</span>, aber ich nicht: Wir sind im Boot geblieben, haben Tee getrunken und Karten gespielt. Lotte hat dreimal gewonnen! Am letzten Abend waren wir im <span class="gl" data-uk="порт, гавань" data-lemma="der Hafen, -ä">Hafen</span> einer kleinen Stadt und haben dort das beste Eis der Welt gegessen.</p>
+        <p>Wir haben in dieser Woche so viel <span class="gl" data-uk="переживати, бачити на власні очі" data-lemma="erleben">erlebt</span>! Nächsten Sommer möchte Mama wieder in die Berge fahren, Opa natürlich aufs Wasser. Und ich? Ich <span class="gl" data-uk="мріяти про" data-lemma="träumen von (+ Dat.)">träume von</span> einer Reise ins <span class="gl" data-uk="закордон" data-lemma="das Ausland">Ausland</span> — in die Ukraine! Darynas Mama hat mich schon eingeladen.</p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">Wo? oder Wohin? · Präpositionen mit Dativ</h2>
+      <p class="lead">Українською ми кажемо «<b>на</b> морі» і «<b>на</b> море» — прийменник той самий, змінюється лише відмінок. Німецькою так само: прийменники <b>an, auf, in</b> на питання <b>Wo?</b> (де?) вимагають Dativ, а на питання <b>Wohin?</b> (куди?) — Akkusativ. Але який із трьох прийменників узяти, вирішує саме місце.</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. an, auf, in: Wo? + Dativ · Wohin? + Akkusativ</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th></th><th>Wo? (Dativ)</th><th>Wohin? (Akkusativ)</th></tr>
+          <tr><td class="gender">der</td><td><strong>am</strong> See</td><td><strong>an den</strong> See</td></tr>
+          <tr><td class="gender">das</td><td><strong>am</strong> Meer</td><td><strong>ans</strong> Meer</td></tr>
+          <tr><td class="gender">das</td><td><strong>auf dem</strong> Land</td><td><strong>aufs</strong> Land</td></tr>
+          <tr><td class="gender">die</td><td><strong>auf der</strong> Insel</td><td><strong>auf die</strong> Insel</td></tr>
+          <tr><td class="gender">der</td><td><strong>im</strong> Wald</td><td><strong>in den</strong> Wald</td></tr>
+          <tr><td class="gender">das</td><td><strong>im</strong> Ausland</td><td><strong>ins</strong> Ausland</td></tr>
+          <tr><td class="gender">die</td><td><strong>in der</strong> Stadt</td><td><strong>in die</strong> Stadt</td></tr>
+          <tr><td class="gender">Pl.</td><td><strong>in den</strong> Bergen</td><td><strong>in die</strong> Berge</td></tr>
+        </table></div>
+        <div class="merke"><b>an</b> — біля води або краю: am Meer, am See, am Fluss, am Strand. <b>auf</b> — на відкритій поверхні: auf dem Land, auf der Insel, auf dem Campingplatz, auf dem Boot. <b>in</b> — всередині: im Wald, in der Stadt, im Gebirge, im Ferienlager, im Ausland.</div>
+        <div class="merke">Злиття: <b>am</b> = an dem, <b>ans</b> = an das, <b>im</b> = in dem, <b>ins</b> = in das, <b>aufs</b> = auf das. Пишемо разом без апострофа.</div>
+        <div class="merke">Міста й більшість країн — без артикля: Wohin? → <b>nach</b> Italien, nach Kyjiw; Wo? → <b>in</b> Italien, in Kyjiw. Додому: <b>nach Hause</b> (Wohin?), вдома: <b>zu Hause</b> (Wo?).</div>
+        <p class="beispiel">Wo warst du im Sommer? — <b>Am</b> Meer. · Wohin fährst du? — <b>Ans</b> Meer.</p>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. Прийменники, що завжди з Dativ</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Präposition</th><th>Beispiel</th></tr>
+          <tr><td><strong>aus</strong> — з (звідки)</td><td>Ayla kommt <b>aus</b> der Türkei.</td></tr>
+          <tr><td><strong>bei</strong> — у (когось)</td><td>Ich wohne <b>bei</b> meiner Oma.</td></tr>
+          <tr><td><strong>mit</strong> — з (разом)</td><td>Wir fahren <b>mit</b> dem Zug.</td></tr>
+          <tr><td><strong>nach</strong> — після; до (міста)</td><td><b>nach</b> dem Frühstück · <b>nach</b> Berlin</td></tr>
+          <tr><td><strong>seit</strong> — уже, з (часу)</td><td><b>seit</b> drei Jahren</td></tr>
+          <tr><td><strong>von</strong> — від, з</td><td>eine Karte <b>von</b> meinem Bruder</td></tr>
+          <tr><td><strong>zu</strong> — до (когось)</td><td>Ich gehe <b>zu</b> meiner Freundin.</td></tr>
+          <tr><td><strong>ab</strong> — з (початку)</td><td><b>ab</b> nächster Woche</td></tr>
+        </table></div>
+        <div class="merke">Злиття: <b>zum</b> = zu dem, <b>zur</b> = zu der, <b>beim</b> = bei dem, <b>vom</b> = von dem.</div>
+        <div class="merke"><b>bei</b> — де? (у кого): Ich war <b>bei</b> Oma. <b>zu</b> — куди? (до кого): Ich fahre <b>zu</b> Oma.</div>
+        <div class="merke"><b>seit</b> + теперішній час: Opa segelt <b>seit</b> dreißig Jahren. — Дідусь ходить під вітрилом <b>уже</b> тридцять років (і досі).</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. Типові помилки</p>
+        <p>✗ Wir fahren am Meer. → ✓ Wir fahren <b>ans</b> Meer. <i>(куди? → Akkusativ)</i></p>
+        <p>✗ Ich war in Ausland. → ✓ Ich war <b>im</b> Ausland. <i>(das Ausland — з артиклем)</i></p>
+        <p>✗ Ich fahre bei meiner Tante. → ✓ Ich fahre <b>zu</b> meiner Tante. <i>(куди? → zu)</i></p>
+        <p>✗ mit meinem Schwester → ✓ mit mein<b>er</b> Schwester <i>(die → Dativ meiner)</i></p>
+        <p>✗ Ich habe seit zwei Jahren hier gewohnt. → ✓ Ich <b>wohne</b> seit zwei Jahren hier. <i>(досі живу — Präsens)</i></p>
+        <p>✗ Ich gehe zu Hause. → ✓ Ich gehe <b>nach Hause</b>.</p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: лексика — картинка → слово ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Ferienorte</h2>
+      <p class="lead">Що на картинці? Вибери слово.</p>
+      <div class="card" id="ub1-pic"></div>
+    </section>
+
+    <!-- ===== Üb. 2: сортування Wo? / Wohin? ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Wo oder wohin?</h2>
+      <p class="lead">Розклади вирази: відповідь на питання <b>Wo?</b> (де? — Dativ) чи на питання <b>Wohin?</b> (куди? — Akkusativ)?</p>
+      <div class="card" id="ub2-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 3: прийменник + артикль у реченні ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Präpositionen</h2>
+      <p class="lead">Впиши прийменник (за потреби разом з артиклем або злиттям: am, ins, zum…).</p>
+      <div class="card" id="ub3-list">
+        <div class="fill-item"><span class="num">1)</span> Im Juli war Iwan <input type="text" class="blank-input inline" data-ans="bei"> uns in Leipzig.</div>
+        <div class="fill-item"><span class="num">2)</span> Im August ist Daryna für zwei Wochen <input type="text" class="blank-input inline" data-ans="ins|in das"> Ferienlager gefahren.</div>
+        <div class="fill-item"><span class="num">3)</span> Wir haben eine Woche <input type="text" class="blank-input inline" data-ans="auf der"> Insel Rügen gewohnt.</div>
+        <div class="fill-item"><span class="num">4)</span> Nach der Schule geht Lotte <input type="text" class="blank-input inline" data-ans="zu"> ihrer Freundin Emma.</div>
+        <div class="fill-item"><span class="num">5)</span> Opa Helmut segelt <input type="text" class="blank-input inline" data-ans="seit"> dreißig Jahren.</div>
+        <div class="fill-item"><span class="num">6)</span> Am Wochenende fahren wir <input type="text" class="blank-input inline" data-ans="aufs|auf das"> Land.</div>
+        <div class="fill-item"><span class="num">7)</span> <input type="text" class="blank-input inline" data-ans="Ab|ab"> nächster Woche haben wir wieder Sport am Nachmittag.</div>
+        <div class="fill-item"><span class="num">8)</span> Aylas Mutter kommt <input type="text" class="blank-input inline" data-ans="aus"> der Türkei.</div>
+        <div class="fill-item"><span class="num">9)</span> Ich habe eine Postkarte <input type="text" class="blank-input inline" data-ans="von"> Erik bekommen.</div>
+        <div class="fill-item"><span class="num">10)</span> Im Sommer liegen wir gern <input type="text" class="blank-input inline" data-ans="am|an dem"> See und schwimmen.</div>
+        <div class="fill-item"><span class="num">11)</span> Mama möchte nächstes Jahr <input type="text" class="blank-input inline" data-ans="in die"> Berge fahren.</div>
+        <div class="fill-item"><span class="num">12)</span> Wo ist Lotte? — Sie ist <input type="text" class="blank-input inline" data-ans="im|in dem"> Wald und sammelt Blaubeeren.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4: листівка з банком слів ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Eine Postkarte vom Hausboot</h2>
+      <p class="lead">Лотте пише листівку бабусі Кристі. Встав слова в пропуски. Три слова зайві.</p>
+      <div class="card" id="ub4-bank"></div>
+    </section>
+
+    <!-- ===== HÖREN — власний діалог, озвучений синтезатором ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Endlich wieder Schule!</h2>
+      <p class="lead">Перший день у 7 класі. Ерік і Дарина зустрілися на шкільному подвір'ї й розповідають про канікули. Послухай діалог (можна двічі) і дай відповіді. Текст діалогу відкривається внизу — але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l1-a-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Erik:</b> Hallo, Daryna! Endlich wieder Schule. Wie waren deine Ferien?<br>
+          <b>Daryna:</b> Hi, Erik! Super! Im Juli war ja Iwan bei uns in Leipzig. Und im August war ich zwei Wochen in einem Ferienlager im Harz.<br>
+          <b>Erik:</b> In einem Ferienlager? Was habt ihr da gemacht?<br>
+          <b>Daryna:</b> Wir sind jeden Tag in die Berge gewandert und geklettert — an echten Felsen, nicht in der Halle! Abends haben wir am Lagerfeuer gesessen.<br>
+          <b>Erik:</b> Cool. Hattest du kein Heimweh?<br>
+          <b>Daryna:</b> Nur am ersten Abend. Und wo warst du? Ich habe dich seit Wochen nicht gesehen!<br>
+          <b>Erik:</b> Wir waren drei Wochen im Ausland — in Dänemark, auf einem Campingplatz direkt am Meer.<br>
+          <b>Daryna:</b> Im Zelt?<br>
+          <b>Erik:</b> Ja, im Zelt. Meine Eltern lieben Camping. Ich bin jeden Morgen zum Strand gelaufen und ins Meer gesprungen.<br>
+          <b>Daryna:</b> War das Wasser nicht kalt? Die Nordsee ist doch kalt.<br>
+          <b>Erik:</b> Doch, sehr! Aber das Schlimmste war der Sturm. In einer Nacht ist unser Zelt fast weggeflogen! Dann haben wir zwei Nächte bei einer Familie aus Hamburg im Wohnwagen geschlafen.<br>
+          <b>Daryna:</b> Was für ein Abenteuer! Und wohin fahrt ihr nächstes Jahr?<br>
+          <b>Erik:</b> Mama sagt: wieder ans Meer. Papa sagt: in die Berge. Und ich sage: in ein Hotel!
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN — 🎤 + говоріння зі зразком ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Erzähl von deinen Ferien!</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Wo hast du die Sommerferien verbracht? Mit wem?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Im Juni war ich zu Hause in Kyjiw. Im Juli habe ich zwei Wochen bei meinen Großeltern auf dem Land verbracht. Und im August war ich mit meiner Familie in den Karpaten.</div>
+        </div>
+        <div class="qa">
+          <label>2. Was hast du in den Ferien erlebt? Erzähl von einem Tag.</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">An einem Tag sind wir früh aufgestanden und in die Berge gewandert. Oben war die Landschaft wirklich malerisch! Mittags haben wir am Fluss gepicknickt, und abends waren wir sehr müde, aber glücklich.</div>
+        </div>
+        <div class="qa">
+          <label>3. Wohin fährt deine Familie normalerweise im Sommer?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Normalerweise fahren wir an einen See, zum Beispiel an die Schazker Seen in Wolhynien. Wir wohnen dort im Zelt auf einem Campingplatz. Manchmal fahren wir auch zu meiner Tante nach Lwiw.</div>
+        </div>
+        <div class="qa">
+          <label>4. Meer oder Gebirge? Stadt oder Land? Was ist für Familienferien besser und warum?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Für mich ist das Gebirge besser, weil ich gern wandere und Hitze nicht mag. Am Meer finde ich es oft todlangweilig: Man liegt nur am Strand. Aber meine Schwester will immer ans Meer.</div>
+        </div>
+        <div class="qa">
+          <label>5. Frag deinen Partner / deine Partnerin: vier Fragen zu seinen / ihren Ferien.</label>
+          <button class="btn secondary" type="button" data-reveal="spr5">Muster zeigen</button>
+          <div class="reveal" id="spr5">Wo warst du in den Sommerferien? Mit wem bist du gefahren? Wie lange warst du dort? Was hast du da erlebt?</div>
+        </div>
+        <div class="qa">
+          <label>6. Wovon träumst du? Wohin möchtest du einmal reisen?</label>
+          <button class="btn secondary" type="button" data-reveal="spr6">Muster zeigen</button>
+          <div class="reveal" id="spr6">Ich träume von einer Reise nach Island. Ich möchte dort die Vulkane und die Wasserfälle erkunden. Und einmal möchte ich mit meiner Familie auf einem Hausboot wohnen — wie Greta!</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN — лист за планом ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Eine Nachricht an Greta</h2>
+      <p class="lead">Грета надіслала тобі фото з плавучого будинку й питає: «А де ти був / була влітку? Напиши мені!» Напиши відповідь на 60–80 слів за планом:</p>
+      <div class="card">
+        <p>1) привітання і кілька слів про її фото; 2) де ти провів / провела канікули і з ким (на питання Wo?); 3) куди ви їздили і як (Wohin? + mit dem Zug / Auto…); 4) що ти там пережив / пережила — 2–3 речення; 5) куди ти мрієш поїхати наступного літа; 6) запитання до Грети й прощання.</p>
+        <p class="beispiel">Liebe Greta, dein Foto ist … · Ich habe die Ferien … verbracht. · Wir sind mit … nach / ans / in … gefahren. · Dort haben wir … · Ich träume von … · Viele Grüße</p>
+        <div class="qa">
+          <label for="schreiben-text">Deine Nachricht</label>
+          <textarea id="schreiben-text" rows="10" placeholder="Liebe Greta,&#10;dein Foto ist super! …"
+            data-words="60-80"
+            data-must="verbracht|mit|Viele Grüße/Liebe Grüße"
+            data-check="Привітання і слова про фото|Де ти був / була (Wo? + Dativ)|Куди й чим ви їхали (Wohin? + Akkusativ, mit + Dativ)|2–3 речення про враження|Мрія про наступне літо|Запитання до Грети, прощання й підпис"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Liebe Greta,<br>dein Foto ist super! Ein Hausboot — wie cool! Ich habe die Ferien in den Karpaten verbracht. Wir sind mit dem Zug nach Iwano-Frankiwsk gefahren und dann mit dem Bus in die Berge. Dort haben wir in einem kleinen Holzhaus am Fluss gewohnt. Wir sind jeden Tag gewandert, und einmal waren wir sogar auf der Howerla! Nächsten Sommer träume ich von einer Reise ans Meer. Und wohin fährst du nächstes Jahr?<br>Viele Grüße<br>Sofija</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — режим контрольної: одна спроба, лише ця вкладка йде в бал ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Daryna fährt am Wochenende
+          <select class="blank inline" data-ans="zu ihrer"><option value="">—</option><option>bei ihrer</option><option>zu ihre</option><option>zu ihrer</option></select> Freundin.</div>
+        <div class="fill-item"><span class="num">8)</span> Im August war Daryna
+          <select class="blank inline" data-ans="im"><option value="">—</option><option>ins</option><option>im</option><option>am</option></select> Ferienlager.</div>
+        <div class="fill-item"><span class="num">9)</span> Erik ist
+          <select class="blank inline" data-ans="mit dem"><option value="">—</option><option>mit den</option><option>mit der</option><option>mit dem</option></select> Zug nach Hamburg gefahren.</div>
+        <div class="fill-item"><span class="num">10)</span> Wir haben die Ferien
+          <select class="blank inline" data-ans="im"><option value="">—</option><option>im</option><option>ins</option><option>in den</option></select> Gebirge verbracht.</div>
+        <div class="fill-item"><span class="num">11)</span> Krümel läuft schnell
+          <select class="blank inline" data-ans="in den"><option value="">—</option><option>im</option><option>in dem</option><option>in den</option></select> Wald.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-7-klas-7-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-7-klas-7-rik";
+  const KN_UNIT = "l1-a";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Gretas Familie fährt im Sommer normalerweise ans Meer oder in die Berge.", a: "r"},
+    {s: "Dieses Jahr hat die Familie zwei Wochen auf einem Hausboot gewohnt.", a: "f"},
+    {s: "Die Idee mit dem Hausboot hatte Gretas Mutter.", a: "f"},
+    {s: "Opa Helmut segelt seit dreißig Jahren.", a: "r"},
+    {s: "Die Mecklenburgische Seenplatte liegt im Süden von Deutschland.", a: "f"},
+    {s: "Morgens ist Greta mit ihrem Vater ins Wasser gesprungen.", a: "r"},
+    {s: "Lotte und Greta haben im Wald Pilze gesammelt.", a: "f"},
+    {s: "Abends hat die Familie auf dem Dach des Bootes gesessen.", a: "r"},
+    {s: "Greta fand den Regentag langweilig.", a: "f"},
+    {s: "Greta möchte nächsten Sommer ins Ausland fahren.", a: "r"}
+  ]);
+
+  // Üb. 1: картинка → слово
+  buildPicture('ub1-pic', [
+    {pic: "🏝️", opts: ["die Insel", "die Wüste", "das Ufer"], correct: "die Insel"},
+    {pic: "🏜️", opts: ["der Strand", "das Gebirge", "die Wüste"], correct: "die Wüste"},
+    {pic: "⛺", opts: ["das Hausboot", "das Zelt", "der Hafen"], correct: "das Zelt"},
+    {pic: "🏔️", opts: ["der See", "das Meer", "das Gebirge"], correct: "das Gebirge"},
+    {pic: "🌲🌲🌲", opts: ["der Wald", "der Strand", "die Insel"], correct: "der Wald"},
+    {pic: "🏖️", opts: ["der Hafen", "der Campingplatz", "der Strand"], correct: "der Strand"},
+    {pic: "⛵", opts: ["wandern", "segeln", "klettern"], correct: "segeln"},
+    {pic: "⚓🚢", opts: ["das Ufer", "der Hafen", "der Wald"], correct: "der Hafen"},
+    {pic: "🌍✈️", opts: ["aufs Land", "in den Wald", "ins Ausland"], correct: "ins Ausland"},
+    {pic: "🏠😢", opts: ["das Heimweh", "die Landschaft", "das Ferienlager"], correct: "das Heimweh"}
+  ]);
+
+  // Üb. 2: Wo? / Wohin?
+  buildSort('ub2-sort', {
+    buckets: ["Wo? (Dativ)", "Wohin? (Akkusativ)"],
+    items: [
+      {t: "am Meer", b: "Wo? (Dativ)"},
+      {t: "ans Meer", b: "Wohin? (Akkusativ)"},
+      {t: "im Wald", b: "Wo? (Dativ)"},
+      {t: "in den Wald", b: "Wohin? (Akkusativ)"},
+      {t: "auf dem Land", b: "Wo? (Dativ)"},
+      {t: "aufs Land", b: "Wohin? (Akkusativ)"},
+      {t: "auf der Insel", b: "Wo? (Dativ)"},
+      {t: "auf die Insel", b: "Wohin? (Akkusativ)"},
+      {t: "in der Stadt", b: "Wo? (Dativ)"},
+      {t: "in die Berge", b: "Wohin? (Akkusativ)"},
+      {t: "im Ausland", b: "Wo? (Dativ)"},
+      {t: "an den See", b: "Wohin? (Akkusativ)"}
+    ]
+  });
+
+  // Üb. 3
+  wireBlanks('ub3');
+
+  // Üb. 4: листівка з банком слів
+  buildWordBank('ub4-bank', {
+    text: "Liebe Oma,\n\nviele Grüße vom [Hausboot]! Wir sind schon drei Tage [auf dem] Wasser. Jeden Morgen springt Greta mit Papa [ins] Wasser, aber ich nicht — zu kalt! Mittags halten wir am [Ufer], und ich gehe mit Greta in den [Wald]. Krümel kommt immer [mit]. Opa erklärt mir alles über das [Segeln]. Gestern haben wir im [Hafen] Eis gegessen. Ich [träume] schon von den nächsten Ferien!\n\nDeine Lotte",
+    extra: ["Wüste", "aufs", "Zelt"]
+  });
+  document.querySelectorAll('#ub4-bank .wb-text p').forEach(p => { p.style.whiteSpace = 'pre-line'; });
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Wann war Iwan in Leipzig?", opts: ["Im August", "Im Juli", "Im Juni"], correct: "Im Juli"},
+    {q: "Wo war Daryna im August?", opts: ["Am Meer in Dänemark", "Bei ihrer Oma in Charkiw", "In einem Ferienlager im Harz"], correct: "In einem Ferienlager im Harz"},
+    {q: "Wo ist Daryna geklettert?", opts: ["An echten Felsen", "In einer Kletterhalle", "Am Strand"], correct: "An echten Felsen"},
+    {q: "Wann hatte Daryna Heimweh?", opts: ["Die ganze Zeit", "Nie", "Am ersten Abend"], correct: "Am ersten Abend"},
+    {q: "Wie lange war Erik in Dänemark?", opts: ["Zwei Wochen", "Drei Wochen", "Eine Woche"], correct: "Drei Wochen"},
+    {q: "Wo hat Eriks Familie gewohnt?", opts: ["In einem Hotel", "Auf einem Hausboot", "Im Zelt auf einem Campingplatz"], correct: "Im Zelt auf einem Campingplatz"},
+    {q: "Was ist in einer Nacht passiert?", opts: ["Ein Sturm ist gekommen.", "Erik ist ins Meer gefallen.", "Das Auto war kaputt."], correct: "Ein Sturm ist gekommen."},
+    {q: "Wohin möchte Erik nächstes Jahr?", opts: ["Ans Meer", "In ein Hotel", "In die Berge"], correct: "In ein Hotel"}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Wir haben die Ferien am Meer verbracht.", uk: "Ми провели канікули на морі."},
+    {say: "Im August war ich im Ferienlager.", uk: "У серпні я був / була в таборі."},
+    {say: "Nächsten Sommer möchte ich ins Ausland fahren.", uk: "Наступного літа я хочу поїхати за кордон."},
+    {say: "Ich träume von einer Reise in die Berge.", uk: "Я мрію про подорож у гори."},
+    {say: "Am See kann ich mich gut entspannen.", uk: "На озері я можу добре відпочити."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Im Sommer fahren wir … Meer.", opts: ["am", "ans", "im"], correct: "ans"},
+    {q: "Mein Onkel wohnt … Land.", opts: ["aufs", "im", "auf dem"], correct: "auf dem"},
+    {q: "Sie hat zwei Wochen … Ausland verbracht.", opts: ["im", "ins", "am"], correct: "im"},
+    {q: "Wo gibt es viel Sand, aber fast kein Wasser?", opts: ["Im Wald", "In der Wüste", "Am Ufer"], correct: "In der Wüste"},
+    {q: "Im Ferienlager hatte ich am ersten Abend …", opts: ["Hafen", "Hausboot", "Heimweh"], correct: "Heimweh"},
+    {q: "Wir wohnen … zwei Jahren in Leipzig.", opts: ["ab", "seit", "vor"], correct: "seit"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Im Sommer fahren wir am Meer.", wrong: 4, fix: "ans"},
+    {s: "Ich war mit meinem Schwester am See.", wrong: 3, fix: "meiner"},
+    {s: "Opa segelt seit vielen Jahren.", ok: true},
+    {s: "Ich fahre morgen bei meiner Tante.", wrong: 3, fix: "zu"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🏖️', '⛵', '🏔️', '🧳']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
