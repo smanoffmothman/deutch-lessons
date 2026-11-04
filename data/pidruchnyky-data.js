@@ -216,8 +216,8 @@ const PIDRUCHNYKY = [
       { id: "l7", label: "7", nazva: "Herzlich willkommen in Deutschland", storinky: "129–144", dity: [
         { id: "l7-a", label: "A", nazva: "Deutschland — Land und Leute", storinky: "130–133", typ: "vpravy", opublikovano: 30 },
         { id: "l7-b", label: "B", nazva: "Wir reisen nach Berlin", storinky: "134–139", typ: "vpravy", gram: ["temporalsaetze"], opublikovano: 31 },
-        { id: "l7-c", label: "C", nazva: "Wiederholung", storinky: "140–141", typ: "povtorennya", gram: ["temporalsaetze", "tempusformen"] },
-        { id: "l7-d", label: "D", nazva: "Geschichtenzeit", storinky: "142", typ: "chytannya" },
+        { id: "l7-c", label: "C", nazva: "Wiederholung", storinky: "140–141", typ: "povtorennya", gram: ["temporalsaetze", "tempusformen"], opublikovano: 32 },
+        { id: "l7-d", label: "D", nazva: "Geschichtenzeit", storinky: "142", typ: "chytannya", opublikovano: 33 },
         { id: "l7-e", label: "E", nazva: "Projektarbeit", storinky: "143", typ: "bez-storinky" },
         { id: "l7-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "144", typ: "bez-storinky" }
       ] },

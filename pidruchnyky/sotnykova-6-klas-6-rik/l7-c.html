@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 7, Modul C: Wiederholung — Німецька мова 6 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 6 КЛАС</span>
+        <h1>Lektion 7 · Modul C: Wiederholung</h1>
+        <p class="sub">Повторення всього Lektion 7: Німеччина, сусідні країни, федеральні землі, Берлін і його пам'ятки; сторони світу, grenzen an, речення з als, wenn, bevor, während. Гра на швидкість, кросворд, квіз у шкільному радіо, говоріння і тест на весь Lektion.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Blitz</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Sortieren</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Kreuzworträtsel</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Hören</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Fehler</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Sätze umbauen</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER — усі слова Lektion 7 (збираються самі) ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Усі слова Lektion 7</h2>
+      <p class="lead">Тут зібрано слова всіх модулів Lektion 7. Перевір себе в «Картки ▶» і познач ☆ ті, які ще не пам'ятаєш, — їх варто повторити перед тестом.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: бліц ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Blitz: 60 Sekunden</h2>
+      <p class="lead">Розминка на швидкість: скільки слів Lektion 7 ти перекладеш за 60 секунд? У бал не йде — це гра. Спробуй побити власний рекорд!</p>
+      <div class="card" id="ub1-blitz"></div>
+    </section>
+
+    <!-- ===== Üb. 2: сортування ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">als oder wenn?</h2>
+      <p class="lead">Розклади частини речень: одна подія в минулому — <b>als</b>, щоразу або тепер — <b>wenn</b>.</p>
+      <div class="card" id="ub2-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 3: кросворд ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Kreuzworträtsel</h2>
+      <p class="lead">Німеччина й Берлін: впиши німецькі слова за перекладом. ä ö ü ß — з панелі внизу.</p>
+      <div class="card" id="ub3-kw"></div>
+    </section>
+
+    <!-- ===== Üb. 4: HÖREN — власний діалог, озвучений синтезатором ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4 · Hören</p>
+      <h2 class="panel-title">Das Deutschland-Quiz im Schulradio</h2>
+      <p class="lead">Ніна веде у шкільному радіо квіз про Німеччину, а відповідає Ерік. Послухай (можна двічі) і дай відповіді. Текст — внизу, але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l7-c-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="ub4-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Nina:</b> Willkommen beim Deutschland-Quiz! Unser Kandidat heute ist Erik aus der sechs b. Erste Frage: Wie viele Nachbarländer hat Deutschland?<br>
+          <b>Erik:</b> Neun!<br>
+          <b>Nina:</b> Richtig! Zweite Frage: Welches Land liegt nördlich von Deutschland?<br>
+          <b>Erik:</b> Dänemark.<br>
+          <b>Nina:</b> Super. Dritte Frage: Wie heißt die Hauptstadt von Bayern?<br>
+          <b>Erik:</b> Nürnberg … nein, Moment: München!<br>
+          <b>Nina:</b> Gerade noch richtig! Vierte Frage: Wo steht der Fernsehturm in Berlin?<br>
+          <b>Erik:</b> Am Alexanderplatz.<br>
+          <b>Nina:</b> Richtig. Fünfte Frage: Was ist die East Side Gallery?<br>
+          <b>Erik:</b> Ein Museum auf der Museumsinsel?<br>
+          <b>Nina:</b> Leider falsch! Die East Side Gallery ist ein Stück der Berliner Mauer mit bunten Bildern.<br>
+          <b>Erik:</b> Ach ja, Greta hat mir davon erzählt.<br>
+          <b>Nina:</b> Letzte Frage: Wann ist die Mauer gefallen?<br>
+          <b>Erik:</b> Am neunten November neunzehnhundertneunundachtzig.<br>
+          <b>Nina:</b> Richtig! Erik, du hast fünf von sechs Punkten. Dein Preis ist ein Gutschein für die Eisdiele!<br>
+          <b>Erik:</b> Super! Dann lade ich Lotte ein. Sie liebt Eis.
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5: знайди помилку ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Finde den Fehler</h2>
+      <p class="lead">Граматика всього Lektion: сторони світу, grenzen an, als / wenn / bevor / während, порядок слів. Знайди помилку й виправ її — або натисни «Fehlerfrei».</p>
+      <div class="card" id="ub5-fix"></div>
+    </section>
+
+    <!-- ===== Üb. 6: перетворення ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6</p>
+      <h2 class="panel-title">Sätze umbauen</h2>
+      <p class="lead">Перепиши речення за завданням. Пиши ціле речення.</p>
+      <div class="card" id="ub6-tr"></div>
+    </section>
+
+    <!-- ===== SPRECHEN ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Sprich mal!</h2>
+      <p class="lead">Спершу вимов фрази в 🎤, потім відповідай уголос на запитання й порівнюй зі зразком.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Stell dir vor: Deine Klasse war drei Tage in Berlin. Erzähle davon im Präteritum, mit als und während.</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Im Mai fuhr unsere Klasse für drei Tage nach Berlin. Als wir ankamen, schien die Sonne. Am ersten Tag besuchten wir den Reichstag und stiegen in die Kuppel. Während der Führer über die Geschichte erzählte, machten wir viele Fotos. Am zweiten Tag fuhren wir auf den Fernsehturm. Die Reise war toll!</div>
+        </div>
+        <div class="qa">
+          <label>2. Was weißt du über Deutschland und seine Nachbarländer?</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Deutschland liegt in der Mitte Europas und hat sechzehn Bundesländer. Im Norden grenzt es an Dänemark, im Osten an Polen und Tschechien. Im Süden liegen Österreich und die Schweiz, im Westen Frankreich, Luxemburg, Belgien und die Niederlande. Die Hauptstadt ist Berlin.</div>
+        </div>
+        <div class="qa">
+          <label>3. Welche Sehenswürdigkeit in Deutschland möchtest du unbedingt sehen? Warum?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Ich möchte unbedingt die East Side Gallery in Berlin sehen. Dort kann man ein Stück der Berliner Mauer mit bunten Bildern sehen. Ich interessiere mich für Geschichte, und ich finde es wichtig, dass man sich an die geteilte Stadt erinnert.</div>
+        </div>
+        <div class="qa">
+          <label>4. Erzähle mit „als“ und „wenn“: Als ich einmal …, … · Immer wenn ich …, …</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Als ich einmal mit meiner Familie in Lwiw war, regnete es den ganzen Tag. Wir saßen im Café und tranken heiße Schokolade. Immer wenn ich jetzt Regen sehe, denke ich an diesen Tag. Und wenn ich groß bin, möchte ich auch nach Berlin fahren.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — на весь Lektion ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Test zu Lektion 7</h2>
+      <p class="lead">Підсумковий тест на весь Lektion 7: 18 завдань. Кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">9)</span> Deutschland grenzt
+          <select class="blank inline" data-ans="an"><option value="">—</option><option>mit</option><option>zu</option><option>an</option></select> Österreich.</div>
+        <div class="fill-item"><span class="num">10)</span> Dänemark liegt
+          <select class="blank inline" data-ans="nördlich"><option value="">—</option><option>südlich</option><option>nördlich</option><option>westlich</option></select> von Deutschland.</div>
+        <div class="fill-item"><span class="num">11)</span> 
+          <select class="blank inline" data-ans="Als"><option value="">—</option><option>Wenn</option><option>Als</option><option>Während</option></select> ich gestern ankam, war es kalt.</div>
+        <div class="fill-item"><span class="num">12)</span> Immer,
+          <select class="blank inline" data-ans="wenn"><option value="">—</option><option>als</option><option>wenn</option><option>bevor</option></select> ich Zeit habe, lese ich.</div>
+        <div class="fill-item"><span class="num">13)</span> 
+          <select class="blank inline" data-ans="Bevor"><option value="">—</option><option>Während</option><option>Als</option><option>Bevor</option></select> du einsteigst, kauf eine Fahrkarte!</div>
+        <div class="fill-item"><span class="num">14)</span> Als wir ankamen,
+          <select class="blank inline" data-ans="sahen wir"><option value="">—</option><option>wir sahen</option><option>sahen wir</option><option>sehen wir</option></select> den Dom.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-6-klas-6-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-6-klas-6-rik";
+  const KN_UNIT = "l7-c";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['ub1', 'ub2', 'ub3', 'ub4', 'ub5', 'ub6', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+
+  // Üb. 1: бліц — усі слова Lektion 7 з файлу слів (без однакових перекладів)
+  const blitzPairs = [], blitzSeen = new Set();
+  ((window.SLOVA && window.SLOVA[KN_BOOK]) || []).filter(w => /^l7-/.test(w.r)).forEach(w => {
+    const de = w.de.split(' / ')[0].split(',')[0].replace(/\s*\(.*?\)/g, '').trim();
+    const uk = w.uk.split(' / ')[0].trim();
+    const key = uk.split(/[,;]/)[0].trim().toLowerCase();
+    if (!de || /^(der|die|das)$/i.test(de) || blitzSeen.has(key)) return;
+    blitzSeen.add(key);
+    blitzPairs.push([de, uk]);
+  });
+  buildBlitz('ub1-blitz', {pairs: blitzPairs, seconds: 60, dir: "de-uk"});
+
+  // Üb. 2: als / wenn
+  buildSort('ub2-sort', {
+    buckets: ["als (einmal, Vergangenheit)", "wenn (immer / jetzt / später)"],
+    items: [
+      {t: "… ich gestern nach Hause kam", b: "als (einmal, Vergangenheit)"},
+      {t: "… Opa jung war", b: "als (einmal, Vergangenheit)"},
+      {t: "… die Mauer im Jahr 1989 fiel", b: "als (einmal, Vergangenheit)"},
+      {t: "… wir am Montag in Berlin ankamen", b: "als (einmal, Vergangenheit)"},
+      {t: "… ich zum ersten Mal Schnee sah", b: "als (einmal, Vergangenheit)"},
+      {t: "Immer, … ich Ferien habe", b: "wenn (immer / jetzt / später)"},
+      {t: "Jedes Mal, … Papa nach Berlin fuhr", b: "wenn (immer / jetzt / später)"},
+      {t: "… ich groß bin", b: "wenn (immer / jetzt / später)"},
+      {t: "Oft, … es im Sommer heiß war", b: "wenn (immer / jetzt / später)"},
+      {t: "… du morgen Zeit hast", b: "wenn (immer / jetzt / später)"}
+    ]
+  });
+
+  // Üb. 3: кросворд
+  buildCrossword('ub3-kw', [
+    ["Nachbarland", "сусідня країна (das)"],
+    ["Bundesland", "федеральна земля (das)"],
+    ["Hauptstadt", "столиця (die)"],
+    ["Fluss", "річка (der)"],
+    ["Landkarte", "мапа (die)"],
+    ["Norden", "північ (der)"],
+    ["Mauer", "Берлінський мур (die)"],
+    ["Reichstag", "Рейхстаг (der)"],
+    ["Fernsehturm", "телевежа (der)"],
+    ["Denkmal", "пам'ятник (das)"],
+    ["Rathaus", "ратуша (das)"],
+    ["umarmen", "обіймати"]
+  ]);
+
+  // Üb. 4: Hören
+  buildQuiz('ub4-quiz', [
+    {q: "Was antwortet Erik auf die erste Frage?", opts: ["Neun.", "Sechzehn.", "Sieben."], correct: "Neun."},
+    {q: "Welches Land liegt nördlich von Deutschland?", opts: ["Dänemark", "Polen", "Österreich"], correct: "Dänemark"},
+    {q: "Welche Stadt nennt Erik zuerst als Hauptstadt von Bayern?", opts: ["Nürnberg", "München", "Stuttgart"], correct: "Nürnberg"},
+    {q: "Wo steht der Fernsehturm?", opts: ["am Brandenburger Tor", "am Alexanderplatz", "auf der Museumsinsel"], correct: "am Alexanderplatz"},
+    {q: "Welche Frage beantwortet Erik falsch?", opts: ["die Frage über die East Side Gallery", "die Frage über Bayern", "die Frage über die Mauer"], correct: "die Frage über die East Side Gallery"},
+    {q: "Was ist die East Side Gallery?", opts: ["ein Museum", "ein Stück der Berliner Mauer mit Bildern", "ein Bahnhof"], correct: "ein Stück der Berliner Mauer mit Bildern"},
+    {q: "Wie viele Punkte hat Erik?", opts: ["sechs von sechs", "fünf von sechs", "vier von sechs"], correct: "fünf von sechs"},
+    {q: "Was bekommt Erik als Preis?", opts: ["ein Buch über Berlin", "einen Gutschein für die Eisdiele", "eine Fahrkarte nach Berlin"], correct: "einen Gutschein für die Eisdiele"}
+  ]);
+
+  // Üb. 5: знайди помилку
+  buildFixError('ub5-fix', [
+    {s: "Deutschland grenzt an Polen.", ok: true},
+    {s: "Österreich liegt nördlich von Deutschland.", wrong: 2, fix: "südlich"},
+    {s: "Deutschland grenzt mit Frankreich.", wrong: 2, fix: "an"},
+    {s: "Hamburg liegt in Norden.", wrong: 2, fix: "im"},
+    {s: "Als ich klein war, wohnten wir in Kyjiw.", ok: true},
+    {s: "Wenn wir gestern ankamen, regnete es.", wrong: 0, fix: "Als"},
+    {s: "Immer, als ich Ferien habe, besuche ich Oma.", wrong: 1, fix: "wenn"},
+    {s: "Die Hauptstadt von Bayern ist Nürnberg.", wrong: 5, fix: "München"},
+    {s: "Während der Führer erzählte, hörten wir zu.", ok: true}
+  ]);
+
+  // Üb. 6: перетворення
+  buildTransform('ub6-tr', [
+    {s: "Wir kamen in Berlin an. Es regnete.", task: "почни з <b>Als …</b>", ans: "Als wir in Berlin ankamen, regnete es."},
+    {s: "Ich bin in Berlin. Ich besuche immer den Zoo.", task: "почни з <b>Wenn …</b>", ans: "Wenn ich in Berlin bin, besuche ich immer den Zoo."},
+    {s: "Wir fuhren los. Wir packten die Rucksäcke.", task: "почни з <b>Bevor …</b>", ans: "Bevor wir losfuhren, packten wir die Rucksäcke."},
+    {s: "Der Führer erzählte. Wir machten Fotos.", task: "почни з <b>Während …</b>", ans: "Während der Führer erzählte, machten wir Fotos."},
+    {s: "Polen liegt im Osten.", task: "<b>Polen liegt … von Deutschland.</b>", ans: "Polen liegt östlich von Deutschland."},
+    {s: "Deutschland — Dänemark — im Norden", task: "з <b>grenzen an</b>, почни з <b>Im Norden …</b>", ans: "Im Norden grenzt Deutschland an Dänemark."}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Deutschland grenzt an neun Länder.", uk: "Німеччина межує з дев'ятьма країнами."},
+    {say: "Als wir in Berlin waren, besuchten wir den Reichstag.", uk: "Коли ми були в Берліні, ми відвідали Рейхстаг."},
+    {say: "Wenn ich nach Deutschland fahre, besuche ich Leipzig.", uk: "Коли я поїду до Німеччини, відвідаю Лейпциг."},
+    {say: "Bevor man in die Kuppel darf, muss man sich anmelden.", uk: "Перш ніж потрапити в купол, треба зареєструватися."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Wie viele Bundesländer hat Deutschland?", opts: ["neun", "zwölf", "sechzehn"], correct: "sechzehn"},
+    {q: "Welches Land ist KEIN Nachbarland Deutschlands?", opts: ["Ungarn", "Polen", "Dänemark"], correct: "Ungarn"},
+    {q: "Die Hauptstadt von Sachsen ist …", opts: ["Leipzig", "Dresden", "Chemnitz"], correct: "Dresden"},
+    {q: "Der längste Fluss in Deutschland ist …", opts: ["die Elbe", "der Rhein", "die Spree"], correct: "der Rhein"},
+    {q: "Im Reichstag arbeitet …", opts: ["das Parlament", "der Zoo", "die Bahn"], correct: "das Parlament"},
+    {q: "Die Berliner Mauer fiel im Jahr …", opts: ["1961", "1989", "1990"], correct: "1989"},
+    {q: "„als“ braucht man für …", opts: ["eine Handlung einmal in der Vergangenheit", "eine Handlung jeden Tag", "die Zukunft"], correct: "eine Handlung einmal in der Vergangenheit"},
+    {q: "Was bedeutet „die Sehenswürdigkeit“?", opts: ["пам'ятка", "столиця", "кордон"], correct: "пам'ятка"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Berlin ist die Hauptstadt Deutschlands.", ok: true},
+    {s: "Frankreich liegt östlich von Deutschland.", wrong: 2, fix: "westlich"},
+    {s: "Wenn ich klein war, hatte ich einen Hund.", wrong: 0, fix: "Als"},
+    {s: "Wir wohnen in Norden.", wrong: 2, fix: "im"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🇩🇪', '🗺️', '🏛️', '🏆']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
