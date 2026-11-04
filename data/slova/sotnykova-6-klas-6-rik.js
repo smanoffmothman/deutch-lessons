@@ -49,6 +49,8 @@
   {de: "ähnlich sein (+ Dat.)", uk: "бути схожим (на когось)", r: "l1-a", note: "Ich bin meiner Oma ähnlich. — Dativ, без прийменника"},
   {de: "die Generation, -en", uk: "покоління", r: "l1-a"},
   {de: "die Überraschung, -en", uk: "сюрприз, несподіванка", r: "l1-a"},
+  {de: "sich wünschen", uk: "бажати собі", r: "l1-a"},
+  {de: "der Zopf, -ö-e", uk: "коса (зачіска)", r: "l1-a"},
   // ---- Lektion 1 · Modul B: Wir sind alle ganz verschieden ----
   {de: "das Aussehen", uk: "зовнішність", r: "l1-b"},
   {de: "aussehen (sieht aus), hat ausgesehen", uk: "виглядати", r: "l1-b", note: "Du siehst toll aus! — Ти чудово виглядаєш!"},
