@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 8, Modul A: Sehenswertes in der Ukraine — Німецька мова 6 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 6 КЛАС</span>
+        <h1>Lektion 8 · Modul A: Sehenswertes in der Ukraine</h1>
+        <p class="sub">Україна: ландшафти, річки, гори й міста. Найвищий ступінь (der höchste Berg, der längste Fluss), Genitiv der Ukraine, am Dnipro. Дарина показує Греті Україну на мапі й розповідає про рідний Харків, вправи, говоріння, письмо і тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Landschaften</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Städte</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · der höchste …</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Chat</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власний текст + вправа на розуміння ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Eine Reise mit dem Finger</h2>
+      <p class="lead">Дарина бере Грету в подорож Україною — поки що лише пальцем по мапі. Розповідає Грета. Послухай і прочитай. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l8-a-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Am Sonntag lagen Daryna und ich in ihrem Zimmer auf dem Boden. Vor uns lag eine große Landkarte der Ukraine. „Ich nehme dich jetzt mit auf eine Reise“, sagte Daryna. „Ohne Zug und ohne Koffer — nur mit dem Finger.“</p>
+        <p>Unsere Reise begann im Osten, in Charkiw. „Das ist meine <span class="gl" data-uk="рідне місто" data-lemma="die Heimatstadt, -ä-e">Heimatstadt</span>, die zweitgrößte Stadt der Ukraine. Hier gibt es viele Universitäten und einen riesigen Platz, den Freiheitsplatz.“ Dann wanderte ihr Finger nach Westen, über weite <span class="gl" data-uk="степ" data-lemma="die Steppe, -n">Steppen</span> und <span class="gl" data-uk="поле" data-lemma="das Feld, -er">Felder</span>, bis zum Dnipro. „Das ist der längste Fluss des Landes. Er <span class="gl" data-uk="текти (про воду)" data-lemma="fließen, floss, ist geflossen">fließt</span> mitten durch Kyjiw.“</p>
+        <p>Im Westen wurde die <span class="gl" data-uk="краєвид, ландшафт" data-lemma="die Landschaft, -en">Landschaft</span> <span class="gl" data-uk="горбистий" data-lemma="hügelig">hügelig</span>, und dann kamen die Karpaten. „Hier ist der Howerla, der höchste Berg der Ukraine. Er ist zweitausendeinundsechzig Meter hoch.“ Nicht weit davon liegt Lwiw mit seiner alten Innenstadt und den gemütlichen Cafés. Und in Tscherniwzi gibt es eine Universität, die wie ein Märchenschloss aussieht.</p>
+        <p>Zum Schluss reisten wir in den Süden, ans Schwarze Meer, nach Odesa. „Im Sommer ist es hier sehr heiß, und alle gehen an den <span class="gl" data-uk="пляж" data-lemma="der Strand, -ä-e">Strand</span>. Und hier ist eine berühmte <span class="gl" data-uk="сходи" data-lemma="die Treppe, -n">Treppe</span> mit fast zweihundert <span class="gl" data-uk="сходинка" data-lemma="die Stufe, -n">Stufen</span>.“</p>
+        <p>Ich staunte. „Die Ukraine ist so groß! Und so verschieden: Berge, Meer, Steppe, <span class="gl" data-uk="ліс" data-lemma="der Wald, -ä-er">Wälder</span> …“ — „Sie ist das größte Land, das ganz in Europa liegt“, sagte Daryna stolz. Dann faltete sie die Karte zusammen. „Eines Tages zeige ich dir das alles in echt. <span class="gl" data-uk="обіцяти" data-lemma="versprechen (verspricht), versprach, hat versprochen">Versprochen</span>.“</p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">Der längste Fluss, der höchste Berg</h2>
+      <p class="lead">Нової граматики в цьому розділі немає. Ось вирази, з якими зручно розповідати про країну: найвищий, найдовший, найбільший — і «чого саме».</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. Superlativ vor dem Nomen</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Adjektiv</th><th>Superlativ</th></tr>
+          <tr><td>hoch</td><td>der <strong>höchste</strong> Berg</td></tr>
+          <tr><td>lang</td><td>der <strong>längste</strong> Fluss</td></tr>
+          <tr><td>groß</td><td>die <strong>größte</strong> Stadt</td></tr>
+          <tr><td>alt</td><td>die <strong>älteste</strong> Universität</td></tr>
+          <tr><td>schön</td><td>das <strong>schönste</strong> Meer</td></tr>
+          <tr><td>bekannt</td><td>der <strong>bekannteste</strong> See</td></tr>
+        </table></div>
+        <div class="merke">Схема: <b>der / die / das + Adjektiv + -(e)ste</b>. Короткі слова часто з умлаутом: hoch → <b>höchste</b>, lang → <b>längste</b>, groß → <b>größte</b>, alt → <b>älteste</b>. «Друге за величиною» — <b>zweitgrößte</b> (одним словом).</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. … der Ukraine · … des Landes</p>
+        <p class="beispiel">der höchste Berg <b>der Ukraine</b> · der längste Fluss <b>des Landes</b> · im Westen <b>der Ukraine</b></p>
+        <div class="merke">«Чого?» — Genitiv: die Ukraine → <b>der</b> Ukraine, das Land → <b>des</b> Land<b>es</b>, Deutschland → Deutschland<b>s</b>.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. Was gibt es wo?</p>
+        <p class="beispiel">In der Ukraine <b>gibt es</b> Berge, Steppen und zwei Meere. — Im Westen <b>liegen</b> die Karpaten.</p>
+        <p class="beispiel">Kyjiw liegt <b>am</b> Dnipro. — Odesa liegt <b>am</b> Schwarzen Meer. — Der Howerla liegt <b>in den</b> Karpaten.</p>
+        <div class="merke">Місто на річці чи морі — <b>am</b> (an + dem): am Dnipro, am Meer. <b>es gibt</b> + Akkusativ: Es gibt einen Fluss, einen Berg.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">4. Типові помилки</p>
+        <p>✗ der höchster Berg → ✓ der <b>höchste</b> Berg</p>
+        <p>✗ die zweite große Stadt → ✓ die <b>zweitgrößte</b> Stadt</p>
+        <p>✗ im Westen die Ukraine → ✓ im Westen <b>der</b> Ukraine</p>
+        <p>✗ Kyjiw liegt an Dnipro. → ✓ Kyjiw liegt <b>am</b> Dnipro.</p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Welche Landschaft ist das?</h2>
+      <p class="lead">Вибери назву до картинки.</p>
+      <div class="card" id="ub1-pic"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Welche Stadt ist das?</h2>
+      <p class="lead">Прочитай опис і вибери українське місто.</p>
+      <div class="card" id="ub2-list"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">der höchste, der längste …</h2>
+      <p class="lead">Утвори найвищий ступінь разом з артиклем і іменником. Приклад: hoch · der Berg → <b>der höchste Berg</b>.</p>
+      <div class="card" id="ub3-tab"></div>
+    </section>
+
+    <!-- ===== Üb. 4: чат ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Greta fragt dich</h2>
+      <p class="lead">Грета хоче знати більше про Україну. Вибирай правильну відповідь.</p>
+      <div class="card" id="ub4-chat"></div>
+    </section>
+
+    <!-- ===== HÖREN — власний діалог, озвучений синтезатором ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Meine Heimatstadt Charkiw</h2>
+      <p class="lead">Для шкільної газети Маттео розпитує Дарину про її рідне місто. Послухай інтерв'ю (можна двічі) і дай відповіді. Текст — внизу, але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l8-a-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Matteo:</b> Daryna, für unsere Schülerzeitung schreibe ich über die Heimatstädte in unserer Klasse. Erzählst du mir von Charkiw?<br>
+          <b>Daryna:</b> Gern! Charkiw liegt im Nordosten der Ukraine. Es ist die zweitgrößte Stadt des Landes.<br>
+          <b>Matteo:</b> Wie viele Menschen leben dort?<br>
+          <b>Daryna:</b> Mehr als eine Million.<br>
+          <b>Matteo:</b> Was ist dein Lieblingsort in Charkiw?<br>
+          <b>Daryna:</b> Der Gorki-Park. Dort gibt es ein Riesenrad und im Winter eine Eisbahn. Ich war fast jedes Wochenende dort.<br>
+          <b>Matteo:</b> Und welche Sehenswürdigkeit muss man unbedingt sehen?<br>
+          <b>Daryna:</b> Den Freiheitsplatz. Er ist einer der größten Plätze Europas. Und dort steht das Derschprom, ein riesiges altes Hochhaus.<br>
+          <b>Matteo:</b> Gibt es in Charkiw auch eine U-Bahn?<br>
+          <b>Daryna:</b> Ja! Charkiw hat eine Metro mit drei Linien. Ich bin jeden Tag damit zur Schule gefahren.<br>
+          <b>Matteo:</b> Was vermisst du am meisten?<br>
+          <b>Daryna:</b> Meine Oma Halyna und ihre Warenyky. Und die Abende im Schewtschenko-Garten mit meinen Freundinnen.<br>
+          <b>Matteo:</b> Möchtest du zurück?<br>
+          <b>Daryna:</b> Ja, sehr. Aber Leipzig ist jetzt auch ein bisschen meine Stadt.
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN — 🎤 + говоріння зі зразком ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Meine Ukraine</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Welche Landschaften gibt es in der Ukraine? Wo liegen sie?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">In der Ukraine gibt es Berge, Wälder, Steppen, Flüsse und zwei Meere. Im Westen liegen die Karpaten. Im Norden gibt es viele Wälder und Seen. Im Süden liegen die Steppe und das Schwarze Meer. Der Dnipro fließt durch die Mitte des Landes.</div>
+        </div>
+        <div class="qa">
+          <label>2. Erzähle über deine Heimatstadt: Wo liegt sie? Was kann man dort sehen?</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Meine Heimatstadt ist Poltawa. Sie liegt in der Mitte der Ukraine, am Fluss Worskla. Im Zentrum gibt es einen runden Platz mit einer Säule. Mein Lieblingsort ist der Park am Fluss. Poltawa ist auch für Haluschky bekannt, eine typische Spezialität.</div>
+        </div>
+        <div class="qa">
+          <label>3. Welche Stadt in der Ukraine möchtest du besuchen? Warum?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Ich möchte Kamjanez-Podilskyj besuchen. Dort gibt es eine alte Festung über einem tiefen Tal. Ich interessiere mich für Geschichte, und die Stadt sieht aus wie im Mittelalter.</div>
+        </div>
+        <div class="qa">
+          <label>4. Rätsel: Beschreibe eine ukrainische Stadt, ohne den Namen zu sagen. Dein Partner rät.</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Diese Stadt liegt im Süden der Ukraine, am Schwarzen Meer. Im Sommer kommen viele Touristen an den Strand. Hier gibt es eine berühmte Treppe und ein schönes Opernhaus. Welche Stadt meine ich? — Odesa!</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN — письмо за планом ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Willkommen in meiner Ukraine</h2>
+      <p class="lead">Грета колись приїде в Україну. Склади для неї маршрут — 60–80 слів за планом:</p>
+      <div class="card">
+        <p>1) звертання; 2) три місця (міста, гори, море …) — де вони лежать; 3) що там можна побачити й робити; 4) щось «найбільше / найвище / найстаріше» (Superlativ); 5) чим подорожувати між місцями; 6) прощання.</p>
+        <p class="beispiel">Liebe Greta, · zuerst fahren wir nach … Es liegt im … der Ukraine. · Dort gibt es … · Dann … · … ist der höchste / längste … · Wir fahren mit dem Zug … · Bis bald!</p>
+        <div class="qa">
+          <label for="schreiben-text">Mein Reiseplan für Greta</label>
+          <textarea id="schreiben-text" rows="10" placeholder="Liebe Greta, …"
+            data-words="60-80"
+            data-must="liegt/liegen|gibt es/Es gibt/es gibt"
+            data-check="Звертання|Три місця|Де вони лежать|Що там побачити|Superlativ|Транспорт|Прощання"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Liebe Greta,<br>zuerst fahren wir nach Kyjiw. Es liegt am Dnipro, dem längsten Fluss der Ukraine. Dort gibt es goldene Kirchen und schöne Parks. Dann fahren wir mit dem Nachtzug nach Lwiw im Westen. In der Altstadt trinken wir den besten Kaffee! Zum Schluss wandern wir in den Karpaten und steigen auf den Howerla, den höchsten Berg des Landes.<br>Bis bald!<br>Dein Bohdan</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — режим контрольної: одна спроба, лише ця вкладка йде в бал ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Der Howerla ist der
+          <select class="blank inline" data-ans="höchste"><option value="">—</option><option>höher</option><option>höchste</option><option>hoch</option></select> Berg der Ukraine.</div>
+        <div class="fill-item"><span class="num">8)</span> Charkiw ist die
+          <select class="blank inline" data-ans="zweitgrößte"><option value="">—</option><option>zweite große</option><option>zweigrößte</option><option>zweitgrößte</option></select> Stadt der Ukraine.</div>
+        <div class="fill-item"><span class="num">9)</span> In der Ukraine
+          <select class="blank inline" data-ans="gibt es"><option value="">—</option><option>ist es</option><option>gibt es</option><option>gibt</option></select> viele Flüsse.</div>
+        <div class="fill-item"><span class="num">10)</span> Lwiw liegt im Westen
+          <select class="blank inline" data-ans="der Ukraine"><option value="">—</option><option>die Ukraine</option><option>der Ukraine</option><option>Ukraine</option></select>.</div>
+        <div class="fill-item"><span class="num">11)</span> Odesa liegt
+          <select class="blank inline" data-ans="am"><option value="">—</option><option>im</option><option>auf dem</option><option>am</option></select> Schwarzen Meer.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-6-klas-6-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-6-klas-6-rik";
+  const KN_UNIT = "l8-a";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Daryna und Greta reisten mit dem Zug durch die Ukraine.", a: "f"},
+    {s: "Die Reise begann in Charkiw.", a: "r"},
+    {s: "Charkiw ist die größte Stadt der Ukraine.", a: "f"},
+    {s: "Der Dnipro fließt durch Kyjiw.", a: "r"},
+    {s: "Die Karpaten liegen im Osten der Ukraine.", a: "f"},
+    {s: "Der Howerla ist der höchste Berg der Ukraine.", a: "r"},
+    {s: "In Tscherniwzi gibt es eine Universität wie ein Schloss.", a: "r"},
+    {s: "Die Treppe in Odesa hat fast zweihundert Stufen.", a: "r"},
+    {s: "Greta war schon einmal in der Ukraine.", a: "f"}
+  ]);
+
+  // Üb. 1: ландшафти
+  buildPicture('ub1-pic', [
+    {pic: "🏔️", opts: ["das Gebirge", "die Steppe", "der See"], correct: "das Gebirge"},
+    {pic: "🌊", opts: ["der Teich", "das Meer", "der Wald"], correct: "das Meer"},
+    {pic: "🌲", opts: ["der Wald", "das Feld", "die Wüste"], correct: "der Wald"},
+    {pic: "🏞️", opts: ["der Fluss", "der Strand", "die Insel"], correct: "der Fluss"},
+    {pic: "🏝️", opts: ["die Halbinsel", "die Insel", "das Gebirge"], correct: "die Insel"},
+    {pic: "🏜️", opts: ["die Wüste", "die Steppe", "der Strand"], correct: "die Wüste"},
+    {pic: "🌾", opts: ["das Feld", "der Wald", "der Bach"], correct: "das Feld"},
+    {pic: "🏖️", opts: ["der Strand", "der Teich", "die Treppe"], correct: "der Strand"}
+  ]);
+
+  // Üb. 2: міста
+  buildMatch('ub2', [
+    ["Die Hauptstadt der Ukraine liegt am Dnipro.", "Kyjiw"],
+    ["Die zweitgrößte Stadt liegt im Nordosten. Hier ist der riesige Freiheitsplatz.", "Charkiw"],
+    ["Diese Stadt im Westen ist für ihre Altstadt und ihre Cafés bekannt.", "Lwiw"],
+    ["Diese Stadt liegt am Schwarzen Meer und hat eine berühmte Treppe.", "Odesa"],
+    ["Hier gibt es eine Universität, die wie ein Märchenschloss aussieht.", "Tscherniwzi"],
+    ["Eine alte Festung steht hier über einem tiefen Tal.", "Kamjanez-Podilskyj"]
+  ], {lead: true, options: ["Charkiw", "Kamjanez-Podilskyj", "Kyjiw", "Lwiw", "Odesa", "Tscherniwzi"]});
+
+  // Üb. 3: Superlativ (одне поле в рядку)
+  buildTable('ub3-tab', {
+    head: ["Adjektiv · Nomen", "Superlativ"],
+    rows: [
+      ["hoch · der Berg", "[der höchste Berg]"],
+      ["lang · der Fluss", "[der längste Fluss]"],
+      ["groß · die Stadt", "[die größte Stadt]"],
+      ["alt · die Universität", "[die älteste Universität]"],
+      ["schön · das Meer", "[das schönste Meer]"],
+      ["bekannt · der See", "[der bekannteste See]"],
+      ["klein · die Insel", "[die kleinste Insel]"],
+      ["warm · der Monat", "[der wärmste Monat]"]
+    ]
+  });
+
+  // Üb. 4: чат
+  buildChat('ub4-chat', {
+    partner: "Greta",
+    steps: [
+      {them: "Daryna hat mir die Ukraine auf der Karte gezeigt. Wo wohnst du eigentlich? 😊"},
+      {you: ["Ich wohne in Poltawa, in der Mitte der Ukraine.", "Ich wohne in Poltawa, in die Mitte der Ukraine.", "Ich wohne in Poltawa, in der Mitte die Ukraine."], correct: 0},
+      {them: "Und was ist der längste Fluss bei euch?"},
+      {you: ["Der Dnipro. Er fließt auch durch Kyjiw.", "Der Dnipro. Er fließen auch durch Kyjiw.", "Der Dnipro. Er fließt auch durch Kyjiws."], correct: 0},
+      {them: "Gibt es in der Ukraine auch Berge?"},
+      {you: ["Ja, im Westen liegen die Karpaten.", "Ja, im Westen liegt die Karpaten.", "Ja, in Westen liegen die Karpaten."], correct: 0},
+      {them: "Und wie hoch ist der höchste Berg?"},
+      {you: ["Der Howerla ist über zweitausend Meter hoch.", "Der Howerla ist über zweitausend Meter hohe.", "Der Howerla ist über zweitausend Meter höher."], correct: 0},
+      {them: "Wohin soll ich zuerst fahren, wenn ich komme?"},
+      {you: ["Nach Lwiw! Dort gibt es den besten Kaffee.", "Nach Lwiw! Dort gibt es der beste Kaffee.", "In Lwiw! Dort gibt es den besten Kaffee."], correct: 0},
+      {them: "Super, das merke ich mir! ☕"}
+    ]
+  });
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Wo liegt Charkiw?", opts: ["im Nordosten der Ukraine", "im Westen der Ukraine", "am Schwarzen Meer"], correct: "im Nordosten der Ukraine"},
+    {q: "Was ist Charkiw?", opts: ["die Hauptstadt", "die zweitgrößte Stadt", "eine kleine Stadt"], correct: "die zweitgrößte Stadt"},
+    {q: "Was ist Darynas Lieblingsort?", opts: ["der Freiheitsplatz", "der Gorki-Park", "der Schewtschenko-Garten"], correct: "der Gorki-Park"},
+    {q: "Was gibt es im Gorki-Park?", opts: ["ein Riesenrad und im Winter eine Eisbahn", "einen Zoo", "einen Strand"], correct: "ein Riesenrad und im Winter eine Eisbahn"},
+    {q: "Was ist das Derschprom?", opts: ["ein riesiges altes Hochhaus", "ein Museum", "eine Universität"], correct: "ein riesiges altes Hochhaus"},
+    {q: "Wie viele Metrolinien hat Charkiw?", opts: ["eine", "drei", "fünf"], correct: "drei"},
+    {q: "Was vermisst Daryna am meisten?", opts: ["Oma Halyna und ihre Warenyky", "die Schule", "das Riesenrad"], correct: "Oma Halyna und ihre Warenyky"},
+    {q: "Was sagt Daryna über Leipzig?", opts: ["Es ist ihr zu groß.", "Es ist jetzt auch ein bisschen ihre Stadt.", "Sie mag es nicht."], correct: "Es ist jetzt auch ein bisschen ihre Stadt."}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "In der Ukraine gibt es Berge, Steppen und zwei Meere.", uk: "В Україні є гори, степи і два моря."},
+    {say: "Der Dnipro ist der längste Fluss der Ukraine.", uk: "Дніпро — найдовша річка України."},
+    {say: "Lwiw liegt im Westen der Ukraine.", uk: "Львів лежить на заході України."},
+    {say: "Ich möchte gern in die Karpaten fahren.", uk: "Я дуже хочу поїхати в Карпати."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Der höchste Berg der Ukraine ist der …", opts: ["Howerla", "Zugspitze", "Ai-Petri"], correct: "Howerla"},
+    {q: "Der längste Fluss der Ukraine ist der …", opts: ["Dnister", "Dnipro", "Rhein"], correct: "Dnipro"},
+    {q: "Odesa liegt am …", opts: ["Schwarzen Meer", "Asowschen Meer", "Dnipro"], correct: "Schwarzen Meer"},
+    {q: "Die Karpaten liegen im … der Ukraine.", opts: ["Osten", "Westen", "Norden"], correct: "Westen"},
+    {q: "Eine weite, flache Landschaft mit Gras heißt …", opts: ["Steppe", "Gebirge", "Strand"], correct: "Steppe"},
+    {q: "Was bedeutet „die Landschaft“?", opts: ["краєвид, ландшафт", "гори", "місто"], correct: "краєвид, ландшафт"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Kyjiw liegt am Dnipro.", ok: true},
+    {s: "Der Howerla ist der höchster Berg der Ukraine.", wrong: 4, fix: "höchste"},
+    {s: "Lwiw liegt im Osten der Ukraine.", wrong: 3, fix: "Westen"},
+    {s: "Odesa liegt am Schwarze Meer.", wrong: 3, fix: "Schwarzen"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🇺🇦', '🏔️', '🌊', '🌻']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>

@@ -222,7 +222,7 @@ const PIDRUCHNYKY = [
         { id: "l7-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "144", typ: "bez-storinky" }
       ] },
       { id: "l8", label: "8", nazva: "Die Ukraine", storinky: "145–158", dity: [
-        { id: "l8-a", label: "A", nazva: "Sehenswertes in der Ukraine", storinky: "146–149", typ: "vpravy" },
+        { id: "l8-a", label: "A", nazva: "Sehenswertes in der Ukraine", storinky: "146–149", typ: "vpravy", opublikovano: 34 },
         { id: "l8-b", label: "B", nazva: "Unsere Hauptstadt", storinky: "150–153", typ: "vpravy", gram: ["praep-akkusativ"] },
         { id: "l8-c", label: "C", nazva: "Wiederholung", storinky: "154–155", typ: "povtorennya", gram: ["praep-akkusativ", "temporalsaetze"] },
         { id: "l8-d", label: "D", nazva: "Geschichtenzeit", storinky: "156", typ: "chytannya" },
