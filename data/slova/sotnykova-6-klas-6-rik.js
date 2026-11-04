@@ -632,4 +632,16 @@
   {de: "umarmen", uk: "обіймати", r: "l7-b"},
   {de: "teilen", uk: "ділити, розділяти", r: "l7-b", note: "Berlin war geteilt."},
   {de: "das Symbol, -e", uk: "символ", r: "l7-b"},
+  // ---- Lektion 7 · Modul D: Geschichtenzeit ----
+  {de: "der Dachboden, -ö-", uk: "горище", r: "l7-d"},
+  {de: "die Kiste, -n", uk: "скриня, ящик", r: "l7-d"},
+  {de: "entdecken", uk: "знаходити, виявляти", r: "l7-d"},
+  {de: "vorlesen (liest vor), las vor, hat vorgelesen", uk: "читати вголос", r: "l7-d"},
+  {de: "die Grenze, -n", uk: "кордон", r: "l7-d"},
+  {de: "fremd", uk: "чужий, незнайомий", r: "l7-d"},
+  {de: "vorsichtig", uk: "обережно", r: "l7-d"},
+  {de: "der Stein, -e", uk: "камінь", r: "l7-d"},
+  {de: "leise", uk: "тихо", r: "l7-d"},
+  {de: "gehören (+ Dat.)", uk: "належати (комусь)", r: "l7-d", note: "Der Stein gehört dir."},
+  {de: "erzählen", uk: "розповідати", r: "l7-d"},
 ];
