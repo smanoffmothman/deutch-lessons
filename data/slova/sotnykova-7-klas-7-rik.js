@@ -272,5 +272,18 @@
   {de: "Ich bin dafür.", uk: "Я за.", r: "l3-b"},
   {de: "Ich bin dagegen.", uk: "Я проти.", r: "l3-b"},
   {de: "Ich bin dabei!", uk: "Я з вами! (беру участь)", r: "l3-b"},
-  {de: "einverstanden", uk: "згоден / згодна", r: "l3-b"}
+  {de: "einverstanden", uk: "згоден / згодна", r: "l3-b"},
+  // ---- Lektion 3 · Modul D: Geschichtenzeit ----
+  {de: "der Rundweg, -e", uk: "кільцевий маршрут", r: "l3-d"},
+  {de: "zusammenbleiben, ist zusammengeblieben", uk: "триматися разом", r: "l3-d"},
+  {de: "das Lunchpaket, -e", uk: "обід з собою (ланч-бокс)", r: "l3-d"},
+  {de: "der Müsliriegel, -", uk: "батончик мюслі", r: "l3-d"},
+  {de: "der Wegweiser, -", uk: "дороговказ", r: "l3-d"},
+  {de: "sich verlaufen (verläuft sich), hat sich verlaufen", uk: "заблукати (пішки)", r: "l3-d"},
+  {de: "sich unterstellen", uk: "сховатися (від дощу)", r: "l3-d"},
+  {de: "überlegen", uk: "обмірковувати, думати", r: "l3-d"},
+  {de: "Hand hoch!", uk: "Руку вгору!", r: "l3-d"},
+  {de: "zählen", uk: "рахувати", r: "l3-d"},
+  {de: "die Kletterwand, -ä-e", uk: "скеледром (стіна для лазіння)", r: "l3-d"},
+  {de: "jetzt oder nie", uk: "зараз або ніколи", r: "l3-d"}
 ];
