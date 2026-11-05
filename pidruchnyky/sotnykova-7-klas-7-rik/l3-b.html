@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 3, Modul B: Besuchst du eine AG? — Німецька мова 7 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 7 КЛАС</span>
+        <h1>Lektion 3 · Modul B: Besuchst du eine AG?</h1>
+        <p class="sub">Урок про шкільні гуртки: театр, робототехніка, захист природи, оркестр. Як запропонувати, погодитися чи відмовитися; зворотні дієслова (sich interessieren für …) та інфінітив з zu. Текст і діалог з озвученням, вправи, говоріння, письмо і підсумковий тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · AGs</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · ja oder nein?</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · sich und zu</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Anmeldung</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власний текст + вправа на розуміння ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Welche AG nehme ich?</h2>
+      <p class="lead">Послухай і прочитай, як Грета цілий тиждень вибирала гурток. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l3-b-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>In der siebten Klasse muss bei uns jeder eine <span class="gl" data-uk="гурток (у школі)" data-lemma="die AG, -s">AG</span> wählen — eine Arbeitsgemeinschaft nach dem Unterricht. Die Liste ist lang: <span class="gl" data-uk="театральний гурток" data-lemma="die Theater-AG, -s">Theater-AG</span>, <span class="gl" data-uk="гурток захисту природи" data-lemma="die Naturschutz-AG, -s">Naturschutz-AG</span>, <span class="gl" data-uk="оркестр" data-lemma="das Orchester, -">Orchester</span>, Schach, Kunst … Ich <span class="gl" data-uk="цікавитися (чимось)" data-lemma="sich interessieren für (+ Akk.)">interessiere mich für</span> vieles. Was soll ich nur nehmen? Zum Glück darf man vorher eine <span class="gl" data-uk="пробне заняття" data-lemma="die Schnupperstunde, -n">Schnupperstunde</span> besuchen.</p>
+        <p>Am Montag war ich in der Kunst-AG. Frau Hoffmann <span class="gl" data-uk="керувати, вести (гурток)" data-lemma="leiten">leitet</span> sie schon seit zehn Jahren. Wir haben mit Kohle gezeichnet, und es war ruhig und schön. Aber ehrlich gesagt: Malen kann ich auch zu Hause.</p>
+        <p>Am Mittwoch hat mich Erik in die neue <span class="gl" data-uk="гурток робототехніки" data-lemma="die Robotik-AG, -s">Robotik-AG</span> mitgenommen. Herr Krüger, unser Informatiklehrer, leitet sie. Die Teilnehmer <span class="gl" data-uk="зустрічатися, збиратися" data-lemma="sich treffen (trifft sich), hat sich getroffen">treffen sich</span> jeden Mittwoch in der <span class="gl" data-uk="майстерня" data-lemma="die Werkstatt, -ä-en">Werkstatt</span>. Wir haben einen kleinen <span class="gl" data-uk="робот" data-lemma="der Roboter, -">Roboter</span> <span class="gl" data-uk="будувати, конструювати" data-lemma="bauen">gebaut</span> und ihn <span class="gl" data-uk="програмувати" data-lemma="programmieren">programmiert</span>. Er sollte bis zur Tür fahren — aber er ist immer im Kreis gefahren. Alle haben gelacht, und ich wollte unbedingt herausfinden, warum.</p>
+        <p>Am Donnerstag war ich noch in der Theater-AG. Die Gruppe übt gerade ein Weihnachtsstück, und ich durfte einen Wolf spielen. Es war lustig, aber nach zwei Stunden war ich ganz heiser. Theater ist wohl nichts für mich.</p>
+        <p>Am Freitag habe ich <span class="gl" data-uk="вирішити (обрати)" data-lemma="sich entscheiden für (+ Akk.), hat sich entschieden">mich</span> dann <span class="gl" data-uk="вирішити (обрати)" data-lemma="sich entscheiden für (+ Akk.), hat sich entschieden">entschieden</span> — für die Robotik-AG! Mama war überrascht: „Du? Mit Computern?“ Aber ich finde es spannend, etwas ganz Neues <span class="gl" data-uk="знайомитися, пізнавати" data-lemma="kennenlernen">kennenzulernen</span>. Und unser Roboter fährt jetzt geradeaus. Na ja, fast.</p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">Reflexive Verben · Vorschläge machen</h2>
+      <p class="lead">Українське «-ся» (цікавитися, зустрічатися) німецькою — займенник <b>sich</b>, і він змінюється за особами: ich interessiere <b>mich</b>, du interessierst <b>dich</b>. Багато таких дієслів мають сталий прийменник.</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. sich — за особами</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Person</th><th>sich interessieren für</th></tr>
+          <tr><td>ich</td><td>interessiere <strong>mich</strong> für …</td></tr>
+          <tr><td>du</td><td>interessierst <strong>dich</strong> für …</td></tr>
+          <tr><td>er / sie / es</td><td>interessiert <strong>sich</strong> für …</td></tr>
+          <tr><td>wir</td><td>interessieren <strong>uns</strong> für …</td></tr>
+          <tr><td>ihr</td><td>interessiert <strong>euch</strong> für …</td></tr>
+          <tr><td>sie / Sie</td><td>interessieren <strong>sich</strong> für …</td></tr>
+        </table></div>
+        <div class="merke">Сталі прийменники: sich interessieren <b>für</b> + Akk. · sich beschäftigen <b>mit</b> + Dat. · sich entscheiden <b>für</b> + Akk. · sich treffen (<b>mit</b> + Dat.).</div>
+        <div class="merke">Perfekt — з <b>haben</b>: Ich habe <b>mich</b> für die Robotik-AG entschieden. Інфінітив з zu: Es ist wichtig, <b>sich</b> regelmäßig zu treffen.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. Запропонувати, погодитися, відмовитися</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th></th><th>Redemittel</th></tr>
+          <tr><td>💡 Vorschlag</td><td>Ich schlage vor, … <strong>zu</strong> … · Wie wäre es mit …? · Lass uns doch …!</td></tr>
+          <tr><td>👍 Ja</td><td>Gute Idee! · Ich bin dafür. · Einverstanden! · Ich bin dabei!</td></tr>
+          <tr><td>👎 Nein</td><td>Ich bin dagegen. · Ich habe keine Lust, … <strong>zu</strong> … · Ich möchte lieber …</td></tr>
+        </table></div>
+        <div class="merke">Після <b>Wie wäre es mit</b> — Dativ: Wie wäre es mit <b>der</b> Theater-AG? <b>dem</b> Orchester?</div>
+        <div class="merke">Відмовляти ввічливо: спершу щось хороше, потім «але»: Die Idee ist gut, <b>aber</b> ich möchte lieber …</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. Типові помилки</p>
+        <p>✗ Ich interessiere mich auf Robotik. → ✓ Ich interessiere mich <b>für</b> Robotik.</p>
+        <p>✗ Wir treffen sich jeden Mittwoch. → ✓ Wir treffen <b>uns</b> jeden Mittwoch.</p>
+        <p>✗ Ich interessiere für Musik. → ✓ Ich interessiere <b>mich</b> für Musik. <i>(без sich — інше значення)</i></p>
+        <p>✗ Ich bin entschieden für Theater. → ✓ Ich habe <b>mich</b> für Theater <b>entschieden</b>.</p>
+        <p>✗ Wie wäre es mit die Koch-AG? → ✓ Wie wäre es mit <b>der</b> Koch-AG?</p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: лексика — картинка → гурток ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Welche AG ist das?</h2>
+      <p class="lead">Який це гурток? Вибери назву.</p>
+      <div class="card" id="ub1-pic"></div>
+    </section>
+
+    <!-- ===== Üb. 2: сортування фраз ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Vorschlag, ja oder nein?</h2>
+      <p class="lead">Розклади вислови: це пропозиція, згода чи відмова?</p>
+      <div class="card" id="ub2-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 3: sich і zu ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">sich und zu</h2>
+      <p class="lead">Впиши зворотний займенник (mich, dich, sich, uns, euch) або інфінітив з дужок у потрібній формі.</p>
+      <div class="card" id="ub3-list">
+        <div class="fill-item"><span class="num">1)</span> Greta interessiert <input type="text" class="blank-input inline" data-ans="sich"> für Robotik.</div>
+        <div class="fill-item"><span class="num">2)</span> Wir treffen <input type="text" class="blank-input inline" data-ans="uns"> jeden Mittwoch in der Werkstatt.</div>
+        <div class="fill-item"><span class="num">3)</span> Ich beschäftige <input type="text" class="blank-input inline" data-ans="mich"> gern mit Fotografie.</div>
+        <div class="fill-item"><span class="num">4)</span> Wofür interessierst du <input type="text" class="blank-input inline" data-ans="dich">?</div>
+        <div class="fill-item"><span class="num">5)</span> Habt ihr <input type="text" class="blank-input inline" data-ans="euch"> schon für eine AG entschieden?</div>
+        <div class="fill-item"><span class="num">6)</span> Hast du Lust, in der Theater-AG <input type="text" class="blank-input inline" data-ans="mitzumachen">? (mitmachen)</div>
+        <div class="fill-item"><span class="num">7)</span> Ich schlage vor, eine Kletter-AG <input type="text" class="blank-input inline" data-ans="zu gründen">. (gründen)</div>
+        <div class="fill-item"><span class="num">8)</span> Es ist spannend, etwas Neues <input type="text" class="blank-input inline" data-ans="auszuprobieren">. (ausprobieren)</div>
+        <div class="fill-item"><span class="num">9)</span> Frau Hoffmann möchte die Kunst-AG noch lange <input type="text" class="blank-input inline" data-ans="leiten">. (leiten)</div>
+        <div class="fill-item"><span class="num">10)</span> Erik hat vor, einen neuen Roboter <input type="text" class="blank-input inline" data-ans="zu bauen">. (bauen)</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4: розмова з керівником гуртка ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Anmeldung zur Robotik-AG</h2>
+      <p class="lead">Ти хочеш записатися до гуртка робототехніки й говориш з паном Крюґером. Вибирай доречну й правильну відповідь.</p>
+      <div class="card" id="ub4-chat"></div>
+    </section>
+
+    <!-- ===== HÖREN — власний діалог, озвучений синтезатором ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Eine neue AG?</h2>
+      <p class="lead">Ерік питає Дарину, який гурток вона обрала. Послухай діалог (можна двічі) і дай відповіді. Текст діалогу відкривається внизу — але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l3-b-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Erik:</b> Hi, Daryna! Hast du schon eine AG gewählt? Bis Freitag müssen wir uns entscheiden.<br>
+          <b>Daryna:</b> Noch nicht. Ehrlich gesagt gefällt mir keine richtig.<br>
+          <b>Erik:</b> Wie wäre es mit der Robotik-AG? Greta macht auch mit.<br>
+          <b>Daryna:</b> Nein, danke. Wir sitzen den ganzen Tag am Tisch. Nach der Schule möchte ich mich bewegen.<br>
+          <b>Erik:</b> Dann nimm doch die Tanz-AG! Du tanzt doch super.<br>
+          <b>Daryna:</b> Die Tanz-AG ist am Mittwoch, und da habe ich schon meinen Kletterkurs. Weißt du, was ich wirklich will? Eine Kletter-AG an der Schule!<br>
+          <b>Erik:</b> Eine Kletter-AG? Die gibt es bei uns aber nicht.<br>
+          <b>Daryna:</b> Genau. Ich schlage vor, wir gründen sie! In der Turnhalle gibt es doch eine Kletterwand.<br>
+          <b>Erik:</b> Gute Idee, aber eine AG braucht einen Leiter. Wer soll sie leiten?<br>
+          <b>Daryna:</b> Frau Schulz! Sie klettert in ihrer Freizeit selbst, das hat sie mir erzählt.<br>
+          <b>Erik:</b> Wirklich? Dann frag sie doch morgen! Ich bin dabei — donnerstags habe ich Zeit.<br>
+          <b>Daryna:</b> Super! Timur fragen wir auch. Wir brauchen mindestens acht Teilnehmer.<br>
+          <b>Erik:</b> Acht? Dann haben wir noch viel zu tun!
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN — 🎤 + говоріння зі зразком ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">AGs in deiner Schule</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Welche AGs gibt es in deiner Schule? Welche sind besonders beliebt?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">In unserer Schule gibt es eine Fußball-AG, einen Chor, eine Theater-AG und eine Schach-AG. Besonders beliebt ist die Fußball-AG — da sind fast dreißig Kinder.</div>
+        </div>
+        <div class="qa">
+          <label>2. Besuchst du eine AG oder einen Kurs? Was macht ihr dort? Wie oft trefft ihr euch?</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Ich besuche die Foto-AG. Wir treffen uns jeden Dienstag nach der sechsten Stunde. Wir fotografieren in der Stadt und lernen, Bilder am Computer zu bearbeiten.</div>
+        </div>
+        <div class="qa">
+          <label>3. Wofür interessierst du dich? Welche AG passt zu dir?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Ich interessiere mich für Tiere und Pflanzen. Die Naturschutz-AG passt am besten zu mir. Ich möchte lernen, wie man die Natur schützt.</div>
+        </div>
+        <div class="qa">
+          <label>4. Welche neue AG möchtest du an deiner Schule gründen? Warum?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Ich schlage vor, eine Koch-AG zu gründen. Viele Kinder können nicht kochen, und es ist wichtig, das zu lernen. Wir können jede Woche ein Gericht aus einem anderen Land kochen.</div>
+        </div>
+        <div class="qa">
+          <label>5. Rollenspiel: Mach deinem Partner / deiner Partnerin einen Vorschlag für eine AG. Er / Sie stimmt zu oder lehnt ab.</label>
+          <button class="btn secondary" type="button" data-reveal="spr5">Muster zeigen</button>
+          <div class="reveal" id="spr5">— Wie wäre es mit der Theater-AG? — Die Idee ist gut, aber ich spiele nicht gern Theater. Ich möchte lieber in den Chor gehen. — Na gut, dann komme ich mit. Ich singe auch gern! — Super, einverstanden!</div>
+        </div>
+        <div class="qa">
+          <label>6. Was ist wichtiger nach der Schule: Bewegung, Kreativität oder Ruhe? Warum?</label>
+          <button class="btn secondary" type="button" data-reveal="spr6">Muster zeigen</button>
+          <div class="reveal" id="spr6">Für mich ist Bewegung am wichtigsten. Wir sitzen den ganzen Tag in der Schule. Wenn ich nach dem Unterricht Sport mache, kann ich mich am Abend besser konzentrieren.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN — лист за планом ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Eine Antwort an Greta</h2>
+      <p class="lead">Грета пише: «Я записалася на робототехніку! А ти ходиш на якийсь гурток? Розкажи!» Напиши відповідь на 60–80 слів за планом:</p>
+      <div class="card">
+        <p>1) привітання і реакція на її вибір; 2) який гурток / курс ти відвідуєш або хочеш відвідувати; 3) чим ви займаєтеся, хто веде, коли зустрічаєтеся; 4) чому тебе це цікавить (sich interessieren für); 5) пропозиція Греті (Wie wäre es mit …? / Ich schlage vor, … zu …); 6) прощання.</p>
+        <p class="beispiel">Liebe Greta, · Toll, dass … · Ich besuche … · Wir treffen uns … · Ich interessiere mich für … · Wie wäre es mit …? · Viele Grüße</p>
+        <div class="qa">
+          <label for="schreiben-text">Deine Nachricht</label>
+          <textarea id="schreiben-text" rows="10" placeholder="Liebe Greta,&#10;toll, dass …"
+            data-words="60-80"
+            data-must="uns/mich|für|Viele Grüße/Liebe Grüße"
+            data-check="Привітання і реакція|Твій гурток або курс|Що робите, хто веде, коли зустрічаєтеся|sich interessieren für …|Пропозиція (Wie wäre es mit … / Ich schlage vor, … zu …)|Прощання й підпис"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Liebe Greta,<br>toll, dass du jetzt Roboter baust! Ich besuche den Chor in unserer Schule. Frau Kovalenko leitet ihn, und wir treffen uns jeden Montag und Donnerstag. Wir singen ukrainische und englische Lieder. Ich interessiere mich sehr für Musik, und im Chor habe ich viele Freunde. Wie wäre es mit einem Videoanruf? Dann singen wir dir etwas vor, und du zeigst uns deinen Roboter!<br>Viele Grüße<br>Solomija</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — режим контрольної: одна спроба, лише ця вкладка йде в бал ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Wir treffen
+          <select class="blank inline" data-ans="uns"><option value="">—</option><option>sich</option><option>uns</option><option>euch</option></select> jeden Donnerstag.</div>
+        <div class="fill-item"><span class="num">8)</span> Ich interessiere mich
+          <select class="blank inline" data-ans="für"><option value="">—</option><option>auf</option><option>mit</option><option>für</option></select> Fotografie.</div>
+        <div class="fill-item"><span class="num">9)</span> Wie wäre es mit
+          <select class="blank inline" data-ans="dem"><option value="">—</option><option>das</option><option>dem</option><option>den</option></select> Orchester?</div>
+        <div class="fill-item"><span class="num">10)</span> Ich schlage vor, eine Kletter-AG
+          <select class="blank inline" data-ans="zu gründen"><option value="">—</option><option>gründen</option><option>zu gründen</option><option>gegründet</option></select>.</div>
+        <div class="fill-item"><span class="num">11)</span> Greta hat
+          <select class="blank inline" data-ans="sich"><option value="">—</option><option>mich</option><option>sich</option><option>ihr</option></select> für die Robotik-AG entschieden.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-7-klas-7-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-7-klas-7-rik";
+  const KN_UNIT = "l3-b";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "In der siebten Klasse muss jeder eine AG wählen.", a: "r"},
+    {s: "Vor der Wahl darf man eine Schnupperstunde besuchen.", a: "r"},
+    {s: "Die Kunst-AG ist neu an der Schule.", a: "f"},
+    {s: "In der Kunst-AG hat Greta mit Kohle gezeichnet.", a: "r"},
+    {s: "Herr Krüger leitet die Robotik-AG.", a: "r"},
+    {s: "Der Roboter ist sofort bis zur Tür gefahren.", a: "f"},
+    {s: "In der Theater-AG hat Greta eine Prinzessin gespielt.", a: "f"},
+    {s: "Nach der Theaterprobe war Greta heiser.", a: "r"},
+    {s: "Greta hat sich für die Kunst-AG entschieden.", a: "f"},
+    {s: "Gretas Mama war über die Entscheidung überrascht.", a: "r"}
+  ]);
+
+  // Üb. 1: картинка → гурток
+  buildPicture('ub1-pic', [
+    {pic: "🤖", opts: ["die Robotik-AG", "die Theater-AG", "das Orchester"], correct: "die Robotik-AG"},
+    {pic: "🎭", opts: ["die Naturschutz-AG", "die Theater-AG", "die Koch-AG"], correct: "die Theater-AG"},
+    {pic: "🌱🦔", opts: ["die Foto-AG", "die Robotik-AG", "die Naturschutz-AG"], correct: "die Naturschutz-AG"},
+    {pic: "🎻🎺", opts: ["das Orchester", "die Kunst-AG", "die Schach-AG"], correct: "das Orchester"},
+    {pic: "📷", opts: ["die Foto-AG", "die Koch-AG", "die Kletter-AG"], correct: "die Foto-AG"},
+    {pic: "🍳👩‍🍳", opts: ["die Theater-AG", "die Koch-AG", "das Orchester"], correct: "die Koch-AG"},
+    {pic: "🧗", opts: ["die Schach-AG", "die Kunst-AG", "die Kletter-AG"], correct: "die Kletter-AG"},
+    {pic: "🎨🖌️", opts: ["die Kunst-AG", "die Foto-AG", "die Robotik-AG"], correct: "die Kunst-AG"},
+    {pic: "🔧🪚", opts: ["die Werkstatt", "die Schnupperstunde", "der Vorschlag"], correct: "die Werkstatt"}
+  ]);
+
+  // Üb. 2: сортування фраз
+  buildSort('ub2-sort', {
+    buckets: ["💡 Vorschlag", "👍 ja", "👎 nein"],
+    items: [
+      {t: "Ich schlage vor, …", b: "💡 Vorschlag"},
+      {t: "Wie wäre es mit …?", b: "💡 Vorschlag"},
+      {t: "Lass uns doch …!", b: "💡 Vorschlag"},
+      {t: "Hast du Lust, … zu …?", b: "💡 Vorschlag"},
+      {t: "Gute Idee!", b: "👍 ja"},
+      {t: "Ich bin dafür.", b: "👍 ja"},
+      {t: "Einverstanden!", b: "👍 ja"},
+      {t: "Ich bin dabei!", b: "👍 ja"},
+      {t: "Ich bin dagegen.", b: "👎 nein"},
+      {t: "Ich habe keine Lust.", b: "👎 nein"},
+      {t: "Ich möchte lieber …", b: "👎 nein"},
+      {t: "Das ist nichts für mich.", b: "👎 nein"}
+    ]
+  });
+
+  // Üb. 3
+  wireBlanks('ub3');
+
+  // Üb. 4: розмова з керівником
+  buildChat('ub4-chat', {
+    partner: "Herr Krüger",
+    steps: [
+      {them: "Hallo! Du möchtest dich für die Robotik-AG anmelden? Wie heißt du, und in welche Klasse gehst du?"},
+      {you: ["Ich heiße Andrij und gehe in die Klasse 7a.", "Ich heiße Andrij und ich bin 7a.", "Ich heiße Andrij, die Klasse ist mich 7a."], correct: 0},
+      {them: "Schön. Warum interessierst du dich für Robotik?"},
+      {you: ["Ich interessiere für Computer.", "Ich interessiere mich für Computer und baue gern Modelle.", "Ich interessiere mich auf Computer."], correct: 1},
+      {them: "Wir treffen uns jeden Mittwoch um halb drei. Passt dir das?"},
+      {you: ["Ja, mittwochs habe ich Zeit.", "Ja, ich treffe mittwochs.", "Gute Besserung!"], correct: 0},
+      {them: "Hast du schon einmal programmiert?"},
+      {you: ["Nein, aber ich habe vor, es zu lernen.", "Nein, aber ich habe vor, es lernen.", "Nein, ich habe vor zu es lernen."], correct: 0},
+      {them: "Kein Problem, das lernen wir hier zusammen. Möchtest du zuerst eine Schnupperstunde besuchen?"},
+      {you: ["Ich bin dagegen, danke.", "Ja, gern! Ich bin dabei.", "Wie wäre es mit mir?"], correct: 1},
+      {them: "Dann bis Mittwoch in der Werkstatt!"},
+      {you: ["Vielen Dank, bis Mittwoch!", "Herzlichen Glückwunsch!", "Guten Appetit!"], correct: 0}
+    ]
+  });
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Bis wann müssen Erik und Daryna eine AG wählen?", opts: ["bis Montag", "bis Freitag", "bis Mittwoch"], correct: "bis Freitag"},
+    {q: "Warum möchte Daryna nicht in die Robotik-AG?", opts: ["Sie möchte sich nach der Schule bewegen.", "Sie mag Greta nicht.", "Die AG ist zu teuer."], correct: "Sie möchte sich nach der Schule bewegen."},
+    {q: "Warum kann Daryna die Tanz-AG nicht besuchen?", opts: ["Sie tanzt nicht gern.", "Am Mittwoch hat sie schon ihren Kletterkurs.", "Die Tanz-AG ist voll."], correct: "Am Mittwoch hat sie schon ihren Kletterkurs."},
+    {q: "Welche AG möchte Daryna gründen?", opts: ["eine Tanz-AG", "eine Theater-AG", "eine Kletter-AG"], correct: "eine Kletter-AG"},
+    {q: "Was gibt es in der Turnhalle?", opts: ["eine Kletterwand", "eine Werkstatt", "einen Roboter"], correct: "eine Kletterwand"},
+    {q: "Wer soll die neue AG leiten?", opts: ["Herr Krüger", "Frau Schulz", "Herr Brandt"], correct: "Frau Schulz"},
+    {q: "Wann hat Erik Zeit?", opts: ["donnerstags", "mittwochs", "freitags"], correct: "donnerstags"},
+    {q: "Wie viele Teilnehmer braucht die AG mindestens?", opts: ["sechs", "acht", "zehn"], correct: "acht"}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Ich interessiere mich für Robotik.", uk: "Я цікавлюся робототехнікою."},
+    {say: "Wir treffen uns jeden Mittwoch.", uk: "Ми збираємося щосереди."},
+    {say: "Wie wäre es mit der Theater-AG?", uk: "А як щодо театрального гуртка?"},
+    {say: "Gute Idee! Ich bin dabei!", uk: "Гарна ідея! Я з вами!"},
+    {say: "Ich habe mich für die Robotik-AG entschieden.", uk: "Я обрав / обрала гурток робототехніки."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Vor der Wahl kann man eine … besuchen und die AG kennenlernen.", opts: ["Schnupperstunde", "Werkstatt", "Tombola"], correct: "Schnupperstunde"},
+    {q: "In der … baut und programmiert man Roboter.", opts: ["Theater-AG", "Robotik-AG", "Naturschutz-AG"], correct: "Robotik-AG"},
+    {q: "Frau Hoffmann … die Kunst-AG.", opts: ["leitet", "gründet", "trifft"], correct: "leitet"},
+    {q: "„Ich bin dabei!“ bedeutet:", opts: ["Ich mache mit.", "Ich bin dagegen.", "Ich habe keine Zeit."], correct: "Ich mache mit."},
+    {q: "Ihr trefft … jeden Mittwoch.", opts: ["sich", "uns", "euch"], correct: "euch"},
+    {q: "Welche Antwort lehnt ab?", opts: ["Einverstanden!", "Ich bin dafür.", "Das ist nichts für mich."], correct: "Das ist nichts für mich."}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Ich interessiere mich auf Musik.", wrong: 3, fix: "für"},
+    {s: "Wir haben uns für die Theater-AG entschieden.", ok: true},
+    {s: "Die Teilnehmer treffen uns in der Werkstatt.", wrong: 3, fix: "sich"},
+    {s: "Wie wäre es mit die Koch-AG?", wrong: 4, fix: "der"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🤖', '🎭', '🧗', '🎨']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
