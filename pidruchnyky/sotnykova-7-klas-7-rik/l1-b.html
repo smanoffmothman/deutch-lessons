@@ -203,8 +203,8 @@
     <!-- ===== HÖREN — власний діалог, озвучений синтезатором ===== -->
     <section class="panel" id="panel-hoeren">
       <p class="section-label">Hören</p>
-      <h2 class="panel-title">Hast du am Samstag Zeit?</h2>
-      <p class="lead">Ерік дзвонить Греті й кличе її в кіно. Послухай діалог (можна двічі) і дай відповіді. Текст діалогу відкривається внизу — але спершу спробуй без нього.</p>
+      <h2 class="panel-title">Ich brauche einen Rat</h2>
+      <p class="lead">Ерік дзвонить Греті: мама каже, що він мало допомагає вдома. Послухай діалог (можна двічі) і дай відповіді. Текст діалогу відкривається внизу — але спершу спробуй без нього.</p>
       <div class="player">
         <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
         <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
@@ -216,20 +216,21 @@
       <div class="qa" data-no-report>
         <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
         <div class="reveal" id="hoeren-transkript">
-          <b>Erik:</b> Hi, Greta! Hast du am Samstag Zeit? Im Kino läuft ein neuer Film.<br>
-          <b>Greta:</b> Am Samstag? Puh, schwierig. Am Samstagvormittag räumen wir immer die ganze Wohnung auf.<br>
+          <b>Erik:</b> Hi, Greta! Hast du kurz Zeit? Ich brauche einen Rat.<br>
+          <b>Greta:</b> Klar! Was ist los?<br>
+          <b>Erik:</b> Meine Mama sagt, ich helfe zu wenig im Haushalt. Wie macht ihr das bei euch?<br>
+          <b>Greta:</b> Wir haben jetzt einen Plan am Kühlschrank. Jeden Samstagvormittag räumen wir die ganze Wohnung auf.<br>
           <b>Erik:</b> Jeden Samstag?<br>
-          <b>Greta:</b> Ja, einmal in der Woche. Wir haben jetzt einen Plan. Diese Woche sauge ich Staub und putze die Fenster in meinem Zimmer.<br>
+          <b>Greta:</b> Ja, einmal in der Woche. Diese Woche sauge ich Staub und putze die Fenster in meinem Zimmer.<br>
           <b>Erik:</b> Und Lotte?<br>
           <b>Greta:</b> Lotte gießt die Blumen und deckt den Tisch. Sie ist ja erst acht.<br>
-          <b>Erik:</b> Bei uns ist das anders. Meine Mama macht fast alles. Ich bringe nur den Müll weg — und das auch nicht regelmäßig.<br>
+          <b>Erik:</b> Bei uns macht Mama fast alles. Ich bringe nur den Müll weg — und das auch nicht regelmäßig.<br>
           <b>Greta:</b> Nur den Müll? Das ist aber wenig!<br>
           <b>Erik:</b> Ich weiß … Na gut, manchmal spüle ich auch das Geschirr. Aber Bügeln hasse ich!<br>
-          <b>Greta:</b> Bügeln mag ich auch nicht. Aber beim Kochen helfe ich gern. Sag mal, wann beginnt der Film?<br>
-          <b>Erik:</b> Um drei. Wann bist du fertig?<br>
-          <b>Greta:</b> Um eins. Aber dann muss ich noch mit Krümel Gassi gehen.<br>
-          <b>Erik:</b> Weißt du was? Ich hole dich um zwei ab, wir gehen zusammen mit Krümel Gassi, und dann fahren wir zum Kino.<br>
-          <b>Greta:</b> Super Idee! Bis Samstag!
+          <b>Greta:</b> Bügeln mag ich auch nicht. Aber beim Kochen helfe ich gern. Mach doch auch einen Plan mit deiner Mama!<br>
+          <b>Erik:</b> Gute Idee. Heute bringe ich den Müll weg, und morgen räume ich mein Zimmer auf. Versprochen!<br>
+          <b>Greta:</b> Und heute Abend gehst du mit mir und Krümel Gassi — dann kannst du gleich üben!<br>
+          <b>Erik:</b> Haha, okay. Bis später!
         </div>
       </div>
     </section>
@@ -270,9 +271,9 @@
           <div class="reveal" id="spr5">Machst du zu Hause mit? Wer kauft bei euch ein? Wie oft räumst du dein Zimmer auf? Was machst du nicht gern?</div>
         </div>
         <div class="qa">
-          <label>6. Rollenspiel: Du möchtest am Samstag ins Kino, aber du musst zu Hause helfen. Sprich mit deiner Mutter / deinem Vater.</label>
+          <label>6. Rollenspiel: Du möchtest nach der Schule länger Fußball spielen, aber heute musst du das Geschirr spülen. Sprich mit deiner Mutter / deinem Vater.</label>
           <button class="btn secondary" type="button" data-reveal="spr6">Muster zeigen</button>
-          <div class="reveal" id="spr6">— Mama, darf ich am Samstag mit Erik ins Kino? — Am Samstag räumen wir doch auf! — Ich räume am Freitag mein Zimmer auf und bringe den Müll weg. Ist das okay? — Na gut, einverstanden.</div>
+          <div class="reveal" id="spr6">— Mama, darf ich heute erst um sieben nach Hause kommen? Wir spielen Fußball. — Aber heute musst du doch das Geschirr spülen! — Ich spüle es nach dem Abendessen und bringe auch den Müll weg. Ist das okay? — Na gut, einverstanden.</div>
         </div>
       </div>
     </section>
@@ -434,14 +435,14 @@
 
   // Hören
   buildQuiz('hoeren-quiz', [
-    {q: "Was möchte Erik am Samstag machen?", opts: ["Fußball spielen", "ins Kino gehen", "einkaufen gehen"], correct: "ins Kino gehen"},
+    {q: "Warum ruft Erik Greta an?", opts: ["Er will ins Kino gehen.", "Er braucht einen Rat.", "Er hat seine Hausaufgaben vergessen."], correct: "Er braucht einen Rat."},
     {q: "Was macht Gretas Familie jeden Samstagvormittag?", opts: ["Sie räumt die Wohnung auf.", "Sie kauft ein.", "Sie besucht Opa."], correct: "Sie räumt die Wohnung auf."},
     {q: "Was macht Greta diese Woche?", opts: ["Sie bügelt und kocht.", "Sie gießt die Blumen.", "Sie saugt Staub und putzt Fenster."], correct: "Sie saugt Staub und putzt Fenster."},
     {q: "Was macht Lotte im Haushalt?", opts: ["Sie gießt die Blumen und deckt den Tisch.", "Sie bringt den Müll weg.", "Sie spült das Geschirr."], correct: "Sie gießt die Blumen und deckt den Tisch."},
     {q: "Wer macht bei Erik fast alles im Haushalt?", opts: ["sein Vater", "seine Mutter", "seine Oma"], correct: "seine Mutter"},
     {q: "Was hasst Erik?", opts: ["Kochen", "Staub saugen", "Bügeln"], correct: "Bügeln"},
-    {q: "Wann ist Greta mit der Hausarbeit fertig?", opts: ["um zwei", "um eins", "um drei"], correct: "um eins"},
-    {q: "Was macht Erik um zwei?", opts: ["Er holt Greta ab.", "Er geht allein ins Kino.", "Er räumt sein Zimmer auf."], correct: "Er holt Greta ab."}
+    {q: "Was rät Greta Erik?", opts: ["mehr bügeln", "einen Plan mit seiner Mama machen", "nie mehr den Müll wegbringen"], correct: "einen Plan mit seiner Mama machen"},
+    {q: "Was will Erik morgen machen?", opts: ["ins Kino gehen", "sein Zimmer aufräumen", "die Fenster putzen"], correct: "sein Zimmer aufräumen"}
   ]);
 
   // Sprechen: 🎤

@@ -255,7 +255,7 @@ const PIDRUCHNYKY = [
       { id: "l1", label: "1", nazva: "Familie und Haushalt", storinky: "5–26", dity: [
         { id: "l1-a", label: "A", nazva: "Familienferien", storinky: "6–11", typ: "vpravy", gram: ["wechselpraepositionen", "praep-dativ"], opublikovano: 1 },
         { id: "l1-b", label: "B", nazva: "Ich mache im Haushalt mit", storinky: "12–16", typ: "vpravy", gram: ["trennbare-verben"], opublikovano: 2 },
-        { id: "l1-c", label: "C", nazva: "Familientraditionen", storinky: "17–21", typ: "vpravy", gram: ["futur"] },
+        { id: "l1-c", label: "C", nazva: "Familientraditionen", storinky: "17–21", typ: "vpravy", gram: ["futur"], opublikovano: 3 },
         { id: "l1-d", label: "D", nazva: "Wiederholung", storinky: "22–23", typ: "povtorennya", gram: ["wechselpraepositionen", "praep-dativ", "futur"] },
         { id: "l1-e", label: "E", nazva: "Geschichtenzeit", storinky: "24", typ: "chytannya" },
         { id: "l1-f", label: "F", nazva: "Projektarbeit", storinky: "25", typ: "bez-storinky" },
