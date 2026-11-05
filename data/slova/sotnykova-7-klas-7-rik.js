@@ -104,5 +104,21 @@
   {de: "Ostern", uk: "Великдень", r: "l1-c", note: "без артикля: Wir feiern Ostern. — an / zu Ostern"},
   {de: "Weihnachten", uk: "Різдво", r: "l1-c", note: "без артикля: zu / an Weihnachten"},
   {de: "die Kerze, -n", uk: "свічка", r: "l1-c"},
-  {de: "werden (wird) + Infinitiv", uk: "майбутній час (Futur I): буду …, будемо …", r: "l1-c", note: "Oma wird uns besuchen. — Бабуся відвідає нас."}
+  {de: "werden (wird) + Infinitiv", uk: "майбутній час (Futur I): буду …, будемо …", r: "l1-c", note: "Oma wird uns besuchen. — Бабуся відвідає нас."},
+  // ---- Lektion 1 · Modul E: Geschichtenzeit ----
+  {de: "der Kleingarten, -ä", uk: "садова ділянка (у місті)", r: "l1-e", note: "у Лейпцигу їх ще називають Schrebergarten"},
+  {de: "der Koffer, -", uk: "валіза", r: "l1-e"},
+  {de: "der Honig", uk: "мед", r: "l1-e"},
+  {de: "aufwachen, ist aufgewacht", uk: "прокидатися", r: "l1-e"},
+  {de: "übersetzen", uk: "перекладати", r: "l1-e"},
+  {de: "die Dolmetscherin, -nen", uk: "перекладачка (усна)", r: "l1-e", note: "чол.: der Dolmetscher"},
+  {de: "sich verstehen, hat sich verstanden", uk: "розуміти одне одного", r: "l1-e", note: "Die beiden verstehen sich ohne Worte."},
+  {de: "zeigen auf (+ Akk.)", uk: "показувати на", r: "l1-e", note: "Opa zeigt auf die Tomaten."},
+  {de: "nicken", uk: "кивати", r: "l1-e"},
+  {de: "die Erde", uk: "земля, ґрунт", r: "l1-e"},
+  {de: "die Sonnenblume, -n", uk: "соняшник", r: "l1-e"},
+  {de: "die Sonnenblumenkerne (Pl.)", uk: "насіння соняшника", r: "l1-e"},
+  {de: "einpflanzen", uk: "висаджувати, садити", r: "l1-e"},
+  {de: "wachsen (wächst), ist gewachsen", uk: "рости", r: "l1-e"},
+  {de: "nass", uk: "мокрий", r: "l1-e", note: "nasse Augen — очі на мокрому місці"}
 ];
