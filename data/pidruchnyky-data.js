@@ -262,7 +262,7 @@ const PIDRUCHNYKY = [
         { id: "l1-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "26", typ: "bez-storinky" }
       ] },
       { id: "l2", label: "2", nazva: "Der Appetit kommt beim Essen", storinky: "27–44", dity: [
-        { id: "l2-a", label: "A", nazva: "Einkaufen und kochen", storinky: "28–31", typ: "vpravy", gram: ["artikel-gebrauch", "indefinitpronomen"] },
+        { id: "l2-a", label: "A", nazva: "Einkaufen und kochen", storinky: "28–31", typ: "vpravy", gram: ["artikel-gebrauch", "indefinitpronomen"], opublikovano: 6 },
         { id: "l2-b", label: "B", nazva: "Wir lernen kochen", storinky: "32–36", typ: "vpravy", gram: ["konditionalsaetze"] },
         { id: "l2-c", label: "C", nazva: "Wir decken den Tisch", storinky: "37–39", typ: "vpravy", gram: ["legen-liegen", "wechselpraepositionen"] },
         { id: "l2-d", label: "D", nazva: "Wiederholung", storinky: "40–41", typ: "povtorennya", gram: ["artikel-gebrauch", "konditionalsaetze", "wechselpraepositionen"] },
