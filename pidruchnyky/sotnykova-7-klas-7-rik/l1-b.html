@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 1, Modul B: Ich mache im Haushalt mit — Німецька мова 7 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 7 КЛАС</span>
+        <h1>Lektion 1 · Modul B: Ich mache im Haushalt mit</h1>
+        <p class="sub">Урок про хатні справи: прибирати, прати, пилососити, виносити сміття — і як часто ти це робиш. Відокремлювані дієслова (aufräumen, wegbringen, einkaufen) у різних часах і реченнях. Текст і діалог з озвученням, вправи, говоріння, письмо і підсумковий тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Was passt?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Verbformen</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Sätze</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Mama ruft an</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власний текст + вправа на розуміння ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Eine Woche ohne Mama</h2>
+      <p class="lead">Послухай і прочитай, як Грета, Лотте і тато цілий тиждень самі вели господарство. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l1-b-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Letzte Woche war Mama auf einer <span class="gl" data-uk="відрядження" data-lemma="die Dienstreise, -n">Dienstreise</span> in München. Vor der Abfahrt hat sie einen Plan an den Kühlschrank gehängt: Wer macht was im <span class="gl" data-uk="домашнє господарство" data-lemma="der Haushalt, -e">Haushalt</span>? „Ihr <span class="gl" data-uk="упоратися, встигнути" data-lemma="schaffen">schafft</span> das!“, hat sie gesagt. Papa hat gelacht: „Natürlich! Wir sind doch ein Team.“</p>
+        <p>Am Montag hat alles gut <span class="gl" data-uk="вдаватися, виходити" data-lemma="klappen">geklappt</span>. Papa hat Frühstück gemacht, ich habe den <span class="gl" data-uk="сміття" data-lemma="der Müll">Müll</span> <span class="gl" data-uk="відносити, виносити" data-lemma="wegbringen, hat weggebracht">weggebracht</span>, und Lotte hat <span class="gl" data-uk="застеляти ліжко" data-lemma="das Bett machen">ihr Bett gemacht</span> — zum ersten Mal ohne Hilfe! Nach der Schule bin ich mit Krümel <span class="gl" data-uk="вигулювати собаку" data-lemma="mit dem Hund Gassi gehen">Gassi gegangen</span>, und Papa hat im Supermarkt <span class="gl" data-uk="купувати, робити покупки" data-lemma="einkaufen">eingekauft</span>.</p>
+        <p>Am Mittwoch hat Papa die <span class="gl" data-uk="білизна; прання" data-lemma="die Wäsche">Wäsche</span> gewaschen: seine weißen Hemden — zusammen mit Lottes roten Socken. Danach waren alle Hemden rosa! Papa hat sie trotzdem <span class="gl" data-uk="прасувати" data-lemma="bügeln">gebügelt</span> und am Donnerstag ein rosa Hemd zur Arbeit getragen. „Das ist jetzt modern“, hat er gesagt.</p>
+        <p>Am Freitag ist Opa Helmut zu Besuch gekommen. An der Tür ist er stehen geblieben: „Was ist denn hier los?“ Überall lag Spielzeug, in der Küche stand <span class="gl" data-uk="брудний" data-lemma="schmutzig">schmutziges</span> <span class="gl" data-uk="посуд" data-lemma="das Geschirr">Geschirr</span>, und auf dem <span class="gl" data-uk="підлога" data-lemma="der Fußboden, -ö">Fußboden</span> waren überall Krümels Haare. Also haben wir alle zusammen <span class="gl" data-uk="прибирати" data-lemma="aufräumen">aufgeräumt</span>: Lotte hat ihr Spielzeug <span class="gl" data-uk="прибирати (на місце)" data-lemma="wegräumen">weggeräumt</span>, Papa hat <span class="gl" data-uk="пилососити" data-lemma="Staub saugen">Staub gesaugt</span>, ich habe die <span class="gl" data-uk="посудомийна машина" data-lemma="die Spülmaschine, -n">Spülmaschine</span> ausgeräumt, und Opa hat die Blumen <span class="gl" data-uk="поливати" data-lemma="gießen, hat gegossen">gegossen</span>. Die haben alle vergessen!</p>
+        <p>Am Samstag ist Mama zurückgekommen. Die Wohnung war <span class="gl" data-uk="чистий" data-lemma="sauber">sauber</span>, Lotte hat <span class="gl" data-uk="накривати на стіл" data-lemma="den Tisch decken">den Tisch gedeckt</span>, und im Ofen hat eine Pizza gewartet. Mama hat gelächelt — bis sie Papas rosa Hemd gesehen hat. Der Plan hängt immer noch am Kühlschrank, und jetzt <span class="gl" data-uk="брати участь, долучатися (mitmachen)" data-lemma="mitmachen">macht</span> bei uns jeder im Haushalt mit. Nur die Wäsche wäscht Papa nie wieder allein.</p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">Trennbare Verben: aufräumen, wegbringen, einkaufen</h2>
+      <p class="lead">Українське «прибирати» — одне слово. Німецьке <b>auf|räumen</b> — дієслово з <b>відокремлюваним префіксом</b>: у простому реченні префікс «відривається» й іде в самий кінець. Між дієсловом і префіксом стоїть усе інше — виходить «рамка».</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. Префікс у кінці речення</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Дієслово</th><th>Речення (Präsens)</th></tr>
+          <tr><td>auf|räumen</td><td>Ich <strong>räume</strong> mein Zimmer <strong>auf</strong>.</td></tr>
+          <tr><td>weg|bringen</td><td><strong>Bringst</strong> du den Müll <strong>weg</strong>?</td></tr>
+          <tr><td>ein|kaufen</td><td>Papa <strong>kauft</strong> samstags <strong>ein</strong>.</td></tr>
+          <tr><td>ab|holen</td><td>Opa <strong>holt</strong> Lotte <strong>ab</strong>.</td></tr>
+          <tr><td>mit|machen</td><td>Jeder <strong>macht</strong> <strong>mit</strong>.</td></tr>
+        </table></div>
+        <div class="merke">Типові відокремлювані префікси: <b>ab-, an-, auf-, aus-, ein-, mit-, weg-, zu-, zurück-, fern-</b>. Наголос — завжди на префіксі: <b>auf</b>räumen, <b>weg</b>bringen.</div>
+        <div class="merke">Наказовий спосіб — так само: <b>Bring</b> bitte den Müll <b>weg</b>! <b>Räumt</b> euer Zimmer <b>auf</b>!</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. Коли префікс НЕ відривається</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Конструкція</th><th>Приклад</th></tr>
+          <tr><td>Modalverb + Infinitiv</td><td>Ich muss heute <strong>aufräumen</strong>.</td></tr>
+          <tr><td>Perfekt: -ge- всередині</td><td>Ich habe den Müll <strong>weg<u>ge</u>bracht</strong>.</td></tr>
+          <tr><td>Nebensatz (dass, weil)</td><td>…, weil Papa heute <strong>einkauft</strong>.</td></tr>
+        </table></div>
+        <div class="merke">Partizip II: <b>префікс + ge + основа</b>: auf<b>ge</b>räumt, ein<b>ge</b>kauft, ab<b>ge</b>holt, weg<b>ge</b>bracht, aus<b>ge</b>räumt. Не «geaufräumt»!</div>
+        <div class="merke">У підрядному реченні дієслово стоїть у кінці — і тоді префікс знову з ним разом: Mama sagt, dass Erik den Müll nicht <b>wegbringt</b>.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. Як часто?</p>
+        <p class="beispiel"><b>jeden Tag</b> · <b>zweimal am Tag</b> · <b>einmal in der Woche</b> · <b>einmal im Monat</b> · <b>regelmäßig</b> · <b>oft</b> · <b>manchmal</b> · <b>selten</b> · <b>nie</b></p>
+        <div class="merke">Слово частоти зазвичай стоїть одразу після дієслова або на початку речення: Ich bringe <b>jeden Tag</b> den Müll weg. = <b>Jeden Tag</b> bringe ich den Müll weg.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">4. Типові помилки</p>
+        <p>✗ Ich aufräume mein Zimmer. → ✓ Ich <b>räume</b> mein Zimmer <b>auf</b>.</p>
+        <p>✗ Ich räume auf mein Zimmer. → ✓ Ich räume mein Zimmer <b>auf</b>. <i>(префікс — у самому кінці)</i></p>
+        <p>✗ Ich habe geaufräumt. → ✓ Ich habe <b>aufgeräumt</b>.</p>
+        <p>✗ Ich muss den Müll bringen weg. → ✓ Ich muss den Müll <b>wegbringen</b>.</p>
+        <p>✗ Ich habe den Müll weggebringt. → ✓ Ich habe den Müll <b>weggebracht</b>. <i>(bringen — неправильне дієслово)</i></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: словосполучення ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Was passt?</h2>
+      <p class="lead">Що з чим уживається? До кожного слова вибери дієслово.</p>
+      <div class="card" id="ub1-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2: перетворення речень ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Verbformen</h2>
+      <p class="lead">Перепиши речення так, як сказано в завданні. Пиши ціле речення.</p>
+      <div class="card" id="ub2-tr"></div>
+    </section>
+
+    <!-- ===== Üb. 3: префікс на своєму місці ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Sätze</h2>
+      <p class="lead">Встав дієслово з дужок у правильній формі. Якщо полів два — префікс іде в друге поле, у кінець речення.</p>
+      <div class="card" id="ub3-list">
+        <div class="fill-item"><span class="num">1)</span> Lotte <input type="text" class="blank-input inline" data-ans="räumt"> heute ihr Zimmer <input type="text" class="blank-input inline" data-ans="auf">. (aufräumen)</div>
+        <div class="fill-item"><span class="num">2)</span> Wann <input type="text" class="blank-input inline" data-ans="kauft"> ihr <input type="text" class="blank-input inline" data-ans="ein">? (einkaufen)</div>
+        <div class="fill-item"><span class="num">3)</span> Papa <input type="text" class="blank-input inline" data-ans="bringt"> jeden Morgen den Müll <input type="text" class="blank-input inline" data-ans="weg">. (wegbringen)</div>
+        <div class="fill-item"><span class="num">4)</span> Ich <input type="text" class="blank-input inline" data-ans="hole"> dich um zwei <input type="text" class="blank-input inline" data-ans="ab">. (abholen)</div>
+        <div class="fill-item"><span class="num">5)</span> Gestern hat Greta die Spülmaschine <input type="text" class="blank-input inline" data-ans="ausgeräumt">. (ausräumen)</div>
+        <div class="fill-item"><span class="num">6)</span> Wir müssen heute noch <input type="text" class="blank-input inline" data-ans="aufräumen">. (aufräumen)</div>
+        <div class="fill-item"><span class="num">7)</span> Erik <input type="text" class="blank-input inline" data-ans="macht"> zu Hause nicht oft <input type="text" class="blank-input inline" data-ans="mit">. (mitmachen)</div>
+        <div class="fill-item"><span class="num">8)</span> Opa hat die Blumen <input type="text" class="blank-input inline" data-ans="gegossen">. (gießen)</div>
+        <div class="fill-item"><span class="num">9)</span> <input type="text" class="blank-input inline" data-ans="Räum|Räume"> bitte dein Spielzeug <input type="text" class="blank-input inline" data-ans="weg">! (wegräumen, du)</div>
+        <div class="fill-item"><span class="num">10)</span> Mama freut sich, dass Lotte jetzt selbst den Tisch <input type="text" class="blank-input inline" data-ans="deckt">. (decken)</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4: діалог-чат ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Mama ruft an</h2>
+      <p class="lead">У четвер мама дзвонить із Мюнхена. Ти — Грета. Вибирай доречну й граматично правильну відповідь.</p>
+      <div class="card" id="ub4-chat"></div>
+    </section>
+
+    <!-- ===== HÖREN — власний діалог, озвучений синтезатором ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Hast du am Samstag Zeit?</h2>
+      <p class="lead">Ерік дзвонить Греті й кличе її в кіно. Послухай діалог (можна двічі) і дай відповіді. Текст діалогу відкривається внизу — але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l1-b-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Erik:</b> Hi, Greta! Hast du am Samstag Zeit? Im Kino läuft ein neuer Film.<br>
+          <b>Greta:</b> Am Samstag? Puh, schwierig. Am Samstagvormittag räumen wir immer die ganze Wohnung auf.<br>
+          <b>Erik:</b> Jeden Samstag?<br>
+          <b>Greta:</b> Ja, einmal in der Woche. Wir haben jetzt einen Plan. Diese Woche sauge ich Staub und putze die Fenster in meinem Zimmer.<br>
+          <b>Erik:</b> Und Lotte?<br>
+          <b>Greta:</b> Lotte gießt die Blumen und deckt den Tisch. Sie ist ja erst acht.<br>
+          <b>Erik:</b> Bei uns ist das anders. Meine Mama macht fast alles. Ich bringe nur den Müll weg — und das auch nicht regelmäßig.<br>
+          <b>Greta:</b> Nur den Müll? Das ist aber wenig!<br>
+          <b>Erik:</b> Ich weiß … Na gut, manchmal spüle ich auch das Geschirr. Aber Bügeln hasse ich!<br>
+          <b>Greta:</b> Bügeln mag ich auch nicht. Aber beim Kochen helfe ich gern. Sag mal, wann beginnt der Film?<br>
+          <b>Erik:</b> Um drei. Wann bist du fertig?<br>
+          <b>Greta:</b> Um eins. Aber dann muss ich noch mit Krümel Gassi gehen.<br>
+          <b>Erik:</b> Weißt du was? Ich hole dich um zwei ab, wir gehen zusammen mit Krümel Gassi, und dann fahren wir zum Kino.<br>
+          <b>Greta:</b> Super Idee! Bis Samstag!
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN — 🎤 + говоріння зі зразком ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Wer macht was bei euch?</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Was machst du im Haushalt? Wie oft?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Ich mache jeden Tag mein Bett und bringe zweimal in der Woche den Müll weg. Am Wochenende räume ich mein Zimmer auf. Manchmal gehe ich auch für meine Oma einkaufen.</div>
+        </div>
+        <div class="qa">
+          <label>2. Wer macht was in deiner Familie?</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Meine Mutter kocht meistens, und mein Vater kauft ein. Mein Bruder saugt Staub, und ich spüle das Geschirr. Die Wäsche waschen meine Eltern zusammen.</div>
+        </div>
+        <div class="qa">
+          <label>3. Was machst du gern im Haushalt und was hasst du? Warum?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Ich koche sehr gern, weil das kreativ ist. Ich gieße auch gern die Blumen. Aber Fenster putzen hasse ich — das dauert so lange, und am nächsten Tag regnet es wieder!</div>
+        </div>
+        <div class="qa">
+          <label>4. Was hast du letzte Woche zu Hause gemacht?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Letzte Woche habe ich zweimal den Müll weggebracht und am Samstag mein Zimmer aufgeräumt. Am Sonntag habe ich mit Papa eingekauft und den Tisch gedeckt.</div>
+        </div>
+        <div class="qa">
+          <label>5. Frag deinen Partner / deine Partnerin: vier Fragen zur Hausarbeit.</label>
+          <button class="btn secondary" type="button" data-reveal="spr5">Muster zeigen</button>
+          <div class="reveal" id="spr5">Machst du zu Hause mit? Wer kauft bei euch ein? Wie oft räumst du dein Zimmer auf? Was machst du nicht gern?</div>
+        </div>
+        <div class="qa">
+          <label>6. Rollenspiel: Du möchtest am Samstag ins Kino, aber du musst zu Hause helfen. Sprich mit deiner Mutter / deinem Vater.</label>
+          <button class="btn secondary" type="button" data-reveal="spr6">Muster zeigen</button>
+          <div class="reveal" id="spr6">— Mama, darf ich am Samstag mit Erik ins Kino? — Am Samstag räumen wir doch auf! — Ich räume am Freitag mein Zimmer auf und bringe den Müll weg. Ist das okay? — Na gut, einverstanden.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN — лист за планом ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Ein Tipp für Erik</h2>
+      <p class="lead">Ерік пише тобі: «Мама каже, що я мало допомагаю вдома. А як у вас? Порадь щось!» Напиши відповідь на 60–80 слів за планом:</p>
+      <div class="card">
+        <p>1) привітання; 2) що ти робиш удома і як часто (2–3 справи); 3) що ти робиш охоче, а що — ні; 4) хто що робить у твоїй родині; 5) порада для Еріка (наказовий спосіб: Räum … auf! Hilf …!); 6) прощання.</p>
+        <p class="beispiel">Hallo Erik, · Ich räume … auf / bringe … weg. · einmal in der Woche · Ich … gern, aber … hasse ich. · Bei uns … · Mach doch … mit! · Viele Grüße</p>
+        <div class="qa">
+          <label for="schreiben-text">Deine Nachricht</label>
+          <textarea id="schreiben-text" rows="10" placeholder="Hallo Erik,&#10;bei uns …"
+            data-words="60-80"
+            data-must="auf|weg/ein/mit|Viele Grüße/Liebe Grüße"
+            data-check="Привітання|2–3 справи з частотою (jeden Tag, einmal in der Woche…)|Що робиш охоче / неохоче|Хто що робить у родині|Порада в наказовому способі|Прощання й підпис"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Hallo Erik,<br>bei uns hilft jeder im Haushalt. Ich mache jeden Tag mein Bett und bringe zweimal in der Woche den Müll weg. Am Samstag räume ich mein Zimmer auf. Kochen mag ich sehr, aber Bügeln hasse ich auch! Meine Mutter wäscht die Wäsche, und mein Vater kauft ein. Mein Tipp: Mach einen Plan mit deiner Mama und räum zuerst dein Zimmer auf. Dann ist sie bestimmt froh!<br>Viele Grüße<br>Andrij</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — режим контрольної: одна спроба, лише ця вкладка йде в бал ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Papa kauft jeden Samstag im Supermarkt
+          <select class="blank inline" data-ans="ein"><option value="">—</option><option>auf</option><option>ein</option><option>mit</option></select>.</div>
+        <div class="fill-item"><span class="num">8)</span> Ich muss heute mein Zimmer
+          <select class="blank inline" data-ans="aufräumen"><option value="">—</option><option>räume auf</option><option>aufgeräumt</option><option>aufräumen</option></select>.</div>
+        <div class="fill-item"><span class="num">9)</span> Hast du den Müll schon
+          <select class="blank inline" data-ans="weggebracht"><option value="">—</option><option>wegbringt</option><option>weggebracht</option><option>gewegbracht</option></select>?</div>
+        <div class="fill-item"><span class="num">10)</span> Opa
+          <select class="blank inline" data-ans="holt"><option value="">—</option><option>abholt</option><option>hat</option><option>holt</option></select> Lotte von der Schule ab.</div>
+        <div class="fill-item"><span class="num">11)</span> Erik spült
+          <select class="blank inline" data-ans="selten"><option value="">—</option><option>jeden Tag</option><option>selten</option><option>regelmäßig</option></select> das Geschirr — nur einmal im Monat.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-7-klas-7-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-7-klas-7-rik";
+  const KN_UNIT = "l1-b";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Gretas Mutter war eine Woche in München.", a: "r"},
+    {s: "Mama hat den Plan an die Tür gehängt.", a: "f"},
+    {s: "Am Montag hat Lotte ihr Bett allein gemacht.", a: "r"},
+    {s: "Am Montag hat Greta im Supermarkt eingekauft.", a: "f"},
+    {s: "Papas Hemden sind beim Waschen rosa geworden.", a: "r"},
+    {s: "Papa hat das rosa Hemd nie getragen.", a: "f"},
+    {s: "Am Freitag war die Wohnung sehr schmutzig.", a: "r"},
+    {s: "Greta hat am Freitag Staub gesaugt.", a: "f"},
+    {s: "Opa hat die Blumen gegossen.", a: "r"},
+    {s: "Jetzt wäscht Papa die Wäsche immer allein.", a: "f"}
+  ]);
+
+  // Üb. 1: словосполучення
+  buildMatch('ub1', [
+    ["das Geschirr", "spülen"],
+    ["den Müll", "wegbringen"],
+    ["die Blumen", "gießen"],
+    ["Staub", "saugen"],
+    ["die Wäsche", "bügeln"],
+    ["den Tisch", "decken"],
+    ["das Bett", "machen"],
+    ["die Fenster", "putzen"],
+    ["die Spülmaschine", "ausräumen"],
+    ["mit dem Hund", "Gassi gehen"]
+  ]);
+
+  // Üb. 2: перетворення
+  buildTransform('ub2-tr', [
+    {s: "Ich räume mein Zimmer auf.", task: "Perfekt", ans: "Ich habe mein Zimmer aufgeräumt."},
+    {s: "Greta bringt den Müll weg.", task: "Perfekt", ans: "Greta hat den Müll weggebracht."},
+    {s: "Papa kauft im Supermarkt ein.", task: "Perfekt", ans: "Papa hat im Supermarkt eingekauft."},
+    {s: "Opa holt Lotte von der Schule ab.", task: "Perfekt", ans: "Opa hat Lotte von der Schule abgeholt."},
+    {s: "Lotte deckt den Tisch.", task: "+ <b>müssen</b>", ans: "Lotte muss den Tisch decken."},
+    {s: "Wir räumen am Samstag auf.", task: "+ <b>wollen</b>", ans: "Wir wollen am Samstag aufräumen."},
+    {s: "Du räumst das Spielzeug weg.", task: "наказовий спосіб (du)", ans: "Räum das Spielzeug weg!|Räume das Spielzeug weg!"},
+    {s: "Erik bringt den Müll nicht regelmäßig weg.", task: "Почни: <b>Mama sagt, dass …</b>", ans: "Mama sagt, dass Erik den Müll nicht regelmäßig wegbringt."}
+  ]);
+
+  // Üb. 3
+  wireBlanks('ub3');
+
+  // Üb. 4: телефонна розмова
+  buildChat('ub4-chat', {
+    partner: "Mama",
+    me: "Greta",
+    steps: [
+      {them: "Hallo, Greta! Wie geht's euch? Hast du heute den Müll weggebracht?"},
+      {you: ["Ja, ich habe ihn heute Morgen weggebracht.", "Ja, ich bringe ihn gestern weg.", "Ja, ich habe ihn weggebringt."], correct: 0},
+      {them: "Super! Und hat Lotte ihr Spielzeug weggeräumt?"},
+      {you: ["Ja, sie hat es geweggeräumt.", "Ja, sie hat es weggeräumt — ganz allein!", "Ja, sie räumt weg es."], correct: 1},
+      {them: "Toll! Und wer kauft morgen ein?"},
+      {you: ["Papa einkauft nach der Arbeit.", "Papa kauft ein nach der Arbeit.", "Papa kauft nach der Arbeit ein."], correct: 2},
+      {them: "Gut. Wer hat heute gekocht?"},
+      {you: ["Papa hat Nudeln gekocht, und ich habe den Tisch gedeckt.", "Papa hat die Nudeln gebügelt.", "Papa kocht gestern Nudeln."], correct: 0},
+      {them: "Und wie geht es Papa? Klappt alles mit der Wäsche?"},
+      {you: ["Die Wäsche ist im Kühlschrank.", "Ähm … Das erzählt dir Papa am Samstag selbst!", "Papa hat die Fenster gegossen."], correct: 1, hint: "не видавай тата 🙂"},
+      {them: "Hm … Okay. Ich vermisse euch! Bis Samstag!"},
+      {you: ["Guten Appetit!", "Herzlich willkommen!", "Wir vermissen dich auch! Tschüss, Mama!"], correct: 2}
+    ]
+  });
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Was möchte Erik am Samstag machen?", opts: ["Fußball spielen", "ins Kino gehen", "einkaufen gehen"], correct: "ins Kino gehen"},
+    {q: "Was macht Gretas Familie jeden Samstagvormittag?", opts: ["Sie räumt die Wohnung auf.", "Sie kauft ein.", "Sie besucht Opa."], correct: "Sie räumt die Wohnung auf."},
+    {q: "Was macht Greta diese Woche?", opts: ["Sie bügelt und kocht.", "Sie gießt die Blumen.", "Sie saugt Staub und putzt Fenster."], correct: "Sie saugt Staub und putzt Fenster."},
+    {q: "Was macht Lotte im Haushalt?", opts: ["Sie gießt die Blumen und deckt den Tisch.", "Sie bringt den Müll weg.", "Sie spült das Geschirr."], correct: "Sie gießt die Blumen und deckt den Tisch."},
+    {q: "Wer macht bei Erik fast alles im Haushalt?", opts: ["sein Vater", "seine Mutter", "seine Oma"], correct: "seine Mutter"},
+    {q: "Was hasst Erik?", opts: ["Kochen", "Staub saugen", "Bügeln"], correct: "Bügeln"},
+    {q: "Wann ist Greta mit der Hausarbeit fertig?", opts: ["um zwei", "um eins", "um drei"], correct: "um eins"},
+    {q: "Was macht Erik um zwei?", opts: ["Er holt Greta ab.", "Er geht allein ins Kino.", "Er räumt sein Zimmer auf."], correct: "Er holt Greta ab."}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Ich räume jeden Samstag mein Zimmer auf.", uk: "Я щосуботи прибираю свою кімнату."},
+    {say: "Bring bitte den Müll weg!", uk: "Винеси, будь ласка, сміття!"},
+    {say: "Wir haben zusammen aufgeräumt.", uk: "Ми разом прибрали."},
+    {say: "Bei uns macht jeder im Haushalt mit.", uk: "У нас кожен допомагає по господарству."},
+    {say: "Bügeln hasse ich.", uk: "Прасувати я ненавиджу."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Bring bitte den Müll …!", opts: ["ab", "weg", "auf"], correct: "weg"},
+    {q: "Wir haben gestern das ganze Haus …", opts: ["geaufräumt", "aufräumt", "aufgeräumt"], correct: "aufgeräumt"},
+    {q: "Mit einem Staubsauger … man Staub.", opts: ["saugt", "putzt", "gießt"], correct: "saugt"},
+    {q: "Die Blumen muss man regelmäßig …", opts: ["bügeln", "fegen", "gießen"], correct: "gießen"},
+    {q: "Vor dem Essen … Lotte den Tisch.", opts: ["spült", "deckt", "räumt"], correct: "deckt"},
+    {q: "Nach dem Essen ist das Geschirr …", opts: ["schmutzig", "sauber", "regelmäßig"], correct: "schmutzig"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Wir haben das Zimmer geaufräumt.", wrong: 4, fix: "aufgeräumt"},
+    {s: "Papa hat die Wäsche gebügelt.", ok: true},
+    {s: "Lotte muss den Tisch deckt.", wrong: 4, fix: "decken"},
+    {s: "Erik hat den Müll weggebringt.", wrong: 4, fix: "weggebracht"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🧹', '🧺', '🍽️', '🐕']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
