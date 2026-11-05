@@ -203,5 +203,18 @@
   {de: "legen", uk: "класти", r: "l2-c", note: "Wohin? + Akk.: Ich lege die Gabel neben den Teller."},
   {de: "liegen, hat gelegen", uk: "лежати", r: "l2-c", note: "Wo? + Dat.: Die Gabel liegt neben dem Teller."},
   {de: "die Mitte", uk: "середина", r: "l2-c", note: "in die Mitte (Wohin?) — in der Mitte (Wo?)"},
-  {de: "festlich", uk: "святковий; святково", r: "l2-c"}
+  {de: "festlich", uk: "святковий; святково", r: "l2-c"},
+  // ---- Lektion 2 · Modul E: Geschichtenzeit ----
+  {de: "das Fieber", uk: "температура (жар)", r: "l2-e", note: "Ich habe Fieber. — У мене температура."},
+  {de: "im Bett bleiben", uk: "лежати в ліжку (хворіти вдома)", r: "l2-e"},
+  {de: "die Brühe, -n", uk: "бульйон", r: "l2-e"},
+  {de: "der Apfelkuchen, -", uk: "яблучний пиріг", r: "l2-e"},
+  {de: "das Tablett, -s", uk: "таця, піднос", r: "l2-e"},
+  {de: "probieren", uk: "куштувати, пробувати", r: "l2-e"},
+  {de: "salzig", uk: "солоний", r: "l2-e"},
+  {de: "das Gesicht verziehen", uk: "скривитися", r: "l2-e"},
+  {de: "das Hochzeitsgeschenk, -e", uk: "весільний подарунок", r: "l2-e"},
+  {de: "der Zettel, -", uk: "записка, папірець", r: "l2-e"},
+  {de: "kleben", uk: "клеїти, наклеювати", r: "l2-e"},
+  {de: "gesund", uk: "здоровий", r: "l2-e", note: "wieder gesund sein — одужати"}
 ];

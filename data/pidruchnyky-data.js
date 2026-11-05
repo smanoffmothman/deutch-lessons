@@ -265,8 +265,8 @@ const PIDRUCHNYKY = [
         { id: "l2-a", label: "A", nazva: "Einkaufen und kochen", storinky: "28–31", typ: "vpravy", gram: ["artikel-gebrauch", "indefinitpronomen"], opublikovano: 6 },
         { id: "l2-b", label: "B", nazva: "Wir lernen kochen", storinky: "32–36", typ: "vpravy", gram: ["konditionalsaetze"], opublikovano: 7 },
         { id: "l2-c", label: "C", nazva: "Wir decken den Tisch", storinky: "37–39", typ: "vpravy", gram: ["legen-liegen", "wechselpraepositionen"], opublikovano: 8 },
-        { id: "l2-d", label: "D", nazva: "Wiederholung", storinky: "40–41", typ: "povtorennya", gram: ["artikel-gebrauch", "konditionalsaetze", "wechselpraepositionen"] },
-        { id: "l2-e", label: "E", nazva: "Geschichtenzeit", storinky: "42", typ: "chytannya" },
+        { id: "l2-d", label: "D", nazva: "Wiederholung", storinky: "40–41", typ: "povtorennya", gram: ["artikel-gebrauch", "konditionalsaetze", "wechselpraepositionen"], opublikovano: 9 },
+        { id: "l2-e", label: "E", nazva: "Geschichtenzeit", storinky: "42", typ: "chytannya", opublikovano: 10 },
         { id: "l2-f", label: "F", nazva: "Projektarbeit", storinky: "43", typ: "bez-storinky" },
         { id: "l2-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "44", typ: "bez-storinky" }
       ] },
