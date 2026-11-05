@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 2, Modul B: Wir lernen kochen — Німецька мова 7 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 7 КЛАС</span>
+        <h1>Lektion 2 · Modul B: Wir lernen kochen</h1>
+        <p class="sub">Урок про кухонні прилади й перші кулінарні спроби: плита, міксер, мікрохвильовка, кавоварка. Речення з wenn (якщо, коли): Wenn der Teig zu dick ist, gib etwas Milch dazu. Текст і діалог з озвученням, вправи, говоріння, письмо і підсумковий тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Küchengeräte</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Kochtipps</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · wenn-Sätze</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Verb am Ende</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власний текст + вправа на розуміння ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Ein Geburtstagsfrühstück für Mama</h2>
+      <p class="lead">Послухай і прочитай, як Ерік готував мамі сніданок на день народження. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l2-b-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Am Sonntag hatte Mama Geburtstag, und ich wollte sie überraschen: mit einem Frühstück im Bett. Ich habe meinen Wecker auf halb sieben gestellt — am Sonntag! Oma Ursula hat mir am Telefon ihr Rezept für <span class="gl" data-uk="млинець, оладка" data-lemma="der Pfannkuchen, -">Pfannkuchen</span> diktiert: „<span class="gl" data-uk="якщо; коли (щоразу)" data-lemma="wenn">Wenn</span> du alles genau so machst, klappt es bestimmt.“</p>
+        <p>Zuerst habe ich Mehl, Milch, Eier und etwas Zucker in eine Schüssel gegeben und mit dem <span class="gl" data-uk="міксер, блендер" data-lemma="der Mixer, -">Mixer</span> <span class="gl" data-uk="змішувати" data-lemma="vermischen">vermischt</span>. Leider habe ich den Mixer gleich auf die höchste Stufe <span class="gl" data-uk="вмикати" data-lemma="einschalten">eingeschaltet</span> — und die halbe Küche war weiß, sogar die <span class="gl" data-uk="стеля; ковдра" data-lemma="die Decke, -n">Decke</span>! Also habe ich alles noch einmal gemacht, diesmal langsam. Wenn man den Mixer langsam einschaltet, bleibt der <span class="gl" data-uk="тісто" data-lemma="der Teig, -e">Teig</span> in der Schüssel. Das weiß ich jetzt.</p>
+        <p>Dann habe ich den Teig in der Pfanne auf dem <span class="gl" data-uk="плита" data-lemma="der Herd, -e">Herd</span> gebraten. Der erste Pfannkuchen war schwarz, der zweite war innen noch <span class="gl" data-uk="сирий (неварений)" data-lemma="roh">roh</span>, aber der dritte war goldbraun und perfekt! Danach wollte ich noch ein Ei für Papa kochen — in der <span class="gl" data-uk="мікрохвильова піч" data-lemma="die Mikrowelle, -n">Mikrowelle</span>, das geht doch schneller. Zum Glück hat Papa mich gesehen: „Halt! Wenn man ein Ei in die Mikrowelle legt, <span class="gl" data-uk="лопатися, вибухати" data-lemma="platzen">platzt</span> es!“ Wir haben das Ei dann zusammen im Kochtopf gekocht.</p>
+        <p>Für Mama habe ich mit der <span class="gl" data-uk="соковитискач" data-lemma="die Saftpresse, -n">Saftpresse</span> frischen Orangensaft gemacht und mit der <span class="gl" data-uk="кавоварка" data-lemma="die Kaffeemaschine, -n">Kaffeemaschine</span> einen Kaffee. Um acht Uhr war alles fertig. Mama hat sich sehr gefreut: „Das ist das schönste Geburtstagsfrühstück! Aber Erik … warum ist die Decke weiß?“</p>
+        <p>Jetzt möchte ich richtig kochen lernen. Oma Ursula sagt: „Wenn du Lust hast, komm jeden Samstag zu mir. Ich <span class="gl" data-uk="навчати (когось чогось)" data-lemma="beibringen (bringt bei), hat beigebracht">bringe</span> dir alles <span class="gl" data-uk="навчати (когось чогось)" data-lemma="beibringen (bringt bei), hat beigebracht">bei</span>.“ Das ist besser als jeder <span class="gl" data-uk="кулінарні курси" data-lemma="der Kochkurs, -e">Kochkurs</span>!</p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">Nebensatz mit wenn</h2>
+      <p class="lead">Українські «якщо» і «коли» порядку слів не змінюють. Німецьке <b>wenn</b> відкриває <b>підрядне речення</b> (Nebensatz), і там дієслово, що змінюється, іде в самий <b>кінець</b>.</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. Дієслово — в кінці</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Hauptsatz</th><th>Nebensatz mit wenn</th></tr>
+          <tr><td>Man benutzt die Mikrowelle,</td><td>wenn man Essen schnell aufwärmen <strong>will</strong>.</td></tr>
+          <tr><td>Der Teig bleibt in der Schüssel,</td><td>wenn man den Mixer langsam <strong>einschaltet</strong>.</td></tr>
+          <tr><td>Gib etwas Milch dazu,</td><td>wenn der Teig zu dick <strong>ist</strong>.</td></tr>
+        </table></div>
+        <div class="merke">У Nebensatz відокремлюване дієслово стоїть разом: wenn man den Mixer <b>einschaltet</b> (не «schaltet … ein»). Модальне — після інфінітива: wenn man Saft trinken <b>will</b>.</div>
+        <div class="merke">Перед <b>wenn</b> завжди стоїть кома.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. wenn-речення на початку</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Nebensatz</th><th>Hauptsatz: дієслово одразу</th></tr>
+          <tr><td>Wenn du Hunger <strong>hast</strong>,</td><td><strong>mach</strong> dir ein Brot.</td></tr>
+          <tr><td>Wenn man ein Ei in die Mikrowelle <strong>legt</strong>,</td><td><strong>platzt</strong> es.</td></tr>
+          <tr><td>Wenn du Lust <strong>hast</strong>,</td><td><strong>komm</strong> zu mir.</td></tr>
+        </table></div>
+        <div class="merke">Якщо речення починається з wenn, то після коми головне речення одразу починається з <b>дієслова</b>: Wenn ich Zeit habe, <b>koche</b> ich. (✗ Wenn ich Zeit habe, ich koche.)</div>
+        <div class="merke"><b>wenn</b> = «якщо» (умова) або «коли / щоразу, коли» (повторюється). Для одного разу в минулому — <b>als</b> (знаєш з 6 класу).</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. Küchengeräte — складні слова</p>
+        <p class="beispiel">die Kaffee + <b>die Maschine</b> = <b>die</b> Kaffeemaschine · der Wasser + <b>der Kocher</b> = <b>der</b> Wasserkocher</p>
+        <div class="merke">Рід складного слова — за <b>останньою</b> частиною: der Kühl<b>schrank</b>, die Saft<b>presse</b>, der Back<b>ofen</b>.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">4. Типові помилки</p>
+        <p>✗ …, wenn man hat Hunger. → ✓ …, wenn man Hunger <b>hat</b>.</p>
+        <p>✗ Wenn ich Zeit habe, ich koche gern. → ✓ Wenn ich Zeit habe, <b>koche ich</b> gern.</p>
+        <p>✗ …, wenn man den Herd schaltet ein. → ✓ …, wenn man den Herd <b>einschaltet</b>.</p>
+        <p>✗ …, wenn man Saft will trinken. → ✓ …, wenn man Saft trinken <b>will</b>.</p>
+        <p>✗ Man benutzt den Mixer wenn … → ✓ Man benutzt den Mixer<b>,</b> wenn …</p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: кухонні прилади ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Küchengeräte</h2>
+      <p class="lead">Про який прилад ідеться? Вибери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+    </section>
+
+    <!-- ===== Üb. 2: поради на кухні ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Kochtipps</h2>
+      <p class="lead">Поради бабусі Урсули: до кожного «Wenn …» вибери закінчення.</p>
+      <div class="card" id="ub2-list"></div>
+    </section>
+
+    <!-- ===== Üb. 3: два речення → одне з wenn ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">wenn-Sätze</h2>
+      <p class="lead">Зʼєднай два речення в одне з <b>wenn</b>. Почни зі слова Wenn — і не забудь, що після коми одразу йде дієслово.</p>
+      <div class="card" id="ub3-tr"></div>
+    </section>
+
+    <!-- ===== Üb. 4: дієслово в кінці ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Das Verb am Ende</h2>
+      <p class="lead">Впиши дієслово з дужок у правильній формі в кінець wenn-речення.</p>
+      <div class="card" id="ub4-list">
+        <div class="fill-item"><span class="num">1)</span> Man braucht eine Pfanne, wenn man Fleisch <input type="text" class="blank-input inline" data-ans="brät">. (braten)</div>
+        <div class="fill-item"><span class="num">2)</span> Wenn du Hunger <input type="text" class="blank-input inline" data-ans="hast">, wärm dir die Suppe auf. (haben)</div>
+        <div class="fill-item"><span class="num">3)</span> Der Teig bleibt in der Schüssel, wenn man den Mixer langsam <input type="text" class="blank-input inline" data-ans="einschaltet">. (einschalten)</div>
+        <div class="fill-item"><span class="num">4)</span> Man benutzt die Saftpresse, wenn man frischen Saft trinken <input type="text" class="blank-input inline" data-ans="will|möchte">. (wollen)</div>
+        <div class="fill-item"><span class="num">5)</span> Wenn die Suppe zu salzig <input type="text" class="blank-input inline" data-ans="ist">, gib etwas Wasser dazu. (sein)</div>
+        <div class="fill-item"><span class="num">6)</span> Wenn wir Gäste <input type="text" class="blank-input inline" data-ans="haben">, backt Mama einen Kuchen. (haben)</div>
+        <div class="fill-item"><span class="num">7)</span> Wenn man Zwiebeln <input type="text" class="blank-input inline" data-ans="schneidet">, weint man oft. (schneiden)</div>
+        <div class="fill-item"><span class="num">8)</span> Schalte den Herd aus, wenn du mit dem Kochen fertig <input type="text" class="blank-input inline" data-ans="bist">. (sein)</div>
+        <div class="fill-item"><span class="num">9)</span> Wenn Erik bei Oma <input type="text" class="blank-input inline" data-ans="kocht">, schreibt er alles in sein Heft. (kochen)</div>
+        <div class="fill-item"><span class="num">10)</span> Die Milch bleibt frisch, wenn man sie im Kühlschrank <input type="text" class="blank-input inline" data-ans="aufbewahrt">. (aufbewahren)</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub4-check">Prüfen</button>
+        <button class="btn secondary" id="ub4-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub4-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== HÖREN — власний діалог, озвучений синтезатором ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Kochen bei Oma Ursula</h2>
+      <p class="lead">Ерік розповідає Дарині про першу суботу в бабусі Урсули. Послухай діалог (можна двічі) і дай відповіді. Текст діалогу відкривається внизу — але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l2-b-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Daryna:</b> Hi, Erik! Und, wie war dein erster Kochnachmittag bei Oma Ursula?<br>
+          <b>Erik:</b> Super! Wir haben Omas Kartoffelsalat gemacht — ganz ohne Mayonnaise.<br>
+          <b>Daryna:</b> Ohne Mayonnaise? Und was kommt dann rein?<br>
+          <b>Erik:</b> Gekochte Kartoffeln, Zwiebeln, Gurken, Brühe, Essig und Öl. Oma sagt: Wenn man die Kartoffeln noch warm schneidet, schmeckt der Salat besser.<br>
+          <b>Daryna:</b> Und wer hat die Zwiebeln geschnitten?<br>
+          <b>Erik:</b> Ich natürlich. Und ich habe so geweint! Oma hat gelacht: Wenn du die Zwiebeln vorher in den Kühlschrank legst, weinst du weniger.<br>
+          <b>Daryna:</b> Stimmt, das macht meine Mama auch. Habt ihr eine Küchenmaschine benutzt?<br>
+          <b>Erik:</b> Nein, Oma hat keine. Sie hat nur ein gutes Messer, einen alten Herd und eine Kaffeemaschine. Sie sagt: Wenn man gut kochen will, braucht man vor allem Zeit.<br>
+          <b>Daryna:</b> Das klingt wie bei meiner Oma Halyna. Sie misst auch nie etwas ab.<br>
+          <b>Erik:</b> Genau! „Etwas Salz, etwas Essig, fertig.“ Ich habe alles in mein Heft geschrieben.<br>
+          <b>Daryna:</b> Darf ich nächsten Samstag mitkommen? Ich zeige euch, wie man Warenyky macht.<br>
+          <b>Erik:</b> Na klar! Oma freut sich bestimmt. Wenn du kommst, mache ich den Nachtisch.<br>
+          <b>Daryna:</b> Pfannkuchen? Aber bitte ohne Mehl an der Decke!
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN — 🎤 + говоріння зі зразком ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">In unserer Küche</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Welche Küchengeräte gibt es bei euch? Welche benutzt du selbst?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Bei uns gibt es einen Herd mit Backofen, eine Mikrowelle, einen Wasserkocher und einen Mixer. Ich benutze oft den Wasserkocher und die Mikrowelle. Den Backofen benutzt meistens meine Mutter.</div>
+        </div>
+        <div class="qa">
+          <label>2. Wann benutzt du die Mikrowelle oder den Wasserkocher? (wenn …)</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Wenn ich aus der Schule komme, wärme ich mein Mittagessen in der Mikrowelle auf. Wenn ich Tee trinken will, koche ich Wasser im Wasserkocher.</div>
+        </div>
+        <div class="qa">
+          <label>3. Was kannst du schon kochen? Was möchtest du lernen?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Ich kann schon Rührei und Nudeln kochen. Ich möchte lernen, Borschtsch zu kochen — wie meine Oma. Wenn sie uns besucht, frage ich sie nach dem Rezept.</div>
+        </div>
+        <div class="qa">
+          <label>4. Ist dir in der Küche schon einmal etwas passiert? Erzähl.</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Einmal habe ich Milch auf dem Herd warm gemacht und dabei telefoniert. Die Milch ist übergekocht, und die ganze Küche hat schrecklich gerochen. Jetzt bleibe ich immer am Herd, wenn ich koche.</div>
+        </div>
+        <div class="qa">
+          <label>5. Gib deinem Partner / deiner Partnerin drei Kochtipps mit wenn.</label>
+          <button class="btn secondary" type="button" data-reveal="spr5">Muster zeigen</button>
+          <div class="reveal" id="spr5">Wenn die Suppe zu salzig ist, gib etwas Wasser dazu. Wenn du Kartoffeln kochst, mach den Deckel auf den Topf. Wenn du fertig bist, schalte den Herd aus!</div>
+        </div>
+        <div class="qa">
+          <label>6. Wie lernt man am besten kochen: mit Oma, im Kochkurs oder mit Videos im Internet? Warum?</label>
+          <button class="btn secondary" type="button" data-reveal="spr6">Muster zeigen</button>
+          <div class="reveal" id="spr6">Ich finde, am besten lernt man mit der Oma. Sie hat viel Erfahrung und viel Zeit. Videos sind auch gut, aber wenn etwas nicht klappt, kann man das Video nicht fragen!</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN — лист за планом ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Kochtipps für Erik</h2>
+      <p class="lead">Ерік пише: «Наступного тижня я сам готую обід для всієї родини! Дай мені кілька порад». Напиши відповідь на 60–80 слів за планом:</p>
+      <div class="card">
+        <p>1) привітання і реакція на новину; 2) яку просту страву ти радиш і чому; 3) які прилади йому знадобляться; 4) три поради з <b>wenn</b>; 5) одне застереження (про мікрохвильовку, плиту чи міксер 🙂); 6) побажання й прощання.</p>
+        <p class="beispiel">Hallo Erik, · Toll, dass du …! · Koch doch … · Du brauchst … · Wenn …, … · Pass auf: … · Viel Erfolg! · Viele Grüße</p>
+        <div class="qa">
+          <label for="schreiben-text">Deine Nachricht</label>
+          <textarea id="schreiben-text" rows="10" placeholder="Hallo Erik,&#10;toll, dass du …"
+            data-words="60-80"
+            data-must="wenn|Viele Grüße/Liebe Grüße"
+            data-check="Привітання і реакція|Страва і чому саме вона|Потрібні прилади|Три поради з wenn (дієслово в кінці!)|Застереження|Побажання й прощання"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Hallo Erik,<br>toll, dass du für deine Familie kochst! Koch doch Nudeln mit Tomatensoße — das ist einfach und schmeckt allen. Du brauchst einen Kochtopf, eine Pfanne und den Herd. Wenn das Wasser kocht, gib etwas Salz dazu. Wenn die Soße zu dick ist, gib etwas Wasser dazu. Und wenn du fertig bist, schalte den Herd aus! Pass auf: Benutze heute keinen Mixer. 😉 Viel Erfolg!<br>Viele Grüße<br>Taras</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — режим контрольної: одна спроба, лише ця вкладка йде в бал ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Wenn ich Durst habe,
+          <select class="blank inline" data-ans="trinke ich"><option value="">—</option><option>ich trinke</option><option>trinke ich</option><option>trinken ich</option></select> Wasser.</div>
+        <div class="fill-item"><span class="num">8)</span> Man benutzt die Mikrowelle, wenn man das Essen schnell
+          <select class="blank inline" data-ans="aufwärmen will"><option value="">—</option><option>will aufwärmen</option><option>aufwärmen will</option><option>wärmt auf</option></select>.</div>
+        <div class="fill-item"><span class="num">9)</span> Der Teig bleibt in der Schüssel, wenn man den Mixer langsam
+          <select class="blank inline" data-ans="einschaltet"><option value="">—</option><option>schaltet ein</option><option>einschalten</option><option>einschaltet</option></select>.</div>
+        <div class="fill-item"><span class="num">10)</span> Kuchen backt man im
+          <select class="blank inline" data-ans="Backofen"><option value="">—</option><option>Kühlschrank</option><option>Backofen</option><option>Wasserkocher</option></select>.</div>
+        <div class="fill-item"><span class="num">11)</span>
+          <select class="blank inline" data-ans="der"><option value="">—</option><option>die</option><option>das</option><option>der</option></select> Wasserkocher ist kaputt.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-7-klas-7-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-7-klas-7-rik";
+  const KN_UNIT = "l2-b";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Erik wollte seiner Mama ein Frühstück im Bett machen.", a: "r"},
+    {s: "Oma Ursula hat Erik das Rezept per E-Mail geschickt.", a: "f"},
+    {s: "Für den Teig braucht man Mehl, Milch, Eier und etwas Zucker.", a: "r"},
+    {s: "Erik hat den Mixer zuerst zu schnell eingeschaltet.", a: "r"},
+    {s: "Der erste Pfannkuchen war perfekt.", a: "f"},
+    {s: "Erik wollte ein Ei in der Mikrowelle kochen.", a: "r"},
+    {s: "Das Ei ist in der Mikrowelle geplatzt.", a: "f"},
+    {s: "Den Orangensaft hat Erik mit der Saftpresse gemacht.", a: "r"},
+    {s: "Mama hat die weiße Decke nicht gesehen.", a: "f"},
+    {s: "Erik möchte jetzt jeden Samstag bei Oma Ursula kochen lernen.", a: "r"}
+  ]);
+
+  // Üb. 1: кухонні прилади
+  buildQuiz('ub1-quiz', [
+    {q: "Hier bewahrt man Lebensmittel kalt auf.", opts: ["der Backofen", "der Kühlschrank", "der Herd"], correct: "der Kühlschrank"},
+    {q: "Damit wärmt man Essen schnell auf.", opts: ["die Mikrowelle", "die Saftpresse", "der Fleischwolf"], correct: "die Mikrowelle"},
+    {q: "Hier kocht oder brät man im Topf oder in der Pfanne.", opts: ["der Mixer", "der Wasserkocher", "der Herd"], correct: "der Herd"},
+    {q: "Damit kocht man schnell Wasser für Tee.", opts: ["der Wasserkocher", "die Kaffeemaschine", "der Kühlschrank"], correct: "der Wasserkocher"},
+    {q: "Damit macht man frischen Orangensaft.", opts: ["der Mixer", "die Saftpresse", "die Mikrowelle"], correct: "die Saftpresse"},
+    {q: "Darin backt man Kuchen und Pizza.", opts: ["der Backofen", "der Kühlschrank", "die Pfanne"], correct: "der Backofen"},
+    {q: "Damit macht man aus Fleisch Hackfleisch.", opts: ["die Küchenmaschine", "der Wasserkocher", "der Fleischwolf"], correct: "der Fleischwolf"},
+    {q: "Damit vermischt man Teig oder macht einen Smoothie.", opts: ["der Mixer", "der Herd", "die Kaffeemaschine"], correct: "der Mixer"}
+  ]);
+
+  // Üb. 2: поради
+  buildMatch('ub2', [
+    ["Wenn die Suppe zu salzig ist,", "gib etwas Wasser dazu."],
+    ["Wenn der Teig zu dick ist,", "gib etwas Milch dazu."],
+    ["Wenn du Zwiebeln schneidest,", "leg sie vorher in den Kühlschrank."],
+    ["Wenn du mit dem Kochen fertig bist,", "schalte den Herd aus."],
+    ["Wenn du ein Ei kochen willst,", "nimm einen Kochtopf, keine Mikrowelle."],
+    ["Wenn du den Mixer einschaltest,", "fang langsam an."]
+  ], {lead: true});
+
+  // Üb. 3: два речення → wenn
+  buildTransform('ub3-tr', [
+    {s: "Ich habe Hunger. Ich mache mir ein Brot.", task: "Wenn …", ans: "Wenn ich Hunger habe, mache ich mir ein Brot."},
+    {s: "Es regnet. Wir bleiben zu Hause.", task: "Wenn …", ans: "Wenn es regnet, bleiben wir zu Hause."},
+    {s: "Erik hat Zeit. Er kocht bei Oma.", task: "Wenn …", ans: "Wenn Erik Zeit hat, kocht er bei Oma."},
+    {s: "Die Milch ist alt. Sie riecht schlecht.", task: "Wenn …", ans: "Wenn die Milch alt ist, riecht sie schlecht."},
+    {s: "Du kommst nach Hause. Du wärmst das Essen auf.", task: "Wenn …", ans: "Wenn du nach Hause kommst, wärmst du das Essen auf."},
+    {s: "Wir haben Gäste. Mama backt einen Kuchen.", task: "Wenn …", ans: "Wenn wir Gäste haben, backt Mama einen Kuchen."},
+    {s: "Man will Kaffee trinken. Man braucht eine Kaffeemaschine.", task: "Wenn …", ans: "Wenn man Kaffee trinken will, braucht man eine Kaffeemaschine."}
+  ]);
+
+  // Üb. 4
+  wireBlanks('ub4');
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Was haben Erik und Oma Ursula gemacht?", opts: ["Pfannkuchen", "Kartoffelsalat", "Warenyky"], correct: "Kartoffelsalat"},
+    {q: "Was ist nicht im Salat?", opts: ["Gurken", "Mayonnaise", "Zwiebeln"], correct: "Mayonnaise"},
+    {q: "Wann schneidet man die Kartoffeln?", opts: ["wenn sie noch warm sind", "wenn sie kalt sind", "wenn sie roh sind"], correct: "wenn sie noch warm sind"},
+    {q: "Was ist Oma Ursulas Tipp für Zwiebeln?", opts: ["Sie zuerst in den Kühlschrank legen.", "Sie in der Mikrowelle aufwärmen.", "Sie mit dem Mixer schneiden."], correct: "Sie zuerst in den Kühlschrank legen."},
+    {q: "Welches Gerät hat Oma Ursula nicht?", opts: ["einen Herd", "eine Kaffeemaschine", "eine Küchenmaschine"], correct: "eine Küchenmaschine"},
+    {q: "Was braucht man laut Oma Ursula vor allem zum Kochen?", opts: ["Zeit", "Geld", "moderne Geräte"], correct: "Zeit"},
+    {q: "Was will Daryna nächsten Samstag zeigen?", opts: ["wie man Kartoffelsalat macht", "wie man Warenyky macht", "wie man Kaffee kocht"], correct: "wie man Warenyky macht"},
+    {q: "Was macht Erik, wenn Daryna kommt?", opts: ["den Nachtisch", "die Suppe", "den Salat"], correct: "den Nachtisch"}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Wenn ich Hunger habe, mache ich mir ein Brot.", uk: "Коли я голодний / голодна, роблю собі бутерброд."},
+    {say: "Man benutzt die Mikrowelle, wenn man Essen aufwärmen will.", uk: "Мікрохвильовкою користуються, коли хочуть розігріти їжу."},
+    {say: "Schalte bitte den Herd aus!", uk: "Вимкни, будь ласка, плиту!"},
+    {say: "Oma bringt mir das Kochen bei.", uk: "Бабуся вчить мене готувати."},
+    {say: "Der Pfannkuchen ist innen noch roh.", uk: "Млинець усередині ще сирий."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Lebensmittel bewahrt man im … auf.", opts: ["Kühlschrank", "Backofen", "Wasserkocher"], correct: "Kühlschrank"},
+    {q: "Frischen Saft macht man mit der …", opts: ["Mikrowelle", "Saftpresse", "Kaffeemaschine"], correct: "Saftpresse"},
+    {q: "Der Pfannkuchen ist innen nicht fertig. Er ist noch …", opts: ["roh", "goldbraun", "frisch"], correct: "roh"},
+    {q: "Oma Ursula … Erik das Kochen …", opts: ["bringt … bei", "schaltet … ein", "bewahrt … auf"], correct: "bringt … bei"},
+    {q: "Man braucht eine Pfanne, wenn man Eier …", opts: ["brät", "bratet", "braten"], correct: "brät"},
+    {q: "Welcher Satz ist richtig?", opts: ["Wenn ich Zeit habe, ich koche.", "Wenn ich Zeit habe, koche ich.", "Wenn habe ich Zeit, koche ich."], correct: "Wenn ich Zeit habe, koche ich."}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Wenn die Suppe zu salzig sind, gib etwas Wasser dazu.", wrong: 5, fix: "ist"},
+    {s: "Man benutzt den Wasserkocher, wenn man Tee kochen will.", ok: true},
+    {s: "Wenn ich nach Hause kommt, wärme ich das Essen auf.", wrong: 4, fix: "komme"},
+    {s: "Die Kaffeemaschine ist neu, aber das Mixer ist alt.", wrong: 5, fix: "der"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🥞', '🍳', '☕', '👵']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
