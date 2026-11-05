@@ -271,7 +271,7 @@ const PIDRUCHNYKY = [
         { id: "l2-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "44", typ: "bez-storinky" }
       ] },
       { id: "l3", label: "3", nazva: "In der Schule ist immer etwas los", storinky: "45–60", dity: [
-        { id: "l3-a", label: "A", nazva: "Schulveranstaltungen", storinky: "46–50", typ: "vpravy", gram: ["verben-dass-infinitiv", "modalverben"] },
+        { id: "l3-a", label: "A", nazva: "Schulveranstaltungen", storinky: "46–50", typ: "vpravy", gram: ["verben-dass-infinitiv", "modalverben"], opublikovano: 11 },
         { id: "l3-b", label: "B", nazva: "Besuchst du eine AG?", storinky: "51–55", typ: "vpravy", gram: ["verben-dass-infinitiv"] },
         { id: "l3-c", label: "C", nazva: "Wiederholung", storinky: "56–57", typ: "povtorennya", gram: ["verben-dass-infinitiv"] },
         { id: "l3-d", label: "D", nazva: "Geschichtenzeit", storinky: "58", typ: "chytannya" },
