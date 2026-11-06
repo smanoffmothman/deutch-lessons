@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 7, Modul A: Reisen planen und machen — Німецька мова 7 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 7 КЛАС</span>
+        <h1>Lektion 7 · Modul A: Reisen planen und machen</h1>
+        <p class="sub">Урок про подорожі: куди їдуть на канікули, що взяти з собою, як спакувати валізу. Країни з артиклем (in die Türkei, in die Schweiz) і без (nach Italien); займенники einer, keiner, welche замість іменника. Опитування шкільної газети й розмова Еріка з мамою з озвученням, вправи, говоріння, письмо і підсумковий тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Reisegepäck</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · nach oder in?</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · einer, keiner</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Ein Schlafsack</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власний текст + вправа на розуміння ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Wohin geht die Reise?</h2>
+      <p class="lead">Ніна й Макс опитали клас для шкільної газети: хто куди їде на зимові канікули. Послухай і прочитай. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l7-a-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Bald sind Weihnachtsferien! Für die Schülerzeitung haben Max und ich gefragt: Wer <span class="gl" data-uk="їхати (кудись) у подорож" data-lemma="verreisen, ist verreist">verreist</span>, und wohin geht die <span class="gl" data-uk="подорож, поїздка" data-lemma="die Reise, -n">Reise</span>? In der 7b sind sechsundzwanzig Schülerinnen und Schüler. Elf bleiben zu Hause in Leipzig, aber fünfzehn fahren weg — das ist ein Rekord!</p>
+        <p>Viele fahren ins Ausland. Ayla fliegt mit ihrer Familie in <span class="gl" data-uk="Туреччина" data-lemma="die Türkei">die Türkei</span>, nach Istanbul. Dort wohnen ihre Großeltern. Matteo fährt nach Italien, zu seinen Großeltern in Neapel. „Im Dezember kann man dort manchmal noch draußen sitzen“, sagt er. Seine <span class="gl" data-uk="купальник / плавки" data-lemma="der Badeanzug, -ü-e / die Badehose, -n">Badehose</span> nimmt er aber trotzdem nicht mit.</p>
+        <p>Andere suchen Schnee. Max fährt mit seinen Eltern in <span class="gl" data-uk="Швейцарія" data-lemma="die Schweiz">die Schweiz</span> zum Skifahren. Timurs Familie macht <span class="gl" data-uk="відпустка, відпочинок" data-lemma="der Urlaub, -e">Urlaub</span> in <span class="gl" data-uk="Нідерланди" data-lemma="die Niederlande (Pl.)">den Niederlanden</span>: „Das Meer im Winter — mit Wind und Wellen! Das wird toll.“ Greta bleibt in Leipzig, denn im Februar fährt ihre Familie wie immer ins Erzgebirge. Das ist ihr <span class="gl" data-uk="мета (пункт призначення) подорожі" data-lemma="das Reiseziel, -e">Lieblingsreiseziel</span>.</p>
+        <p>Und Erik? Erik <span class="gl" data-uk="подорожувати" data-lemma="reisen, ist gereist">reist</span> zum ersten Mal allein: Am ersten Wochenende im Januar fährt er ins Biathlon-Wintercamp. Er hat schon eine <span class="gl" data-uk="список (що зробити / взяти)" data-lemma="die Checkliste, -n">Checkliste</span> geschrieben: <span class="gl" data-uk="спальний мішок" data-lemma="der Schlafsack, -ä-e">Schlafsack</span>, <span class="gl" data-uk="ліхтарик" data-lemma="die Taschenlampe, -n">Taschenlampe</span>, <span class="gl" data-uk="сонцезахисні окуляри" data-lemma="die Sonnenbrille, -n">Sonnenbrille</span> für den Schnee, warme Socken, das <span class="gl" data-uk="зарядний пристрій" data-lemma="das Ladegerät, -e">Ladegerät</span> fürs Handy … Alles <span class="gl" data-uk="пакувати, класти (в сумку)" data-lemma="einpacken">packt</span> er in einen großen <span class="gl" data-uk="рюкзак" data-lemma="der Rucksack, -ä-e">Rucksack</span> <span class="gl" data-uk="пакувати, класти (в сумку)" data-lemma="einpacken">ein</span> — eine <span class="gl" data-uk="дорожня сумка" data-lemma="die Reisetasche, -n">Reisetasche</span> findet er unpraktisch. Die <span class="gl" data-uk="квиток (на транспорт)" data-lemma="die Fahrkarte, -n">Fahrkarte</span> für den Zug hat Papa schon gekauft.</p>
+        <p>Daryna fährt mit ihrer Mama nach Polen, nach Krakau. Dort wohnt ihre Tante, und Oma Halyna kommt auch dorthin. „Endlich ist die ganze Familie wieder zusammen“, sagt Daryna.</p>
+        <p>Unsere Umfrage zeigt: Am beliebtesten ist in der 7b der Süden — Italien und die Türkei. Und unser Tipp für alle: Packt den Koffer nicht in der letzten Minute! Wiegt euer <span class="gl" data-uk="багаж" data-lemma="das Gepäck">Gepäck</span>, vergesst die <span class="gl" data-uk="дорожня аптечка" data-lemma="die Reiseapotheke, -n">Reiseapotheke</span> nicht, und nehmt ein <span class="gl" data-uk="рушник" data-lemma="das Handtuch, -ü-er">Handtuch</span> mit — man braucht immer eins!</p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">einer, keiner, welche · in die Türkei</h2>
+      <p class="lead">Щоб не повторювати іменник, німці кажуть <b>einer / keiner</b>: «Brauchst du einen Schal? — Ja, ich brauche <b>einen</b>.» Українською — «Так, потрібен (один)» або «Ні, не маю жодного».</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. einer / keiner</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th></th><th>Nominativ</th><th>Akkusativ</th></tr>
+          <tr><td>m (der Schal)</td><td>ein<strong>er</strong> / kein<strong>er</strong></td><td>ein<strong>en</strong> / kein<strong>en</strong></td></tr>
+          <tr><td>n (das Handtuch)</td><td>ein<strong>s</strong> / kein<strong>s</strong></td><td>ein<strong>s</strong> / kein<strong>s</strong></td></tr>
+          <tr><td>f (die Mütze)</td><td>ein<strong>e</strong> / kein<strong>e</strong></td><td>ein<strong>e</strong> / kein<strong>e</strong></td></tr>
+          <tr><td>Pl (die Socken)</td><td><strong>welche</strong> / kein<strong>e</strong></td><td><strong>welche</strong> / kein<strong>e</strong></td></tr>
+        </table></div>
+        <p>Hast du einen Schlafsack? — Nein, ich habe <b>keinen</b>. · Wo ist ein Handtuch? — Da ist <b>eins</b>. · Hast du Handschuhe? — Im Schrank liegen <b>welche</b>.</p>
+        <div class="merke">Закінчення як в означеного артикля: d<b>er</b> → ein<b>er</b>, d<b>en</b> → ein<b>en</b>, da<b>s</b> → ein<b>s</b>. У множині «якісь» — <b>welche</b>.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. Країни: nach чи in?</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th></th><th>Wohin?</th><th>Wo?</th></tr>
+          <tr><td>більшість країн (без артикля)</td><td><strong>nach</strong> Italien, nach Polen</td><td><strong>in</strong> Italien</td></tr>
+          <tr><td>країни з артиклем</td><td><strong>in die</strong> Türkei, <strong>in die</strong> Schweiz</td><td><strong>in der</strong> Türkei, <strong>in der</strong> Schweiz</td></tr>
+          <tr><td>у множині</td><td><strong>in die</strong> Niederlande, in die USA</td><td><strong>in den</strong> Niederlanden</td></tr>
+          <tr><td>регіони, гори, море</td><td><strong>ins</strong> Erzgebirge, <strong>ans</strong> Meer</td><td><strong>im</strong> Erzgebirge, <strong>am</strong> Meer</td></tr>
+        </table></div>
+        <div class="merke">До людей — <b>zu</b>: zu den Großeltern, zu meiner Tante. Додому — <b>nach Hause</b>, удома — <b>zu Hause</b>.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. Типові помилки</p>
+        <p>✗ nach Türkei → ✓ <b>in die</b> Türkei</p>
+        <p>✗ Hast du einen Rucksack? — Ja, ich habe ein. → ✓ Ja, ich habe <b>einen</b>.</p>
+        <p>✗ Brauchst du Socken? — Ja, ich brauche eins. → ✓ Ja, ich brauche <b>welche</b>.</p>
+        <p>✗ Ich fahre zu Italien. → ✓ Ich fahre <b>nach</b> Italien.</p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: лексика ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Was nehme ich mit?</h2>
+      <p class="lead">Що на картинці? Вибери слово.</p>
+      <div class="card" id="ub1-pic"></div>
+    </section>
+
+    <!-- ===== Üb. 2: nach / in ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">nach, in die oder ins?</h2>
+      <p class="lead">Куди їдуть учні 7b? Вибери прийменник.</p>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> Matteo fährt
+          <select class="blank inline" data-ans="nach"><option value="">—</option><option>nach</option><option>in die</option><option>ins</option></select> Italien.</div>
+        <div class="fill-item"><span class="num">2)</span> Ayla fliegt
+          <select class="blank inline" data-ans="in die"><option value="">—</option><option>nach</option><option>in die</option><option>ins</option></select> Türkei.</div>
+        <div class="fill-item"><span class="num">3)</span> Max fährt
+          <select class="blank inline" data-ans="in die"><option value="">—</option><option>nach</option><option>in die</option><option>ins</option></select> Schweiz.</div>
+        <div class="fill-item"><span class="num">4)</span> Daryna fährt
+          <select class="blank inline" data-ans="nach"><option value="">—</option><option>nach</option><option>in die</option><option>ins</option></select> Polen.</div>
+        <div class="fill-item"><span class="num">5)</span> Timur fährt
+          <select class="blank inline" data-ans="in die"><option value="">—</option><option>nach</option><option>in die</option><option>ins</option></select> Niederlande.</div>
+        <div class="fill-item"><span class="num">6)</span> Gretas Familie fährt im Februar
+          <select class="blank inline" data-ans="ins"><option value="">—</option><option>nach</option><option>in die</option><option>ins</option></select> Erzgebirge.</div>
+        <div class="fill-item"><span class="num">7)</span> Nina möchte einmal
+          <select class="blank inline" data-ans="in die"><option value="">—</option><option>nach</option><option>in die</option><option>ins</option></select> USA fliegen.</div>
+        <div class="fill-item"><span class="num">8)</span> Herr Brandt fährt
+          <select class="blank inline" data-ans="nach"><option value="">—</option><option>nach</option><option>in die</option><option>ins</option></select> Österreich.</div>
+        <div class="fill-item"><span class="num">9)</span> Erik fährt
+          <select class="blank inline" data-ans="ins"><option value="">—</option><option>nach</option><option>in die</option><option>ins</option></select> Wintercamp.</div>
+        <div class="fill-item"><span class="num">10)</span> Am Abend fahren alle wieder
+          <select class="blank inline" data-ans="nach"><option value="">—</option><option>nach</option><option>in die</option><option>ins</option></select> Hause.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: einer / keiner ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">einer, keiner, welche</h2>
+      <p class="lead">Встав займенник у правильній формі. Подумай про рід іменника і про відмінок.</p>
+      <div class="card" id="ub3-list">
+        <div class="fill-item"><span class="num">1)</span> Hast du einen Schlafsack? — Nein, ich habe <input type="text" class="blank-input inline" data-ans="keinen">.</div>
+        <div class="fill-item"><span class="num">2)</span> Brauchst du eine Taschenlampe? — Ja, ich brauche <input type="text" class="blank-input inline" data-ans="eine">.</div>
+        <div class="fill-item"><span class="num">3)</span> Wo ist ein Handtuch? — Da ist <input type="text" class="blank-input inline" data-ans="eins">.</div>
+        <div class="fill-item"><span class="num">4)</span> Hast du Handschuhe? — Ja, im Schrank liegen <input type="text" class="blank-input inline" data-ans="welche">.</div>
+        <div class="fill-item"><span class="num">5)</span> Nimmst du ein Buch mit? — Nein, ich nehme <input type="text" class="blank-input inline" data-ans="keins">.</div>
+        <div class="fill-item"><span class="num">6)</span> Ist hier ein Ladegerät? — Nein, hier ist <input type="text" class="blank-input inline" data-ans="keins">.</div>
+        <div class="fill-item"><span class="num">7)</span> Wo ist ein Rucksack? — Im Flur steht <input type="text" class="blank-input inline" data-ans="einer">.</div>
+        <div class="fill-item"><span class="num">8)</span> Brauchst du Socken? — Nein, ich brauche <input type="text" class="blank-input inline" data-ans="keine">.</div>
+        <div class="fill-item"><span class="num">9)</span> Hast du eine Sonnenbrille? — Nein, ich habe <input type="text" class="blank-input inline" data-ans="keine">.</div>
+        <div class="fill-item"><span class="num">10)</span> Kaufst du einen Koffer? — Ja, ich kaufe <input type="text" class="blank-input inline" data-ans="einen">.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4: чат ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Hast du einen Schlafsack?</h2>
+      <p class="lead">Ерік пише тобі: йому бракує речей для табору. Вибирай правильну відповідь.</p>
+      <div class="card" id="ub4-chat"></div>
+    </section>
+
+    <!-- ===== HÖREN — власний діалог, озвучений синтезатором ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Die Checkliste</h2>
+      <p class="lead">Ерік пакує рюкзак до зимового табору, мама перевіряє список. Послухай (можна двічі) і дай відповіді. Текст відкривається внизу — але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l7-a-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Mama:</b> Erik, wir gehen die Checkliste durch. Hast du einen Schlafsack?<br>
+          <b>Erik:</b> Nein, ich habe keinen. Aber Greta hat einen. Sie leiht ihn mir.<br>
+          <b>Mama:</b> Gut. Und eine Taschenlampe?<br>
+          <b>Erik:</b> Ja, ich habe eine. Sie ist schon im Rucksack.<br>
+          <b>Mama:</b> Brauchst du eine Sonnenbrille?<br>
+          <b>Erik:</b> Eine Sonnenbrille? Im Januar?<br>
+          <b>Mama:</b> Na klar! Im Schnee ist die Sonne sehr hell. Hier, nimm meine.<br>
+          <b>Erik:</b> Okay. Und Handschuhe? Ich finde keine.<br>
+          <b>Mama:</b> Im Schrank liegen welche. Nimm gleich zwei Paar mit, beim Schießen werden sie nass.<br>
+          <b>Erik:</b> Brauche ich ein Handtuch?<br>
+          <b>Mama:</b> Ja, im Camp gibt es keins. Und das Ladegerät?<br>
+          <b>Erik:</b> Ist schon drin. Ohne Handy fahre ich nirgendwohin!<br>
+          <b>Mama:</b> Ich packe dir auch eine kleine Reiseapotheke ein.<br>
+          <b>Erik:</b> Mama, es sind nur drei Tage!<br>
+          <b>Mama:</b> Drei Tage im Schnee. Und die Fahrkarte?<br>
+          <b>Erik:</b> Die hat Papa. Er bringt mich am Freitag zum Zug.<br>
+          <b>Mama:</b> Gut. Dann fehlt nur noch eins: die Mütze! Du vergisst sie immer.<br>
+          <b>Erik:</b> Ich habe eine, Mama — auf dem Kopf!
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN — 🎤 + говоріння зі зразком ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Wohin fährst du?</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Wohin bist du schon einmal gereist? Wie war es?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Letzten Sommer bin ich mit meinen Eltern nach Polen gefahren. Wir waren in Krakau und in den Bergen. Das Essen war lecker, und die Altstadt war wunderschön.</div>
+        </div>
+        <div class="qa">
+          <label>2. Wohin möchtest du einmal reisen? Warum?</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Ich möchte einmal in die Schweiz fahren, weil ich die Berge liebe. Und ich möchte nach Japan fliegen, denn ich interessiere mich für die japanische Kultur.</div>
+        </div>
+        <div class="qa">
+          <label>3. Was nimmst du immer mit auf eine Reise?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Ich nehme immer mein Handy und das Ladegerät mit. Im Sommer packe ich eine Sonnenbrille und einen Badeanzug ein, im Winter eine Mütze und Handschuhe.</div>
+        </div>
+        <div class="qa">
+          <label>4. Packst du deinen Koffer allein? Früh oder in der letzten Minute?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Ich packe meinen Rucksack allein, aber immer in der letzten Minute. Dann vergesse ich oft etwas, zum Beispiel die Zahnbürste.</div>
+        </div>
+        <div class="qa">
+          <label>5. Spiel: Frag deinen Partner / deine Partnerin, was er / sie für die Reise hat. (Hast du …? — Ja, ich habe einen / eine / eins …)</label>
+          <button class="btn secondary" type="button" data-reveal="spr5">Muster zeigen</button>
+          <div class="reveal" id="spr5">— Hast du einen Schlafsack? — Ja, ich habe einen. — Und ein Zelt? — Nein, ich habe keins. — Hast du Wanderschuhe? — Ja, ich habe welche.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Meine Ferienpläne</h2>
+      <p class="lead">Ніна й Макс просять і тебе відповісти на опитування для шкільної газети. Напиши 60–80 слів за планом:</p>
+      <div class="card">
+        <p>1) куди ти їдеш (або чому лишаєшся вдома) — nach / in die / ins …; 2) з ким і як (поїздом, літаком, машиною); 3) що ти там робитимеш; 4) що ти береш із собою (три-чотири речі); 5) чого в тебе ще немає і що треба купити (Ich habe keinen / keine / keins …); 6) прощання.</p>
+        <p class="beispiel">In den Ferien fahre ich … · Ich fahre mit … · Dort möchte ich … · Ich nehme … mit. · Einen … habe ich noch nicht, ich brauche einen. · Viele Grüße</p>
+        <div class="qa">
+          <label for="schreiben-text">Deine Antwort</label>
+          <textarea id="schreiben-text" rows="10" placeholder="Hallo Nina, hallo Max,&#10;in den Ferien …"
+            data-words="60-80"
+            data-must="nach/in die/ins/zu Hause|mit"
+            data-check="Куди їду (nach / in die)|З ким і як|Що там робитиму|Що беру з собою|Чого бракує (keinen / keine / keins)|Прощання"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Hallo Nina, hallo Max,<br>in den Ferien fahre ich mit meiner Familie in die Karpaten. Wir fahren mit dem Zug und wohnen in einem kleinen Hotel. Dort möchte ich Ski fahren und wandern. Ich nehme meine Skihose, eine warme Jacke und eine Sonnenbrille mit. Einen Rucksack habe ich noch nicht, ich brauche einen für die Wanderungen. Und meine Schwester hat keine Handschuhe — wir kaufen ihr welche.<br>Viele Grüße<br>Oksana</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — режим контрольної ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Wir fliegen im Sommer
+          <select class="blank inline" data-ans="in die"><option value="">—</option><option>nach</option><option>in die</option><option>in der</option></select> Türkei.</div>
+        <div class="fill-item"><span class="num">8)</span> Max ist gerade
+          <select class="blank inline" data-ans="in der"><option value="">—</option><option>in die</option><option>in der</option><option>nach</option></select> Schweiz.</div>
+        <div class="fill-item"><span class="num">9)</span> Hast du einen Rucksack? — Ja, ich habe
+          <select class="blank inline" data-ans="einen"><option value="">—</option><option>ein</option><option>einer</option><option>einen</option></select>.</div>
+        <div class="fill-item"><span class="num">10)</span> Gibt es hier ein Handtuch? — Nein, hier ist
+          <select class="blank inline" data-ans="keins"><option value="">—</option><option>kein</option><option>keins</option><option>keinen</option></select>.</div>
+        <div class="fill-item"><span class="num">11)</span> Brauchst du Socken? — Ja, ich brauche
+          <select class="blank inline" data-ans="welche"><option value="">—</option><option>eins</option><option>welche</option><option>einer</option></select>.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+<section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-7-klas-7-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-7-klas-7-rik";
+  const KN_UNIT = "l7-a";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "In den Weihnachtsferien fahren fünfzehn Schüler der 7b weg.", a: "r"},
+    {s: "Ayla fliegt nach Italien.", a: "f"},
+    {s: "Matteos Großeltern wohnen in Neapel.", a: "r"},
+    {s: "Max fährt in die Schweiz zum Skifahren.", a: "r"},
+    {s: "Timurs Familie fährt in die Berge.", a: "f"},
+    {s: "Greta fährt in den Weihnachtsferien ins Erzgebirge.", a: "f"},
+    {s: "Erik fährt zum ersten Mal allein weg.", a: "r"},
+    {s: "Erik packt alles in eine Reisetasche.", a: "f"},
+    {s: "Daryna trifft in Krakau Oma Halyna.", a: "r"},
+    {s: "Am beliebtesten ist in der 7b der Norden.", a: "f"}
+  ]);
+
+  // Üb. 1: картинка → слово
+  buildPicture('ub1-pic', [
+    {pic: "🎒", opts: ["der Rucksack", "der Schlafsack", "das Gepäck"], correct: "der Rucksack"},
+    {pic: "⛺", opts: ["die Reisetasche", "das Zelt", "das Handtuch"], correct: "das Zelt"},
+    {pic: "🔦", opts: ["das Ladegerät", "die Taschenlampe", "die Sonnenbrille"], correct: "die Taschenlampe"},
+    {pic: "🕶️", opts: ["die Sonnenbrille", "die Fahrkarte", "die Checkliste"], correct: "die Sonnenbrille"},
+    {pic: "🎫", opts: ["die Fahrkarte", "die Reiseapotheke", "der Urlaub"], correct: "die Fahrkarte"},
+    {pic: "🩱", opts: ["das Handtuch", "der Badeanzug", "der Schlafsack"], correct: "der Badeanzug"},
+    {pic: "🔌", opts: ["das Ladegerät", "die Taschenlampe", "das Zelt"], correct: "das Ladegerät"},
+    {pic: "📋", opts: ["die Checkliste", "das Reiseziel", "die Fahrkarte"], correct: "die Checkliste"},
+    {pic: "🧳", opts: ["der Koffer", "der Rucksack", "das Handtuch"], correct: "der Koffer"}
+  ]);
+
+  // Üb. 2, 3
+  wireBlanks('ub2');
+  wireBlanks('ub3');
+
+  // Üb. 4: чат з Еріком
+  buildChat('ub4-chat', {
+    partner: "Erik",
+    steps: [
+      {them: "Hi! Ich fahre bald ins Wintercamp. Hast du einen Schlafsack?"},
+      {you: ["Ja, ich habe einen. Du kannst ihn haben.", "Ja, ich habe ein. Du kannst ihn haben.", "Ja, ich habe eins. Du kannst ihn haben."], correct: 0},
+      {them: "Super, danke! Und hast du vielleicht eine Stirnlampe?"},
+      {you: ["Nein, ich habe keinen.", "Nein, ich habe keine.", "Nein, ich habe kein."], correct: 1},
+      {them: "Schade. Und Wollsocken? Meine sind alle zu klein."},
+      {you: ["Ja, ich habe welche.", "Ja, ich habe eins.", "Ja, ich habe einer."], correct: 0},
+      {them: "Du bist der Beste! Fährst du in den Ferien auch weg?"},
+      {you: ["Ja, ich fahre nach Österreich.", "Ja, ich fahre in Österreich.", "Ja, ich fahre zu Österreich."], correct: 0},
+      {them: "Cool! Und Ayla fliegt in die Türkei, oder?"},
+      {you: ["Ja, sie fliegt nach Türkei.", "Ja, sie fliegt in die Türkei.", "Ja, sie fliegt in der Türkei."], correct: 1},
+      {them: "Dann gute Reise für alle!"},
+      {you: ["Danke, dir auch viel Spaß im Camp!", "Gute Besserung!", "Guten Appetit!"], correct: 0}
+    ]
+  });
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Wer leiht Erik einen Schlafsack?", opts: ["Mama", "Greta", "Max"], correct: "Greta"},
+    {q: "Wo ist die Taschenlampe?", opts: ["im Rucksack", "im Schrank", "bei Papa"], correct: "im Rucksack"},
+    {q: "Warum braucht Erik eine Sonnenbrille?", opts: ["Im Schnee ist die Sonne sehr hell.", "Er fährt ans Meer.", "Für das Schießen."], correct: "Im Schnee ist die Sonne sehr hell."},
+    {q: "Wo liegen Handschuhe?", opts: ["im Schrank", "im Auto", "im Camp"], correct: "im Schrank"},
+    {q: "Warum soll Erik zwei Paar Handschuhe mitnehmen?", opts: ["Beim Schießen werden sie nass.", "Er verliert immer welche.", "Greta braucht auch welche."], correct: "Beim Schießen werden sie nass."},
+    {q: "Gibt es im Camp Handtücher?", opts: ["Ja.", "Nein.", "Nur kleine."], correct: "Nein."},
+    {q: "Wie lange ist Erik im Camp?", opts: ["drei Tage", "eine Woche", "zwei Wochen"], correct: "drei Tage"},
+    {q: "Wo ist Eriks Mütze?", opts: ["im Rucksack", "auf seinem Kopf", "im Schrank"], correct: "auf seinem Kopf"}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Wir fahren in den Ferien in die Schweiz.", uk: "На канікулах ми їдемо до Швейцарії."},
+    {say: "Ayla fliegt in die Türkei.", uk: "Айла летить до Туреччини."},
+    {say: "Hast du einen Schlafsack? — Nein, ich habe keinen.", uk: "У тебе є спальник? — Ні, немає."},
+    {say: "Im Schrank liegen welche.", uk: "У шафі є (кілька)."},
+    {say: "Ich packe meinen Rucksack.", uk: "Я пакую свій рюкзак."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Für den Zug braucht man eine …", opts: ["Fahrkarte", "Taschenlampe", "Checkliste"], correct: "Fahrkarte"},
+    {q: "Im Zelt schläft man in einem …", opts: ["Schlafsack", "Rucksack", "Handtuch"], correct: "Schlafsack"},
+    {q: "Medikamente für die Reise sind die …", opts: ["Reiseapotheke", "Reisetasche", "Reise"], correct: "Reiseapotheke"},
+    {q: "Was man mitnimmt, schreibt man auf eine …", opts: ["Checkliste", "Fahrkarte", "Sonnenbrille"], correct: "Checkliste"},
+    {q: "Matteo fährt … Italien.", opts: ["nach", "in die", "zu"], correct: "nach"},
+    {q: "Welcher Satz ist richtig?", opts: ["Wo ist ein Handtuch? — Da ist eins.", "Wo ist ein Handtuch? — Da ist einen.", "Wo ist ein Handtuch? — Da ist welche."], correct: "Wo ist ein Handtuch? — Da ist eins."}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Ayla fliegt nach Türkei.", wrong: 2, fix: "in die"},
+    {s: "Hast du einen Schlafsack? — Nein, ich habe keinen.", ok: true},
+    {s: "Brauchst du Socken? — Ja, ich brauche eins.", wrong: 7, fix: "welche"},
+    {s: "Wir fahren in den Ferien zu Polen.", wrong: 5, fix: "nach"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🧳', '🎒', '✈️', '🗺️']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
