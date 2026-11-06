@@ -586,5 +586,18 @@
   {de: "verzweifelt", uk: "у розпачі", r: "l7-c"},
   {de: "umsteigen, ist umgestiegen", uk: "робити пересадку", r: "l7-c"},
   {de: "die S-Bahn, -en", uk: "міська електричка", r: "l7-c"},
-  {de: "der Stadtplan, -ä-e", uk: "мапа міста", r: "l7-c"}
+  {de: "der Stadtplan, -ä-e", uk: "мапа міста", r: "l7-c"},
+  // ---- Lektion 7 · Modul E: Geschichtenzeit ----
+  {de: "die Hütte, -n", uk: "хатинка, будиночок (у горах)", r: "l7-e"},
+  {de: "das Stockbett, -en", uk: "двоярусне ліжко", r: "l7-e"},
+  {de: "die Zahnbürste, -n", uk: "зубна щітка", r: "l7-e"},
+  {de: "die Dämmerung", uk: "сутінки", r: "l7-e"},
+  {de: "die Spur, -en", uk: "слід; лижня", r: "l7-e"},
+  {de: "leuchten", uk: "світити", r: "l7-e"},
+  {de: "frieren, hat gefroren", uk: "мерзнути", r: "l7-e"},
+  {de: "schnarchen", uk: "хропіти", r: "l7-e"},
+  {de: "vermissen", uk: "сумувати (за кимось), бракувати", r: "l7-e"},
+  {de: "die Urkunde, -n", uk: "грамота, диплом", r: "l7-e"},
+  {de: "der Schütze, -n / die Schützin, -nen", uk: "стрілець / стрілкиня", r: "l7-e"},
+  {de: "Gott sei Dank!", uk: "Слава Богу! / На щастя!", r: "l7-e"}
 ];
