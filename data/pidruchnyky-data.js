@@ -289,7 +289,7 @@ const PIDRUCHNYKY = [
       ] },
       { id: "l5", label: "5", nazva: "Theater und Kino", storinky: "85–102", dity: [
         { id: "l5-a", label: "A", nazva: "Im Theater", storinky: "86–91", typ: "vpravy", gram: ["wechselpraepositionen"], opublikovano: 20 },
-        { id: "l5-b", label: "B", nazva: "Wir gehen ins Kino", storinky: "92–96", typ: "vpravy", gram: ["konjunktionen-position-null"] },
+        { id: "l5-b", label: "B", nazva: "Wir gehen ins Kino", storinky: "92–96", typ: "vpravy", gram: ["konjunktionen-position-null"], opublikovano: 21 },
         { id: "l5-c", label: "C", nazva: "Wiederholung", storinky: "97–99", typ: "povtorennya", gram: ["wechselpraepositionen", "konjunktionen-position-null"] },
         { id: "l5-d", label: "D", nazva: "Geschichtenzeit", storinky: "100", typ: "chytannya" },
         { id: "l5-e", label: "E", nazva: "Projektarbeit", storinky: "101", typ: "bez-storinky" },
