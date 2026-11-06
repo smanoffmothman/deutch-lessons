@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 5, Modul B: Wir gehen ins Kino — Німецька мова 7 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 7 КЛАС</span>
+        <h1>Lektion 5 · Modul B: Wir gehen ins Kino</h1>
+        <p class="sub">Урок про кіно: жанри фільмів, квитки, як оцінити фільм і порадити його. Сполучники und, aber, oder, denn, sondern — без зміни порядку слів. Розповідь Ґрети й кінопорада шкільного радіо з озвученням, вправи, говоріння, письмо і підсумковий тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Filme</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Wie ist der Film?</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · und, aber, denn …</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Sätze verbinden</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власний текст + вправа на розуміння ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Sechs Meinungen, ein Film</h2>
+      <p class="lead">Ґрета розповідає, як шестеро друзів вибирали фільм. Послухай і прочитай. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l5-b-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Am Freitag hat Erik in unserem Klassenchat gefragt: „Wer kommt am Samstag mit ins <span class="gl" data-uk="кінотеатр, кіно" data-lemma="das Kino, -s">Kino</span>?“ Fünf Leute haben sofort Ja geschrieben: Daryna, Timur, Ayla, Max und ich. Aber dann kam die schwierige Frage: Welchen <span class="gl" data-uk="фільм" data-lemma="der Film, -e">Film</span> <span class="gl" data-uk="дивитися (фільм, виставу)" data-lemma="sich (Dat.) ansehen (sieht an), hat angesehen">sehen</span> wir uns an?</p>
+        <p>Erik wollte einen <span class="gl" data-uk="науково-фантастичний фільм" data-lemma="der Science-Fiction-Film, -e">Science-Fiction-Film</span> sehen, <span class="gl" data-uk="бо, тому що" data-lemma="denn">denn</span> er liebt Roboter und Raumschiffe. Timur war für einen <span class="gl" data-uk="фільм жахів" data-lemma="der Horrorfilm, -e">Horrorfilm</span>: „Horrorfilme sind nicht <span class="gl" data-uk="жахливий, страшний" data-lemma="fürchterlich">fürchterlich</span>, <span class="gl" data-uk="а (після заперечення)" data-lemma="sondern">sondern</span> <span class="gl" data-uk="захопливий, напружений" data-lemma="spannend">spannend</span>!“ Aber Ayla mag keine Horrorfilme, denn danach kann sie nicht schlafen. Daryna wollte einen <span class="gl" data-uk="пригодницький фільм" data-lemma="der Abenteuerfilm, -e">Abenteuerfilm</span>, und ich wollte eine <span class="gl" data-uk="комедія" data-lemma="die Komödie, -n">Komödie</span>, denn nach einer Woche mit drei Tests wollte ich einfach lachen. Max hat nur geschrieben: „Egal, Hauptsache Popcorn!“</p>
+        <p>Dann hat Daryna im Internet nachgesehen. Im Kino am Markt <span class="gl" data-uk="іти (у кіно — про фільм)" data-lemma="laufen (läuft) (im Kino)">lief</span> ein neuer <span class="gl" data-uk="фентезі" data-lemma="der Fantasyfilm, -e">Fantasyfilm</span>: „Der letzte Drache von Leipzig“. Im Film <span class="gl" data-uk="ідеться про" data-lemma="es geht um (+ Akk.)">geht es um</span> ein Mädchen, das unter der Stadt einen kleinen Drachen findet. Die <span class="gl" data-uk="головний персонаж" data-lemma="die Hauptfigur, -en">Hauptfigur</span> heißt Mira, sie ist zwölf. Es gibt Abenteuer, ein bisschen Magie, einen Roboter und viele lustige Szenen. „Da ist ja für jeden etwas dabei!“, hat Daryna geschrieben. Alle waren einverstanden — sogar Timur.</p>
+        <p>Erik hat die <span class="gl" data-uk="квиток у кіно" data-lemma="die Kinokarte, -n">Kinokarten</span> online <span class="gl" data-uk="бронювати" data-lemma="buchen">gebucht</span>: sechs Plätze nebeneinander in Reihe neun. Vor dem Film kamen zuerst zwanzig Minuten <span class="gl" data-uk="реклама" data-lemma="die Werbung">Werbung</span>. Max hatte da schon die Hälfte von seinem Popcorn gegessen. Dann haben wir die <span class="gl" data-uk="3D-окуляри" data-lemma="die 3D-Brille, -n">3D-Brillen</span> aufgesetzt, und es ging los.</p>
+        <p>Der Film war wirklich toll: <span class="gl" data-uk="смішний, веселий" data-lemma="lustig">lustig</span>, spannend und nie <span class="gl" data-uk="нудний" data-lemma="langweilig">langweilig</span>. Die <span class="gl" data-uk="сюжет, дія" data-lemma="die Handlung, -en">Handlung</span> war ein bisschen wie ein Märchen, aber die <span class="gl" data-uk="герой / героїня" data-lemma="der Held, -en / die Heldin, -nen">Heldin</span> Mira war mutig und klug. Bei einer Szene im dunklen Tunnel hat Ayla meine Hand ganz fest gehalten — und Timur, unser großer Horrorfan, hat die Augen zugemacht! Nach dem Kino hat Erik gesagt: „Ich <span class="gl" data-uk="рекомендувати, радити" data-lemma="empfehlen (empfiehlt), hat empfohlen">empfehle</span> den Film allen, denn er ist der beste Film des Jahres!“ Okay, vielleicht übertreibt er ein bisschen. Nächsten Samstag gehen wir wieder ins Kino — diesmal ohne lange Diskussion im Chat!</p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">und, aber, oder, denn, sondern</h2>
+      <p class="lead">Ці п'ять сполучників з'єднують два звичайні речення і <b>не змінюють порядку слів</b>: після них — підмет, потім дієслово, як завжди. Їх називають сполучниками на «нульовій позиції».</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. Значення</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Konjunktion</th><th>Beispiel</th></tr>
+          <tr><td><strong>und</strong> — і, та</td><td>Erik bucht die Karten, <strong>und</strong> Max kauft Popcorn.</td></tr>
+          <tr><td><strong>aber</strong> — але</td><td>Der Film ist lang, <strong>aber</strong> er ist spannend.</td></tr>
+          <tr><td><strong>oder</strong> — або, чи</td><td>Gehen wir heute ins Kino, <strong>oder</strong> bleiben wir zu Hause?</td></tr>
+          <tr><td><strong>denn</strong> — бо</td><td>Ich mag Komödien, <strong>denn</strong> sie sind lustig.</td></tr>
+          <tr><td><strong>sondern</strong> — а (після nicht / kein)</td><td>Das ist kein Krimi, <strong>sondern</strong> eine Komödie.</td></tr>
+        </table></div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. Порядок слів</p>
+        <p>Ich mag Komödien, <b>denn</b> &nbsp;| <b>sie</b> (0) &nbsp;| <b>sind</b> (2) &nbsp;| lustig.</p>
+        <div class="merke">Перед <b>aber, denn, sondern</b> ставимо кому. Перед <b>und, oder</b> між двома реченнями кома необов'язкова.</div>
+        <div class="merke">З <b>weil</b> («тому що») дієслово йде в кінець: …, weil sie lustig <b>sind</b>. Це — у Lektion 6.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. Типові помилки</p>
+        <p>✗ Ich mag Krimis, denn sind sie spannend. → ✓ …, denn <b>sie sind</b> spannend.</p>
+        <p>✗ Ich mag keine Horrorfilme, aber Komödien. → ✓ …, <b>sondern</b> Komödien. <i>(після kein / nicht — sondern)</i></p>
+        <p>✗ Im Film geht es über einen Drachen. → ✓ Im Film geht es <b>um</b> einen Drachen.</p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: лексика — картинка → слово ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Filme und Kino</h2>
+      <p class="lead">Який це жанр або що це? Вибери слово.</p>
+      <div class="card" id="ub1-pic"></div>
+    </section>
+
+    <!-- ===== Üb. 2: оцінка ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Wie ist der Film?</h2>
+      <p class="lead">Це похвала чи критика? Розклади слова по кошиках.</p>
+      <div class="card" id="ub2-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 3: сполучники ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">und, aber, oder, denn, sondern</h2>
+      <p class="lead">Вибери сполучник, який пасує за змістом.</p>
+      <div class="card" id="ub3-list">
+        <div class="fill-item"><span class="num">1)</span> Ich mag Komödien,
+          <select class="blank inline" data-ans="denn"><option value="">—</option><option>und</option><option>aber</option><option>oder</option><option>denn</option><option>sondern</option></select> sie sind lustig.</div>
+        <div class="fill-item"><span class="num">2)</span> Timur mag nicht Komödien,
+          <select class="blank inline" data-ans="sondern"><option value="">—</option><option>und</option><option>aber</option><option>oder</option><option>denn</option><option>sondern</option></select> Horrorfilme.</div>
+        <div class="fill-item"><span class="num">3)</span> Gehen wir heute
+          <select class="blank inline" data-ans="oder"><option value="">—</option><option>und</option><option>aber</option><option>oder</option><option>denn</option><option>sondern</option></select> morgen ins Kino?</div>
+        <div class="fill-item"><span class="num">4)</span> Der Film ist spannend,
+          <select class="blank inline" data-ans="aber"><option value="">—</option><option>und</option><option>aber</option><option>oder</option><option>denn</option><option>sondern</option></select> er ist zu lang.</div>
+        <div class="fill-item"><span class="num">5)</span> Erik bucht die Karten,
+          <select class="blank inline" data-ans="und"><option value="">—</option><option>und</option><option>aber</option><option>oder</option><option>denn</option><option>sondern</option></select> Max kauft Popcorn.</div>
+        <div class="fill-item"><span class="num">6)</span> Ayla sieht keine Horrorfilme,
+          <select class="blank inline" data-ans="denn"><option value="">—</option><option>und</option><option>aber</option><option>oder</option><option>denn</option><option>sondern</option></select> danach kann sie nicht schlafen.</div>
+        <div class="fill-item"><span class="num">7)</span> Das ist kein Krimi,
+          <select class="blank inline" data-ans="sondern"><option value="">—</option><option>und</option><option>aber</option><option>oder</option><option>denn</option><option>sondern</option></select> eine Komödie.</div>
+        <div class="fill-item"><span class="num">8)</span> Möchtest du Popcorn
+          <select class="blank inline" data-ans="oder"><option value="">—</option><option>und</option><option>aber</option><option>oder</option><option>denn</option><option>sondern</option></select> lieber Nachos?</div>
+        <div class="fill-item"><span class="num">9)</span> Die Werbung war lang,
+          <select class="blank inline" data-ans="aber"><option value="">—</option><option>und</option><option>aber</option><option>oder</option><option>denn</option><option>sondern</option></select> der Film war super.</div>
+        <div class="fill-item"><span class="num">10)</span> Wir setzen die 3D-Brillen auf,
+          <select class="blank inline" data-ans="und"><option value="">—</option><option>und</option><option>aber</option><option>oder</option><option>denn</option><option>sondern</option></select> der Film beginnt.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4: з'єднання речень ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Sätze verbinden</h2>
+      <p class="lead">З'єднай два речення сполучником у дужках. Порядок слів не змінюється. Пиши ціле речення з комою.</p>
+      <div class="card" id="ub4-tr"></div>
+    </section>
+
+    <!-- ===== HÖREN — власний радіовипуск, озвучений синтезатором ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Der Kinotipp der Woche</h2>
+      <p class="lead">Ніна й Макс у шкільному радіо розповідають про три нові фільми (вигадані для цього уроку). Послухай (можна двічі) і дай відповіді. Текст відкривається внизу — але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l5-b-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Nina:</b> Hallo und willkommen beim Kinotipp der Woche! Max und ich waren diese Woche dreimal im Kino.<br>
+          <b>Max:</b> Zuerst der Trickfilm „Oskar, der Ritter-Igel“. Es geht um einen kleinen Igel, der ein Ritter werden will. Der Film ist für kleine Kinder und dauert nur achtzig Minuten.<br>
+          <b>Nina:</b> Ich fand ihn süß, aber ein bisschen langweilig. Meine kleine Cousine hat aber die ganze Zeit gelacht. Also: Für Kinder ab fünf ist er super, für uns eher nicht.<br>
+          <b>Max:</b> Film Nummer zwei ist ein Krimi: „Der Fall im Zoo“. Im Zoo verschwindet ein Pinguin, und zwei Jugendliche suchen den Dieb.<br>
+          <b>Nina:</b> Den empfehle ich euch! Er ist spannend, und man weiß bis zum Ende nicht, wer der Dieb ist.<br>
+          <b>Max:</b> Ich habe es nach zehn Minuten gewusst. Aber okay, der Film ist trotzdem gut.<br>
+          <b>Nina:</b> Und zum Schluss Science-Fiction: „Mission Mondschule“. Eine ganze Schule fliegt auf den Mond.<br>
+          <b>Max:</b> Das war mein Lieblingsfilm! Die Bilder in 3D sind fantastisch. Aber er dauert fast drei Stunden — nehmt genug Popcorn mit!<br>
+          <b>Nina:</b> Ich bin nach zwei Stunden fast eingeschlafen, denn die Handlung ist ziemlich kompliziert.<br>
+          <b>Max:</b> Übrigens: Am Mittwoch ist im Kino am Markt Kinotag. Dann kosten alle Karten nur fünf Euro.<br>
+          <b>Nina:</b> Viel Spaß im Kino und bis nächste Woche!
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN — 🎤 + говоріння зі зразком ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Gehst du gern ins Kino?</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Wie oft gehst du ins Kino? Mit wem?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Ich gehe etwa einmal im Monat ins Kino, meistens mit meinen Freunden. Manchmal sehe ich mir Filme auch zu Hause mit meiner Familie an.</div>
+        </div>
+        <div class="qa">
+          <label>2. Welche Filme magst du, welche nicht? Warum? (denn / sondern)</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Ich mag Abenteuerfilme, denn sie sind spannend. Horrorfilme mag ich nicht, denn danach habe ich Angst. Am liebsten sehe ich keine Krimis, sondern Komödien.</div>
+        </div>
+        <div class="qa">
+          <label>3. Was ist dein Lieblingsfilm? Worum geht es?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Mein Lieblingsfilm ist ein Trickfilm. Es geht um einen kleinen Fisch, der seinen Vater sucht. Die Hauptfigur ist sehr mutig, und der Film ist lustig und auch ein bisschen traurig.</div>
+        </div>
+        <div class="qa">
+          <label>4. Was machst du im Kino gern, was nicht? (Popcorn, Werbung, 3D-Brille …)</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Ich esse gern Popcorn, aber die Werbung finde ich langweilig. 3D-Filme mag ich, denn die Bilder sind toll.</div>
+        </div>
+        <div class="qa">
+          <label>5. Rollenspiel: Ihr wählt zusammen einen Film. Jeder schlägt einen Film vor und sagt, warum.</label>
+          <button class="btn secondary" type="button" data-reveal="spr5">Muster zeigen</button>
+          <div class="reveal" id="spr5">— Sehen wir uns den Krimi an, denn er ist spannend! — Nein, Krimis finde ich langweilig. Wie wäre es mit einer Komödie? — Okay, aber dann kaufst du das Popcorn! — Abgemacht!</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Mein Filmtipp</h2>
+      <p class="lead">Ніна й Макс збирають кінопоради учнів для шкільного радіо. Напиши свою пораду на 60–80 слів за планом:</p>
+      <div class="card">
+        <p>1) назва фільму і жанр; 2) про що він (Es geht um …); 3) хто головний герой / героїня; 4) що тобі сподобалося, а що ні (aber, denn); 5) кому ти радиш цей фільм і чому.</p>
+        <p class="beispiel">Mein Filmtipp heißt … · Das ist ein … · Im Film geht es um … · Die Hauptfigur ist … · Der Film ist …, aber … · Ich empfehle den Film …, denn …</p>
+        <div class="qa">
+          <label for="schreiben-text">Dein Filmtipp</label>
+          <textarea id="schreiben-text" rows="10" placeholder="Mein Filmtipp heißt …"
+            data-words="60-80"
+            data-must="denn|aber|geht es um"
+            data-check="Назва й жанр|Про що фільм|Головний герой|Плюси й мінуси (aber, denn)|Кому радиш і чому"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Mein Filmtipp heißt „Der letzte Drache von Leipzig“. Das ist ein Fantasyfilm mit viel Humor. Im Film geht es um ein Mädchen, das unter der Stadt einen kleinen Drachen findet. Die Hauptfigur Mira ist zwölf, mutig und sehr klug. Der Film ist spannend und lustig, aber die Werbung vorher war zu lang. Ich empfehle den Film allen ab zehn Jahren, denn er ist nie langweilig.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — режим контрольної ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Wir gehen nicht heute,
+          <select class="blank inline" data-ans="sondern"><option value="">—</option><option>aber</option><option>denn</option><option>sondern</option></select> morgen ins Kino.</div>
+        <div class="fill-item"><span class="num">8)</span> Heute sehe ich
+          <select class="blank inline" data-ans="mir"><option value="">—</option><option>mich</option><option>mir</option><option>mein</option></select> einen Krimi an.</div>
+        <div class="fill-item"><span class="num">9)</span> Im Film geht es
+          <select class="blank inline" data-ans="um"><option value="">—</option><option>über</option><option>von</option><option>um</option></select> einen Drachen.</div>
+        <div class="fill-item"><span class="num">10)</span> Erik
+          <select class="blank inline" data-ans="bucht"><option value="">—</option><option>bucht</option><option>buchen</option><option>gebucht</option></select> die Karten online.</div>
+        <div class="fill-item"><span class="num">11)</span> Den Film kann ich dir
+          <select class="blank inline" data-ans="empfehlen"><option value="">—</option><option>empfiehlt</option><option>empfehlen</option><option>empfohlen</option></select>.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+<section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-7-klas-7-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-7-klas-7-rik";
+  const KN_UNIT = "l5-b";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Erik hat im Klassenchat gefragt, wer mit ins Kino kommt.", a: "r"},
+    {s: "Sieben Freunde wollten ins Kino gehen.", a: "f"},
+    {s: "Erik wollte einen Science-Fiction-Film sehen.", a: "r"},
+    {s: "Ayla mag Horrorfilme sehr.", a: "f"},
+    {s: "Greta wollte nach den Tests lachen.", a: "r"},
+    {s: "Im Film geht es um einen Jungen und einen Roboter.", a: "f"},
+    {s: "Die Hauptfigur Mira ist zwölf Jahre alt.", a: "r"},
+    {s: "Max hat die Karten online gebucht.", a: "f"},
+    {s: "Vor dem Film gab es zwanzig Minuten Werbung.", a: "r"},
+    {s: "Bei der Szene im Tunnel hat Timur die Augen zugemacht.", a: "r"}
+  ]);
+
+  // Üb. 1: картинка → слово
+  buildPicture('ub1-pic', [
+    {pic: "🐉", opts: ["der Fantasyfilm", "der Krimi", "die Komödie"], correct: "der Fantasyfilm"},
+    {pic: "👻", opts: ["der Trickfilm", "der Horrorfilm", "der Abenteuerfilm"], correct: "der Horrorfilm"},
+    {pic: "🚀", opts: ["der Science-Fiction-Film", "die Komödie", "der Krimi"], correct: "der Science-Fiction-Film"},
+    {pic: "😂", opts: ["der Horrorfilm", "die Komödie", "der Krimi"], correct: "die Komödie"},
+    {pic: "🕵️", opts: ["der Krimi", "der Trickfilm", "der Fantasyfilm"], correct: "der Krimi"},
+    {pic: "🏴‍☠️", opts: ["der Abenteuerfilm", "die Komödie", "der Horrorfilm"], correct: "der Abenteuerfilm"},
+    {pic: "🍿", opts: ["das Kino", "die Handlung", "die Werbung"], correct: "das Kino"},
+    {pic: "🎟️", opts: ["die Kinokarte", "die 3D-Brille", "die Hauptfigur"], correct: "die Kinokarte"},
+    {pic: "🕶️", opts: ["die Werbung", "die 3D-Brille", "die Kinokarte"], correct: "die 3D-Brille"},
+    {pic: "🦸", opts: ["der Held", "der Krimi", "das Kino"], correct: "der Held"}
+  ]);
+
+  // Üb. 2: оцінка
+  buildSort('ub2-sort', {
+    buckets: ["👍 toll", "👎 nicht gut"],
+    items: [
+      {t: "spannend", b: "👍 toll"},
+      {t: "lustig", b: "👍 toll"},
+      {t: "fantastisch", b: "👍 toll"},
+      {t: "wunderbar", b: "👍 toll"},
+      {t: "interessant", b: "👍 toll"},
+      {t: "Ich empfehle ihn!", b: "👍 toll"},
+      {t: "langweilig", b: "👎 nicht gut"},
+      {t: "fürchterlich", b: "👎 nicht gut"},
+      {t: "zu lang", b: "👎 nicht gut"},
+      {t: "dumm", b: "👎 nicht gut"},
+      {t: "zu kompliziert", b: "👎 nicht gut"},
+      {t: "Schade um das Geld!", b: "👎 nicht gut"}
+    ]
+  });
+
+  // Üb. 3: сполучники
+  wireBlanks('ub3');
+
+  // Üb. 4: з'єднання речень
+  buildTransform('ub4-tr', [
+    {s: "Ich mag Trickfilme. Sie sind lustig.", task: "denn", ans: "Ich mag Trickfilme, denn sie sind lustig."},
+    {s: "Der Film ist gut. Er ist zu lang.", task: "aber", ans: "Der Film ist gut, aber er ist zu lang."},
+    {s: "Das ist kein Krimi. Das ist eine Komödie.", task: "sondern", ans: "Das ist kein Krimi, sondern eine Komödie."},
+    {s: "Ayla sieht keine Horrorfilme. Sie hat Angst.", task: "denn", ans: "Ayla sieht keine Horrorfilme, denn sie hat Angst."},
+    {s: "Gehen wir ins Kino? Bleiben wir zu Hause?", task: "oder", ans: "Gehen wir ins Kino, oder bleiben wir zu Hause?"},
+    {s: "Erik bucht die Karten. Max kauft das Popcorn.", task: "und", ans: "Erik bucht die Karten, und Max kauft das Popcorn."},
+    {s: "Wir gehen nicht am Samstag. Wir gehen am Sonntag.", task: "sondern", ans: "Wir gehen nicht am Samstag, sondern am Sonntag."},
+    {s: "Ich empfehle den Film. Die Handlung ist spannend.", task: "denn", ans: "Ich empfehle den Film, denn die Handlung ist spannend."}
+  ]);
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Wie oft waren Nina und Max diese Woche im Kino?", opts: ["einmal", "zweimal", "dreimal"], correct: "dreimal"},
+    {q: "Worum geht es im Trickfilm?", opts: ["um einen Igel", "um einen Pinguin", "um einen Drachen"], correct: "um einen Igel"},
+    {q: "Wie fand Nina den Trickfilm?", opts: ["fürchterlich", "süß, aber ein bisschen langweilig", "sehr spannend"], correct: "süß, aber ein bisschen langweilig"},
+    {q: "Was verschwindet im Krimi?", opts: ["ein Pinguin", "ein Igel", "eine Schule"], correct: "ein Pinguin"},
+    {q: "Welchen Film empfiehlt Nina?", opts: ["„Oskar, der Ritter-Igel“", "„Der Fall im Zoo“", "„Mission Mondschule“"], correct: "„Der Fall im Zoo“"},
+    {q: "Welcher Film ist Max' Lieblingsfilm?", opts: ["der Trickfilm", "der Krimi", "der Science-Fiction-Film"], correct: "der Science-Fiction-Film"},
+    {q: "Wie lange dauert „Mission Mondschule“?", opts: ["achtzig Minuten", "fast drei Stunden", "zwei Stunden"], correct: "fast drei Stunden"},
+    {q: "Wie viel kosten die Karten am Kinotag?", opts: ["fünf Euro", "acht Euro", "zehn Euro"], correct: "fünf Euro"}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Was läuft heute im Kino?", uk: "Що сьогодні йде в кіно?"},
+    {say: "Ich mag Komödien, denn sie sind lustig.", uk: "Я люблю комедії, бо вони смішні."},
+    {say: "Das ist kein Krimi, sondern eine Komödie.", uk: "Це не детектив, а комедія."},
+    {say: "Im Film geht es um einen Drachen.", uk: "У фільмі йдеться про дракона."},
+    {say: "Ich empfehle dir den Film.", uk: "Раджу тобі цей фільм."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "In einem … gibt es Monster und Vampire.", opts: ["Horrorfilm", "Trickfilm", "Komödie"], correct: "Horrorfilm"},
+    {q: "In einer … lacht man viel.", opts: ["Krimi", "Komödie", "Werbung"], correct: "Komödie"},
+    {q: "Karten kann man online …", opts: ["buchen", "laufen", "empfehlen"], correct: "buchen"},
+    {q: "Was … heute im Kino?", opts: ["läuft", "fährt", "liegt"], correct: "läuft"},
+    {q: "Ein Film, der nicht interessant ist, ist …", opts: ["spannend", "langweilig", "lustig"], correct: "langweilig"},
+    {q: "Welcher Satz ist richtig?", opts: ["Ich mag den Film, denn ist er lustig.", "Ich mag den Film, denn er ist lustig.", "Ich mag den Film, denn er lustig ist."], correct: "Ich mag den Film, denn er ist lustig."}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Ich mag keine Horrorfilme, aber Komödien.", wrong: 4, fix: "sondern"},
+    {s: "Wir gehen ins Kino, denn der Film ist neu.", ok: true},
+    {s: "Im Film geht es über einen Drachen.", wrong: 4, fix: "um"},
+    {s: "Ich sehe mich den Film an.", wrong: 2, fix: "mir"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🍿', '🎬', '🐉', '🎟️']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
