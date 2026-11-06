@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 6, Modul B: Arztempfehlungen — Німецька мова 7 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 7 КЛАС</span>
+        <h1>Lektion 6 · Modul B: Arztempfehlungen</h1>
+        <p class="sub">Урок про хвороби й поради лікаря: застуда, грип, кашель, ліки, аптека, здоровий спосіб життя. Інфінітив з zu після empfehlen, raten, versuchen, vergessen, versprechen — і без zu після модальних дієслів. Розповідь Айли й поради тренерки з озвученням, вправи, говоріння, письмо і підсумковий тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Krank</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Mit oder ohne zu?</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Der Arzt empfiehlt …</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Beim Arzt</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власний текст + вправа на розуміння ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Fünf Tage im Bett</h2>
+      <p class="lead">Айла розповідає, як захворіла на грип і що їй порадив лікар. Послухай і прочитай. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l6-b-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Letzten Dienstag bin ich nach dem Schwimmtraining mit nassen Haaren nach Hause gegangen. Es war kalt und windig, und meine Mütze lag zu Hause, denn ich hatte vergessen, sie mitzunehmen. Am Mittwochmorgen hatte ich <span class="gl" data-uk="нежить" data-lemma="der Schnupfen">Schnupfen</span>, und ich habe die ganze Zeit <span class="gl" data-uk="чхати" data-lemma="niesen">geniest</span> und <span class="gl" data-uk="кашляти" data-lemma="husten">gehustet</span>. Mama hat <span class="gl" data-uk="міряти температуру" data-lemma="Fieber messen (misst)">Fieber gemessen</span>: Das <span class="gl" data-uk="термометр, градусник" data-lemma="das Thermometer, -">Thermometer</span> hat 38,7 Grad gezeigt. „Du hast dich <span class="gl" data-uk="застудитися" data-lemma="sich erkälten">erkältet</span>“, hat sie gesagt.</p>
+        <p>Am Nachmittag waren wir bei meinem Kinderarzt, Herrn Dr. Brückner. Er hat mich <span class="gl" data-uk="оглядати (пацієнта)" data-lemma="untersuchen, hat untersucht">untersucht</span>: Er hat in meinen Hals geschaut und meine Lunge abgehört. Dann hat er gesagt: „Das ist keine einfache <span class="gl" data-uk="застуда" data-lemma="die Erkältung, -en">Erkältung</span>, das ist eine <span class="gl" data-uk="грип" data-lemma="die Grippe">Grippe</span>. Ich empfehle dir, viel Tee zu trinken und im Bett zu bleiben.“ Er hat mir <span class="gl" data-uk="пігулка, таблетка" data-lemma="die Tablette, -n">Tabletten</span> gegen das Fieber <span class="gl" data-uk="виписувати, призначати (ліки)" data-lemma="verschreiben, hat verschrieben">verschrieben</span> und Mama das <span class="gl" data-uk="рецепт (від лікаря)" data-lemma="das Rezept (vom Arzt)">Rezept</span> gegeben. „Und bitte eine Woche kein Schwimmtraining!“ Das war für mich das Schlimmste.</p>
+        <p>In der <span class="gl" data-uk="аптека" data-lemma="die Apotheke, -n">Apotheke</span> hat Mama die <span class="gl" data-uk="ліки, медикамент" data-lemma="das Medikament, -e">Medikamente</span> gekauft. Zu Hause musste ich dreimal am Tag mit Salzwasser <span class="gl" data-uk="полоскати горло" data-lemma="gurgeln">gurgeln</span> — igitt! Mama hat Hühnersuppe gekocht, und Papa hat versprochen, mir jeden Abend etwas vorzulesen. „Du bist eine gute <span class="gl" data-uk="пацієнт / пацієнтка" data-lemma="der Patient, -en / die Patientin, -nen">Patientin</span>“, hat er gesagt, „du beschwerst dich nur zwanzigmal am Tag.“</p>
+        <p>Am dritten Tag war das Fieber weg, aber mir war furchtbar langweilig. Daryna hat mir die Hausaufgaben gebracht, und Greta hat mir lustige Videos geschickt. Dann hat meine Trainerin angerufen: „Ich <span class="gl" data-uk="радити" data-lemma="raten (rät), hat geraten">rate</span> dir, noch ein paar Tage zu warten. Nach einer Grippe muss sich der Körper <span class="gl" data-uk="відпочивати" data-lemma="sich ausruhen">ausruhen</span>.“ Ich habe <span class="gl" data-uk="намагатися, пробувати" data-lemma="versuchen">versucht</span>, nicht an das Schwimmbad zu denken. Es hat nicht geklappt!</p>
+        <p>Jetzt bin ich wieder gesund und habe drei Regeln für meine <span class="gl" data-uk="здоров'я" data-lemma="die Gesundheit">Gesundheit</span>. Erstens: Nach dem Schwimmen föhne ich immer die Haare. Zweitens: Im Winter vergesse ich nie, eine Mütze zu tragen. Drittens: Ich esse weniger Chips, denn sie sind <span class="gl" data-uk="шкідливий для здоров'я" data-lemma="ungesund">ungesund</span>, und gehe öfter an die <span class="gl" data-uk="свіже повітря" data-lemma="die frische Luft">frische Luft</span>. Mama hat noch eine vierte Regel: genug <span class="gl" data-uk="сон" data-lemma="der Schlaf">Schlaf</span>! Und Papa sagt, ich soll <span class="gl" data-uk="рухатися" data-lemma="sich bewegen">mich</span> auch an Land mehr <span class="gl" data-uk="рухатися" data-lemma="sich bewegen">bewegen</span>.</p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">Mit oder ohne zu?</h2>
+      <p class="lead">Поради лікаря — це часто дієслово + інфінітив з <b>zu</b>: «Ich empfehle dir, viel <b>zu trinken</b>». Але після модальних дієслів (müssen, sollen, können, dürfen, wollen, möchten) — <b>без zu</b>.</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. З zu</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Verb</th><th>Beispiel</th></tr>
+          <tr><td>empfehlen (+ Dat.)</td><td>Der Arzt empfiehlt <strong>dem</strong> Patienten, im Bett <strong>zu bleiben</strong>.</td></tr>
+          <tr><td>raten (+ Dat.)</td><td>Ich rate <strong>dir</strong>, dich <strong>auszuruhen</strong>.</td></tr>
+          <tr><td>versuchen</td><td>Ich versuche, nicht an das Schwimmbad <strong>zu denken</strong>.</td></tr>
+          <tr><td>vergessen</td><td>Vergiss nicht, die Tabletten <strong>zu nehmen</strong>!</td></tr>
+          <tr><td>versprechen</td><td>Papa verspricht, mir <strong>vorzulesen</strong>.</td></tr>
+        </table></div>
+        <div class="merke">Зворотне дієслово: sich ausruhen → Ich rate dir, <b>dich</b> auszuruhen. · Er versucht, <b>sich</b> mehr zu bewegen.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. Без zu</p>
+        <p>Du <b>musst</b> im Bett <b>bleiben</b>. · Du <b>sollst</b> viel Tee <b>trinken</b>. · Du <b>darfst</b> nicht <b>schwimmen</b>.</p>
+        <p>Також без zu після <b>gehen</b>: Wir gehen <b>spazieren</b>.</p>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. Типові помилки</p>
+        <p>✗ Der Arzt empfiehlt mir, im Bett bleiben. → ✓ …, im Bett <b>zu bleiben</b>.</p>
+        <p>✗ Du musst viel Tee zu trinken. → ✓ Du musst viel Tee <b>trinken</b>.</p>
+        <p>✗ Ich rate dir, zu dich ausruhen. → ✓ Ich rate dir, dich <b>auszuruhen</b>.</p>
+        <p>✗ Der Arzt empfiehlt den Patienten … (одному) → ✓ empfiehlt <b>dem</b> Patienten (Dativ).</p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: лексика ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Krank und wieder gesund</h2>
+      <p class="lead">Що на картинці? Вибери слово.</p>
+      <div class="card" id="ub1-pic"></div>
+    </section>
+
+    <!-- ===== Üb. 2: з zu чи без ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Mit oder ohne zu?</h2>
+      <p class="lead">Вибери правильну форму.</p>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> Der Arzt empfiehlt mir, viel Tee
+          <select class="blank inline" data-ans="zu trinken"><option value="">—</option><option>trinken</option><option>zu trinken</option></select>.</div>
+        <div class="fill-item"><span class="num">2)</span> Du musst drei Tage im Bett
+          <select class="blank inline" data-ans="bleiben"><option value="">—</option><option>bleiben</option><option>zu bleiben</option></select>.</div>
+        <div class="fill-item"><span class="num">3)</span> Vergiss nicht, die Tabletten
+          <select class="blank inline" data-ans="zu nehmen"><option value="">—</option><option>nehmen</option><option>zu nehmen</option></select>!</div>
+        <div class="fill-item"><span class="num">4)</span> Ich rate dir, dich
+          <select class="blank inline" data-ans="auszuruhen"><option value="">—</option><option>ausruhen</option><option>zu ausruhen</option><option>auszuruhen</option></select>.</div>
+        <div class="fill-item"><span class="num">5)</span> Ayla darf eine Woche nicht
+          <select class="blank inline" data-ans="schwimmen"><option value="">—</option><option>schwimmen</option><option>zu schwimmen</option></select>.</div>
+        <div class="fill-item"><span class="num">6)</span> Papa verspricht, jeden Abend
+          <select class="blank inline" data-ans="vorzulesen"><option value="">—</option><option>vorlesen</option><option>zu vorlesen</option><option>vorzulesen</option></select>.</div>
+        <div class="fill-item"><span class="num">7)</span> Ich versuche, mehr an die frische Luft
+          <select class="blank inline" data-ans="zu gehen"><option value="">—</option><option>gehen</option><option>zu gehen</option></select>.</div>
+        <div class="fill-item"><span class="num">8)</span> Du sollst dreimal am Tag
+          <select class="blank inline" data-ans="gurgeln"><option value="">—</option><option>gurgeln</option><option>zu gurgeln</option></select>.</div>
+        <div class="fill-item"><span class="num">9)</span> Die Ärztin rät dem Patienten, weniger Chips
+          <select class="blank inline" data-ans="zu essen"><option value="">—</option><option>essen</option><option>zu essen</option></select>.</div>
+        <div class="fill-item"><span class="num">10)</span> Am Sonntag gehen wir im Park
+          <select class="blank inline" data-ans="spazieren"><option value="">—</option><option>spazieren</option><option>zu spazieren</option></select>.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: поради лікаря ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Der Arzt empfiehlt …</h2>
+      <p class="lead">Перекажи пораду лікаря реченням з zu. Пиши ціле речення з комою.</p>
+      <div class="card" id="ub3-tr"></div>
+    </section>
+
+    <!-- ===== Üb. 4: у лікаря ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Beim Arzt</h2>
+      <p class="lead">Ти прийшов / прийшла до лікаря. Вибирай доречну й правильну відповідь.</p>
+      <div class="card" id="ub4-chat"></div>
+    </section>
+
+    <!-- ===== HÖREN — власне інтерв'ю, озвучене синтезатором ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Gesund durch den Winter</h2>
+      <p class="lead">У шкільному радіо Макс розпитує вчительку фізкультури Frau Schulz, як не захворіти взимку. Послухай (можна двічі) і дай відповіді. Текст відкривається внизу — але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l6-b-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Max:</b> Hallo, hier sind die Sportnews — heute mit einem Spezialthema: gesund durch den Winter! Bei mir im Studio ist Frau Schulz. Frau Schulz, gerade sind viele Schüler erkältet. Was empfehlen Sie?<br>
+          <b>Frau Schulz:</b> Das Wichtigste ist ganz einfach: Wascht oft die Hände, besonders vor dem Essen und nach der Fahrt mit dem Bus.<br>
+          <b>Max:</b> Und was noch?<br>
+          <b>Frau Schulz:</b> Ich empfehle euch, jeden Tag mindestens eine Stunde draußen zu sein. Auch im Winter! Frische Luft und Bewegung sind die beste Medizin.<br>
+          <b>Max:</b> Auch wenn es regnet?<br>
+          <b>Frau Schulz:</b> Ja, auch dann. Es gibt kein schlechtes Wetter, nur falsche Kleidung. Vergesst nicht, Mütze und Schal zu tragen.<br>
+          <b>Max:</b> Viele Schüler schlafen zu wenig. Wie viel Schlaf brauchen wir?<br>
+          <b>Frau Schulz:</b> In eurem Alter etwa acht bis zehn Stunden. Ich rate euch, das Handy eine Stunde vor dem Schlafen wegzulegen.<br>
+          <b>Max:</b> Eine Stunde ohne Handy? Das ist hart!<br>
+          <b>Frau Schulz:</b> Versucht es einfach! Und noch ein Tipp: Lüftet das Klassenzimmer in jeder Pause, fünf Minuten mit offenem Fenster.<br>
+          <b>Max:</b> Und wenn man doch krank ist?<br>
+          <b>Frau Schulz:</b> Dann bleibt bitte zu Hause und ruht euch aus. Wer krank in die Schule kommt, steckt die anderen an.<br>
+          <b>Max:</b> Vielen Dank, Frau Schulz! Und euch allen: Bleibt gesund!
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN — 🎤 + говоріння зі зразком ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Gute Besserung!</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Wann warst du zum letzten Mal krank? Was hattest du?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Im Oktober hatte ich eine Erkältung. Ich hatte Schnupfen und Husten, aber kein Fieber. Ich bin zwei Tage zu Hause geblieben.</div>
+        </div>
+        <div class="qa">
+          <label>2. Was empfiehlt der Arzt bei einer Grippe? (Der Arzt empfiehlt, … zu …)</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Der Arzt empfiehlt, im Bett zu bleiben, viel Tee zu trinken und Tabletten gegen das Fieber zu nehmen. Er rät auch, nicht in die Schule zu gehen.</div>
+        </div>
+        <div class="qa">
+          <label>3. Was machst du, wenn du Halsschmerzen hast?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Ich trinke warmen Tee mit Honig und gurgle mit Salzwasser. Ich versuche, wenig zu sprechen. Wenn es nicht besser wird, gehe ich zum Arzt.</div>
+        </div>
+        <div class="qa">
+          <label>4. Was machst du für deine Gesundheit? Was ist bei dir nicht so gesund?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Ich fahre jeden Tag mit dem Fahrrad zur Schule und esse viel Obst. Aber ich schlafe zu wenig, weil ich abends lange am Handy bin.</div>
+        </div>
+        <div class="qa">
+          <label>5. Rollenspiel: Arzt / Ärztin und Patient / Patientin. Der Patient beschreibt die Symptome, der Arzt gibt Tipps.</label>
+          <button class="btn secondary" type="button" data-reveal="spr5">Muster zeigen</button>
+          <div class="reveal" id="spr5">— Was fehlt dir? — Ich huste und habe Kopfschmerzen. — Seit wann? — Seit zwei Tagen. — Hast du Fieber gemessen? — Ja, 37,6 Grad. — Das ist eine Erkältung. Ich rate dir, viel zu trinken und dich auszuruhen. — Danke, Herr Doktor!</div>
+        </div>
+        <div class="qa">
+          <label>6. Gib drei Tipps für einen gesunden Winter. (Es ist wichtig, … zu …)</label>
+          <button class="btn secondary" type="button" data-reveal="spr6">Muster zeigen</button>
+          <div class="reveal" id="spr6">Es ist wichtig, oft die Hände zu waschen. Es ist gesund, jeden Tag an die frische Luft zu gehen. Und es ist gut, genug zu schlafen.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Gute-Besserung-Nachricht</h2>
+      <p class="lead">Твій друг / подруга захворів / захворіла на грип і пише: «Мені так нудно! І лікар каже лежати ще три дні…» Напиши повідомлення на 60–80 слів за планом:</p>
+      <div class="card">
+        <p>1) звертання й співчуття; 2) запитання про самопочуття (Hast du noch Fieber?); 3) дві-три поради (Ich rate dir, … zu … · Du musst / sollst …); 4) що ти зробиш для друга (Ich verspreche, … zu …); 5) що цікавого в школі; 6) «Gute Besserung!» і прощання.</p>
+        <p class="beispiel">Hallo …, · Oh, du Armer / du Arme! · Hast du noch …? · Ich rate dir, … zu … · Du sollst … · Ich verspreche, … zu … · In der Schule … · Gute Besserung!</p>
+        <div class="qa">
+          <label for="schreiben-text">Deine Nachricht</label>
+          <textarea id="schreiben-text" rows="10" placeholder="Hallo …,&#10;oh, du Arme(r)! …"
+            data-words="60-80"
+            data-must="zu|Gute Besserung"
+            data-check="Звертання й співчуття|Запитання про самопочуття|2–3 поради (з zu і без zu)|Обіцянка (Ich verspreche, … zu …)|Новини зі школи|Побажання й прощання"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Hallo Ayla,<br>oh, du Arme! Hast du noch Fieber? Ich rate dir, viel Tee mit Honig zu trinken und viel zu schlafen. Du sollst auch nicht so lange am Handy sein, das ist nicht gut für die Augen. Ich verspreche, dir morgen die Hausaufgaben zu bringen. In der Schule ist alles wie immer: Herr Brandt hat schon wieder einen Test angekündigt! Gute Besserung!<br>Deine Nina</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — режим контрольної ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Die Ärztin empfiehlt mir, im Bett
+          <select class="blank inline" data-ans="zu bleiben"><option value="">—</option><option>bleiben</option><option>zu bleiben</option><option>geblieben</option></select>.</div>
+        <div class="fill-item"><span class="num">8)</span> Du musst die Tabletten
+          <select class="blank inline" data-ans="nehmen"><option value="">—</option><option>nehmen</option><option>zu nehmen</option><option>genommen</option></select>.</div>
+        <div class="fill-item"><span class="num">9)</span> Ich rate dir, dich
+          <select class="blank inline" data-ans="auszuruhen"><option value="">—</option><option>ausruhen</option><option>auszuruhen</option><option>zu ausruhen</option></select>.</div>
+        <div class="fill-item"><span class="num">10)</span> Der Arzt empfiehlt
+          <select class="blank inline" data-ans="dem"><option value="">—</option><option>den</option><option>dem</option><option>der</option></select> Patienten, viel zu trinken.</div>
+        <div class="fill-item"><span class="num">11)</span> Ayla hat sich
+          <select class="blank inline" data-ans="erkältet"><option value="">—</option><option>erkältet</option><option>erkälten</option><option>erkältete</option></select>.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+<section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-7-klas-7-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-7-klas-7-rik";
+  const KN_UNIT = "l6-b";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Ayla ist nach dem Training mit nassen Haaren nach Hause gegangen.", a: "r"},
+    {s: "Ayla hatte ihre Mütze auf dem Kopf.", a: "f"},
+    {s: "Das Thermometer hat 38,7 Grad gezeigt.", a: "r"},
+    {s: "Der Kinderarzt hat gesagt, Ayla hat nur eine leichte Erkältung.", a: "f"},
+    {s: "Der Arzt hat Tabletten gegen das Fieber verschrieben.", a: "r"},
+    {s: "Ayla musste dreimal am Tag mit Salzwasser gurgeln.", a: "r"},
+    {s: "Papa hat Hühnersuppe gekocht.", a: "f"},
+    {s: "Am dritten Tag hatte Ayla kein Fieber mehr.", a: "r"},
+    {s: "Die Trainerin hat gesagt, Ayla kann sofort wieder schwimmen.", a: "f"},
+    {s: "Ayla isst jetzt weniger Chips.", a: "r"}
+  ]);
+
+  // Üb. 1: картинка → слово
+  buildPicture('ub1-pic', [
+    {pic: "🤧", opts: ["niesen", "gurgeln", "husten"], correct: "niesen"},
+    {pic: "🌡️", opts: ["das Rezept", "das Thermometer", "die Apotheke"], correct: "das Thermometer"},
+    {pic: "💊", opts: ["die Tablette", "die Grippe", "der Schlaf"], correct: "die Tablette"},
+    {pic: "🩺", opts: ["untersuchen", "niesen", "sich bewegen"], correct: "untersuchen"},
+    {pic: "🛌", opts: ["sich bewegen", "sich ausruhen", "gurgeln"], correct: "sich ausruhen"},
+    {pic: "😴", opts: ["der Husten", "der Schlaf", "der Schnupfen"], correct: "der Schlaf"},
+    {pic: "🌳", opts: ["die frische Luft", "die Erkältung", "die Apotheke"], correct: "die frische Luft"},
+    {pic: "🍟", opts: ["gesund", "ungesund", "krank"], correct: "ungesund"},
+    {pic: "🏃", opts: ["sich bewegen", "sich erkälten", "sich ausruhen"], correct: "sich bewegen"}
+  ]);
+
+  // Üb. 2: з zu чи без
+  wireBlanks('ub2');
+
+  // Üb. 3: поради лікаря
+  buildTransform('ub3-tr', [
+    {s: "Der Arzt: „Trink viel Tee!“", task: "Der Arzt empfiehlt mir, …", ans: "Der Arzt empfiehlt mir, viel Tee zu trinken."},
+    {s: "Die Ärztin: „Bleib drei Tage im Bett!“", task: "Die Ärztin rät mir, …", ans: "Die Ärztin rät mir, drei Tage im Bett zu bleiben."},
+    {s: "Der Arzt: „Nimm die Tabletten zweimal am Tag!“", task: "Der Arzt empfiehlt mir, …", ans: "Der Arzt empfiehlt mir, die Tabletten zweimal am Tag zu nehmen."},
+    {s: "Die Trainerin: „Ruh dich aus!“", task: "Die Trainerin rät mir, …", ans: "Die Trainerin rät mir, mich auszuruhen."},
+    {s: "Mama: „Zieh die Mütze an!“", task: "Mama rät mir, …", ans: "Mama rät mir, die Mütze anzuziehen."},
+    {s: "Der Arzt: „Geh jeden Tag an die frische Luft!“", task: "Der Arzt empfiehlt mir, …", ans: "Der Arzt empfiehlt mir, jeden Tag an die frische Luft zu gehen."},
+    {s: "Die Ärztin: „Iss mehr Obst und Gemüse!“", task: "Die Ärztin rät mir, …", ans: "Die Ärztin rät mir, mehr Obst und Gemüse zu essen."},
+    {s: "Der Arzt: „Du musst gurgeln.“", task: "Der Arzt empfiehlt mir, …", ans: "Der Arzt empfiehlt mir, zu gurgeln."}
+  ]);
+
+  // Üb. 4: у лікаря
+  buildChat('ub4-chat', {
+    partner: "Ärztin",
+    steps: [
+      {them: "Guten Tag! Was fehlt dir?"},
+      {you: ["Ich habe Husten und Halsschmerzen.", "Ich fehle Husten und Halsschmerzen.", "Mir tut Husten weh."], correct: 0},
+      {them: "Seit wann hast du das?"},
+      {you: ["Seit zwei Tagen.", "Vor zwei Tagen seit.", "Seit zwei Tage."], correct: 0},
+      {them: "Hast du Fieber gemessen?"},
+      {you: ["Ja, ich habe 37,9 Grad.", "Ja, ich messe Fieber 37,9.", "Ja, das Fieber hat mich gemessen."], correct: 0},
+      {them: "Zeig mal deinen Hals … Das ist eine Erkältung. Ich empfehle dir, viel zu trinken und zu Hause zu bleiben."},
+      {you: ["Darf ich am Freitag Fußball spielen?", "Darf ich am Freitag Fußball zu spielen?", "Darf ich am Freitag zu Fußball spielen?"], correct: 0},
+      {them: "Lieber nicht. Ich rate dir, eine Woche keinen Sport zu machen. Hier ist das Rezept für den Hustensaft."},
+      {you: ["Wo bekomme ich das Medikament?", "Wohin bekomme ich das Medikament?", "Wo bekomme ich den Medikament?"], correct: 0},
+      {them: "In jeder Apotheke. Gute Besserung!"},
+      {you: ["Vielen Dank! Auf Wiedersehen!", "Guten Appetit!", "Herzlichen Glückwunsch!"], correct: 0}
+    ]
+  });
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Was ist laut Frau Schulz das Wichtigste?", opts: ["oft die Hände waschen", "viel Vitamin C", "jeden Tag Sport in der Halle"], correct: "oft die Hände waschen"},
+    {q: "Wie lange soll man jeden Tag draußen sein?", opts: ["zehn Minuten", "mindestens eine Stunde", "drei Stunden"], correct: "mindestens eine Stunde"},
+    {q: "Was sagt Frau Schulz über das Wetter?", opts: ["Bei Regen soll man zu Hause bleiben.", "Es gibt kein schlechtes Wetter, nur falsche Kleidung.", "Im Winter ist es zu kalt für Sport."], correct: "Es gibt kein schlechtes Wetter, nur falsche Kleidung."},
+    {q: "Was soll man nicht vergessen?", opts: ["Mütze und Schal", "das Handy", "die Tabletten"], correct: "Mütze und Schal"},
+    {q: "Wie viel Schlaf brauchen Jugendliche?", opts: ["sechs Stunden", "acht bis zehn Stunden", "zwölf Stunden"], correct: "acht bis zehn Stunden"},
+    {q: "Was soll man eine Stunde vor dem Schlafen machen?", opts: ["Sport treiben", "das Handy weglegen", "Tee trinken"], correct: "das Handy weglegen"},
+    {q: "Wie oft soll man das Klassenzimmer lüften?", opts: ["einmal am Tag", "in jeder Pause", "nur im Sommer"], correct: "in jeder Pause"},
+    {q: "Was soll man machen, wenn man krank ist?", opts: ["trotzdem in die Schule gehen", "zu Hause bleiben und sich ausruhen", "viel Sport treiben"], correct: "zu Hause bleiben und sich ausruhen"}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Ich habe mich erkältet.", uk: "Я застудився / застудилася."},
+    {say: "Der Arzt hat mich untersucht.", uk: "Лікар мене оглянув."},
+    {say: "Ich empfehle dir, viel Tee zu trinken.", uk: "Раджу тобі пити багато чаю."},
+    {say: "Du musst im Bett bleiben.", uk: "Тобі треба лежати в ліжку."},
+    {say: "Vergiss nicht, die Tabletten zu nehmen!", uk: "Не забудь випити пігулки!"}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Mit dem Thermometer misst man …", opts: ["Fieber", "Husten", "Schlaf"], correct: "Fieber"},
+    {q: "Medikamente kauft man in der …", opts: ["Apotheke", "Arztpraxis", "Sprechstunde"], correct: "Apotheke"},
+    {q: "Der Arzt schreibt ein … für die Apotheke.", opts: ["Rezept", "Thermometer", "Wartezimmer"], correct: "Rezept"},
+    {q: "Bei Halsschmerzen soll man oft …", opts: ["niesen", "gurgeln", "husten"], correct: "gurgeln"},
+    {q: "Chips und Cola sind …", opts: ["gesund", "ungesund", "erkältet"], correct: "ungesund"},
+    {q: "Welcher Satz ist richtig?", opts: ["Du musst im Bett zu bleiben.", "Du musst im Bett bleiben.", "Du musst zu im Bett bleiben."], correct: "Du musst im Bett bleiben."}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Der Arzt empfiehlt mir, viel Tee trinken.", wrong: 6, fix: "zu trinken"},
+    {s: "Vergiss nicht, die Tabletten zu nehmen.", ok: true},
+    {s: "Die Ärztin hat mich untersuchen.", wrong: 4, fix: "untersucht"},
+    {s: "Ich rate dir, dich ausruhen.", wrong: 4, fix: "auszuruhen"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🌡️', '💊', '🍵', '🧣']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
