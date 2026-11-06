@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 8, Modul A: Die Ukraine — mein Heimatland — Німецька мова 7 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 7 КЛАС</span>
+        <h1>Lektion 8 · Modul A: Die Ukraine — mein Heimatland</h1>
+        <p class="sub">Урок про Україну: площа, сусіди, гори, ріки, рекорди й культурна спадщина. Ступені порівняння (größer als, der höchste) і непрямі запитання (Max wollte wissen, ob …; Ich möchte wissen, wie …). Вікторина «Україна проти Німеччини» та інтерв'ю з Дариною з озвученням, вправи, говоріння, письмо і підсумковий тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Wörter</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · größer, am größten</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Indirekte Fragen</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Was stimmt?</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власний текст + вправа на розуміння ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Das große Länderquiz</h2>
+      <p class="lead">Останній урок перед канікулами: вікторина «Україна проти Німеччини». Послухай і прочитай. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l8-a-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>In der letzten Deutschstunde vor den Weihnachtsferien hat Herr Brandt ein <span class="gl" data-uk="вікторина" data-lemma="das Quiz, -">Quiz</span> gemacht: die Ukraine gegen Deutschland. Im Team Ukraine waren Daryna, Erik und Timur, im Team Deutschland Greta, Max und Ayla. Jedes Team durfte dem anderen Team Fragen stellen. Für jede richtige Antwort gab es einen Punkt.</p>
+        <p>Zuerst hat Daryna ihr <span class="gl" data-uk="батьківщина" data-lemma="das Heimatland, -ä-er">Heimatland</span> kurz vorgestellt: „Die Ukraine liegt in Osteuropa. Im Süden liegen das <span class="gl" data-uk="Чорне море" data-lemma="das Schwarze Meer">Schwarze Meer</span> und die <span class="gl" data-uk="півострів" data-lemma="die Halbinsel, -n">Halbinsel</span> Krim, im Westen die Karpaten. Es gibt <span class="gl" data-uk="степ" data-lemma="die Steppe, -n">Steppen</span>, Wälder und Berge. Die <span class="gl" data-uk="державна (офіційна) мова" data-lemma="die Amtssprache, -n">Amtssprache</span> ist Ukrainisch.“ Dann ging das Quiz los.</p>
+        <p>Max hat angefangen. Er <span class="gl" data-uk="хотіти знати, чи …" data-lemma="wissen wollen, ob …">wollte wissen, ob</span> die Ukraine größer als Deutschland ist. „Viel größer!“, hat Daryna sofort gesagt. „Die <span class="gl" data-uk="площа" data-lemma="die Fläche, -n">Fläche</span> der Ukraine ist über 600 000 <span class="gl" data-uk="квадратний кілометр" data-lemma="der Quadratkilometer, -">Quadratkilometer</span>, die von Deutschland nur etwa 357 000. Die Ukraine ist das größte Land, das ganz in Europa liegt. Sie <span class="gl" data-uk="межувати з" data-lemma="grenzen an (+ Akk.)">grenzt an</span> sieben <span class="gl" data-uk="сусідня країна" data-lemma="das Nachbarland, -ä-er">Nachbarländer</span>.“ Ein Punkt für das Team Ukraine.</p>
+        <p>Dann hat Erik gefragt, welche Stadt älter ist: Leipzig oder Kyjiw. Greta wusste, dass man Leipzig im Jahr 1015 zum ersten Mal <span class="gl" data-uk="згадувати" data-lemma="erwähnen, hat erwähnt">erwähnt</span> hat. „Aber Kyjiw ist noch viel älter“, hat Timur gelacht. „Nach der <span class="gl" data-uk="легенда (про заснування)" data-lemma="die Legende, -n (Gründungs-)">Legende</span> hat man die Stadt schon vor über 1500 Jahren gegründet.“ Kein Punkt für Team Deutschland!</p>
+        <p>Ayla hat gefragt, wie das größte <span class="gl" data-uk="літак" data-lemma="das Flugzeug, -e">Flugzeug</span> der Welt hieß. Niemand wusste es — nur Timur: „Die Mrija! Man hat sie in Kyjiw gebaut. Im Krieg, im Jahr 2022, hat man sie <span class="gl" data-uk="руйнувати, знищувати" data-lemma="zerstören, hat zerstört">zerstört</span>.“ Alle waren still. Dann hat Erik eine leichtere Frage gestellt: Welcher Berg ist höher, die Zugspitze oder die Howerla in den <span class="gl" data-uk="Карпати" data-lemma="die Karpaten (Pl.)">Karpaten</span>? „Die Zugspitze“, hat Max gesagt. „Sie ist fast 3000 Meter hoch, die Howerla nur 2061.“ Richtig! Max hat die beiden Berge <span class="gl" data-uk="порівнювати" data-lemma="vergleichen, hat verglichen">verglichen</span> und war sehr stolz.</p>
+        <p>Am Ende stand es sieben zu sieben — <span class="gl" data-uk="нічия, унічию" data-lemma="unentschieden">unentschieden</span>! Herr Brandt hat noch eine letzte Frage gestellt: „Welche ukrainische Suppe gehört seit 2022 zum <span class="gl" data-uk="культурна спадщина" data-lemma="das Kulturerbe">Kulturerbe</span> der UNESCO?“ Beide Teams haben dasselbe auf ihren Zettel geschrieben: Borschtsch! „Dann gewinnen heute alle“, hat Herr Brandt gesagt. Und Daryna hat versprochen, nach den Ferien für die ganze Klasse Borschtsch zu kochen — nach dem Rezept von Oma Halyna.</p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">Komparation · Indirekte Fragen</h2>
+      <p class="lead">Щоб порівнювати країни, міста й гори, потрібні <b>ступені порівняння</b>. А щоб переказати чиєсь запитання — <b>непряме запитання</b> з дієсловом у кінці.</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. Ступені порівняння</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Positiv</th><th>Komparativ (+ als)</th><th>Superlativ</th></tr>
+          <tr><td>groß</td><td>gr<strong>ö</strong>ß<strong>er</strong></td><td>am gr<strong>ö</strong>ß<strong>ten</strong> / der größte</td></tr>
+          <tr><td>alt</td><td><strong>ä</strong>lt<strong>er</strong></td><td>am <strong>ä</strong>lt<strong>esten</strong> / die älteste</td></tr>
+          <tr><td>hoch</td><td><strong>höher</strong></td><td>am <strong>höchsten</strong> / der höchste</td></tr>
+          <tr><td>lang</td><td>l<strong>ä</strong>ng<strong>er</strong></td><td>am l<strong>ä</strong>ng<strong>sten</strong> / der längste</td></tr>
+        </table></div>
+        <p>Die Ukraine ist größer <b>als</b> Deutschland. · Kyjiw ist älter <b>als</b> Leipzig. · Die Howerla ist der höchste Berg der Ukraine.</p>
+        <div class="merke">Рівність — <b>so … wie</b>: Die Elbe ist nicht so lang wie der Dnipro. Винятки: gut — besser — am besten, viel — mehr — am meisten, gern — lieber — am liebsten.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. Непрямі запитання</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Пряме запитання</th><th>Непряме (дієслово в кінці)</th></tr>
+          <tr><td>Ist die Ukraine größer?</td><td>Max wollte wissen, <strong>ob</strong> die Ukraine größer <strong>ist</strong>.</td></tr>
+          <tr><td>Welche Stadt ist älter?</td><td>Erik hat gefragt, <strong>welche</strong> Stadt älter <strong>ist</strong>.</td></tr>
+          <tr><td>Wie hieß das Flugzeug?</td><td>Ayla hat gefragt, <strong>wie</strong> das Flugzeug <strong>hieß</strong>.</td></tr>
+        </table></div>
+        <div class="merke">Запитання без питального слова (Ja / Nein) → <b>ob</b> («чи»). Із питальним словом (wer, wie, wo, welche …) → те саме слово. Корисні початки: Ich möchte wissen, … · Weißt du, … ? · Kannst du mir sagen, … ?</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. Типові помилки</p>
+        <p>✗ Die Ukraine ist größer wie Deutschland. → ✓ größer <b>als</b> Deutschland.</p>
+        <p>✗ der hochste Berg → ✓ der <b>höchste</b> Berg</p>
+        <p>✗ Max wollte wissen, ob ist die Ukraine größer. → ✓ …, ob die Ukraine größer <b>ist</b>.</p>
+        <p>✗ Ich möchte wissen, wenn Kyjiw älter ist. → ✓ …, <b>ob</b> Kyjiw älter ist. <i>(«чи» — завжди ob)</i></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: лексика ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Was ist das?</h2>
+      <p class="lead">Що на картинці? Вибери слово.</p>
+      <div class="card" id="ub1-pic"></div>
+    </section>
+
+    <!-- ===== Üb. 2: ступені порівняння ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">größer, am größten</h2>
+      <p class="lead">Впиши прикметник у потрібній формі.</p>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> Die Ukraine ist <input type="text" class="blank-input inline" data-ans="größer"> als Deutschland. (groß)</div>
+        <div class="fill-item"><span class="num">2)</span> Kyjiw ist viel <input type="text" class="blank-input inline" data-ans="älter"> als Leipzig. (alt)</div>
+        <div class="fill-item"><span class="num">3)</span> Die Zugspitze ist <input type="text" class="blank-input inline" data-ans="höher"> als die Howerla. (hoch)</div>
+        <div class="fill-item"><span class="num">4)</span> Die Howerla ist der <input type="text" class="blank-input inline" data-ans="höchste"> Berg der Ukraine. (hoch)</div>
+        <div class="fill-item"><span class="num">5)</span> Der Dnipro ist der <input type="text" class="blank-input inline" data-ans="längste"> Fluss der Ukraine. (lang)</div>
+        <div class="fill-item"><span class="num">6)</span> Die Mrija war das <input type="text" class="blank-input inline" data-ans="größte"> Flugzeug der Welt. (groß)</div>
+        <div class="fill-item"><span class="num">7)</span> Der Dnipro ist <input type="text" class="blank-input inline" data-ans="länger"> als die Elbe. (lang)</div>
+        <div class="fill-item"><span class="num">8)</span> Borschtsch schmeckt mir <input type="text" class="blank-input inline" data-ans="besser"> als Kartoffelsuppe. (gut)</div>
+        <div class="fill-item"><span class="num">9)</span> Am <input type="text" class="blank-input inline" data-ans="liebsten"> esse ich Warenyky. (gern)</div>
+        <div class="fill-item"><span class="num">10)</span> Die Elbe ist nicht so <input type="text" class="blank-input inline" data-ans="lang"> wie der Dnipro. (lang)</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: непрямі запитання ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Was wollte er wissen?</h2>
+      <p class="lead">Перекажи запитання непрямою мовою. Дієслово — в кінець! Пиши ціле речення.</p>
+      <div class="card" id="ub3-tr"></div>
+    </section>
+
+    <!-- ===== Üb. 4: правда чи ні ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Was stimmt?</h2>
+      <p class="lead">Вибери правильну відповідь. Якщо не знаєш — спробуй вгадати, а потім перевір у тексті чи в Hören.</p>
+      <div class="card" id="ub4-quiz"></div>
+    </section>
+
+    <!-- ===== HÖREN — власне інтерв'ю, озвучене синтезатором ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Was ist typisch ukrainisch?</h2>
+      <p class="lead">Для шкільної газети Тимур розпитує Дарину про українські традиції. Послухай (можна двічі) і дай відповіді. Текст відкривається внизу — але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l8-a-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Timur:</b> Daryna, unsere Leser möchten wissen, was typisch ukrainisch ist. Womit fangen wir an?<br>
+          <b>Daryna:</b> Mit der Wyschywanka! Das ist ein Hemd mit Stickerei. Jede Region hat ihre eigenen Farben und Muster.<br>
+          <b>Timur:</b> Trägt man sie jeden Tag?<br>
+          <b>Daryna:</b> Nein, meistens an Feiertagen. Es gibt sogar einen Wyschywanka-Tag, immer am dritten Donnerstag im Mai. Dann tragen viele Leute ihre Stickerei — in der Schule, im Büro, überall.<br>
+          <b>Timur:</b> Und was ist mit der Malerei?<br>
+          <b>Daryna:</b> Da gibt es die Petrykiwka-Malerei, mit bunten Blumen und Vögeln. Sie gehört seit 2013 zum Kulturerbe der UNESCO.<br>
+          <b>Timur:</b> Ich habe auch etwas über Ostereier gelesen.<br>
+          <b>Daryna:</b> Ja, die Pysanky! Das sind bemalte Ostereier. Seit 2024 sind auch sie UNESCO-Kulturerbe. Und in Kolomyja, im Westen der Ukraine, gibt es ein Museum, das selbst wie ein riesiges Osterei aussieht!<br>
+          <b>Timur:</b> Wirklich? Das möchte ich sehen! Was ist noch typisch?<br>
+          <b>Daryna:</b> Sonnenblumen! Im Sommer sind in der Steppe Felder voller Sonnenblumen, bis zum Horizont. Die Ukraine produziert sehr viel Sonnenblumenöl.<br>
+          <b>Timur:</b> Und zum Schluss: Was vermisst du in Leipzig am meisten?<br>
+          <b>Daryna:</b> Omas Warenyky. Aber die koche ich jetzt selbst — und viel besser als früher!
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN — 🎤 + говоріння зі зразком ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Meine Heimat</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Stell die Ukraine kurz vor: Lage, Fläche, Nachbarländer, Hauptstadt.</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Die Ukraine liegt in Osteuropa. Sie ist das größte Land, das ganz in Europa liegt: über 600 000 Quadratkilometer. Sie grenzt an sieben Länder. Die Hauptstadt ist Kyjiw, die Amtssprache ist Ukrainisch.</div>
+        </div>
+        <div class="qa">
+          <label>2. Vergleiche die Ukraine und Deutschland. (größer als, höher als …)</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Die Ukraine ist größer als Deutschland. Die Zugspitze ist höher als die Howerla. Der Dnipro ist länger als die Elbe. Und Kyjiw ist älter als Berlin.</div>
+        </div>
+        <div class="qa">
+          <label>3. Was ist für dich typisch ukrainisch?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Für mich sind die Wyschywanka und der Borschtsch typisch ukrainisch. Und natürlich die Pysanky zu Ostern — meine Oma bemalt jedes Jahr welche.</div>
+        </div>
+        <div class="qa">
+          <label>4. Welche Region der Ukraine gefällt dir am besten? Warum?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Am besten gefallen mir die Karpaten, weil dort die Berge so schön sind. Im Winter kann man Ski fahren, im Sommer wandern.</div>
+        </div>
+        <div class="qa">
+          <label>5. Spiel: Stellt einander Quizfragen über die Ukraine und berichtet: „… wollte wissen, ob / wie / wo …“</label>
+          <button class="btn secondary" type="button" data-reveal="spr5">Muster zeigen</button>
+          <div class="reveal" id="spr5">— Ist die Howerla höher als 2000 Meter? — Ja, sie ist 2061 Meter hoch. — Olja wollte wissen, ob die Howerla höher als 2000 Meter ist. Die Antwort ist: ja!</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Fünf Quizfragen über die Ukraine</h2>
+      <p class="lead">Склади власну вікторину для Ґрети й Еріка: п'ять запитань про Україну з відповідями (60–80 слів разом). Використай ступені порівняння й хоча б одне непряме запитання.</p>
+      <div class="card">
+        <p>1) запитання про площу або сусідів; 2) запитання-порівняння (Was ist größer / älter / höher …?); 3) запитання про рекорд (der / die / das …ste); 4) запитання про традицію; 5) одне запитання в непрямій формі (Weißt du, ob / wo / wie …?). До кожного — коротка відповідь.</p>
+        <p class="beispiel">1. Wie viele Nachbarländer hat die Ukraine? — Sieben. · 2. Was ist länger: … oder …? — … · 3. Wie heißt der höchste …? — … · 5. Weißt du, wo … liegt? — …</p>
+        <div class="qa">
+          <label for="schreiben-text">Dein Quiz</label>
+          <textarea id="schreiben-text" rows="10" placeholder="1. …?&#10;— …"
+            data-words="60-80"
+            data-must="als|ob/wo/wie/wer/welche"
+            data-check="Площа або сусіди|Порівняння з als|Рекорд (Superlativ)|Традиція|Непряме запитання|Відповіді"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">1. An wie viele Länder grenzt die Ukraine? — An sieben Länder.<br>2. Was ist länger: der Dnipro oder die Elbe? — Der Dnipro ist viel länger.<br>3. Wie heißt der höchste Berg der Ukraine? — Die Howerla, 2061 Meter.<br>4. Wie heißt das ukrainische Hemd mit Stickerei? — Wyschywanka.<br>5. Weißt du, in welcher Stadt ein Museum wie ein Osterei aussieht? — In Kolomyja!<br>Viel Spaß beim Raten!</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — режим контрольної ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Die Ukraine ist größer
+          <select class="blank inline" data-ans="als"><option value="">—</option><option>wie</option><option>als</option><option>so</option></select> Deutschland.</div>
+        <div class="fill-item"><span class="num">8)</span> Die Howerla ist der
+          <select class="blank inline" data-ans="höchste"><option value="">—</option><option>hochste</option><option>höchste</option><option>höher</option></select> Berg der Ukraine.</div>
+        <div class="fill-item"><span class="num">9)</span> Max wollte wissen,
+          <select class="blank inline" data-ans="ob"><option value="">—</option><option>ob</option><option>wenn</option><option>dass</option></select> Kyjiw älter ist.</div>
+        <div class="fill-item"><span class="num">10)</span> Weißt du, wo Kolomyja
+          <select class="blank inline" data-ans="liegt"><option value="">—</option><option>liegt</option><option>liegt es</option><option>liegen</option></select>?</div>
+        <div class="fill-item"><span class="num">11)</span> Die Ukraine grenzt
+          <select class="blank inline" data-ans="an"><option value="">—</option><option>mit</option><option>an</option><option>zu</option></select> sieben Länder.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+<section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-7-klas-7-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-7-klas-7-rik";
+  const KN_UNIT = "l8-a";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Das Quiz war in der letzten Deutschstunde vor den Weihnachtsferien.", a: "r"},
+    {s: "Greta war im Team Ukraine.", a: "f"},
+    {s: "Die Ukraine ist das größte Land, das ganz in Europa liegt.", a: "r"},
+    {s: "Die Ukraine grenzt an fünf Länder.", a: "f"},
+    {s: "Leipzig hat man im Jahr 1015 zum ersten Mal erwähnt.", a: "r"},
+    {s: "Leipzig ist älter als Kyjiw.", a: "f"},
+    {s: "Die Mrija hat man in Kyjiw gebaut.", a: "r"},
+    {s: "Die Howerla ist höher als die Zugspitze.", a: "f"},
+    {s: "Am Ende stand es unentschieden.", a: "r"},
+    {s: "Daryna kocht nach den Ferien Borschtsch für die Klasse.", a: "r"}
+  ]);
+
+  // Üb. 1: картинка → слово
+  buildPicture('ub1-pic', [
+    {pic: "✈️", opts: ["das Flugzeug", "das Gebiet", "die Fläche"], correct: "das Flugzeug"},
+    {pic: "🌻", opts: ["die Steppe", "die Sonnenblume", "die Stickerei"], correct: "die Sonnenblume"},
+    {pic: "🥚", opts: ["das Osterei", "das Quiz", "das Kulturerbe"], correct: "das Osterei"},
+    {pic: "🏔️", opts: ["die Karpaten", "die Halbinsel", "das Schwarze Meer"], correct: "die Karpaten"},
+    {pic: "🌊", opts: ["das Schwarze Meer", "die Steppe", "das Gebiet"], correct: "das Schwarze Meer"},
+    {pic: "🧵", opts: ["die Stickerei", "die Legende", "die Bevölkerung"], correct: "die Stickerei"},
+    {pic: "❓", opts: ["das Quiz", "das Flugzeug", "der Quadratkilometer"], correct: "das Quiz"},
+    {pic: "🤝", opts: ["unentschieden", "zerstört", "erwähnt"], correct: "unentschieden"},
+    {pic: "⚖️", opts: ["vergleichen", "grenzen an", "zerstören"], correct: "vergleichen"}
+  ]);
+
+  // Üb. 2
+  wireBlanks('ub2');
+
+  // Üb. 3: непрямі запитання
+  buildTransform('ub3-tr', [
+    {s: "Max: „Ist die Ukraine größer als Deutschland?“", task: "Max wollte wissen, …", ans: "Max wollte wissen, ob die Ukraine größer als Deutschland ist."},
+    {s: "Erik: „Welche Stadt ist älter?“", task: "Erik hat gefragt, …", ans: "Erik hat gefragt, welche Stadt älter ist."},
+    {s: "Ayla: „Wie hieß das größte Flugzeug der Welt?“", task: "Ayla hat gefragt, …", ans: "Ayla hat gefragt, wie das größte Flugzeug der Welt hieß."},
+    {s: "Greta: „Ist die Howerla höher als die Zugspitze?“", task: "Greta wollte wissen, …", ans: "Greta wollte wissen, ob die Howerla höher als die Zugspitze ist."},
+    {s: "Timur: „Wo liegt Kolomyja?“", task: "Timur hat gefragt, …", ans: "Timur hat gefragt, wo Kolomyja liegt."},
+    {s: "Max: „Kocht Daryna Borschtsch?“", task: "Max wollte wissen, …", ans: "Max wollte wissen, ob Daryna Borschtsch kocht."},
+    {s: "„An wie viele Länder grenzt die Ukraine?“", task: "Weißt du, …?", ans: "Weißt du, an wie viele Länder die Ukraine grenzt?"},
+    {s: "„Wann trägt man die Wyschywanka?“", task: "Ich möchte wissen, …", ans: "Ich möchte wissen, wann man die Wyschywanka trägt."}
+  ]);
+
+  // Üb. 4: квіз
+  buildQuiz('ub4-quiz', [
+    {q: "Wie viele Nachbarländer hat die Ukraine?", opts: ["fünf", "sieben", "neun"], correct: "sieben"},
+    {q: "Welcher Fluss ist länger?", opts: ["der Dnipro", "die Elbe", "Sie sind gleich lang."], correct: "der Dnipro"},
+    {q: "Wie heißt der höchste Berg der Ukraine?", opts: ["die Zugspitze", "die Howerla", "der Brocken"], correct: "die Howerla"},
+    {q: "Welche Suppe gehört seit 2022 zum UNESCO-Kulturerbe?", opts: ["Borschtsch", "Soljanka", "Gulasch"], correct: "Borschtsch"},
+    {q: "Wie heißt das ukrainische Hemd mit Stickerei?", opts: ["Pysanka", "Wyschywanka", "Mrija"], correct: "Wyschywanka"},
+    {q: "Was sind Pysanky?", opts: ["bemalte Ostereier", "Lieder", "Suppen"], correct: "bemalte Ostereier"},
+    {q: "Welches Meer liegt im Süden der Ukraine?", opts: ["die Ostsee", "das Schwarze Meer", "die Nordsee"], correct: "das Schwarze Meer"},
+    {q: "Welches Land ist größer?", opts: ["die Ukraine", "Deutschland", "Sie sind gleich groß."], correct: "die Ukraine"}
+  ]);
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Was ist eine Wyschywanka?", opts: ["ein Hemd mit Stickerei", "eine Suppe", "ein Osterei"], correct: "ein Hemd mit Stickerei"},
+    {q: "Wann ist der Wyschywanka-Tag?", opts: ["am 24. August", "am dritten Donnerstag im Mai", "zu Ostern"], correct: "am dritten Donnerstag im Mai"},
+    {q: "Was malt man in der Petrykiwka-Malerei?", opts: ["Berge und Flüsse", "bunte Blumen und Vögel", "Häuser"], correct: "bunte Blumen und Vögel"},
+    {q: "Seit wann ist die Petrykiwka-Malerei UNESCO-Kulturerbe?", opts: ["seit 2013", "seit 2022", "seit 2024"], correct: "seit 2013"},
+    {q: "Was sind Pysanky?", opts: ["bemalte Ostereier", "gestickte Hemden", "Sonnenblumen"], correct: "bemalte Ostereier"},
+    {q: "Wo gibt es ein Museum, das wie ein Osterei aussieht?", opts: ["in Kyjiw", "in Kolomyja", "in Charkiw"], correct: "in Kolomyja"},
+    {q: "Was wächst im Sommer in der Steppe?", opts: ["Sonnenblumen", "Palmen", "Tannen"], correct: "Sonnenblumen"},
+    {q: "Was vermisst Daryna in Leipzig am meisten?", opts: ["Omas Warenyky", "das Meer", "ihre Schule"], correct: "Omas Warenyky"}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Die Ukraine ist größer als Deutschland.", uk: "Україна більша за Німеччину."},
+    {say: "Die Howerla ist der höchste Berg der Ukraine.", uk: "Говерла — найвища гора України."},
+    {say: "Die Ukraine grenzt an sieben Länder.", uk: "Україна межує із сімома країнами."},
+    {say: "Max wollte wissen, ob Kyjiw älter ist.", uk: "Макс хотів знати, чи Київ старший."},
+    {say: "Ich möchte wissen, wo Kolomyja liegt.", uk: "Я хочу знати, де розташована Коломия."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Die Menschen in einem Land sind seine …", opts: ["Bevölkerung", "Fläche", "Steppe"], correct: "Bevölkerung"},
+    {q: "Die Amtssprache der Ukraine ist …", opts: ["Ukrainisch", "Deutsch", "Englisch"], correct: "Ukrainisch"},
+    {q: "Ein Land, das direkt neben einem anderen liegt, ist ein …", opts: ["Nachbarland", "Heimatland", "Bundesland"], correct: "Nachbarland"},
+    {q: "Die Krim ist eine …", opts: ["Halbinsel", "Steppe", "Hauptstadt"], correct: "Halbinsel"},
+    {q: "gut — besser — am …", opts: ["besten", "gutesten", "bessten"], correct: "besten"},
+    {q: "Welcher Satz ist richtig?", opts: ["Ich möchte wissen, ob ist das Museum offen.", "Ich möchte wissen, ob das Museum offen ist.", "Ich möchte wissen, wenn das Museum offen ist."], correct: "Ich möchte wissen, ob das Museum offen ist."}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Die Ukraine ist größer wie Deutschland.", wrong: 4, fix: "als"},
+    {s: "Der Dnipro ist der längste Fluss der Ukraine.", ok: true},
+    {s: "Ich möchte wissen, wenn die Ukraine größer ist.", wrong: 3, fix: "ob"},
+    {s: "Die Howerla ist der hochste Berg.", wrong: 4, fix: "höchste"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🇺🇦', '🌻', '🥚', '🏔️']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
