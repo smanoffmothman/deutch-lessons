@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 7, Modul D: Wiederholung — Німецька мова 7 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 7 КЛАС</span>
+        <h1>Lektion 7 · Modul D: Wiederholung</h1>
+        <p class="sub">Повторення всього Lektion 7 «Reiseziel: Deutschland»: подорожі, міста Німеччини, Берлін; einer / keiner / welche, jemand / niemand, країни з артиклем, прикметники на -er від назв міст. Ігри на слова, вправи, говоріння і великий тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Blitz</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Kreuzworträtsel</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Sortieren</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Fehler</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Chat</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER — усі слова Lektion 7 (збираються самі) ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Усі слова Lektion 7</h2>
+      <p class="lead">Тут зібрано слова всіх модулів Lektion 7. Перевір себе в «Картки ▶» і познач ☆ ті, які ще не пам'ятаєш, — їх варто повторити перед тестом.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: бліц ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Blitz: 60 Sekunden</h2>
+      <p class="lead">Розминка на швидкість: скільки слів Lektion 7 ти перекладеш за 60 секунд? У бал не йде — це гра. Спробуй побити власний рекорд!</p>
+      <div class="card" id="ub1-blitz"></div>
+    </section>
+
+    <!-- ===== Üb. 2: кросворд ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Kreuzworträtsel: Reisen</h2>
+      <p class="lead">Торкнися клітинки чи підказки й пиши слово (ще раз по клітинці — інший напрямок). Артиклі писати не треба. ä ö ü — з панелі внизу.</p>
+      <div class="card" id="ub2-kw"></div>
+    </section>
+
+    <!-- ===== Üb. 3: сортування ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Was ist was?</h2>
+      <p class="lead">Це річ для подорожі чи пам'ятка в місті? Натисни слово, потім кошик.</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 4: знайди помилку ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Finde den Fehler</h2>
+      <p class="lead">Граматика всього Lektion: einer / keiner / welche, jemand / niemand, nach / in die, прикметники від назв міст. Знайди помилку й виправ її — або натисни «Fehlerfrei».</p>
+      <div class="card" id="ub4-fix"></div>
+    </section>
+
+    <!-- ===== Üb. 5: чат ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Matteo fragt</h2>
+      <p class="lead">Маттео розпитує тебе про подорожі. Вибирай правильну відповідь.</p>
+      <div class="card" id="ub5-chat"></div>
+    </section>
+
+    <!-- ===== SPRECHEN ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Sprich mal!</h2>
+      <p class="lead">Спершу вимов фрази в 🎤, потім відповідай уголос на запитання й порівнюй зі зразком.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Reist du gern? Wann, wie und wohin?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Ja, ich reise sehr gern. Meistens reisen wir im Sommer, mit dem Auto oder mit dem Zug. Letztes Jahr sind wir nach Polen gefahren, und nächstes Jahr möchten wir in die Schweiz.</div>
+        </div>
+        <div class="qa">
+          <label>2. Welche deutsche Stadt möchtest du besuchen? Was gibt es dort?</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Ich möchte nach Lübeck fahren. Dort gibt es das Holstentor und das Lübecker Marzipan. Und die Ostsee ist ganz nah!</div>
+        </div>
+        <div class="qa">
+          <label>3. Spiel „Das stimmt nicht!“: Sag einen falschen Satz über eine Stadt. Dein Partner / deine Partnerin korrigiert.</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">— Ulm liegt an der Ostsee. — Das stimmt nicht! Ulm liegt an der Donau. — Die Siegessäule steht in München. — Falsch! Sie steht in Berlin, im Tiergarten.</div>
+        </div>
+        <div class="qa">
+          <label>4. Packspiel: Fragt einander, was ihr für eine Reise habt. (Hast du einen …? — Ja, ich habe einen. / Nein, ich habe keinen.)</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">— Hast du einen Schlafsack? — Nein, ich habe keinen. — Und eine Taschenlampe? — Ja, ich habe eine. — Hast du Handschuhe? — Ja, ich habe welche.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — на весь Lektion ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Test zu Lektion 7</h2>
+      <p class="lead">Підсумковий тест на весь Lektion 7: 18 завдань. Кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">9)</span> Ayla fliegt
+          <select class="blank inline" data-ans="in die"><option value="">—</option><option>nach</option><option>in die</option><option>in der</option></select> Türkei.</div>
+        <div class="fill-item"><span class="num">10)</span> Hast du ein Handtuch? — Nein, ich habe
+          <select class="blank inline" data-ans="keins"><option value="">—</option><option>kein</option><option>keins</option><option>keinen</option></select>.</div>
+        <div class="fill-item"><span class="num">11)</span> Brauchst du Socken? — Ja, ich brauche
+          <select class="blank inline" data-ans="welche"><option value="">—</option><option>welche</option><option>eins</option><option>einen</option></select>.</div>
+        <div class="fill-item"><span class="num">12)</span> Hat
+          <select class="blank inline" data-ans="jemand"><option value="">—</option><option>jemand</option><option>jemanden</option><option>niemanden</option></select> mein Kabel gesehen?</div>
+        <div class="fill-item"><span class="num">13)</span> Ich habe mit
+          <select class="blank inline" data-ans="niemandem"><option value="">—</option><option>niemand</option><option>niemanden</option><option>niemandem</option></select> gesprochen.</div>
+        <div class="fill-item"><span class="num">14)</span> Wir besichtigen das
+          <select class="blank inline" data-ans="Heidelberger"><option value="">—</option><option>Heidelberger</option><option>heidelberger</option><option>Heidelbergen</option></select> Schloss.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-7-klas-7-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-7-klas-7-rik";
+  const KN_UNIT = "l7-d";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['ub1', 'ub2', 'ub3', 'ub4', 'ub5', 'sprechen']});
+
+  // Üb. 1: бліц — усі слова Lektion 7 з файлу слів (без однакових перекладів)
+  const blitzPairs = [], blitzSeen = new Set();
+  ((window.SLOVA && window.SLOVA[KN_BOOK]) || []).filter(w => /^l7-/.test(w.r) && !/[.!?]$/.test(w.de)).forEach(w => {
+    const de = w.de.split(' / ')[0].split(',')[0].replace(/\s*\(.*?\)/g, '').trim();
+    const uk = w.uk.split(' / ')[0].trim();
+    const key = uk.split(/[,;]/)[0].trim().toLowerCase();
+    if (!de || /^(der|die|das)$/i.test(de) || blitzSeen.has(key)) return;
+    blitzSeen.add(key);
+    blitzPairs.push([de, uk]);
+  });
+  buildBlitz('ub1-blitz', {pairs: blitzPairs, seconds: 60, dir: "de-uk"});
+
+  // Üb. 2: кросворд
+  buildCrossword('ub2-kw', [
+    ["Reise", "подорож (die)"],
+    ["Rucksack", "рюкзак (der)"],
+    ["Schlafsack", "спальний мішок (der)"],
+    ["Fahrkarte", "квиток (die)"],
+    ["Gepäck", "багаж (das)"],
+    ["Schloss", "замок (das)"],
+    ["Brücke", "міст (die)"],
+    ["Altstadt", "старе місто (die)"],
+    ["Hauptstadt", "столиця (die)"],
+    ["Akku", "акумулятор (der)"],
+    ["Statue", "статуя (die)"],
+    ["umsteigen", "робити пересадку"]
+  ]);
+
+  // Üb. 3: сортування
+  buildSort('ub3-sort', {
+    buckets: ["im Rucksack 🎒", "in der Stadt 🏙️"],
+    items: [
+      {t: "der Schlafsack", b: "im Rucksack 🎒"},
+      {t: "die Taschenlampe", b: "im Rucksack 🎒"},
+      {t: "das Ladegerät", b: "im Rucksack 🎒"},
+      {t: "die Sonnenbrille", b: "im Rucksack 🎒"},
+      {t: "das Handtuch", b: "im Rucksack 🎒"},
+      {t: "die Fahrkarte", b: "im Rucksack 🎒"},
+      {t: "das Schloss", b: "in der Stadt 🏙️"},
+      {t: "der Dom", b: "in der Stadt 🏙️"},
+      {t: "die Brücke", b: "in der Stadt 🏙️"},
+      {t: "das Tor", b: "in der Stadt 🏙️"},
+      {t: "die Siegessäule", b: "in der Stadt 🏙️"},
+      {t: "die Altstadt", b: "in der Stadt 🏙️"}
+    ]
+  });
+
+  // Üb. 4: знайди помилку
+  buildFixError('ub4-fix', [
+    {s: "Wir fliegen im Sommer nach Türkei.", wrong: 4, fix: "in die"},
+    {s: "Matteo fährt nach Italien.", ok: true},
+    {s: "Hast du einen Rucksack? Ja, ich habe ein.", wrong: 7, fix: "einen"},
+    {s: "Brauchst du Handschuhe? Ja, ich brauche eins.", wrong: 6, fix: "welche"},
+    {s: "Jemand haben das Kabel genommen.", wrong: 1, fix: "hat"},
+    {s: "Ich habe in Berlin niemanden getroffen.", ok: true},
+    {s: "Wir besichtigen das ulmer Münster.", wrong: 3, fix: "Ulmer"},
+    {s: "Ulm liegt auf der Donau.", wrong: 2, fix: "an"},
+    {s: "Am Hauptbahnhof sind wir in die S-Bahn umgestiegen.", ok: true}
+  ]);
+
+  // Üb. 5: чат
+  buildChat('ub5-chat', {
+    partner: "Matteo",
+    steps: [
+      {them: "Ciao! Reist du gern?"},
+      {you: ["Ja, sehr gern! Im Sommer fahre ich in die Schweiz.", "Ja, sehr gern! Im Sommer fahre ich nach Schweiz.", "Ja, sehr gern! Im Sommer fahre ich in der Schweiz."], correct: 0},
+      {them: "Toll! Hast du schon einen Koffer?"},
+      {you: ["Nein, ich habe keinen. Ich nehme einen Rucksack.", "Nein, ich habe kein. Ich nehme einen Rucksack.", "Nein, ich habe keins. Ich nehme einen Rucksack."], correct: 0},
+      {them: "Und kennst du dort jemanden?"},
+      {you: ["Ja, ich kenne jemand in Zürich: meine Tante.", "Ja, ich kenne jemanden in Zürich: meine Tante.", "Ja, ich kenne jemandem in Zürich: meine Tante."], correct: 1},
+      {them: "Welche deutsche Stadt möchtest du einmal sehen?"},
+      {you: ["Lübeck, denn ich möchte das Lübecker Marzipan probieren!", "Lübeck, denn ich möchte das lübecker Marzipan probieren!", "Lübeck, denn ich möchte das Lübeckes Marzipan probieren!"], correct: 0},
+      {them: "Ha! Da fahren wir ja im Juni mit der Klasse hin!"},
+      {you: ["Super, ich freue mich schon!", "Gute Besserung!", "Herzliches Beileid!"], correct: 0},
+      {them: "Bis morgen!"},
+      {you: ["Bis morgen!", "Guten Appetit!", "Viel Erfolg beim Arzt!"], correct: 0}
+    ]
+  });
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Im Sommer fahren wir in die Schweiz.", uk: "Улітку ми їдемо до Швейцарії."},
+    {say: "Hast du einen Schlafsack? — Nein, ich habe keinen.", uk: "У тебе є спальник? — Ні, немає."},
+    {say: "Wir besichtigen das Ulmer Münster.", uk: "Ми оглядаємо Ульмський собор."},
+    {say: "Niemand hatte ein Kabel.", uk: "Ні в кого не було кабелю."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Für den Zug braucht man eine …", opts: ["Fahrkarte", "Taschenlampe", "Statue"], correct: "Fahrkarte"},
+    {q: "Das Symbol einer Stadt ist ihr …", opts: ["Wahrzeichen", "Gepäck", "Akku"], correct: "Wahrzeichen"},
+    {q: "Lübeck liegt nicht weit von der …", opts: ["Ostsee", "Donau", "Spree"], correct: "Ostsee"},
+    {q: "Das Ulmer Münster hat einen sehr hohen …", opts: ["Turm", "Tor", "Park"], correct: "Turm"},
+    {q: "Berlin ist die … von Deutschland.", opts: ["Hauptstadt", "Hansestadt", "Altstadt"], correct: "Hauptstadt"},
+    {q: "Am Hauptbahnhof muss man in die S-Bahn …", opts: ["umsteigen", "aufladen", "abstimmen"], correct: "umsteigen"},
+    {q: "Touristen … gern Sehenswürdigkeiten.", opts: ["besichtigen", "verreisen", "packen"], correct: "besichtigen"},
+    {q: "„Keine einzige Person“ heißt …", opts: ["niemand", "jemand", "keiner Mensch"], correct: "niemand"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "In den Ferien fahren wir zu Polen.", wrong: 5, fix: "nach"},
+    {s: "Wo ist ein Handtuch? Da ist eins.", ok: true},
+    {s: "Ich habe mit niemanden gesprochen.", wrong: 3, fix: "niemandem"},
+    {s: "Im Aachenern Dom ist es ruhig.", wrong: 1, fix: "Aachener"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🧳', '🏰', '🗺️', '🚆']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
