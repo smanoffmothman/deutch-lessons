@@ -644,5 +644,18 @@
   {de: "empfehlenswert", uk: "вартий уваги, рекомендований", r: "l8-b"},
   {de: "die Spezialität, -en", uk: "фірмова страва, делікатес", r: "l8-b"},
   {de: "sicher", uk: "безпечний; напевно", r: "l8-b", note: "wenn es wieder sicher ist"},
-  {de: "der Fürst, -en", uk: "князь", r: "l8-b", note: "Fürst Wolodymyr"}
+  {de: "der Fürst, -en", uk: "князь", r: "l8-b", note: "Fürst Wolodymyr"},
+  // ---- Lektion 8 · Modul D: Geschichtenzeit ----
+  {de: "die Rote Bete", uk: "буряк (червоний)", r: "l8-d"},
+  {de: "der Kohl", uk: "капуста", r: "l8-d"},
+  {de: "die Schulküche, -n", uk: "шкільна кухня (кабінет)", r: "l8-d"},
+  {de: "die Schürze, -n", uk: "фартух", r: "l8-d"},
+  {de: "der Fleck, -en", uk: "пляма", r: "l8-d"},
+  {de: "rosa", uk: "рожевий", r: "l8-d"},
+  {de: "der Schmand", uk: "густа сметана", r: "l8-d"},
+  {de: "der Dill", uk: "кріп", r: "l8-d"},
+  {de: "der Nachschlag", uk: "добавка (ще порція)", r: "l8-d"},
+  {de: "das Geheimnis, -se", uk: "таємниця, секрет", r: "l8-d"},
+  {de: "stolz", uk: "гордий", r: "l8-d"},
+  {de: "Guten Appetit!", uk: "Смачного!", r: "l8-d"}
 ];
