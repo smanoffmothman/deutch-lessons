@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 6, Modul A: Ich brauche einen Termin — Німецька мова 7 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 7 КЛАС</span>
+        <h1>Lektion 6 · Modul A: Ich brauche einen Termin</h1>
+        <p class="sub">Урок про лікарів і здоров'я: до якого лікаря йти, що болить, як записатися на прийом. Підрядні речення з weil і da (дієслово в кінці), zum Arzt / zur Ärztin, beim Arzt. Розповідь Ґрети й телефонна розмова з озвученням, вправи, говоріння, письмо і підсумковий тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Körper</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Zu welchem Arzt?</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · weil und da</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · zum / beim</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власний текст + вправа на розуміння ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Montag ist Arzttag</h2>
+      <p class="lead">Ґрета розповідає, як уся її родина за один день потрапила до лікарів. Послухай і прочитай. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l6-a-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Am Sonntagabend hatte bei uns plötzlich fast jeder ein Problem. Lotte hatte <span class="gl" data-uk="біль" data-lemma="die Schmerzen (Pl.)">Zahnschmerzen</span>, <span class="gl" data-uk="тому що, бо" data-lemma="weil">weil</span> sie am Martinstag zu viele Süßigkeiten gegessen hat. Papa konnte nicht gerade stehen, weil ihm der <span class="gl" data-uk="спина" data-lemma="der Rücken, -">Rücken</span> <span class="gl" data-uk="боліти" data-lemma="wehtun (tut weh), hat wehgetan">wehtat</span>: Er hatte im Kleingarten von Opa Helmut schwere Säcke getragen. Opa selbst konnte seine Zeitung nicht mehr lesen, denn seine alte <span class="gl" data-uk="окуляри" data-lemma="die Brille, -n">Brille</span> war zu schwach. Und ich? Ich habe <span class="gl" data-uk="травмуватися, поранитися" data-lemma="sich verletzen">mich</span> beim Basketballtraining am <span class="gl" data-uk="палець (руки)" data-lemma="der Finger, -">Finger</span> <span class="gl" data-uk="травмуватися, поранитися" data-lemma="sich verletzen">verletzt</span>.</p>
+        <p>Am Montagmorgen hat sich Mama mit dem Handy an den Küchentisch gesetzt und die <span class="gl" data-uk="лікарський кабінет, приватна практика" data-lemma="die Arztpraxis, -praxen">Arztpraxen</span> angerufen. Zuerst die <span class="gl" data-uk="стоматолог" data-lemma="der Zahnarzt, -ä-e / die Zahnärztin, -nen">Zahnärztin</span>. Sie hatte an diesem Tag <span class="gl" data-uk="години прийому" data-lemma="die Sprechstunde, -n">Sprechstunde</span> bis sechs, und <span class="gl" data-uk="оскільки, тому що" data-lemma="da">da</span> Lotte so große Schmerzen hatte, hat Mama gleich für den Nachmittag einen <span class="gl" data-uk="запис (на прийом), призначений час" data-lemma="der Termin, -e">Termin</span> bekommen. Papa sollte zu seinem <span class="gl" data-uk="сімейний лікар / лікарка" data-lemma="der Hausarzt, -ä-e / die Hausärztin, -nen">Hausarzt</span> gehen, und ich zu meiner <span class="gl" data-uk="дитячий лікар, педіатр" data-lemma="der Kinderarzt, -ä-e / die Kinderärztin, -nen">Kinderärztin</span>. Opa hat auch einen Termin beim <span class="gl" data-uk="окуліст, офтальмолог" data-lemma="der Augenarzt, -ä-e / die Augenärztin, -nen">Augenarzt</span> bekommen — aber erst in drei Wochen!</p>
+        <p>Am Nachmittag saß ich mit Lotte im <span class="gl" data-uk="приймальня, кімната очікування" data-lemma="das Wartezimmer, -">Wartezimmer</span>. Lotte hatte Angst und hat meine Hand gehalten. Die Zahnärztin, Frau Dr. Vogel, war aber sehr nett. „<span class="gl" data-uk="Що з тобою? / Що з вами? (Що болить?)" data-lemma="Was fehlt dir? / Was fehlt Ihnen?">Was fehlt dir?</span>“, hat sie gefragt. Lotte hat auf ihren Mund gezeigt. Ein kleines Loch im <span class="gl" data-uk="зуб" data-lemma="der Zahn, -ä-e">Zahn</span> — zehn Minuten, und alles war vorbei. Danach hat Lotte einen Aufkleber bekommen und war wieder glücklich.</p>
+        <p>Dann war ich dran, bei meiner Kinderärztin Frau Dr. Hahn. Sie hat meinen Finger untersucht: Er ist nicht gebrochen, nur geprellt. Ich habe einen <span class="gl" data-uk="пов'язка, бинт" data-lemma="der Verband, -ä-e">Verband</span> bekommen und darf zwei Wochen nicht Basketball spielen. Das ist schlimmer als jeder Schmerz!</p>
+        <p>Am Abend hat Papa erzählt: Der <span class="gl" data-uk="лікар / лікарка" data-lemma="der Arzt, -ä-e / die Ärztin, -nen">Arzt</span> hat gesagt, er soll keine schweren Säcke mehr tragen. Opa hat bis zu seinem Termin eine Lupe aus der Schublade geholt. Und Mama? Sie lag auf dem Sofa: „Ich habe Kopfschmerzen, und mein <span class="gl" data-uk="горло; шия" data-lemma="der Hals, -ä-e">Hals</span> tut weh, weil ich den ganzen Tag telefoniert habe.“ Wir haben alle gelacht und gerufen: „<span class="gl" data-uk="Одужуй(те)!" data-lemma="Gute Besserung!">Gute Besserung</span>, Mama!“</p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">weil und da · zum Arzt / beim Arzt</h2>
+      <p class="lead">Після <b>weil</b> і <b>da</b> («тому що», «оскільки») починається підрядне речення: відмінюване дієслово стоїть у самому <b>кінці</b>. Порівняй з <b>denn</b> з Lektion 5 — там порядок слів не змінюється.</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. Порядок слів</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Hauptsatz</th><th>Nebensatz (дієслово в кінці)</th></tr>
+          <tr><td>Lotte geht zur Zahnärztin,</td><td><strong>weil</strong> ihr Zahn <strong>wehtut</strong>.</td></tr>
+          <tr><td>Opa braucht eine Brille,</td><td><strong>weil</strong> er nicht gut lesen <strong>kann</strong>.</td></tr>
+          <tr><td>Greta darf nicht spielen,</td><td><strong>weil</strong> sie sich verletzt <strong>hat</strong>.</td></tr>
+        </table></div>
+        <div class="merke">Відокремлюване дієслово в кінці пишемо разом: weil ihr Zahn <b>wehtut</b>. Модальне чи допоміжне дієслово — останнє: weil er nicht lesen <b>kann</b>, weil sie sich verletzt <b>hat</b>.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. da на початку</p>
+        <p><b>Da</b> Lotte Schmerzen <b>hat</b>, <b>bekommt</b> sie sofort einen Termin.</p>
+        <div class="merke">Якщо підрядне речення стоїть першим, головне починається з <b>дієслова</b>: …, <b>bekommt</b> sie … Так само з weil: Weil ich krank bin, <b>bleibe</b> ich zu Hause.</div>
+        <p>Порівняй: Ich bleibe zu Hause, <b>denn</b> ich <b>bin</b> krank. — Ich bleibe zu Hause, <b>weil</b> ich krank <b>bin</b>.</p>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. До лікаря — у лікаря</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th></th><th>Wohin? (zu + Dat.)</th><th>Wo? (bei + Dat.)</th></tr>
+          <tr><td>m</td><td><strong>zum</strong> Zahnarzt</td><td><strong>beim</strong> Zahnarzt</td></tr>
+          <tr><td>f</td><td><strong>zur</strong> Zahnärztin</td><td><strong>bei der</strong> Zahnärztin</td></tr>
+        </table></div>
+        <div class="merke">zu + dem = <b>zum</b>, zu + der = <b>zur</b>, bei + dem = <b>beim</b>. Der Chirurg → zum Chirurg<b>en</b>.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">4. Типові помилки</p>
+        <p>✗ …, weil ich habe Bauchschmerzen. → ✓ …, weil ich Bauchschmerzen <b>habe</b>.</p>
+        <p>✗ …, weil mein Kopf tut weh. → ✓ …, weil mein Kopf <b>wehtut</b>.</p>
+        <p>✗ Ich gehe zur Zahnarzt. → ✓ Ich gehe <b>zum</b> Zahnarzt / <b>zur</b> Zahnärztin.</p>
+        <p>✗ Mein Kopf tun weh. → ✓ Mein Kopf <b>tut</b> weh. — Meine Beine <b>tun</b> weh.</p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: тіло ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Was tut weh?</h2>
+      <p class="lead">Що на картинці? Вибери слово.</p>
+      <div class="card" id="ub1-pic"></div>
+    </section>
+
+    <!-- ===== Üb. 2: до якого лікаря ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Zu welchem Arzt?</h2>
+      <p class="lead">До якого лікаря треба піти? Вибери для кожної проблеми.</p>
+      <div class="card" id="ub2-list"></div>
+    </section>
+
+    <!-- ===== Üb. 3: weil / da ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">weil und da</h2>
+      <p class="lead">З'єднай два речення за допомогою weil або da. Дієслово — в кінець! Пиши ціле речення з комою.</p>
+      <div class="card" id="ub3-tr"></div>
+    </section>
+
+    <!-- ===== Üb. 4: zum / zur / beim / bei der ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">zum, zur, beim oder bei der?</h2>
+      <p class="lead">Куди (zu) чи де (bei)? І який рід?</p>
+      <div class="card" id="ub4-list">
+        <div class="fill-item"><span class="num">1)</span> Lotte geht
+          <select class="blank inline" data-ans="zur"><option value="">—</option><option>zum</option><option>zur</option><option>beim</option><option>bei der</option></select> Zahnärztin.</div>
+        <div class="fill-item"><span class="num">2)</span> Greta war gestern
+          <select class="blank inline" data-ans="bei der"><option value="">—</option><option>zum</option><option>zur</option><option>beim</option><option>bei der</option></select> Kinderärztin.</div>
+        <div class="fill-item"><span class="num">3)</span> Opa geht
+          <select class="blank inline" data-ans="zum"><option value="">—</option><option>zum</option><option>zur</option><option>beim</option><option>bei der</option></select> Augenarzt.</div>
+        <div class="fill-item"><span class="num">4)</span> Ich habe morgen einen Termin
+          <select class="blank inline" data-ans="beim"><option value="">—</option><option>zum</option><option>zur</option><option>beim</option><option>bei der</option></select> Zahnarzt.</div>
+        <div class="fill-item"><span class="num">5)</span> Mit Ohrenschmerzen geht man
+          <select class="blank inline" data-ans="zum"><option value="">—</option><option>zum</option><option>zur</option><option>beim</option><option>bei der</option></select> HNO-Arzt.</div>
+        <div class="fill-item"><span class="num">6)</span> Mama bringt das Baby
+          <select class="blank inline" data-ans="zur"><option value="">—</option><option>zum</option><option>zur</option><option>beim</option><option>bei der</option></select> Kinderärztin.</div>
+        <div class="fill-item"><span class="num">7)</span>
+          <select class="blank inline" data-ans="Beim"><option value="">—</option><option>Zum</option><option>Zur</option><option>Beim</option><option>Bei der</option></select> Arzt muss man oft lange warten.</div>
+        <div class="fill-item"><span class="num">8)</span> Papa war heute
+          <select class="blank inline" data-ans="beim"><option value="">—</option><option>zum</option><option>zur</option><option>beim</option><option>bei der</option></select> Hausarzt.</div>
+        <div class="fill-item"><span class="num">9)</span> Kommst du mit
+          <select class="blank inline" data-ans="zur"><option value="">—</option><option>zum</option><option>zur</option><option>beim</option><option>bei der</option></select> Apotheke?</div>
+        <div class="fill-item"><span class="num">10)</span> Wie lange warst du
+          <select class="blank inline" data-ans="bei der"><option value="">—</option><option>zum</option><option>zur</option><option>beim</option><option>bei der</option></select> Augenärztin?</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub4-check">Prüfen</button>
+        <button class="btn secondary" id="ub4-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub4-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== HÖREN — власний діалог, озвучений синтезатором ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Ein Anruf in der Zahnarztpraxis</h2>
+      <p class="lead">У понеділок зранку мама Ґрети телефонує до стоматологічного кабінету через Лотту. Послухай (можна двічі) і дай відповіді. Текст відкривається внизу — але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l6-a-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Herr Sommer:</b> Zahnarztpraxis Dr. Vogel, Sommer am Apparat. Guten Morgen!<br>
+          <b>Mama:</b> Guten Morgen! Ich rufe für meine Tochter Lotte an. Sie ist acht und hat seit gestern Abend starke Zahnschmerzen.<br>
+          <b>Herr Sommer:</b> Oh je. Hat sie auch Fieber?<br>
+          <b>Mama:</b> Nein, kein Fieber. Aber sie konnte in der Nacht kaum schlafen, weil der Zahn so wehgetan hat.<br>
+          <b>Herr Sommer:</b> Dann soll sie heute noch kommen. Frau Dr. Vogel hat heute Sprechstunde bis achtzehn Uhr. Geht es um halb vier?<br>
+          <b>Mama:</b> Um halb vier? Ja, das passt. Ich muss leider arbeiten, aber ihre große Schwester Greta kommt mit.<br>
+          <b>Herr Sommer:</b> Kein Problem. War Lotte schon einmal bei uns?<br>
+          <b>Mama:</b> Ja, im Frühling, zur Kontrolle.<br>
+          <b>Herr Sommer:</b> Gut. Bitte bringen Sie die Versichertenkarte mit. Und Lotte soll heute keine Süßigkeiten essen!<br>
+          <b>Mama:</b> Das ist kein Problem. Süßigkeiten hatte sie am Martinstag genug!<br>
+          <b>Herr Sommer:</b> Dann bis heute Nachmittag. Gute Besserung für Lotte!<br>
+          <b>Mama:</b> Vielen Dank! Auf Wiederhören!
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN — 🎤 + говоріння зі зразком ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Was fehlt dir?</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Wann warst du zum letzten Mal beim Arzt? Warum?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Im Oktober war ich beim Zahnarzt, weil ich zur Kontrolle musste. Alles war in Ordnung, ich hatte keine Löcher in den Zähnen.</div>
+        </div>
+        <div class="qa">
+          <label>2. Zu welchem Arzt geht man, wenn …? Nenne drei Beispiele mit weil.</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Man geht zum Augenarzt, weil man schlecht sieht. Man geht zum HNO-Arzt, weil der Hals wehtut. Und man geht zum Zahnarzt, weil man Zahnschmerzen hat.</div>
+        </div>
+        <div class="qa">
+          <label>3. Hast du Angst vor dem Zahnarzt? Warum (nicht)?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Früher hatte ich Angst, weil das Bohren so laut ist. Jetzt habe ich keine Angst mehr, denn meine Zahnärztin ist sehr nett und erklärt alles.</div>
+        </div>
+        <div class="qa">
+          <label>4. Hast du dich schon einmal beim Sport verletzt? Was ist passiert?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Ja, beim Fußball habe ich mich am Bein verletzt. Ich bin zum Arzt gegangen, und er hat mir einen Verband gemacht. Zwei Wochen konnte ich nicht spielen.</div>
+        </div>
+        <div class="qa">
+          <label>5. Rollenspiel: Ruf in einer Arztpraxis an und bitte um einen Termin.</label>
+          <button class="btn secondary" type="button" data-reveal="spr5">Muster zeigen</button>
+          <div class="reveal" id="spr5">— Praxis Dr. Hahn, guten Tag! — Guten Tag, ich brauche einen Termin, weil ich seit drei Tagen Halsschmerzen habe. — Können Sie morgen um zehn kommen? — Morgen habe ich Schule. Geht es auch am Nachmittag? — Ja, um sechzehn Uhr. — Super, vielen Dank!</div>
+        </div>
+        <div class="qa">
+          <label>6. Ein Freund ist krank. Was sagst du ihm?</label>
+          <button class="btn secondary" type="button" data-reveal="spr6">Muster zeigen</button>
+          <div class="reveal" id="spr6">Was fehlt dir? Warst du schon beim Arzt? Bleib im Bett und trink viel Tee. Ich bringe dir die Hausaufgaben. Gute Besserung!</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Eine E-Mail an die Trainerin</h2>
+      <p class="lead">Ти пропустив / пропустила тренування, бо був / була хворий / хвора або травмувався / травмувалася. Напиши тренерці Frau Schulz e-mail на 60–80 слів за планом:</p>
+      <div class="card">
+        <p>1) звертання (Liebe Frau Schulz, …); 2) чому тебе не було на тренуванні (weil …); 3) у якого лікаря ти був / була і що сказав лікар; 4) як ти почуваєшся зараз; 5) коли повернешся на тренування; 6) прощання.</p>
+        <p class="beispiel">Liebe Frau Schulz, · am Mittwoch war ich nicht beim Training, weil … · Ich war beim / bei der … · Der Arzt / Die Ärztin hat gesagt, … · Jetzt … · Ab … komme ich wieder. · Viele Grüße</p>
+        <div class="qa">
+          <label for="schreiben-text">Deine E-Mail</label>
+          <textarea id="schreiben-text" rows="10" placeholder="Liebe Frau Schulz,&#10;…"
+            data-words="60-80"
+            data-must="weil|Arzt/Ärztin|Viele Grüße/Liebe Grüße/Mit freundlichen Grüßen"
+            data-check="Звертання|Причина з weil (дієслово в кінці)|Лікар і що сказав|Як почуваюся|Коли повернуся|Прощання"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Liebe Frau Schulz,<br>am Mittwoch war ich leider nicht beim Training, weil ich krank war. Ich hatte Fieber und starke Halsschmerzen. Am Donnerstag war ich bei der Kinderärztin. Sie hat gesagt, ich muss drei Tage im Bett bleiben und viel Tee trinken. Jetzt geht es mir schon viel besser, und das Fieber ist weg. Ab nächster Woche komme ich wieder zum Training.<br>Viele Grüße<br>Ihre Sofija</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — режим контрольної ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Ich gehe heute
+          <select class="blank inline" data-ans="zum"><option value="">—</option><option>zum</option><option>zur</option><option>beim</option></select> Zahnarzt.</div>
+        <div class="fill-item"><span class="num">8)</span> Lotte war
+          <select class="blank inline" data-ans="bei der"><option value="">—</option><option>zur</option><option>bei der</option><option>zum</option></select> Zahnärztin.</div>
+        <div class="fill-item"><span class="num">9)</span> Ich bleibe im Bett, weil ich Fieber
+          <select class="blank inline" data-ans="habe"><option value="">—</option><option>habe</option><option>hat</option><option>haben</option></select>.</div>
+        <div class="fill-item"><span class="num">10)</span> Mein Bauch
+          <select class="blank inline" data-ans="tut"><option value="">—</option><option>tun</option><option>tut</option><option>macht</option></select> weh.</div>
+        <div class="fill-item"><span class="num">11)</span>
+          <select class="blank inline" data-ans="Da"><option value="">—</option><option>Da</option><option>Denn</option><option>Aber</option></select> ich krank bin, gehe ich zum Arzt.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+<section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-7-klas-7-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-7-klas-7-rik";
+  const KN_UNIT = "l6-a";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Lotte hatte Zahnschmerzen, weil sie zu viele Süßigkeiten gegessen hat.", a: "r"},
+    {s: "Papa hat sich beim Basketball verletzt.", a: "f"},
+    {s: "Opa konnte die Zeitung nicht lesen, weil seine Brille zu schwach war.", a: "r"},
+    {s: "Mama hat am Montagmorgen alle Arztpraxen angerufen.", a: "r"},
+    {s: "Opa hat schon am Montag einen Termin beim Augenarzt bekommen.", a: "f"},
+    {s: "Greta war mit Lotte im Wartezimmer.", a: "r"},
+    {s: "Lotte hatte ein großes Loch im Zahn und musste lange bleiben.", a: "f"},
+    {s: "Gretas Finger ist gebrochen.", a: "f"},
+    {s: "Greta darf zwei Wochen nicht Basketball spielen.", a: "r"},
+    {s: "Am Abend hatte Mama Kopfschmerzen.", a: "r"}
+  ]);
+
+  // Üb. 1: картинка → слово
+  buildPicture('ub1-pic', [
+    {pic: "🦷", opts: ["der Zahn", "der Hals", "der Finger"], correct: "der Zahn"},
+    {pic: "👂", opts: ["das Auge", "das Ohr", "die Nase"], correct: "das Ohr"},
+    {pic: "👁️", opts: ["das Auge", "der Bauch", "das Ohr"], correct: "das Auge"},
+    {pic: "🦵", opts: ["der Arm", "das Bein", "der Rücken"], correct: "das Bein"},
+    {pic: "👃", opts: ["der Mund", "die Nase", "der Hals"], correct: "die Nase"},
+    {pic: "☝️", opts: ["der Finger", "der Fuß", "der Zahn"], correct: "der Finger"},
+    {pic: "🩹", opts: ["der Verband", "die Brille", "der Termin"], correct: "der Verband"},
+    {pic: "👓", opts: ["die Brille", "die Sprechstunde", "der Verband"], correct: "die Brille"},
+    {pic: "🤕", opts: ["Kopfschmerzen", "Bauchschmerzen", "Zahnschmerzen"], correct: "Kopfschmerzen"}
+  ]);
+
+  // Üb. 2: проблема → лікар
+  buildMatch('ub2', [
+    ["Ich habe Zahnschmerzen.", "zum Zahnarzt"],
+    ["Ich sehe die Tafel nicht gut.", "zum Augenarzt"],
+    ["Mein Ohr tut weh.", "zum HNO-Arzt"],
+    ["Mein Baby hat Fieber.", "zur Kinderärztin"],
+    ["Ich brauche eine Operation.", "zum Chirurgen"],
+    ["Ich fühle mich schlecht und weiß nicht, was ich habe.", "zum Hausarzt"]
+  ]);
+
+  // Üb. 3: weil / da
+  buildTransform('ub3-tr', [
+    {s: "Lotte geht zur Zahnärztin. Ihr Zahn tut weh.", task: "weil", ans: "Lotte geht zur Zahnärztin, weil ihr Zahn wehtut."},
+    {s: "Papa geht zum Hausarzt. Er hat Rückenschmerzen.", task: "weil", ans: "Papa geht zum Hausarzt, weil er Rückenschmerzen hat."},
+    {s: "Opa braucht eine neue Brille. Er kann nicht gut lesen.", task: "weil", ans: "Opa braucht eine neue Brille, weil er nicht gut lesen kann."},
+    {s: "Greta darf nicht spielen. Sie hat sich am Finger verletzt.", task: "weil", ans: "Greta darf nicht spielen, weil sie sich am Finger verletzt hat."},
+    {s: "Ich bleibe heute zu Hause. Ich bin krank.", task: "weil", ans: "Ich bleibe heute zu Hause, weil ich krank bin."},
+    {s: "Mama hat Kopfschmerzen. Sie hat den ganzen Tag telefoniert.", task: "weil", ans: "Mama hat Kopfschmerzen, weil sie den ganzen Tag telefoniert hat."},
+    {s: "Lotte hat große Schmerzen. Sie bekommt sofort einen Termin.", task: "Da …", ans: "Da Lotte große Schmerzen hat, bekommt sie sofort einen Termin."},
+    {s: "Ich habe Halsschmerzen. Ich gehe zum HNO-Arzt.", task: "Da …", ans: "Da ich Halsschmerzen habe, gehe ich zum HNO-Arzt."}
+  ]);
+
+  // Üb. 4: zum / beim
+  wireBlanks('ub4');
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Wie heißt die Zahnärztin?", opts: ["Frau Dr. Hahn", "Frau Dr. Vogel", "Frau Sommer"], correct: "Frau Dr. Vogel"},
+    {q: "Seit wann hat Lotte Zahnschmerzen?", opts: ["seit gestern Abend", "seit einer Woche", "seit heute Morgen"], correct: "seit gestern Abend"},
+    {q: "Hat Lotte Fieber?", opts: ["Ja, hohes Fieber.", "Nein.", "Das weiß Mama nicht."], correct: "Nein."},
+    {q: "Warum konnte Lotte nicht schlafen?", opts: ["weil der Zahn so wehgetan hat", "weil sie Angst hatte", "weil sie Fieber hatte"], correct: "weil der Zahn so wehgetan hat"},
+    {q: "Wann hat Lotte den Termin?", opts: ["um halb drei", "um halb vier", "um achtzehn Uhr"], correct: "um halb vier"},
+    {q: "Wer kommt mit Lotte in die Praxis?", opts: ["Mama", "Papa", "Greta"], correct: "Greta"},
+    {q: "Was soll man mitbringen?", opts: ["die Versichertenkarte", "eine Brille", "Süßigkeiten"], correct: "die Versichertenkarte"},
+    {q: "Was soll Lotte heute nicht essen?", opts: ["Suppe", "Süßigkeiten", "Obst"], correct: "Süßigkeiten"}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Ich brauche einen Termin.", uk: "Мені потрібно записатися на прийом."},
+    {say: "Was fehlt dir?", uk: "Що з тобою? / Що болить?"},
+    {say: "Mein Zahn tut weh.", uk: "У мене болить зуб."},
+    {say: "Ich gehe zum Arzt, weil ich krank bin.", uk: "Я йду до лікаря, бо я хворий / хвора."},
+    {say: "Gute Besserung!", uk: "Одужуй!"}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Mit Zahnschmerzen geht man zum …", opts: ["Augenarzt", "Zahnarzt", "Chirurgen"], correct: "Zahnarzt"},
+    {q: "Wenn man schlecht sieht, braucht man vielleicht eine …", opts: ["Brille", "Sprechstunde", "Verband"], correct: "Brille"},
+    {q: "In der Arztpraxis wartet man im …", opts: ["Wartezimmer", "Rücken", "Termin"], correct: "Wartezimmer"},
+    {q: "Der Arzt fragt: „Was … dir?“", opts: ["tut", "fehlt", "hast"], correct: "fehlt"},
+    {q: "Einem kranken Freund sagt man: …", opts: ["Guten Appetit!", "Gute Besserung!", "Herzlichen Glückwunsch!"], correct: "Gute Besserung!"},
+    {q: "Welcher Satz ist richtig?", opts: ["Ich bleibe zu Hause, weil mein Kopf tut weh.", "Ich bleibe zu Hause, weil mein Kopf wehtut.", "Ich bleibe zu Hause, weil tut mein Kopf weh."], correct: "Ich bleibe zu Hause, weil mein Kopf wehtut."}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Ich gehe heute zur Zahnarzt.", wrong: 3, fix: "zum"},
+    {s: "Opa geht zum Augenarzt, weil er eine Brille braucht.", ok: true},
+    {s: "Mein Kopf tun weh.", wrong: 2, fix: "tut"},
+    {s: "Ich habe morgen einen Termin bei der Augenarzt.", wrong: 6, fix: "dem"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🦷', '🩺', '🩹', '👓']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
