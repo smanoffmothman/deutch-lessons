@@ -298,8 +298,8 @@ const PIDRUCHNYKY = [
       { id: "l6", label: "6", nazva: "Der Gesunde weiß nicht, wie reich er ist", storinky: "103–118", dity: [
         { id: "l6-a", label: "A", nazva: "Ich brauche einen Termin", storinky: "104–108", typ: "vpravy", gram: ["kausalsaetze", "praep-dativ"], opublikovano: 24 },
         { id: "l6-b", label: "B", nazva: "Arztempfehlungen", storinky: "109–113", typ: "vpravy", gram: ["verben-dass-infinitiv"], opublikovano: 25 },
-        { id: "l6-c", label: "C", nazva: "Wiederholung", storinky: "114–115", typ: "povtorennya", gram: ["kausalsaetze", "verben-dass-infinitiv"] },
-        { id: "l6-d", label: "D", nazva: "Geschichtenzeit", storinky: "116", typ: "chytannya" },
+        { id: "l6-c", label: "C", nazva: "Wiederholung", storinky: "114–115", typ: "povtorennya", gram: ["kausalsaetze", "verben-dass-infinitiv"], opublikovano: 26 },
+        { id: "l6-d", label: "D", nazva: "Geschichtenzeit", storinky: "116", typ: "chytannya", opublikovano: 27 },
         { id: "l6-e", label: "E", nazva: "Projektarbeit", storinky: "117", typ: "bez-storinky" },
         { id: "l6-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "118", typ: "bez-storinky" }
       ] },

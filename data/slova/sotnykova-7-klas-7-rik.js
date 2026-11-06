@@ -503,5 +503,18 @@
   {de: "ungesund", uk: "шкідливий для здоров'я", r: "l6-b"},
   {de: "sich bewegen", uk: "рухатися", r: "l6-b"},
   {de: "die frische Luft", uk: "свіже повітря", r: "l6-b", note: "an die frische Luft gehen"},
-  {de: "der Schlaf", uk: "сон", r: "l6-b"}
+  {de: "der Schlaf", uk: "сон", r: "l6-b"},
+  // ---- Lektion 6 · Modul D: Geschichtenzeit ----
+  {de: "die Mathearbeit, -en", uk: "контрольна з математики", r: "l6-d"},
+  {de: "sich wohlfühlen", uk: "почуватися добре", r: "l6-d", note: "Ich fühle mich nicht wohl."},
+  {de: "die Stirn, -en", uk: "лоб", r: "l6-d"},
+  {de: "schwindelig", uk: "запаморочливий", r: "l6-d", note: "Mir ist schwindelig. — У мене паморочиться в голові."},
+  {de: "die Diagnose, -n", uk: "діагноз", r: "l6-d"},
+  {de: "die Ausrede, -n", uk: "відмовка", r: "l6-d"},
+  {de: "rot werden", uk: "почервоніти", r: "l6-d"},
+  {de: "ehrlich", uk: "чесний, чесно", r: "l6-d"},
+  {de: "verschieben, hat verschoben", uk: "переносити (на інший час)", r: "l6-d"},
+  {de: "erleichtert", uk: "з полегшенням", r: "l6-d"},
+  {de: "vorbereitet", uk: "підготовлений", r: "l6-d", note: "gut vorbereitet sein"},
+  {de: "die Belohnung, -en", uk: "винагорода", r: "l6-d"}
 ];
