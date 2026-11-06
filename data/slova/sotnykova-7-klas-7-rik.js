@@ -367,5 +367,19 @@
   {de: "das Vorbild, -er", uk: "приклад для наслідування, кумир", r: "l4-c"},
   {de: "stolz auf (+ Akk.)", uk: "гордий (кимось / чимось)", r: "l4-c"},
   {de: "an erster Stelle", uk: "на першому місці", r: "l4-c", note: "an zweiter, dritter Stelle"},
-  {de: "zum ersten Mal", uk: "уперше", r: "l4-c"}
+  {de: "zum ersten Mal", uk: "уперше", r: "l4-c"},
+  // ---- Lektion 4 · Modul E: Geschichtenzeit ----
+  {de: "der Schnuppertag, -e", uk: "пробний день (щоб спробувати)", r: "l4-e"},
+  {de: "der Langlauf", uk: "лижні перегони (біг на лижах)", r: "l4-e"},
+  {de: "die Loipe, -n", uk: "лижня", r: "l4-e"},
+  {de: "die Scheibe, -n", uk: "мішень", r: "l4-e"},
+  {de: "das Lasergewehr, -e", uk: "лазерна гвинтівка", r: "l4-e"},
+  {de: "zielen", uk: "цілитися", r: "l4-e"},
+  {de: "treffen (trifft), hat getroffen", uk: "влучати", r: "l4-e"},
+  {de: "der Treffer, -", uk: "влучання", r: "l4-e"},
+  {de: "die Strafrunde, -n", uk: "штрафне коло", r: "l4-e"},
+  {de: "ausrutschen, ist ausgerutscht", uk: "посковзнутися", r: "l4-e"},
+  {de: "der Stock, -ö-e", uk: "палиця (лижна)", r: "l4-e"},
+  {de: "außer Atem", uk: "засапаний, задиханий", r: "l4-e"},
+  {de: "staunen", uk: "дивуватися", r: "l4-e"}
 ];
