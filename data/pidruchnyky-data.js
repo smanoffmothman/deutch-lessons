@@ -306,7 +306,7 @@ const PIDRUCHNYKY = [
       { id: "l7", label: "7", nazva: "Reiseziel: Deutschland", storinky: "119–138", dity: [
         { id: "l7-a", label: "A", nazva: "Reisen planen und machen", storinky: "120–124", typ: "vpravy", gram: ["indefinitpronomen", "artikel-gebrauch"], opublikovano: 28 },
         { id: "l7-b", label: "B", nazva: "Schöne Städte Deutschlands", storinky: "125–128", typ: "vpravy", opublikovano: 29 },
-        { id: "l7-c", label: "C", nazva: "Willkommen in Berlin", storinky: "129–133", typ: "vpravy", gram: ["indefinitpronomen"] },
+        { id: "l7-c", label: "C", nazva: "Willkommen in Berlin", storinky: "129–133", typ: "vpravy", gram: ["indefinitpronomen"], opublikovano: 30 },
         { id: "l7-d", label: "D", nazva: "Wiederholung", storinky: "134–135", typ: "povtorennya", gram: ["indefinitpronomen", "artikel-gebrauch"] },
         { id: "l7-e", label: "E", nazva: "Geschichtenzeit", storinky: "136", typ: "chytannya" },
         { id: "l7-f", label: "F", nazva: "Projektarbeit", storinky: "137", typ: "bez-storinky" },
