@@ -565,5 +565,26 @@
   {de: "die Stimme, -n", uk: "голос (на виборах)", r: "l7-b"},
   {de: "abstimmen, hat abgestimmt", uk: "голосувати", r: "l7-b"},
   {de: "die Legende, -n", uk: "легенда", r: "l7-b"},
-  {de: "der Spatz, -en", uk: "горобець", r: "l7-b"}
+  {de: "der Spatz, -en", uk: "горобець", r: "l7-b"},
+  // ---- Lektion 7 · Modul C: Willkommen in Berlin ----
+  {de: "die Hauptstadt, -ä-e", uk: "столиця", r: "l7-c"},
+  {de: "das Bundesland, -ä-er", uk: "федеральна земля", r: "l7-c", note: "Berlin ist eine Stadt und zugleich ein Bundesland."},
+  {de: "die Regierung, -en", uk: "уряд", r: "l7-c"},
+  {de: "der Bundestag", uk: "Бундестаг (парламент Німеччини)", r: "l7-c"},
+  {de: "der Einwohner, - / die Einwohnerin, -nen", uk: "мешканець / мешканка", r: "l7-c"},
+  {de: "der Wettbewerb, -e (Robotik-)", uk: "конкурс (з робототехніки)", r: "l7-c"},
+  {de: "der Akku, -s", uk: "акумулятор", r: "l7-c"},
+  {de: "aufladen (lädt auf), hat aufgeladen", uk: "заряджати", r: "l7-c"},
+  {de: "das Kabel, -", uk: "кабель, шнур", r: "l7-c"},
+  {de: "der Sonderpreis, -e", uk: "спеціальний приз", r: "l7-c"},
+  {de: "jemand", uk: "хтось", r: "l7-c", note: "jemand(en) — Akk., jemand(em) — Dat."},
+  {de: "niemand", uk: "ніхто", r: "l7-c", note: "niemand(en) — Akk., niemand(em) — Dat."},
+  {de: "die Säule, -n", uk: "колона", r: "l7-c", note: "die Siegessäule"},
+  {de: "die Wendeltreppe, -n", uk: "гвинтові сходи", r: "l7-c"},
+  {de: "die Statue, -n", uk: "статуя", r: "l7-c"},
+  {de: "der Park, -s", uk: "парк", r: "l7-c"},
+  {de: "verzweifelt", uk: "у розпачі", r: "l7-c"},
+  {de: "umsteigen, ist umgestiegen", uk: "робити пересадку", r: "l7-c"},
+  {de: "die S-Bahn, -en", uk: "міська електричка", r: "l7-c"},
+  {de: "der Stadtplan, -ä-e", uk: "мапа міста", r: "l7-c"}
 ];

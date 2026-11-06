@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 7, Modul C: Willkommen in Berlin — Німецька мова 7 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 7 КЛАС</span>
+        <h1>Lektion 7 · Modul C: Willkommen in Berlin</h1>
+        <p class="sub">Урок про Берлін — столицю й федеральну землю. Займенники jemand і niemand у різних відмінках. Розповідь Ґрети про конкурс з робототехніки в Берліні й інструктаж учителя в потязі з озвученням, вправи, говоріння, письмо і підсумковий тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Wörter</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · jemand, niemand</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Berlin-Quiz</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Nach dem Weg fragen</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власний текст + вправа на розуміння ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Ein Roboter fährt nach Berlin</h2>
+      <p class="lead">Ґрета розповідає, як гурток робототехніки їздив на конкурс до Берліна. Послухай і прочитай. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l7-c-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>An einem Samstag im Dezember ist unsere Robotik-AG zum ersten Mal zu einem <span class="gl" data-uk="конкурс (з робототехніки)" data-lemma="der Wettbewerb, -e (Robotik-)">Wettbewerb</span> gefahren — nach Berlin, in die <span class="gl" data-uk="столиця" data-lemma="die Hauptstadt, -ä-e">Hauptstadt</span>! Herr Krüger, Erik, ich und unser Roboter „Flitzer“. Mit dem ICE dauert die Fahrt von Leipzig nur etwas mehr als eine Stunde. Am Hauptbahnhof sind wir in die <span class="gl" data-uk="міська електричка" data-lemma="die S-Bahn, -en">S-Bahn</span> <span class="gl" data-uk="робити пересадку" data-lemma="umsteigen, ist umgestiegen">umgestiegen</span>.</p>
+        <p>Der Wettbewerb war in einer großen Sporthalle. Zwanzig Teams aus ganz Deutschland waren da. Die Aufgabe: Der Roboter muss in zwei Minuten so viele Bälle wie möglich in einen Korb bringen. Eine halbe Stunde vor unserem Start hat Erik <span class="gl" data-uk="у розпачі" data-lemma="verzweifelt">verzweifelt</span> gerufen: „Unser <span class="gl" data-uk="акумулятор" data-lemma="der Akku, -s">Akku</span> ist leer! Hat <span class="gl" data-uk="хтось" data-lemma="jemand">jemand</span> ein <span class="gl" data-uk="кабель, шнур" data-lemma="das Kabel, -">Kabel</span>?“ Wir haben überall gefragt, aber <span class="gl" data-uk="ніхто" data-lemma="niemand">niemand</span> hatte das richtige Kabel.</p>
+        <p>Dann ist ein Mädchen aus einem Team aus Hamburg zu uns gekommen: „Ich habe eins! Ihr könnt euren Akku bei uns <span class="gl" data-uk="заряджати" data-lemma="aufladen (lädt auf), hat aufgeladen">aufladen</span>.“ In der letzten Minute war Flitzer wieder fit. Er hat elf Bälle gebracht — Platz vier! Und die Jury hat uns einen <span class="gl" data-uk="спеціальний приз" data-lemma="der Sonderpreis, -e">Sonderpreis</span> gegeben: für die beste Teamarbeit. Den haben wir gern mit den Hamburgern geteilt. Denn ohne ihr Kabel war alles verloren.</p>
+        <p>Am Nachmittag hatten wir noch zwei Stunden für Berlin. Herr Krüger hat den <span class="gl" data-uk="мапа міста" data-lemma="der Stadtplan, -ä-e">Stadtplan</span> aufgemacht: „Wir gehen in den Tiergarten.“ Der Tiergarten ist ein riesiger <span class="gl" data-uk="парк" data-lemma="der Park, -s">Park</span> mitten in der Stadt. In der Mitte steht die Siegessäule. Ich dachte: Wer will denn auf eine <span class="gl" data-uk="колона" data-lemma="die Säule, -n">Säule</span> steigen? Aber Erik war schon an der <span class="gl" data-uk="гвинтові сходи" data-lemma="die Wendeltreppe, -n">Wendeltreppe</span>. 285 Stufen! Oben, auf 51 Metern, hatten wir eine tolle Aussicht: Wir haben den Reichstag mit der Glaskuppel gesehen — dort arbeitet der <span class="gl" data-uk="Бундестаг (парламент Німеччини)" data-lemma="der Bundestag">Bundestag</span> — und den Fernsehturm. Über uns stand die goldene <span class="gl" data-uk="статуя" data-lemma="die Statue, -n">Statue</span>. Die Berliner nennen sie „Goldelse“.</p>
+        <p>Auf der Rückfahrt hat Erik im Zug im Internet gelesen: Berlin ist nicht nur eine Stadt, sondern auch ein <span class="gl" data-uk="федеральна земля" data-lemma="das Bundesland, -ä-er">Bundesland</span>. Hier arbeitet die <span class="gl" data-uk="уряд" data-lemma="die Regierung, -en">Regierung</span>, und hier leben fast vier Millionen <span class="gl" data-uk="мешканець / мешканка" data-lemma="der Einwohner, - / die Einwohnerin, -nen">Einwohner</span>. „Nächstes Jahr fahren wir wieder hin“, hat Erik gesagt, „aber mit zwei Kabeln!“</p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">jemand und niemand</h2>
+      <p class="lead"><b>jemand</b> — «хтось», <b>niemand</b> — «ніхто». Обидва займенники вживаються як однина, тож дієслово — у 3-й особі однини: Jemand <b>hat</b> angerufen. Niemand <b>weiß</b> es.</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. Відмінки</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th></th><th>jemand</th><th>niemand</th></tr>
+          <tr><td>Nominativ</td><td>jemand</td><td>niemand</td></tr>
+          <tr><td>Akkusativ</td><td>jemand(<strong>en</strong>)</td><td>niemand(<strong>en</strong>)</td></tr>
+          <tr><td>Dativ</td><td>jemand(<strong>em</strong>)</td><td>niemand(<strong>em</strong>)</td></tr>
+        </table></div>
+        <p><b>Jemand</b> hat ein Kabel. · Ich habe <b>niemanden</b> gefragt. · Mit <b>jemandem</b> aus Hamburg haben wir den Preis geteilt.</p>
+        <div class="merke">У розмовній мові закінчення в Akk. і Dat. часто не додають: Ich habe niemand gesehen. На письмі краще з закінченням: niemand<b>en</b>, mit jemand<b>em</b>.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. Не плутай</p>
+        <p><b>niemand</b> — ніхто (про людей) · <b>nichts</b> — нічого (про речі) · <b>jemand</b> — хтось · <b>etwas</b> — щось</p>
+        <p>Niemand hatte ein Kabel. — Wir hatten nichts zu essen. — Hat jemand etwas gesehen?</p>
+        <div class="merke">З niemand не потрібне друге заперечення: ✓ Niemand hat angerufen. ✗ Niemand hat nicht angerufen.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. Типові помилки</p>
+        <p>✗ Jemand haben angerufen. → ✓ Jemand <b>hat</b> angerufen.</p>
+        <p>✗ Niemand hat nicht geholfen. → ✓ Niemand hat geholfen.</p>
+        <p>✗ Ich habe mit niemanden gesprochen. → ✓ mit niemand<b>em</b> <i>(mit + Dativ)</i></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: лексика ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Was ist das?</h2>
+      <p class="lead">Що на картинці? Вибери слово.</p>
+      <div class="card" id="ub1-pic"></div>
+    </section>
+
+    <!-- ===== Üb. 2: jemand / niemand ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">jemand oder niemand?</h2>
+      <p class="lead">Вибери правильне слово в правильній формі.</p>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> Hat
+          <select class="blank inline" data-ans="jemand"><option value="">—</option><option>jemand</option><option>jemanden</option><option>niemand</option></select> ein Kabel für uns?</div>
+        <div class="fill-item"><span class="num">2)</span> Wir haben gefragt, aber
+          <select class="blank inline" data-ans="niemand"><option value="">—</option><option>jemand</option><option>niemand</option><option>nichts</option></select> hatte eins.</div>
+        <div class="fill-item"><span class="num">3)</span> Ich habe auf dem Bahnsteig
+          <select class="blank inline" data-ans="niemanden"><option value="">—</option><option>niemanden</option><option>niemandem</option><option>nichts</option></select> gesehen. Alle waren schon im Zug.</div>
+        <div class="fill-item"><span class="num">4)</span> Mit
+          <select class="blank inline" data-ans="jemandem"><option value="">—</option><option>jemand</option><option>jemanden</option><option>jemandem</option></select> aus Hamburg haben wir den Preis geteilt.</div>
+        <div class="fill-item"><span class="num">5)</span>
+          <select class="blank inline" data-ans="Jemand"><option value="">—</option><option>Jemand</option><option>Etwas</option><option>Niemanden</option></select> hat mein Ladegerät genommen!</div>
+        <div class="fill-item"><span class="num">6)</span> Kennst du
+          <select class="blank inline" data-ans="jemanden"><option value="">—</option><option>jemand</option><option>jemanden</option><option>jemandem</option></select> in Berlin?</div>
+        <div class="fill-item"><span class="num">7)</span> Ich habe mit
+          <select class="blank inline" data-ans="niemandem"><option value="">—</option><option>niemand</option><option>niemanden</option><option>niemandem</option></select> über das Problem gesprochen.</div>
+        <div class="fill-item"><span class="num">8)</span> Im Rucksack war
+          <select class="blank inline" data-ans="nichts"><option value="">—</option><option>niemand</option><option>nichts</option><option>jemand</option></select> — kein Kabel, kein Akku.</div>
+        <div class="fill-item"><span class="num">9)</span> Ist
+          <select class="blank inline" data-ans="jemand"><option value="">—</option><option>jemand</option><option>etwas</option><option>niemanden</option></select> von euch schon in Berlin gewesen?</div>
+        <div class="fill-item"><span class="num">10)</span>
+          <select class="blank inline" data-ans="Niemand"><option value="">—</option><option>Niemand</option><option>Nichts</option><option>Niemandem</option></select> wollte nach Hause fahren — alle wollten noch bleiben.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: Berlin-Quiz ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Berlin-Quiz</h2>
+      <p class="lead">Що ти знаєш про Берлін? Вибери відповідь до кожного запитання.</p>
+      <div class="card" id="ub3-list"></div>
+    </section>
+
+    <!-- ===== Üb. 4: чат ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Nach dem Weg fragen</h2>
+      <p class="lead">Ти на вокзалі в Берліні й питаєш перехожу, як дістатися до Siegessäule. Вибирай доречну й правильну відповідь.</p>
+      <div class="card" id="ub4-chat"></div>
+    </section>
+
+    <!-- ===== HÖREN — власний діалог, озвучений синтезатором ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Herr Krüger erklärt den Plan</h2>
+      <p class="lead">Зранку в потязі пан Крюґер пояснює Ґреті й Еріку план дня. Послухай (можна двічі) і дай відповіді. Текст відкривається внизу — але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l7-c-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Herr Krüger:</b> So, hört mal zu, ihr zwei. Um acht Uhr achtundvierzig kommen wir am Hauptbahnhof an. Dort steigen wir in die S-Bahn um.<br>
+          <b>Greta:</b> Wie lange fahren wir mit der S-Bahn?<br>
+          <b>Herr Krüger:</b> Ungefähr zwanzig Minuten. Um zehn Uhr beginnt der Wettbewerb, und unser Start ist um halb zwölf.<br>
+          <b>Greta:</b> Und was machen wir bis dahin?<br>
+          <b>Herr Krüger:</b> Wir testen Flitzer noch einmal. Und ihr könnt euch die Roboter von den anderen Teams ansehen.<br>
+          <b>Greta:</b> Dürfen wir allein durch die Halle gehen?<br>
+          <b>Herr Krüger:</b> Ja, aber niemand geht allein aus der Halle! Wenn jemand verloren geht, ruft er mich sofort an. Habt ihr meine Handynummer?<br>
+          <b>Greta:</b> Ja, ich habe sie gespeichert. Erik auch, oder? … Erik? Er schläft!<br>
+          <b>Herr Krüger:</b> Dann erklärst du ihm alles später. Unser Treffpunkt ist immer am Eingang, unter der großen Uhr.<br>
+          <b>Greta:</b> Und wann fahren wir zurück?<br>
+          <b>Herr Krüger:</b> Unser Zug fährt um achtzehn Uhr vierzig. Wenn wir früh fertig sind, gehen wir noch ein bisschen spazieren.<br>
+          <b>Greta:</b> Super! Und wer hat das Ladekabel für Flitzer?<br>
+          <b>Herr Krüger:</b> Das hat Erik. … Oder? Erik, wach auf! Hast du das Kabel?
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN — 🎤 + говоріння зі зразком ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Berlin und du</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Was weißt du über Berlin? Nenne drei Fakten.</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Berlin ist die Hauptstadt von Deutschland und auch ein Bundesland. Dort arbeiten die Regierung und der Bundestag. In Berlin leben fast vier Millionen Menschen.</div>
+        </div>
+        <div class="qa">
+          <label>2. Was möchtest du in Berlin sehen? Warum?</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Ich möchte auf die Siegessäule steigen, weil man von oben die ganze Stadt sieht. Ich möchte auch im Tiergarten spazieren gehen.</div>
+        </div>
+        <div class="qa">
+          <label>3. Kennst du jemanden in einer anderen Stadt? Wo wohnt er / sie?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Ja, ich kenne jemanden in Odesa — meinen Cousin. Er wohnt direkt am Meer. Ich besuche ihn jeden Sommer.</div>
+        </div>
+        <div class="qa">
+          <label>4. Hast du schon an einem Wettbewerb in einer anderen Stadt teilgenommen? Erzähl.</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Ja, letztes Jahr war ich mit unserem Schulchor in Lwiw. Wir haben den zweiten Platz gemacht. Am Abend haben wir noch die Altstadt besichtigt.</div>
+        </div>
+        <div class="qa">
+          <label>5. Rollenspiel: Du hast etwas verloren. Frag in einer Gruppe. (Hat jemand …? — Nein, niemand …)</label>
+          <button class="btn secondary" type="button" data-reveal="spr5">Muster zeigen</button>
+          <div class="reveal" id="spr5">— Hat jemand mein Handy gesehen? — Nein, niemand hat es gesehen. — Hast du jemanden gefragt? — Ja, alle. — Ruf es doch an! … Da klingelt es — in deiner Jacke!</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Eine Nachricht aus Berlin</h2>
+      <p class="lead">Уяви, що ти теж був / була на конкурсі в Берліні. Напиши повідомлення другові / подрузі на 60–80 слів за планом:</p>
+      <div class="card">
+        <p>1) привітання; 2) як ти доїхав / доїхала (ICE, S-Bahn, umsteigen); 3) що сталося на конкурсі (jemand / niemand); 4) яке місце / приз; 5) що ви побачили в Берліні; 6) прощання.</p>
+        <p class="beispiel">Hallo …, · ich bin gerade in Berlin! · Wir sind mit dem ICE … · Plötzlich … Niemand hatte … / Jemand hat … · Am Ende … · Danach haben wir … gesehen. · Bis bald!</p>
+        <div class="qa">
+          <label for="schreiben-text">Deine Nachricht</label>
+          <textarea id="schreiben-text" rows="10" placeholder="Hallo …,&#10;ich bin gerade in Berlin! …"
+            data-words="60-80"
+            data-must="Berlin|jemand/niemand/Jemand/Niemand"
+            data-check="Привітання|Дорога (ICE, S-Bahn)|Подія з jemand / niemand|Результат|Що побачили|Прощання"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Hallo Ayla,<br>ich bin gerade in Berlin! Wir sind mit dem ICE gefahren und am Hauptbahnhof in die S-Bahn umgestiegen. Beim Wettbewerb war plötzlich unser Akku leer, und niemand von uns hatte ein Kabel. Zum Glück hat uns jemand aus Hamburg geholfen. Am Ende waren wir auf Platz vier und haben sogar einen Sonderpreis bekommen! Danach sind wir auf die Siegessäule gestiegen. Die Aussicht war super!<br>Bis bald!<br>Greta</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — режим контрольної ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span>
+          <select class="blank inline" data-ans="Jemand"><option value="">—</option><option>Jemand</option><option>Jemanden</option><option>Jemandem</option></select> hat angerufen.</div>
+        <div class="fill-item"><span class="num">8)</span> Ich habe
+          <select class="blank inline" data-ans="niemanden"><option value="">—</option><option>niemand</option><option>niemanden</option><option>niemandem</option></select> gesehen.</div>
+        <div class="fill-item"><span class="num">9)</span> Hast du mit
+          <select class="blank inline" data-ans="jemandem"><option value="">—</option><option>jemand</option><option>jemanden</option><option>jemandem</option></select> gesprochen?</div>
+        <div class="fill-item"><span class="num">10)</span> Am Hauptbahnhof sind wir in die S-Bahn
+          <select class="blank inline" data-ans="umgestiegen"><option value="">—</option><option>umgestiegen</option><option>umsteigen</option><option>gestiegen um</option></select>.</div>
+        <div class="fill-item"><span class="num">11)</span> Berlin ist eine Stadt und zugleich ein
+          <select class="blank inline" data-ans="Bundesland"><option value="">—</option><option>Bundestag</option><option>Bundesland</option><option>Einwohner</option></select>.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+<section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-7-klas-7-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-7-klas-7-rik";
+  const KN_UNIT = "l7-c";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Die Robotik-AG ist zum ersten Mal zu einem Wettbewerb gefahren.", a: "r"},
+    {s: "Die Fahrt von Leipzig nach Berlin dauert mit dem ICE drei Stunden.", a: "f"},
+    {s: "Am Wettbewerb haben zwanzig Teams teilgenommen.", a: "r"},
+    {s: "Der Roboter musste Bälle in einen Korb bringen.", a: "r"},
+    {s: "Herr Krüger hatte ein Kabel im Rucksack.", a: "f"},
+    {s: "Ein Mädchen aus Hamburg hat geholfen.", a: "r"},
+    {s: "Flitzer hat den ersten Platz gemacht.", a: "f"},
+    {s: "Die Siegessäule steht im Tiergarten.", a: "r"},
+    {s: "Bis zur Aussichtsplattform sind es 158 Stufen.", a: "f"},
+    {s: "Die Berliner nennen die goldene Statue „Goldelse“.", a: "r"}
+  ]);
+
+  // Üb. 1: картинка → слово
+  buildPicture('ub1-pic', [
+    {pic: "🔋", opts: ["der Akku", "das Kabel", "der Park"], correct: "der Akku"},
+    {pic: "🔌", opts: ["die Statue", "das Kabel", "die S-Bahn"], correct: "das Kabel"},
+    {pic: "🌳", opts: ["der Park", "die Säule", "der Stadtplan"], correct: "der Park"},
+    {pic: "🗽", opts: ["die Statue", "die Regierung", "der Akku"], correct: "die Statue"},
+    {pic: "🗺️", opts: ["der Stadtplan", "der Bundestag", "die Wendeltreppe"], correct: "der Stadtplan"},
+    {pic: "🚆", opts: ["die S-Bahn", "die Säule", "das Bundesland"], correct: "die S-Bahn"},
+    {pic: "🏛️", opts: ["der Bundestag", "der Park", "der Sonderpreis"], correct: "der Bundestag"},
+    {pic: "🏅", opts: ["der Sonderpreis", "der Einwohner", "das Kabel"], correct: "der Sonderpreis"},
+    {pic: "😫", opts: ["verzweifelt", "glücklich", "müde"], correct: "verzweifelt"}
+  ]);
+
+  // Üb. 2
+  wireBlanks('ub2');
+
+  // Üb. 3: квіз
+  buildMatch('ub3', [
+    ["Welche Stadt ist die Hauptstadt von Deutschland?", "Berlin"],
+    ["An welchem Fluss liegt Berlin?", "an der Spree"],
+    ["Wo arbeitet der Bundestag?", "im Reichstagsgebäude"],
+    ["Wie heißt der große Park mitten in Berlin?", "der Tiergarten"],
+    ["Wie nennen die Berliner die goldene Statue auf der Siegessäule?", "Goldelse"],
+    ["Welches Bundesland liegt rund um Berlin?", "Brandenburg"]
+  ]);
+
+  // Üb. 4: чат
+  buildChat('ub4-chat', {
+    partner: "Passantin",
+    steps: [
+      {them: "Kann ich dir helfen? Du siehst ein bisschen verloren aus."},
+      {you: ["Ja, bitte! Wie komme ich zur Siegessäule?", "Ja, bitte! Wo komme ich zu Siegessäule?", "Ja, bitte! Wohin ist die Siegessäule?"], correct: 0},
+      {them: "Nimm die S-Bahn bis Bellevue. Das ist nur eine Station."},
+      {you: ["Muss ich umsteigen?", "Muss ich umgestiegen?", "Muss ich zu umsteigen?"], correct: 0},
+      {them: "Nein, du musst nicht umsteigen. Von Bellevue gehst du dann etwa zehn Minuten durch den Tiergarten."},
+      {you: ["Hat jemand hier einen Stadtplan?", "Haben Sie vielleicht einen Stadtplan?", "Hat niemand einen Stadtplan?"], correct: 1},
+      {them: "Leider nicht, aber im Handy findest du den Weg bestimmt."},
+      {you: ["Stimmt. Kann man auf die Säule hinaufsteigen?", "Stimmt. Kann man auf die Säule hinaufsteigt?", "Stimmt. Kann man auf der Säule hinaufsteigen zu?"], correct: 0},
+      {them: "Ja, aber es sind 285 Stufen — viel Spaß!"},
+      {you: ["Vielen Dank für Ihre Hilfe!", "Gute Besserung!", "Herzlichen Glückwunsch!"], correct: 0}
+    ]
+  });
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Wann kommt der Zug am Hauptbahnhof an?", opts: ["um 8:48 Uhr", "um 10:00 Uhr", "um 11:30 Uhr"], correct: "um 8:48 Uhr"},
+    {q: "Wie lange fahren sie mit der S-Bahn?", opts: ["etwa zehn Minuten", "etwa zwanzig Minuten", "eine Stunde"], correct: "etwa zwanzig Minuten"},
+    {q: "Wann ist der Start von Flitzer?", opts: ["um zehn Uhr", "um halb zwölf", "um zwölf Uhr"], correct: "um halb zwölf"},
+    {q: "Was darf niemand machen?", opts: ["allein aus der Halle gehen", "die Roboter ansehen", "telefonieren"], correct: "allein aus der Halle gehen"},
+    {q: "Was soll man machen, wenn jemand verloren geht?", opts: ["Herrn Krüger anrufen", "zum Bahnhof fahren", "warten"], correct: "Herrn Krüger anrufen"},
+    {q: "Wo ist der Treffpunkt?", opts: ["am Eingang, unter der großen Uhr", "am Bahnhof", "an der Siegessäule"], correct: "am Eingang, unter der großen Uhr"},
+    {q: "Wann fährt der Zug zurück?", opts: ["um 16:40 Uhr", "um 18:40 Uhr", "um 20:40 Uhr"], correct: "um 18:40 Uhr"},
+    {q: "Was macht Erik während des Gesprächs?", opts: ["Er liest.", "Er schläft.", "Er programmiert."], correct: "Er schläft."}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Berlin ist die Hauptstadt von Deutschland.", uk: "Берлін — столиця Німеччини."},
+    {say: "Hat jemand ein Kabel?", uk: "У когось є кабель?"},
+    {say: "Niemand hatte das richtige Kabel.", uk: "Ні в кого не було потрібного кабелю."},
+    {say: "Am Hauptbahnhof steigen wir in die S-Bahn um.", uk: "На головному вокзалі ми пересідаємо на електричку."},
+    {say: "Von oben hatten wir eine tolle Aussicht.", uk: "Згори ми мали чудовий краєвид."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Das Parlament von Deutschland heißt …", opts: ["Bundestag", "Bundesland", "Regierung"], correct: "Bundestag"},
+    {q: "Wenn der Akku leer ist, muss man ihn …", opts: ["aufladen", "umsteigen", "besichtigen"], correct: "aufladen"},
+    {q: "Eine Treppe, die sich dreht, ist eine …", opts: ["Wendeltreppe", "Säule", "Statue"], correct: "Wendeltreppe"},
+    {q: "Die Menschen, die in einer Stadt wohnen, sind ihre …", opts: ["Einwohner", "Zuschauer", "Gegner"], correct: "Einwohner"},
+    {q: "„Keine einzige Person“ heißt …", opts: ["jemand", "niemand", "nichts"], correct: "niemand"},
+    {q: "Welcher Satz ist richtig?", opts: ["Niemand hat nicht geholfen.", "Niemand hat geholfen.", "Niemand haben geholfen."], correct: "Niemand hat geholfen."}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Jemand haben mein Kabel genommen.", wrong: 1, fix: "hat"},
+    {s: "Hast du in Berlin jemanden getroffen?", ok: true},
+    {s: "Ich habe mit niemanden gesprochen.", wrong: 3, fix: "niemandem"},
+    {s: "Wir sind am Hauptbahnhof umgesteigt.", wrong: 4, fix: "umgestiegen"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🤖', '🔋', '🗽', '🏅']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
