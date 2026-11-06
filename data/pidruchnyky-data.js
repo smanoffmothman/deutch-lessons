@@ -314,7 +314,7 @@ const PIDRUCHNYKY = [
       ] },
       { id: "l8", label: "8", nazva: "Heimat mein — was kann besser sein", storinky: "139–154", dity: [
         { id: "l8-a", label: "A", nazva: "Die Ukraine — mein Heimatland", storinky: "140–143", typ: "vpravy", gram: ["komparation", "indirekte-fragesaetze"], opublikovano: 33 },
-        { id: "l8-b", label: "B", nazva: "Sehenswertes in Kyjiw", storinky: "144–149", typ: "vpravy", gram: ["konjunktionen-position-eins"] },
+        { id: "l8-b", label: "B", nazva: "Sehenswertes in Kyjiw", storinky: "144–149", typ: "vpravy", gram: ["konjunktionen-position-eins"], opublikovano: 34 },
         { id: "l8-c", label: "C", nazva: "Wiederholung", storinky: "150–151", typ: "povtorennya", gram: ["komparation", "konjunktionen-position-eins"] },
         { id: "l8-d", label: "D", nazva: "Geschichtenzeit", storinky: "152", typ: "chytannya" },
         { id: "l8-e", label: "E", nazva: "Projektarbeit", storinky: "153", typ: "bez-storinky" },
