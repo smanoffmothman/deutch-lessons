@@ -437,5 +437,18 @@
   {de: "fürchterlich", uk: "жахливий, страшний", r: "l5-b"},
   {de: "empfehlen (empfiehlt), hat empfohlen", uk: "рекомендувати, радити", r: "l5-b"},
   {de: "denn", uk: "бо, тому що", r: "l5-b", note: "порядок слів не змінюється: …, denn der Film ist lustig."},
-  {de: "sondern", uk: "а (після заперечення)", r: "l5-b", note: "nicht heute, sondern morgen"}
+  {de: "sondern", uk: "а (після заперечення)", r: "l5-b", note: "nicht heute, sondern morgen"},
+  // ---- Lektion 5 · Modul D: Geschichtenzeit ----
+  {de: "die Premiere, -n", uk: "прем'єра", r: "l5-d"},
+  {de: "einspringen (springt ein), ist eingesprungen", uk: "підмінити (когось)", r: "l5-d", note: "für jemanden einspringen"},
+  {de: "der Wächter, -", uk: "сторож, вартовий", r: "l5-d"},
+  {de: "der Schnurrbart, -ä-e", uk: "вуса", r: "l5-d"},
+  {de: "das Publikum", uk: "публіка, глядачі", r: "l5-d"},
+  {de: "schlucken", uk: "ковтати (від хвилювання)", r: "l5-d"},
+  {de: "mit klopfendem Herzen", uk: "із завмиранням серця", r: "l5-d"},
+  {de: "leer", uk: "порожній", r: "l5-d", note: "Mein Kopf war leer."},
+  {de: "einfallen (fällt ein), ist eingefallen", uk: "спадати на думку", r: "l5-d", note: "Da fiel ihm etwas ein."},
+  {de: "landen, ist gelandet", uk: "приземлятися", r: "l5-d"},
+  {de: "umarmen", uk: "обіймати", r: "l5-d"},
+  {de: "weiterspielen", uk: "грати далі", r: "l5-d"}
 ];

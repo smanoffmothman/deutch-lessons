@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 5, Modul C: Wiederholung — Німецька мова 7 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 7 КЛАС</span>
+        <h1>Lektion 5 · Modul C: Wiederholung</h1>
+        <p class="sub">Повторення всього Lektion 5 «Theater und Kino»: театр, кіно, жанри фільмів; прийменники Wo? + Dativ / Wohin? + Akkusativ, сполучники und, aber, oder, denn, sondern. Ігри на слова, вправи, говоріння і великий тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Blitz</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Kreuzworträtsel</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Sortieren</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Fehler</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Chat</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER — усі слова Lektion 5 (збираються самі) ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Усі слова Lektion 5</h2>
+      <p class="lead">Тут зібрано слова всіх модулів Lektion 5. Перевір себе в «Картки ▶» і познач ☆ ті, які ще не пам'ятаєш, — їх варто повторити перед тестом.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: бліц ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Blitz: 60 Sekunden</h2>
+      <p class="lead">Розминка на швидкість: скільки слів Lektion 5 ти перекладеш за 60 секунд? У бал не йде — це гра. Спробуй побити власний рекорд!</p>
+      <div class="card" id="ub1-blitz"></div>
+    </section>
+
+    <!-- ===== Üb. 2: кросворд ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Kreuzworträtsel: Theater und Kino</h2>
+      <p class="lead">Торкнися клітинки чи підказки й пиши слово (ще раз по клітинці — інший напрямок). Артиклі писати не треба. ä ö ü — з панелі внизу.</p>
+      <div class="card" id="ub2-kw"></div>
+    </section>
+
+    <!-- ===== Üb. 3: сортування ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wo? oder Wohin?</h2>
+      <p class="lead">Це відповідь на Wo? (Dativ) чи на Wohin? (Akkusativ)? Натисни вираз, потім кошик.</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 4: знайди помилку ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Finde den Fehler</h2>
+      <p class="lead">Граматика всього Lektion: прийменники з Dativ і Akkusativ, sitzen / sich setzen, сполучники aber, denn, sondern. Знайди помилку й виправ її — або натисни «Fehlerfrei».</p>
+      <div class="card" id="ub4-fix"></div>
+    </section>
+
+    <!-- ===== Üb. 5: чат ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Daryna fragt</h2>
+      <p class="lead">Дарина розпитує тебе про театр і кіно. Вибирай правильну відповідь.</p>
+      <div class="card" id="ub5-chat"></div>
+    </section>
+
+    <!-- ===== SPRECHEN ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Sprich mal!</h2>
+      <p class="lead">Спершу вимов фрази в 🎤, потім відповідай уголос на запитання й порівнюй зі зразком.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Wohin gehst du lieber: ins Theater oder ins Kino? Warum?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Ich gehe lieber ins Kino, denn dort kann ich Popcorn essen und Filme in 3D sehen. Ins Theater gehe ich nur ein- oder zweimal im Jahr, aber dann ist es immer etwas Besonderes.</div>
+        </div>
+        <div class="qa">
+          <label>2. Beschreibe ein Theater oder ein Kino in deiner Stadt. Was ist wo?</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Das Kino in unserer Stadt ist in einem Einkaufszentrum. Die Kasse ist neben dem Eingang, und über der Kasse hängt ein großer Bildschirm mit Trailern. Im Saal sitzt man in bequemen roten Sesseln.</div>
+        </div>
+        <div class="qa">
+          <label>3. Welchen Film oder welches Theaterstück kannst du empfehlen? Worum geht es?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Ich empfehle einen Trickfilm über eine Katze, die Detektivin ist. Es geht um einen verschwundenen Diamanten. Der Film ist lustig und spannend, denn man weiß bis zum Ende nicht, wer der Dieb ist.</div>
+        </div>
+        <div class="qa">
+          <label>4. Ratespiel: Beschreibe einen Film, ohne den Titel zu nennen. Die anderen raten mit Ja-/Nein-Fragen.</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">— Ist das eine Komödie? — Nein. — Ist das ein Fantasyfilm? — Ja. — Gibt es einen Drachen? — Ja! — Ist das „Der letzte Drache von Leipzig“? — Genau!</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — на весь Lektion ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Test zu Lektion 5</h2>
+      <p class="lead">Підсумковий тест на весь Lektion 5: 18 завдань. Кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">9)</span> Wir gehen heute Abend
+          <select class="blank inline" data-ans="ins"><option value="">—</option><option>im</option><option>ins</option><option>in der</option></select> Theater.</div>
+        <div class="fill-item"><span class="num">10)</span> Die Schauspieler warten hinter
+          <select class="blank inline" data-ans="dem"><option value="">—</option><option>den</option><option>dem</option><option>die</option></select> Vorhang.</div>
+        <div class="fill-item"><span class="num">11)</span> Erik
+          <select class="blank inline" data-ans="setzt"><option value="">—</option><option>sitzt</option><option>setzt</option><option>stellt</option></select> sich in die Loge.</div>
+        <div class="fill-item"><span class="num">12)</span> Ich mag Krimis,
+          <select class="blank inline" data-ans="denn"><option value="">—</option><option>sondern</option><option>oder</option><option>denn</option></select> sie sind spannend.</div>
+        <div class="fill-item"><span class="num">13)</span> Das ist kein Horrorfilm,
+          <select class="blank inline" data-ans="sondern"><option value="">—</option><option>aber</option><option>sondern</option><option>und</option></select> eine Komödie.</div>
+        <div class="fill-item"><span class="num">14)</span> Im Film geht es
+          <select class="blank inline" data-ans="um"><option value="">—</option><option>über</option><option>um</option><option>an</option></select> eine Zeitmaschine.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-7-klas-7-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-7-klas-7-rik";
+  const KN_UNIT = "l5-c";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['ub1', 'ub2', 'ub3', 'ub4', 'ub5', 'sprechen']});
+
+  // Üb. 1: бліц — усі слова Lektion 5 з файлу слів (без однакових перекладів)
+  const blitzPairs = [], blitzSeen = new Set();
+  ((window.SLOVA && window.SLOVA[KN_BOOK]) || []).filter(w => /^l5-/.test(w.r) && !/[.!?]$/.test(w.de)).forEach(w => {
+    const de = w.de.split(' / ')[0].split(',')[0].replace(/\s*\(.*?\)/g, '').trim();
+    const uk = w.uk.split(' / ')[0].trim();
+    const key = uk.split(/[,;]/)[0].trim().toLowerCase();
+    if (!de || /^(der|die|das)$/i.test(de) || blitzSeen.has(key)) return;
+    blitzSeen.add(key);
+    blitzPairs.push([de, uk]);
+  });
+  buildBlitz('ub1-blitz', {pairs: blitzPairs, seconds: 60, dir: "de-uk"});
+
+  // Üb. 2: кросворд
+  buildCrossword('ub2-kw', [
+    ["Bühne", "сцена (die)"],
+    ["Vorhang", "завіса (der)"],
+    ["Garderobe", "гардероб (die)"],
+    ["Kasse", "каса (die)"],
+    ["Parkett", "партер (das)"],
+    ["Loge", "ложа (die)"],
+    ["Reihe", "ряд (die)"],
+    ["Probe", "репетиція (die)"],
+    ["Komödie", "комедія (die)"],
+    ["Krimi", "детектив (der)"],
+    ["Werbung", "реклама (die)"],
+    ["buchen", "бронювати"]
+  ]);
+
+  // Üb. 3: сортування
+  buildSort('ub3-sort', {
+    buckets: ["Wo? + Dativ 📍", "Wohin? + Akkusativ ➡️"],
+    items: [
+      {t: "im Foyer warten", b: "Wo? + Dativ 📍"},
+      {t: "auf der Bühne stehen", b: "Wo? + Dativ 📍"},
+      {t: "in der Loge sitzen", b: "Wo? + Dativ 📍"},
+      {t: "an der Garderobe hängen", b: "Wo? + Dativ 📍"},
+      {t: "hinter dem Vorhang warten", b: "Wo? + Dativ 📍"},
+      {t: "im Kino Popcorn essen", b: "Wo? + Dativ 📍"},
+      {t: "ins Theater gehen", b: "Wohin? + Akkusativ ➡️"},
+      {t: "auf die Bühne gehen", b: "Wohin? + Akkusativ ➡️"},
+      {t: "sich in die Loge setzen", b: "Wohin? + Akkusativ ➡️"},
+      {t: "die Jacke an die Garderobe hängen", b: "Wohin? + Akkusativ ➡️"},
+      {t: "hinter den Vorhang gehen", b: "Wohin? + Akkusativ ➡️"},
+      {t: "in den Zuschauerraum gehen", b: "Wohin? + Akkusativ ➡️"}
+    ]
+  });
+
+  // Üb. 4: знайди помилку
+  buildFixError('ub4-fix', [
+    {s: "Wir gehen heute im Kino.", wrong: 3, fix: "ins"},
+    {s: "Die Jacken hängen an der Garderobe.", ok: true},
+    {s: "Timur steht auf die Bühne.", wrong: 3, fix: "der"},
+    {s: "Erik sitzt sich in die Loge.", wrong: 1, fix: "setzt"},
+    {s: "Ich mag Komödien, denn sie sind lustig.", ok: true},
+    {s: "Ich mag keine Krimis, aber Trickfilme.", wrong: 4, fix: "sondern"},
+    {s: "Im Film geht es über einen Igel.", wrong: 4, fix: "um"},
+    {s: "Über die Bühne hängen Scheinwerfer.", wrong: 1, fix: "der"},
+    {s: "Wir setzen uns in die fünfte Reihe.", ok: true}
+  ]);
+
+  // Üb. 5: чат
+  buildChat('ub5-chat', {
+    partner: "Daryna",
+    steps: [
+      {them: "Hi! Gehst du lieber ins Theater oder ins Kino?"},
+      {you: ["Lieber ins Kino, denn ich mag Trickfilme.", "Lieber im Kino, denn ich mag Trickfilme.", "Lieber ins Kino, denn mag ich Trickfilme."], correct: 0},
+      {them: "Und welche Filme magst du nicht?"},
+      {you: ["Ich mag keine Horrorfilme, aber Komödien.", "Ich mag keine Horrorfilme, sondern Komödien.", "Ich mag nicht Horrorfilme, denn Komödien."], correct: 1},
+      {them: "Wo sitzt du im Kino am liebsten?"},
+      {you: ["In die letzte Reihe.", "In der letzten Reihe.", "Auf der letzten Reihe in."], correct: 1},
+      {them: "Timur spielt im Jugendclub Theater. Kommst du zur Premiere?"},
+      {you: ["Ja, gern! Wo findet sie statt?", "Ja, gern! Wohin findet sie statt?", "Ja, gern! Wo findet sie?"], correct: 0},
+      {them: "Im Theater, auf der kleinen Bühne. Wir treffen uns vor dem Eingang."},
+      {you: ["Super, ich bin um sechs vor dem Eingang.", "Super, ich bin um sechs vor den Eingang.", "Super, ich gehe um sechs vor dem Eingang hin."], correct: 0},
+      {them: "Bis dann!"},
+      {you: ["Bis dann!", "Gute Besserung!", "Guten Appetit!"], correct: 0}
+    ]
+  });
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Wir gehen heute ins Theater.", uk: "Ми сьогодні йдемо до театру."},
+    {say: "Wir sitzen im Parkett in der dritten Reihe.", uk: "Ми сидимо в партері в третьому ряду."},
+    {say: "Ich mag Komödien, denn sie sind lustig.", uk: "Я люблю комедії, бо вони смішні."},
+    {say: "Das ist kein Krimi, sondern ein Trickfilm.", uk: "Це не детектив, а мультфільм."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Die Jacken gibt man an der … ab.", opts: ["Kasse", "Garderobe", "Bühne"], correct: "Garderobe"},
+    {q: "Die Schauspieler spielen auf der …", opts: ["Bühne", "Loge", "Werbung"], correct: "Bühne"},
+    {q: "Vor der Aufführung ist der … zu.", opts: ["Rang", "Vorhang", "Spielplan"], correct: "Vorhang"},
+    {q: "Ein Schauspieler spielt eine …", opts: ["Rolle", "Reihe", "Probe"], correct: "Rolle"},
+    {q: "In einem … sucht man einen Dieb.", opts: ["Krimi", "Trickfilm", "Horrorfilm"], correct: "Krimi"},
+    {q: "Vor dem Film im Kino gibt es oft …", opts: ["Werbung", "Proben", "Kulissen"], correct: "Werbung"},
+    {q: "Die wichtigste Person im Film ist die …", opts: ["Hauptfigur", "Handlung", "Kinokarte"], correct: "Hauptfigur"},
+    {q: "Am Ende der Aufführung … die Zuschauer Beifall.", opts: ["klatschen", "buchen", "laufen"], correct: "klatschen"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Die Schauspieler warten zwischen den Kulissen.", ok: true},
+    {s: "Wir setzen uns in der Loge.", wrong: 4, fix: "die"},
+    {s: "Im Foyer hängen Fotos an die Wand.", wrong: 5, fix: "der"},
+    {s: "Ich sehe mich einen Krimi an.", wrong: 2, fix: "mir"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🎭', '🎬', '🍿', '👏']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
