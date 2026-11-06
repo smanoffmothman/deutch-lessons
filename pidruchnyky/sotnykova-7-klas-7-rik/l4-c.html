@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 4, Modul C: Profisport — Німецька мова 7 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 7 КЛАС</span>
+        <h1>Lektion 4 · Modul C: Profisport</h1>
+        <p class="sub">Урок про професійний спорт і справжніх чемпіонів: Ярослава Магучіх, Олександр Усик, Еліна Світоліна, Малайка Міхамбо. Порядкові числівники й дати (am 19. September 2001, an dritter Stelle), біографія в минулому часі. Реферат Дарини й випуск шкільного радіо з озвученням, вправи, говоріння, письмо і підсумковий тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Wer ist das?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Ordinalzahlen</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Perfekt</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Das Referat</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власний текст + вправа на розуміння ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Meine Vorbilder</h2>
+      <p class="lead">На уроці німецької кожен готував реферат про відомого спортсмена. Дарина розповіла одразу про трьох — з України. Послухай і прочитай. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l4-c-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>In unserer Deutschstunde hat jeder ein Referat über einen <span class="gl" data-uk="відомий, знаменитий" data-lemma="berühmt">berühmten</span> <span class="gl" data-uk="спортсмен / спортсменка" data-lemma="der Sportler, - / die Sportlerin, -nen">Sportler</span> oder eine berühmte Sportlerin gehalten. Ich habe gleich drei gewählt. Alle drei kommen aus der Ukraine, sie sind im <span class="gl" data-uk="професійний спорт" data-lemma="der Profisport">Profisport</span> sehr <span class="gl" data-uk="успішний" data-lemma="erfolgreich">erfolgreich</span>, und ich bin sehr <span class="gl" data-uk="гордий (кимось / чимось)" data-lemma="stolz auf (+ Akk.)">stolz auf</span> sie.</p>
+        <p>Jaroslawa Mahutschich <span class="gl" data-uk="народитися" data-lemma="geboren sein (ist geboren)">ist</span> am 19. September 2001 in Dnipro <span class="gl" data-uk="народитися" data-lemma="geboren sein (ist geboren)">geboren</span>. Ihre Sportart ist die <span class="gl" data-uk="легка атлетика" data-lemma="die Leichtathletik">Leichtathletik</span>, genauer: der <span class="gl" data-uk="стрибки у висоту" data-lemma="der Hochsprung">Hochsprung</span>. 2021 hat die junge <span class="gl" data-uk="атлет / атлетка" data-lemma="der Athlet, -en / die Athletin, -nen">Athletin</span> bei den Olympischen Spielen in Tokio Bronze gewonnen, 2023 ist sie in Budapest <span class="gl" data-uk="чемпіон / чемпіонка світу" data-lemma="der Weltmeister, - / die Weltmeisterin, -nen">Weltmeisterin</span> geworden. Ihr größter Erfolg kam im Sommer 2024: Am 7. Juli ist sie in Paris 2,10 Meter hoch gesprungen — <span class="gl" data-uk="світовий рекорд" data-lemma="der Weltrekord, -e">Weltrekord</span>! Einen Monat später ist sie in Paris auch <span class="gl" data-uk="олімпійський чемпіон / олімпійська чемпіонка" data-lemma="der Olympiasieger, - / die Olympiasiegerin, -nen">Olympiasiegerin</span> geworden.</p>
+        <p>Oleksandr Ussyk ist am 17. Januar 1987 in Simferopol auf der Krim geboren. Er ist <span class="gl" data-uk="боксер" data-lemma="der Boxer, -">Boxer</span>. 2012 hat er bei den Olympischen Spielen in London Gold im <span class="gl" data-uk="важка вага (у боксі)" data-lemma="das Schwergewicht">Schwergewicht</span> gewonnen. Dann ist er <span class="gl" data-uk="професіонал" data-lemma="der Profi, -s">Profi</span> geworden. Im Mai 2024 hat er Tyson Fury <span class="gl" data-uk="перемогти (когось)" data-lemma="besiegen, hat besiegt">besiegt</span> und hatte <span class="gl" data-uk="уперше" data-lemma="zum ersten Mal">zum ersten Mal</span> alle vier großen <span class="gl" data-uk="титул" data-lemma="der Titel, -">Weltmeistertitel</span> im Schwergewicht. Im Juli 2025 hat er das zum zweiten Mal geschafft. Als Profi hat er noch keinen einzigen <span class="gl" data-uk="бій; боротьба" data-lemma="der Kampf, -ä-e">Kampf</span> verloren — keine <span class="gl" data-uk="поразка" data-lemma="die Niederlage, -n">Niederlage</span>!</p>
+        <p>Elina Switolina ist am 12. September 1994 in Odesa geboren. Sie spielt Tennis und ist seit 2008 Profi. 2017 stand sie in der Weltrangliste <span class="gl" data-uk="на першому місці" data-lemma="an erster Stelle">an dritter Stelle</span>. 2018 war sie die <span class="gl" data-uk="переможець / переможниця" data-lemma="der Sieger, - / die Siegerin, -nen">Siegerin</span> beim WTA-Finale — einem Turnier für die acht besten Spielerinnen des Jahres. Und 2021 hat sie in Tokio die erste olympische Medaille im Tennis für die Ukraine geholt: Bronze.</p>
+        <p>Warum sind sie meine <span class="gl" data-uk="приклад для наслідування, кумир" data-lemma="das Vorbild, -er">Vorbilder</span>? In ihrer <span class="gl" data-uk="кар'єра" data-lemma="die Karriere, -n">Karriere</span> gab es auch schwere Niederlagen, aber sie haben nie aufgegeben und viel <span class="gl" data-uk="досягати" data-lemma="erreichen, hat erreicht">erreicht</span>. Herr Brandt war zufrieden. Und Erik wollte sofort wissen, wie hoch 2,10 Meter sind. Wir haben es an der Tür gemessen: Die Tür in unserem Klassenzimmer ist niedriger!</p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">Ordinalzahlen · Daten · Biografie</h2>
+      <p class="lead">Порядкові числівники («перший», «третій») потрібні для дат і місць у рейтингу. На письмі — цифра з крапкою: <b>19.</b> = neunzehnte.</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. Як утворити</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Zahl</th><th>Regel</th><th>Beispiel</th></tr>
+          <tr><td>1.–19.</td><td>+ <strong>-te</strong></td><td>der zwei<strong>te</strong>, der vier<strong>te</strong>, der neunzehn<strong>te</strong></td></tr>
+          <tr><td>ab 20.</td><td>+ <strong>-ste</strong></td><td>der zwanzig<strong>ste</strong>, der einunddreißig<strong>ste</strong></td></tr>
+          <tr><td>Ausnahmen</td><td>—</td><td>der <strong>erste</strong>, der <strong>dritte</strong>, der <strong>siebte</strong>, der <strong>achte</strong></td></tr>
+        </table></div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. Дати й місця</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Frage</th><th>Antwort</th></tr>
+          <tr><td>Der Wievielte ist heute?</td><td>Heute ist <strong>der</strong> sechs<strong>te</strong> November.</td></tr>
+          <tr><td>Wann ist sie geboren?</td><td><strong>Am</strong> neunzehn<strong>ten</strong> September 2001.</td></tr>
+          <tr><td>An welcher Stelle?</td><td><strong>An</strong> dritt<strong>er</strong> Stelle · <strong>auf dem</strong> zweit<strong>en</strong> Platz</td></tr>
+          <tr><td>Wie oft?</td><td><strong>zum</strong> erst<strong>en</strong> Mal, zum zweit<strong>en</strong> Mal</td></tr>
+        </table></div>
+        <div class="merke">Роки: <b>1987</b> — neunzehnhundertsiebenundachtzig, <b>2001</b> — zweitausendeins, <b>2024</b> — zweitausendvierundzwanzig. Рік ставимо без прийменника: <b>2024</b> hat sie gewonnen (або: im Jahr 2024). ✗ in 2024.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. Біографія в минулому часі</p>
+        <p>Про людину: <b>Sie ist</b> 2001 <b>geboren</b>. · Er <b>ist</b> Profi <b>geworden</b>. · Sie <b>ist</b> 2,10 Meter hoch <b>gesprungen</b>.</p>
+        <p>Перемоги: Er <b>hat</b> Gold <b>gewonnen</b>. · Er <b>hat</b> den Gegner <b>besiegt</b>. · Sie <b>hat</b> viel <b>erreicht</b>.</p>
+        <p>В оповіді часто — Präteritum дієслів sein, haben, werden: Sie <b>war</b> die Siegerin. · Er <b>hatte</b> alle Titel. · Sie <b>wurde</b> Weltmeisterin.</p>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">4. Типові помилки</p>
+        <p>✗ am zwölf September → ✓ am <b>zwölften</b> September</p>
+        <p>✗ der dreite, der siebente → ✓ der <b>dritte</b>, der <b>siebte</b></p>
+        <p>✗ Sie hat 2001 geboren. → ✓ Sie <b>ist</b> 2001 geboren.</p>
+        <p>✗ Er hat Weltmeister geworden. → ✓ Er <b>ist</b> Weltmeister geworden.</p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: хто це? ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Wer ist das?</h2>
+      <p class="lead">Про кого це? Розклади факти з тексту по кошиках.</p>
+      <div class="card" id="ub1-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 2: порядкові числівники ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Ordinalzahlen</h2>
+      <p class="lead">Напиши порядковий числівник словами — з правильним закінченням.</p>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> Jaroslawa Mahutschich ist am <input type="text" class="blank-input inline" data-ans="neunzehnten"> (19.) September geboren.</div>
+        <div class="fill-item"><span class="num">2)</span> Oleksandr Ussyk ist am <input type="text" class="blank-input inline" data-ans="siebzehnten"> (17.) Januar geboren.</div>
+        <div class="fill-item"><span class="num">3)</span> 2017 stand Elina Switolina an <input type="text" class="blank-input inline" data-ans="dritter"> (3.) Stelle.</div>
+        <div class="fill-item"><span class="num">4)</span> Den Weltrekord ist sie am <input type="text" class="blank-input inline" data-ans="siebten"> (7.) Juli gesprungen.</div>
+        <div class="fill-item"><span class="num">5)</span> Heute ist der <input type="text" class="blank-input inline" data-ans="erste"> (1.) Dezember.</div>
+        <div class="fill-item"><span class="num">6)</span> Lotte war beim Wettbewerb auf dem <input type="text" class="blank-input inline" data-ans="fünften"> (5.) Platz.</div>
+        <div class="fill-item"><span class="num">7)</span> Gretas Mannschaft hat den <input type="text" class="blank-input inline" data-ans="zweiten"> (2.) Platz gemacht.</div>
+        <div class="fill-item"><span class="num">8)</span> Mein Geburtstag ist am <input type="text" class="blank-input inline" data-ans="zwanzigsten"> (20.) März.</div>
+        <div class="fill-item"><span class="num">9)</span> Die Ferien beginnen am <input type="text" class="blank-input inline" data-ans="dreißigsten"> (30.) Juni.</div>
+        <div class="fill-item"><span class="num">10)</span> Ussyk hat das zum <input type="text" class="blank-input inline" data-ans="zweiten"> (2.) Mal geschafft.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: Perfekt ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Was haben sie erreicht?</h2>
+      <p class="lead">Перепиши речення в Perfekt. Подумай: haben чи sein? Пиши ціле речення.</p>
+      <div class="card" id="ub3-tr"></div>
+    </section>
+
+    <!-- ===== Üb. 4: розмова про реферат ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Das Referat</h2>
+      <p class="lead">Ти розповідаєш пану Брандту про свій реферат. Вибирай правильну відповідь.</p>
+      <div class="card" id="ub4-chat"></div>
+    </section>
+
+    <!-- ===== HÖREN — власний радіовипуск, озвучений синтезатором ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Sportnews: Steckbrief der Woche</h2>
+      <p class="lead">Ніна й Макс у шкільному радіо розповідають про відому німецьку спортсменку. Послухай (можна двічі) і дай відповіді. Текст відкривається внизу — але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l4-c-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Nina:</b> Hallo, hier sind wieder die Sportnews! In unserem Steckbrief der Woche geht es heute um eine deutsche Sportlerin: Malaika Mihambo.<br>
+          <b>Max:</b> Sie ist am dritten Februar 1994 in Heidelberg geboren. Aufgewachsen ist sie in Oftersheim, einem kleinen Ort in Baden-Württemberg.<br>
+          <b>Nina:</b> Ihre Disziplin ist der Weitsprung. Ihr Verein heißt LG Kurpfalz.<br>
+          <b>Max:</b> 2019 ist sie in Doha zum ersten Mal Weltmeisterin geworden — mit 7,30 Metern. Das ist bis heute ihre beste Weite.<br>
+          <b>Nina:</b> Bei den Olympischen Spielen in Tokio 2021 hat sie Gold gewonnen, mit genau sieben Metern.<br>
+          <b>Max:</b> 2022 ist sie zum zweiten Mal Weltmeisterin geworden, in Eugene in den USA. Und bei den Olympischen Spielen 2024 in Paris hat sie Silber geholt.<br>
+          <b>Nina:</b> Und bei der Weltmeisterschaft 2025 in Tokio hat sie noch einmal Silber gewonnen.<br>
+          <b>Max:</b> Und jetzt eine Aufgabe für euch: Wie weit springt ihr? In der Sportstunde am Freitag messen wir es. Frau Schulz hat schon Ja gesagt!<br>
+          <b>Nina:</b> Ich habe es gestern probiert: drei Meter zwanzig. Malaika Mihambo springt also mehr als doppelt so weit wie ich!<br>
+          <b>Max:</b> Das war der Steckbrief der Woche. Bis nächste Woche bei den Sportnews!
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN — 🎤 + говоріння зі зразком ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Berühmte Sportlerinnen und Sportler</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Welche berühmten Sportlerinnen und Sportler aus der Ukraine kennst du?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Ich kenne Jaroslawa Mahutschich, Oleksandr Ussyk und Elina Switolina. Mahutschich macht Hochsprung, Ussyk boxt, und Switolina spielt Tennis.</div>
+        </div>
+        <div class="qa">
+          <label>2. Wann bist du geboren? Und wann sind deine Eltern geboren?</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Ich bin am vierzehnten April 2013 geboren. Meine Mutter ist am zweiten Oktober 1985 geboren, mein Vater am einunddreißigsten Mai 1983.</div>
+        </div>
+        <div class="qa">
+          <label>3. Wer ist dein Vorbild im Sport? Warum?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Mein Vorbild ist Oleksandr Ussyk. Er hat als Profi keinen Kampf verloren. Er trainiert sehr viel und ist trotzdem immer freundlich.</div>
+        </div>
+        <div class="qa">
+          <label>4. Möchtest du Profisportler / Profisportlerin werden? Warum (nicht)?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Nein, ich möchte kein Profi werden. Das Training ist zu anstrengend, und man hat wenig Freizeit. Sport ist für mich ein Hobby.</div>
+        </div>
+        <div class="qa">
+          <label>5. Was hast du schon im Sport erreicht? (Ich habe … gewonnen / Ich bin … geworden)</label>
+          <button class="btn secondary" type="button" data-reveal="spr5">Muster zeigen</button>
+          <div class="reveal" id="spr5">Letztes Jahr habe ich beim Schulturnier im Tischtennis den dritten Platz gemacht. Und ich bin zum ersten Mal zehn Kilometer gelaufen.</div>
+        </div>
+        <div class="qa">
+          <label>6. Rollenspiel: Fragt einander nach einem berühmten Sportler / einer berühmten Sportlerin (Wann ist … geboren? Was hat … gewonnen?).</label>
+          <button class="btn secondary" type="button" data-reveal="spr6">Muster zeigen</button>
+          <div class="reveal" id="spr6">— Wann ist Elina Switolina geboren? — Am zwölften September 1994. — Und was hat sie gewonnen? — 2018 das WTA-Finale und 2021 Bronze in Tokio. — An welcher Stelle stand sie 2017? — An dritter Stelle.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Mein Vorbild im Sport</h2>
+      <p class="lead">Напиши короткий реферат про відомого спортсмена чи спортсменку на 60–80 слів. Можеш вибрати когось з уроку або іншу людину — перевір факти в надійному джерелі. План:</p>
+      <div class="card">
+        <p>1) хто це і з якої країни; 2) коли й де народився / народилася (am …ten … in …); 3) вид спорту і відколи; 4) два-три найбільші успіхи (… hat … gewonnen / ist … geworden); 5) чому це твій кумир.</p>
+        <p class="beispiel">Mein Vorbild ist … · … ist am … in … geboren. · Seit … spielt / macht … · 20… hat … gewonnen. · … ist … geworden. · … ist mein Vorbild, weil …</p>
+        <div class="qa">
+          <label for="schreiben-text">Dein Referat</label>
+          <textarea id="schreiben-text" rows="10" placeholder="Mein Vorbild ist …"
+            data-words="60-80"
+            data-must="geboren|Vorbild"
+            data-check="Хто це і звідки|Дата й місце народження|Вид спорту, відколи|2–3 успіхи в Perfekt|Чому кумир"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Mein Vorbild ist Malaika Mihambo aus Deutschland. Sie ist am dritten Februar 1994 in Heidelberg geboren. Ihre Disziplin ist der Weitsprung. 2019 ist sie in Doha zum ersten Mal Weltmeisterin geworden, mit 7,30 Metern. 2021 hat sie in Tokio Gold gewonnen, und 2024 in Paris Silber. Sie ist mein Vorbild, weil sie so weit springt und trotzdem ruhig und freundlich bleibt. Ich springe auch gern, aber nur drei Meter!</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — режим контрольної ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Heute ist der
+          <select class="blank inline" data-ans="zweite"><option value="">—</option><option>zwei</option><option>zweite</option><option>zweiten</option></select> November.</div>
+        <div class="fill-item"><span class="num">8)</span> Ich bin am
+          <select class="blank inline" data-ans="ersten"><option value="">—</option><option>erste</option><option>eins</option><option>ersten</option></select> Mai geboren.</div>
+        <div class="fill-item"><span class="num">9)</span> Sie
+          <select class="blank inline" data-ans="ist"><option value="">—</option><option>hat</option><option>ist</option><option>wird</option></select> 2023 Weltmeisterin geworden.</div>
+        <div class="fill-item"><span class="num">10)</span> Er
+          <select class="blank inline" data-ans="hat"><option value="">—</option><option>hat</option><option>ist</option><option>wurde</option></select> den Gegner besiegt.</div>
+        <div class="fill-item"><span class="num">11)</span> Unsere Mannschaft steht an
+          <select class="blank inline" data-ans="erster"><option value="">—</option><option>erste</option><option>erster</option><option>ersten</option></select> Stelle.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+<section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-7-klas-7-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-7-klas-7-rik";
+  const KN_UNIT = "l4-c";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Daryna hat ein Referat über drei Sportler aus der Ukraine gehalten.", a: "r"},
+    {s: "Jaroslawa Mahutschich ist in Odesa geboren.", a: "f"},
+    {s: "Mahutschich ist 2023 in Budapest Weltmeisterin geworden.", a: "r"},
+    {s: "Den Weltrekord ist sie in Tokio gesprungen.", a: "f"},
+    {s: "Oleksandr Ussyk hat 2012 in London Gold gewonnen.", a: "r"},
+    {s: "Als Profi hat Ussyk zwei Kämpfe verloren.", a: "f"},
+    {s: "Elina Switolina ist seit 2008 Profi.", a: "r"},
+    {s: "2017 stand Switolina in der Weltrangliste an erster Stelle.", a: "f"},
+    {s: "Beim WTA-Finale spielen die acht besten Spielerinnen des Jahres.", a: "r"},
+    {s: "Die Tür im Klassenzimmer ist höher als 2,10 Meter.", a: "f"}
+  ]);
+
+  // Üb. 1: хто це?
+  buildSort('ub1-sort', {
+    buckets: ["Mahutschich", "Ussyk", "Switolina"],
+    items: [
+      {t: "Sie ist in Dnipro geboren.", b: "Mahutschich"},
+      {t: "Ihre Disziplin ist der Hochsprung.", b: "Mahutschich"},
+      {t: "Sie ist 2,10 Meter hoch gesprungen.", b: "Mahutschich"},
+      {t: "Sie ist 2024 Olympiasiegerin geworden.", b: "Mahutschich"},
+      {t: "Er ist auf der Krim geboren.", b: "Ussyk"},
+      {t: "Er ist Boxer im Schwergewicht.", b: "Ussyk"},
+      {t: "Er hat 2024 Tyson Fury besiegt.", b: "Ussyk"},
+      {t: "Er hat als Profi keinen Kampf verloren.", b: "Ussyk"},
+      {t: "Sie ist in Odesa geboren.", b: "Switolina"},
+      {t: "Sie spielt Tennis.", b: "Switolina"},
+      {t: "Sie war 2018 die Siegerin beim WTA-Finale.", b: "Switolina"},
+      {t: "Sie stand 2017 an dritter Stelle.", b: "Switolina"}
+    ]
+  });
+
+  // Üb. 2: порядкові числівники
+  wireBlanks('ub2');
+
+  // Üb. 3: Perfekt
+  buildTransform('ub3-tr', [
+    {s: "Sie springt 2,10 Meter hoch.", task: "Perfekt", ans: "Sie ist 2,10 Meter hoch gesprungen."},
+    {s: "Er besiegt den Weltmeister.", task: "Perfekt", ans: "Er hat den Weltmeister besiegt."},
+    {s: "Sie wird Olympiasiegerin.", task: "Perfekt", ans: "Sie ist Olympiasiegerin geworden."},
+    {s: "Er gewinnt die Goldmedaille.", task: "Perfekt", ans: "Er hat die Goldmedaille gewonnen."},
+    {s: "Sie erreicht das Finale.", task: "Perfekt", ans: "Sie hat das Finale erreicht."},
+    {s: "Er verliert keinen Kampf.", task: "Perfekt", ans: "Er hat keinen Kampf verloren."},
+    {s: "Sie nimmt an den Olympischen Spielen teil.", task: "Perfekt", ans: "Sie hat an den Olympischen Spielen teilgenommen."},
+    {s: "Die Karriere beginnt in Odesa.", task: "Perfekt", ans: "Die Karriere hat in Odesa begonnen."}
+  ]);
+
+  // Üb. 4: розмова про реферат
+  buildChat('ub4-chat', {
+    partner: "Herr Brandt",
+    steps: [
+      {them: "Über wen ist dein Referat?"},
+      {you: ["Über Elina Switolina. Sie ist eine berühmte Tennisspielerin.", "Über Elina Switolina. Sie ist ein berühmter Tennisspielerin.", "Von Elina Switolina, sie ist berühmt Tennis."], correct: 0},
+      {them: "Interessant! Wann ist sie geboren?"},
+      {you: ["Am zwölf September 1994.", "Am zwölften September 1994.", "Im zwölften September 1994."], correct: 1},
+      {them: "Und wo?"},
+      {you: ["Nach Odesa.", "Aus Odesa ist geboren.", "In Odesa."], correct: 2},
+      {them: "Welchen Erfolg findest du am wichtigsten?"},
+      {you: ["2021 hat sie in Tokio Bronze gewinnt.", "2021 hat sie in Tokio Bronze gewonnen.", "2021 ist sie in Tokio Bronze gewonnen."], correct: 1},
+      {them: "An welcher Stelle stand sie 2017 in der Weltrangliste?"},
+      {you: ["An dritter Stelle.", "An dritte Stelle.", "Auf drei Stelle."], correct: 0},
+      {them: "Warum ist sie dein Vorbild?"},
+      {you: ["Sie hat nie aufgegebt.", "Sie ist nie aufgegeben.", "Sie hat nie aufgegeben."], correct: 2}
+    ]
+  });
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Wann ist Malaika Mihambo geboren?", opts: ["am 3. Februar 1994", "am 13. Februar 1994", "am 3. Februar 1984"], correct: "am 3. Februar 1994"},
+    {q: "Wo ist sie aufgewachsen?", opts: ["in Heidelberg", "in Oftersheim", "in Leipzig"], correct: "in Oftersheim"},
+    {q: "Was ist ihre Disziplin?", opts: ["der Hochsprung", "der Weitsprung", "das Laufen"], correct: "der Weitsprung"},
+    {q: "Wo ist sie zum ersten Mal Weltmeisterin geworden?", opts: ["in Doha", "in Eugene", "in Tokio"], correct: "in Doha"},
+    {q: "Wie weit ist sie 2019 gesprungen?", opts: ["7,00 Meter", "7,30 Meter", "3,20 Meter"], correct: "7,30 Meter"},
+    {q: "Welche Medaille hat sie in Tokio 2021 gewonnen?", opts: ["Gold", "Silber", "Bronze"], correct: "Gold"},
+    {q: "Was hat sie 2024 in Paris geholt?", opts: ["Gold", "Silber", "keine Medaille"], correct: "Silber"},
+    {q: "Was passiert am Freitag in der Sportstunde?", opts: ["Die Klasse misst, wie weit sie springt.", "Malaika Mihambo kommt in die Schule.", "Es gibt ein Turnier."], correct: "Die Klasse misst, wie weit sie springt."}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Sie ist am neunzehnten September geboren.", uk: "Вона народилася дев'ятнадцятого вересня."},
+    {say: "Sie ist Olympiasiegerin geworden.", uk: "Вона стала олімпійською чемпіонкою."},
+    {say: "Er hat keinen Kampf verloren.", uk: "Він не програв жодного бою."},
+    {say: "Sie stand an dritter Stelle.", uk: "Вона була на третьому місці."},
+    {say: "Ich bin sehr stolz auf sie.", uk: "Я дуже пишаюся нею / ними."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Wer bei den Olympischen Spielen Gold gewinnt, ist …", opts: ["Olympiasieger", "Weltmeister", "Zuschauer"], correct: "Olympiasieger"},
+    {q: "Eine Sportlerin, die mit Sport Geld verdient, ist ein …", opts: ["Profi", "Gegner", "Vorbild"], correct: "Profi"},
+    {q: "Der beste Sprung der ganzen Welt ist ein …", opts: ["Titel", "Weltrekord", "Kampf"], correct: "Weltrekord"},
+    {q: "Einen Kampf verlieren — das ist eine …", opts: ["Niederlage", "Karriere", "Siegerin"], correct: "Niederlage"},
+    {q: "Ich bin sehr stolz … meine Schwester.", opts: ["für", "von", "auf"], correct: "auf"},
+    {q: "Welcher Satz ist richtig?", opts: ["Sie hat 2001 geboren.", "Sie ist 2001 geboren.", "Sie ist in 2001 geboren."], correct: "Sie ist 2001 geboren."}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Ussyk hat in London Gold gewinnt.", wrong: 5, fix: "gewonnen"},
+    {s: "Mahutschich ist am neunzehnten September geboren.", ok: true},
+    {s: "Mihambo hat Olympiasiegerin geworden.", wrong: 1, fix: "ist"},
+    {s: "Heute ist der zwei November.", wrong: 3, fix: "zweite"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🥇', '🥊', '🎾', '🏅']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>

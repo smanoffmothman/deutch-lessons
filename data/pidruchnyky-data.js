@@ -281,7 +281,7 @@ const PIDRUCHNYKY = [
       { id: "l4", label: "4", nazva: "Mit Freude am Sport hat man Erfolg", storinky: "61–84", dity: [
         { id: "l4-a", label: "A", nazva: "Sportarten", storinky: "62–66", typ: "vpravy", gram: ["fragen", "komparation"], opublikovano: 15 },
         { id: "l4-b", label: "B", nazva: "Auf die Plätze, fertig, los!", storinky: "67–73", typ: "vpravy", gram: ["verben-dass-infinitiv"], opublikovano: 16 },
-        { id: "l4-c", label: "C", nazva: "Profisport", storinky: "74–78", typ: "vpravy", gram: ["zahlwoerter", "tempusformen"] },
+        { id: "l4-c", label: "C", nazva: "Profisport", storinky: "74–78", typ: "vpravy", gram: ["zahlwoerter", "tempusformen"], opublikovano: 17 },
         { id: "l4-d", label: "D", nazva: "Wiederholung", storinky: "79–81", typ: "povtorennya", gram: ["fragen", "verben-dass-infinitiv", "zahlwoerter"] },
         { id: "l4-e", label: "E", nazva: "Geschichtenzeit", storinky: "82", typ: "chytannya" },
         { id: "l4-f", label: "F", nazva: "Projektarbeit", storinky: "83", typ: "bez-storinky" },
