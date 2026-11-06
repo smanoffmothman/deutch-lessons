@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 4, Modul B: Auf die Plätze, fertig, los! — Німецька мова 7 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 7 КЛАС</span>
+        <h1>Lektion 4 · Modul B: Auf die Plätze, fertig, los!</h1>
+        <p class="sub">Урок про спортивні змагання: турніри, чемпіонати, фінали й Олімпійські ігри. Інфінітив з zu після haben + іменник: die Möglichkeit / die Hoffnung / Lust haben, … zu … Розповідь Ґрети й олімпійська вікторина з озвученням, вправи, говоріння, письмо і підсумковий тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Wettkampf</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Was ist das?</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · haben + zu</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Sportnews</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власний текст + вправа на розуміння ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Das Finale</h2>
+      <p class="lead">Ґрета розповідає, як її баскетбольна команда грала у фіналі міського чемпіонату. Послухай і прочитай. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l4-b-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Hallo, ich bin Greta aus der 7b. Ich spiele Basketball in der Mädchenmannschaft unserer Schule. Jedes Jahr im November findet in Leipzig die <span class="gl" data-uk="чемпіонат" data-lemma="die Meisterschaft, -en">Stadtmeisterschaft</span> im Schulbasketball statt. Dieses Jahr haben zwölf Mannschaften an dem <span class="gl" data-uk="турнір" data-lemma="das Turnier, -e">Turnier</span> teilgenommen. Wir hatten nur einen <span class="gl" data-uk="бажання" data-lemma="der Wunsch, -ü-e">Wunsch</span>: endlich den <span class="gl" data-uk="кубок" data-lemma="der Pokal, -e">Pokal</span> zu <span class="gl" data-uk="вигравати, перемагати" data-lemma="gewinnen, hat gewonnen">gewinnen</span>!</p>
+        <p>Sechs Wochen lang haben wir dreimal pro Woche trainiert. Das Training bei Frau Schulz war sehr <span class="gl" data-uk="виснажливий, важкий" data-lemma="anstrengend">anstrengend</span>, aber wir hatten immer Lust, noch einen <span class="gl" data-uk="кошик (у баскетболі)" data-lemma="der Korb, -ö-e">Korb</span> zu <span class="gl" data-uk="кидати" data-lemma="werfen (wirft), hat geworfen">werfen</span>. Im <span class="gl" data-uk="півфінал" data-lemma="das Halbfinale, -">Halbfinale</span> haben wir gegen eine Mannschaft aus Grünau 34:28 gewonnen. Wir waren im <span class="gl" data-uk="фінал" data-lemma="das Finale, -">Finale</span>!</p>
+        <p>Unser <span class="gl" data-uk="суперник / суперниця" data-lemma="der Gegner, - / die Gegnerin, -nen">Gegner</span> im Finale war ein Gymnasium aus der Innenstadt — der Stadtmeister vom letzten Jahr. In der Halle waren über zweihundert <span class="gl" data-uk="глядач / глядачка" data-lemma="der Zuschauer, - / die Zuschauerin, -nen">Zuschauer</span>. Die ganze 7b war da! Erik hatte die <span class="gl" data-uk="ідея" data-lemma="die Idee, -n">Idee</span>, ein großes Plakat zu malen: „Go, Greta, go!“ Daryna und Timur haben die ganze Zeit <span class="gl" data-uk="радісно вигукувати, вболівати" data-lemma="jubeln">gejubelt</span>.</p>
+        <p>Nach der ersten <span class="gl" data-uk="тайм, половина гри" data-lemma="die Halbzeit, -en">Halbzeit</span> stand es 16:22. Frau Schulz hat gesagt: „Ihr habt noch die <span class="gl" data-uk="можливість" data-lemma="die Möglichkeit, -en">Möglichkeit</span>, das Spiel zu gewinnen. <span class="gl" data-uk="боротися" data-lemma="kämpfen">Kämpft</span>!“ Und wir haben gekämpft. Zehn Sekunden vor dem Ende stand es 39:40. Ich hatte den Ball und die <span class="gl" data-uk="надія" data-lemma="die Hoffnung, -en">Hoffnung</span>, den letzten Korb zu werfen. Ich habe geworfen … und der Ball ist an den <span class="gl" data-uk="кільце" data-lemma="der Ring, -e">Ring</span> geflogen, aber nicht in den Korb. Dann haben unsere Gegnerinnen noch einmal getroffen: 39:42.</p>
+        <p>Wir haben mit drei <span class="gl" data-uk="очко, бал" data-lemma="der Punkt, -e">Punkten</span> <span class="gl" data-uk="програвати" data-lemma="verlieren, hat verloren">verloren</span>. Ich war so traurig! Aber dann hat uns Frau Schulz die <span class="gl" data-uk="медаль" data-lemma="die Medaille, -n">Silbermedaillen</span> gezeigt: „Der zweite Platz in der ganzen Stadt — das ist ein großer <span class="gl" data-uk="успіх" data-lemma="der Erfolg, -e">Erfolg</span>!“ Am Abend hat Opa Helmut angerufen und gelacht: „Silber? Wie bei den <span class="gl" data-uk="Олімпійські ігри" data-lemma="die Olympischen Spiele (Pl.)">Olympischen Spielen</span>!“ Jetzt haben wir die <span class="gl" data-uk="намір" data-lemma="die Absicht, -en">Absicht</span>, im nächsten Jahr den <span class="gl" data-uk="перемога" data-lemma="der Sieg, -e">Sieg</span> zu holen. Seit Montag trainieren wir schon wieder.</p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">haben + Nomen + zu + Infinitiv</h2>
+      <p class="lead">Українською кажемо «маю надію <b>виграти</b>», «є можливість <b>узяти</b> участь». Німецькою після таких іменників інфінітив іде з <b>zu</b> — так само, як після vorhaben чи Es ist toll (див. Lektion 3).</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. Іменники, після яких іде zu</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>haben + …</th><th>Beispiel</th></tr>
+          <tr><td>die Möglichkeit — можливість</td><td>Wir haben die Möglichkeit, an der Meisterschaft <strong>teilzunehmen</strong>.</td></tr>
+          <tr><td>die Hoffnung — надія</td><td>Ich habe die Hoffnung, das Spiel <strong>zu gewinnen</strong>.</td></tr>
+          <tr><td>der Wunsch — бажання</td><td>Sie hat den Wunsch, Profisportlerin <strong>zu werden</strong>.</td></tr>
+          <tr><td>die Absicht — намір</td><td>Wir haben die Absicht, den Sieg <strong>zu holen</strong>.</td></tr>
+          <tr><td>die Idee — ідея</td><td>Erik hat die Idee, ein Plakat <strong>zu malen</strong>.</td></tr>
+          <tr><td>Lust / Zeit — без артикля</td><td>Hast du Lust / Zeit, <strong>mitzuspielen</strong>?</td></tr>
+        </table></div>
+        <div class="merke">Заперечення — <b>keine</b>: Ich habe <b>keine</b> Zeit, zum Training zu gehen. · Er hat <b>keine</b> Lust, zu verlieren.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. Порядок слів</p>
+        <p>Wir haben die Hoffnung<b>,</b> &nbsp;| den Pokal &nbsp;| <b>zu gewinnen</b>.</p>
+        <p>Інфінітив з zu — у самому кінці. Перед ним — усе, що до нього належить. Інфінітивну групу відокремлюємо комою.</p>
+        <div class="merke">Відокремлюване дієслово: zu всередині — mit<b>zu</b>spielen, teil<b>zu</b>nehmen, an<b>zu</b>feuern.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. Типові помилки</p>
+        <p>✗ Wir haben die Hoffnung, den Pokal gewinnen. → ✓ …, den Pokal <b>zu gewinnen</b>.</p>
+        <p>✗ Ich habe die Möglichkeit, am Turnier zu teilnehmen. → ✓ …, am Turnier <b>teilzunehmen</b>.</p>
+        <p>✗ Wir haben die Hoffnung zu den Pokal gewinnen. → ✓ Wir haben die Hoffnung, den Pokal <b>zu gewinnen</b>. <i>(zu — безпосередньо перед інфінітивом)</i></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: лексика — картинка → слово ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Rund um den Wettkampf</h2>
+      <p class="lead">Що на картинці? Вибери слово.</p>
+      <div class="card" id="ub1-pic"></div>
+    </section>
+
+    <!-- ===== Üb. 2: значення слів ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Was ist das?</h2>
+      <p class="lead">Прочитай пояснення й вибери слово, яке до нього пасує.</p>
+      <div class="card" id="ub2-list"></div>
+    </section>
+
+    <!-- ===== Üb. 3: перетворення ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">haben + Nomen + zu</h2>
+      <p class="lead">Перепиши речення з іменником у дужках. Пиши ціле речення, не забудь кому й zu.</p>
+      <div class="card" id="ub3-tr"></div>
+    </section>
+
+    <!-- ===== Üb. 4: репортаж з банком слів ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Sportnews: das Finale</h2>
+      <p class="lead">Макс пише короткий репортаж для шкільного радіо. Встав слова в пропуски. Два слова зайві.</p>
+      <div class="card" id="ub4-bank"></div>
+    </section>
+
+    <!-- ===== HÖREN — власна вікторина, озвучена синтезатором ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Das Olympia-Quiz</h2>
+      <p class="lead">У шкільному радіо Макс проводить олімпійську вікторину. Відповідає Айла. Послухай (можна двічі) і дай відповіді. Текст відкривається внизу — але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l4-b-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Max:</b> Hallo und willkommen bei den Sportnews! Heute haben wir ein Olympia-Quiz. Unsere Kandidatin ist Ayla aus der 7b. Hallo, Ayla!<br>
+          <b>Ayla:</b> Hallo, Max!<br>
+          <b>Max:</b> Du hast die Möglichkeit, ein T-Shirt unserer Schule zu gewinnen. Du brauchst fünf richtige Antworten von sechs. Bist du bereit?<br>
+          <b>Ayla:</b> Ja! Ich habe große Lust, das T-Shirt zu gewinnen.<br>
+          <b>Max:</b> Frage eins: Wie oft finden die Olympischen Sommerspiele statt?<br>
+          <b>Ayla:</b> Alle vier Jahre.<br>
+          <b>Max:</b> Richtig! Frage zwei: Wie viele Ringe hat die olympische Fahne?<br>
+          <b>Ayla:</b> Fünf: blau, gelb, schwarz, grün und rot.<br>
+          <b>Max:</b> Super! Frage drei: Wo haben die Sommerspiele 2024 stattgefunden?<br>
+          <b>Ayla:</b> In Paris. Da habe ich die Schwimmwettkämpfe im Fernsehen gesehen.<br>
+          <b>Max:</b> Richtig. Frage vier: Und wo finden die nächsten Sommerspiele statt, im Jahr 2028?<br>
+          <b>Ayla:</b> Hmm … In Los Angeles, in den USA.<br>
+          <b>Max:</b> Genau! Frage fünf ist schwer: Wo waren die Olympischen Winterspiele 2026?<br>
+          <b>Ayla:</b> In … Norwegen?<br>
+          <b>Max:</b> Leider falsch. Sie waren in Italien, in Mailand und Cortina d'Ampezzo. Jetzt brauchst du die letzte Antwort! Frage sechs: In welcher Stadt haben 1896 die ersten Olympischen Spiele der Neuzeit stattgefunden?<br>
+          <b>Ayla:</b> In Athen, in Griechenland!<br>
+          <b>Max:</b> Richtig! Fünf von sechs — das T-Shirt gehört dir! Herzlichen Glückwunsch!<br>
+          <b>Ayla:</b> Danke! Und ich habe die Hoffnung, einmal selbst bei Olympia zu schwimmen.<br>
+          <b>Max:</b> Wir drücken dir die Daumen! Bis nächste Woche!
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN — 🎤 + говоріння зі зразком ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Wettkämpfe und Wünsche</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Welche Sportwettkämpfe gibt es in deiner Schule oder in deiner Stadt?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">In unserer Schule gibt es im Frühling ein Fußballturnier. Im Mai findet in unserer Stadt ein Lauf für Kinder statt. Da laufen jedes Jahr über hundert Schüler mit.</div>
+        </div>
+        <div class="qa">
+          <label>2. Hast du schon an einem Turnier oder einer Meisterschaft teilgenommen? Wie war es?</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Ja, letztes Jahr habe ich an einem Schachturnier teilgenommen. Ich habe drei Spiele gewonnen und zwei verloren. Am Ende war ich auf Platz vier.</div>
+        </div>
+        <div class="qa">
+          <label>3. Wie fühlst du dich, wenn du verlierst? Was machst du dann?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Wenn ich verliere, bin ich zuerst traurig. Aber dann trainiere ich mehr. Ich habe immer die Hoffnung, beim nächsten Mal zu gewinnen.</div>
+        </div>
+        <div class="qa">
+          <label>4. Welche Olympischen Spiele hast du im Fernsehen gesehen? Welche Sportart war am spannendsten?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Ich habe die Sommerspiele in Paris gesehen. Am spannendsten war für mich Fechten. Unsere Sportlerinnen haben super gekämpft!</div>
+        </div>
+        <div class="qa">
+          <label>5. Was für Wünsche hast du im Sport? (Ich habe den Wunsch / die Absicht, … zu …)</label>
+          <button class="btn secondary" type="button" data-reveal="spr5">Muster zeigen</button>
+          <div class="reveal" id="spr5">Ich habe den Wunsch, besser Volleyball zu spielen. Ich habe auch die Absicht, im Sommer schwimmen zu lernen.</div>
+        </div>
+        <div class="qa">
+          <label>6. Rollenspiel: Lade deinen Partner / deine Partnerin zu einem Spiel deiner Mannschaft ein. (Hast du Lust / Zeit, … zu …?)</label>
+          <button class="btn secondary" type="button" data-reveal="spr6">Muster zeigen</button>
+          <div class="reveal" id="spr6">— Hast du am Samstag Zeit, zu unserem Spiel zu kommen? — Wann beginnt es? — Um zehn Uhr in der Sporthalle. — Ja, gern! Ich habe Lust, euch anzufeuern.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Eine Nachricht an Greta</h2>
+      <p class="lead">Ґрета пише тобі: «Ми програли фінал лише на три очки… Тепер у нас срібло. Ти колись грав / грала в змаганнях?» Напиши відповідь на 60–80 слів за планом:</p>
+      <div class="card">
+        <p>1) привітання й вітання з другим місцем; 2) підтримка (чому срібло — це успіх); 3) у якому змаганні ти брав / брала участь і як воно минуло; 4) твоє бажання або намір у спорті (… den Wunsch / die Absicht, … zu …); 5) побажання Ґреті на наступний рік; 6) прощання.</p>
+        <p class="beispiel">Liebe Greta, · Herzlichen Glückwunsch zur Silbermedaille! · Der zweite Platz ist … · Ich habe einmal an … teilgenommen. · Ich habe den Wunsch, … zu … · Viel Erfolg! · Viele Grüße</p>
+        <div class="qa">
+          <label for="schreiben-text">Deine Nachricht</label>
+          <textarea id="schreiben-text" rows="10" placeholder="Liebe Greta,&#10;…"
+            data-words="60-80"
+            data-must="zu|Erfolg|Viele Grüße/Liebe Grüße"
+            data-check="Привітання й вітання|Підтримка: срібло — успіх|Моє змагання|Бажання / намір з zu|Побажання на наступний рік|Прощання"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Liebe Greta,<br>herzlichen Glückwunsch zur Silbermedaille! Zweiter Platz in einer so großen Stadt ist ein toller Erfolg. Sei nicht traurig! Ich habe im Frühling an einem Lauf in unserem Park teilgenommen. Ich war nur auf Platz zwölf, aber es hat viel Spaß gemacht. Jetzt habe ich den Wunsch, schneller zu laufen, und trainiere zweimal pro Woche. Ich wünsche dir und deiner Mannschaft viel Erfolg im nächsten Jahr!<br>Viele Grüße<br>Wiktorija</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — режим контрольної ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Wir haben die Hoffnung, das Spiel
+          <select class="blank inline" data-ans="zu gewinnen"><option value="">—</option><option>gewinnen</option><option>zu gewinnen</option><option>gewonnen</option></select>.</div>
+        <div class="fill-item"><span class="num">8)</span> Hast du Zeit, zum Turnier
+          <select class="blank inline" data-ans="zu kommen"><option value="">—</option><option>kommen</option><option>zukommen</option><option>zu kommen</option></select>?</div>
+        <div class="fill-item"><span class="num">9)</span> Ich habe die Absicht, an der Meisterschaft
+          <select class="blank inline" data-ans="teilzunehmen"><option value="">—</option><option>teilnehmen</option><option>teilzunehmen</option><option>zu teilnehmen</option></select>.</div>
+        <div class="fill-item"><span class="num">10)</span> Die Meisterschaft
+          <select class="blank inline" data-ans="findet"><option value="">—</option><option>nimmt</option><option>findet</option><option>hat</option></select> im November statt.</div>
+        <div class="fill-item"><span class="num">11)</span> Erik hat
+          <select class="blank inline" data-ans="die"><option value="">—</option><option>der</option><option>das</option><option>die</option></select> Idee, ein Plakat zu malen.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+<section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-7-klas-7-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-7-klas-7-rik";
+  const KN_UNIT = "l4-b";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Die Stadtmeisterschaft im Schulbasketball findet jedes Jahr im November statt.", a: "r"},
+    {s: "An dem Turnier haben acht Mannschaften teilgenommen.", a: "f"},
+    {s: "Die Mädchen haben sechs Wochen lang dreimal pro Woche trainiert.", a: "r"},
+    {s: "Im Halbfinale hat Gretas Mannschaft verloren.", a: "f"},
+    {s: "Der Gegner im Finale war der Stadtmeister vom letzten Jahr.", a: "r"},
+    {s: "Das Plakat war Darynas Idee.", a: "f"},
+    {s: "Nach der ersten Halbzeit stand es 16:22.", a: "r"},
+    {s: "Greta hat den letzten Korb geworfen und das Spiel gewonnen.", a: "f"},
+    {s: "Die Mannschaft hat mit drei Punkten verloren.", a: "r"},
+    {s: "Die Mädchen wollen im nächsten Jahr nicht mehr mitspielen.", a: "f"}
+  ]);
+
+  // Üb. 1: картинка → слово
+  buildPicture('ub1-pic', [
+    {pic: "🏆", opts: ["der Pokal", "der Korb", "der Punkt"], correct: "der Pokal"},
+    {pic: "🥈", opts: ["die Halbzeit", "die Medaille", "die Idee"], correct: "die Medaille"},
+    {pic: "🏀🧺", opts: ["der Korb", "der Gegner", "der Sieg"], correct: "der Korb"},
+    {pic: "👀👏👏", opts: ["die Gegner", "die Zuschauer", "die Punkte"], correct: "die Zuschauer"},
+    {pic: "🙌🎉", opts: ["verlieren", "werfen", "jubeln"], correct: "jubeln"},
+    {pic: "🏀↗️", opts: ["werfen", "kämpfen", "jubeln"], correct: "werfen"},
+    {pic: "😢👎", opts: ["gewinnen", "verlieren", "siegen"], correct: "verlieren"},
+    {pic: "⏱️ ½", opts: ["das Finale", "die Halbzeit", "das Turnier"], correct: "die Halbzeit"},
+    {pic: "⭕⭕⭕⭕⭕🔥", opts: ["die Olympischen Spiele", "die Stadtmeisterschaft", "das Schachturnier"], correct: "die Olympischen Spiele"},
+    {pic: "😓💦🏋️", opts: ["anstrengend", "langweilig", "traurig"], correct: "anstrengend"}
+  ]);
+
+  // Üb. 2: пояснення → слово
+  buildMatch('ub2', [
+    ["Das letzte Spiel im Turnier — es geht um den ersten Platz.", "das Finale"],
+    ["Die Mannschaft, gegen die man spielt.", "der Gegner"],
+    ["Die Leute, die in der Halle das Spiel sehen.", "die Zuschauer"],
+    ["Man bekommt sie für Platz 1, 2 oder 3, oft aus Metall.", "die Medaille"],
+    ["Ein großer Becher für die Siegermannschaft.", "der Pokal"],
+    ["Die Hälfte vom Spiel.", "die Halbzeit"],
+    ["Ein Wettkampf: Hier wird man Stadtmeister oder Weltmeister.", "die Meisterschaft"],
+    ["Der größte Sportwettkampf der Welt.", "die Olympischen Spiele"]
+  ]);
+
+  // Üb. 3: перетворення
+  buildTransform('ub3-tr', [
+    {s: "Wir gewinnen das Turnier.", task: "(die Hoffnung) Wir haben …", ans: "Wir haben die Hoffnung, das Turnier zu gewinnen."},
+    {s: "Ich spiele mit.", task: "(Lust) Ich habe …", ans: "Ich habe Lust, mitzuspielen."},
+    {s: "Die Klasse malt ein Plakat.", task: "(die Idee) Die Klasse hat …", ans: "Die Klasse hat die Idee, ein Plakat zu malen."},
+    {s: "Ihr nehmt an der Meisterschaft teil.", task: "(die Möglichkeit) Ihr habt …", ans: "Ihr habt die Möglichkeit, an der Meisterschaft teilzunehmen."},
+    {s: "Greta wirft den letzten Korb.", task: "(den Wunsch) Greta hat …", ans: "Greta hat den Wunsch, den letzten Korb zu werfen."},
+    {s: "Wir holen nächstes Jahr den Sieg.", task: "(die Absicht) Wir haben …", ans: "Wir haben die Absicht, nächstes Jahr den Sieg zu holen."},
+    {s: "Ich komme zum Finale.", task: "(keine Zeit) Ich habe …", ans: "Ich habe keine Zeit, zum Finale zu kommen."},
+    {s: "Timur trainiert jeden Tag.", task: "(keine Lust) Timur hat …", ans: "Timur hat keine Lust, jeden Tag zu trainieren."}
+  ]);
+
+  // Üb. 4: репортаж
+  buildWordBank('ub4-bank', {
+    text: "SPORTNEWS\n\nAm Wochenende hat das [Finale] der Stadtmeisterschaft im Schulbasketball stattgefunden. Über zweihundert [Zuschauer] waren in der Halle. Unsere Mädchen haben gegen einen sehr starken [Gegner] gespielt. Nach der ersten [Halbzeit] stand es 16:22. Dann haben unsere Spielerinnen super gekämpft, aber am Ende haben sie mit drei [Punkten] verloren. Trotzdem: Der zweite Platz und die [Silbermedaillen] sind ein großer [Erfolg]!\n\nHerzlichen Glückwunsch, Mädchen!",
+    extra: ["Pokal", "Halbfinale"]
+  });
+  document.querySelectorAll('#ub4-bank .wb-text p').forEach(p => { p.style.whiteSpace = 'pre-line'; });
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Was kann Ayla gewinnen?", opts: ["einen Pokal", "ein T-Shirt der Schule", "eine Medaille"], correct: "ein T-Shirt der Schule"},
+    {q: "Wie viele richtige Antworten braucht Ayla?", opts: ["vier", "fünf", "sechs"], correct: "fünf"},
+    {q: "Wie oft finden die Olympischen Sommerspiele statt?", opts: ["jedes Jahr", "alle zwei Jahre", "alle vier Jahre"], correct: "alle vier Jahre"},
+    {q: "Wie viele Ringe hat die olympische Fahne?", opts: ["vier", "fünf", "sechs"], correct: "fünf"},
+    {q: "Was hat Ayla 2024 im Fernsehen gesehen?", opts: ["Schwimmwettkämpfe", "Basketballspiele", "Biathlon"], correct: "Schwimmwettkämpfe"},
+    {q: "Bei welcher Frage hat Ayla falsch geantwortet?", opts: ["bei Frage zwei", "bei Frage fünf", "bei Frage sechs"], correct: "bei Frage fünf"},
+    {q: "Wo waren die Olympischen Winterspiele 2026?", opts: ["in Norwegen", "in Italien", "in Griechenland"], correct: "in Italien"},
+    {q: "Welche Hoffnung hat Ayla?", opts: ["einmal bei Olympia zu schwimmen", "Moderatorin zu werden", "nach Paris zu fahren"], correct: "einmal bei Olympia zu schwimmen"}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Die Meisterschaft findet im November statt.", uk: "Чемпіонат відбувається в листопаді."},
+    {say: "Wir haben die Hoffnung, den Pokal zu gewinnen.", uk: "Ми маємо надію виграти кубок."},
+    {say: "Hast du Lust, mitzuspielen?", uk: "Хочеш пограти з нами?"},
+    {say: "Wir haben mit drei Punkten verloren.", uk: "Ми програли на три очки."},
+    {say: "Der zweite Platz ist ein großer Erfolg.", uk: "Друге місце — великий успіх."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Das letzte Spiel eines Turniers heißt …", opts: ["Halbzeit", "Finale", "Gegner"], correct: "Finale"},
+    {q: "Die Olympischen Sommerspiele finden alle … Jahre statt.", opts: ["zwei", "vier", "fünf"], correct: "vier"},
+    {q: "Für den ersten Platz bekommt man eine …", opts: ["Goldmedaille", "Silbermedaille", "Bronzemedaille"], correct: "Goldmedaille"},
+    {q: "Unsere Mannschaft hat nicht gewonnen. Sie hat …", opts: ["gesiegt", "verloren", "geworfen"], correct: "verloren"},
+    {q: "Im Basketball muss man den Ball in den … werfen.", opts: ["Korb", "Pokal", "Punkt"], correct: "Korb"},
+    {q: "Welcher Satz ist richtig?", opts: ["Ich habe Lust, mitzuspielen.", "Ich habe Lust, zu mitspielen.", "Ich habe Lust, mitspielen."], correct: "Ich habe Lust, mitzuspielen."}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Wir haben die Hoffnung, den Pokal gewinnen.", wrong: 6, fix: "zu gewinnen"},
+    {s: "Hast du Lust, mit uns Basketball zu spielen?", ok: true},
+    {s: "Er hat keine Lust, mitspielen.", wrong: 4, fix: "mitzuspielen"},
+    {s: "Unsere Mannschaft hat das Finale gewonnt.", wrong: 5, fix: "gewonnen"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🏀', '🏆', '🥈', '🔥']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
