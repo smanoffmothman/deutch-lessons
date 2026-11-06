@@ -624,5 +624,25 @@
   {de: "das Quiz, -", uk: "вікторина", r: "l8-a"},
   {de: "unentschieden", uk: "нічия, унічию", r: "l8-a"},
   {de: "wissen wollen, ob …", uk: "хотіти знати, чи …", r: "l8-a", note: "Max wollte wissen, ob die Ukraine größer ist."},
-  {de: "vergleichen, hat verglichen", uk: "порівнювати", r: "l8-a"}
+  {de: "vergleichen, hat verglichen", uk: "порівнювати", r: "l8-a"},
+  // ---- Lektion 8 · Modul B: Sehenswertes in Kyjiw ----
+  {de: "darum", uk: "тому", r: "l8-b", note: "на 1-му місці, дієслово одразу після нього: …, darum fahre ich nach Kyjiw."},
+  {de: "deshalb", uk: "тому, через це", r: "l8-b", note: "= darum: Ich mag Tiere, deshalb gehe ich in den Zoo."},
+  {de: "das Denkmal, -ä-er", uk: "пам'ятник", r: "l8-b"},
+  {de: "die Markthalle, -n", uk: "критий ринок", r: "l8-b"},
+  {de: "die Skulptur, -en", uk: "скульптура", r: "l8-b"},
+  {de: "das Mosaik, -e(n)", uk: "мозаїка", r: "l8-b"},
+  {de: "der Architekt, -en / die Architektin, -nen", uk: "архітектор / архітекторка", r: "l8-b"},
+  {de: "die Fassade, -n", uk: "фасад", r: "l8-b"},
+  {de: "das Fabelwesen, -", uk: "казкова (фантастична) істота", r: "l8-b"},
+  {de: "der Hügel, -", uk: "пагорб", r: "l8-b"},
+  {de: "der Botanische Garten", uk: "ботанічний сад", r: "l8-b"},
+  {de: "der Flieder", uk: "бузок", r: "l8-b"},
+  {de: "blühen, hat geblüht", uk: "цвісти", r: "l8-b"},
+  {de: "der Spielplatz, -ä-e", uk: "дитячий майданчик", r: "l8-b"},
+  {de: "der Stadtteil, -e", uk: "район міста", r: "l8-b"},
+  {de: "empfehlenswert", uk: "вартий уваги, рекомендований", r: "l8-b"},
+  {de: "die Spezialität, -en", uk: "фірмова страва, делікатес", r: "l8-b"},
+  {de: "sicher", uk: "безпечний; напевно", r: "l8-b", note: "wenn es wieder sicher ist"},
+  {de: "der Fürst, -en", uk: "князь", r: "l8-b", note: "Fürst Wolodymyr"}
 ];
