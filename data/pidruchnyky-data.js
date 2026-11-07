@@ -323,7 +323,7 @@ const PIDRUCHNYKY = [
       { id: "anhang", label: "", nazva: "Anhang", storinky: "155–191", dity: [
         { id: "anhang-grammatik", label: "", nazva: "Grammatik", storinky: "155–170", typ: "bez-storinky" },
         { id: "anhang-zu-infinitiv", label: "", nazva: "Verben mit zu + Infinitiv", typ: "gramatyka", gram: ["verben-dass-infinitiv"], opublikovano: 37 },
-        { id: "anhang-verben", label: "", nazva: "Unregelmäßige Verben", storinky: "171–173", typ: "gramatyka", gram: ["starke-verben", "tempusformen"] },
+        { id: "anhang-verben", label: "", nazva: "Unregelmäßige Verben", storinky: "171–173", typ: "gramatyka", gram: ["starke-verben", "tempusformen"], opublikovano: 38 },
         { id: "anhang-woerter", label: "", nazva: "Deutsch-Ukrainisches Wörterverzeichnis", storinky: "174–191", typ: "bez-storinky" }
       ] }
     ]
