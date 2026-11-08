@@ -1109,5 +1109,17 @@ const GLOSSARY = [
   {de: "die Enzyklopädie (die Enzyklopädien)", uk: "енциклопедія", klas: "8", modul: "C", lektion: 1},
   {de: "das Wörterbuch (die Wörterbücher)", uk: "словник", klas: "8", modul: "C", lektion: 1},
   {de: "der Roman (die Romane) (der Fantasyroman)", uk: "роман (фентезі-роман)", klas: "8", modul: "C", lektion: 1},
-  {de: "ausleihen (trennbar) (Bücher ausleihen)", uk: "брати (книжки) в бібліотеці, позичати", klas: "8", modul: "C", lektion: 1}
+  {de: "ausleihen (trennbar) (Bücher ausleihen)", uk: "брати (книжки) в бібліотеці, позичати", klas: "8", modul: "C", lektion: 1},
+  {de: "der/die Bekannte (ein Bekannter; die Bekannten)", uk: "знайомий / знайома", klas: "8", modul: "C", lektion: 2},
+  {de: "der/die Deutsche (ein Deutscher; die Deutschen)", uk: "німець / німкеня", klas: "8", modul: "C", lektion: 2},
+  {de: "der/die Jugendliche (ein Jugendlicher; die Jugendlichen)", uk: "підліток, юнак / дівчина", klas: "8", modul: "C", lektion: 2},
+  {de: "jemandem zur Verfügung stehen", uk: "бути в чиємусь розпорядженні (= frei benutzen dürfen)", klas: "8", modul: "C", lektion: 2},
+  {de: "kostenlos", uk: "безкоштовно, безкоштовний", klas: "8", modul: "C", lektion: 2},
+  {de: "die Frist (die Fristen)", uk: "термін, строк", klas: "8", modul: "C", lektion: 2},
+  {de: "der Bestand (der Bibliotheksbestand)", uk: "фонд (бібліотечний фонд)", klas: "8", modul: "C", lektion: 2},
+  {de: "entdecken", uk: "відкривати, виявляти", klas: "8", modul: "C", lektion: 2},
+  {de: "versprechen", uk: "обіцяти", klas: "8", modul: "C", lektion: 2},
+  {de: "die Öffnungszeiten (Pl.)", uk: "години роботи", klas: "8", modul: "C", lektion: 2},
+  {de: "etwas Interessantes / nichts Neues", uk: "щось цікаве / нічого нового", klas: "8", modul: "C", lektion: 2},
+  {de: "alles Gute", uk: "всього найкращого", klas: "8", modul: "C", lektion: 2}
 ];
