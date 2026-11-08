@@ -1133,5 +1133,17 @@ const GLOSSARY = [
   {de: "ausführlich (ausführliche Informationen)", uk: "докладний, детальний", klas: "8", modul: "C", lektion: 3},
   {de: "dringend (dringend eine Information brauchen)", uk: "терміново, нагальний", klas: "8", modul: "C", lektion: 3},
   {de: "der Vorteil (die Vorteile)", uk: "перевага", klas: "8", modul: "C", lektion: 3},
-  {de: "sich zu Tode langweilen", uk: "нудьгувати до смерті", klas: "8", modul: "C", lektion: 3}
+  {de: "sich zu Tode langweilen", uk: "нудьгувати до смерті", klas: "8", modul: "C", lektion: 3},
+  {de: "der Veranstaltungskalender (die Veranstaltungskalender)", uk: "календар заходів", klas: "9", modul: "B", lektion: 10},
+  {de: "der Freizeitclub (die Freizeitclubs)", uk: "клуб дозвілля", klas: "9", modul: "B", lektion: 10},
+  {de: "die Freizeitmöglichkeit (die Freizeitmöglichkeiten)", uk: "можливість проведення дозвілля", klas: "9", modul: "B", lektion: 10},
+  {de: "der Gitarrenunterricht", uk: "уроки гри на гітарі", klas: "9", modul: "B", lektion: 10},
+  {de: "das Gesellschaftsspiel (die Gesellschaftsspiele)", uk: "настільна гра (для компанії)", klas: "9", modul: "B", lektion: 10},
+  {de: "das Altersheim (die Altersheime)", uk: "будинок для літніх людей", klas: "9", modul: "B", lektion: 10},
+  {de: "die Grillparty (die Grillpartys)", uk: "вечірка з грилем", klas: "9", modul: "B", lektion: 10},
+  {de: "zustimmen (trennbar) (einem Vorschlag zustimmen)", uk: "погоджуватися (з пропозицією)", klas: "9", modul: "B", lektion: 10},
+  {de: "ablehnen (trennbar) (einen Vorschlag ablehnen)", uk: "відхиляти, відмовлятися", klas: "9", modul: "B", lektion: 10},
+  {de: "Es besteht die Möglichkeit, … zu …", uk: "є можливість …", klas: "9", modul: "B", lektion: 10},
+  {de: "Ich bin dabei!", uk: "Я з вами! / Я беру участь!", klas: "9", modul: "B", lektion: 10},
+  {de: "Ich habe nichts dagegen.", uk: "Я не проти.", klas: "9", modul: "B", lektion: 10}
 ];

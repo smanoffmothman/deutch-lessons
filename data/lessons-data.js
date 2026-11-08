@@ -1040,5 +1040,17 @@ const LESSONS = [
     gram: ["verben-dass-infinitiv", "konditionalsaetze", "trennbare-verben", "adjektive-als-nomen"],
     hook: "undu",
     dz: "Umfrage „Bibliothek oder Internet?“: 1) Frag drei Personen (Familie, Freunde, Nachbarn): Besuchst du Bibliotheken? Wie oft? Was leihst du dir dort aus? Was machst du, wenn du dringend Informationen brauchst? 2) Notiere die Antworten auf Deutsch in einer Tabelle (Stichwörter reichen). 3) Schreib 5–6 Sätze über die Ergebnisse. Benutze mindestens dreimal „dass“ und zweimal „wenn“ (z. B. „Meine Oma sagt, dass sie jede Woche in die Bibliothek geht.“, „Wenn mein Bruder dringend Informationen braucht, surft er im Internet.“). Nächstes Mal vergleichen wir: Wer gewinnt in unserer Klasse – die Bibliothek oder das Internet?"
+  },
+  {
+    klas: "9",
+    modul: "B",
+    lektion: 10,
+    nazva: "Im Freizeitclub: Was ist heute los?",
+    opys: "Клуби за інтересами: читаємо календар заходів молодіжного клубу «Phönix» і коментуємо його (Am Montag kann man …, Es besteht die Möglichkeit, … zu …, … findet um … Uhr statt), виправляємо хибний текст про клуб, вчимося пропонувати, погоджуватися й відмовлятися (Ich schlage vor, … / Ich bin dabei! / Schade, aber …) та презентуємо програму дозвілля своєї молодіжної організації.",
+    file: "klas-9/modul-b/lektion-10.html",
+    nove: true,
+    gram: ["verben-dass-infinitiv", "trennbare-verben", "satzstellung-hauptsatz", "deklination-nomen"],
+    hook: "undu",
+    dz: "Unser Wochenprogramm: Wähle eine Jugendorganisation – zum Beispiel die Organisation von deinem Flyer, deine Organisation aus Üb. 4 oder eine neue (einen Jugendsportverein, ein Jugendorchester, eine Jugendorganisation für den Umweltschutz …). 1) Mach (auf Papier oder digital) einen Veranstaltungskalender wie im Club Phönix (Üb. 1): Montag bis Sonntag, mindestens acht Veranstaltungen mit Uhrzeit. 2) Schreib dazu eine Präsentation (7–8 Sätze) nach dem Muster aus Üb. 4: „Wir möchten das Freizeitprogramm eines / einer … präsentieren. Dazu gehören …“. Benutze mindestens einmal „… findet um … Uhr statt“, einmal „Es besteht auch die Möglichkeit, … zu …“ und einmal „Am … können Jugendliche … besuchen“. 3) Schreib zum Schluss zwei Fragen an die Zuhörer (z. B. „Findet ihr das Programm interessant? Möchtet ihr irgendetwas mitmachen?“). Nächstes Mal präsentiert ihr eure Programme, und die Klasse wählt mit „Ich schlage vor, … zu …“ und „Ich bin dabei!“ drei Veranstaltungen, die sie zusammen besuchen möchte."
   }
 ];
