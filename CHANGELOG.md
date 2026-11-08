@@ -409,6 +409,14 @@
   - «Підручники» (2026-11-08): бриф у Knowledge збігався з GitHub;
     `build-book-preview.py` перенесено в `tools/`, BOOK-BRIEF — шляхи
     `tools/…`, без пунктів про оновлення Knowledge. У Knowledge — лише плани.
+  - «Матеріали» (2026-11-08): `MATERIAL-BRIEF.md` на GitHub раніше не було
+    зовсім — залито версію з Knowledge (усі інші файли сайту в Knowledge
+    були старші за GitHub). `build-material-preview.py` і
+    `commons-search.py` перенесено в `tools/`; превʼю-скрипт тепер бере
+    файли з клону (`assets/`, `data/`), а не «пласкі» копії з Knowledge.
+    У брифі — новий розділ «Файли», шляхи `tools/…`, без пунктів про
+    оновлення Knowledge. `commons/` і `materialy/statti/*-preview.html` — у
+    `.gitignore`. У Knowledge — лише плани номерів.
 - **У Knowledge лишається** лише робочий стан, якого немає на GitHub:
   плани (`PLAN-<книжка>.md`, `PLAN-<журнал>-<номер>.md`), тимчасово —
   PDF номера чи книжки. Технічна підтримка — порожній Knowledge; ТЗ від
