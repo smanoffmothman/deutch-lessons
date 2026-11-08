@@ -1028,5 +1028,17 @@ const LESSONS = [
     gram: ["adjektive-als-nomen", "adjektivdeklination", "indefinitpronomen", "infinitiv-um-zu"],
     hook: "fehler",
     dz: "Buchtipp-Karte „Das Beste, was ich gelesen habe“: Gestalte eine Karte (A5, auf Papier oder digital) für unsere Buchtipp-Wand. 1) Oben: Titel und Autor deines Lieblingsbuches und ein kleines Bild. 2) Schreib 5–6 Sätze: Worum geht es? Wer ist die Hauptfigur? Warum soll man das Buch lesen? Benutze mindestens vier substantivierte Adjektive (z. B. etwas Spannendes, viel Interessantes, nichts Langweiliges, das Beste, ein Bekannter, die Jugendlichen) und unterstreiche sie. 3) Schreib zum Schluss einen Satz mit „um … zu“ (z. B. „Lies dieses Buch, um etwas Neues über Japan zu erfahren!“). Nächstes Mal hängen wir die Karten auf, und jeder wählt ein Buch, das er gern ausleihen möchte."
+  },
+  {
+    klas: "8",
+    modul: "C",
+    lektion: 3,
+    nazva: "Besuchst du gern Bibliotheken?",
+    opys: "Відвідування бібліотеки: вчимо звороти (Bücher ausleihen, in einer Zeitschrift blättern, um Hilfe bitten, etwas Passendes auswählen) й перевіряємо на слух, читаємо форум «Бібліотека чи інтернет?», слухаємо два інтерв'ю і переказуємо чужу думку підрядними реченнями з dass і wenn.",
+    file: "klas-8/modul-c/lektion-3.html",
+    nove: true,
+    gram: ["verben-dass-infinitiv", "konditionalsaetze", "trennbare-verben", "adjektive-als-nomen"],
+    hook: "undu",
+    dz: "Umfrage „Bibliothek oder Internet?“: 1) Frag drei Personen (Familie, Freunde, Nachbarn): Besuchst du Bibliotheken? Wie oft? Was leihst du dir dort aus? Was machst du, wenn du dringend Informationen brauchst? 2) Notiere die Antworten auf Deutsch in einer Tabelle (Stichwörter reichen). 3) Schreib 5–6 Sätze über die Ergebnisse. Benutze mindestens dreimal „dass“ und zweimal „wenn“ (z. B. „Meine Oma sagt, dass sie jede Woche in die Bibliothek geht.“, „Wenn mein Bruder dringend Informationen braucht, surft er im Internet.“). Nächstes Mal vergleichen wir: Wer gewinnt in unserer Klasse – die Bibliothek oder das Internet?"
   }
 ];

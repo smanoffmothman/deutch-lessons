@@ -1121,5 +1121,17 @@ const GLOSSARY = [
   {de: "versprechen", uk: "обіцяти", klas: "8", modul: "C", lektion: 2},
   {de: "die Öffnungszeiten (Pl.)", uk: "години роботи", klas: "8", modul: "C", lektion: 2},
   {de: "etwas Interessantes / nichts Neues", uk: "щось цікаве / нічого нового", klas: "8", modul: "C", lektion: 2},
-  {de: "alles Gute", uk: "всього найкращого", klas: "8", modul: "C", lektion: 2}
+  {de: "alles Gute", uk: "всього найкращого", klas: "8", modul: "C", lektion: 2},
+  {de: "blättern (in einer Zeitschrift blättern)", uk: "гортати (журнал)", klas: "8", modul: "C", lektion: 3},
+  {de: "auswählen (trennbar) (aus vielen Büchern auswählen)", uk: "вибирати, обирати", klas: "8", modul: "C", lektion: 3},
+  {de: "um Hilfe bitten (Man kann Bibliothekare um Hilfe bitten.)", uk: "просити про допомогу", klas: "8", modul: "C", lektion: 3},
+  {de: "etwas Passendes finden", uk: "знайти щось підходяще", klas: "8", modul: "C", lektion: 3},
+  {de: "die Auswahl (eine große Auswahl an Büchern)", uk: "вибір (великий вибір книжок)", klas: "8", modul: "C", lektion: 3},
+  {de: "das Referat (die Referate) (ein Referat vorbereiten)", uk: "доповідь, реферат (готувати доповідь)", klas: "8", modul: "C", lektion: 3},
+  {de: "der Besucher / die Besucherin (die Besucher / die Besucherinnen)", uk: "відвідувач / відвідувачка", klas: "8", modul: "C", lektion: 3},
+  {de: "stören (Andere Besucher stören mich.)", uk: "заважати", klas: "8", modul: "C", lektion: 3},
+  {de: "ausführlich (ausführliche Informationen)", uk: "докладний, детальний", klas: "8", modul: "C", lektion: 3},
+  {de: "dringend (dringend eine Information brauchen)", uk: "терміново, нагальний", klas: "8", modul: "C", lektion: 3},
+  {de: "der Vorteil (die Vorteile)", uk: "перевага", klas: "8", modul: "C", lektion: 3},
+  {de: "sich zu Tode langweilen", uk: "нудьгувати до смерті", klas: "8", modul: "C", lektion: 3}
 ];
