@@ -1016,5 +1016,17 @@ const LESSONS = [
     gram: ["deklination-nomen", "wechselpraepositionen"],
     hook: "prognose",
     dz: "Plan „Meine Bibliothek“: 1) Zeichne einen Plan von deiner Schulbibliothek oder von deiner Traumbibliothek. 2) Beschrifte mindestens acht Dinge und Personen auf Deutsch – immer mit Artikel und Pluralform (z. B. das Regal – die Regale, die Leseecke – die Leseecken). 3) Schreib unter den Plan fünf Sätze: Wer arbeitet dort? Wo kann man lesen oder lernen? Was kann man ausleihen? Benutze mindestens zweimal den Dativ Plural (z. B. „in vielen Regalen“, „in allen Fächern“). Nächstes Mal zeigst du deinen Plan, und die Klasse stellt Fragen: „Wo stehen die Wörterbücher?“"
+  },
+  {
+    klas: "8",
+    modul: "C",
+    lektion: 2,
+    nazva: "Wir gehen in die Bibliothek",
+    opys: "Ідемо до бібліотеки: читаємо інформацію шкільної бібліотеки для читачів (що там є, на який термін можна брати книжки, години роботи), вчимо субстантивовані прикметники (der Bekannte, etwas Interessantes, nichts Neues, alles Gute), перевіряємо закінчення на слух і граємо в «лавину» «Wir gehen in die Bibliothek, um … zu …».",
+    file: "klas-8/modul-c/lektion-2.html",
+    nove: true,
+    gram: ["adjektive-als-nomen", "adjektivdeklination", "indefinitpronomen", "infinitiv-um-zu"],
+    hook: "fehler",
+    dz: "Buchtipp-Karte „Das Beste, was ich gelesen habe“: Gestalte eine Karte (A5, auf Papier oder digital) für unsere Buchtipp-Wand. 1) Oben: Titel und Autor deines Lieblingsbuches und ein kleines Bild. 2) Schreib 5–6 Sätze: Worum geht es? Wer ist die Hauptfigur? Warum soll man das Buch lesen? Benutze mindestens vier substantivierte Adjektive (z. B. etwas Spannendes, viel Interessantes, nichts Langweiliges, das Beste, ein Bekannter, die Jugendlichen) und unterstreiche sie. 3) Schreib zum Schluss einen Satz mit „um … zu“ (z. B. „Lies dieses Buch, um etwas Neues über Japan zu erfahren!“). Nächstes Mal hängen wir die Karten auf, und jeder wählt ein Buch, das er gern ausleihen möchte."
   }
 ];
