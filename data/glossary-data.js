@@ -1157,5 +1157,17 @@ const GLOSSARY = [
   {de: "Verantwortung übernehmen", uk: "брати на себе відповідальність", klas: "9", modul: "B", lektion: 11},
   {de: "Konflikte lösen", uk: "розв'язувати конфлікти", klas: "9", modul: "B", lektion: 11},
   {de: "das Halstuch (die Halstücher)", uk: "шийна хустка", klas: "9", modul: "B", lektion: 11},
-  {de: "die gute Tat (Jeden Tag eine gute Tat.)", uk: "добра справа (Щодня — добра справа.)", klas: "9", modul: "B", lektion: 11}
+  {de: "die gute Tat (Jeden Tag eine gute Tat.)", uk: "добра справа (Щодня — добра справа.)", klas: "9", modul: "B", lektion: 11},
+  {de: "verantwortungsbewusst", uk: "відповідальний (свідомий своєї відповідальності)", klas: "9", modul: "B", lektion: 12},
+  {de: "die Fähigkeit (die Fähigkeiten)", uk: "уміння, здатність", klas: "9", modul: "B", lektion: 12},
+  {de: "das Engagement (soziales Engagement)", uk: "активна участь (громадська активність)", klas: "9", modul: "B", lektion: 12},
+  {de: "musizieren", uk: "музикувати, грати музику", klas: "9", modul: "B", lektion: 12},
+  {de: "die Fahrt (die Fahrten) (auf Fahrt gehen)", uk: "мандрівка, похід (вирушати в мандрівку)", klas: "9", modul: "B", lektion: 12},
+  {de: "das Motto (die Mottos)", uk: "девіз, гасло", klas: "9", modul: "B", lektion: 12},
+  {de: "das Symbol (die Symbole)", uk: "символ", klas: "9", modul: "B", lektion: 12},
+  {de: "die Tradition (die Traditionen)", uk: "традиція", klas: "9", modul: "B", lektion: 12},
+  {de: "weltweit", uk: "у всьому світі, всесвітньо", klas: "9", modul: "B", lektion: 12},
+  {de: "Gutes tun", uk: "робити добро", klas: "9", modul: "B", lektion: 12},
+  {de: "erinnern an (+Akk.) (j-n daran erinnern, … zu …)", uk: "нагадувати (комусь про щось / щось зробити)", klas: "9", modul: "B", lektion: 12},
+  {de: "Was für ein …? (Was für eine Organisation ist das?)", uk: "Що за …? Який (за типом)? (Що це за організація?)", klas: "9", modul: "B", lektion: 12}
 ];

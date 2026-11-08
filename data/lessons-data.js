@@ -1064,5 +1064,17 @@ const LESSONS = [
     gram: ["verben-dass-infinitiv", "kausalsaetze", "nebensaetze", "konjunktionen-position-null"],
     hook: "fakt",
     dz: "Plakat „Pfadfinder in der Ukraine“: Auch in der Ukraine gibt es eine Pfadfinderorganisation – „Plast“. Such Informationen über Plast (im Internet, in der Bibliothek, oder frag deine Eltern und Bekannten) und mach ein Plakat (A4, auf Papier oder digital). 1) Wann und wo hat man Plast gegründet? 2) Welches Symbol und welches Motto hat Plast? Zeichne oder klebe das Symbol auf. 3) Schreib 4–5 Sätze, was die Mitglieder von Plast machen – mit mindestens vier Wortverbindungen aus Üb. 2 (z. B. Knoten machen, Erste Hilfe leisten, Verantwortung übernehmen, die Umwelt schützen). 4) Vergleiche: Schreib zwei Sätze, was Plast und die Pfadfinder in Deutschland gemeinsam haben (z. B. „Ich habe gelesen, dass …“, „Beide Organisationen …“). 5) Schreib zum Schluss einen Satz mit „weil“ oder „denn“: Möchtest du bei Plast mitmachen oder nicht? Nächstes Mal hängen wir die Plakate auf und vergleichen: Was ist ähnlich, was ist anders?"
+  },
+  {
+    klas: "9",
+    modul: "B",
+    lektion: 12,
+    nazva: "Seien wir aktiv! Pfadfinder und Plast",
+    opys: "Будьмо активними: слухаємо розповідь про історію й традиції скаутського руху та з'єднуємо частини речень, беремо інтерв'ю в скаутів, ставимо питання з Was für ein …? і Welcher …?, читаємо допис про український Пласт і радимо молодіжну організацію з weil і denn.",
+    file: "klas-9/modul-b/lektion-12.html",
+    nove: true,
+    gram: ["fragen", "kausalsaetze", "verben-dass-infinitiv"],
+    hook: "fehler",
+    dz: "Interview und Beitrag: Such eine Person (aus deiner Familie, aus deiner Schule oder aus deinem Bekanntenkreis), die in einer Jugendorganisation in der Ukraine mitmacht oder mitgemacht hat – zum Beispiel bei Plast, in einem Sportverein, in einer Freiwilligengruppe oder im Schülerparlament. 1) Mach mit dieser Person ein kurzes Interview: Stell mindestens fünf Fragen wie in Üb. 2 und Üb. 3 (z. B. „Was für eine Jugendorganisation ist das?“, „Wie bist du dazu gekommen?“, „Welche Fähigkeiten hast du dort gelernt?“) und notiere die Antworten auf Deutsch. 2) Schreib dann einen Beitrag für die Schulwebsite (7–8 Sätze) wie in Üb. 4: Wie heißt die Organisation? Was machen die Mitglieder? Welche Symbole, Mottos oder Traditionen gibt es? Benutze mindestens vier Wörter aus der Stunde (z. B. die Fähigkeit, verantwortungsbewusst, das Engagement, die Tradition, weltweit, musizieren). 3) Schreib zum Schluss einen Satz mit „weil“ oder „denn“: Kannst du diese Organisation anderen Jugendlichen empfehlen? Nächstes Mal stellen wir die Organisationen vor, und die Klasse stellt Fragen mit „Was für …?“ und „Welche …?“."
   }
 ];
