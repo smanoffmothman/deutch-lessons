@@ -356,8 +356,8 @@ const PIDRUCHNYKY = [
       { id: "l2", label: "2", nazva: "Meine Freunde und ich", storinky: "27–42", dity: [
         { id: "l2-a", label: "A", nazva: "Freunde und Freizeit", storinky: "28–32", typ: "vpravy", gram: ["verben-praepositionalobjekt"], opublikovano: 6 },
         { id: "l2-b", label: "B", nazva: "Brieffreunde", storinky: "33–37", typ: "vpravy", gram: ["adjektivdeklination", "kausalsaetze"], opublikovano: 7 },
-        { id: "l2-c", label: "C", nazva: "Wiederholung", storinky: "38–39", typ: "povtorennya", gram: ["verben-praepositionalobjekt", "adjektivdeklination"] },
-        { id: "l2-d", label: "D", nazva: "Geschichtenzeit", storinky: "40", typ: "chytannya" },
+        { id: "l2-c", label: "C", nazva: "Wiederholung", storinky: "38–39", typ: "povtorennya", gram: ["verben-praepositionalobjekt", "adjektivdeklination"], opublikovano: 8 },
+        { id: "l2-d", label: "D", nazva: "Geschichtenzeit", storinky: "40", typ: "chytannya", opublikovano: 9 },
         { id: "l2-e", label: "E", nazva: "Projektarbeit", storinky: "41", typ: "bez-storinky" },
         { id: "l2-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "42", typ: "bez-storinky" }
       ] },
