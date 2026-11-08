@@ -417,6 +417,15 @@
     У брифі — новий розділ «Файли», шляхи `tools/…`, без пунктів про
     оновлення Knowledge. `commons/` і `materialy/statti/*-preview.html` — у
     `.gitignore`. У Knowledge — лише плани номерів.
+  - «Граматика» (2026-11-08): `GRAMMAR-BRIEF.md` у Knowledge збігався з
+    GitHub байт у байт; решта файлів сайту в Knowledge — такі самі або
+    старші за GitHub (README і CHANGELOG — без розділу про Knowledge).
+    `build-grammar-preview.py` перенесено в `tools/`; бере файли з клону
+    (`assets/`, `data/grammar-data.js`), а не «пласкі» копії з `/mnt/project`.
+    У брифі — розділ «Файли» зі шляхами репозиторію, превʼю —
+    `tools/…`, без пунктів про оновлення Knowledge; підсумок — «GitHub:
+    залито (#N)». `gramatyka/temy/*-preview.html` — у `.gitignore`.
+    Knowledge проєкту — порожній (планів там не було).
 - **У Knowledge лишається** лише робочий стан, якого немає на GitHub:
   плани (`PLAN-<книжка>.md`, `PLAN-<журнал>-<номер>.md`), тимчасово —
   PDF номера чи книжки. Технічна підтримка — порожній Knowledge; ТЗ від
