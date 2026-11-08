@@ -1004,5 +1004,17 @@ const LESSONS = [
     gram: ["verben-dass-infinitiv", "modalverben", "trennbare-verben"],
     hook: "prognose",
     dz: "„Etwas stimmt nicht“ – dein Quiz für die Klasse: 1) Schreib fünf falsche Sätze über AGs oder über deine Schule wie in Üb. 1 (z. B. „In einer Zirkus-AG programmiert man Roboter.“, „Unsere Schule hat vor, im Dezember eine Radwanderung zu machen.“). Mindestens zwei Sätze mit „zu“ + Infinitiv (vorhaben, beschließen, vergessen, es ist wichtig …). 2) Schreib die richtigen Sätze als Lösung auf einen extra Zettel. Nächstes Mal liest du deine Sätze vor, und die Klasse korrigiert sie: „Nein, das stimmt nicht. In einer Zirkus-AG lernt man jonglieren.“"
+  },
+  {
+    klas: "8",
+    modul: "C",
+    lektion: 1,
+    nazva: "Wer liest, lebt doppelt: In der Bibliothek",
+    opys: "Починаємо тему «Література»: знайомимося з бібліотекою (Bibliothekar, Lesesaal, Leseecke, Katalog), утворюємо множину іменників і перевіряємо її на слух, сортуємо слова за питаннями «Wer? Wo? Was?», тренуємо Dativ Plural (in vielen Regalen, in allen Fächern) й описуємо свою шкільну бібліотеку.",
+    file: "klas-8/modul-c/lektion-1.html",
+    nove: true,
+    gram: ["deklination-nomen", "wechselpraepositionen"],
+    hook: "prognose",
+    dz: "Plan „Meine Bibliothek“: 1) Zeichne einen Plan von deiner Schulbibliothek oder von deiner Traumbibliothek. 2) Beschrifte mindestens acht Dinge und Personen auf Deutsch – immer mit Artikel und Pluralform (z. B. das Regal – die Regale, die Leseecke – die Leseecken). 3) Schreib unter den Plan fünf Sätze: Wer arbeitet dort? Wo kann man lesen oder lernen? Was kann man ausleihen? Benutze mindestens zweimal den Dativ Plural (z. B. „in vielen Regalen“, „in allen Fächern“). Nächstes Mal zeigst du deinen Plan, und die Klasse stellt Fragen: „Wo stehen die Wörterbücher?“"
   }
 ];

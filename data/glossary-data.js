@@ -1097,5 +1097,17 @@ const GLOSSARY = [
   {de: "das Orchester (die Orchester)", uk: "оркестр", klas: "7", modul: "C", lektion: 8},
   {de: "das Stück (Rollen in einem Stück spielen)", uk: "п'єса, вистава (грати ролі у виставі)", klas: "7", modul: "C", lektion: 8},
   {de: "Interesse an Technik haben", uk: "цікавитися технікою", klas: "7", modul: "C", lektion: 8},
-  {de: "die Radwanderung (die Radwanderungen)", uk: "велопохід, велосипедна прогулянка", klas: "7", modul: "C", lektion: 8}
+  {de: "die Radwanderung (die Radwanderungen)", uk: "велопохід, велосипедна прогулянка", klas: "7", modul: "C", lektion: 8},
+  {de: "der Leser / die Leserin (die Leser / die Leserinnen)", uk: "читач / читачка", klas: "8", modul: "C", lektion: 1},
+  {de: "der Bibliothekar / die Bibliothekarin (die Bibliothekare / die Bibliothekarinnen)", uk: "бібліотекар / бібліотекарка", klas: "8", modul: "C", lektion: 1},
+  {de: "der Lesesaal (die Lesesäle)", uk: "читальна зала", klas: "8", modul: "C", lektion: 1},
+  {de: "die Leseecke (die Leseecken)", uk: "куточок для читання", klas: "8", modul: "C", lektion: 1},
+  {de: "der Katalog (die Kataloge)", uk: "каталог", klas: "8", modul: "C", lektion: 1},
+  {de: "das Regal (die Regale)", uk: "полиця, стелаж", klas: "8", modul: "C", lektion: 1},
+  {de: "das Fach (die Fächer) (in allen Fächern)", uk: "відділення, секція (полиці, шафи)", klas: "8", modul: "C", lektion: 1},
+  {de: "der Raum (die Räume)", uk: "приміщення, кімната", klas: "8", modul: "C", lektion: 1},
+  {de: "die Enzyklopädie (die Enzyklopädien)", uk: "енциклопедія", klas: "8", modul: "C", lektion: 1},
+  {de: "das Wörterbuch (die Wörterbücher)", uk: "словник", klas: "8", modul: "C", lektion: 1},
+  {de: "der Roman (die Romane) (der Fantasyroman)", uk: "роман (фентезі-роман)", klas: "8", modul: "C", lektion: 1},
+  {de: "ausleihen (trennbar) (Bücher ausleihen)", uk: "брати (книжки) в бібліотеці, позичати", klas: "8", modul: "C", lektion: 1}
 ];
