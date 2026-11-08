@@ -1051,5 +1051,17 @@ const GLOSSARY = [
   {de: "an Turngeräten trainieren", uk: "тренуватися на гімнастичних снарядах", klas: "9", modul: "B", lektion: 9},
   {de: "Kampfsport machen", uk: "займатися бойовими мистецтвами", klas: "9", modul: "B", lektion: 9},
   {de: "mit dem Tanzprogramm auftreten (trennbar)", uk: "виступати з танцювальною програмою", klas: "9", modul: "B", lektion: 9},
-  {de: "am politischen Leben teilnehmen (trennbar)", uk: "брати участь у політичному житті", klas: "9", modul: "B", lektion: 9}
+  {de: "am politischen Leben teilnehmen (trennbar)", uk: "брати участь у політичному житті", klas: "9", modul: "B", lektion: 9},
+  {de: "leiten (eine AG leiten)", uk: "керувати, вести (гурток)", klas: "7", modul: "C", lektion: 5},
+  {de: "der Leiter / die Leiterin", uk: "керівник / керівниця", klas: "7", modul: "C", lektion: 5},
+  {de: "die Kette (die Ketten)", uk: "ланцюжок, намисто", klas: "7", modul: "C", lektion: 5},
+  {de: "das Armband (die Armbänder)", uk: "браслет", klas: "7", modul: "C", lektion: 5},
+  {de: "die Ausstellung (die Ausstellungen)", uk: "виставка", klas: "7", modul: "C", lektion: 5},
+  {de: "das Archiv (die Archive)", uk: "архів", klas: "7", modul: "C", lektion: 5},
+  {de: "die Grabung (archäologische Grabungen)", uk: "розкопки (археологічні розкопки)", klas: "7", modul: "C", lektion: 5},
+  {de: "der Tanzstil (die Tanzstile)", uk: "стиль танцю", klas: "7", modul: "C", lektion: 5},
+  {de: "die Vorkenntnisse (Pl.)", uk: "попередні знання", klas: "7", modul: "C", lektion: 5},
+  {de: "zweimal / viermal in der Woche", uk: "двічі / чотири рази на тиждень", klas: "7", modul: "C", lektion: 5},
+  {de: "der Muskel (die Muskeln)", uk: "м'яз", klas: "7", modul: "C", lektion: 5},
+  {de: "die Sprachnachricht (die Sprachnachrichten)", uk: "голосове повідомлення", klas: "7", modul: "C", lektion: 5}
 ];

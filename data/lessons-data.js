@@ -956,5 +956,17 @@ const LESSONS = [
     nove: true,
     gram: ["verben-dass-infinitiv", "trennbare-verben", "deklination-nomen", "modalverben"],
     dz: "Mitglieder gesucht! Gestalte (auf Papier oder digital) einen Werbeflyer für eine Jugendorganisation in deiner Stadt – eine echte oder eine erfundene (z. B. einen Jugendsportverein, ein Jugendorchester, eine Jugendtanzgruppe, einen Jugendclub oder eine Jugendorganisation für den Umweltschutz). 1) Gib der Organisation einen Namen und schreib dazu: Wo und wann trefft ihr euch? Wer kann Mitglied werden? 2) Schreib 4–5 Sätze, was man bei euch machen kann – mit mindestens vier Wortverbindungen aus der Stunde (z. B. an Turngeräten trainieren, neue Musikstücke üben, mit dem Tanzprogramm auftreten, zum Naturschutz beitragen). 3) Lade die Leser ein: Schreib mindestens drei Sätze mit Infinitiv mit zu, davon mindestens einen mit einem trennbaren Verb (z. B. „Hast du Lust, bei uns mitzumachen?“, „Es macht Spaß, an Umweltschutzaktionen teilzunehmen!“, „Vergiss nicht, deine Freunde mitzubringen!“). Unterstreiche alle Infinitive mit zu. Mal ein Bild dazu. Nächstes Mal hängen wir die Flyer auf, und jeder wählt eine Organisation, bei der er gern mitmachen möchte."
+  },
+  {
+    klas: "7",
+    modul: "C",
+    lektion: 5,
+    nazva: "Was macht man in den AGs?",
+    opys: "Чим займаються на гуртках: читаємо тексти про кіногурток, гурток юних істориків, творчий і танцювальний гуртки та добираємо заголовки, перевіряємо зміст (richtig / falsch), обговорюємо, який гурток обрати (Ich schlage vor, … zu besuchen / Ich bin dabei! / Ich bin dagegen), слухаємо голосове повідомлення Яна про спортивну секцію й розігруємо з ним інтерв'ю.",
+    file: "klas-7/modul-c/lektion-5.html",
+    nove: true,
+    gram: ["verben-dass-infinitiv", "kausalsaetze", "satzstellung-hauptsatz"],
+    hook: "undu",
+    dz: "Antwort an Jan: Jan fragt in seiner Sprachnachricht: „Welche AGs habt ihr in der Schule? Besuchst du eine AG?“ Schreib den Text für deine Sprachnachricht an Jan (8–10 Sätze). 1) Begrüße Jan und erzähl, welche AGs es in deiner Schule gibt. 2) Erzähl von einer AG, die du besuchst oder gern besuchen möchtest: Wer leitet die AG? Wann und wie oft findet sie statt? Was macht ihr dort? Wie findest du sie? Benutze mindestens einmal „…mal in der Woche“ und einen Satz mit „weil“. 3) Stell Jan am Ende zwei Fragen über seine Sport-AG (z. B. „Wer leitet …?“, „Was ist für dich am schwierigsten?“). 4) Wer möchte, nimmt die Nachricht mit dem Handy auf (bis zu einer Minute). Nächstes Mal hören oder lesen wir die Nachrichten in Paaren, und der Partner notiert: Welche AG? Wie oft? Was macht man da?"
   }
 ];
