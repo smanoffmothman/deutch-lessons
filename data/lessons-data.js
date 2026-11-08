@@ -980,5 +980,17 @@ const LESSONS = [
     gram: ["zahlwoerter", "indefinitpronomen", "verben-dass-infinitiv", "fragen"],
     hook: "fehler",
     dz: "Mein AG-Wochenplan: 1) Zeichne eine Tabelle Mo–Fr wie in Üb. 1 und trag ein, welche AGs, Kurse oder Trainings du nach den Stunden besuchst oder gern besuchen möchtest – mit Uhrzeit (z. B. Di: Kletter-AG, 15.00–16.30). Mindestens vier Einträge. 2) Schreib zu deinem Plan 5–6 Sätze: Wann findet die AG statt? Wie oft? Was macht man da? Warum möchtest du sie besuchen? (z. B. „Am Dienstag habe ich von 15 Uhr bis 16 Uhr 30 die Kletter-AG.“, „Ich finde es spannend, … zu …“). 3) Schreib zwei Fragen an deinen Partner: „Wann ist deine …?“, „Welche AG möchtest du besuchen?“ Nächstes Mal zeigt ihr eure Pläne nicht, sondern fragt und antwortet: Wer findet zuerst einen Nachmittag, an dem ihr beide frei seid?"
+  },
+  {
+    klas: "7",
+    modul: "C",
+    lektion: 7,
+    nazva: "Nach den Stunden",
+    opys: "Повторюємо тему «Шкільне життя»: розрізняємо шкільні заходи й гуртки, на слух добираємо відповіді до запитань про гуртки й заходи, даємо інтерв'ю шкільній газеті, тренуємо «an … teilnehmen» (am Turnier, an der Talentshow, an den Wettbewerben) і «stattfinden», описуємо шкільне свято.",
+    file: "klas-7/modul-c/lektion-7.html",
+    nove: true,
+    gram: ["trennbare-verben", "verben-praepositionalobjekt", "deklination-nomen", "fragen"],
+    hook: "fakt",
+    dz: "Interview für die Schülerzeitung: 1) Wähle eine Person – deinen Bruder oder deine Schwester, einen Freund oder eine Freundin aus einer anderen Klasse oder deine Mama / deinen Papa (über ihre / seine Schulzeit). 2) Stell ihr / ihm mindestens fünf Fragen aus Üb. 2 (z. B. „Welche AG besuchst du?“, „Wie oft gehst du zum Training?“, „An welchen Veranstaltungen nimmst du gern teil?“). Das Interview kann auch auf Ukrainisch sein. 3) Schreib die Antworten auf Deutsch als kurzen Artikel (6–8 Sätze) in der 3. Person: „Meine Schwester besucht die Tanz-AG. Sie geht zweimal in der Woche zum Training. Sie nimmt gern an Wettbewerben teil.“ Benutze mindestens zweimal „an … teilnehmen“. 4) Gib deinem Artikel einen Titel. Nächstes Mal lest ihr eure Artikel vor, ohne den Namen zu sagen, und die Klasse rät: Wer ist diese Person?"
   }
 ];

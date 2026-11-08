@@ -1074,5 +1074,17 @@ const GLOSSARY = [
   {de: "die Klassenstufe (die Klassenstufen)", uk: "рівень класу, паралель (напр. 6–8 класи)", klas: "7", modul: "C", lektion: 6},
   {de: "meinen (Viele meinen, dass …)", uk: "вважати, думати", klas: "7", modul: "C", lektion: 6},
   {de: "nur wenige (Nur wenige finden … interessant.)", uk: "лише небагато, лише кілька", klas: "7", modul: "C", lektion: 6},
-  {de: "die Bühne (die Bühnen)", uk: "сцена", klas: "7", modul: "C", lektion: 6}
+  {de: "die Bühne (die Bühnen)", uk: "сцена", klas: "7", modul: "C", lektion: 6},
+  {de: "teilnehmen (trennbar) (an Wettbewerben teilnehmen, Ich nehme am Turnier teil.)", uk: "брати участь (у змаганнях)", klas: "7", modul: "C", lektion: 7},
+  {de: "das Fußballturnier (die Fußballturniere)", uk: "футбольний турнір", klas: "7", modul: "C", lektion: 7},
+  {de: "die Akrobatik-AG (die Akrobatik-AGs)", uk: "гурток акробатики", klas: "7", modul: "C", lektion: 7},
+  {de: "das Konzert (die Konzerte)", uk: "концерт", klas: "7", modul: "C", lektion: 7},
+  {de: "das Quiz (die Quiz)", uk: "вікторина", klas: "7", modul: "C", lektion: 7},
+  {de: "besonders beliebt (Die Theater-AG ist besonders beliebt.)", uk: "особливо популярний", klas: "7", modul: "C", lektion: 7},
+  {de: "zum Training gehen (dreimal in der Woche)", uk: "ходити на тренування (тричі на тиждень)", klas: "7", modul: "C", lektion: 7},
+  {de: "der Zauberer (die Zauberer)", uk: "чарівник, фокусник", klas: "7", modul: "C", lektion: 7},
+  {de: "die Prinzessin (die Prinzessinnen)", uk: "принцеса", klas: "7", modul: "C", lektion: 7},
+  {de: "der Luftballon (die Luftballons)", uk: "повітряна кулька", klas: "7", modul: "C", lektion: 7},
+  {de: "klatschen", uk: "плескати в долоні", klas: "7", modul: "C", lektion: 7},
+  {de: "die Stadtrundfahrt (die Stadtrundfahrten)", uk: "оглядова екскурсія містом", klas: "7", modul: "C", lektion: 7}
 ];
