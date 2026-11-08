@@ -180,5 +180,20 @@
   {de: "schüchtern", uk: "сором'язливий", r: "l2-b"},
   {de: "chaotisch", uk: "безладний, неорганізований", r: "l2-b"},
   {de: "fröhlich", uk: "веселий, життєрадісний", r: "l2-b"},
-  {de: "die Geschwister (Pl.)", uk: "брати й сестри", r: "l2-b", note: "Hast du Geschwister? — лише множина"}
+  {de: "die Geschwister (Pl.)", uk: "брати й сестри", r: "l2-b", note: "Hast du Geschwister? — лише множина"},
+  // ---- Lektion 2 · Modul D: Geschichtenzeit ----
+  {de: "das Schach", uk: "шахи", r: "l2-d", note: "Schach spielen; eine Schachpartie"},
+  {de: "das Schachbrett, -er", uk: "шахова дошка", r: "l2-d"},
+  {de: "der Spieler, -", uk: "гравець", r: "l2-d"},
+  {de: "die Show, -s", uk: "шоу, виступ", r: "l2-d"},
+  {de: "das Publikum", uk: "публіка, глядачі", r: "l2-d"},
+  {de: "vergessen (vergisst), hat vergessen", uk: "забувати", r: "l2-d", note: "die Zeit vergessen — забути про час"},
+  {de: "Es tut mir leid.", uk: "мені шкода, вибач", r: "l2-d"},
+  {de: "fair", uk: "чесно, справедливо", r: "l2-d"},
+  {de: "der Fehler, -", uk: "помилка", r: "l2-d", note: "einen Fehler machen"},
+  {de: "schweigen, hat geschwiegen", uk: "мовчати", r: "l2-d"},
+  {de: "kennenlernen", uk: "знайомитися (з кимось)", r: "l2-d", note: "Ich habe ihn im Sommer kennengelernt."},
+  {de: "begeistert", uk: "захоплений, у захваті", r: "l2-d", note: "von etwas begeistert sein"},
+  {de: "beibringen, hat beigebracht", uk: "навчати (когось чогось)", r: "l2-d", note: "Ich bringe dir Schach bei. (кому — Dativ)"},
+  {de: "zu dritt", uk: "утрьох", r: "l2-d"}
 ];
