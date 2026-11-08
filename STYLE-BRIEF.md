@@ -5,14 +5,17 @@
 
 ## Файли, з яких це складається
 
-У Project Knowledge — усі, КРІМ data-файлів (`lessons-data.js`,
-`glossary-data.js`, `grammar-data.js`, `modules-data.js`): їх (з 2026-11-08)
-Claude бере ЛИШЕ зі свіжої копії репозиторію на GitHub, у Knowledge їх немає.
+**Джерело правди — GitHub** (`smanoffmothman/deutch-lessons`). На початку
+роботи — свіжий clone; бриф, шаблон, спільні файли й дані — звідти. Якщо в
+сесії немає доступу до GitHub — людина прикріплює до чату свіжі
+`lessons-data.js` і `glossary-data.js` з репозиторію (за відсутні дані не
+вигадувати). У Project Knowledge копій файлів сайту немає — лише робочий
+стан, якого немає на GitHub (плани) (CHANGELOG, «Project Knowledge: лише те,
+чого немає на GitHub»).
 
-
-- `lesson-style.css` — весь візуальний стиль ("зошитовий": тепла
+- `assets/lesson-style.css` — весь візуальний стиль ("зошитовий": тепла
   палітра папір/бірюза/теракота, компас і прогрес-літак у хедері).
-- `lesson-interactions.js` — уся логіка вправ, не пиши її заново:
+- `assets/lesson-interactions.js` — уся логіка вправ, не пиши її заново:
   `buildQuiz(containerId, data)`, `checkBlanks(containerId, scoreId,
   stateKey)` / `resetBlanks(...)`, `initTokenClicks(containerId)` /
   `checkTokens(...)` / `resetTokens(...)`, `wirePlayer(audioId, playId,
@@ -25,16 +28,20 @@ Claude бере ЛИШЕ зі свіжої копії репозиторію н�
   дописувати не треба. У `textarea` вставка з буфера заблокована
   автоматично (`initNoPaste`, див. окремий розділ нижче). Панель ä ö ü ß біля
   текстових полів теж з'являється сама (`initUmlautKb`, див. розділ нижче).
-- `lesson-template.html` — структура: `<header class="hero">` →
+- `assets/svg/deutschland.js`, `assets/svg/ukraine.js` — карти для
+  `buildHotspot` (довантажуються самі; id зон — README, «Карти для
+  buildHotspot»).
+- `lessons/lesson-template.html` — структура: `<header class="hero">` →
   `<nav class="tabbar">` → набір `<section class="panel" id="panel-...">`.
 - `README.md` — архітектура сайту, формат `data/*.js`, шляхи до `assets/`.
-- `lessons-data.js` — маніфест УСІХ уроків (масив `LESSONS`) — з GitHub.
-- `glossary-data.js` — маніфест УСІХ слів (масив `GLOSSARY`) — з GitHub.
-- `site-nav.js` — спільний хедер і хлібні крихти (не дизайн уроку, але
+- `data/lessons-data.js` — маніфест УСІХ уроків (масив `LESSONS`).
+- `data/glossary-data.js` — маніфест УСІХ слів (масив `GLOSSARY`).
+- `assets/site-nav.js` — спільний хедер і хлібні крихти (не дизайн уроку, але
   обов'язковий блок на початку `<body>` кожного уроку).
-- `grammar-data.js` — план тем розділу "Граматика" (масив `GRAMMAR`). Тут
+- `data/grammar-data.js` — план тем розділу "Граматика" (масив `GRAMMAR`). Тут
   він потрібен лише для того, щоб проставити уроку поле `gram` (id тем) —
   самі теми генеруються в окремому проєкті.
+- `STYLE-BRIEF.md` (цей файл), `CHANGELOG.md`.
 
 ## Порядок вкладок у кожному уроці — завжди однаковий
 
@@ -243,7 +250,7 @@ Claude бере ЛИШЕ зі свіжої копії репозиторію н�
 
 **ВАЖЛИВО:** Claude не має пам'яті між чатами (див. розділ у
 README.md) — тому це правило працює тільки тому, що воно записане
-тут, у файлі, який лежить у Project Knowledge. Якщо захочеш ще щось
+тут, у цьому файлі в репозиторії. Якщо захочеш ще щось
 закріпити на майбутнє — додавай сюди ж, а не покладайся на те, що
 Claude "запам'ятає" з розмови.
 
@@ -468,23 +475,22 @@ wirePlayer('audio1', 'play1', 'seek1', 'time1');
 6. **На GitHub Claude заливає сам** (з 2026-10-23 і в цьому проєкті, процес —
    CHANGELOG, «Заливання на GitHub: Claude напряму»): `add_repo` з правом
    запису → свіжий clone → data-файли дописуються в кінець ВЕРСІЇ З GitHub
-   (не з Knowledge) → гілка → коміт → перед заливанням fetch + rebase на
+   → гілка → коміт → перед заливанням fetch + rebase на
    свіжий `main` → запит на злиття і squash-злиття через `gh api`.
    Якщо `main` змінився під час злиття (HTTP 405) — ще раз fetch + rebase.
    Людині — посилання на урок на сайті
    (`https://deutschheft.com.ua/lessons/klas-X/modul-Y/lektion-N.html`, оновиться
    за кілька хвилин після злиття). Якщо доступу до GitHub у сесії немає —
-   запасний варіант: zip з `GitHub/` (структура репозиторію) і
-   `Project-Knowledge/`.
-6а. **Data-файлів у Knowledge немає** (з 2026-11-08, рішення людини):
-   `lessons-data.js`, `glossary-data.js` (та інші `data/*.js`) живуть лише на
-   GitHub — Claude читає й дописує їх тільки там, у Knowledge їх не кладе й
-   людину оновлювати Knowledge не просить. Якщо в сесії немає доступу до
-   GitHub — попросити людину прикріпити до чату свіжі `lessons-data.js` і
+   запасний варіант: zip зі структурою репозиторію (людина перетягує вміст
+   на GitHub).
+6а. **Файли сайту — лише на GitHub** (з 2026-11-08, рішення людини):
+   `lessons-data.js`, `glossary-data.js` (та інші `data/*.js`), шаблон, бриф,
+   CSS/JS у Knowledge не кладуться. Якщо в сесії немає доступу до GitHub —
+   попросити людину прикріпити до чату свіжі `lessons-data.js` і
    `glossary-data.js` з репозиторію (а не брати старі копії звідкись ще).
-7. Наприкінці — «що куди»: GitHub — «залито (запит на злиття #N)». Нагадування
-   про Knowledge — лише якщо змінився спільний НЕ-data файл (шаблон, бриф,
-   CSS/JS): які файли й у Knowledge яких проєктів їх покласти.
+7. Наприкінці — підсумок «GitHub: залито (#N)». Knowledge — лише якщо
+   змінився план (робочий стан, якого немає на GitHub); інакше про Knowledge
+   нічого не писати.
 
 ## Що НЕ робити
 

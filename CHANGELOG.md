@@ -426,6 +426,14 @@
     `tools/…`, без пунктів про оновлення Knowledge; підсумок — «GitHub:
     залито (#N)». `gramatyka/temy/*-preview.html` — у `.gitignore`.
     Knowledge проєкту — порожній (планів там не було).
+  - «Уроки» (2026-11-08): `STYLE-BRIEF.md` у Knowledge збігався з GitHub
+    (версія #181); `lesson-template.html`, `lesson-style.css`,
+    `lesson-interactions.js` і карти `deutschland.js`/`ukraine.js` — такі
+    самі, як на GitHub, README і CHANGELOG — старші. Власних скриптів у
+    Knowledge не було (шляхів `/mnt/project/…` у брифі теж). У брифі — розділ
+    «Файли» зі шляхами репозиторію, без пунктів про оновлення Knowledge;
+    підсумок — «GitHub: залито (#N)», Knowledge — лише якщо змінився план.
+    Knowledge проєкту — порожній (планів там не було).
 - **У Knowledge лишається** лише робочий стан, якого немає на GitHub:
   плани (`PLAN-<книжка>.md`, `PLAN-<журнал>-<номер>.md`), тимчасово —
   PDF номера чи книжки. Технічна підтримка — порожній Knowledge; ТЗ від
