@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Klein, bunt und mächtig: die Briefmarke · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Geschichte</span>
+        <h1>Klein, bunt und mächtig: die Briefmarke</h1>
+        <p class="sub">Шматочок паперу з клеєм змінив пошту в усьому світі. А ще марка стала маленьким плакатом: держави розповідають на ній, якими хочуть бачити себе.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wozu Briefmarken?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Post von früher</h2>
+      <div class="card">
+        <p>Wann hast du zum letzten Mal einen Brief oder eine Postkarte geschickt? Was ist auf ukrainischen Briefmarken zu sehen? Sammelt jemand in deiner Familie Briefmarken?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Коли ти востаннє надсилав(-ла) лист чи листівку? Що зображено на українських марках? Чи колекціонує хтось у твоїй родині марки?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Sie ist klein, man klebt sie auf einen <span class="gl" data-key data-uk="конверт" data-lemma="der Briefumschlag, -ä-e">Briefumschlag</span> und vergisst sie sofort wieder. Trotzdem ist die <span class="gl" data-key data-uk="поштова марка" data-lemma="die Briefmarke, -n">Briefmarke</span> eine der wichtigsten <span class="gl" data-uk="винахід" data-lemma="die Erfindung, -en">Erfindungen</span> der modernen Zeit.</p>
+
+          <p>Bevor es Briefmarken gab, war die Post <span class="gl" data-uk="складний" data-lemma="kompliziert">kompliziert</span>. Der Preis hing davon ab, wie weit ein Brief reisen musste, und oft bezahlte nicht der <span class="gl" data-uk="відправник" data-lemma="der Absender, -">Absender</span>, sondern der <span class="gl" data-uk="одержувач, адресат" data-lemma="der Empfänger, -">Empfänger</span>. Das änderte sich im 19. Jahrhundert. Als erste offizielle Briefmarke gilt die britische „Penny Black“ aus dem Jahr 1840. Mit ihr gab es <span class="gl" data-uk="єдиний, однаковий" data-lemma="einheitlich">einheitliche</span> Preise, und das <span class="gl" data-key data-uk="поштовий збір, вартість пересилання" data-lemma="das Porto, -s">Porto</span> bezahlte man vorher.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Penny_Black_and_Penny_Red_RA.jpg/960px-Penny_Black_and_Penny_Red_RA.jpg" alt="Die „Penny Black“ von 1840 (links) und die „Penny Red“ von 1841." width="960" height="577" loading="lazy">
+            <figcaption>Die „Penny Black“ von 1840 (links) und die „Penny Red“ von 1841. Stich: C &amp; F Heath, gemeinfrei, <a href="https://commons.wikimedia.org/wiki/File:Penny_Black_and_Penny_Red_RA.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Die Idee <span class="gl" data-uk="поширюватися" data-lemma="sich verbreiten">verbreitete sich</span> schnell auf der ganzen Welt. Briefmarken machten die Arbeit der Post einfacher: Man konnte die <span class="gl" data-uk="збір, плата" data-lemma="die Gebühr, -en">Gebühren</span> leicht <span class="gl" data-uk="контролювати" data-lemma="kontrollieren">kontrollieren</span>, und die immer größeren Postnetze ließen sich besser <span class="gl" data-uk="організовувати" data-lemma="organisieren">organisieren</span>.</p>
+
+          <p>Bald waren Briefmarken aber mehr als nur ein Stück Papier. Die Staaten zeigten darauf, was ihnen wichtig war: Porträts von <span class="gl" data-uk="правитель" data-lemma="der Herrscher, -">Herrschern</span>, <span class="gl" data-uk="герб" data-lemma="das Wappen, -">Wappen</span>, Landschaften oder neue Technik. So wurde die kleine Marke zu einem <span class="gl" data-uk="візитівка" data-note="тут: «обличчя» країни" data-lemma="das Aushängeschild, -er">Aushängeschild</span> für das ganze Land.</p>
+
+          <p>Manchmal hatte eine Briefmarke auch einen Zweck, der nichts mit Post zu tun hatte. In Frankreich gab es im Ersten Weltkrieg Marken mit einem <span class="gl" data-uk="надбавка, доплата" data-lemma="der Zuschlag, -ä-e">Zuschlag</span>: Ein Teil des Preises war das Porto, der Rest ging an das Rote Kreuz. In der Zeit des Nationalsozialismus verkaufte der Staat in Deutschland ebenfalls <span class="gl" data-uk="спеціальна (пам'ятна) марка" data-lemma="die Sondermarke, -n">Sondermarken</span> mit Zuschlag. Das Geld <span class="gl" data-uk="надходити (про гроші)" data-lemma="fließen (floss, ist geflossen)">floss</span> in staatliche Programme, zum Beispiel in die Finanzierung des Krieges. Wer solche Marken kaufte, sollte sich wie ein guter <span class="gl" data-uk="патріот" data-lemma="der Patriot, -en">Patriot</span> fühlen.</p>
+
+          <p>Heute schreiben die meisten Menschen E-Mails und Nachrichten statt Briefe. <span class="gl" data-uk="зникати" data-lemma="verschwinden (verschwand, ist verschwunden)">Verschwunden</span> ist die Briefmarke aber nicht. Viele Menschen <span class="gl" data-key data-uk="збирати, колекціонувати" data-lemma="sammeln">sammeln</span> sie, und für Historiker sind alte Marken spannende <span class="gl" data-key data-uk="документ, свідчення" data-lemma="das Dokument, -e">Dokumente</span> ihrer Zeit.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Die erste Briefmarke in Deutschland kam 1849 in Bayern heraus. Sie war schwarz und kostete einen Kreuzer. Deshalb nennen Sammler sie bis heute den „Schwarzen Einser“.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wozu Briefmarken?</h2>
+      <p class="lead">Для чого слугували марки? Розсортуй: практична користь для пошти чи щось інше?</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+      <p class="lead">б) Встав слова в текст. Одне слово зайве.</p>
+      <div class="card" id="ub4b-bank"></div>
+    </section>
+
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши текст німецькою. Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div id="ub5-w"></div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Згадай, наприклад, марки Укрпошти, за якими у 2022 році стояли довжелезні черги, або марки з тваринами, містами, видатними людьми. Корисні звороти: <i>Auf der Briefmarke sieht man …, Sie zeigt, dass …, Ich würde … auf eine Briefmarke bringen, weil …</i>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Die erste Briefmarke war die „Penny Black“ von 1840. Seitdem bezahlt der Absender das Porto vorher, und es gibt einheitliche Preise. Briefmarken zeigen, was einem Staat wichtig ist – manchmal dienten sie sogar der Propaganda. In Deutschland war die erste Marke der bayerische „Schwarze Einser“ von 1849.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Першою поштовою маркою була «Penny Black» 1840 року. Відтоді відправник сплачує пересилання заздалегідь, а ціни однакові. Марки показують, що важливо для держави, — інколи вони навіть служили пропаганді. У Німеччині першою маркою був баварський «Schwarzer Einser» 1849 року.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "geschichte-der-briefmarke";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Wie die Briefmarke die Post veränderte und was sie über Staaten erzählt",
+            "Wie man eine wertvolle Briefmarkensammlung aufbaut",
+            "Warum heute niemand mehr Briefe schreibt"],
+     correct: "Wie die Briefmarke die Post veränderte und was sie über Staaten erzählt"}
+  ]);
+  buildMatch('ub1h', [
+    ["Die Post vor und nach 1840", "Absatz 1"],
+    ["Praktisch für die Post", "Absatz 2"],
+    ["Bilder eines Staates", "Absatz 3"],
+    ["Geld für andere Zwecke", "Absatz 4"],
+    ["Die Briefmarke heute", "Absatz 5"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "Vor den Briefmarken bezahlte oft der Empfänger den Brief.", a: "r"},
+    {s: "Die „Penny Black“ kam aus Frankreich.", a: "f"},
+    {s: "Mit der „Penny Black“ bezahlte man das Porto vorher.", a: "r"},
+    {s: "Auf Briefmarken sah man nur Landschaften.", a: "f"},
+    {s: "Die französischen Zuschlagsmarken waren besonders bei Kindern beliebt.", a: "n"},
+    {s: "Im Nationalsozialismus floss Geld aus Sondermarken auch in den Krieg.", a: "r"},
+    {s: "Für Historiker sind alte Briefmarken heute uninteressant.", a: "f"}
+  ]);
+
+  buildSort('ub3-sort', {
+    buckets: ["Für die Post", "Für den Staat und andere Zwecke"],
+    items: [
+      {t: "Gebühren leicht kontrollieren", b: "Für die Post"},
+      {t: "einheitliche Preise für Briefe", b: "Für die Post"},
+      {t: "große Postnetze besser organisieren", b: "Für die Post"},
+      {t: "Porträts von Herrschern zeigen", b: "Für den Staat und andere Zwecke"},
+      {t: "Geld für das Rote Kreuz sammeln", b: "Für den Staat und andere Zwecke"},
+      {t: "Geld für den Krieg sammeln", b: "Für den Staat und andere Zwecke"}
+    ]
+  });
+
+  buildMatch('ub4', [
+    ["der Absender", "відправник"],
+    ["der Empfänger", "одержувач, адресат"],
+    ["das Porto", "поштовий збір"],
+    ["der Briefumschlag", "конверт"],
+    ["das Wappen", "герб"],
+    ["sammeln", "збирати, колекціонувати"],
+    ["einheitlich", "єдиний, однаковий"]
+  ]);
+  buildWordBank('ub4b-bank', {
+    text: "Ich schreibe meiner Oma einen Brief. Ich stecke ihn in einen [Briefumschlag] und klebe eine [Briefmarke] darauf. Das [Porto] bezahle ich vorher. Meine Oma ist die [Empfängerin], ich bin der Absender. Sie [sammelt] übrigens alte Briefmarken.",
+    extra: ["Wappen"]
+  });
+
+  buildWriting('ub5-w', {
+    prompt: "Welche ukrainische Briefmarke kennst du? Beschreibe sie: Was ist darauf zu sehen, und was will sie zeigen? Oder: Du darfst selbst eine Briefmarke für die Ukraine gestalten. Was zeigst du darauf und warum? (60–100 Wörter)",
+    words: "60-100",
+    must: ["Briefmarke"],
+    check: ["Ich beschreibe, was auf der Marke zu sehen ist", "Ich erkläre, warum"]
+  });
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['✉️','📮','👑','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
