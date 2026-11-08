@@ -1063,5 +1063,16 @@ const GLOSSARY = [
   {de: "die Vorkenntnisse (Pl.)", uk: "попередні знання", klas: "7", modul: "C", lektion: 5},
   {de: "zweimal / viermal in der Woche", uk: "двічі / чотири рази на тиждень", klas: "7", modul: "C", lektion: 5},
   {de: "der Muskel (die Muskeln)", uk: "м'яз", klas: "7", modul: "C", lektion: 5},
-  {de: "die Sprachnachricht (die Sprachnachrichten)", uk: "голосове повідомлення", klas: "7", modul: "C", lektion: 5}
+  {de: "die Sprachnachricht (die Sprachnachrichten)", uk: "голосове повідомлення", klas: "7", modul: "C", lektion: 5},
+  {de: "der Stundenplan (die Stundenpläne)", uk: "розклад (уроків, занять)", klas: "7", modul: "C", lektion: 6},
+  {de: "von … bis … (von 12 Uhr 40 bis 13 Uhr 40)", uk: "з … до … (з 12:40 до 13:40)", klas: "7", modul: "C", lektion: 6},
+  {de: "klettern", uk: "лазити; займатися скелелазінням", klas: "7", modul: "C", lektion: 6},
+  {de: "die Kletter-AG (die Kletter-AGs)", uk: "гурток скелелазіння", klas: "7", modul: "C", lektion: 6},
+  {de: "die Zirkus-AG (die Zirkus-AGs)", uk: "цирковий гурток", klas: "7", modul: "C", lektion: 6},
+  {de: "der Forscher / die Forscherin (junge Forscher)", uk: "дослідник / дослідниця (юні дослідники)", klas: "7", modul: "C", lektion: 6},
+  {de: "programmieren", uk: "програмувати", klas: "7", modul: "C", lektion: 6},
+  {de: "die Klassenstufe (die Klassenstufen)", uk: "рівень класу, паралель (напр. 6–8 класи)", klas: "7", modul: "C", lektion: 6},
+  {de: "meinen (Viele meinen, dass …)", uk: "вважати, думати", klas: "7", modul: "C", lektion: 6},
+  {de: "nur wenige (Nur wenige finden … interessant.)", uk: "лише небагато, лише кілька", klas: "7", modul: "C", lektion: 6},
+  {de: "die Bühne (die Bühnen)", uk: "сцена", klas: "7", modul: "C", lektion: 6}
 ];
