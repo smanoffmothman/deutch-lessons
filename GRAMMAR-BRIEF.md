@@ -14,26 +14,34 @@
 - Одна тема = одна сторінка, навіть якщо підрозділів багато (напр.
   «Präpositionen mit dem Dativ» — 17 прийменників на одній сторінці).
 
-## Файли в Project Knowledge цього проєкту
+## Файли
 
-- `grammar-data.js` — план УСІХ тем (`GRAMMAR_ROZDILY` + `GRAMMAR`),
-  поля описані в шапці файлу. Джерело правди — версія на GitHub.
-- `grammar-template.html` — шаблон сторінки теми.
-- `lesson-style.css`, `lesson-interactions.js` — спільний стиль і логіка
-  вправ (ті самі, що в уроках).
-- `site-nav.js` — хедер сайту.
-- `site.css`, `site.js` — оболонка сайту. Тут вони потрібні лише для
-  превʼю (у `site.js` живе `initGrammarPage`); не змінюються.
-- `build-grammar-preview.py` — збирає превʼю (див. розділ «Превʼю»).
+**Джерело правди — GitHub** (`smanoffmothman/deutch-lessons`). На початку
+роботи — свіжий clone; бриф, шаблон і дані — звідти. Якщо в сесії немає
+доступу до GitHub — людина прикріплює потрібні файли до чату (свіжі з
+GitHub). У Project Knowledge копій файлів сайту немає — лише робочий стан,
+якого немає на GitHub (плани) (CHANGELOG, «Project Knowledge: лише те, чого
+немає на GitHub»).
+
+- `data/grammar-data.js` — план УСІХ тем (`GRAMMAR_ROZDILY` + `GRAMMAR`),
+  поля описані в шапці файлу.
+- `gramatyka/temy/grammar-template.html` — шаблон сторінки теми.
+- `assets/lesson-style.css`, `assets/lesson-interactions.js` — спільний
+  стиль і логіка вправ (ті самі, що в уроках).
+- `assets/site-nav.js` — хедер сайту.
+- `assets/site.css`, `assets/site.js` — оболонка сайту (у `site.js` живе
+  `initGrammarPage`). **Спільні файли в цьому проєкті не змінюються.**
+- `tools/build-grammar-preview.py` — збирає превʼю (див. розділ «Превʼю»).
+  Інструмент, не частина сайту.
 - `GRAMMAR-BRIEF.md` (цей файл), `README.md`, `CHANGELOG.md`.
 
 ## Як проходить одна порція
 
 1. Людина називає, які теми генерувати (id або назви з `grammar-data.js`).
 2. **Спершу звір `grammar-data.js`:** чи є там ці теми, які в них
-   `pidrozdily`, і який зараз найбільший `opublikovano`. Якщо файл у
-   Knowledge може бути застарілим (людина не підтвердила, що поклала
-   свіжу копію з GitHub) — попроси підтвердити, перш ніж видавати новий
+   `pidrozdily`, і який зараз найбільший `opublikovano` — у свіжому
+   клоні. Без доступу до GitHub — лише у файлі, який людина щойно
+   прикріпила з GitHub; інакше попроси його, перш ніж видавати новий
    `grammar-data.js`.
 3. Для кожної теми — окремий файл `gramatyka/temy/<id>.html`, зроблений
    з `grammar-template.html` (шляхи `../../` у шаблоні вже правильні,
@@ -146,14 +154,13 @@ Dreyer/Schmitt «Lehr- und Übungsbuch der deutschen Grammatik». Звідти
 спільні CSS/JS. Збирай його скриптом, не вручну:
 
 ```
-python3 /mnt/project/build-grammar-preview.py \
-  /mnt/user-data/outputs/<id>.html /mnt/project \
-  /mnt/user-data/outputs/grammar-data.js
+python3 tools/build-grammar-preview.py gramatyka/temy/<id>.html .
 ```
 
-(третій аргумент — оновлений `grammar-data.js`; якщо ти його не
-змінював, пропусти — візьметься з Knowledge). Скрипт створить
-`<id>-preview.html` поруч. Якщо він зупинився з помилкою «Не вбудовано»
+(з кореня клону; спільні файли — з `assets/`, дані — з
+`data/grammar-data.js` клону, тож онови його ДО збирання. Окремий
+`grammar-data.js` можна передати третім аргументом). Скрипт створить
+`gramatyka/temy/<id>-preview.html` поруч — він у `.gitignore`. Якщо він зупинився з помилкою «Не вбудовано»
 — у сторінці теми змінено шлях підключення, виправ сторінку, а не
 скрипт.
 
@@ -161,10 +168,10 @@ python3 /mnt/project/build-grammar-preview.py \
 - Превʼю позначене червоною смугою вгорі; меню й посилання в ньому не
   ведуть на сайт, картка «Де це ще трапляється» показує лише теми з
   `dyv` (уроків у превʼю немає) — це нормально.
-- Превʼю **не кладеться** ні на GitHub, ні в Knowledge. Прямо про це
-  нагадуй у підсумку «що куди покласти».
-- Віддавай обидва файли: спершу превʼю (для перевірки), потім
-  `<id>.html` і `grammar-data.js`.
+- Превʼю **не кладеться** ні на GitHub, ні в Knowledge.
+- Людині віддавай превʼю (для перевірки); `<id>.html` і
+  `grammar-data.js` Claude заливає на GitHub сам (CHANGELOG, «Заливання на
+  GitHub: Claude напряму»). Без доступу до GitHub — віддай і їх файлами.
 
 ## Прогрес учня
 
@@ -186,9 +193,9 @@ python3 /mnt/project/build-grammar-preview.py \
 - Квізи: позиції `correct` розкидані.
 - Превʼю зібране скриптом і відкривається без помилок: вкладки
   перемикаються, кожна вправа перевіряється.
-- Наприкінці відповіді — підсумок «що куди покласти»: `<id>.html` →
-  GitHub `gramatyka/temy/`; `grammar-data.js` → GitHub `data/` +
-  Knowledge усіх трьох проєктів; `<id>-preview.html` — нікуди.
+- Наприкінці відповіді — підсумок: «GitHub: залито (#N)» (`<id>.html` у
+  `gramatyka/temy/`, `grammar-data.js` у `data/`); Knowledge — лише якщо
+  змінився план; `<id>-preview.html` — нікуди.
 
 ## Що НЕ робити
 
