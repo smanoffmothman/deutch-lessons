@@ -107,5 +107,21 @@
   {de: "sich fühlen", uk: "почуватися", r: "l1-c", note: "Ich fühle mich gut."},
   {de: "sich konzentrieren", uk: "зосереджуватися", r: "l1-c"},
   {de: "sich langweilen", uk: "нудьгувати", r: "l1-c"},
-  {de: "das Fazit, -s", uk: "підсумок, висновок", r: "l1-c"}
+  {de: "das Fazit, -s", uk: "підсумок, висновок", r: "l1-c"},
+  // ---- Lektion 1 · Modul E: Geschichtenzeit ----
+  {de: "die Wette, -n", uk: "парі, суперечка на щось", r: "l1-e", note: "eine Wette machen / gewinnen / verlieren"},
+  {de: "Abgemacht!", uk: "Домовилися!", r: "l1-e"},
+  {de: "der Schritt, -e", uk: "крок", r: "l1-e"},
+  {de: "die Schiedsrichterin, -nen", uk: "суддя (жінка), арбітр", r: "l1-e", note: "der Schiedsrichter — суддя (чоловік)"},
+  {de: "der Pokal, -e", uk: "кубок", r: "l1-e"},
+  {de: "gewinnen, hat gewonnen", uk: "вигравати, перемагати", r: "l1-e"},
+  {de: "verlieren, hat verloren", uk: "програвати", r: "l1-e"},
+  {de: "das Ergebnis, -se", uk: "результат", r: "l1-e"},
+  {de: "der Sessel, -", uk: "крісло", r: "l1-e"},
+  {de: "die Treppe, -n", uk: "сходи", r: "l1-e", note: "die Treppe nehmen — іти сходами"},
+  {de: "der Aufzug, -ü-e", uk: "ліфт", r: "l1-e"},
+  {de: "der Kleingarten, -ä", uk: "садова ділянка (у місті)", r: "l1-e"},
+  {de: "das Laub", uk: "опале листя", r: "l1-e"},
+  {de: "rechen", uk: "згрібати граблями", r: "l1-e", note: "Laub rechen"},
+  {de: "die Revanche, -n", uk: "реванш", r: "l1-e"}
 ];
