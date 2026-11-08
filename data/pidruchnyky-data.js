@@ -327,5 +327,97 @@ const PIDRUCHNYKY = [
         { id: "anhang-woerter", label: "", nazva: "Deutsch-Ukrainisches Wörterverzeichnis", storinky: "174–191", typ: "bez-storinky" }
       ] }
     ]
+  },
+  {
+    id: "sotnykova-8-klas-8-rik",
+    nazva: "Німецька мова (8-й рік навчання)",
+    nazvaDe: "Deutsch (8. Lernjahr)",
+    nazvaKorotko: "Сотникова, Гоголєва · 8 клас",
+    pidnazva: "підручник для 8 класу (з аудіосупроводом), 8-й рік навчання",
+    klas: "8 клас",
+    riven: null,
+    avtory: ["Світлана Сотникова", "Ганна Гоголєва"],
+    vydavnytstvo: "Ранок",
+    rik: 2025,
+    isbn: "978-617-09-9586-5",
+    aliasy: ["Сотникова 8 клас", "Сотникова Гоголєва 8 клас", "німецька мова 8 клас Сотникова", "Deutsch 8 Sotnykova"],
+    rivni: ["Lektion", "Modul"],
+    audio: null,
+    rozdily: [
+      { id: "l1", label: "1", nazva: "Die Jugend und ihre Lebensweise", storinky: "5–26", dity: [
+        { id: "l1-a", label: "A", nazva: "Sommererholung", storinky: "6–11", typ: "vpravy", gram: ["praep-genitiv", "deklination-nomen"], opublikovano: 1 },
+        { id: "l1-b", label: "B", nazva: "Wir sind aktiv", storinky: "12–16", typ: "vpravy" },
+        { id: "l1-c", label: "C", nazva: "Gesunde Lebensweise", storinky: "17–21", typ: "vpravy", gram: ["reflexive-verben"] },
+        { id: "l1-d", label: "D", nazva: "Wiederholung", storinky: "22–23", typ: "povtorennya", gram: ["praep-genitiv", "reflexive-verben"] },
+        { id: "l1-e", label: "E", nazva: "Geschichtenzeit", storinky: "24", typ: "chytannya" },
+        { id: "l1-f", label: "F", nazva: "Projektarbeit", storinky: "25", typ: "bez-storinky" },
+        { id: "l1-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "26", typ: "bez-storinky" }
+      ] },
+      { id: "l2", label: "2", nazva: "Meine Freunde und ich", storinky: "27–42", dity: [
+        { id: "l2-a", label: "A", nazva: "Freunde und Freizeit", storinky: "28–32", typ: "vpravy", gram: ["verben-praepositionalobjekt"] },
+        { id: "l2-b", label: "B", nazva: "Brieffreunde", storinky: "33–37", typ: "vpravy", gram: ["adjektivdeklination", "kausalsaetze"] },
+        { id: "l2-c", label: "C", nazva: "Wiederholung", storinky: "38–39", typ: "povtorennya", gram: ["verben-praepositionalobjekt", "adjektivdeklination"] },
+        { id: "l2-d", label: "D", nazva: "Geschichtenzeit", storinky: "40", typ: "chytannya" },
+        { id: "l2-e", label: "E", nazva: "Projektarbeit", storinky: "41", typ: "bez-storinky" },
+        { id: "l2-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "42", typ: "bez-storinky" }
+      ] },
+      { id: "l3", label: "3", nazva: "Wer liest, lebt doppelt!", storinky: "43–66", dity: [
+        { id: "l3-a", label: "A", nazva: "In der Bibliothek", storinky: "44–49", typ: "vpravy", gram: ["adjektive-als-nomen"] },
+        { id: "l3-b", label: "B", nazva: "Was lesen wir?", storinky: "50–55", typ: "vpravy", gram: ["relativsaetze"] },
+        { id: "l3-c", label: "C", nazva: "Lieblingsbücher und -autoren", storinky: "56–61", typ: "vpravy", gram: ["deklination-nomen", "relativsaetze"] },
+        { id: "l3-d", label: "D", nazva: "Wiederholung", storinky: "62–63", typ: "povtorennya", gram: ["adjektive-als-nomen", "relativsaetze", "deklination-nomen"] },
+        { id: "l3-e", label: "E", nazva: "Geschichtenzeit", storinky: "64", typ: "chytannya" },
+        { id: "l3-f", label: "F", nazva: "Projektarbeit", storinky: "65", typ: "bez-storinky" },
+        { id: "l3-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "66", typ: "bez-storinky" }
+      ] },
+      { id: "l4", label: "4", nazva: "Ohne Musik wär’ alles nichts", storinky: "67–90", dity: [
+        { id: "l4-a", label: "A", nazva: "Musikinstrumente und Musiker", storinky: "68–73", typ: "vpravy", gram: ["deklination-nomen"] },
+        { id: "l4-b", label: "B", nazva: "Weltbekannte Komponisten", storinky: "74–79", typ: "vpravy", gram: ["relativsaetze", "tempusformen"] },
+        { id: "l4-c", label: "C", nazva: "Wir gehen ins Konzert", storinky: "80–85", typ: "vpravy", gram: ["komparation", "adjektivdeklination"] },
+        { id: "l4-d", label: "D", nazva: "Wiederholung", storinky: "86–87", typ: "povtorennya", gram: ["relativsaetze", "tempusformen", "komparation"] },
+        { id: "l4-e", label: "E", nazva: "Geschichtenzeit", storinky: "88", typ: "chytannya" },
+        { id: "l4-f", label: "F", nazva: "Projektarbeit", storinky: "89", typ: "bez-storinky" },
+        { id: "l4-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "90", typ: "bez-storinky" }
+      ] },
+      { id: "l5", label: "5", nazva: "Wissen ist Macht", storinky: "91–116", dity: [
+        { id: "l5-a", label: "A", nazva: "Wozu braucht man Schulen?", storinky: "92–98", typ: "vpravy", gram: ["finalsaetze", "infinitiv-um-zu"] },
+        { id: "l5-b", label: "B", nazva: "Schulen in Deutschland", storinky: "99–105", typ: "vpravy" },
+        { id: "l5-c", label: "C", nazva: "Unsere Schulen", storinky: "106–111", typ: "vpravy", gram: ["wechselpraepositionen"] },
+        { id: "l5-d", label: "D", nazva: "Wiederholung", storinky: "112–113", typ: "povtorennya", gram: ["finalsaetze", "infinitiv-um-zu", "wechselpraepositionen"] },
+        { id: "l5-e", label: "E", nazva: "Geschichtenzeit", storinky: "114", typ: "chytannya" },
+        { id: "l5-f", label: "F", nazva: "Projektarbeit", storinky: "115", typ: "bez-storinky" },
+        { id: "l5-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "116", typ: "bez-storinky" }
+      ] },
+      { id: "l6", label: "6", nazva: "Moderne Massenmedien", storinky: "117–134", dity: [
+        { id: "l6-a", label: "A", nazva: "Zeitungen und Zeitschriften", storinky: "118–123", typ: "vpravy", gram: ["relativsaetze"] },
+        { id: "l6-b", label: "B", nazva: "Beliebte Kommunikationsmittel", storinky: "124–129", typ: "vpravy", gram: ["finalsaetze", "infinitiv-um-zu"] },
+        { id: "l6-c", label: "C", nazva: "Wiederholung", storinky: "130–131", typ: "povtorennya", gram: ["relativsaetze", "finalsaetze"] },
+        { id: "l6-d", label: "D", nazva: "Geschichtenzeit", storinky: "132", typ: "chytannya" },
+        { id: "l6-e", label: "E", nazva: "Projektarbeit", storinky: "133", typ: "bez-storinky" },
+        { id: "l6-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "134", typ: "bez-storinky" }
+      ] },
+      { id: "l7", label: "7", nazva: "Deutschsprachige Länder", storinky: "135–160", dity: [
+        { id: "l7-a", label: "A", nazva: "Prima Klima", storinky: "136–141", typ: "vpravy", gram: ["relativsaetze"] },
+        { id: "l7-b", label: "B", nazva: "Menschen, die hier leben", storinky: "142–147", typ: "vpravy", gram: ["zahlwoerter"] },
+        { id: "l7-c", label: "C", nazva: "Wohin fahren wir diesmal?", storinky: "148–155", typ: "vpravy", gram: ["wechselpraepositionen", "artikel-gebrauch", "kausalsaetze", "konjunktionen-position-null"] },
+        { id: "l7-d", label: "D", nazva: "Wiederholung", storinky: "156–157", typ: "povtorennya", gram: ["relativsaetze", "wechselpraepositionen", "kausalsaetze"] },
+        { id: "l7-e", label: "E", nazva: "Geschichtenzeit", storinky: "158", typ: "chytannya" },
+        { id: "l7-f", label: "F", nazva: "Projektarbeit", storinky: "159", typ: "bez-storinky" },
+        { id: "l7-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "160", typ: "bez-storinky" }
+      ] },
+      { id: "l8", label: "8", nazva: "Die Ukraine — Land und Leute", storinky: "161–178", dity: [
+        { id: "l8-a", label: "A", nazva: "Die Ukraine geografisch gesehen", storinky: "162–167", typ: "vpravy", gram: ["relativsaetze"] },
+        { id: "l8-b", label: "B", nazva: "Menschen im Fokus", storinky: "168–173", typ: "vpravy", gram: ["tempusformen", "relativsaetze"] },
+        { id: "l8-c", label: "C", nazva: "Wiederholung", storinky: "174–175", typ: "povtorennya", gram: ["relativsaetze", "tempusformen"] },
+        { id: "l8-d", label: "D", nazva: "Geschichtenzeit", storinky: "176", typ: "chytannya" },
+        { id: "l8-e", label: "E", nazva: "Projektarbeit", storinky: "177", typ: "bez-storinky" },
+        { id: "l8-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "178", typ: "bez-storinky" }
+      ] },
+      { id: "anhang", label: "", nazva: "Anhang", storinky: "179–207", dity: [
+        { id: "anhang-grammatik", label: "", nazva: "Grammatik", storinky: "179–188", typ: "bez-storinky" },
+        { id: "anhang-praep-verben", label: "", nazva: "Verben mit festen Präpositionen", typ: "gramatyka", gram: ["verben-praepositionalobjekt"] },
+        { id: "anhang-woerter", label: "", nazva: "Deutsch-Ukrainisches Wörterverzeichnis", storinky: "189–207", typ: "bez-storinky" }
+      ] }
+    ]
   }
 ];
