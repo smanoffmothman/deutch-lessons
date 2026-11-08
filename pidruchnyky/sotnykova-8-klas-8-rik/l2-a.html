@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 2, Modul A: Freunde und Freizeit — Німецька мова 8 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 8 КЛАС</span>
+        <h1>Lektion 2 · Modul A: Freunde und Freizeit</h1>
+        <p class="sub">Урок про дружбу й захоплення: якою має бути справжня подруга, спільні інтереси, сварки й примирення. Дієслова з прийменниками (sich interessieren für, träumen von) і питання та відповіді з wo- і da- (Worüber? — Darüber). Текст і діалог з озвученням, вправи, говоріння, письмо і підсумковий тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Welche Präposition?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Wofür? Für wen?</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · darauf oder auf sie?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Chat</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити. Дієслова вчи разом із прийменником і відмінком!</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власний текст + вправа на розуміння ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Meine beste Freundin</h2>
+      <p class="lead">Послухай і прочитай допис Грети для нової рубрики шкільної газети. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l2-a-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Unsere Schülerzeitung hat eine neue Rubrik: „Mein Freund, meine Freundin“. Heute schreibe ich über Daryna. Wir sind seit über zwei Jahren <span class="gl" data-uk="дружити, бути друзями" data-lemma="befreundet sein (mit + Dat.)">befreundet</span>.</p>
+        <p>Ich <span class="gl" data-uk="пам'ятати, згадувати (про)" data-lemma="sich erinnern an (+ Akk.)">erinnere</span> mich noch gut <span class="gl" data-uk="пам'ятати, згадувати (про)" data-lemma="sich erinnern an (+ Akk.)">an</span> ihren ersten Tag in unserer Klasse. Sie war neu, sie kam aus Charkiw und hat fast nichts gesagt. In der Pause hat sie allein am Fenster gestanden. Ich habe sie gefragt: „<span class="gl" data-uk="цікавитися (чимось)" data-lemma="sich interessieren für (+ Akk.)">Interessierst</span> du dich für Basketball?“ Sie hat gelacht: „Nein, für Klettern!“ So hat alles angefangen.</p>
+        <p>Eigentlich sind wir sehr <span class="gl" data-uk="різний, неоднаковий" data-lemma="unterschiedlich">unterschiedlich</span>. Daryna <span class="gl" data-uk="займатися (чимось)" data-lemma="sich beschäftigen mit (+ Dat.)">beschäftigt</span> sich in ihrer Freizeit mit Klettern und Sprachen, ich interessiere mich für Basketball und Malen. Sie liest gern, ich zeichne lieber. Aber wir <span class="gl" data-uk="сміятися (з когось / чогось)" data-lemma="lachen über (+ Akk.)">lachen</span> über dieselben Witze, und wir können über alles <span class="gl" data-uk="говорити (про)" data-lemma="sprechen über (+ Akk.)">sprechen</span>.</p>
+        <p>Warum ist sie meine beste Freundin? Sie ist <span class="gl" data-uk="чесний" data-lemma="ehrlich">ehrlich</span> und <span class="gl" data-uk="надійний" data-lemma="zuverlässig">zuverlässig</span>. Auf Daryna kann ich mich immer <span class="gl" data-uk="покладатися (на)" data-lemma="sich verlassen auf (+ Akk.)">verlassen</span>. Letztes Jahr hatte ich mir beim Basketball den Finger verletzt. Da hat sie zwei Wochen lang meine Schultasche getragen.</p>
+        <p>Natürlich <span class="gl" data-uk="сваритися" data-lemma="sich streiten (mit + Dat.)">streiten</span> wir uns manchmal. Daryna <span class="gl" data-uk="сердитися (через)" data-lemma="sich ärgern über (+ Akk.)">ärgert</span> sich darüber, dass ich immer zu spät komme. Und ich ärgere mich über ihre langen Nachrichten um Mitternacht … nein, das stimmt nicht mehr: Ihr Handy schläft jetzt in der Küche! Aber wir <span class="gl" data-uk="миритися" data-lemma="sich versöhnen">versöhnen</span> uns immer schnell.</p>
+        <p>Wovon <span class="gl" data-uk="мріяти (про)" data-lemma="träumen von (+ Dat.)">träumen</span> wir? Wir träumen davon, zusammen nach Charkiw zu fahren — wenn es dort wieder sicher ist. Daryna will mir ihre Stadt zeigen. Ich <span class="gl" data-uk="радіти (тому, що буде), чекати з нетерпінням" data-lemma="sich freuen auf (+ Akk.)">freue</span> mich schon jetzt darauf.</p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">Verben mit Präpositionen · Worauf? — Darauf.</h2>
+      <p class="lead">Багато дієслів мають «свій» прийменник, і його треба вчити разом із дієсловом. Українська тут не допоможе: «цікавлюся музикою» — без прийменника, а німецькою <b>sich interessieren für</b> Musik; «думаю про тебе» — німецькою <b>denken an</b> dich.</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. Дієслово + прийменник</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Verb</th><th>Beispiel</th></tr>
+          <tr><td><strong>sich interessieren für</strong> + A</td><td>für Musik</td></tr>
+          <tr><td><strong>denken an</strong> + A</td><td>an die Ferien</td></tr>
+          <tr><td><strong>sich erinnern an</strong> + A</td><td>an den ersten Tag</td></tr>
+          <tr><td><strong>warten auf</strong> + A</td><td>auf den Bus</td></tr>
+          <tr><td><strong>sich verlassen auf</strong> + A</td><td>auf meine Freundin</td></tr>
+          <tr><td><strong>sich ärgern über</strong> + A</td><td>über den Regen</td></tr>
+          <tr><td><strong>sprechen über</strong> + A</td><td>über das Konzert</td></tr>
+          <tr><td><strong>träumen von</strong> + D</td><td>von einer Reise</td></tr>
+          <tr><td><strong>sich beschäftigen mit</strong> + D</td><td>mit Fotografie</td></tr>
+        </table></div>
+        <div class="merke"><b>sich freuen auf</b> + A — на те, що <b>буде</b>: Ich freue mich auf die Ferien. <b>sich freuen über</b> + A — тому, що <b>вже є</b>: Ich freue mich über dein Geschenk.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. Річ чи людина?</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th></th><th>Sache (річ, ідея)</th><th>Person</th></tr>
+          <tr><td class="gender">Frage</td><td><strong>Worauf</strong> wartest du?</td><td><strong>Auf wen</strong> wartest du?</td></tr>
+          <tr><td class="gender">Antwort</td><td>Ich warte <strong>darauf</strong>.</td><td>Ich warte <strong>auf sie</strong>.</td></tr>
+          <tr><td class="gender">Frage</td><td><strong>Wofür</strong> interessierst du dich?</td><td><strong>Für wen</strong> …?</td></tr>
+          <tr><td class="gender">Antwort</td><td>Ich interessiere mich <strong>dafür</strong>.</td><td>… <strong>für ihn</strong>.</td></tr>
+        </table></div>
+        <div class="merke">Про речі й ідеї: <b>wo-</b> + прийменник (питання) і <b>da-</b> + прийменник (відповідь). Якщо прийменник починається з голосної — додаємо <b>r</b>: wo<b>r</b>auf, wo<b>r</b>an, wo<b>r</b>über, da<b>r</b>auf, da<b>r</b>an, da<b>r</b>über. Але: wofür, womit, wovon, dafür, damit, davon.</div>
+        <div class="merke">Про людей і тварин: прийменник + <b>wen / wem</b> і прийменник + особовий займенник: An wen denkst du? — An meine Oma. Ich denke oft <b>an sie</b>.</div>
+        <div class="merke"><b>da-</b> слово часто «готує» речення з <b>dass</b> або <b>zu</b>: Ich träume <b>davon</b>, Pilotin <b>zu</b> werden. Daryna ärgert sich <b>darüber</b>, <b>dass</b> ich zu spät komme.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. Типові помилки</p>
+        <p>✗ Ich interessiere mich an Musik. → ✓ Ich interessiere mich <b>für</b> Musik.</p>
+        <p>✗ Ich warte für dich. → ✓ Ich warte <b>auf</b> dich.</p>
+        <p>✗ Ich denke oft an es. → ✓ Ich denke oft <b>daran</b>. <i>(про річ — da-слово)</i></p>
+        <p>✗ Worauf wartest du? — Auf Nina. → ✓ <b>Auf wen</b> wartest du? — Auf Nina. <i>(людина)</i></p>
+        <p>✗ Ich freue mich auf dein Geschenk von gestern. → ✓ Ich freue mich <b>über</b> dein Geschenk.</p>
+        <p>✗ Ich träume von Musiker werden. → ✓ Ich träume <b>davon</b>, Musiker <b>zu</b> werden.</p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: дієслово ↔ прийменник ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Welche Präposition?</h2>
+      <p class="lead">Який прийменник і відмінок «належить» до дієслова? Вибери.</p>
+      <div class="card" id="ub1-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2: питання wo- / Präposition + wen ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Wofür? Für wen?</h2>
+      <p class="lead">Вибери питальне слово. Подивися на відповідь: це річ чи людина?</p>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span>
+          <select class="blank inline" data-ans="Wofür"><option value="">—</option><option>Wofür</option><option>Für wen</option><option>Womit</option></select> interessierst du dich? — Für Fotografie.</div>
+        <div class="fill-item"><span class="num">2)</span>
+          <select class="blank inline" data-ans="Auf wen"><option value="">—</option><option>Worauf</option><option>Auf wen</option><option>Woran</option></select> wartest du? — Auf Daryna.</div>
+        <div class="fill-item"><span class="num">3)</span>
+          <select class="blank inline" data-ans="Worüber"><option value="">—</option><option>Über wen</option><option>Wofür</option><option>Worüber</option></select> ärgerst du dich? — Über die vielen Hausaufgaben.</div>
+        <div class="fill-item"><span class="num">4)</span>
+          <select class="blank inline" data-ans="Wovon"><option value="">—</option><option>Wovon</option><option>Womit</option><option>Von wem</option></select> träumst du? — Von einem eigenen Hund.</div>
+        <div class="fill-item"><span class="num">5)</span>
+          <select class="blank inline" data-ans="An wen"><option value="">—</option><option>Woran</option><option>An wen</option><option>Auf wen</option></select> denkst du gerade? — An meine Oma in Kyjiw.</div>
+        <div class="fill-item"><span class="num">6)</span>
+          <select class="blank inline" data-ans="Womit"><option value="">—</option><option>Wofür</option><option>Mit wem</option><option>Womit</option></select> beschäftigt sich Timur in der Freizeit? — Mit Theater.</div>
+        <div class="fill-item"><span class="num">7)</span>
+          <select class="blank inline" data-ans="Worauf"><option value="">—</option><option>Worauf</option><option>Wofür</option><option>Auf wen</option></select> freust du dich? — Auf die Klassenfahrt.</div>
+        <div class="fill-item"><span class="num">8)</span>
+          <select class="blank inline" data-ans="Über wen"><option value="">—</option><option>Worüber</option><option>Über wen</option><option>Von wem</option></select> lacht die ganze Klasse? — Über Erik und seine Witze.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: відповідь з da- або займенником ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">darauf oder auf sie?</h2>
+      <p class="lead">Дай коротку відповідь «Ja, …» і заміни виділену частину: річ — на da-слово (darauf, dafür…), людину — на прийменник + займенник (auf sie, an ihn…).</p>
+      <div class="card" id="ub3-tr"></div>
+    </section>
+
+    <!-- ===== Üb. 4: чат ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Daryna fragt nach deinem besten Freund</h2>
+      <p class="lead">Дарина готує наступний випуск рубрики й розпитує про твого найкращого друга / твою найкращу подругу. Вибирай доречну й правильну відповідь.</p>
+      <div class="card" id="ub4-chat"></div>
+    </section>
+
+    <!-- ===== HÖREN — власний діалог, озвучений синтезатором ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Ayla ist sauer</h2>
+      <p class="lead">Перерва в школі. Айла сердиться на подругу, а Маттео її розпитує. Послухай діалог (можна двічі) і дай відповіді. Текст діалогу відкривається внизу — але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l2-a-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Matteo:</b> Ayla, was ist los? Du siehst sauer aus.<br>
+          <b>Ayla:</b> Ich ärgere mich über Nina. Wir waren gestern um vier im Café verabredet. Ich habe eine halbe Stunde auf sie gewartet — und sie ist nicht gekommen!<br>
+          <b>Matteo:</b> Hat sie dir nicht geschrieben?<br>
+          <b>Ayla:</b> Keine Ahnung. Mein Handy war leer. Und ich habe die ganze Zeit daran gedacht: Ist sie vielleicht böse auf mich?<br>
+          <b>Matteo:</b> Hast du schon mit ihr darüber gesprochen?<br>
+          <b>Ayla:</b> Nein. Ich warte darauf, dass sie sich entschuldigt.<br>
+          <b>Matteo:</b> Hm. Nina ist doch deine beste Freundin. Auf sie kann man sich immer verlassen. Da gibt es bestimmt einen Grund. Ist dein Handy jetzt wieder an?<br>
+          <b>Ayla:</b> Ja, seit heute Morgen. Moment … Oh! Eine Nachricht von gestern, Viertel vor vier: „Sorry, Ayla! Meine Mama muss plötzlich arbeiten, ich muss mich um meinen kleinen Bruder kümmern. Können wir uns morgen treffen?“<br>
+          <b>Matteo:</b> Siehst du?<br>
+          <b>Ayla:</b> Oh nein. Und ich habe mich so über sie geärgert! Jetzt muss ich mich bei ihr entschuldigen.<br>
+          <b>Matteo:</b> Schreib ihr doch gleich zurück.<br>
+          <b>Ayla:</b> Mach ich. Wir verabreden uns für Freitag — wir gehen zusammen ins Kino. Darauf freue ich mich schon!
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN — 🎤 + говоріння зі зразком ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Freunde und Interessen</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Wer ist dein bester Freund / deine beste Freundin? Seit wann seid ihr befreundet?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Meine beste Freundin heißt Solomija. Wir sind seit der ersten Klasse befreundet. Wir wohnen im selben Haus und gehen jeden Tag zusammen zur Schule.</div>
+        </div>
+        <div class="qa">
+          <label>2. Wofür interessiert ihr euch? Womit beschäftigt ihr euch in der Freizeit?</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Wir interessieren uns beide für Musik. Solomija spielt Gitarre, ich singe. In der Freizeit beschäftigen wir uns auch mit Fotografie — wir machen Fotos in der Stadt.</div>
+        </div>
+        <div class="qa">
+          <label>3. Wie muss ein guter Freund sein? Nenne drei Eigenschaften.</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Ein guter Freund muss ehrlich und zuverlässig sein. Man muss sich auf ihn verlassen können. Und er muss auch über deine Witze lachen!</div>
+        </div>
+        <div class="qa">
+          <label>4. Worüber streitet ihr manchmal? Wie versöhnt ihr euch?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Manchmal streiten wir uns über Kleinigkeiten, zum Beispiel über einen Film. Aber wir versöhnen uns schnell. Meistens schreibt einer von uns eine lustige Nachricht, und dann ist alles wieder gut.</div>
+        </div>
+        <div class="qa">
+          <label>5. Wovon träumst du? Worauf freust du dich in diesem Jahr?</label>
+          <button class="btn secondary" type="button" data-reveal="spr5">Muster zeigen</button>
+          <div class="reveal" id="spr5">Ich träume davon, einmal nach Japan zu reisen. In diesem Jahr freue ich mich auf das Schulkonzert im Dezember. Ich singe dort zum ersten Mal allein.</div>
+        </div>
+        <div class="qa">
+          <label>6. Frag deinen Partner / deine Partnerin: Wofür …? Worüber …? Wovon …? Woran …?</label>
+          <button class="btn secondary" type="button" data-reveal="spr6">Muster zeigen</button>
+          <div class="reveal" id="spr6">Wofür interessierst du dich? Worüber ärgerst du dich oft? Wovon träumst du? Woran denkst du gern?</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN — допис для рубрики ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">„Mein Freund, meine Freundin“</h2>
+      <p class="lead">Напиши допис для рубрики шкільної газети про свого найкращого друга чи свою найкращу подругу — 60–80 слів за планом:</p>
+      <div class="card">
+        <p>1) хто це і відколи ви дружите; 2) як ви познайомилися; 3) чим він / вона цікавиться і чим займається (sich interessieren für, sich beschäftigen mit); 4) чому на нього / неї можна покластися (приклад); 5) про що ви іноді сперечаєтеся; 6) про що ви мрієте разом.</p>
+        <p class="beispiel">Mein bester Freund / Meine beste Freundin heißt … · Wir sind seit … befreundet. · Er / Sie interessiert sich für … · Auf ihn / sie kann ich mich verlassen. · Wir streiten uns manchmal über … · Wir träumen davon, … zu …</p>
+        <div class="qa">
+          <label for="schreiben-text">Dein Beitrag</label>
+          <textarea id="schreiben-text" rows="10" placeholder="Mein bester Freund heißt …"
+            data-words="60-80"
+            data-must="befreundet|interessiert sich für|davon"
+            data-check="Хто і відколи ви дружите|Як ви познайомилися|Інтереси (für + Akk., mit + Dat.)|Чому можна покластися (sich verlassen auf)|Про що сперечаєтеся (über + Akk.)|Спільна мрія (davon, … zu …)"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Mein bester Freund heißt Bohdan. Wir sind seit fünf Jahren befreundet. Wir haben uns im Fußballverein kennengelernt. Bohdan interessiert sich für Geschichte und beschäftigt sich viel mit alten Karten. Auf ihn kann ich mich immer verlassen: Als ich krank war, hat er mir jeden Tag die Hausaufgaben geschickt. Wir streiten uns manchmal über Fußball, weil er für einen anderen Verein ist. Wir träumen davon, zusammen ein Spiel im Stadion zu sehen.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — режим контрольної: одна спроба, лише ця вкладка йде в бал ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Max interessiert sich
+          <select class="blank inline" data-ans="für"><option value="">—</option><option>an</option><option>für</option><option>über</option></select> Fußball.</div>
+        <div class="fill-item"><span class="num">8)</span> Wir warten schon zehn Minuten
+          <select class="blank inline" data-ans="auf"><option value="">—</option><option>für</option><option>an</option><option>auf</option></select> den Bus.</div>
+        <div class="fill-item"><span class="num">9)</span> Daryna träumt
+          <select class="blank inline" data-ans="davon"><option value="">—</option><option>davon</option><option>darüber</option><option>daran</option></select>, Übersetzerin zu werden.</div>
+        <div class="fill-item"><span class="num">10)</span> Denkst du oft an deine Oma? — Ja, ich denke oft
+          <select class="blank inline" data-ans="an sie"><option value="">—</option><option>daran</option><option>an sie</option><option>an ihr</option></select>.</div>
+        <div class="fill-item"><span class="num">11)</span> Ich freue mich sehr
+          <select class="blank inline" data-ans="über"><option value="">—</option><option>über</option><option>auf</option><option>an</option></select> dein Geschenk. Danke!</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-8-klas-8-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-8-klas-8-rik";
+  const KN_UNIT = "l2-a";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Greta und Daryna sind seit über zwei Jahren befreundet.", a: "r"},
+    {s: "An ihrem ersten Tag hat Daryna viel erzählt.", a: "f"},
+    {s: "Greta hat Daryna in der Pause angesprochen.", a: "r"},
+    {s: "Daryna interessiert sich für Basketball.", a: "f"},
+    {s: "Greta und Daryna haben sehr unterschiedliche Hobbys.", a: "r"},
+    {s: "Greta liest lieber, Daryna zeichnet lieber.", a: "f"},
+    {s: "Als Greta den Finger verletzt hatte, hat Daryna ihr geholfen.", a: "r"},
+    {s: "Greta kommt oft zu spät.", a: "r"},
+    {s: "Die Freundinnen streiten sich nie.", a: "f"},
+    {s: "Daryna möchte Greta einmal Charkiw zeigen.", a: "r"}
+  ]);
+
+  // Üb. 1: дієслово ↔ прийменник
+  buildMatch('ub1', [
+    ["sich interessieren", "für + Akk."],
+    ["warten", "auf + Akk."],
+    ["denken", "an + Akk."],
+    ["sich erinnern", "an + Akk."],
+    ["träumen", "von + Dat."],
+    ["sich beschäftigen", "mit + Dat."],
+    ["sich ärgern", "über + Akk."],
+    ["lachen", "über + Akk."],
+    ["sich verlassen", "auf + Akk."],
+    ["sich kümmern", "um + Akk."]
+  ], {options: ["an + Akk.", "auf + Akk.", "für + Akk.", "über + Akk.", "um + Akk.", "mit + Dat.", "von + Dat."]});
+
+  // Üb. 2
+  wireBlanks('ub2');
+
+  // Üb. 3: відповідь з da- / займенником
+  buildTransform('ub3-tr', [
+    {s: "Freust du dich auf <b>die Ferien</b>?", task: "Ja, …",
+     ans: "Ja, ich freue mich darauf.|Ja, ich freue mich sehr darauf."},
+    {s: "Wartest du auf <b>Greta</b>?", task: "Ja, …",
+     ans: "Ja, ich warte auf sie."},
+    {s: "Interessierst du dich für <b>Fotografie</b>?", task: "Ja, …",
+     ans: "Ja, ich interessiere mich dafür."},
+    {s: "Denkst du oft an <b>deinen Opa</b>?", task: "Ja, …",
+     ans: "Ja, ich denke oft an ihn."},
+    {s: "Hast du mit Nina über <b>das Konzert</b> gesprochen?", task: "Ja, …",
+     ans: "Ja, ich habe mit Nina darüber gesprochen.|Ja, ich habe mit ihr darüber gesprochen.|Ja, ich habe darüber mit Nina gesprochen.|Ja, ich habe darüber mit ihr gesprochen."},
+    {s: "Träumst du von <b>einem Hund</b>?", task: "Ja, …",
+     ans: "Ja, ich träume davon."}
+  ]);
+
+  // Üb. 4: чат
+  buildChat('ub4-chat', {
+    partner: "Daryna",
+    steps: [
+      {them: "Hallo! Wie heißt dein bester Freund oder deine beste Freundin?"},
+      {you: ["Er heißt Andrij.", "Ich heiße mit Andrij.", "Er ist Andrij heißt."], correct: 0},
+      {them: "Seit wann seid ihr befreundet?"},
+      {you: ["Wir haben seit drei Jahren befreundet.", "Seit drei Jahren. Wir haben uns im Sommerlager kennengelernt.", "Vor drei Jahren befreundet."], correct: 1},
+      {them: "Wofür interessiert sich Andrij?"},
+      {you: ["Er interessiert sich an Computer.", "Er interessiert sich für Computer und Schach.", "Er interessiert für Schach."], correct: 1},
+      {them: "Und worüber sprecht ihr oft?"},
+      {you: ["Wir sprechen oft über Spiele und über die Schule.", "Wir sprechen oft darüber Spiele.", "Wir sprechen oft auf Spiele."], correct: 0},
+      {them: "Kannst du dich auf ihn verlassen?"},
+      {you: ["Ja, ich verlasse mich darauf.", "Ja, ich kann mich immer auf ihn verlassen.", "Ja, ich verlasse ihn."], correct: 1, hint: "Andrij — людина"},
+      {them: "Super, danke! Das kommt in die nächste Ausgabe."}
+    ]
+  });
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Warum ist Ayla sauer?", opts: ["Nina hat ihr Handy kaputt gemacht.", "Nina ist nicht ins Café gekommen.", "Nina hat sich über sie geärgert."], correct: "Nina ist nicht ins Café gekommen."},
+    {q: "Wie lange hat Ayla gewartet?", opts: ["Eine halbe Stunde", "Eine Stunde", "Zehn Minuten"], correct: "Eine halbe Stunde"},
+    {q: "Warum hat Ayla Ninas Nachricht nicht gelesen?", opts: ["Sie hatte keine Lust.", "Ihr Handy war leer.", "Nina hat keine Nachricht geschrieben."], correct: "Ihr Handy war leer."},
+    {q: "Worauf wartet Ayla zuerst?", opts: ["Darauf, dass Nina sich entschuldigt.", "Auf den Bus.", "Auf Matteo."], correct: "Darauf, dass Nina sich entschuldigt."},
+    {q: "Was sagt Matteo über Nina?", opts: ["Sie kommt immer zu spät.", "Man kann sich immer auf sie verlassen.", "Sie ist oft böse."], correct: "Man kann sich immer auf sie verlassen."},
+    {q: "Warum ist Nina nicht gekommen?", opts: ["Sie musste sich um ihren kleinen Bruder kümmern.", "Sie war krank.", "Sie hatte Training."], correct: "Sie musste sich um ihren kleinen Bruder kümmern."},
+    {q: "Was muss Ayla jetzt machen?", opts: ["Sie muss auf Nina warten.", "Sie muss sich bei Nina entschuldigen.", "Sie muss ihr Handy kaufen."], correct: "Sie muss sich bei Nina entschuldigen."},
+    {q: "Was machen die Freundinnen am Freitag?", opts: ["Sie gehen ins Café.", "Sie gehen ins Kino.", "Sie gehen zum Training."], correct: "Sie gehen ins Kino."}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Wir sind seit drei Jahren befreundet.", uk: "Ми дружимо вже три роки."},
+    {say: "Ich interessiere mich für Musik.", uk: "Я цікавлюся музикою."},
+    {say: "Auf meine Freundin kann ich mich immer verlassen.", uk: "На мою подругу я завжди можу покластися."},
+    {say: "Worüber ärgerst du dich?", uk: "Через що ти сердишся?"},
+    {say: "Ich freue mich schon darauf.", uk: "Я вже на це чекаю."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Ich erinnere mich gern … unseren Ausflug.", opts: ["an", "auf", "über"], correct: "an"},
+    {q: "Womit beschäftigst du dich? — …", opts: ["Für Musik.", "Mit Fotografie.", "An die Ferien."], correct: "Mit Fotografie."},
+    {q: "… wartest du? — Auf meinen Bruder.", opts: ["Worauf", "Auf wen", "Wofür"], correct: "Auf wen"},
+    {q: "Ein Freund sagt immer die Wahrheit. Er ist …", opts: ["unterschiedlich", "befreundet", "ehrlich"], correct: "ehrlich"},
+    {q: "Nach dem Streit … sich die Freundinnen schnell.", opts: ["versöhnen", "verlassen", "erinnern"], correct: "versöhnen"},
+    {q: "Interessierst du dich für Schach? — Nein, ich interessiere mich nicht …", opts: ["davon", "dafür", "für es"], correct: "dafür"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Ich träume von einer Reise nach Japan.", ok: true},
+    {s: "Wir sprechen oft auf Fußball.", wrong: 3, fix: "über"},
+    {s: "Ich denke oft darauf.", wrong: 3, fix: "daran"},
+    {s: "Worauf wartest du? — Auf Nina.", wrong: 0, fix: "Auf wen"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🤝', '💬', '🎨', '💛']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
