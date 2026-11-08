@@ -1086,5 +1086,16 @@ const GLOSSARY = [
   {de: "die Prinzessin (die Prinzessinnen)", uk: "принцеса", klas: "7", modul: "C", lektion: 7},
   {de: "der Luftballon (die Luftballons)", uk: "повітряна кулька", klas: "7", modul: "C", lektion: 7},
   {de: "klatschen", uk: "плескати в долоні", klas: "7", modul: "C", lektion: 7},
-  {de: "die Stadtrundfahrt (die Stadtrundfahrten)", uk: "оглядова екскурсія містом", klas: "7", modul: "C", lektion: 7}
+  {de: "die Stadtrundfahrt (die Stadtrundfahrten)", uk: "оглядова екскурсія містом", klas: "7", modul: "C", lektion: 7},
+  {de: "der Roboter (die Roboter)", uk: "робот", klas: "7", modul: "C", lektion: 8},
+  {de: "die Foto-AG (die Foto-AGs)", uk: "фотогурток", klas: "7", modul: "C", lektion: 8},
+  {de: "die Koch-AG (die Koch-AGs)", uk: "кулінарний гурток", klas: "7", modul: "C", lektion: 8},
+  {de: "die Tanz-AG (die Tanz-AGs)", uk: "танцювальний гурток", klas: "7", modul: "C", lektion: 8},
+  {de: "die Mode-AG (die Mode-AGs)", uk: "гурток моди (дизайну одягу)", klas: "7", modul: "C", lektion: 8},
+  {de: "die Sprach-AG (die Sprach-AGs)", uk: "мовний гурток", klas: "7", modul: "C", lektion: 8},
+  {de: "die Technik-AG (die Technik-AGs)", uk: "технічний гурток", klas: "7", modul: "C", lektion: 8},
+  {de: "das Orchester (die Orchester)", uk: "оркестр", klas: "7", modul: "C", lektion: 8},
+  {de: "das Stück (Rollen in einem Stück spielen)", uk: "п'єса, вистава (грати ролі у виставі)", klas: "7", modul: "C", lektion: 8},
+  {de: "Interesse an Technik haben", uk: "цікавитися технікою", klas: "7", modul: "C", lektion: 8},
+  {de: "die Radwanderung (die Radwanderungen)", uk: "велопохід, велосипедна прогулянка", klas: "7", modul: "C", lektion: 8}
 ];

@@ -992,5 +992,17 @@ const LESSONS = [
     gram: ["trennbare-verben", "verben-praepositionalobjekt", "deklination-nomen", "fragen"],
     hook: "fakt",
     dz: "Interview für die Schülerzeitung: 1) Wähle eine Person – deinen Bruder oder deine Schwester, einen Freund oder eine Freundin aus einer anderen Klasse oder deine Mama / deinen Papa (über ihre / seine Schulzeit). 2) Stell ihr / ihm mindestens fünf Fragen aus Üb. 2 (z. B. „Welche AG besuchst du?“, „Wie oft gehst du zum Training?“, „An welchen Veranstaltungen nimmst du gern teil?“). Das Interview kann auch auf Ukrainisch sein. 3) Schreib die Antworten auf Deutsch als kurzen Artikel (6–8 Sätze) in der 3. Person: „Meine Schwester besucht die Tanz-AG. Sie geht zweimal in der Woche zum Training. Sie nimmt gern an Wettbewerben teil.“ Benutze mindestens zweimal „an … teilnehmen“. 4) Gib deinem Artikel einen Titel. Nächstes Mal lest ihr eure Artikel vor, ohne den Namen zu sagen, und die Klasse rät: Wer ist diese Person?"
+  },
+  {
+    klas: "7",
+    modul: "C",
+    lektion: 8,
+    nazva: "Etwas stimmt nicht!",
+    opys: "Повторюємо тему «Об'єднання за інтересами»: виправляємо хибні твердження про гуртки (Nein, das stimmt nicht. In einer Koch-AG lernt man kochen.), повторюємо інфінітив із «zu» і без нього (vorhaben, beschließen, es ist wichtig, … zu …; möchten, wollen, können), граємо в «Würfelspiel „Schulleben“» і пишемо про свої плани.",
+    file: "klas-7/modul-c/lektion-8.html",
+    nove: true,
+    gram: ["verben-dass-infinitiv", "modalverben", "trennbare-verben"],
+    hook: "prognose",
+    dz: "„Etwas stimmt nicht“ – dein Quiz für die Klasse: 1) Schreib fünf falsche Sätze über AGs oder über deine Schule wie in Üb. 1 (z. B. „In einer Zirkus-AG programmiert man Roboter.“, „Unsere Schule hat vor, im Dezember eine Radwanderung zu machen.“). Mindestens zwei Sätze mit „zu“ + Infinitiv (vorhaben, beschließen, vergessen, es ist wichtig …). 2) Schreib die richtigen Sätze als Lösung auf einen extra Zettel. Nächstes Mal liest du deine Sätze vor, und die Klasse korrigiert sie: „Nein, das stimmt nicht. In einer Zirkus-AG lernt man jonglieren.“"
   }
 ];
