@@ -968,5 +968,17 @@ const LESSONS = [
     gram: ["verben-dass-infinitiv", "kausalsaetze", "satzstellung-hauptsatz"],
     hook: "undu",
     dz: "Antwort an Jan: Jan fragt in seiner Sprachnachricht: „Welche AGs habt ihr in der Schule? Besuchst du eine AG?“ Schreib den Text für deine Sprachnachricht an Jan (8–10 Sätze). 1) Begrüße Jan und erzähl, welche AGs es in deiner Schule gibt. 2) Erzähl von einer AG, die du besuchst oder gern besuchen möchtest: Wer leitet die AG? Wann und wie oft findet sie statt? Was macht ihr dort? Wie findest du sie? Benutze mindestens einmal „…mal in der Woche“ und einen Satz mit „weil“. 3) Stell Jan am Ende zwei Fragen über seine Sport-AG (z. B. „Wer leitet …?“, „Was ist für dich am schwierigsten?“). 4) Wer möchte, nimmt die Nachricht mit dem Handy auf (bis zu einer Minute). Nächstes Mal hören oder lesen wir die Nachrichten in Paaren, und der Partner notiert: Welche AG? Wie oft? Was macht man da?"
+  },
+  {
+    klas: "7",
+    modul: "C",
+    lektion: 6,
+    nazva: "Beliebte AGs",
+    opys: "Відвідуємо гурток: на слух доповнюємо голосове повідомлення Яна, читаємо відповідь Аліни, працюємо з розкладом гуртків (Wann ist die …-AG? – Am Montag von 12 Uhr 40 bis 13 Uhr 40), граємо в опитування «Beliebte AGs» і коментуємо його результати (die meisten, einige, nur wenige, Viele meinen, dass …), складаємо програму гуртків для своєї школи й вигадуємо новий гурток.",
+    file: "klas-7/modul-c/lektion-6.html",
+    nove: true,
+    gram: ["zahlwoerter", "indefinitpronomen", "verben-dass-infinitiv", "fragen"],
+    hook: "fehler",
+    dz: "Mein AG-Wochenplan: 1) Zeichne eine Tabelle Mo–Fr wie in Üb. 1 und trag ein, welche AGs, Kurse oder Trainings du nach den Stunden besuchst oder gern besuchen möchtest – mit Uhrzeit (z. B. Di: Kletter-AG, 15.00–16.30). Mindestens vier Einträge. 2) Schreib zu deinem Plan 5–6 Sätze: Wann findet die AG statt? Wie oft? Was macht man da? Warum möchtest du sie besuchen? (z. B. „Am Dienstag habe ich von 15 Uhr bis 16 Uhr 30 die Kletter-AG.“, „Ich finde es spannend, … zu …“). 3) Schreib zwei Fragen an deinen Partner: „Wann ist deine …?“, „Welche AG möchtest du besuchen?“ Nächstes Mal zeigt ihr eure Pläne nicht, sondern fragt und antwortet: Wer findet zuerst einen Nachmittag, an dem ihr beide frei seid?"
   }
 ];
