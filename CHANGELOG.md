@@ -364,48 +364,58 @@
   без `cursor:pointer`/hover-поведінки (він не клікабельний).
 
 ## Робочі правила (для мене, Claude)
-- **Чотири** окремі Project (з 2026-10-11): "генерація уроків",
-  "генерація граматики", "генерація матеріалів (статей)" і "технічна
-  підтримка сайту". Спільні файли:
-  - з проєктом уроків: README.md, CHANGELOG.md, STYLE-BRIEF.md,
-    lesson-template.html, lesson-style.css, lesson-interactions.js,
-    lessons-data.js, glossary-data.js, modules-data.js, grammar-data.js
-    (лише для вибору id у полі `gram`);
-  - з проєктом граматики: README.md, CHANGELOG.md, GRAMMAR-BRIEF.md,
-    grammar-data.js, grammar-template.html, lesson-style.css,
-    lesson-interactions.js, site-nav.js, а також site.css, site.js і
-    build-grammar-preview.py (лише для збирання превʼю);
-  - з проєктом матеріалів: README.md, CHANGELOG.md, MATERIAL-BRIEF.md,
-    materials-data.js, material-template.html, material-reader.js,
-    material-style.css, lesson-style.css, lesson-interactions.js,
-    site-nav.js, site.css і build-material-preview.py (site.css і
-    скрипт — для превʼю);
-  - з проєктом підручників (П'ЯТИЙ, з 2026-10-22): README.md,
-    CHANGELOG.md, BOOK-BRIEF.md, pidruchnyky-data.js,
-    data/slova/<книга>.js, rozdil-template.html, knyha-template.html,
-    pidruchnyk.js, pidruchnyk.css, material-reader.js, material-style.css,
-    lesson-style.css, lesson-interactions.js, site-nav.js, site.css,
-    grammar-data.js (лише для вибору id у полі `gram`) і
-    build-book-preview.py (превʼю; головна копія — у Knowledge того
-    проєкту, на GitHub не потрібен);
-  - лише тут: HTML-сторінки оболонки, а також `home.css` і `home.js`
-    головної (site.css і site.js редагуються лише тут, але копія
-    site.css потрібна в проєктах граматики й матеріалів, site.js — у
-    проєкті граматики).
-  Зміна в одному місці не поширюється сама, тому
-  **після кожної відповіді, де змінюється хоч один файл, я завжди
-  нагадую, що куди покласти** (GitHub / Knowledge цього проєкту /
-  Knowledge іншого проєкту, якщо файл спільний). Це не одноразова
-  ввічливість, а стандартна частина відповіді.
+- **П'ять** окремих Project: «генерація уроків», «генерація граматики»,
+  «генерація матеріалів (статей)», «підручники» і «технічна підтримка
+  сайту». Спільний у них один — репозиторій на GitHub (див. «Project
+  Knowledge: лише те, чого немає на GitHub»). Копій файлів сайту в
+  Knowledge проєктів більше немає, тож розносити їх по проєктах не треба.
 - **На GitHub Claude заливає сам** (з 2026-10-22, див. «Заливання на
   GitHub: Claude напряму»). Архів — лише запасний варіант, коли в сесії
   немає доступу до GitHub: `.zip`, у корені якого одразу лежать `assets/`,
   `klasy/`, `CHANGELOG.md` тощо (без зайвої папки-обгортки), з реальними
   назвами (`klasy/index.html`, а не `klasy-index.html`); людина розпаковує
-  й перетягує ВМІСТ на GitHub. Для Project Knowledge — окремо ті самі
-  файли з «пласкими» назвами, як вони там лежать. У підсумку «що куди»
-  пункт GitHub тепер — «залито (запит на злиття #N)», але нагадування про
-  Knowledge лишається обов'язковим.
+  й перетягує ВМІСТ на GitHub.
+- **Підсумок «що куди»** наприкінці відповіді, де змінився файл, —
+  лишається, але коротший: GitHub — «залито (запит на злиття #N)» (або
+  архів); Knowledge — лише якщо змінився файл, який справді живе там
+  (план книжки чи номера журналу тощо). Якщо нічого в Knowledge класти не
+  треба — так і сказати одним рядком.
+
+## Project Knowledge: лише те, чого немає на GitHub (2026-11-08)
+- **Рішення людини:** у Knowledge проєктів не тримати копій файлів, які є
+  в репозиторії `smanoffmothman/deutch-lessons` (брифи, README, CHANGELOG,
+  шаблони, CSS/JS, data-файли, сторінки оболонки). Репозиторій публічний,
+  тож будь-яка сесія клонує його без налаштувань, а копії в Knowledge лише
+  застарівали (інцидент з Уроком 18; `MATERIAL-BRIEF.md` у Knowledge
+  техпідтримки був ще з обов'язковим превʼю, скасованим 2026-10-27), і їх
+  доводилося вручну оновлювати в п'яти проєктах. `CHANGELOG.md` Claude
+  перезалити в Knowledge сам узагалі не може (завеликий для інструмента).
+- **Як працює кожна сесія:** спершу свіжий clone, README і CHANGELOG
+  читаються звідти, брифи — з кореня репозиторію (`STYLE-BRIEF.md`,
+  `GRAMMAR-BRIEF.md`, `MATERIAL-BRIEF.md`, `BOOK-BRIEF.md`). «Пласкі» назви
+  з колишнього Knowledge відповідають шляхам у репозиторії: `site*.js/css`,
+  `home.*`, `lesson-*.js/css`, `material-*.js/css`, `pidruchnyk.*` →
+  `assets/`; `*-data.js` → `data/`; `lesson-template.html` → `lessons/`;
+  `grammar-template.html` → `gramatyka/temy/`; `material-template.html` →
+  `materialy/statti/`; `rozdil-/knyha-template.html` →
+  `pidruchnyky/shablon/`; `klasy-index.html` → `klasy/index.html` тощо.
+- **Інструменти** (скрипти, що не є частиною сайту) — у теці `tools/`
+  репозиторію, а не в Knowledge. Перший — `tools/build-hotspot-maps.py`.
+  Решту (`build-grammar-preview.py`, `build-material-preview.py`,
+  `commons-search.py`, `build-book-preview.py`) переносить у `tools/` кожен
+  проєкт генерації сам, з власного Knowledge — там їхні актуальні версії.
+  Так само кожен проєкт звіряє свій бриф з GitHub і заливає новішу версію,
+  якщо в Knowledge вона новіша, і лише тоді чистить Knowledge.
+- **У Knowledge лишається** лише робочий стан, якого немає на GitHub:
+  плани (`PLAN-<книжка>.md`, `PLAN-<журнал>-<номер>.md`), тимчасово —
+  PDF номера чи книжки. Технічна підтримка — порожній Knowledge; ТЗ від
+  інших проєктів, як і раніше, можна покласти туди, а після виконання —
+  видалити (рішення вже в CHANGELOG/README).
+- **Важливо:** сайт публікує весь репозиторій (`.nojekyll`), тож усе в
+  ньому, включно з `tools/` і брифами, відкривається й за адресою сайту.
+  Нічого секретного туди не класти.
+- **Без доступу до коду** (звичайний чат без середовища) Claude файлів
+  сайту не бачить — людина прикріплює потрібні файли до чату.
 
 ## Уроки: data-файлів у Knowledge більше немає (2026-11-08)
 - **Рішення людини:** `lessons-data.js` і `glossary-data.js` прибрано з
@@ -1125,14 +1135,14 @@
   кордони (без щілин між землями). **Natural Earth за замовчуванням
   відносить Крим і Севастополь до Росії — у нашій карті вони в складі
   України** (міжнародно визнані кордони). Скрипт збирання
-  `build-hotspot-maps.py` — інструмент у Knowledge техпідтримки, на GitHub
-  не потрібен.
+  `tools/build-hotspot-maps.py` (до 2026-11-08 лежав у Knowledge
+  техпідтримки).
   - **Чому .js, а не .svg:** зони мають бути вбудованим SVG (інакше їх не
     натиснути), а `fetch` файлу .svg не працює з диска й у превʼю.
     `buildHotspot` довантажує `assets/svg/<назва>.js` сам (шлях — від
     `lesson-interactions.js`); для превʼю в проєктах генерації карту краще
     підключити явним тегом script — тоді скрипт превʼю її вбудує. Файли
-    карт треба покласти в Knowledge проєктів, де будуть карти.
+    карт беруться з клону репозиторію.
   - id зон: у містах і землях з тим самим ім'ям (`hamburg`, `berlin`,
     `bremen`, `kyjiw`, `sewastopol`) id однаковий — зараховується будь-яке;
     саме одне — `kind`. Річка Дніпро — `dnipro-fluss`, бо `dnipro` — місто.
