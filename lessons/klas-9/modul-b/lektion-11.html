@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 11 · Modul B · Die Pfadfinder</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 9'},
+    {label: 'Урок 11: Die Pfadfinder'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 11 · MODUL B</span>
+        <h1>Jugendorganisationen: Die Pfadfinder</h1>
+        <p class="sub">Молодіжні організації: дізнаємося, хто такі скаути (Pfadfinder), називаємо їхні символи й заняття, читаємо текст про скаутський рух і висловлюємо думку з <i>dass</i>, <i>weil</i> і <i>denn</i>.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Bilder und Symbole</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Was machen Pfadfinder?</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Lesen</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Meine Meinung</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== ПАНЕЛЬ: вступ ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Wer sind die Pfadfinder?</h2>
+      <div class="card">
+        <p>Es gibt viele Jugendorganisationen: Sportvereine, Jugendorchester, Organisationen für den Umweltschutz. Eine der größten Jugendorganisationen der Welt sind die Pfadfinder. Pfadfinderinnen und Pfadfinder zelten, wandern, bauen Hütten und helfen anderen Menschen. Heute lernen wir ihre Symbole kennen, sprechen darüber, was sie machen, lesen einen Text über die Pfadfinderbewegung und sagen unsere Meinung.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Є багато молодіжних організацій: спортивні клуби, молодіжні оркестри, організації з охорони довкілля. Одна з найбільших молодіжних організацій світу — скаути (нім. <i>die Pfadfinder</i>, дослівно «ті, хто знаходить стежку»; в Україні — Пласт). Скаути живуть у наметах, ходять у походи, будують хатинки й допомагають іншим людям. Сьогодні знайомимося з їхніми символами, говоримо про те, чим вони займаються, читаємо текст про скаутський рух і висловлюємо свою думку.
+        </div>
+      </div>
+
+      <div id="hook"></div>
+
+      <div id="lz-start"></div>
+
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Allzeit bereit! Heute packen wir Rucksack, Kompass und Halstuch ein.</p>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: перевірка ДЗ (dz уроку 9-B-10: «Unser Wochenprogramm») ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: календар заходів на тиждень для молодіжної організації (щонайменше вісім заходів із часом) і презентація до нього на 7–8 речень за зразком з Üb. 4 — з „… findet um … Uhr statt“, „Es besteht auch die Möglichkeit, … zu …“, „Am … können Jugendliche … besuchen“ і двома запитаннями до слухачів.<br><br>
+        Презентуйте свої програми: клас за допомогою „Ich schlage vor, … zu …“ і „Ich bin dabei!“ обирає три заходи, які хоче відвідати разом. А тепер перевір себе: Дарина теж підготувала презентацію. Обери правильне слово.
+      </div>
+      <div class="card" id="dz-list" style="margin-top:16px;">
+        <div class="fill-item"><span class="num">1)</span> Wir möchten das Freizeitprogramm <select class="blank inline" data-ans="einer" aria-label="Wort 1"><option value="">—</option><option>eines</option><option>ein</option><option>einer</option></select> Jugendorganisation für den Umweltschutz präsentieren.</div>
+        <div class="fill-item"><span class="num">2)</span> Dazu <select class="blank inline" data-ans="gehören" aria-label="Wort 2"><option value="">—</option><option>gehören</option><option>gehört</option><option>gehen</option></select> Ausflüge, Workshops und Umweltaktionen.</div>
+        <div class="fill-item"><span class="num">3)</span> Der Fotokurs findet am Dienstag um 16 Uhr <select class="blank inline" data-ans="statt" aria-label="Wort 3"><option value="">—</option><option>teil</option><option>statt</option><option>mit</option></select>.</div>
+        <div class="fill-item"><span class="num">4)</span> Am Mittwoch können Jugendliche einen Kurs „Erste Hilfe“ <select class="blank inline" data-ans="besuchen" aria-label="Wort 4"><option value="">—</option><option>zu besuchen</option><option>besucht</option><option>besuchen</option></select>.</div>
+        <div class="fill-item"><span class="num">5)</span> Es besteht auch die Möglichkeit, am Samstag an einer Müllsammelaktion <select class="blank inline" data-ans="teilzunehmen" aria-label="Wort 5"><option value="">—</option><option>teilzunehmen</option><option>teilnehmen</option><option>zu teilnehmen</option></select>.</div>
+        <div class="fill-item"><span class="num">6)</span> Findet ihr das Programm interessant? Möchtet ihr irgendetwas <select class="blank inline" data-ans="mitmachen" aria-label="Wort 6"><option value="">—</option><option>mitzumachen</option><option>mitmachen</option><option>zu mitmachen</option></select>?</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="dz-check">Prüfen</button>
+        <button class="btn secondary" id="dz-reset">Zurücksetzen</button>
+        <span class="score-pill" id="dz-score"></span>
+      </div>
+
+      <div class="card" id="dz-vocab-wrap" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">Wörter-Check</p>
+        <p class="lead">Перевір слова з минулих уроків.</p>
+        <div id="dz-vocab"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: слова до картинок + обговорення з dass / weil / denn ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Bilder und Symbole: Was ist das?</h2>
+      <p class="lead">A) Що це? Добери слово до картинки чи опису.</p>
+      <div class="card tinted-teal">
+        <p style="margin:0;">die Hütte · der Knoten · die Lilie (Fleur-de-Lis) als Symbol · die Pfadfindergruppe · der Pfadfindergruß · das Pfadfinderlager</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Корисні слова</span>
+          <b>die Hütte</b> — хатинка, курінь · <b>der Knoten</b> — вузол · <b>die Lilie</b> — лілія · <b>die Pfadfindergruppe</b> — скаутська група · <b>der Pfadfindergruß</b> — скаутське привітання · <b>das Pfadfinderlager</b> — скаутський табір
+        </div>
+      </div>
+      <div class="card" id="ub1-pic"></div>
+
+      <p class="lead" style="margin-top:18px;">B) З якою молодіжною організацією пов'язані ці картинки? Четверо друзів обговорюють. Доповни їхні репліки — зверни увагу на порядок слів.</p>
+      <div class="card" id="ub1-list">
+        <div class="fill-item"><span class="num">1)</span> <b>A:</b> Ich bin nicht sicher, aber ich meine, <select class="blank inline" data-ans="dass diese Organisation „Pfadfinder“ heißt" aria-label="Lücke 1"><option value="">—</option><option>dass heißt diese Organisation „Pfadfinder“</option><option>dass diese Organisation „Pfadfinder“ heißt</option><option>dass diese Organisation heißen „Pfadfinder“</option></select>.</div>
+        <div class="fill-item"><span class="num">2)</span> <b>A:</b> Die Personen auf dem Bild <select class="blank inline" data-ans="sind" aria-label="Lücke 2"><option value="">—</option><option>ist</option><option>sein</option><option>sind</option></select> Pfadfinder.</div>
+        <div class="fill-item"><span class="num">3)</span> <b>B:</b> Ich meine, du hast Recht, <select class="blank inline" data-ans="denn" aria-label="Lücke 3"><option value="">—</option><option>denn</option><option>weil</option><option>dass</option></select> auf den Bildern sind gerade die Symbole von Pfadfindern zu sehen.</div>
+        <div class="fill-item"><span class="num">4)</span> <b>C:</b> Ja, stimmt. Ich weiß genau, dass die Lilie das Symbol der Pfadfinder <input type="text" class="blank-input inline" data-ans="ist" aria-label="Lücke 4">.</div>
+        <div class="fill-item"><span class="num">5)</span> <b>C:</b> Ich bin sicher, dass Pfadfinder oft im Zeltlager <select class="blank inline" data-ans="übernachten" aria-label="Lücke 5"><option value="">—</option><option>übernachtet</option><option>übernachten</option><option>zu übernachten</option></select>.</div>
+        <div class="fill-item"><span class="num">6)</span> <b>D:</b> Nein, ich stimme euch nicht zu. Ich glaube, das sind Touristen, <select class="blank inline" data-ans="denn" aria-label="Lücke 6"><option value="">—</option><option>weil</option><option>dass</option><option>denn</option></select> sie haben Rucksäcke.</div>
+        <div class="fill-item"><span class="num">7)</span> <b>D:</b> Das sind Touristen, weil sie Rucksäcke <input type="text" class="blank-input inline" data-ans="haben" aria-label="Lücke 7"> <i>(haben)</i>.</div>
+        <div class="fill-item"><span class="num">8)</span> <b>B:</b> Aber Touristen machen keinen Pfadfindergruß! Ich bin sicher, dass das Pfadfinder <input type="text" class="blank-input inline" data-ans="sind" aria-label="Lücke 8"> <i>(sein)</i>.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub1-check">Prüfen</button>
+        <button class="btn secondary" id="ub1-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub1-score"></span>
+      </div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Зверни увагу</span>
+        Після <b>dass</b> і <b>weil</b> дієслово йде в <b>кінець</b>: <i>…, dass diese Organisation „Pfadfinder“ <b>heißt</b>; …, weil sie Rucksäcke <b>haben</b></i>. Після <b>denn</b> порядок звичайний — дієслово на <b>другому</b> місці: <i>…, denn sie <b>haben</b> Rucksäcke</i>. За змістом <b>weil</b> і <b>denn</b> однакові — «бо, тому що».
+      </div>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Jetzt ihr! · Diskussion</p>
+        <p style="margin:0;">У малих групах: кожен каже, з якою організацією пов'язані картинки, і обґрунтовує думку:<br>
+          • Ich bin nicht sicher, aber ich meine, dass … heißt.<br>
+          • Ich meine, du hast Recht, denn … .<br>
+          • Ja, stimmt. Ich weiß genau, dass … . / Ich bin sicher, dass … .<br>
+          • Nein, ich stimme euch nicht zu. Ich glaube, das sind …, denn … .</p>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 2: дієслова до словосполучень ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Was machen Pfadfinder? Welche Verben passen?</h2>
+      <p class="lead">A) Впиши дієслово, яке підходить. Іноді правильних варіантів кілька.</p>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Verben</p>
+        <p style="margin:0;">bauen · gründen · grüßen · <s>machen</s> · leisten · lösen · organisieren · schützen · sein · übernehmen</p>
+        <p style="margin:6px 0 0;"><i>Beispiel:</i> Knoten <b>machen</b></p>
+      </div>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> eine Hütte <input type="text" class="blank-input inline" data-ans="bauen" aria-label="Verb 1"></div>
+        <div class="fill-item"><span class="num">2)</span> ein Zeltlager <input type="text" class="blank-input inline wide" data-ans="organisieren|machen|bauen" aria-label="Verb 2"></div>
+        <div class="fill-item"><span class="num">3)</span> Erste Hilfe <input type="text" class="blank-input inline" data-ans="leisten" aria-label="Verb 3"></div>
+        <div class="fill-item"><span class="num">4)</span> die Umwelt <input type="text" class="blank-input inline" data-ans="schützen" aria-label="Verb 4"></div>
+        <div class="fill-item"><span class="num">5)</span> Konflikte <input type="text" class="blank-input inline" data-ans="lösen" aria-label="Verb 5"></div>
+        <div class="fill-item"><span class="num">6)</span> eine Pfadfindergruppe <input type="text" class="blank-input inline wide" data-ans="gründen|organisieren" aria-label="Verb 6"></div>
+        <div class="fill-item"><span class="num">7)</span> mit der rechten Hand <input type="text" class="blank-input inline" data-ans="grüßen" aria-label="Verb 7"></div>
+        <div class="fill-item"><span class="num">8)</span> Verantwortung <input type="text" class="blank-input inline wide" data-ans="übernehmen" aria-label="Verb 8"></div>
+        <div class="fill-item"><span class="num">9)</span> hilfsbereit <input type="text" class="blank-input inline" data-ans="sein" aria-label="Verb 9"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Переклад</span>
+        будувати хатинку · організувати наметовий табір · надавати першу допомогу · захищати довкілля · розв'язувати конфлікти · заснувати скаутську групу · вітатися правою рукою · брати на себе відповідальність · бути готовим допомогти
+      </div>
+
+      <p class="lead" style="margin-top:18px;">B) Чого вчаться скаути? Встав словосполучення з А з інфінітивом із <b>zu</b>.</p>
+      <div class="card" id="ub2b-list">
+        <div class="fill-item"><span class="num">1)</span> Bei den Pfadfindern lernt man, Erste Hilfe <input type="text" class="blank-input inline wide" data-ans="zu leisten" aria-label="Lücke 1">.</div>
+        <div class="fill-item"><span class="num">2)</span> Es ist wichtig, Konflikte friedlich <input type="text" class="blank-input inline wide" data-ans="zu lösen" aria-label="Lücke 2">.</div>
+        <div class="fill-item"><span class="num">3)</span> Pfadfinder versuchen, Verantwortung <input type="text" class="blank-input inline wide" data-ans="zu übernehmen" aria-label="Lücke 3">.</div>
+        <div class="fill-item"><span class="num">4)</span> Im Zeltlager haben wir beschlossen, eine Hütte im Wald <input type="text" class="blank-input inline wide" data-ans="zu bauen" aria-label="Lücke 4">.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2b-check">Prüfen</button>
+        <button class="btn secondary" id="ub2b-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2b-score"></span>
+      </div>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Jetzt ihr! · Kettenspiel</p>
+        <p style="margin:0;">Ланцюжком: кожен повторює попереднє й додає своє словосполучення.<br>
+          <b>A:</b> Pfadfinder bauen Hütten.<br>
+          <b>B:</b> Pfadfinder bauen Hütten und leisten Erste Hilfe.<br>
+          <b>C:</b> Pfadfinder bauen Hütten, leisten Erste Hilfe und …</p>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: читання — текст про скаутський рух (власна адаптація) ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Die Pfadfinderbewegung</h2>
+      <p class="lead">Прочитай текст. У класі — у групах по четверо: кожен читає <b>один</b> абзац і розповідає про нього іншим (3–4 речення).</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Abschnitt 1</p>
+        <p style="margin:0;">Die Pfadfinderbewegung ist über hundert Jahre alt. Im Jahr 1907 organisierte der britische General Robert Baden-Powell ein Zeltlager auf einer kleinen Insel in England. Etwa 20 Jungen nahmen daran teil. Das Projekt war ein großer Erfolg, und schon 1909 entstand auch eine Organisation für Mädchen. Im selben Jahr gründete man die ersten Gruppen in Deutschland, zum Beispiel in Berlin und in München. Heute gibt es Pfadfinder fast in allen Ländern der Welt. Die Gruppen sind nach dem Alter geteilt: So lernen Kinder und Jugendliche zusammen mit Gleichaltrigen.</p>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Abschnitt 2</p>
+        <p style="margin:0;">Pfadfinderinnen und Pfadfinder verbringen viel Zeit in der Natur. Sie zelten, bauen Hütten, machen Knoten und finden den Weg mit Karte und Kompass. Sie lernen auch, Erste Hilfe zu leisten. In den Ferien fahren sie ins Zeltlager oder zu internationalen Sommercamps, sie wandern und nehmen an Umweltaktionen und Hilfsprojekten teil. Viele Gruppen sind auch kreativ: Sie basteln, machen Musik und spielen Theater. Wichtig ist das Miteinander: Man hilft sich gegenseitig und auch Menschen in Not.</p>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Abschnitt 3</p>
+        <p style="margin:0;">Pfadfinder möchten wichtige Fähigkeiten entwickeln: im Team arbeiten, in der Natur zurechtkommen, Verantwortung tragen. Ein bekanntes Motto lautet: „Jeden Tag eine gute Tat.“ Pfadfinder sollen selbstständig, ehrlich und hilfsbereit sein. Sie lernen, die Umwelt zu schützen, Konflikte friedlich zu lösen und Verantwortung zu übernehmen. Ein anderes Motto hört man besonders oft in Deutschland, Österreich und der Schweiz: „Allzeit bereit“. Das heißt: Ein Pfadfinder ist immer bereit zu helfen.</p>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Abschnitt 4</p>
+        <p style="margin:0;">Das bekannteste Symbol der Pfadfinder ist die Lilie (Fleur-de-Lis). Wie die Nadel eines Kompasses zeigt sie den richtigen Weg im Leben. Pfadfinder grüßen mit drei Fingern der rechten Hand. Sie tragen oft Pfadfinderkleidung: ein Hemd, ein Halstuch und Abzeichen. Die Kinder und Jugendlichen arbeiten in kleinen Gruppen, und erfahrene Erwachsene leiten sie. Jedes Jahr am 22. Februar feiern Pfadfinder auf der ganzen Welt den Weltdenktag – das ist der Geburtstag von Robert Baden-Powell und von seiner Frau Olave.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Корисні слова</span>
+          <b>der Erfolg</b> — успіх · <b>entstehen</b> — виникати · <b>Gleichaltrige</b> — однолітки · <b>Menschen in Not</b> — люди, які потрапили в біду · <b>die Fähigkeit</b> — уміння, здатність · <b>zurechtkommen</b> — давати собі раду · <b>die gute Tat</b> — добра справа · <b>ehrlich</b> — чесний · <b>allzeit bereit</b> — завжди готовий · <b>die Nadel</b> — стрілка (компаса) · <b>das Halstuch</b> — шийна хустка · <b>das Abzeichen</b> — значок, нашивка · <b>erfahren</b> — досвідчений · <b>der Weltdenktag</b> — Всесвітній день думки (свято скаутів)
+        </div>
+      </div>
+
+      <p class="lead" style="margin-top:18px;">A) Добери заголовок до кожного абзацу.</p>
+      <div class="card" id="ub3-list">
+        <div class="fill-item"><span class="num">1)</span> Abschnitt 1: <select class="blank inline" data-ans="Wie alles begann" aria-label="Überschrift 1"><option value="">—</option><option>Symbole und Traditionen</option><option>Wie alles begann</option><option>Abenteuer in der Natur</option><option>Ziele und Mottos</option></select></div>
+        <div class="fill-item"><span class="num">2)</span> Abschnitt 2: <select class="blank inline" data-ans="Abenteuer in der Natur" aria-label="Überschrift 2"><option value="">—</option><option>Symbole und Traditionen</option><option>Wie alles begann</option><option>Abenteuer in der Natur</option><option>Ziele und Mottos</option></select></div>
+        <div class="fill-item"><span class="num">3)</span> Abschnitt 3: <select class="blank inline" data-ans="Ziele und Mottos" aria-label="Überschrift 3"><option value="">—</option><option>Symbole und Traditionen</option><option>Wie alles begann</option><option>Abenteuer in der Natur</option><option>Ziele und Mottos</option></select></div>
+        <div class="fill-item"><span class="num">4)</span> Abschnitt 4: <select class="blank inline" data-ans="Symbole und Traditionen" aria-label="Überschrift 4"><option value="">—</option><option>Symbole und Traditionen</option><option>Wie alles begann</option><option>Abenteuer in der Natur</option><option>Ziele und Mottos</option></select></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+
+      <p class="lead" style="margin-top:18px;">B) Richtig oder falsch?</p>
+      <div class="card" id="ub3-quiz"></div>
+
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Jeden Tag eine gute Tat! Was war deine gute Tat heute?</p>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4: думка з dass / weil / denn — склади речення ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Meine Meinung über die Pfadfinder</h2>
+      <p class="lead">Склади речення з карток. Пам'ятай: після <b>dass</b> і <b>weil</b> дієслово в кінці, після <b>denn</b> — на другому місці.</p>
+      <div class="card" id="ub4-order"></div>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Jetzt ihr! · Möchtest du Pfadfinder werden?</p>
+        <p style="margin:0;">Кожен відповідає одним-двома реченнями й обґрунтовує:<br>
+          • Ich möchte (nicht) Pfadfinder / Pfadfinderin werden, weil … .<br>
+          • Ich finde die Pfadfinder toll / nicht so interessant, denn … .<br>
+          • Ich meine, dass Pfadfinder … .</p>
+      </div>
+    </section>
+
+    <!-- ===== ПРИКІНЦЕВА ПАНЕЛЬ ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div id="lz-check"></div>
+
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Plakat „Pfadfinder in der Ukraine“: Auch in der Ukraine gibt es eine Pfadfinderorganisation – „Plast“. Such Informationen über Plast (im Internet, in der Bibliothek, oder frag deine Eltern und Bekannten) und mach ein Plakat (A4, auf Papier oder digital). 1) Wann und wo hat man Plast gegründet? 2) Welches Symbol und welches Motto hat Plast? Zeichne oder klebe das Symbol auf. 3) Schreib 4–5 Sätze, was die Mitglieder von Plast machen – mit mindestens vier Wortverbindungen aus Üb. 2 (z. B. Knoten machen, Erste Hilfe leisten, Verantwortung übernehmen, die Umwelt schützen). 4) Vergleiche: Schreib zwei Sätze, was Plast und die Pfadfinder in Deutschland gemeinsam haben (z. B. „Ich habe gelesen, dass …“, „Beide Organisationen …“). 5) Schreib zum Schluss einen Satz mit „weil“ oder „denn“: Möchtest du bei Plast mitmachen oder nicht? Nächstes Mal hängen wir die Plakate auf und vergleichen: Was ist ähnlich, was ist anders?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Плакат «Скаути в Україні»: в Україні теж є скаутська організація — «Пласт». Знайди інформацію про Пласт (в інтернеті, у бібліотеці або запитай батьків і знайомих) і зроби плакат (A4, на папері чи в цифровому вигляді). 1) Коли й де заснували Пласт? 2) Який символ і який девіз має Пласт? Намалюй або наклей символ. 3) Напиши 4–5 речень про те, чим займаються пластуни, — щонайменше з чотирма словосполученнями з Üb. 2 (напр. Knoten machen, Erste Hilfe leisten, Verantwortung übernehmen, die Umwelt schützen). 4) Порівняй: напиши два речення про те, що спільного в Пласту й німецьких скаутів (напр. „Ich habe gelesen, dass …“, „Beide Organisationen …“). 5) Наприкінці напиши одне речення з „weil“ або „denn“: ти хотів би / хотіла б долучитися до Пласту чи ні? Наступного уроку розвісимо плакати й порівняємо: що схоже, а що відрізняється?
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Wörter zum Lernen</p>
+        <div class="chip-row" id="vocabChips"></div>
+      </div>
+
+      <div class="card" id="lessonGramWrap">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="lessonGram"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../data/glossary-data.js"></script>
+<script src="../../../data/lessons-data.js"></script>
+<script src="../../../data/grammar-data.js"></script>
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  const LEKTION_KLAS = "9", LEKTION_MODUL = "B", LEKTION_LEKTION = 11;
+  const LEKTION_PREV_LEKTION = 10;
+
+  // ===== Цілі уроку «Ich kann …» (Start) + самооцінка-світлофор (Fertig!) =====
+  const LERNZIELE = [
+    {de: "Ich kann die Symbole und Aktivitäten der Pfadfinder auf Deutsch nennen.", uk: "Я можу назвати німецькою символи й заняття скаутів."},
+    {de: "Ich kann einen Text über die Pfadfinderbewegung lesen und die wichtigsten Informationen finden.", uk: "Я можу прочитати текст про скаутський рух і знайти в ньому головне."},
+    {de: "Ich kann meine Meinung mit „dass“, „weil“ und „denn“ begründen.", uk: "Я можу обґрунтувати свою думку за допомогою «dass», «weil» і «denn»."}
+  ];
+  buildLernziele('lz-start', 'lz-check', LERNZIELE);
+
+  // ===== Хук входу: fakt (у 9-B-10 був undu) =====
+  buildHook('hook', {type: 'fakt', pic: '⛺', q: "Wo fand 1907 das erste Pfadfinderlager statt?",
+    opts: ["in den Alpen in Österreich", "auf einer Insel in England", "an einem See bei Berlin"], correct: "auf einer Insel in England",
+    fakt: "Das erste Pfadfinderlager fand im Sommer 1907 auf der kleinen Insel Brownsea im Süden Englands statt. Etwa 20 Jungen lebten dort eine Woche lang in Zelten.",
+    uk: "Перший скаутський табір відбувся влітку 1907 року на маленькому острові Браунсі на півдні Англії. Близько 20 хлопців прожили там тиждень у наметах."});
+
+  (function renderLessonVocab(){
+    const box = document.getElementById('vocabChips');
+    if (!box || typeof GLOSSARY === 'undefined') return;
+    const words = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_LEKTION
+    );
+    if (words.length === 0){
+      box.innerHTML = '<p class="empty-note">Слова для цього уроку ще не додані в глосарій.</p>';
+      return;
+    }
+    box.innerHTML = words.map(w =>
+      '<span class="chip static">' + w.de + ' — ' + w.uk + '</span>'
+    ).join('');
+  })();
+
+  // ===== Граматика до цього уроку у вкладці Fertig (поле gram у lessons-data.js) =====
+  (function renderLessonGrammar(){
+    const wrap = document.getElementById('lessonGramWrap');
+    const box = document.getElementById('lessonGram');
+    if (!wrap || !box) return;
+    const hide = () => { wrap.style.display = 'none'; };
+    if (typeof LESSONS === 'undefined' || typeof GRAMMAR === 'undefined') return hide();
+    const me = LESSONS.find(l => l.klas === LEKTION_KLAS && l.modul === LEKTION_MODUL && l.lektion === LEKTION_LEKTION);
+    const topics = ((me && me.gram) || []).map(id => GRAMMAR.find(t => t.id === id)).filter(t => t && t.opublikovano > 0);
+    if (topics.length === 0) return hide();
+    const src = document.querySelector('script[src$="data/grammar-data.js"]').getAttribute('src');
+    const root = src.slice(0, src.length - 'data/grammar-data.js'.length);
+    box.innerHTML = topics.map(t =>
+      '<a class="gram-link" href="' + root + 'gramatyka/temy/' + t.id + '.html">'
+      + '<span class="k">' + t.uk + '</span>' + t.tema + '</a>'
+    ).join('');
+  })();
+
+  // ===== Wörter-Check у вкладці Hausaufgabe =====
+  function guessPos(de){
+    var base = (de || '').replace(/\([^)]*\)/g, '').trim();
+    if(/^(der|die|das)(\/(der|die|das))?\s/.test(base)) return 'noun';
+    if(/^sich\s/.test(base)) return 'verb';
+    if(/^am\s/.test(base)) return 'other'; // "am liebsten", "am besten" — прислівникова найвища форма, не дієслово
+    if(/\(\+(Gen|Dat|Akk)\.?\)/.test(de)) return 'prep';
+    var words = base.split(/\s+/);
+    var last = words[words.length - 1];
+    if(/(en|ern|eln)$/.test(last) && last === last.toLowerCase()) return 'verb';
+    return 'other'; // прикметники / прислівники / сталі вирази
+  }
+
+  (function renderDzVocabCheck(){
+    const wrap = document.getElementById('dz-vocab-wrap');
+    const box = document.getElementById('dz-vocab');
+    if (!wrap || !box || typeof GLOSSARY === 'undefined') return;
+    const same = (w, l) => w.klas === l.klas && w.modul === l.modul && w.lektion === l.lektion;
+    const prevWords = LEKTION_PREV_LEKTION ? GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_PREV_LEKTION
+    ) : [];
+
+    // Інтервальне повторення: ще 2+ слова з уроків 2–5 тому (той самий клас, порядок — як у LESSONS)
+    let olderWords = [];
+    if (typeof LESSONS !== 'undefined'){
+      const mine = LESSONS.filter(l => l.klas === LEKTION_KLAS);
+      const idx = mine.findIndex(l => l.modul === LEKTION_MODUL && l.lektion === LEKTION_LEKTION);
+      if (idx > 0){
+        const older = mine.slice(Math.max(0, idx - 5), idx)
+          .filter(l => !(l.modul === LEKTION_MODUL && l.lektion === LEKTION_PREV_LEKTION));
+        olderWords = GLOSSARY.filter(w => older.some(l => same(w, l)));
+      }
+    }
+    const fromPrev = shuffleArray(prevWords).slice(0, olderWords.length ? 4 : 6);
+    const pool = shuffleArray(fromPrev.concat(shuffleArray(olderWords).slice(0, 6 - fromPrev.length)));
+    if (pool.length < 3){ wrap.style.display = 'none'; return; }
+
+    const quizData = pool.map(w => {
+      const pos = guessPos(w.de);
+      let sameKind = GLOSSARY.filter(g => g.uk !== w.uk && guessPos(g.de) === pos);
+      if(sameKind.length < 2) sameKind = GLOSSARY.filter(g => g.uk !== w.uk);
+      const distractors = shuffleArray(sameKind).slice(0, 2).map(g => g.uk);
+      return { q: w.de, opts: [w.uk, ...distractors], correct: w.uk };
+    });
+    buildQuiz('dz-vocab', quizData);
+  })();
+
+  // Hausaufgabe: презентація Дарини — перевірка зворотів з минулого уроку
+  wireBlanks('dz');
+
+  // Üb. 1: A — слово до картинки; B — обговорення з dass / weil / denn
+  buildPicture('ub1-pic', [
+    {pic: "🪢", opts: ["der Knoten", "die Hütte", "die Lilie"], correct: "der Knoten"},
+    {pic: "🛖", opts: ["das Pfadfinderlager", "die Hütte", "der Pfadfindergruß"], correct: "die Hütte"},
+    {pic: "⚜️", opts: ["die Pfadfindergruppe", "der Knoten", "die Lilie"], correct: "die Lilie"},
+    {pic: "⛺", q: "Viele Zelte im Wald, Pfadfinder bleiben hier zwei Wochen.", opts: ["das Pfadfinderlager", "die Lilie", "die Pfadfindergruppe"], correct: "das Pfadfinderlager"},
+    {pic: "🎒", q: "Jungen und Mädchen in Hemd und Halstuch wandern zusammen.", opts: ["der Pfadfindergruß", "die Pfadfindergruppe", "die Hütte"], correct: "die Pfadfindergruppe"},
+    {pic: "✋", q: "Man hebt drei Finger der rechten Hand.", opts: ["die Hütte", "das Pfadfinderlager", "der Pfadfindergruß"], correct: "der Pfadfindergruß"}
+  ]);
+  wireBlanks('ub1');
+
+  // Üb. 2: A — дієслова до словосполучень; B — інфінітив із zu
+  wireBlanks('ub2');
+  wireBlanks('ub2b');
+
+  // Üb. 3: A — заголовки до абзаців; B — richtig / falsch
+  wireBlanks('ub3');
+  buildQuiz('ub3-quiz', [
+    {q: "Das erste Pfadfinderlager gab es in Deutschland.", opts: ["richtig", "falsch"], correct: "falsch"},
+    {q: "Die Organisation für Mädchen entstand 1909.", opts: ["richtig", "falsch"], correct: "richtig"},
+    {q: "Pfadfinder lernen, Erste Hilfe zu leisten.", opts: ["falsch", "richtig"], correct: "richtig"},
+    {q: "Pfadfinder machen nur Sport, aber keine Musik und kein Theater.", opts: ["falsch", "richtig"], correct: "falsch"},
+    {q: "Ein Motto der Pfadfinder lautet: „Jeden Tag eine gute Tat.“", opts: ["richtig", "falsch"], correct: "richtig"},
+    {q: "Pfadfinder grüßen mit drei Fingern der linken Hand.", opts: ["richtig", "falsch"], correct: "falsch"},
+    {q: "Die Lilie zeigt wie ein Kompass den richtigen Weg im Leben.", opts: ["falsch", "richtig"], correct: "richtig"},
+    {q: "Am 22. Februar hat nur Robert Baden-Powell Geburtstag.", opts: ["falsch", "richtig"], correct: "falsch"}
+  ]);
+
+  // Üb. 4: речення з dass / weil / denn / zu
+  buildOrder('ub4-order', [
+    {words: ["Ich meine,", "dass", "Pfadfinder", "viel Zeit", "in der Natur", "verbringen"], end: ".",
+      alt: ["Ich meine, dass Pfadfinder in der Natur viel Zeit verbringen"]},
+    {words: ["Ich weiß genau,", "dass", "die Lilie", "das Symbol der Pfadfinder", "ist"], end: ".",
+      alt: ["Ich weiß genau, dass das Symbol der Pfadfinder die Lilie ist"]},
+    {words: ["Meine Schwester", "möchte", "Pfadfinderin", "werden,", "weil", "sie", "gern", "zeltet"], end: "."},
+    {words: ["Ich", "finde", "die Pfadfinder", "toll,", "denn", "sie", "helfen", "Menschen in Not"], end: "."},
+    {words: ["Pfadfinder", "lernen,", "Konflikte", "friedlich", "zu lösen"], end: ".", gross: true}
+  ]);
+
+  // Фінальна панель зі штампами
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['⚜️','🪢','⛺','🧭']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>

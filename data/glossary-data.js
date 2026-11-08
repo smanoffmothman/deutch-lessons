@@ -1145,5 +1145,17 @@ const GLOSSARY = [
   {de: "ablehnen (trennbar) (einen Vorschlag ablehnen)", uk: "відхиляти, відмовлятися", klas: "9", modul: "B", lektion: 10},
   {de: "Es besteht die Möglichkeit, … zu …", uk: "є можливість …", klas: "9", modul: "B", lektion: 10},
   {de: "Ich bin dabei!", uk: "Я з вами! / Я беру участь!", klas: "9", modul: "B", lektion: 10},
-  {de: "Ich habe nichts dagegen.", uk: "Я не проти.", klas: "9", modul: "B", lektion: 10}
+  {de: "Ich habe nichts dagegen.", uk: "Я не проти.", klas: "9", modul: "B", lektion: 10},
+  {de: "der Pfadfinder / die Pfadfinderin (die Pfadfinder / die Pfadfinderinnen)", uk: "скаут / скаутка", klas: "9", modul: "B", lektion: 11},
+  {de: "die Pfadfinderbewegung", uk: "скаутський рух", klas: "9", modul: "B", lektion: 11},
+  {de: "das Pfadfinderlager (die Pfadfinderlager)", uk: "скаутський табір", klas: "9", modul: "B", lektion: 11},
+  {de: "der Knoten (die Knoten) (einen Knoten machen)", uk: "вузол (зав'язувати вузол)", klas: "9", modul: "B", lektion: 11},
+  {de: "die Hütte (die Hütten) (eine Hütte bauen)", uk: "хатинка, курінь (будувати хатинку)", klas: "9", modul: "B", lektion: 11},
+  {de: "die Lilie (die Lilien)", uk: "лілія", klas: "9", modul: "B", lektion: 11},
+  {de: "der Gruß (die Grüße) (der Pfadfindergruß)", uk: "привітання (скаутське привітання)", klas: "9", modul: "B", lektion: 11},
+  {de: "Erste Hilfe leisten", uk: "надавати першу допомогу", klas: "9", modul: "B", lektion: 11},
+  {de: "Verantwortung übernehmen", uk: "брати на себе відповідальність", klas: "9", modul: "B", lektion: 11},
+  {de: "Konflikte lösen", uk: "розв'язувати конфлікти", klas: "9", modul: "B", lektion: 11},
+  {de: "das Halstuch (die Halstücher)", uk: "шийна хустка", klas: "9", modul: "B", lektion: 11},
+  {de: "die gute Tat (Jeden Tag eine gute Tat.)", uk: "добра справа (Щодня — добра справа.)", klas: "9", modul: "B", lektion: 11}
 ];

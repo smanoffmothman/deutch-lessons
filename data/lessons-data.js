@@ -1052,5 +1052,17 @@ const LESSONS = [
     gram: ["verben-dass-infinitiv", "trennbare-verben", "satzstellung-hauptsatz", "deklination-nomen"],
     hook: "undu",
     dz: "Unser Wochenprogramm: Wähle eine Jugendorganisation – zum Beispiel die Organisation von deinem Flyer, deine Organisation aus Üb. 4 oder eine neue (einen Jugendsportverein, ein Jugendorchester, eine Jugendorganisation für den Umweltschutz …). 1) Mach (auf Papier oder digital) einen Veranstaltungskalender wie im Club Phönix (Üb. 1): Montag bis Sonntag, mindestens acht Veranstaltungen mit Uhrzeit. 2) Schreib dazu eine Präsentation (7–8 Sätze) nach dem Muster aus Üb. 4: „Wir möchten das Freizeitprogramm eines / einer … präsentieren. Dazu gehören …“. Benutze mindestens einmal „… findet um … Uhr statt“, einmal „Es besteht auch die Möglichkeit, … zu …“ und einmal „Am … können Jugendliche … besuchen“. 3) Schreib zum Schluss zwei Fragen an die Zuhörer (z. B. „Findet ihr das Programm interessant? Möchtet ihr irgendetwas mitmachen?“). Nächstes Mal präsentiert ihr eure Programme, und die Klasse wählt mit „Ich schlage vor, … zu …“ und „Ich bin dabei!“ drei Veranstaltungen, die sie zusammen besuchen möchte."
+  },
+  {
+    klas: "9",
+    modul: "B",
+    lektion: 11,
+    nazva: "Jugendorganisationen: Die Pfadfinder",
+    opys: "Молодіжні організації: знайомимося зі скаутами (Pfadfinder) — називаємо їхні символи (лілія, скаутське привітання, табір), добираємо дієслова до занять (eine Hütte bauen, Erste Hilfe leisten, Verantwortung übernehmen), читаємо текст про історію, девізи й традиції скаутського руху та обґрунтовуємо свою думку з dass, weil і denn.",
+    file: "klas-9/modul-b/lektion-11.html",
+    nove: true,
+    gram: ["verben-dass-infinitiv", "kausalsaetze", "nebensaetze", "konjunktionen-position-null"],
+    hook: "fakt",
+    dz: "Plakat „Pfadfinder in der Ukraine“: Auch in der Ukraine gibt es eine Pfadfinderorganisation – „Plast“. Such Informationen über Plast (im Internet, in der Bibliothek, oder frag deine Eltern und Bekannten) und mach ein Plakat (A4, auf Papier oder digital). 1) Wann und wo hat man Plast gegründet? 2) Welches Symbol und welches Motto hat Plast? Zeichne oder klebe das Symbol auf. 3) Schreib 4–5 Sätze, was die Mitglieder von Plast machen – mit mindestens vier Wortverbindungen aus Üb. 2 (z. B. Knoten machen, Erste Hilfe leisten, Verantwortung übernehmen, die Umwelt schützen). 4) Vergleiche: Schreib zwei Sätze, was Plast und die Pfadfinder in Deutschland gemeinsam haben (z. B. „Ich habe gelesen, dass …“, „Beide Organisationen …“). 5) Schreib zum Schluss einen Satz mit „weil“ oder „denn“: Möchtest du bei Plast mitmachen oder nicht? Nächstes Mal hängen wir die Plakate auf und vergleichen: Was ist ähnlich, was ist anders?"
   }
 ];
