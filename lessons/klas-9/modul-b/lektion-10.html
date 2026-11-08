@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 10 · Modul B · Im Freizeitclub</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 9'},
+    {label: 'Урок 10: Im Freizeitclub'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 10 · MODUL B</span>
+        <h1>Im Freizeitclub: Was ist heute los?</h1>
+        <p class="sub">Клуби за інтересами: читаємо календар заходів молодіжного клубу «Phönix», шукаємо помилки в тексті про нього, домовляємося, які заходи відвідати разом, і презентуємо програму свого клубу.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Der Kalender</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Etwas stimmt nicht</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Was machen wir?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Unser Programm</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== ПАНЕЛЬ: вступ ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Was kann man in einem Jugendclub machen?</h2>
+      <div class="card">
+        <p>In vielen Städten gibt es Freizeitclubs für Jugendliche. Dort kann man Kurse besuchen, Sport treiben, Gesellschaftsspiele spielen oder einfach Freunde treffen. Was wann stattfindet, steht im Veranstaltungskalender. Heute lesen wir den Kalender des Jugendclubs <i>Phönix</i>, finden Fehler in einem Text über den Club, wählen zusammen drei Veranstaltungen und präsentieren ein Freizeitprogramm.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          У багатьох містах є клуби дозвілля для молоді. Там можна відвідувати курси, займатися спортом, грати в настільні ігри чи просто зустрічатися з друзями. Що й коли відбувається — написано в календарі заходів. Сьогодні читаємо календар молодіжного клубу <i>Phönix</i>, шукаємо помилки в тексті про клуб, разом обираємо три заходи й презентуємо програму дозвілля.
+        </div>
+      </div>
+
+      <div id="hook"></div>
+
+      <div id="lz-start"></div>
+
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Ich gehe jeden Mittwoch in den Club Phönix – da spielen wir Volleyball! Komm doch mit!</p>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: перевірка ДЗ (dz уроку 9-B-9: флаєр «Mitglieder gesucht!») ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: рекламний флаєр «Mitglieder gesucht!» для молодіжної організації — назва, де й коли збираються, хто може стати учасником, 4–5 речень про те, що там можна робити (зі словосполученнями з уроку), і щонайменше три запрошення з <b>інфінітивом із zu</b> (одне — з відокремлюваним дієсловом: <i>mitzumachen</i>), інфінітиви підкреслено.<br><br>
+        Розвісьте флаєри в класі: кожен обирає організацію, до якої хотів би приєднатися, і каже чому. А тепер перевір себе: Соня теж зробила флаєр. Обери правильну форму дієслова — із <b>zu</b> чи без нього?
+      </div>
+      <div class="card" id="dz-list" style="margin-top:16px;">
+        <div class="fill-item"><span class="num">1)</span> Hast du Lust, bei unserem Jugendsportverein <select class="blank inline" data-ans="mitzumachen" aria-label="Form 1"><option value="">—</option><option>mitmachen</option><option>zu mitmachen</option><option>mitzumachen</option></select>?</div>
+        <div class="fill-item"><span class="num">2)</span> Bei uns kannst du an Turngeräten <select class="blank inline" data-ans="trainieren" aria-label="Form 2"><option value="">—</option><option>zu trainieren</option><option>trainieren</option><option>zutrainieren</option></select>.</div>
+        <div class="fill-item"><span class="num">3)</span> Es macht Spaß, mit dem Tanzprogramm <select class="blank inline" data-ans="aufzutreten" aria-label="Form 3"><option value="">—</option><option>auftreten</option><option>zu auftreten</option><option>aufzutreten</option></select>.</div>
+        <div class="fill-item"><span class="num">4)</span> Vergiss nicht, deine Freunde <select class="blank inline" data-ans="mitzubringen" aria-label="Form 4"><option value="">—</option><option>mitzubringen</option><option>mitbringen</option><option>zu mitbringen</option></select>!</div>
+        <div class="fill-item"><span class="num">5)</span> Wir möchten zusammen zum Naturschutz <select class="blank inline" data-ans="beitragen" aria-label="Form 5"><option value="">—</option><option>beizutragen</option><option>zu beitragen</option><option>beitragen</option></select>.</div>
+        <div class="fill-item"><span class="num">6)</span> Ich finde es toll, im Jugendorchester neue Musikstücke <select class="blank inline" data-ans="zu üben" aria-label="Form 6"><option value="">—</option><option>zu üben</option><option>üben</option><option>zuüben</option></select>.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="dz-check">Prüfen</button>
+        <button class="btn secondary" id="dz-reset">Zurücksetzen</button>
+        <span class="score-pill" id="dz-score"></span>
+      </div>
+
+      <div class="card" id="dz-vocab-wrap" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">Wörter-Check</p>
+        <p class="lead">Перевір слова з минулих уроків.</p>
+        <div id="dz-vocab"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: календар заходів клубу Phönix ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Der Veranstaltungskalender des Jugendclubs Phönix</h2>
+      <p class="lead">A) Роздивись календар заходів молодіжного клубу <i>Phönix</i>. Потім дай відповіді на запитання.</p>
+
+      <div class="card">
+        <table class="gtable">
+          <tr><th colspan="3">Freizeitclub <i>Phönix</i></th></tr>
+          <tr><td rowspan="3"><b>MO</b></td><td>16 Uhr</td><td>Gitarrenunterricht</td></tr>
+          <tr><td rowspan="2">18.30 Uhr</td><td>Fußball auf dem Sportplatz</td></tr>
+          <tr><td>Tischtennis und -fußball, Darts, Billard und verschiedene Gesellschaftsspiele</td></tr>
+          <tr><td rowspan="3"><b>DI</b></td><td>15 Uhr</td><td>Computerkurs</td></tr>
+          <tr><td rowspan="2">18.30 Uhr</td><td>Gesundes Kochen</td></tr>
+          <tr><td>Tischtennis und -fußball, Darts, Billard und verschiedene Gesellschaftsspiele</td></tr>
+          <tr><td><b>MI</b></td><td>18.30 Uhr</td><td>Volleyball in der Turnhalle<br>Tischtennis und -fußball, Darts, Billard und verschiedene Gesellschaftsspiele</td></tr>
+          <tr><td rowspan="3"><b>DO</b></td><td>16 Uhr</td><td>Gitarrenunterricht</td></tr>
+          <tr><td rowspan="2">18.30 Uhr</td><td>Basketball, Volleyball, Tennis</td></tr>
+          <tr><td>Tischtennis und -fußball, Darts, Billard und verschiedene Gesellschaftsspiele</td></tr>
+          <tr><td rowspan="3"><b>FR</b></td><td>15 Uhr</td><td>Computerkurs</td></tr>
+          <tr><td>16 Uhr</td><td>Besuch im Altersheim</td></tr>
+          <tr><td>19 Uhr</td><td>Disko</td></tr>
+          <tr><td rowspan="2"><b>SA</b></td><td>10 Uhr</td><td>Schachturnier</td></tr>
+          <tr><td>15 Uhr</td><td>Grillparty</td></tr>
+          <tr><td><b>SO</b></td><td>9–17 Uhr</td><td>Ausflug in die Nachbarstadt</td></tr>
+        </table>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Корисні слова</span>
+          <b>der Veranstaltungskalender</b> — календар заходів · <b>der Gitarrenunterricht</b> — уроки гри на гітарі · <b>das Gesellschaftsspiel</b> — настільна гра для компанії · <b>der Tischfußball</b> — настільний футбол · <b>das Altersheim</b> — будинок для літніх людей · <b>die Grillparty</b> — вечірка з грилем · <b>die Nachbarstadt</b> — сусіднє місто
+        </div>
+      </div>
+
+      <div class="card" id="ub1-quiz"></div>
+
+      <p class="lead" style="margin-top:18px;">B) Прокоментуй календар: доповни речення. Де в дужках дієслово — впиши його в потрібній формі.</p>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Redemittel</p>
+        <p style="margin:0;">• Am Montag / Dienstag / … <b>kann</b> man um … Uhr … <b>besuchen</b>.<br>
+          • Es besteht auch die Möglichkeit, um … Uhr … <b>zu besuchen</b> / <b>zu spielen</b> / <b>mitzumachen</b>.<br>
+          • Am Montag / Dienstag / … <b>organisiert</b> man auch … .<br>
+          • Der / Die / Das … <b>findet</b> um … Uhr <b>statt</b>.</p>
+      </div>
+      <div class="card" id="ub1-list">
+        <div class="fill-item"><span class="num">1)</span> Am Montag kann man um 16 Uhr Gitarrenunterricht <input type="text" class="blank-input inline" data-ans="besuchen" aria-label="Lücke 1">.</div>
+        <div class="fill-item"><span class="num">2)</span> Es besteht auch die Möglichkeit, um 18.30 Uhr Fußball auf dem Sportplatz <input type="text" class="blank-input inline wide" data-ans="zu spielen" aria-label="Lücke 2"> <i>(spielen)</i>.</div>
+        <div class="fill-item"><span class="num">3)</span> Am Dienstag <select class="blank inline" data-ans="organisiert" aria-label="Lücke 3"><option value="">—</option><option>besteht</option><option>organisiert</option><option>findet</option></select> man auch einen Kochkurs „Gesundes Kochen“.</div>
+        <div class="fill-item"><span class="num">4)</span> Der Computerkurs <select class="blank inline" data-ans="findet" aria-label="Lücke 4"><option value="">—</option><option>findet</option><option>besteht</option><option>organisiert</option></select> dienstags und freitags um 15 Uhr <input type="text" class="blank-input inline" data-ans="statt" aria-label="Lücke 5">.</div>
+        <div class="fill-item"><span class="num">5)</span> Am Freitag um 16 Uhr besteht die Möglichkeit, das Altersheim <input type="text" class="blank-input inline wide" data-ans="zu besuchen" aria-label="Lücke 6"> <i>(besuchen)</i>.</div>
+        <div class="fill-item"><span class="num">6)</span> Die Disko findet am Freitag um <input type="text" class="blank-input inline" data-ans="19" aria-label="Lücke 7"> Uhr statt.</div>
+        <div class="fill-item"><span class="num">7)</span> Am Samstag um 10 Uhr kann man an einem Schachturnier <input type="text" class="blank-input inline wide" data-ans="teilnehmen" aria-label="Lücke 8"> <i>(teilnehmen)</i>.</div>
+        <div class="fill-item"><span class="num">8)</span> Es besteht auch die Möglichkeit, am Sonntag beim Ausflug in die Nachbarstadt <input type="text" class="blank-input inline wide" data-ans="mitzumachen" aria-label="Lücke 9"> <i>(mitmachen)</i>.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub1-check">Prüfen</button>
+        <button class="btn secondary" id="ub1-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub1-score"></span>
+      </div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Зверни увагу</span>
+        Після <b>kann man</b> друге дієслово стоїть у кінці <b>без zu</b>: <i>kann man … besuchen</i>. Після <b>Es besteht die Möglichkeit, …</b> — з <b>zu</b> і комою: <i>…, Fußball zu spielen</i>; у відокремлюваних дієсловах <b>zu</b> стоїть усередині: <i>mit<b>zu</b>machen</i>. <b>stattfinden</b> — відокремлюване: <i>Der Kurs <b>findet</b> um 15 Uhr <b>statt</b>.</i>
+      </div>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Jetzt ihr! · Kettenspiel</p>
+        <p style="margin:0;">Прокоментуйте календар ланцюжком — кожен бере наступний день і використовує інший зворот з Redemittel:<br>
+          <b>A:</b> Am Montag kann man um 16 Uhr Gitarrenunterricht besuchen.<br>
+          <b>B:</b> Am Dienstag besteht die Möglichkeit, um 15 Uhr einen Computerkurs zu besuchen.<br>
+          <b>C:</b> Am Mittwoch findet um 18.30 Uhr …</p>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 2: Etwas stimmt nicht ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Etwas stimmt nicht! Korrigiere den Text.</h2>
+      <p class="lead">Текст про клуб <i>Phönix</i> написано з помилками. Звір кожне речення з календарем в Üb. 1: торкнися слова, яке не відповідає календарю, і впиши правильне. Якщо все правильно — «Fehlerfrei».</p>
+      <div class="card" id="ub2-fix"></div>
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Nein, das stimmt nicht! Den Club kann man überwiegend am Nachmittag besuchen.</p>
+      </div>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Jetzt ihr! · Nein, das stimmt nicht!</p>
+        <p style="margin:0;">Один читає речення з помилкою, інший заперечує й виправляє повним реченням:<br>
+          <b>A:</b> Die Disko findet am Samstagabend statt.<br>
+          <b>B:</b> Nein, das stimmt nicht! Die Disko findet am Freitag um 19 Uhr statt.</p>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: Vorschläge machen, zustimmen, ablehnen ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Was machen wir? Vorschlag, ja oder nein</h2>
+      <p class="lead">A) Розсортуй вирази: це пропозиція, згода чи відмова?</p>
+      <div class="card" id="ub3-sort"></div>
+
+      <p class="lead" style="margin-top:18px;">B) Ти, Макс і Оля — нові учасники клубу <i>Phönix</i>. Вам треба разом обрати <b>три</b> заходи. Обирай доречні репліки — підказка над варіантами скаже, що ти хочеш сказати.</p>
+      <div class="card" id="ub3-chat"></div>
+
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Jetzt ihr! · Drei Veranstaltungen</p>
+        <p style="margin:0;">У групах по троє: ви учасники клубу <i>Phönix</i>. Кожен пропонує один захід із календаря, інші погоджуються або відмовляються (з причиною). Домовтеся про три заходи й назвіть їх класу: <i>Wir besuchen am … um … Uhr …</i></p>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4: презентація програми дозвілля ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wir präsentieren unser Freizeitprogramm</h2>
+      <p class="lead">A) Учасники молодіжного оркестру «Melodie» презентують свою програму. Встав слова в текст.</p>
+      <div class="card" id="ub4-bank"></div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Зверни увагу</span>
+        <i>das Freizeitprogramm <b>eines</b> Jugendorchesters / <b>eines</b> Jugendclubs</i> (der, das → eines …s) · <i>das Freizeitprogramm <b>einer</b> Jugendorganisation</i> (die → einer) — це родовий відмінок (Genitiv): «програма дозвілля якогось оркестру / організації».
+      </div>
+
+      <p class="lead" style="margin-top:18px;">B) А тепер ти: вигадай молодіжну організацію (напр. <i>Jugendsportverein, Jugendorchester, Jugendorganisation für den Umweltschutz</i>) і презентуй її програму. Текст набирай сам — вставка тексту тут вимкнена.</p>
+      <div class="card" id="ub4-w"></div>
+    </section>
+
+    <!-- ===== ПРИКІНЦЕВА ПАНЕЛЬ ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div id="lz-check"></div>
+
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Unser Wochenprogramm: Wähle eine Jugendorganisation – zum Beispiel die Organisation von deinem Flyer, deine Organisation aus Üb. 4 oder eine neue (einen Jugendsportverein, ein Jugendorchester, eine Jugendorganisation für den Umweltschutz …). 1) Mach (auf Papier oder digital) einen Veranstaltungskalender wie im Club Phönix (Üb. 1): Montag bis Sonntag, mindestens acht Veranstaltungen mit Uhrzeit. 2) Schreib dazu eine Präsentation (7–8 Sätze) nach dem Muster aus Üb. 4: „Wir möchten das Freizeitprogramm eines / einer … präsentieren. Dazu gehören …“. Benutze mindestens einmal „… findet um … Uhr statt“, einmal „Es besteht auch die Möglichkeit, … zu …“ und einmal „Am … können Jugendliche … besuchen“. 3) Schreib zum Schluss zwei Fragen an die Zuhörer (z. B. „Findet ihr das Programm interessant? Möchtet ihr irgendetwas mitmachen?“). Nächstes Mal präsentiert ihr eure Programme, und die Klasse wählt mit „Ich schlage vor, … zu …“ und „Ich bin dabei!“ drei Veranstaltungen, die sie zusammen besuchen möchte.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          «Наша програма на тиждень»: обери молодіжну організацію — наприклад, організацію з твого флаєра, свою організацію з Üb. 4 або нову (молодіжний спортивний клуб, молодіжний оркестр, молодіжну організацію з охорони довкілля…). 1) Склади (на папері чи в цифровому вигляді) календар заходів, як у клубі Phönix (Üb. 1): з понеділка до неділі, щонайменше вісім заходів із часом. 2) Напиши до нього презентацію (7–8 речень) за зразком з Üb. 4: „Wir möchten das Freizeitprogramm eines / einer … präsentieren. Dazu gehören …“. Використай щонайменше один раз „… findet um … Uhr statt“, один раз „Es besteht auch die Möglichkeit, … zu …“ і один раз „Am … können Jugendliche … besuchen“. 3) Наприкінці напиши два запитання до слухачів (напр. „Findet ihr das Programm interessant? Möchtet ihr irgendetwas mitmachen?“). Наступного уроку ви презентуєте свої програми, а клас за допомогою „Ich schlage vor, … zu …“ і „Ich bin dabei!“ обере три заходи, які хоче відвідати разом.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Wörter zum Lernen</p>
+        <div class="chip-row" id="vocabChips"></div>
+      </div>
+
+      <div class="card" id="lessonGramWrap">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="lessonGram"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../data/glossary-data.js"></script>
+<script src="../../../data/lessons-data.js"></script>
+<script src="../../../data/grammar-data.js"></script>
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  const LEKTION_KLAS = "9", LEKTION_MODUL = "B", LEKTION_LEKTION = 10;
+  const LEKTION_PREV_LEKTION = 9;
+
+  // ===== Цілі уроку «Ich kann …» (Start) + самооцінка-світлофор (Fertig!) =====
+  const LERNZIELE = [
+    {de: "Ich kann einen Veranstaltungskalender lesen und sagen, was man wann besuchen kann.", uk: "Я можу прочитати календар заходів і сказати, що й коли можна відвідати."},
+    {de: "Ich kann etwas vorschlagen und einem Vorschlag zustimmen oder ihn ablehnen.", uk: "Я можу щось запропонувати й погодитися з пропозицією або відхилити її."},
+    {de: "Ich kann das Freizeitprogramm eines Clubs präsentieren.", uk: "Я можу презентувати програму дозвілля клубу."}
+  ];
+  buildLernziele('lz-start', 'lz-check', LERNZIELE);
+
+  // ===== Хук входу: undu (у 9-B-9 хука ще не було) =====
+  buildHook('hook', {type: 'undu', q: "Was machst du nach der Schule? Besuchst du einen Club, einen Kurs oder eine AG?",
+    uk: "Що ти робиш після уроків? Ти відвідуєш клуб, курс чи гурток?", words: "10"});
+
+  (function renderLessonVocab(){
+    const box = document.getElementById('vocabChips');
+    if (!box || typeof GLOSSARY === 'undefined') return;
+    const words = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_LEKTION
+    );
+    if (words.length === 0){
+      box.innerHTML = '<p class="empty-note">Слова для цього уроку ще не додані в глосарій.</p>';
+      return;
+    }
+    box.innerHTML = words.map(w =>
+      '<span class="chip static">' + w.de + ' — ' + w.uk + '</span>'
+    ).join('');
+  })();
+
+  // ===== Граматика до цього уроку у вкладці Fertig (поле gram у lessons-data.js) =====
+  (function renderLessonGrammar(){
+    const wrap = document.getElementById('lessonGramWrap');
+    const box = document.getElementById('lessonGram');
+    if (!wrap || !box) return;
+    const hide = () => { wrap.style.display = 'none'; };
+    if (typeof LESSONS === 'undefined' || typeof GRAMMAR === 'undefined') return hide();
+    const me = LESSONS.find(l => l.klas === LEKTION_KLAS && l.modul === LEKTION_MODUL && l.lektion === LEKTION_LEKTION);
+    const topics = ((me && me.gram) || []).map(id => GRAMMAR.find(t => t.id === id)).filter(t => t && t.opublikovano > 0);
+    if (topics.length === 0) return hide();
+    const src = document.querySelector('script[src$="data/grammar-data.js"]').getAttribute('src');
+    const root = src.slice(0, src.length - 'data/grammar-data.js'.length);
+    box.innerHTML = topics.map(t =>
+      '<a class="gram-link" href="' + root + 'gramatyka/temy/' + t.id + '.html">'
+      + '<span class="k">' + t.uk + '</span>' + t.tema + '</a>'
+    ).join('');
+  })();
+
+  // ===== Wörter-Check у вкладці Hausaufgabe =====
+  function guessPos(de){
+    var base = (de || '').replace(/\([^)]*\)/g, '').trim();
+    if(/^(der|die|das)(\/(der|die|das))?\s/.test(base)) return 'noun';
+    if(/^sich\s/.test(base)) return 'verb';
+    if(/^am\s/.test(base)) return 'other'; // "am liebsten", "am besten" — прислівникова найвища форма, не дієслово
+    if(/\(\+(Gen|Dat|Akk)\.?\)/.test(de)) return 'prep';
+    var words = base.split(/\s+/);
+    var last = words[words.length - 1];
+    if(/(en|ern|eln)$/.test(last) && last === last.toLowerCase()) return 'verb';
+    return 'other'; // прикметники / прислівники / сталі вирази
+  }
+
+  (function renderDzVocabCheck(){
+    const wrap = document.getElementById('dz-vocab-wrap');
+    const box = document.getElementById('dz-vocab');
+    if (!wrap || !box || typeof GLOSSARY === 'undefined') return;
+    const same = (w, l) => w.klas === l.klas && w.modul === l.modul && w.lektion === l.lektion;
+    const prevWords = LEKTION_PREV_LEKTION ? GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_PREV_LEKTION
+    ) : [];
+
+    // Інтервальне повторення: ще 2+ слова з уроків 2–5 тому (той самий клас, порядок — як у LESSONS)
+    let olderWords = [];
+    if (typeof LESSONS !== 'undefined'){
+      const mine = LESSONS.filter(l => l.klas === LEKTION_KLAS);
+      const idx = mine.findIndex(l => l.modul === LEKTION_MODUL && l.lektion === LEKTION_LEKTION);
+      if (idx > 0){
+        const older = mine.slice(Math.max(0, idx - 5), idx)
+          .filter(l => !(l.modul === LEKTION_MODUL && l.lektion === LEKTION_PREV_LEKTION));
+        olderWords = GLOSSARY.filter(w => older.some(l => same(w, l)));
+      }
+    }
+    const fromPrev = shuffleArray(prevWords).slice(0, olderWords.length ? 4 : 6);
+    const pool = shuffleArray(fromPrev.concat(shuffleArray(olderWords).slice(0, 6 - fromPrev.length)));
+    if (pool.length < 3){ wrap.style.display = 'none'; return; }
+
+    const quizData = pool.map(w => {
+      const pos = guessPos(w.de);
+      let sameKind = GLOSSARY.filter(g => g.uk !== w.uk && guessPos(g.de) === pos);
+      if(sameKind.length < 2) sameKind = GLOSSARY.filter(g => g.uk !== w.uk);
+      const distractors = shuffleArray(sameKind).slice(0, 2).map(g => g.uk);
+      return { q: w.de, opts: [w.uk, ...distractors], correct: w.uk };
+    });
+    buildQuiz('dz-vocab', quizData);
+  })();
+
+  // Hausaufgabe: флаєр Соні — інфінітив із zu чи без
+  wireBlanks('dz');
+
+  // Üb. 1: A — квіз до календаря; B — коментар до календаря
+  const ub1Quiz = [
+    {q: "Wann kann man Gitarrenunterricht besuchen?", opts: ["am Montag und am Donnerstag um 16 Uhr", "am Dienstag und am Freitag um 15 Uhr", "am Mittwoch um 18.30 Uhr"], correct: "am Montag und am Donnerstag um 16 Uhr"},
+    {q: "Was kann man am Dienstag um 18.30 Uhr machen?", opts: ["Volleyball in der Turnhalle spielen", "gesund kochen lernen", "an einem Schachturnier teilnehmen"], correct: "gesund kochen lernen"},
+    {q: "An welchen Tagen findet der Computerkurs statt?", opts: ["am Montag und am Mittwoch", "am Samstag und am Sonntag", "am Dienstag und am Freitag"], correct: "am Dienstag und am Freitag"},
+    {q: "Wann findet die Disko statt?", opts: ["am Samstag um 15 Uhr", "am Freitag um 19 Uhr", "am Sonntag um 17 Uhr"], correct: "am Freitag um 19 Uhr"},
+    {q: "Was steht von Montag bis Donnerstag immer um 18.30 Uhr auf dem Programm?", opts: ["Tischtennis, Darts, Billard und Gesellschaftsspiele", "Basketball und Tennis", "ein Besuch im Altersheim"], correct: "Tischtennis, Darts, Billard und Gesellschaftsspiele"},
+    {q: "Wohin fahren die Jugendlichen am Sonntag?", opts: ["ins Altersheim", "zum Sportplatz", "in die Nachbarstadt"], correct: "in die Nachbarstadt"},
+    {q: "Wann kann man Basketball, Volleyball und Tennis spielen?", opts: ["am Donnerstag um 18.30 Uhr", "am Montag um 16 Uhr", "am Samstag um 10 Uhr"], correct: "am Donnerstag um 18.30 Uhr"}
+  ];
+  buildQuiz('ub1-quiz', ub1Quiz);
+  wireBlanks('ub1');
+
+  // Üb. 2: текст з помилками (звірити з календарем)
+  buildFixError('ub2-fix', [
+    {s: "Der Freizeitclub Phönix bietet Jugendlichen viele Freizeitmöglichkeiten an.", ok: true},
+    {s: "Fast jeden Tag können Jugendliche am Vormittag in den Club kommen.", wrong: 6, fix: "Nachmittag|Abend"},
+    {s: "Im Club kann man Klavierunterricht und einen Computerkurs besuchen.", wrong: 4, fix: "Gitarrenunterricht"},
+    {s: "Diskos, Partys und Klassenfahrten stehen auch oft auf dem Programm.", wrong: 3, fix: "Ausflüge"},
+    {s: "Jan besucht dienstags und freitags um 16 Uhr einen Computerkurs.", wrong: 6, fix: "15"},
+    {s: "Mittwochs spielt er mit seinen Freunden Volleyball in der Turnhalle.", ok: true},
+    {s: "Das Fußballspiel auf dem Sportplatz findet am Donnerstag statt.", wrong: 7, fix: "Montag"},
+    {s: "Am Samstag um 10 Uhr findet ein Schachturnier statt.", ok: true},
+    {s: "Die Disko findet am Samstagabend statt.", wrong: 4, fix: "Freitagabend|Freitag"},
+    {s: "Am Sonntag machen die Jugendlichen einen Ausflug in die Hauptstadt.", wrong: 9, fix: "Nachbarstadt"}
+  ]);
+
+  // Üb. 3: A — сортування виразів; B — діалог
+  buildSort('ub3-sort', {
+    buckets: ["Vorschlag machen", "zustimmen (+)", "ablehnen (–)"],
+    items: [
+      {t: "Ich schlage vor, … mitzumachen.", b: "Vorschlag machen"},
+      {t: "Gehen wir … !", b: "Vorschlag machen"},
+      {t: "Habt ihr Lust, … zu …?", b: "Vorschlag machen"},
+      {t: "Ich finde es interessant, … zu … . Seid ihr dabei?", b: "Vorschlag machen"},
+      {t: "Ja, prima!", b: "zustimmen (+)"},
+      {t: "Das ist eine tolle Idee!", b: "zustimmen (+)"},
+      {t: "Mit Vergnügen!", b: "zustimmen (+)"},
+      {t: "Ich habe nichts dagegen.", b: "zustimmen (+)"},
+      {t: "Ja, wir sind dabei!", b: "zustimmen (+)"},
+      {t: "Nein, gehen wir lieber … .", b: "ablehnen (–)"},
+      {t: "Schade, aber ich habe keine Lust, … zu … .", b: "ablehnen (–)"},
+      {t: "Ich finde es nicht besonders interessant, … zu … .", b: "ablehnen (–)"}
+    ]
+  });
+  buildChat('ub3-chat', {
+    partner: "Max",
+    steps: [
+      {them: "Hallo! Wir sind jetzt Mitglieder im Club Phönix. Wir möchten drei Veranstaltungen besuchen. Was schlägst du vor?"},
+      {you: ["Ich schlage vor, am Montag den Gitarrenunterricht zu besuchen.", "Ja, wir sind dabei!", "Nein, das stimmt nicht."], correct: 0, hint: "зроби пропозицію"},
+      {them: "Schade, aber ich habe keine Lust, Gitarre zu spielen. Habt ihr Lust, am Mittwoch Volleyball in der Turnhalle zu spielen?"},
+      {you: ["Ich schlage vor, Volleyball zu spielen.", "Das ist eine tolle Idee! Ich bin dabei!", "Schade, aber der Kurs findet um 15 Uhr statt."], correct: 1, hint: "погодься з пропозицією Макса"},
+      {them: "Super! Olja sagt: Am Freitag um 16 Uhr gibt es einen Besuch im Altersheim. Machen wir mit?"},
+      {you: ["Habt ihr Lust, Volleyball zu spielen?", "Nein, gehen wir lieber in die Turnhalle.", "Mit Vergnügen! Ich habe nichts dagegen."], correct: 2, hint: "погодься"},
+      {them: "Und am Samstag um 10 Uhr findet ein Schachturnier statt. Spielen wir mit?"},
+      {you: ["Nein, lieber nicht. Ich finde es nicht besonders interessant, Schach zu spielen.", "Ja, prima! Schach ist mein Hobby.", "Ich habe nichts dagegen."], correct: 0, hint: "відмов: шахи тобі нецікаві"},
+      {them: "Okay. Dann haben wir Volleyball und das Altersheim. Und die dritte Veranstaltung?"},
+      {you: ["Ja, wir sind dabei!", "Gehen wir am Freitag um 19 Uhr in die Disko!", "Schade, aber ich habe keine Lust."], correct: 1, hint: "запропонуй третій захід"},
+      {them: "Ja, prima! Also: am Mittwoch Volleyball, am Freitag das Altersheim und die Disko. Bis Mittwoch!"}
+    ]
+  });
+
+  // Üb. 4: A — банк слів; B — власна презентація (exit ticket)
+  buildWordBank('ub4-bank', {
+    text: "Wir möchten das Freizeitprogramm [eines] Jugendorchesters präsentieren. Unser Orchester heißt „Melodie“. Dazu [gehören] Musikunterricht, Proben und Konzerte. Im [Veranstaltungskalender] kann man auch Ausflüge und Partys sehen.\n\nEs gibt auch [Freizeitmöglichkeiten] wie Karaoke und verschiedene [Gesellschaftsspiele]. Am Montag und am Mittwoch können Jugendliche um 16 Uhr den Gitarrenunterricht [besuchen]. Am Freitag um 18 Uhr [findet] ein Konzert statt. Es besteht auch die Möglichkeit, im Sommer an einem Musikcamp [teilzunehmen].\n\nFindet ihr das Freizeitprogramm [interessant]? Möchtet ihr irgendetwas [mitmachen]?",
+    extra: ["einer", "statt", "zu besuchen"]
+  });
+  buildWriting('ub4-w', {
+    prompt: "Präsentiere das Freizeitprogramm deiner Jugendorganisation (5–6 Sätze). Почни так: <i>Wir möchten das Freizeitprogramm eines / einer … präsentieren.</i>",
+    words: "45-80",
+    must: ["Wir möchten", "Dazu gehören", "statt", "Es besteht auch die Möglichkeit"],
+    check: ["Назва організації", "Щонайменше два дні з часом", "Запитання до слухачів наприкінці"]
+  });
+
+  // Фінальна панель зі штампами
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🎸','🏐','♟️','🗓️']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
