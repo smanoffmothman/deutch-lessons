@@ -362,7 +362,7 @@ const PIDRUCHNYKY = [
         { id: "l2-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "42", typ: "bez-storinky" }
       ] },
       { id: "l3", label: "3", nazva: "Wer liest, lebt doppelt!", storinky: "43–66", dity: [
-        { id: "l3-a", label: "A", nazva: "In der Bibliothek", storinky: "44–49", typ: "vpravy", gram: ["adjektive-als-nomen"] },
+        { id: "l3-a", label: "A", nazva: "In der Bibliothek", storinky: "44–49", typ: "vpravy", gram: ["adjektive-als-nomen"], opublikovano: 10 },
         { id: "l3-b", label: "B", nazva: "Was lesen wir?", storinky: "50–55", typ: "vpravy", gram: ["relativsaetze"] },
         { id: "l3-c", label: "C", nazva: "Lieblingsbücher und -autoren", storinky: "56–61", typ: "vpravy", gram: ["deklination-nomen", "relativsaetze"] },
         { id: "l3-d", label: "D", nazva: "Wiederholung", storinky: "62–63", typ: "povtorennya", gram: ["adjektive-als-nomen", "relativsaetze", "deklination-nomen"] },

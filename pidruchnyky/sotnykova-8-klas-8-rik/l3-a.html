@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 3, Modul A: In der Bibliothek — Німецька мова 8 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 8 КЛАС</span>
+        <h1>Lektion 3 · Modul A: In der Bibliothek</h1>
+        <p class="sub">Урок про бібліотеку: читальний зал, каталог, читацький квиток, як позичати й повертати книжки. Граматика — прикметники в ролі іменників (der Bekannte, ein Jugendlicher, etwas Neues, alles Gute). Текст і діалог з озвученням, вправи, говоріння, письмо і підсумковий тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · In der Bibliothek</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · der Bekannte, ein Bekannter</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · etwas Neues</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Leserausweis</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власний текст + вправа на розуміння ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Erik entdeckt die Bibliothek</h2>
+      <p class="lead">Послухай і прочитай репортаж Маттео для шкільної газети. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l3-a-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Herr Krüger hat uns in Informatik eine Aufgabe gegeben: Jeder soll ein <span class="gl" data-uk="доповідь, реферат" data-lemma="das Referat">Referat</span> über eine Erfindung halten. Erik hat sofort „Roboter“ gewählt. „Kein Problem“, hat er gesagt, „im Internet finde ich alles.“ Zwei Abende lang hat er Videos gesehen — aber er hat <span class="gl" data-uk="нічого нового" data-lemma="nichts Neues">nichts Neues</span> gelernt. Da hat Daryna gesagt: „Komm doch mit in die Stadtbibliothek! Dort findest du bestimmt etwas Besseres.“ Ich bin auch mitgekommen — für unsere Schülerzeitung.</p>
+        <p>Die Stadtbibliothek liegt mitten in der Stadt, unweit des Rathauses. Drinnen ist es hell und ruhig. Im Erdgeschoss liegen Zeitungen und <span class="gl" data-uk="журнал" data-lemma="die Zeitschrift">Zeitschriften</span>, im ersten Stock gibt es einen großen <span class="gl" data-uk="читальний зал" data-lemma="der Lesesaal">Lesesaal</span> mit Computern und eine bunte <span class="gl" data-uk="куточок для читання" data-lemma="die Leseecke">Leseecke</span> für <span class="gl" data-uk="малеча, маленькі діти" data-lemma="die Kleinen (Pl.)">die Kleinen</span>. Daryna kennt hier fast alle. Sie kommt jeden Freitag und <span class="gl" data-uk="позичати (брати на певний час)" data-lemma="ausleihen">leiht</span> sich einen ganzen Stapel Bücher <span class="gl" data-uk="позичати (брати на певний час)" data-lemma="ausleihen">aus</span>. Die <span class="gl" data-uk="бібліотекарка" data-lemma="die Bibliothekarin">Bibliothekarin</span>, Frau Okafor, ist eine gute <span class="gl" data-uk="знайома" data-lemma="der / die Bekannte">Bekannte</span> von ihr.</p>
+        <p>Zuerst brauchte Erik einen <span class="gl" data-uk="читацький квиток" data-lemma="der Leserausweis">Leserausweis</span>. Für <span class="gl" data-uk="підлітки, молодь" data-lemma="der / die Jugendliche">Jugendliche</span> ist er <span class="gl" data-uk="безкоштовний" data-lemma="kostenlos">kostenlos</span>. Man braucht nur einen Ausweis und die Unterschrift der Eltern — zum Glück hatte Erik das Formular schon zu Hause ausgefüllt. Dann hat Frau Okafor ihm den digitalen <span class="gl" data-uk="каталог" data-lemma="der Katalog">Katalog</span> gezeigt. Erik hat „Roboter“ eingegeben und 143 <span class="gl" data-uk="результат пошуку" data-lemma="der Treffer">Treffer</span> bekommen. „Das ist zu viel!“, hat er gestöhnt. Frau Okafor hat gelacht: „Keine Sorge. Ich zeige dir <span class="gl" data-uk="найкраще" data-lemma="das Beste">das Beste</span>.“</p>
+        <p>Im <span class="gl" data-uk="полиця, стелаж" data-lemma="das Regal">Regal</span> „Technik“ hat sie drei Titel für ihn <span class="gl" data-uk="вибирати, підбирати" data-lemma="aussuchen">ausgesucht</span>: ein <span class="gl" data-uk="науково-популярна книжка" data-lemma="das Sachbuch">Sachbuch</span> für Jugendliche, ein dickes <span class="gl" data-uk="енциклопедія, енциклопедичний словник" data-lemma="das Lexikon">Lexikon</span> und eine Zeitschrift mit einem langen Artikel über Roboter in Krankenhäusern. Erik hat eine Stunde im Lesesaal gesessen, in den Büchern <span class="gl" data-uk="гортати" data-lemma="blättern (in + Dat.)">geblättert</span> und sich Notizen gemacht. Er hat <span class="gl" data-uk="багато цікавого" data-lemma="viel Interessantes">viel Interessantes</span> gefunden — und etwas Wichtiges verstanden: Im Internet gibt es alles, aber in der Bibliothek hilft dir jemand, das Richtige zu finden.</p>
+        <p>Das Lexikon durfte Erik nicht mitnehmen: <span class="gl" data-uk="довідкове видання" data-lemma="das Nachschlagewerk">Nachschlagewerke</span> bleiben in der Bibliothek. Die anderen Bücher kann man vier Wochen behalten und die <span class="gl" data-uk="термін" data-lemma="die Frist">Frist</span> online <span class="gl" data-uk="продовжувати (термін)" data-lemma="verlängern">verlängern</span>. Bringt man ein Buch zu spät zurück, muss man eine kleine <span class="gl" data-uk="плата, збір" data-lemma="die Gebühr">Gebühr</span> bezahlen. Erik hat sich das Rückgabedatum sofort ins Handy geschrieben.</p>
+        <p>Und Daryna? Sie hat <span class="gl" data-uk="щось зовсім нове" data-lemma="etwas Neues">etwas ganz Neues</span> mitgenommen: ihren ersten Krimi auf Deutsch, 400 Seiten! Gestern hat Erik sein Referat gehalten. Herr Krüger war begeistert: „Endlich mal etwas Neues!“ Und Erik will am Freitag wieder in die Bibliothek gehen — diesmal ohne Referat.</p>
+        <p><i>Matteo, 8b</i></p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">Substantivierte Adjektive · der Bekannte, etwas Neues</h2>
+      <p class="lead">Прикметник може стати іменником: <b>bekannt</b> (знайомий) → <b>der Bekannte</b> (знайомий чоловік). Такі слова пишемо з <b>великої</b> літери, але відмінюємо <b>як прикметники</b> — закінчення залежать від артикля перед ними.</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. Люди: der / die …</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Adjektiv</th><th>Nomen</th></tr>
+          <tr><td>bekannt</td><td><strong>der / die Bekannte</strong> — знайомий / знайома</td></tr>
+          <tr><td>verwandt</td><td><strong>der / die Verwandte</strong> — родич / родичка</td></tr>
+          <tr><td>jugendlich</td><td><strong>der / die Jugendliche</strong> — підліток</td></tr>
+          <tr><td>erwachsen</td><td><strong>der / die Erwachsene</strong> — дорослий / доросла</td></tr>
+          <tr><td>deutsch</td><td><strong>der / die Deutsche</strong> — німець / німкеня</td></tr>
+          <tr><td>klein</td><td><strong>die Kleinen</strong> — малеча</td></tr>
+        </table></div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. З der чи з ein — різні закінчення</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th></th><th>der / die</th><th>ein / eine / —</th></tr>
+          <tr><td class="gender">m</td><td>der Bekannt<strong>e</strong></td><td>ein Bekannt<strong>er</strong></td></tr>
+          <tr><td class="gender">f</td><td>die Bekannt<strong>e</strong></td><td>eine Bekannt<strong>e</strong></td></tr>
+          <tr><td class="gender">Pl.</td><td>die Bekannt<strong>en</strong></td><td>(viele) Bekannt<strong>e</strong></td></tr>
+        </table></div>
+        <div class="merke">У Dativ і Akkusativ (чоловічий рід) — <b>-en</b>, як у прикметника: Erik spricht mit <b>dem / einem</b> Bekannt<b>en</b>. Ich habe <b>einen</b> Bekannt<b>en</b> in Wien. У Dativ множини теж <b>-en</b>: zu meinen Verwandt<b>en</b>.</div>
+        <div class="merke">Порівняй: Paul aus Dresden ist <b>ein</b> Deutsch<b>er</b>. — <b>Der</b> Deutsch<b>e</b> heißt Paul.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. Речі й ідеї: etwas Neues, alles Gute</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Nach …</th><th>Endung</th><th>Beispiel</th></tr>
+          <tr><td>etwas, nichts, viel, wenig</td><td><strong>-es</strong></td><td>etwas Neu<strong>es</strong>, nichts Spannend<strong>es</strong>, viel Interessant<strong>es</strong></td></tr>
+          <tr><td>alles, das</td><td><strong>-e</strong></td><td>alles Gut<strong>e</strong>, das Best<strong>e</strong>, das Richtig<strong>e</strong></td></tr>
+        </table></div>
+        <div class="merke">Ці слова — середнього роду: <b>das</b> Neue, <b>das</b> Beste. Типові побажання й питання: <b>Alles Gute!</b> — Усього найкращого! <b>Was gibt es Neues?</b> — Що нового?</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">4. Типові помилки</p>
+        <p>✗ Ich lese etwas spannendes. → ✓ etwas <b>Spannendes</b> <i>(з великої)</i></p>
+        <p>✗ Ich habe nichts Interessante gefunden. → ✓ nichts Interessant<b>es</b></p>
+        <p>✗ Alles Gutes zum Geburtstag! → ✓ Alles Gut<b>e</b>!</p>
+        <p>✗ Er ist ein Deutsche. → ✓ ein Deutsch<b>er</b></p>
+        <p>✗ Viele Jugendlichen lesen Comics. → ✓ Viele Jugendlich<b>e</b></p>
+        <p>✗ Ich fahre zu meinen Verwandte. → ✓ zu meinen Verwandt<b>en</b></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: картинка → слово ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">In der Bibliothek</h2>
+      <p class="lead">Що на картинці? Вибери слово.</p>
+      <div class="card" id="ub1-pic"></div>
+    </section>
+
+    <!-- ===== Üb. 2: форма субстантивованого прикметника ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">der Bekannte, ein Bekannter</h2>
+      <p class="lead">Вибери правильну форму. Подивися на слово перед пропуском: der / ein / без артикля, etwas / alles?</p>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> Frau Okafor ist eine gute
+          <select class="blank inline" data-ans="Bekannte"><option value="">—</option><option>Bekannte</option><option>Bekannter</option><option>Bekannten</option></select> von Daryna.</div>
+        <div class="fill-item"><span class="num">2)</span> Für
+          <select class="blank inline" data-ans="Jugendliche"><option value="">—</option><option>Jugendlicher</option><option>Jugendliche</option><option>Jugendliches</option></select> ist der Leserausweis kostenlos.</div>
+        <div class="fill-item"><span class="num">3)</span> Erik hat im Internet nichts
+          <select class="blank inline" data-ans="Neues"><option value="">—</option><option>Neue</option><option>Neues</option><option>Neuen</option></select> gelernt.</div>
+        <div class="fill-item"><span class="num">4)</span> Frau Okafor zeigt Erik das
+          <select class="blank inline" data-ans="Beste"><option value="">—</option><option>Beste</option><option>Bestes</option><option>Besten</option></select>.</div>
+        <div class="fill-item"><span class="num">5)</span> Im Lesesaal sitzen viele
+          <select class="blank inline" data-ans="Erwachsene"><option value="">—</option><option>Erwachsene</option><option>Erwachsenen</option><option>Erwachsener</option></select>.</div>
+        <div class="fill-item"><span class="num">6)</span> Ich wünsche dir alles
+          <select class="blank inline" data-ans="Gute"><option value="">—</option><option>Gutes</option><option>Guten</option><option>Gute</option></select> für dein Referat!</div>
+        <div class="fill-item"><span class="num">7)</span> Mein Onkel wohnt in Wien. Er ist ein
+          <select class="blank inline" data-ans="Verwandter"><option value="">—</option><option>Verwandte</option><option>Verwandter</option><option>Verwandten</option></select> von mir.</div>
+        <div class="fill-item"><span class="num">8)</span> Die
+          <select class="blank inline" data-ans="Kleinen"><option value="">—</option><option>Kleine</option><option>Kleines</option><option>Kleinen</option></select> sitzen in der bunten Leseecke.</div>
+        <div class="fill-item"><span class="num">9)</span> Hast du etwas
+          <select class="blank inline" data-ans="Spannendes"><option value="">—</option><option>Spannende</option><option>Spannendes</option><option>Spannenden</option></select> für mich?</div>
+        <div class="fill-item"><span class="num">10)</span> Erik spricht mit einem
+          <select class="blank inline" data-ans="Bekannten"><option value="">—</option><option>Bekannte</option><option>Bekannter</option><option>Bekannten</option></select> von Daryna.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: перетворення ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">etwas Neues, alles Gute</h2>
+      <p class="lead">Перепиши речення зі словом у дужках. Прикметник стає іменником: велика літера і правильне закінчення!</p>
+      <div class="card" id="ub3-tr"></div>
+    </section>
+
+    <!-- ===== Üb. 4: чат ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Ein Leserausweis, bitte!</h2>
+      <p class="lead">Ти вперше прийшов (прийшла) до міської бібліотеки. Бібліотекарка Frau Okafor допомагає тобі. Вибирай доречну й правильну відповідь.</p>
+      <div class="card" id="ub4-chat"></div>
+    </section>
+
+    <!-- ===== HÖREN — власний діалог, озвучений синтезатором ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Etwas Kurzes, bitte!</h2>
+      <p class="lead">Макс прийшов до шкільної бібліотеки. Послухай його розмову з бібліотекаркою (можна двічі) і дай відповіді. Текст діалогу відкривається внизу — але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l3-a-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Frau Lindner:</b> Hallo, Max! Kann ich dir helfen?<br>
+          <b>Max:</b> Ja, bitte. Wir müssen für Deutsch ein Buch lesen und in der Klasse vorstellen. Aber ich lese nicht so gern. Haben Sie etwas Kurzes?<br>
+          <b>Frau Lindner:</b> Etwas Kurzes — und etwas Spannendes, oder? Was machst du denn gern?<br>
+          <b>Max:</b> Fußball. Ich bin Torwart.<br>
+          <b>Frau Lindner:</b> Dann habe ich das Richtige für dich: einen Krimi über eine Jugendmannschaft. Kurz vor dem Finale verschwindet der beste Spieler. Nur 120 Seiten.<br>
+          <b>Max:</b> Klingt gut! Gibt es das auch als Hörbuch?<br>
+          <b>Frau Lindner:</b> Ja, aber das Hörbuch ist gerade ausgeliehen. Du kannst es reservieren.<br>
+          <b>Max:</b> Nein, danke, dann nehme ich das Buch. Wie lange darf ich es behalten?<br>
+          <b>Frau Lindner:</b> Drei Wochen. Brauchst du mehr Zeit, kannst du die Frist einmal verlängern.<br>
+          <b>Max:</b> Und wenn ich es vergesse?<br>
+          <b>Frau Lindner:</b> Dann bekommst du eine Erinnerung per E-Mail. Eine Gebühr gibt es bei uns nicht — das ist ja eine Schulbibliothek. Aber vielleicht warten andere schon auf das Buch!<br>
+          <b>Max:</b> Verstanden. Darf ich gleich hier im Lesesaal anfangen?<br>
+          <b>Frau Lindner:</b> Natürlich. Aber bitte das Handy auf lautlos — und die Chips bleiben in der Tasche. Essen ist im Lesesaal verboten.<br>
+          <b>Max:</b> Oh … Entschuldigung!<br>
+          <b>Frau Lindner:</b> Kein Problem. Viel Spaß beim Lesen — und alles Gute für dein Spiel am Samstag!
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN — 🎤 + говоріння зі зразком ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Bücher und Bibliotheken</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Gehst du gern in die Bibliothek? Warum (nicht)?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Ja, ich gehe gern in unsere Stadtbibliothek. Dort ist es ruhig, und die Bibliothekarinnen helfen mir immer. Außerdem ist der Leserausweis für Schüler kostenlos.</div>
+        </div>
+        <div class="qa">
+          <label>2. Was leihst du dir meistens aus? Wie lange darfst du die Bücher behalten?</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Meistens leihe ich mir Fantasy-Bücher und Comics aus, manchmal auch ein Hörbuch. Ich darf sie drei Wochen behalten. Wenn ich mehr Zeit brauche, verlängere ich die Frist online.</div>
+        </div>
+        <div class="qa">
+          <label>3. Internet oder Bibliothek: Wo findest du für ein Referat das Beste? Warum?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Im Internet geht es schneller, aber dort findet man auch viel Falsches. In der Bibliothek gibt es Sachbücher und Lexika, und man kann um Hilfe bitten. Für ein Referat ist die Bibliothek für mich das Beste.</div>
+        </div>
+        <div class="qa">
+          <label>4. Was hast du in letzter Zeit Spannendes oder Lustiges gelesen?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Im Herbst habe ich einen Krimi gelesen. Er war sehr spannend — ich habe ihn an einem Wochenende gelesen. Etwas Lustiges habe ich auch: einen Comic über eine Katze in der Schule.</div>
+        </div>
+        <div class="qa">
+          <label>5. Was gibt es Neues in deiner Schule oder in deiner Stadt?</label>
+          <button class="btn secondary" type="button" data-reveal="spr5">Muster zeigen</button>
+          <div class="reveal" id="spr5">In unserer Schule gibt es etwas Neues: Die Bibliothek hat jetzt eine Leseecke mit Sofas. Dort sitzen in der Pause viele Jugendliche und lesen oder machen Hausaufgaben.</div>
+        </div>
+        <div class="qa">
+          <label>6. Hast du Bekannte oder Verwandte in einem anderen Land? Erzähl kurz.</label>
+          <button class="btn secondary" type="button" data-reveal="spr6">Muster zeigen</button>
+          <div class="reveal" id="spr6">Ja, ein Verwandter von mir wohnt in Polen — mein Cousin. Und meine Mutter hat eine gute Bekannte in Deutschland. Sie schickt mir manchmal Bücher auf Deutsch.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Meine Bibliothek</h2>
+      <p class="lead">Напиши листа другові / подрузі з Німеччини про свою шкільну або міську бібліотеку — 60–80 слів за планом:</p>
+      <div class="card">
+        <p>1) яка це бібліотека і де вона; 2) що там є (зали, полиці, комп'ютери); 3) як часто ти туди ходиш і що позичаєш; 4) правила: читацький квиток, на скільки можна взяти книжку; 5) щось цікаве, що ти там знайшов / знайшла (etwas Interessantes); 6) запитання до друга / подруги.</p>
+        <p class="beispiel">Heute erzähle ich dir von … · Sie liegt … · Es gibt dort … · Ich leihe mir oft … aus. · Man kann die Bücher … Wochen behalten. · Letztes Mal habe ich etwas … gefunden: … · Gehst du auch gern …?</p>
+        <div class="qa">
+          <label for="schreiben-text">Dein Brief</label>
+          <textarea id="schreiben-text" rows="10" placeholder="Liebe Hanna, …"
+            data-words="60-80"
+            data-must="Bibliothek|leihe|etwas"
+            data-check="Яка бібліотека і де|Що там є|Як часто ходиш і що позичаєш (leihe … aus)|Правила (Leserausweis, Frist)|etwas + прикметник з великої (-es)|Запитання до друга"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Liebe Hanna, heute erzähle ich dir von unserer Stadtbibliothek in Poltawa. Sie liegt im Zentrum, unweit des Parks. Es gibt dort einen großen Lesesaal, eine Leseecke und viele Computer. Ich gehe zweimal im Monat hin und leihe mir meistens Fantasy-Bücher und Comics aus. Der Leserausweis ist für Schüler kostenlos, und man kann die Bücher drei Wochen behalten. Letztes Mal habe ich etwas Interessantes gefunden: ein altes Buch über unsere Stadt. Gehst du auch gern in die Bibliothek? Viele Grüße, Oksana</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — режим контрольної: одна спроба, лише ця вкладка йде в бал ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Viele
+          <select class="blank inline" data-ans="Jugendliche"><option value="">—</option><option>Jugendlichen</option><option>Jugendliche</option><option>Jugendlicher</option></select> lesen gern Comics.</div>
+        <div class="fill-item"><span class="num">8)</span> Die Bibliothekarin spricht mit den
+          <select class="blank inline" data-ans="Erwachsenen"><option value="">—</option><option>Erwachsene</option><option>Erwachsener</option><option>Erwachsenen</option></select>.</div>
+        <div class="fill-item"><span class="num">9)</span> Hallo, Greta! Was gibt es
+          <select class="blank inline" data-ans="Neues"><option value="">—</option><option>Neues</option><option>Neue</option><option>Neuen</option></select>?</div>
+        <div class="fill-item"><span class="num">10)</span> Das
+          <select class="blank inline" data-ans="Beste"><option value="">—</option><option>Bestes</option><option>Beste</option><option>Besten</option></select> am Wochenende war der Ausflug.</div>
+        <div class="fill-item"><span class="num">11)</span> Die Bücher stehen in hohen
+          <select class="blank inline" data-ans="Regalen"><option value="">—</option><option>Katalogen</option><option>Regalen</option><option>Gebühren</option></select>.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-8-klas-8-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-8-klas-8-rik";
+  const KN_UNIT = "l3-a";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Erik hat zuerst im Internet nach Informationen gesucht.", a: "r"},
+    {s: "In den Videos hat Erik viel Neues gelernt.", a: "f"},
+    {s: "Daryna besucht die Stadtbibliothek jede Woche.", a: "r"},
+    {s: "Die Leseecke ist für Erwachsene.", a: "f"},
+    {s: "Für Jugendliche kostet der Leserausweis nichts.", a: "r"},
+    {s: "Im Katalog hat Erik nur drei Bücher gefunden.", a: "f"},
+    {s: "Frau Okafor hat Erik beim Aussuchen geholfen.", a: "r"},
+    {s: "Erik durfte das Lexikon mit nach Hause nehmen.", a: "f"},
+    {s: "Die Frist kann man online verlängern.", a: "r"},
+    {s: "Herr Krüger hat das Referat langweilig gefunden.", a: "f"}
+  ]);
+
+  // Üb. 1: картинка → слово
+  buildPicture('ub1-pic', [
+    {pic: "📰", opts: ["das Lexikon", "die Zeitung", "der Katalog"], correct: "die Zeitung"},
+    {pic: "🎧", opts: ["das Hörbuch", "der Leserausweis", "der Lesesaal"], correct: "das Hörbuch"},
+    {pic: "📚", opts: ["die Gebühr", "die Frist", "die Bücher"], correct: "die Bücher"},
+    {pic: "🔖", opts: ["die Zeitschrift", "das Lesezeichen", "das Referat"], correct: "das Lesezeichen"},
+    {pic: "🔍", opts: ["ausleihen", "suchen", "bezahlen"], correct: "suchen"},
+    {pic: "🤫", opts: ["laut lachen", "telefonieren", "leise sein"], correct: "leise sein"},
+    {pic: "📅", opts: ["die Leseecke", "das Rückgabedatum", "das Regal"], correct: "das Rückgabedatum"},
+    {pic: "💶", opts: ["die Gebühr", "der Treffer", "das Sachbuch"], correct: "die Gebühr"}
+  ]);
+
+  // Üb. 2
+  wireBlanks('ub2');
+
+  // Üb. 3: перетворення
+  buildTransform('ub3-tr', [
+    {s: "Ich möchte ein Buch lesen. Es soll lustig sein.", task: "etwas …",
+     ans: "Ich möchte etwas Lustiges lesen."},
+    {s: "Heute gibt es in der Zeitung keine neuen Nachrichten.", task: "nichts …",
+     ans: "Heute gibt es in der Zeitung nichts Neues.|In der Zeitung gibt es heute nichts Neues."},
+    {s: "Erik hat in den Büchern viele interessante Dinge gefunden.", task: "viel …",
+     ans: "Erik hat in den Büchern viel Interessantes gefunden."},
+    {s: "Ich wünsche dir viel Glück und nur gute Dinge!", task: "alles …",
+     ans: "Ich wünsche dir alles Gute!"},
+    {s: "Die Leseecke ist für <b>kleine Kinder</b>.", task: "die …",
+     ans: "Die Leseecke ist für die Kleinen."},
+    {s: "Mein Onkel ist mit mir verwandt.", task: "Er ist ein …",
+     ans: "Er ist ein Verwandter von mir.|Er ist ein Verwandter."}
+  ]);
+
+  // Üb. 4: чат
+  buildChat('ub4-chat', {
+    partner: "Frau Okafor",
+    steps: [
+      {them: "Guten Tag! Kann ich dir helfen?"},
+      {you: ["Hallo! Ich möchte einen Leserausweis ausleihen.", "Guten Tag! Ich möchte einen Leserausweis machen.", "Guten Tag! Ich bin einen Leserausweis."], correct: 1},
+      {them: "Gern. Wie alt bist du?"},
+      {you: ["Ich habe vierzehn Jahre.", "Ich bin vierzehn Jahre alt.", "Ich bin vierzehn Jahren."], correct: 1},
+      {them: "Dann ist der Ausweis kostenlos. Hast du die Unterschrift deiner Eltern?"},
+      {you: ["Ja, hier ist das Formular.", "Ja, ich unterschreibe meine Eltern.", "Nein, ich habe keine Eltern unterschrieben."], correct: 0},
+      {them: "Prima. Suchst du etwas Bestimmtes?"},
+      {you: ["Ja, etwas spannendes für die Ferien.", "Ja, etwas Spannendes für die Ferien.", "Ja, etwas Spannende für die Ferien."], correct: 1, hint: "Після etwas — з великої літери і -es"},
+      {them: "Dann schau mal ins Regal „Jugendbücher“. Hast du noch eine Frage?"},
+      {you: ["Wie lange darf ich die Bücher behalten?", "Wie lange darf ich die Bücher bezahlen?", "Wie lange muss ich die Bücher verboten?"], correct: 0},
+      {them: "Vier Wochen. Und du kannst die Frist online verlängern. Viel Spaß beim Lesen!"},
+      {you: ["Danke, guten Appetit!", "Danke, gute Besserung!", "Vielen Dank! Auf Wiedersehen!"], correct: 2},
+      {them: "Auf Wiedersehen — und bis bald!"}
+    ]
+  });
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Was müssen die Schüler für Deutsch machen?", opts: ["Ein Buch lesen und vorstellen.", "Ein Referat über Roboter halten.", "Einen Brief schreiben."], correct: "Ein Buch lesen und vorstellen."},
+    {q: "Was sucht Max zuerst?", opts: ["Etwas Lustiges.", "Etwas Kurzes.", "Etwas über Roboter."], correct: "Etwas Kurzes."},
+    {q: "Was macht Max gern?", opts: ["Er klettert.", "Er spielt Fußball.", "Er liest Krimis."], correct: "Er spielt Fußball."},
+    {q: "Was passiert im Krimi?", opts: ["Der beste Spieler verschwindet.", "Ein Torwart fährt in Urlaub.", "Die Mannschaft verliert das Finale."], correct: "Der beste Spieler verschwindet."},
+    {q: "Warum nimmt Max nicht das Hörbuch?", opts: ["Es ist zu lang.", "Es kostet Geld.", "Es ist gerade ausgeliehen."], correct: "Es ist gerade ausgeliehen."},
+    {q: "Wie lange darf Max das Buch behalten?", opts: ["Zwei Wochen", "Drei Wochen", "Vier Wochen"], correct: "Drei Wochen"},
+    {q: "Was passiert, wenn Max das Buch vergisst?", opts: ["Er bekommt eine E-Mail.", "Er muss eine Gebühr bezahlen.", "Er bekommt keinen Ausweis mehr."], correct: "Er bekommt eine E-Mail."},
+    {q: "Was ist im Lesesaal verboten?", opts: ["Lesen", "Essen", "Notizen machen"], correct: "Essen"}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Ich möchte mir dieses Buch ausleihen.", uk: "Я хотів би (хотіла б) позичити цю книжку."},
+    {say: "Wie lange darf ich es behalten?", uk: "Скільки часу я можу її тримати?"},
+    {say: "Haben Sie etwas Spannendes für mich?", uk: "У вас є для мене щось захопливе?"},
+    {say: "Sie ist eine gute Bekannte von mir.", uk: "Вона моя добра знайома."},
+    {say: "Alles Gute und viel Spaß beim Lesen!", uk: "Усього найкращого і приємного читання!"}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Eine Frau arbeitet in der Bibliothek. Sie ist …", opts: ["Leserin", "Bibliothekarin", "Bekannte"], correct: "Bibliothekarin"},
+    {q: "Ein Lexikon darf man im Lesesaal lesen, aber man darf es nicht …", opts: ["ausleihen", "benutzen", "aufschlagen"], correct: "ausleihen"},
+    {q: "Ich brauche das Buch noch eine Woche. Ich möchte die Frist …", opts: ["bezahlen", "verlängern", "zurückgeben"], correct: "verlängern"},
+    {q: "Leider habe ich im Katalog nichts … gefunden.", opts: ["Interessantes", "Interessante", "interessantes"], correct: "Interessantes"},
+    {q: "Du hast Geburtstag? Alles …!", opts: ["Gutes", "Gute", "Guten"], correct: "Gute"},
+    {q: "Mein Onkel ist ein … von mir.", opts: ["Verwandte", "Verwandten", "Verwandter"], correct: "Verwandter"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Ich habe gestern etwas Neues gelesen.", ok: true},
+    {s: "Hast du etwas spannendes für mich?", wrong: 3, fix: "Spannendes"},
+    {s: "Er ist ein Deutsche aus Hamburg.", wrong: 3, fix: "Deutscher"},
+    {s: "Alles Gutes zum Geburtstag!", wrong: 1, fix: "Gute"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📚', '🔍', '🎧', '🔖']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
