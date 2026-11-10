@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 3, Modul C: Lieblingsbücher und -autoren — Німецька мова 8 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 8 КЛАС</span>
+        <h1>Lektion 3 · Modul C: Lieblingsbücher und -autoren</h1>
+        <p class="sub">Урок про улюблених авторів: Еріх Кестнер, Міхаель Енде, Корнелія Функе, Леся Українка, Сергій Жадан. Як розповісти про письменника: де народився, що написав, чим відомий. Граматика — родовий відмінок власних імен (Erich Kästners Bücher, Max’ Referat) і повторення Relativsätze. Текст і діалог з озвученням, вправи, говоріння, письмо і підсумковий тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Rund ums Buch</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Kästners Bücher</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · der, dessen, in dem</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · von → Genitiv</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власний текст + вправа на розуміння ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Unsere Autorengalerie</h2>
+      <p class="lead">У шкільній бібліотеці з'явилася «галерея авторів»: кожен із 8b представляє улюбленого письменника. Послухай і прочитай п'ять портретів. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l3-c-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>In unserer Schulbibliothek gibt es seit Montag eine „Autorengalerie“. Die Idee hatte Herr Brandt: Jeder aus der 8b <span class="gl" data-uk="представляти" data-lemma="vorstellen">stellt</span> eine Autorin oder einen Autor <span class="gl" data-uk="представляти" data-lemma="vorstellen">vor</span>. Frau Sander hat die <span class="gl" data-uk="портрет" data-lemma="das Porträt">Porträts</span> an die Wand gehängt. Hier sind fünf davon.</p>
+        <p><b>Erik:</b> „Erich Kästners Bücher habe ich von Oma Ursula bekommen. Sie kommt aus Dresden — wie Kästner, der dort 1899 <span class="gl" data-uk="народитися" data-lemma="geboren sein">geboren</span> ist. <span class="gl" data-uk="відомий, знаменитий" data-lemma="berühmt">Berühmt</span> wurde er 1929 mit ‚Emil und die Detektive‘, seinem ersten <span class="gl" data-uk="дитяча книжка" data-lemma="das Kinderbuch">Kinderbuch</span>. Emil ist ein Junge, dem ein <span class="gl" data-uk="злодій" data-lemma="der Dieb">Dieb</span> im Zug Geld <span class="gl" data-uk="красти" data-lemma="stehlen">stiehlt</span> und der ihn mit anderen Kindern durch Berlin <span class="gl" data-uk="переслідувати" data-lemma="verfolgen">verfolgt</span>. Kästners Geschichten sind fast hundert Jahre alt, aber immer noch lustig. In Dresden gibt es heute ein Kästner-Museum.“</p>
+        <p><b>Greta:</b> „Mein Lieblingsautor ist Michael Ende, dessen Vater Maler war. Vielleicht sind Endes Bücher deshalb so voller Bilder! Er ist 1929 in Garmisch-Partenkirchen geboren und hat später viele Jahre in Italien gelebt. Dort hat er ‚Momo‘ geschrieben, das 1973 <span class="gl" data-uk="виходити (про книжку)" data-lemma="erscheinen">erschienen</span> ist. Momo ist ein Mädchen, das sehr gut <span class="gl" data-uk="слухати (уважно)" data-lemma="zuhören">zuhören</span> kann und den Menschen die gestohlene Zeit zurückbringt. Sein bekanntestes <span class="gl" data-uk="твір" data-lemma="das Werk">Werk</span>, ‚Die unendliche Geschichte‘ von 1979, habe ich noch vor mir.“</p>
+        <p><b>Nina:</b> „Cornelia Funke, die 1958 in Dorsten geboren ist, war zuerst <span class="gl" data-uk="ілюстраторка" data-lemma="die Illustratorin">Illustratorin</span>. Sie hat Bilder für Kinderbücher gezeichnet, bevor sie selbst zu schreiben begann. Funkes Roman ‚Tintenherz‘ von 2003 erzählt von einem Mädchen, dessen Vater <span class="gl" data-uk="персонаж" data-lemma="die Figur">Figuren</span> aus Büchern ‚herauslesen‘ kann: Sie werden lebendig! Besonders mag ich die Bilder, die die Autorin selbst gezeichnet hat.“</p>
+        <p><b>Timur:</b> „Lessja Ukrajinka ist eine große ukrainische <span class="gl" data-uk="поетка" data-lemma="die Dichterin">Dichterin</span>. Eigentlich hieß sie Laryssa Kossatsch, Lessja Ukrajinka ist ihr <span class="gl" data-uk="псевдонім" data-lemma="das Pseudonym">Pseudonym</span>. Sie ist 1871 geboren und hat ihr erstes Gedicht mit acht Jahren geschrieben. Lessja Ukrajinka, die oft krank war, lernte zu Hause und konnte viele Sprachen, zum Beispiel Deutsch, Französisch und Englisch. Ihr <span class="gl" data-uk="драма" data-lemma="das Drama">Drama</span> ‚Das Waldlied‘ von 1911, in dem ein Waldmädchen einen Menschen liebt, spielt man heute noch im Theater. In diesem <span class="gl" data-uk="п'єса" data-lemma="das Theaterstück">Stück</span> möchte ich einmal mitspielen!“</p>
+        <p><b>Daryna:</b> „Serhij Zhadan ist Schriftsteller, Dichter und Musiker. Er ist 1974 in Starobilsk geboren und lebt in Charkiw, der Stadt, aus der ich komme. Dort hat er Germanistik studiert, und er ist auch <span class="gl" data-uk="перекладач" data-lemma="der Übersetzer">Übersetzer</span>. Viele von Zhadans Büchern spielen in Charkiw. 2022 hat er in Frankfurt den <span class="gl" data-uk="Премія миру німецьких книгарів" data-lemma="der Friedenspreis des Deutschen Buchhandels">Friedenspreis des Deutschen Buchhandels</span> bekommen. Meine Mama liest seine Romane, und ich höre gern die Lieder, die er mit seiner Band singt.“</p>
+        <p>Und wessen Porträt fehlt noch? Deins! Frau Sander hat noch viel Platz an der Wand.</p>
+        <p><i>Ayla, 8b</i></p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">Erich Kästners Bücher · Genitiv der Eigennamen</h2>
+      <p class="lead">Чиї книжки? Українською: «книжки Еріха Кестнера». Німецькою власне ім'я в Genitiv отримує <b>-s</b> і зазвичай стоїть <b>перед</b> іменником: Erich Kästner<b>s</b> Bücher. Артикль перед іменником тоді не потрібен.</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. Три способи сказати те саме</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Wie?</th><th>Beispiel</th></tr>
+          <tr><td>Name + <strong>-s</strong> vorn</td><td>Erich Kästner<strong>s</strong> Bücher</td></tr>
+          <tr><td>Name + <strong>-s</strong> hinten</td><td>die Bücher Erich Kästner<strong>s</strong></td></tr>
+          <tr><td><strong>von</strong> + Name</td><td>die Bücher <strong>von</strong> Erich Kästner</td></tr>
+        </table></div>
+        <div class="merke">Закінчення <b>-s</b> — без апострофа й однакове для чоловічих і жіночих імен: Cornelia Funke<b>s</b> Romane, Lessja Ukrajinka<b>s</b> Gedichte, Daryna<b>s</b> Krimi.</div>
+        <div class="merke">Якщо імен кілька (ім'я + прізвище), <b>-s</b> отримує лише <b>останнє</b>: Michael Ende<b>s</b> „Momo“ (не «Michaels Endes»).</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. Особливі випадки</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Regel</th><th>Beispiel</th></tr>
+          <tr><td>Name auf -s, -ß, -x, -z → nur <strong>’</strong></td><td>Max<strong>’</strong> Referat, Thomas<strong>’</strong> Buch, Franz<strong>’</strong> Gedicht</td></tr>
+          <tr><td>nach <strong>von</strong> → kein -s</td><td>die Lieder von Serhij Zhadan</td></tr>
+          <tr><td>Artikel + Beruf + Name → Name ohne -s</td><td>die Werke <strong>des Dichters</strong> Taras Schewtschenko</td></tr>
+        </table></div>
+        <div class="merke">У розмові частіше кажуть <b>von</b>: das Buch von Max. На письмі гарніше Genitiv: Max’ Buch.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. Relativsätze — коротке повторення</p>
+        <p>Kästner, <b>der</b> in Dresden geboren ist, … <i>(Nom.)</i><br>
+           das Buch, <b>das</b> Michael Ende 1973 geschrieben hat, … <i>(Akk.)</i><br>
+           Emil, <b>dem</b> ein Dieb Geld stiehlt, … <i>(Dat.)</i><br>
+           Michael Ende, <b>dessen</b> Vater Maler war, … <i>(Gen.)</i><br>
+           das Drama, <b>in dem</b> ein Waldmädchen einen Menschen liebt, … <i>(Präp. + Dat.)</i></p>
+        <div class="merke">Рід і число — від іменника перед комою, відмінок — від дієслова в підрядному реченні. Дієслово — в кінці.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">4. Типові помилки</p>
+        <p>✗ Erich Kästner’s Bücher → ✓ Erich Kästner<b>s</b> Bücher <i>(без апострофа)</i></p>
+        <p>✗ Michaels Endes Roman → ✓ Michael Ende<b>s</b> Roman</p>
+        <p>✗ die Bücher von Cornelia Funkes → ✓ die Bücher von Cornelia Funke</p>
+        <p>✗ Maxs Referat → ✓ Max<b>’</b> Referat</p>
+        <p>✗ die Kästners Bücher → ✓ Kästners Bücher <i>(без артикля)</i></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: визначення ↔ слово ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Rund ums Buch</h2>
+      <p class="lead">Хто або що це? Добери слово до пояснення.</p>
+      <div class="card" id="ub1-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2: Genitiv власних імен ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Kästners Bücher</h2>
+      <p class="lead">Вибери правильну форму імені. Пам'ятай: -s лише в останнього імені; після von — без -s; після -s, -x, -z — апостроф.</p>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> Oma Ursula hat Erik
+          <select class="blank inline" data-ans="Erich Kästners"><option value="">—</option><option>Erich Kästners</option><option>Erichs Kästners</option><option>Erich Kästner</option></select> Bücher geschenkt.</div>
+        <div class="fill-item"><span class="num">2)</span> Greta liest gerade
+          <select class="blank inline" data-ans="Michael Endes"><option value="">—</option><option>Michaels Ende</option><option>Michael Endes</option><option>Michaels Endes</option></select> „Momo“.</div>
+        <div class="fill-item"><span class="num">3)</span> Die Romane von
+          <select class="blank inline" data-ans="Cornelia Funke"><option value="">—</option><option>Cornelia Funkes</option><option>Cornelias Funke</option><option>Cornelia Funke</option></select> haben viele Bilder.</div>
+        <div class="fill-item"><span class="num">4)</span> Timur möchte in
+          <select class="blank inline" data-ans="Lessja Ukrajinkas"><option value="">—</option><option>Lessja Ukrajinkas</option><option>Lessjas Ukrajinka</option><option>Lessja Ukrajinka</option></select> „Waldlied“ mitspielen.</div>
+        <div class="fill-item"><span class="num">5)</span> Herr Krüger fand
+          <select class="blank inline" data-ans="Eriks"><option value="">—</option><option>Erik</option><option>Eriks</option><option>Erik’</option></select> Referat über Roboter toll.</div>
+        <div class="fill-item"><span class="num">6)</span>
+          <select class="blank inline" data-ans="Max’"><option value="">—</option><option>Maxs</option><option>Max’</option><option>Maxes</option></select> Krimi hat nur 120 Seiten.</div>
+        <div class="fill-item"><span class="num">7)</span> Daryna hört gern die Lieder
+          <select class="blank inline" data-ans="Serhij Zhadans"><option value="">—</option><option>Serhijs Zhadan</option><option>Serhij Zhadan</option><option>Serhij Zhadans</option></select>.</div>
+        <div class="fill-item"><span class="num">8)</span> Wir lesen die Gedichte des Dichters
+          <select class="blank inline" data-ans="Taras Schewtschenko"><option value="">—</option><option>Taras Schewtschenko</option><option>Taras Schewtschenkos</option><option>Taras’ Schewtschenko</option></select>.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: Relativpronomen ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">der, dessen, in dem</h2>
+      <p class="lead">Факти про авторів і їхні книжки. Вибери правильний Relativpronomen.</p>
+      <div class="card" id="ub3-list">
+        <div class="fill-item"><span class="num">1)</span> Erich Kästner,
+          <select class="blank inline" data-ans="der"><option value="">—</option><option>der</option><option>den</option><option>dessen</option></select> aus Dresden kommt, hat auch Gedichte geschrieben.</div>
+        <div class="fill-item"><span class="num">2)</span> „Emil und die Detektive“ ist das Buch,
+          <select class="blank inline" data-ans="das"><option value="">—</option><option>der</option><option>das</option><option>dem</option></select> Kästner berühmt gemacht hat.</div>
+        <div class="fill-item"><span class="num">3)</span> Michael Ende,
+          <select class="blank inline" data-ans="dessen"><option value="">—</option><option>deren</option><option>der</option><option>dessen</option></select> Vater Maler war, hat lange in Italien gelebt.</div>
+        <div class="fill-item"><span class="num">4)</span> Momo ist ein Mädchen,
+          <select class="blank inline" data-ans="dem"><option value="">—</option><option>dem</option><option>der</option><option>das</option></select> alle Menschen gern etwas erzählen.</div>
+        <div class="fill-item"><span class="num">5)</span> Cornelia Funke ist eine Autorin,
+          <select class="blank inline" data-ans="die"><option value="">—</option><option>der</option><option>deren</option><option>die</option></select> ihre Bücher selbst illustriert.</div>
+        <div class="fill-item"><span class="num">6)</span> Lessja Ukrajinka ist die Dichterin,
+          <select class="blank inline" data-ans="deren"><option value="">—</option><option>deren</option><option>dessen</option><option>die</option></select> Drama Timur so gefällt.</div>
+        <div class="fill-item"><span class="num">7)</span> Charkiw ist die Stadt, in
+          <select class="blank inline" data-ans="der"><option value="">—</option><option>dem</option><option>die</option><option>der</option></select> Serhij Zhadan lebt.</div>
+        <div class="fill-item"><span class="num">8)</span> Das sind die Porträts,
+          <select class="blank inline" data-ans="die"><option value="">—</option><option>die</option><option>denen</option><option>das</option></select> Frau Sander an die Wand gehängt hat.</div>
+        <div class="fill-item"><span class="num">9)</span> Der Preis,
+          <select class="blank inline" data-ans="den"><option value="">—</option><option>der</option><option>dem</option><option>den</option></select> Zhadan 2022 bekommen hat, ist sehr bekannt.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4: von → Genitiv ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">von → Genitiv</h2>
+      <p class="lead">Перепиши речення: замість <b>von + ім'я</b> — ім'я в Genitiv перед іменником (без артикля!). Апостроф можна набрати як ' .</p>
+      <div class="card" id="ub4-tr"></div>
+    </section>
+
+    <!-- ===== HÖREN — власний діалог, озвучений синтезатором ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Die Lesenacht</h2>
+      <p class="lead">Herr Brandt має для 8b новину, а Грета одразу розпитує. Послухай діалог (можна двічі) і дай відповіді. Текст діалогу відкривається внизу — але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l3-c-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Herr Brandt:</b> So, noch eine Neuigkeit: Am Freitag machen wir eine Lesenacht in der Schulbibliothek!<br>
+          <b>Greta:</b> Eine Lesenacht? Schlafen wir dann in der Schule?<br>
+          <b>Herr Brandt:</b> Genau. Wir treffen uns um 19 Uhr. Bringt bitte einen Schlafsack und eine Taschenlampe mit.<br>
+          <b>Greta:</b> Und was lesen wir?<br>
+          <b>Herr Brandt:</b> Jeder bringt ein Buch mit, das er den anderen vorstellen möchte, und liest fünf Minuten daraus vor.<br>
+          <b>Greta:</b> Nur fünf Minuten? Michael Endes „Momo“ ist doch so dick!<br>
+          <b>Herr Brandt:</b> Deshalb suchst du die Stelle aus, die dir am besten gefällt. Timur und Daryna zeigen übrigens eine Szene aus Lessja Ukrajinkas „Waldlied“.<br>
+          <b>Greta:</b> Cool! Dürfen wir etwas zu essen mitbringen?<br>
+          <b>Herr Brandt:</b> Ja, aber wir essen im Klassenraum nebenan, nicht zwischen den Büchern. Da ist Frau Sander sehr streng.<br>
+          <b>Greta:</b> Und die Handys?<br>
+          <b>Herr Brandt:</b> Die schlafen in einer Kiste — bis zum Frühstück.<br>
+          <b>Greta:</b> Wie bei Daryna in der Küche! Wann gibt es Frühstück?<br>
+          <b>Herr Brandt:</b> Um acht. Eure Eltern bringen Brötchen mit und holen euch um neun ab.<br>
+          <b>Greta:</b> Und was passiert um Mitternacht?<br>
+          <b>Herr Brandt:</b> Um Mitternacht lese ich etwas Gruseliges vor. Aber keine Angst: Danach kommen Erich Kästners Gedichte — zum Lachen.<br>
+          <b>Greta:</b> Dann bringe ich Krümel mit. Der passt auf uns auf!<br>
+          <b>Herr Brandt:</b> Der Hund bleibt bitte zu Hause, Greta.
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN — 🎤 + говоріння зі зразком ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Mein Lieblingsautor, meine Lieblingsautorin</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Wer ist dein Lieblingsautor / deine Lieblingsautorin? Woher kommt er / sie?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Meine Lieblingsautorin ist Cornelia Funke. Sie kommt aus Deutschland und ist 1958 in Dorsten geboren.</div>
+        </div>
+        <div class="qa">
+          <label>2. Welche Bücher hat er / sie geschrieben? Welches hast du gelesen?</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Sie hat viele Fantasy-Romane für Kinder und Jugendliche geschrieben. Ich habe Funkes „Tintenherz“ gelesen — auf Ukrainisch.</div>
+        </div>
+        <div class="qa">
+          <label>3. Wer ist deine Lieblingsfigur? Wie ist sie?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Meine Lieblingsfigur ist Momo aus Michael Endes Roman. Sie ist ein Mädchen, das wenig spricht, aber sehr gut zuhören kann. Sie ist mutig und hilfsbereit.</div>
+        </div>
+        <div class="qa">
+          <label>4. Welche ukrainischen Autorinnen und Autoren kennst du? Was weißt du über sie?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Ich kenne Lessja Ukrajinka, die Gedichte und Dramen geschrieben hat. Ihr „Waldlied“ haben wir im Theater gesehen. Ich kenne auch Serhij Zhadan, dessen Lieder ich mag.</div>
+        </div>
+        <div class="qa">
+          <label>5. Buch oder Verfilmung — was findest du besser? Warum?</label>
+          <button class="btn secondary" type="button" data-reveal="spr5">Muster zeigen</button>
+          <div class="reveal" id="spr5">Meistens finde ich das Buch besser, weil es mehr Details gibt. Aber eine gute Verfilmung sehe ich auch gern — am liebsten nach dem Lesen.</div>
+        </div>
+        <div class="qa">
+          <label>6. Rätsel: Beschreibe einen Autor / eine Autorin. Dein Partner / deine Partnerin rät.</label>
+          <button class="btn secondary" type="button" data-reveal="spr6">Muster zeigen</button>
+          <div class="reveal" id="spr6">Das ist ein deutscher Schriftsteller, der 1899 in Dresden geboren ist. Sein erstes Kinderbuch erzählt von einem Jungen, dem ein Dieb Geld stiehlt. — Das ist Erich Kästner!</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Ein Porträt für die Autorengalerie</h2>
+      <p class="lead">На стіні ще є місце! Напиши портрет свого улюбленого автора чи авторки — 60–80 слів за планом. Ужий Genitiv імені (… Bücher) і щонайменше один Relativsatz. Дати й факти перевір у надійному джерелі.</p>
+      <div class="card">
+        <p>1) хто це (письменник, поетка…) і звідки; 2) коли й де народився / народилася; 3) що написав / написала; 4) про що твоя улюблена книжка; 5) чому тобі подобаються ці книжки; 6) кому ти їх радиш.</p>
+        <p class="beispiel">… ist ein Schriftsteller / eine Dichterin, der / die … · Er / Sie ist … in … geboren. · …s Bücher sind … · In dem Buch geht es um … · Mir gefällt, dass … · Ich empfehle …s Bücher allen, die …</p>
+        <div class="qa">
+          <label for="schreiben-text">Dein Porträt</label>
+          <textarea id="schreiben-text" rows="10" placeholder="Mein Lieblingsautor ist …"
+            data-words="60-80"
+            data-must="geboren|geschrieben|empfehle"
+            data-check="Хто це і звідки|Коли й де народився / народилася (ist … geboren)|Що написав / написала|Про що улюблена книжка (Es geht um …)|Genitiv імені (…s Bücher)|Relativsatz (…, der / die / das …)"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Mein Lieblingsautor ist Michael Ende, ein deutscher Schriftsteller, der 1929 in Garmisch-Partenkirchen geboren ist. Er hat viele Bücher für Kinder und Jugendliche geschrieben. Michael Endes „Momo“ habe ich im Sommer gelesen. In dem Buch geht es um ein Mädchen, das den Menschen die gestohlene Zeit zurückbringt. Mir gefällt, dass die Geschichte spannend ist und dass man danach lange nachdenkt. Ich empfehle Endes Bücher allen, die Fantasie und Abenteuer mögen.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — режим контрольної: одна спроба, лише ця вкладка йде в бал ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Kennst du
+          <select class="blank inline" data-ans="Erich Kästners"><option value="">—</option><option>Erichs Kästner</option><option>Erich Kästners</option><option>Erichs Kästners</option></select> Gedichte?</div>
+        <div class="fill-item"><span class="num">8)</span> Das ist
+          <select class="blank inline" data-ans="Thomas’"><option value="">—</option><option>Thomas’</option><option>Thomass</option><option>Thomasen</option></select> Lieblingsbuch.</div>
+        <div class="fill-item"><span class="num">9)</span> Ich mag die Bücher von
+          <select class="blank inline" data-ans="Cornelia Funke"><option value="">—</option><option>Cornelia Funkes</option><option>Cornelia Funke</option><option>Cornelias Funkes</option></select>.</div>
+        <div class="fill-item"><span class="num">10)</span> Das ist die Dichterin,
+          <select class="blank inline" data-ans="deren"><option value="">—</option><option>dessen</option><option>die</option><option>deren</option></select> Gedichte wir in der Schule lesen.</div>
+        <div class="fill-item"><span class="num">11)</span> „Momo“ ist ein Roman,
+          <select class="blank inline" data-ans="den"><option value="">—</option><option>den</option><option>der</option><option>dem</option></select> Michael Ende 1973 geschrieben hat.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-8-klas-8-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-8-klas-8-rik";
+  const KN_UNIT = "l3-c";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Die Autorengalerie hängt in der Schulbibliothek.", a: "r"},
+    {s: "Erich Kästner ist in Berlin geboren.", a: "f"},
+    {s: "„Emil und die Detektive“ war Kästners erstes Kinderbuch.", a: "r"},
+    {s: "Michael Endes Vater war Musiker.", a: "f"},
+    {s: "Michael Ende hat „Momo“ in Italien geschrieben.", a: "r"},
+    {s: "Greta hat „Die unendliche Geschichte“ schon gelesen.", a: "f"},
+    {s: "Cornelia Funke hat zuerst Bilder für Kinderbücher gezeichnet.", a: "r"},
+    {s: "Lessja Ukrajinka ist ein Pseudonym.", a: "r"},
+    {s: "Lessja Ukrajinka hat ihr erstes Gedicht mit achtzehn Jahren geschrieben.", a: "f"},
+    {s: "Serhij Zhadan lebt in der Stadt, aus der Daryna kommt.", a: "r"}
+  ]);
+
+  // Üb. 1: пояснення ↔ слово
+  buildMatch('ub1', [
+    ["Sie schreibt Gedichte.", "die Dichterin"],
+    ["Er zeichnet Bilder für Bücher.", "der Illustrator"],
+    ["Sie überträgt Texte in eine andere Sprache.", "die Übersetzerin"],
+    ["Ein Text für das Theater.", "das Drama"],
+    ["Ein Film nach einem Buch.", "die Verfilmung"],
+    ["Ein anderer Name, unter dem ein Autor schreibt.", "das Pseudonym"],
+    ["Eine Person in einem Roman oder Film.", "die Figur"],
+    ["Er nimmt Dinge, die ihm nicht gehören.", "der Dieb"]
+  ], {lead: true});
+
+  // Üb. 2, Üb. 3
+  wireBlanks('ub2');
+  wireBlanks('ub3');
+
+  // Üb. 4: von → Genitiv
+  buildTransform('ub4-tr', [
+    {s: "Die Bücher von Erich Kästner sind lustig.", task: "Genitiv",
+     ans: "Erich Kästners Bücher sind lustig."},
+    {s: "Die Romane von Cornelia Funke haben viele Bilder.", task: "Genitiv",
+     ans: "Cornelia Funkes Romane haben viele Bilder."},
+    {s: "Die Gedichte von Lessja Ukrajinka kennt jedes Kind.", task: "Genitiv",
+     ans: "Lessja Ukrajinkas Gedichte kennt jedes Kind."},
+    {s: "Das Referat von Max war kurz.", task: "Genitiv",
+     ans: "Max' Referat war kurz.|Max´ Referat war kurz.|Max` Referat war kurz."},
+    {s: "Der Krimi von Daryna spielt in Hamburg.", task: "Genitiv",
+     ans: "Darynas Krimi spielt in Hamburg."},
+    {s: "Die Lieder von Serhij Zhadan hört Daryna gern.", task: "Genitiv",
+     ans: "Serhij Zhadans Lieder hört Daryna gern.|Daryna hört Serhij Zhadans Lieder gern.|Daryna hört gern Serhij Zhadans Lieder."}
+  ]);
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Wo findet die Lesenacht statt?", opts: ["In der Stadtbibliothek", "In der Schulbibliothek", "In der Turnhalle"], correct: "In der Schulbibliothek"},
+    {q: "Wann trifft sich die Klasse?", opts: ["Am Freitag um 19 Uhr", "Am Samstag um 19 Uhr", "Am Freitag um 9 Uhr"], correct: "Am Freitag um 19 Uhr"},
+    {q: "Was sollen die Schüler mitbringen?", opts: ["Einen Schlafsack und eine Taschenlampe", "Ein Zelt und einen Rucksack", "Ein Kissen und ein Hörbuch"], correct: "Einen Schlafsack und eine Taschenlampe"},
+    {q: "Wie lange liest jeder vor?", opts: ["Eine halbe Stunde", "Fünfzehn Minuten", "Fünf Minuten"], correct: "Fünf Minuten"},
+    {q: "Was zeigen Timur und Daryna?", opts: ["Einen Film über Michael Ende", "Eine Szene aus dem „Waldlied“", "Ein Gedicht von Kästner"], correct: "Eine Szene aus dem „Waldlied“"},
+    {q: "Wo darf man essen?", opts: ["Im Klassenraum nebenan", "Zwischen den Büchern", "Nirgends"], correct: "Im Klassenraum nebenan"},
+    {q: "Was passiert mit den Handys?", opts: ["Sie bleiben zu Hause.", "Sie liegen bis zum Frühstück in einer Kiste.", "Man darf sie die ganze Nacht benutzen."], correct: "Sie liegen bis zum Frühstück in einer Kiste."},
+    {q: "Was liest Herr Brandt um Mitternacht vor?", opts: ["Etwas Gruseliges", "Etwas Lustiges", "Etwas Langweiliges"], correct: "Etwas Gruseliges"},
+    {q: "Darf Greta ihren Hund mitbringen?", opts: ["Ja, Krümel passt auf.", "Nein, der Hund bleibt zu Hause.", "Ja, aber nur bis Mitternacht."], correct: "Nein, der Hund bleibt zu Hause."}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Erich Kästners Bücher sind immer noch lustig.", uk: "Книжки Еріха Кестнера й досі смішні."},
+    {say: "Mein Lieblingsautor ist Michael Ende.", uk: "Мій улюблений автор — Міхаель Енде."},
+    {say: "Sie ist eine Dichterin, die viele Sprachen konnte.", uk: "Вона поетка, яка знала багато мов."},
+    {say: "Das Buch ist 1973 erschienen.", uk: "Книжка вийшла 1973 року."},
+    {say: "Wessen Porträt fehlt noch?", uk: "Чийого портрета ще бракує?"}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Lessja Ukrajinka hat viele Gedichte geschrieben. Sie ist eine große ukrainische …", opts: ["Dichterin", "Illustratorin", "Figur"], correct: "Dichterin"},
+    {q: "Wann ist „Momo“ …? — 1973.", opts: ["geboren", "erschienen", "gestohlen"], correct: "erschienen"},
+    {q: "Wer hat „Emil und die Detektive“ geschrieben?", opts: ["Michael Ende", "Cornelia Funke", "Erich Kästner"], correct: "Erich Kästner"},
+    {q: "Welche Autorin hat ihre Bücher selbst illustriert?", opts: ["Cornelia Funke", "Lessja Ukrajinka", "Frau Sander"], correct: "Cornelia Funke"},
+    {q: "… Roman „Tintenherz“ ist 2003 erschienen.", opts: ["Cornelias Funkes", "Cornelia Funkes", "Cornelia Funke"], correct: "Cornelia Funkes"},
+    {q: "Emil ist ein Junge, … ein Dieb Geld stiehlt.", opts: ["der", "den", "dem"], correct: "dem"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Das ist Erich Kästners erstes Kinderbuch.", ok: true},
+    {s: "Ich lese gern Michaels Endes Bücher.", wrong: 3, fix: "Michael"},
+    {s: "Die Romane von Cornelia Funkes sind spannend.", wrong: 4, fix: "Funke"},
+    {s: "Lessja Ukrajinka ist eine Dichterin, der viele Sprachen konnte.", wrong: 5, fix: "die"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['✍️', '📚', '🎭', '🏅']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
