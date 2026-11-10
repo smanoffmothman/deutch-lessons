@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 3, Modul B: Was lesen wir? — Німецька мова 8 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 8 КЛАС</span>
+        <h1>Lektion 3 · Modul B: Was lesen wir?</h1>
+        <p class="sub">Урок про літературні жанри: детектив, фентезі, історичний роман, пригоди, комікс. Як розповісти, про що книжка, хто головний герой і де відбувається дія. Граматика — підрядні означальні речення (das Buch, das ich lese; die Autorin, deren Bücher …; die Geschichten, in denen …). Текст і діалог з озвученням, вправи, говоріння, письмо і підсумковий тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Genres</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · der, die, das, den</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · dem, deren, in denen</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Zwei Sätze — ein Satz</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власний текст + вправа на розуміння ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Was liest die 8b?</h2>
+      <p class="lead">Ніна розпитала однокласників для рубрики «Lesetipps» у шкільній газеті. Послухай і прочитай. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l3-b-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Für unsere Rubrik „Lesetipps“ habe ich fünf Leute aus der 8b gefragt: Was liest du gerade? Hier sind ihre Antworten.</p>
+        <p><b>Daryna:</b> „Ich lese gerade den <span class="gl" data-uk="детектив" data-lemma="der Krimi">Krimi</span>, den ich mir in der Stadtbibliothek ausgeliehen habe — meinen ersten Krimi auf Deutsch! Die <span class="gl" data-uk="головний герой, головна героїня" data-lemma="die Hauptfigur">Hauptfigur</span> ist eine junge <span class="gl" data-uk="комісарка, слідча" data-lemma="die Kommissarin">Kommissarin</span>, die in Hamburg arbeitet. Im Hafen verschwindet ein Schiff, und niemand weiß, wohin. Die Sätze sind manchmal lang, aber die <span class="gl" data-uk="сюжет, дія" data-lemma="die Handlung">Handlung</span> ist so <span class="gl" data-uk="захопливий, напружений" data-lemma="spannend">spannend</span>, dass ich das Wörterbuch fast vergesse.“</p>
+        <p><b>Timur:</b> „Mein Buch ist ein <span class="gl" data-uk="історичний роман" data-lemma="der historische Roman">historischer Roman</span>, dessen Handlung im 17. Jahrhundert <span class="gl" data-uk="відбуватися (про дію книжки, фільму)" data-lemma="spielen (in + Dat.)">spielt</span>. <span class="gl" data-uk="ідеться про…" data-lemma="es geht um (+ Akk.)">Es geht um</span> einen Jungen, der mit einer Theatergruppe durch Deutschland reist. Die Schauspieler, mit denen er unterwegs ist, haben kein Geld, aber viele Ideen. Für mich ist das perfekt: Geschichte und Theater in einem Buch!“</p>
+        <p><b>Greta:</b> „Ich lese eine <span class="gl" data-uk="графічний роман (великий комікс)" data-lemma="die Graphic Novel">Graphic Novel</span>. Das ist ein <span class="gl" data-uk="комікс" data-lemma="der Comic">Comic</span> für Jugendliche, dessen Geschichte so lang ist wie ein Roman. Die Zeichnerin, deren Bilder ich so toll finde, erzählt fast ohne Worte von einem Mädchen und seinem Großvater am Meer. Ich schaue mir jede Seite lange an — und dann zeichne ich selbst.“</p>
+        <p><b>Erik:</b> „Nach meinem Referat über Roboter brauchte ich etwas Neues: einen <span class="gl" data-uk="науково-фантастичний роман" data-lemma="der Science-Fiction-Roman">Science-Fiction-Roman</span>. Im Jahr 2150 lebt ein Roboter, der plötzlich <span class="gl" data-uk="почуття" data-lemma="das Gefühl">Gefühle</span> hat. Die Menschen, für die er arbeitet, haben Angst vor ihm. Ob er am Ende ein Freund oder ein Feind ist, <span class="gl" data-uk="видавати (таємницю)" data-lemma="verraten">verrate</span> ich nicht!“</p>
+        <p><b>Max:</b> „Ich? Ich lese doch nicht gern … Aber das Buch, das Frau Sander mir in der Schulbibliothek <span class="gl" data-uk="радити, рекомендувати" data-lemma="empfehlen">empfohlen</span> hat, habe ich in vier Tagen gelesen! Es ist ein Krimi über eine Jugendmannschaft, deren bester Spieler kurz vor dem Finale verschwindet. Der <span class="gl" data-uk="герой" data-lemma="der Held">Held</span>, der den Fall löst, ist ein Torwart — wie ich!“</p>
+        <p>Und ich? Ich lese am liebsten <span class="gl" data-uk="оповідання про тварин" data-lemma="die Tiergeschichte">Tiergeschichten</span>. Das Buch, über das ich nächste Woche schreibe, verrate ich noch nicht. Fünf Leute — und fast jeder liest etwas anderes. Nur Daryna und Max lesen beide Krimis. Max hat schon eine Idee: „Daryna, wir können ja Bücher tauschen!“</p>
+        <p><i>Nina, 8b</i></p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">Relativsätze · das Buch, das ich lese</h2>
+      <p class="lead">Підрядне означальне речення (Relativsatz) пояснює іменник — відповідає на питання «який? яка? яке?». Українською: «книжка, <b>яку</b> я читаю». Німецькою слово «який» — це <b>der / die / das</b> (Relativpronomen).</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. Як будується</p>
+        <p>Das ist der Krimi. Ich lese <b>ihn</b> gerade.<br>→ Das ist der Krimi, <b>den</b> ich gerade <b>lese</b>.</p>
+        <div class="merke">Перед Relativsatz — <b>кома</b>. Дієслово — <b>в кінці</b> (як після dass і weil). Relativsatz стоїть одразу після слова, яке пояснює: Das Buch, <b>das</b> ich lese, ist spannend.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. Relativpronomen</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th></th><th>Nom.</th><th>Akk.</th><th>Dat.</th><th>Gen.</th></tr>
+          <tr><td class="gender">m</td><td>der</td><td><strong>den</strong></td><td>dem</td><td><strong>dessen</strong></td></tr>
+          <tr><td class="gender">n</td><td>das</td><td>das</td><td>dem</td><td><strong>dessen</strong></td></tr>
+          <tr><td class="gender">f</td><td>die</td><td>die</td><td>der</td><td><strong>deren</strong></td></tr>
+          <tr><td class="gender">Pl.</td><td>die</td><td>die</td><td><strong>denen</strong></td><td><strong>deren</strong></td></tr>
+        </table></div>
+        <div class="merke">Майже як означений артикль. Інакше лише: Dativ множини — <b>denen</b>, Genitiv — <b>dessen / deren</b>.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. Яку форму взяти?</p>
+        <p><b>Рід і число</b> — від іменника, який пояснюємо. <b>Відмінок</b> — від дієслова в самому Relativsatz:</p>
+        <p>der Roman, <b>der</b> spannend ist <i>(хто? що? — Nom.)</i><br>
+           der Roman, <b>den</b> ich lese <i>(lesen + що? — Akk.)</i><br>
+           der Junge, <b>dem</b> ich helfe <i>(helfen + кому? — Dat.)</i><br>
+           der Autor, <b>dessen</b> Bücher ich mag <i>(чиї? — Gen.)</i></p>
+        <div class="merke"><b>dessen / deren</b> = «чий / чия / чиї»: die Autorin, <b>deren</b> Bücher … (її книжки); der Spieler, <b>dessen</b> Name … (його ім'я). Після dessen / deren іменник — без артикля.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">4. Прийменник + Relativpronomen</p>
+        <p>Ich wohne in <b>dem</b> Haus. → das Haus, <b>in dem</b> ich wohne<br>
+           Ich spreche mit <b>der</b> Freundin. → die Freundin, <b>mit der</b> ich spreche<br>
+           In den Büchern geht es um Tiere. → die Bücher, <b>in denen</b> es um Tiere geht<br>
+           Ich schreibe über <b>das</b> Buch. → das Buch, <b>über das</b> ich schreibe</p>
+        <div class="merke">Прийменник стоїть <b>перед</b> Relativpronomen і «вирішує» відмінок: mit, von, in (wo?) + Dativ; für, über, um + Akkusativ.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">5. Типові помилки</p>
+        <p>✗ Das ist das Buch, das ich lese gerade. → ✓ …, das ich gerade <b>lese</b>.</p>
+        <p>✗ Wie heißt der Roman, der du liest? → ✓ …, <b>den</b> du liest? <i>(du — підмет, Roman — Akk.)</i></p>
+        <p>✗ Ich mag Bücher, in die es um Tiere geht. → ✓ in <b>denen</b></p>
+        <p>✗ Das ist die Autorin, ihre Bücher ich mag. → ✓ …, <b>deren</b> Bücher ich mag.</p>
+        <p>✗ Das Buch, was ich lese, … → ✓ Das Buch, <b>das</b> ich lese, …</p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: жанри за картинкою ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Welches Genre?</h2>
+      <p class="lead">Який жанр підходить до картинки? Вибери.</p>
+      <div class="card" id="ub1-pic"></div>
+    </section>
+
+    <!-- ===== Üb. 2: Nom. / Akk. ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">der, die, das oder den?</h2>
+      <p class="lead">Вибери Relativpronomen. Спершу знайди іменник, який пояснюємо (рід!), потім подумай: це підмет (Nom.) чи додаток (Akk.)?</p>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> Das ist die Kommissarin,
+          <select class="blank inline" data-ans="die"><option value="">—</option><option>der</option><option>die</option><option>das</option></select> in Hamburg arbeitet.</div>
+        <div class="fill-item"><span class="num">2)</span> Wie heißt der Roman,
+          <select class="blank inline" data-ans="den"><option value="">—</option><option>der</option><option>den</option><option>dem</option></select> du gerade liest?</div>
+        <div class="fill-item"><span class="num">3)</span> Ich suche ein Buch,
+          <select class="blank inline" data-ans="das"><option value="">—</option><option>der</option><option>die</option><option>das</option></select> nicht so lang ist.</div>
+        <div class="fill-item"><span class="num">4)</span> Der Junge,
+          <select class="blank inline" data-ans="der"><option value="">—</option><option>der</option><option>den</option><option>die</option></select> mit der Theatergruppe reist, ist zwölf.</div>
+        <div class="fill-item"><span class="num">5)</span> Die Graphic Novel,
+          <select class="blank inline" data-ans="die"><option value="">—</option><option>der</option><option>den</option><option>die</option></select> Greta liest, hat 200 Seiten.</div>
+        <div class="fill-item"><span class="num">6)</span> Erik mag den Roboter,
+          <select class="blank inline" data-ans="der"><option value="">—</option><option>der</option><option>den</option><option>die</option></select> plötzlich Gefühle hat.</div>
+        <div class="fill-item"><span class="num">7)</span> Das ist der Krimi,
+          <select class="blank inline" data-ans="den"><option value="">—</option><option>der</option><option>den</option><option>das</option></select> Frau Sander Max empfohlen hat.</div>
+        <div class="fill-item"><span class="num">8)</span> Die Bücher,
+          <select class="blank inline" data-ans="die"><option value="">—</option><option>die</option><option>der</option><option>das</option></select> Daryna ausleiht, sind oft dick.</div>
+        <div class="fill-item"><span class="num">9)</span> Kennst du das Gedicht,
+          <select class="blank inline" data-ans="das"><option value="">—</option><option>das</option><option>den</option><option>der</option></select> wir morgen auswendig lernen?</div>
+        <div class="fill-item"><span class="num">10)</span> Ich habe einen Freund,
+          <select class="blank inline" data-ans="der"><option value="">—</option><option>den</option><option>der</option><option>dem</option></select> nur Comics liest.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: Dat. / Gen. / Präp. ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">dem, deren, in denen</h2>
+      <p class="lead">Тепер складніше: Dativ, Genitiv і прийменники. Вибери правильну форму.</p>
+      <div class="card" id="ub3-list">
+        <div class="fill-item"><span class="num">1)</span> Die Schauspieler, mit
+          <select class="blank inline" data-ans="denen"><option value="">—</option><option>denen</option><option>den</option><option>die</option></select> Timurs Held reist, haben kein Geld.</div>
+        <div class="fill-item"><span class="num">2)</span> Greta mag die Zeichnerin,
+          <select class="blank inline" data-ans="deren"><option value="">—</option><option>deren</option><option>dessen</option><option>der</option></select> Bilder fast ohne Worte erzählen.</div>
+        <div class="fill-item"><span class="num">3)</span> Max liest einen Krimi, in
+          <select class="blank inline" data-ans="dem"><option value="">—</option><option>dem</option><option>den</option><option>der</option></select> ein Spieler verschwindet.</div>
+        <div class="fill-item"><span class="num">4)</span> Frau Okafor ist die Bibliothekarin,
+          <select class="blank inline" data-ans="der"><option value="">—</option><option>die</option><option>der</option><option>deren</option></select> Daryna oft Bücher zurückgibt.</div>
+        <div class="fill-item"><span class="num">5)</span> Das ist ein Autor,
+          <select class="blank inline" data-ans="dessen"><option value="">—</option><option>deren</option><option>dem</option><option>dessen</option></select> Romane in vielen Sprachen erscheinen.</div>
+        <div class="fill-item"><span class="num">6)</span> Charkiw ist die Stadt, in
+          <select class="blank inline" data-ans="der"><option value="">—</option><option>die</option><option>der</option><option>dem</option></select> Daryna früher gewohnt hat.</div>
+        <div class="fill-item"><span class="num">7)</span> Die Menschen, für
+          <select class="blank inline" data-ans="die"><option value="">—</option><option>die</option><option>denen</option><option>deren</option></select> der Roboter arbeitet, haben Angst.</div>
+        <div class="fill-item"><span class="num">8)</span> Ich mag Geschichten, in
+          <select class="blank inline" data-ans="denen"><option value="">—</option><option>den</option><option>die</option><option>denen</option></select> Tiere sprechen können.</div>
+        <div class="fill-item"><span class="num">9)</span> Der Junge,
+          <select class="blank inline" data-ans="dem"><option value="">—</option><option>den</option><option>dem</option><option>der</option></select> ich mein Buch geliehen habe, ist mein Nachbar.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4: з'єднати речення ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Zwei Sätze — ein Satz</h2>
+      <p class="lead">З'єднай два речення в одне з Relativsatz. Підказка показує, з чого почати підрядне речення. Не забудь кому й дієслово в кінці!</p>
+      <div class="card" id="ub4-tr"></div>
+    </section>
+
+    <!-- ===== HÖREN — власний діалог, озвучений синтезатором ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Ein Buch für Lotte</h2>
+      <p class="lead">Грета шукає в книгарні подарунок для молодшої сестри. Послухай її розмову з продавцем (можна двічі) і дай відповіді. Текст діалогу відкривається внизу — але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l3-b-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Herr Wendt:</b> Guten Tag! Suchst du etwas Bestimmtes?<br>
+          <b>Greta:</b> Ja. Meine kleine Schwester Lotte hat am Sonntag Geburtstag. Ich suche ein Buch, das ihr gefällt.<br>
+          <b>Herr Wendt:</b> Was liest sie denn gern?<br>
+          <b>Greta:</b> Am liebsten Pferdebücher. Aber die hat sie schon alle! Und sie hat schnell Angst. Also bitte nichts Gruseliges.<br>
+          <b>Herr Wendt:</b> Dann keine Fantasy mit Drachen … Wie findest du das hier? Eine Tiergeschichte, in der ein Mädchen einen kleinen Fuchs im Wald findet.<br>
+          <b>Greta:</b> Oh, süß! Aber ist das Ende traurig? Lotte weint bei traurigen Geschichten immer.<br>
+          <b>Herr Wendt:</b> Keine Sorge, das Ende ist glücklich. Und es gibt viele Bilder, die eine junge Künstlerin gemalt hat.<br>
+          <b>Greta:</b> Die sind wirklich schön. Ich zeichne selbst gern. Wie viel kostet das Buch?<br>
+          <b>Herr Wendt:</b> Vierzehn Euro neunzig.<br>
+          <b>Greta:</b> Puh, ich habe genau fünfzehn Euro.<br>
+          <b>Herr Wendt:</b> Das reicht ja! Und weil es ein Geschenk ist, bekommst du ein Lesezeichen dazu — natürlich mit einem Fuchs.<br>
+          <b>Greta:</b> Perfekt! Können Sie das Buch bitte als Geschenk einpacken?<br>
+          <b>Herr Wendt:</b> Gern. Welches Papier möchtest du — das blaue oder das mit den Sternen?<br>
+          <b>Greta:</b> Das mit den Sternen. Lotte liebt Sterne.<br>
+          <b>Herr Wendt:</b> Bitte schön. Und alles Gute für deine Schwester!
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN — 🎤 + говоріння зі зразком ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Mein Buch</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Welche Genres liest du gern? Welche nicht? Warum?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Ich lese gern Fantasy und Abenteuergeschichten, weil sie spannend sind. Horrorgeschichten lese ich nicht — danach kann ich nicht schlafen.</div>
+        </div>
+        <div class="qa">
+          <label>2. Was liest du gerade? Worum geht es?</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Gerade lese ich einen Fantasy-Roman. Es geht um ein Mädchen, das plötzlich mit Tieren sprechen kann.</div>
+        </div>
+        <div class="qa">
+          <label>3. Wer ist die Hauptfigur? Wie ist sie?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Die Hauptfigur ist ein Mädchen, das sehr mutig ist. Sie hat einen Bruder, mit dem sie oft streitet, aber am Ende helfen sie einander.</div>
+        </div>
+        <div class="qa">
+          <label>4. Wo und wann spielt die Handlung?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Die Handlung spielt heute, in einem kleinen Dorf in den Bergen. Es gibt dort einen Wald, in dem viele Geheimnisse sind.</div>
+        </div>
+        <div class="qa">
+          <label>5. Welches Buch kannst du empfehlen? Für wen?</label>
+          <button class="btn secondary" type="button" data-reveal="spr5">Muster zeigen</button>
+          <div class="reveal" id="spr5">Ich empfehle das Buch, das ich im Sommer gelesen habe. Es ist perfekt für alle, die Abenteuer und Tiere mögen.</div>
+        </div>
+        <div class="qa">
+          <label>6. Buch, Hörbuch oder Film — was magst du am liebsten?</label>
+          <button class="btn secondary" type="button" data-reveal="spr6">Muster zeigen</button>
+          <div class="reveal" id="spr6">Am liebsten mag ich Bücher, weil ich mir die Figuren selbst vorstellen kann. Hörbücher höre ich im Bus, und Filme sehe ich mit meiner Familie.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Mein Lesetipp</h2>
+      <p class="lead">Напиши свій «Lesetipp» для рубрики Ніни — 60–80 слів за планом. Ужий щонайменше два Relativsätze.</p>
+      <div class="card">
+        <p>1) який це жанр; 2) про що книжка (Es geht um …); 3) хто головний герой / головна героїня і який (яка) він / вона; 4) де і коли відбувається дія; 5) що тобі сподобалося; 6) кому ти радиш цю книжку.</p>
+        <p class="beispiel">Mein Lesetipp ist ein …, den / eine …, die ich … gelesen habe. · Es geht um … · Die Hauptfigur ist …, der / die / das … · Die Handlung spielt … · Ich empfehle das Buch allen, die …</p>
+        <div class="qa">
+          <label for="schreiben-text">Dein Lesetipp</label>
+          <textarea id="schreiben-text" rows="10" placeholder="Mein Lesetipp ist …"
+            data-words="60-80"
+            data-must="geht es um|Hauptfigur|empfehle"
+            data-check="Жанр|Про що книжка (Es geht um + Akk.)|Головний герой + Relativsatz|Де і коли (Die Handlung spielt …)|Що сподобалося|Кому радиш (allen, die …)"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Mein Lesetipp ist eine Abenteuergeschichte, die ich im Sommer gelesen habe. Es geht um zwei Geschwister, die mit ihrem Opa in den Karpaten wandern. Die Hauptfigur ist Marta, ein Mädchen, das sehr mutig ist. Im Wald finden die Kinder eine alte Karte, deren Geheimnis niemand kennt. Die Handlung ist spannend, und die Berge sind wunderschön beschrieben. Ich empfehle das Buch allen, die Abenteuer und die Natur lieben.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — режим контрольної: одна спроба, лише ця вкладка йде в бал ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Wie heißt das Buch,
+          <select class="blank inline" data-ans="das"><option value="">—</option><option>den</option><option>das</option><option>die</option></select> du mir empfohlen hast?</div>
+        <div class="fill-item"><span class="num">8)</span> Die Autorin,
+          <select class="blank inline" data-ans="die"><option value="">—</option><option>der</option><option>deren</option><option>die</option></select> diesen Krimi geschrieben hat, lebt in Wien.</div>
+        <div class="fill-item"><span class="num">9)</span> Der Film, über
+          <select class="blank inline" data-ans="den"><option value="">—</option><option>den</option><option>dem</option><option>der</option></select> wir sprechen, ist ganz neu.</div>
+        <div class="fill-item"><span class="num">10)</span> Das ist meine Freundin,
+          <select class="blank inline" data-ans="deren"><option value="">—</option><option>dessen</option><option>deren</option><option>die</option></select> Bruder Gitarre spielt.</div>
+        <div class="fill-item"><span class="num">11)</span> Es geht
+          <select class="blank inline" data-ans="um"><option value="">—</option><option>über</option><option>von</option><option>um</option></select> einen Hund, der sprechen kann.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-8-klas-8-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-8-klas-8-rik";
+  const KN_UNIT = "l3-b";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Daryna liest einen Krimi auf Deutsch.", a: "r"},
+    {s: "Die Kommissarin in Darynas Buch arbeitet in Berlin.", a: "f"},
+    {s: "Timurs Roman spielt im 17. Jahrhundert.", a: "r"},
+    {s: "Die Schauspieler in Timurs Buch sind reich.", a: "f"},
+    {s: "Gretas Graphic Novel hat viele Bilder und wenige Worte.", a: "r"},
+    {s: "In Gretas Buch geht es um ein Mädchen und seine Großmutter.", a: "f"},
+    {s: "Nach dem Referat liest Erik einen Science-Fiction-Roman.", a: "r"},
+    {s: "Erik erzählt, wie das Buch endet.", a: "f"},
+    {s: "Max hat sein Buch schnell gelesen.", a: "r"},
+    {s: "Daryna und Max lesen das gleiche Genre.", a: "r"}
+  ]);
+
+  // Üb. 1: жанри
+  buildPicture('ub1-pic', [
+    {pic: "🔍", opts: ["der Krimi", "die Liebesgeschichte", "das Gedicht"], correct: "der Krimi"},
+    {pic: "🐉", opts: ["die Tiergeschichte", "die Fantasy", "das Sachbuch"], correct: "die Fantasy"},
+    {pic: "🏰", opts: ["der historische Roman", "der Comic", "die Science-Fiction"], correct: "der historische Roman"},
+    {pic: "👻", opts: ["die Abenteuergeschichte", "die Horrorgeschichte", "das Sachbuch"], correct: "die Horrorgeschichte"},
+    {pic: "🐎", opts: ["die Tiergeschichte", "der Krimi", "die Science-Fiction"], correct: "die Tiergeschichte"},
+    {pic: "💕", opts: ["der historische Roman", "die Horrorgeschichte", "die Liebesgeschichte"], correct: "die Liebesgeschichte"},
+    {pic: "🚀", opts: ["die Science-Fiction", "die Tiergeschichte", "das Gedicht"], correct: "die Science-Fiction"},
+    {pic: "🧭", opts: ["die Liebesgeschichte", "die Abenteuergeschichte", "der Comic"], correct: "die Abenteuergeschichte"},
+    {pic: "💬", opts: ["der Comic", "der Krimi", "das Lexikon"], correct: "der Comic"}
+  ]);
+
+  // Üb. 2, Üb. 3
+  wireBlanks('ub2');
+  wireBlanks('ub3');
+
+  // Üb. 4: з'єднати речення
+  buildTransform('ub4-tr', [
+    {s: "Daryna liest einen Krimi. Der Krimi hat 400 Seiten.", task: "…, der …",
+     ans: "Daryna liest einen Krimi, der 400 Seiten hat.|Daryna liest einen Krimi, der vierhundert Seiten hat."},
+    {s: "Das ist das Buch. Ich habe das Buch in der Bibliothek ausgeliehen.", task: "…, das …",
+     ans: "Das ist das Buch, das ich in der Bibliothek ausgeliehen habe."},
+    {s: "Wie heißt die Autorin? Du liest ihre Bücher so gern.", task: "…, deren …",
+     ans: "Wie heißt die Autorin, deren Bücher du so gern liest?"},
+    {s: "Ich mag Bücher. In den Büchern geht es um Tiere.", task: "…, in denen …",
+     ans: "Ich mag Bücher, in denen es um Tiere geht."},
+    {s: "Hier ist mein Freund. Ich tausche mit ihm Comics.", task: "…, mit dem …",
+     ans: "Hier ist mein Freund, mit dem ich Comics tausche."},
+    {s: "Der Roboter hat Gefühle. Die Menschen haben Angst vor dem Roboter.", task: "Der Roboter, vor dem …",
+     ans: "Der Roboter, vor dem die Menschen Angst haben, hat Gefühle."}
+  ]);
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Für wen sucht Greta ein Buch?", opts: ["Für Daryna", "Für ihre Schwester Lotte", "Für ihre Mutter"], correct: "Für ihre Schwester Lotte"},
+    {q: "Wann hat Lotte Geburtstag?", opts: ["Am Samstag", "Am Freitag", "Am Sonntag"], correct: "Am Sonntag"},
+    {q: "Warum kauft Greta kein Pferdebuch?", opts: ["Lotte hat schon alle.", "Lotte mag keine Pferde.", "Es gibt keine Pferdebücher."], correct: "Lotte hat schon alle."},
+    {q: "Was möchte Greta für Lotte nicht?", opts: ["Etwas mit Bildern", "Etwas Gruseliges", "Eine Tiergeschichte"], correct: "Etwas Gruseliges"},
+    {q: "Worum geht es im Buch?", opts: ["Um ein Mädchen und einen Fuchs", "Um einen Drachen", "Um ein Pferd am Meer"], correct: "Um ein Mädchen und einen Fuchs"},
+    {q: "Wie ist das Ende?", opts: ["Traurig", "Glücklich", "Offen"], correct: "Glücklich"},
+    {q: "Was bekommt Greta dazu?", opts: ["Eine Karte", "Ein Lesezeichen", "Einen Kalender"], correct: "Ein Lesezeichen"},
+    {q: "Welches Papier nimmt Greta?", opts: ["Das blaue", "Das rote", "Das mit den Sternen"], correct: "Das mit den Sternen"}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Das ist das Buch, das ich gerade lese.", uk: "Це книжка, яку я зараз читаю."},
+    {say: "Es geht um ein Mädchen, das zaubern kann.", uk: "Ідеться про дівчинку, яка вміє чаклувати."},
+    {say: "Die Handlung spielt im Mittelalter.", uk: "Дія відбувається в середньовіччі."},
+    {say: "Ich mag Bücher, in denen es um Tiere geht.", uk: "Я люблю книжки, у яких ідеться про тварин."},
+    {say: "Wie heißt die Autorin, deren Bücher du liest?", uk: "Як звати авторку, чиї книжки ти читаєш?"}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Detektive klären ein Verbrechen auf. Das Buch ist ein …", opts: ["Krimi", "Liebesroman", "Gedicht"], correct: "Krimi"},
+    {q: "Ein Buch über Drachen, Zauberer und magische Welten ist …", opts: ["ein Sachbuch", "Fantasy", "ein historischer Roman"], correct: "Fantasy"},
+    {q: "Wo spielt die …? — In Hamburg.", opts: ["Hauptfigur", "Seite", "Handlung"], correct: "Handlung"},
+    {q: "Das ist der Junge, … ich ein Buch geschenkt habe.", opts: ["den", "dem", "der"], correct: "dem"},
+    {q: "Ich lese einen Roman, … Held ein Pilot ist.", opts: ["dessen", "deren", "den"], correct: "dessen"},
+    {q: "Das sind die Freunde, mit … ich ins Kino gehe.", opts: ["den", "die", "denen"], correct: "denen"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Das ist der Roman, den ich gerade lese.", ok: true},
+    {s: "Wie heißt der Krimi, der du gerade liest?", wrong: 4, fix: "den"},
+    {s: "Ich mag Geschichten, in die Tiere sprechen.", wrong: 4, fix: "denen"},
+    {s: "Das ist meine Freundin, ihre Mutter Ärztin ist.", wrong: 4, fix: "deren"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📖', '🔍', '🐉', '✍️']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
