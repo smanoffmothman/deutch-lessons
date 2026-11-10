@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stadion, Lachter, Stone: kuriose Maßeinheiten · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Geschichte</span>
+        <h1>Stadion, Lachter, Stone: kuriose Maßeinheiten</h1>
+        <p class="sub">Відстань у стадіонах, глибину шахти в лахтерах, вагу людини в каменях — а атомне ядро в «сараях». Невелика екскурсія світом незвичних мір.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Welche Einheit?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Wie lang ist ein Fuß?</h2>
+      <div class="card">
+        <p>Womit misst du Längen und Gewichte? Kennst du alte Maßeinheiten – zum Beispiel aus Märchen, Büchern oder von deinen Großeltern?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Чим ти вимірюєш довжину й вагу? Чи знаєш старі одиниці виміру — наприклад, із казок, книжок чи від бабусі й дідуся (лікоть, п'ядь, сажень, верста…)?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Meter und Kilogramm kennt heute fast jeder. Früher aber hatte fast jede Region ihre eigenen <span class="gl" data-key data-uk="одиниця виміру" data-lemma="die Maßeinheit, -en">Maßeinheiten</span>. Manche davon sind ziemlich <span class="gl" data-uk="кумедний, дивний" data-lemma="kurios">kurios</span>.</p>
+
+          <p>Im antiken Griechenland <span class="gl" data-key data-uk="вимірювати" data-lemma="messen (maß, hat gemessen)">maß</span> man Strecken in „Stadien“. Ein Stadion war etwa 185 Meter lang – so lang wie die <span class="gl" data-uk="бігова доріжка" data-lemma="die Laufbahn, -en">Laufbahn</span> in einem Stadion für Wettläufe. Die Einheit benutzte man nicht nur im Sport. Auch auf Karten und bei der <span class="gl" data-uk="землемірство, вимірювання землі" data-lemma="die Landvermessung, -en">Landvermessung</span> gab man <span class="gl" data-key data-uk="відстань" data-lemma="die Entfernung, -en">Entfernungen</span> in Stadien an.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ancient_stadium_at_Delphi%2C_Greece.jpg/960px-Ancient_stadium_at_Delphi%2C_Greece.jpg" alt="Das antike Stadion von Delphi in Griechenland." width="960" height="447" loading="lazy">
+            <figcaption>Das antike Stadion von Delphi in Griechenland. Foto: Milo44, gemeinfrei, <a href="https://commons.wikimedia.org/wiki/File:Ancient_stadium_at_Delphi,_Greece.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Im alten <span class="gl" data-key data-uk="гірництво, гірнича справа" data-lemma="der Bergbau">Bergbau</span> rechnete man in „Lachter“. Ein Lachter war je nach Region zwischen 1,75 und 2,38 Meter lang. Gemessen wurde oft mit einer <span class="gl" data-uk="шнур, мотузка" data-lemma="die Schnur, -ü-e">Schnur</span>, die in Öl <span class="gl" data-uk="просочувати" data-lemma="tränken">getränkt</span> war. Sie hielt die <span class="gl" data-uk="вологий" data-lemma="feucht">feuchte</span> Luft in den Stollen gut aus. So konnte man auch in dunklen Tunneln ziemlich <span class="gl" data-uk="точно" data-lemma="genau">genau</span> messen.</p>
+
+          <p>Ein besonders <span class="gl" data-uk="кумедний" data-lemma="lustig">lustiger</span> Name stammt aus der Physik: das „Barn“. Auf Englisch heißt <i>barn</i> „Scheune“. Ein Barn ist aber winzig: eine <span class="gl" data-uk="площа" data-lemma="die Fläche, -n">Fläche</span> von 10<sup>−28</sup> Quadratmetern. Das ist ungefähr der <span class="gl" data-uk="поперечний переріз" data-lemma="der Querschnitt, -e">Querschnitt</span> eines schweren <span class="gl" data-uk="атомне ядро" data-lemma="der Atomkern, -e">Atomkerns</span>. Den Namen <span class="gl" data-uk="вигадувати (слово), карбувати" data-lemma="prägen">prägten</span> amerikanische Forscher 1942 während des Manhattan-Projekts, in dem die Atombombe entwickelt wurde. Der harmlose Name sollte nicht <span class="gl" data-uk="привертати увагу" data-lemma="auffallen (fiel auf, ist aufgefallen)">auffallen</span> – und war zugleich ein Witz: Für Physiker ist ein Atomkern „groß wie eine Scheune“.</p>
+
+          <p>Viele Völker nahmen einfach den eigenen Körper als <span class="gl" data-uk="мірило, еталон" data-lemma="das Maß, -e">Maß</span>. Die Maori in Neuseeland zum Beispiel maßen mit der Breite der Hand oder mit dem Abstand zwischen Daumen und kleinem Finger bei <span class="gl" data-uk="розчепірений, розставлений" data-lemma="gespreizt">gespreizter</span> Hand. Das war praktisch: Den Körper hat man immer dabei.</p>
+
+          <p>In Großbritannien lebt eine alte Einheit bis heute: der „Stone“. Ein Stone sind genau 14 <span class="gl" data-uk="фунт" data-lemma="das Pfund, -e">Pfund</span>, also etwa 6,35 Kilogramm. Früher dienten echte Steine als <span class="gl" data-uk="гиря, вага-еталон" data-lemma="das Gewicht, -e">Gewichte</span> für Waren wie Getreide oder Fleisch. Heute geben viele Briten so vor allem ihr <span class="gl" data-key data-uk="вага тіла" data-lemma="das Körpergewicht">Körpergewicht</span> an.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Auch in Deutschland hatte früher fast jede Stadt ihre eigene <span class="gl" data-uk="лікоть (міра довжини)" data-lemma="die Elle, -n">Elle</span> und ihren eigenen Fuß. Damit es beim Handel keinen Streit gab, hingen die richtigen Maße oft öffentlich am Rathaus. Erst seit 1872 gelten in ganz Deutschland Meter und Kilogramm.</p>
+          </aside>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Elle_Mannheim.JPG/960px-Elle_Mannheim.JPG" alt="Rheinländische Elle und Rheinländischer Fuß am alten Rathaus in Mannheim (1711)." width="960" height="720" loading="lazy">
+            <figcaption>Rheinländische Elle und Rheinländischer Fuß am alten Rathaus in Mannheim (1711). Foto: Altera levatur, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Elle_Mannheim.JPG" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Welche Einheit ist das?</h2>
+      <p class="lead">Поєднай одиницю виміру з описом.</p>
+      <div class="card" id="ub3-list"></div>
+    </section>
+
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+      <p class="lead">б) Встав слова в текст. Одне слово зайве.</p>
+      <div class="card" id="ub4b-bank"></div>
+    </section>
+
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповідь німецькою. Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div id="ub5-w"></div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Старі українські міри: <b>п'ядь</b> — відстань між розчепіреними великим і вказівним пальцями; <b>лікоть</b> — від ліктя до кінчиків пальців; <b>сажень</b> — розмах рук; <b>верста</b> — для доріг. Корисні звороти: <i>Ein … ist ungefähr … lang, Man misst mit …, Das hat man für … benutzt.</i>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Früher hatte fast jede Region eigene Maße: das Stadion in Griechenland, den Lachter im Bergbau, den Stone in Großbritannien. Oft nahm man den Körper als Maß. Auch in Deutschland gab es viele verschiedene Ellen und Füße – erst seit 1872 gelten überall Meter und Kilogramm.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Колись майже кожен регіон мав свої міри: стадій у Греції, лахтер у гірництві, стоун у Британії. Часто мірою було людське тіло. І в Німеччині існувало багато різних ліктів і футів — лише з 1872 року скрізь діють метр і кілограм.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "alte-masseinheiten";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text?",
+     opts: ["Um ungewöhnliche Maßeinheiten aus verschiedenen Zeiten und Ländern",
+            "Um die Geschichte der Olympischen Spiele",
+            "Um moderne Messgeräte in der Physik"],
+     correct: "Um ungewöhnliche Maßeinheiten aus verschiedenen Zeiten und Ländern"}
+  ]);
+  buildMatch('ub1h', [
+    ["Laufen und Messen in Griechenland", "Absatz 1"],
+    ["Messen unter der Erde", "Absatz 2"],
+    ["Eine Scheune in der Physik", "Absatz 3"],
+    ["Der Körper als Maß", "Absatz 4"],
+    ["Ein Stein für das Gewicht", "Absatz 5"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "Ein griechisches Stadion war etwa 185 Meter lang.", a: "r"},
+    {s: "Ein Lachter war überall genau zwei Meter lang.", a: "f"},
+    {s: "Die Messschnur im Bergbau war in Öl getränkt.", a: "r"},
+    {s: "Ein Barn ist eine sehr große Fläche.", a: "f"},
+    {s: "Die Maori benutzten auch die Länge ihres Fußes als Maß.", a: "n"},
+    {s: "Viele Briten geben ihr Körpergewicht in Stone an.", a: "r"}
+  ]);
+
+  buildMatch('ub3', [
+    ["das Stadion", "etwa 185 Meter, so lang wie eine antike Laufbahn"],
+    ["der Lachter", "1,75 bis 2,38 Meter, im Bergbau benutzt"],
+    ["das Barn", "eine winzige Fläche in der Physik"],
+    ["der Stone", "14 Pfund, etwa 6,35 Kilogramm"],
+    ["die Elle", "eine alte Längeneinheit, in jeder Stadt etwas anders"]
+  ]);
+
+  buildMatch('ub4', [
+    ["messen", "вимірювати"],
+    ["die Entfernung", "відстань"],
+    ["feucht", "вологий"],
+    ["genau", "точно"],
+    ["die Fläche", "площа"],
+    ["das Körpergewicht", "вага тіла"]
+  ]);
+  buildWordBank('ub4b-bank', {
+    text: "In der Schule [messen] wir die Länge des Tisches mit einem Lineal. Die [Entfernung] von Kyjiw nach Lwiw gibt man in Kilometern an. Beim Arzt steht man auf einer Waage, und sie zeigt das [Körpergewicht]. Für ein gutes Ergebnis muss man [genau] messen.",
+    extra: ["feucht"]
+  });
+
+  buildWriting('ub5-w', {
+    prompt: "Welche alten Maßeinheiten gab es in der Ukraine? Wähle zwei aus und erkläre auf Deutsch, wie man damit gemessen hat. Probiere es auch selbst: Wie viele „Spannen“ (п'ядь) ist dein Schreibtisch lang? (50–80 Wörter)",
+    words: "50-80",
+    check: ["Ich erkläre zwei alte Maßeinheiten", "Ich beschreibe meine eigene Messung"]
+  });
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📏','⚖️','🏟️','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
