@@ -292,5 +292,22 @@
   {de: "vorlesen (liest vor), hat vorgelesen", uk: "читати вголос", r: "l3-c"},
   {de: "die Lesenacht, -nächte", uk: "ніч читання", r: "l3-c"},
   {de: "der Schlafsack, -säcke", uk: "спальний мішок", r: "l3-c"},
-  {de: "die Taschenlampe, -n", uk: "ліхтарик", r: "l3-c"}
+  {de: "die Taschenlampe, -n", uk: "ліхтарик", r: "l3-c"},
+  // ---- Lektion 3 · Modul E: Geschichtenzeit ----
+  {de: "der Geist, -er", uk: "привид", r: "l3-e"},
+  {de: "das Geräusch, -e", uk: "шум, звук", r: "l3-e"},
+  {de: "still", uk: "тихий, тихо", r: "l3-e"},
+  {de: "flüstern", uk: "шепотіти", r: "l3-e"},
+  {de: "schreien, hat geschrien", uk: "кричати", r: "l3-e", note: "Präteritum: schrie"},
+  {de: "zittern", uk: "тремтіти", r: "l3-e"},
+  {de: "klatschen", uk: "плескати в долоні, аплодувати", r: "l3-e"},
+  {de: "die Kiste, -n", uk: "ящик, коробка", r: "l3-e"},
+  {de: "die Ecke, -n", uk: "куток", r: "l3-e"},
+  {de: "das Kinn", uk: "підборіддя", r: "l3-e"},
+  {de: "die Tüte, -n", uk: "пакет, пакетик", r: "l3-e", note: "eine Tüte Chips"},
+  {de: "die Strafe, -n", uk: "покарання", r: "l3-e", note: "Strafe muss sein. / zur Strafe"},
+  {de: "die Stimme, -n", uk: "голос", r: "l3-e"},
+  {de: "der Krümel, -", uk: "крихта", r: "l3-e"},
+  {de: "fegen", uk: "підмітати", r: "l3-e"},
+  {de: "heimlich", uk: "потай, нишком", r: "l3-e"}
 ];
