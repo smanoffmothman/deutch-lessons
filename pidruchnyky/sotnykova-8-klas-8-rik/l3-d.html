@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 3, Modul D: Wiederholung — Німецька мова 8 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 8 КЛАС</span>
+        <h1>Lektion 3 · Modul D: Wiederholung</h1>
+        <p class="sub">Повторення Lektion 3 «Wer liest, lebt doppelt!»: бібліотека, жанри, автори. Граматика — прикметники в ролі іменників (etwas Neues, der Bekannte), Relativsätze і Genitiv власних імен. Бліц, кросворд, вправи, чат і підсумковий тест на весь Lektion.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Blitz</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Kreuzworträtsel</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Sortieren</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Fehler</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Chat</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER — усі слова Lektion 3 (збираються самі) ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Усі слова Lektion 3</h2>
+      <p class="lead">Тут зібрано слова всіх модулів Lektion 3. Перевір себе в «Картки ▶» і познач ☆ ті, які ще не пам'ятаєш, — їх варто повторити перед тестом.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: бліц ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Blitz: 60 Sekunden</h2>
+      <p class="lead">Розминка на швидкість: скільки слів Lektion 3 ти перекладеш за 60 секунд? У бал не йде — це гра. Спробуй побити власний рекорд!</p>
+      <div class="card" id="ub1-blitz"></div>
+    </section>
+
+    <!-- ===== Üb. 2: кросворд ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Kreuzworträtsel: Bibliothek und Bücher</h2>
+      <p class="lead">Торкнися клітинки чи підказки й пиши слово (ще раз по клітинці — інший напрямок). Артиклі писати не треба. ä ö ü — з панелі внизу.</p>
+      <div class="card" id="ub2-kw"></div>
+    </section>
+
+    <!-- ===== Üb. 3: сортування ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Bibliothek, Genre oder Mensch?</h2>
+      <p class="lead">Розклади слова по трьох кошиках: натисни слово, потім кошик.</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 4: знайди помилку ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Finde den Fehler</h2>
+      <p class="lead">Граматика всього Lektion: etwas Neues і der Bekannte, Relativsätze (der, den, dem, dessen, deren), Genitiv власних імен. Знайди помилку й виправ її — або натисни «Fehlerfrei».</p>
+      <div class="card" id="ub4-fix"></div>
+    </section>
+
+    <!-- ===== Üb. 5: чат ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Ostap fragt nach Büchern</h2>
+      <p class="lead">Остап зі Львова готує для свого класу опитування про читання й пише тобі. Вибирай правильну відповідь.</p>
+      <div class="card" id="ub5-chat"></div>
+    </section>
+
+    <!-- ===== SPRECHEN ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Sprich mal!</h2>
+      <p class="lead">Спершу вимов фрази в 🎤, потім відповідай уголос на запитання й порівнюй зі зразком.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Wie oft gehst du in die Bibliothek? Was leihst du dir aus?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Ich gehe ungefähr einmal im Monat in unsere Schulbibliothek. Meistens leihe ich mir Fantasy-Romane aus, manchmal auch ein Sachbuch für ein Referat. Die Bücher darf ich drei Wochen behalten.</div>
+        </div>
+        <div class="qa">
+          <label>2. Welche Genres liest du gern? Warum?</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Ich lese gern Krimis, weil sie spannend sind. Ich mag auch Geschichten, in denen es um Tiere geht. Etwas Gruseliges lese ich nicht so gern.</div>
+        </div>
+        <div class="qa">
+          <label>3. Erzähl von einem Buch, das du gelesen hast: Worum geht es? Wer ist die Hauptfigur?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Im Sommer habe ich einen Abenteuerroman gelesen. Es geht um einen Jungen, der allein durch die Berge wandert. Die Hauptfigur ist mutig und klug. Die Handlung spielt in den Karpaten.</div>
+        </div>
+        <div class="qa">
+          <label>4. Wer ist dein Lieblingsautor / deine Lieblingsautorin? Was weißt du über ihn / sie?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Mein Lieblingsautor ist Erich Kästner, der 1899 in Dresden geboren ist. Kästners Bücher sind lustig und spannend. Am besten gefällt mir „Emil und die Detektive“.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — на весь Lektion ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Test zu Lektion 3</h2>
+      <p class="lead">Підсумковий тест на весь Lektion 3: 18 завдань. Кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">9)</span> Daryna liest einen Krimi,
+          <select class="blank inline" data-ans="der"><option value="">—</option><option>den</option><option>der</option><option>das</option></select> in Hamburg spielt.</div>
+        <div class="fill-item"><span class="num">10)</span> Wie heißt das Buch,
+          <select class="blank inline" data-ans="das"><option value="">—</option><option>das</option><option>den</option><option>dem</option></select> du gerade liest?</div>
+        <div class="fill-item"><span class="num">11)</span> Das sind die Freunde, mit
+          <select class="blank inline" data-ans="denen"><option value="">—</option><option>den</option><option>die</option><option>denen</option></select> ich Bücher tausche.</div>
+        <div class="fill-item"><span class="num">12)</span> Im Katalog gibt es viel
+          <select class="blank inline" data-ans="Interessantes"><option value="">—</option><option>Interessante</option><option>Interessantes</option><option>Interessanten</option></select>.</div>
+        <div class="fill-item"><span class="num">13)</span>
+          <select class="blank inline" data-ans="Max’"><option value="">—</option><option>Maxs</option><option>Maxes</option><option>Max’</option></select> Lieblingsbuch ist ein Krimi.</div>
+        <div class="fill-item"><span class="num">14)</span> Ich mag die Gedichte von
+          <select class="blank inline" data-ans="Erich Kästner"><option value="">—</option><option>Erich Kästner</option><option>Erich Kästners</option><option>Erichs Kästner</option></select>.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-8-klas-8-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-8-klas-8-rik";
+  const KN_UNIT = "l3-d";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['ub1', 'ub2', 'ub3', 'ub4', 'ub5', 'sprechen']});
+
+  // Üb. 1: бліц — усі слова Lektion 3 з файлу слів (без однакових перекладів)
+  const blitzPairs = [], blitzSeen = new Set();
+  ((window.SLOVA && window.SLOVA[KN_BOOK]) || []).filter(w => /^l3-/.test(w.r)).forEach(w => {
+    const de = w.de.split(' / ')[0].split(',')[0].replace(/\s*\(.*?\)/g, '').trim();
+    const uk = w.uk.split(' / ')[0].trim();
+    const key = uk.split(/[,;]/)[0].trim().toLowerCase();
+    if (!de || /^(der|die|das)$/i.test(de) || blitzSeen.has(key)) return;
+    blitzSeen.add(key);
+    blitzPairs.push([de, uk]);
+  });
+  buildBlitz('ub1-blitz', {pairs: blitzPairs, seconds: 60, dir: "de-uk"});
+
+  // Üb. 2: кросворд
+  buildCrossword('ub2-kw', [
+    ["Bibliothek", "бібліотека (die)"],
+    ["Lesesaal", "читальний зал (der)"],
+    ["Katalog", "каталог (der)"],
+    ["Regal", "полиця, стелаж (das)"],
+    ["Krimi", "детектив (der)"],
+    ["Gedicht", "вірш (das)"],
+    ["Handlung", "сюжет, дія (die)"],
+    ["Held", "герой (der)"],
+    ["Dichterin", "поетка (die)"],
+    ["Autor", "автор (der)"],
+    ["Frist", "термін (die)"],
+    ["spannend", "захопливий"]
+  ]);
+
+  // Üb. 3: сортування
+  buildSort('ub3-sort', {
+    buckets: ["In der Bibliothek 📚", "Genres 🔍", "Menschen ✍️"],
+    items: [
+      {t: "der Lesesaal", b: "In der Bibliothek 📚"},
+      {t: "der Leserausweis", b: "In der Bibliothek 📚"},
+      {t: "die Frist", b: "In der Bibliothek 📚"},
+      {t: "das Regal", b: "In der Bibliothek 📚"},
+      {t: "der Krimi", b: "Genres 🔍"},
+      {t: "die Fantasy", b: "Genres 🔍"},
+      {t: "die Tiergeschichte", b: "Genres 🔍"},
+      {t: "der historische Roman", b: "Genres 🔍"},
+      {t: "die Dichterin", b: "Menschen ✍️"},
+      {t: "der Illustrator", b: "Menschen ✍️"},
+      {t: "der Übersetzer", b: "Menschen ✍️"},
+      {t: "die Schriftstellerin", b: "Menschen ✍️"}
+    ]
+  });
+
+  // Üb. 4: знайди помилку
+  buildFixError('ub4-fix', [
+    {s: "Ich möchte etwas spannendes lesen.", wrong: 3, fix: "Spannendes"},
+    {s: "Für Jugendliche ist der Leserausweis kostenlos.", ok: true},
+    {s: "Im Internet habe ich nichts Neue gefunden.", wrong: 5, fix: "Neues"},
+    {s: "Das ist der Krimi, den ich gerade lese.", ok: true},
+    {s: "Kennst du die Autorin, dessen Bücher so spannend sind?", wrong: 4, fix: "deren"},
+    {s: "Das ist das Buch, das mir Frau Sander empfohlen hat.", ok: true},
+    {s: "Timur spielt in Lessjas Ukrajinkas „Waldlied“ mit.", wrong: 3, fix: "Lessja"},
+    {s: "Mein Onkel ist ein Verwandte von mir.", wrong: 4, fix: "Verwandter"},
+    {s: "Der Junge, den ich das Buch geliehen habe, heißt Leon.", wrong: 2, fix: "dem"}
+  ]);
+
+  // Üb. 5: чат
+  buildChat('ub5-chat', {
+    partner: "Ostap",
+    steps: [
+      {them: "Hallo! Ich mache eine Umfrage für meine Klasse. Liest du gern?"},
+      {you: ["Ja, ich lese gern, am liebsten Krimis.", "Ja, ich lese gern am liebsten Krimis sind.", "Ja, ich gern lese Krimis."], correct: 0},
+      {them: "Was liest du gerade?"},
+      {you: ["Ein Buch, der in Kyjiw spielt.", "Ein Buch, das in Kyjiw spielt.", "Ein Buch, das spielt in Kyjiw."], correct: 1},
+      {them: "Worum geht es?"},
+      {you: ["Es geht über zwei Freunde.", "Es geht zwei Freunde, die einen Schatz suchen.", "Es geht um zwei Freunde, die einen Schatz suchen."], correct: 2},
+      {them: "Klingt gut! Gehst du oft in die Bibliothek?"},
+      {you: ["Ja, dort finde ich immer etwas Interessantes.", "Ja, dort finde ich immer etwas interessantes.", "Ja, dort finde ich immer etwas Interessante."], correct: 0},
+      {them: "Und wer ist dein Lieblingsautor?"},
+      {you: ["Ich mag Erichs Kästners Bücher.", "Ich mag die Bücher von Erich Kästners.", "Ich mag Erich Kästners Bücher."], correct: 2},
+      {them: "Super, danke! Das kommt alles in meine Umfrage."}
+    ]
+  });
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Ich möchte mir dieses Buch ausleihen.", uk: "Я хотів би (хотіла б) позичити цю книжку."},
+    {say: "Hast du etwas Spannendes für mich?", uk: "У тебе є для мене щось захопливе?"},
+    {say: "Das ist das Buch, das ich gerade lese.", uk: "Це книжка, яку я зараз читаю."},
+    {say: "Erich Kästners Bücher sind immer noch lustig.", uk: "Книжки Еріха Кестнера й досі смішні."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "In der Bibliothek kann man Bücher …", opts: ["einpacken", "ausleihen", "verraten"], correct: "ausleihen"},
+    {q: "Ich brauche das Buch noch eine Woche. Ich muss die Frist …", opts: ["verlängern", "vorstellen", "verfolgen"], correct: "verlängern"},
+    {q: "Ein Buch über ein Verbrechen und eine Kommissarin ist ein …", opts: ["Gedicht", "Sachbuch", "Krimi"], correct: "Krimi"},
+    {q: "Die … des Romans ist ein Mädchen, das gut zuhören kann.", opts: ["Hauptfigur", "Handlung", "Gebühr"], correct: "Hauptfigur"},
+    {q: "Hast du etwas … für mich?", opts: ["Lustige", "Lustiges", "lustiges"], correct: "Lustiges"},
+    {q: "Meine Tante ist eine gute … von Frau Okafor.", opts: ["Bekannter", "Bekanntes", "Bekannte"], correct: "Bekannte"},
+    {q: "Das ist der Autor, … Bücher ich so gern lese.", opts: ["dessen", "deren", "den"], correct: "dessen"},
+    {q: "… Roman „Momo“ ist 1973 erschienen.", opts: ["Michaels Ende", "Michael Endes", "Michaels Endes"], correct: "Michael Endes"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Die Bibliothekarin hat mir etwas Gutes empfohlen.", ok: true},
+    {s: "Das ist der Roman, der ich im Sommer gelesen habe.", wrong: 4, fix: "den"},
+    {s: "Für Erwachsenen kostet der Ausweis zehn Euro.", wrong: 1, fix: "Erwachsene"},
+    {s: "Ich kenne Cornelias Funkes Bücher.", wrong: 2, fix: "Cornelia"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📚', '🔍', '✍️', '🏆']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>

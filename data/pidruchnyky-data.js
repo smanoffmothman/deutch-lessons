@@ -365,8 +365,8 @@ const PIDRUCHNYKY = [
         { id: "l3-a", label: "A", nazva: "In der Bibliothek", storinky: "44–49", typ: "vpravy", gram: ["adjektive-als-nomen"], opublikovano: 10 },
         { id: "l3-b", label: "B", nazva: "Was lesen wir?", storinky: "50–55", typ: "vpravy", gram: ["relativsaetze"], opublikovano: 11 },
         { id: "l3-c", label: "C", nazva: "Lieblingsbücher und -autoren", storinky: "56–61", typ: "vpravy", gram: ["deklination-nomen", "relativsaetze"], opublikovano: 12 },
-        { id: "l3-d", label: "D", nazva: "Wiederholung", storinky: "62–63", typ: "povtorennya", gram: ["adjektive-als-nomen", "relativsaetze", "deklination-nomen"] },
-        { id: "l3-e", label: "E", nazva: "Geschichtenzeit", storinky: "64", typ: "chytannya" },
+        { id: "l3-d", label: "D", nazva: "Wiederholung", storinky: "62–63", typ: "povtorennya", gram: ["adjektive-als-nomen", "relativsaetze", "deklination-nomen"], opublikovano: 13 },
+        { id: "l3-e", label: "E", nazva: "Geschichtenzeit", storinky: "64", typ: "chytannya", opublikovano: 14 },
         { id: "l3-f", label: "F", nazva: "Projektarbeit", storinky: "65", typ: "bez-storinky" },
         { id: "l3-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "66", typ: "bez-storinky" }
       ] },
