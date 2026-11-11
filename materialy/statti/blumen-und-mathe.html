@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blumen, die rechnen können · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Geschichte</span>
+        <h1>Blumen, die rechnen können</h1>
+        <p class="sub">На посуді, якому вісім тисяч років, намальовано квіти — і пелюсток на них майже завжди 4, 8, 16, 32 або 64. Випадковість? Чи найдавніша математика людства?</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Zwei Meinungen</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Deine Meinung</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Muster und Zahlen</h2>
+      <div class="card">
+        <p>Wo siehst du im Alltag Muster, die sich regelmäßig wiederholen? Was glaubst du: Was kam in der Geschichte der Menschen zuerst – das Rechnen oder das Schreiben?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Де в повсякденні ти бачиш візерунки, що рівномірно повторюються (вишиванка, писанка, плитка…)? Як гадаєш, що в історії людства з'явилося раніше — лічба чи письмо?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Vier, acht, sechzehn, zweiunddreißig: Auf 8000 Jahre alten Schalen haben Forscher eine erstaunliche <span class="gl" data-key data-uk="закономірність, регулярність" data-lemma="die Regelmäßigkeit, -en">Regelmäßigkeit</span> entdeckt. Konnten die Menschen damals schon mathematisch denken – lange bevor es Schrift gab?</p>
+          <p>Die Halaf-Kultur lebte zwischen 6200 und 5500 v. Chr. im Norden von Mesopotamien, also in der Region des heutigen Irak und Syrien. Es war die <span class="gl" data-uk="неоліт, новий кам&#x27;яний вік" data-lemma="die Jungsteinzeit">Jungsteinzeit</span>: Die Menschen wohnten in Dörfern und lebten vom Ackerbau. Berühmt ist diese Kultur für ihre fein bemalte <span class="gl" data-key data-uk="кераміка" data-lemma="die Keramik">Keramik</span>. Ein Team der Hebräischen Universität Jerusalem hat nun Hunderte dieser <span class="gl" data-key data-uk="посудина" data-lemma="das Gefäß, -e">Gefäße</span> untersucht.</p>
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Handmade_pottery_shallow_plate._The_interior_is_decorated_with_a_floral_design_in_the_center%2C_with_polychrome_in_black_and_red_on_the_buff_surfaces._From_Tell_Arpachiyah%2C_Iraq._Halaf_period%2C_6000-5000_BCE.jpg/960px-thumbnail.jpg" alt="Teller der Halaf-Kultur aus Tell Arpachiyah (Irak) mit einem Blütenmuster in der Mitte." width="960" height="752" loading="lazy">
+            <figcaption>Teller der Halaf-Kultur aus Tell Arpachiyah (Irak) mit einem Blütenmuster in der Mitte. Foto: Osama Shukir Muhammed Amin, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Handmade_pottery_shallow_plate._The_interior_is_decorated_with_a_floral_design_in_the_center,_with_polychrome_in_black_and_red_on_the_buff_surfaces._From_Tell_Arpachiyah,_Iraq._Halaf_period,_6000-5000_BCE.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+          <p>Viele Schalen und Schüsseln sind mit <span class="gl" data-uk="стилізований" data-lemma="stilisiert">stilisierten</span> Pflanzen <span class="gl" data-uk="прикрашати" data-lemma="verzieren">verziert</span>: Blüten mit klar gezeichneten <span class="gl" data-key data-uk="пелюстка" data-lemma="das Blütenblatt, -ä-er">Blütenblättern</span>, oft in einem Quadrat oder einem Kreis. Dabei fiel den Forschern etwas auf. Die Zahl der Blütenblätter ist fast immer 4, 8, 16, 32 oder 64. Jede Zahl ist das <span class="gl" data-uk="подвоєне, удвічі більше" data-lemma="das Doppelte">Doppelte</span> der vorherigen. Und in allen Fällen teilen die Blätter den Kreis in gleich große, <span class="gl" data-uk="симетричний" data-lemma="symmetrisch">symmetrische</span> Stücke.</p>
+          <p>Wie kommt man zu solchen Zahlen? Am einfachsten durch <span class="gl" data-uk="ділити навпіл" data-lemma="halbieren">Halbieren</span>: Man teilt einen Kreis in zwei Hälften und jede Hälfte noch einmal – so entstehen vier gleiche Teile. Teilt man jeden Teil wieder in der Mitte, sind es acht, dann 16, dann 32. Dafür braucht man kein <span class="gl" data-uk="вимірювальний прилад" data-lemma="das Messgerät, -e">Messgerät</span>, nur ein gutes Auge und eine klare Regel. Einen Kreis in fünf oder sieben gleiche Teile zu teilen ist dagegen viel schwieriger – und solche Blüten sind auf den Gefäßen selten.</p>
+          <p>Die Autoren der Studie halten das nicht für einen <span class="gl" data-key data-uk="випадковість" data-lemma="der Zufall, -ä-e">Zufall</span>. Für sie zeigt es, dass die Töpfer <span class="gl" data-uk="свідомо" data-lemma="bewusst">bewusst</span> nach mathematischen Regeln arbeiteten: Symmetrie, Wiederholung, gleichmäßige <span class="gl" data-uk="поділ, розподіл" data-lemma="die Aufteilung, -en">Aufteilung</span> einer Fläche. Solche Fähigkeiten brauchte man im Alltag eines Dorfes – zum Beispiel, wenn Felder oder die <span class="gl" data-uk="урожай" data-lemma="die Ernte, -n">Ernte</span> gerecht geteilt werden mussten.</p>
+          <p>Nicht alle Fachleute sind überzeugt. Manche sind <span class="gl" data-uk="стриманий, обережний" data-lemma="zurückhaltend">zurückhaltender</span>: Sie sehen in den Mustern vor allem ein feines <span class="gl" data-uk="чуття, відчуття" data-lemma="das Gespür">Gespür</span> für Schönheit, nicht unbedingt Mathematik. Eines zeigt die Untersuchung aber in jedem Fall: Menschen konnten schon <span class="gl" data-uk="тисячоліття" data-lemma="das Jahrtausend, -e">Jahrtausende</span> vor der Erfindung der Schrift <span class="gl" data-uk="абстрактно" data-lemma="abstrakt">abstrakt</span> denken und Ordnung in ihre Welt bringen – und das kann man an ihren Töpfen bis heute sehen.</p>
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Bowl_Arpachiyah_Halaf.jpg/960px-Bowl_Arpachiyah_Halaf.jpg" alt="Schale der Halaf-Kultur aus Tell Arpachiyah mit Blütenmuster." width="960" height="824" loading="lazy">
+            <figcaption>Schale der Halaf-Kultur aus Tell Arpachiyah mit Blütenmuster. Foto: Zunkir, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Bowl_Arpachiyah_Halaf.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Mesopotamien heißt auf Deutsch auch „Zweistromland“: das Land zwischen den Flüssen Euphrat und Tigris. Hier entstand später auch die älteste bekannte Schrift der Welt, die <span class="gl" data-uk="клинопис" data-lemma="die Keilschrift">Keilschrift</span> – aber erst um 3300 v. Chr., also mehr als 2000 Jahre nach der Halaf-Kultur.</p>
+          </aside>
+
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wer sagt was?</h2>
+      <p class="lead">Чия це думка? Розсортуй.</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+      <p class="lead">б) Встав слова в текст. Одне слово зайве.</p>
+      <div class="card" id="ub4b-bank"></div>
+    </section>
+
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Deine Meinung</h2>
+      <p class="lead">Напиши текст німецькою. Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div id="ub5-w"></div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Mich überzeugt …, weil …, Dafür spricht, dass …, Auch bei uns gibt es …, Die Muster sind symmetrisch / wiederholen sich …</i>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Auf Keramik der Halaf-Kultur (6200–5500 v. Chr.) aus Mesopotamien haben Blüten fast immer 4, 8, 16, 32 oder 64 Blätter. Manche Forscher sehen darin das älteste Zeichen für mathematisches Denken, andere nur einen Sinn für Schönheit. Sicher ist: Abstraktes Denken gab es schon lange vor der Schrift.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          На кераміці халафської культури (6200–5500 до н. е.) з Месопотамії квіти майже завжди мають 4, 8, 16, 32 або 64 пелюстки. Одні дослідники бачать у цьому найдавніший знак математичного мислення, інші — лише відчуття краси. Певно одне: абстрактне мислення існувало задовго до письма.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "blumen-und-mathe";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Um Muster auf sehr alter Keramik, die vielleicht mathematisches Denken zeigen",
+            "Um die Erfindung der Schrift in Mesopotamien",
+            "Um Blumen, die in der Jungsteinzeit angebaut wurden"],
+     correct: "Um Muster auf sehr alter Keramik, die vielleicht mathematisches Denken zeigen"}
+  ]);
+  buildMatch('ub1h', [
+    ["Eine Kultur und ihre Töpfe", "Absatz 1"],
+    ["Immer das Doppelte", "Absatz 2"],
+    ["Teilen, teilen und noch einmal teilen", "Absatz 3"],
+    ["Mathematik für den Alltag", "Absatz 4"],
+    ["Zweifel – und ein sicheres Ergebnis", "Absatz 5"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "Die Halaf-Kultur lebte in Nordmesopotamien.", a: "r"},
+    {s: "Die Menschen der Halaf-Kultur konnten schon schreiben.", a: "f"},
+    {s: "Die Forscher haben nur ein einziges Gefäß untersucht.", a: "f"},
+    {s: "Auf den Gefäßen findet man oft Blüten mit 16 oder 32 Blättern.", a: "r"},
+    {s: "Blüten mit sieben Blättern sind auf den Gefäßen besonders häufig.", a: "f"},
+    {s: "Die Gefäße wurden vor allem für Wein benutzt.", a: "n"},
+    {s: "Alle Fachleute stimmen den Autoren der Studie zu.", a: "f"}
+  ]);
+
+  buildSort('ub3-sort', {
+    buckets: ["Autoren der Studie", "Zurückhaltende Forscher"],
+    items: [
+      {t: "Die Regelmäßigkeit ist kein Zufall.", b: "Autoren der Studie"},
+      {t: "Die Töpfer arbeiteten bewusst nach mathematischen Regeln.", b: "Autoren der Studie"},
+      {t: "Solches Wissen kam vielleicht vom Aufteilen der Felder.", b: "Autoren der Studie"},
+      {t: "Die Muster zeigen vor allem ein Gespür für Schönheit.", b: "Zurückhaltende Forscher"},
+      {t: "Es muss nicht unbedingt Mathematik sein.", b: "Zurückhaltende Forscher"}
+    ]
+  });
+
+  buildMatch('ub4', [
+    ["das Gefäß", "посудина"],
+    ["verzieren", "прикрашати"],
+    ["das Blütenblatt", "пелюстка"],
+    ["der Zufall", "випадковість"],
+    ["bewusst", "свідомо"],
+    ["die Ernte", "урожай"],
+    ["die Regelmäßigkeit", "закономірність"]
+  ]);
+  buildWordBank('ub4b-bank', {
+    text: "Die Menschen der Halaf-Kultur haben ihre [Gefäße] mit Blüten [verziert]. Die Zahl der [Blütenblätter] ist fast immer 4, 8, 16, 32 oder 64. Die Forscher glauben nicht an einen [Zufall]: Die Töpfer haben [bewusst] so gearbeitet.",
+    extra: ["Ernte"]
+  });
+
+  buildWriting('ub5-w', {
+    prompt: "Wer hat deiner Meinung nach recht: die Autoren der Studie oder die zurückhaltenden Forscher? Begründe deine Meinung. Schreib auch: Wo findest du in deinem Alltag Symmetrie und regelmäßige Muster – zum Beispiel auf einer Wyschywanka oder einer Pysanka? (80–120 Wörter)",
+    words: "80-120",
+    must: ["Muster"],
+    check: ["Ich sage, welche Seite mich überzeugt, und begründe es", "Ich nenne ein Beispiel für Muster aus meinem Alltag"]
+  });
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🌸','🔢','🏺','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
