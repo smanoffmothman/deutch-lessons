@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 4, Modul C: Wir gehen ins Konzert — Німецька мова 8 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 8 КЛАС</span>
+        <h1>Lektion 4 · Modul C: Wir gehen ins Konzert</h1>
+        <p class="sub">Урок про музичні стилі й улюблених виконавців: рок, поп, хіп-хоп, джаз, класика; Okean Elzy, Kalush Orchestra, Jamala, Lena, Die Fantastischen Vier. Як запросити на концерт. Граматика — ступені порівняння (lauter, am lautesten) і «один із найкращих» (eine der besten Bands). Текст і діалог з озвученням, вправи, говоріння, письмо і підсумковий тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Musikstile</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · lauter, am lautesten</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · einer der besten</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Superlativ-Sätze</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власний текст + вправа на розуміння ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Die Hitparade der 8b</h2>
+      <p class="lead">Ніна й Макс зробили для шкільного радіо опитування: кого найбільше люблять слухати в 8b? Послухай і прочитай. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l4-c-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Für unser Schulradio haben Max und ich alle 24 Schülerinnen und Schüler der 8b gefragt: Welche Musik hörst du am liebsten? Das Ergebnis war bunter als gedacht. Hier sind fünf <span class="gl" data-uk="виконавець, виконавиця" data-lemma="der Interpret, -en">Interpreten</span>, die mehrere Stimmen bekommen haben.</p>
+        <p>Daryna hat sofort „Okean Elzy“ gesagt. Die <span class="gl" data-uk="рок-гурт" data-lemma="die Rockband">Rockband</span> aus Lwiw gibt es seit 1994, ihr <span class="gl" data-uk="співак, вокаліст" data-lemma="der Sänger">Sänger</span> heißt Swjatoslaw Wakartschuk. „Das ist eine der <span class="gl" data-uk="найпопулярніший" data-lemma="populär — am populärsten">populärsten</span> Bands der Ukraine“, sagt Daryna. „2014 haben sie in Kyjiw vor 70 000 Menschen gespielt. Bei ihren <span class="gl" data-uk="балада (повільна пісня)" data-lemma="die Ballade">Balladen</span> singt das ganze <span class="gl" data-uk="публіка, глядачі" data-lemma="das Publikum">Publikum</span> mit.“ Auch Ostap in Lwiw ist ein großer <span class="gl" data-uk="фанат, шанувальник" data-lemma="der Fan, -s">Fan</span>.</p>
+        <p>Matteo trommelt am liebsten zu Kalush Orchestra. Die Band mischt Rap mit ukrainischer <span class="gl" data-uk="народна музика" data-lemma="die Volksmusik">Volksmusik</span>. 2022 hat sie mit dem Lied „Stefania“ den <span class="gl" data-uk="Євробачення (пісенний конкурс)" data-lemma="der Eurovision Song Contest (ESC)">Eurovision Song Contest</span> in Turin gewonnen. Das Lied hat der Sänger Oleh Psjuk für seine Mutter geschrieben. „So viele Stimmen vom Publikum hat noch kein Lied beim ESC bekommen“, erzählt Matteo.</p>
+        <p>Auch Timurs Lieblingssängerin hat den ESC gewonnen: Jamala, 2016 in Stockholm, mit dem Lied „1944“. Sie hat es selbst geschrieben. Es erzählt die <span class="gl" data-uk="сумний" data-lemma="traurig">traurige</span> Geschichte ihrer Familie: Die Krimtataren mussten 1944 ihre Heimat verlassen. „Jamala hat eine der <span class="gl" data-uk="сильний" data-lemma="stark — am stärksten">stärksten</span> Stimmen, die ich kenne“, sagt Timur.</p>
+        <p>Ayla hört lieber deutschen Pop. Ihr <span class="gl" data-uk="кумир, приклад для наслідування" data-lemma="das Vorbild, -er">Vorbild</span> ist Lena aus Hannover. 2010 hat sie mit nur 19 Jahren in Oslo mit „Satellite“ den ESC gewonnen — das war der erste deutsche <span class="gl" data-uk="перемога" data-lemma="der Sieg, -e">Sieg</span> seit 1982. „Ihre Lieder sind fröhlicher als alles andere auf meiner Playlist“, findet Ayla.</p>
+        <p>Und Leon? Er macht seine Parkourvideos am liebsten mit Hip-Hop. Sein Tipp: Die Fantastischen Vier aus Stuttgart. Die Band hat 1989 ihr erstes Konzert gegeben. Ihr Lied „Die da!?“ war 1992 einer der ersten deutschen Hip-Hop-<span class="gl" data-uk="хіт" data-lemma="der Hit, -s">Hits</span>. „Die Band ist viel älter als ich“, lacht Leon, „aber immer noch gut!“</p>
+        <p>Am Ende haben wir gezählt. Platz 1: Okean Elzy mit sieben Stimmen. Platz 2: Kalush Orchestra mit fünf. Die größte <span class="gl" data-uk="сюрприз, несподіванка" data-lemma="die Überraschung, -en">Überraschung</span> war aber Platz 3: Klassik — mit vier Stimmen! Nora sagt: „Ich habe es euch ja gesagt: Klassik ist cool!“ Erik hat übrigens „alles außer Schlager“ gesagt. Das zählt leider nicht.</p>
+        <p><i>Nina, 8b</i></p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">Komparation · eine der populärsten Bands</h2>
+      <p class="lead">Щоб порівнювати, прикметник має три ступені: <b>laut — lauter — am lautesten</b>. А щоб сказати «один із найкращих», німецькою беремо <b>einer / eines / eine der</b> + найвищий ступінь + іменник у Genitiv множини.</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. Ступені порівняння</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Positiv</th><th>Komparativ</th><th>Superlativ</th></tr>
+          <tr><td>schnell</td><td>schnell<strong>er</strong></td><td>am schnell<strong>sten</strong></td></tr>
+          <tr><td>laut</td><td>laut<strong>er</strong></td><td>am laut<strong>esten</strong></td></tr>
+          <tr><td>stark</td><td>st<strong>ä</strong>rk<strong>er</strong></td><td>am st<strong>ä</strong>rk<strong>sten</strong></td></tr>
+          <tr><td>gut</td><td><strong>besser</strong></td><td>am <strong>besten</strong></td></tr>
+          <tr><td>gern</td><td><strong>lieber</strong></td><td>am <strong>liebsten</strong></td></tr>
+          <tr><td>viel</td><td><strong>mehr</strong></td><td>am <strong>meisten</strong></td></tr>
+        </table></div>
+        <div class="merke">Після -t, -d, -s, -z і -ß у Superlativ — <b>-esten</b>: am lautesten, am ältesten, am heißesten. Короткі слова часто мають умлаут: alt — älter, groß — größer, jung — jünger.</div>
+        <div class="merke">Порівняння: lauter <b>als</b> … (голосніший, ніж); <b>so</b> laut <b>wie</b> … (такий самий голосний, як).</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. einer der besten … — «один із найкращих»</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th></th><th>Beispiel</th></tr>
+          <tr><td class="gender">m</td><td><strong>einer der</strong> bekannt<strong>esten</strong> Sänger</td></tr>
+          <tr><td class="gender">n</td><td><strong>eines der</strong> schön<strong>sten</strong> Lieder</td></tr>
+          <tr><td class="gender">f</td><td><strong>eine der</strong> populär<strong>sten</strong> Bands</td></tr>
+        </table></div>
+        <div class="merke">Рід займенника (einer / eines / eine) — від іменника в <b>однині</b>: der Sänger → einer, das Lied → eines, die Band → eine. Іменник після der — у <b>множині</b>, прикметник — з <b>-en</b>.</div>
+        <div class="merke">Займенник відмінюється: Das ist <b>eine</b> der besten Bands. — Ich gehe zum Konzert <b>einer</b> der besten Bands. — Sie gehört zu <b>einer</b> der besten Bands. (Dativ)</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. Superlativ перед іменником</p>
+        <p>der lauteste Song · das schönste Lied · die beste Band<br>
+           Das war <b>der größte</b> Erfolg. — Sie hat <b>die stärkste</b> Stimme.</p>
+        <div class="merke">Перед іменником Superlativ — без am, з артиклем і звичайним закінченням прикметника: der laut<b>este</b> Song, mit dem laut<b>esten</b> Song.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">4. Типові помилки</p>
+        <p>✗ Das ist eine der populärste Band. → ✓ eine der populär<b>sten</b> Band<b>s</b></p>
+        <p>✗ Das ist einer der schönsten Lieder. → ✓ <b>eines</b> der schönsten Lieder <i>(das Lied)</i></p>
+        <p>✗ Ich höre Rock gerner. → ✓ Ich höre Rock <b>lieber</b>.</p>
+        <p>✗ Rap ist lauter wie Jazz. → ✓ lauter <b>als</b> Jazz</p>
+        <p>✗ Sie singt am schönste. → ✓ am schön<b>sten</b></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Welcher Musikstil ist das?</h2>
+      <p class="lead">Прочитай опис і вибери музичний стиль.</p>
+      <div class="card" id="ub1-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">lauter, am lautesten</h2>
+      <p class="lead">Вибери правильну форму: Positiv, Komparativ чи Superlativ? Не забудь про als і wie.</p>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> Rock ist
+          <select class="blank inline" data-ans="lauter"><option value="">—</option><option>laut</option><option>lauter</option><option>am lautesten</option></select> als Jazz.</div>
+        <div class="fill-item"><span class="num">2)</span> Ayla hört Pop
+          <select class="blank inline" data-ans="lieber"><option value="">—</option><option>gerner</option><option>lieber</option><option>mehr gern</option></select> als Rap.</div>
+        <div class="fill-item"><span class="num">3)</span> Okean Elzy hat
+          <select class="blank inline" data-ans="die meisten"><option value="">—</option><option>die meisten</option><option>die vielsten</option><option>die mehr</option></select> Stimmen bekommen.</div>
+        <div class="fill-item"><span class="num">4)</span> Für Timur singt Jamala
+          <select class="blank inline" data-ans="am schönsten"><option value="">—</option><option>am schönste</option><option>schönsten</option><option>am schönsten</option></select>.</div>
+        <div class="fill-item"><span class="num">5)</span> Die Fantastischen Vier sind
+          <select class="blank inline" data-ans="älter"><option value="">—</option><option>alter</option><option>älter</option><option>ältester</option></select> als Kalush Orchestra.</div>
+        <div class="fill-item"><span class="num">6)</span> Lenas Lieder sind so fröhlich
+          <select class="blank inline" data-ans="wie"><option value="">—</option><option>als</option><option>wie</option><option>dass</option></select> ein Sommertag.</div>
+        <div class="fill-item"><span class="num">7)</span> Das Konzert war
+          <select class="blank inline" data-ans="besser"><option value="">—</option><option>guter</option><option>besser</option><option>am besten</option></select>, als ich gedacht habe.</div>
+        <div class="fill-item"><span class="num">8)</span> Das war die
+          <select class="blank inline" data-ans="größte"><option value="">—</option><option>größte</option><option>großeste</option><option>größten</option></select> Überraschung.</div>
+        <div class="fill-item"><span class="num">9)</span> Wer von euch singt
+          <select class="blank inline" data-ans="am lautesten"><option value="">—</option><option>am lautesten</option><option>am lautsten</option><option>lautester</option></select>?</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">einer, eines oder eine der …?</h2>
+      <p class="lead">Подивися на іменник в однині (der, das чи die?) і вибери правильну форму.</p>
+      <div class="card" id="ub3-list">
+        <div class="fill-item"><span class="num">1)</span> Okean Elzy ist
+          <select class="blank inline" data-ans="eine"><option value="">—</option><option>einer</option><option>eines</option><option>eine</option></select> der populärsten Bands der Ukraine.</div>
+        <div class="fill-item"><span class="num">2)</span> „Stefania“ ist
+          <select class="blank inline" data-ans="eines"><option value="">—</option><option>eines</option><option>einer</option><option>eine</option></select> der bekanntesten Lieder des ESC.</div>
+        <div class="fill-item"><span class="num">3)</span> Wakartschuk ist
+          <select class="blank inline" data-ans="einer"><option value="">—</option><option>eine</option><option>eines</option><option>einer</option></select> der beliebtesten Sänger der Ukraine.</div>
+        <div class="fill-item"><span class="num">4)</span> Jamala hat eine der stärksten
+          <select class="blank inline" data-ans="Stimmen"><option value="">—</option><option>Stimme</option><option>Stimmen</option><option>Stimmes</option></select>.</div>
+        <div class="fill-item"><span class="num">5)</span> Das ist einer der
+          <select class="blank inline" data-ans="ersten"><option value="">—</option><option>erste</option><option>ersten</option><option>erster</option></select> Hip-Hop-Hits in Deutschland.</div>
+        <div class="fill-item"><span class="num">6)</span> Das Gewandhaus ist
+          <select class="blank inline" data-ans="eines"><option value="">—</option><option>einer</option><option>eine</option><option>eines</option></select> der berühmtesten Konzerthäuser Europas.</div>
+        <div class="fill-item"><span class="num">7)</span> Nora spielt in
+          <select class="blank inline" data-ans="einem"><option value="">—</option><option>einem</option><option>eines</option><option>einer</option></select> der besten Schulorchester der Stadt.</div>
+        <div class="fill-item"><span class="num">8)</span> Ich gehe zum Konzert
+          <select class="blank inline" data-ans="einer"><option value="">—</option><option>eine</option><option>einer</option><option>einen</option></select> meiner Lieblingsbands.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Das ist eines der schönsten Lieder</h2>
+      <p class="lead">Перепиши речення за зразком: Das Lied ist sehr schön. → <b>Das ist eines der schönsten Lieder.</b> Множину іменника дивись у підказці.</p>
+      <div class="card" id="ub4-tr"></div>
+    </section>
+
+    <!-- ===== HÖREN ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Kommst du mit zum Jazz?</h2>
+      <p class="lead">Нора телефонує Максові: у неї є квитки на концерт. Послухай розмову (можна двічі) і дай відповіді. Текст відкривається внизу — але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l4-c-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Max:</b> Hallo, Nora! Was gibt's?<br>
+          <b>Nora:</b> Hallo, Max! Hast du am Samstagabend schon etwas vor?<br>
+          <b>Max:</b> Am Nachmittag habe ich Fußballtraining, bis fünf. Danach habe ich Zeit. Warum?<br>
+          <b>Nora:</b> Ich habe zwei Karten für ein Konzert. Die Big Band der Musikschule spielt im Jugendhaus. Mein Cousin Malte spielt dort Trompete.<br>
+          <b>Max:</b> Eine Big Band? Ist das nicht Jazz? Ehrlich gesagt höre ich lieber Rock.<br>
+          <b>Nora:</b> Das dachte ich früher auch. Aber Jazz live ist ganz anders als im Radio. Es ist lauter, schneller und viel lustiger. Die Musiker spielen nicht nur nach Noten, sie improvisieren.<br>
+          <b>Max:</b> Hm. Und ist die Band gut?<br>
+          <b>Nora:</b> Sie ist eine der besten Schulbands der Stadt. Letztes Jahr hat sie einen Preis gewonnen.<br>
+          <b>Max:</b> Okay, du hast mich überzeugt. Was kostet die Karte?<br>
+          <b>Nora:</b> Für dich nichts. Malte hat mir die Karten geschenkt.<br>
+          <b>Max:</b> Super, danke! Wann fängt das Konzert an?<br>
+          <b>Nora:</b> Um sieben. Treffen wir uns um halb sieben an der Straßenbahnhaltestelle vor der Schule?<br>
+          <b>Max:</b> Gut. Muss ich etwas Besonderes anziehen?<br>
+          <b>Nora:</b> Nein, Jeans sind völlig okay. Nur bitte keine Chips mitbringen!<br>
+          <b>Max:</b> Sehr witzig. Bis Samstag!
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Musikgeschmack</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Welche Musik hörst du am liebsten? Welche gar nicht?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Am liebsten höre ich Rock und Pop. Hip-Hop höre ich manchmal beim Sport. Schlager und Techno höre ich gar nicht — das ist mir zu monoton.</div>
+        </div>
+        <div class="qa">
+          <label>2. Wer ist dein Lieblingsinterpret oder deine Lieblingsband? Warum?</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Meine Lieblingsband ist Okean Elzy. Für mich ist sie eine der besten Rockbands der Welt. Die Texte sind ehrlich, und die Melodien sind wunderschön.</div>
+        </div>
+        <div class="qa">
+          <label>3. Vergleiche zwei Musikstile: Was ist lauter, ruhiger, moderner?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Rock ist lauter als Klassik, aber Klassik ist oft spannender, als man denkt. Hip-Hop ist moderner als Volksmusik. Am ruhigsten finde ich Jazz-Balladen.</div>
+        </div>
+        <div class="qa">
+          <label>4. Warst du schon einmal auf einem Konzert? Erzähl.</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Ja, letzten Sommer war ich mit meinem Bruder auf einem Open-Air-Konzert. Es war sehr voll und sehr laut, aber die Stimmung war toll. Das ganze Publikum hat mitgesungen.</div>
+        </div>
+        <div class="qa">
+          <label>5. Lade deinen Partner / deine Partnerin zu einem Konzert ein.</label>
+          <button class="btn secondary" type="button" data-reveal="spr5">Muster zeigen</button>
+          <div class="reveal" id="spr5">— Hast du am Freitag Zeit? Ich habe zwei Karten für ein Rockkonzert. Kommst du mit? — Gern! Wann und wo? — Um acht in der Stadthalle. Treffen wir uns um halb acht am Eingang? — Abgemacht!</div>
+        </div>
+        <div class="qa">
+          <label>6. Welcher Musiker ist für dich einer der besten der Welt? Begründe.</label>
+          <button class="btn secondary" type="button" data-reveal="spr6">Muster zeigen</button>
+          <div class="reveal" id="spr6">Für mich ist Mozart einer der besten Musiker der Welt. Er hat schon als Kind komponiert, und seine Musik klingt heute noch frisch und fröhlich.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Mein Konzerttipp</h2>
+      <p class="lead">Ніна збирає для шкільного радіо поради, кого варто послухати. Напиши свою — 60–80 слів за планом. Ужий Komparativ, Superlativ і <b>einer / eines / eine der …</b></p>
+      <div class="card">
+        <p>1) хто це (співак, співачка, гурт) і звідки; 2) у якому стилі грає; 3) що ти знаєш про цього виконавця (факти перевір у надійному джерелі); 4) твоя улюблена пісня; 5) чим ця музика краща за інші; 6) кому ти її радиш.</p>
+        <p class="beispiel">Mein Tipp ist … aus … · Die Band spielt … · Sie ist eine der … Bands … · Mein Lieblingslied heißt … · Ihre Musik ist … als … · Am besten gefällt mir … · Hört sie euch an, wenn ihr … mögt!</p>
+        <div class="qa">
+          <label for="schreiben-text">Dein Konzerttipp</label>
+          <textarea id="schreiben-text" rows="10" placeholder="Mein Tipp ist …"
+            data-words="60-80"
+            data-must="der|als|am"
+            data-check="Хто це і звідки|Музичний стиль|Факт про виконавця|Улюблена пісня|Порівняння (Komparativ + als)|einer / eines / eine der + Superlativ"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Mein Tipp ist die Band Okean Elzy aus Lwiw. Sie spielt Rock, aber viele ihrer Lieder sind ruhige Balladen. Die Band gibt es schon seit 1994, und sie ist eine der populärsten Bands der Ukraine. Ihr Sänger hat eine der schönsten Stimmen, die ich kenne. Mein Lieblingslied ist eine langsame Ballade. Diese Musik ist ehrlicher als viele Popsongs im Radio. Am besten gefällt mir, dass das Publikum bei Konzerten immer mitsingt. Hört sie euch an!</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Jazz finde ich
+          <select class="blank inline" data-ans="interessanter"><option value="">—</option><option>interessanter</option><option>interessantester</option><option>mehr interessant</option></select> als Schlager.</div>
+        <div class="fill-item"><span class="num">8)</span> Welche Musik hörst du am
+          <select class="blank inline" data-ans="liebsten"><option value="">—</option><option>gernsten</option><option>liebsten</option><option>lieber</option></select>?</div>
+        <div class="fill-item"><span class="num">9)</span> Lena ist
+          <select class="blank inline" data-ans="eine"><option value="">—</option><option>einer</option><option>eines</option><option>eine</option></select> der bekanntesten Sängerinnen Deutschlands.</div>
+        <div class="fill-item"><span class="num">10)</span> „Satellite“ ist eines der erfolgreichsten
+          <select class="blank inline" data-ans="Lieder"><option value="">—</option><option>Lied</option><option>Lieder</option><option>Liedes</option></select> von Lena.</div>
+        <div class="fill-item"><span class="num">11)</span> Mein Bruder singt so laut
+          <select class="blank inline" data-ans="wie"><option value="">—</option><option>als</option><option>wie</option><option>wenn</option></select> ein Rockstar.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-8-klas-8-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-8-klas-8-rik";
+  const KN_UNIT = "l4-c";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Nina und Max haben alle Schüler der 8b gefragt.", a: "r"},
+    {s: "Okean Elzy kommt aus Kyjiw.", a: "f"},
+    {s: "Ostap mag Okean Elzy auch.", a: "r"},
+    {s: "Kalush Orchestra mischt Rap und Volksmusik.", a: "r"},
+    {s: "Das Lied „Stefania“ ist für die Schwester des Sängers.", a: "f"},
+    {s: "Jamala hat das Lied „1944“ selbst geschrieben.", a: "r"},
+    {s: "Lena war beim ESC-Sieg 25 Jahre alt.", a: "f"},
+    {s: "Leon hört Hip-Hop, wenn er Parkourvideos macht.", a: "r"},
+    {s: "Platz 1 hat Kalush Orchestra bekommen.", a: "f"},
+    {s: "Vier Schüler haben „Klassik“ gesagt.", a: "r"}
+  ]);
+
+  // Üb. 1: опис → стиль
+  buildMatch('ub1', [
+    ["Laute Gitarren, ein Schlagzeug, ein Sänger, der oft schreit.", "Rock"],
+    ["Man spricht den Text schnell und rhythmisch.", "Rap"],
+    ["Ein Orchester spielt Musik von Bach oder Mozart.", "Klassik"],
+    ["Die Musiker improvisieren oft, man hört viel Saxofon und Trompete.", "Jazz"],
+    ["Alte Lieder aus einer Region, oft mit Akkordeon oder Bandura.", "Volksmusik"],
+    ["Elektronische Musik mit schnellem Beat für den Club.", "Techno"],
+    ["Fröhliche, einfache Lieder, die oft im Radio laufen.", "Pop"]
+  ], {lead: true});
+
+  // Üb. 2, Üb. 3
+  wireBlanks('ub2');
+  wireBlanks('ub3');
+
+  // Üb. 4
+  buildTransform('ub4-tr', [
+    {s: "Das Lied ist sehr schön.", task: "Das ist eines der …", hint: "die Lieder",
+     ans: "Das ist eines der schönsten Lieder."},
+    {s: "Die Band ist sehr populär.", task: "Das ist eine der …", hint: "die Bands",
+     ans: "Das ist eine der populärsten Bands."},
+    {s: "Der Sänger ist sehr bekannt.", task: "Das ist einer der …", hint: "die Sänger",
+     ans: "Das ist einer der bekanntesten Sänger."},
+    {s: "Das Festival ist sehr groß.", task: "Das ist eines der …", hint: "die Festivals",
+     ans: "Das ist eines der größten Festivals."},
+    {s: "Die Stimme ist sehr stark.", task: "Das ist eine der …", hint: "die Stimmen",
+     ans: "Das ist eine der stärksten Stimmen."},
+    {s: "Der Hit ist sehr alt.", task: "Das ist einer der …", hint: "die Hits",
+     ans: "Das ist einer der ältesten Hits."}
+  ]);
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Was macht Max am Samstagnachmittag?", opts: ["Er hat Fußballtraining.", "Er spielt Schlagzeug.", "Er ist bei seiner Oma."], correct: "Er hat Fußballtraining."},
+    {q: "Wer spielt beim Konzert?", opts: ["Das Schulorchester", "Die Big Band der Musikschule", "Die Band „Kurzschluss“"], correct: "Die Big Band der Musikschule"},
+    {q: "Welches Instrument spielt Noras Cousin?", opts: ["Saxofon", "Schlagzeug", "Trompete"], correct: "Trompete"},
+    {q: "Welche Musik hört Max lieber?", opts: ["Rock", "Jazz", "Klassik"], correct: "Rock"},
+    {q: "Was sagt Nora über Jazz live?", opts: ["Er ist leiser als im Radio.", "Er ist lauter, schneller und lustiger.", "Er ist langweilig."], correct: "Er ist lauter, schneller und lustiger."},
+    {q: "Warum ist die Band besonders gut?", opts: ["Sie hat letztes Jahr einen Preis gewonnen.", "Sie spielt im Gewandhaus.", "Sie hat 100 Musiker."], correct: "Sie hat letztes Jahr einen Preis gewonnen."},
+    {q: "Was kostet die Karte für Max?", opts: ["8 Euro", "Nichts", "5 Euro"], correct: "Nichts"},
+    {q: "Wann und wo treffen sie sich?", opts: ["Um sieben am Jugendhaus", "Um halb sieben an der Haltestelle vor der Schule", "Um fünf am Fußballplatz"], correct: "Um halb sieben an der Haltestelle vor der Schule"}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Am liebsten höre ich Rock.", uk: "Найбільше я люблю слухати рок."},
+    {say: "Jazz ist lauter, als ich gedacht habe.", uk: "Джаз гучніший, ніж я думав (думала)."},
+    {say: "Das ist eine der besten Bands der Welt.", uk: "Це один із найкращих гуртів світу."},
+    {say: "Ich habe zwei Karten. Kommst du mit?", uk: "У мене два квитки. Підеш зі мною?"},
+    {say: "Das ganze Publikum hat mitgesungen.", uk: "Уся публіка співала разом."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Bei einem Konzert sitzen oder stehen die Zuhörer im …", opts: ["Publikum", "Orchester", "Sieg"], correct: "Publikum"},
+    {q: "Ein sehr erfolgreiches Lied ist ein …", opts: ["Hit", "Fan", "Stil"], correct: "Hit"},
+    {q: "Lena hat 2010 den ESC …", opts: ["verloren", "gewonnen", "gesungen"], correct: "gewonnen"},
+    {q: "Rap ist … als Klassik.", opts: ["moderner", "modernster", "am modernsten"], correct: "moderner"},
+    {q: "Das ist … der schönsten Lieder.", opts: ["einer", "eines", "eine"], correct: "eines"},
+    {q: "Matteo ist einer der besten … der Schule.", opts: ["Schlagzeuger", "Schlagzeugers", "Schlagzeug"], correct: "Schlagzeuger"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Okean Elzy ist eine der populärsten Bands der Ukraine.", ok: true},
+    {s: "Ich höre Pop gerner als Rock.", wrong: 3, fix: "lieber"},
+    {s: "Rock ist lauter wie Jazz.", wrong: 3, fix: "als"},
+    {s: "Das ist einer der schönsten Lieder.", wrong: 2, fix: "eines"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🎸', '🎤', '🎷', '🏆']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
