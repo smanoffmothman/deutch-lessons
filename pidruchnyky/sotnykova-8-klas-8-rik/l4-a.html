@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 4, Modul A: Musikinstrumente und Musiker — Німецька мова 8 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 8 КЛАС</span>
+        <h1>Lektion 4 · Modul A: Musikinstrumente und Musiker</h1>
+        <p class="sub">Урок про музичні інструменти, оркестр, хор і шкільний гурт: скрипка, труба, ударні, репетиція, диригент. Граматика — Genitiv (die Probe des Orchesters, der Klang der Geige, der Taktstock des Dirigenten). Текст і інтерв’ю з озвученням, вправи, говоріння, письмо і підсумковий тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Instrumente</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Streicher, Bläser …</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · des Orchesters</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Genitiv bauen</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власний текст + вправа на розуміння ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Probe für das Winterkonzert</h2>
+      <p class="lead">Нора грає на скрипці в шкільному оркестрі й пише про репетицію для шкільної газети. Послухай і прочитай. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l4-a-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Donnerstag, 15 Uhr, Aula. Die <span class="gl" data-uk="репетиція" data-lemma="die Probe">Probe</span> des Schulorchesters beginnt. Ich sitze bei den <span class="gl" data-uk="скрипка" data-lemma="die Geige">Geigen</span> in der ersten Reihe und <span class="gl" data-uk="настроювати (інструмент)" data-lemma="stimmen">stimme</span> mein Instrument. In drei Wochen ist unser Winterkonzert — und noch klappt nicht alles.</p>
+        <p>Unser Orchester ist klein: 28 Musikerinnen und Musiker aus den Klassen 5 bis 10. Vorne sitzen die <span class="gl" data-uk="струнні (музиканти)" data-lemma="die Streicher (Pl.)">Streicher</span>: die Geigen und zwei <span class="gl" data-uk="віолончель" data-lemma="das Cello, Celli">Celli</span>. Hinter uns sitzen die <span class="gl" data-uk="духові (музиканти)" data-lemma="die Bläser (Pl.)">Bläser</span> mit <span class="gl" data-uk="флейта" data-lemma="die Flöte">Flöten</span>, Klarinetten und einer <span class="gl" data-uk="труба" data-lemma="die Trompete">Trompete</span>. Ganz hinten steht das <span class="gl" data-uk="ударна установка" data-lemma="das Schlagzeug">Schlagzeug</span>. Dort sitzt heute Matteo. Er ist das jüngste <span class="gl" data-uk="учасник, член" data-lemma="das Mitglied">Mitglied</span> der Schulband und hilft im Orchester aus, weil unser Schlagzeuger krank ist.</p>
+        <p>Die <span class="gl" data-uk="керівниця" data-lemma="die Leiterin">Leiterin</span> des Orchesters ist Frau Albrecht, unsere Musiklehrerin. Sie hebt den <span class="gl" data-uk="диригентська паличка" data-lemma="der Taktstock">Taktstock</span>, und alle werden still. „Noch einmal vom Anfang des zweiten <span class="gl" data-uk="твір, п'єса (музична)" data-lemma="das Stück">Stücks</span>!“, sagt sie. Wir spielen. Der <span class="gl" data-uk="звучання, звук" data-lemma="der Klang">Klang</span> der Geigen ist schön, aber die Trompete ist viel zu laut. „<span class="gl" data-uk="тихіше" data-lemma="leise">Leiser</span>, bitte! Das ist ein Wiegenlied, kein Fußballspiel“, sagt Frau Albrecht. Alle lachen.</p>
+        <p>Das Programm des Konzerts hat drei Teile: zuerst zwei klassische Stücke, dann Filmmusik und am Ende ein ukrainisches Neujahrslied, das Daryna vorgeschlagen hat: „Schtschedryk“. Den Text des Liedes singt der <span class="gl" data-uk="шкільний хор" data-lemma="der Schulchor">Schulchor</span>, die <span class="gl" data-uk="мелодія" data-lemma="die Melodie">Melodie</span> spielen die Flöten.</p>
+        <p>In der Pause kommt Erik mit einem langen Kabel. Er kann nicht singen und spielt kein Instrument, aber er ist der <span class="gl" data-uk="звукотехнік" data-lemma="der Tontechniker">Tontechniker</span> des Konzerts: Er stellt die Mikrofone auf. „Ohne mich hört euch niemand“, sagt er stolz.</p>
+        <p>Um halb fünf ist die Probe zu Ende. Meine Finger tun weh, aber das letzte Stück hat zum ersten Mal richtig gut <span class="gl" data-uk="звучати" data-lemma="klingen, hat geklungen">geklungen</span>. Frau Albrecht sagt: „<span class="gl" data-uk="вправлятися, репетирувати" data-lemma="üben">Üben</span>, üben, üben — dann wird es ein tolles Konzert.“ Kommt ihr auch? Am Freitag, dem 29. Januar, um 18 Uhr in der Aula!</p>
+        <p><i>Nora, 8b</i></p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">Genitiv · die Probe des Orchesters</h2>
+      <p class="lead">Genitiv відповідає на питання <b>Wessen?</b> (чий? чия? чиє?). Українською: «репетиція оркестру», «звучання скрипки». Німецькою Genitiv стоїть <b>після</b> іменника, який він пояснює: die Probe <b>des Orchesters</b>.</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. Артикль і закінчення</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th></th><th>Nominativ</th><th>Genitiv</th></tr>
+          <tr><td class="gender">m</td><td>der Chor</td><td><strong>des</strong> Chor<strong>s</strong></td></tr>
+          <tr><td class="gender">n</td><td>das Orchester</td><td><strong>des</strong> Orchester<strong>s</strong></td></tr>
+          <tr><td class="gender">f</td><td>die Band</td><td><strong>der</strong> Band</td></tr>
+          <tr><td class="gender">Pl.</td><td>die Musiker</td><td><strong>der</strong> Musiker</td></tr>
+        </table></div>
+        <div class="merke">Чоловічий і середній рід: артикль <b>des / eines</b> і закінчення <b>-s</b> в іменника. Жіночий рід і множина: артикль <b>der / einer</b>, іменник не змінюється.</div>
+        <div class="merke">Короткі слова (один склад) і слова на -s, -ß, -z часто мають <b>-es</b>: des Lied<b>es</b>, des Stück<b>es</b>, des Tanz<b>es</b>. У розмові кажуть і des Lieds, des Stücks.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. Особливі іменники: -en</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Nominativ</th><th>Genitiv</th></tr>
+          <tr><td>der Dirigent</td><td>des Dirigent<strong>en</strong></td></tr>
+          <tr><td>der Solist</td><td>des Solist<strong>en</strong></td></tr>
+          <tr><td>der Pianist</td><td>des Pianist<strong>en</strong></td></tr>
+          <tr><td>der Junge</td><td>des Junge<strong>n</strong></td></tr>
+        </table></div>
+        <div class="merke">Чоловічі назви людей на <b>-ent, -ist, -e</b> мають у Genitiv (і в Dativ та Akkusativ) закінчення <b>-(e)n</b>, а не -s: der Taktstock des Dirigent<b>en</b>.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. Ланцюжки з Genitiv</p>
+        <p>die Leiterin <b>des Orchesters</b> — керівниця оркестру<br>
+           der Klang <b>der Geigen</b> — звучання скрипок<br>
+           das Programm <b>des Konzerts</b> — програма концерту<br>
+           das jüngste Mitglied <b>der Schulband</b> — наймолодший учасник шкільного гурту<br>
+           der Anfang <b>des zweiten Stücks</b> — початок другого твору</p>
+        <div class="merke">Прикметник після des / der у Genitiv завжди має <b>-en</b>: des zweit<b>en</b> Stücks, der neu<b>en</b> Band.</div>
+        <div class="merke">І ще одне: «грати на інструменті» — <b>без</b> прийменника й артикля: Ich spiele Geige. Matteo spielt Schlagzeug.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">4. Типові помилки</p>
+        <p>✗ die Probe des Orchester → ✓ des Orchester<b>s</b></p>
+        <p>✗ der Klang des Geige → ✓ <b>der</b> Geige <i>(die Geige — жіночий рід)</i></p>
+        <p>✗ das Mitglied der Schulbands → ✓ der Schulband <i>(жіночий рід, однина — без -s)</i></p>
+        <p>✗ der Taktstock des Dirigents → ✓ des Dirigent<b>en</b></p>
+        <p>✗ Ich spiele auf der Gitarre gern. → ✓ Ich spiele gern Gitarre.</p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Welches Instrument?</h2>
+      <p class="lead">Що на картинці? Вибери слово.</p>
+      <div class="card" id="ub1-pic"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Streicher, Bläser oder Tasten und Schlag?</h2>
+      <p class="lead">До якої групи належить інструмент? Струнні смичкові, духові чи клавішні й ударні — розклади.</p>
+      <div class="card" id="ub2-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">des Orchesters, der Band</h2>
+      <p class="lead">Вибери правильну форму Genitiv: артикль або закінчення іменника.</p>
+      <div class="card" id="ub3-list">
+        <div class="fill-item"><span class="num">1)</span> Die Probe
+          <select class="blank inline" data-ans="des"><option value="">—</option><option>der</option><option>des</option><option>dem</option></select> Schulorchesters beginnt um drei.</div>
+        <div class="fill-item"><span class="num">2)</span> Frau Albrecht ist die Leiterin des
+          <select class="blank inline" data-ans="Orchesters"><option value="">—</option><option>Orchester</option><option>Orchesters</option><option>Orchestern</option></select>.</div>
+        <div class="fill-item"><span class="num">3)</span> Der Klang
+          <select class="blank inline" data-ans="der"><option value="">—</option><option>des</option><option>die</option><option>der</option></select> Geige ist warm und schön.</div>
+        <div class="fill-item"><span class="num">4)</span> Das Programm des
+          <select class="blank inline" data-ans="Konzerts"><option value="">—</option><option>Konzerts</option><option>Konzert</option><option>Konzerten</option></select> hat drei Teile.</div>
+        <div class="fill-item"><span class="num">5)</span> Alle schauen auf den Taktstock der
+          <select class="blank inline" data-ans="Dirigentin"><option value="">—</option><option>Dirigentins</option><option>Dirigentin</option><option>Dirigenten</option></select>.</div>
+        <div class="fill-item"><span class="num">6)</span> Die Instrumente
+          <select class="blank inline" data-ans="der"><option value="">—</option><option>der</option><option>des</option><option>den</option></select> Bläser sind manchmal zu laut.</div>
+        <div class="fill-item"><span class="num">7)</span> Matteo ist das jüngste Mitglied
+          <select class="blank inline" data-ans="der"><option value="">—</option><option>des</option><option>der</option><option>die</option></select> Schulband.</div>
+        <div class="fill-item"><span class="num">8)</span> Der Name des
+          <select class="blank inline" data-ans="Solisten"><option value="">—</option><option>Solist</option><option>Solists</option><option>Solisten</option></select> steht im Programm.</div>
+        <div class="fill-item"><span class="num">9)</span> Am Ende
+          <select class="blank inline" data-ans="des"><option value="">—</option><option>des</option><option>der</option><option>dem</option></select> Stücks klatschen alle.</div>
+        <div class="fill-item"><span class="num">10)</span> Die Stimme
+          <select class="blank inline" data-ans="eines"><option value="">—</option><option>einer</option><option>einem</option><option>eines</option></select> Sängers muss stark sein.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Genitiv bauen</h2>
+      <p class="lead">З двох слів зроби одне словосполучення з Genitiv. Зразок: die Probe + das Orchester → <b>die Probe des Orchesters</b>.</p>
+      <div class="card" id="ub4-tr"></div>
+    </section>
+
+    <!-- ===== HÖREN ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Die Schulband sucht dich!</h2>
+      <p class="lead">Ніна для шкільного радіо розпитує Маттео про шкільний гурт. Послухай інтерв'ю (можна двічі) і дай відповіді. Текст відкривається внизу — але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l4-a-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Nina:</b> Hallo und willkommen beim Schulradio! Heute bei mir: Matteo aus der 8b, der Schlagzeuger unserer Schulband. Matteo, wie heißt die Band eigentlich?<br>
+          <b>Matteo:</b> Wir heißen „Kurzschluss“. Bei der ersten Probe ist nämlich der Strom ausgefallen.<br>
+          <b>Nina:</b> Wie viele Mitglieder hat die Band?<br>
+          <b>Matteo:</b> Wir sind zu fünft: eine Sängerin, ein Gitarrist, ein Bassist, eine Keyboarderin — und ich am Schlagzeug.<br>
+          <b>Nina:</b> Seit wann spielst du Schlagzeug?<br>
+          <b>Matteo:</b> Seit vier Jahren. Ich habe in der Musikschule angefangen.<br>
+          <b>Nina:</b> Und was sagen deine Nachbarn?<br>
+          <b>Matteo:</b> Nichts! Zu Hause habe ich ein elektronisches Schlagzeug und spiele mit Kopfhörern.<br>
+          <b>Nina:</b> Wann und wo probt ihr?<br>
+          <b>Matteo:</b> Dienstags und freitags nach der sechsten Stunde, im Keller der Schule. Dort stört der Klang des Schlagzeugs niemanden.<br>
+          <b>Nina:</b> Welche Musik macht ihr?<br>
+          <b>Matteo:</b> Rock und Pop. Wir spielen bekannte Songs, aber wir haben auch schon zwei eigene Lieder.<br>
+          <b>Nina:</b> Ich habe gehört, ihr sucht jemanden?<br>
+          <b>Matteo:</b> Ja, wir suchen einen zweiten Gitarristen oder eine Gitarristin. Das Casting ist am nächsten Mittwoch um halb drei im Musikraum. Bringt bitte eure Gitarre mit!<br>
+          <b>Nina:</b> Und wann kann man euch hören?<br>
+          <b>Matteo:</b> Beim Schulfest im Sommer. Und vielleicht spielen wir am Ende des Winterkonzerts ein Lied — das ist aber noch ein Geheimnis.<br>
+          <b>Nina:</b> Jetzt nicht mehr! Danke, Matteo.
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Musik und Instrumente</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Spielst du ein Instrument? Welches? Seit wann?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Ja, ich spiele seit drei Jahren Gitarre. Ich habe in der Musikschule angefangen und übe jetzt jeden Tag eine halbe Stunde.</div>
+        </div>
+        <div class="qa">
+          <label>2. Welches Instrument möchtest du spielen lernen? Warum?</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Ich möchte Schlagzeug spielen lernen, weil ich den Rhythmus mag. Aber meine Eltern sagen, dass das zu laut ist.</div>
+        </div>
+        <div class="qa">
+          <label>3. Gibt es in deiner Schule einen Chor, ein Orchester oder eine Band? Erzähl.</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">In unserer Schule gibt es einen Chor. Die Leiterin des Chors ist unsere Musiklehrerin. Die Proben sind zweimal in der Woche, und im Dezember gibt es ein Konzert.</div>
+        </div>
+        <div class="qa">
+          <label>4. Welche Instrumente spielt man in einer Rockband? Und in einem Orchester?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">In einer Rockband spielt man Gitarre, Bassgitarre, Keyboard und Schlagzeug. In einem Orchester gibt es Geigen, Celli, Flöten, Trompeten und viele andere Instrumente.</div>
+        </div>
+        <div class="qa">
+          <label>5. Welcher Klang gefällt dir am besten: der Klang der Geige, der Gitarre oder des Klaviers?</label>
+          <button class="btn secondary" type="button" data-reveal="spr5">Muster zeigen</button>
+          <div class="reveal" id="spr5">Mir gefällt der Klang des Klaviers am besten. Er ist ruhig und schön. Der Klang der Trompete ist mir zu laut.</div>
+        </div>
+        <div class="qa">
+          <label>6. Warst du schon einmal bei einem Konzert? Wie war es?</label>
+          <button class="btn secondary" type="button" data-reveal="spr6">Muster zeigen</button>
+          <div class="reveal" id="spr6">Ja, im Herbst war ich bei einem Konzert unserer Musikschule. Meine Schwester hat Flöte gespielt. Am Ende des Konzerts haben alle lange geklatscht.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Bewerbung für die Schulband</h2>
+      <p class="lead">Гурт «Kurzschluss» шукає нових музикантів. Напиши Маттео e-mail — 60–80 слів за планом. (Можеш вигадати, на чому граєш.)</p>
+      <div class="card">
+        <p>1) хто ти і з якого класу; 2) на якому інструменті граєш і відколи; 3) де ти вчився / вчилася грати; 4) яку музику любиш; 5) коли можеш приходити на репетиції; 6) запитання до гурту.</p>
+        <p class="beispiel">Hallo Matteo, ich heiße … und gehe in die Klasse … · Ich spiele seit … Jahren … · Ich habe … gelernt. · Am liebsten höre / spiele ich … · Ich kann … zur Probe kommen. · Wie lange dauern die Proben?</p>
+        <div class="qa">
+          <label for="schreiben-text">Deine E-Mail</label>
+          <textarea id="schreiben-text" rows="10" placeholder="Hallo Matteo, …"
+            data-words="60-80"
+            data-must="spiele|seit|Probe"
+            data-check="Хто ти і з якого класу|Інструмент і відколи (seit … Jahren)|Де вчився / вчилася грати|Яку музику любиш|Коли можеш на репетиції|Запитання до гурту"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Hallo Matteo, ich heiße Danylo und gehe in die Klasse 8a. Ich spiele seit fünf Jahren Gitarre. Zuerst habe ich in der Musikschule gelernt, jetzt übe ich allein mit Videos. Am liebsten spiele ich Rock, aber ich mag auch ruhige Lieder. Dienstags und freitags habe ich Zeit und kann zu jeder Probe kommen. Ich habe noch eine Frage: Wie lange dauern die Proben der Band? Ich freue mich auf das Casting! Viele Grüße, Danylo</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Die Musiker
+          <select class="blank inline" data-ans="des"><option value="">—</option><option>der</option><option>des</option><option>den</option></select> Orchesters kommen aus allen Klassen.</div>
+        <div class="fill-item"><span class="num">8)</span> Wie heißt die Leiterin des
+          <select class="blank inline" data-ans="Chors"><option value="">—</option><option>Chor</option><option>Chören</option><option>Chors</option></select>?</div>
+        <div class="fill-item"><span class="num">9)</span> Alle schauen auf den Taktstock des
+          <select class="blank inline" data-ans="Dirigenten"><option value="">—</option><option>Dirigenten</option><option>Dirigents</option><option>Dirigent</option></select>.</div>
+        <div class="fill-item"><span class="num">10)</span> Mir gefallen die Lieder
+          <select class="blank inline" data-ans="der"><option value="">—</option><option>des</option><option>dem</option><option>der</option></select> Band sehr.</div>
+        <div class="fill-item"><span class="num">11)</span> Vor dem Konzert muss Nora ihre Geige
+          <select class="blank inline" data-ans="stimmen"><option value="">—</option><option>klingen</option><option>stimmen</option><option>klatschen</option></select>.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-8-klas-8-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-8-klas-8-rik";
+  const KN_UNIT = "l4-a";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Die Probe des Schulorchesters ist am Donnerstag in der Aula.", a: "r"},
+    {s: "Nora spielt Flöte.", a: "f"},
+    {s: "Im Orchester spielen Schüler aus verschiedenen Klassen.", a: "r"},
+    {s: "Das Schlagzeug steht ganz vorne.", a: "f"},
+    {s: "Matteo spielt heute im Orchester, weil der Schlagzeuger krank ist.", a: "r"},
+    {s: "Frau Albrecht findet die Trompete zu leise.", a: "f"},
+    {s: "Das Konzert hat drei Teile.", a: "r"},
+    {s: "Das ukrainische Lied hat Daryna vorgeschlagen.", a: "r"},
+    {s: "Erik singt im Schulchor.", a: "f"},
+    {s: "Das Winterkonzert ist an einem Freitag im Januar.", a: "r"}
+  ]);
+
+  // Üb. 1
+  buildPicture('ub1-pic', [
+    {pic: "🎹", opts: ["das Klavier", "die Geige", "die Trompete"], correct: "das Klavier"},
+    {pic: "🎸", opts: ["das Cello", "die Gitarre", "die Flöte"], correct: "die Gitarre"},
+    {pic: "🎻", opts: ["die Geige", "das Schlagzeug", "das Saxofon"], correct: "die Geige"},
+    {pic: "🎺", opts: ["die Klarinette", "das Keyboard", "die Trompete"], correct: "die Trompete"},
+    {pic: "🎷", opts: ["das Saxofon", "die Trommel", "die Gitarre"], correct: "das Saxofon"},
+    {pic: "🥁", opts: ["die Flöte", "die Trommel", "das Klavier"], correct: "die Trommel"},
+    {pic: "🎤", opts: ["der Taktstock", "der Kopfhörer", "das Mikrofon"], correct: "das Mikrofon"},
+    {pic: "🎧", opts: ["der Kopfhörer", "das Mikrofon", "der Chor"], correct: "der Kopfhörer"},
+    {pic: "🎼", opts: ["die Probe", "die Noten", "die Band"], correct: "die Noten"}
+  ]);
+
+  // Üb. 2
+  buildSort('ub2-sort', {
+    buckets: ["Streichinstrumente 🎻", "Blasinstrumente 🎺", "Tasten & Schlag 🥁"],
+    items: [
+      {t: "die Geige", b: "Streichinstrumente 🎻"},
+      {t: "das Cello", b: "Streichinstrumente 🎻"},
+      {t: "der Kontrabass", b: "Streichinstrumente 🎻"},
+      {t: "die Flöte", b: "Blasinstrumente 🎺"},
+      {t: "die Trompete", b: "Blasinstrumente 🎺"},
+      {t: "die Klarinette", b: "Blasinstrumente 🎺"},
+      {t: "das Saxofon", b: "Blasinstrumente 🎺"},
+      {t: "das Horn", b: "Blasinstrumente 🎺"},
+      {t: "das Klavier", b: "Tasten & Schlag 🥁"},
+      {t: "das Keyboard", b: "Tasten & Schlag 🥁"},
+      {t: "das Schlagzeug", b: "Tasten & Schlag 🥁"},
+      {t: "die Trommel", b: "Tasten & Schlag 🥁"}
+    ]
+  });
+
+  // Üb. 3
+  wireBlanks('ub3');
+
+  // Üb. 4
+  buildTransform('ub4-tr', [
+    {s: "der Klang + die Trompete", task: "Genitiv",
+     ans: "der Klang der Trompete"},
+    {s: "das Ende + das Konzert", task: "Genitiv",
+     ans: "das Ende des Konzerts|das Ende des Konzertes"},
+    {s: "die Mitglieder + die Band", task: "Genitiv",
+     ans: "die Mitglieder der Band"},
+    {s: "der Taktstock + der Dirigent", task: "Genitiv",
+     ans: "der Taktstock des Dirigenten"},
+    {s: "die Instrumente + die Musiker (Pl.)", task: "Genitiv",
+     ans: "die Instrumente der Musiker"},
+    {s: "der Text + das Lied", task: "Genitiv",
+     ans: "der Text des Liedes|der Text des Lieds"}
+  ]);
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Warum heißt die Band „Kurzschluss“?", opts: ["Bei der ersten Probe ist der Strom ausgefallen.", "Der Gitarrist heißt so.", "Die Lieder sind sehr kurz."], correct: "Bei der ersten Probe ist der Strom ausgefallen."},
+    {q: "Wie viele Mitglieder hat die Band?", opts: ["Vier", "Fünf", "Sechs"], correct: "Fünf"},
+    {q: "Seit wann spielt Matteo Schlagzeug?", opts: ["Seit zwei Jahren", "Seit vier Jahren", "Seit sechs Jahren"], correct: "Seit vier Jahren"},
+    {q: "Warum stört Matteo zu Hause die Nachbarn nicht?", opts: ["Er übt nur in der Schule.", "Die Nachbarn sind nie da.", "Er spielt mit Kopfhörern."], correct: "Er spielt mit Kopfhörern."},
+    {q: "Wo probt die Band?", opts: ["Im Keller der Schule", "In der Aula", "In der Musikschule"], correct: "Im Keller der Schule"},
+    {q: "Welche Musik macht die Band?", opts: ["Klassik", "Rock und Pop", "Filmmusik"], correct: "Rock und Pop"},
+    {q: "Wen sucht die Band?", opts: ["Eine Sängerin", "Einen Schlagzeuger", "Einen Gitarristen oder eine Gitarristin"], correct: "Einen Gitarristen oder eine Gitarristin"},
+    {q: "Wann ist das Casting?", opts: ["Am Mittwoch um halb drei", "Am Freitag um drei", "Am Dienstag um halb vier"], correct: "Am Mittwoch um halb drei"}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Ich spiele seit drei Jahren Gitarre.", uk: "Я вже три роки граю на гітарі."},
+    {say: "Die Probe des Orchesters beginnt um drei.", uk: "Репетиція оркестру починається о третій."},
+    {say: "Der Klang der Geige ist schön.", uk: "Звучання скрипки гарне."},
+    {say: "Wir suchen einen Gitarristen.", uk: "Ми шукаємо гітариста."},
+    {say: "Am Ende des Konzerts klatschen alle.", uk: "Наприкінці концерту всі аплодують."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Wer steht vor dem Orchester?", opts: ["Der Schlagzeuger", "Der Dirigent", "Der Tontechniker"], correct: "Der Dirigent"},
+    {q: "Die Geige und das Cello sind …", opts: ["Streichinstrumente", "Blasinstrumente", "Schlaginstrumente"], correct: "Streichinstrumente"},
+    {q: "Vor einem Konzert gibt es viele …", opts: ["Pausen", "Preise", "Proben"], correct: "Proben"},
+    {q: "Ich spiele seit drei Jahren …", opts: ["auf Gitarre", "Gitarre", "mit Gitarre"], correct: "Gitarre"},
+    {q: "Das ist das Instrument … Pianistin.", opts: ["der", "des", "dem"], correct: "der"},
+    {q: "Der Klang … Schlagzeugs ist sehr laut.", opts: ["der", "dem", "des"], correct: "des"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Die Probe des Orchesters dauert zwei Stunden.", ok: true},
+    {s: "Der Klang des Geige ist schön.", wrong: 2, fix: "der"},
+    {s: "Wie heißt die Leiterin des Chor?", wrong: 5, fix: "Chors|Chores"},
+    {s: "Das ist die Trompete des Solist.", wrong: 5, fix: "Solisten"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🎻', '🥁', '🎺', '🎶']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
