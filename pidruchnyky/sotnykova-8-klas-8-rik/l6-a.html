@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 6, Modul A: Zeitungen und Zeitschriften — Німецька мова 8 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 8 КЛАС</span>
+        <h1>Lektion 6 · Modul A: Zeitungen und Zeitschriften</h1>
+        <p class="sub">Урок про газети й журнали: як улаштована газета (Titelseite, Schlagzeile, Rubrik, Anzeige), як працює шкільна редакція, паперова газета чи новини в телефоні. Граматика — відносні речення: der, die, das, den, dem, deren, dessen і з прийменниками (die Rubrik, in der …). Текст і діалог з озвученням, вправи, говоріння, письмо і підсумковий тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Zeitungswörter</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · der, den, dem …</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · in der, über den …</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Relativsätze bilden</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власний текст + вправа на розуміння ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Wie entsteht der „Pausenhof“?</h2>
+      <p class="lead">«Pausenhof» — це шкільна газета, у якій уже писали Дарина, Маттео, Макс і Грета. Айла розповідає, що відбувається в редакції, поки новий номер ще не вийшов. Послухай і прочитай. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l6-a-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Ihr kennt den „Pausenhof“? Das ist unsere <span class="gl" data-uk="шкільна газета" data-lemma="die Schülerzeitung">Schülerzeitung</span>, die alle zwei Monate <span class="gl" data-uk="виходить (друком)" data-lemma="erscheinen, ist erschienen">erscheint</span>. Eine <span class="gl" data-uk="випуск, номер" data-lemma="die Ausgabe, -n">Ausgabe</span> kostet einen Euro, und das Geld bekommen die Klassen, die eine Klassenfahrt planen. Aber wie entsteht eigentlich so eine Zeitung? Ich war bei der <span class="gl" data-uk="редакція" data-lemma="die Redaktion, -en">Redaktion</span> und habe es mir angesehen.</p>
+        <p>Jeden Montag nach der sechsten Stunde gibt es in der Bibliothek eine Redaktionssitzung. Die <span class="gl" data-uk="головна редакторка" data-lemma="der Chefredakteur, -e">Chefredakteurin</span> heißt Johanna. Sie ist ein Mädchen aus der 10a, das schon seit drei Jahren für den „Pausenhof“ schreibt. Johanna hat immer einen Kalender dabei, in dem alle Termine stehen. „Ohne Kalender gibt es keine Zeitung“, sagt sie.</p>
+        <p>Jede <span class="gl" data-uk="рубрика" data-lemma="die Rubrik, -en">Rubrik</span> hat eine eigene Person, die für sie verantwortlich ist. Max schreibt die Sportseite. Nina macht die „Lesetipps“, die viele Schüler zuerst lesen. Greta zeichnet die Comics, deren Helden alle Lehrer der Schule sind — natürlich ganz lieb! Und Daryna schreibt <span class="gl" data-uk="репортажі" data-lemma="die Reportage, -n">Reportagen</span> und <span class="gl" data-uk="інтерв'ю" data-lemma="das Interview, -s">Interviews</span>. Hinten in der Zeitung gibt es auch <span class="gl" data-uk="оголошення" data-lemma="die Anzeige, -n">Anzeigen</span>: Fahrräder, Bücher, Nachhilfe in Mathe.</p>
+        <p>Am Montag ging es um die wichtigste Frage: Was kommt auf die <span class="gl" data-uk="перша сторінка" data-lemma="die Titelseite, -n">Titelseite</span>? Das Thema war schnell klar — der Tag der offenen Tür. Aber welche <span class="gl" data-uk="заголовок (великий)" data-lemma="die Schlagzeile, -n">Schlagzeile</span>? Max hatte eine Idee: „Der Vulkan von Raum 214“. Alle lachten — nur einer nicht: Erik, der zufällig in der Bibliothek saß. „Bitte nicht!“, rief er. „Das ist ein Experiment, über das ich nie wieder sprechen will!“ Es gab eine Abstimmung. Das Ergebnis: sieben zu eins für den Vulkan.</p>
+        <p>Danach beginnt die eigentliche Arbeit. Die Reporter <span class="gl" data-uk="збирають інформацію" data-lemma="recherchieren">recherchieren</span>, machen Fotos und schreiben ihre <span class="gl" data-uk="статті" data-lemma="der Artikel, -">Artikel</span>. Herr Brandt liest alles noch einmal und korrigiert die Fehler, die alle machen. Zwei Wochen später druckt die Schule dreihundert Exemplare. Seit diesem Jahr gibt es den „Pausenhof“ auch online, auf der Website der Schule.</p>
+        <p>Was mir am besten gefällt? Die <span class="gl" data-uk="листи читачів" data-lemma="der Leserbrief, -e">Leserbriefe</span>. Letztes Mal hat ein Fünftklässler geschrieben: „Liebe Redaktion, wann schreibt ihr endlich über Hamster?“ Johanna hat geantwortet: „Schreib doch selbst!“ Jetzt hat der „Pausenhof“ den jüngsten <span class="gl" data-uk="журналіст" data-lemma="der Journalist, -en">Journalisten</span>, den er je hatte.</p>
+        <p><i>Ayla, 8b</i></p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">Relativsätze: der Artikel, den ich lese</h2>
+      <p class="lead">Відносне речення пояснює іменник: «газета, <b>яка</b> виходить…», «стаття, <b>яку</b> я читаю». Відносний займенник бере <b>рід і число</b> від іменника, а <b>відмінок</b> — від своєї ролі в підрядному реченні. Дієслово стоїть у кінці.</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. Форми відносних займенників</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th></th><th>m</th><th>n</th><th>f</th><th>Pl.</th></tr>
+          <tr><td>Nom.</td><td>der</td><td>das</td><td>die</td><td>die</td></tr>
+          <tr><td>Akk.</td><td><strong>den</strong></td><td>das</td><td>die</td><td>die</td></tr>
+          <tr><td>Dat.</td><td><strong>dem</strong></td><td><strong>dem</strong></td><td><strong>der</strong></td><td><strong>denen</strong></td></tr>
+          <tr><td>Gen.</td><td><strong>dessen</strong></td><td><strong>dessen</strong></td><td><strong>deren</strong></td><td><strong>deren</strong></td></tr>
+        </table></div>
+        <div class="merke">Відрізняються від артикля лише виділені форми: <b>denen</b> (Dat. Pl.) і <b>dessen / deren</b> (Gen.).</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. Як вибрати форму</p>
+        <p>der Artikel, <strong>der</strong> auf Seite 3 steht. <i>(хто? що? — Nom.)</i><br>
+           der Artikel, <strong>den</strong> Daryna geschrieben hat. <i>(кого? що? — Akk.)</i><br>
+           die Leser, <strong>denen</strong> die Zeitung gefällt. <i>(кому? — Dat.)</i><br>
+           die Comics, <strong>deren</strong> Helden Lehrer sind. <i>(чиї? — Gen.)</i></p>
+        <div class="merke">Крок 1: який рід і число в іменника? Крок 2: яку роль займенник має в підрядному реченні (підмет? додаток?) — це й дає відмінок.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. З прийменником</p>
+        <p>die Rubrik, <strong>in der</strong> es Buchtipps gibt · der Kalender, <strong>in dem</strong> alle Termine stehen · ein Experiment, <strong>über das</strong> ich nicht sprechen will · die Freundin, <strong>mit der</strong> ich schreibe</p>
+        <div class="merke">Прийменник стоїть <b>перед</b> займенником і визначає відмінок: über + Akk. (über <b>den</b> / <b>das</b> / <b>die</b>), mit + Dat. (mit <b>dem</b> / <b>der</b> / <b>denen</b>).</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">4. Типові помилки</p>
+        <p>✗ der Artikel, der ich lese → ✓ der Artikel, <b>den</b> ich lese</p>
+        <p>✗ die Leser, die die Zeitung gefällt → ✓ die Leser, <b>denen</b> die Zeitung gefällt</p>
+        <p>✗ die Zeitung, die erscheint alle zwei Monate → ✓ die alle zwei Monate <b>erscheint</b></p>
+        <p>✗ das Mädchen, die schreibt → ✓ das Mädchen, <b>das</b> schreibt <i>(das Mädchen — середній рід)</i></p>
+        <p>✗ die Rubrik, der ich lese → ✓ die Rubrik, <b>die</b> ich lese</p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Was ist das?</h2>
+      <p class="lead">Прочитай пояснення (у ньому відносне речення!) і вибери слово.</p>
+      <div class="card" id="ub1-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">der, den, dem, denen, dessen oder deren?</h2>
+      <p class="lead">Вибери відносний займенник. Спершу подивися на рід іменника, потім — на роль у підрядному реченні.</p>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> Der „Pausenhof“ ist eine Zeitung,
+          <select class="blank inline" data-ans="die"><option value="">—</option><option>der</option><option>die</option><option>das</option></select> alle zwei Monate erscheint.</div>
+        <div class="fill-item"><span class="num">2)</span> Johanna ist ein Mädchen,
+          <select class="blank inline" data-ans="das"><option value="">—</option><option>die</option><option>das</option><option>der</option></select> seit drei Jahren für die Zeitung schreibt.</div>
+        <div class="fill-item"><span class="num">3)</span> Das ist der Artikel,
+          <select class="blank inline" data-ans="den"><option value="">—</option><option>der</option><option>den</option><option>dem</option></select> Daryna geschrieben hat.</div>
+        <div class="fill-item"><span class="num">4)</span> Max ist der Reporter,
+          <select class="blank inline" data-ans="der"><option value="">—</option><option>der</option><option>den</option><option>dessen</option></select> über Sport schreibt.</div>
+        <div class="fill-item"><span class="num">5)</span> Greta zeichnet Comics,
+          <select class="blank inline" data-ans="deren"><option value="">—</option><option>die</option><option>denen</option><option>deren</option></select> Helden Lehrer sind.</div>
+        <div class="fill-item"><span class="num">6)</span> Die Leser,
+          <select class="blank inline" data-ans="denen"><option value="">—</option><option>die</option><option>denen</option><option>deren</option></select> die Lesetipps gefallen, schreiben oft Briefe.</div>
+        <div class="fill-item"><span class="num">7)</span> Erik ist der Schüler,
+          <select class="blank inline" data-ans="dessen"><option value="">—</option><option>der</option><option>dessen</option><option>deren</option></select> Experiment auf der Titelseite ist.</div>
+        <div class="fill-item"><span class="num">8)</span> Herr Brandt ist der Lehrer,
+          <select class="blank inline" data-ans="dem"><option value="">—</option><option>den</option><option>dem</option><option>der</option></select> die Redaktion alle Texte schickt.</div>
+        <div class="fill-item"><span class="num">9)</span> Die Fotos,
+          <select class="blank inline" data-ans="die"><option value="">—</option><option>die</option><option>denen</option><option>der</option></select> Nina gemacht hat, sind super.</div>
+        <div class="fill-item"><span class="num">10)</span> Das ist die Chefredakteurin,
+          <select class="blank inline" data-ans="der"><option value="">—</option><option>die</option><option>der</option><option>deren</option></select> wir unsere Ideen erzählen.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Relativsätze mit Präposition</h2>
+      <p class="lead">Вибери прийменник із займенником. Прийменник підказує відмінок.</p>
+      <div class="card" id="ub3-list">
+        <div class="fill-item"><span class="num">1)</span> Die „Lesetipps“ sind eine Rubrik,
+          <select class="blank inline" data-ans="in der"><option value="">—</option><option>in der</option><option>in die</option><option>in dem</option></select> Nina Bücher empfiehlt.</div>
+        <div class="fill-item"><span class="num">2)</span> Johanna hat einen Kalender,
+          <select class="blank inline" data-ans="in dem"><option value="">—</option><option>in den</option><option>in dem</option><option>in der</option></select> alle Termine stehen.</div>
+        <div class="fill-item"><span class="num">3)</span> Das ist ein Experiment,
+          <select class="blank inline" data-ans="über das"><option value="">—</option><option>über das</option><option>über dem</option><option>über den</option></select> Erik nicht sprechen will.</div>
+        <div class="fill-item"><span class="num">4)</span> Die Bibliothek ist der Raum,
+          <select class="blank inline" data-ans="in dem"><option value="">—</option><option>in dem</option><option>in den</option><option>in die</option></select> die Redaktion arbeitet.</div>
+        <div class="fill-item"><span class="num">5)</span> Daryna ist die Reporterin,
+          <select class="blank inline" data-ans="mit der"><option value="">—</option><option>mit die</option><option>mit dem</option><option>mit der</option></select> ich das Interview gemacht habe.</div>
+        <div class="fill-item"><span class="num">6)</span> Der Tag der offenen Tür war das Thema,
+          <select class="blank inline" data-ans="über das"><option value="">—</option><option>über den</option><option>über das</option><option>über dem</option></select> alle schreiben wollten.</div>
+        <div class="fill-item"><span class="num">7)</span> Das sind die Leser,
+          <select class="blank inline" data-ans="für die"><option value="">—</option><option>für die</option><option>für denen</option><option>für deren</option></select> wir die Zeitung machen.</div>
+        <div class="fill-item"><span class="num">8)</span> Herr Brandt ist der Lehrer,
+          <select class="blank inline" data-ans="von dem"><option value="">—</option><option>von den</option><option>von dem</option><option>von der</option></select> wir viel lernen.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Aus zwei Sätzen wird einer</h2>
+      <p class="lead">Зʼєднай два речення: друге стає відносним. Не забудь кому й дієслово в кінці.</p>
+      <div class="card" id="ub4-tr"></div>
+    </section>
+
+    <!-- ===== HÖREN ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Opas Zeitung</h2>
+      <p class="lead">Субота, сніданок у дідуся Гельмута. Він читає паперову газету, а Грета — новини в телефоні. Аж раптом дідусь щось знаходить у місцевих новинах… Послухай (можна двічі) і дай відповіді. Текст відкривається внизу — але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l6-a-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Greta:</b> Opa, warum liest du eigentlich noch eine Zeitung aus Papier? Alle Nachrichten sind doch im Handy.<br>
+          <b>Opa:</b> Weil ich das Rascheln mag. Und weil mein Kaffee am Samstag ohne Zeitung nicht schmeckt. Ich habe mein Abo seit über dreißig Jahren.<br>
+          <b>Greta:</b> Und was liest du zuerst? Politik?<br>
+          <b>Opa:</b> Nein, zuerst das Wetter. Dann den Sport und dann Lokales — das ist die Rubrik, in der alles über Leipzig steht. Politik lese ich am Abend.<br>
+          <b>Greta:</b> Ich lese meistens nur die Schlagzeilen in der App. Wenn mich etwas interessiert, klicke ich auf den Artikel.<br>
+          <b>Opa:</b> Und woher weißt du, dass die Nachricht stimmt?<br>
+          <b>Greta:</b> Ich lese nur Apps von richtigen Zeitungen, nicht irgendwelche Videos. Das hat uns Herr Krüger beigebracht.<br>
+          <b>Opa:</b> Kluger Mann. — Moment mal … Greta! Guck mal hier, im Lokalteil!<br>
+          <b>Greta:</b> Was ist denn?<br>
+          <b>Opa:</b> Ein Foto von eurer Schule! „Rote Lava im Chemieraum: Tag der offenen Tür am Gymnasium.“ Und das ist doch Erik, mit roten Händen!<br>
+          <b>Greta:</b> Oh nein! Der Arme! Er wollte doch, dass niemand mehr über den Vulkan spricht. Und jetzt ist er in der richtigen Zeitung!<br>
+          <b>Opa:</b> Den Artikel schneide ich aus. Den schenke ich Erik zum Geburtstag — mit Rahmen.<br>
+          <b>Greta:</b> Opa! Das ist gemein! … Aber lustig. Machst du jetzt dein Kreuzworträtsel?<br>
+          <b>Opa:</b> Natürlich. Das ist die letzte Seite, die ich lese. Hilfst du mir? Ein Medium mit sechs Buchstaben, das jeden Tag erscheint …<br>
+          <b>Greta:</b> Zeitung! Das war leicht.
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Zeitung, Zeitschrift, App</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Liest du Zeitungen oder Zeitschriften? Auf Papier oder online?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Zeitungen aus Papier lese ich fast nie. Die Nachrichten lese ich in einer App. Aber ich habe ein Abo für eine Zeitschrift über Tiere, die einmal im Monat kommt.</div>
+        </div>
+        <div class="qa">
+          <label>2. Welche Rubriken liest du am liebsten? Welche gar nicht?</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Am liebsten lese ich die Rubrik Sport, weil ich mich für Fußball interessiere. Politik und Wirtschaft lese ich selten. Das Wetter schaue ich jeden Morgen an.</div>
+        </div>
+        <div class="qa">
+          <label>3. Gibt es an deiner Schule eine Schülerzeitung? Was steht darin?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Ja, wir haben eine Schülerzeitung, die zweimal im Jahr erscheint. Es gibt Interviews mit Lehrern, Fotos von Schulfesten und eine Seite mit Witzen, die alle zuerst lesen.</div>
+        </div>
+        <div class="qa">
+          <label>4. Wie erkennst du, ob eine Nachricht stimmt?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Ich schaue, wer die Nachricht geschrieben hat. Ich lese lieber Zeitungen, die ich kenne. Wenn eine Nachricht sehr komisch klingt, suche ich sie noch in einer anderen Quelle.</div>
+        </div>
+        <div class="qa">
+          <label>5. Beschreibe eine Zeitung oder Zeitschrift mit zwei Relativsätzen.</label>
+          <button class="btn secondary" type="button" data-reveal="spr5">Muster zeigen</button>
+          <div class="reveal" id="spr5">Mein Lieblingsmagazin ist eine Zeitschrift, die über Technik und Computer berichtet. Am besten gefällt mir die Rubrik, in der Leser ihre eigenen Erfindungen zeigen.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Ein Artikel für die Schülerzeitung</h2>
+      <p class="lead">Напиши короткий допис у шкільну газету про подію у твоїй школі (концерт, змагання, екскурсія…) — 60–80 слів. Придумай заголовок і вжий щонайменше два відносних речення.</p>
+      <div class="card">
+        <p>1) заголовок (Schlagzeile); 2) що, де і коли сталося; 3) хто брав участь; 4) найцікавіший момент; 5) що сказав хтось із учасників; 6) твоя думка.</p>
+        <p class="beispiel">Schlagzeile: … · Am … fand in … statt · Dabei waren …, die … · Das Highlight war …, das … · „…“, sagte … · Ich finde, …</p>
+        <div class="qa">
+          <label for="schreiben-text">Dein Artikel</label>
+          <textarea id="schreiben-text" rows="10" placeholder="Schlagzeile: …"
+            data-words="60-80"
+            data-must="die|der|das"
+            data-check="Заголовок|Що, де, коли|Учасники|Найцікавіший момент|Цитата учасника|Твоя думка|Два відносних речення"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Schlagzeile: Die 8-A gewinnt das Volleyballturnier! Am Freitag fand in unserer Turnhalle das Volleyballturnier statt, das jedes Jahr im März stattfindet. Dabei waren acht Mannschaften, die sehr gut gespielt haben. Das Highlight war das Finale, in dem unsere Klasse gegen die 9-B gewonnen hat. „Wir haben jeden Tag trainiert“, sagte unser Kapitän Andrij. Ich finde, das war der beste Sporttag des Jahres!</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Das ist die Zeitschrift,
+          <select class="blank inline" data-ans="die"><option value="">—</option><option>der</option><option>die</option><option>das</option></select> ich jeden Monat kaufe.</div>
+        <div class="fill-item"><span class="num">8)</span> Opa hat ein Abo,
+          <select class="blank inline" data-ans="das"><option value="">—</option><option>der</option><option>die</option><option>das</option></select> schon über dreißig Jahre alt ist.</div>
+        <div class="fill-item"><span class="num">9)</span> Der Reporter,
+          <select class="blank inline" data-ans="den"><option value="">—</option><option>der</option><option>den</option><option>dem</option></select> wir interviewt haben, war sehr nett.</div>
+        <div class="fill-item"><span class="num">10)</span> Die Kinder,
+          <select class="blank inline" data-ans="denen"><option value="">—</option><option>die</option><option>denen</option><option>deren</option></select> wir die Zeitung gezeigt haben, waren begeistert.</div>
+        <div class="fill-item"><span class="num">11)</span> Lokales ist die Rubrik,
+          <select class="blank inline" data-ans="in der"><option value="">—</option><option>in die</option><option>in der</option><option>in dem</option></select> alles über die Stadt steht.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-8-klas-8-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-8-klas-8-rik";
+  const KN_UNIT = "l6-a";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Der „Pausenhof“ erscheint jeden Monat.", a: "f"},
+    {s: "Das Geld für die Zeitung bekommen Klassen, die eine Klassenfahrt planen.", a: "r"},
+    {s: "Die Redaktionssitzung ist am Montag in der Bibliothek.", a: "r"},
+    {s: "Johanna ist die Chefredakteurin und geht in die 8b.", a: "f"},
+    {s: "Max ist für die Sportseite verantwortlich.", a: "r"},
+    {s: "Greta schreibt die Lesetipps.", a: "f"},
+    {s: "Erik wollte den Vulkan auf der Titelseite haben.", a: "f"},
+    {s: "Die Redaktion hat sieben zu eins für den Vulkan gestimmt.", a: "r"},
+    {s: "Herr Brandt korrigiert die Texte.", a: "r"},
+    {s: "Ein Fünftklässler schreibt jetzt auch für die Zeitung.", a: "r"}
+  ]);
+
+  // Üb. 1: пояснення → слово
+  buildMatch('ub1', [
+    ["Die erste Seite, die man sieht.", "die Titelseite"],
+    ["Die große Überschrift, die man sofort liest.", "die Schlagzeile"],
+    ["Ein Teil der Zeitung, in dem es immer um ein Thema geht, z. B. Sport.", "die Rubrik"],
+    ["Ein kurzer Text, in dem jemand ein Fahrrad verkauft.", "die Anzeige"],
+    ["Ein Brief, den ein Leser an die Redaktion schreibt.", "der Leserbrief"],
+    ["Ein Gespräch, in dem ein Journalist Fragen stellt.", "das Interview"],
+    ["Die Person, die die ganze Zeitung leitet.", "die Chefredakteurin"],
+    ["Ein Spiel, das oft auf der letzten Seite steht.", "das Kreuzworträtsel"]
+  ], {lead: true});
+
+  // Üb. 2, Üb. 3
+  wireBlanks('ub2');
+  wireBlanks('ub3');
+
+  // Üb. 4
+  buildTransform('ub4-tr', [
+    {s: "Das ist die Zeitung. Sie erscheint jeden Tag.", task: "…, die …",
+     ans: "Das ist die Zeitung, die jeden Tag erscheint."},
+    {s: "Das ist der Artikel. Ich habe ihn gestern gelesen.", task: "…, den …",
+     ans: "Das ist der Artikel, den ich gestern gelesen habe."},
+    {s: "Johanna ist die Chefredakteurin. Wir schicken ihr unsere Texte.", task: "…, der …",
+     ans: "Johanna ist die Chefredakteurin, der wir unsere Texte schicken."},
+    {s: "Das ist das Magazin. Seine Fotos sind fantastisch.", task: "…, dessen …",
+     ans: "Das ist das Magazin, dessen Fotos fantastisch sind."},
+    {s: "Das sind die Leser. Die Comics gefallen ihnen.", task: "…, denen …",
+     ans: "Das sind die Leser, denen die Comics gefallen."},
+    {s: "Das ist die Rubrik. In der Rubrik gibt es Buchtipps.", task: "…, in der …",
+     ans: "Das ist die Rubrik, in der es Buchtipps gibt."},
+    {s: "Erik ist der Schüler. Alle sprechen über ihn.", task: "…, über den …",
+     ans: "Erik ist der Schüler, über den alle sprechen."}
+  ]);
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Warum liest Opa eine Zeitung aus Papier?", opts: ["Er hat kein Handy.", "Er mag das Rascheln, und sie gehört zum Kaffee.", "Die Zeitung ist billiger."], correct: "Er mag das Rascheln, und sie gehört zum Kaffee."},
+    {q: "Wie lange hat Opa schon ein Abo?", opts: ["Seit drei Jahren", "Seit über dreißig Jahren", "Seit einem Monat"], correct: "Seit über dreißig Jahren"},
+    {q: "Was liest Opa zuerst?", opts: ["Politik", "Das Wetter", "Das Kreuzworträtsel"], correct: "Das Wetter"},
+    {q: "Was ist „Lokales“?", opts: ["Die Rubrik mit Nachrichten über die Stadt", "Die Seite mit Anzeigen", "Die Seite mit Rätseln"], correct: "Die Rubrik mit Nachrichten über die Stadt"},
+    {q: "Wie liest Greta Nachrichten?", opts: ["In der App einer richtigen Zeitung", "Nur in Videos", "Gar nicht"], correct: "In der App einer richtigen Zeitung"},
+    {q: "Was findet Opa im Lokalteil?", opts: ["Ein Foto von Erik", "Einen Artikel über das Winterkonzert", "Eine Anzeige für ein Fahrrad"], correct: "Ein Foto von Erik"},
+    {q: "Was will Opa mit dem Artikel machen?", opts: ["Wegwerfen", "Ausschneiden und Erik schenken", "An die Redaktion schicken"], correct: "Ausschneiden und Erik schenken"},
+    {q: "Welches Wort sucht Opa im Kreuzworträtsel?", opts: ["Radio", "Zeitung", "Leser"], correct: "Zeitung"}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Das ist eine Zeitung, die jeden Tag erscheint.", uk: "Це газета, яка виходить щодня."},
+    {say: "Der Artikel, den ich gelesen habe, war spannend.", uk: "Стаття, яку я прочитав (прочитала), була цікава."},
+    {say: "Lokales ist die Rubrik, in der alles über die Stadt steht.", uk: "«Місцеві новини» — рубрика, де все про місто."},
+    {say: "Ich lese die Nachrichten meistens in einer App.", uk: "Я здебільшого читаю новини в застосунку."},
+    {say: "Was steht heute auf der Titelseite?", uk: "Що сьогодні на першій сторінці?"}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Die große Überschrift auf der Titelseite heißt …", opts: ["Schlagzeile", "Anzeige", "Rubrik"], correct: "Schlagzeile"},
+    {q: "Ein Text, in dem jemand etwas verkauft, ist eine …", opts: ["Reportage", "Anzeige", "Rubrik"], correct: "Anzeige"},
+    {q: "Eine Zeitung, die man jeden Monat nach Hause bekommt, hat man im …", opts: ["Abo", "Artikel", "Interview"], correct: "Abo"},
+    {q: "Das Mädchen, … die Zeitung leitet, heißt Johanna.", opts: ["die", "das", "der"], correct: "das"},
+    {q: "Die Schüler, … der „Pausenhof“ gefällt, kaufen jede Ausgabe.", opts: ["die", "denen", "deren"], correct: "denen"},
+    {q: "Das ist der Comic, … Held Herr Brandt ist.", opts: ["dessen", "deren", "dem"], correct: "dessen"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Das ist die Zeitung, die mein Opa liest.", ok: true},
+    {s: "Das ist der Artikel, der ich geschrieben habe.", wrong: 4, fix: "den"},
+    {s: "Die Kinder, die das Experiment gefallen hat, haben gelacht.", wrong: 2, fix: "denen"},
+    {s: "Die Rubrik, in die es Buchtipps gibt, heißt „Lesetipps“.", wrong: 3, fix: "der"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📰', '✏️', '📸', '🏆']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
