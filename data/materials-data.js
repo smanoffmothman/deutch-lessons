@@ -46,6 +46,7 @@ const MATERIAL_KRAYINY = {
   EU: { uk: "Європа", de: "Europa" },          // кілька європейських країн / Європа загалом
   WELT: { uk: "Увесь світ", de: "Welt" },      // світова тема без однієї країни (космос, наука, історія світу)
   UA: { uk: "Україна", de: "Ukraine" },
+  AO: { uk: "Ангола", de: "Angola" },
   AR: { uk: "Аргентина", de: "Argentinien" },
   AU: { uk: "Австралія", de: "Australien" },
   BE: { uk: "Бельгія", de: "Belgien" },
@@ -60,6 +61,7 @@ const MATERIAL_KRAYINY = {
   FI: { uk: "Фінляндія", de: "Finnland" },
   FR: { uk: "Франція", de: "Frankreich" },
   GB: { uk: "Велика Британія", de: "Großbritannien" },
+  GL: { uk: "Гренландія", de: "Grönland" },
   GR: { uk: "Греція", de: "Griechenland" },
   HT: { uk: "Гаїті", de: "Haiti" },
   HU: { uk: "Угорщина", de: "Ungarn" },
