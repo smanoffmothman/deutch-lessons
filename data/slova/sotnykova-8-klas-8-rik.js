@@ -579,5 +579,18 @@
   {de: "die Suchmaschine, -n", uk: "пошукова система", r: "l6-b"},
   {de: "erreichbar", uk: "доступний (на зв'язку)", r: "l6-b"},
   {de: "die Erlaubnis", uk: "дозвіл", r: "l6-b", note: "ohne Erlaubnis"},
-  {de: "die Regel, -n", uk: "правило", r: "l6-b"}
+  {de: "die Regel, -n", uk: "правило", r: "l6-b"},
+  // ---- Lektion 6 · Modul D: Geschichtenzeit ----
+  {de: "der Aprilscherz, -e", uk: "першоквітневий жарт", r: "l6-d"},
+  {de: "die Fake News (Pl.)", uk: "фейкові новини", r: "l6-d"},
+  {de: "der Screenshot, -s", uk: "знімок екрана", r: "l6-d"},
+  {de: "der Rohrbruch, ¨-e", uk: "прорив труби", r: "l6-d"},
+  {de: "die Website, -s", uk: "вебсайт", r: "l6-d"},
+  {de: "prüfen", uk: "перевіряти", r: "l6-d", note: "eine Nachricht prüfen"},
+  {de: "glauben + Dat.", uk: "вірити (комусь, чомусь)", r: "l6-d", note: "Ich glaube der Nachricht nicht."},
+  {de: "verbreiten", uk: "поширювати", r: "l6-d"},
+  {de: "echt", uk: "справжній", r: "l6-d"},
+  {de: "stolz sein auf + Akk.", uk: "пишатися", r: "l6-d"},
+  {de: "das Hochwasser", uk: "повінь", r: "l6-d"},
+  {de: "unsicher", uk: "невпевнений", r: "l6-d"}
 ];
