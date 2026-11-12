@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Das Rätsel der Grönland-Wikinger · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Geschichte</span>
+        <h1>Das Rätsel der Grönland-Wikinger</h1>
+        <p class="sub">Майже пів тисячоліття вікінги жили на найбільшому острові світу — а потім просто зникли, не залишивши жодної звістки про катастрофу. Археологи шукають розгадку в моржевих іклах.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Zeitleiste</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Deine Meinung</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Wikinger – nur Krieger?</h2>
+      <div class="card">
+        <p>Was fällt dir zum Wort „Wikinger“ ein? Waren sie nur Krieger und Seeräuber – oder auch etwas anderes? Und was glaubst du: Wie lebt man auf einer Insel, die zum großen Teil von Eis bedeckt ist?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Що спадає тобі на думку при слові «вікінги»? Чи були вони лише воїнами й морськими розбійниками — чи ще кимось? І як гадаєш: як живеться на острові, більша частина якого вкрита льодом?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Um das Jahr 985 erreichten Wikinger aus Island die größte Insel der Welt. Rund 450 Jahre lang lebten sie dort – dann <span class="gl" data-uk="губитися, зникати" data-lemma="sich verlieren (verlor, hat verloren)">verloren sich</span> ihre <span class="gl" data-key data-uk="слід" data-lemma="die Spur, -en">Spuren</span>. Was ist mit ihnen geschehen?</p>
+
+          <p>Wer heute durch den Süden Grönlands reist, <span class="gl" data-uk="натрапляти (на щось)" data-lemma="stoßen auf (stieß, ist gestoßen)">stößt</span> immer wieder auf Ruinen: Mauern von Scheunen, Wohnhäusern und Kirchen, <span class="gl" data-uk="порослий" data-lemma="bewachsen">bewachsen</span> mit Gras und <span class="gl" data-uk="лишайник" data-lemma="die Flechte, -n">Flechten</span>. Sie stammen von skandinavischen <span class="gl" data-key data-uk="поселенець" data-lemma="der Siedler, -">Siedlern</span>, die man heute Grænlendingar nennt. Mittelalterliche <span class="gl" data-uk="джерело (історичне)" data-lemma="die Quelle, -n">Quellen</span> erzählen <span class="gl" data-uk="докладно" data-lemma="ausführlich">ausführlich</span> von ihren Anfängen – über ihr Ende <span class="gl" data-uk="мовчати" data-lemma="schweigen (schwieg, hat geschwiegen)">schweigen</span> sie. Für Michael Nielsen, Archäologe am Grönländischen Nationalmuseum in Nuuk, ist das eines der spannendsten <span class="gl" data-key data-uk="загадка" data-lemma="das Rätsel, -">Rätsel</span> überhaupt.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Grönland ist die größte Insel der Welt, rund 80 Prozent sind von Eis bedeckt. Politisch ist sie ein <span class="gl" data-uk="самоврядний" data-lemma="selbstverwaltet">selbstverwalteter</span> Teil des Königreichs Dänemark. Die meisten Einwohner sind Inuit, die Hauptstadt heißt Nuuk.</p>
+          </aside>
+
+          <p>Angeführt wurden die ersten Siedler von Erik Thorvaldsson, bekannt als Erik der Rote. Er hatte die Insel entdeckt, nachdem man ihn wegen Mordes aus Island <span class="gl" data-uk="виганяти, засилати" data-lemma="verbannen">verbannt</span> hatte. Den Namen „Grönland“ – grünes Land – wählte er wohl, um möglichst viele Menschen in die neue Kolonie zu <span class="gl" data-uk="заманювати" data-lemma="locken">locken</span>. Die <span class="gl" data-uk="переправа, переїзд морем" data-lemma="die Überfahrt, -en">Überfahrt</span> war gefährlich: Laut den Sagas brachen 25 Schiffe auf, nur 14 kamen an. Mit dem Zeitpunkt hatten die Siedler aber Glück. In der sogenannten mittelalterlichen Warmzeit, die um 900 begann, gab es im Nordatlantik weniger Meereis und weniger Stürme.</p>
+
+          <p>In den Fjorden im Südwesten entstanden Höfe mit Schafen, Rindern, Ziegen und Pferden, große Ställe und sogar Kirchen mit bis zu einem Meter dicken Mauern. Allein in der „Ostsiedlung“ fanden Archäologen die Reste von rund 500 Bauernhöfen. Leicht war das Leben trotzdem nicht. Im Winter <span class="gl" data-uk="замерзати" data-lemma="zufrieren (fror zu, ist zugefroren)">froren</span> die Fjorde zu, das <span class="gl" data-key data-uk="худоба" data-lemma="das Vieh">Vieh</span> blieb monatelang im Stall, und im Frühling waren manche Tiere so schwach, dass man sie auf die <span class="gl" data-uk="пасовище" data-lemma="die Weide, -n">Weide</span> tragen musste.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Hvalsey_Church_2014_04.jpg/960px-Hvalsey_Church_2014_04.jpg" alt="Die Ruine der Kirche von Hvalsey am Fjord." width="960" height="638" loading="lazy">
+            <figcaption>Die Ruine der Kirche von Hvalsey am Fjord. Foto: jtstewart, <a href="https://creativecommons.org/licenses/by-sa/2.0" target="_blank" rel="noopener">CC BY-SA 2.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Hvalsey_Church_2014_04.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Lange schien die Erklärung für das Ende einfach. Als der norwegische Missionar Hans Egede 1721 nach Grönland segelte, um die <span class="gl" data-uk="нащадок" data-lemma="der Nachfahre, -n">Nachfahren</span> der Wikinger zum lutherischen Glauben zu <span class="gl" data-uk="навертати (у віру)" data-lemma="bekehren">bekehren</span>, fand er nur Ruinen – und Inuit. Er vermutete, die Siedler seien getötet worden oder der Kälte <span class="gl" data-uk="стати жертвою" data-lemma="zum Opfer fallen (fiel, ist gefallen)">zum Opfer gefallen</span>. Tatsächlich begann im frühen 14. Jahrhundert die Kleine <span class="gl" data-key data-uk="льодовиковий період" data-lemma="die Eiszeit, -en">Eiszeit</span>. Noch in den 1970er-Jahren war die <span class="gl" data-uk="поширений, звичний" data-lemma="gängig">gängige</span> These: Die Siedler hatten ihre Umwelt <span class="gl" data-uk="надмірно використовувати, виснажувати" data-lemma="übernutzen">übernutzt</span>, kaum Fisch gegessen und waren schließlich <span class="gl" data-uk="помирати з голоду" data-lemma="verhungern">verhungert</span> – Bauern, die sich nicht <span class="gl" data-key data-uk="пристосовуватися" data-lemma="sich anpassen">anpassen</span> konnten.</p>
+
+          <p>Neue Methoden zeigen ein anderes Bild. 2012 untersuchte ein Team um die dänische Forscherin Jette Arneborg Skelette der Siedler mit einer Isotopenanalyse. Das Ergebnis: Im Lauf der Jahrzehnte aßen die Menschen immer weniger Fleisch von Landtieren und immer mehr <span class="gl" data-uk="тюлень" data-lemma="die Robbe, -n">Robben</span>. Die Grænlendingar waren also eher Jäger, die <span class="gl" data-uk="між іншим, побіжно" data-lemma="nebenbei">nebenbei</span> etwas Landwirtschaft <span class="gl" data-uk="займатися (чимось)" data-lemma="betreiben (betrieb, hat betrieben)">betrieben</span>. <span class="gl" data-uk="нездатний" data-lemma="unfähig">Unfähig</span>, sich an die Kälte anzupassen, waren sie offenbar nicht.</p>
+
+          <p>Heute glauben viele Forscher, dass es in Grönland vor allem um eine Ware ging: die <span class="gl" data-key data-uk="ікло (бивень)" data-lemma="der Stoßzahn, -ä-e">Stoßzähne</span> der <span class="gl" data-key data-uk="морж" data-lemma="das Walross, -e">Walrosse</span>, das „weiße Gold“. In Europa <span class="gl" data-uk="вирізати (з дерева, кістки)" data-lemma="schnitzen">schnitzte</span> man daraus Schachfiguren, Kreuze und Messergriffe für reiche Kunden. In Island waren die Walrosse damals fast <span class="gl" data-uk="винищувати" data-lemma="ausrotten">ausgerottet</span>, in Grönland gab es sie noch. Für das <span class="gl" data-uk="слонова кістка" data-lemma="das Elfenbein">Elfenbein</span> bekamen die Siedler Holz und Eisen, und sie konnten sogar der Kirche in Rom ihre <span class="gl" data-uk="податок, внесок" data-lemma="die Abgabe, -n">Abgaben</span> zahlen. Für die Jagd mussten sie allerdings weit nach Norden fahren – in offenen Booten durch <span class="gl" data-uk="паковий лід" data-lemma="das Packeis">Packeis</span>. Eine DNA-Studie von 2024 zeigt, dass sie dabei vielleicht bis in die kanadische Arktis kamen.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Lewis_chessmen%2C_British_museum%2C_London.jpg/960px-Lewis_chessmen%2C_British_museum%2C_London.jpg" alt="Die Lewis-Schachfiguren im British Museum in London." width="960" height="638" loading="lazy">
+            <figcaption>Die Lewis-Schachfiguren im British Museum in London. Foto: Helen Simonsson, <a href="https://creativecommons.org/licenses/by-sa/2.0" target="_blank" rel="noopener">CC BY-SA 2.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Lewis_chessmen,_British_museum,_London.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Doch schon im 13. Jahrhundert bekam das weiße Gold Konkurrenz: Elfenbein von afrikanischen Elefanten kam auf den europäischen Markt. Gleichzeitig wurde das Klima kälter und die Seefahrt riskanter. Immer seltener kamen Schiffe aus Europa. Mitte des 14. Jahrhunderts starb außerdem in Norwegen, dem wichtigsten Handelspartner, wahrscheinlich mehr als die Hälfte der Menschen an der Pest. Die kleinere „Westsiedlung“ war wohl schon Ende des 14. Jahrhunderts verlassen.</p>
+
+          <p>Die letzte <span class="gl" data-uk="задокументований, засвідчений" data-lemma="belegt">belegte</span> Fahrt zwischen Norwegen und Grönland fand 1410 statt. Zu den letzten Nachrichten aus der Kolonie gehört der Bericht über eine Hochzeit im Jahr 1408 – von einer Katastrophe ist darin keine Rede. Um 1450 war auch die Ostsiedlung leer. Ob die Menschen starben oder wegzogen, weiß niemand. Auffällig ist: Die Inuit, die um 1200 aus dem heutigen Kanada nach Grönland gekommen waren, <span class="gl" data-uk="давати собі раду" data-lemma="zurechtkommen (kam zurecht, ist zurechtgekommen)">kamen</span> mit der Kälte gut zurecht. Als Nomaden folgten sie Robben, Walrossen und Walen. Die Wikinger <span class="gl" data-uk="переймати" data-lemma="übernehmen (übernahm, hat übernommen)">übernahmen</span> diese <span class="gl" data-uk="спосіб життя" data-lemma="die Lebensweise, -n">Lebensweise</span> nicht – vielleicht, weil sie zu sehr an ihrer europäischen Identität <span class="gl" data-uk="триматися (за щось)" data-lemma="festhalten an (hielt fest, hat festgehalten)">festhielten</span>.</p>
+
+          <p>Jette Arneborg beschreibt das Ende mit einem einfachen Bild: Man solle sich vorstellen, in Grönland zu sitzen, ohne eigenes Schiff, und auf die Schiffe aus Norwegen zu warten. Und irgendwann kommen sie einfach nicht mehr.</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»). Два абзаци залишаться без заголовка.</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Eine Zeitleiste</h2>
+      <p class="lead">Розстав події в хронологічному порядку — від найдавнішої до найновішої. Натискай речення по черзі; натиснеш на вже поставлене — воно повернеться вниз.</p>
+      <div class="card" id="ub3-seq"></div>
+    </section>
+
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+      <p class="lead">б) Встав слова в текст. Одне слово зайве.</p>
+      <div class="card" id="ub4b-bank"></div>
+    </section>
+
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Anpassen oder untergehen?</h2>
+      <p class="lead">Напиши текст німецькою. Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div id="ub5-w"></div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Meiner Meinung nach …, Ein wichtiger Grund war wahrscheinlich …, Hätten die Wikinger …, dann …, Auch heute müssen wir uns an … anpassen.</i>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Um 985 gründeten Wikinger unter Erik dem Roten Siedlungen in Grönland. Sie lebten von Viehzucht, Robbenjagd und vor allem vom Handel mit Walrosselfenbein. Als afrikanisches Elfenbein billiger wurde, das Klima kälter wurde und immer weniger Schiffe kamen, gerieten die Kolonien unter Druck. Um 1450 waren sie verlassen – warum genau, ist bis heute ein Rätsel. Heute ist Grönland ein selbstverwalteter Teil Dänemarks, in dem vor allem Inuit leben.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Близько 985 року вікінги на чолі з Еріком Рудим заснували поселення в Гренландії. Вони жили з тваринництва, полювання на тюленів і передусім з торгівлі моржевими іклами. Коли африканська слонова кістка витіснила моржеву, клімат похолоднішав, а кораблів ставало дедалі менше, колонії опинилися в скруті. Близько 1450 року їх покинули — чому саме, досі загадка. Сьогодні Гренландія — самоврядна частина Данії, де живуть переважно інуїти.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "wikinger-in-groenland";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Um das Leben und das rätselhafte Verschwinden der Wikinger in Grönland",
+            "Um die Kriegszüge der Wikinger in Europa und Nordamerika",
+            "Um das Leben der Inuit im heutigen Grönland"],
+     correct: "Um das Leben und das rätselhafte Verschwinden der Wikinger in Grönland"},
+    {q: "Welche Erklärung für das Ende der Kolonien ist heute besonders wichtig?",
+     opts: ["Der Handel mit Walrosselfenbein brach zusammen, und es kamen kaum noch Schiffe.",
+            "Die Inuit vertrieben die Wikinger in einem großen Krieg.",
+            "Die Siedler aßen keine Robben und verhungerten deshalb."],
+     correct: "Der Handel mit Walrosselfenbein brach zusammen, und es kamen kaum noch Schiffe."}
+  ]);
+  buildMatch('ub1h', [
+    ["Ein Mörder gibt der Insel ihren Namen", "Absatz 2"],
+    ["Harte Winter auf den Höfen", "Absatz 3"],
+    ["Die alte Theorie: zu kalt, zu unflexibel", "Absatz 4"],
+    ["Was die Knochen verraten", "Absatz 5"],
+    ["Das weiße Gold", "Absatz 6"],
+    ["Konkurrenz, Kälte und Pest", "Absatz 7"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5", "Absatz 6", "Absatz 7", "Absatz 8", "Absatz 9"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "Mittelalterliche Quellen beschreiben genau, wie die Kolonien endeten.", a: "f"},
+    {s: "Nicht alle Schiffe von Erik dem Roten kamen in Grönland an.", a: "r"},
+    {s: "Die Wikinger brachten auch Hunde nach Grönland.", a: "n"},
+    {s: "Hans Egede traf 1721 in Grönland keine Wikinger mehr.", a: "r"},
+    {s: "Die Isotopenanalyse zeigte, dass die Siedler mit der Zeit mehr Robben aßen.", a: "r"},
+    {s: "Walrosse lebten direkt neben der Ostsiedlung.", a: "f"},
+    {s: "Afrikanisches Elfenbein machte das Walrosselfenbein weniger wertvoll.", a: "r"},
+    {s: "Archäologen haben Beweise für einen Krieg zwischen Wikingern und Inuit gefunden.", a: "n"},
+    {s: "Die Wikinger übernahmen die Lebensweise der Inuit.", a: "f"}
+  ]);
+
+  buildSequence('ub3-seq', [
+    "Erik der Rote wird aus Island verbannt und entdeckt Grönland.",
+    "Siedler aus Island gründen Höfe in den Fjorden Grönlands.",
+    "Elfenbein von afrikanischen Elefanten erreicht den europäischen Markt.",
+    "In Norwegen stirbt mehr als die Hälfte der Menschen an der Pest.",
+    "Die letzte belegte Fahrt zwischen Norwegen und Grönland findet statt.",
+    "Die Ostsiedlung ist verlassen.",
+    "Hans Egede segelt nach Grönland und findet nur Ruinen.",
+    "Eine Isotopenanalyse zeigt, wie sich die Ernährung der Siedler verändert hat."
+  ]);
+
+  buildMatch('ub4', [
+    ["die Spur", "слід"],
+    ["der Siedler", "поселенець"],
+    ["das Walross", "морж"],
+    ["der Stoßzahn", "ікло (бивень)"],
+    ["sich anpassen", "пристосовуватися"],
+    ["verhungern", "помирати з голоду"],
+    ["ausrotten", "винищувати"],
+    ["die Lebensweise", "спосіб життя"]
+  ]);
+  buildWordBank('ub4b-bank', {
+    text: "Die ersten [Siedler] kamen um 985 nach Grönland. Sie lebten von Viehzucht und von der Jagd auf [Robben]. Ihre wichtigste Ware waren die Stoßzähne der [Walrosse]. Als die Schiffe aus Europa ausblieben, wurde ihre Lage schwierig. Bis heute ist ihr Verschwinden ein [Rätsel]. Die Inuit konnten sich besser an die Kälte [anpassen].",
+    extra: ["Ruinen"]
+  });
+
+  buildWriting('ub5-w', {
+    prompt: "Warum sind die Wikinger in Grönland verschwunden, die Inuit aber nicht? Nenne die Gründe aus dem Text, die du für die wichtigsten hältst, und begründe deine Meinung. Was können wir heute aus ihrer Geschichte lernen – zum Beispiel über den Klimawandel? (100–150 Wörter)",
+    words: "100-150",
+    must: ["Inuit", "Klima"],
+    check: ["Мінімум два чинники з тексту", "Власна думка з обґрунтуванням (weil …, deshalb …)", "Висновок для сьогодення"]
+  });
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['⛵','🧊','🦭','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
