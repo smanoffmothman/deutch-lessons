@@ -142,6 +142,8 @@ FLAGS = {
     'EU': (eu(), 30, 20),
     'WELT': (welt(), 20, 20),
     # інші країни (за кодом ISO 3166-1)
+    'AO': (hstripes('#CC092F', '#000') + '<path d="M17.2,6.6A4.2,4.2 0 1 1 11.6,13.4" fill="none" stroke="#FFCB00" stroke-width="1.1"/>'
+           + '<path d="M11.8,12.8L16.4,8.6" stroke="#FFCB00" stroke-width="1"/>' + f'<polygon points="{star(13.2, 8.3, 1.5)}" fill="#FFCB00"/>', 30, 20),
     'AR': (hstripes('#74ACDF', '#fff', '#74ACDF') + '<circle cx="15" cy="10" r="2" fill="#F6B40E"/>', 30, 20),
     'AU': (au_nz('#fff', [(7.5, 15, 2.3), (22.5, 4, 1.1), (19, 9.5, 1.1), (25.5, 8.5, 1.1), (22.5, 16.5, 1.2)]), 30, 20),
     'BE': (vstripes('#000', '#FDDA24', '#EF3340'), 30, 20),
@@ -156,6 +158,9 @@ FLAGS = {
     'FI': (nordic('#fff', '#002F6C', w=36, h=22), 36, 22),
     'FR': (vstripes('#0055A4', '#fff', '#EF4135'), 30, 20),
     'GB': (union_jack(30, 15), 30, 15),
+    # Гренландія: біле/червоне + коло з протилежними кольорами, зміщене до древка
+    'GL': ('<rect width="30" height="10" fill="#fff"/><rect y="10" width="30" height="10" fill="#D00C33"/>'
+           '<path d="M5,10A6.67,6.67 0 0 1 18.33,10Z" fill="#D00C33"/><path d="M5,10A6.67,6.67 0 0 0 18.33,10Z" fill="#fff"/>', 30, 20),
     'GR': (gr(), 30, 20),
     'HT': (hstripes('#00209F', '#D21034') + '<rect x="11" y="6.5" width="8" height="7" fill="#fff"/><rect x="14" y="8" width="2" height="4" fill="#016A16"/>', 30, 20),
     'HU': (hstripes('#CD2A3E', '#fff', '#436F4D'), 30, 20),
