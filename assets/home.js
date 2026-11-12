@@ -171,7 +171,10 @@
   if(articles.length){
     const top = articles.slice(-3).reverse();
     const rows = top.map((m, i) => {
-      const flags = (m.krayina || []).map(c => '<span class="flag flag-' + esc(c) + '"></span>').join('');
+      const flags = (m.krayina || []).map(c => {
+        const k = (typeof MATERIAL_KRAYINY !== 'undefined') ? MATERIAL_KRAYINY[c] : null;
+        return '<span class="flag flag-' + esc(c) + '" title="' + esc((k && k.uk) || c) + '"></span>';
+      }).join('');
       const href = 'materialy/' + (m.file || ('statti/' + m.id + '.html'));
       return '<a class="hn-row" href="' + esc(href) + '">'
         + '<span class="hn-txt"><b lang="de">' + esc(m.nazva) + '</b>'

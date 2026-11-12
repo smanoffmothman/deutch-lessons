@@ -437,10 +437,14 @@ function buildSequence(containerId, data){
    - переклад слів, панель над текстом, шухляда, вкладка Wörter;
    - збереження прогресу: trackProgress('mat:' + id) (його показує сторінка
      materialy/ на картці статті). */
-const MAT_LAND = {DE: 'Deutschland', AT: 'Österreich', CH: 'Schweiz', LI: 'Liechtenstein', LU: 'Luxemburg', EU: 'Europa', UA: 'Ukraine'};
+// назви країн — MATERIAL_KRAYINY (data/materials-data.js), тут німецькою
+function matLandDe(code){
+  const k = (typeof MATERIAL_KRAYINY !== 'undefined') ? MATERIAL_KRAYINY[code] : null;
+  return (k && k.de) || code;
+}
 function matFlag(code){
-  // прапорці намальовані CSS (емодзі-прапорців Windows не показує)
-  return '<span class="flag flag-' + matEsc(code) + '" title="' + matEsc(MAT_LAND[code] || code) + '" aria-label="' + matEsc(MAT_LAND[code] || code) + '"></span>';
+  // прапорці намальовані CSS (емодзі-прапорців Windows не показує); підпис поруч — тому aria-hidden
+  return '<span class="flag flag-' + matEsc(code) + '" aria-hidden="true"></span>';
 }
 function matTextWords(){
   const text = document.getElementById('matText');
@@ -475,7 +479,7 @@ function initMaterialPage(id, opts){
   if(meta){
     const bits = [];
     if(m && m.riven) bits.push('<span class="mm-chip mm-level">' + matEsc(m.riven) + '</span>');
-    if(m && m.krayina) [].concat(m.krayina).forEach(c => bits.push('<span class="mm-chip">' + matFlag(c) + matEsc(MAT_LAND[c] || c) + '</span>'));
+    if(m && m.krayina) [].concat(m.krayina).forEach(c => bits.push('<span class="mm-chip">' + matFlag(c) + matEsc(matLandDe(c)) + '</span>'));
     if(m && m.temy) [].concat(m.temy).forEach(t => bits.push('<span class="mm-chip">' + matEsc(t) + '</span>'));
     if(words) bits.push('<span class="mm-chip">≈ ' + words + ' Wörter · ' + matMinutes(words) + ' хв</span>');
     meta.innerHTML = bits.join('');
