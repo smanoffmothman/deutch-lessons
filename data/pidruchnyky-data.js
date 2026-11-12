@@ -398,7 +398,7 @@ const PIDRUCHNYKY = [
       ] },
       { id: "l7", label: "7", nazva: "Deutschsprachige Länder", storinky: "135–160", dity: [
         { id: "l7-a", label: "A", nazva: "Prima Klima", storinky: "136–141", typ: "vpravy", gram: ["relativsaetze"], opublikovano: 29 },
-        { id: "l7-b", label: "B", nazva: "Menschen, die hier leben", storinky: "142–147", typ: "vpravy", gram: ["zahlwoerter"] },
+        { id: "l7-b", label: "B", nazva: "Menschen, die hier leben", storinky: "142–147", typ: "vpravy", gram: ["zahlwoerter"], opublikovano: 30 },
         { id: "l7-c", label: "C", nazva: "Wohin fahren wir diesmal?", storinky: "148–155", typ: "vpravy", gram: ["wechselpraepositionen", "artikel-gebrauch", "kausalsaetze", "konjunktionen-position-null"] },
         { id: "l7-d", label: "D", nazva: "Wiederholung", storinky: "156–157", typ: "povtorennya", gram: ["relativsaetze", "wechselpraepositionen", "kausalsaetze"] },
         { id: "l7-e", label: "E", nazva: "Geschichtenzeit", storinky: "158", typ: "chytannya" },
