@@ -410,5 +410,23 @@
   {de: "traurig", uk: "сумний", r: "l4-c"},
   {de: "lieber — am liebsten", uk: "охочіше — найохочіше (від gern)", r: "l4-c"},
   {de: "besser — am besten", uk: "краще — найкраще (від gut)", r: "l4-c"},
-  {de: "einer / eines / eine der besten …", uk: "один / одне / одна з найкращих …", r: "l4-c", note: "eine der besten Bands"}
+  {de: "einer / eines / eine der besten …", uk: "один / одне / одна з найкращих …", r: "l4-c", note: "eine der besten Bands"},
+  // ---- Lektion 4 · Modul E: Geschichtenzeit ----
+  {de: "der Stromausfall, -fälle", uk: "вимкнення світла, відключення електрики", r: "l4-e"},
+  {de: "der Kurzschluss, -schlüsse", uk: "коротке замикання", r: "l4-e"},
+  {de: "das Mischpult, -e", uk: "мікшерний пульт", r: "l4-e"},
+  {de: "das Kabel, -", uk: "кабель", r: "l4-e"},
+  {de: "der Knall, -e", uk: "гучний тріск, вибух (звук)", r: "l4-e"},
+  {de: "dunkel", uk: "темний, темно", r: "l4-e"},
+  {de: "voll", uk: "повний", r: "l4-e", note: "Die Aula war voll."},
+  {de: "leuchten", uk: "світити(ся)", r: "l4-e"},
+  {de: "anschalten", uk: "вмикати", r: "l4-e", note: "die Lampe anschalten"},
+  {de: "weinen", uk: "плакати", r: "l4-e"},
+  {de: "der Augenblick, -e", uk: "мить", r: "l4-e"},
+  {de: "der Hausmeister, -", uk: "завгосп (у школі)", r: "l4-e"},
+  {de: "der Wasserkocher, -", uk: "електрочайник", r: "l4-e"},
+  {de: "schuld sein", uk: "бути винним", r: "l4-e", note: "Der Wasserkocher war schuld."},
+  {de: "die Zugabe, -n", uk: "біс, виконання на біс", r: "l4-e"},
+  {de: "die Kerze, -n", uk: "свічка", r: "l4-e"},
+  {de: "strahlen", uk: "сяяти", r: "l4-e"}
 ];
