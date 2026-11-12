@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 5, Modul D: Wiederholung — Німецька мова 8 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 8 КЛАС</span>
+        <h1>Lektion 5 · Modul D: Wiederholung</h1>
+        <p class="sub">Повторення Lektion 5 «Wissen ist Macht»: навіщо потрібна школа, оцінки й табель, шкільні системи Німеччини й України, план школи. Граматика — um … zu і damit, zu у дієсловах з префіксом, Wo? + Dativ / Wohin? + Akkusativ. Бліц, кросворд, вправи, чат і підсумковий тест на весь Lektion.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Blitz</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Kreuzworträtsel</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Sortieren</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Fehler</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Chat</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER — усі слова Lektion 5 (збираються самі) ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Усі слова Lektion 5</h2>
+      <p class="lead">Тут зібрано слова всіх модулів Lektion 5. Перевір себе в «Картки ▶» і познач ☆ ті, які ще не пам'ятаєш, — їх варто повторити перед тестом.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: бліц ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Blitz: 60 Sekunden</h2>
+      <p class="lead">Розминка на швидкість: скільки слів Lektion 5 ти перекладеш за 60 секунд? У бал не йде — це гра. Спробуй побити власний рекорд!</p>
+      <div class="card" id="ub1-blitz"></div>
+    </section>
+
+    <!-- ===== Üb. 2: кросворд ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Kreuzworträtsel: Schule</h2>
+      <p class="lead">Торкнися клітинки чи підказки й пиши слово (ще раз по клітинці — інший напрямок). Артиклі писати не треба. ä ö ü — з панелі внизу.</p>
+      <div class="card" id="ub2-kw"></div>
+    </section>
+
+    <!-- ===== Üb. 3: сортування ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Schule, Raum oder Abschluss?</h2>
+      <p class="lead">Розклади слова по трьох кошиках: натисни слово, потім кошик.</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 4: знайди помилку ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Finde den Fehler</h2>
+      <p class="lead">Граматика всього Lektion: um … zu і damit, zu в дієсловах (auszuleihen), Wo? + Dativ і Wohin? + Akkusativ, рід складних слів. Знайди помилку й виправ її — або натисни «Fehlerfrei».</p>
+      <div class="card" id="ub4-fix"></div>
+    </section>
+
+    <!-- ===== Üb. 5: чат ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Noah fragt nach der Schule</h2>
+      <p class="lead">Ноа — новенький у 8b. Він пише тобі в месенджер і розпитує про школу. Вибирай правильну відповідь.</p>
+      <div class="card" id="ub5-chat"></div>
+    </section>
+
+    <!-- ===== SPRECHEN ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Sprich mal!</h2>
+      <p class="lead">Спершу вимов фрази в 🎤, потім відповідай уголос на запитання й порівнюй зі зразком.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Wozu gehst du in die Schule? Nenne drei Gründe mit „um … zu“ oder „damit“.</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Ich gehe in die Schule, um viel Neues zu lernen. Ich gehe auch hin, um meine Freunde zu sehen. Und meine Eltern schicken mich in die Schule, damit ich später einen guten Beruf finde.</div>
+        </div>
+        <div class="qa">
+          <label>2. Erkläre kurz: Wie ist das Schulsystem in Deutschland und in der Ukraine?</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">In beiden Ländern beginnt die Schule mit sechs Jahren, und die Grundschule dauert vier Jahre. In Sachsen geht man danach auf eine Oberschule oder aufs Gymnasium. In der Ukraine lernen alle bis zur neunten Klasse zusammen, dann geht man auf ein Lyzeum oder ein College.</div>
+        </div>
+        <div class="qa">
+          <label>3. Bist du für Noten oder dagegen? Begründe.</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Ich bin für Noten, weil sie schnell zeigen, wo ich stehe. Aber ein kurzer Kommentar ist auch wichtig, damit ich weiß, was ich besser machen kann.</div>
+        </div>
+        <div class="qa">
+          <label>4. Beschreibe deine Schule: Was ist wo?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Unsere Schule hat drei Etagen. Im Erdgeschoss sind die Mensa und die Turnhalle. Unser Klassenraum ist im ersten Stock, neben dem Lehrerzimmer. Die Bibliothek liegt im zweiten Stock.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — на весь Lektion ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Test zu Lektion 5</h2>
+      <p class="lead">Підсумковий тест на весь Lektion 5: 18 завдань. Кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">9)</span> Max steht früh auf,
+          <select class="blank inline" data-ans="um"><option value="">—</option><option>um</option><option>damit</option><option>dass</option></select> pünktlich zu sein.</div>
+        <div class="fill-item"><span class="num">10)</span> Greta hilft Daryna,
+          <select class="blank inline" data-ans="damit"><option value="">—</option><option>um</option><option>damit</option><option>zu</option></select> sie nicht aufgibt.</div>
+        <div class="fill-item"><span class="num">11)</span> Nina geht zur Musikschule, um ihren Bruder
+          <select class="blank inline" data-ans="abzuholen"><option value="">—</option><option>zu abholen</option><option>abzuholen</option><option>abholen</option></select>.</div>
+        <div class="fill-item"><span class="num">12)</span> Unser Klassenraum ist
+          <select class="blank inline" data-ans="im"><option value="">—</option><option>im</option><option>in den</option><option>ins</option></select> ersten Stock.</div>
+        <div class="fill-item"><span class="num">13)</span> Nach der Pause laufen alle
+          <select class="blank inline" data-ans="in den"><option value="">—</option><option>im</option><option>in den</option><option>in dem</option></select> Klassenraum.</div>
+        <div class="fill-item"><span class="num">14)</span>
+          <select class="blank inline" data-ans="Das"><option value="">—</option><option>Der</option><option>Das</option><option>Die</option></select> Schuljahr beginnt im August.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-8-klas-8-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-8-klas-8-rik";
+  const KN_UNIT = "l5-d";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['ub1', 'ub2', 'ub3', 'ub4', 'ub5', 'sprechen']});
+
+  // Üb. 1: бліц — усі слова Lektion 4 з файлу слів (без однакових перекладів)
+  const blitzPairs = [], blitzSeen = new Set();
+  ((window.SLOVA && window.SLOVA[KN_BOOK]) || []).filter(w => /^l5-/.test(w.r)).forEach(w => {
+    const de = w.de.split(' / ')[0].split(',')[0].replace(/\s*\(.*?\)/g, '').trim();
+    const uk = w.uk.split(' / ')[0].trim();
+    const key = uk.split(/[,;]/)[0].trim().toLowerCase();
+    if (!de || /^(der|die|das)$/i.test(de) || blitzSeen.has(key)) return;
+    blitzSeen.add(key);
+    blitzPairs.push([de, uk]);
+  });
+  buildBlitz('ub1-blitz', {pairs: blitzPairs, seconds: 60, dir: "de-uk"});
+
+  // Üb. 2: кросворд
+  buildCrossword('ub2-kw', [
+    ["Zeugnis", "табель, свідоцтво (das)"],
+    ["Abitur", "атестат гімназії (das)"],
+    ["Mensa", "шкільна їдальня (die)"],
+    ["Aula", "актова зала (die)"],
+    ["Turnhalle", "спортзал (die)"],
+    ["Note", "оцінка (die)"],
+    ["Referat", "доповідь (das)"],
+    ["Fach", "шкільний предмет (das)"],
+    ["Gymnasium", "гімназія (das)"],
+    ["Keller", "підвал (der)"],
+    ["Treppe", "сходи (die)"],
+    ["Ausbildung", "професійне навчання (die)"]
+  ]);
+
+  // Üb. 3: сортування
+  buildSort('ub3-sort', {
+    buckets: ["Schulen 🏫", "Räume 🚪", "Noten & Abschlüsse 📜"],
+    items: [
+      {t: "die Grundschule", b: "Schulen 🏫"},
+      {t: "das Gymnasium", b: "Schulen 🏫"},
+      {t: "die Oberschule", b: "Schulen 🏫"},
+      {t: "das Lyzeum", b: "Schulen 🏫"},
+      {t: "die Aula", b: "Räume 🚪"},
+      {t: "die Mensa", b: "Räume 🚪"},
+      {t: "das Lehrerzimmer", b: "Räume 🚪"},
+      {t: "der Computerraum", b: "Räume 🚪"},
+      {t: "das Zeugnis", b: "Noten & Abschlüsse 📜"},
+      {t: "das Abitur", b: "Noten & Abschlüsse 📜"},
+      {t: "die Eins", b: "Noten & Abschlüsse 📜"},
+      {t: "der Realschulabschluss", b: "Noten & Abschlüsse 📜"}
+    ]
+  });
+
+  // Üb. 4: знайди помилку
+  buildFixError('ub4-fix', [
+    {s: "Ich gehe in die Bibliothek, damit ein Buch auszuleihen.", wrong: 5, fix: "um"},
+    {s: "Die Lehrerin spricht langsam, damit alle sie verstehen.", ok: true},
+    {s: "Max steht früh auf, um pünktlich zu sein.", ok: true},
+    {s: "Wir essen in die Mensa.", wrong: 3, fix: "der"},
+    {s: "Das Lehrerzimmer ist im erste Stock.", wrong: 4, fix: "ersten"},
+    {s: "In Deutschland ist die Zwölf die beste Note.", wrong: 4, fix: "Eins"},
+    {s: "Lotte geht nach der vierten Klasse aufs Gymnasium.", ok: true},
+    {s: "Mama hilft mir, um ich die Aufgabe verstehe.", wrong: 3, fix: "damit"},
+    {s: "Der Grundschule dauert vier Jahre.", wrong: 0, fix: "Die"}
+  ]);
+
+  // Üb. 5: чат
+  buildChat('ub5-chat', {
+    partner: "Noah",
+    steps: [
+      {them: "Hi, ich bin's, Noah, der Neue! Morgen habe ich zum ersten Mal Chemie. Wo ist der Chemieraum noch mal?"},
+      {you: ["Im zweiten Stock, in Raum 214.", "In zweiten Stock, in Raum 214.", "Im zweite Stock, in Raum 214."], correct: 0},
+      {them: "Danke! Und wozu brauche ich morgen meinen Laptop?"},
+      {you: ["Damit wir ein Referat vorzubereiten.", "Um ein Referat vorzubereiten.", "Um ein Referat zu vorbereiten."], correct: 1},
+      {them: "Okay. Wo essen wir mittags?"},
+      {you: ["In die Mensa, im Erdgeschoss.", "Im Mensa, im Erdgeschoss.", "In der Mensa, im Erdgeschoss."], correct: 2},
+      {them: "Und wann probt die Band? Ich will unbedingt mitspielen."},
+      {you: ["Dienstags und freitags nach der sechsten Stunde, im Keller.", "Dienstags und freitags nach der sechsten Stunde, in den Keller.", "Dienstags und freitags nach die sechste Stunde, im Keller."], correct: 0},
+      {them: "Matteo sagt, ich soll meine Gitarre mitbringen. Warum eigentlich?"},
+      {you: ["Damit die Band hören kann, wie du spielst.", "Um die Band hören kann, wie du spielst.", "Damit die Band zu hören, wie du spielst."], correct: 0},
+      {them: "Klar! Danke für alles. Bis morgen in Raum 104!"}
+    ]
+  });
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Ich gehe in die Schule, um viel Neues zu erfahren.", uk: "Я ходжу до школи, щоб дізнаватися багато нового."},
+    {say: "Die Lehrerin erklärt es noch einmal, damit alle es verstehen.", uk: "Учителька пояснює ще раз, щоб усі зрозуміли."},
+    {say: "Nach der vierten Klasse geht Lotte aufs Gymnasium.", uk: "Після четвертого класу Лотте піде до гімназії."},
+    {say: "Die Bibliothek ist im zweiten Stock.", uk: "Бібліотека — на третьому поверсі."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Am Ende des Schuljahres bekommt man ein …", opts: ["Zeugnis", "Referat", "Abitur"], correct: "Zeugnis"},
+    {q: "In Deutschland ist die schlechteste Note die …", opts: ["Eins", "Sechs", "Zwölf"], correct: "Sechs"},
+    {q: "Ein ukrainisches Gymnasium endet nach der … Klasse.", opts: ["vierten", "neunten", "zwölften"], correct: "neunten"},
+    {q: "Neben der Ausbildung geht man in die …", opts: ["Grundschule", "Berufsschule", "Aula"], correct: "Berufsschule"},
+    {q: "Wir lernen viel, … gute Noten zu bekommen.", opts: ["um", "damit", "dass"], correct: "um"},
+    {q: "Der Lehrer spricht laut, … alle ihn hören.", opts: ["um", "damit", "zu"], correct: "damit"},
+    {q: "Erik ruft Leon an, um ihn …", opts: ["einzuladen", "zu einladen", "einladen"], correct: "einzuladen"},
+    {q: "Wohin gehen wir? — …", opts: ["In die Mensa.", "In der Mensa.", "Im Mensa."], correct: "In die Mensa."}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Die Aula liegt im Erdgeschoss.", ok: true},
+    {s: "Ich übe jeden Tag, damit besser Gitarre zu spielen.", wrong: 4, fix: "um"},
+    {s: "Wir gehen nach der Stunde in der Turnhalle.", wrong: 6, fix: "die"},
+    {s: "Lotte bekommt eine Empfehlung für der Gymnasium.", wrong: 5, fix: "das"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🎒', '📚', '🏫', '🏆']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
