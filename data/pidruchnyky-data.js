@@ -373,7 +373,7 @@ const PIDRUCHNYKY = [
       { id: "l4", label: "4", nazva: "Ohne Musik wär’ alles nichts", storinky: "67–90", dity: [
         { id: "l4-a", label: "A", nazva: "Musikinstrumente und Musiker", storinky: "68–73", typ: "vpravy", gram: ["deklination-nomen"], opublikovano: 15 },
         { id: "l4-b", label: "B", nazva: "Weltbekannte Komponisten", storinky: "74–79", typ: "vpravy", gram: ["relativsaetze", "tempusformen"], opublikovano: 16 },
-        { id: "l4-c", label: "C", nazva: "Wir gehen ins Konzert", storinky: "80–85", typ: "vpravy", gram: ["komparation", "adjektivdeklination"] },
+        { id: "l4-c", label: "C", nazva: "Wir gehen ins Konzert", storinky: "80–85", typ: "vpravy", gram: ["komparation", "adjektivdeklination"], opublikovano: 17 },
         { id: "l4-d", label: "D", nazva: "Wiederholung", storinky: "86–87", typ: "povtorennya", gram: ["relativsaetze", "tempusformen", "komparation"] },
         { id: "l4-e", label: "E", nazva: "Geschichtenzeit", storinky: "88", typ: "chytannya" },
         { id: "l4-f", label: "F", nazva: "Projektarbeit", storinky: "89", typ: "bez-storinky" },
