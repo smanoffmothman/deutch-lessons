@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 5, Modul B: Schulen in Deutschland — Німецька мова 8 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 8 КЛАС</span>
+        <h1>Lektion 5 · Modul B: Schulen in Deutschland</h1>
+        <p class="sub">Урок про шкільну систему Німеччини на прикладі Саксонії: Grundschule, Bildungsempfehlung, Oberschule і Gymnasium, Abitur, Ausbildung і Berufsschule, а ще школа в НДР. Лексика — складні слова з Schul- і -schule та сполучення in die / auf die / zur Schule. Текст і діалог з озвученням, вправи, говоріння, письмо і підсумковий тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · der, das, die?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Schularten</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Lottes Weg</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · aufs Gymnasium</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власний текст + вправа на розуміння ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Sechzehn Länder, sechzehn Schulsysteme?</h2>
+      <p class="lead">Остап зі Львова запитав Еріка, як улаштована школа в Німеччині. Ерік відповів довгим листом. Послухай і прочитай. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l5-b-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Hallo Ostap, danke für deine lange E-Mail! Du fragst, wie die Schule in Deutschland funktioniert. Ehrlich gesagt ist das keine leichte Frage. In Deutschland ist <span class="gl" data-uk="освіта" data-lemma="die Bildung">Bildung</span> nämlich Ländersache: Jedes der sechzehn <span class="gl" data-uk="федеральна земля" data-lemma="das Bundesland, ¨-er">Bundesländer</span> organisiert seine Schulen selbst. Darum gibt es viele Unterschiede. Ich erkläre dir, wie es bei uns in Sachsen ist.</p>
+        <p>Mit sechs Jahren kommen alle Kinder in die <span class="gl" data-uk="початкова школа" data-lemma="die Grundschule, -n">Grundschule</span>. Am ersten Schultag bekommt jedes Kind eine große, bunte <span class="gl" data-uk="кульок із солодощами першокласнику" data-lemma="die Schultüte, -n">Schultüte</span> mit Süßigkeiten. In Sachsen <span class="gl" data-uk="тривати" data-lemma="dauern">dauert</span> die Grundschule vier Jahre, wie in den meisten Bundesländern. Nur in Berlin und Brandenburg sind es sechs Jahre. Ab der dritten Klasse lernt man Englisch.</p>
+        <p>In der vierten Klasse bekommen alle Kinder eine <span class="gl" data-uk="рекомендація щодо подальшої школи" data-lemma="die Bildungsempfehlung, -en">Bildungsempfehlung</span>: Die Lehrer empfehlen, welche Schule danach am besten passt — die Oberschule oder das Gymnasium. Am Ende <span class="gl" data-uk="вирішувати" data-lemma="entscheiden, hat entschieden">entscheiden</span> aber die Eltern. Gretas Schwester Lotte ist gerade in der vierten Klasse, und bei ihr zu Hause spricht man im Moment über nichts anderes!</p>
+        <p>Die <span class="gl" data-uk="середня школа (у Саксонії, 5–10 клас)" data-lemma="die Oberschule, -n">Oberschule</span> <span class="gl" data-uk="охоплює" data-lemma="umfassen">umfasst</span> die Klassen fünf bis zehn. Nach der neunten Klasse kann man den Hauptschulabschluss machen, nach der zehnten den Realschulabschluss. Danach beginnen viele eine <span class="gl" data-uk="професійне навчання" data-lemma="die Ausbildung, -en">Ausbildung</span>. Mein Cousin Tobias macht zum Beispiel eine Ausbildung zum Elektroniker. Drei Tage pro Woche arbeitet er in einer Firma, zwei Tage geht er in die <span class="gl" data-uk="професійна школа" data-lemma="die Berufsschule, -n">Berufsschule</span>. Und er verdient schon Geld!</p>
+        <p>Wir — die ganze 8b — gehen auf ein <span class="gl" data-uk="гімназія" data-lemma="das Gymnasium, die Gymnasien">Gymnasium</span>. Es umfasst die Klassen fünf bis zwölf, und nach der zwölften Klasse machen wir das Abitur. Damit kann man an einer Universität oder Hochschule <span class="gl" data-uk="навчатися у виші" data-lemma="studieren">studieren</span>. Seit der sechsten Klasse lernen wir eine zweite <span class="gl" data-uk="іноземна мова" data-lemma="die Fremdsprache, -n">Fremdsprache</span>, und ab der achten Klasse hat jeder ein <span class="gl" data-uk="профіль (поглиблені предмети)" data-lemma="das Profil, -e">Profil</span>. Ich habe natürlich das naturwissenschaftliche Profil gewählt: mehr Physik, mehr Chemie, mehr Experimente!</p>
+        <p>Wichtig ist: Der Weg ist nicht für immer festgelegt. Nach der sechsten Klasse <span class="gl" data-uk="переходять" data-lemma="wechseln">wechseln</span> manche Schüler von der Oberschule aufs Gymnasium. Und auch nach dem Realschulabschluss kann man noch das Abitur machen, zum Beispiel an einem Beruflichen Gymnasium — dann eben nach dreizehn Jahren.</p>
+        <p>In anderen Bundesländern heißen die Schulen manchmal anders: Hauptschule, Realschule, Gesamtschule … Das erkläre ich dir ein anderes Mal, sonst wird diese E-Mail zu lang. Jetzt bist du dran: Wie ist die Schule in der Ukraine? Und gibt es bei euch auch Schultüten?</p>
+        <p>Viele Grüße aus Leipzig, dein Erik</p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">Schulwörter · in die / auf die / zur Schule</h2>
+      <p class="lead">У цьому розділі багато складних слів зі <b>Schul-</b> і <b>-schule</b>. Головне в них — рід: він завжди від <b>останньої частини</b>. А ще німецькою «ходити до школи» можна сказати кількома способами — і прийменник залежить від типу школи.</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. Складні слова: рід — від останнього слова</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Schul- + …</th><th>… + -schule</th></tr>
+          <tr><td><strong>das</strong> Schul<b>jahr</b> <i>(das Jahr)</i></td><td><strong>die</strong> Grund<b>schule</b></td></tr>
+          <tr><td><strong>der</strong> Schul<b>hof</b> <i>(der Hof)</i></td><td><strong>die</strong> Ober<b>schule</b></td></tr>
+          <tr><td><strong>die</strong> Schul<b>tüte</b> <i>(die Tüte)</i></td><td><strong>die</strong> Berufs<b>schule</b></td></tr>
+          <tr><td><strong>das</strong> Schul<b>fach</b> <i>(das Fach)</i></td><td><strong>die</strong> Hoch<b>schule</b></td></tr>
+        </table></div>
+        <div class="merke">Усі слова на <b>-schule</b> — жіночого роду (die). Слова на <b>Schul-</b> беруть рід другої частини: der Schul<b>weg</b>, das Schul<b>gebäude</b>, die Schul<b>zeit</b>.</div>
+        <div class="merke">Зверни увагу: <b>Schul</b>- без -e: das Schuljahr, не «Schulejahr».</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. Куди ходиш? — in die / auf die / zur</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Wohin?</th><th>Beispiel</th></tr>
+          <tr><td><strong>in die</strong> Schule</td><td>Lotte geht <b>in die</b> Grundschule.</td></tr>
+          <tr><td><strong>auf das (aufs)</strong></td><td>Erik geht <b>aufs</b> Gymnasium.</td></tr>
+          <tr><td><strong>zur</strong> Schule</td><td>Max geht gern <b>zur</b> Schule.</td></tr>
+          <tr><td><strong>an die</strong> Uni</td><td>Nach dem Abitur geht Daryna <b>an die</b> Uni.</td></tr>
+        </table></div>
+        <div class="merke">Про <b>Gymnasium</b> і <b>Oberschule</b> часто кажуть <b>auf</b>: aufs Gymnasium gehen / wechseln, auf eine Oberschule gehen. Про загальне «ходити до школи» — <b>in die</b> Schule або <b>zur</b> Schule.</div>
+        <div class="merke">Wo? — з Dativ: Ich bin <b>in der</b> achten Klasse. Sie studiert <b>an der</b> Universität. Er lernt <b>auf dem</b> Gymnasium.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. Корисні сполучення</p>
+        <p>das Abitur <b>machen</b> · eine Ausbildung <b>machen</b> · eine Ausbildung <b>zum</b> Elektroniker / <b>zur</b> Erzieherin · die Schule <b>besuchen</b> · <b>in die</b> vierte Klasse gehen · Die Grundschule <b>dauert</b> vier Jahre / <b>umfasst</b> vier Klassen.</p>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">4. Типові помилки</p>
+        <p>✗ der Grundschule → ✓ <b>die</b> Grundschule</p>
+        <p>✗ die Schuljahr → ✓ <b>das</b> Schuljahr <i>(das Jahr)</i></p>
+        <p>✗ Ich gehe im Gymnasium. → ✓ Ich gehe <b>aufs</b> Gymnasium.</p>
+        <p>✗ Ich bin in achte Klasse. → ✓ Ich bin <b>in der</b> achten Klasse.</p>
+        <p>✗ Er studiert in der Berufsschule. → ✓ Er <b>geht</b> in die Berufsschule. <i>(studieren — лише у виші)</i></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">der, das oder die?</h2>
+      <p class="lead">Визнач рід складного слова. Підказка: дивись на останню частину.</p>
+      <div class="card" id="ub1-list">
+        <div class="fill-item"><span class="num">1)</span>
+          <select class="blank inline" data-ans="der"><option value="">—</option><option>der</option><option>das</option><option>die</option></select> Schulhof</div>
+        <div class="fill-item"><span class="num">2)</span>
+          <select class="blank inline" data-ans="das"><option value="">—</option><option>der</option><option>das</option><option>die</option></select> Schuljahr</div>
+        <div class="fill-item"><span class="num">3)</span>
+          <select class="blank inline" data-ans="die"><option value="">—</option><option>der</option><option>das</option><option>die</option></select> Grundschule</div>
+        <div class="fill-item"><span class="num">4)</span>
+          <select class="blank inline" data-ans="die"><option value="">—</option><option>der</option><option>das</option><option>die</option></select> Schultüte</div>
+        <div class="fill-item"><span class="num">5)</span>
+          <select class="blank inline" data-ans="das"><option value="">—</option><option>der</option><option>das</option><option>die</option></select> Schulfach</div>
+        <div class="fill-item"><span class="num">6)</span>
+          <select class="blank inline" data-ans="der"><option value="">—</option><option>der</option><option>das</option><option>die</option></select> Schulweg</div>
+        <div class="fill-item"><span class="num">7)</span>
+          <select class="blank inline" data-ans="die"><option value="">—</option><option>der</option><option>das</option><option>die</option></select> Berufsschule</div>
+        <div class="fill-item"><span class="num">8)</span>
+          <select class="blank inline" data-ans="das"><option value="">—</option><option>der</option><option>das</option><option>die</option></select> Schulgebäude</div>
+        <div class="fill-item"><span class="num">9)</span>
+          <select class="blank inline" data-ans="der"><option value="">—</option><option>der</option><option>das</option><option>die</option></select> Schulgarten</div>
+        <div class="fill-item"><span class="num">10)</span>
+          <select class="blank inline" data-ans="die"><option value="">—</option><option>der</option><option>das</option><option>die</option></select> Schulzeit</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub1-check">Prüfen</button>
+        <button class="btn secondary" id="ub1-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub1-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Welche Schule ist das?</h2>
+      <p class="lead">Прочитай опис і вибери тип школи (так, як у Саксонії).</p>
+      <div class="card" id="ub2-list"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Lottes Weg durch die Schule</h2>
+      <p class="lead">Лотте вже уявляє свій шлях. Розстав етапи в правильному порядку — від першого до останнього.</p>
+      <div class="card" id="ub3-seq"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">in die, aufs oder zur?</h2>
+      <p class="lead">Вибери прийменник з артиклем. Подумай: Wohin? чи Wo?</p>
+      <div class="card" id="ub4-list">
+        <div class="fill-item"><span class="num">1)</span> Lotte geht noch
+          <select class="blank inline" data-ans="in die"><option value="">—</option><option>in die</option><option>in der</option><option>auf die</option></select> Grundschule.</div>
+        <div class="fill-item"><span class="num">2)</span> Greta und Erik gehen
+          <select class="blank inline" data-ans="aufs"><option value="">—</option><option>im</option><option>aufs</option><option>zum</option></select> Gymnasium.</div>
+        <div class="fill-item"><span class="num">3)</span> Tobias geht zwei Tage pro Woche
+          <select class="blank inline" data-ans="in die"><option value="">—</option><option>in die</option><option>an der</option><option>im</option></select> Berufsschule.</div>
+        <div class="fill-item"><span class="num">4)</span> Nach dem Abitur will Erik
+          <select class="blank inline" data-ans="an der"><option value="">—</option><option>an die</option><option>an der</option><option>in die</option></select> Universität studieren.</div>
+        <div class="fill-item"><span class="num">5)</span> Mit sechs Jahren kommen die Kinder
+          <select class="blank inline" data-ans="in die"><option value="">—</option><option>in der</option><option>in die</option><option>zu die</option></select> Schule.</div>
+        <div class="fill-item"><span class="num">6)</span> Max geht eigentlich gern
+          <select class="blank inline" data-ans="zur"><option value="">—</option><option>zur</option><option>zum</option><option>zu</option></select> Schule.</div>
+        <div class="fill-item"><span class="num">7)</span> Daryna ist
+          <select class="blank inline" data-ans="in der"><option value="">—</option><option>in die</option><option>in der</option><option>auf der</option></select> achten Klasse.</div>
+        <div class="fill-item"><span class="num">8)</span> Tobias macht eine Ausbildung
+          <select class="blank inline" data-ans="zum"><option value="">—</option><option>als</option><option>zum</option><option>für</option></select> Elektroniker.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub4-check">Prüfen</button>
+        <button class="btn secondary" id="ub4-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub4-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== HÖREN ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Lotte, Opa und die Bildungsempfehlung</h2>
+      <p class="lead">Лотте принесла додому табель за півріччя і рекомендацію на подальшу школу. Але вона не дуже радіє — і Opa Helmut розповідає, якою була школа в його дитинстві в НДР. Послухай (можна двічі) і дай відповіді. Текст відкривається внизу — але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l5-b-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Lotte:</b> Opa, guck mal! Meine Halbjahresinformation. Und hier ist die Bildungsempfehlung — fürs Gymnasium!<br>
+          <b>Opa:</b> Herzlichen Glückwunsch, Lotte! Dann gehst du bald aufs Gymnasium, wie Greta. Aber warum machst du so ein trauriges Gesicht?<br>
+          <b>Lotte:</b> Emma hat eine Empfehlung für die Oberschule. Dann sind wir nicht mehr zusammen. Ich will nicht ohne Emma in die fünfte Klasse!<br>
+          <b>Opa:</b> Ich verstehe dich. Weißt du, bei mir war das ganz anders. In der DDR gab es nach der vierten Klasse keine Empfehlung. Wir sind alle zusammen zehn Jahre in eine Schule gegangen, in die POS — die Polytechnische Oberschule.<br>
+          <b>Lotte:</b> Zehn Jahre mit derselben Klasse? Wie langweilig!<br>
+          <b>Opa:</b> Gar nicht! Wir hatten sogar ein Fach „Schulgarten“. Da haben wir Kartoffeln und Radieschen gepflanzt. Vielleicht liebe ich deshalb meinen Kleingarten so.<br>
+          <b>Lotte:</b> Und Englisch? Wir haben Englisch schon seit der dritten Klasse.<br>
+          <b>Opa:</b> Englisch hatte ich nicht. Ab der fünften Klasse mussten alle Russisch lernen.<br>
+          <b>Lotte:</b> Und hast du Abitur gemacht?<br>
+          <b>Opa:</b> Nein. Nach der zehnten Klasse habe ich eine Lehre gemacht. Abitur haben damals nur wenige gemacht. Dafür musste man auf eine besondere Schule gehen, die EOS.<br>
+          <b>Lotte:</b> Und was mache ich jetzt mit Emma?<br>
+          <b>Opa:</b> Weißt du, wer zusammen in die erste Klasse gegangen ist? Oma Christa und Eriks Oma Ursula, in Dresden. Dann haben sie sich sehr lange nicht gesehen. Und heute trinken sie jeden Donnerstag zusammen Kaffee. Eine echte Freundschaft hängt nicht von der Schule ab.<br>
+          <b>Lotte:</b> Stimmt. Emma und ich können uns ja nachmittags treffen. Und am Wochenende!<br>
+          <b>Opa:</b> Genau. Und jetzt zeig mal deine Noten.<br>
+          <b>Lotte:</b> Eine Eins in Mathe, eine Zwei in Deutsch und … eine Drei in Musik.<br>
+          <b>Opa:</b> Eine Drei in Musik? Na, das hast du von mir!
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Schule hier und dort</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Erkläre kurz das Schulsystem in Sachsen.</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Mit sechs Jahren gehen die Kinder in die Grundschule. Sie dauert vier Jahre. Danach gehen sie auf eine Oberschule oder aufs Gymnasium. Die Oberschule endet nach der zehnten Klasse, das Gymnasium nach der zwölften mit dem Abitur.</div>
+        </div>
+        <div class="qa">
+          <label>2. Was gefällt dir am deutschen Schulsystem? Was nicht?</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Mir gefällt, dass man ein Profil wählen kann. Nicht so gut finde ich, dass die Kinder schon nach der vierten Klasse getrennt werden. Mit zehn Jahren weiß man doch noch nicht, was man später machen will.</div>
+        </div>
+        <div class="qa">
+          <label>3. Wie viele Jahre gehst du schon zur Schule? In welche Klasse gehst du?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Ich gehe schon seit acht Jahren zur Schule. Jetzt bin ich in der achten Klasse. Meine Schule hat elf Klassen, und ich bin seit der ersten Klasse dort.</div>
+        </div>
+        <div class="qa">
+          <label>4. Ausbildung oder Studium — was möchtest du später machen?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Ich möchte später an der Universität studieren, vielleicht Informatik. Aber eine Ausbildung finde ich auch interessant: Man lernt praktisch und verdient schon Geld.</div>
+        </div>
+        <div class="qa">
+          <label>5. Gibt es in der Ukraine auch eine Schultüte? Welche Traditionen hat der erste Schultag bei euch?</label>
+          <button class="btn secondary" type="button" data-reveal="spr5">Muster zeigen</button>
+          <div class="reveal" id="spr5">Eine Schultüte gibt es bei uns nicht. Aber am ersten September ist der Tag des Wissens. Die Kinder bringen Blumen für die Lehrerin mit, und es gibt eine Feier auf dem Schulhof.</div>
+        </div>
+        <div class="qa">
+          <label>6. Was erzählen deine Großeltern über ihre Schulzeit?</label>
+          <button class="btn secondary" type="button" data-reveal="spr6">Muster zeigen</button>
+          <div class="reveal" id="spr6">Meine Oma erzählt, dass sie mit einem Füller geschrieben hat. Die Klassen waren größer als heute, und es gab keine Computer. Sie war aber zehn Jahre mit denselben Freunden zusammen.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Antwort an Erik</h2>
+      <p class="lead">Ерік питає, яка школа в Україні. Напиши йому відповідь — 60–80 слів за планом.</p>
+      <div class="card">
+        <p>1) звертання й подяка за лист; 2) з якого віку діти йдуть до школи; 3) скільки років ти вже в школі і в якому ти класі; 4) які в тебе предмети й іноземні мови; 5) традиції 1 вересня або останнього дня; 6) одне питання до Еріка; 7) прощання.</p>
+        <p class="beispiel">Hallo Erik, danke für … · Bei uns kommen die Kinder mit … Jahren in die Schule · Ich gehe schon seit … in die Schule · Jetzt bin ich in der … Klasse · Wir lernen … · Am ersten September … · Sag mal, … ? · Viele Grüße aus …</p>
+        <div class="qa">
+          <label for="schreiben-text">Deine E-Mail</label>
+          <textarea id="schreiben-text" rows="10" placeholder="Hallo Erik, …"
+            data-words="60-80"
+            data-must="Hallo|Klasse|Grüße"
+            data-check="Звертання й подяка|Вік початку школи|Твій клас|Предмети й мови|Традиція|Питання до Еріка|Прощання"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Hallo Erik, danke für deine lange E-Mail! Bei uns kommen die Kinder auch mit sechs Jahren in die Schule. Eine Bildungsempfehlung gibt es nicht: Viele bleiben von der ersten bis zur letzten Klasse in derselben Schule. Ich bin jetzt in der achten Klasse. Wir lernen Englisch und Deutsch. Eine Schultüte gibt es nicht, aber am ersten September ist der Tag des Wissens, und alle bringen Blumen mit. Sag mal, wie lange dauert bei euch eine Stunde? Viele Grüße aus Lwiw, Ostap</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span>
+          <select class="blank inline" data-ans="Das"><option value="">—</option><option>Der</option><option>Das</option><option>Die</option></select> Schuljahr beginnt in Sachsen im August.</div>
+        <div class="fill-item"><span class="num">8)</span> Nach der vierten Klasse geht Lotte
+          <select class="blank inline" data-ans="aufs"><option value="">—</option><option>aufs</option><option>im</option><option>zum</option></select> Gymnasium.</div>
+        <div class="fill-item"><span class="num">9)</span> Die Oberschule
+          <select class="blank inline" data-ans="umfasst"><option value="">—</option><option>umfasst</option><option>dauert</option><option>besucht</option></select> die Klassen fünf bis zehn.</div>
+        <div class="fill-item"><span class="num">10)</span> Nach dem Abitur möchte Daryna
+          <select class="blank inline" data-ans="studieren"><option value="">—</option><option>studieren</option><option>lernen</option><option>wechseln</option></select>.</div>
+        <div class="fill-item"><span class="num">11)</span> Tobias geht zwei Tage pro Woche in
+          <select class="blank inline" data-ans="die"><option value="">—</option><option>der</option><option>das</option><option>die</option></select> Berufsschule.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-8-klas-8-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-8-klas-8-rik";
+  const KN_UNIT = "l5-b";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "In Deutschland organisiert jedes Bundesland seine Schulen selbst.", a: "r"},
+    {s: "In Sachsen dauert die Grundschule sechs Jahre.", a: "f"},
+    {s: "Am ersten Schultag bekommen die Kinder eine Schultüte.", a: "r"},
+    {s: "Die Bildungsempfehlung bekommen die Kinder in der vierten Klasse.", a: "r"},
+    {s: "Am Ende entscheiden die Lehrer, welche Schule das Kind besucht.", a: "f"},
+    {s: "Die Oberschule umfasst die Klassen fünf bis zehn.", a: "r"},
+    {s: "Tobias geht fünf Tage pro Woche in die Berufsschule.", a: "f"},
+    {s: "Am Gymnasium macht man das Abitur nach der zwölften Klasse.", a: "r"},
+    {s: "Erik hat das sprachliche Profil gewählt.", a: "f"},
+    {s: "Auch nach dem Realschulabschluss kann man noch das Abitur machen.", a: "r"}
+  ]);
+
+  // Üb. 1
+  wireBlanks('ub1');
+
+  // Üb. 2: опис → тип школи
+  buildMatch('ub2', [
+    ["Hier lernen alle Kinder von der ersten bis zur vierten Klasse zusammen.", "die Grundschule"],
+    ["Klassen 5 bis 10; nach der zehnten Klasse bekommt man den Realschulabschluss.", "die Oberschule"],
+    ["Klassen 5 bis 12; am Ende macht man das Abitur.", "das Gymnasium"],
+    ["Hier lernt man neben der Ausbildung, zum Beispiel zwei Tage pro Woche.", "die Berufsschule"],
+    ["Hier studiert man nach dem Abitur.", "die Universität"],
+    ["Hier kann man nach dem Realschulabschluss in drei Jahren das Abitur machen.", "das Berufliche Gymnasium"],
+    ["In der DDR sind alle Kinder zehn Jahre in diese Schule gegangen.", "die POS"]
+  ], {lead: true});
+
+  // Üb. 3: послідовність
+  buildSequence('ub3-seq', [
+    "Lotte bekommt ihre Schultüte und kommt in die Grundschule.",
+    "In der dritten Klasse beginnt sie mit Englisch.",
+    "In der vierten Klasse bekommt sie die Bildungsempfehlung.",
+    "Sie wechselt aufs Gymnasium.",
+    "In der sechsten Klasse beginnt sie eine zweite Fremdsprache.",
+    "Ab der achten Klasse hat sie ein Profil.",
+    "Nach der zwölften Klasse macht sie das Abitur.",
+    "Sie studiert an einer Universität."
+  ]);
+
+  // Üb. 4
+  wireBlanks('ub4');
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Was hat Lotte bekommen?", opts: ["Eine Empfehlung fürs Gymnasium", "Eine Empfehlung für die Oberschule", "Ein Abiturzeugnis"], correct: "Eine Empfehlung fürs Gymnasium"},
+    {q: "Warum ist Lotte traurig?", opts: ["Ihre Noten sind schlecht.", "Emma geht wahrscheinlich auf eine andere Schule.", "Sie will nicht aufs Gymnasium."], correct: "Emma geht wahrscheinlich auf eine andere Schule."},
+    {q: "Wie lange war Opa mit seiner Klasse zusammen?", opts: ["Vier Jahre", "Zehn Jahre", "Zwölf Jahre"], correct: "Zehn Jahre"},
+    {q: "Was haben die Kinder im Fach „Schulgarten“ gemacht?", opts: ["Sie haben Kartoffeln und Radieschen gepflanzt.", "Sie haben Blumen gemalt.", "Sie haben Sport gemacht."], correct: "Sie haben Kartoffeln und Radieschen gepflanzt."},
+    {q: "Welche Fremdsprache musste Opa ab der fünften Klasse lernen?", opts: ["Englisch", "Französisch", "Russisch"], correct: "Russisch"},
+    {q: "Was hat Opa nach der zehnten Klasse gemacht?", opts: ["Abitur", "Eine Lehre", "Ein Studium"], correct: "Eine Lehre"},
+    {q: "Wer ist zusammen in die erste Klasse gegangen?", opts: ["Opa und Oma Christa", "Oma Christa und Oma Ursula", "Lotte und Greta"], correct: "Oma Christa und Oma Ursula"},
+    {q: "Welche Note hat Lotte in Musik?", opts: ["Eine Eins", "Eine Zwei", "Eine Drei"], correct: "Eine Drei"}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "In Deutschland ist Bildung Ländersache.", uk: "У Німеччині освіта — справа федеральних земель."},
+    {say: "Die Grundschule dauert vier Jahre.", uk: "Початкова школа триває чотири роки."},
+    {say: "Nach der vierten Klasse geht sie aufs Gymnasium.", uk: "Після четвертого класу вона піде до гімназії."},
+    {say: "Nach dem Abitur möchte ich studieren.", uk: "Після атестата я хочу навчатися в університеті."},
+    {say: "Mein Cousin macht eine Ausbildung zum Elektroniker.", uk: "Мій двоюрідний брат навчається на електроніка."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Am ersten Schultag bekommen deutsche Kinder eine …", opts: ["Schultüte", "Schultasche", "Schulnote"], correct: "Schultüte"},
+    {q: "In Berlin und Brandenburg dauert die Grundschule …", opts: ["vier Jahre", "sechs Jahre", "zehn Jahre"], correct: "sechs Jahre"},
+    {q: "Am Gymnasium in Sachsen macht man das Abitur nach der … Klasse.", opts: ["zehnten", "zwölften", "dreizehnten"], correct: "zwölften"},
+    {q: "Während der Ausbildung geht man auch in die …", opts: ["Berufsschule", "Grundschule", "Universität"], correct: "Berufsschule"},
+    {q: "Wer entscheidet am Ende, auf welche Schule das Kind geht?", opts: ["Die Eltern", "Der Bürgermeister", "Das Kind allein"], correct: "Die Eltern"},
+    {q: "„Bildung ist Ländersache“ bedeutet:", opts: ["Jedes Bundesland organisiert seine Schulen selbst.", "Alle Schulen sind auf dem Land.", "Nur große Städte haben Gymnasien."], correct: "Jedes Bundesland organisiert seine Schulen selbst."}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Lotte geht noch in die Grundschule.", ok: true},
+    {s: "Erik geht im Gymnasium.", wrong: 2, fix: "aufs"},
+    {s: "Der Grundschule dauert vier Jahre.", wrong: 0, fix: "Die"},
+    {s: "Tobias studiert zwei Tage pro Woche in der Berufsschule.", wrong: 1, fix: "lernt"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🏫', '🎒', '🎓', '🏆']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
