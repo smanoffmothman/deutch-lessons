@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 7, Modul A: Prima Klima — Німецька мова 8 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 8 КЛАС</span>
+        <h1>Lektion 7 · Modul A: Prima Klima</h1>
+        <p class="sub">Урок про природу й клімат Німеччини: гори, ріки, озера, острови й моря — Zugspitze, Bodensee, Rügen, Wattenmeer. Як погода різниться на півночі й на півдні. Граматика — відносні речення з прийменниками (der See, an dem …; die Insel, auf der …). Текст і діалог з озвученням, вправи, говоріння, письмо і підсумковий тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Landschaften</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · der, den, dem?</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Deutschland-Quiz</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Ein Satz</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власний текст + вправа на розуміння ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Familienrat: Wohin im Sommer?</h2>
+      <p class="lead">У родині Ґрети про літню відпустку вирішує сімейна рада. Кожен хоче чогось свого: гори, море, озеро… Послухай і прочитай. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l7-a-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Bei uns gibt es eine Regel: Über den Sommerurlaub entscheidet der <span class="gl" data-uk="сімейна рада" data-lemma="der Familienrat">Familienrat</span>. Am Sonntag lag auf dem Küchentisch eine große Deutschlandkarte, und jeder durfte einen Vorschlag machen.</p>
+        <p>Papa war zuerst dran. „Ich will auf die Zugspitze! Das ist der höchste Berg Deutschlands, der direkt an der <span class="gl" data-uk="кордон" data-lemma="die Grenze, -n">Grenze</span> zu Österreich liegt — 2962 Meter hoch.“ Er zeigte uns ein altes Foto, auf dem er als Student am <span class="gl" data-uk="вершина" data-lemma="der Gipfel, -">Gipfel</span> steht. Mama nickte: „Berge finde ich auch toll. Aber ich will nicht nur auf einen Gipfel. Ich will durch <span class="gl" data-uk="долини" data-lemma="das Tal, ¨-er">Täler</span> wandern und auf einer <span class="gl" data-uk="луг" data-lemma="die Wiese, -n">Wiese</span> Pause machen.“</p>
+        <p>Lotte hatte ein Buch mitgebracht, das sie in der Schulbibliothek gefunden hatte. „Ich will an die Nordsee, ins <span class="gl" data-uk="ваттове море (мілина біля узбережжя)" data-lemma="das Wattenmeer">Wattenmeer</span>!“ Das <span class="gl" data-uk="ватт, мілина" data-lemma="das Watt">Watt</span> ist ein Meeresboden, auf dem man bei <span class="gl" data-uk="відплив" data-lemma="die Ebbe">Ebbe</span> zu Fuß gehen kann. Zweimal am Tag kommt die <span class="gl" data-uk="приплив" data-lemma="die Flut">Flut</span>, und das Wasser ist wieder da. „Und auf den Sandbänken liegen <span class="gl" data-uk="тюлені" data-lemma="der Seehund, -e">Seehunde</span>, die man vom Boot aus beobachten kann!“ Seit 2009 gehört das Wattenmeer zum Weltnaturerbe der UNESCO — das stand auch in Lottes Buch.</p>
+        <p>Opa Helmut sagte nur: „Hauptsache Wasser. Ich brauche einen See, in dem man schwimmen kann, und eine Bank, von der ich aufs Wasser schaue.“ Also Berge oder Wasser? Norden oder Süden? Alle redeten durcheinander.</p>
+        <p>Da hatte ich eine Idee. Ich zeigte auf einen großen blauen Fleck ganz im Süden: den Bodensee. Das ist ein <span class="gl" data-uk="озеро" data-lemma="der See, -n">See</span>, an dem drei Länder liegen: Deutschland, Österreich und die Schweiz. Man kann darin schwimmen — das ist für Opa. An klaren Tagen sieht man die Alpen — das ist für Mama und Papa. Bei Bregenz in Österreich gibt es den Pfänder, einen Berg, von dem man über den ganzen See und auf viele Alpengipfel schaut. Und die Altstadt von Lindau liegt sogar auf einer <span class="gl" data-uk="острів" data-lemma="die Insel, -n">Insel</span>.</p>
+        <p>„Und die Seehunde?“, fragte Lotte. Seehunde gibt es am Bodensee leider nicht. Aber Papa fand einen <span class="gl" data-uk="компроміс" data-lemma="der Kompromiss, -e">Kompromiss</span>: „Im Herbst fahren wir für ein Wochenende an die Nordsee.“ Dann haben wir abgestimmt: vier Stimmen für den Bodensee und eine für die Nordsee. Ratet mal, von wem!</p>
+        <p><i>Greta, 8b</i></p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">Relativsätze — auch mit Präposition</h2>
+      <p class="lead">Відносне речення пояснює іменник: <b>der See, in dem man schwimmen kann</b>. Рід і число займенника — від слова, яке пояснюємо; відмінок — від його ролі в підрядному реченні. Дієслово — в кінці.</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. Relativpronomen</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th></th><th>der See</th><th>die Insel</th><th>das Tal</th><th>die Berge (Pl.)</th></tr>
+          <tr><td>Nom.</td><td>der</td><td>die</td><td>das</td><td>die</td></tr>
+          <tr><td>Akk.</td><td><strong>den</strong></td><td>die</td><td>das</td><td>die</td></tr>
+          <tr><td>Dat.</td><td><strong>dem</strong></td><td><strong>der</strong></td><td><strong>dem</strong></td><td><strong>denen</strong></td></tr>
+        </table></div>
+        <div class="merke">Майже як означений артикль. Запамʼятай лише одну «особливу» форму: Dat. Pl. — <b>denen</b> (die Kinder, mit <b>denen</b> ich spiele).</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. Präposition + Relativpronomen</p>
+        <p>Якщо в підрядному реченні є прийменник, він стоїть <b>перед</b> займенником і визначає відмінок:</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>У простому реченні</th><th>Відносне речення</th></tr>
+          <tr><td>Man schwimmt <b>in dem</b> See.</td><td>der See, <b>in dem</b> man schwimmt</td></tr>
+          <tr><td>Lindau liegt <b>auf der</b> Insel.</td><td>die Insel, <b>auf der</b> Lindau liegt</td></tr>
+          <tr><td>Man schaut <b>von dem</b> Berg auf die Alpen.</td><td>der Berg, <b>von dem</b> man auf die Alpen schaut</td></tr>
+          <tr><td>Deutschland grenzt <b>an die</b> Länder.</td><td>die Länder, <b>an die</b> Deutschland grenzt</td></tr>
+          <tr><td>Greta wandert <b>mit den</b> Eltern.</td><td>die Eltern, <b>mit denen</b> Greta wandert</td></tr>
+        </table></div>
+        <div class="merke">Прийменники з Dat. (mit, von, bei, aus, zu, nach) → завжди <b>dem / der / denen</b>. Wechselpräpositionen: <b>wo?</b> → Dat. (der See, <b>in dem</b> man schwimmt), <b>wohin?</b> → Akk. (der See, <b>in den</b> der Rhein fließt).</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. Як знайти правильну форму</p>
+        <p>Das ist ein Berg. Von <u>dem Berg</u> sieht man die Alpen.<br>
+           ① рід: der Berg → <b>der</b>-форми · ② прийменник: von + Dat. → <b>dem</b> · ③ дієслово в кінець:<br>
+           → Das ist ein Berg, <b>von dem</b> man die Alpen <b>sieht</b>.</p>
+        <div class="merke">Перед відносним реченням — кома. Якщо воно стоїть посередині, кома і після нього: Der See, in dem wir baden<b>,</b> heißt Bodensee.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">4. Типові помилки</p>
+        <p>✗ der See, in den man schwimmen kann → ✓ in <b>dem</b> (wo? → Dat.)</p>
+        <p>✗ die Seehunde, die liegen auf der Sandbank → ✓ die auf der Sandbank <b>liegen</b></p>
+        <p>✗ die Kinder, mit die Lotte spielt → ✓ mit <b>denen</b></p>
+        <p>✗ das Foto, auf die Papa steht → ✓ auf <b>dem</b> (das Foto → dem)</p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Was ist das?</h2>
+      <p class="lead">Прочитай визначення з відносним реченням і вибери слово.</p>
+      <div class="card" id="ub1-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">der, den, dem …?</h2>
+      <p class="lead">Вибери відносний займенник. Подумай: який рід у слова й чи є прийменник?</p>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> Lotte will die Seehunde sehen,
+          <select class="blank inline" data-ans="die"><option value="">—</option><option>der</option><option>die</option><option>denen</option></select> auf den Sandbänken liegen.</div>
+        <div class="fill-item"><span class="num">2)</span> Papa zeigt den Gipfel,
+          <select class="blank inline" data-ans="den"><option value="">—</option><option>der</option><option>den</option><option>dem</option></select> er als Student bestiegen hat.</div>
+        <div class="fill-item"><span class="num">3)</span> Opa sucht einen See, in
+          <select class="blank inline" data-ans="dem"><option value="">—</option><option>den</option><option>dem</option><option>der</option></select> man schwimmen kann.</div>
+        <div class="fill-item"><span class="num">4)</span> Lindau ist eine Stadt,
+          <select class="blank inline" data-ans="die"><option value="">—</option><option>der</option><option>die</option><option>das</option></select> am Bodensee liegt.</div>
+        <div class="fill-item"><span class="num">5)</span> Das Watt ist ein Meeresboden, auf
+          <select class="blank inline" data-ans="dem"><option value="">—</option><option>dem</option><option>den</option><option>das</option></select> man bei Ebbe laufen kann.</div>
+        <div class="fill-item"><span class="num">6)</span> Die Kinder, mit
+          <select class="blank inline" data-ans="denen"><option value="">—</option><option>die</option><option>denen</option><option>dem</option></select> Lotte in die vierte Klasse geht, waren schon alle am Meer.</div>
+        <div class="fill-item"><span class="num">7)</span> Das Gebirge,
+          <select class="blank inline" data-ans="das"><option value="">—</option><option>der</option><option>das</option><option>dem</option></select> Mama am liebsten mag, sind die Alpen.</div>
+        <div class="fill-item"><span class="num">8)</span> Der Wetterbericht,
+          <select class="blank inline" data-ans="den"><option value="">—</option><option>der</option><option>den</option><option>dem</option></select> Nina und Max im Schulradio machen, ist immer lustig.</div>
+        <div class="fill-item"><span class="num">9)</span> Die Insel, auf
+          <select class="blank inline" data-ans="der"><option value="">—</option><option>die</option><option>der</option><option>dem</option></select> die Altstadt von Lindau liegt, ist klein.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Deutschland-Quiz</h2>
+      <p class="lead">Про що йдеться? Прочитай опис і вибери місце на карті Німеччини.</p>
+      <div class="card" id="ub3-list"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Aus zwei Sätzen wird einer</h2>
+      <p class="lead">Зʼєднай два речення у одне з відносним реченням. Друге речення стає підрядним, дієслово йде в кінець.</p>
+      <div class="card" id="ub4-tr"></div>
+    </section>
+
+    <!-- ===== HÖREN ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Das Wetter am Wochenende</h2>
+      <p class="lead">У шкільному радіо Ніна й Макс розповідають, якою буде погода на вихідних у різних куточках Німеччини. Послухай (можна двічі) і дай відповіді. Текст відкривається внизу — але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l7-a-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Max:</b> Und jetzt im Schulradio: das Wetter fürs Wochenende! Mit Nina, die heute aus dem Fenster schaut, und mit mir, Max, der den Wetterbericht im Internet gelesen hat.<br>
+          <b>Nina:</b> Sehr witzig, Max. Also: Im April weiß man nie, was kommt. Sonne, Regen, manchmal sogar Schnee — das nennt man Aprilwetter.<br>
+          <b>Max:</b> Wir fangen im Norden an. An der Nordsee wird es sehr windig, und es gibt immer wieder Schauer. Die Temperaturen: nur 8 Grad.<br>
+          <b>Nina:</b> Also nichts für Leute, die am Strand liegen wollen. Aber die Seehunde stört das nicht.<br>
+          <b>Max:</b> Weiter in die Mitte. Im Harz ist es am Samstagmorgen neblig. Wer auf den Brocken steigt, sieht vom Gipfel nur Wolken.<br>
+          <b>Nina:</b> Im Erzgebirge gibt es nachts noch Frost. Wer dort Blumen auf dem Balkon hat, nimmt sie lieber rein.<br>
+          <b>Max:</b> Und in den Alpen liegt noch viel Schnee. Auf der Zugspitze sind es am Sonntag minus 5 Grad.<br>
+          <b>Nina:</b> Brrr. Und jetzt die Frage, auf die alle warten: Wie wird das Wetter bei uns in Leipzig?<br>
+          <b>Max:</b> Gute Nachrichten für alle, die am Samstag draußen sein wollen: Es wird sonnig, bis zu 16 Grad!<br>
+          <b>Nina:</b> Am Sonntag kommen dann Wolken und ein paar Schauer. Es sind nur noch 12 Grad.<br>
+          <b>Max:</b> Unser Tipp: Am Samstag raus — an einen See, zum Fahrradfahren, egal wohin.<br>
+          <b>Nina:</b> Und der Sonntag ist ein Tag, an dem man endlich die Hausaufgaben machen kann.<br>
+          <b>Max:</b> Oder den Regenschirm sucht, den man im Herbst verloren hat. Tschüss und schönes Wochenende!
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Berge oder Meer?</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Berge, Meer oder See — wohin fährst du im Sommer am liebsten? Warum?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Am liebsten fahre ich ans Meer. Ich mag Strände, an denen nicht so viele Leute sind. In den Bergen wandern finde ich auch schön, aber dort ist es mir oft zu anstrengend.</div>
+        </div>
+        <div class="qa">
+          <label>2. Erkläre ein Wort mit einem Relativsatz: die Insel, das Tal, die Küste …</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Eine Insel ist ein Stück Land, das ganz von Wasser umgeben ist. Ein Tal ist eine Landschaft, die zwischen Bergen liegt. Die Küste ist das Land, an dem das Meer beginnt.</div>
+        </div>
+        <div class="qa">
+          <label>3. Welche Landschaften gibt es in der Ukraine? Nenne Berge, Flüsse, ein Meer.</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">In der Ukraine gibt es die Karpaten, ein Gebirge, in dem man gut wandern kann. Der Dnipro ist der Fluss, der durch Kyjiw fließt. Im Süden liegt das Schwarze Meer.</div>
+        </div>
+        <div class="qa">
+          <label>4. Wie ist das Wetter heute? Und wie ist das Klima bei dir im Sommer und im Winter?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Heute ist es bewölkt und ein bisschen windig. Bei uns ist der Sommer meistens warm und sonnig. Im Winter gibt es oft Frost, und manchmal liegt Schnee.</div>
+        </div>
+        <div class="qa">
+          <label>5. Wie entscheidet ihr in der Familie, wohin ihr fahrt?</label>
+          <button class="btn secondary" type="button" data-reveal="spr5">Muster zeigen</button>
+          <div class="reveal" id="spr5">Bei uns entscheiden meistens meine Eltern. Aber jeder darf einen Vorschlag machen. Letztes Jahr haben wir einen Kompromiss gefunden: eine Woche Berge und eine Woche See.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Mein Lieblingsort in der Natur</h2>
+      <p class="lead">Опиши своє улюблене місце на природі — 50–70 слів. Використай щонайменше три відносні речення, одне з них — із прийменником (in dem, an dem, auf der …).</p>
+      <div class="card">
+        <p>1) що це за місце і де воно; 2) який там краєвид; 3) що ти там робиш; 4) чому тобі там подобається.</p>
+        <p class="beispiel">Mein Lieblingsort ist ein … , der/die/das … liegt. · Es gibt dort einen …, in dem/an dem … · Dort treffe ich Freunde, mit denen … · Ich mag den Ort, weil …</p>
+        <div class="qa">
+          <label for="schreiben-text">Dein Text</label>
+          <textarea id="schreiben-text" rows="9" placeholder="Mein Lieblingsort ist …"
+            data-words="50-70"
+            data-must="der|die|dem"
+            data-check="Що це за місце і де воно|Краєвид|Що ти там робиш|Чому подобається|Три відносні речення|Одне з прийменником"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Mein Lieblingsort ist ein kleiner See, der hinter unserem Dorf im Wald liegt. Um den See stehen hohe Bäume, und es gibt eine Wiese, auf der man in der Sonne liegen kann. Im Sommer schwimme ich dort mit meinen Freunden, mit denen ich auch oft grille. Ich mag den Ort, weil es dort so ruhig ist.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Der Rhein ist ein Fluss,
+          <select class="blank inline" data-ans="der"><option value="">—</option><option>der</option><option>den</option><option>dem</option></select> durch den Bodensee fließt.</div>
+        <div class="fill-item"><span class="num">8)</span> Das ist die Insel, auf
+          <select class="blank inline" data-ans="der"><option value="">—</option><option>die</option><option>der</option><option>denen</option></select> wir im Sommer waren.</div>
+        <div class="fill-item"><span class="num">9)</span> Die Freunde, mit
+          <select class="blank inline" data-ans="denen"><option value="">—</option><option>die</option><option>dem</option><option>denen</option></select> ich wandere, wohnen in Leipzig.</div>
+        <div class="fill-item"><span class="num">10)</span> Das Foto,
+          <select class="blank inline" data-ans="das"><option value="">—</option><option>das</option><option>der</option><option>dem</option></select> Papa uns gezeigt hat, ist sehr alt.</div>
+        <div class="fill-item"><span class="num">11)</span> Bei Ebbe kann man im
+          <select class="blank inline" data-ans="Watt"><option value="">—</option><option>Watt</option><option>Gipfel</option><option>Tal</option></select> zu Fuß gehen.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-8-klas-8-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-8-klas-8-rik";
+  const KN_UNIT = "l7-a";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Bei Greta entscheidet der Familienrat über den Sommerurlaub.", a: "r"},
+    {s: "Papa will auf die Zugspitze.", a: "r"},
+    {s: "Die Zugspitze liegt an der Grenze zur Schweiz.", a: "f"},
+    {s: "Mama will nur auf einen Gipfel steigen.", a: "f"},
+    {s: "Lotte hat ein Buch über das Wattenmeer in der Schulbibliothek gefunden.", a: "r"},
+    {s: "Im Watt kann man bei Flut zu Fuß gehen.", a: "f"},
+    {s: "Opa braucht einen See, in dem man schwimmen kann.", a: "r"},
+    {s: "Am Bodensee liegen drei Länder.", a: "r"},
+    {s: "Am Bodensee kann man Seehunde beobachten.", a: "f"},
+    {s: "Lotte hat für die Nordsee gestimmt.", a: "r"}
+  ]);
+
+  // Üb. 1: визначення → слово
+  buildMatch('ub1', [
+    ["Der höchste Punkt, auf dem man oben auf dem Berg steht.", "der Gipfel"],
+    ["Eine Landschaft, die zwischen zwei Bergen liegt.", "das Tal"],
+    ["Land, das ganz von Wasser umgeben ist.", "die Insel"],
+    ["Wasser, das durch das Land fließt und ins Meer geht.", "der Fluss"],
+    ["Wasser, das mitten im Land liegt und in dem man baden kann.", "der See"],
+    ["Das Land direkt am Meer, an dem oft Strände sind.", "die Küste"],
+    ["Ein Meeresboden, auf dem man bei Ebbe laufen kann.", "das Watt"],
+    ["Viele Berge, die zusammen eine große Gruppe bilden.", "das Gebirge"]
+  ], {lead: true});
+
+  // Üb. 2
+  wireBlanks('ub2');
+
+  // Üb. 3: Deutschland-Quiz
+  buildMatch('ub3', [
+    ["Der höchste Berg Deutschlands, der an der Grenze zu Österreich liegt.", "die Zugspitze"],
+    ["Die größte Insel Deutschlands, die in der Ostsee liegt.", "Rügen"],
+    ["Ein großer See, an dem Deutschland, Österreich und die Schweiz liegen.", "der Bodensee"],
+    ["Der größte See, der ganz in Deutschland liegt.", "die Müritz"],
+    ["Eine Landschaft an der Nordsee, die seit 2009 Weltnaturerbe ist.", "das Wattenmeer"],
+    ["Der längste Fluss, der durch Deutschland fließt.", "der Rhein"],
+    ["Ein Fluss, an dem Dresden und Hamburg liegen.", "die Elbe"],
+    ["Ein Mittelgebirge, in dem der Brocken liegt.", "der Harz"]
+  ], {lead: true});
+
+  // Üb. 4
+  buildTransform('ub4-tr', [
+    {s: "Wir fahren an einen See. In dem See kann man schwimmen.", task: "in dem …",
+     ans: "Wir fahren an einen See, in dem man schwimmen kann."},
+    {s: "Lotte liest ein Buch. Das Buch handelt von Seehunden.", task: "das …",
+     ans: "Lotte liest ein Buch, das von Seehunden handelt."},
+    {s: "Papa erzählt von der Zugspitze. Er hat sie als Student bestiegen.", task: "die …",
+     ans: "Papa erzählt von der Zugspitze, die er als Student bestiegen hat."},
+    {s: "Der Pfänder ist ein Berg. Von dem Berg sieht man viele Alpengipfel.", task: "von dem …",
+     ans: "Der Pfänder ist ein Berg, von dem man viele Alpengipfel sieht."},
+    {s: "Greta hat eine Karte. Auf der Karte hat sie alle Orte markiert.", task: "auf der …",
+     ans: "Greta hat eine Karte, auf der sie alle Orte markiert hat."},
+    {s: "Die Kinder sehen Seehunde. Die Seehunde liegen auf einer Sandbank.", task: "die …",
+     ans: "Die Kinder sehen Seehunde, die auf einer Sandbank liegen."},
+    {s: "Opa hat Freunde. Mit den Freunden geht er angeln.", task: "mit denen …", hint: "Dat. Pl.",
+     ans: "Opa hat Freunde, mit denen er angeln geht."}
+  ]);
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Wie nennt Nina das Wetter im April?", opts: ["Aprilwetter", "Sommerwetter", "Schulwetter"], correct: "Aprilwetter"},
+    {q: "Wie wird das Wetter an der Nordsee?", opts: ["Sonnig und warm", "Windig, mit Schauern", "Neblig und still"], correct: "Windig, mit Schauern"},
+    {q: "Wie warm wird es an der Nordsee?", opts: ["8 Grad", "16 Grad", "minus 5 Grad"], correct: "8 Grad"},
+    {q: "Was sieht man am Samstagmorgen vom Brocken?", opts: ["Die Alpen", "Nur Wolken", "Die Nordsee"], correct: "Nur Wolken"},
+    {q: "Wo gibt es nachts noch Frost?", opts: ["Im Erzgebirge", "An der Nordsee", "In Leipzig"], correct: "Im Erzgebirge"},
+    {q: "Wie kalt ist es am Sonntag auf der Zugspitze?", opts: ["Minus 5 Grad", "0 Grad", "Minus 12 Grad"], correct: "Minus 5 Grad"},
+    {q: "Wie wird der Samstag in Leipzig?", opts: ["Sonnig, bis zu 16 Grad", "Regnerisch, 12 Grad", "Neblig, 8 Grad"], correct: "Sonnig, bis zu 16 Grad"},
+    {q: "Was kann man laut Nina am Sonntag machen?", opts: ["Schwimmen gehen", "Die Hausaufgaben", "Auf die Zugspitze steigen"], correct: "Die Hausaufgaben"}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Der Bodensee ist ein See, an dem drei Länder liegen.", uk: "Боденське озеро — це озеро, на березі якого лежать три країни."},
+    {say: "Ich suche einen See, in dem man schwimmen kann.", uk: "Я шукаю озеро, в якому можна плавати."},
+    {say: "Die Zugspitze ist der höchste Berg Deutschlands.", uk: "Цугшпітце — найвища гора Німеччини."},
+    {say: "Bei Ebbe kann man im Watt zu Fuß gehen.", uk: "Під час відпливу по ватту можна ходити пішки."},
+    {say: "An der Nordsee ist es heute windig.", uk: "На Північному морі сьогодні вітряно."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Land, das ganz von Wasser umgeben ist, ist eine …", opts: ["Insel", "Küste", "Wiese"], correct: "Insel"},
+    {q: "Der höchste Punkt eines Berges ist der …", opts: ["Gipfel", "Fluss", "Wald"], correct: "Gipfel"},
+    {q: "Am Bodensee liegen Deutschland, Österreich und …", opts: ["die Schweiz", "Polen", "Frankreich"], correct: "die Schweiz"},
+    {q: "Das ist der See, in … wir geschwommen sind.", opts: ["dem", "den", "der"], correct: "dem"},
+    {q: "Die Kinder, … Lotte hilft, sind noch klein.", opts: ["denen", "die", "dem"], correct: "denen"},
+    {q: "Das ist der Berg, … Papa als Student bestiegen hat.", opts: ["den", "der", "dem"], correct: "den"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Lindau ist eine Stadt, die auf einer Insel liegt.", ok: true},
+    {s: "Der Bodensee ist ein See, in den man schwimmen kann.", wrong: 6, fix: "dem"},
+    {s: "Lotte sieht Seehunde, der auf der Sandbank liegen.", wrong: 3, fix: "die"},
+    {s: "Die Kinder, mit die Lotte spielt, wohnen in Leipzig.", wrong: 3, fix: "denen"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🏔️', '🌊', '🦭', '🏆']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
