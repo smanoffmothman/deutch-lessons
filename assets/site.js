@@ -286,7 +286,10 @@ function renderGlossary(){
      — окремим списком під статтями, без фільтрів.
    Прапорці — CSS (.flag-DE …), бо емодзі-прапорців Windows не показує. */
 const MAT_LEVELS = ['A2', 'B1', 'B2', 'C1', 'C2'];
-const MAT_LANDS = {DE: 'Німеччина', AT: 'Австрія', CH: 'Швейцарія', LI: 'Ліхтенштейн', LU: 'Люксембург', EU: 'Європа', UA: 'Україна'};
+// Країни — MATERIAL_KRAYINY у data/materials-data.js (одне місце для всіх сторінок).
+const MAT_KRAYINY = (typeof MATERIAL_KRAYINY !== 'undefined') ? MATERIAL_KRAYINY : {};
+function matLandName(code){ return (MAT_KRAYINY[code] && MAT_KRAYINY[code].uk) || code; }
+const MAT_DACH = '@dach'; // значення фільтра «Усі німецькомовні»
 function matIsArticle(m){ return m && m.typ === 'stattya'; }
 function articleCountLabel(n){ // 1 стаття, 2–4 статті, 5+ статей, 21 стаття
   const m10 = n % 10, m100 = n % 100;
@@ -295,7 +298,7 @@ function articleCountLabel(n){ // 1 стаття, 2–4 статті, 5+ ста�
   return n + ' статей';
 }
 function matFlagHtml(code){
-  return '<span class="flag flag-' + escHtml(code) + '" title="' + escHtml(MAT_LANDS[code] || code) + '"></span>';
+  return '<span class="flag flag-' + escHtml(code) + '" title="' + escHtml(matLandName(code)) + '"></span>';
 }
 
 function renderMaterials(){
@@ -325,7 +328,22 @@ function renderMaterials(){
 
   // фільтри: лише ті значення, що реально трапляються в статтях
   const levels = MAT_LEVELS.filter(l => articles.some(a => a.riven === l));
-  const lands = Object.keys(MAT_LANDS).filter(c => articles.some(a => [].concat(a.krayina || []).includes(c)));
+  // країни: німецькомовні (порядок реєстру) → інші країни (за абеткою) → регіони
+  const usedLands = new Set();
+  articles.forEach(a => [].concat(a.krayina || []).forEach(c => usedLands.add(c)));
+  const isDach = c => !!(MAT_KRAYINY[c] && MAT_KRAYINY[c].dach);
+  const isRegion = c => c === 'EU' || c === 'WELT';
+  const landsDach = Object.keys(MAT_KRAYINY).filter(c => isDach(c) && usedLands.has(c));
+  const landsRegion = ['EU', 'WELT'].filter(c => usedLands.has(c));
+  const landsOther = Array.from(usedLands).filter(c => !isDach(c) && !isRegion(c))
+    .sort((x, y) => matLandName(x).localeCompare(matLandName(y), 'uk'));
+  const landOpts = list => list.map(c => '<option value="' + escHtml(c) + '">' + escHtml(matLandName(c)) + '</option>').join('');
+  const landGroups = [
+    landsDach.length ? '<optgroup label="Німецькомовні країни">'
+      + (landsDach.length > 1 ? '<option value="' + MAT_DACH + '">Усі німецькомовні</option>' : '') + landOpts(landsDach) + '</optgroup>' : '',
+    landsOther.length ? '<optgroup label="Інші країни">' + landOpts(landsOther) + '</optgroup>' : '',
+    landsRegion.length ? '<optgroup label="Регіони">' + landOpts(landsRegion) + '</optgroup>' : ''
+  ].join('');
   const temyOrder = (typeof MATERIAL_TEMY !== 'undefined') ? MATERIAL_TEMY : [];
   const temySet = new Set();
   articles.forEach(a => [].concat(a.temy || []).forEach(t => temySet.add(t)));
@@ -337,8 +355,7 @@ function renderMaterials(){
       + '<div class="mat-levels" role="group" aria-label="Рівень">'
       + '<button type="button" class="lvl-chip" data-l="" aria-pressed="true">Усі рівні</button>'
       + levels.map(l => '<button type="button" class="lvl-chip" data-l="' + l + '" aria-pressed="false">' + l + '</button>').join('') + '</div>'
-      + (lands.length > 1 ? '<select id="matLand" aria-label="Країна"><option value="">Усі країни</option>'
-        + lands.map(c => '<option value="' + c + '">' + MAT_LANDS[c] + '</option>').join('') + '</select>' : '')
+      + (usedLands.size > 1 ? '<select id="matLand" aria-label="Країна"><option value="">Усі країни</option>' + landGroups + '</select>' : '')
       + (temy.length > 1 ? '<select id="matTema" aria-label="Тема"><option value="">Усі теми</option>'
         + temy.map(t => '<option>' + escHtml(t) + '</option>').join('') + '</select>' : '')
       + '</div><p class="mat-summary" id="matSummary"></p>';
@@ -380,7 +397,10 @@ function renderMaterials(){
   function render(){
     const list = articles.slice().reverse().filter(a => {
       if(state.level && a.riven !== state.level) return false;
-      if(state.land && ![].concat(a.krayina || []).includes(state.land)) return false;
+      if(state.land){
+        const ks = [].concat(a.krayina || []);
+        if(state.land === MAT_DACH ? !ks.some(isDach) : !ks.includes(state.land)) return false;
+      }
       if(state.tema && ![].concat(a.temy || []).includes(state.tema)) return false;
       if(state.q){
         const hay = [a.nazva, a.opys, [].concat(a.temy || []).join(' '), a.dzherelo ? a.dzherelo.nazva : ''].join(' ').toLowerCase();
