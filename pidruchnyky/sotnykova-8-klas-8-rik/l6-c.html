@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 6, Modul C: Wiederholung — Німецька мова 8 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 8 КЛАС</span>
+        <h1>Lektion 6 · Modul C: Wiederholung</h1>
+        <p class="sub">Повторення Lektion 6 «Moderne Massenmedien»: газети й журнали, шкільна редакція, засоби спілкування, правила чату. Граматика — відносні речення (der, den, dem, denen, dessen, deren, з прийменниками) і мета з um … zu / damit. Бліц, кросворд, вправи, чат і підсумковий тест на весь Lektion.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Blitz</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Kreuzworträtsel</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Sortieren</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Fehler</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Chat</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER — усі слова Lektion 6 (збираються самі) ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Усі слова Lektion 6</h2>
+      <p class="lead">Тут зібрано слова всіх модулів Lektion 6. Перевір себе в «Картки ▶» і познач ☆ ті, які ще не пам'ятаєш, — їх варто повторити перед тестом.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: бліц ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Blitz: 60 Sekunden</h2>
+      <p class="lead">Розминка на швидкість: скільки слів Lektion 6 ти перекладеш за 60 секунд? У бал не йде — це гра. Спробуй побити власний рекорд!</p>
+      <div class="card" id="ub1-blitz"></div>
+    </section>
+
+    <!-- ===== Üb. 2: кросворд ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Kreuzworträtsel: Medien</h2>
+      <p class="lead">Торкнися клітинки чи підказки й пиши слово (ще раз по клітинці — інший напрямок). Артиклі писати не треба. ä ö ü — з панелі внизу.</p>
+      <div class="card" id="ub2-kw"></div>
+    </section>
+
+    <!-- ===== Üb. 3: сортування ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Zeitung, Gerät oder online?</h2>
+      <p class="lead">Розклади слова по трьох кошиках: натисни слово, потім кошик.</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 4: знайди помилку ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Finde den Fehler</h2>
+      <p class="lead">Граматика всього Lektion: відносні речення (den, dem, denen, dessen, deren, in der …) і мета з um … zu / damit (hochzuladen, anzurufen). Знайди помилку й виправ її — або натисни «Fehlerfrei».</p>
+      <div class="card" id="ub4-fix"></div>
+    </section>
+
+    <!-- ===== Üb. 5: чат ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Solomija fragt nach dem „Pausenhof“</h2>
+      <p class="lead">Соломія зі Львова з однокласниками започатковує шкільну газету й розпитує про «Pausenhof». Вибирай правильну відповідь.</p>
+      <div class="card" id="ub5-chat"></div>
+    </section>
+
+    <!-- ===== SPRECHEN ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Sprich mal!</h2>
+      <p class="lead">Спершу вимов фрази в 🎤, потім відповідай уголос на запитання й порівнюй зі зразком.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Welche Zeitung oder Zeitschrift liest du? Beschreibe sie mit zwei Relativsätzen.</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Ich lese eine Zeitschrift, die über Natur und Tiere berichtet. Am liebsten mag ich die Rubrik, in der Kinder ihre Fotos zeigen.</div>
+        </div>
+        <div class="qa">
+          <label>2. Wozu nutzt du dein Handy und das Internet? Nenne drei Dinge.</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Ich nutze mein Handy, um mit meinen Freunden zu chatten. Ich brauche das Internet, um Informationen für Referate zu finden. Und ich mache Videoanrufe, damit meine Oma mich sieht.</div>
+        </div>
+        <div class="qa">
+          <label>3. Wie haben Menschen früher kommuniziert? Vergleiche mit heute.</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Früher haben die Menschen Briefe geschrieben und aus der Telefonzelle telefoniert. Heute schicken wir Nachrichten in Sekunden. Das ist schneller, aber wir sehen uns vielleicht weniger.</div>
+        </div>
+        <div class="qa">
+          <label>4. Welche Regeln findest du für einen Klassenchat wichtig?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Man soll nachts keine Nachrichten schicken, damit alle schlafen können. Und man darf keine Fotos von anderen ohne Erlaubnis posten.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — на весь Lektion ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Test zu Lektion 6</h2>
+      <p class="lead">Підсумковий тест на весь Lektion 6: 18 завдань. Кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">9)</span> Das ist der Artikel,
+          <select class="blank inline" data-ans="den"><option value="">—</option><option>der</option><option>den</option><option>dem</option></select> Daryna geschrieben hat.</div>
+        <div class="fill-item"><span class="num">10)</span> Greta zeichnet Comics,
+          <select class="blank inline" data-ans="deren"><option value="">—</option><option>die</option><option>denen</option><option>deren</option></select> Helden Lehrer sind.</div>
+        <div class="fill-item"><span class="num">11)</span> Herr Brandt ist der Lehrer,
+          <select class="blank inline" data-ans="dem"><option value="">—</option><option>den</option><option>dem</option><option>dessen</option></select> wir alle Texte schicken.</div>
+        <div class="fill-item"><span class="num">12)</span> Leon braucht WLAN, um sein Video
+          <select class="blank inline" data-ans="hochzuladen"><option value="">—</option><option>zu hochladen</option><option>hochzuladen</option><option>hochladen</option></select>.</div>
+        <div class="fill-item"><span class="num">13)</span> Daryna schickt Fotos,
+          <select class="blank inline" data-ans="damit"><option value="">—</option><option>um</option><option>damit</option><option>dass</option></select> Oma alles sieht.</div>
+        <div class="fill-item"><span class="num">14)</span> Opa ging zur Telefonzelle, um seine Oma
+          <select class="blank inline" data-ans="anzurufen"><option value="">—</option><option>anrufen</option><option>anzurufen</option><option>zu anrufen</option></select>.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-8-klas-8-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-8-klas-8-rik";
+  const KN_UNIT = "l6-c";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['ub1', 'ub2', 'ub3', 'ub4', 'ub5', 'sprechen']});
+
+  // Üb. 1: бліц — усі слова Lektion 4 з файлу слів (без однакових перекладів)
+  const blitzPairs = [], blitzSeen = new Set();
+  ((window.SLOVA && window.SLOVA[KN_BOOK]) || []).filter(w => /^l6-/.test(w.r)).forEach(w => {
+    const de = w.de.split(' / ')[0].split(',')[0].replace(/\s*\(.*?\)/g, '').trim();
+    const uk = w.uk.split(' / ')[0].trim();
+    const key = uk.split(/[,;]/)[0].trim().toLowerCase();
+    if (!de || /^(der|die|das)$/i.test(de) || blitzSeen.has(key)) return;
+    blitzSeen.add(key);
+    blitzPairs.push([de, uk]);
+  });
+  buildBlitz('ub1-blitz', {pairs: blitzPairs, seconds: 60, dir: "de-uk"});
+
+  // Üb. 2: кросворд
+  buildCrossword('ub2-kw', [
+    ["Zeitung", "газета (die)"],
+    ["Rubrik", "рубрика (die)"],
+    ["Schlagzeile", "великий заголовок (die)"],
+    ["Anzeige", "оголошення (die)"],
+    ["Artikel", "стаття (der)"],
+    ["Leser", "читач (der)"],
+    ["Redaktion", "редакція (die)"],
+    ["Drucker", "принтер (der)"],
+    ["Messenger", "месенджер (der)"],
+    ["Telefonzelle", "телефонна будка (die)"],
+    ["Abo", "передплата (das)"],
+    ["Nachricht", "повідомлення (die)"]
+  ]);
+
+  // Üb. 3: сортування
+  buildSort('ub3-sort', {
+    buckets: ["Zeitung 📰", "Geräte 📱", "Online 🌐"],
+    items: [
+      {t: "die Schlagzeile", b: "Zeitung 📰"},
+      {t: "die Rubrik", b: "Zeitung 📰"},
+      {t: "die Anzeige", b: "Zeitung 📰"},
+      {t: "der Leserbrief", b: "Zeitung 📰"},
+      {t: "der Drucker", b: "Geräte 📱"},
+      {t: "das Smartphone", b: "Geräte 📱"},
+      {t: "das Tablet", b: "Geräte 📱"},
+      {t: "das Festnetztelefon", b: "Geräte 📱"},
+      {t: "der Messenger", b: "Online 🌐"},
+      {t: "die Suchmaschine", b: "Online 🌐"},
+      {t: "der Klassenchat", b: "Online 🌐"},
+      {t: "der Videoanruf", b: "Online 🌐"}
+    ]
+  });
+
+  // Üb. 4: знайди помилку
+  buildFixError('ub4-fix', [
+    {s: "Das ist der Artikel, der ich gelesen habe.", wrong: 4, fix: "den"},
+    {s: "Der „Pausenhof“ ist eine Zeitung, die alle zwei Monate erscheint.", ok: true},
+    {s: "Johanna ist ein Mädchen, die die Zeitung leitet.", wrong: 4, fix: "das"},
+    {s: "Die Leser, die die Comics gefallen, schreiben Briefe.", wrong: 2, fix: "denen"},
+    {s: "Lokales ist die Rubrik, in der alles über die Stadt steht.", ok: true},
+    {s: "Ich brauche das Handy, damit Oma anzurufen.", wrong: 4, fix: "um"},
+    {s: "Leon braucht WLAN, um sein Video hochzuladen.", ok: true},
+    {s: "Ich schicke Fotos, um Oma alles sieht.", wrong: 3, fix: "damit"},
+    {s: "Erik ist der Schüler, dessen Vulkan auf der Titelseite war.", ok: true}
+  ]);
+
+  // Üb. 5: чат
+  buildChat('ub5-chat', {
+    partner: "Solomija",
+    steps: [
+      {them: "Hallo! Stell dir vor: Wir machen jetzt auch eine Schülerzeitung in Lwiw! Wie oft erscheint euer „Pausenhof“?"},
+      {you: ["Er erscheint alle zwei Monate.", "Er erscheint alle zwei Monaten.", "Er erscheinen alle zwei Monate."], correct: 0},
+      {them: "Und wer schreibt die Artikel?"},
+      {you: ["Schüler, die gern schreibt.", "Schüler, denen gern schreiben.", "Schüler, die gern schreiben."], correct: 2},
+      {them: "Welche Rubrik ist bei euch am beliebtesten?"},
+      {you: ["Die „Lesetipps“, in denen Nina Bücher empfiehlt.", "Die „Lesetipps“, in der Nina Bücher empfiehlt.", "Die „Lesetipps“, in die Nina Bücher empfiehlt."], correct: 1},
+      {them: "Super Idee! Und wozu verkauft ihr die Zeitung?"},
+      {you: ["Damit die Klassen Geld für Klassenfahrten haben.", "Um die Klassen Geld für Klassenfahrten haben.", "Damit die Klassen Geld für Klassenfahrten zu haben."], correct: 0},
+      {them: "Letzte Frage: Wie stellt ihr die Zeitung online?"},
+      {you: ["Wir nutzen die Website der Schule, um sie hochladen.", "Wir nutzen die Website der Schule, um sie hochzuladen.", "Wir nutzen die Website der Schule, damit sie hochzuladen."], correct: 1},
+      {them: "Danke! Ich schicke euch unsere erste Ausgabe — mit einem Comic von mir!"}
+    ]
+  });
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Das ist eine Zeitung, die jeden Tag erscheint.", uk: "Це газета, яка виходить щодня."},
+    {say: "Lokales ist die Rubrik, in der alles über die Stadt steht.", uk: "«Місцеві новини» — рубрика, де все про місто."},
+    {say: "Ich nutze den Messenger, um mit Freunden zu chatten.", uk: "Я користуюся месенджером, щоб листуватися з друзями."},
+    {say: "Ich schicke Oma Fotos, damit sie alles sieht.", uk: "Я надсилаю бабусі фото, щоб вона все бачила."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Die große Überschrift auf der Titelseite heißt …", opts: ["Schlagzeile", "Rubrik", "Anzeige"], correct: "Schlagzeile"},
+    {q: "Ein Brief, den ein Leser an die Zeitung schreibt, ist ein …", opts: ["Leserbrief", "Interview", "Abo"], correct: "Leserbrief"},
+    {q: "Ein Gespräch, bei dem man sich sieht, ist ein …", opts: ["Videoanruf", "Festnetz", "Drucker"], correct: "Videoanruf"},
+    {q: "Mit einer … sucht man Informationen im Internet.", opts: ["Suchmaschine", "Telefonzelle", "Schlagzeile"], correct: "Suchmaschine"},
+    {q: "Die Journalistin, … wir interviewt haben, war sehr nett.", opts: ["die", "der", "deren"], correct: "die"},
+    {q: "Das sind die Kinder, … wir die Zeitung gezeigt haben.", opts: ["die", "denen", "deren"], correct: "denen"},
+    {q: "Ich brauche den Drucker, … mein Referat auszudrucken.", opts: ["um", "damit", "dass"], correct: "um"},
+    {q: "Wir schreiben nachts nicht, … alle schlafen können.", opts: ["um", "damit", "zu"], correct: "damit"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Opa liest eine Zeitung, die er seit dreißig Jahren im Abo hat.", ok: true},
+    {s: "Das ist die Rubrik, in die es Buchtipps gibt.", wrong: 5, fix: "der"},
+    {s: "Max lädt eine App herunter, damit Englisch zu lernen.", wrong: 5, fix: "um"},
+    {s: "Das ist der Comic, deren Held Herr Brandt ist.", wrong: 4, fix: "dessen"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📰', '📱', '💬', '🏆']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
