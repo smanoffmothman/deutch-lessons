@@ -1138,7 +1138,7 @@ const MATERIALS = [
     dzherelo: { nazva: "Deutsch perfekt", nomer: "13/2026", storinky: "12" },
     dodano: "2026-10", file: "statti/wohnung-ohne-kueche.html" },
   { id: "smartphone-debatte", typ: "stattya", nazva: "30 Jahre Smartphone: Fluch oder Segen?",
-    opys: "Від Nokia 9000 Communicator 1996 року до чат-ботів: президентка Ґете-Інституту і нейробіолог сперечаються, чи зробив смартфон наше життя кращим.",
+    opys: "Від Nokia 9000 Communicator 1996 року до чат-ботів: президентка Ґете-Інституту і нейронауковець сперечаються, чи зробив смартфон наше життя кращим.",
     riven: "B2", krayina: ["DE"], temy: ["Wissenschaft & Technik", "Gesellschaft"],
     dzherelo: { nazva: "Deutsch perfekt", nomer: "13/2026", storinky: "22–23" },
     dodano: "2026-10", file: "statti/smartphone-debatte.html" },
