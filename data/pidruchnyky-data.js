@@ -400,8 +400,8 @@ const PIDRUCHNYKY = [
         { id: "l7-a", label: "A", nazva: "Prima Klima", storinky: "136–141", typ: "vpravy", gram: ["relativsaetze"], opublikovano: 29 },
         { id: "l7-b", label: "B", nazva: "Menschen, die hier leben", storinky: "142–147", typ: "vpravy", gram: ["zahlwoerter"], opublikovano: 30 },
         { id: "l7-c", label: "C", nazva: "Wohin fahren wir diesmal?", storinky: "148–155", typ: "vpravy", gram: ["wechselpraepositionen", "artikel-gebrauch", "kausalsaetze", "konjunktionen-position-null"], opublikovano: 31 },
-        { id: "l7-d", label: "D", nazva: "Wiederholung", storinky: "156–157", typ: "povtorennya", gram: ["relativsaetze", "wechselpraepositionen", "kausalsaetze"] },
-        { id: "l7-e", label: "E", nazva: "Geschichtenzeit", storinky: "158", typ: "chytannya" },
+        { id: "l7-d", label: "D", nazva: "Wiederholung", storinky: "156–157", typ: "povtorennya", gram: ["relativsaetze", "wechselpraepositionen", "kausalsaetze"], opublikovano: 32 },
+        { id: "l7-e", label: "E", nazva: "Geschichtenzeit", storinky: "158", typ: "chytannya", opublikovano: 33 },
         { id: "l7-f", label: "F", nazva: "Projektarbeit", storinky: "159", typ: "bez-storinky" },
         { id: "l7-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "160", typ: "bez-storinky" }
       ] },

@@ -670,5 +670,20 @@
   {de: "auf die Insel / auf der Insel", uk: "на острів / на острові", r: "l7-c"},
   {de: "denn", uk: "бо (прямий порядок слів)", r: "l7-c", note: "…, denn er hat Zeit."},
   {de: "weil", uk: "тому що (дієслово в кінці)", r: "l7-c", note: "…, weil er Zeit hat."},
-  {de: "die Großeltern (Pl.)", uk: "бабуся й дідусь", r: "l7-c"}
+  {de: "die Großeltern (Pl.)", uk: "бабуся й дідусь", r: "l7-c"},
+  // ---- Lektion 7 · Modul E: Geschichtenzeit ----
+  {de: "die Grenzkontrolle, -n", uk: "прикордонний контроль", r: "l7-e"},
+  {de: "die Seilbahn, -en", uk: "канатна дорога", r: "l7-e"},
+  {de: "der Ausblick, -e", uk: "краєвид (згори)", r: "l7-e"},
+  {de: "jemandem den Atem nehmen", uk: "перехопити подих", r: "l7-e"},
+  {de: "der Wildpark, -s", uk: "парк диких тварин", r: "l7-e"},
+  {de: "das Murmeltier, -e", uk: "бабак", r: "l7-e"},
+  {de: "das Gasthaus, ¨-er", uk: "харчевня, ресторанчик", r: "l7-e"},
+  {de: "der Paradeiser, - (österr.)", uk: "помідор (в Австрії)", r: "l7-e"},
+  {de: "bezahlen", uk: "платити", r: "l7-e"},
+  {de: "das Wechselgeld", uk: "решта (гроші)", r: "l7-e"},
+  {de: "der Franken, -", uk: "франк (швейцарські гроші)", r: "l7-e"},
+  {de: "die Münze, -n", uk: "монета", r: "l7-e"},
+  {de: "der Sonnenbrand", uk: "сонячний опік", r: "l7-e"},
+  {de: "zufrieden", uk: "задоволений", r: "l7-e"}
 ];
