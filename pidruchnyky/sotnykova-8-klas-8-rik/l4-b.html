@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 4, Modul B: Weltbekannte Komponisten — Німецька мова 8 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 8 КЛАС</span>
+        <h1>Lektion 4 · Modul B: Weltbekannte Komponisten</h1>
+        <p class="sub">Урок про відомих композиторів: Бах і Мендельсон у Лейпцигу, Моцарт, Бетховен, Микола Леонтович і його «Щедрик». Як розповісти біографію: народився, жив, написав, заснував. Граматика — Präteritum у біографіях (kam, schrieb, wurde, gründete) і Relativsätze. Текст і гра «Wer bin ich?» з озвученням, вправи, говоріння, письмо і підсумковий тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Musikwörter</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · kam, schrieb, wurde</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · der, dessen, in dem</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Präteritum</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити. Дієслова вчи разом із формою Präteritum!</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Ein Spaziergang durch die Musikstadt Leipzig</h2>
+      <p class="lead">Дарина пише у своєму блозі про музичну прогулянку Лейпцигом з дідусем Грети. Послухай і прочитай. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l4-b-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Am Samstag hat Opa Helmut Greta und mich zu einem Musikspaziergang eingeladen. „Wer in Leipzig wohnt, muss seine <span class="gl" data-uk="композитор" data-lemma="der Komponist">Komponisten</span> kennen“, sagte er. Wir hatten drei Stationen.</p>
+        <p><b>Station 1: die Thomaskirche.</b> Vor der Kirche steht ein <span class="gl" data-uk="пам'ятник" data-lemma="das Denkmal">Denkmal</span> von Johann Sebastian Bach. Bach wurde 1685 in Eisenach <span class="gl" data-uk="народився" data-lemma="wurde geboren">geboren</span>. 1723 kam er nach Leipzig und wurde <span class="gl" data-uk="кантор церкви св. Томи (керівник хору хлопчиків)" data-lemma="der Thomaskantor">Thomaskantor</span>: Er <span class="gl" data-uk="керувати" data-lemma="leiten">leitete</span> den Thomanerchor, unterrichtete die Jungen und schrieb fast jede Woche neue Musik für den <span class="gl" data-uk="богослужіння" data-lemma="der Gottesdienst">Gottesdienst</span>. Er blieb 27 Jahre in Leipzig, bis zu seinem <span class="gl" data-uk="смерть" data-lemma="der Tod">Tod</span> im Jahr 1750. In der Kirche liegt sein <span class="gl" data-uk="могила" data-lemma="das Grab">Grab</span>. Den Chor, den Bach leitete, gibt es heute noch — wir haben die Jungen proben gehört.</p>
+        <p><b>Station 2: das Mendelssohn-Haus.</b> Hier wohnte Felix Mendelssohn Bartholdy, der 1809 in Hamburg geboren wurde. 1835 wurde er <span class="gl" data-uk="диригент" data-lemma="der Dirigent">Dirigent</span> des Gewandhausorchesters, und 1843 <span class="gl" data-uk="заснувати" data-lemma="gründen">gründete</span> er in Leipzig das erste <span class="gl" data-uk="консерваторія" data-lemma="das Konservatorium">Konservatorium</span> Deutschlands. Opa Helmut erzählte etwas, das ich nicht wusste: Nach Bachs Tod <span class="gl" data-uk="забувати" data-lemma="vergessen, vergaß">vergaßen</span> viele Menschen seine Musik. Mendelssohn, der Bach sehr liebte, <span class="gl" data-uk="виконувати (твір на сцені)" data-lemma="aufführen">führte</span> 1829 in Berlin Bachs Matthäus-Passion wieder <span class="gl" data-uk="виконувати (твір на сцені)" data-lemma="aufführen">auf</span> — und plötzlich wollten alle Bach hören. Im Museum gibt es einen Raum, in dem man selbst ein Orchester dirigieren kann. Greta nahm den Taktstock und dirigierte so schnell, dass sogar Opa lachen musste.</p>
+        <p><b>Station 3: das Gewandhaus.</b> Am Augustusplatz steht das <span class="gl" data-uk="концертний зал" data-lemma="das Konzerthaus">Konzerthaus</span> des Orchesters, das Mendelssohn leitete. Opa Helmut hatte eine <span class="gl" data-uk="сюрприз" data-lemma="die Überraschung">Überraschung</span> für uns: drei Karten für ein Konzert im Februar!</p>
+        <p>Früher dachte ich: Klassische Musik ist etwas für alte Leute. Jetzt weiß ich: Bach war ein Lehrer mit viel Arbeit und zwanzig Kindern. Mendelssohn war erst zwanzig Jahre alt, als er die Matthäus-Passion dirigierte. Sie waren Menschen wie wir — nur mit sehr guten Ohren.</p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">Präteritum in Biografien · kam, schrieb, gründete</h2>
+      <p class="lead">Про життя людей минулого пишуть у <b>Präteritum</b> — це «книжковий» минулий час біографій, оповідань і новин. У розмові про себе частіше кажуть Perfekt (Ich <b>habe</b> Musik <b>gehört</b>), а в біографії: Bach <b>kam</b> 1723 nach Leipzig.</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. Правильні дієслова: -te</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Infinitiv</th><th>er / sie</th><th>sie (Pl.)</th></tr>
+          <tr><td>leben</td><td>leb<strong>te</strong></td><td>leb<strong>ten</strong></td></tr>
+          <tr><td>komponieren</td><td>komponier<strong>te</strong></td><td>komponier<strong>ten</strong></td></tr>
+          <tr><td>gründen</td><td>gründ<strong>ete</strong></td><td>gründ<strong>eten</strong></td></tr>
+          <tr><td>arbeiten</td><td>arbeit<strong>ete</strong></td><td>arbeit<strong>eten</strong></td></tr>
+        </table></div>
+        <div class="merke">Після <b>-t / -d</b> в основі — <b>-ete</b>: gründ<b>ete</b>, arbeit<b>ete</b>, leit<b>ete</b>, heirat<b>ete</b>. Форми ich і er / sie однакові: ich lebte — er lebte.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. Неправильні дієслова: нова голосна, без -te</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Infinitiv</th><th>Präteritum</th><th>Infinitiv</th><th>Präteritum</th></tr>
+          <tr><td>sein</td><td><strong>war</strong></td><td>werden</td><td><strong>wurde</strong></td></tr>
+          <tr><td>kommen</td><td><strong>kam</strong></td><td>gehen</td><td><strong>ging</strong></td></tr>
+          <tr><td>schreiben</td><td><strong>schrieb</strong></td><td>bleiben</td><td><strong>blieb</strong></td></tr>
+          <tr><td>ziehen</td><td><strong>zog</strong></td><td>sterben</td><td><strong>starb</strong></td></tr>
+          <tr><td>beginnen</td><td><strong>begann</strong></td><td>vergessen</td><td><strong>vergaß</strong></td></tr>
+          <tr><td>nehmen</td><td><strong>nahm</strong></td><td>geben</td><td><strong>gab</strong></td></tr>
+        </table></div>
+        <div class="merke">У множині додаємо <b>-en</b>: sie kam<b>en</b>, sie schrieb<b>en</b>, sie vergaß<b>en</b>. Запам'ятай також: wissen — <b>wusste</b>, denken — <b>dachte</b>, können — <b>konnte</b>.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. Корисні «біографічні» речення</p>
+        <p>Bach <b>wurde</b> 1685 in Eisenach <b>geboren</b>. — Бах народився 1685 року в Айзенаху.<br>
+           1723 <b>wurde</b> er Thomaskantor. — 1723 року він став кантором.<br>
+           Er <b>zog</b> nach Leipzig. — Він переїхав до Лейпцига.<br>
+           Er <b>starb</b> 1750 in Leipzig. — Він помер 1750 року в Лейпцигу.</p>
+        <div class="merke"><b>wurde</b> має два значення: <b>wurde … geboren</b> = народився; <b>wurde + професія</b> = став (ким). Рік стоїть без прийменника: <b>1723</b> kam er … або <b>im Jahr 1723</b> kam er … (не «in 1723»).</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">4. Relativsätze в біографіях</p>
+        <p>Mendelssohn, <b>der</b> 1809 in Hamburg geboren wurde, …<br>
+           der Chor, <b>den</b> Bach leitete, …<br>
+           ein Raum, <b>in dem</b> man dirigieren kann, …<br>
+           Bach, <b>dessen</b> Musik viele vergaßen, …</p>
+        <div class="merke">У Relativsatz дієслово в Präteritum теж стоїть у кінці: …, der Bach sehr <b>liebte</b>.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">5. Типові помилки</p>
+        <p>✗ Bach kommte nach Leipzig. → ✓ Bach <b>kam</b> nach Leipzig.</p>
+        <p>✗ Er schreibte viele Werke. → ✓ Er <b>schrieb</b> viele Werke.</p>
+        <p>✗ Mendelssohn gründte ein Konservatorium. → ✓ gründ<b>ete</b></p>
+        <p>✗ In 1750 starb Bach. → ✓ <b>1750</b> starb Bach. / <b>Im Jahr 1750</b> starb Bach.</p>
+        <p>✗ 1723 er kam nach Leipzig. → ✓ 1723 <b>kam er</b> nach Leipzig. <i>(дієслово на 2-му місці)</i></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Musikwörter</h2>
+      <p class="lead">Що це? Добери слово до пояснення.</p>
+      <div class="card" id="ub1-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">kam, schrieb, wurde</h2>
+      <p class="lead">Вибери правильну форму Präteritum.</p>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> Bach
+          <select class="blank inline" data-ans="kam"><option value="">—</option><option>kommte</option><option>kam</option><option>kamte</option></select> 1723 nach Leipzig.</div>
+        <div class="fill-item"><span class="num">2)</span> Dort
+          <select class="blank inline" data-ans="wurde"><option value="">—</option><option>wurde</option><option>werdete</option><option>wird</option></select> er Thomaskantor.</div>
+        <div class="fill-item"><span class="num">3)</span> Er
+          <select class="blank inline" data-ans="schrieb"><option value="">—</option><option>schreibte</option><option>schrieb</option><option>schriebte</option></select> fast jede Woche neue Musik.</div>
+        <div class="fill-item"><span class="num">4)</span> Er
+          <select class="blank inline" data-ans="blieb"><option value="">—</option><option>bleibte</option><option>bliebte</option><option>blieb</option></select> 27 Jahre in Leipzig.</div>
+        <div class="fill-item"><span class="num">5)</span> Bach
+          <select class="blank inline" data-ans="starb"><option value="">—</option><option>starb</option><option>sterbte</option><option>stirbte</option></select> im Jahr 1750.</div>
+        <div class="fill-item"><span class="num">6)</span> Mendelssohn
+          <select class="blank inline" data-ans="gründete"><option value="">—</option><option>gründte</option><option>grundete</option><option>gründete</option></select> 1843 ein Konservatorium.</div>
+        <div class="fill-item"><span class="num">7)</span> Er
+          <select class="blank inline" data-ans="leitete"><option value="">—</option><option>leitete</option><option>leitte</option><option>litt</option></select> das Gewandhausorchester.</div>
+        <div class="fill-item"><span class="num">8)</span> Nach Bachs Tod
+          <select class="blank inline" data-ans="vergaßen"><option value="">—</option><option>vergessten</option><option>vergaßen</option><option>vergaß</option></select> viele Menschen seine Musik.</div>
+        <div class="fill-item"><span class="num">9)</span> Greta
+          <select class="blank inline" data-ans="nahm"><option value="">—</option><option>nehmte</option><option>nimmte</option><option>nahm</option></select> den Taktstock.</div>
+        <div class="fill-item"><span class="num">10)</span> Daryna
+          <select class="blank inline" data-ans="wusste"><option value="">—</option><option>wusste</option><option>wisste</option><option>weißte</option></select> das früher nicht.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">der, dessen, in dem</h2>
+      <p class="lead">Факти про композиторів і Лейпциг. Вибери правильний Relativpronomen.</p>
+      <div class="card" id="ub3-list">
+        <div class="fill-item"><span class="num">1)</span> Bach,
+          <select class="blank inline" data-ans="der"><option value="">—</option><option>der</option><option>den</option><option>dessen</option></select> in Eisenach geboren wurde, lebte lange in Leipzig.</div>
+        <div class="fill-item"><span class="num">2)</span> Die Thomaskirche ist die Kirche, in
+          <select class="blank inline" data-ans="der"><option value="">—</option><option>dem</option><option>die</option><option>der</option></select> Bachs Grab liegt.</div>
+        <div class="fill-item"><span class="num">3)</span> Der Chor,
+          <select class="blank inline" data-ans="den"><option value="">—</option><option>der</option><option>den</option><option>dem</option></select> Bach leitete, singt heute noch.</div>
+        <div class="fill-item"><span class="num">4)</span> Mendelssohn,
+          <select class="blank inline" data-ans="dessen"><option value="">—</option><option>deren</option><option>dessen</option><option>der</option></select> Haus heute ein Museum ist, war Dirigent.</div>
+        <div class="fill-item"><span class="num">5)</span> Das Konservatorium,
+          <select class="blank inline" data-ans="das"><option value="">—</option><option>das</option><option>der</option><option>den</option></select> er gründete, war das erste in Deutschland.</div>
+        <div class="fill-item"><span class="num">6)</span> Im Museum gibt es einen Raum, in
+          <select class="blank inline" data-ans="dem"><option value="">—</option><option>den</option><option>der</option><option>dem</option></select> man ein Orchester dirigieren kann.</div>
+        <div class="fill-item"><span class="num">7)</span> Die Karten,
+          <select class="blank inline" data-ans="die"><option value="">—</option><option>die</option><option>denen</option><option>deren</option></select> Opa Helmut gekauft hat, sind für ein Konzert im Februar.</div>
+        <div class="fill-item"><span class="num">8)</span> Opa Helmut,
+          <select class="blank inline" data-ans="dem"><option value="">—</option><option>den</option><option>dem</option><option>der</option></select> die Mädchen gern zuhören, weiß viel über Musik.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Präsens → Präteritum</h2>
+      <p class="lead">Екскурсовод розповідає в теперішньому часі. Перепиши речення в Präteritum, як у біографії.</p>
+      <div class="card" id="ub4-tr"></div>
+    </section>
+
+    <!-- ===== HÖREN ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Wer bin ich?</h2>
+      <p class="lead">На уроці музики Frau Albrecht грає з класом у «Хто я?»: вона дає підказки, а Ерік відгадує композитора. Послухай (можна двічі) і дай відповіді. Текст відкривається внизу — але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l4-b-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Frau Albrecht:</b> Heute spielen wir „Wer bin ich?“. Ich gebe drei Tipps, und ihr ratet den Komponisten. Erik, du fängst an. Nummer eins: Ich wurde 1756 in Salzburg geboren. Schon mit fünf Jahren schrieb ich meine ersten Stücke.<br>
+          <b>Erik:</b> Mit fünf? Da konnte ich noch nicht einmal schreiben! Ist das Beethoven?<br>
+          <b>Frau Albrecht:</b> Nein. Zweiter Tipp: Mit sechs reiste ich mit meiner Schwester durch Europa und gab Konzerte. Dritter Tipp: Meine Oper „Die Zauberflöte“ kennt ihr alle.<br>
+          <b>Erik:</b> Mozart!<br>
+          <b>Frau Albrecht:</b> Richtig. Er starb 1791 in Wien, mit nur 35 Jahren. Nummer zwei: Ich wurde 1770 in Bonn geboren und zog 1792 nach Wien.<br>
+          <b>Erik:</b> Jetzt aber: Beethoven?<br>
+          <b>Frau Albrecht:</b> Langsam! Zweiter Tipp: Ich wurde taub, aber ich komponierte weiter. Dritter Tipp: Bei der Uraufführung meiner neunten Sinfonie konnte ich den Applaus nicht hören.<br>
+          <b>Erik:</b> Das ist wirklich Beethoven. Und die Melodie aus dieser Sinfonie ist heute die Europahymne, oder?<br>
+          <b>Frau Albrecht:</b> Sehr gut, Erik! Nummer drei — die ist schwer. Ich war Lehrer und Chorleiter in der Ukraine. An meinem bekanntesten Lied arbeitete ich viele Jahre.<br>
+          <b>Erik:</b> Hm … keine Ahnung.<br>
+          <b>Frau Albrecht:</b> Zweiter Tipp: 1916 sang ein Chor in Kyjiw das Lied zum ersten Mal. 1922 hörte man es in New York. Dritter Tipp: Unser Orchester probt es gerade für das Winterkonzert.<br>
+          <b>Erik:</b> „Schtschedryk“! Dann ist das … Moment … Mykola Leontowytsch!<br>
+          <b>Frau Albrecht:</b> Bravo! Auf Englisch heißt das Lied „Carol of the Bells“.<br>
+          <b>Erik:</b> Das kenne ich aus einem Film! Ich wusste nicht, dass es aus der Ukraine kommt.
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Komponisten und ihre Musik</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Welche Komponisten kennst du? Was weißt du über sie?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Ich kenne Mozart, Beethoven und Bach. Mozart wurde in Salzburg geboren und komponierte schon mit fünf Jahren. Bach lebte lange in Leipzig und war dort Thomaskantor.</div>
+        </div>
+        <div class="qa">
+          <label>2. Erzähl über Bach in Leipzig: Wann kam er? Was machte er dort?</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Bach kam 1723 nach Leipzig und wurde Thomaskantor. Er leitete den Chor, unterrichtete und schrieb viel Musik. Er blieb 27 Jahre und starb 1750 in Leipzig.</div>
+        </div>
+        <div class="qa">
+          <label>3. Warum ist Mendelssohn für Leipzig wichtig?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Mendelssohn war Dirigent des Gewandhausorchesters und gründete 1843 das erste Konservatorium Deutschlands. Er führte auch Bachs Musik wieder auf.</div>
+        </div>
+        <div class="qa">
+          <label>4. Welche ukrainischen Komponisten oder Lieder kennst du?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Ich kenne Mykola Leontowytsch, der „Schtschedryk“ schrieb. Dieses Lied kennt man in der ganzen Welt. Ich kenne auch Mykola Lyssenko, der viele Opern und Lieder komponierte.</div>
+        </div>
+        <div class="qa">
+          <label>5. Hörst du manchmal klassische Musik? Wann und wo?</label>
+          <button class="btn secondary" type="button" data-reveal="spr5">Muster zeigen</button>
+          <div class="reveal" id="spr5">Ja, manchmal. Wenn ich Hausaufgaben mache, höre ich gern ruhige Klaviermusik. Und klassische Musik kenne ich aus vielen Filmen.</div>
+        </div>
+        <div class="qa">
+          <label>6. Spiel „Wer bin ich?“: Gib drei Tipps über einen Komponisten. Dein Partner / deine Partnerin rät.</label>
+          <button class="btn secondary" type="button" data-reveal="spr6">Muster zeigen</button>
+          <div class="reveal" id="spr6">Ich wurde 1770 in Bonn geboren. Ich zog nach Wien und wurde später taub. Meine neunte Sinfonie kennt jeder. — Du bist Beethoven!</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Eine kurze Biografie</h2>
+      <p class="lead">Напиши коротку біографію композитора або композиторки (можна українського / української) — 60–80 слів у Präteritum. Дати й факти перевір у надійному джерелі.</p>
+      <div class="card">
+        <p>1) хто це; 2) коли й де народився / народилася (wurde … geboren); 3) де жив / жила і працював / працювала; 4) що написав / написала; 5) чим відомий / відома сьогодні; 6) коли й де помер / померла (якщо це людина минулого).</p>
+        <p class="beispiel">… war ein Komponist / eine Komponistin aus … · Er / Sie wurde … in … geboren. · Er / Sie lebte in … und arbeitete als … · Er / Sie schrieb … · Sein / Ihr Werk … kennt man heute in der ganzen Welt. · Er / Sie starb … in …</p>
+        <div class="qa">
+          <label for="schreiben-text">Deine Biografie</label>
+          <textarea id="schreiben-text" rows="10" placeholder="… war ein Komponist aus …"
+            data-words="60-80"
+            data-must="wurde|geboren|schrieb"
+            data-check="Хто це|Коли й де народився / народилася (wurde … geboren)|Де жив / жила і працював / працювала (Präteritum)|Що написав / написала (schrieb, komponierte)|Чим відомий / відома сьогодні|Щонайменше один Relativsatz"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Mykola Leontowytsch war ein ukrainischer Komponist. Er wurde 1877 geboren. Er arbeitete als Lehrer und Chorleiter und sammelte ukrainische Volkslieder, die er für Chöre bearbeitete. An seinem bekanntesten Lied, „Schtschedryk“, arbeitete er viele Jahre. 1916 sang ein Chor in Kyjiw das Lied zum ersten Mal, und 1922 hörte man es in New York. Heute kennt man die Melodie in der ganzen Welt, auf Englisch heißt sie „Carol of the Bells“. Leontowytsch starb 1921.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Mozart
+          <select class="blank inline" data-ans="schrieb"><option value="">—</option><option>schrieb</option><option>schreibte</option><option>schriebt</option></select> schon als Kind Musik.</div>
+        <div class="fill-item"><span class="num">8)</span> Beethoven
+          <select class="blank inline" data-ans="zog"><option value="">—</option><option>ziehte</option><option>zogte</option><option>zog</option></select> 1792 nach Wien.</div>
+        <div class="fill-item"><span class="num">9)</span> Leontowytsch
+          <select class="blank inline" data-ans="arbeitete"><option value="">—</option><option>arbeitte</option><option>arbeitete</option><option>arbeit</option></select> als Lehrer und Chorleiter.</div>
+        <div class="fill-item"><span class="num">10)</span> Bach, in
+          <select class="blank inline" data-ans="dessen"><option value="">—</option><option>dessen</option><option>deren</option><option>dem</option></select> Familie es viele Musiker gab, wurde in Eisenach geboren.</div>
+        <div class="fill-item"><span class="num">11)</span> „Die Zauberflöte“ ist eine Oper,
+          <select class="blank inline" data-ans="die"><option value="">—</option><option>der</option><option>das</option><option>die</option></select> Mozart 1791 komponierte.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-8-klas-8-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-8-klas-8-rik";
+  const KN_UNIT = "l4-b";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Opa Helmut zeigte den Mädchen drei Orte in Leipzig.", a: "r"},
+    {s: "Bach wurde in Leipzig geboren.", a: "f"},
+    {s: "Bach leitete in Leipzig einen Chor.", a: "r"},
+    {s: "Bach blieb nur sieben Jahre in Leipzig.", a: "f"},
+    {s: "Bachs Grab liegt in der Thomaskirche.", a: "r"},
+    {s: "Mendelssohn war Dirigent des Gewandhausorchesters.", a: "r"},
+    {s: "Mendelssohn gründete das Konservatorium in Berlin.", a: "f"},
+    {s: "Nach Bachs Tod hörten alle Menschen weiter seine Musik.", a: "f"},
+    {s: "Im Mendelssohn-Haus durfte Greta dirigieren.", a: "r"},
+    {s: "Opa Helmut schenkte den Mädchen Karten für ein Konzert.", a: "r"}
+  ]);
+
+  // Üb. 1
+  buildMatch('ub1', [
+    ["Er schreibt Musik.", "der Komponist"],
+    ["Ein Theaterstück mit Musik und Gesang.", "die Oper"],
+    ["Ein großes Werk für Orchester.", "die Sinfonie"],
+    ["Ein sehr großes Instrument, das oft in einer Kirche steht.", "die Orgel"],
+    ["Das erste Konzert mit einem neuen Werk.", "die Uraufführung"],
+    ["Eine Figur aus Stein oder Metall für eine berühmte Person.", "das Denkmal"],
+    ["So ist ein Mensch, der nicht hören kann.", "taub"],
+    ["Ein Kind mit einem sehr großen Talent.", "das Wunderkind"]
+  ], {lead: true});
+
+  // Üb. 2, Üb. 3
+  wireBlanks('ub2');
+  wireBlanks('ub3');
+
+  // Üb. 4
+  buildTransform('ub4-tr', [
+    {s: "Bach kommt 1723 nach Leipzig.", task: "Präteritum",
+     ans: "Bach kam 1723 nach Leipzig."},
+    {s: "Mendelssohn gründet 1843 ein Konservatorium.", task: "Präteritum",
+     ans: "Mendelssohn gründete 1843 ein Konservatorium."},
+    {s: "Mozart schreibt viele Opern.", task: "Präteritum",
+     ans: "Mozart schrieb viele Opern."},
+    {s: "Beethoven zieht 1792 nach Wien.", task: "Präteritum",
+     ans: "Beethoven zog 1792 nach Wien."},
+    {s: "Bach bleibt 27 Jahre in Leipzig.", task: "Präteritum",
+     ans: "Bach blieb 27 Jahre in Leipzig.|Bach blieb siebenundzwanzig Jahre in Leipzig."},
+    {s: "Mozart stirbt 1791 in Wien.", task: "Präteritum",
+     ans: "Mozart starb 1791 in Wien."}
+  ]);
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Wo wurde Mozart geboren?", opts: ["In Wien", "In Salzburg", "In Bonn"], correct: "In Salzburg"},
+    {q: "Wie alt war Mozart, als er seine ersten Stücke schrieb?", opts: ["Fünf", "Sechs", "Zwölf"], correct: "Fünf"},
+    {q: "Mit wem reiste Mozart als Kind durch Europa?", opts: ["Mit seinem Bruder", "Mit seinem Lehrer", "Mit seiner Schwester"], correct: "Mit seiner Schwester"},
+    {q: "Wohin zog Beethoven 1792?", opts: ["Nach Wien", "Nach Bonn", "Nach Leipzig"], correct: "Nach Wien"},
+    {q: "Was konnte Beethoven bei der Uraufführung der neunten Sinfonie nicht?", opts: ["Dirigieren", "Den Applaus hören", "Das Orchester sehen"], correct: "Den Applaus hören"},
+    {q: "Was ist die Melodie aus Beethovens neunter Sinfonie heute?", opts: ["Die Europahymne", "Ein Weihnachtslied", "Eine Filmmusik"], correct: "Die Europahymne"},
+    {q: "Was war Mykola Leontowytsch von Beruf?", opts: ["Dirigent in Wien", "Lehrer und Chorleiter", "Organist in Leipzig"], correct: "Lehrer und Chorleiter"},
+    {q: "Wo sang man „Schtschedryk“ zum ersten Mal?", opts: ["In New York", "In Lwiw", "In Kyjiw"], correct: "In Kyjiw"},
+    {q: "Woher kennt Erik „Carol of the Bells“?", opts: ["Aus einem Film", "Aus dem Radio", "Aus dem Musikbuch"], correct: "Aus einem Film"}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Bach kam 1723 nach Leipzig.", uk: "Бах приїхав до Лейпцига 1723 року."},
+    {say: "Er wurde in Eisenach geboren.", uk: "Він народився в Айзенаху."},
+    {say: "Mozart schrieb seine ersten Stücke mit fünf Jahren.", uk: "Моцарт написав свої перші твори в п'ять років."},
+    {say: "Beethoven zog nach Wien.", uk: "Бетховен переїхав до Відня."},
+    {say: "Dieses Lied kennt man in der ganzen Welt.", uk: "Цю пісню знають у всьому світі."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Wer schreibt Musik?", opts: ["Der Komponist", "Der Tontechniker", "Der Thomaskantor"], correct: "Der Komponist"},
+    {q: "Ein Mensch, der nicht hören kann, ist …", opts: ["still", "taub", "leise"], correct: "taub"},
+    {q: "Bach … 1685 in Eisenach geboren.", opts: ["war", "wurde", "hat"], correct: "wurde"},
+    {q: "1723 … nach Leipzig.", opts: ["Bach kam", "kam Bach", "Bach kommte"], correct: "kam Bach"},
+    {q: "Mendelssohn … das erste Konservatorium Deutschlands.", opts: ["gründete", "gründte", "grundete"], correct: "gründete"},
+    {q: "Viele Menschen … Bachs Musik.", opts: ["vergaß", "vergessten", "vergaßen"], correct: "vergaßen"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Bach schrieb fast jede Woche neue Musik.", ok: true},
+    {s: "Mozart kommte 1756 in Salzburg zur Welt.", wrong: 1, fix: "kam"},
+    {s: "Bach bleibte 27 Jahre in Leipzig.", wrong: 1, fix: "blieb"},
+    {s: "Beethoven, die aus Bonn kam, lebte in Wien.", wrong: 1, fix: "der"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🎼', '🎹', '🎻', '🏛️']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
