@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 7, Modul B: Menschen, die hier leben — Німецька мова 8 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 8 КЛАС</span>
+        <h1>Lektion 7 · Modul B: Menschen, die hier leben</h1>
+        <p class="sub">Урок про німецькомовні країни та людей, які в них живуть: Німеччина, Австрія, Швейцарія, Ліхтенштейн, Люксембург. Країна — національність — мова, великі числа, дроби й відсотки (die Hälfte, ein Drittel, 9,2 Millionen). Текст і діалог з озвученням, вправи, говоріння, письмо і підсумковий тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Land und Leute</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Brüche</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Große Zahlen</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · In Worten</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+        <!-- ===== TEXT — власний текст + вправа на розуміння ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Deutsch — eine Sprache, viele Länder</h2>
+      <p class="lead">Для спільного проєкту «Unsere Städte» зі школою у Львові Ґрета й Ерік готують презентацію: у яких країнах говорять німецькою і скільки там людей. Послухай і прочитай. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l7-b-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>„In welchen Ländern spricht man eigentlich Deutsch?“, fragte Solomija in unserer letzten Videostunde mit der Klasse aus Lwiw. „In Deutschland natürlich!“, rief Max. Das stimmt, aber es ist nur ein Teil der Antwort. Deshalb haben Erik und ich für die nächste Stunde eine Präsentation vorbereitet.</p>
+        <p><b>Deutschland</b> ist das größte deutschsprachige Land: Hier leben rund 83,5 Millionen Menschen. In <b>Österreich</b> sind es etwa 9,2 Millionen <span class="gl" data-uk="мешканці" data-lemma="der Einwohner, -">Einwohner</span>, und ungefähr ein <span class="gl" data-uk="пʼята частина" data-lemma="das Fünftel, -">Fünftel</span> von ihnen hat einen ausländischen Pass. Die Österreicher sprechen Deutsch, aber manche Wörter sind anders: Der Januar heißt dort „Jänner“, und viele sagen „Paradeiser“ statt Tomate.</p>
+        <p>Am spannendsten finde ich die <b>Schweiz</b>. Dort leben über 9,1 Millionen Menschen, und das Land hat vier <span class="gl" data-uk="національні мови" data-lemma="die Landessprache, -n">Landessprachen</span>. Fast zwei <span class="gl" data-uk="третини" data-lemma="das Drittel, -">Drittel</span> der Schweizer haben Deutsch oder Schweizerdeutsch als <span class="gl" data-uk="основна мова" data-lemma="die Hauptsprache, -n">Hauptsprache</span>, fast ein <span class="gl" data-uk="чверть" data-lemma="das Viertel, -">Viertel</span> Französisch und 8 Prozent Italienisch. Die vierte Sprache, Rätoromanisch, sprechen nur 0,5 Prozent — also nicht einmal einer von hundert. In Zürich sagt man „Grüezi“ statt „Hallo“, und das Fahrrad heißt „Velo“.</p>
+        <p>Zwischen der Schweiz und Österreich liegt <b>Liechtenstein</b>. Das ganze Land hat nur rund 41.700 Einwohner, und mehr als ein Drittel von ihnen sind <span class="gl" data-uk="іноземці" data-lemma="der Ausländer, -">Ausländer</span>. Die <span class="gl" data-uk="столиця" data-lemma="die Hauptstadt, ¨-e">Hauptstadt</span> heißt Vaduz. In <b>Luxemburg</b> leben etwa 690.000 Menschen, fast die <span class="gl" data-uk="половина" data-lemma="die Hälfte">Hälfte</span> davon ohne luxemburgischen Pass. Dort gibt es drei <span class="gl" data-uk="офіційні мови" data-lemma="die Amtssprache, -n">Amtssprachen</span>: Luxemburgisch, Französisch und Deutsch. „Hallo“ heißt auf Luxemburgisch „Moien“.</p>
+        <p>Und das ist noch nicht alles: Auch in Belgien gibt es eine kleine deutschsprachige <span class="gl" data-uk="громада" data-lemma="die Gemeinschaft, -en">Gemeinschaft</span>, und in Südtirol in Italien ist Deutsch ebenfalls Amtssprache.</p>
+        <p>Am Ende haben wir Ostap gefragt, wie viele Schüler in seiner Klasse Deutsch lernen. „Alle 26 Schüler!“, hat er gesagt. Erik hat gelacht: „Dann ist eure Klasse ja fast ein kleines deutschsprachiges Land!“</p>
+        <p><i>Greta, 8b</i></p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">Große Zahlen, Brüche, Prozent</h2>
+      <p class="lead">Щоб говорити про населення, потрібні великі числа, дроби й відсотки. А ще — правильні слова для країни, людей і мови.</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. Große Zahlen lesen</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Zahl</th><th>So liest man</th></tr>
+          <tr><td>41.700</td><td>einundvierzig<b>tausend</b>siebenhundert</td></tr>
+          <tr><td>690.000</td><td>sechshundertneunzig<b>tausend</b></td></tr>
+          <tr><td>1.000.000</td><td><b>eine Million</b></td></tr>
+          <tr><td>9,2 Mio.</td><td>neun <b>Komma</b> zwei <b>Millionen</b></td></tr>
+          <tr><td>83,5 Mio.</td><td>dreiundachtzig Komma fünf Millionen</td></tr>
+        </table></div>
+        <div class="merke">Числа до мільйона пишемо <b>одним словом</b>. Million — іменник: <b>eine</b> Million, zwei Million<b>en</b>. Німецькою кома — це десятковий знак (9,2), а крапка або пробіл розділяють тисячі (41.700 / 41 700).</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. Brüche und Prozent</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Bruch</th><th>Deutsch</th><th>≈ Prozent</th></tr>
+          <tr><td>1/2</td><td><b>die Hälfte</b> · halb</td><td>50 %</td></tr>
+          <tr><td>1/3 · 2/3</td><td>ein Dritt<b>el</b> · zwei Drittel</td><td>33 % · 67 %</td></tr>
+          <tr><td>1/4 · 3/4</td><td>ein Viert<b>el</b> · drei Viertel</td><td>25 % · 75 %</td></tr>
+          <tr><td>1/5</td><td>ein Fünft<b>el</b></td><td>20 %</td></tr>
+        </table></div>
+        <div class="merke">Дроби утворюються з порядкового числівника + <b>-el</b>: drei → Dritt<b>el</b>, vier → Viert<b>el</b>. Усі вони середнього роду (<b>das</b> Drittel). Виняток — <b>die Hälfte</b>. Після дробу — Genitiv або von: ein Drittel <b>der</b> Schüler / ein Drittel <b>von</b> ihnen.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. Land — Leute — Sprache</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Land</th><th>Person</th><th>Sprache</th></tr>
+          <tr><td>Österreich</td><td>der Österreich<b>er</b> / die Österreicher<b>in</b></td><td>Deutsch</td></tr>
+          <tr><td>die Schweiz</td><td>der Schweiz<b>er</b> / die Schweizer<b>in</b></td><td>Deutsch, Französisch, Italienisch, Rätoromanisch</td></tr>
+          <tr><td>Italien</td><td>der Italien<b>er</b> / die Italiener<b>in</b></td><td>Italienisch</td></tr>
+          <tr><td>die Ukraine</td><td>der Ukrain<b>er</b> / die Ukrainer<b>in</b></td><td>Ukrainisch</td></tr>
+          <tr><td>die Türkei</td><td>der Türk<b>e</b> / die Türk<b>in</b></td><td>Türkisch</td></tr>
+          <tr><td>Polen</td><td>der Pol<b>e</b> / die Pol<b>in</b></td><td>Polnisch</td></tr>
+          <tr><td>Deutschland</td><td><b>der Deutsche / ein Deutscher</b> · die Deutsche</td><td>Deutsch</td></tr>
+        </table></div>
+        <div class="merke">Мова — середній рід і з великої літери: Ich spreche <b>Ukrainisch</b>. «Deutsche» відмінюється як прикметник: der Deutsch<b>e</b>, ein Deutsch<b>er</b>, viele Deutsch<b>e</b>.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">4. Типові помилки</p>
+        <p>✗ Er ist Italienisch. → ✓ Er ist <b>Italiener</b>. (людина ≠ мова)</p>
+        <p>✗ neun Komma zwei Million → ✓ neun Komma zwei Million<b>en</b></p>
+        <p>✗ Die Hälfte der Klasse sprechen Deutsch. → ✓ Die Hälfte der Klasse <b>spricht</b> Deutsch.</p>
+        <p>✗ ein Drei → ✓ ein <b>Drittel</b></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Land, Leute, Sprache</h2>
+      <p class="lead">Людина чи мова? Вибери правильне слово.</p>
+      <div class="card" id="ub1-list">
+        <div class="fill-item"><span class="num">1)</span> Matteos Papa kommt aus Neapel. Er ist
+          <select class="blank inline" data-ans="Italiener"><option value="">—</option><option>Italienisch</option><option>Italiener</option><option>Italien</option></select>.</div>
+        <div class="fill-item"><span class="num">2)</span> Aylas Mama kommt aus Istanbul. Sie ist
+          <select class="blank inline" data-ans="Türkin"><option value="">—</option><option>Türke</option><option>Türkin</option><option>Türkisch</option></select>.</div>
+        <div class="fill-item"><span class="num">3)</span> Mit ihrer Mama spricht Daryna zu Hause
+          <select class="blank inline" data-ans="Ukrainisch"><option value="">—</option><option>Ukrainisch</option><option>Ukrainer</option><option>Ukrainerin</option></select>.</div>
+        <div class="fill-item"><span class="num">4)</span> Solomija wohnt in Lwiw. Sie ist
+          <select class="blank inline" data-ans="Ukrainerin"><option value="">—</option><option>Ukrainisch</option><option>Ukrainer</option><option>Ukrainerin</option></select>.</div>
+        <div class="fill-item"><span class="num">5)</span> In Wien leben viele
+          <select class="blank inline" data-ans="Österreicher"><option value="">—</option><option>Österreich</option><option>Österreicher</option><option>Österreichisch</option></select>.</div>
+        <div class="fill-item"><span class="num">6)</span> Noah kommt aus Hamburg. Er ist
+          <select class="blank inline" data-ans="Deutscher"><option value="">—</option><option>Deutsch</option><option>Deutscher</option><option>Deutschland</option></select>.</div>
+        <div class="fill-item"><span class="num">7)</span> In Luxemburg spricht man auch
+          <select class="blank inline" data-ans="Luxemburgisch"><option value="">—</option><option>Luxemburger</option><option>Luxemburgisch</option><option>Luxemburg</option></select>.</div>
+        <div class="fill-item"><span class="num">8)</span> In Genf sprechen die meisten
+          <select class="blank inline" data-ans="Schweizer"><option value="">—</option><option>Schweiz</option><option>Schweizer</option><option>Schweizerisch</option></select> Französisch.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub1-check">Prüfen</button>
+        <button class="btn secondary" id="ub1-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub1-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Wie viele von 24?</h2>
+      <p class="lead">У 8b — 24 учні. Яка це частина класу? Вибери дріб.</p>
+      <div class="card" id="ub2-list"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wie liest man das?</h2>
+      <p class="lead">Як правильно прочитати число? Вибери варіант.</p>
+      <div class="card" id="ub3-quiz"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Schreib die Zahl in Worten</h2>
+      <p class="lead">Напиши число словами — так, як його читають. Числа до мільйона — одним словом.</p>
+      <div class="card" id="ub4-tr"></div>
+    </section>
+
+    <!-- ===== HÖREN ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Welche Sprachen spricht die 8b?</h2>
+      <p class="lead">Дарина й Ноа провели в 8b опитування для проєкту зі Львовом і розповідають про результати. Послухай (можна двічі) і дай відповіді. Текст відкривається внизу — але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l7-b-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Daryna:</b> Für unser Projekt mit Lwiw haben Noah und ich eine Umfrage gemacht: Welche Sprachen spricht die 8b? Alle 24 Schüler haben mitgemacht.<br>
+          <b>Noah:</b> Erste Frage: Welche Sprachen sprichst du zu Hause? Die Hälfte der Klasse spricht zu Hause nur Deutsch. Das sind zwölf Schüler.<br>
+          <b>Daryna:</b> Ein Drittel spricht zu Hause zwei Sprachen — also acht Schüler. Ich zum Beispiel: Mit Mama spreche ich Ukrainisch, mit Greta natürlich Deutsch.<br>
+          <b>Noah:</b> Matteo spricht mit seinem Papa Italienisch, und Ayla mit ihrer Mama Türkisch.<br>
+          <b>Daryna:</b> Und vier Schüler — das ist ein Sechstel — sprechen sogar drei Sprachen. Timur zum Beispiel spricht mit seiner Oma Usbekisch, aber er sagt, nur ein bisschen.<br>
+          <b>Noah:</b> Und ich? Ich spreche nur Deutsch. Aber mein Opa in Hamburg spricht Plattdeutsch. Ich verstehe ungefähr die Hälfte.<br>
+          <b>Daryna:</b> Zweite Frage: Welche Fremdsprachen lernt ihr in der Schule? Englisch lernen alle. Als zweite Fremdsprache lernen drei Viertel der Klasse Französisch und ein Viertel Latein.<br>
+          <b>Noah:</b> Zusammen haben wir in der 8b neun verschiedene Sprachen gezählt. Nicht schlecht für eine Klasse, oder?<br>
+          <b>Daryna:</b> Max hat übrigens gesagt, er spricht zwei Sprachen: Deutsch und Fußball.<br>
+          <b>Noah:</b> Das haben wir nicht mitgezählt. Morgen schicken wir die Ergebnisse nach Lwiw, und Ostap macht die gleiche Umfrage in seiner Klasse.
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Länder und Sprachen</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Welche Sprachen sprichst du? Welche Sprache sprichst du zu Hause?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Zu Hause spreche ich Ukrainisch. In der Schule lerne ich Englisch und Deutsch. Mit meiner Oma spreche ich manchmal auch ein bisschen Polnisch.</div>
+        </div>
+        <div class="qa">
+          <label>2. Präsentiere ein deutschsprachiges Land: Einwohner, Hauptstadt, Sprachen.</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Ich möchte Österreich präsentieren. Dort leben etwa 9,2 Millionen Menschen. Die Hauptstadt ist Wien. Man spricht Deutsch, aber manche Wörter sind anders, zum Beispiel „Jänner“ statt Januar.</div>
+        </div>
+        <div class="qa">
+          <label>3. Welches deutschsprachige Land findest du am interessantesten? Warum?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Am interessantesten finde ich die Schweiz, weil man dort vier Sprachen spricht. Ich finde es toll, wenn Menschen mehrere Sprachen können.</div>
+        </div>
+        <div class="qa">
+          <label>4. Mach eine kleine Umfrage in deiner Klasse: Wie viele lernen Deutsch, wie viele Englisch? Sag es mit Brüchen.</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">In meiner Klasse sind 28 Schüler. Alle lernen Englisch. Die Hälfte lernt Deutsch, ein Viertel lernt Französisch, und ein Viertel lernt Polnisch.</div>
+        </div>
+        <div class="qa">
+          <label>5. Warum ist es gut, mehrere Sprachen zu sprechen?</label>
+          <button class="btn secondary" type="button" data-reveal="spr5">Muster zeigen</button>
+          <div class="reveal" id="spr5">Wenn man mehrere Sprachen spricht, kann man mit mehr Menschen reden. Man versteht andere Kulturen besser, und auf Reisen ist alles leichter.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Steckbrief: ein deutschsprachiges Land</h2>
+      <p class="lead">Обери одну німецькомовну країну і напиши про неї 50–70 слів. Знайди свіжі дані в інтернеті. Використай щонайменше одне велике число і один дріб або відсоток.</p>
+      <div class="card">
+        <p>1) назва країни й столиця; 2) скільки там мешканців; 3) які там мови; 4) що тебе в цій країні цікавить.</p>
+        <p class="beispiel">Ich präsentiere … · Die Hauptstadt ist … · Dort leben rund … Millionen Menschen. · Ein Drittel / die Hälfte / … Prozent … · Man spricht … · Interessant finde ich …</p>
+        <div class="qa">
+          <label for="schreiben-text">Dein Steckbrief</label>
+          <textarea id="schreiben-text" rows="9" placeholder="Ich präsentiere …"
+            data-words="50-70"
+            data-must="Hauptstadt|leben|spricht"
+            data-check="Країна і столиця|Кількість мешканців|Мови|Що цікавить|Велике число|Дріб або відсоток"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Ich präsentiere Luxemburg. Das Land ist sehr klein, und die Hauptstadt heißt auch Luxemburg. Dort leben etwa 690.000 Menschen, fast die Hälfte davon sind Ausländer. Man spricht drei Sprachen: Luxemburgisch, Französisch und Deutsch. Interessant finde ich, dass viele Kinder schon in der Schule drei oder vier Sprachen lernen.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Die Schweiz hat vier
+          <select class="blank inline" data-ans="Landessprachen"><option value="">—</option><option>Landessprachen</option><option>Hauptstädte</option><option>Einwohner</option></select>.</div>
+        <div class="fill-item"><span class="num">8)</span> 50 Prozent — das ist
+          <select class="blank inline" data-ans="die Hälfte"><option value="">—</option><option>ein Drittel</option><option>die Hälfte</option><option>ein Viertel</option></select>.</div>
+        <div class="fill-item"><span class="num">9)</span> In Österreich leben etwa neun
+          <select class="blank inline" data-ans="Millionen"><option value="">—</option><option>Million</option><option>Millionen</option><option>Millionens</option></select> Menschen.</div>
+        <div class="fill-item"><span class="num">10)</span> Solomija kommt aus Lwiw. Sie ist
+          <select class="blank inline" data-ans="Ukrainerin"><option value="">—</option><option>Ukrainisch</option><option>Ukrainerin</option><option>Ukraine</option></select>.</div>
+        <div class="fill-item"><span class="num">11)</span> Die Hauptstadt von Liechtenstein heißt
+          <select class="blank inline" data-ans="Vaduz"><option value="">—</option><option>Vaduz</option><option>Bern</option><option>Wien</option></select>.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-8-klas-8-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-8-klas-8-rik";
+  const KN_UNIT = "l7-b";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Solomija wollte wissen, in welchen Ländern man Deutsch spricht.", a: "r"},
+    {s: "Max hat die Frage ganz richtig und vollständig beantwortet.", a: "f"},
+    {s: "In Deutschland leben rund 83,5 Millionen Menschen.", a: "r"},
+    {s: "Ungefähr die Hälfte der Menschen in Österreich hat einen ausländischen Pass.", a: "f"},
+    {s: "In Österreich sagt man „Jänner“ statt Januar.", a: "r"},
+    {s: "Die Schweiz hat vier Landessprachen.", a: "r"},
+    {s: "Rätoromanisch sprechen in der Schweiz sehr viele Menschen.", a: "f"},
+    {s: "Liechtenstein liegt zwischen der Schweiz und Österreich.", a: "r"},
+    {s: "In Luxemburg gibt es nur eine Amtssprache.", a: "f"},
+    {s: "In Ostaps Klasse lernen alle Schüler Deutsch.", a: "r"}
+  ]);
+
+  // Üb. 1
+  wireBlanks('ub1');
+
+  // Üb. 2: частина класу
+  buildMatch('ub2', [
+    ["12 von 24 Schülern", "die Hälfte"],
+    ["8 von 24 Schülern", "ein Drittel"],
+    ["16 von 24 Schülern", "zwei Drittel"],
+    ["6 von 24 Schülern", "ein Viertel"],
+    ["18 von 24 Schülern", "drei Viertel"],
+    ["4 von 24 Schülern", "ein Sechstel"],
+    ["3 von 24 Schülern", "ein Achtel"],
+    ["24 von 24 Schülern", "alle"]
+  ], {lead: true});
+
+  // Üb. 3: читання чисел
+  buildQuiz('ub3-quiz', [
+    {q: "83,5 Millionen", opts: ["dreiundachtzig Komma fünf Millionen", "achtunddreißig Komma fünf Millionen", "dreiundachtzig Punkt fünf Million"], correct: "dreiundachtzig Komma fünf Millionen"},
+    {q: "9,2 Millionen", opts: ["neun Komma zwei Millionen", "neunundzwanzig Millionen", "neun Komma zwei Million"], correct: "neun Komma zwei Millionen"},
+    {q: "41.700", opts: ["einundvierzigtausendsiebenhundert", "vierzigeinstausendsiebenhundert", "einundvierzig Komma sieben"], correct: "einundvierzigtausendsiebenhundert"},
+    {q: "690.000", opts: ["sechshundertneunzigtausend", "sechshundertneunzig Millionen", "neunzigsechshunderttausend"], correct: "sechshundertneunzigtausend"},
+    {q: "0,5 %", opts: ["null Komma fünf Prozent", "fünf Prozent", "fünfzig Prozent"], correct: "null Komma fünf Prozent"},
+    {q: "1.000.000", opts: ["eine Million", "ein Millionen", "tausend Tausend"], correct: "eine Million"},
+    {q: "2/3", opts: ["zwei Drittel", "zwei Dritte", "zweidrei"], correct: "zwei Drittel"},
+    {q: "3/4", opts: ["drei Viertel", "drei Vier", "dreiviert"], correct: "drei Viertel"}
+  ]);
+
+  // Üb. 4
+  buildTransform('ub4-tr', [
+    {s: "24", task: "in Worten", ans: "vierundzwanzig"},
+    {s: "175", task: "in Worten", ans: "einhundertfünfundsiebzig|hundertfünfundsiebzig"},
+    {s: "2026 (das Jahr)", task: "in Worten", ans: "zweitausendsechsundzwanzig"},
+    {s: "41.700", task: "in Worten", hint: "одним словом",
+     ans: "einundvierzigtausendsiebenhundert"},
+    {s: "690.000", task: "in Worten", ans: "sechshundertneunzigtausend"},
+    {s: "1.000.000", task: "in Worten", ans: "eine Million"},
+    {s: "9,2 Millionen", task: "in Worten", hint: "… Komma …",
+     ans: "neun Komma zwei Millionen"}
+  ]);
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Wie viele Schüler haben bei der Umfrage mitgemacht?", opts: ["24", "26", "12"], correct: "24"},
+    {q: "Wie viele Schüler sprechen zu Hause nur Deutsch?", opts: ["Die Hälfte", "Ein Drittel", "Drei Viertel"], correct: "Die Hälfte"},
+    {q: "Welche Sprache spricht Daryna mit ihrer Mama?", opts: ["Deutsch", "Ukrainisch", "Polnisch"], correct: "Ukrainisch"},
+    {q: "Mit wem spricht Matteo Italienisch?", opts: ["Mit seinem Papa", "Mit seiner Oma", "Mit Ayla"], correct: "Mit seinem Papa"},
+    {q: "Wie viele Schüler sprechen drei Sprachen?", opts: ["Vier — ein Sechstel", "Acht — ein Drittel", "Zwei"], correct: "Vier — ein Sechstel"},
+    {q: "Welche Sprache spricht Noahs Opa?", opts: ["Plattdeutsch", "Usbekisch", "Latein"], correct: "Plattdeutsch"},
+    {q: "Wie viele lernen Französisch als zweite Fremdsprache?", opts: ["Drei Viertel", "Ein Viertel", "Alle"], correct: "Drei Viertel"},
+    {q: "Wie viele Sprachen haben Daryna und Noah in der 8b gezählt?", opts: ["Neun", "Vier", "Zwölf"], correct: "Neun"}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "In Österreich leben etwa neun Komma zwei Millionen Menschen.", uk: "В Австрії живе приблизно 9,2 мільйона людей."},
+    {say: "Die Schweiz hat vier Landessprachen.", uk: "Швейцарія має чотири національні мови."},
+    {say: "Die Hälfte der Klasse spricht zu Hause nur Deutsch.", uk: "Половина класу вдома говорить лише німецькою."},
+    {say: "Mit meiner Mama spreche ich Ukrainisch.", uk: "З мамою я говорю українською."},
+    {say: "Fast ein Drittel sind Ausländer.", uk: "Майже третина — іноземці."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Ein Mann aus der Schweiz ist ein …", opts: ["Schweizer", "Schweizerisch", "Schweiz"], correct: "Schweizer"},
+    {q: "Eine Frau aus der Türkei ist eine …", opts: ["Türkin", "Türke", "Türkisch"], correct: "Türkin"},
+    {q: "25 Prozent — das ist …", opts: ["ein Viertel", "ein Fünftel", "die Hälfte"], correct: "ein Viertel"},
+    {q: "Wie liest man 690.000?", opts: ["sechshundertneunzigtausend", "sechshundertneunzig Millionen", "neunzigsechshunderttausend"], correct: "sechshundertneunzigtausend"},
+    {q: "In Luxemburg gibt es … Amtssprachen.", opts: ["drei", "zwei", "vier"], correct: "drei"},
+    {q: "Welches Land ist das größte deutschsprachige Land?", opts: ["Deutschland", "Österreich", "die Schweiz"], correct: "Deutschland"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "In der Schweiz gibt es vier Landessprachen.", ok: true},
+    {s: "Matteos Papa ist Italienisch.", wrong: 3, fix: "Italiener"},
+    {s: "Die Hälfte der Klasse sprechen zu Hause Deutsch.", wrong: 4, fix: "spricht"},
+    {s: "Aylas Mama spricht mit ihr Türke.", wrong: 5, fix: "Türkisch"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🗺️', '🗣️', '🔢', '🏆']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
