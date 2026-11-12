@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 5, Modul C: Unsere Schulen — Німецька мова 8 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 8 КЛАС</span>
+        <h1>Lektion 5 · Modul C: Unsere Schulen</h1>
+        <p class="sub">Урок про школи в Україні й Німеччині: порівняння двох систем (гімназія, ліцей, коледж, 12 років навчання) і план шкільної будівлі — Aula, Mensa, Turnhalle, Lehrerzimmer. Граматика — Wo? + Dativ: im Erdgeschoss, im ersten Stock, in der Turnhalle, neben der Bibliothek. Текст і діалог з озвученням, вправи, говоріння, письмо і підсумковий тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Vergleich</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Wo? + Dativ</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wo oder wohin?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · In welchem Raum?</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власний текст + вправа на розуміння ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Leipzig – Lwiw: zwei Schulen im Vergleich</h2>
+      <p class="lead">8b провела спільний онлайн-урок із класом Остапа й Соломії у Львові. Грета й Ерік написали про нього для шкільної газети. Послухай і прочитай. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l5-c-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Seit November schreiben wir Briefe an eine Schule in Lwiw. Letzten Freitag haben wir unsere Brieffreunde zum ersten Mal live gesehen: Herr Brandt und Frau Kowaltschuk, die Deutschlehrerin aus Lwiw, haben eine gemeinsame Videostunde organisiert. Das Thema: Wie sind unsere Schulen? Hier ist das Ergebnis.</p>
+        <p>Zuerst die <span class="gl" data-uk="спільні риси" data-lemma="die Gemeinsamkeit, -en">Gemeinsamkeiten</span>: In beiden Ländern kommen die Kinder mit sechs Jahren in die Schule, und die Grundschule dauert vier Jahre. Und in beiden Ländern dauert die Schule am Ende zwölf Jahre — in der Ukraine allerdings erst seit der großen Schulreform. Ostaps Jahrgang lernt schon nach dem neuen System.</p>
+        <p>Und die <span class="gl" data-uk="відмінності" data-lemma="der Unterschied, -e">Unterschiede</span>? In der Ukraine gibt es nach der vierten Klasse keine Bildungsempfehlung. Alle Kinder lernen von der fünften bis zur neunten Klasse zusammen — in einem Gymnasium! Das war für uns die größte Überraschung. Denn ein ukrainisches Gymnasium ist etwas ganz anderes als ein deutsches: Es endet nach der neunten Klasse. Ein echter „<span class="gl" data-uk="«фальшивий друг» (схоже слово з іншим значенням)" data-lemma="der falsche Freund">falscher Freund</span>“! Danach wählt man: Wer studieren möchte, geht für drei Jahre auf ein <span class="gl" data-uk="ліцей" data-lemma="das Lyzeum, die Lyzeen">Lyzeum</span>. Wer lieber einen Beruf lernt, geht auf ein <span class="gl" data-uk="коледж" data-lemma="das College, -s">College</span>. Für die Universität macht man am Ende einen Test, keine Abiturprüfung wie bei uns.</p>
+        <p>Dann haben wir unsere Schulen gezeigt. Unser <span class="gl" data-uk="будівля" data-lemma="das Gebäude, -">Gebäude</span> ist über hundert Jahre alt und hat drei Etagen. Im <span class="gl" data-uk="перший (цокольний) поверх" data-lemma="das Erdgeschoss">Erdgeschoss</span> liegen das Sekretariat, die <span class="gl" data-uk="шкільна їдальня" data-lemma="die Mensa, die Mensen">Mensa</span> und die <span class="gl" data-uk="актова зала" data-lemma="die Aula, die Aulen">Aula</span>. Im ersten <span class="gl" data-uk="поверх" data-lemma="der Stock / das Stockwerk">Stock</span> sind unsere Klassenräume und das <span class="gl" data-uk="учительська" data-lemma="das Lehrerzimmer, -">Lehrerzimmer</span> — ja, das mit dem berühmten Wasserkocher. Im zweiten Stock befinden sich die Bibliothek und die Computerräume. Die <span class="gl" data-uk="спортзал" data-lemma="die Turnhalle, -n">Turnhalle</span> steht hinter dem <span class="gl" data-uk="шкільне подвір'я" data-lemma="der Schulhof, ¨-e">Schulhof</span>, und im <span class="gl" data-uk="підвал" data-lemma="der Keller, -">Keller</span> probt die Band „Kurzschluss“.</p>
+        <p>Ostaps Schule ist neu und hell. Im Erdgeschoss gibt es eine große Mensa mit Fenstern zum Park, im zweiten Stock ein Physiklabor mit einem echten Teleskop — kein Wunder, dass Ostap Astronomie liebt! Aber im Keller ist etwas, das wir nicht haben: ein <span class="gl" data-uk="укриття" data-lemma="der Schutzraum, ¨-e">Schutzraum</span>. Wenn es <span class="gl" data-uk="повітряна тривога" data-lemma="der Luftalarm">Luftalarm</span> gibt, gehen alle Schüler dorthin. Dort sitzen sie auf Bänken, und der Unterricht geht weiter. „Man gewöhnt sich daran“, hat Solomija gesagt. Danach war es in unserem Klassenraum sehr still.</p>
+        <p>Am Ende haben wir einen Plan gemacht: Im Frühling wollen beide Klassen zusammen ein Projekt machen — „Unsere Städte“. Und Ostap und Erik? Die spielen natürlich weiter Online-Schach.</p>
+        <p><i>Greta und Erik, 8b</i></p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">Wo? + Dativ · Wohin? + Akkusativ</h2>
+      <p class="lead">Щоб сказати, <b>де</b> щось розташоване (питання <b>Wo?</b>), після прийменників in, an, auf, neben, hinter, vor, über, unter, zwischen ставимо <b>Dativ</b>. Якщо ж ідеться про рух <b>куди</b> (<b>Wohin?</b>) — <b>Akkusativ</b>.</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. Wo? — Dativ</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th></th><th>Wo?</th></tr>
+          <tr><td class="gender">m</td><td>i<strong>m</strong> Keller · auf <strong>dem</strong> Schulhof</td></tr>
+          <tr><td class="gender">n</td><td>i<strong>m</strong> Erdgeschoss · i<strong>m</strong> ersten Stock</td></tr>
+          <tr><td class="gender">f</td><td>in <strong>der</strong> Mensa · neben <strong>der</strong> Bibliothek</td></tr>
+          <tr><td class="gender">Pl.</td><td>in <strong>den</strong> Klassenräume<strong>n</strong></td></tr>
+        </table></div>
+        <div class="merke">in + dem = <b>im</b>, an + dem = <b>am</b>. У множині Dativ має <b>-n</b> в іменнику: in den Räume<b>n</b>.</div>
+        <div class="merke">Поверхи: <b>im Erdgeschoss</b> (наш 1-й поверх), <b>im ersten Stock</b> (наш 2-й), <b>im zweiten Stock</b> (наш 3-й). Німці рахують поверхи над першим!</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. Wo? чи Wohin?</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Wo? (Dativ)</th><th>Wohin? (Akkusativ)</th></tr>
+          <tr><td>Wir essen <b>in der</b> Mensa.</td><td>Wir gehen <b>in die</b> Mensa.</td></tr>
+          <tr><td>Die Band probt <b>im</b> Keller.</td><td>Die Band geht <b>in den</b> Keller.</td></tr>
+          <tr><td>Wir spielen <b>auf dem</b> Schulhof.</td><td>Wir laufen <b>auf den</b> Schulhof.</td></tr>
+        </table></div>
+        <div class="merke"><b>Wo?</b> — дієслова стану: sein, liegen, sich befinden, stehen, sitzen, essen, lernen. <b>Wohin?</b> — дієслова руху: gehen, laufen, kommen, bringen, legen.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. Як описати план</p>
+        <p>Im Erdgeschoss <b>liegt</b> die Mensa. · Die Aula <b>befindet sich</b> im Erdgeschoss. · Die Bibliothek ist <b>links von der</b> Treppe. · Der Computerraum ist <b>rechts vom</b> Musikraum. · Das Sekretariat liegt <b>zwischen dem</b> Eingang <b>und der</b> Mensa.</p>
+        <div class="merke">links / rechts <b>von</b> + Dativ: links von <b>der</b> Treppe, rechts <b>vom</b> (von dem) Eingang.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">4. Типові помилки</p>
+        <p>✗ Die Mensa ist in die Erdgeschoss. → ✓ <b>im</b> Erdgeschoss</p>
+        <p>✗ Wir essen in die Mensa. → ✓ <b>in der</b> Mensa</p>
+        <p>✗ Wir gehen in der Turnhalle. → ✓ Wir gehen <b>in die</b> Turnhalle.</p>
+        <p>✗ im erste Stock → ✓ im erste<b>n</b> Stock</p>
+        <p>✗ in den Klassenräume → ✓ in den Klassenräume<b>n</b></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Deutschland, Ukraine oder beide?</h2>
+      <p class="lead">Розклади твердження: це про Саксонію, про Україну чи про обидві країни?</p>
+      <div class="card" id="ub1-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Wo ist das?</h2>
+      <p class="lead">Опиши школу 8b. Вибери прийменник з артиклем у Dativ.</p>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> Das Sekretariat liegt
+          <select class="blank inline" data-ans="im"><option value="">—</option><option>im</option><option>in der</option><option>ins</option></select> Erdgeschoss.</div>
+        <div class="fill-item"><span class="num">2)</span> Wir essen zu Mittag
+          <select class="blank inline" data-ans="in der"><option value="">—</option><option>in die</option><option>in der</option><option>im</option></select> Mensa.</div>
+        <div class="fill-item"><span class="num">3)</span> Die Klassenräume sind
+          <select class="blank inline" data-ans="im ersten"><option value="">—</option><option>im ersten</option><option>im erste</option><option>in den ersten</option></select> Stock.</div>
+        <div class="fill-item"><span class="num">4)</span> Die Turnhalle steht
+          <select class="blank inline" data-ans="hinter dem"><option value="">—</option><option>hinter den</option><option>hinter dem</option><option>hinter der</option></select> Schulhof.</div>
+        <div class="fill-item"><span class="num">5)</span> Die Band „Kurzschluss“ probt
+          <select class="blank inline" data-ans="im"><option value="">—</option><option>in den</option><option>im</option><option>am</option></select> Keller.</div>
+        <div class="fill-item"><span class="num">6)</span> Der Computerraum ist
+          <select class="blank inline" data-ans="neben der"><option value="">—</option><option>neben die</option><option>neben dem</option><option>neben der</option></select> Bibliothek.</div>
+        <div class="fill-item"><span class="num">7)</span> In der Pause spielen wir
+          <select class="blank inline" data-ans="auf dem"><option value="">—</option><option>auf dem</option><option>auf den</option><option>auf der</option></select> Schulhof.</div>
+        <div class="fill-item"><span class="num">8)</span> In
+          <select class="blank inline" data-ans="den Klassenräumen"><option value="">—</option><option>den Klassenräume</option><option>die Klassenräume</option><option>den Klassenräumen</option></select> hängen interaktive Whiteboards.</div>
+        <div class="fill-item"><span class="num">9)</span> Die Bibliothek ist links
+          <select class="blank inline" data-ans="von der"><option value="">—</option><option>von der</option><option>von die</option><option>an der</option></select> Treppe.</div>
+        <div class="fill-item"><span class="num">10)</span> Bei Luftalarm sitzen Ostap und seine Klasse
+          <select class="blank inline" data-ans="im"><option value="">—</option><option>in den</option><option>im</option><option>ins</option></select> Schutzraum.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wo oder wohin?</h2>
+      <p class="lead">Спершу постав собі питання: де (Wo? — Dativ) чи куди (Wohin? — Akkusativ)? Тоді вибери форму.</p>
+      <div class="card" id="ub3-list">
+        <div class="fill-item"><span class="num">1)</span> Nach der dritten Stunde gehen wir
+          <select class="blank inline" data-ans="in die"><option value="">—</option><option>in die</option><option>in der</option></select> Mensa.</div>
+        <div class="fill-item"><span class="num">2)</span> Heute gibt es
+          <select class="blank inline" data-ans="in der"><option value="">—</option><option>in die</option><option>in der</option></select> Mensa Nudeln.</div>
+        <div class="fill-item"><span class="num">3)</span> Matteo trägt sein Schlagzeug
+          <select class="blank inline" data-ans="in den"><option value="">—</option><option>in den</option><option>im</option></select> Keller.</div>
+        <div class="fill-item"><span class="num">4)</span> Das Winterkonzert war
+          <select class="blank inline" data-ans="in der"><option value="">—</option><option>in die</option><option>in der</option></select> Aula.</div>
+        <div class="fill-item"><span class="num">5)</span> Frau Albrecht bringt die Noten
+          <select class="blank inline" data-ans="ins"><option value="">—</option><option>ins</option><option>im</option></select> Lehrerzimmer.</div>
+        <div class="fill-item"><span class="num">6)</span> Die Schüler laufen
+          <select class="blank inline" data-ans="auf den"><option value="">—</option><option>auf den</option><option>auf dem</option></select> Schulhof.</div>
+        <div class="fill-item"><span class="num">7)</span> Max sitzt in der Bibliothek
+          <select class="blank inline" data-ans="am"><option value="">—</option><option>am</option><option>an das</option></select> Fenster.</div>
+        <div class="fill-item"><span class="num">8)</span> Bei Luftalarm gehen alle Schüler
+          <select class="blank inline" data-ans="in den"><option value="">—</option><option>in den</option><option>im</option></select> Schutzraum.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">In welchem Raum macht man das?</h2>
+      <p class="lead">Прочитай, що там роблять, і вибери приміщення (з прийменником у Dativ).</p>
+      <div class="card" id="ub4-list"></div>
+    </section>
+
+    <!-- ===== HÖREN ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Der Neue in der 8b</h2>
+      <p class="lead">У 8b новий учень — Ноа з Гамбурга. Грета показує йому школу. Послухай (можна двічі) і дай відповіді. Текст відкривається внизу — але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l5-c-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Greta:</b> Hallo, du bist bestimmt Noah! Ich bin Greta. Frau Schulz hat gesagt, ich soll dir die Schule zeigen.<br>
+          <b>Noah:</b> Hallo, Greta! Ja, gern! Gestern habe ich mich schon im Sekretariat angemeldet, aber sonst kenne ich nichts.<br>
+          <b>Greta:</b> Also, wir stehen jetzt im Erdgeschoss. Das Sekretariat kennst du schon, es ist gleich rechts vom Eingang. Links ist die Mensa. Das Essen ist okay, aber freitags gibt es Fischstäbchen. Die sind super!<br>
+          <b>Noah:</b> Gut zu wissen. Und was ist hinter der großen Tür?<br>
+          <b>Greta:</b> Das ist die Aula. Dort war im Januar unser Winterkonzert — mit einem Stromausfall. Das erzähle ich dir später. Komm, wir gehen die Treppe hoch.<br>
+          <b>Noah:</b> Wo ist denn unser Klassenraum?<br>
+          <b>Greta:</b> Im ersten Stock, Raum 104, ganz am Ende vom Flur. Direkt neben uns ist das Lehrerzimmer. Bitte nicht klopfen, wenn es nicht wichtig ist!<br>
+          <b>Noah:</b> Verstanden. Und wo haben wir Chemie?<br>
+          <b>Greta:</b> Im zweiten Stock, in Raum 214. Dort sind auch die Bibliothek und die Computerräume. Die Bibliothekarin heißt Frau Sander. Sie ist sehr nett, aber Essen ist in der Bibliothek verboten.<br>
+          <b>Noah:</b> Und Sport? Ich spiele Basketball.<br>
+          <b>Greta:</b> Wirklich? Ich auch! Die Turnhalle ist hinter dem Schulhof. Training ist dienstags nach der sechsten Stunde.<br>
+          <b>Noah:</b> Cool. Ich spiele übrigens auch ein bisschen Gitarre.<br>
+          <b>Greta:</b> Dann musst du unbedingt in den Keller gehen! Dort probt die Schulband „Kurzschluss“. Sie suchen immer noch einen zweiten Gitarristen. Frag nach Matteo, er spielt Schlagzeug.<br>
+          <b>Noah:</b> Danke, Greta! Eine Frage noch … wo sind die Toiletten?<br>
+          <b>Greta:</b> Auf jeder Etage neben der Treppe. Willkommen in der 8b!
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Meine Schule</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Beschreibe dein Schulgebäude: Wie viele Etagen? Was ist wo?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Unsere Schule ist ein großes Gebäude mit drei Etagen. Im Erdgeschoss liegen die Mensa und die Turnhalle. Im ersten Stock sind die Klassenräume für die Grundschule, und im zweiten Stock befinden sich die Bibliothek und der Computerraum.</div>
+        </div>
+        <div class="qa">
+          <label>2. Welcher Raum in deiner Schule gefällt dir am besten? Warum?</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Am besten gefällt mir unsere Bibliothek. Sie ist hell und ruhig, und es gibt bequeme Sessel am Fenster. Dort lese ich in der Pause.</div>
+        </div>
+        <div class="qa">
+          <label>3. Was fehlt in deiner Schule? Was möchtest du ändern?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">In unserer Schule fehlt ein Musikraum mit Instrumenten. Ich möchte auch mehr Grün auf dem Schulhof — Bäume und Bänke, damit wir in der Pause draußen sitzen können.</div>
+        </div>
+        <div class="qa">
+          <label>4. Vergleiche: Welche Gemeinsamkeiten und Unterschiede gibt es zwischen Schulen in der Ukraine und in Deutschland?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">In beiden Ländern beginnt die Schule mit sechs Jahren. Ein großer Unterschied: In Deutschland trennen sich die Wege schon nach der vierten Klasse, in der Ukraine erst nach der neunten. Auch die Noten sind anders: Bei uns ist die Zwölf die beste Note, in Deutschland die Eins.</div>
+        </div>
+        <div class="qa">
+          <label>5. Zeig einem neuen Mitschüler die Schule. Spielt einen Dialog.</label>
+          <button class="btn secondary" type="button" data-reveal="spr5">Muster zeigen</button>
+          <div class="reveal" id="spr5">— Entschuldigung, wo ist der Computerraum? — Im zweiten Stock, links von der Treppe. — Und die Mensa? — Im Erdgeschoss, gleich neben dem Eingang. — Danke! — Gern geschehen!</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Willkommen in unserer Schule!</h2>
+      <p class="lead">До вашої школи приїжджає клас із Німеччини. Напиши для гостей короткий опис школи — 60–80 слів. Ужий щонайменше чотири вирази з <b>Wo? + Dativ</b>.</p>
+      <div class="card">
+        <p>1) яка ваша школа (велика / маленька, стара / нова, скільки поверхів); 2) що є на першому поверсі (im Erdgeschoss); 3) що на інших поверхах; 4) що є біля школи (подвір'я, спортмайданчик); 5) твоє улюблене місце і чому; 6) запрошення.</p>
+        <p class="beispiel">Unsere Schule ist … · Sie hat … Etagen · Im Erdgeschoss liegen … · Im ersten Stock befinden sich … · Neben der Schule gibt es … · Mein Lieblingsort ist … , weil … · Herzlich willkommen!</p>
+        <div class="qa">
+          <label for="schreiben-text">Dein Text</label>
+          <textarea id="schreiben-text" rows="10" placeholder="Unsere Schule ist …"
+            data-words="60-80"
+            data-must="im|Stock|Erdgeschoss"
+            data-check="Яка школа|Erdgeschoss|Інші поверхи|Біля школи|Улюблене місце|Запрошення"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Unsere Schule ist ein modernes Gebäude mit vier Etagen. Im Erdgeschoss liegen die Mensa, die Garderobe und die Turnhalle. Im ersten Stock befinden sich die Klassenräume der Grundschule. Im zweiten Stock sind die Bibliothek und zwei Computerräume. Im Keller gibt es einen Schutzraum. Neben der Schule haben wir einen Sportplatz. Mein Lieblingsort ist die Bibliothek, weil es dort ruhig ist und weil man auf Sitzsäcken lesen kann. Herzlich willkommen!</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Die Mensa liegt
+          <select class="blank inline" data-ans="im"><option value="">—</option><option>im</option><option>ins</option><option>in die</option></select> Erdgeschoss.</div>
+        <div class="fill-item"><span class="num">8)</span> Wir gehen jetzt
+          <select class="blank inline" data-ans="in die"><option value="">—</option><option>in der</option><option>in die</option><option>im</option></select> Turnhalle.</div>
+        <div class="fill-item"><span class="num">9)</span> Unser Klassenraum ist im
+          <select class="blank inline" data-ans="ersten"><option value="">—</option><option>erste</option><option>ersten</option><option>erster</option></select> Stock.</div>
+        <div class="fill-item"><span class="num">10)</span> Das Sekretariat ist rechts
+          <select class="blank inline" data-ans="vom"><option value="">—</option><option>vom</option><option>von den</option><option>zum</option></select> Eingang.</div>
+        <div class="fill-item"><span class="num">11)</span> In der Pause sind alle
+          <select class="blank inline" data-ans="auf dem"><option value="">—</option><option>auf den</option><option>auf dem</option><option>auf die</option></select> Schulhof.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-8-klas-8-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-8-klas-8-rik";
+  const KN_UNIT = "l5-c";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Die 8b hat ihre Brieffreunde aus Lwiw zum ersten Mal live gesehen.", a: "r"},
+    {s: "In der Ukraine kommen die Kinder mit sieben Jahren in die Schule.", a: "f"},
+    {s: "In der Ukraine gibt es nach der vierten Klasse eine Bildungsempfehlung.", a: "f"},
+    {s: "Ein ukrainisches Gymnasium endet nach der neunten Klasse.", a: "r"},
+    {s: "Wer einen Beruf lernen möchte, kann in der Ukraine auf ein College gehen.", a: "r"},
+    {s: "Die Schule der 8b ist ganz neu.", a: "f"},
+    {s: "Die Bibliothek der 8b liegt im zweiten Stock.", a: "r"},
+    {s: "In Ostaps Schule gibt es ein Physiklabor mit einem Teleskop.", a: "r"},
+    {s: "Bei Luftalarm ist der Unterricht in Lwiw zu Ende.", a: "f"},
+    {s: "Im Frühling wollen beide Klassen ein gemeinsames Projekt machen.", a: "r"}
+  ]);
+
+  // Üb. 1: сортування
+  buildSort('ub1-sort', {
+    buckets: ["Sachsen", "Ukraine", "beide"],
+    items: [
+      {t: "Die Kinder kommen mit sechs Jahren in die Schule.", b: "beide"},
+      {t: "Die Grundschule dauert vier Jahre.", b: "beide"},
+      {t: "Nach der vierten Klasse gibt es eine Bildungsempfehlung.", b: "Sachsen"},
+      {t: "Das Gymnasium endet nach der neunten Klasse.", b: "Ukraine"},
+      {t: "Das Gymnasium endet mit dem Abitur.", b: "Sachsen"},
+      {t: "Die beste Note ist die Zwölf.", b: "Ukraine"},
+      {t: "Die beste Note ist die Eins.", b: "Sachsen"},
+      {t: "Nach der neunten Klasse geht man auf ein Lyzeum oder ein College.", b: "Ukraine"},
+      {t: "Die Schule dauert insgesamt zwölf Jahre.", b: "beide"}
+    ]
+  });
+
+  // Üb. 2, Üb. 3
+  wireBlanks('ub2');
+  wireBlanks('ub3');
+
+  // Üb. 4: що роблять → де
+  buildMatch('ub4', [
+    ["Hier isst man zu Mittag.", "in der Mensa"],
+    ["Hier spielt man Basketball, auch wenn es regnet.", "in der Turnhalle"],
+    ["Hier trinken die Lehrer Kaffee und korrigieren Arbeiten.", "im Lehrerzimmer"],
+    ["Hier finden Konzerte und Schulfeste statt.", "in der Aula"],
+    ["Hier meldet man sich an der Schule an.", "im Sekretariat"],
+    ["Hier leiht man Bücher aus.", "in der Bibliothek"],
+    ["Hier spielt man in der Pause draußen.", "auf dem Schulhof"],
+    ["Hier probt die Schulband.", "im Keller"]
+  ], {lead: true});
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Woher kommt Noah?", opts: ["Aus Hamburg", "Aus Dresden", "Aus Berlin"], correct: "Aus Hamburg"},
+    {q: "Wo ist das Sekretariat?", opts: ["Rechts vom Eingang", "Im ersten Stock", "Neben der Aula"], correct: "Rechts vom Eingang"},
+    {q: "Was gibt es freitags in der Mensa?", opts: ["Pizza", "Fischstäbchen", "Nudeln"], correct: "Fischstäbchen"},
+    {q: "Wo ist der Klassenraum der 8b?", opts: ["Im Erdgeschoss", "Im ersten Stock, Raum 104", "Im zweiten Stock, Raum 214"], correct: "Im ersten Stock, Raum 104"},
+    {q: "Was ist direkt neben dem Klassenraum der 8b?", opts: ["Die Bibliothek", "Das Lehrerzimmer", "Der Chemieraum"], correct: "Das Lehrerzimmer"},
+    {q: "Was ist in der Bibliothek verboten?", opts: ["Laut lesen", "Essen", "Handys"], correct: "Essen"},
+    {q: "Wo ist die Turnhalle?", opts: ["Hinter dem Schulhof", "Im Keller", "Neben der Mensa"], correct: "Hinter dem Schulhof"},
+    {q: "Warum soll Noah in den Keller gehen?", opts: ["Dort ist der Schutzraum.", "Die Band sucht einen Gitarristen.", "Dort ist die Garderobe."], correct: "Die Band sucht einen Gitarristen."}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Die Mensa liegt im Erdgeschoss.", uk: "Їдальня розташована на першому поверсі."},
+    {say: "Unser Klassenraum ist im ersten Stock.", uk: "Наш клас — на другому поверсі."},
+    {say: "Die Bibliothek ist links von der Treppe.", uk: "Бібліотека — ліворуч від сходів."},
+    {say: "Nach der Stunde gehen wir in die Turnhalle.", uk: "Після уроку ми йдемо до спортзалу."},
+    {say: "Entschuldigung, wo ist das Sekretariat?", uk: "Перепрошую, де канцелярія?"}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Konzerte und Schulfeste finden in der … statt.", opts: ["Aula", "Mensa", "Garderobe"], correct: "Aula"},
+    {q: "„Im ersten Stock“ ist in der Ukraine …", opts: ["der erste Stock", "der zweite Stock", "das Erdgeschoss"], correct: "der zweite Stock"},
+    {q: "Ein ukrainisches Gymnasium umfasst die Klassen …", opts: ["5 bis 9", "5 bis 12", "1 bis 4"], correct: "5 bis 9"},
+    {q: "Bei Luftalarm gehen ukrainische Schüler in den …", opts: ["Schutzraum", "Schulhof", "Musikraum"], correct: "Schutzraum"},
+    {q: "Wo? — Wir sitzen …", opts: ["in der Mensa", "in die Mensa", "zur Mensa"], correct: "in der Mensa"},
+    {q: "Wohin? — Die Band geht …", opts: ["in den Keller", "im Keller", "am Keller"], correct: "in den Keller"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Die Bibliothek befindet sich im zweiten Stock.", ok: true},
+    {s: "Wir essen in die Mensa.", wrong: 3, fix: "der"},
+    {s: "Die Aula liegt in Erdgeschoss.", wrong: 3, fix: "im"},
+    {s: "Nach der Stunde gehen wir in der Mensa.", wrong: 6, fix: "die"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🏫', '🗺️', '📚', '🏆']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
