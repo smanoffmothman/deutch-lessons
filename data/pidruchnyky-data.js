@@ -383,8 +383,8 @@ const PIDRUCHNYKY = [
         { id: "l5-a", label: "A", nazva: "Wozu braucht man Schulen?", storinky: "92–98", typ: "vpravy", gram: ["finalsaetze", "infinitiv-um-zu"], opublikovano: 20 },
         { id: "l5-b", label: "B", nazva: "Schulen in Deutschland", storinky: "99–105", typ: "vpravy", opublikovano: 21 },
         { id: "l5-c", label: "C", nazva: "Unsere Schulen", storinky: "106–111", typ: "vpravy", gram: ["wechselpraepositionen"], opublikovano: 22 },
-        { id: "l5-d", label: "D", nazva: "Wiederholung", storinky: "112–113", typ: "povtorennya", gram: ["finalsaetze", "infinitiv-um-zu", "wechselpraepositionen"] },
-        { id: "l5-e", label: "E", nazva: "Geschichtenzeit", storinky: "114", typ: "chytannya" },
+        { id: "l5-d", label: "D", nazva: "Wiederholung", storinky: "112–113", typ: "povtorennya", gram: ["finalsaetze", "infinitiv-um-zu", "wechselpraepositionen"], opublikovano: 23 },
+        { id: "l5-e", label: "E", nazva: "Geschichtenzeit", storinky: "114", typ: "chytannya", opublikovano: 24 },
         { id: "l5-f", label: "F", nazva: "Projektarbeit", storinky: "115", typ: "bez-storinky" },
         { id: "l5-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "116", typ: "bez-storinky" }
       ] },

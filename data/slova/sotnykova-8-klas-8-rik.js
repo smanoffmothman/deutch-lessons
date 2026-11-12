@@ -511,5 +511,21 @@
   {de: "die Gemeinsamkeit, -en", uk: "спільна риса", r: "l5-c"},
   {de: "der Unterschied, -e", uk: "відмінність", r: "l5-c"},
   {de: "vergleichen, hat verglichen", uk: "порівнювати", r: "l5-c"},
-  {de: "der falsche Freund", uk: "«фальшивий друг» (слово, схоже, але з іншим значенням)", r: "l5-c"}
+  {de: "der falsche Freund", uk: "«фальшивий друг» (слово, схоже, але з іншим значенням)", r: "l5-c"},
+  // ---- Lektion 5 · Modul E: Geschichtenzeit ----
+  {de: "der Tag der offenen Tür", uk: "день відчинених дверей", r: "l5-e"},
+  {de: "der Viertklässler, -", uk: "четвертокласник", r: "l5-e", note: "die Viertklässlerin, -nen"},
+  {de: "die Schulführung, -en", uk: "екскурсія школою", r: "l5-e"},
+  {de: "die Schulleiterin, -nen", uk: "директорка школи", r: "l5-e", note: "der Schulleiter, -"},
+  {de: "verpassen", uk: "пропускати, втрачати", r: "l5-e"},
+  {de: "wegwerfen, hat weggeworfen", uk: "викидати", r: "l5-e"},
+  {de: "der Vulkan, -e", uk: "вулкан", r: "l5-e"},
+  {de: "der Schaum", uk: "піна", r: "l5-e"},
+  {de: "wischen", uk: "витирати", r: "l5-e", note: "den Boden wischen"},
+  {de: "nervös", uk: "знервований", r: "l5-e"},
+  {de: "klappen", uk: "вдаватися, виходити", r: "l5-e", note: "Es hat geklappt!"},
+  {de: "anmelden", uk: "записати (до школи), зареєструвати", r: "l5-e"},
+  {de: "das Beratungsgespräch, -e", uk: "консультаційна розмова", r: "l5-e"},
+  {de: "umarmen", uk: "обіймати", r: "l5-e"},
+  {de: "der Kompromiss, -e", uk: "компроміс", r: "l5-e"}
 ];
