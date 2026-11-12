@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 5, Modul A: Wozu braucht man Schulen? — Німецька мова 8 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 8 КЛАС</span>
+        <h1>Lektion 5 · Modul A: Wozu braucht man Schulen?</h1>
+        <p class="sub">Урок про те, навіщо потрібна школа: предмети, оцінки й табель, німецька шкала від 1 до 6, суперечка «оцінки — за чи проти?». Граматика — підрядні речення мети: «um … zu» і «damit». Текст і діалог з озвученням, вправи, говоріння, письмо і підсумковий тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Schulwörter</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · um oder damit?</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · auszuleihen</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Finalsätze</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власний текст + вправа на розуміння ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Zwei Schulen, ein Kopf</h2>
+      <p class="lead">Пан Брандт запитав 8b: «Навіщо потрібні школи?» Дарина відповіла дописом у шкільну газету — адже в неї дві школи. Послухай і прочитай. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l5-a-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Letzte Woche hat Herr Brandt uns eine einfache Frage gestellt: „<span class="gl" data-uk="навіщо? для чого?" data-lemma="wozu?">Wozu</span> braucht man Schulen?“ Erik hat sofort geantwortet: „Damit die Eltern morgens ihre Ruhe haben!“ Alle haben gelacht. Aber für mich ist die Frage gar nicht so einfach. Ich gehe nämlich in zwei Schulen.</p>
+        <p>Morgens bin ich, wie alle, in unserer Schule in Leipzig. Hier lerne ich Mathe, Biologie, Englisch und natürlich Deutsch. Vor drei Jahren konnte ich fast kein Wort Deutsch, heute schreibe ich Texte für die Schülerzeitung. Ich gehe hierher, um gute <span class="gl" data-uk="знання" data-lemma="die Kenntnisse (Pl.)">Kenntnisse</span> zu bekommen und später das <span class="gl" data-uk="атестат про повну середню освіту (іспити в гімназії)" data-lemma="das Abitur">Abitur</span> zu machen. Und um meine Freunde zu sehen — das ist ehrlich gesagt auch ein wichtiger <span class="gl" data-uk="причина" data-lemma="der Grund, ¨-e">Grund</span>.</p>
+        <p>Zweimal pro Woche, am Dienstag und am Donnerstag, öffne ich nach den Hausaufgaben meinen Laptop. Dann beginnt meine zweite Schule: eine ukrainische <span class="gl" data-uk="онлайн-школа" data-lemma="die Online-Schule, -n">Online-Schule</span>. Dort lerne ich Ukrainisch, ukrainische Literatur und die Geschichte der Ukraine. Unsere Lehrerin sitzt in Lwiw, meine <span class="gl" data-uk="однокласник, однокласниця" data-lemma="der Mitschüler, -">Mitschüler</span> wohnen in ganz Europa: in Polen, in Spanien, in Irland.</p>
+        <p>Wozu brauche ich das? Meine Mutter sagt: „Damit du deine <span class="gl" data-uk="рідна мова" data-lemma="die Muttersprache, -n">Muttersprache</span> nicht <span class="gl" data-uk="забувати" data-lemma="vergessen, hat vergessen">vergisst</span>.“ Ich sage: um Oma Halyna lange Briefe ohne Fehler zu schreiben. Und um Lessja Ukrajinka im Original zu lesen — Timur kennt ihr „Waldlied“ nur auf Deutsch. Und damit ich in Charkiw weiterlernen kann, wenn wir eines Tages zurückgehen.</p>
+        <p>Leicht ist das nicht. Manchmal bin ich am Abend sehr müde. Manchmal schreibe ich einen Test, während die anderen beim Training sind. Am Ende des Schuljahres bekomme ich zwei <span class="gl" data-uk="табель, свідоцтво" data-lemma="das Zeugnis, -se">Zeugnisse</span>: eins mit <span class="gl" data-uk="оцінка" data-lemma="die Note, -n">Noten</span> von 1 bis 6 und eins mit Punkten von 1 bis 12. In Deutschland ist die 1 die beste Note, in der Ukraine die 12. Am Anfang war das ganz schön <span class="gl" data-uk="заплутаний" data-lemma="verwirrend">verwirrend</span>!</p>
+        <p>Greta hilft mir, damit ich nicht <span class="gl" data-uk="здаватися, кидати (справу)" data-lemma="aufgeben, hat aufgegeben">aufgebe</span>. Wenn ich ein <span class="gl" data-uk="доповідь" data-lemma="das Referat, -e">Referat</span> für die Online-Schule vorbereite, hört sie zu und stellt Fragen — auf Deutsch natürlich. Dafür <span class="gl" data-uk="навчаю (когось чогось)" data-lemma="jemandem etwas beibringen">bringe</span> ich ihr das ukrainische Alphabet <span class="gl" data-uk="навчаю (когось чогось)" data-lemma="jemandem etwas beibringen">bei</span>. Sie will es lernen, um in Charkiw die Straßenschilder zu lesen, wenn wir einmal zusammen hinfahren.</p>
+        <p>Also: Wozu braucht man Schulen? Meine Antwort ist: um zu verstehen, wie die Welt funktioniert. Und um nicht zu vergessen, woher man kommt.</p>
+        <p><i>Daryna, 8b</i></p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">Finalsätze: um … zu · damit</h2>
+      <p class="lead">Щоб сказати, <b>навіщо</b> ми щось робимо (питання <b>Wozu?</b>), німецька має два способи: <b>um … zu</b> + інфінітив і підрядне речення з <b>damit</b>. Українською обидва — «щоб».</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. um … zu — той самий підмет</p>
+        <p><b>Ich</b> gehe in die Schule. <b>Ich</b> will das Abitur machen.<br>
+           → Ich gehe in die Schule, <strong>um</strong> das Abitur <strong>zu</strong> machen.</p>
+        <div class="merke">Якщо в обох частинах <b>та сама особа</b>, беремо um … zu. Підмета в другій частині немає: <b>um</b> на початку, <b>zu + інфінітив</b> у самому кінці.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. damit — різні підмети</p>
+        <p><b>Herr Brandt</b> erklärt die Regel noch einmal. <b>Alle</b> sollen sie verstehen.<br>
+           → Herr Brandt erklärt die Regel noch einmal, <strong>damit</strong> alle sie <strong>verstehen</strong>.</p>
+        <div class="merke">Якщо особи <b>різні</b>, потрібне підрядне речення з <b>damit</b>: підмет є, дієслово стоїть <b>у кінці</b>. Перед damit і перед um — <b>кома</b>.</div>
+        <div class="merke">У реченні з damit не вживай <b>wollen</b> і <b>sollen</b> — мета вже є в самому damit: ✗ damit alle sie verstehen sollen.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. zu у дієсловах</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Verb</th><th>um … zu</th></tr>
+          <tr><td>lernen</td><td>um … <strong>zu</strong> lernen</td></tr>
+          <tr><td>vergessen</td><td>um … nicht <strong>zu</strong> vergessen</td></tr>
+          <tr><td>ausleihen</td><td>um … aus<strong>zu</strong>leihen</td></tr>
+          <tr><td>sich vorbereiten</td><td>um <b>sich</b> … vor<strong>zu</strong>bereiten</td></tr>
+        </table></div>
+        <div class="merke">У дієсловах з відокремлюваним префіксом zu стоїть <b>між префіксом і основою</b> й пишеться разом: ab<b>zu</b>holen, ein<b>zu</b>laden, teil<b>zu</b>nehmen. У невідокремлюваних (be-, ver-, er-…) zu стоїть окремо: <b>zu</b> bekommen, <b>zu</b> verstehen.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">4. Мета на початку речення</p>
+        <p><strong>Um</strong> fit <strong>zu</strong> bleiben, <b>fährt</b> Erik Rad.<br>
+           <strong>Damit</strong> Greta die Schilder lesen kann, <b>bringt</b> Daryna ihr das Alphabet bei.</p>
+        <div class="merke">Якщо мета стоїть першою, головне речення починається з <b>дієслова</b>.</div>
+        <div class="merke">Питання до мети: <b>Wozu?</b> — Wozu lernst du Ukrainisch? — <b>Um</b> Bücher im Original <b>zu</b> lesen.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">5. Типові помилки</p>
+        <p>✗ Ich lerne viel, damit eine gute Note zu bekommen. → ✓ <b>um</b> eine gute Note zu bekommen</p>
+        <p>✗ Ich lerne viel, um ich eine gute Note bekomme. → ✓ um eine gute Note <b>zu bekommen</b></p>
+        <p>✗ Mama hilft mir, um ich die Aufgabe verstehe. → ✓ <b>damit</b> ich die Aufgabe verstehe</p>
+        <p>✗ um das Buch zu ausleihen → ✓ um das Buch aus<b>zu</b>leihen</p>
+        <p>✗ Ich spreche langsam, damit du verstehst mich. → ✓ damit du mich <b>verstehst</b></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Was ist das?</h2>
+      <p class="lead">Прочитай пояснення і вибери шкільне слово.</p>
+      <div class="card" id="ub1-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">um oder damit?</h2>
+      <p class="lead">Подивися: та сама особа чи інша? Є zu + інфінітив чи підмет і дієслово в кінці? Вибери сполучник.</p>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> Ich gehe in die Schule,
+          <select class="blank inline" data-ans="um"><option value="">—</option><option>um</option><option>damit</option><option>dass</option></select> gute Kenntnisse zu bekommen.</div>
+        <div class="fill-item"><span class="num">2)</span> Mama schickt mich in die Online-Schule,
+          <select class="blank inline" data-ans="damit"><option value="">—</option><option>um</option><option>damit</option><option>dass</option></select> ich meine Muttersprache nicht vergesse.</div>
+        <div class="fill-item"><span class="num">3)</span> Greta lernt das Alphabet,
+          <select class="blank inline" data-ans="um"><option value="">—</option><option>damit</option><option>um</option><option>dass</option></select> die Straßenschilder in Charkiw zu lesen.</div>
+        <div class="fill-item"><span class="num">4)</span> Herr Brandt erklärt die Regel noch einmal,
+          <select class="blank inline" data-ans="damit"><option value="">—</option><option>um</option><option>dass</option><option>damit</option></select> alle sie verstehen.</div>
+        <div class="fill-item"><span class="num">5)</span> Nina lernt zwei Wochen lang,
+          <select class="blank inline" data-ans="um"><option value="">—</option><option>um</option><option>damit</option><option>dass</option></select> eine Eins in Bio zu bekommen.</div>
+        <div class="fill-item"><span class="num">6)</span> Ich stelle den Wecker auf 6:45,
+          <select class="blank inline" data-ans="damit"><option value="">—</option><option>um</option><option>damit</option><option>dass</option></select> ich nicht zu spät komme.</div>
+        <div class="fill-item"><span class="num">7)</span> Erik geht in die Stadtbibliothek,
+          <select class="blank inline" data-ans="um"><option value="">—</option><option>damit</option><option>dass</option><option>um</option></select> ein Sachbuch auszuleihen.</div>
+        <div class="fill-item"><span class="num">8)</span>
+          <select class="blank inline" data-ans="Damit"><option value="">—</option><option>Um</option><option>Damit</option><option>Dass</option></select> wir das Ergebnis bekanntgeben können, stimmt bitte bis Freitag ab!</div>
+        <div class="fill-item"><span class="num">9)</span>
+          <select class="blank inline" data-ans="Um"><option value="">—</option><option>Um</option><option>Damit</option><option>Dass</option></select> besser Englisch zu sprechen, sieht Ayla Serien im Original.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wo steht zu?</h2>
+      <p class="lead">Вибери правильну форму інфінітива з zu. Пам'ятай: у дієсловах з відокремлюваним префіксом zu стоїть усередині.</p>
+      <div class="card" id="ub3-list">
+        <div class="fill-item"><span class="num">1)</span> Daryna öffnet den Laptop, um am Unterricht
+          <select class="blank inline" data-ans="teilzunehmen"><option value="">—</option><option>zu teilnehmen</option><option>teilzunehmen</option><option>teilnehmen zu</option></select>.</div>
+        <div class="fill-item"><span class="num">2)</span> Greta kommt am Abend, um Daryna beim Referat
+          <select class="blank inline" data-ans="zu helfen"><option value="">—</option><option>zu helfen</option><option>helfen</option><option>hilft</option></select>.</div>
+        <div class="fill-item"><span class="num">3)</span> Max steht um sechs auf, um sich auf die Klassenarbeit
+          <select class="blank inline" data-ans="vorzubereiten"><option value="">—</option><option>zu vorbereiten</option><option>vorbereiten zu</option><option>vorzubereiten</option></select>.</div>
+        <div class="fill-item"><span class="num">4)</span> Wir üben jeden Tag, um die Wörter nicht
+          <select class="blank inline" data-ans="zu vergessen"><option value="">—</option><option>verzugessen</option><option>zu vergessen</option><option>vergessen</option></select>.</div>
+        <div class="fill-item"><span class="num">5)</span> Erik ruft Ostap an, um ihn zum Schachspiel
+          <select class="blank inline" data-ans="einzuladen"><option value="">—</option><option>einzuladen</option><option>zu einladen</option><option>einladen</option></select>.</div>
+        <div class="fill-item"><span class="num">6)</span> Nina geht zur Musikschule, um ihren kleinen Bruder
+          <select class="blank inline" data-ans="abzuholen"><option value="">—</option><option>zu abholen</option><option>abholt</option><option>abzuholen</option></select>.</div>
+        <div class="fill-item"><span class="num">7)</span> Daryna ruft Oma Halyna an, um ihr alles
+          <select class="blank inline" data-ans="zu erzählen"><option value="">—</option><option>erzuzählen</option><option>zu erzählen</option><option>erzählt</option></select>.</div>
+        <div class="fill-item"><span class="num">8)</span> Timur liest das „Waldlied“, um den Text
+          <select class="blank inline" data-ans="zu verstehen"><option value="">—</option><option>zu verstehen</option><option>verzustehen</option><option>versteht</option></select>.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Aus zwei Sätzen wird einer</h2>
+      <p class="lead">Зʼєднай два речення в одне — з <b>um … zu</b> або з <b>damit</b> (дивись підказку). Друге речення стоїть після коми.</p>
+      <div class="card" id="ub4-tr"></div>
+    </section>
+
+    <!-- ===== HÖREN ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Pro und Contra: Brauchen wir Noten?</h2>
+      <p class="lead">У шкільному радіо Макс і Ніна сперечаються про оцінки: один — проти, друга — за. Послухай (можна двічі) і дай відповіді. Текст відкривається внизу — але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l5-a-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Max:</b> Hallo und willkommen bei „Pro und Contra“ im Schulradio! Heute streiten wir über eine Frage, die uns alle betrifft: Brauchen wir Noten? Ich bin Max …<br>
+          <b>Nina:</b> … und ich bin Nina. Max ist gegen Noten, ich bin dafür. Max, fang an!<br>
+          <b>Max:</b> Gern. Mein erstes Argument: Noten machen Stress. Vor jeder Klassenarbeit schlafe ich schlecht. Und viele lernen nur, um eine gute Note zu bekommen. Nach dem Test haben sie alles vergessen.<br>
+          <b>Nina:</b> Das stimmt manchmal. Aber eine Note zeigt mir schnell, wo ich stehe. Wenn ich eine Drei in Englisch habe, weiß ich: Ich muss mehr üben.<br>
+          <b>Max:</b> Eine Drei sagt dir aber nicht, was du üben musst. Ein Kommentar von der Lehrerin sagt das. Zum Beispiel: „Deine Grammatik ist gut, aber du brauchst mehr Wörter.“<br>
+          <b>Nina:</b> Okay, Kommentare sind gut. Aber für fünfundzwanzig Schüler in jeder Klasse? Dann sitzen die Lehrer bis Mitternacht am Schreibtisch.<br>
+          <b>Max:</b> Na ja … Mein zweites Argument: Noten sind oft nicht gerecht. Wer gut schreibt, aber im Unterricht still ist, bekommt oft eine schlechtere Note.<br>
+          <b>Nina:</b> Und mein letztes Argument: Ich freue mich über eine gute Note. Für meine Eins in Bio habe ich zwei Wochen gelernt. Sie ist meine Belohnung.<br>
+          <b>Max:</b> Übrigens: In der Ukraine gibt es Noten von eins bis zwölf, und die Zwölf ist die beste. Das hat Daryna erzählt.<br>
+          <b>Nina:</b> Bei uns ist es umgekehrt: Die Eins ist „sehr gut“, die Sechs ist „ungenügend“. Also, liebe Hörerinnen und Hörer, was meint ihr? Stimmt bis Freitag in der Schul-App ab, damit wir das Ergebnis nächste Woche bekanntgeben können!<br>
+          <b>Max:</b> Tschüss, bis nächste Woche!
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Wozu gehst du in die Schule?</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Wozu gehst du in die Schule? Nenne drei Gründe.</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Ich gehe in die Schule, um jeden Tag etwas Neues zu erfahren. Außerdem gehe ich hin, um meine Freunde zu treffen. Und meine Eltern schicken mich in die Schule, damit ich später einen guten Beruf finde.</div>
+        </div>
+        <div class="qa">
+          <label>2. Welches Fach brauchst du später am meisten? Wozu?</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Am meisten brauche ich Englisch. Ich will viel reisen, und ich brauche Englisch, um mit Menschen aus der ganzen Welt zu sprechen.</div>
+        </div>
+        <div class="qa">
+          <label>3. Was machst du, um dich auf eine Klassenarbeit vorzubereiten?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Ich fange eine Woche vorher an. Ich schreibe die wichtigsten Regeln auf Karten, um sie schneller zu wiederholen. Am Abend vor der Arbeit frage ich meine Schwester, damit sie mich abfragt.</div>
+        </div>
+        <div class="qa">
+          <label>4. Bist du für Noten oder dagegen? Warum?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Ich bin für Noten, weil sie schnell zeigen, wo ich stehe. Aber ich finde, die Lehrer sollen auch einen kurzen Kommentar schreiben, damit wir wissen, was wir besser machen können.</div>
+        </div>
+        <div class="qa">
+          <label>5. Was können Lehrer machen, damit der Unterricht spannender wird?</label>
+          <button class="btn secondary" type="button" data-reveal="spr5">Muster zeigen</button>
+          <div class="reveal" id="spr5">Sie können mehr Projekte und Spiele machen. Man kann auch Videos zeigen, damit wir das Thema besser verstehen. Und Exkursionen sind immer super!</div>
+        </div>
+        <div class="qa">
+          <label>6. Vergleiche die Noten in der Ukraine und in Deutschland.</label>
+          <button class="btn secondary" type="button" data-reveal="spr6">Muster zeigen</button>
+          <div class="reveal" id="spr6">In Deutschland gibt es Noten von eins bis sechs, und die Eins ist die beste Note. In der Ukraine gibt es zwölf Punkte, und die Zwölf ist die beste. Eine Sechs ist also in Deutschland sehr schlecht, aber in der Ukraine nicht so schlimm.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Wozu brauche ich die Schule?</h2>
+      <p class="lead">Пан Брандт збирає відповіді 8b для шкільної газети. Напиши свою — 60–80 слів за планом. Ужий щонайменше двічі <b>um … zu</b> і один раз <b>damit</b>.</p>
+      <div class="card">
+        <p>1) у який клас і яку школу ти ходиш; 2) твій улюблений предмет і навіщо він тобі; 3) три причини, навіщо ти ходиш до школи; 4) що тобі в школі важко; 5) хто тобі допомагає і навіщо; 6) твоя відповідь одним реченням: «Schulen braucht man, um …».</p>
+        <p class="beispiel">Ich gehe in die … Klasse · Mein Lieblingsfach ist …, weil … · Ich brauche …, um … zu … · Ich gehe in die Schule, um … · Schwer finde ich … · … hilft mir, damit ich … · Schulen braucht man, um …</p>
+        <div class="qa">
+          <label for="schreiben-text">Dein Text</label>
+          <textarea id="schreiben-text" rows="10" placeholder="Ich gehe in die …"
+            data-words="60-80"
+            data-must="um|zu|damit"
+            data-check="Клас і школа|Улюблений предмет і навіщо|Три причини (um … zu)|Що важко|Хто допомагає (damit)|Підсумок одним реченням"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Ich gehe in die achte Klasse einer Schule in Kyjiw. Mein Lieblingsfach ist Biologie. Ich brauche Bio, um später Tierärztin zu werden. In die Schule gehe ich, um viel Neues zu erfahren, um meine Freunde zu treffen und um mich auf das Studium vorzubereiten. Schwer finde ich Physik. Mein Vater erklärt mir die Aufgaben am Abend, damit ich keine schlechten Noten bekomme. Schulen braucht man, um die Welt besser zu verstehen.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Leon ruft an, um uns zu seiner Parkourshow
+          <select class="blank inline" data-ans="einzuladen"><option value="">—</option><option>einzuladen</option><option>zu einladen</option><option>einladen</option></select>.</div>
+        <div class="fill-item"><span class="num">8)</span> Papa erklärt mir die Aufgabe,
+          <select class="blank inline" data-ans="damit"><option value="">—</option><option>um</option><option>damit</option><option>dass</option></select> ich sie verstehe.</div>
+        <div class="fill-item"><span class="num">9)</span> Nora übt jeden Tag, um besser Geige
+          <select class="blank inline" data-ans="zu spielen"><option value="">—</option><option>zu spielen</option><option>spielen</option><option>spielt</option></select>.</div>
+        <div class="fill-item"><span class="num">10)</span> Frau Albrecht spricht laut, damit alle sie
+          <select class="blank inline" data-ans="hören"><option value="">—</option><option>hören</option><option>zu hören</option><option>hört</option></select>.</div>
+        <div class="fill-item"><span class="num">11)</span>
+          <select class="blank inline" data-ans="Um"><option value="">—</option><option>Um</option><option>Damit</option><option>Dass</option></select> fit zu bleiben, geht Erik jeden Tag zu Fuß zur Schule.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-8-klas-8-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-8-klas-8-rik";
+  const KN_UNIT = "l5-a";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Erik hat Herrn Brandts Frage ganz ernst beantwortet.", a: "f"},
+    {s: "Vor drei Jahren konnte Daryna fast kein Deutsch.", a: "r"},
+    {s: "Daryna geht in die Leipziger Schule auch, um ihre Freunde zu sehen.", a: "r"},
+    {s: "Die Online-Schule hat Daryna am Montag und am Mittwoch.", a: "f"},
+    {s: "Die Lehrerin der Online-Schule sitzt in Lwiw.", a: "r"},
+    {s: "Daryna will Lessja Ukrajinka im Original lesen.", a: "r"},
+    {s: "Am Ende des Schuljahres bekommt Daryna nur ein Zeugnis.", a: "f"},
+    {s: "In der Ukraine ist die 12 die beste Note.", a: "r"},
+    {s: "Daryna bringt Greta das ukrainische Alphabet bei.", a: "r"},
+    {s: "Greta hilft Daryna bei den Mathe-Hausaufgaben.", a: "f"}
+  ]);
+
+  // Üb. 1: пояснення → слово
+  buildMatch('ub1', [
+    ["Ein Blatt mit allen Noten am Ende des Schuljahres.", "das Zeugnis"],
+    ["Ein Test, den die ganze Klasse in der Stunde schreibt.", "die Klassenarbeit"],
+    ["Mathe, Biologie oder Geschichte.", "das Fach"],
+    ["Ein kurzer Vortrag über ein Thema vor der Klasse.", "das Referat"],
+    ["Die Prüfung am Ende des Gymnasiums; danach kann man studieren.", "das Abitur"],
+    ["Alles, was man weiß und gelernt hat.", "die Kenntnisse"],
+    ["Eine Zahl von 1 bis 6 für eine Arbeit.", "die Note"],
+    ["Die Sprache, die man als Kind zuerst lernt.", "die Muttersprache"]
+  ], {lead: true});
+
+  // Üb. 2, Üb. 3
+  wireBlanks('ub2');
+  wireBlanks('ub3');
+
+  // Üb. 4
+  buildTransform('ub4-tr', [
+    {s: "Ich gehe in die Bibliothek. Ich will ein Buch ausleihen.", task: "um … zu", hint: "ausleihen → auszuleihen",
+     ans: "Ich gehe in die Bibliothek, um ein Buch auszuleihen."},
+    {s: "Die Lehrerin spricht langsam. Alle sollen sie verstehen.", task: "damit", hint: "без sollen",
+     ans: "Die Lehrerin spricht langsam, damit alle sie verstehen."},
+    {s: "Daryna lernt Ukrainisch. Sie will Bücher im Original lesen.", task: "um … zu",
+     ans: "Daryna lernt Ukrainisch, um Bücher im Original zu lesen."},
+    {s: "Greta hilft Daryna. Daryna soll nicht aufgeben.", task: "damit", hint: "Daryna → sie",
+     ans: "Greta hilft Daryna, damit sie nicht aufgibt.|Greta hilft Daryna, damit Daryna nicht aufgibt."},
+    {s: "Max steht früh auf. Er will pünktlich sein.", task: "um … zu",
+     ans: "Max steht früh auf, um pünktlich zu sein."},
+    {s: "Ich mache das Fenster auf. Frische Luft soll ins Zimmer kommen.", task: "damit",
+     ans: "Ich mache das Fenster auf, damit frische Luft ins Zimmer kommt."},
+    {s: "Erik ruft Leon an. Er will sich entschuldigen.", task: "um … zu", hint: "sich — перед zu",
+     ans: "Erik ruft Leon an, um sich zu entschuldigen."},
+    {s: "Wir schreiben eine Liste. Wir wollen nichts vergessen.", task: "um … zu",
+     ans: "Wir schreiben eine Liste, um nichts zu vergessen."}
+  ]);
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Worüber streiten Max und Nina?", opts: ["Über Hausaufgaben", "Über Noten", "Über das Handyverbot"], correct: "Über Noten"},
+    {q: "Wer ist gegen Noten?", opts: ["Nina", "Max", "Beide"], correct: "Max"},
+    {q: "Was passiert nach dem Test — sagt Max?", opts: ["Viele haben alles vergessen.", "Alle feiern.", "Alle lernen weiter."], correct: "Viele haben alles vergessen."},
+    {q: "Was macht Nina, wenn sie eine Drei in Englisch hat?", opts: ["Sie ist zufrieden.", "Sie übt mehr.", "Sie spricht mit der Lehrerin."], correct: "Sie übt mehr."},
+    {q: "Was ist für Max besser als eine Note?", opts: ["Ein Smiley", "Ein Kommentar der Lehrerin", "Ein Test mehr"], correct: "Ein Kommentar der Lehrerin"},
+    {q: "Was ist Ninas Problem mit Kommentaren?", opts: ["Die Lehrer brauchen sehr viel Zeit.", "Sie sind zu kurz.", "Die Eltern verstehen sie nicht."], correct: "Die Lehrer brauchen sehr viel Zeit."},
+    {q: "Wofür hat Nina zwei Wochen gelernt?", opts: ["Für ihre Eins in Bio", "Für ein Referat in Englisch", "Für das Konzert"], correct: "Für ihre Eins in Bio"},
+    {q: "Wie können die Hörer abstimmen?", opts: ["Per Brief an das Schulradio", "Bis Freitag in der Schul-App", "Am Montag in der Pause"], correct: "Bis Freitag in der Schul-App"}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Wozu braucht man Schulen?", uk: "Навіщо потрібні школи?"},
+    {say: "Ich lerne Deutsch, um in Deutschland zu studieren.", uk: "Я вчу німецьку, щоб навчатися в Німеччині."},
+    {say: "Die Lehrerin erklärt es noch einmal, damit alle es verstehen.", uk: "Учителька пояснює ще раз, щоб усі зрозуміли."},
+    {say: "Im Zeugnis habe ich eine Zwei in Mathe.", uk: "У табелі в мене «двійка» (добре) з математики."},
+    {say: "Ich bin für Noten, aber auch für Kommentare.", uk: "Я за оцінки, але й за коментарі."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Am Ende des Schuljahres bekommt man ein …", opts: ["Zeugnis", "Referat", "Fach"], correct: "Zeugnis"},
+    {q: "In Deutschland ist die beste Note die …", opts: ["Eins", "Sechs", "Zwölf"], correct: "Eins"},
+    {q: "Ich lerne viel, … eine gute Note zu bekommen.", opts: ["um", "damit", "dass"], correct: "um"},
+    {q: "Wir sprechen leise, … das Baby schläft.", opts: ["um", "damit", "zu"], correct: "damit"},
+    {q: "Ich stehe früh auf, um den Bus nicht …", opts: ["zu verpassen", "verpassen", "verpasse"], correct: "zu verpassen"},
+    {q: "Wozu brauchst du einen Laptop?", opts: ["Um Referate zu schreiben.", "Weil ich müde bin.", "Seit zwei Jahren."], correct: "Um Referate zu schreiben."}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Ich gehe in die Bibliothek, um ein Buch auszuleihen.", ok: true},
+    {s: "Ich lerne viel, damit eine gute Note zu bekommen.", wrong: 3, fix: "um"},
+    {s: "Wir üben, damit unsere Lehrerin zufrieden sind.", wrong: 6, fix: "ist"},
+    {s: "In Deutschland ist die Sechs die beste Note.", wrong: 4, fix: "Eins"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🎒', '📚', '✏️', '🏆']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
