@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ein Archiv aus Eis · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Natur &amp; Umwelt</span>
+        <h1>Ein Archiv aus Eis</h1>
+        <p class="sub">Гірські льодовики тануть — а разом з ними зникає пам'ять про клімат минулого. Тому шматки альпійського льоду тепер зберігають у сніговій печері в Антарктиді.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Zahlen</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Was erzählt das Eis?</h2>
+      <div class="card">
+        <p>Hast du schon einmal einen Gletscher gesehen – in echt oder auf Fotos? Was weißt du über die Antarktis? Und warum werden Gletscher heute immer kleiner?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Чи бачив(-ла) ти колись льодовик — наживо чи на фото? Що ти знаєш про Антарктиду? І чому льодовики сьогодні стають дедалі меншими?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Gletscher sind wie ein <span class="gl" data-uk="щоденник" data-lemma="das Tagebuch, -ü-er">Tagebuch</span> des Klimas. Doch viele von ihnen <span class="gl" data-uk="танути" data-lemma="schmelzen (schmolz, ist geschmolzen)">schmelzen</span>. Deshalb gibt es jetzt ein besonderes Archiv – tief im Schnee der Antarktis.</p>
+
+          <p>Im Eis von <span class="gl" data-key data-uk="льодовик" data-lemma="der Gletscher, -">Gletschern</span> ist Luft aus <span class="gl" data-uk="минулий" data-lemma="vergangen">vergangenen</span> Jahrtausenden <span class="gl" data-uk="замкнений, ув'язнений" data-lemma="eingeschlossen">eingeschlossen</span>. Daran können Forscher <span class="gl" data-uk="зчитувати, визначати" data-lemma="ablesen (las ab, hat abgelesen)">ablesen</span>, wie das Klima früher war. Dafür <span class="gl" data-uk="бурити, свердлити" data-lemma="bohren">bohren</span> sie lange Stücke aus dem Eis heraus. Man nennt sie <span class="gl" data-key data-uk="льодовий керн" data-lemma="der Eisbohrkern, -e">Eisbohrkerne</span>.</p>
+
+          <p>Am 14. Januar 2026 wurde in der Antarktis ein Archiv für solche Eisbohrkerne <span class="gl" data-uk="відкривати" data-lemma="eröffnen">eröffnet</span>. Es liegt an der französisch-italienischen <span class="gl" data-key data-uk="дослідницька станція" data-lemma="die Forschungsstation, -en">Forschungsstation</span> Concordia. Das Archiv ist eine <span class="gl" data-key data-uk="печера" data-lemma="die Höhle, -n">Höhle</span> im Schnee: 35 Meter lang und 5 Meter hoch. Dort ist es das ganze Jahr etwa minus 52 Grad kalt – ganz ohne <span class="gl" data-uk="холодильник" data-lemma="der Kühlschrank, -ä-e">Kühlschrank</span>. Gebaut hat es die Ice Memory Foundation, eine Gruppe von europäischen Forschungsinstituten.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Concordia_Station_at_Dome_C.jpg/960px-Concordia_Station_at_Dome_C.jpg" alt="Die französisch-italienische Forschungsstation Concordia in der Antarktis." width="960" height="636" loading="lazy">
+            <figcaption>Die französisch-italienische Forschungsstation Concordia in der Antarktis. Foto: NASA/Michael Studinger, gemeinfrei, <a href="https://commons.wikimedia.org/wiki/File:Concordia_Station_at_Dome_C.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Die ersten <span class="gl" data-key data-uk="зразок, проба" data-lemma="die Probe, -n">Proben</span> kommen aus den Alpen: vom Mont Blanc in Frankreich und vom Grand Combin in der Schweiz. Zusammen <span class="gl" data-uk="важити" data-lemma="wiegen (wog, hat gewogen)">wogen</span> sie 1,7 Tonnen. Ihre Reise von Triest in Italien bis zur Station dauerte rund 50 Tage – mit einem <span class="gl" data-uk="криголам" data-lemma="der Eisbrecher, -">Eisbrecher</span> und mit dem Flugzeug, immer gut <span class="gl" data-uk="охолоджений" data-lemma="gekühlt">gekühlt</span>. Später sollen Eisbohrkerne von Gletschern aus der ganzen Welt dazukommen.</p>
+
+          <p>Wie <span class="gl" data-uk="терміновий, нагальний" data-lemma="dringend">dringend</span> das ist, zeigt eine <span class="gl" data-uk="розрахунок" data-lemma="die Berechnung, -en">Berechnung</span> der ETH Zürich. Wenn sich die Erde um 1,5 Grad <span class="gl" data-key data-uk="нагріватися, теплішати" data-lemma="sich erwärmen">erwärmt</span>, gibt es im Jahr 2100 in den Alpen nur noch zwölf Prozent der heutigen Gletscher. Bei zwei Grad wären es acht Prozent, bei vier Grad sogar nur ein Prozent – etwa 20 Gletscher.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Grand_Combin_N.jpg/960px-Grand_Combin_N.jpg" alt="Die Nordseite des Grand Combin in der Schweiz." width="960" height="720" loading="lazy">
+            <figcaption>Die Nordseite des Grand Combin in der Schweiz. Foto: Zacharie Grossen, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Grand_Combin_N.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Die ETH Zürich ist die Eidgenössische Technische <span class="gl" data-uk="вищий навчальний заклад" data-lemma="die Hochschule, -n">Hochschule</span> – eine der bekanntesten Universitäten Europas. Auch Albert Einstein hat dort studiert. „Eidgenössisch“ bedeutet in der Schweiz so viel wie „vom Bund“, also „für das ganze Land“.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Zahlen im Text</h2>
+      <p class="lead">Знайди в тексті потрібне число й впиши його.</p>
+      <div class="card">
+        <div id="ub3-list">
+          <div class="fill-item"><span class="num">1)</span> Die Eishöhle ist <input type="text" class="blank-input inline" data-ans="35"> Meter lang.</div>
+          <div class="fill-item"><span class="num">2)</span> Im Archiv ist es etwa minus <input type="text" class="blank-input inline" data-ans="52"> Grad kalt.</div>
+          <div class="fill-item"><span class="num">3)</span> Die Reise der Proben dauerte rund <input type="text" class="blank-input inline" data-ans="50"> Tage.</div>
+          <div class="fill-item"><span class="num">4)</span> Bei 1,5 Grad Erwärmung bleiben in den Alpen nur <input type="text" class="blank-input inline" data-ans="12|zwölf"> Prozent der Gletscher.</div>
+          <div class="fill-item"><span class="num">5)</span> Bei vier Grad Erwärmung gäbe es nur noch etwa <input type="text" class="blank-input inline" data-ans="20|zwanzig"> Gletscher.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub3-check">Prüfen</button>
+          <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub3-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+      <p class="lead">б) Встав слова в текст. Одне слово зайве.</p>
+      <div class="card" id="ub4b-bank"></div>
+    </section>
+
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (3–5 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Merkst du in deiner Region, dass sich das Klima verändert? Was ist anders als früher (Winter, Sommer, Schnee, Hitze)?</label>
+          <textarea id="ub5-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Was möchtest du für die Zukunft aufbewahren – zum Beispiel in einem Archiv oder einer Zeitkapsel? Warum?</label>
+          <textarea id="ub5-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Früher gab es bei uns …, Heute …, Die Winter sind …, Ich würde … aufbewahren, weil …</i>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Im Eis von Gletschern steckt Luft aus vergangenen Zeiten. Seit Januar 2026 lagern Eisbohrkerne aus den Alpen in einer Schneehöhle an der Station Concordia in der Antarktis. Das ist wichtig, denn nach Berechnungen der ETH Zürich könnten bis 2100 fast alle Alpengletscher verschwinden.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          У льоду льодовиків є повітря з давніх часів. З січня 2026 року льодові керни з Альп зберігаються в сніговій печері біля станції «Конкордія» в Антарктиді. Це важливо, бо, за розрахунками Цюрихської політехніки (ETH), до 2100 року можуть зникнути майже всі альпійські льодовики.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "eisarchiv-antarktis";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Um ein Archiv in der Antarktis, in dem Eis aus schmelzenden Gletschern aufbewahrt wird",
+            "Um eine Reise von Touristen in die Antarktis",
+            "Um neue Skigebiete in den Alpen"],
+     correct: "Um ein Archiv in der Antarktis, in dem Eis aus schmelzenden Gletschern aufbewahrt wird"}
+  ]);
+  buildMatch('ub1h', [
+    ["Luft aus alten Zeiten", "Absatz 1"],
+    ["Eine Höhle im Schnee", "Absatz 2"],
+    ["Eine lange, kalte Reise", "Absatz 3"],
+    ["Bald ohne Gletscher?", "Absatz 4"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "Im Gletschereis ist Luft aus früheren Zeiten.", a: "r"},
+    {s: "Das Archiv wurde im Januar 2026 eröffnet.", a: "r"},
+    {s: "Für das Archiv braucht man große Kühlschränke.", a: "f"},
+    {s: "Die ersten Proben kommen aus Norwegen.", a: "f"},
+    {s: "Die Proben reisten mit Schiff und Flugzeug.", a: "r"},
+    {s: "Im Archiv arbeiten das ganze Jahr zehn Forscher.", a: "n"},
+    {s: "Bei vier Grad Erwärmung bleiben in den Alpen mehr Gletscher als bei zwei Grad.", a: "f"}
+  ]);
+
+  wireBlanks('ub3');
+
+  buildMatch('ub4', [
+    ["der Gletscher", "льодовик"],
+    ["die Höhle", "печера"],
+    ["die Probe", "зразок, проба"],
+    ["der Eisbrecher", "криголам"],
+    ["bohren", "бурити, свердлити"],
+    ["dringend", "терміновий, нагальний"],
+    ["sich erwärmen", "нагріватися, теплішати"]
+  ]);
+  buildWordBank('ub4b-bank', {
+    text: "Viele [Gletscher] in den Alpen schmelzen. Forscher [bohren] lange Stücke aus dem Eis. Diese [Proben] lagern jetzt in einer [Höhle] in der Antarktis. Ein [Eisbrecher] hat sie über das Meer gebracht.",
+    extra: ["Kühlschrank"]
+  });
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🧊','🏔️','🐧','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
