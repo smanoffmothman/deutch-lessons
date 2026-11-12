@@ -389,7 +389,7 @@ const PIDRUCHNYKY = [
         { id: "l5-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "116", typ: "bez-storinky" }
       ] },
       { id: "l6", label: "6", nazva: "Moderne Massenmedien", storinky: "117–134", dity: [
-        { id: "l6-a", label: "A", nazva: "Zeitungen und Zeitschriften", storinky: "118–123", typ: "vpravy", gram: ["relativsaetze"] },
+        { id: "l6-a", label: "A", nazva: "Zeitungen und Zeitschriften", storinky: "118–123", typ: "vpravy", gram: ["relativsaetze"], opublikovano: 25 },
         { id: "l6-b", label: "B", nazva: "Beliebte Kommunikationsmittel", storinky: "124–129", typ: "vpravy", gram: ["finalsaetze", "infinitiv-um-zu"] },
         { id: "l6-c", label: "C", nazva: "Wiederholung", storinky: "130–131", typ: "povtorennya", gram: ["relativsaetze", "finalsaetze"] },
         { id: "l6-d", label: "D", nazva: "Geschichtenzeit", storinky: "132", typ: "chytannya" },
