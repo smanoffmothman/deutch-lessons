@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 6, Modul B: Beliebte Kommunikationsmittel — Німецька мова 8 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 8 КЛАС</span>
+        <h1>Lektion 6 · Modul B: Beliebte Kommunikationsmittel</h1>
+        <p class="sub">Урок про засоби спілкування — від телефонної будки й листів до месенджерів, відеодзвінків і класного чату. Навіщо нам усі ці пристрої і як домовитися про правила в чаті. Граматика — мета з um … zu і damit (повторення й розширення). Текст і діалог з озвученням, вправи, говоріння, письмо і підсумковий тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Medien</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · um oder damit?</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · hochzuladen</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wozu?</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+    <!-- ===== TEXT — власний текст + вправа на розуміння ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Wie hast du mit vierzehn kommuniziert?</h2>
+      <p class="lead">Для газети «Pausenhof» Дарина поставила одне й те саме питання трьом людям: дідусеві Гельмуту, своїй мамі й собі самій. Послухай і прочитай. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l6-b-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Wir sind heute fast immer <span class="gl" data-uk="доступний (на зв'язку)" data-lemma="erreichbar">erreichbar</span>. Aber wie war das früher? Für unsere Rubrik „Interview“ habe ich drei Menschen dieselbe Frage gestellt: Wie hast du mit vierzehn mit deinen Freunden kommuniziert?</p>
+        <p><b>Opa Helmut (Gretas Opa):</b> „Mit vierzehn? Wir hatten kein Telefon in der Wohnung. In der DDR hatten nur wenige Familien einen <span class="gl" data-uk="підключення (телефонна лінія)" data-lemma="der Anschluss, ¨-e">Anschluss</span>, und viele haben jahrelang darauf gewartet. Um meine Oma <span class="gl" data-uk="подзвонити" data-lemma="anrufen, hat angerufen">anzurufen</span>, bin ich mit Kleingeld zur <span class="gl" data-uk="телефонна будка" data-lemma="die Telefonzelle, -n">Telefonzelle</span> an der Ecke gegangen. Oft stand dort schon eine lange Schlange. Mit meinen Freunden habe ich mich einfach auf dem Hof getroffen. Und wer weiter weg wohnte, bekam einen Brief.“</p>
+        <p><b>Meine Mama:</b> „Als ich vierzehn war, hatten wir in Charkiw ein <span class="gl" data-uk="стаціонарний телефон" data-lemma="das Festnetz / das Festnetztelefon">Festnetztelefon</span> im Flur. Wenn ich mit meiner besten Freundin telefoniert habe, hat die ganze Familie zugehört! Mein erstes Handy habe ich mit sechzehn bekommen. Es hatte Tasten und einen kleinen Bildschirm, und man konnte nur anrufen und <span class="gl" data-uk="есемески" data-lemma="die SMS, -">SMS</span> schreiben. Jede SMS hat Geld gekostet, und sie durfte nur 160 Zeichen lang sein. Damit alles in eine SMS passt, haben wir die Wörter abgekürzt.“ Übrigens: Die Idee mit den 160 Zeichen hatte ein Deutscher, Friedhelm Hillebrand, schon 1985.</p>
+        <p><b>Und ich?</b> Ich habe ein <span class="gl" data-uk="смартфон" data-lemma="das Smartphone, -s">Smartphone</span>, das alles kann. Ich nutze einen <span class="gl" data-uk="месенджер" data-lemma="der Messenger, -">Messenger</span>, um mit Greta zu chatten, und den <span class="gl" data-uk="класний чат" data-lemma="der Klassenchat, -s">Klassenchat</span>, um die Hausaufgaben zu erfahren. Jeden Sonntag um sechs mache ich einen <span class="gl" data-uk="відеодзвінок" data-lemma="der Videoanruf, -e">Videoanruf</span> mit Oma Halyna, damit sie sieht, wie groß ich geworden bin. Und ich schicke ihr Fotos, damit sie bei allem ein bisschen dabei ist.</p>
+        <p>Was ist nun besser? Opa sagt: „Früher haben wir weniger geredet, aber mehr gesagt.“ Mama sagt: „Heute ist es leichter, in Kontakt zu bleiben — besonders, wenn die Familie weit weg ist.“ Ich glaube, beide haben recht. Denn ohne Videoanrufe sehe ich Oma Halyna nur auf alten Fotos. Aber manchmal lege ich das Handy weg, um einfach mit Greta auf dem Hof zu sitzen — wie Opa früher.</p>
+        <p><i>Daryna, 8b</i></p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">Wozu? — um … zu · damit</h2>
+      <p class="lead">Повторюємо мету з L5: <b>um … zu</b>, якщо особа та сама, <b>damit</b> — якщо різні. Нове тут — дієслова з медіа: у них часто є префікс, тож zu ховається всередині: hoch<b>zu</b>laden, an<b>zu</b>rufen.</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. Та сама особа чи різні?</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>um … zu</th><th>damit</th></tr>
+          <tr><td><b>Ich</b> nutze den Messenger, um mit Greta <b>zu</b> chatten.</td><td><b>Ich</b> schicke Fotos, damit <b>Oma</b> dabei ist.</td></tr>
+          <tr><td><b>Opa</b> geht zur Telefonzelle, um seine Oma an<b>zu</b>rufen.</td><td><b>Mama</b> kürzt Wörter ab, damit <b>die SMS</b> nicht teuer wird.</td></tr>
+        </table></div>
+        <div class="merke">Якщо особа та сама, з damit речення теж буде правильним, але звучить важко. Обирай <b>um … zu</b>.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. zu в дієсловах медіа</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Infinitiv</th><th>um … zu</th></tr>
+          <tr><td>anrufen</td><td>um Oma an<strong>zu</strong>rufen</td></tr>
+          <tr><td>hochladen</td><td>um ein Video hoch<strong>zu</strong>laden</td></tr>
+          <tr><td>herunterladen</td><td>um eine App herunter<strong>zu</strong>laden</td></tr>
+          <tr><td>ausdrucken</td><td>um das Referat aus<strong>zu</strong>drucken</td></tr>
+          <tr><td>chatten · teilen · posten</td><td>um <strong>zu</strong> chatten · <strong>zu</strong> teilen · <strong>zu</strong> posten</td></tr>
+          <tr><td>sich etwas ansehen</td><td>um <b>sich</b> ein Video an<strong>zu</strong>sehen</td></tr>
+        </table></div>
+        <div class="merke">У слові <b>telefonieren</b> префікса немає: um <b>zu</b> telefonieren. А <b>im Internet surfen</b> → um im Internet <b>zu</b> surfen.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. Питання й відповідь</p>
+        <p>Wozu brauchst du das Tablet? — <b>Um</b> Filme <b>zu</b> sehen. / <b>Damit</b> mein Bruder Spiele spielen kann.<br>
+           Wofür nutzt du den Klassenchat? — <b>Für</b> die Hausaufgaben. = <b>Um</b> die Hausaufgaben <b>zu</b> erfahren.</p>
+        <div class="merke">Коротка відповідь на «Wozu?» може бути й просто з <b>für</b> + Akk.: für die Schule, für meine Oma.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">4. Типові помилки</p>
+        <p>✗ um ein Video zu hochladen → ✓ um ein Video hoch<b>zu</b>laden</p>
+        <p>✗ Ich brauche das Handy, damit Oma anzurufen. → ✓ <b>um</b> Oma an<b>zu</b>rufen</p>
+        <p>✗ Ich schicke Fotos, um Oma sie sieht. → ✓ <b>damit</b> Oma sie <b>sieht</b></p>
+        <p>✗ damit sie kann alles sehen → ✓ damit sie alles sehen <b>kann</b></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Was ist das?</h2>
+      <p class="lead">Прочитай опис і вибери засіб спілкування.</p>
+      <div class="card" id="ub1-list"></div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">um oder damit?</h2>
+      <p class="lead">Та сама особа чи інша? Вибери сполучник.</p>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> Daryna nutzt den Messenger,
+          <select class="blank inline" data-ans="um"><option value="">—</option><option>um</option><option>damit</option></select> mit Greta zu chatten.</div>
+        <div class="fill-item"><span class="num">2)</span> Sie schickt Oma Halyna Fotos,
+          <select class="blank inline" data-ans="damit"><option value="">—</option><option>um</option><option>damit</option></select> Oma bei allem dabei ist.</div>
+        <div class="fill-item"><span class="num">3)</span> Opa ging zur Telefonzelle,
+          <select class="blank inline" data-ans="um"><option value="">—</option><option>um</option><option>damit</option></select> seine Oma anzurufen.</div>
+        <div class="fill-item"><span class="num">4)</span> Mama kürzte die Wörter ab,
+          <select class="blank inline" data-ans="damit"><option value="">—</option><option>um</option><option>damit</option></select> die SMS nicht zu lang wurde.</div>
+        <div class="fill-item"><span class="num">5)</span> Erik braucht den Drucker,
+          <select class="blank inline" data-ans="um"><option value="">—</option><option>um</option><option>damit</option></select> sein Referat auszudrucken.</div>
+        <div class="fill-item"><span class="num">6)</span> Frau Schulz schreibt die Hausaufgaben in den Chat,
+          <select class="blank inline" data-ans="damit"><option value="">—</option><option>um</option><option>damit</option></select> alle sie kennen.</div>
+        <div class="fill-item"><span class="num">7)</span> Leon filmt seine Sprünge,
+          <select class="blank inline" data-ans="um"><option value="">—</option><option>um</option><option>damit</option></select> sie später zu posten.</div>
+        <div class="fill-item"><span class="num">8)</span> Ich mache den Ton aus,
+          <select class="blank inline" data-ans="damit"><option value="">—</option><option>um</option><option>damit</option></select> mein Bruder schlafen kann.</div>
+        <div class="fill-item"><span class="num">9)</span> Max lädt eine App herunter,
+          <select class="blank inline" data-ans="um"><option value="">—</option><option>um</option><option>damit</option></select> Englisch zu lernen.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Wo steht zu?</h2>
+      <p class="lead">Вибери правильну форму дієслова з zu.</p>
+      <div class="card" id="ub3-list">
+        <div class="fill-item"><span class="num">1)</span> Leon braucht WLAN, um sein Video
+          <select class="blank inline" data-ans="hochzuladen"><option value="">—</option><option>zu hochladen</option><option>hochzuladen</option><option>hochladen</option></select>.</div>
+        <div class="fill-item"><span class="num">2)</span> Ich gehe in die Bibliothek, um das Referat
+          <select class="blank inline" data-ans="auszudrucken"><option value="">—</option><option>auszudrucken</option><option>zu ausdrucken</option><option>ausdruckenzu</option></select>.</div>
+        <div class="fill-item"><span class="num">3)</span> Max nimmt das Handy, um seine Mutter
+          <select class="blank inline" data-ans="anzurufen"><option value="">—</option><option>zu anrufen</option><option>anrufen</option><option>anzurufen</option></select>.</div>
+        <div class="fill-item"><span class="num">4)</span> Daryna öffnet den Laptop, um mit Oma
+          <select class="blank inline" data-ans="zu telefonieren"><option value="">—</option><option>zu telefonieren</option><option>telezufonieren</option><option>telefonieren</option></select>.</div>
+        <div class="fill-item"><span class="num">5)</span> Greta braucht das Tablet, um Comics
+          <select class="blank inline" data-ans="zu zeichnen"><option value="">—</option><option>zu zeichnen</option><option>zeichnen</option><option>zuzeichnen</option></select>.</div>
+        <div class="fill-item"><span class="num">6)</span> Erik nutzt die App, um Schach
+          <select class="blank inline" data-ans="zu spielen"><option value="">—</option><option>spielen</option><option>zu spielen</option><option>gespielt</option></select>.</div>
+        <div class="fill-item"><span class="num">7)</span> Nina setzt sich aufs Sofa, um sich einen Film
+          <select class="blank inline" data-ans="anzusehen"><option value="">—</option><option>zu ansehen</option><option>ansehen</option><option>anzusehen</option></select>.</div>
+        <div class="fill-item"><span class="num">8)</span> Matteo braucht die App, um neue Lieder
+          <select class="blank inline" data-ans="herunterzuladen"><option value="">—</option><option>herunterzuladen</option><option>zu herunterladen</option><option>herunterladen</option></select>.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wozu brauchen sie das?</h2>
+      <p class="lead">Зʼєднай два речення: з <b>um … zu</b> або з <b>damit</b> (дивись підказку).</p>
+      <div class="card" id="ub4-tr"></div>
+    </section>
+
+    <!-- ===== HÖREN ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Regeln für den Klassenchat</h2>
+      <p class="lead">У класному чаті 8b забагато шуму. Пані Шульц на класній годині обговорює з Еріком правила. Послухай (можна двічі) і дай відповіді. Текст відкривається внизу — але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l6-b-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Frau Schulz:</b> So, liebe 8b, heute sprechen wir über unseren Klassenchat. Ninas Mutter hat mir geschrieben: Gestern hatte Nina über dreihundert neue Nachrichten — um Mitternacht!<br>
+          <b>Erik:</b> Das waren fast nur Sticker. Und ein paar Videos von Leon.<br>
+          <b>Frau Schulz:</b> Eben. Deshalb brauchen wir Regeln. Erik, du schreibst sie an die Tafel, ja? Regel Nummer eins?<br>
+          <b>Erik:</b> Keine Nachrichten nach 21 Uhr und vor 7 Uhr. Damit alle schlafen können.<br>
+          <b>Frau Schulz:</b> Sehr gut. Nummer zwei?<br>
+          <b>Erik:</b> Hmm … Keine Fotos von anderen ohne Erlaubnis. Das ist mir passiert: Jemand hat ein Foto von meinem Vulkan in den Chat gestellt, und am Abend war es überall.<br>
+          <b>Frau Schulz:</b> Das ist eine wichtige Regel. Fotos von Personen teilt man nur, wenn die Person ja sagt. Und Nummer drei?<br>
+          <b>Erik:</b> Der Klassenchat ist für die Schule: Hausaufgaben, Termine, Fragen. Für Sticker und lustige Videos gibt es private Chats.<br>
+          <b>Frau Schulz:</b> Prima. Und noch eine Regel von mir: Wir schreiben freundlich. Niemand wird ausgelacht. Wenn es Streit gibt, sprechen wir lieber in der Klasse darüber — direkt, nicht im Chat.<br>
+          <b>Erik:</b> Und wenn jemand die Regeln nicht einhält?<br>
+          <b>Frau Schulz:</b> Dann erinnert ihn zuerst jemand freundlich daran. Und wenn das nicht hilft, sprechen wir in der Klassenstunde darüber. Max, du fotografierst die Tafel, damit wir die Regeln morgen in den Chat stellen können.<br>
+          <b>Erik:</b> Aber bitte nur die Tafel, Max, nicht mich!
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Wozu brauchst du das?</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Wozu nutzt du dein Handy? Nenne drei Dinge mit „um … zu“.</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Ich nutze mein Handy, um mit Freunden zu chatten. Ich brauche es auch, um Musik zu hören. Und ich nutze es, um morgens das Wetter zu checken.</div>
+        </div>
+        <div class="qa">
+          <label>2. Wie haben deine Eltern oder Großeltern mit vierzehn kommuniziert? Frag sie und erzähl.</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Meine Oma hatte als Kind kein Telefon. Sie hat ihrer Freundin Briefe geschrieben. Mein Vater hatte mit vierzehn ein Handy mit Tasten, aber Internet hatte er nur zu Hause am Computer.</div>
+        </div>
+        <div class="qa">
+          <label>3. Welche Regeln findest du für einen Klassenchat wichtig? Warum?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Wichtig ist, dass man nachts keine Nachrichten schickt, damit alle schlafen können. Man soll auch keine Fotos von anderen ohne Erlaubnis posten.</div>
+        </div>
+        <div class="qa">
+          <label>4. Telefonieren, Sprachnachricht oder Text — was machst du am liebsten?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Am liebsten schreibe ich kurze Nachrichten. Mit meiner besten Freundin schicke ich Sprachnachrichten. Telefonieren mag ich nicht so gern — nur mit meiner Oma.</div>
+        </div>
+        <div class="qa">
+          <label>5. Kannst du dir eine Woche ohne Handy vorstellen? Was ist dann schwer?</label>
+          <button class="btn secondary" type="button" data-reveal="spr5">Muster zeigen</button>
+          <div class="reveal" id="spr5">Eine Woche ohne Handy ist für mich schwer. Am meisten fehlen mir die Nachrichten von meinen Freunden. Aber ich habe dann mehr Zeit, um zu lesen und Sport zu machen.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Unsere Chat-Regeln</h2>
+      <p class="lead">Склади правила для вашого класного чату — 50–70 слів. Для кожного правила поясни, навіщо воно, з <b>um … zu</b> або <b>damit</b>.</p>
+      <div class="card">
+        <p>1) короткий вступ (для чого цей чат); 2) щонайменше чотири правила з поясненням мети; 3) що робити, якщо хтось порушує правила.</p>
+        <p class="beispiel">Unser Klassenchat ist für … · Regel 1: Keine Nachrichten nach …, damit … · Regel 2: Wir schreiben …, um … zu … · Wenn jemand die Regeln nicht einhält, …</p>
+        <div class="qa">
+          <label for="schreiben-text">Deine Regeln</label>
+          <textarea id="schreiben-text" rows="9" placeholder="Unser Klassenchat ist für …"
+            data-words="50-70"
+            data-must="damit|um|zu"
+            data-check="Вступ: для чого чат|Правило 1 з метою|Правило 2 з метою|Правило 3 з метою|Правило 4 з метою|Що робити, якщо порушують"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Unser Klassenchat ist für die Schule. Regel 1: Keine Nachrichten nach 21 Uhr, damit alle schlafen können. Regel 2: Wir schreiben kurz, um keine Zeit zu verlieren. Regel 3: Keine Fotos ohne Erlaubnis, damit sich niemand ärgert. Regel 4: Wir sind freundlich, um Streit zu vermeiden. Wenn jemand die Regeln nicht einhält, sprechen wir in der Klassenstunde darüber.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Ich brauche das Handy, um meine Freundin
+          <select class="blank inline" data-ans="anzurufen"><option value="">—</option><option>anzurufen</option><option>zu anrufen</option><option>anrufen</option></select>.</div>
+        <div class="fill-item"><span class="num">8)</span> Mama schickt Fotos,
+          <select class="blank inline" data-ans="damit"><option value="">—</option><option>um</option><option>damit</option><option>zu</option></select> Oma alles sieht.</div>
+        <div class="fill-item"><span class="num">9)</span> Leon braucht WLAN, um das Video
+          <select class="blank inline" data-ans="hochzuladen"><option value="">—</option><option>hochzuladen</option><option>zu hochladen</option><option>hochladen</option></select>.</div>
+        <div class="fill-item"><span class="num">10)</span> Wir schreiben nach 21 Uhr nicht, damit alle schlafen
+          <select class="blank inline" data-ans="können"><option value="">—</option><option>können</option><option>zu können</option><option>kann</option></select>.</div>
+        <div class="fill-item"><span class="num">11)</span> Opa ging zur
+          <select class="blank inline" data-ans="Telefonzelle"><option value="">—</option><option>Telefonzelle</option><option>Suchmaschine</option><option>Sprachnachricht</option></select>, um seine Oma anzurufen.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-8-klas-8-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-8-klas-8-rik";
+  const KN_UNIT = "l6-b";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Daryna hat drei Menschen dieselbe Frage gestellt.", a: "r"},
+    {s: "Opa Helmuts Familie hatte ein Telefon in der Wohnung.", a: "f"},
+    {s: "Opa ist zur Telefonzelle gegangen, um seine Oma anzurufen.", a: "r"},
+    {s: "Mit Freunden in der Nähe hat sich Opa auf dem Hof getroffen.", a: "r"},
+    {s: "Darynas Mama hat ihr erstes Handy mit vierzehn bekommen.", a: "f"},
+    {s: "Mit ihrem ersten Handy konnte Mama schon Fotos machen.", a: "f"},
+    {s: "Eine SMS durfte nur 160 Zeichen lang sein.", a: "r"},
+    {s: "Daryna macht jeden Sonntag einen Videoanruf mit Oma Halyna.", a: "r"},
+    {s: "Opa findet, dass man früher mehr geredet hat.", a: "f"},
+    {s: "Manchmal legt Daryna das Handy weg, um mit Greta auf dem Hof zu sitzen.", a: "r"}
+  ]);
+
+  // Üb. 1: опис → засіб
+  buildMatch('ub1', [
+    ["Ein kleines Haus auf der Straße mit einem Telefon für alle.", "die Telefonzelle"],
+    ["Ein Telefon, das zu Hause steht und ein Kabel hat.", "das Festnetztelefon"],
+    ["Eine kurze Textnachricht mit höchstens 160 Zeichen.", "die SMS"],
+    ["Ein Gespräch, bei dem man sich auch sieht.", "der Videoanruf"],
+    ["Eine Gruppe im Messenger für die ganze Klasse.", "der Klassenchat"],
+    ["Ein Programm, mit dem man im Internet etwas sucht.", "die Suchmaschine"],
+    ["Eine Nachricht, die man spricht, statt zu schreiben.", "die Sprachnachricht"],
+    ["Ein Gerät, mit dem man Texte auf Papier bringt.", "der Drucker"]
+  ], {lead: true});
+
+  // Üb. 2, Üb. 3
+  wireBlanks('ub2');
+  wireBlanks('ub3');
+
+  // Üb. 4
+  buildTransform('ub4-tr', [
+    {s: "Greta braucht das Tablet. Sie will Comics zeichnen.", task: "um … zu",
+     ans: "Greta braucht das Tablet, um Comics zu zeichnen."},
+    {s: "Daryna schickt Oma Fotos. Oma soll alles sehen.", task: "damit", hint: "без soll",
+     ans: "Daryna schickt Oma Fotos, damit Oma alles sieht.|Daryna schickt Oma Fotos, damit sie alles sieht."},
+    {s: "Leon braucht WLAN. Er will sein Video hochladen.", task: "um … zu", hint: "hochladen → hochzuladen",
+     ans: "Leon braucht WLAN, um sein Video hochzuladen."},
+    {s: "Frau Schulz schreibt die Termine in den Chat. Alle sollen sie kennen.", task: "damit",
+     ans: "Frau Schulz schreibt die Termine in den Chat, damit alle sie kennen."},
+    {s: "Opa ging zur Telefonzelle. Er wollte seine Oma anrufen.", task: "um … zu",
+     ans: "Opa ging zur Telefonzelle, um seine Oma anzurufen."},
+    {s: "Ich mache den Ton aus. Mein Bruder soll schlafen können.", task: "damit",
+     ans: "Ich mache den Ton aus, damit mein Bruder schlafen kann."},
+    {s: "Max nimmt den Laptop. Er will sich ein Video ansehen.", task: "um … zu", hint: "sich … anzusehen",
+     ans: "Max nimmt den Laptop, um sich ein Video anzusehen."}
+  ]);
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Warum spricht Frau Schulz über den Klassenchat?", opts: ["Nina hatte nachts über 300 Nachrichten.", "Der Chat funktioniert nicht.", "Erik hat den Chat gelöscht."], correct: "Nina hatte nachts über 300 Nachrichten."},
+    {q: "Was waren die meisten Nachrichten?", opts: ["Hausaufgaben", "Sticker", "Sprachnachrichten"], correct: "Sticker"},
+    {q: "Wann darf man im Chat nicht schreiben?", opts: ["Nach 21 Uhr und vor 7 Uhr", "Nur am Wochenende", "Während der Pause"], correct: "Nach 21 Uhr und vor 7 Uhr"},
+    {q: "Warum ist Regel Nummer zwei für Erik wichtig?", opts: ["Ein Foto von seinem Vulkan war plötzlich überall.", "Er hat kein Handy.", "Er mag keine Videos."], correct: "Ein Foto von seinem Vulkan war plötzlich überall."},
+    {q: "Wofür ist der Klassenchat?", opts: ["Für Sticker und Videos", "Für Hausaufgaben, Termine und Fragen", "Für Werbung"], correct: "Für Hausaufgaben, Termine und Fragen"},
+    {q: "Was soll man bei Streit machen?", opts: ["Im Chat weiter diskutieren", "In der Klasse direkt darüber sprechen", "Den Chat verlassen"], correct: "In der Klasse direkt darüber sprechen"},
+    {q: "Was passiert, wenn jemand die Regeln nicht einhält?", opts: ["Er muss sofort raus.", "Zuerst erinnert ihn jemand freundlich daran.", "Nichts."], correct: "Zuerst erinnert ihn jemand freundlich daran."},
+    {q: "Was soll Max machen?", opts: ["Die Tafel fotografieren", "Erik fotografieren", "Die Regeln vorlesen"], correct: "Die Tafel fotografieren"}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Ich nutze den Messenger, um mit Freunden zu chatten.", uk: "Я користуюся месенджером, щоб листуватися з друзями."},
+    {say: "Ich schicke Oma Fotos, damit sie alles sieht.", uk: "Я надсилаю бабусі фото, щоб вона все бачила."},
+    {say: "Ich brauche WLAN, um ein Video hochzuladen.", uk: "Мені потрібен вайфай, щоб завантажити відео."},
+    {say: "Keine Fotos ohne Erlaubnis!", uk: "Жодних фото без дозволу!"},
+    {say: "Wozu brauchst du das Tablet?", uk: "Навіщо тобі планшет?"}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Ein Telefon, das zu Hause steht, ist ein …", opts: ["Festnetztelefon", "Smartphone", "Messenger"], correct: "Festnetztelefon"},
+    {q: "Ein Gespräch, bei dem man sich sieht, ist ein …", opts: ["Videoanruf", "Brief", "Drucker"], correct: "Videoanruf"},
+    {q: "Fotos von anderen teilt man nur mit …", opts: ["Erlaubnis", "Zeichen", "Anschluss"], correct: "Erlaubnis"},
+    {q: "Ich nutze die App, … Englisch zu lernen.", opts: ["um", "damit", "dass"], correct: "um"},
+    {q: "Ich erkläre es dir, … du es verstehst.", opts: ["um", "damit", "zu"], correct: "damit"},
+    {q: "Wozu brauchst du den Drucker? — Um das Referat …", opts: ["auszudrucken", "zu ausdrucken", "ausdrucken"], correct: "auszudrucken"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Ich nutze den Messenger, um mit Greta zu chatten.", ok: true},
+    {s: "Ich brauche das Handy, damit Oma anzurufen.", wrong: 4, fix: "um"},
+    {s: "Wir schreiben nachts nicht, damit alle schlafen kann.", wrong: 7, fix: "können"},
+    {s: "Ich schicke Fotos, um Oma sie sieht.", wrong: 3, fix: "damit"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📱', '💬', '📞', '🏆']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
