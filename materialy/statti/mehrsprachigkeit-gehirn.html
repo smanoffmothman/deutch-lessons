@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mehr Sprachen, jüngeres Gehirn · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Sprache</span>
+        <h1>Mehr Sprachen, jüngeres Gehirn</h1>
+        <p class="sub">Ще одна причина вчити німецьку: велике європейське дослідження показало, що люди, які говорять кількома мовами, рідше старіють передчасно. І почати ніколи не пізно.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Zahlen</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Wie viele Sprachen sprichst du?</h2>
+      <div class="card">
+        <p>Welche Sprachen sprichst du – und welche lernst du gerade? Wann benutzt du sie im Alltag? Was glaubst du: Ist es gut für das Gehirn, mehrere Sprachen zu sprechen?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Якими мовами ти говориш — і які вчиш зараз? Коли ти користуєшся ними в повсякденному житті? Як гадаєш: чи корисно для мозку знати кілька мов?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Wer mehrere Sprachen spricht, bleibt im Kopf länger jung. Das zeigt eine große <span class="gl" data-key data-uk="дослідження" data-lemma="die Studie, -n">Studie</span> aus Europa. Und die beste Nachricht: Es ist nie zu spät, mit einer neuen Sprache anzufangen.</p>
+
+          <p>Für die Studie haben Forscher Daten von mehr als 86 000 <span class="gl" data-uk="дорослий" data-lemma="der/die Erwachsene, -n">Erwachsenen</span> aus 27 europäischen Ländern <span class="gl" data-uk="аналізувати" data-lemma="auswerten">ausgewertet</span>. Die <span class="gl" data-uk="учасник" data-lemma="der Teilnehmer, -">Teilnehmer</span> waren zwischen 51 und 90 Jahre alt. Ihre Ergebnisse haben die Forscher im November 2025 in der <span class="gl" data-uk="фаховий журнал" data-lemma="die Fachzeitschrift, -en">Fachzeitschrift</span> „Nature Aging“ <span class="gl" data-uk="публікувати" data-lemma="veröffentlichen">veröffentlicht</span>.</p>
+
+          <p>Das Ergebnis ist <span class="gl" data-uk="вражаючий" data-lemma="beeindruckend">beeindruckend</span>: Menschen, die mehrere Sprachen sprechen, zeigten nur halb so oft Zeichen einer <span class="gl" data-uk="передчасний" data-lemma="vorzeitig">vorzeitigen</span> <span class="gl" data-key data-uk="старіння" data-lemma="die Alterung">Alterung</span> wie Menschen mit nur einer Sprache. Besonders interessant: Es gibt offenbar eine Art „Dosiseffekt“. Das heißt: Jede <span class="gl" data-uk="додатковий" data-lemma="zusätzlich">zusätzliche</span> Sprache <span class="gl" data-uk="посилювати" data-lemma="verstärken">verstärkt</span> den <span class="gl" data-key data-uk="захист" data-lemma="der Schutz">Schutz</span>.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Bilingual_%28French-Dutch%29_signs_in_Brussels.jpg/960px-Bilingual_%28French-Dutch%29_signs_in_Brussels.jpg" alt="Zweisprachige Schilder in Brüssel: Französisch und Niederländisch." width="960" height="556" loading="lazy">
+            <figcaption>Zweisprachige Schilder in Brüssel: Französisch und Niederländisch. Foto: Andrijko Z., <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Bilingual_(French-Dutch)_signs_in_Brussels.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Wichtig ist allerdings, die Sprachen auch wirklich aktiv zu benutzen. Wer oft zwischen zwei oder mehr Sprachen <span class="gl" data-key data-uk="переходити, перемикатися" data-lemma="wechseln">wechselt</span>, trainiert offenbar die <span class="gl" data-key data-uk="увага" data-lemma="die Aufmerksamkeit">Aufmerksamkeit</span> und das <span class="gl" data-key data-uk="робоча пам'ять" data-lemma="das Arbeitsgedächtnis">Arbeitsgedächtnis</span>. Das ist so etwas wie Sport für das <span class="gl" data-uk="мозок" data-lemma="das Gehirn, -e">Gehirn</span>.</p>
+
+          <p>Und was ist mit Menschen, die erst als Erwachsene eine neue Sprache lernen? Auch sie können nach der Studie von dem Effekt <span class="gl" data-uk="мати користь" data-lemma="profitieren">profitieren</span>. Für alle, die gerade Deutsch lernen, heißt das also: Jede neue Vokabel ist nicht nur gut für die nächste <span class="gl" data-uk="контрольна робота" data-lemma="die Klassenarbeit, -en">Klassenarbeit</span>, sondern vielleicht auch für die <span class="gl" data-uk="здоров'я" data-lemma="die Gesundheit">Gesundheit</span> in vielen Jahren.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>In manchen deutschsprachigen Ländern ist Mehrsprachigkeit ganz normal. Die Schweiz hat vier <span class="gl" data-uk="державна мова (країни)" data-lemma="die Landessprache, -n">Landessprachen</span>: Deutsch, Französisch, Italienisch und Rätoromanisch. In Luxemburg sprechen viele Menschen im Alltag Luxemburgisch, Französisch und Deutsch.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Zahlen im Text</h2>
+      <p class="lead">Знайди в тексті потрібне число чи слово й впиши його.</p>
+      <div class="card">
+        <div id="ub3-list">
+          <div class="fill-item"><span class="num">1)</span> Die Forscher haben Daten von mehr als <input type="text" class="blank-input inline wide" data-ans="86 000|86000|86.000"> Erwachsenen ausgewertet.</div>
+          <div class="fill-item"><span class="num">2)</span> Die Menschen kamen aus <input type="text" class="blank-input inline" data-ans="27|siebenundzwanzig"> europäischen Ländern.</div>
+          <div class="fill-item"><span class="num">3)</span> Die jüngsten Teilnehmer waren <input type="text" class="blank-input inline" data-ans="51|einundfünfzig"> Jahre alt.</div>
+          <div class="fill-item"><span class="num">4)</span> Mehrsprachige zeigten nur <input type="text" class="blank-input inline" data-ans="halb"> so oft Zeichen vorzeitiger Alterung.</div>
+          <div class="fill-item"><span class="num">5)</span> Die Schweiz hat <input type="text" class="blank-input inline" data-ans="vier|4"> Landessprachen.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub3-check">Prüfen</button>
+          <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub3-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+      <p class="lead">б) Встав слова в текст. Одне слово зайве.</p>
+      <div class="card" id="ub4b-bank"></div>
+    </section>
+
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (3–5 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Welche Sprachen sprichst du? Wann und mit wem benutzt du welche Sprache?</label>
+          <textarea id="ub5-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Welche Sprache möchtest du noch lernen – und warum?</label>
+          <textarea id="ub5-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Zu Hause spreche ich …, In der Schule lerne ich …, Mit meinen Freunden …, Ich möchte gern … lernen, weil …</i>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Eine Studie mit mehr als 86 000 Menschen aus 27 Ländern zeigt: Wer mehrere Sprachen spricht, altert seltener zu früh. Jede weitere Sprache hilft – aber nur, wenn man sie aktiv benutzt. Auch späte Lerner profitieren. In der Schweiz und in Luxemburg ist Mehrsprachigkeit Alltag.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Дослідження понад 86 000 людей із 27 країн показує: хто говорить кількома мовами, рідше старіє передчасно. Кожна наступна мова допомагає — але лише тоді, коли нею активно користуються. Навіть ті, хто почав учити мову пізно, отримують користь. У Швейцарії й Люксембурзі багатомовність — звична річ.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "mehrsprachigkeit-gehirn";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Um eine Studie: Mehrere Sprachen schützen vor zu frühem Altern",
+            "Um die beste Methode, schnell eine Sprache zu lernen",
+            "Um die vier Landessprachen der Schweiz"],
+     correct: "Um eine Studie: Mehrere Sprachen schützen vor zu frühem Altern"}
+  ]);
+  buildMatch('ub1h', [
+    ["Wer hat mitgemacht?", "Absatz 1"],
+    ["Je mehr Sprachen, desto besser", "Absatz 2"],
+    ["Sport für den Kopf", "Absatz 3"],
+    ["Nie zu spät", "Absatz 4"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "An der Studie haben auch Kinder teilgenommen.", a: "f"},
+    {s: "Die Daten kommen aus 27 europäischen Ländern.", a: "r"},
+    {s: "Jede zusätzliche Sprache verstärkt den Schutz.", a: "r"},
+    {s: "Es reicht, eine Sprache in der Schule gelernt zu haben – benutzen muss man sie nicht.", a: "f"},
+    {s: "Die meisten Teilnehmer sprachen Englisch als zweite Sprache.", a: "n"},
+    {s: "Auch Menschen, die spät eine Sprache lernen, können profitieren.", a: "r"}
+  ]);
+
+  wireBlanks('ub3');
+
+  buildMatch('ub4', [
+    ["die Studie", "дослідження"],
+    ["vorzeitig", "передчасний"],
+    ["die Alterung", "старіння"],
+    ["wechseln", "переходити, перемикатися"],
+    ["die Aufmerksamkeit", "увага"],
+    ["das Gehirn", "мозок"],
+    ["der Schutz", "захист"]
+  ]);
+  buildWordBank('ub4b-bank', {
+    text: "Eine neue [Studie] zeigt: Mehrere Sprachen sind gut für das [Gehirn]. Wer oft zwischen Sprachen [wechselt], trainiert seine [Aufmerksamkeit]. Jede weitere Sprache [verstärkt] den Schutz.",
+    extra: ["Gesundheit"]
+  });
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🗣️','🧠','🌍','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
