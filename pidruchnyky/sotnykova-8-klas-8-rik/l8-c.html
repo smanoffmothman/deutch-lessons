@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 8, Modul C: Wiederholung — Німецька мова 8 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 8 КЛАС</span>
+        <h1>Lektion 8 · Modul C: Wiederholung</h1>
+        <p class="sub">Повторення Lektion 8 «Die Ukraine — Land und Leute»: природа й географія України, сторони світу, відомі українці. Граматика — відносні речення (dessen, deren, з прийменниками) і Präteritum у біографіях. Бліц, кросворд, вправи, чат і підсумковий тест на весь Lektion.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Blitz</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Kreuzworträtsel</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Sortieren</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Fehler</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Chat</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER — усі слова Lektion 8 (збираються самі) ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Усі слова Lektion 8</h2>
+      <p class="lead">Тут зібрано слова всіх модулів Lektion 8. Перевір себе в «Картки ▶» і познач ☆ ті, які ще не пам'ятаєш, — їх варто повторити перед тестом.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: бліц ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Blitz: 60 Sekunden</h2>
+      <p class="lead">Розминка на швидкість: скільки слів Lektion 8 ти перекладеш за 60 секунд? У бал не йде — це гра. Спробуй побити власний рекорд!</p>
+      <div class="card" id="ub1-blitz"></div>
+    </section>
+
+    <!-- ===== Üb. 2: кросворд ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Kreuzworträtsel: Die Ukraine</h2>
+      <p class="lead">Торкнися клітинки чи підказки й пиши слово (ще раз по клітинці — інший напрямок). Артиклі писати не треба. ä ö ü — з панелі внизу.</p>
+      <div class="card" id="ub2-kw"></div>
+    </section>
+
+    <!-- ===== Üb. 3: сортування ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Natur, Menschen oder Präteritum?</h2>
+      <p class="lead">Розклади слова по трьох кошиках: натисни слово, потім кошик.</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 4: знайди помилку ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Finde den Fehler</h2>
+      <p class="lead">Граматика всього Lektion: відносні речення (an dem, in der, dessen, deren) і Präteritum (flog, sang, gewann). Знайди помилку — або познач, що речення правильне.</p>
+      <div class="card" id="ub4-fix"></div>
+    </section>
+
+    <!-- ===== Üb. 5: чат ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Iwan fragt nach dem Ukrainischen Nachmittag</h2>
+      <p class="lead">Іван із Києва чув про «Український вечір» 8b і розпитує тебе. Вибирай правильну відповідь.</p>
+      <div class="card" id="ub5-chat"></div>
+    </section>
+
+    <!-- ===== SPRECHEN ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Sprich mal!</h2>
+      <p class="lead">Спершу вимов фрази в 🎤, потім відповідай уголос на запитання й порівнюй зі зразком.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Beschreibe eine Region der Ukraine. Benutze Himmelsrichtungen und einen Relativsatz.</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Im Westen der Ukraine liegen die Karpaten, ein Gebirge, in dem es viele Wälder und Bergseen gibt. Der bekannteste See ist der Synewyr, den man auch „Meerauge“ nennt.</div>
+        </div>
+        <div class="qa">
+          <label>2. Stell eine berühmte Person aus der Ukraine kurz vor. Benutze das Präteritum.</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Igor Sikorsky wurde 1889 in Kyjiw geboren. Er baute Flugzeuge und wanderte 1919 in die USA aus. Dort flog er 1939 seinen ersten Hubschrauber.</div>
+        </div>
+        <div class="qa">
+          <label>3. Welchen Ort in der Ukraine möchtest du deutschen Freunden zeigen? Warum?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Ich möchte ihnen den Dnister-Canyon zeigen, denn dort kann man mit dem Boot fahren. Die Felsen, an denen man vorbeifährt, sind Millionen Jahre alt.</div>
+        </div>
+        <div class="qa">
+          <label>4. Was hast du in diesem Schuljahr im Deutschunterricht gelernt?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Ich habe viele neue Wörter über Natur, Medien und Reisen gelernt. Am schwierigsten waren für mich die Relativsätze, aber jetzt verstehe ich sie besser.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST — на весь Lektion ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Test zu Lektion 8</h2>
+      <p class="lead">Підсумковий тест на весь Lektion 8: 18 завдань. Кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">9)</span> Kyjiw liegt im
+          <select class="blank inline" data-ans="Norden"><option value="">—</option><option>Norden</option><option>Süden</option><option>Westen</option></select> der Ukraine.</div>
+        <div class="fill-item"><span class="num">10)</span> Die Karpaten sind ein Gebirge, in
+          <select class="blank inline" data-ans="dem"><option value="">—</option><option>dem</option><option>den</option><option>der</option></select> man gut wandern kann.</div>
+        <div class="fill-item"><span class="num">11)</span> Polissja ist eine Region,
+          <select class="blank inline" data-ans="deren"><option value="">—</option><option>deren</option><option>dessen</option><option>denen</option></select> Wälder riesig sind.</div>
+        <div class="fill-item"><span class="num">12)</span> Sikorsky
+          <select class="blank inline" data-ans="wanderte"><option value="">—</option><option>wanderte</option><option>wandert</option><option>auswanderte</option></select> 1919 in die USA aus.</div>
+        <div class="fill-item"><span class="num">13)</span> Marija Prymatschenko
+          <select class="blank inline" data-ans="besuchte"><option value="">—</option><option>besuchte</option><option>besucht</option><option>besuchen</option></select> nie eine Kunstschule.</div>
+        <div class="fill-item"><span class="num">14)</span> Solomija Kruschelnyzka
+          <select class="blank inline" data-ans="sang"><option value="">—</option><option>sang</option><option>singte</option><option>sung</option></select> in vielen Ländern.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-8-klas-8-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-8-klas-8-rik";
+  const KN_UNIT = "l8-c";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['ub1', 'ub2', 'ub3', 'ub4', 'ub5', 'sprechen']});
+
+  // Üb. 1: бліц — усі слова Lektion 8 з файлу слів (без однакових перекладів)
+  const blitzPairs = [], blitzSeen = new Set();
+  ((window.SLOVA && window.SLOVA[KN_BOOK]) || []).filter(w => /^l8-/.test(w.r)).forEach(w => {
+    const de = w.de.split(' / ')[0].split(',')[0].replace(/\s*\(.*?\)/g, '').trim();
+    const uk = w.uk.split(' / ')[0].trim();
+    const key = uk.split(/[,;]/)[0].trim().toLowerCase();
+    if (!de || /^(der|die|das)$/i.test(de) || /[?—·]/.test(de) || blitzSeen.has(key)) return;
+    blitzSeen.add(key);
+    blitzPairs.push([de, uk]);
+  });
+  buildBlitz('ub1-blitz', {pairs: blitzPairs, seconds: 60, dir: "de-uk"});
+
+  // Üb. 2: кросворд
+  buildCrossword('ub2-kw', [
+    ["Steppe", "степ (die)"],
+    ["Sumpf", "болото (der)"],
+    ["Quelle", "джерело (die)"],
+    ["Norden", "північ (der)"],
+    ["Westen", "захід (der)"],
+    ["Malerin", "художниця (die)"],
+    ["Hubschrauber", "гелікоптер (der)"],
+    ["Erfolg", "успіх (der)"],
+    ["Oper", "опера (die)"],
+    ["Spende", "пожертва (die)"],
+    ["Canyon", "каньйон (der)"],
+    ["Ingenieur", "інженер (der)"]
+  ]);
+
+  // Üb. 3: сортування
+  buildSort('ub3-sort', {
+    buckets: ["Natur 🌳", "Menschen 👥", "Präteritum ⏳"],
+    items: [
+      {t: "die Steppe", b: "Natur 🌳"},
+      {t: "der Sumpf", b: "Natur 🌳"},
+      {t: "die Quelle", b: "Natur 🌳"},
+      {t: "der Canyon", b: "Natur 🌳"},
+      {t: "die Malerin", b: "Menschen 👥"},
+      {t: "der Ingenieur", b: "Menschen 👥"},
+      {t: "die Turnerin", b: "Menschen 👥"},
+      {t: "die Sängerin", b: "Menschen 👥"},
+      {t: "flog", b: "Präteritum ⏳"},
+      {t: "sang", b: "Präteritum ⏳"},
+      {t: "gewann", b: "Präteritum ⏳"},
+      {t: "starb", b: "Präteritum ⏳"}
+    ]
+  });
+
+  // Üb. 4: знайди помилку
+  buildFixError('ub4-fix', [
+    {s: "Der Dnipro ist der Fluss, an den Kyjiw liegt.", wrong: 6, fix: "dem"},
+    {s: "Lwiw liegt im Westen der Ukraine.", ok: true},
+    {s: "Polissja ist eine Region, dessen Wälder riesig sind.", wrong: 4, fix: "deren"},
+    {s: "Sikorsky flog seinen ersten Hubschrauber selbst.", ok: true},
+    {s: "Prymatschenko malte Tiere, die es in keinem Zoo gibt.", ok: true},
+    {s: "Podkopajewa gewinnte zwei Goldmedaillen.", wrong: 1, fix: "gewann"},
+    {s: "Kruschelnyzka singte die Hauptrolle.", wrong: 1, fix: "sang"},
+    {s: "Charkiw ist die Stadt, in die Daryna geboren ist.", wrong: 5, fix: "der"},
+    {s: "Der Synewyr ist ein See, den man „Meerauge“ nennt.", ok: true}
+  ]);
+
+  // Üb. 5: чат
+  buildChat('ub5-chat', {
+    partner: "Iwan",
+    steps: [
+      {them: "Hi! Ich habe gehört, ihr habt einen Ukrainischen Nachmittag gemacht. Wie viele Gäste kamen?"},
+      {you: ["Es kamen über hundert Gäste.", "Es kommten über hundert Gäste.", "Es kam über hundert Gäste."], correct: 0},
+      {them: "Wow! Und was hat Greta gezeigt?"},
+      {you: ["Bilder, die sie im Stil von Prymatschenko gemalt hat.", "Bilder, deren sie im Stil von Prymatschenko gemalt hat.", "Bilder, die sie im Stil von Prymatschenko gemalt haben."], correct: 0},
+      {them: "Und über wen hat Erik gesprochen?"},
+      {you: ["Über Sikorsky, dessen Hubschrauber heute überall fliegen.", "Über Sikorsky, deren Hubschrauber heute überall fliegen.", "Über Sikorsky, der Hubschrauber heute überall fliegen."], correct: 0},
+      {them: "Cool. Wo liegt eigentlich Leipzig? Ich brauche das für Geografie."},
+      {you: ["Im Osten Deutschlands, in Sachsen.", "Im Osten Deutschland, in Sachsen.", "In den Osten Deutschlands, in Sachsen."], correct: 0},
+      {them: "Danke! Und wann kommt Darynas Oma zu euch?"},
+      {you: ["Im Juli. Daryna freut sich schon sehr.", "Am Juli. Daryna freut sich schon sehr.", "Im Juli. Daryna freute sich schon morgen sehr."], correct: 0},
+      {them: "Grüß sie von mir! Und schick mir ein Foto vom Borschtsch!"}
+    ]
+  });
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Lwiw liegt im Westen der Ukraine.", uk: "Львів розташований на заході України."},
+    {say: "Polissja ist eine Region, deren Wälder riesig sind.", uk: "Полісся — край, ліси якого величезні."},
+    {say: "Sie wurde neunzehnhundertneun geboren.", uk: "Вона народилася 1909 року."},
+    {say: "Er flog seinen ersten Hubschrauber selbst.", uk: "Він сам полетів на своєму першому гелікоптері."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Lwiw liegt im … der Ukraine.", opts: ["Westen", "Osten", "Süden"], correct: "Westen"},
+    {q: "Der tiefste See der Ukraine ist …", opts: ["der Switjas", "der Synewyr", "der Bodensee"], correct: "der Switjas"},
+    {q: "Eine weite Landschaft fast ohne Bäume ist die …", opts: ["Steppe", "Küste", "Quelle"], correct: "Steppe"},
+    {q: "Präteritum von „gewinnen“: sie …", opts: ["gewann", "gewinnte", "gewonnen"], correct: "gewann"},
+    {q: "Präteritum von „sterben“: er …", opts: ["starb", "sterbte", "stirb"], correct: "starb"},
+    {q: "Marija Prymatschenko … 1909 geboren.", opts: ["wurde", "war", "ist"], correct: "wurde"},
+    {q: "Das ist ein Fluss, … Canyon sehr lang ist.", opts: ["dessen", "deren", "dem"], correct: "dessen"},
+    {q: "Das sind die Freunde, mit … ich wandere.", opts: ["denen", "die", "deren"], correct: "denen"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Odesa liegt im Süden der Ukraine.", ok: true},
+    {s: "Das ist die Malerin, dessen Bilder bunt sind.", wrong: 4, fix: "deren"},
+    {s: "Er fliegte seinen ersten Hubschrauber.", wrong: 1, fix: "flog"},
+    {s: "Lwiw ist die Stadt, in die Solomija wohnt.", wrong: 5, fix: "der"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🌻', '🗺️', '⭐', '🏆']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
