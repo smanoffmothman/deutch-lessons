@@ -735,5 +735,20 @@
   {de: "gewinnen, gewann, hat gewonnen", uk: "вигравати", r: "l8-b"},
   {de: "singen, sang, hat gesungen", uk: "співати", r: "l8-b"},
   {de: "fliegen, flog, ist geflogen", uk: "летіти", r: "l8-b"},
-  {de: "die Spende, -n", uk: "пожертва", r: "l8-b"}
+  {de: "die Spende, -n", uk: "пожертва", r: "l8-b"},
+  // ---- Lektion 8 · Modul D: Geschichtenzeit ----
+  {de: "der Busbahnhof, ¨-e", uk: "автовокзал", r: "l8-d"},
+  {de: "der Blumenstrauß, ¨-e", uk: "букет квітів", r: "l8-d"},
+  {de: "die Kirschmarmelade", uk: "вишневе варення", r: "l8-d"},
+  {de: "der Kleingarten, ¨-", uk: "садова ділянка", r: "l8-d"},
+  {de: "das Beet, -e", uk: "грядка", r: "l8-d"},
+  {de: "die Rote Bete", uk: "буряк", r: "l8-d"},
+  {de: "der Samen, -", uk: "насіння", r: "l8-d"},
+  {de: "übersetzen", uk: "перекладати", r: "l8-d"},
+  {de: "sich verständigen", uk: "порозумітися", r: "l8-d"},
+  {de: "Kommt ihr allein klar?", uk: "Впораєтеся самі?", r: "l8-d"},
+  {de: "den Daumen heben", uk: "показати великий палець (схвалення)", r: "l8-d"},
+  {de: "strahlen", uk: "сяяти (від радості)", r: "l8-d"},
+  {de: "heimlich", uk: "потайки", r: "l8-d"},
+  {de: "winken", uk: "махати рукою", r: "l8-d"}
 ];
