@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 8, Modul B: Menschen im Fokus — Німецька мова 8 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 8 КЛАС</span>
+        <h1>Lektion 8 · Modul B: Menschen im Fokus</h1>
+        <p class="sub">Урок про відомих українців: художниця Марія Примаченко, конструктор Ігор Сікорський, гімнастка Лілія Подкопаєва й оперна співачка Соломія Крушельницька. Граматика — Präteritum у біографіях (malte, flog, gewann, sang, wurde geboren) і відносні речення з dessen / deren. Текст і діалог з озвученням, вправи, говоріння, письмо і підсумковий тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Präteritum</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Wer ist das?</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Früher</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · dessen, deren</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+        <!-- ===== TEXT — власний текст + вправа на розуміння ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Menschen, die die Welt kennt</h2>
+      <p class="lead">Наприкінці навчального року 8b підготувала для проєкту зі Львовом презентації про відомих українців. Айла пише про них для шкільної газети. Послухай і прочитай. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l8-b-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Herr Brandt hatte uns eine Frage gestellt: „Welche Menschen aus der Ukraine kennt die Welt?“ Am Montag hörten wir vier Präsentationen. Hier sind sie.</p>
+        <p><b>Greta</b> stellte die <span class="gl" data-uk="художниця" data-lemma="die Malerin, -nen">Malerin</span> Marija Prymatschenko vor. Sie wurde 1909 in Bolotnja, einem Dorf bei Kyjiw, geboren und lebte dort ihr ganzes Leben. Eine Kunstschule besuchte sie nie — sie lernte alles allein. Sie malte fantastische Tiere in leuchtenden Farben, die es in keinem Zoo gibt. Die UNESCO erklärte das Jahr 2009 zum Jahr von Marija Prymatschenko. Im Februar 2022 <span class="gl" data-uk="згорів" data-lemma="verbrennen, verbrannte, ist verbrannt">verbrannte</span> das Museum in Iwankiw, in dem viele ihrer Bilder hingen. Männer aus dem Ort <span class="gl" data-uk="врятували" data-lemma="retten">retteten</span> einige Bilder aus dem Feuer. Greta zeigte uns danach ein Tier, das sie selbst in diesem Stil gemalt hatte: halb Katze, halb Fisch.</p>
+        <p><b>Erik</b> sprach natürlich über einen <span class="gl" data-uk="інженер" data-lemma="der Ingenieur, -e">Ingenieur</span>: Igor Sikorsky. Er wurde 1889 in Kyjiw geboren. 1913 baute er eines der ersten viermotorigen <span class="gl" data-uk="літаки" data-lemma="das Flugzeug, -e">Flugzeuge</span> der Welt. 1919 <span class="gl" data-uk="емігрував" data-lemma="auswandern, ist ausgewandert">wanderte</span> er in die USA aus. Dort flog er 1939 selbst seinen ersten <span class="gl" data-uk="гелікоптер" data-lemma="der Hubschrauber, -">Hubschrauber</span>, den VS-300. „Fast alle Hubschrauber, die heute fliegen, haben einen großen Rotor oben und einen kleinen hinten — genau wie seiner“, erklärte Erik.</p>
+        <p><b>Daryna</b> wählte eine Sportlerin, weil sie in Charkiw selbst fünf Jahre geturnt hat: Lilija Podkopajewa. Sie wurde 1978 in Donezk geboren und begann mit fünf Jahren zu turnen. 1996 in Atlanta wurde sie mit nur achtzehn Jahren <span class="gl" data-uk="олімпійська чемпіонка" data-lemma="die Olympiasiegerin, -nen">Olympiasiegerin</span> im Mehrkampf und am Boden. Ein Element, das sie als Erste zeigte, ist bis heute <span class="gl" data-uk="назване на її честь" data-lemma="nach + Dat. benannt sein">nach ihr benannt</span>: ein doppelter Salto vorwärts mit halber Drehung. „Ich habe es nie geschafft“, gab Daryna zu.</p>
+        <p>Die letzte Präsentation kam per Video aus Lwiw. <b>Solomija</b> erzählte von der <span class="gl" data-uk="співачка" data-lemma="die Sängerin, -nen">Sängerin</span>, deren Namen sie trägt: Solomija Kruschelnyzka. Sie wurde 1872 in einem Dorf im Gebiet Ternopil geboren und sang später in vielen Ländern Europas. 1904 fiel in Mailand die neue Oper „Madama Butterfly“ von Puccini durch. Ein paar Monate später sang Kruschelnyzka die Hauptrolle in Brescia — und hatte einen riesigen <span class="gl" data-uk="успіх" data-lemma="der Erfolg, -e">Erfolg</span>. Heute trägt die Oper in Lwiw ihren Namen. „Meine Eltern haben mich nach ihr benannt“, sagte Solomija. „Singen kann ich leider nicht so gut wie sie.“</p>
+        <p><i>Ayla, 8b</i></p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">Präteritum in Biografien</h2>
+      <p class="lead">У біографіях і письмових розповідях про минуле німці вживають <b>Präteritum</b>. У розмові частіше — Perfekt. Модальні дієслова, sein і haben навіть у розмові частіше стоять у Präteritum.</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. Regelmäßige Verben: -te</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th></th><th>malen</th><th>retten</th></tr>
+          <tr><td>ich</td><td>mal<b>te</b></td><td>rett<b>ete</b></td></tr>
+          <tr><td>du</td><td>mal<b>test</b></td><td>rett<b>etest</b></td></tr>
+          <tr><td>er / sie</td><td>mal<b>te</b></td><td>rett<b>ete</b></td></tr>
+          <tr><td>wir / sie / Sie</td><td>mal<b>ten</b></td><td>rett<b>eten</b></td></tr>
+          <tr><td>ihr</td><td>mal<b>tet</b></td><td>rett<b>etet</b></td></tr>
+        </table></div>
+        <div class="merke">Після <b>-t-</b> / <b>-d-</b> у корені додаємо <b>-e-</b>: rett<b>e</b>te, arbeit<b>e</b>te, red<b>e</b>te. Форми <b>ich</b> і <b>er/sie</b> однакові!</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. Unregelmäßige Verben</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Infinitiv</th><th>Präteritum</th><th>Infinitiv</th><th>Präteritum</th></tr>
+          <tr><td>sein</td><td><b>war</b></td><td>fliegen</td><td><b>flog</b></td></tr>
+          <tr><td>haben</td><td><b>hatte</b></td><td>singen</td><td><b>sang</b></td></tr>
+          <tr><td>werden</td><td><b>wurde</b></td><td>gewinnen</td><td><b>gewann</b></td></tr>
+          <tr><td>gehen</td><td><b>ging</b></td><td>sterben</td><td><b>starb</b></td></tr>
+          <tr><td>kommen</td><td><b>kam</b></td><td>beginnen</td><td><b>begann</b></td></tr>
+        </table></div>
+        <div class="merke">У неправильних дієслів змінюється корінь, а в <b>ich</b> і <b>er/sie</b> немає закінчення: er flog, sie sang. Дієслова з префіксом: aus|wandern → er wanderte … <b>aus</b>, an|fangen → sie fing … <b>an</b>.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. Geboren werden · Jahreszahlen</p>
+        <p>Sie <b>wurde</b> 1909 <b>geboren</b>. · Er <b>wurde</b> 1889 in Kyjiw <b>geboren</b>. · Sie <b>starb</b> 1952 in Lwiw.</p>
+        <p>Роки до 2000 читаються сотнями: 1889 = <b>achtzehnhundert</b>neunundachtzig, 1996 = <b>neunzehnhundert</b>sechsundneunzig. Рік — без прийменника або з <b>im Jahr</b>: <s>in</s> 1996 → 1996 / im Jahr 1996.</p>
+        <div class="merke">Про живу людину кажуть <b>ist … geboren</b>: Daryna <b>ist</b> in Charkiw geboren. Про історичну особу — <b>wurde … geboren</b>.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">4. Типові помилки</p>
+        <p>✗ Sie singte. → ✓ Sie <b>sang</b>.</p>
+        <p>✗ Er gewinnte. → ✓ Er <b>gewann</b>.</p>
+        <p>✗ Er auswanderte 1919. → ✓ Er <b>wanderte</b> 1919 <b>aus</b>.</p>
+        <p>✗ Sikorsky war ein Ingenieur, deren Hubschrauber … → ✓ <b>dessen</b> Hubschrauber (der Ingenieur → dessen)</p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Was taten sie?</h2>
+      <p class="lead">Вибери правильну форму Präteritum.</p>
+      <div class="card" id="ub1-list">
+        <div class="fill-item"><span class="num">1)</span> Marija Prymatschenko
+          <select class="blank inline" data-ans="lebte"><option value="">—</option><option>lebte</option><option>lebt</option><option>lebten</option></select> ihr ganzes Leben in Bolotnja.</div>
+        <div class="fill-item"><span class="num">2)</span> Sie
+          <select class="blank inline" data-ans="besuchte"><option value="">—</option><option>besuchte</option><option>besucht</option><option>besuchten</option></select> nie eine Kunstschule.</div>
+        <div class="fill-item"><span class="num">3)</span> Igor Sikorsky
+          <select class="blank inline" data-ans="wurde"><option value="">—</option><option>wurde</option><option>war</option><option>ist</option></select> 1889 in Kyjiw geboren.</div>
+        <div class="fill-item"><span class="num">4)</span> 1919
+          <select class="blank inline" data-ans="ging"><option value="">—</option><option>ging</option><option>gang</option><option>gehte</option></select> er in die USA.</div>
+        <div class="fill-item"><span class="num">5)</span> 1939
+          <select class="blank inline" data-ans="flog"><option value="">—</option><option>flog</option><option>fliegte</option><option>flug</option></select> er selbst seinen ersten Hubschrauber.</div>
+        <div class="fill-item"><span class="num">6)</span> Lilija Podkopajewa
+          <select class="blank inline" data-ans="gewann"><option value="">—</option><option>gewann</option><option>gewinnte</option><option>gewonnen</option></select> 1996 zwei Goldmedaillen.</div>
+        <div class="fill-item"><span class="num">7)</span> Solomija Kruschelnyzka
+          <select class="blank inline" data-ans="sang"><option value="">—</option><option>sang</option><option>singte</option><option>sung</option></select> in vielen Ländern Europas.</div>
+        <div class="fill-item"><span class="num">8)</span> 1904
+          <select class="blank inline" data-ans="hatte"><option value="">—</option><option>hatte</option><option>habte</option><option>hat</option></select> sie in Brescia einen riesigen Erfolg.</div>
+        <div class="fill-item"><span class="num">9)</span> Sie
+          <select class="blank inline" data-ans="starb"><option value="">—</option><option>starb</option><option>sterbte</option><option>stirbt</option></select> 1952 in Lwiw.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub1-check">Prüfen</button>
+        <button class="btn secondary" id="ub1-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub1-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Wer ist das?</h2>
+      <p class="lead">Про кого йдеться? Вибери людину.</p>
+      <div class="card" id="ub2-list"></div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Früher war das so</h2>
+      <p class="lead">Перепиши речення в Präteritum.</p>
+      <div class="card" id="ub3-tr"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">dessen, deren, in der …</h2>
+      <p class="lead">Зʼєднай два речення у одне з відносним реченням.</p>
+      <div class="card" id="ub4-tr"></div>
+    </section>
+
+    <!-- ===== HÖREN ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Der Ukrainische Nachmittag</h2>
+      <p class="lead">Після презентацій 8b влаштувала в актовій залі «Український вечір». Ніна в шкільному радіо розпитує пана Брандта, як усе минуло. Послухай (можна двічі) і дай відповіді. Текст відкривається внизу — але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l8-b-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Nina:</b> Herr Brandt, am Freitag hatte die 8b ihren Ukrainischen Nachmittag in der Aula. Wie war es?<br>
+          <b>Herr Brandt:</b> Ehrlich gesagt: besser, als ich dachte. Wir hatten mit fünfzig Gästen gerechnet, aber es kamen über hundert.<br>
+          <b>Nina:</b> Was gab es zu sehen?<br>
+          <b>Herr Brandt:</b> Zuerst zeigten Greta, Erik und Daryna noch einmal ihre Präsentationen. Greta stellte außerdem zwölf Bilder aus, die sie im Stil von Marija Prymatschenko gemalt hatte. Ein Bild war schon nach zehn Minuten verkauft.<br>
+          <b>Nina:</b> Und das Essen? Ich habe gehört, es gab Borschtsch.<br>
+          <b>Herr Brandt:</b> Ja! Darynas Mutter kochte einen riesigen Topf Borschtsch, nach dem Rezept von Oma Halyna. Nach zwanzig Minuten war er leer. Ich bekam leider nur noch einen halben Teller.<br>
+          <b>Nina:</b> Gab es auch Musik?<br>
+          <b>Herr Brandt:</b> Natürlich. Die Band „Kurzschluss“ spielte ein Lied von Okean Elzy, und Daryna sang den Text auf Ukrainisch. Und Ostap und Solomija waren per Video aus Lwiw dabei.<br>
+          <b>Nina:</b> Und wofür war das Geld?<br>
+          <b>Herr Brandt:</b> Für die Bibliothek in Ostaps Schule. Wir sammelten fast vierhundert Euro für neue Bücher.<br>
+          <b>Nina:</b> Super! Und was war für Sie der schönste Moment?<br>
+          <b>Herr Brandt:</b> Am Ende sagte Solomija auf dem Bildschirm: „Danke, Leipzig!“ — und die ganze Aula antwortete: „Djakuju, Lwiw!“ Das vergesse ich nicht so schnell.
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Berühmte Menschen</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Welche Person aus dem Text findest du am interessantesten? Warum?</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Am interessantesten finde ich Igor Sikorsky, weil er schon als junger Mann Flugzeuge baute. Er flog seinen ersten Hubschrauber selbst — das war sehr mutig.</div>
+        </div>
+        <div class="qa">
+          <label>2. Stell eine berühmte Person aus der Ukraine vor. Benutze das Präteritum.</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Ich stelle Taras Schewtschenko vor. Er wurde 1814 geboren. Er war Dichter und Maler. Als junger Mann lebte er in Sankt Petersburg und studierte dort an der Kunstakademie.</div>
+        </div>
+        <div class="qa">
+          <label>3. Gibt es eine Person, die für dich ein Vorbild ist? Erzähl.</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Mein Vorbild ist meine Trainerin. Sie war früher selbst eine gute Sportlerin. Sie hilft mir, wenn etwas nicht klappt, und sie gibt nie auf.</div>
+        </div>
+        <div class="qa">
+          <label>4. Warum ist es wichtig, die Geschichte berühmter Menschen zu kennen?</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Berühmte Menschen zeigen uns, was man schaffen kann. Viele von ihnen hatten am Anfang Probleme, aber sie gaben nicht auf. Das motiviert mich.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Steckbrief: Ein Mensch im Fokus</h2>
+      <p class="lead">Обери відому людину з України (не з тексту) і напиши про неї 60–80 слів для шкільної газети. Перевір факти в надійних джерелах. Пиши в Präteritum і вживи щонайменше одне відносне речення.</p>
+      <div class="card">
+        <p>1) хто ця людина і чим відома; 2) коли й де народилася; 3) два-три важливі події з життя; 4) чому ти її обрав(-ла).</p>
+        <p class="beispiel">Ich stelle … vor. · Er/Sie wurde … in … geboren. · … war ein/e …, der/die/dessen/deren … · 19… schrieb / malte / gewann / baute er/sie … · Ich habe … gewählt, weil …</p>
+        <div class="qa">
+          <label for="schreiben-text">Dein Text</label>
+          <textarea id="schreiben-text" rows="9" placeholder="Ich stelle … vor."
+            data-words="60-80"
+            data-must="wurde|geboren"
+            data-check="Хто і чим відомий|Коли й де народився|Важливі події|Präteritum|Відносне речення|Чому обрав(-ла)"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Ich stelle Lessja Ukrajinka vor. Sie war eine Dichterin, deren Werke man in der Ukraine in jeder Schule liest. Sie wurde 1871 geboren. Ihr richtiger Name war Laryssa Kossatsch. Ihr erstes Gedicht schrieb sie schon mit acht Jahren. Später schrieb sie das Drama „Waldlied“, das bis heute im Theater gespielt wird. Ich habe sie gewählt, weil sie trotz ihrer Krankheit nie aufgab.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Marija Prymatschenko
+          <select class="blank inline" data-ans="wurde"><option value="">—</option><option>wurde</option><option>war</option><option>ist</option></select> 1909 geboren.</div>
+        <div class="fill-item"><span class="num">8)</span> Sikorsky
+          <select class="blank inline" data-ans="ging"><option value="">—</option><option>ging</option><option>geht</option><option>gehte</option></select> 1919 in die USA.</div>
+        <div class="fill-item"><span class="num">9)</span> Prymatschenko war eine Malerin,
+          <select class="blank inline" data-ans="deren"><option value="">—</option><option>deren</option><option>dessen</option><option>die</option></select> Bilder voller Farben sind.</div>
+        <div class="fill-item"><span class="num">10)</span> Mit achtzehn
+          <select class="blank inline" data-ans="wurde"><option value="">—</option><option>wurde</option><option>werdete</option><option>wird</option></select> Podkopajewa Olympiasiegerin.</div>
+        <div class="fill-item"><span class="num">11)</span> Brescia ist die Stadt, in
+          <select class="blank inline" data-ans="der"><option value="">—</option><option>der</option><option>die</option><option>dem</option></select> Kruschelnyzka 1904 großen Erfolg hatte.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-8-klas-8-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-8-klas-8-rik";
+  const KN_UNIT = "l8-b";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Marija Prymatschenko lebte ihr ganzes Leben in Bolotnja.", a: "r"},
+    {s: "Sie studierte an einer Kunstschule in Kyjiw.", a: "f"},
+    {s: "Im Februar 2022 verbrannte das Museum in Iwankiw.", a: "r"},
+    {s: "Greta hat ein Tier gemalt, das halb Katze und halb Fisch ist.", a: "r"},
+    {s: "Igor Sikorsky wurde in Lwiw geboren.", a: "f"},
+    {s: "Sikorsky flog seinen ersten Hubschrauber selbst.", a: "r"},
+    {s: "Lilija Podkopajewa wurde mit achtzehn Jahren Olympiasiegerin.", a: "r"},
+    {s: "Daryna kann das Element von Podkopajewa auch turnen.", a: "f"},
+    {s: "„Madama Butterfly“ hatte in Mailand sofort großen Erfolg.", a: "f"},
+    {s: "Die Oper in Lwiw trägt den Namen von Solomija Kruschelnyzka.", a: "r"}
+  ]);
+
+  // Üb. 1
+  wireBlanks('ub1');
+
+  // Üb. 2: хто це
+  buildMatch('ub2', [
+    ["Sie malte Tiere, die es in keinem Zoo gibt.", "Marija Prymatschenko"],
+    ["Er wanderte 1919 in die USA aus.", "Igor Sikorsky"],
+    ["Sie begann mit fünf Jahren zu turnen.", "Lilija Podkopajewa"],
+    ["Sie sang die Hauptrolle in „Madama Butterfly“.", "Solomija Kruschelnyzka"],
+    ["Sie lernte alles allein und besuchte nie eine Kunstschule.", "Marija Prymatschenko"],
+    ["Er baute eines der ersten viermotorigen Flugzeuge.", "Igor Sikorsky"],
+    ["Ein Element im Turnen ist nach ihr benannt.", "Lilija Podkopajewa"],
+    ["Sie wurde 1872 im Gebiet Ternopil geboren.", "Solomija Kruschelnyzka"]
+  ], {lead: true, options: ["Igor Sikorsky", "Lilija Podkopajewa", "Marija Prymatschenko", "Solomija Kruschelnyzka"]});
+
+  // Üb. 3: у Präteritum
+  buildTransform('ub3-tr', [
+    {s: "Sie malt fantastische Tiere.", task: "Präteritum", ans: "Sie malte fantastische Tiere."},
+    {s: "Er baut ein Flugzeug.", task: "Präteritum", ans: "Er baute ein Flugzeug."},
+    {s: "Er fliegt seinen ersten Hubschrauber.", task: "Präteritum", ans: "Er flog seinen ersten Hubschrauber."},
+    {s: "Sie gewinnt zwei Goldmedaillen.", task: "Präteritum", ans: "Sie gewann zwei Goldmedaillen."},
+    {s: "Sie singt in vielen Ländern.", task: "Präteritum", ans: "Sie sang in vielen Ländern."},
+    {s: "Die Männer retten einige Bilder.", task: "Präteritum", ans: "Die Männer retteten einige Bilder."},
+    {s: "Er wandert in die USA aus.", task: "Präteritum", hint: "aus — в кінці", ans: "Er wanderte in die USA aus."}
+  ]);
+
+  // Üb. 4: відносні речення
+  buildTransform('ub4-tr', [
+    {s: "Sikorsky war ein Ingenieur. Seine Hubschrauber fliegen heute überall.", task: "dessen …",
+     ans: "Sikorsky war ein Ingenieur, dessen Hubschrauber heute überall fliegen."},
+    {s: "Prymatschenko war eine Malerin. Ihre Bilder sind voller Farben.", task: "deren …",
+     ans: "Prymatschenko war eine Malerin, deren Bilder voller Farben sind."},
+    {s: "Brescia ist die Stadt. In der Stadt hatte Kruschelnyzka großen Erfolg.", task: "in der …",
+     ans: "Brescia ist die Stadt, in der Kruschelnyzka großen Erfolg hatte."},
+    {s: "Podkopajewa ist eine Turnerin. Ein Element ist nach ihr benannt.", task: "nach der …",
+     ans: "Podkopajewa ist eine Turnerin, nach der ein Element benannt ist."},
+    {s: "Das ist das Museum. Die Männer retteten Bilder aus dem Museum.", task: "aus dem …",
+     ans: "Das ist das Museum, aus dem die Männer Bilder retteten."},
+    {s: "Die Oper trägt den Namen einer Sängerin. Die Sängerin kam aus dem Gebiet Ternopil.", task: "die …",
+     ans: "Die Oper trägt den Namen einer Sängerin, die aus dem Gebiet Ternopil kam."}
+  ]);
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Wie viele Gäste kamen zum Ukrainischen Nachmittag?", opts: ["Über hundert", "Fünfzig", "Zwölf"], correct: "Über hundert"},
+    {q: "Was stellte Greta aus?", opts: ["Zwölf Bilder im Stil von Prymatschenko", "Fotos aus Lwiw", "Ein Modell eines Hubschraubers"], correct: "Zwölf Bilder im Stil von Prymatschenko"},
+    {q: "Wer kochte den Borschtsch?", opts: ["Darynas Mutter", "Oma Halyna", "Herr Brandt"], correct: "Darynas Mutter"},
+    {q: "Wie schnell war der Topf leer?", opts: ["Nach zwanzig Minuten", "Nach zwei Stunden", "Nach fünf Minuten"], correct: "Nach zwanzig Minuten"},
+    {q: "Was spielte die Band „Kurzschluss“?", opts: ["Ein Lied von Okean Elzy", "„Schtschedryk“", "Ein eigenes Lied"], correct: "Ein Lied von Okean Elzy"},
+    {q: "Wer sang den Text auf Ukrainisch?", opts: ["Daryna", "Solomija", "Noah"], correct: "Daryna"},
+    {q: "Wofür war das Geld?", opts: ["Für die Bibliothek in Ostaps Schule", "Für eine Klassenfahrt", "Für die Schulzeitung"], correct: "Für die Bibliothek in Ostaps Schule"},
+    {q: "Was antwortete die ganze Aula am Ende?", opts: ["„Djakuju, Lwiw!“", "„Danke, Leipzig!“", "„Bis bald!“"], correct: "„Djakuju, Lwiw!“"}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Sie wurde neunzehnhundertneun geboren.", uk: "Вона народилася 1909 року."},
+    {say: "Sie malte fantastische Tiere in leuchtenden Farben.", uk: "Вона малювала фантастичних тварин яскравими барвами."},
+    {say: "Neunzehnhundertneununddreißig flog er seinen ersten Hubschrauber.", uk: "У 1939 році він полетів на своєму першому гелікоптері."},
+    {say: "Sie gewann zwei Goldmedaillen.", uk: "Вона виграла дві золоті медалі."},
+    {say: "Solomija erzählte von der Sängerin, deren Namen sie trägt.", uk: "Соломія розповіла про співачку, ім'я якої вона носить."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Wer flog 1939 den ersten praktischen Hubschrauber?", opts: ["Igor Sikorsky", "Marija Prymatschenko", "Lilija Podkopajewa"], correct: "Igor Sikorsky"},
+    {q: "Präteritum von „fliegen“: er …", opts: ["flog", "fliegte", "flug"], correct: "flog"},
+    {q: "Präteritum von „singen“: sie …", opts: ["sang", "singte", "sung"], correct: "sang"},
+    {q: "Eine Frau, die Bilder malt, ist eine …", opts: ["Malerin", "Turnerin", "Sängerin"], correct: "Malerin"},
+    {q: "Marija Prymatschenko lernte das Malen …", opts: ["allein", "an der Kunstakademie", "in Paris"], correct: "allein"},
+    {q: "Die Oper in Lwiw trägt den Namen von …", opts: ["Solomija Kruschelnyzka", "Lilija Podkopajewa", "Lessja Ukrajinka"], correct: "Solomija Kruschelnyzka"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Sikorsky flog 1939 seinen ersten Hubschrauber.", ok: true},
+    {s: "Lilija Podkopajewa gewinnte zwei Goldmedaillen.", wrong: 2, fix: "gewann"},
+    {s: "Kruschelnyzka singte in vielen Ländern.", wrong: 1, fix: "sang"},
+    {s: "Sikorsky war ein Ingenieur, deren Hubschrauber berühmt sind.", wrong: 4, fix: "dessen"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🎨', '🚁', '🤸', '🏆']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
