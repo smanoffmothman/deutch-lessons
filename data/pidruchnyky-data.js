@@ -406,7 +406,7 @@ const PIDRUCHNYKY = [
         { id: "l7-selbst", label: "", nazva: "Selbsteinschätzung", storinky: "160", typ: "bez-storinky" }
       ] },
       { id: "l8", label: "8", nazva: "Die Ukraine — Land und Leute", storinky: "161–178", dity: [
-        { id: "l8-a", label: "A", nazva: "Die Ukraine geografisch gesehen", storinky: "162–167", typ: "vpravy", gram: ["relativsaetze"] },
+        { id: "l8-a", label: "A", nazva: "Die Ukraine geografisch gesehen", storinky: "162–167", typ: "vpravy", gram: ["relativsaetze"], opublikovano: 34 },
         { id: "l8-b", label: "B", nazva: "Menschen im Fokus", storinky: "168–173", typ: "vpravy", gram: ["tempusformen", "relativsaetze"] },
         { id: "l8-c", label: "C", nazva: "Wiederholung", storinky: "174–175", typ: "povtorennya", gram: ["relativsaetze", "tempusformen"] },
         { id: "l8-d", label: "D", nazva: "Geschichtenzeit", storinky: "176", typ: "chytannya" },

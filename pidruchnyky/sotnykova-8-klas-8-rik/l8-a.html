@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 8, Modul A: Die Ukraine geografisch gesehen — Німецька мова 8 клас Сотникова · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+<link rel="stylesheet" href="../../assets/pidruchnyk.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'pidruchnyky' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">СОТНИКОВА · 8 КЛАС</span>
+        <h1>Lektion 8 · Modul A: Die Ukraine geografisch gesehen</h1>
+        <p class="sub">Урок про природу України німецькою: Карпати й озеро Синевир, Світязь, Дністровський каньйон, Дніпро, Полісся і степ, сторони світу та клімат. Граматика — відносні речення (der, den, dem, dessen, deren, з прийменниками). Текст і діалог з озвученням, вправи, говоріння, письмо і підсумковий тест.</p>
+        <div class="kn-meta" id="knMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="woerter" aria-selected="true">Wörter</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="gram">Grammatik</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Himmelsrichtungen</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · dessen, deren …</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Ukraine-Quiz</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Ein Satz</button>
+    <button class="tab-btn" data-tab="hoeren">Hören</button>
+    <button class="tab-btn" data-tab="sprechen">Sprechen</button>
+    <button class="tab-btn" data-tab="schreiben">Schreiben</button>
+    <button class="tab-btn" data-tab="test">Test</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== WÖRTER ===== -->
+    <section class="panel active" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Слова розділу</h2>
+      <p class="lead">Повтори слова перед уроком. Натисни «Картки ▶», щоб перевірити себе, і познач ☆ ті, що варто ще повторити.</p>
+      <div class="card"><div id="matWords"></div></div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Weiter zum Text</button>
+      </div>
+    </section>
+
+        <!-- ===== TEXT — власний текст + вправа на розуміння ===== -->
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <h2 class="panel-title">Meine Ukraine — von Lwiw bis zum Dnipro</h2>
+      <p class="lead">Для спільного проєкту з 8b Соломія зі Львова записала відеопрезентацію про природу України — про місця, які вона найбільше любить. Послухай і прочитай. Торкнися виділеного слова, щоб побачити переклад. Потім виконай завдання під текстом.</p>
+      <div class="player">
+        <button class="play" id="play1" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek1" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time1">0:00</span>
+      </div>
+      <audio id="audio1" preload="none" src="audio/l8-a-1.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <article class="mat-text" id="matText">
+        <p>Hallo, liebe 8b! Herr Brandt hat uns gebeten, euch die Natur der Ukraine zu zeigen. Die Ukraine ist groß, deshalb zeige ich euch nur die Orte, die ich selbst kenne und liebe.</p>
+        <p>Ich beginne mit meiner Stadt. Lwiw liegt im Westen der Ukraine, nicht weit von der Grenze zu Polen. Durch Lwiw läuft die Europäische <span class="gl" data-uk="головний вододіл" data-lemma="die Hauptwasserscheide">Hauptwasserscheide</span>. Man erzählt, dass es in der Stadt ein Haus gibt, von dessen Dach das Regenwasser in zwei Meere <span class="gl" data-uk="тече" data-lemma="fließen, ist geflossen">fließt</span>: ein Teil in die Ostsee, der andere ins Schwarze Meer.</p>
+        <p>Südlich von Lwiw beginnen die Karpaten, ein Gebirge, in dem meine Familie jeden Sommer wandert. Mein Lieblingsort dort ist der Synewyr, der größte See der ukrainischen Karpaten. Er liegt fast 1000 Meter hoch, und in der Mitte gibt es eine winzige Insel. Von oben sieht der See deshalb aus wie ein blaues Auge — die Menschen nennen ihn „Meerauge“. Das Wasser ist sogar im Juli <span class="gl" data-uk="крижаний" data-lemma="eiskalt">eiskalt</span>.</p>
+        <p>Im Nordwesten, in Wolhynien, liegt der Switjas, der tiefste See der Ukraine: über 58 Meter. Interessant ist, dass kein einziger Fluss in den See fließt. Sein Wasser kommt vom Regen und aus <span class="gl" data-uk="джерела" data-lemma="die Quelle, -n">Quellen</span> unter dem See. Mein Onkel, der in Luzk wohnt, fährt jeden Sommer mit uns dorthin.</p>
+        <p>Im Südwesten fließt der Dnister durch einen <span class="gl" data-uk="каньйон" data-lemma="der Canyon, -s">Canyon</span>, der etwa 250 Kilometer lang ist. Er gehört zu den größten Canyons Europas. Letzten Sommer sind wir mit dem <span class="gl" data-uk="надувний човен" data-lemma="das Schlauchboot, -e">Schlauchboot</span> auf dem Dnister gefahren. Die <span class="gl" data-uk="скелі" data-lemma="der Fels, -en">Felsen</span>, an denen wir vorbeigefahren sind, sind älter als die Dinosaurier!</p>
+        <p>Und natürlich gibt es den Dnipro, den längsten Fluss der Ukraine, der von Norden nach Süden durch das ganze Land fließt und an dem auch Kyjiw liegt. Im Norden gibt es in Polissja <span class="gl" data-uk="величезні" data-lemma="riesig">riesige</span> Wälder und <span class="gl" data-uk="болота" data-lemma="der Sumpf, ¨-e">Sümpfe</span>, im Süden und Osten die <span class="gl" data-uk="степ" data-lemma="die Steppe, -n">Steppe</span> — und ganz im Süden das Schwarze Meer. Dort war ich schon lange nicht mehr. Ich hoffe, dass wir bald wieder ans Meer fahren können.</p>
+        <p>Ich habe euch nur einen kleinen Teil gezeigt. Wenn ihr eines Tages zu uns kommt — wenn es wieder sicher ist —, zeige ich euch alles!</p>
+        <p><i>Solomija, Lwiw</i></p>
+      </article>
+
+      <div class="card" id="ub-text-rf">
+        <p class="section-label" style="margin:0 0 8px;">Text verstehen</p>
+      </div>
+    </section>
+
+    <!-- ===== GRAMMATIK KOMPAKT ===== -->
+    <section class="panel" id="panel-gram">
+      <p class="section-label">Grammatik</p>
+      <h2 class="panel-title">Relativsätze — alle Formen</h2>
+      <p class="lead">Підсумок теми: відносні займенники в усіх відмінках, з прийменниками і в Genitiv (dessen / deren). А ще — як говорити про сторони світу.</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">1. Relativpronomen</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th></th><th>m</th><th>f</th><th>n</th><th>Pl.</th></tr>
+          <tr><td>Nom.</td><td>der</td><td>die</td><td>das</td><td>die</td></tr>
+          <tr><td>Akk.</td><td>den</td><td>die</td><td>das</td><td>die</td></tr>
+          <tr><td>Dat.</td><td>dem</td><td>der</td><td>dem</td><td><strong>denen</strong></td></tr>
+          <tr><td>Gen.</td><td><strong>dessen</strong></td><td><strong>deren</strong></td><td><strong>dessen</strong></td><td><strong>deren</strong></td></tr>
+        </table></div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">2. dessen und deren — «чий»</p>
+        <p>Der Dnister ist ein Fluss. <u>Sein</u> Canyon ist 250 km lang.<br>→ Der Dnister ist ein Fluss, <b>dessen</b> Canyon 250 km lang ist.</p>
+        <p>Polissja ist eine Region. <u>Ihre</u> Wälder sind riesig.<br>→ Polissja ist eine Region, <b>deren</b> Wälder riesig sind.</p>
+        <div class="merke"><b>dessen</b> — якщо слово, яке пояснюємо, чоловічого або середнього роду (sein); <b>deren</b> — жіночого роду або множина (ihr). Іменник після dessen/deren — без артикля: dessen <s>der</s> Canyon.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">3. Präposition + Relativpronomen · wo</p>
+        <p>der Fluss, <b>an dem</b> Kyjiw liegt · die Stadt, <b>in der</b> Daryna geboren ist · die Felsen, <b>an denen</b> wir vorbeigefahren sind · der See, <b>in den</b> kein Fluss fließt (wohin? → Akk.)</p>
+        <div class="merke">Для місця можна сказати й <b>wo</b>: die Stadt, <b>wo</b> Daryna geboren ist = die Stadt, <b>in der</b> … Але після wo — без займенника: ✗ wo der.</div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">4. Himmelsrichtungen</p>
+        <div class="tb-wrap"><table class="gtable">
+          <tr><th>Wo?</th><th>Wohin?</th><th>Lage zu …</th></tr>
+          <tr><td><b>im</b> Norden <b>der</b> Ukraine</td><td><b>in den</b> Norden</td><td><b>nördlich von</b> Kyjiw</td></tr>
+          <tr><td><b>im</b> Südwesten <b>des</b> Landes</td><td><b>in den</b> Südwesten</td><td><b>südlich von</b> Lwiw</td></tr>
+          <tr><td>ganz im Osten</td><td>von Norden nach Süden</td><td>östlich / westlich von …</td></tr>
+        </table></div>
+        <div class="merke">Усі сторони світу — чоловічого роду: <b>der</b> Norden, <b>der</b> Nordosten. Після них — Genitiv: im Westen <b>der</b> Ukraine, im Süden <b>des</b> Landes.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Übungen</button>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1 ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Wo liegt das?</h2>
+      <p class="lead">Подивись на карту України і вибери сторону світу.</p>
+      <div class="card" id="ub1-list">
+        <div class="fill-item"><span class="num">1)</span> Kyjiw, die Hauptstadt, liegt im
+          <select class="blank inline" data-ans="Norden"><option value="">—</option><option>Norden</option><option>Süden</option><option>Westen</option></select> der Ukraine.</div>
+        <div class="fill-item"><span class="num">2)</span> Lwiw liegt im
+          <select class="blank inline" data-ans="Westen"><option value="">—</option><option>Osten</option><option>Westen</option><option>Süden</option></select> der Ukraine, nicht weit von Polen.</div>
+        <div class="fill-item"><span class="num">3)</span> Charkiw liegt im
+          <select class="blank inline" data-ans="Nordosten"><option value="">—</option><option>Nordosten</option><option>Südwesten</option><option>Nordwesten</option></select> der Ukraine.</div>
+        <div class="fill-item"><span class="num">4)</span> Odesa liegt im
+          <select class="blank inline" data-ans="Süden"><option value="">—</option><option>Norden</option><option>Süden</option><option>Osten</option></select>, am Schwarzen Meer.</div>
+        <div class="fill-item"><span class="num">5)</span> Der Switjas liegt im
+          <select class="blank inline" data-ans="Nordwesten"><option value="">—</option><option>Nordwesten</option><option>Südosten</option><option>Süden</option></select> der Ukraine, in Wolhynien.</div>
+        <div class="fill-item"><span class="num">6)</span> Die Karpaten liegen im
+          <select class="blank inline" data-ans="Westen"><option value="">—</option><option>Westen</option><option>Osten</option><option>Norden</option></select> des Landes.</div>
+        <div class="fill-item"><span class="num">7)</span> Polissja mit seinen Wäldern und Sümpfen liegt im
+          <select class="blank inline" data-ans="Norden"><option value="">—</option><option>Norden</option><option>Süden</option><option>Osten</option></select>.</div>
+        <div class="fill-item"><span class="num">8)</span> Der Dnipro fließt von Norden nach
+          <select class="blank inline" data-ans="Süden"><option value="">—</option><option>Süden</option><option>Westen</option><option>Norden</option></select> ins Schwarze Meer.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub1-check">Prüfen</button>
+        <button class="btn secondary" id="ub1-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub1-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 2 ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">der, den, dessen, deren …</h2>
+      <p class="lead">Вибери відносний займенник — разом із прийменником, якщо він потрібен.</p>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> Lwiw ist die Stadt,
+          <select class="blank inline" data-ans="in der"><option value="">—</option><option>in der</option><option>in die</option><option>die</option></select> Solomija wohnt.</div>
+        <div class="fill-item"><span class="num">2)</span> Der Synewyr ist ein See,
+          <select class="blank inline" data-ans="den"><option value="">—</option><option>der</option><option>den</option><option>dem</option></select> man „Meerauge“ nennt.</div>
+        <div class="fill-item"><span class="num">3)</span> Die Karpaten sind ein Gebirge,
+          <select class="blank inline" data-ans="dessen"><option value="">—</option><option>dessen</option><option>deren</option><option>das</option></select> höchster Berg Howerla heißt.</div>
+        <div class="fill-item"><span class="num">4)</span> Der Switjas ist ein See, in
+          <select class="blank inline" data-ans="den"><option value="">—</option><option>den</option><option>dem</option><option>der</option></select> kein einziger Fluss fließt.</div>
+        <div class="fill-item"><span class="num">5)</span> Polissja ist eine Region,
+          <select class="blank inline" data-ans="deren"><option value="">—</option><option>deren</option><option>dessen</option><option>die</option></select> Wälder riesig sind.</div>
+        <div class="fill-item"><span class="num">6)</span> Solomijas Onkel,
+          <select class="blank inline" data-ans="der"><option value="">—</option><option>der</option><option>den</option><option>dem</option></select> in Luzk wohnt, fährt mit ihr an den Switjas.</div>
+        <div class="fill-item"><span class="num">7)</span> Die Felsen, an
+          <select class="blank inline" data-ans="denen"><option value="">—</option><option>die</option><option>denen</option><option>dem</option></select> sie vorbeigefahren sind, sind sehr alt.</div>
+        <div class="fill-item"><span class="num">8)</span> Charkiw ist die Stadt,
+          <select class="blank inline" data-ans="in der"><option value="">—</option><option>in der</option><option>in die</option><option>wo der</option></select> Daryna geboren ist.</div>
+        <div class="fill-item"><span class="num">9)</span> Der Dnipro ist der Fluss, an
+          <select class="blank inline" data-ans="dem"><option value="">—</option><option>dem</option><option>den</option><option>der</option></select> Kyjiw liegt.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3 ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Ukraine-Quiz</h2>
+      <p class="lead">Прочитай опис і вибери, про яке місце йдеться.</p>
+      <div class="card" id="ub3-list"></div>
+    </section>
+
+    <!-- ===== Üb. 4 ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Aus zwei Sätzen wird einer</h2>
+      <p class="lead">Зʼєднай два речення у одне з відносним реченням. Для «sein / ihr» — dessen / deren.</p>
+      <div class="card" id="ub4-tr"></div>
+    </section>
+
+    <!-- ===== HÖREN ===== -->
+    <section class="panel" id="panel-hoeren">
+      <p class="section-label">Hören</p>
+      <h2 class="panel-title">Eine Karte für das Projekt</h2>
+      <p class="lead">Ерік малює для проєкту карту України, а Дарина допомагає: де які міста, гори, ріки — і яка погода в Харкові. Послухай (можна двічі) і дай відповіді. Текст відкривається внизу — але спершу спробуй без нього.</p>
+      <div class="player">
+        <button class="play" id="play2" type="button" aria-label="Abspielen">▶</button>
+        <input type="range" id="seek2" min="0" max="100" step="0.1" value="0" aria-label="Position im Audio">
+        <span class="label" id="time2">0:00</span>
+      </div>
+      <audio id="audio2" preload="none" src="audio/l8-a-2.mp3"></audio>
+      <p class="kn-tts-note">Озвучено синтезатором мовлення — це не запис із підручника.</p>
+      <div class="card" id="hoeren-quiz"></div>
+      <div class="qa" data-no-report>
+        <button class="btn secondary" type="button" data-reveal="hoeren-transkript">Transkript zeigen</button>
+        <div class="reveal" id="hoeren-transkript">
+          <b>Erik:</b> Daryna, ich soll für das Projekt eine Karte der Ukraine zeichnen. Hilfst du mir?<br>
+          <b>Daryna:</b> Klar. Also, hier oben ist Norden. Kyjiw, die Hauptstadt, liegt im Norden, am Dnipro.<br>
+          <b>Erik:</b> Und Lwiw, wo Ostap und Solomija wohnen?<br>
+          <b>Daryna:</b> Lwiw liegt im Westen, nicht weit von der Grenze zu Polen. Und hier im Nordosten liegt Charkiw — die Stadt, in der ich geboren bin.<br>
+          <b>Erik:</b> Ist Charkiw weit von Kyjiw?<br>
+          <b>Daryna:</b> Fast fünfhundert Kilometer. Mit dem Zug fährt man mehrere Stunden.<br>
+          <b>Erik:</b> Und wo ist das Meer?<br>
+          <b>Daryna:</b> Ganz im Süden. Odesa zum Beispiel liegt am Schwarzen Meer.<br>
+          <b>Erik:</b> Und wie ist das Wetter in Charkiw? So wie in Leipzig?<br>
+          <b>Daryna:</b> Nein, das Klima ist kontinentaler. Im Winter ist es oft kälter als in Leipzig, mit mehr Schnee und Frost. Und der Sommer ist heißer und trockener. Meine Oma Halyna sagt immer: In Leipzig gibt es keinen richtigen Winter.<br>
+          <b>Erik:</b> Ha! Dann soll sie im Sommer kommen — da ist es hier nicht so heiß.<br>
+          <b>Daryna:</b> Sie kommt ja im Sommer! Ich zeige ihr den Cospudener See.<br>
+          <b>Erik:</b> Super. Und was zeichnen wir noch auf die Karte?<br>
+          <b>Daryna:</b> Die Karpaten im Westen und Polissja im Norden, wo es riesige Wälder und Sümpfe gibt. Und die Steppe im Süden und Osten.<br>
+          <b>Erik:</b> Steppe — ist das so etwas wie eine große Wiese?<br>
+          <b>Daryna:</b> So ungefähr. Eine weite, flache Landschaft, in der es kaum Bäume gibt.<br>
+          <b>Erik:</b> Okay. Ich zeichne die Berge und Flüsse, und du schreibst die Namen. Meine Schrift kann ja sowieso keiner lesen.
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPRECHEN ===== -->
+    <section class="panel" id="panel-sprechen">
+      <p class="section-label">Sprechen</p>
+      <h2 class="panel-title">Meine Region</h2>
+      <p class="lead">Спершу скажи речення в 🎤. Потім відповідай уголос — сам(а) або з партнером — і лише після цього відкрий зразок. Зразок — один з можливих варіантів, твоя відповідь може бути іншою.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">🎤 Sprich nach</p>
+        <div id="sprechen-speak"></div>
+      </div>
+      <div class="card" data-no-report>
+        <div class="qa">
+          <label>1. Wo liegt deine Stadt oder dein Dorf? Benutze Himmelsrichtungen.</label>
+          <button class="btn secondary" type="button" data-reveal="spr1">Muster zeigen</button>
+          <div class="reveal" id="spr1">Ich wohne in Poltawa. Die Stadt liegt in der Mitte der Ukraine, etwas östlich vom Dnipro. Kyjiw liegt nordwestlich von uns.</div>
+        </div>
+        <div class="qa">
+          <label>2. Welche Landschaften gibt es in deiner Region?</label>
+          <button class="btn secondary" type="button" data-reveal="spr2">Muster zeigen</button>
+          <div class="reveal" id="spr2">Bei uns gibt es viele Felder und kleine Wälder. Durch unsere Stadt fließt ein Fluss, an dem wir im Sommer oft baden. Berge gibt es bei uns nicht.</div>
+        </div>
+        <div class="qa">
+          <label>3. Welchen Ort in der Ukraine möchtest du Freunden aus Deutschland zeigen? Warum?</label>
+          <button class="btn secondary" type="button" data-reveal="spr3">Muster zeigen</button>
+          <div class="reveal" id="spr3">Ich möchte ihnen die Karpaten zeigen, ein Gebirge, in dem man wunderbar wandern kann. Besonders schön ist der Synewyr, ein See, dessen Wasser ganz klar und blau ist.</div>
+        </div>
+        <div class="qa">
+          <label>4. Wie ist das Klima bei dir? Vergleiche Sommer und Winter.</label>
+          <button class="btn secondary" type="button" data-reveal="spr4">Muster zeigen</button>
+          <div class="reveal" id="spr4">Bei uns ist das Klima gemäßigt kontinental. Der Sommer ist warm und manchmal sehr heiß. Im Winter gibt es Frost, und oft liegt Schnee.</div>
+        </div>
+        <div class="qa">
+          <label>5. Erkläre einem Deutschen, was eine Steppe ist.</label>
+          <button class="btn secondary" type="button" data-reveal="spr5">Muster zeigen</button>
+          <div class="reveal" id="spr5">Die Steppe ist eine weite, flache Landschaft, in der es fast keine Bäume gibt. Dort wachsen vor allem Gras und Blumen, und im Sommer ist es dort heiß und trocken.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCHREIBEN ===== -->
+    <section class="panel" id="panel-schreiben">
+      <p class="section-label">Schreiben</p>
+      <h2 class="panel-title">Ein Ort in der Ukraine, den ich liebe</h2>
+      <p class="lead">Напиши німецькому другові чи подрузі про своє улюблене місце в Україні — 50–70 слів. Використай щонайменше три відносні речення (одне з dessen або deren) і сторони світу.</p>
+      <div class="card">
+        <p>1) що це за місце і де воно (сторона світу); 2) який там краєвид; 3) що ти там робиш; 4) чому ти це місце любиш.</p>
+        <p class="beispiel">Mein Lieblingsort ist …, der/die/das im … der Ukraine liegt. · Das ist ein …, dessen/deren … · Dort gibt es …, in dem/auf der … · Ich liebe diesen Ort, weil …</p>
+        <div class="qa">
+          <label for="schreiben-text">Dein Text</label>
+          <textarea id="schreiben-text" rows="9" placeholder="Mein Lieblingsort in der Ukraine ist …"
+            data-words="50-70"
+            data-must="liegt"
+            data-check="Що за місце|Де (сторона світу)|Краєвид|Що робиш|dessen або deren|Чому любиш"></textarea>
+        </div>
+        <div class="qa" data-no-report>
+          <button class="btn secondary" type="button" data-reveal="schreiben-muster">Muster zeigen (erst nach dem Schreiben!)</button>
+          <div class="reveal" id="schreiben-muster">Mein Lieblingsort ist ein kleines Dorf, das im Westen der Ukraine in den Karpaten liegt. Dort wohnt meine Tante, deren Haus direkt am Wald steht. Hinter dem Haus fließt ein Bach, in dem das Wasser eiskalt ist. Im Sommer wandern wir auf die Berge, von denen man sehr weit sehen kann. Ich liebe diesen Ort, weil es dort so still ist.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEST ===== -->
+    <section class="panel" id="panel-test">
+      <p class="section-label">Test</p>
+      <h2 class="panel-title">Teste dich!</h2>
+      <p class="lead">Підсумковий тест модуля. Тут кожна відповідь — з першої спроби, виправити не можна. Результат тесту — це бал у «Fertig!» і у звіті для вчителя.</p>
+      <div class="card" id="test-quiz"></div>
+      <div class="card" id="test-list">
+        <div class="fill-item"><span class="num">7)</span> Odesa liegt im
+          <select class="blank inline" data-ans="Süden"><option value="">—</option><option>Süden</option><option>Norden</option><option>Westen</option></select> der Ukraine.</div>
+        <div class="fill-item"><span class="num">8)</span> Der Dnister ist ein Fluss,
+          <select class="blank inline" data-ans="dessen"><option value="">—</option><option>dessen</option><option>deren</option><option>den</option></select> Canyon sehr lang ist.</div>
+        <div class="fill-item"><span class="num">9)</span> Die Freunde, mit
+          <select class="blank inline" data-ans="denen"><option value="">—</option><option>die</option><option>dem</option><option>denen</option></select> Solomija wandert, wohnen in Lwiw.</div>
+        <div class="fill-item"><span class="num">10)</span> Lwiw liegt im
+          <select class="blank inline" data-ans="Westen"><option value="">—</option><option>Westen</option><option>Osten</option><option>Süden</option></select> der Ukraine.</div>
+        <div class="fill-item"><span class="num">11)</span> Der Switjas ist der
+          <select class="blank inline" data-ans="tiefste"><option value="">—</option><option>tiefste</option><option>höchste</option><option>längste</option></select> See der Ukraine.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="test-check">Prüfen</button>
+        <button class="btn secondary" id="test-reset">Zurücksetzen</button>
+        <span class="score-pill" id="test-score"></span>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Finde den Fehler</p>
+        <div id="test-fix"></div>
+      </div>
+    </section>
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="knGram"></div>
+      </div>
+
+      <div class="card kn-audio-card" hidden><div class="kn-audio" id="knAudio"></div></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 8px;">Weiter im Buch</p>
+        <div class="kn-nav" id="knNext"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+      <p class="kn-disclaimer" id="knDisclaimer"></p>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/pidruchnyky-data.js"></script>
+<script src="../../data/slova/sotnykova-8-klas-8-rik.js"></script>
+<script src="../../data/grammar-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script src="../../assets/pidruchnyk.js"></script>
+<script>
+  const KN_BOOK = "sotnykova-8-klas-8-rik";
+  const KN_UNIT = "l8-a";
+
+  // Тест — режим контрольної; тренування й 🎤 не йдуть у бал
+  enableTestMode({exclude: ['text', 'ub1', 'ub2', 'ub3', 'ub4', 'hoeren', 'sprechen']});
+
+  wirePlayer('audio1', 'play1', 'seek1', 'time1');
+  wirePlayer('audio2', 'play2', 'seek2', 'time2');
+
+  // Text: розуміння
+  buildRF('ub-text-rf', [
+    {s: "Solomija zeigt nur Orte, die sie selbst kennt.", a: "r"},
+    {s: "Lwiw liegt im Osten der Ukraine.", a: "f"},
+    {s: "Man erzählt, dass in Lwiw Regenwasser von einem Dach in zwei Meere fließt.", a: "r"},
+    {s: "Solomijas Familie wandert jeden Sommer in den Karpaten.", a: "r"},
+    {s: "Der Synewyr ist der tiefste See der Ukraine.", a: "f"},
+    {s: "Im Synewyr ist das Wasser im Juli warm.", a: "f"},
+    {s: "In den Switjas fließt kein einziger Fluss.", a: "r"},
+    {s: "Solomija ist mit dem Schlauchboot auf dem Dnister gefahren.", a: "r"},
+    {s: "Der Dnipro fließt von Westen nach Osten.", a: "f"},
+    {s: "Solomija war schon lange nicht mehr am Schwarzen Meer.", a: "r"}
+  ]);
+
+  // Üb. 1, 2
+  wireBlanks('ub1');
+  wireBlanks('ub2');
+
+  // Üb. 3: Ukraine-Quiz
+  buildMatch('ub3', [
+    ["Der höchste Berg der Ukraine, der in den Karpaten liegt.", "Howerla"],
+    ["Der längste Fluss der Ukraine, an dem Kyjiw liegt.", "der Dnipro"],
+    ["Ein Bergsee, den man auch „Meerauge“ nennt.", "der Synewyr"],
+    ["Der tiefste See der Ukraine, in den kein Fluss fließt.", "der Switjas"],
+    ["Ein Fluss, dessen Canyon zu den größten in Europa gehört.", "der Dnister"],
+    ["Das Meer, an dem Odesa liegt.", "das Schwarze Meer"],
+    ["Eine Region im Norden, deren Wälder und Sümpfe riesig sind.", "Polissja"],
+    ["Eine Stadt, durch die die Europäische Hauptwasserscheide läuft.", "Lwiw"]
+  ], {lead: true});
+
+  // Üb. 4
+  buildTransform('ub4-tr', [
+    {s: "Der Synewyr ist ein See. Er liegt fast 1000 Meter hoch.", task: "der …",
+     ans: "Der Synewyr ist ein See, der fast 1000 Meter hoch liegt.|Der Synewyr ist ein See, der fast tausend Meter hoch liegt."},
+    {s: "Lwiw ist eine Stadt. Durch die Stadt läuft die Europäische Hauptwasserscheide.", task: "durch die …",
+     ans: "Lwiw ist eine Stadt, durch die die Europäische Hauptwasserscheide läuft."},
+    {s: "Der Dnister ist ein Fluss. Sein Canyon ist etwa 250 Kilometer lang.", task: "dessen …",
+     ans: "Der Dnister ist ein Fluss, dessen Canyon etwa 250 Kilometer lang ist."},
+    {s: "Solomija hat einen Onkel. Mit ihm fährt sie an den Switjas.", task: "mit dem …",
+     ans: "Solomija hat einen Onkel, mit dem sie an den Switjas fährt."},
+    {s: "Polissja ist eine Region. Ihre Wälder sind riesig.", task: "deren …",
+     ans: "Polissja ist eine Region, deren Wälder riesig sind."},
+    {s: "Die Steppe ist eine Landschaft. In der Steppe gibt es kaum Bäume.", task: "in der …",
+     ans: "Die Steppe ist eine Landschaft, in der es kaum Bäume gibt."},
+    {s: "Odesa ist eine Stadt. Sie liegt am Schwarzen Meer.", task: "die …",
+     ans: "Odesa ist eine Stadt, die am Schwarzen Meer liegt."}
+  ]);
+
+  // Hören
+  buildQuiz('hoeren-quiz', [
+    {q: "Was soll Erik für das Projekt machen?", opts: ["Eine Karte der Ukraine zeichnen", "Einen Brief schreiben", "Ein Video drehen"], correct: "Eine Karte der Ukraine zeichnen"},
+    {q: "Wo liegt Kyjiw?", opts: ["Im Norden, am Dnipro", "Im Westen, an der Grenze", "Im Süden, am Meer"], correct: "Im Norden, am Dnipro"},
+    {q: "Wo liegt Charkiw?", opts: ["Im Nordosten", "Im Südwesten", "Im Westen"], correct: "Im Nordosten"},
+    {q: "Wie weit ist Charkiw von Kyjiw entfernt?", opts: ["Fast 500 Kilometer", "Fast 50 Kilometer", "Fast 1500 Kilometer"], correct: "Fast 500 Kilometer"},
+    {q: "Welche Stadt liegt am Schwarzen Meer?", opts: ["Odesa", "Lwiw", "Charkiw"], correct: "Odesa"},
+    {q: "Wie ist der Winter in Charkiw im Vergleich zu Leipzig?", opts: ["Oft kälter, mit mehr Schnee", "Wärmer und nasser", "Genauso"], correct: "Oft kälter, mit mehr Schnee"},
+    {q: "Was gibt es in Polissja?", opts: ["Riesige Wälder und Sümpfe", "Hohe Berge", "Eine Steppe ohne Bäume"], correct: "Riesige Wälder und Sümpfe"},
+    {q: "Warum soll Daryna die Namen schreiben?", opts: ["Weil niemand Eriks Schrift lesen kann", "Weil Erik keine Zeit hat", "Weil Erik nicht zeichnen kann"], correct: "Weil niemand Eriks Schrift lesen kann"}
+  ]);
+
+  // Sprechen: 🎤
+  buildSpeak('sprechen-speak', [
+    {say: "Lwiw liegt im Westen der Ukraine.", uk: "Львів розташований на заході України."},
+    {say: "Der Dnipro ist der Fluss, an dem Kyjiw liegt.", uk: "Дніпро — це річка, на якій стоїть Київ."},
+    {say: "Der Dnister ist ein Fluss, dessen Canyon sehr lang ist.", uk: "Дністер — річка, каньйон якої дуже довгий."},
+    {say: "Polissja ist eine Region, deren Wälder riesig sind.", uk: "Полісся — край, ліси якого величезні."},
+    {say: "Die Steppe ist eine Landschaft, in der es kaum Bäume gibt.", uk: "Степ — це краєвид, де майже немає дерев."}
+  ]);
+
+  // Test
+  buildQuiz('test-quiz', [
+    {q: "Der längste Fluss der Ukraine ist …", opts: ["der Dnipro", "der Dnister", "die Desna"], correct: "der Dnipro"},
+    {q: "Der Synewyr liegt …", opts: ["in den Karpaten", "am Schwarzen Meer", "in Polissja"], correct: "in den Karpaten"},
+    {q: "Charkiw liegt im … der Ukraine.", opts: ["Nordosten", "Südwesten", "Westen"], correct: "Nordosten"},
+    {q: "Das ist eine Region, … Wälder riesig sind.", opts: ["deren", "dessen", "denen"], correct: "deren"},
+    {q: "Das ist der See, in … ich geschwommen bin.", opts: ["dem", "den", "der"], correct: "dem"},
+    {q: "Eine weite Landschaft, in der es kaum Bäume gibt, ist die …", opts: ["Steppe", "Küste", "Schlucht"], correct: "Steppe"}
+  ]);
+  wireBlanks('test');
+  buildFixError('test-fix', [
+    {s: "Kyjiw liegt im Norden der Ukraine.", ok: true},
+    {s: "Der Synewyr ist ein See, der man „Meerauge“ nennt.", wrong: 5, fix: "den"},
+    {s: "Polissja ist eine Region, dessen Wälder riesig sind.", wrong: 4, fix: "deren"},
+    {s: "Charkiw ist die Stadt, in die Daryna geboren ist.", wrong: 5, fix: "der"}
+  ]);
+
+  // Зразки: показати / сховати
+  document.querySelectorAll('[data-reveal]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById(b.dataset.reveal).classList.toggle('show');
+  }));
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🏔️', '🌊', '🌻', '🏆']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initBookUnit(KN_BOOK, KN_UNIT);
+</script>
+</body>
+</html>
