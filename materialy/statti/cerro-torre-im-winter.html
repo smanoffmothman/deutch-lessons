@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Allein auf dem Eisturm · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Sport &amp; Freizeit</span>
+        <h1>Allein auf dem Eisturm</h1>
+        <p class="sub">Один альпініст, одна найсуворіша гора Патагонії і зима. А внизу — фотограф із дроном, який два роки готувався до кількох кадрів.</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Reihenfolge</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und du?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Abenteuer in den Bergen</h2>
+      <div class="card">
+        <p>Warst du schon einmal in den Bergen – zum Beispiel in den Karpaten? Würdest du gern einen hohen Berg besteigen? Was braucht man dafür?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Чи бував(-ла) ти в горах — наприклад, у Карпатах? Чи хотів(-ла) б ти піднятися на високу гору? Що для цього потрібно?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Ein Berg aus Stein und Eis, ein Kletterer ganz allein – und ein Fotograf, der ihn von unten <span class="gl" data-uk="супроводжувати" data-lemma="begleiten">begleitet</span>. So ist ein besonderes Foto entstanden.</p>
+
+          <p>Der Cerro Torre ist 3130 Meter hoch. Er steht im Süden Patagoniens, am Südlichen Patagonischen <span class="gl" data-key data-uk="крижане поле, льодовикове плато" data-lemma="das Eisfeld, -er">Eisfeld</span> an der Grenze zwischen Argentinien und Chile. Diese Gegend ist <span class="gl" data-uk="віддалений" data-lemma="entlegen">entlegen</span>, sehr <span class="gl" data-uk="вітряний" data-lemma="windig">windig</span> und <span class="gl" data-uk="дуже холодний, лютий (про мороз)" data-lemma="bitterkalt">bitterkalt</span>.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Cerro_torre_laguna_torre.jpg/960px-Cerro_torre_laguna_torre.jpg" alt="Der Cerro Torre und die Laguna Torre in Patagonien." width="960" height="654" loading="lazy">
+            <figcaption>Der Cerro Torre und die Laguna Torre in Patagonien. Foto: Stefan.straub, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Cerro_torre_laguna_torre.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Im September 2025 – auf der Südhalbkugel ist dann noch Winter – wollte der US-Alpinist Colin Haley als erster Mensch allein im Winter auf den <span class="gl" data-key data-uk="вершина" data-lemma="der Gipfel, -">Gipfel</span> steigen. Er hatte es schon 2013 und 2023 versucht, musste aber beide Male <span class="gl" data-uk="повертати назад" data-lemma="umkehren">umkehren</span>.</p>
+
+          <p>Der Fotograf Tyler Lekki hat dieses <span class="gl" data-key data-uk="пригода" data-lemma="das Abenteuer, -">Abenteuer</span> dokumentiert. Er hat zwei Jahre lang geplant und auf stabiles, schönes Wetter gewartet. Dann ist er auf Skiern mehr als 50 Kilometer über das Eisfeld gelaufen. Seine Kameras und das <span class="gl" data-uk="намет" data-lemma="das Zelt, -e">Zelt</span> hat er auf einem <span class="gl" data-key data-uk="сани" data-lemma="der Schlitten, -">Schlitten</span> hinter sich hergezogen. Über <span class="gl" data-uk="радіозв'язок" data-lemma="der Funk">Funk</span> hatten die beiden Kontakt.</p>
+
+          <p>Haley hat die letzte Nacht vor dem Gipfel <span class="gl" data-uk="просто неба" data-lemma="im Freien">im Freien</span> <span class="gl" data-uk="проводити (час)" data-lemma="verbringen (verbrachte, hat verbracht)">verbracht</span>, ein paar <span class="gl" data-uk="мотузкова ділянка (в альпінізмі)" data-lemma="die Seillänge, -n">Seillängen</span> unter der <span class="gl" data-uk="верхівка, шпиль" data-lemma="die Spitze, -n">Spitze</span>. Lekki hat sein <span class="gl" data-uk="табір" data-lemma="das Lager, -">Lager</span> am Fuß des Berges <span class="gl" data-uk="розбивати (табір)" data-lemma="aufschlagen (schlug auf, hat aufgeschlagen)">aufgeschlagen</span>. Als Haley die letzten Eisformationen erreicht hat, hat Lekki seine <span class="gl" data-key data-uk="дрон" data-lemma="die Drohne, -n">Drohne</span> starten lassen. Am 7. September 2025, kurz vor 22 Uhr, stand Haley oben – bei Vollmond und ohne Wind. Lekkis Bilder zeigen ihn ganz allein auf dem wilden Turm aus Stein und Eis. Das große Panoramafoto hat er aus neun <span class="gl" data-uk="знімок" data-lemma="die Aufnahme, -n">Aufnahmen</span> <span class="gl" data-uk="складати (з частин)" data-lemma="zusammensetzen">zusammengesetzt</span>.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Patagonien ist eine große Region im Süden Südamerikas. Ein Teil gehört zu Argentinien, ein Teil zu Chile. Weil Patagonien auf der Südhalbkugel liegt, sind die Jahreszeiten umgekehrt: Wenn in Europa Sommer ist, ist dort Winter.</p>
+          </aside>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Про що текст загалом? Обери одну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Was passierte zuerst?</h2>
+      <p class="lead">Розстав події в правильному порядку. Натискай речення по черзі; натиснеш на вже поставлене — воно повернеться вниз.</p>
+      <div class="card" id="ub3-seq"></div>
+    </section>
+
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+      <p class="lead">б) Встав слова в текст. Одне слово зайве.</p>
+      <div class="card" id="ub4b-bank"></div>
+    </section>
+
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und du?</h2>
+      <p class="lead">Напиши відповіді німецькою (3–5 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Würdest du gern einmal etwas ganz allein machen – eine Reise, eine Wanderung, ein Abenteuer? Was und warum?</label>
+          <textarea id="ub5-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Welche Berge oder Naturorte in der Ukraine möchtest du besuchen oder hast du schon besucht?</label>
+          <textarea id="ub5-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Ich möchte gern einmal allein …, Das wäre spannend, weil …, Ich war schon in …, Dort gibt es …</i>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Der Cerro Torre (3130 m) steht in Patagonien an der Grenze zwischen Argentinien und Chile. Im September 2025 hat Colin Haley ihn als erster Mensch allein im Winter bestiegen. Der Fotograf Tyler Lekki hat ihn dabei mit einer Drohne fotografiert. Auf der Südhalbkugel sind die Jahreszeiten umgekehrt.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Серро-Торре (3130 м) стоїть у Патагонії на кордоні Аргентини й Чилі. У вересні 2025 року Колін Гейлі першим піднявся на нього взимку сам. Фотограф Тайлер Леккі зняв це сходження з дрона. У Південній півкулі пори року навпаки.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "cerro-torre-im-winter";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text vor allem?",
+     opts: ["Um eine Winterbesteigung des Cerro Torre und um die Fotos davon",
+            "Um einen Skiurlaub in Argentinien",
+            "Um die Tiere in Patagonien"],
+     correct: "Um eine Winterbesteigung des Cerro Torre und um die Fotos davon"}
+  ]);
+  buildMatch('ub1h', [
+    ["Ein Berg am Ende der Welt", "Absatz 1"],
+    ["Der dritte Versuch", "Absatz 2"],
+    ["Mit Ski und Schlitten", "Absatz 3"],
+    ["Ganz oben", "Absatz 4"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "Der Cerro Torre ist mehr als 3000 Meter hoch.", a: "r"},
+    {s: "Im September ist in Patagonien Sommer.", a: "f"},
+    {s: "Colin Haley war schon zweimal im Winter auf dem Gipfel.", a: "f"},
+    {s: "Tyler Lekki ist mit dem Auto zum Berg gefahren.", a: "f"},
+    {s: "Haley und Lekki haben über Funk gesprochen.", a: "r"},
+    {s: "Lekki hat auch selbst den Gipfel erreicht.", a: "f"},
+    {s: "Haley hat auf dem Gipfel eine Fahne aufgestellt.", a: "n"}
+  ]);
+
+  buildSequence('ub3-seq', [
+    "Lekki plant die Fotos zwei Jahre lang.",
+    "Lekki läuft auf Skiern über das Eisfeld.",
+    "Lekki schlägt sein Lager am Fuß des Berges auf.",
+    "Lekki lässt seine Drohne starten.",
+    "Haley steht bei Vollmond auf dem Gipfel."
+  ]);
+
+  buildMatch('ub4', [
+    ["der Gipfel", "вершина"],
+    ["der Schlitten", "сани"],
+    ["die Drohne", "дрон"],
+    ["umkehren", "повертати назад"],
+    ["entlegen", "віддалений"],
+    ["das Lager", "табір"]
+  ]);
+  buildWordBank('ub4b-bank', {
+    text: "Colin Haley ist ein bekannter [Alpinist]. Im Winter wollte er allein auf den [Gipfel] des Cerro Torre. Der Fotograf zog seine Kameras auf einem [Schlitten]. Von unten hat er Haley mit einer [Drohne] fotografiert.",
+    extra: ["Lager"]
+  });
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🏔️','🧗','📸','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
