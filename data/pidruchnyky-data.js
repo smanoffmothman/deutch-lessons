@@ -415,7 +415,7 @@ const PIDRUCHNYKY = [
       ] },
       { id: "anhang", label: "", nazva: "Anhang", storinky: "179–207", dity: [
         { id: "anhang-grammatik", label: "", nazva: "Grammatik", storinky: "179–188", typ: "bez-storinky" },
-        { id: "anhang-praep-verben", label: "", nazva: "Verben mit festen Präpositionen", typ: "gramatyka", gram: ["verben-praepositionalobjekt"] },
+        { id: "anhang-praep-verben", label: "", nazva: "Verben mit festen Präpositionen", typ: "gramatyka", gram: ["verben-praepositionalobjekt"], opublikovano: 38 },
         { id: "anhang-woerter", label: "", nazva: "Deutsch-Ukrainisches Wörterverzeichnis", storinky: "189–207", typ: "bez-storinky" }
       ] }
     ]
