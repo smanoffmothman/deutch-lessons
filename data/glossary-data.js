@@ -1214,5 +1214,16 @@ const GLOSSARY = [
   {de: "die Schülerzeitung (die Schülerzeitungen)", uk: "шкільна газета", klas: "7", modul: "C", lektion: 10},
   {de: "der Blogbeitrag (die Blogbeiträge)", uk: "допис у блозі", klas: "7", modul: "C", lektion: 10},
   {de: "die Altstadt (die Altstädte)", uk: "старе місто, історичний центр", klas: "7", modul: "C", lektion: 10},
-  {de: "zurückkommen (trennbar) (Wir sind nach Hause zurückgekommen.)", uk: "повертатися (Ми повернулися додому.)", klas: "7", modul: "C", lektion: 10}
+  {de: "zurückkommen (trennbar) (Wir sind nach Hause zurückgekommen.)", uk: "повертатися (Ми повернулися додому.)", klas: "7", modul: "C", lektion: 10},
+  {de: "der Interessent / die Interessentin (die Interessenten)", uk: "зацікавлена особа, охочий / охоча", klas: "7", modul: "C", lektion: 11},
+  {de: "der Schulleiter / die Schulleiterin", uk: "директор / директорка школи", klas: "7", modul: "C", lektion: 11},
+  {de: "die Erlaubnis (um Erlaubnis bitten)", uk: "дозвіл (просити дозволу)", klas: "7", modul: "C", lektion: 11},
+  {de: "das Plakat (die Plakate)", uk: "плакат", klas: "7", modul: "C", lektion: 11},
+  {de: "aufhängen (trennbar) (ein Plakat aufhängen)", uk: "вішати (повісити плакат)", klas: "7", modul: "C", lektion: 11},
+  {de: "das Treffen (die Treffen)", uk: "зустріч", klas: "7", modul: "C", lektion: 11},
+  {de: "insgesamt", uk: "загалом, усього", klas: "7", modul: "C", lektion: 11},
+  {de: "längst (Wir haben längst davon geträumt.)", uk: "давно (Ми давно про це мріяли.)", klas: "7", modul: "C", lektion: 11},
+  {de: "pflanzen (Tomaten pflanzen)", uk: "садити (садити помідори)", klas: "7", modul: "C", lektion: 11},
+  {de: "erfinden (Geschichten erfinden)", uk: "вигадувати (історії)", klas: "7", modul: "C", lektion: 11},
+  {de: "das Erntefest (die Erntefeste)", uk: "свято врожаю", klas: "7", modul: "C", lektion: 11}
 ];
