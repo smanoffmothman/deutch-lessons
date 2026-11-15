@@ -1169,5 +1169,16 @@ const GLOSSARY = [
   {de: "weltweit", uk: "у всьому світі, всесвітньо", klas: "9", modul: "B", lektion: 12},
   {de: "Gutes tun", uk: "робити добро", klas: "9", modul: "B", lektion: 12},
   {de: "erinnern an (+Akk.) (j-n daran erinnern, … zu …)", uk: "нагадувати (комусь про щось / щось зробити)", klas: "9", modul: "B", lektion: 12},
-  {de: "Was für ein …? (Was für eine Organisation ist das?)", uk: "Що за …? Який (за типом)? (Що це за організація?)", klas: "9", modul: "B", lektion: 12}
+  {de: "Was für ein …? (Was für eine Organisation ist das?)", uk: "Що за …? Який (за типом)? (Що це за організація?)", klas: "9", modul: "B", lektion: 12},
+  {de: "der Rundgang (die Rundgänge)", uk: "прогулянка-екскурсія, обхід (пішки)", klas: "7", modul: "C", lektion: 9},
+  {de: "besichtigen", uk: "оглядати (пам'ятки, місто)", klas: "7", modul: "C", lektion: 9},
+  {de: "die Bauten (Pl.) (historische Bauten)", uk: "споруди, будівлі (історичні споруди)", klas: "7", modul: "C", lektion: 9},
+  {de: "die Kirche (die Kirchen)", uk: "церква", klas: "7", modul: "C", lektion: 9},
+  {de: "der Architekt (die Architekten)", uk: "архітектор", klas: "7", modul: "C", lektion: 9},
+  {de: "berühmt", uk: "відомий, славетний", klas: "7", modul: "C", lektion: 9},
+  {de: "die Schiffsreise (die Schiffsreisen)", uk: "подорож кораблем", klas: "7", modul: "C", lektion: 9},
+  {de: "das Mittelmeer", uk: "Середземне море", klas: "7", modul: "C", lektion: 9},
+  {de: "das Museum (die Museen)", uk: "музей", klas: "7", modul: "C", lektion: 9},
+  {de: "der Stadtbummel", uk: "прогулянка містом", klas: "7", modul: "C", lektion: 9},
+  {de: "zufrieden sein (mit + Dat.) (Ich bin damit zufrieden.)", uk: "бути задоволеним (чимось) (Я цим задоволений.)", klas: "7", modul: "C", lektion: 9}
 ];
