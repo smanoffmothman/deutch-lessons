@@ -1191,5 +1191,17 @@ const GLOSSARY = [
   {de: "leise", uk: "тихо", klas: "8", modul: "C", lektion: 4},
   {de: "einmal pro Woche (zweimal pro Monat)", uk: "раз на тиждень (двічі на місяць)", klas: "8", modul: "C", lektion: 4},
   {de: "meistens", uk: "здебільшого, найчастіше", klas: "8", modul: "C", lektion: 4},
-  {de: "Keine Sorge! / Macht nichts!", uk: "Не хвилюйся! / Нічого страшного!", klas: "8", modul: "C", lektion: 4}
+  {de: "Keine Sorge! / Macht nichts!", uk: "Не хвилюйся! / Нічого страшного!", klas: "8", modul: "C", lektion: 4},
+  {de: "das Sakko (die Sakkos)", uk: "піджак (спортивного крою)", klas: "9", modul: "B", lektion: 13},
+  {de: "das Kleid (die Kleider)", uk: "сукня", klas: "9", modul: "B", lektion: 13},
+  {de: "die Jeans (die Jeans)", uk: "джинси", klas: "9", modul: "B", lektion: 13},
+  {de: "das Jeanshemd (die Jeanshemden)", uk: "джинсова сорочка", klas: "9", modul: "B", lektion: 13},
+  {de: "die Lederjacke (die Lederjacken)", uk: "шкіряна куртка", klas: "9", modul: "B", lektion: 13},
+  {de: "der Pelzmantel (die Pelzmäntel)", uk: "шуба, хутряне пальто", klas: "9", modul: "B", lektion: 13},
+  {de: "das Outfit (die Outfits)", uk: "образ, комплект одягу (Was hast du heute an? Beschreibe dein Outfit.)", klas: "9", modul: "B", lektion: 13},
+  {de: "modisch", uk: "модний (Ich finde Sakkos modisch.)", klas: "9", modul: "B", lektion: 13},
+  {de: "die Pfadfinderorganisation (die Pfadfinderorganisationen)", uk: "скаутська організація", klas: "9", modul: "B", lektion: 13},
+  {de: "die Umweltbewegung", uk: "екологічний рух, рух за охорону довкілля", klas: "9", modul: "B", lektion: 13},
+  {de: "die Skaterszene", uk: "субкультура скейтерів", klas: "9", modul: "B", lektion: 13},
+  {de: "das Hauptziel (die Hauptziele)", uk: "головна мета", klas: "9", modul: "B", lektion: 13}
 ];
