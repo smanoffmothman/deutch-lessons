@@ -1180,5 +1180,16 @@ const GLOSSARY = [
   {de: "das Mittelmeer", uk: "Середземне море", klas: "7", modul: "C", lektion: 9},
   {de: "das Museum (die Museen)", uk: "музей", klas: "7", modul: "C", lektion: 9},
   {de: "der Stadtbummel", uk: "прогулянка містом", klas: "7", modul: "C", lektion: 9},
-  {de: "zufrieden sein (mit + Dat.) (Ich bin damit zufrieden.)", uk: "бути задоволеним (чимось) (Я цим задоволений.)", klas: "7", modul: "C", lektion: 9}
+  {de: "zufrieden sein (mit + Dat.) (Ich bin damit zufrieden.)", uk: "бути задоволеним (чимось) (Я цим задоволений.)", klas: "7", modul: "C", lektion: 9},
+  {de: "die Bibliotheksordnung (die Bibliotheksordnungen)", uk: "правила користування бібліотекою", klas: "8", modul: "C", lektion: 4},
+  {de: "erlauben (Das ist erlaubt.)", uk: "дозволяти (Це дозволено.)", klas: "8", modul: "C", lektion: 4},
+  {de: "verbieten (Das ist verboten.)", uk: "забороняти (Це заборонено.)", klas: "8", modul: "C", lektion: 4},
+  {de: "beschädigen (Bücher beschädigen)", uk: "пошкоджувати (пошкоджувати книжки)", klas: "8", modul: "C", lektion: 4},
+  {de: "mitbringen (trennbar) (Essen mitbringen)", uk: "приносити з собою (приносити їжу)", klas: "8", modul: "C", lektion: 4},
+  {de: "kaputt machen (einen Computer kaputt machen)", uk: "зламати (зламати комп'ютер)", klas: "8", modul: "C", lektion: 4},
+  {de: "telefonieren (mit Freunden telefonieren)", uk: "розмовляти телефоном (з друзями)", klas: "8", modul: "C", lektion: 4},
+  {de: "leise", uk: "тихо", klas: "8", modul: "C", lektion: 4},
+  {de: "einmal pro Woche (zweimal pro Monat)", uk: "раз на тиждень (двічі на місяць)", klas: "8", modul: "C", lektion: 4},
+  {de: "meistens", uk: "здебільшого, найчастіше", klas: "8", modul: "C", lektion: 4},
+  {de: "Keine Sorge! / Macht nichts!", uk: "Не хвилюйся! / Нічого страшного!", klas: "8", modul: "C", lektion: 4}
 ];
