@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 4 · Modul C · Wie benimmt man sich in der Bibliothek?</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 8'},
+    {label: 'Урок 4: Wie benimmt man sich in der Bibliothek?'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 4 · MODUL C</span>
+        <h1>Wie benimmt man sich in der Bibliothek?</h1>
+        <p class="sub">Як поводитися в бібліотеці: беремо інтерв'ю про шкільну бібліотеку, розповідаємо, як часто й навіщо туди ходимо (um … zu), читаємо дивні правила бібліотеки й коментуємо їх із «man darf / man darf nicht».</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Interviews</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Wie oft und wozu?</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Bibliotheksordnung</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · dürfen + Meinung</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Meine drei Regeln</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== ПАНЕЛЬ: вступ ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Worum geht es heute?</h2>
+      <div class="card">
+        <p>Wir bleiben in der Bibliothek. Heute machen wir Interviews: Wie oft besucht ihr die Schulbibliothek, und wozu? Dann lesen wir eine sehr komische Bibliotheksordnung. Darf man dort wirklich laut Musik hören und Pizza essen? Wir sagen unsere Meinung und schreiben unsere eigenen Regeln: <b>Wie benimmt man sich in der Bibliothek?</b></p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Ми й далі в бібліотеці. Сьогодні беремо інтерв'ю: як часто ви ходите до шкільної бібліотеки і навіщо? Потім читаємо дуже дивні правила користування бібліотекою. Невже там справді можна гучно слухати музику та їсти піцу? Висловлюємо свою думку й пишемо власні правила: <b>як треба поводитися в бібліотеці?</b>
+        </div>
+      </div>
+
+      <div id="hook"></div>
+
+      <div id="lz-start"></div>
+
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Ich besuche unsere Schulbibliothek ziemlich oft. Und du? 🐶📚</p>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: перевірка домашнього завдання (dz уроку 8-C-3) ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: опитування «Бібліотека чи інтернет?» — запитати трьох людей, чи ходять вони до бібліотеки, як часто, що там беруть і що роблять, коли терміново потрібна інформація; записати відповіді в таблицю й написати 5–6 речень про результати (щонайменше тричі «dass» і двічі «wenn»).
+      </div>
+
+      <div id="dz-check">
+        <div class="card" style="margin-top:18px;">
+          <p class="section-label" style="margin:0 0 6px;">Teil A · Maxims Umfrage</p>
+          <p class="lead">Максим теж провів опитування, але не впевнений у порядку слів. Обери правильний варіант. Потім так само перевір свої речення: після <b>dass</b> і <b>wenn</b> дієслово стоїть у кінці, а після wenn-речення головне речення починається з дієслова.</p>
+          <div class="mail-window">
+            <div class="mail-titlebar">📋 Umfrage: Bibliothek oder Internet?</div>
+            <div class="mail-body" id="hw-list">
+              <div class="fill-item"><span class="num">1)</span> Meine Oma sagt, dass <select class="blank inline" data-ans="sie jede Woche in die Bibliothek geht" aria-label="Lücke 1"><option value="">—</option><option>sie geht jede Woche in die Bibliothek</option><option>sie jede Woche in die Bibliothek geht</option><option>geht sie jede Woche in die Bibliothek</option></select>.</div>
+              <div class="fill-item"><span class="num">2)</span> Wenn mein Bruder dringend Informationen braucht, <select class="blank inline" data-ans="surft er im Internet" aria-label="Lücke 2"><option value="">—</option><option>er surft im Internet</option><option>er im Internet surft</option><option>surft er im Internet</option></select>.</div>
+              <div class="fill-item"><span class="num">3)</span> Mein Vater erzählt, dass er nur selten Bücher <select class="blank inline" data-ans="ausleiht" aria-label="Lücke 3"><option value="">—</option><option>ausleiht</option><option>leiht aus</option><option>aus leiht</option></select>.</div>
+              <div class="fill-item"><span class="num">4)</span> <select class="blank inline" data-ans="Wenn meine Freundin ein Referat vorbereitet" aria-label="Lücke 4"><option value="">—</option><option>Wenn meine Freundin ein Referat vorbereitet</option><option>Wenn meine Freundin bereitet ein Referat vor</option><option>Wenn vorbereitet meine Freundin ein Referat</option></select>, geht sie in die Stadtbibliothek.</div>
+              <div class="fill-item"><span class="num">5)</span> Meine Mutter meint, dass man im Internet nicht immer etwas Passendes <select class="blank inline" data-ans="findet" aria-label="Lücke 5"><option value="">—</option><option>finden</option><option>findet</option><option>gefunden</option></select>.</div>
+              <div class="fill-item"><span class="num">6)</span> Zwei Personen finden, <select class="blank inline" data-ans="dass die Bibliothek gemütlich ist" aria-label="Lücke 6"><option value="">—</option><option>dass ist die Bibliothek gemütlich</option><option>dass die Bibliothek ist gemütlich</option><option>dass die Bibliothek gemütlich ist</option></select>.</div>
+            </div>
+          </div>
+          <div class="check-bar">
+            <button class="btn" id="hw-check" type="button">Prüfen</button>
+            <button class="btn secondary" id="hw-reset" type="button">Zurücksetzen</button>
+            <span class="score-pill" id="hw-score"></span>
+          </div>
+        </div>
+
+        <div class="card tinted-teal">
+          <p class="section-label" style="margin:0 0 6px;">Teil B · Wer gewinnt in unserer Klasse?</p>
+          <p style="margin:0;">Lies zwei Sätze aus deiner Umfrage vor. Zählt zusammen: Wie viele Personen gehen lieber in die Bibliothek, wie viele surfen lieber im Internet? <em>„In unserer Klasse gewinnt …, denn … Personen meinen, dass …“</em></p>
+          <div class="ua-note">
+            <span class="ua-label">🇺🇦 У класі</span>
+            Прочитай два речення зі свого опитування. Порахуйте всім класом: скільки людей обирає бібліотеку, а скільки — інтернет? Підсумуйте одним реченням. Якщо працюєш удома — порахуй відповіді у своїй таблиці й скажи підсумкове речення вголос.
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="dz-vocab-wrap" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">Wörter-Check</p>
+        <p class="lead">Перевір слова з минулих уроків.</p>
+        <div id="dz-vocab"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: Interviews ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Interviews in der Schulbibliothek</h2>
+      <p class="lead">Пам'ятаєш підлітків із форуму (минулий урок)? Тепер ти граєш їхню роль в інтерв'ю. Прочитай картку персонажа й обери відповідь, яку дав(ла) б саме він чи вона.</p>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">👦 Rolle 1: Lukas</p>
+        <p style="margin:0;">geht sehr gern in die Schulbibliothek · etwa zweimal pro Monat · leiht Bücher, Zeitschriften und Videos aus · bezahlt kaum Geld · mag die Atmosphäre und unterhält sich gern mit interessanten Leuten</p>
+      </div>
+      <div class="card" id="ub1-chat1"></div>
+
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">👩 Rolle 2: Sandra</p>
+        <p style="margin:0;">besucht Bibliotheken selten · langweilt sich dort · sucht Informationen lieber im Internet · liest nicht gern · kauft ab und zu eine Zeitschrift</p>
+      </div>
+      <div class="card" id="ub1-chat2"></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Jetzt spielt ihr!</p>
+        <p style="margin:0;">Verteilt die Rollen: Interviewer/in, Eva, Thomas, Paul, Andrea, Lukas, Sandra. Der Interviewer stellt die Fragen: <em>Gehst du gern in die Schulbibliothek? Warum? · Was leihst du meistens aus? · Wo suchst du lieber nach Informationen? · Kaufst du Bücher, Zeitschriften oder Videos? · Wie oft besuchst du die Schulbibliothek? · Wie findest du die Atmosphäre dort?</em></p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Усно</span>
+          Розподіліть ролі й зіграйте інтерв'ю: один ставить питання, решта відповідають від імені свого персонажа. Удома — обери одного персонажа й дай відповіді на всі шість питань уголос.
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 2: Wie oft und wozu? ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Wie oft und wozu besucht ihr die Schulbibliothek?</h2>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">So fragt und antwortet man</p>
+        <p style="margin:0 0 4px;"><b>A:</b> Wie oft besuchst du die Schulbibliothek?</p>
+        <p style="margin:0 0 4px;"><b>B:</b> Ich besuche die Schulbibliothek <b>einmal / zweimal / … pro Woche / pro Monat</b> / nicht sehr oft.</p>
+        <p style="margin:0 0 4px;"><b>A:</b> Wozu besuchst du meistens die Bibliothek?</p>
+        <p style="margin:0;"><b>B:</b> Meistens gehe ich in die Bibliothek, <b>um</b> Bücher aus<b>zu</b>leihen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Запам'ятай</span>
+          <b>Wozu?</b> — навіщо? Відповідаємо конструкцією <b>um … zu</b> + інфінітив у кінці: um ein Buch <b>zu lesen</b>. У відокремлюваних дієсловах <b>zu</b> стоїть між префіксом і коренем і пишеться разом: aus<b>zu</b>leihen, vor<b>zu</b>bereiten, zurück<b>zu</b>bringen.
+        </div>
+      </div>
+
+      <p class="lead">A) Доповни речення: постав дієслово в дужках у форму з <b>zu</b>.</p>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> Meistens gehe ich in die Bibliothek, um Bücher <input type="text" class="blank-input inline wide" data-ans="auszuleihen" aria-label="Lücke 1"> <em>(ausleihen)</em>.</div>
+        <div class="fill-item"><span class="num">2)</span> Eva geht in die Bibliothek, um ein Referat <input type="text" class="blank-input inline wide" data-ans="vorzubereiten" aria-label="Lücke 2"> <em>(vorbereiten)</em>.</div>
+        <div class="fill-item"><span class="num">3)</span> Lukas sitzt gern im Lesesaal, um in Zeitschriften <input type="text" class="blank-input inline wide" data-ans="zu blättern" aria-label="Lücke 3"> <em>(blättern)</em>.</div>
+        <div class="fill-item"><span class="num">4)</span> Andrea besucht die Bibliothek, um ausführliche Informationen <input type="text" class="blank-input inline wide" data-ans="zu suchen" aria-label="Lücke 4"> <em>(suchen)</em>.</div>
+        <div class="fill-item"><span class="num">5)</span> Ich gehe einmal pro Woche hin, um meine Bücher rechtzeitig <input type="text" class="blank-input inline wide" data-ans="zurückzubringen" aria-label="Lücke 5"> <em>(zurückbringen)</em>.</div>
+        <div class="fill-item"><span class="num">6)</span> Wir bleiben nach dem Unterricht in der Bibliothek, um dort Hausaufgaben <input type="text" class="blank-input inline wide" data-ans="zu machen" aria-label="Lücke 6"> <em>(machen)</em>.</div>
+        <div class="fill-item"><span class="num">7)</span> Thomas surft lieber im Internet, um schnell etwas Passendes <input type="text" class="blank-input inline wide" data-ans="zu finden" aria-label="Lücke 7"> <em>(finden)</em>.</div>
+        <div class="fill-item"><span class="num">8)</span> Manche Schüler kommen in die Leseecke, um dort Freunde <input type="text" class="blank-input inline wide" data-ans="zu treffen" aria-label="Lücke 8"> <em>(treffen)</em>.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check" type="button">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset" type="button">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+
+      <p class="lead" style="margin-top:20px;">B) Склади відповіді для опитування з карток. Підказка українською — над кожним реченням.</p>
+      <div class="card" id="ub2-order"></div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Umfrage in der Klasse</p>
+        <p style="margin:0;">Frag drei Mitschüler/innen und mach eine Tabelle: <b>Name · Wie oft besucht er/sie die Schulbibliothek? · Wozu besucht er/sie die Schulbibliothek?</b> Erzähl dann: <em>„Olena besucht die Schulbibliothek zweimal pro Monat. Sie geht hin, um … zu …“</em></p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Усно</span>
+          Опитай трьох однокласників за діалогом-зразком угорі й заповни таблицю в зошиті. Потім розкажи про одного з них. Удома — опитай когось із родини (про шкільну чи міську бібліотеку).
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: Bibliotheksordnung ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Eine komische Bibliotheksordnung</h2>
+      <p class="lead">Прочитай «правила» бібліотеки. Щось тут не так… 🤔</p>
+
+      <div class="mail-window">
+        <div class="mail-titlebar">📜 Bibliotheksordnung</div>
+        <div class="mail-body">
+          <p style="margin:0 0 6px;">✓ In der Bibliothek darf man laut sprechen. 😊 Das stört niemanden.</p>
+          <p style="margin:0 0 6px;">✓ Man darf mit Freunden telefonieren. 😊 Das ist ganz okay.</p>
+          <p style="margin:0 0 6px;">✓ Man darf Computer spielen. 😊 Das macht Spaß.</p>
+          <p style="margin:0 0 6px;">✓ Man darf laut Musik hören und mitsingen. 😊 Laute Musik finden alle gut.</p>
+          <p style="margin:0 0 6px;">✓ Man darf Essen und Getränke mitbringen. 😊 Du kannst Hunger oder Durst haben.</p>
+          <p style="margin:0 0 6px;">✓ Man darf sich komische Videos ansehen und laut lachen. 😊 Alle wissen — Lachen verlängert das Leben.</p>
+          <p style="margin:0 0 6px;">✓ Man darf Bücher ausleihen und sie nicht rechtzeitig zurückbringen. 😊 Macht nichts! Andere können warten.</p>
+          <p style="margin:0 0 6px;">✓ Man darf Bücher beschädigen. 😊 Kein Problem! Die Bibliothek besitzt so viele Bücher!</p>
+          <p style="margin:0;">✓ Man darf einen Computer kaputt machen. 😊 Keine Sorgen! Die Bibliothek kann einen neuen kaufen.</p>
+        </div>
+      </div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Підказка</span>
+        <b>die Bibliotheksordnung</b> — правила користування бібліотекою; <b>stören</b> — заважати; <b>niemand(en)</b> — нікого; <b>mitbringen</b> — приносити з собою; <b>verlängern</b> — подовжувати; <b>rechtzeitig</b> — вчасно; <b>beschädigen</b> — пошкоджувати; <b>besitzen</b> — мати, володіти; <b>kaputt machen</b> — зламати; <b>Keine Sorge(n)!</b> — Не хвилюйся! <b>Macht nichts!</b> — Нічого страшного!
+      </div>
+
+      <p class="lead" style="margin-top:20px;">A) А як насправді? Розклади дії по кошиках: що в бібліотеці можна, а чого не можна.</p>
+      <div class="card" id="ub3-sort"></div>
+
+      <p class="lead" style="margin-top:20px;">B) Який коментар до правила найкращий? Обери.</p>
+      <div id="ub3-quiz"></div>
+    </section>
+
+    <!-- ===== Üb. 4: dürfen + Meinung ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Was darf man? Was meinst du?</h2>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">So sagt man seine Meinung</p>
+        <p style="margin:0 0 4px;">Diese Regeln finde ich gut / nicht so gut / nicht echt / …</p>
+        <p style="margin:0 0 4px;">Meiner Meinung nach <b>darf</b> man (nicht) …, <b>denn</b> … .</p>
+        <p style="margin:0 0 4px;">Ich finde, <b>dass</b> … die anderen (nicht) stören <b>kann</b>.</p>
+        <p style="margin:0;">Ich glaube, <b>dass</b> man … in der Bibliothek erlauben / verbieten <b>soll</b>.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Запам'ятай</span>
+          <b>dürfen</b> — мати дозвіл: man <b>darf</b> = можна, man <b>darf nicht</b> = не можна. Інфінітив іде в кінець речення: Man darf hier nicht laut <b>sprechen</b>. Після <b>denn</b> — звичайний порядок слів (дієслово на 2-му місці), після <b>dass</b> — дієслово в кінці.
+        </div>
+      </div>
+
+      <p class="lead">A) Відміни дієслово <b>dürfen</b>.</p>
+      <div class="card" id="ub4-tab"></div>
+
+      <p class="lead" style="margin-top:20px;">B) Обери правильну форму.</p>
+      <div class="card" id="ub4-list">
+        <div class="fill-item"><span class="num">1)</span> Meiner Meinung nach <select class="blank inline" data-ans="darf" aria-label="Lücke 1"><option value="">—</option><option>dürfen</option><option>darf</option><option>darfst</option></select> man in der Bibliothek nicht laut sprechen.</div>
+        <div class="fill-item"><span class="num">2)</span> Diese Regel finde ich nicht gut, denn laute Musik <select class="blank inline" data-ans="stört" aria-label="Lücke 2"><option value="">—</option><option>stört</option><option>stören</option><option>gestört</option></select> die anderen.</div>
+        <div class="fill-item"><span class="num">3)</span> Paul, du <select class="blank inline" data-ans="darfst" aria-label="Lücke 3"><option value="">—</option><option>darf</option><option>dürft</option><option>darfst</option></select> hier keine Pizza essen!</div>
+        <div class="fill-item"><span class="num">4)</span> Ich finde, dass man Bücher nicht beschädigen <select class="blank inline" data-ans="darf" aria-label="Lücke 4"><option value="">—</option><option>darf</option><option>darfst</option><option>dürft</option></select>.</div>
+        <div class="fill-item"><span class="num">5)</span> Kinder, ihr <select class="blank inline" data-ans="dürft" aria-label="Lücke 5"><option value="">—</option><option>dürfen</option><option>dürft</option><option>darfst</option></select> im Lesesaal leise lernen.</div>
+        <div class="fill-item"><span class="num">6)</span> Wir <select class="blank inline" data-ans="dürfen" aria-label="Lücke 6"><option value="">—</option><option>darf</option><option>dürft</option><option>dürfen</option></select> Bücher für drei Wochen ausleihen.</div>
+        <div class="fill-item"><span class="num">7)</span> Ich glaube, dass man Telefongespräche in der Bibliothek <select class="blank inline" data-ans="verbieten" aria-label="Lücke 7"><option value="">—</option><option>erlauben</option><option>verbieten</option></select> soll, denn sie stören beim Lesen.</div>
+        <div class="fill-item"><span class="num">8)</span> Bei lauter Musik finde ich, dass die anderen nicht in Ruhe lesen <select class="blank inline" data-ans="können" aria-label="Lücke 8"><option value="">—</option><option>kann</option><option>können</option><option>kannst</option></select>.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub4-check" type="button">Prüfen</button>
+        <button class="btn secondary" id="ub4-reset" type="button">Zurücksetzen</button>
+        <span class="score-pill" id="ub4-score"></span>
+      </div>
+
+      <p class="lead" style="margin-top:20px;">C) Склади коментарі до правил з карток.</p>
+      <div class="card" id="ub4-order"></div>
+    </section>
+
+    <!-- ===== Üb. 5: Meine drei Regeln (Exit ticket) ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Schreibe deine drei Regeln</h2>
+      <p class="lead">Exit-Ticket: напиши три правила для шкільної бібліотеки, які ти вважаєш особливо важливими, і поясни одне з них.</p>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Увага</span>
+        Вставляти текст із буфера тут не можна — набирай сам(а).
+      </div>
+      <div class="card" id="ub5-w"></div>
+
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">So was habe ich noch nie gelesen! Was denkt ihr über eure Regeln? 🐶</p>
+      </div>
+    </section>
+
+    <!-- ===== ПРИКІНЦЕВА ПАНЕЛЬ ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div id="lz-check"></div>
+
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Szene „Ärger in der Bibliothek“: Schreib einen Dialog (8–10 Repliken) zwischen einer Bibliothekarin / einem Bibliothekar und einem Schüler oder einer Schülerin, der/die sich in der Bibliothek schlecht benimmt (er/sie telefoniert laut, isst Chips, bringt die Bücher nicht rechtzeitig zurück …). 1) Die Bibliothekarin erklärt die Regeln – mindestens dreimal mit „dürfen“ (z. B. „Hier darf man nicht …“, „Du darfst …, aber …“). 2) Der Schüler / die Schülerin sagt seine / ihre Meinung – einmal mit „Ich finde, dass …“ und einmal mit „denn“. 3) Zum Schluss fragt die Bibliothekarin: „Wozu bist du eigentlich in die Bibliothek gekommen?“ – und der Schüler / die Schülerin antwortet mit „um … zu …“. Nächstes Mal spielt ihr die Szenen zu zweit vor, und die Klasse sagt, welche Regeln der Schüler / die Schülerin gebrochen hat.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Сценка «Неприємності в бібліотеці»: напиши діалог (8–10 реплік) між бібліотекаркою / бібліотекарем і учнем чи ученицею, який/яка погано поводиться в бібліотеці (голосно розмовляє телефоном, їсть чипси, не повертає вчасно книжки …). 1) Бібліотекарка пояснює правила — щонайменше тричі з «dürfen» (напр. «Hier darf man nicht …», «Du darfst …, aber …»). 2) Учень / учениця висловлює свою думку — один раз із «Ich finde, dass …» і один раз із «denn». 3) Наприкінці бібліотекарка питає: «Wozu bist du eigentlich in die Bibliothek gekommen?» (А навіщо ти, власне, прийшов/прийшла до бібліотеки?) — і учень / учениця відповідає з «um … zu …». Наступного уроку ви розіграєте сценки в парах, а клас скаже, які правила порушив персонаж.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Wörter zum Lernen</p>
+        <div class="chip-row" id="vocabChips"></div>
+      </div>
+
+      <div class="card" id="lessonGramWrap">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="lessonGram"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../data/glossary-data.js"></script>
+<script src="../../../data/lessons-data.js"></script>
+<script src="../../../data/grammar-data.js"></script>
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  const LEKTION_KLAS = "8", LEKTION_MODUL = "C", LEKTION_LEKTION = 4;
+  const LEKTION_PREV_LEKTION = 3;
+
+  // ===== Цілі уроку «Ich kann …» (Start) + самооцінка-світлофор (Fertig!) =====
+  const LERNZIELE = [
+    {de: "Ich kann fragen und sagen, wie oft und wozu ich die Schulbibliothek besuche.", uk: "Я можу запитати й сказати, як часто і навіщо я ходжу до шкільної бібліотеки."},
+    {de: "Ich kann mit „man darf / man darf nicht“ sagen, wie man sich in der Bibliothek benimmt.", uk: "Я можу сказати з «man darf / man darf nicht», як треба поводитися в бібліотеці."},
+    {de: "Ich kann Regeln kommentieren und meine Meinung mit „dass“ und „denn“ begründen.", uk: "Я можу коментувати правила й обґрунтовувати свою думку з «dass» і «denn»."}
+  ];
+  buildLernziele('lz-start', 'lz-check', LERNZIELE);
+
+  // ===== Хук входу (тип fakt — поле hook у lessons-data.js) =====
+  buildHook('hook', {type: 'fakt', pic: '🏛️',
+    q: "Die Deutsche Nationalbibliothek in Leipzig und Frankfurt am Main sammelt alle Bücher aus Deutschland. Darf man dort Bücher mit nach Hause nehmen?",
+    opts: ["Ja, für vier Wochen.", "Nein, man darf sie nur im Lesesaal lesen.", "Ja, aber nur Kinderbücher."],
+    correct: "Nein, man darf sie nur im Lesesaal lesen.",
+    fakt: "Die Deutsche Nationalbibliothek ist eine Präsenzbibliothek: Man darf die Bücher nicht ausleihen. Man liest sie nur vor Ort im Lesesaal.",
+    uk: "Німецька національна бібліотека — бібліотека без видачі додому: книжки не можна брати з собою, їх читають лише на місці, у читальній залі."});
+
+  (function renderLessonVocab(){
+    const box = document.getElementById('vocabChips');
+    if (!box || typeof GLOSSARY === 'undefined') return;
+    const words = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_LEKTION
+    );
+    if (words.length === 0){
+      box.innerHTML = '<p class="empty-note">Слова для цього уроку ще не додані в глосарій.</p>';
+      return;
+    }
+    box.innerHTML = words.map(w =>
+      '<span class="chip static">' + w.de + ' — ' + w.uk + '</span>'
+    ).join('');
+  })();
+
+  // ===== Граматика до цього уроку у вкладці Fertig (поле gram у lessons-data.js) =====
+  (function renderLessonGrammar(){
+    const wrap = document.getElementById('lessonGramWrap');
+    const box = document.getElementById('lessonGram');
+    if (!wrap || !box) return;
+    const hide = () => { wrap.style.display = 'none'; };
+    if (typeof LESSONS === 'undefined' || typeof GRAMMAR === 'undefined') return hide();
+    const me = LESSONS.find(l => l.klas === LEKTION_KLAS && l.modul === LEKTION_MODUL && l.lektion === LEKTION_LEKTION);
+    const topics = ((me && me.gram) || []).map(id => GRAMMAR.find(t => t.id === id)).filter(t => t && t.opublikovano > 0);
+    if (topics.length === 0) return hide();
+    const src = document.querySelector('script[src$="data/grammar-data.js"]').getAttribute('src');
+    const root = src.slice(0, src.length - 'data/grammar-data.js'.length);
+    box.innerHTML = topics.map(t =>
+      '<a class="gram-link" href="' + root + 'gramatyka/temy/' + t.id + '.html">'
+      + '<span class="k">' + t.uk + '</span>' + t.tema + '</a>'
+    ).join('');
+  })();
+
+  // ---------- Груба евристика частини мови за виглядом "de" (для пасток у Wörter-Check) ----------
+  function guessPos(de){
+    var base = (de || '').replace(/\([^)]*\)/g, '').trim();
+    if(/^(der|die|das)(\/(der|die|das))?\s/.test(base)) return 'noun';
+    if(/^sich\s/.test(base)) return 'verb';
+    if(/^am\s/.test(base)) return 'other';
+    if(/\(\+(Gen|Dat|Akk)\.?\)/.test(de)) return 'prep';
+    var words = base.split(/\s+/);
+    var last = words[words.length - 1];
+    if(/(en|ern|eln)$/.test(last) && last === last.toLowerCase()) return 'verb';
+    return 'other';
+  }
+
+  // ===== Wörter-Check: до 4 слів попереднього уроку + слова з 2–5 уроків тому =====
+  (function renderDzVocabCheck(){
+    const wrap = document.getElementById('dz-vocab-wrap');
+    const box = document.getElementById('dz-vocab');
+    if (!wrap || !box || typeof GLOSSARY === 'undefined') return;
+    const same = (w, l) => w.klas === l.klas && w.modul === l.modul && w.lektion === l.lektion;
+    const prevWords = LEKTION_PREV_LEKTION ? GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_PREV_LEKTION
+    ) : [];
+    let olderWords = [];
+    if (typeof LESSONS !== 'undefined'){
+      const mine = LESSONS.filter(l => l.klas === LEKTION_KLAS);
+      const idx = mine.findIndex(l => l.modul === LEKTION_MODUL && l.lektion === LEKTION_LEKTION);
+      if (idx > 0){
+        const older = mine.slice(Math.max(0, idx - 5), idx)
+          .filter(l => !(l.modul === LEKTION_MODUL && l.lektion === LEKTION_PREV_LEKTION));
+        olderWords = GLOSSARY.filter(w => older.some(l => same(w, l)));
+      }
+    }
+    const fromPrev = shuffleArray(prevWords).slice(0, olderWords.length ? 4 : 6);
+    const pool = shuffleArray(fromPrev.concat(shuffleArray(olderWords).slice(0, 6 - fromPrev.length)));
+    if (pool.length < 3){ wrap.style.display = 'none'; return; }
+
+    const quizData = pool.map(w => {
+      const pos = guessPos(w.de);
+      let sameKind = GLOSSARY.filter(g => g.uk !== w.uk && guessPos(g.de) === pos);
+      if(sameKind.length < 2) sameKind = GLOSSARY.filter(g => g.uk !== w.uk);
+      const distractors = shuffleArray(sameKind).slice(0, 2).map(g => g.uk);
+      return { q: w.de, opts: [w.uk, ...distractors], correct: w.uk };
+    });
+    buildQuiz('dz-vocab', quizData);
+  })();
+
+  // ===== Hausaufgabe, Teil A: Wortstellung in dass-/wenn-Sätzen =====
+  wireBlanks('hw');
+
+  // ===== Üb. 1: Interviews =====
+  buildChat('ub1-chat1', {
+    partner: "Interviewerin", me: "Lukas",
+    steps: [
+      {them: "Hallo Lukas! Gehst du gern in die Schulbibliothek? Warum?"},
+      {you: ["Ja, sehr gern! Man hat dort eine große Auswahl.", "Nein, dort langweile ich mich.", "Ja, ich gehe gern ins Kino."], correct: 0},
+      {them: "Wie oft besuchst du die Schulbibliothek?"},
+      {you: ["Jeden Tag zweimal.", "Fast nie.", "Etwa zweimal pro Monat."], correct: 2},
+      {them: "Was leihst du meistens aus?"},
+      {you: ["Nur Lehrbücher.", "Bücher, Zeitschriften und Videos.", "Ich leihe nichts aus."], correct: 1},
+      {them: "Kaufst du Bücher oder Zeitschriften?"},
+      {you: ["Kaum, denn in der Bibliothek muss man fast nichts bezahlen.", "Ja, ich kaufe jede Woche zehn Bücher.", "Ja, bei einem großen Internetanbieter."], correct: 0},
+      {them: "Wie findest du die Atmosphäre in der Schulbibliothek?"},
+      {you: ["Schrecklich langweilig!", "Zu laut, alle telefonieren.", "Toll! Ich unterhalte mich dort gern mit interessanten Leuten."], correct: 2}
+    ]
+  });
+  buildChat('ub1-chat2', {
+    partner: "Interviewer", me: "Sandra",
+    steps: [
+      {them: "Hallo Sandra! Wie oft besuchst du die Schulbibliothek?"},
+      {you: ["Zweimal pro Woche.", "Nicht sehr oft, nur selten.", "Jeden Morgen vor dem Unterricht."], correct: 1},
+      {them: "Wo suchst du lieber nach Informationen?"},
+      {you: ["Lieber im Internet, das geht schneller.", "Im Katalog der Bibliothek.", "Ich frage immer die Bibliothekarin."], correct: 0},
+      {them: "Kaufst du Bücher, Zeitschriften oder Videos?"},
+      {you: ["Ja, ich kaufe viele Romane.", "Ab und zu eine Zeitschrift, aber mehr nicht.", "Nein, ich leihe alles in der Bibliothek aus."], correct: 1},
+      {them: "Wie findest du die Atmosphäre in der Schulbibliothek?"},
+      {you: ["Gemütlich, ich bleibe dort gern lange.", "Sehr lustig!", "Ich langweile mich dort schrecklich."], correct: 2},
+      {them: "Liest du gern?"},
+      {you: ["Nein, ich lese überhaupt nicht gern.", "Ja, ich lese jeden Tag ein Buch.", "Ja, am liebsten im Lesesaal."], correct: 0}
+    ]
+  });
+
+  // ===== Üb. 2 A: um … zu =====
+  wireBlanks('ub2');
+
+  // ===== Üb. 2 B: Antworten bauen =====
+  buildOrder('ub2-order', [
+    {words: ["Ich", "besuche", "die Schulbibliothek", "zweimal", "pro Monat"], end: ".",
+      hint: "Я відвідую шкільну бібліотеку двічі на місяць."},
+    {words: ["Meistens", "gehe", "ich", "in die Bibliothek,", "um", "Bücher", "auszuleihen"], end: ".",
+      alt: ["Ich gehe meistens in die Bibliothek, um Bücher auszuleihen"],
+      hint: "Здебільшого я ходжу до бібліотеки, щоб узяти книжки."},
+    {words: ["Ich", "gehe", "in die Bibliothek,", "um", "ein Referat", "vorzubereiten"], end: ".",
+      hint: "Я ходжу до бібліотеки, щоб підготувати доповідь."},
+    {words: ["Maria", "besucht", "die Bibliothek", "einmal", "pro Woche,", "um", "in Ruhe", "zu lernen"], end: ".", gross: true,
+      hint: "Марія ходить до бібліотеки раз на тиждень, щоб спокійно повчитися."}
+  ]);
+
+  // ===== Üb. 3 A: Was darf man wirklich? =====
+  buildSort('ub3-sort', {
+    buckets: ["✅ Das darf man", "⛔ Das darf man nicht"],
+    items: [
+      {t: "leise sprechen", b: "✅ Das darf man"},
+      {t: "Bücher ausleihen", b: "✅ Das darf man"},
+      {t: "im Lesesaal lernen", b: "✅ Das darf man"},
+      {t: "am Computer Informationen suchen", b: "✅ Das darf man"},
+      {t: "laut telefonieren", b: "⛔ Das darf man nicht"},
+      {t: "laut Musik hören und mitsingen", b: "⛔ Das darf man nicht"},
+      {t: "im Lesesaal Pizza essen", b: "⛔ Das darf man nicht"},
+      {t: "Bücher beschädigen", b: "⛔ Das darf man nicht"},
+      {t: "einen Computer kaputt machen", b: "⛔ Das darf man nicht"}
+    ]
+  });
+
+  // ===== Üb. 3 B: Kommentare zu den Regeln =====
+  buildQuiz('ub3-quiz', [
+    {q: "„Man darf mit Freunden telefonieren.“",
+      opts: ["Die Regel finde ich nicht gut, denn das Telefonieren stört die anderen.", "Die Regel finde ich gut, denn in der Bibliothek ist es zu leise.", "Die Regel finde ich gut, denn Telefone sind teuer."],
+      correct: "Die Regel finde ich nicht gut, denn das Telefonieren stört die anderen."},
+    {q: "„Man darf Bücher beschädigen.“",
+      opts: ["Das ist okay, denn die Bibliothek hat viele Bücher.", "Das ist nicht echt! Nach mir möchten auch andere die Bücher lesen.", "Das finde ich gut, denn alte Bücher sind langweilig."],
+      correct: "Das ist nicht echt! Nach mir möchten auch andere die Bücher lesen."},
+    {q: "„Man darf Bücher nicht rechtzeitig zurückbringen.“",
+      opts: ["Ich finde, dass das okay ist, denn ich lese langsam.", "Ich finde, dass man das erlauben soll.", "Ich finde, dass man das verbieten soll, denn andere warten auf die Bücher."],
+      correct: "Ich finde, dass man das verbieten soll, denn andere warten auf die Bücher."},
+    {q: "„Man darf Essen und Getränke mitbringen.“",
+      opts: ["Meiner Meinung nach darf man im Lesesaal nicht essen, denn die Bücher können schmutzig werden.", "Meiner Meinung nach darf man dort essen, denn Bücher mögen Pizza.", "Meiner Meinung nach muss man in der Bibliothek immer essen."],
+      correct: "Meiner Meinung nach darf man im Lesesaal nicht essen, denn die Bücher können schmutzig werden."},
+    {q: "„Man darf sich komische Videos ansehen und laut lachen.“",
+      opts: ["Super Regel! Alle möchten mitlachen.", "Lachen ist gut, aber nicht im Lesesaal. Dort lesen und lernen die anderen.","Ich glaube, dass man Videos in der Bibliothek kaufen soll."],
+      correct: "Lachen ist gut, aber nicht im Lesesaal. Dort lesen und lernen die anderen."}
+  ]);
+
+  // ===== Üb. 4 A: dürfen =====
+  buildTable('ub4-tab', {
+    head: ["", "dürfen"],
+    rows: [
+      ["ich", "[darf]"],
+      ["du", "[darfst]"],
+      ["er / sie / man", "[darf]"],
+      ["wir", "[dürfen]"],
+      ["ihr", "[dürft]"],
+      ["sie / Sie", "[dürfen]"]
+    ]
+  });
+
+  // ===== Üb. 4 B: Formen wählen =====
+  wireBlanks('ub4');
+
+  // ===== Üb. 4 C: Kommentare bauen =====
+  buildOrder('ub4-order', [
+    {words: ["In der Bibliothek", "darf", "man", "nicht", "laut", "sprechen"], end: ".",
+      alt: ["Man darf in der Bibliothek nicht laut sprechen"],
+      hint: "У бібліотеці не можна голосно розмовляти."},
+    {words: ["Diese Regel", "finde", "ich", "nicht gut,", "denn", "laute Musik", "stört", "die anderen"], end: ".",
+      hint: "Це правило мені не подобається, бо гучна музика заважає іншим."},
+    {words: ["Ich finde, dass", "man", "Bücher", "rechtzeitig", "zurückbringen", "muss"], end: ".", gross: true,
+      hint: "Я вважаю, що книжки треба вчасно повертати."}
+  ]);
+
+  // ===== Üb. 5: Exit ticket =====
+  buildWriting('ub5-w', {
+    prompt: "Schreib deine drei Regeln für die Schulbibliothek und kommentiere eine Regel. Напр.: «1) In der Bibliothek darf man nicht … 2) Man darf … 3) … Die erste Regel finde ich besonders wichtig, denn …»",
+    words: "25-60",
+    must: ["darf", "denn"],
+    check: ["Є три правила з «man darf / man darf nicht»", "Інфінітив стоїть у кінці речення", "Одне правило прокоментоване з «denn» або «dass»"]
+  });
+
+  // Фінальна панель зі штампами
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📚','🤫','📜','✍️']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>

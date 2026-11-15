@@ -1088,5 +1088,17 @@ const LESSONS = [
     gram: ["perfekt-plusquamperfekt", "fragen", "zahlwoerter"],
     hook: "undu",
     dz: "Mein Klassenfahrt-Blog: Wähle eine Anzeige aus Üb. 1 – „Klassenfahrt nach Berlin“, „Karpatenreise“ oder „Ausflug in die Nachbarstadt“ (nicht Barcelona!). Stell dir vor: Du warst mit deiner Klasse dort. 1) Schreib einen Blogbeitrag (7–9 Sätze) wie Leon: Wohin seid ihr gefahren? Wann und wie lange? Was habt ihr am ersten, am zweiten … Tag gemacht? Wie hat dir die Klassenfahrt gefallen? Benutze mindestens fünf Verben im Perfekt (z. B. besichtigen, besuchen, machen, unternehmen, fahren). 2) Mal oder klebe ein „Foto“ dazu und schreib eine Bildunterschrift (ein Satz). Nächstes Mal liest du deinen Beitrag vor, ohne das Reiseziel zu nennen – die Klasse stellt Fragen (Wohin …? Was …? Wie lange …?) und rät, welche Anzeige du gewählt hast."
+  },
+  {
+    klas: "8",
+    modul: "C",
+    lektion: 4,
+    nazva: "Wie benimmt man sich in der Bibliothek?",
+    opys: "Як поводитися в бібліотеці: граємо інтерв'ю про шкільну бібліотеку (Wie oft? Wozu?), відповідаємо з um … zu (um Bücher auszuleihen), читаємо дивні правила бібліотеки, сортуємо, що можна й чого не можна, відмінюємо dürfen, коментуємо правила з dass і denn та пишемо три власні правила.",
+    file: "klas-8/modul-c/lektion-4.html",
+    nove: true,
+    gram: ["modalverben", "infinitiv-um-zu", "finalsaetze", "konjunktionen-position-null", "verben-dass-infinitiv"],
+    hook: "fakt",
+    dz: "Szene „Ärger in der Bibliothek“: Schreib einen Dialog (8–10 Repliken) zwischen einer Bibliothekarin / einem Bibliothekar und einem Schüler oder einer Schülerin, der/die sich in der Bibliothek schlecht benimmt (er/sie telefoniert laut, isst Chips, bringt die Bücher nicht rechtzeitig zurück …). 1) Die Bibliothekarin erklärt die Regeln – mindestens dreimal mit „dürfen“ (z. B. „Hier darf man nicht …“, „Du darfst …, aber …“). 2) Der Schüler / die Schülerin sagt seine / ihre Meinung – einmal mit „Ich finde, dass …“ und einmal mit „denn“. 3) Zum Schluss fragt die Bibliothekarin: „Wozu bist du eigentlich in die Bibliothek gekommen?“ – und der Schüler / die Schülerin antwortet mit „um … zu …“. Nächstes Mal spielt ihr die Szenen zu zweit vor, und die Klasse sagt, welche Regeln der Schüler / die Schülerin gebrochen hat."
   }
 ];
