@@ -1100,5 +1100,18 @@ const LESSONS = [
     gram: ["modalverben", "infinitiv-um-zu", "finalsaetze", "konjunktionen-position-null", "verben-dass-infinitiv"],
     hook: "fakt",
     dz: "Szene „Ärger in der Bibliothek“: Schreib einen Dialog (8–10 Repliken) zwischen einer Bibliothekarin / einem Bibliothekar und einem Schüler oder einer Schülerin, der/die sich in der Bibliothek schlecht benimmt (er/sie telefoniert laut, isst Chips, bringt die Bücher nicht rechtzeitig zurück …). 1) Die Bibliothekarin erklärt die Regeln – mindestens dreimal mit „dürfen“ (z. B. „Hier darf man nicht …“, „Du darfst …, aber …“). 2) Der Schüler / die Schülerin sagt seine / ihre Meinung – einmal mit „Ich finde, dass …“ und einmal mit „denn“. 3) Zum Schluss fragt die Bibliothekarin: „Wozu bist du eigentlich in die Bibliothek gekommen?“ – und der Schüler / die Schülerin antwortet mit „um … zu …“. Nächstes Mal spielt ihr die Szenen zu zweit vor, und die Klasse sagt, welche Regeln der Schüler / die Schülerin gebrochen hat."
+  },
+  {
+    klas: "9",
+    modul: "B",
+    lektion: 13,
+    nazva: "Jugendorganisationen in der Ukraine",
+    opys: "Дитячі й юнацькі організації в Україні та підсумок модуля: розгадуємо назви одягу й пишемо їхню множину з аудіоконтролем, діалоги «Trägst du gern …?» (gern – lieber – am liebsten), описуємо косплей-субкультуру, складні слова з Jugend-, Pfadfinder-, -szene, -bewegung, -mode та гра «Tic Tac Toe» про Пласт, Малу академію наук і молодіжні субкультури.",
+    file: "klas-9/modul-b/lektion-13.html",
+    nove: true,
+    gram: ["deklination-nomen", "komparation", "adjektivdeklination", "personalpronomen"],
+    hook: "prognose",
+    dz: "Bildgeschichte „Ein Samstag mit meinem Hobby“: Wähle eine Person – einen Skater / eine Skaterin, der oder die im Skatepark trainiert, oder einen jungen Geiger / eine junge Geigerin, der oder die im Jugendorchester spielt. 1) Zeichne eine Bildgeschichte mit vier Bildern (wie ein Comic) und schreib unter jedes Bild zwei Sätze (insgesamt 8 Sätze). Erzähl im Perfekt: Was hat die Person am Samstag gemacht? 2) Beschreib das Outfit der Person: mindestens drei Kleidungsstücke mit Adjektiv (z. B. eine weite Jeans, einen grauen Kapuzenpulli, bunte Turnschuhe). 3) Benutze mindestens einmal „sich interessieren für“, einen Satz mit „weil“ und zwei zusammengesetzte Wörter aus Üb. 4 (z. B. die Skaterszene, das Jugendorchester). 4) Schreib außerdem zwei eigene Tic-Tac-Toe-Fragen zum Modul auf eine Karte. Nächstes Mal stellen wir die Bildgeschichten vor und spielen Tic Tac Toe mit euren Fragen."
+
   }
 ];
