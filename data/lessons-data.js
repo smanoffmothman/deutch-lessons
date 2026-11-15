@@ -1124,5 +1124,17 @@ const LESSONS = [
     nove: true,
     gram: ["deklination-nomen", "trennbare-verben", "verben-praepositionalobjekt", "verben-dass-infinitiv", "modalverben", "perfekt-plusquamperfekt", "fragen", "zahlwoerter", "indefinitpronomen"],
     dz: "1) Fehleranalyse: Schau dir deinen Bericht zur Kontrollarbeit an. Wähle drei Aufgaben aus verschiedenen Übungen, bei denen du einen Fehler gemacht hast oder unsicher warst, und schreib sie richtig ins Heft – jeweils mit einer kurzen Regel auf Ukrainisch (z. B. „teilnehmen: Ich hoffe, am Turnier teilzunehmen. – zu steht in der Mitte“). Hattest du keine Fehler? Dann wähle die drei Aufgaben, die für dich am schwierigsten waren. 2) Richtig oder falsch? – Unsere Schule: Schreib sechs Aussagen über Veranstaltungen und AGs in unserer Schule – vier richtige und zwei falsche (z. B. „Im Oktober findet bei uns ein Schachturnier statt.“, „Die Zirkus-AG ist am Freitag von 14 bis 15 Uhr.“). Benutze mindestens einmal „stattfinden“, einmal „an … teilnehmen“, einen Satz mit „zu“ + Infinitiv und einen Satz im Perfekt. Schreib die Lösung (R / F) auf die Rückseite. Nächstes Mal liest du deine Aussagen vor, und die Klasse sagt: Richtig oder falsch?"
+  },
+  {
+    klas: "7",
+    modul: "C",
+    lektion: 11,
+    nazva: "Wir gründen eine AG!",
+    opys: "Організовуємо гурток: читаємо допис Ліни про те, як вона з подругами заснувала садовий гурток (richtig / falsch), кажемо, навіщо щось робимо, з «um … zu» (um alle Interessenten einzuladen), просимо дозволу в директорки на гурток коміксів (Was für eine AG? Wer darf mitmachen? Was braucht ihr?) і пишемо оголошення про власний гурток.",
+    file: "klas-7/modul-c/lektion-11.html",
+    nove: true,
+    gram: ["infinitiv-um-zu", "verben-dass-infinitiv", "trennbare-verben"],
+    hook: "fehler",
+    dz: "Ein Post über das erste Treffen: Stell dir vor, deine AG aus Üb. 4 hatte gestern ihr erstes Treffen. 1) Schreib einen Post für den Schulblog oder die Schulseite in sozialen Netzwerken (6–8 Sätze): Wie viele Personen sind insgesamt gekommen? Wer leitet die AG? Was habt ihr beim ersten Treffen gemacht? Wann trefft ihr euch wieder? Benutze mindestens drei Verben im Perfekt (z. B. kommen, besprechen, malen, beschließen). 2) Schreib mindestens zwei Sätze mit „um … zu“, eins davon mit einem trennbaren Verb (z. B. „Wir haben Plakate aufgehängt, um alle Interessenten einzuladen.“). 3) Zeichne ein „Foto“ vom Treffen und schreib drei Hashtags auf Deutsch dazu (z. B. #ComicAG #ErstesTreffen #MachMit). Nächstes Mal machen wir eine AG-Messe: Wir hängen die Posts auf, jeder liest mindestens drei und schreibt unter seinen Lieblingspost „Ich bin dabei!“ – welche AG bekommt die meisten Mitglieder?"
   }
 ];

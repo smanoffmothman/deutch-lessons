@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 11 · Modul C · Wir gründen eine AG!</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 7'},
+    {label: 'Урок 11: Wir gründen eine AG!'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 11 · MODUL C</span>
+        <h1>Wir gründen eine AG!</h1>
+        <p class="sub">Організовуємо гурток: читаємо, як Ліна з подругами заснувала садовий гурток, кажемо з «um … zu», навіщо щось робимо, просимо дозволу в директорки й пишемо оголошення про власний гурток.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Linas Garten-AG</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Wozu? um … zu</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Bei der Schulleiterin</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Unsere Anzeige</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== ПАНЕЛЬ: вступ ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Worum geht es heute?</h2>
+      <div class="card">
+        <p>Gibt es in deiner Schule eine AG, die dir fehlt – vielleicht eine Comic-AG, eine Garten-AG oder eine Gaming-AG? Dann gründe sie doch selbst! Heute liest du, wie Lina und ihre Freundinnen eine neue AG gegründet haben. Du sagst mit „um … zu“, wozu man etwas macht, sprichst mit der Schulleiterin und schreibst eine Anzeige für deine eigene AG.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          У твоїй школі бракує якогось гуртка — може, гуртка коміксів, садового чи ігрового? Тоді заснуй його сам(а)! Сьогодні ти прочитаєш, як Ліна з подругами заснувала новий гурток. Ти скажеш за допомогою «um … zu», навіщо щось робиш, поговориш із директоркою школи й напишеш оголошення про власний гурток.
+        </div>
+      </div>
+
+      <div id="hook"></div>
+
+      <div id="lz-start"></div>
+
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Ich habe längst davon geträumt, eine Hunde-AG zu gründen! 🐾 Und du?</p>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: перевірка домашнього завдання (dz уроку 7-C-10, контрольна) ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: 1) робота над помилками контрольної — три завдання, де була помилка чи сумнів, правильно в зошит із коротким правилом українською; 2) «Richtig oder falsch? – Unsere Schule» — шість тверджень про заходи й гуртки нашої школи (чотири правдиві, два хибні) зі «stattfinden», «an … teilnehmen», «zu» + інфінітив і реченням у Perfekt.
+      </div>
+
+      <div id="dz-check">
+        <div class="card" style="margin-top:18px;">
+          <p class="section-label" style="margin:0 0 6px;">Teil A · Fehleranalyse</p>
+          <p class="lead">Перевір себе: це ті місця, де в контрольній найчастіше помиляються. Обери правильне речення. Звір з правилами, які ти записав(-ла) в зошит, — чи збігаються вони?</p>
+          <div id="hw-quiz"></div>
+        </div>
+
+        <div class="card tinted-teal">
+          <p class="section-label" style="margin:0 0 6px;">Teil B · Richtig oder falsch?</p>
+          <p style="margin:0;">Lies deine sechs Aussagen über unsere Schule vor. Die Klasse antwortet: <em>„Das stimmt!“</em> oder <em>„Nein, das stimmt nicht. Das Schachturnier findet im November statt.“</em></p>
+          <div class="ua-note">
+            <span class="ua-label">🇺🇦 У класі</span>
+            Прочитай свої шість тверджень, клас відповідає «правда» чи «неправда» й виправляє хибні. Якщо працюєш удома — перевір свої речення: чи стоїть «statt» і «teil» у кінці, чи є «zu» перед інфінітивом і чи правильне допоміжне дієслово (haben / sein) у Perfekt?
+          </div>
+        </div>
+      </div>
+
+      <!-- WÖRTER-CHECK: слова уроку 7-C-10 + інтервальне повторення (LEKTION_PREV_LEKTION = 10) -->
+      <div class="card" id="dz-vocab-wrap" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">Wörter-Check</p>
+        <p class="lead">Перевір слова з минулих уроків.</p>
+        <div id="dz-vocab"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: Linas Garten-AG (читання) ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Wie wir unsere Garten-AG gegründet haben</h2>
+      <p class="lead">Прочитай допис Ліни в шкільному блозі. Потім визнач, правдиві твердження чи ні.</p>
+
+      <div class="mail-window">
+        <div class="mail-titlebar">Schulblog · 7b</div>
+        <div class="mail-body">
+          <p><b>Wie wir unsere Garten-AG gegründet haben 🌱</b></p>
+          <p>Hallo, ich bin Lina und gehe in die 7b. Meine Freundinnen Mia, Sofia und ich haben längst davon geträumt, im Schulgarten Gemüse und Blumen zu pflanzen. Aber in unserer Schule gab es keine Garten-AG. Also haben wir beschlossen, selbst eine AG zu gründen!</p>
+          <p>Zuerst haben wir in der Pause diskutiert: Was wollen wir machen? Wer darf mitmachen? Was brauchen wir? Dann sind wir zur Schulleiterin, Frau Kraus, gegangen, um sie um Erlaubnis zu bitten. Sie war sofort einverstanden. Unser Biologielehrer, Herr Becker, hat versprochen, uns zu helfen – jetzt leitet er die AG.</p>
+          <p>Danach haben wir Plakate gemalt und im Schulflur aufgehängt, um alle Interessenten einzuladen. Zum ersten Treffen sind insgesamt 14 Schülerinnen und Schüler gekommen – sogar zwei Jungen aus der 5. Klasse!</p>
+          <p>Jetzt treffen wir uns jeden Mittwoch um 14 Uhr im Schulgarten. Wir haben schon Tomaten, Kräuter und Sonnenblumen gepflanzt, und im Herbst haben wir ein kleines Erntefest gemacht. Mein Tipp: Habt ihr eine Idee? Dann wartet nicht lange – gründet eure AG!</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Слова</span>
+          <dl>
+            <dt>eine AG gründen</dt><dd>заснувати гурток</dd>
+            <dt>längst (davon) träumen, … zu …</dt><dd>давно мріяти (про те, щоб …)</dd>
+            <dt>die Schulleiterin / der Schulleiter</dt><dd>директорка / директор школи</dd>
+            <dt>um Erlaubnis bitten</dt><dd>просити дозволу</dd>
+            <dt>das Plakat (die Plakate) aufhängen</dt><dd>вішати плакат</dd>
+            <dt>der Interessent / die Interessentin</dt><dd>зацікавлена особа, охочий</dd>
+            <dt>das Treffen</dt><dd>зустріч</dd>
+            <dt>insgesamt</dt><dd>загалом, усього</dd>
+            <dt>das Erntefest</dt><dd>свято врожаю</dd>
+          </dl>
+        </div>
+      </div>
+
+      <p class="lead" style="margin-top:20px;">Richtig oder falsch?</p>
+      <div class="card" id="ub1-quiz"></div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Wie gründet man eine AG?</p>
+        <p style="margin:0;"><b>1.</b> Diskutiert: Was für eine AG? Wer darf mitmachen? Was braucht ihr? → <b>2.</b> Bittet die Schulleitung um Erlaubnis. → <b>3.</b> Bittet einen Lehrer oder eine Lehrerin um Hilfe. → <b>4.</b> Schreibt Anzeigen und ladet alle Interessenten ein. → <b>5.</b> Trefft euch und macht mit!</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 План</span>
+          Так Ліна з подругами засновувала гурток — за цими кроками ти пройдеш і в Üb. 3 та Üb. 4: поговориш із директоркою і напишеш оголошення.
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 2: Wozu? um … zu ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Wozu? – um … zu</h2>
+      <div class="card">
+        <table class="gtable">
+          <tr><th>Was?</th><th>Wozu?</th></tr>
+          <tr><td>Wir hängen Plakate auf,</td><td><b>um</b> alle Interessenten <b>einzuladen</b>.</td></tr>
+          <tr><td>Lina geht zur Schulleiterin,</td><td><b>um</b> sie um Erlaubnis <b>zu bitten</b>.</td></tr>
+          <tr><td><b>Um</b> Tomaten <b>zu pflanzen</b>,</td><td><b>braucht</b> man Erde.</td></tr>
+        </table>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Запам'ятай</span>
+          <b>um … zu</b> + інфінітив = «щоб», «для того щоб» — відповідає на питання <b>Wozu?</b> (Навіщо?). <b>um</b> стоїть на початку цієї частини, <b>zu</b> + інфінітив — у самому кінці, перед нею — кома. У дієсловах з відокремлюваним префіксом zu стає всередину: ein<b>zu</b>laden, teil<b>zu</b>nehmen, auf<b>zu</b>hängen. Якщо частина з «um … zu» стоїть першою, далі одразу йде дієслово: <i>Um … zu pflanzen, <b>braucht</b> man …</i>
+        </div>
+      </div>
+
+      <p class="lead" style="margin-top:20px;">A) Склади речення з карток.</p>
+      <div class="card" id="ub2-order"></div>
+
+      <p class="lead" style="margin-top:20px;">B) Навіщо? Впиши дієслово з дужок з «zu» в правильній формі.</p>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> Wir treffen uns in der Pause, um über die neue AG <input type="text" class="blank-input inline wide" data-ans="zu diskutieren" autocomplete="off" spellcheck="false" aria-label="Lücke 1">. <i>(diskutieren)</i></div>
+        <div class="fill-item"><span class="num">2)</span> Mia malt ein Plakat, um alle Interessenten <input type="text" class="blank-input inline wide" data-ans="einzuladen" autocomplete="off" spellcheck="false" aria-label="Lücke 2">. <i>(einladen)</i></div>
+        <div class="fill-item"><span class="num">3)</span> Lina geht zu Herrn Becker, um ihn um Hilfe <input type="text" class="blank-input inline wide" data-ans="zu bitten" autocomplete="off" spellcheck="false" aria-label="Lücke 3">. <i>(bitten)</i></div>
+        <div class="fill-item"><span class="num">4)</span> Wir sammeln Geld, um Samen und Erde <input type="text" class="blank-input inline wide" data-ans="zu kaufen" autocomplete="off" spellcheck="false" aria-label="Lücke 4">. <i>(kaufen)</i></div>
+        <div class="fill-item"><span class="num">5)</span> Die Jungen aus der 5. Klasse kommen früher, um am Treffen <input type="text" class="blank-input inline wide" data-ans="teilzunehmen" autocomplete="off" spellcheck="false" aria-label="Lücke 5">. <i>(teilnehmen)</i></div>
+        <div class="fill-item"><span class="num">6)</span> Sofia macht Fotos, um die AG im Schulblog <input type="text" class="blank-input inline wide" data-ans="vorzustellen" autocomplete="off" spellcheck="false" aria-label="Lücke 6">. <i>(vorstellen)</i></div>
+        <div class="fill-item"><span class="num">7)</span> Man braucht einen Leiter, um die AG gut <input type="text" class="blank-input inline wide" data-ans="zu organisieren" autocomplete="off" spellcheck="false" aria-label="Lücke 7">. <i>(organisieren)</i></div>
+        <div class="fill-item"><span class="num">8)</span> Die Kinder hängen Zettel <input type="text" class="blank-input inline" data-ans="auf" autocomplete="off" spellcheck="false" aria-label="Lücke 8">, um die Eltern zum Erntefest <input type="text" class="blank-input inline wide" data-ans="einzuladen" autocomplete="off" spellcheck="false" aria-label="Lücke 9">. <i>(aufhängen, einladen)</i></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check" type="button">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset" type="button">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: Gespräch mit der Schulleiterin ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Bei der Schulleiterin</h2>
+      <p class="lead">Ти з друзями хочеш заснувати гурток коміксів (die Comic-AG). Іди до директорки, пані Краус, і попроси дозволу. Обирай доречні відповіді. Обережно: до директорки звертаємося на «Sie», а деякі відповіді мають граматичну помилку.</p>
+      <div class="card" id="ub3-chat"></div>
+    </section>
+
+    <!-- ===== Üb. 4: Anzeige (банк слів + exit ticket) ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Unsere Anzeige</h2>
+      <p class="lead">A) Директорка погодилася! Доповни оголошення про гурток коміксів словами з набору. Два слова зайві.</p>
+      <div class="card" id="ub4-bank"></div>
+
+      <p class="lead" style="margin-top:20px;">B) А тепер — твій гурток! Напиши оголошення про гурток, який ти хотів(-ла) б заснувати (у школі такого ще немає). Відповідай на питання: Was? Was macht man da? Wann und wo? Wer darf mitmachen? Was braucht man? Вживи щонайменше одне речення з «um … zu».</p>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Увага</span>
+        Вставляти текст із буфера тут не можна — набирай сам(а). Збережи своє оголошення: воно знадобиться для домашнього завдання.
+      </div>
+      <div class="card" id="ub4-w"></div>
+    </section>
+
+    <!-- ===== ПРИКІНЦЕВА ПАНЕЛЬ ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div id="lz-check"></div>
+
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Ein Post über das erste Treffen: Stell dir vor, deine AG aus Üb. 4 hatte gestern ihr erstes Treffen. 1) Schreib einen Post für den Schulblog oder die Schulseite in sozialen Netzwerken (6–8 Sätze): Wie viele Personen sind insgesamt gekommen? Wer leitet die AG? Was habt ihr beim ersten Treffen gemacht? Wann trefft ihr euch wieder? Benutze mindestens drei Verben im Perfekt (z. B. kommen, besprechen, malen, beschließen). 2) Schreib mindestens zwei Sätze mit „um … zu“, eins davon mit einem trennbaren Verb (z. B. „Wir haben Plakate aufgehängt, um alle Interessenten einzuladen.“). 3) Zeichne ein „Foto“ vom Treffen und schreib drei Hashtags auf Deutsch dazu (z. B. #ComicAG #ErstesTreffen #MachMit). Nächstes Mal machen wir eine AG-Messe: Wir hängen die Posts auf, jeder liest mindestens drei und schreibt unter seinen Lieblingspost „Ich bin dabei!“ – welche AG bekommt die meisten Mitglieder?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Допис про першу зустріч: уяви, що твій гурток з Üb. 4 учора мав першу зустріч. 1) Напиши допис для шкільного блогу або сторінки школи в соцмережах (6–8 речень): скільки людей прийшло загалом? Хто керує гуртком? Що ви робили на першій зустрічі? Коли зустрічаєтеся знову? Вживи щонайменше три дієслова в Perfekt (напр. kommen, besprechen, malen, beschließen). 2) Напиши щонайменше два речення з «um … zu», одне з них — із дієсловом з відокремлюваним префіксом (напр. «Wir haben Plakate aufgehängt, um alle Interessenten einzuladen.»). 3) Намалюй «фото» з зустрічі й додай три хештеги німецькою (напр. #ComicAG #ErstesTreffen #MachMit). Наступного уроку влаштуємо «ярмарок гуртків»: вивісимо дописи, кожен прочитає щонайменше три й напише під улюбленим «Ich bin dabei!» — який гурток збере найбільше учасників?
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Wörter zum Lernen</p>
+        <div class="chip-row" id="vocabChips"></div>
+      </div>
+
+      <div class="card" id="lessonGramWrap">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="lessonGram"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../data/glossary-data.js"></script>
+<script src="../../../data/lessons-data.js"></script>
+<script src="../../../data/grammar-data.js"></script>
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  const LEKTION_KLAS = "7", LEKTION_MODUL = "C", LEKTION_LEKTION = 11;
+  const LEKTION_PREV_LEKTION = 10;
+
+  // ===== Цілі уроку «Ich kann …» (Start) + самооцінка-світлофор (Fertig!) =====
+  const LERNZIELE = [
+    {de: "Ich kann erzählen, wie man eine neue AG gründet.", uk: "Я можу розповісти, як заснувати новий гурток."},
+    {de: "Ich kann mit „um … zu“ sagen, wozu man etwas macht.", uk: "Я можу за допомогою «um … zu» сказати, навіщо щось роблять."},
+    {de: "Ich kann eine Anzeige für meine eigene AG schreiben.", uk: "Я можу написати оголошення про власний гурток."}
+  ];
+  buildLernziele('lz-start', 'lz-check', LERNZIELE);
+
+  // ===== Хук входу (тип fehler — поле hook у lessons-data.js) =====
+  buildHook('hook', {type: 'fehler', items: [
+    {s: "Wir haben beschlossen, eine Theatergruppe organisieren.", wrong: 5, fix: "zu organisieren", hint: "beschließen + …"},
+    {s: "Ich möchte gern in einer Musikgruppe mitmachen.", ok: true},
+    {s: "Letzte Woche bin ich an einem Malwettbewerb teilgenommen.", wrong: 2, fix: "habe", hint: "teilnehmen — Perfekt"}
+  ]});
+
+  (function renderLessonVocab(){
+    const box = document.getElementById('vocabChips');
+    if (!box || typeof GLOSSARY === 'undefined') return;
+    const words = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_LEKTION
+    );
+    if (words.length === 0){
+      box.innerHTML = '<p class="empty-note">Слова для цього уроку ще не додані в глосарій.</p>';
+      return;
+    }
+    box.innerHTML = words.map(w =>
+      '<span class="chip static">' + w.de + ' — ' + w.uk + '</span>'
+    ).join('');
+  })();
+
+  // ===== Граматика до цього уроку у вкладці Fertig (поле gram у lessons-data.js) =====
+  (function renderLessonGrammar(){
+    const wrap = document.getElementById('lessonGramWrap');
+    const box = document.getElementById('lessonGram');
+    if (!wrap || !box) return;
+    const hide = () => { wrap.style.display = 'none'; };
+    if (typeof LESSONS === 'undefined' || typeof GRAMMAR === 'undefined') return hide();
+    const me = LESSONS.find(l => l.klas === LEKTION_KLAS && l.modul === LEKTION_MODUL && l.lektion === LEKTION_LEKTION);
+    const topics = ((me && me.gram) || []).map(id => GRAMMAR.find(t => t.id === id)).filter(t => t && t.opublikovano > 0);
+    if (topics.length === 0) return hide();
+    const src = document.querySelector('script[src$="data/grammar-data.js"]').getAttribute('src');
+    const root = src.slice(0, src.length - 'data/grammar-data.js'.length);
+    box.innerHTML = topics.map(t =>
+      '<a class="gram-link" href="' + root + 'gramatyka/temy/' + t.id + '.html">'
+      + '<span class="k">' + t.uk + '</span>' + t.tema + '</a>'
+    ).join('');
+  })();
+
+  // ---------- Груба евристика частини мови за виглядом "de" (для пасток у Wörter-Check) ----------
+  function guessPos(de){
+    var base = (de || '').replace(/\([^)]*\)/g, '').trim();
+    if(/^(der|die|das)(\/(der|die|das))?\s/.test(base)) return 'noun';
+    if(/^sich\s/.test(base)) return 'verb';
+    if(/^am\s/.test(base)) return 'other';
+    if(/\(\+(Gen|Dat|Akk)\.?\)/.test(de)) return 'prep';
+    var words = base.split(/\s+/);
+    var last = words[words.length - 1];
+    if(/(en|ern|eln)$/.test(last) && last === last.toLowerCase()) return 'verb';
+    return 'other';
+  }
+
+  // ===== Wörter-Check: до 4 слів попереднього уроку + слова з 2–5 уроків тому =====
+  (function renderDzVocabCheck(){
+    const wrap = document.getElementById('dz-vocab-wrap');
+    const box = document.getElementById('dz-vocab');
+    if (!wrap || !box || typeof GLOSSARY === 'undefined') return;
+    const same = (w, l) => w.klas === l.klas && w.modul === l.modul && w.lektion === l.lektion;
+    const prevWords = LEKTION_PREV_LEKTION ? GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_PREV_LEKTION
+    ) : [];
+    let olderWords = [];
+    if (typeof LESSONS !== 'undefined'){
+      const mine = LESSONS.filter(l => l.klas === LEKTION_KLAS);
+      const idx = mine.findIndex(l => l.modul === LEKTION_MODUL && l.lektion === LEKTION_LEKTION);
+      if (idx > 0){
+        const older = mine.slice(Math.max(0, idx - 5), idx)
+          .filter(l => !(l.modul === LEKTION_MODUL && l.lektion === LEKTION_PREV_LEKTION));
+        olderWords = GLOSSARY.filter(w => older.some(l => same(w, l)));
+      }
+    }
+    const fromPrev = shuffleArray(prevWords).slice(0, olderWords.length ? 4 : 6);
+    const pool = shuffleArray(fromPrev.concat(shuffleArray(olderWords).slice(0, 6 - fromPrev.length)));
+    if (pool.length < 3){ wrap.style.display = 'none'; return; }
+
+    const quizData = pool.map(w => {
+      const pos = guessPos(w.de);
+      let sameKind = GLOSSARY.filter(g => g.uk !== w.uk && guessPos(g.de) === pos);
+      if(sameKind.length < 2) sameKind = GLOSSARY.filter(g => g.uk !== w.uk);
+      const distractors = shuffleArray(sameKind).slice(0, 2).map(g => g.uk);
+      return { q: w.de, opts: [w.uk, ...distractors], correct: w.uk };
+    });
+    buildQuiz('dz-vocab', quizData);
+  })();
+
+  // ===== Hausaufgabe, Teil A: типові помилки контрольної (7-C-10) =====
+  buildQuiz('hw-quiz', [
+    {q: "zu + trennbares Verb: Welcher Satz ist richtig?",
+     opts: ["Ich hoffe, am Turnier zu teilnehmen.", "Ich hoffe, am Turnier teilzunehmen.", "Ich hoffe, am Turnier teilnehmen."],
+     correct: "Ich hoffe, am Turnier teilzunehmen."},
+    {q: "Modalverb: Welcher Satz ist richtig?",
+     opts: ["Wir wollen eine Radwanderung zu machen.", "Wir wollen zu eine Radwanderung machen.", "Wir wollen eine Radwanderung machen."],
+     correct: "Wir wollen eine Radwanderung machen."},
+    {q: "stattfinden: Welcher Satz ist richtig?",
+     opts: ["Das Schulfest findet im Mai statt.", "Das Schulfest stattfindet im Mai.", "Das Schulfest findet statt im Mai."],
+     correct: "Das Schulfest findet im Mai statt."},
+    {q: "Perfekt: Welcher Satz ist richtig?",
+     opts: ["Wir haben nach Lwiw gefahren.", "Wir sind nach Lwiw gefahren.", "Wir sind nach Lwiw gefahrt."],
+     correct: "Wir sind nach Lwiw gefahren."},
+    {q: "an + Dativ: Welcher Satz ist richtig?",
+     opts: ["Ich nehme an das Schachturnier teil.", "Ich nehme an Schachturnier teil.", "Ich nehme am Schachturnier teil."],
+     correct: "Ich nehme am Schachturnier teil."},
+    {q: "W-Frage: Welcher Satz ist richtig?",
+     opts: ["Wann findet die Talentshow statt?", "Wann die Talentshow findet statt?", "Wann statt findet die Talentshow?"],
+     correct: "Wann findet die Talentshow statt?"}
+  ]);
+
+  // ===== Üb. 1: Richtig oder falsch? =====
+  buildQuiz('ub1-quiz', [
+    {q: "Lina und ihre Freundinnen haben die Garten-AG selbst gegründet.", opts: ["richtig", "falsch"], correct: "richtig"},
+    {q: "Zuerst haben die Mädchen Plakate im Schulflur aufgehängt.", opts: ["richtig", "falsch"], correct: "falsch"},
+    {q: "Die Schulleiterin war gegen die Idee.", opts: ["falsch", "richtig"], correct: "falsch"},
+    {q: "Herr Becker leitet die Garten-AG.", opts: ["falsch", "richtig"], correct: "richtig"},
+    {q: "Zum ersten Treffen sind insgesamt 14 Schülerinnen und Schüler gekommen.", opts: ["richtig", "falsch"], correct: "richtig"},
+    {q: "Die Garten-AG trifft sich jeden Freitag.", opts: ["richtig", "falsch"], correct: "falsch"},
+    {q: "Die Mädchen haben Plakate gemalt, um alle Interessenten einzuladen.", opts: ["falsch", "richtig"], correct: "richtig"}
+  ]);
+
+  // ===== Üb. 2 A: um … zu — склади речення =====
+  buildOrder('ub2-order', [
+    {words: ["wir", "gehen", "zur Schulleiterin,", "um", "die Erlaubnis", "zu bekommen"], end: "."},
+    {words: ["Lina", "malt", "Plakate,", "um", "alle Interessenten", "einzuladen"], end: ".", gross: true},
+    {words: ["die Kinder", "treffen sich", "im Schulgarten,", "um", "Tomaten", "zu pflanzen"], end: "."},
+    {words: ["um", "Comics", "zu zeichnen,", "braucht", "man", "Papier und Bleistifte"], end: ".", hint: "Почни з «um …»"}
+  ]);
+
+  // ===== Üb. 2 B: пропуски =====
+  wireBlanks('ub2');
+
+  // ===== Üb. 3: Gespräch mit der Schulleiterin =====
+  buildChat('ub3-chat', {
+    partner: "Frau Kraus",
+    steps: [
+      {them: "Guten Tag! Komm herein. Was kann ich für dich tun?"},
+      {you: ["Guten Tag, Frau Kraus! Ich möchte mit Ihnen über eine neue AG sprechen.",
+             "Hallo! Wie geht's dir?",
+             "Guten Tag! Ich möchte eine Klassenfahrt nach Berlin machen."], correct: 0, hint: "до директорки — на «Sie»"},
+      {them: "Eine neue AG? Interessant! Was für eine AG ist das?"},
+      {you: ["Das ist eine Koch-AG. Wir zeichnen dort Comics.",
+             "Das ist eine Comic-AG. Wir haben längst davon geträumt, eigene Comics zeichnen.",
+             "Das ist eine Comic-AG. Wir haben längst davon geträumt, eigene Comics zu zeichnen."], correct: 2},
+      {them: "Womit beschäftigen sich die Teilnehmer?"},
+      {you: ["Sie spielen Fußball in der Turnhalle.",
+             "Sie erfinden Geschichten und zeichnen Figuren.",
+             "Am Donnerstag um 14 Uhr."], correct: 1},
+      {them: "Wer darf die AG besuchen?"},
+      {you: ["Nur meine beste Freundin und ich.",
+             "Im Raum 12.",
+             "Alle Schülerinnen und Schüler aus den Klassen 5 bis 8. Man muss nicht gut zeichnen können."], correct: 2},
+      {them: "Und wann und wo wollt ihr euch treffen?"},
+      {you: ["Einmal in der Woche, am Donnerstag von 14 bis 15 Uhr, im Raum 12.",
+             "Wir treffen uns, um Comics zu zeichnen.",
+             "Im Sommer in Barcelona."], correct: 0},
+      {them: "Was braucht ihr für eure AG?"},
+      {you: ["Wir brauchen eine Klassenfahrt und ein Kostümfest.",
+             "Wir brauchen Papier, Bleistifte und einen Raum mit großen Tischen.",
+             "Wir brauchen, um Papier zu kaufen."], correct: 1},
+      {them: "Und wer leitet die AG? Wen wollt ihr um Hilfe bitten?"},
+      {you: ["Wir brauchen keine Hilfe. Wir sind schon groß!",
+             "Frau Lenz hat uns gestern um Hilfe gebeten.",
+             "Wir bitten Frau Lenz, unsere Kunstlehrerin, um Hilfe. Sie leitet die AG gern."], correct: 2},
+      {them: "Gute Idee! Und wie wollt ihr alle Interessenten einladen?"},
+      {you: ["Wir hängen Plakate auf, um alle Interessenten einzuladen.",
+             "Wir hängen Plakate auf, um alle Interessenten zu einladen.",
+             "Wir laden alle Interessenten ein, um Plakate aufzuhängen."], correct: 0, hint: "einladen — дієслово з відокремлюваним префіксом"},
+      {them: "Prima! Ihr habt meine Erlaubnis. Viel Erfolg mit eurer Comic-AG! 🎨"},
+      {you: ["Ok, tschüss!",
+             "Vielen Dank, Frau Kraus! Auf Wiedersehen!"], correct: 1}
+    ]
+  });
+
+  // ===== Üb. 4 A: Anzeige — банк слів =====
+  buildWordBank('ub4-bank', {
+    text: "✏️ [Neue] AG: Comics zeichnen!\n\nHast du Lust, eigene Comics zu [zeichnen]? Dann komm in unsere Comic-AG! Wir erfinden Geschichten und zeichnen Figuren.\n\n[Wann]? Jeden Donnerstag von 14 [bis] 15 Uhr.\n\nWo? Im [Raum] 12.\n\nWer darf [mitmachen]? Alle aus den Klassen 5–8.\n\nWas brauchst du? Bleistifte, Papier und gute [Ideen]!\n\nDie AG [leitet] unsere Kunstlehrerin, Frau Lenz. Komm einfach zum ersten [Treffen] – wir freuen uns auf dich!",
+    extra: ["Warum", "kochen"]
+  });
+
+  // ===== Üb. 4 B: exit ticket — власне оголошення =====
+  buildWriting('ub4-w', {
+    prompt: "Meine Anzeige: z. B. „🌍 Neue AG: Reisen ohne Koffer! Hast du Lust, andere Länder kennenzulernen? … Wann? … Wo? … Wer darf mitmachen? … Was brauchst du? … Komm zum ersten Treffen, um …!“",
+    words: "35-70",
+    must: ["um"],
+    check: ["Was für eine AG? Was macht man da?", "Wann und wo?", "Wer darf mitmachen?", "Was braucht man?", "Ein Satz mit „um … zu“"],
+    rows: 7
+  });
+
+  // Фінальна панель зі штампами
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🌱','🎯','🏫','📌']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
