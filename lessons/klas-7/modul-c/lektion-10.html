@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 10 · Modul C · Тематична контрольна робота</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 7'},
+    {label: 'Урок 10: Тематична контрольна робота'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 10 · MODUL C</span>
+        <h1>Kontrollarbeit: Schulleben</h1>
+        <p class="sub">Тематична контрольна робота за Модуль C «Шкільне життя»: шкільні заходи й гуртки, інфінітив із zu, Perfekt, читання листа Паули й лист-відповідь — усе, що ми вивчили за 9 уроків.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Plural &amp; teilnehmen</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · zu + Infinitiv</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Perfekt</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Satzbau</button>
+    <button class="tab-btn" data-tab="ub6">Üb. 6 · Lesen</button>
+    <button class="tab-btn" data-tab="ub7">Üb. 7 · E-Mail</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== ПАНЕЛЬ: вступ ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Worum geht es heute?</h2>
+      <div class="card">
+        <p>Heute schreiben wir die Kontrollarbeit zum Modul C „Schulleben“. Du zeigst, was du in den letzten Wochen gelernt hast: Wörter zu Schulveranstaltungen und AGs, den Plural der Nomen, „an … teilnehmen“ und „stattfinden“, den Infinitiv mit und ohne „zu“, das Perfekt mit „haben“ und „sein“ und Fragen mit Wann? Wohin? Mit wem? Am Ende liest du eine E-Mail von Paula aus Leipzig und schreibst ihr selbst eine Antwort.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Сьогодні пишемо контрольну роботу за Модуль C «Шкільне життя». Ти показуєш, чого навчився(-лася) за останні тижні: слова про шкільні заходи й гуртки, множину іменників, «an … teilnehmen» і «stattfinden», інфінітив із «zu» і без нього, Perfekt із «haben» і «sein» та запитання Wann? Wohin? Mit wem? Наприкінці читаєш лист Паули з Лейпцига й сам(а) пишеш їй відповідь.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Was wird geprüft?</p>
+        <table class="gtable">
+          <tr><th>Übung</th><th>Thema</th><th>Aus Lektion</th></tr>
+          <tr><td>Üb. 1</td><td>Wortschatz: Schulveranstaltungen, AGs; Was macht man in welcher AG?</td><td>1, 3–8</td></tr>
+          <tr><td>Üb. 2</td><td>Plural der Nomen; an … teilnehmen, stattfinden</td><td>1, 3, 7, 9</td></tr>
+          <tr><td>Üb. 3</td><td>Infinitiv mit und ohne „zu“ (auch trennbare Verben)</td><td>2, 3, 8</td></tr>
+          <tr><td>Üb. 4</td><td>Perfekt mit haben / sein: eine Postkarte von der Klassenfahrt</td><td>9</td></tr>
+          <tr><td>Üb. 5</td><td>Satzbau: stattfinden, zu + Infinitiv, man, von … bis, dass, W-Fragen</td><td>2, 4, 6, 7, 9</td></tr>
+          <tr><td>Üb. 6</td><td>Leseverstehen: Richtig oder falsch?</td><td>Modul C</td></tr>
+          <tr><td>Üb. 7</td><td>Schreiben: Antwort-E-Mail an Paula</td><td>Modul C</td></tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">So funktioniert die Kontrollarbeit</p>
+        <p>Arbeite allein und ohne Hefte. Nur dein erster Versuch zählt. Die Übungen 1–6 prüft der Computer, die E-Mail in Übung 7 bewertet dein Lehrer / deine Lehrerin.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Як працює контрольна</span>
+          Працюй самостійно, без зошитів і підручника. <b>Кожну відповідь можна дати лише один раз.</b> Щойно ти натиснув(-ла) варіант або «Prüfen», відповідь блокується: зелений — правильно, червоний — неправильно, змінити її вже не можна (правильна відповідь не показується). Порожні поля лишаються відкритими — їх можна заповнити й перевірити пізніше. Тому спершу подумай, а потім натискай.<br><br>
+          Вправи 1–6 перевіряє комп'ютер, лист у вправі 7 оцінює вчитель(-ка). Перевірка домашнього завдання — це розминка, вона <b>не входить</b> в оцінку. Таблицю переведення балів в оцінку знайдеш у вкладці «Fertig!». <b>Не натискай «Von vorn beginnen» і не оновлюй сторінку</b> до кінця роботи — усі відповіді зітруться.<br><br>
+          Орієнтовний час: Üb. 1–2 — приблизно по 5 хв, Üb. 3–6 — по 4 хв, Üb. 7 — 8–10 хв.
+        </div>
+      </div>
+
+      <div id="lz-start"></div>
+
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">In der Schule ist immer etwas los – heute die Kontrollarbeit! Lies jede Aufgabe genau. Viel Erfolg! 🍀</p>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: перевірка ДЗ (поле dz уроку 7-C-9) ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: <i>„Mein Klassenfahrt-Blog: Wähle eine Anzeige aus Üb. 1 – „Klassenfahrt nach Berlin“, „Karpatenreise“ oder „Ausflug in die Nachbarstadt“ (nicht Barcelona!). Stell dir vor: Du warst mit deiner Klasse dort. 1) Schreib einen Blogbeitrag (7–9 Sätze) wie Leon: Wohin seid ihr gefahren? Wann und wie lange? Was habt ihr am ersten, am zweiten … Tag gemacht? Wie hat dir die Klassenfahrt gefallen? Benutze mindestens fünf Verben im Perfekt (z. B. besichtigen, besuchen, machen, unternehmen, fahren). 2) Mal oder klebe ein „Foto“ dazu und schreib eine Bildunterschrift (ein Satz). Nächstes Mal liest du deinen Beitrag vor, ohne das Reiseziel zu nennen – die Klasse stellt Fragen (Wohin …? Was …? Wie lange …?) und rät, welche Anzeige du gewählt hast.“</i><br><br>
+        <b>Крок 1 (2–3 хв, усно):</b> прочитайте свої дописи в парах або для класу, не називаючи місця. Слухачі ставлять запитання (Wann …? Wie lange …? Was …?) і вгадують, яке оголошення обрано.<br>
+        <b>Крок 2:</b> потренуйся на дописі Софії нижче: обери до кожної відповіді правильне питальне слово й вгадай, куди їздив її клас.<br><br>
+        ℹ️ Це розминка перед контрольною: тут (і у Wörter-Check) можна виправляти помилки, і результат <b>не входить</b> в оцінку за контрольну.
+      </div>
+
+      <div class="mail-window" style="margin-top:16px;">
+        <div class="mail-titlebar">Sofias Blog · Unsere Klassenfahrt 🧳</div>
+        <div class="mail-body">
+          <p>Im September sind wir mit dem Zug an einen wunderschönen Ort gefahren. Wir sind eine Woche dort geblieben. Am ersten Tag haben wir eine lange Fußwanderung gemacht – die Landschaften waren malerisch! Am zweiten Tag sind wir geritten. Am dritten Tag haben wir an einem Volksfest teilgenommen. Dort habe ich mit meiner besten Freundin Daryna getanzt. Die Klassenfahrt hat mir sehr gut gefallen!</p>
+          <p style="margin:0;"><i>📷 Bildunterschrift: Daryna und ich auf dem Pferd – endlich frische Luft!</i></p>
+        </div>
+      </div>
+
+      <div class="card" id="dz-list" style="margin-top:16px;">
+        <div class="fill-item">
+          <span class="num">1)</span>
+          <select class="blank inline" data-ans="Wann"><option value="">—</option><option>Wohin</option><option>Wann</option><option>Wie lange</option></select>
+          ist Sofias Klasse gefahren? – Im September.
+        </div>
+        <div class="fill-item">
+          <span class="num">2)</span>
+          <select class="blank inline" data-ans="Wie lange"><option value="">—</option><option>Wann</option><option>Mit wem</option><option>Wie lange</option></select>
+          ist die Klasse dort geblieben? – Eine Woche.
+        </div>
+        <div class="fill-item">
+          <span class="num">3)</span>
+          <select class="blank inline" data-ans="Was"><option value="">—</option><option>Was</option><option>Wer</option><option>Wo</option></select>
+          hat die Klasse am ersten Tag gemacht? – Eine Fußwanderung.
+        </div>
+        <div class="fill-item">
+          <span class="num">4)</span>
+          <select class="blank inline" data-ans="Mit wem"><option value="">—</option><option>Womit</option><option>Mit wem</option><option>Wem</option></select>
+          hat Sofia getanzt? – Mit Daryna.
+        </div>
+        <div class="fill-item">
+          <span class="num">5)</span> Sofia hat die Anzeige
+          <select class="blank inline" data-ans="Karpatenreise"><option value="">—</option><option>Klassenfahrt nach Berlin</option><option>Karpatenreise</option><option>Ausflug in die Nachbarstadt</option></select>
+          gewählt.
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="dz-check">Prüfen</button>
+        <button class="btn secondary" id="dz-reset">Zurücksetzen</button>
+        <span class="score-pill" id="dz-score"></span>
+      </div>
+
+      <div class="card" id="dz-vocab-wrap" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">Wörter-Check</p>
+        <p class="lead">Перевір слова з минулих уроків.</p>
+        <div id="dz-vocab"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: Wortschatz (квіз + сортування) ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1 · Wortschatz</p>
+      <h2 class="panel-title">Was passt?</h2>
+      <p class="lead">Teil A: Wähle das passende Wort.</p>
+      <div class="ua-note">
+        Обери слово, яке підходить за змістом. Після першого натискання питання блокується — змінити відповідь не можна.
+      </div>
+      <div class="card" style="margin-top:16px;">
+        <div id="ub1-quiz"></div>
+      </div>
+
+      <p class="lead">Teil B: Was macht man in welcher AG?</p>
+      <div class="ua-note">
+        Розклади заняття по гуртках. Натисни картку, потім назву гуртка. Поки не натиснув(-ла) «Prüfen», картки можна переставляти; після перевірки розкладені картки блокуються.
+      </div>
+      <div class="card" style="margin-top:16px;">
+        <div id="ub1-sort"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 2: Plural + an … teilnehmen / stattfinden ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2 · Grammatik</p>
+      <h2 class="panel-title">Plural, teilnehmen und stattfinden</h2>
+      <p class="lead">Teil A: Schreib die Pluralform.</p>
+      <div class="ua-note">
+        Впиши форму множини іменника (артикль <i>die</i> уже стоїть). Іменник пишемо з великої літери, не забувай про умлаут (ä ö ü), якщо він потрібен.<br>Після «Prüfen» заповнені поля блокуються; порожні можна заповнити й перевірити пізніше.
+      </div>
+      <div class="card" style="margin-top:16px;">
+        <div id="ub2-tab"></div>
+      </div>
+
+      <p class="lead">Teil B: Wähle die richtige Form.</p>
+      <div class="ua-note">
+        <i>an + der → am</i> (der Wettbewerb, das Turnier), <i>an der</i> (die Talentshow), <i>an den</i> + -n (Plural: an den Wettbewerben). <i>teilnehmen</i> і <i>stattfinden</i> — відокремлювані дієслова: <i>Ich nehme … teil. Das Fest findet … statt.</i><br>Після «Prüfen» заповнені поля блокуються; порожні можна заповнити й перевірити пізніше.
+      </div>
+      <div class="card" id="ub2-list" style="margin-top:16px;">
+        <div class="fill-item">
+          <span class="num">1)</span> Ich nehme gern
+          <select class="blank inline" data-ans="an der"><option value="">—</option><option>am</option><option>an der</option><option>an den</option></select>
+          Talentshow teil.
+        </div>
+        <div class="fill-item">
+          <span class="num">2)</span> Nimmst du
+          <select class="blank inline" data-ans="am"><option value="">—</option><option>an der</option><option>an den</option><option>am</option></select>
+          Schachturnier teil?
+        </div>
+        <div class="fill-item">
+          <span class="num">3)</span> Wir nehmen jedes Jahr
+          <select class="blank inline" data-ans="an den"><option value="">—</option><option>an den</option><option>am</option><option>an der</option></select>
+          Sportwettbewerben teil.
+        </div>
+        <div class="fill-item">
+          <span class="num">4)</span> Morgen
+          <select class="blank inline" data-ans="findet"><option value="">—</option><option>nimmt</option><option>hat</option><option>findet</option></select>
+          in der Aula ein Konzert statt.
+        </div>
+        <div class="fill-item">
+          <span class="num">5)</span> Wann
+          <select class="blank inline" data-ans="finden"><option value="">—</option><option>findet</option><option>finden</option><option>stattfinden</option></select>
+          die Musikwettbewerbe statt?
+        </div>
+        <div class="fill-item">
+          <span class="num">6)</span> Wer
+          <select class="blank inline" data-ans="nimmt"><option value="">—</option><option>teilnimmt</option><option>nimmt</option><option>nehmt</option></select>
+          am Fußballturnier teil?
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: Infinitiv mit / ohne zu ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3 · Grammatik</p>
+      <h2 class="panel-title">Mit „zu“ oder ohne „zu“?</h2>
+      <p class="lead">Wähle die richtige Form des Verbs.</p>
+      <div class="ua-note">
+        Після <i>vorhaben, beschließen, hoffen, vergessen, Lust haben, es ist wichtig …</i> — інфінітив <b>із zu</b>. Після модальних дієслів (<i>können, wollen, möchten, dürfen …</i>) — <b>без zu</b>. У відокремлюваних дієсловах <i>zu</i> стоїть усередині: <i>teil<b>zu</b>nehmen</i>.<br>Після «Prüfen» заповнені поля блокуються; порожні можна заповнити й перевірити пізніше.
+      </div>
+      <div class="card" id="ub3-list" style="margin-top:16px;">
+        <div class="fill-item">
+          <span class="num">1)</span> Wir haben vor, im Mai eine Radwanderung
+          <select class="blank inline" data-ans="zu machen"><option value="">—</option><option>machen</option><option>zu machen</option><option>gemacht</option></select>.
+        </div>
+        <div class="fill-item">
+          <span class="num">2)</span> Ich will die Theater-AG
+          <select class="blank inline" data-ans="besuchen"><option value="">—</option><option>besuchen</option><option>zu besuchen</option><option>besucht</option></select>.
+        </div>
+        <div class="fill-item">
+          <span class="num">3)</span> Es ist wichtig, pünktlich zum Training
+          <select class="blank inline" data-ans="zu kommen"><option value="">—</option><option>kommen</option><option>zukommen</option><option>zu kommen</option></select>.
+        </div>
+        <div class="fill-item">
+          <span class="num">4)</span> Ich hoffe, am Malwettbewerb
+          <select class="blank inline" data-ans="teilzunehmen"><option value="">—</option><option>teilnehmen</option><option>zu teilnehmen</option><option>teilzunehmen</option></select>.
+        </div>
+        <div class="fill-item">
+          <span class="num">5)</span> In der Koch-AG kann man leckere Kuchen
+          <select class="blank inline" data-ans="backen"><option value="">—</option><option>zu backen</option><option>backen</option><option>gebacken</option></select>.
+        </div>
+        <div class="fill-item">
+          <span class="num">6)</span> Unsere Klasse hat beschlossen, im Wald
+          <select class="blank inline" data-ans="zu zelten"><option value="">—</option><option>zu zelten</option><option>zelten</option><option>gezeltet</option></select>.
+        </div>
+        <div class="fill-item">
+          <span class="num">7)</span> Hast du Lust, beim Schulfest
+          <select class="blank inline" data-ans="mitzumachen"><option value="">—</option><option>mitmachen</option><option>mitzumachen</option><option>zu mitmachen</option></select>?
+        </div>
+        <div class="fill-item">
+          <span class="num">8)</span> Wir dürfen heute länger in der Turnhalle
+          <select class="blank inline" data-ans="trainieren"><option value="">—</option><option>zu trainieren</option><option>trainiert</option><option>trainieren</option></select>.
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4: Perfekt — Postkarte aus Lwiw ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4 · Grammatik</p>
+      <h2 class="panel-title">Eine Postkarte aus Lwiw</h2>
+      <p class="lead">Maksym war mit seiner Klasse in Lwiw. Ergänze seine Postkarte im Perfekt.</p>
+      <div class="ua-note">
+        У реченнях зі списком обери допоміжне дієслово: <i>haben</i> чи <i>sein</i> (рух, зміна місця — <i>sein</i>). У порожні поля впиши Partizip II дієслова в дужках. Пам'ятай: <i>besichtigen → besichtigt</i> (без ge-), у відокремлюваних дієсловах <i>ge</i> стоїть усередині: <i>zurück<b>ge</b>kommen</i>.<br>Після «Prüfen» заповнені поля блокуються; порожні можна заповнити й перевірити пізніше.
+      </div>
+      <div class="mail-window" style="margin-top:16px;">
+        <div class="mail-titlebar">Postkarte · Grüße aus Lwiw! 🏰</div>
+        <div class="mail-fields">An: <b>Oma Halyna</b></div>
+        <div class="mail-body" id="ub4-list">
+          <p style="margin:0 0 8px;">Liebe Oma,</p>
+          <div class="fill-item"><span class="num">1)</span> am ersten Tag
+            <select class="blank inline" data-ans="sind" aria-label="haben oder sein"><option value="">—</option><option>haben</option><option>sind</option></select>
+            wir mit dem Zug nach Lwiw gefahren.</div>
+          <div class="fill-item"><span class="num">2)</span> Wir haben in einem kleinen Hotel
+            <input type="text" class="blank-input inline" data-ans="gewohnt" aria-label="Partizip II von wohnen">. (wohnen)</div>
+          <div class="fill-item"><span class="num">3)</span> Am zweiten Tag haben wir die Altstadt
+            <input type="text" class="blank-input inline" data-ans="besichtigt" aria-label="Partizip II von besichtigen">. (besichtigen)</div>
+          <div class="fill-item"><span class="num">4)</span> Wir
+            <select class="blank inline" data-ans="haben" aria-label="haben oder sein"><option value="">—</option><option>haben</option><option>sind</option></select>
+            auch ein Museum besucht.</div>
+          <div class="fill-item"><span class="num">5)</span> Am dritten Tag
+            <select class="blank inline" data-ans="sind" aria-label="haben oder sein"><option value="">—</option><option>sind</option><option>haben</option></select>
+            wir in den Karpaten gewandert.</div>
+          <div class="fill-item"><span class="num">6)</span> Am Abend
+            <select class="blank inline" data-ans="haben" aria-label="haben oder sein"><option value="">—</option><option>sind</option><option>haben</option></select>
+            wir in einem Café Kuchen gegessen.</div>
+          <div class="fill-item"><span class="num">7)</span> Wir haben vier tolle Tage in Lwiw
+            <input type="text" class="blank-input inline" data-ans="verbracht" aria-label="Partizip II von verbringen">. (verbringen)</div>
+          <div class="fill-item"><span class="num">8)</span> Gestern sind wir nach Hause
+            <input type="text" class="blank-input inline wide" data-ans="zurückgekommen" aria-label="Partizip II von zurückkommen">. (zurückkommen)</div>
+          <p style="margin:8px 0 0;">Bis bald! Dein Maksym</p>
+        </div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub4-check">Prüfen</button>
+        <span class="score-pill" id="ub4-score"></span>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5: Satzbau (buildOrder) ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5 · Satzbau</p>
+      <h2 class="panel-title">Bilde Sätze</h2>
+      <p class="lead">Klicke die Wörter in der richtigen Reihenfolge an.</p>
+      <div class="ua-note">
+        Натискай картки по черзі, щоб скласти речення. Поки речення не складене повністю, поставлену картку можна повернути назад (натисни на неї ще раз). Щойно стоять усі картки — речення перевіряється й блокується. Пам'ятай: відокремлюваний префікс (<i>statt</i>) і інфінітив із <i>zu</i> стоять у кінці; після <i>dass</i> дієслово — у кінці; у Perfekt Partizip II — у кінці.
+      </div>
+      <div class="card" style="margin-top:16px;">
+        <div id="ub5-order"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 6: Lesen (Richtig / Falsch) ===== -->
+    <section class="panel" id="panel-ub6">
+      <p class="section-label">Üb. 6 · Leseverstehen</p>
+      <h2 class="panel-title">Eine E-Mail aus Leipzig</h2>
+      <p class="lead">Lies Paulas E-Mail. Sind die Aussagen richtig oder falsch?</p>
+      <div class="ua-note">
+        Паула з Лейпцига (Німеччина) — подруга по листуванню вашого класу. Вона розповідає про гуртки й заходи у своїй школі. Прочитай лист і визнач, чи твердження правильні (Richtig) чи неправильні (Falsch). Текст можна перечитувати скільки завгодно, але відповідь на кожне твердження — лише одна, вона одразу блокується.
+      </div>
+
+      <div class="mail-window" style="margin-top:16px;">
+        <div class="mail-titlebar">Posteingang · Neue Nachricht</div>
+        <div class="mail-fields">Von: <b>Paula Schreiber</b> · Betreff: Bei uns ist immer etwas los! 🎪</div>
+        <div class="mail-body">
+          <p>Hallo!</p>
+          <p>Ich heiße Paula, bin 13 Jahre alt und gehe in die 7. Klasse eines Gymnasiums in Leipzig. In unserer Schule ist immer etwas los! Wir haben über 20 AGs, und die meisten Schüler besuchen mindestens eine AG.</p>
+          <p>Ich bin in der Zirkus-AG. Sie findet zweimal in der Woche statt: am Dienstag und am Donnerstag von 14 Uhr 30 bis 16 Uhr. Unsere Leiterin, Frau Berger, war früher Akrobatin im Zirkus. Bei ihr lernen wir jonglieren und auf dem Seil tanzen. Mein Bruder Felix besucht die Technik-AG. Dort bauen und programmieren sie kleine Roboter.</p>
+          <p>Im Juni findet bei uns ein großes Schulfest statt. Wir haben vor, auf dem Schulhof eine Zirkusshow zu zeigen. Die Theater-AG inszeniert ein Stück in der Aula, und die Koch-AG verkauft Kuchen. Mit dem Geld wollen wir im Herbst eine Klassenfahrt nach Dresden machen.</p>
+          <p>Letztes Jahr hat unsere Klasse an einem Malwettbewerb der Stadt teilgenommen. Wir haben den zweiten Preis gewonnen!</p>
+          <p>Und du? Welche AGs gibt es in deiner Schule? Nimmst du gern an Schulveranstaltungen teil? Schreib mir bald!</p>
+          <p style="margin:0;">Viele Grüße<br>Paula</p>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:20px;">
+        <div id="ub6-quiz"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 7: Schreiben (оцінює вчитель) ===== -->
+    <section class="panel" id="panel-ub7">
+      <p class="section-label">Üb. 7 · Schreiben</p>
+      <h2 class="panel-title">Antworte Paula!</h2>
+      <p class="lead">Schreib Paula eine Antwort-E-Mail (8–10 Sätze).</p>
+      <div class="card tinted-mustard">
+        <p style="margin:0 0 8px;"><b>In deiner E-Mail:</b></p>
+        <p style="margin:0;">
+          ✔ bedankst du dich für die E-Mail und stellst dich kurz vor (Name, Alter, Klasse, Wohnort);<br>
+          ✔ schreibst du, welche AGs es in deiner Schule gibt;<br>
+          ✔ erzählst du von einer AG, die du besuchst oder gern besuchen möchtest: Wann und wie oft findet sie statt (von … bis …)? Was macht man da?<br>
+          ✔ erzählst du von einer Schulveranstaltung, an der du teilgenommen hast – im Perfekt (z. B. „Im Oktober habe ich am Schachturnier teilgenommen.“);<br>
+          ✔ schreibst du deine Pläne mit „zu“ + Infinitiv (z. B. „Ich habe vor, …“ / „Ich hoffe, …“);<br>
+          ✔ stellst du Paula am Ende eine Frage (z. B. „Wohin fahrt ihr …?“, „Wann findet …?“).
+        </p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Напиши Паулі лист-відповідь на 8–10 речень. У листі: подякуй за лист і коротко представся (ім'я, вік, клас, місто); напиши, які гуртки є у твоїй школі; розкажи про гурток, який ти відвідуєш або хотів(-ла) би відвідувати: коли й як часто він відбувається (von … bis …), що там роблять; розкажи у Perfekt про шкільний захід, у якому ти брав(-ла) участь; напиши про свої плани з «zu» + інфінітив; наприкінці постав Паулі запитання.<br><br>
+          ⚠️ Вставляти текст у поле не можна — набирай сам(а). Під полем видно кількість слів і чи вжив(-ла) ти обов'язкові звороти. Текст нікуди не надсилається автоматично: він потрапить у звіт для вчителя (вкладка «Fertig!»), або перепиши його в зошит. Цю вправу оцінює вчитель — <b>до 3 балів</b> (див. таблицю у вкладці «Fertig!»).
+        </div>
+      </div>
+      <div class="mail-window">
+        <div class="mail-titlebar">Antworten</div>
+        <div class="mail-fields">An: <b>Paula Schreiber</b> · Betreff: AW: Bei uns ist immer etwas los!</div>
+        <div class="mail-body">
+          <div class="qa" style="margin:0;">
+            <label for="ub7-text">Liebe Paula, …</label>
+            <textarea id="ub7-text" rows="12" data-words="60-110" data-must="Liebe Paula|teilgenommen|zu|Viele Grüße/Liebe Grüße" placeholder="Liebe Paula, vielen Dank für deine E-Mail! …"></textarea>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ПРИКІНЦЕВА ПАНЕЛЬ ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div id="lz-check"></div>
+
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>1) Fehleranalyse: Schau dir deinen Bericht zur Kontrollarbeit an. Wähle drei Aufgaben aus verschiedenen Übungen, bei denen du einen Fehler gemacht hast oder unsicher warst, und schreib sie richtig ins Heft – jeweils mit einer kurzen Regel auf Ukrainisch (z. B. „teilnehmen: Ich hoffe, am Turnier teilzunehmen. – zu steht in der Mitte“). Hattest du keine Fehler? Dann wähle die drei Aufgaben, die für dich am schwierigsten waren. 2) Richtig oder falsch? – Unsere Schule: Schreib sechs Aussagen über Veranstaltungen und AGs in unserer Schule – vier richtige und zwei falsche (z. B. „Im Oktober findet bei uns ein Schachturnier statt.“, „Die Zirkus-AG ist am Freitag von 14 bis 15 Uhr.“). Benutze mindestens einmal „stattfinden“, einmal „an … teilnehmen“, einen Satz mit „zu“ + Infinitiv und einen Satz im Perfekt. Schreib die Lösung (R / F) auf die Rückseite. Nächstes Mal liest du deine Aussagen vor, und die Klasse sagt: Richtig oder falsch?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          1) Аналіз помилок: переглянь свій звіт до контрольної роботи. Обери три завдання з різних вправ, у яких ти помилився(-лася) або вагався(-лася), і запиши їх правильно в зошит — до кожного коротке правило українською (напр. «teilnehmen: Ich hoffe, am Turnier teilzunehmen. — zu стоїть посередині»). Не мав(-ла) помилок? Тоді обери три завдання, які були для тебе найскладнішими. 2) Правда чи ні? — Наша школа: напиши шість тверджень про заходи й гуртки нашої школи — чотири правильні й два неправильні (напр. «Im Oktober findet bei uns ein Schachturnier statt.», «Die Zirkus-AG ist am Freitag von 14 bis 15 Uhr.»). Ужий щонайменше один раз «stattfinden», один раз «an … teilnehmen», одне речення з «zu» + інфінітив і одне речення в Perfekt. Відповіді (R / F) запиши на звороті. Наступного уроку ти читаєш свої твердження, а клас каже: правда чи ні?
+        </div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Deine Note</p>
+        <p>Hier siehst du dein Ergebnis für die Übungen 1–6 – in Prozent und in Punkten. Für die E-Mail (Üb. 7) gibt dein Lehrer / deine Lehrerin noch bis zu 3 Punkte.</p>
+        <div id="testResult"></div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Твоя оцінка</span>
+          Відсоток і бали за вправи 1–6 рахуються автоматично (максимум 9) — твій рядок у таблиці підсвічено. Невиконані завдання рахуються як неправильні. Перевірка ДЗ і Wörter-Check сюди не входять. До цього додаються бали вчителя за лист (максимум 3): <b>9 + 3 = 12 балів</b>.<br>
+          Лист оцінюється так: 3 — є всі 6 пунктів плану, помилки майже не заважають розумінню; 2 — є 4–5 пунктів або багато граматичних помилок; 1 — є 2–3 пункти, текст короткий; 0 — лист не написано.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Wörter zum Lernen</p>
+        <div class="chip-row" id="vocabChips"></div>
+      </div>
+
+      <div class="card" id="lessonGramWrap">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="lessonGram"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../data/glossary-data.js"></script>
+<script src="../../../data/lessons-data.js"></script>
+<script src="../../../data/grammar-data.js"></script>
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  // ===== Слова цього уроку у вкладці Fertig =====
+  const LEKTION_KLAS = "7", LEKTION_MODUL = "C", LEKTION_LEKTION = 10;
+  const LEKTION_PREV_LEKTION = 9;
+
+  // Контрольна робота: одна відповідь без виправлень, вкладка Hausaufgabe
+  // (розминка + Wörter-Check) не входить у результат.
+  enableTestMode();
+
+  // ===== Цілі уроку «Ich kann …» (Start) + самооцінка-світлофор (Fertig!) =====
+  // Контрольна — хук входу не ставиться (STYLE-BRIEF), «Ich kann» лишається.
+  const LERNZIELE = [
+    {de: "Ich kann über Schulveranstaltungen und AGs sprechen.", uk: "Я можу розповідати про шкільні заходи й гуртки."},
+    {de: "Ich kann Sätze mit und ohne „zu“ + Infinitiv richtig bilden.", uk: "Я можу правильно будувати речення з «zu» + інфінітив і без нього."},
+    {de: "Ich kann im Perfekt über eine Klassenfahrt oder ein Schulfest erzählen.", uk: "Я можу розповідати в Perfekt про поїздку класом або шкільне свято."}
+  ];
+  buildLernziele('lz-start', 'lz-check', LERNZIELE);
+
+  (function renderLessonVocab(){
+    const box = document.getElementById('vocabChips');
+    if (!box || typeof GLOSSARY === 'undefined') return;
+    const words = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_LEKTION
+    );
+    if (words.length === 0){
+      box.innerHTML = '<p class="empty-note">Слова для цього уроку ще не додані в глосарій.</p>';
+      return;
+    }
+    box.innerHTML = words.map(w =>
+      '<span class="chip static">' + w.de + ' — ' + w.uk + '</span>'
+    ).join('');
+  })();
+
+  // ===== Граматика до цього уроку у вкладці Fertig (поле gram у lessons-data.js) =====
+  (function renderLessonGrammar(){
+    const wrap = document.getElementById('lessonGramWrap');
+    const box = document.getElementById('lessonGram');
+    if (!wrap || !box) return;
+    const hide = () => { wrap.style.display = 'none'; };
+    if (typeof LESSONS === 'undefined' || typeof GRAMMAR === 'undefined') return hide();
+    const me = LESSONS.find(l => l.klas === LEKTION_KLAS && l.modul === LEKTION_MODUL && l.lektion === LEKTION_LEKTION);
+    const topics = ((me && me.gram) || []).map(id => GRAMMAR.find(t => t.id === id)).filter(t => t && t.opublikovano > 0);
+    if (topics.length === 0) return hide();
+    const src = document.querySelector('script[src$="data/grammar-data.js"]').getAttribute('src');
+    const root = src.slice(0, src.length - 'data/grammar-data.js'.length);
+    box.innerHTML = topics.map(t =>
+      '<a class="gram-link" href="' + root + 'gramatyka/temy/' + t.id + '.html">'
+      + '<span class="k">' + t.uk + '</span>' + t.tema + '</a>'
+    ).join('');
+  })();
+
+  // ===== Wörter-Check у вкладці Hausaufgabe =====
+  function guessPos(de){
+    var base = (de || '').replace(/\([^)]*\)/g, '').trim();
+    if(/^(der|die|das)(\/(der|die|das))?\s/.test(base)) return 'noun';
+    if(/^sich\s/.test(base)) return 'verb';
+    if(/^am\s/.test(base)) return 'other'; // "am liebsten", "am besten" — прислівникова найвища форма, не дієслово
+    if(/\(\+(Gen|Dat|Akk)\.?\)/.test(de)) return 'prep';
+    var words = base.split(/\s+/);
+    var last = words[words.length - 1];
+    if(/(en|ern|eln)$/.test(last) && last === last.toLowerCase()) return 'verb';
+    return 'other'; // прикметники / прислівники / сталі вирази
+  }
+
+  (function renderDzVocabCheck(){
+    const wrap = document.getElementById('dz-vocab-wrap');
+    const box = document.getElementById('dz-vocab');
+    if (!wrap || !box || typeof GLOSSARY === 'undefined') return;
+    const same = (w, l) => w.klas === l.klas && w.modul === l.modul && w.lektion === l.lektion;
+    const prevWords = LEKTION_PREV_LEKTION ? GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_PREV_LEKTION
+    ) : [];
+
+    // Інтервальне повторення: ще 2+ слова з уроків 2–5 тому
+    let olderWords = [];
+    if (typeof LESSONS !== 'undefined'){
+      const mine = LESSONS.filter(l => l.klas === LEKTION_KLAS);
+      const idx = mine.findIndex(l => l.modul === LEKTION_MODUL && l.lektion === LEKTION_LEKTION);
+      if (idx > 0){
+        const older = mine.slice(Math.max(0, idx - 5), idx)
+          .filter(l => !(l.modul === LEKTION_MODUL && l.lektion === LEKTION_PREV_LEKTION));
+        olderWords = GLOSSARY.filter(w => older.some(l => same(w, l)));
+      }
+    }
+    const fromPrev = shuffleArray(prevWords).slice(0, olderWords.length ? 4 : 6);
+    const pool = shuffleArray(fromPrev.concat(shuffleArray(olderWords).slice(0, 6 - fromPrev.length)));
+    if (pool.length < 3){ wrap.style.display = 'none'; return; }
+
+    const quizData = pool.map(w => {
+      const pos = guessPos(w.de);
+      let sameKind = GLOSSARY.filter(g => g.uk !== w.uk && guessPos(g.de) === pos);
+      if(sameKind.length < 2) sameKind = GLOSSARY.filter(g => g.uk !== w.uk);
+      const distractors = shuffleArray(sameKind).slice(0, 2).map(g => g.uk);
+      return { q: w.de, opts: [w.uk, ...distractors], correct: w.uk };
+    });
+    buildQuiz('dz-vocab', quizData);
+  })();
+
+  // Hausaufgabe: розминка-перевірка (блог Софії)
+  wireBlanks('dz');
+
+  // Üb. 1 · Teil A: квіз з лексики (позиції correct: 1,3,2,1,2,3,3,2)
+  const ub1Data = [
+    {q: "In einer Theater-AG … die Schüler ein Stück.", opts: ["inszenieren", "nähen", "klettern"], correct: "inszenieren"},
+    {q: "Am Wandertag macht die Klasse …", opts: ["einen Malwettbewerb", "einen Stundenplan", "einen Ausflug in die Natur"], correct: "einen Ausflug in die Natur"},
+    {q: "Wer leitet die Koch-AG? – Frau Klein ist die …", opts: ["Jury", "Leiterin", "Bühne"], correct: "Leiterin"},
+    {q: "Beim Malwettbewerb entscheidet die …, wer gewinnt.", opts: ["Jury", "Aula", "Werkstatt"], correct: "Jury"},
+    {q: "In der Naturschutz-AG … wir die Umwelt.", opts: ["programmieren", "erkunden", "jonglieren"], correct: "erkunden"},
+    {q: "Für den Sportwettbewerb brauchst du einen …", opts: ["Luftballon", "Terminkalender", "Trainingsanzug"], correct: "Trainingsanzug"},
+    {q: "Mia schreibt alle Termine und Veranstaltungen in ihren …", opts: ["Schulhof", "Muskel", "Terminkalender"], correct: "Terminkalender"},
+    {q: "Wer ist für ein Kostümfest? – Ohne Frage! Ich bin …", opts: ["dagegen", "dafür", "blöd"], correct: "dafür"}
+  ];
+  buildQuiz('ub1-quiz', ub1Data);
+
+  // Üb. 1 · Teil B: Was macht man in welcher AG?
+  buildSort('ub1-sort', {
+    buckets: ["Zirkus-AG", "Naturschutz-AG", "Technik-AG", "Mode-AG"],
+    items: [
+      {t: "jonglieren", b: "Zirkus-AG"},
+      {t: "auf dem Seil tanzen", b: "Zirkus-AG"},
+      {t: "die Umwelt erkunden", b: "Naturschutz-AG"},
+      {t: "Vögel beobachten", b: "Naturschutz-AG"},
+      {t: "Roboter programmieren", b: "Technik-AG"},
+      {t: "Flugmodelle konstruieren", b: "Technik-AG"},
+      {t: "Kleidung nähen", b: "Mode-AG"},
+      {t: "eine Modenschau organisieren", b: "Mode-AG"}
+    ]
+  });
+
+  // Üb. 2 · Teil A: множина (таблиця, регістр важливий — іменники з великої)
+  buildTable('ub2-tab', {
+    head: ["Singular", "Plural"],
+    case: true,
+    rows: [
+      ["das Schulfest", "die [Schulfeste]"],
+      ["der Wettbewerb", "die [Wettbewerbe]"],
+      ["die Klassenfahrt", "die [Klassenfahrten]"],
+      ["der Schulhof", "die [Schulhöfe]"],
+      ["die Werkstatt", "die [Werkstätten]"],
+      ["das Museum", "die [Museen]"]
+    ]
+  });
+
+  // Üb. 2 · Teil B, Üb. 3, Üb. 4: пропуски й випадні списки
+  wireBlanks('ub2');
+  wireBlanks('ub3');
+  wireBlanks('ub4');
+
+  // Üb. 5: склади речення
+  buildOrder('ub5-order', [
+    { words: ["Am Samstag", "findet", "in der Aula", "ein Konzert", "statt"], end: ".",
+      alt: ["In der Aula findet am Samstag ein Konzert statt", "Ein Konzert findet am Samstag in der Aula statt"],
+      hint: "stattfinden — відокремлюване дієслово" },
+    { words: ["Ich", "hoffe,", "am Wettbewerb", "teilzunehmen"], end: ".",
+      hint: "Інфінітив із zu — у кінці" },
+    { words: ["Wir", "haben", "beschlossen,", "eine Klassenfahrt", "zu machen"], end: ".",
+      hint: "beschließen, … zu …" },
+    { words: ["In einer Koch-AG", "lernt", "man", "kochen"], end: ".",
+      alt: ["Man lernt in einer Koch-AG kochen"],
+      hint: "In einer … lernt man …" },
+    { words: ["Die Tanz-AG", "ist", "am Mittwoch", "von 15 bis 16 Uhr"], end: ".",
+      alt: ["Am Mittwoch ist die Tanz-AG von 15 bis 16 Uhr"],
+      hint: "Розклад гуртків" },
+    { words: ["Viele", "meinen,", "dass", "die Zirkus-AG", "toll", "ist"], end: ".",
+      hint: "Підрядне речення з dass" },
+    { words: ["Mit wem", "bist", "du", "nach Berlin", "gefahren"], end: "?",
+      hint: "W-Frage у Perfekt" }
+  ]);
+
+  // Üb. 6: Richtig / Falsch (позиції correct: 1,2,1,1,2,2,1,2 — порядок у opts чергується)
+  const ub6Data = [
+    {q: "Paula geht in die siebte Klasse.", opts: ["Richtig", "Falsch"], correct: "Richtig"},
+    {q: "In Paulas Schule besuchen nur wenige Schüler eine AG.", opts: ["Richtig", "Falsch"], correct: "Falsch"},
+    {q: "Die Zirkus-AG findet zweimal in der Woche statt.", opts: ["Richtig", "Falsch"], correct: "Richtig"},
+    {q: "Paulas AG beginnt um 16 Uhr.", opts: ["Falsch", "Richtig"], correct: "Falsch"},
+    {q: "In der Technik-AG programmiert man Roboter.", opts: ["Falsch", "Richtig"], correct: "Richtig"},
+    {q: "Das Schulfest findet im Herbst statt.", opts: ["Richtig", "Falsch"], correct: "Falsch"},
+    {q: "Auf dem Schulfest verkauft die Koch-AG Kuchen.", opts: ["Richtig", "Falsch"], correct: "Richtig"},
+    {q: "Beim Malwettbewerb hat Paulas Klasse den ersten Preis gewonnen.", opts: ["Richtig", "Falsch"], correct: "Falsch"}
+  ];
+  buildQuiz('ub6-quiz', ub6Data);
+
+  // Фінальна панель зі штампами (іконки — на тему модуля «Шкільне життя»)
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🎭','🏆','🎪','🚌','📝']);
+    renderTestResult('testResult', { label: 'Üb. 1–6', extra: { label: 'E-Mail (Üb. 7)', max: 3 } });
+  });
+  document.getElementById('restart-all').addEventListener('click', () => {
+    if (confirm('Усі відповіді зітруться. Почати спочатку?')) location.reload();
+  });
+</script>
+</body>
+</html>

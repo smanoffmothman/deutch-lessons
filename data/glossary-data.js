@@ -1203,5 +1203,16 @@ const GLOSSARY = [
   {de: "die Pfadfinderorganisation (die Pfadfinderorganisationen)", uk: "скаутська організація", klas: "9", modul: "B", lektion: 13},
   {de: "die Umweltbewegung", uk: "екологічний рух, рух за охорону довкілля", klas: "9", modul: "B", lektion: 13},
   {de: "die Skaterszene", uk: "субкультура скейтерів", klas: "9", modul: "B", lektion: 13},
-  {de: "das Hauptziel (die Hauptziele)", uk: "головна мета", klas: "9", modul: "B", lektion: 13}
+  {de: "das Hauptziel (die Hauptziele)", uk: "головна мета", klas: "9", modul: "B", lektion: 13},
+  {de: "die Fehleranalyse", uk: "аналіз помилок", klas: "7", modul: "C", lektion: 10},
+  {de: "die Aussage (die Aussagen)", uk: "твердження", klas: "7", modul: "C", lektion: 10},
+  {de: "In unserer Schule ist immer etwas los!", uk: "У нашій школі завжди щось відбувається!", klas: "7", modul: "C", lektion: 10},
+  {de: "mindestens (mindestens eine AG)", uk: "щонайменше (щонайменше один гурток)", klas: "7", modul: "C", lektion: 10},
+  {de: "der Akrobat / die Akrobatin", uk: "акробат / акробатка", klas: "7", modul: "C", lektion: 10},
+  {de: "verkaufen (Kuchen verkaufen)", uk: "продавати (продавати пироги)", klas: "7", modul: "C", lektion: 10},
+  {de: "der Preis (die Preise) (den zweiten Preis gewinnen)", uk: "приз, нагорода (здобути другий приз)", klas: "7", modul: "C", lektion: 10},
+  {de: "die Schülerzeitung (die Schülerzeitungen)", uk: "шкільна газета", klas: "7", modul: "C", lektion: 10},
+  {de: "der Blogbeitrag (die Blogbeiträge)", uk: "допис у блозі", klas: "7", modul: "C", lektion: 10},
+  {de: "die Altstadt (die Altstädte)", uk: "старе місто, історичний центр", klas: "7", modul: "C", lektion: 10},
+  {de: "zurückkommen (trennbar) (Wir sind nach Hause zurückgekommen.)", uk: "повертатися (Ми повернулися додому.)", klas: "7", modul: "C", lektion: 10}
 ];

@@ -1113,5 +1113,16 @@ const LESSONS = [
     hook: "prognose",
     dz: "Bildgeschichte „Ein Samstag mit meinem Hobby“: Wähle eine Person – einen Skater / eine Skaterin, der oder die im Skatepark trainiert, oder einen jungen Geiger / eine junge Geigerin, der oder die im Jugendorchester spielt. 1) Zeichne eine Bildgeschichte mit vier Bildern (wie ein Comic) und schreib unter jedes Bild zwei Sätze (insgesamt 8 Sätze). Erzähl im Perfekt: Was hat die Person am Samstag gemacht? 2) Beschreib das Outfit der Person: mindestens drei Kleidungsstücke mit Adjektiv (z. B. eine weite Jeans, einen grauen Kapuzenpulli, bunte Turnschuhe). 3) Benutze mindestens einmal „sich interessieren für“, einen Satz mit „weil“ und zwei zusammengesetzte Wörter aus Üb. 4 (z. B. die Skaterszene, das Jugendorchester). 4) Schreib außerdem zwei eigene Tic-Tac-Toe-Fragen zum Modul auf eine Karte. Nächstes Mal stellen wir die Bildgeschichten vor und spielen Tic Tac Toe mit euren Fragen."
 
+  },
+  {
+    klas: "7",
+    modul: "C",
+    lektion: 10,
+    nazva: "Тематична контрольна робота за Модуль C",
+    opys: "Тематична контрольна робота за Модуль C «Шкільне життя» (режим контрольної, бали рахуються автоматично): лексика шкільних заходів і гуртків, множина іменників, an … teilnehmen і stattfinden, інфінітив із zu та без zu, Perfekt із haben / sein (листівка зі Львова), порядок слів і W-запитання, читання листа Паули з Лейпцига й лист-відповідь.",
+    file: "klas-7/modul-c/lektion-10.html",
+    nove: true,
+    gram: ["deklination-nomen", "trennbare-verben", "verben-praepositionalobjekt", "verben-dass-infinitiv", "modalverben", "perfekt-plusquamperfekt", "fragen", "zahlwoerter", "indefinitpronomen"],
+    dz: "1) Fehleranalyse: Schau dir deinen Bericht zur Kontrollarbeit an. Wähle drei Aufgaben aus verschiedenen Übungen, bei denen du einen Fehler gemacht hast oder unsicher warst, und schreib sie richtig ins Heft – jeweils mit einer kurzen Regel auf Ukrainisch (z. B. „teilnehmen: Ich hoffe, am Turnier teilzunehmen. – zu steht in der Mitte“). Hattest du keine Fehler? Dann wähle die drei Aufgaben, die für dich am schwierigsten waren. 2) Richtig oder falsch? – Unsere Schule: Schreib sechs Aussagen über Veranstaltungen und AGs in unserer Schule – vier richtige und zwei falsche (z. B. „Im Oktober findet bei uns ein Schachturnier statt.“, „Die Zirkus-AG ist am Freitag von 14 bis 15 Uhr.“). Benutze mindestens einmal „stattfinden“, einmal „an … teilnehmen“, einen Satz mit „zu“ + Infinitiv und einen Satz im Perfekt. Schreib die Lösung (R / F) auf die Rückseite. Nächstes Mal liest du deine Aussagen vor, und die Klasse sagt: Richtig oder falsch?"
   }
 ];
