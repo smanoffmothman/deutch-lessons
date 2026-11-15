@@ -1136,5 +1136,17 @@ const LESSONS = [
     gram: ["infinitiv-um-zu", "verben-dass-infinitiv", "trennbare-verben"],
     hook: "fehler",
     dz: "Ein Post über das erste Treffen: Stell dir vor, deine AG aus Üb. 4 hatte gestern ihr erstes Treffen. 1) Schreib einen Post für den Schulblog oder die Schulseite in sozialen Netzwerken (6–8 Sätze): Wie viele Personen sind insgesamt gekommen? Wer leitet die AG? Was habt ihr beim ersten Treffen gemacht? Wann trefft ihr euch wieder? Benutze mindestens drei Verben im Perfekt (z. B. kommen, besprechen, malen, beschließen). 2) Schreib mindestens zwei Sätze mit „um … zu“, eins davon mit einem trennbaren Verb (z. B. „Wir haben Plakate aufgehängt, um alle Interessenten einzuladen.“). 3) Zeichne ein „Foto“ vom Treffen und schreib drei Hashtags auf Deutsch dazu (z. B. #ComicAG #ErstesTreffen #MachMit). Nächstes Mal machen wir eine AG-Messe: Wir hängen die Posts auf, jeder liest mindestens drei und schreibt unter seinen Lieblingspost „Ich bin dabei!“ – welche AG bekommt die meisten Mitglieder?"
+  },
+  {
+    klas: "7",
+    modul: "D",
+    lektion: 1,
+    nazva: "Welche Sportarten kennst du?",
+    opys: "Вступ до модуля «Спорт»: слухаємо й повторюємо назви видів спорту, робимо з дієслова іменник (boxen → das Boxen, laufen → der Lauf), сортуємо Ballsport / Kampfsport / Natursport / Wintersport, питаємо з «welcher, welche, welches» у Nominativ, Dativ і Akkusativ, підбираємо дієслово (Rad fahren, Schlittschuh laufen, Yoga machen, Tischtennis spielen) і даємо інтерв'ю: «Am besten gefällt mir …».",
+    file: "klas-7/modul-d/lektion-1.html",
+    nove: true,
+    gram: ["fragen", "komparation"],
+    hook: "prognose",
+    dz: "Sport-Interview in der Familie: 1) Schreib fünf Fragen mit „welcher / welche / welches / welchen / welchem“ (z. B. „Welche Sportart gefällt dir am besten?“, „Welchen Wintersport hast du schon gemacht?“, „Von welchen Sportarten hast du nie gehört?“). 2) Stell die Fragen zwei Personen aus deiner Familie oder deinen Freunden und notiere die Antworten in einer Tabelle. 3) Schreib zu jeder Person drei Sätze mit den richtigen Verben spielen, machen, fahren oder laufen (z. B. „Mein Opa fährt im Winter gern Ski. Am liebsten spielt er Schach. Er möchte mal Yoga ausprobieren.“). Nächstes Mal berichten wir in der Klasse: Welche Sportart ist in unseren Familien am beliebtesten?"
   }
 ];

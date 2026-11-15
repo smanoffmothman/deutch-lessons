@@ -1225,5 +1225,17 @@ const GLOSSARY = [
   {de: "längst (Wir haben längst davon geträumt.)", uk: "давно (Ми давно про це мріяли.)", klas: "7", modul: "C", lektion: 11},
   {de: "pflanzen (Tomaten pflanzen)", uk: "садити (садити помідори)", klas: "7", modul: "C", lektion: 11},
   {de: "erfinden (Geschichten erfinden)", uk: "вигадувати (історії)", klas: "7", modul: "C", lektion: 11},
-  {de: "das Erntefest (die Erntefeste)", uk: "свято врожаю", klas: "7", modul: "C", lektion: 11}
+  {de: "das Erntefest (die Erntefeste)", uk: "свято врожаю", klas: "7", modul: "C", lektion: 11},
+  {de: "die Sportart (die Sportarten)", uk: "вид спорту", klas: "7", modul: "D", lektion: 1},
+  {de: "der Ballsport", uk: "види спорту з м'ячем", klas: "7", modul: "D", lektion: 1},
+  {de: "der Kampfsport", uk: "бойові мистецтва, єдиноборства", klas: "7", modul: "D", lektion: 1},
+  {de: "der Natursport", uk: "спорт на природі", klas: "7", modul: "D", lektion: 1},
+  {de: "der Wintersport", uk: "зимові види спорту", klas: "7", modul: "D", lektion: 1},
+  {de: "das Boxen", uk: "бокс", klas: "7", modul: "D", lektion: 1},
+  {de: "der Eiskunstlauf", uk: "фігурне катання", klas: "7", modul: "D", lektion: 1},
+  {de: "der Skisprung", uk: "стрибки на лижах із трампліна", klas: "7", modul: "D", lektion: 1},
+  {de: "das Rudern", uk: "веслування", klas: "7", modul: "D", lektion: 1},
+  {de: "Schlitten fahren", uk: "кататися на санчатах", klas: "7", modul: "D", lektion: 1},
+  {de: "Gymnastik machen", uk: "займатися гімнастикою", klas: "7", modul: "D", lektion: 1},
+  {de: "Hals- und Beinbruch!", uk: "Ні пуху ні пера! (побажання успіху)", klas: "7", modul: "D", lektion: 1}
 ];
