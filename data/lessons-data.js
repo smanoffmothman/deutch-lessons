@@ -1076,5 +1076,17 @@ const LESSONS = [
     gram: ["fragen", "kausalsaetze", "verben-dass-infinitiv"],
     hook: "fehler",
     dz: "Interview und Beitrag: Such eine Person (aus deiner Familie, aus deiner Schule oder aus deinem Bekanntenkreis), die in einer Jugendorganisation in der Ukraine mitmacht oder mitgemacht hat – zum Beispiel bei Plast, in einem Sportverein, in einer Freiwilligengruppe oder im Schülerparlament. 1) Mach mit dieser Person ein kurzes Interview: Stell mindestens fünf Fragen wie in Üb. 2 und Üb. 3 (z. B. „Was für eine Jugendorganisation ist das?“, „Wie bist du dazu gekommen?“, „Welche Fähigkeiten hast du dort gelernt?“) und notiere die Antworten auf Deutsch. 2) Schreib dann einen Beitrag für die Schulwebsite (7–8 Sätze) wie in Üb. 4: Wie heißt die Organisation? Was machen die Mitglieder? Welche Symbole, Mottos oder Traditionen gibt es? Benutze mindestens vier Wörter aus der Stunde (z. B. die Fähigkeit, verantwortungsbewusst, das Engagement, die Tradition, weltweit, musizieren). 3) Schreib zum Schluss einen Satz mit „weil“ oder „denn“: Kannst du diese Organisation anderen Jugendlichen empfehlen? Nächstes Mal stellen wir die Organisationen vor, und die Klasse stellt Fragen mit „Was für …?“ und „Welche …?“."
+  },
+  {
+    klas: "7",
+    modul: "C",
+    lektion: 9,
+    nazva: "Unsere Klassenfahrt",
+    opys: "Шкільна екскурсія: читаємо оголошення про поїздки класом, слухаємо розповідь Леона про поїздку до Барселони й добираємо оголошення, розкладаємо події по днях (am ersten / zweiten / dritten / vierten Tag), пишемо листівку в Perfekt (haben / sein + Partizip II: besichtigt, besucht, verbracht, geflogen) і беремо інтерв'ю в Леона (Wohin …? Wann …? Wie lange …? Mit wem …?).",
+    file: "klas-7/modul-c/lektion-9.html",
+    nove: true,
+    gram: ["perfekt-plusquamperfekt", "fragen", "zahlwoerter"],
+    hook: "undu",
+    dz: "Mein Klassenfahrt-Blog: Wähle eine Anzeige aus Üb. 1 – „Klassenfahrt nach Berlin“, „Karpatenreise“ oder „Ausflug in die Nachbarstadt“ (nicht Barcelona!). Stell dir vor: Du warst mit deiner Klasse dort. 1) Schreib einen Blogbeitrag (7–9 Sätze) wie Leon: Wohin seid ihr gefahren? Wann und wie lange? Was habt ihr am ersten, am zweiten … Tag gemacht? Wie hat dir die Klassenfahrt gefallen? Benutze mindestens fünf Verben im Perfekt (z. B. besichtigen, besuchen, machen, unternehmen, fahren). 2) Mal oder klebe ein „Foto“ dazu und schreib eine Bildunterschrift (ein Satz). Nächstes Mal liest du deinen Beitrag vor, ohne das Reiseziel zu nennen – die Klasse stellt Fragen (Wohin …? Was …? Wie lange …?) und rät, welche Anzeige du gewählt hast."
   }
 ];
