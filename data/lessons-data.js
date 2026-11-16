@@ -1148,5 +1148,17 @@ const LESSONS = [
     gram: ["fragen", "komparation"],
     hook: "prognose",
     dz: "Sport-Interview in der Familie: 1) Schreib fünf Fragen mit „welcher / welche / welches / welchen / welchem“ (z. B. „Welche Sportart gefällt dir am besten?“, „Welchen Wintersport hast du schon gemacht?“, „Von welchen Sportarten hast du nie gehört?“). 2) Stell die Fragen zwei Personen aus deiner Familie oder deinen Freunden und notiere die Antworten in einer Tabelle. 3) Schreib zu jeder Person drei Sätze mit den richtigen Verben spielen, machen, fahren oder laufen (z. B. „Mein Opa fährt im Winter gern Ski. Am liebsten spielt er Schach. Er möchte mal Yoga ausprobieren.“). Nächstes Mal berichten wir in der Klasse: Welche Sportart ist in unseren Familien am beliebtesten?"
+  },
+  {
+    klas: "8",
+    modul: "C",
+    lektion: 5,
+    nazva: "Was lesen wir?",
+    opys: "Що ми читаємо: слухаємо й повторюємо німецькі прислів'я про книжки («Ein Buch ist wie ein Garten, den man in der Tasche trägt»), з'ясовуємо, що вони означають і коли їх вживати, розгадуємо анаграми (Roman, Novelle, Zeitschrift, Comic), ставимо слова в Akkusativ (einen Roman, eine Novelle, ein Gedicht) і тренуємо множину жанрів з перевіркою на слух (die Abenteuerbücher, die Genres, die Krimis).",
+    file: "klas-8/modul-c/lektion-5.html",
+    nove: true,
+    gram: ["deklination-nomen"],
+    hook: "prognose",
+    dz: "Post „Mein Bücherregal“: 1) Fotografiere oder zeichne dein Bücherregal (oder das Regal deiner Familie). 2) Schreib dazu einen Post für soziale Netzwerke (5–6 Sätze): Was steht in deinem Regal? Benutze mindestens fünf Wörter aus der Stunde im Plural (z. B. „In meinem Regal stehen drei Krimis, viele Comics und zwei Abenteuerbücher.“). Was liest du gern, was nicht so gern – und warum? 3) Wähle ein Sprichwort aus Üb. 1, schreib es unter deinen Post und erkläre in einem Satz, warum es zu dir passt. Nächstes Mal machen wir eine „Bücherregal-Galerie“: Wir raten, wem welches Regal gehört."
   }
 ];

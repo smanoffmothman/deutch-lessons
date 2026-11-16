@@ -1237,5 +1237,17 @@ const GLOSSARY = [
   {de: "das Rudern", uk: "веслування", klas: "7", modul: "D", lektion: 1},
   {de: "Schlitten fahren", uk: "кататися на санчатах", klas: "7", modul: "D", lektion: 1},
   {de: "Gymnastik machen", uk: "займатися гімнастикою", klas: "7", modul: "D", lektion: 1},
-  {de: "Hals- und Beinbruch!", uk: "Ні пуху ні пера! (побажання успіху)", klas: "7", modul: "D", lektion: 1}
+  {de: "Hals- und Beinbruch!", uk: "Ні пуху ні пера! (побажання успіху)", klas: "7", modul: "D", lektion: 1},
+  {de: "das Gedicht (die Gedichte)", uk: "вірш", klas: "8", modul: "C", lektion: 5},
+  {de: "die Novelle (die Novellen)", uk: "новела", klas: "8", modul: "C", lektion: 5},
+  {de: "die Geschichte (die Geschichten)", uk: "історія, оповідання", klas: "8", modul: "C", lektion: 5},
+  {de: "das Genre (die Genres)", uk: "жанр", klas: "8", modul: "C", lektion: 5},
+  {de: "die Gattung (die Gattungen)", uk: "(літературний) рід, вид", klas: "8", modul: "C", lektion: 5},
+  {de: "das Abenteuerbuch (die Abenteuerbücher)", uk: "пригодницька книжка", klas: "8", modul: "C", lektion: 5},
+  {de: "der Artikel (die Artikel)", uk: "стаття (у газеті, журналі)", klas: "8", modul: "C", lektion: 5},
+  {de: "der Text (die Texte)", uk: "текст", klas: "8", modul: "C", lektion: 5},
+  {de: "fressen (Bücher fressen)", uk: "жерти (про тварин); жадібно ковтати (книжки)", klas: "8", modul: "C", lektion: 5},
+  {de: "kauen", uk: "жувати", klas: "8", modul: "C", lektion: 5},
+  {de: "entbehren", uk: "обходитися без чогось, не мати", klas: "8", modul: "C", lektion: 5},
+  {de: "lehren", uk: "навчати (когось чогось)", klas: "8", modul: "C", lektion: 5}
 ];
