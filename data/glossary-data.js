@@ -1261,5 +1261,17 @@ const GLOSSARY = [
   {de: "die Tragödie (die Tragödien)", uk: "трагедія", klas: "8", modul: "C", lektion: 6},
   {de: "das Märchen (die Märchen)", uk: "казка", klas: "8", modul: "C", lektion: 6},
   {de: "die Hauptfigur (die Hauptfiguren)", uk: "головний герой, головна героїня", klas: "8", modul: "C", lektion: 6},
-  {de: "das Verbrechen (die Verbrechen)", uk: "злочин", klas: "8", modul: "C", lektion: 6}
+  {de: "das Verbrechen (die Verbrechen)", uk: "злочин", klas: "8", modul: "C", lektion: 6},
+  {de: "die Leidenschaft (die Leidenschaften)", uk: "пристрасть, захоплення (Parkour ist meine Leidenschaft.)", klas: "9", modul: "B", lektion: 14},
+  {de: "das Vorurteil (die Vorurteile) (Vorurteile gegen + Akk.)", uk: "упередження (упередження щодо когось)", klas: "9", modul: "B", lektion: 14},
+  {de: "gefährlich", uk: "небезпечний", klas: "9", modul: "B", lektion: 14},
+  {de: "aufeinander achten", uk: "дбати одне про одного, пильнувати одне одного", klas: "9", modul: "B", lektion: 14},
+  {de: "die Treppe (die Treppen)", uk: "сходи", klas: "9", modul: "B", lektion: 14},
+  {de: "das Geländer (die Geländer)", uk: "поруччя, перила", klas: "9", modul: "B", lektion: 14},
+  {de: "sich verletzen (Ich habe mich verletzt.)", uk: "травмуватися, поранитися", klas: "9", modul: "B", lektion: 14},
+  {de: "mutig", uk: "сміливий", klas: "9", modul: "B", lektion: 14},
+  {de: "das Selbstvertrauen", uk: "впевненість у собі", klas: "9", modul: "B", lektion: 14},
+  {de: "die Freiheit", uk: "свобода", klas: "9", modul: "B", lektion: 14},
+  {de: "der Skatepark (die Skateparks)", uk: "скейтпарк", klas: "9", modul: "B", lektion: 14},
+  {de: "das Kleidungsstück (die Kleidungsstücke)", uk: "предмет одягу, річ", klas: "9", modul: "B", lektion: 14}
 ];

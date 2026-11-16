@@ -1172,5 +1172,16 @@ const LESSONS = [
     gram: ["relativsaetze", "adjektivdeklination"],
     hook: "fehler",
     dz: "Bücher-Rätsel: 1) Wähle ein Buch, das du gelesen hast (oder einen Film nach einem Buch). 2) Schreib eine kurze Inhaltsangabe (5–6 einfache Sätze), aber OHNE Titel und ohne die Namen der Hauptfiguren! Benutze: „In dem Buch geht es um …“, „Die Hauptfigur ist …“, „Das ist ein/eine … (Gattung)“. 3) Schreib noch einen Satz über den Autor / die Autorin, z. B. „Der Autor ist ein bekannter ukrainischer Schriftsteller.“ Nächstes Mal lesen wir die Rätsel vor – die Klasse rät den Titel."
+  },
+  {
+    klas: "9",
+    modul: "B",
+    lektion: 14,
+    nazva: "Тематична контрольна робота: Mode und Jugendkultur",
+    opys: "Тематична контрольна робота за модуль B «Одяг. Молодіжна культура» (режим контрольної, бали рахуються автоматично): лексика (одяг і мода, субкультури, молодіжні організації, скаути), закінчення прикметників, Komparativ і Superlativ, дієслова з прийменниками (sich interessieren für, angehören, beitragen zu), was für ein / welch-, порядок слів (dass, weil, denn, wenn, zu + Infinitiv), пошук помилок, читання блогу Йонаса про паркур і лист-відповідь.",
+    file: "klas-9/modul-b/lektion-14.html",
+    nove: true,
+    gram: ["adjektivdeklination", "komparation", "verben-praepositionalobjekt", "rektion-verben", "fragen", "verben-dass-infinitiv", "nebensaetze", "kausalsaetze", "konjunktionen-position-null", "perfekt-plusquamperfekt"],
+    dz: "1) Fehleranalyse: Schau dir deinen Bericht zur Kontrollarbeit an. Wähle drei Aufgaben aus verschiedenen Übungen, bei denen du einen Fehler gemacht hast oder unsicher warst, und schreib sie richtig ins Heft – jeweils mit einer kurzen Regel auf Ukrainisch (z. B. „angehören + Dativ: Ich gehöre keiner Szene an.“). Hattest du keine Fehler? Dann wähle die drei Aufgaben, die für dich am schwierigsten waren. 2) Eine Seite für unseren Klassen-Modekatalog „Jugendszenen“: Wähle eine Jugendszene aus dem Modul (z. B. Goths, Punks, Skater, Cosplayer, Hip-Hopper, Traceure) oder die Pfadfinder. Zeichne ein typisches Outfit oder klebe ein Bild ein und beschrifte mindestens fünf Kleidungsstücke und Accessoires mit Artikel und Adjektiv (z. B. der schwarze Mantel, die bunten Haare, das karierte Halstuch). Schreib darunter drei Sätze: einen Satz mit „tragen“ und Adjektiven im Akkusativ (z. B. „Punks tragen oft eine alte Lederjacke.“), einen Vergleich mit „als“ (z. B. „Ihre Kleidung ist auffälliger als …“) und einen Satz mit „weil“ oder „denn“ (Warum tragen sie das?). Nächstes Mal binden wir eure Seiten zu einem Katalog zusammen und raten: Welche Szene ist das?"
   }
 ];
