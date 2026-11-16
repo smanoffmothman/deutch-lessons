@@ -1183,5 +1183,17 @@ const LESSONS = [
     nove: true,
     gram: ["adjektivdeklination", "komparation", "verben-praepositionalobjekt", "rektion-verben", "fragen", "verben-dass-infinitiv", "nebensaetze", "kausalsaetze", "konjunktionen-position-null", "perfekt-plusquamperfekt"],
     dz: "1) Fehleranalyse: Schau dir deinen Bericht zur Kontrollarbeit an. Wähle drei Aufgaben aus verschiedenen Übungen, bei denen du einen Fehler gemacht hast oder unsicher warst, und schreib sie richtig ins Heft – jeweils mit einer kurzen Regel auf Ukrainisch (z. B. „angehören + Dativ: Ich gehöre keiner Szene an.“). Hattest du keine Fehler? Dann wähle die drei Aufgaben, die für dich am schwierigsten waren. 2) Eine Seite für unseren Klassen-Modekatalog „Jugendszenen“: Wähle eine Jugendszene aus dem Modul (z. B. Goths, Punks, Skater, Cosplayer, Hip-Hopper, Traceure) oder die Pfadfinder. Zeichne ein typisches Outfit oder klebe ein Bild ein und beschrifte mindestens fünf Kleidungsstücke und Accessoires mit Artikel und Adjektiv (z. B. der schwarze Mantel, die bunten Haare, das karierte Halstuch). Schreib darunter drei Sätze: einen Satz mit „tragen“ und Adjektiven im Akkusativ (z. B. „Punks tragen oft eine alte Lederjacke.“), einen Vergleich mit „als“ (z. B. „Ihre Kleidung ist auffälliger als …“) und einen Satz mit „weil“ oder „denn“ (Warum tragen sie das?). Nächstes Mal binden wir eure Seiten zu einem Katalog zusammen und raten: Welche Szene ist das?"
+  },
+  {
+    klas: "9",
+    modul: "B",
+    lektion: 15,
+    nazva: "Gemeinsame Interessen: Jugendherbergen",
+    opys: "Спільні інтереси: дізнаємося, що таке Jugendherberge, слухаємо розповідь про молодіжні хостели в Німеччині — від ідеї вчителя Ріхарда Ширрмана до найбільшого хостелу на острові Боркум і найменшого в старій вежі — та доповнюємо речення (wegen der günstigen Preise, die größte / die kleinste), сортуємо переваги й недоліки, висловлюємо думку (Meiner Meinung nach …, weil …) та описуємо власну Jugendherberge: Lage, Ausstattung, Freizeitangebot.",
+    file: "klas-9/modul-b/lektion-15.html",
+    nove: true,
+    gram: ["praep-genitiv", "komparation", "kausalsaetze", "verben-dass-infinitiv"],
+    hook: "fakt",
+    dz: "Online-Bewertung „Unsere Nacht in der Jugendherberge“: Stell dir vor, du hast mit deiner Klasse zwei Nächte in einer Jugendherberge verbracht – in der Herberge aus deinem Text in Üb. 4, im „Karpatenstern“ oder in der Jugendherberge „Am Wattenmeer“ auf Borkum. 1) Schreib eine Bewertung für eine Reise-Website (7–8 Sätze) im Perfekt: Wann und mit wem warst du dort? Wie waren die Zimmer und die Ausstattung? Was habt ihr in der Freizeit gemacht? 2) Nenne mindestens zwei Vorteile und einen Nachteil – mit „Zu den Vorteilen gehört …“ und „Meiner Meinung nach gibt es auch Nachteile wie …“. 3) Benutze einen Satz mit „weil“ und mindestens vier Wörter aus der Stunde (z. B. die Unterkunft, die Lage, die Ausstattung, das Freizeitangebot, günstig, im Durchschnitt). 4) Gib der Herberge 1 bis 5 Sterne (★) und schreib zum Schluss: Kannst du die Herberge empfehlen? Nächstes Mal lesen wir die Bewertungen vor und wählen zusammen die beste Jugendherberge für unsere Klassenfahrt."
   }
 ];

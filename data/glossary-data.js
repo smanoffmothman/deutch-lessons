@@ -1273,5 +1273,17 @@ const GLOSSARY = [
   {de: "das Selbstvertrauen", uk: "впевненість у собі", klas: "9", modul: "B", lektion: 14},
   {de: "die Freiheit", uk: "свобода", klas: "9", modul: "B", lektion: 14},
   {de: "der Skatepark (die Skateparks)", uk: "скейтпарк", klas: "9", modul: "B", lektion: 14},
-  {de: "das Kleidungsstück (die Kleidungsstücke)", uk: "предмет одягу, річ", klas: "9", modul: "B", lektion: 14}
+  {de: "das Kleidungsstück (die Kleidungsstücke)", uk: "предмет одягу, річ", klas: "9", modul: "B", lektion: 14},
+  {de: "die Jugendherberge (die Jugendherbergen)", uk: "молодіжний хостел, молодіжна турбаза", klas: "9", modul: "B", lektion: 15},
+  {de: "die Unterkunft (die Unterkünfte)", uk: "житло, місце для ночівлі", klas: "9", modul: "B", lektion: 15},
+  {de: "die Wanderung (die Wanderungen)", uk: "похід, піша мандрівка", klas: "9", modul: "B", lektion: 15},
+  {de: "das Gewitter (die Gewitter)", uk: "гроза", klas: "9", modul: "B", lektion: 15},
+  {de: "Schutz suchen (vor einem Gewitter)", uk: "шукати притулку, сховку (від грози)", klas: "9", modul: "B", lektion: 15},
+  {de: "das Netz (ein Netz von Jugendherbergen)", uk: "мережа (мережа молодіжних хостелів)", klas: "9", modul: "B", lektion: 15},
+  {de: "im Durchschnitt", uk: "у середньому", klas: "9", modul: "B", lektion: 15},
+  {de: "die Lage", uk: "розташування, місцезнаходження", klas: "9", modul: "B", lektion: 15},
+  {de: "die Ausstattung", uk: "обладнання, оснащення", klas: "9", modul: "B", lektion: 15},
+  {de: "das Freizeitangebot (die Freizeitangebote)", uk: "пропозиції для дозвілля", klas: "9", modul: "B", lektion: 15},
+  {de: "der Nachteil (die Nachteile)", uk: "недолік", klas: "9", modul: "B", lektion: 15},
+  {de: "ermöglichen (Das ermöglicht Jugendlichen, günstig zu reisen.)", uk: "робити можливим, давати змогу", klas: "9", modul: "B", lektion: 15}
 ];
