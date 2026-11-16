@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 6 · Modul C · Literarische Gattungen</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 8'},
+    {label: 'Урок 6: Literarische Gattungen'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 6 · MODUL C</span>
+        <h1>Literarische Gattungen</h1>
+        <p class="sub">Літературні жанри: дізнаємося, чим фентезі відрізняється від детективу, хто що написав — від Шекспіра до Джоан Роулінг, читаємо короткі анотації до книжок і переказуємо їх простими реченнями.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Gattungen</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Wer hat was geschrieben?</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Buchtitel</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Einfache Sätze</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Mein Buchtipp</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== ПАНЕЛЬ: вступ ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Worum geht es heute?</h2>
+      <div class="card">
+        <p>Krimi, Fantasy oder doch lieber eine Liebesgeschichte? Heute lernen wir die literarischen Gattungen kennen und sagen, worum es in ihnen geht. Wir erfahren, wer was geschrieben hat: Agatha Christie, die Brüder Grimm, Goethe, Shakespeare … Dann lesen wir kurze Inhaltsangaben von Jugendbüchern, finden die passenden Titel und erzählen die Texte mit einfachen Sätzen nach.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Детектив, фентезі чи, може, краще історія про кохання? Сьогодні знайомимося з літературними жанрами й розповідаємо, про що в них ідеться. Дізнаємося, хто що написав: Агата Крісті, брати Грімм, Ґете, Шекспір … Потім читаємо короткі анотації до книжок для підлітків, добираємо до них назви й переказуємо тексти простими реченнями.
+        </div>
+      </div>
+
+      <div id="hook"></div>
+
+      <div id="lz-start"></div>
+
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Ich glaube, die Bücher heute können recht spannend sein! 🐶📚</p>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: перевірка домашнього завдання (dz уроку 8-C-5) ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: пост «Моя книжкова полиця» — фото чи малюнок полиці й 5–6 речень для соцмереж: що стоїть на полиці (щонайменше п'ять слів з уроку в множині), що читаєш охоче, а що ні й чому; під постом — прислів'я з Üb. 1 і одне речення, чому воно тобі пасує.
+      </div>
+
+      <div id="dz-check">
+        <div class="card" style="margin-top:18px;">
+          <p class="section-label" style="margin:0 0 6px;">Teil A · Tims Post</p>
+          <p class="lead">Тім теж написав пост, але поспішав. Натисни на слово з помилкою й напиши правильну форму. Якщо речення правильне — натисни «Fehlerfrei». Потім так само перевір свій пост: множина (<b>die Krimis, die Zeitschriften</b>) і Akkusativ після <b>lesen, kaufen, haben</b> (<b>einen</b> Roman).</p>
+          <div id="hw-fix"></div>
+        </div>
+
+        <div class="card tinted-teal">
+          <p class="section-label" style="margin:0 0 6px;">Teil B · Bücherregal-Galerie</p>
+          <p style="margin:0;">Hängt eure Posts auf (ohne Namen!). Lest sie und ratet: Wem gehört dieses Regal? <em>„Ich glaube, das ist Olgas Regal, denn sie liest gern Fantasy.“</em></p>
+          <div class="ua-note">
+            <span class="ua-label">🇺🇦 У класі</span>
+            Розвісьте пости без підписів, прочитайте й угадуйте, чия це полиця. Якщо працюєш удома — прочитай свій пост уголос і додай одне речення: яку книжку з полиці ти порадив(-ла) б другові й чому.
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="dz-vocab-wrap" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">Wörter-Check</p>
+        <p class="lead">Перевір слова з минулих уроків.</p>
+        <div id="dz-vocab"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: Literarische Gattungen ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Welche literarischen Gattungen sind das?</h2>
+      <p class="lead">A) Прочитай визначення й встав назву жанру. Дві картки зайві.</p>
+      <div class="card" id="ub1-bank"></div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Підказка</span>
+        <b>schauderhaft</b> — моторошний; <b>Angst und Schrecken hervorrufen</b> — викликати страх і жах; <b>das Verbrechen</b> — злочин; <b>der Detektiv</b> — детектив (людина, яка розслідує); <b>ungewöhnlich</b> — незвичайний; <b>darstellen</b> — зображати. Зверни увагу: <b>der Krimi</b> — це книжка чи фільм, а <b>der Detektiv</b> — людина!
+      </div>
+
+      <p class="lead" style="margin-top:20px;">B) Що це за жанр? Подивись на емодзі й обери.</p>
+      <div class="card" id="ub1-pic"></div>
+    </section>
+
+    <!-- ===== Üb. 2: Wer hat was geschrieben? ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Wer hat was geschrieben?</h2>
+      <p class="lead">A) Хто це і що він/вона написав(-ла)? Розклади картки: до кожного автора — по одній картці «хто це» і «що написав».</p>
+      <div class="card" id="ub2-sort"></div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Запам'ятай</span>
+        Прикметник після <b>ein / eine</b> у Nominativ: <b>ein</b> berühmt<b>er</b> deutsch<b>er</b> Dichter (der), <b>eine</b> berühmt<b>e</b> englisch<b>e</b> Schriftstellerin (die). У множині без артикля: berühmt<b>e</b> deutsch<b>e</b> Märchensammler. Жінка-письменниця — <b>die Schriftstellerin</b>, чоловік — <b>der Schriftsteller</b>.
+      </div>
+
+      <p class="lead" style="margin-top:20px;">B) Max перевіряє, що ти знаєш про письменників. Обирай правильні відповіді.</p>
+      <div class="card" id="ub2-chat"></div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Und jetzt ihr!</p>
+        <p style="margin:0;"><b>A:</b> <em>Was hat Agatha Christie geschrieben? Weißt du?</em><br><b>B:</b> <em>Natürlich weiß ich das. Agatha Christie ist eine berühmte englische Schriftstellerin. Sie hat viele Krimis geschrieben.</em></p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Усно</span>
+          Складіть у парах такі ж діалоги про інших авторів із вправи А. Додайте одного українського письменника: <em>„Lesja Ukrajinka ist eine berühmte ukrainische Dichterin. Sie hat Gedichte und Dramen geschrieben.“</em> Удома — запитай і відповідай уголос за обох.
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: Buchtitel und Inhaltsangaben ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Welcher Titel passt?</h2>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Vor dem Lesen: Was vermutest du?</p>
+        <p style="margin:0 0 6px;"><b>1.</b> Ausreißer &nbsp; <b>2.</b> Hund Müller &nbsp; <b>3.</b> Löwenzahnwein &nbsp; <b>4.</b> Rubinrot – Liebe geht durch alle Zeiten</p>
+        <p style="margin:0;"><em>„Ich glaube, in diesem Buch geht es um … Meiner Meinung nach ist das ein Krimi / eine Abenteuergeschichte / …“</em></p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Усно</span>
+          Прочитай назви книжок і припусти, про що вони і який це жанр. <b>der Ausreißer</b> — утікач, той, хто відірвався (напр. від групи у велоперегонах); <b>der Löwenzahn</b> — кульбаба; <b>der Wein</b> — вино; <b>rubinrot</b> — рубіново-червоний. А тепер прочитай анотації — чи вгадав(-ла)?
+        </div>
+      </div>
+
+      <p class="lead" style="margin-top:20px;">A) Прочитай чотири анотації.</p>
+      <div class="mail-window">
+        <div class="mail-titlebar">📕 Text A</div>
+        <div class="mail-body">
+          <p style="margin:0;">Gwendolyn ist sechzehn und lebt in London. In ihrer Familie warten alle darauf, dass ihre Cousine Charlotte eine Zeitreise macht. Charlotte hat sich lange darauf vorbereitet. Aber plötzlich landet Gwen selbst in der Vergangenheit! Jetzt muss sie zusammen mit Gideon, einem sehr attraktiven jungen Mann, eine gefährliche Aufgabe erledigen. Ein lustiges und romantisches Buch. <i>Von Kerstin Gier</i></p>
+        </div>
+      </div>
+      <div class="mail-window">
+        <div class="mail-titlebar">📗 Text B</div>
+        <div class="mail-body">
+          <p style="margin:0;">Helmut hat einen Ferienjob: Er geht mit einem Hund spazieren. Das findet er zuerst langweilig. Aber dieser Hund ist kein normaler Hund: Er findet immer Geld auf der Straße und läuft schneller als ein Marathonläufer. Und man darf nicht „du“ zu ihm sagen! Bald gerät Helmut in eine gefährliche Verfolgungsjagd – und der Hund hilft ihm. Eine lustige Geschichte. <i>Von Hilke Rosenboom</i></p>
+        </div>
+      </div>
+      <div class="mail-window">
+        <div class="mail-titlebar">📘 Text C</div>
+        <div class="mail-body">
+          <p style="margin:0;">Michael, Jabali, Linh, Ilka und Lennart sind echte Freunde. Sie nennen sich „die Fünf Asse“ und lieben Sport. Bei einem Radrennen zeigt Jabali sehr gute Resultate, und ein Trainer lädt ihn in ein richtiges Team ein. Plötzlich hat Jabali keine Zeit mehr für seine Freunde. Dann finden sie Tabletten bei ihm … Ein spannender Roman über Freundschaft und Radsport. <i>Von Andreas Schlüter und Irene Margil</i></p>
+        </div>
+      </div>
+      <div class="mail-window">
+        <div class="mail-titlebar">📙 Text D</div>
+        <div class="mail-body">
+          <p style="margin:0;">Douglas Spaulding ist zwölf und wohnt in Green Town, Illinois. Es ist Sommer, und Douglas erlebt viel: Er bekommt neue Turnschuhe und läuft schnell wie eine Gazelle. Er trifft einen alten Mann, der wie eine „Zeitmaschine“ ist – er erzählt Geschichten von früher. Und jeden Sommer macht der Opa Wein aus Löwenzahn. Ein Roman über Kindheit, Erinnerungen und Träume. <i>Von Ray Bradbury</i></p>
+        </div>
+      </div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Підказка</span>
+        <b>die Inhaltsangabe</b> — анотація, короткий зміст; <b>die Hauptfigur</b> — головний герой; <b>die Zeitreise</b> — подорож у часі; <b>die Vergangenheit</b> — минуле; <b>die Verfolgungsjagd</b> — погоня; <b>das Radrennen</b> — велоперегони; <b>die Kindheit</b> — дитинство; <b>die Erinnerung</b> — спогад. Тексти — короткий переказ книжок, які є в підручнику.
+      </div>
+
+      <p class="lead" style="margin-top:20px;">B) Який заголовок пасує до якого тексту?</p>
+      <div id="ub3-titel"></div>
+
+      <p class="lead" style="margin-top:20px;">C) Richtig oder falsch?</p>
+      <div id="ub3-rf"></div>
+    </section>
+
+    <!-- ===== Üb. 4: Mit einfachen Sätzen nacherzählen ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Erzähl mit einfachen Sätzen nach</h2>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">So geht's</p>
+        <p style="margin:0 0 6px;">Die Hauptfigur ist ein Hund, <b>der</b> immer Geld findet.<br>→ Die Hauptfigur ist ein Hund. <b>Er</b> findet immer Geld.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Запам'ятай</span>
+          У книжках часто трапляються довгі речення з <b>der, die, das</b> після коми — вони пояснюють слово перед комою (це <b>означальні підрядні речення</b>, детально — пізніше). Щоб переказати простіше, розбий речення на два: замість <b>der</b> → <b>er</b>, <b>die</b> → <b>sie</b>, <b>das</b> → <b>es</b>, <b>die</b> (множина) → <b>sie</b>. Дієслово тоді стоїть знову на другому місці.
+        </div>
+      </div>
+
+      <p class="lead" style="margin-top:20px;">A) Обери, як те саме сказати простими реченнями.</p>
+      <div id="ub4-quiz"></div>
+
+      <p class="lead" style="margin-top:20px;">B) Склади з карток речення для переказу.</p>
+      <div class="card" id="ub4-order"></div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Und jetzt ihr!</p>
+        <p style="margin:0;"><em>„In dem Buch geht es um einen Hund. Er heißt Müller. Er findet immer Geld. Helmut geht mit ihm spazieren …“</em></p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Усно</span>
+          Працюйте в четвірках: кожен обирає один текст з Üb. 3 і переказує його іншим 4–5 простими реченнями. Потім обговоріть, що б ви охоче прочитали. Удома — перекажи вголос два тексти.
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 5: Exit ticket ===== -->
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Was möchtest du gern lesen?</h2>
+      <p class="lead">Яку книжку з Üb. 3 ти хотів(-ла) б прочитати і чому? Напиши 3–4 речення. Вставка тексту вимкнена — набирай сам(а).</p>
+      <div class="card" id="ub5-w"></div>
+    </section>
+
+    <!-- ===== ПРИКІНЦЕВА ПАНЕЛЬ ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div id="lz-check"></div>
+
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Bücher-Rätsel: 1) Wähle ein Buch, das du gelesen hast (oder einen Film nach einem Buch). 2) Schreib eine kurze Inhaltsangabe (5–6 einfache Sätze), aber OHNE Titel und ohne die Namen der Hauptfiguren! Benutze: „In dem Buch geht es um …“, „Die Hauptfigur ist …“, „Das ist ein/eine … (Gattung)“. 3) Schreib noch einen Satz über den Autor / die Autorin, z. B. „Der Autor ist ein bekannter ukrainischer Schriftsteller.“ Nächstes Mal lesen wir die Rätsel vor – die Klasse rät den Titel.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Книжкова загадка: 1) Обери книжку, яку ти прочитав(-ла) (або фільм за книжкою). 2) Напиши коротку анотацію (5–6 простих речень), але БЕЗ назви й без імен головних героїв! Вживай: «In dem Buch geht es um …», «Die Hauptfigur ist …», «Das ist ein/eine … (жанр)». 3) Додай ще одне речення про автора чи авторку, напр. «Der Autor ist ein bekannter ukrainischer Schriftsteller.» Наступного уроку прочитаємо загадки вголос — клас угадуватиме назву.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Wörter zum Lernen</p>
+        <div class="chip-row" id="vocabChips"></div>
+      </div>
+
+      <div class="card" id="lessonGramWrap">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="lessonGram"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../data/glossary-data.js"></script>
+<script src="../../../data/lessons-data.js"></script>
+<script src="../../../data/grammar-data.js"></script>
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  const LEKTION_KLAS = "8", LEKTION_MODUL = "C", LEKTION_LEKTION = 6;
+  const LEKTION_PREV_LEKTION = 5;
+
+  // ===== Цілі уроку «Ich kann …» (Start) + самооцінка-світлофор (Fertig!) =====
+  const LERNZIELE = [
+    {de: "Ich kann literarische Gattungen erkennen und sagen, worum es in einem Krimi oder in einer Fantasy geht.", uk: "Я можу розпізнати літературні жанри й сказати, про що йдеться в детективі чи у фентезі."},
+    {de: "Ich kann sagen, wer was geschrieben hat: „Agatha Christie hat viele Krimis geschrieben.“", uk: "Я можу сказати, хто що написав: «Агата Крісті написала багато детективів»."},
+    {de: "Ich kann kurze Inhaltsangaben verstehen und mit einfachen Sätzen nacherzählen.", uk: "Я можу зрозуміти короткі анотації й переказати їх простими реченнями."}
+  ];
+  buildLernziele('lz-start', 'lz-check', LERNZIELE);
+
+  // ===== Хук входу (тип fehler — поле hook у lessons-data.js; граматика з уроку 8-C-5) =====
+  buildHook('hook', {type: 'fehler', items: [
+    {s: "In meinem Regal stehen drei Krimi.", wrong: 5, fix: "Krimis", hint: "множина"},
+    {s: "Meine Schwester hat viele Abenteuerbücher.", ok: true},
+    {s: "Ich lese gerade ein Roman von Goethe.", wrong: 3, fix: "einen", hint: "lesen + Akkusativ"}
+  ]});
+
+  (function renderLessonVocab(){
+    const box = document.getElementById('vocabChips');
+    if (!box || typeof GLOSSARY === 'undefined') return;
+    const words = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_LEKTION
+    );
+    if (words.length === 0){
+      box.innerHTML = '<p class="empty-note">Слова для цього уроку ще не додані в глосарій.</p>';
+      return;
+    }
+    box.innerHTML = words.map(w =>
+      '<span class="chip static">' + w.de + ' — ' + w.uk + '</span>'
+    ).join('');
+  })();
+
+  // ===== Граматика до цього уроку у вкладці Fertig (поле gram у lessons-data.js) =====
+  (function renderLessonGrammar(){
+    const wrap = document.getElementById('lessonGramWrap');
+    const box = document.getElementById('lessonGram');
+    if (!wrap || !box) return;
+    const hide = () => { wrap.style.display = 'none'; };
+    if (typeof LESSONS === 'undefined' || typeof GRAMMAR === 'undefined') return hide();
+    const me = LESSONS.find(l => l.klas === LEKTION_KLAS && l.modul === LEKTION_MODUL && l.lektion === LEKTION_LEKTION);
+    const topics = ((me && me.gram) || []).map(id => GRAMMAR.find(t => t.id === id)).filter(t => t && t.opublikovano > 0);
+    if (topics.length === 0) return hide();
+    const src = document.querySelector('script[src$="data/grammar-data.js"]').getAttribute('src');
+    const root = src.slice(0, src.length - 'data/grammar-data.js'.length);
+    box.innerHTML = topics.map(t =>
+      '<a class="gram-link" href="' + root + 'gramatyka/temy/' + t.id + '.html">'
+      + '<span class="k">' + t.uk + '</span>' + t.tema + '</a>'
+    ).join('');
+  })();
+
+  // ---------- Груба евристика частини мови за виглядом "de" (для пасток у Wörter-Check) ----------
+  function guessPos(de){
+    var base = (de || '').replace(/\([^)]*\)/g, '').trim();
+    if(/^(der|die|das)(\/(der|die|das))?\s/.test(base)) return 'noun';
+    if(/^sich\s/.test(base)) return 'verb';
+    if(/^am\s/.test(base)) return 'other';
+    if(/\(\+(Gen|Dat|Akk)\.?\)/.test(de)) return 'prep';
+    var words = base.split(/\s+/);
+    var last = words[words.length - 1];
+    if(/(en|ern|eln)$/.test(last) && last === last.toLowerCase()) return 'verb';
+    return 'other';
+  }
+
+  // ===== Wörter-Check: до 4 слів попереднього уроку + слова з 2–5 уроків тому =====
+  (function renderDzVocabCheck(){
+    const wrap = document.getElementById('dz-vocab-wrap');
+    const box = document.getElementById('dz-vocab');
+    if (!wrap || !box || typeof GLOSSARY === 'undefined') return;
+    const same = (w, l) => w.klas === l.klas && w.modul === l.modul && w.lektion === l.lektion;
+    const prevWords = LEKTION_PREV_LEKTION ? GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_PREV_LEKTION
+    ) : [];
+    let olderWords = [];
+    if (typeof LESSONS !== 'undefined'){
+      const mine = LESSONS.filter(l => l.klas === LEKTION_KLAS);
+      const idx = mine.findIndex(l => l.modul === LEKTION_MODUL && l.lektion === LEKTION_LEKTION);
+      if (idx > 0){
+        const older = mine.slice(Math.max(0, idx - 5), idx)
+          .filter(l => !(l.modul === LEKTION_MODUL && l.lektion === LEKTION_PREV_LEKTION));
+        olderWords = GLOSSARY.filter(w => older.some(l => same(w, l)));
+      }
+    }
+    const fromPrev = shuffleArray(prevWords).slice(0, olderWords.length ? 4 : 6);
+    const pool = shuffleArray(fromPrev.concat(shuffleArray(olderWords).slice(0, 6 - fromPrev.length)));
+    if (pool.length < 3){ wrap.style.display = 'none'; return; }
+
+    const quizData = pool.map(w => {
+      const pos = guessPos(w.de);
+      let sameKind = GLOSSARY.filter(g => g.uk !== w.uk && guessPos(g.de) === pos);
+      if(sameKind.length < 2) sameKind = GLOSSARY.filter(g => g.uk !== w.uk);
+      const distractors = shuffleArray(sameKind).slice(0, 2).map(g => g.uk);
+      return { q: w.de, opts: [w.uk, ...distractors], correct: w.uk };
+    });
+    buildQuiz('dz-vocab', quizData);
+  })();
+
+
+  // ===== Hausaufgabe, Teil A: Fehler in Tims Post =====
+  buildFixError('hw-fix', [
+    {s: "In meinem Regal stehen viele Comics und zwei Abenteuerbücher.", ok: true},
+    {s: "Am liebsten lese ich Krimi, denn sie sind spannend.", wrong: 4, fix: "Krimis", hint: "множина"},
+    {s: "Ich habe auch drei Zeitschrift über Fußball.", wrong: 4, fix: "Zeitschriften"},
+    {s: "Gedichte lese ich nicht so gern, denn sie sind oft schwer.", ok: true},
+    {s: "Gestern habe ich ein neuen Roman gekauft.", wrong: 3, fix: "einen", hint: "kaufen + Akkusativ"},
+    {s: "Mein Lieblingssprichwort ist: Ein Buch ist wie ein Garten, den man in der Tasche trägt.", ok: true}
+  ]);
+
+  // ===== Üb. 1 A: Gattungen und Definitionen =====
+  buildWordBank('ub1-bank', {
+    text: "1) [Die Fantasy] erzählt etwas Fantastisches, z. B. Geschichten über fantastische Reisen, Menschen und Zauberwelten.\n\n"
+      + "2) [Der historische Roman] beschreibt historische Ereignisse und bekannte Persönlichkeiten.\n\n"
+      + "3) [Die Liebesgeschichte] erzählt über die Liebe.\n\n"
+      + "4) [Die Horrorgeschichte] ist schauderhaft und ruft Angst und Schrecken hervor.\n\n"
+      + "5) [Der Krimi] beschreibt ein Verbrechen und die Arbeit der Detektive.\n\n"
+      + "6) [Die Abenteuergeschichte] stellt ungewöhnliche Ereignisse im Leben einer Person dar, meistens auf einer Reise.\n\n"
+      + "7) [Die Tiergeschichte] beschreibt das Leben der Tiere und ihre Abenteuer.",
+    extra: ["Das Gedicht", "Die Komödie"]
+  });
+
+  // ===== Üb. 1 B: Emodzi → Gattung =====
+  buildPicture('ub1-pic', [
+    {pic: "🕵️🔍", opts: ["der Krimi", "die Tiergeschichte", "die Liebesgeschichte"], correct: "der Krimi"},
+    {pic: "🐉🧙", opts: ["der historische Roman", "die Fantasy", "der Krimi"], correct: "die Fantasy"},
+    {pic: "👻🧛", opts: ["die Abenteuergeschichte", "die Liebesgeschichte", "die Horrorgeschichte"], correct: "die Horrorgeschichte"},
+    {pic: "💌💕", opts: ["die Liebesgeschichte", "die Horrorgeschichte", "die Fantasy"], correct: "die Liebesgeschichte"},
+    {pic: "🏰👑⚔️", opts: ["die Tiergeschichte", "der historische Roman", "die Horrorgeschichte"], correct: "der historische Roman"},
+    {pic: "🐕🐾", opts: ["der Krimi", "die Abenteuergeschichte", "die Tiergeschichte"], correct: "die Tiergeschichte"},
+    {pic: "🗺️⛵🏝️", opts: ["die Abenteuergeschichte", "der Krimi", "die Fantasy"], correct: "die Abenteuergeschichte"}
+  ]);
+
+  // ===== Üb. 2 A: Autoren — wer ist das, was hat er/sie geschrieben? =====
+  buildSort('ub2-sort', {
+    buckets: ["Agatha Christie", "Alexandre Dumas", "die Brüder Grimm", "Joanne Rowling", "Johann Wolfgang von Goethe", "William Shakespeare"],
+    items: [
+      {t: "eine berühmte englische Schriftstellerin", b: "Agatha Christie"},
+      {t: "Krimis", b: "Agatha Christie"},
+      {t: "ein bekannter französischer Schriftsteller", b: "Alexandre Dumas"},
+      {t: "historische und Abenteuerromane", b: "Alexandre Dumas"},
+      {t: "berühmte deutsche Märchensammler", b: "die Brüder Grimm"},
+      {t: "Märchen", b: "die Brüder Grimm"},
+      {t: "eine populäre englische Schriftstellerin", b: "Joanne Rowling"},
+      {t: "eine Fantasy-Reihe über junge Zauberer und eine Zauberschule", b: "Joanne Rowling"},
+      {t: "ein berühmter deutscher Dichter", b: "Johann Wolfgang von Goethe"},
+      {t: "Gedichte, Dramen, Novellen und Romane", b: "Johann Wolfgang von Goethe"},
+      {t: "ein bekannter englischer Dramatiker", b: "William Shakespeare"},
+      {t: "Komödien und Tragödien", b: "William Shakespeare"}
+    ]
+  });
+
+  // ===== Üb. 2 B: Dialog mit Max =====
+  buildChat('ub2-chat', {partner: "Max", steps: [
+    {them: "Hallo! Wer war Alexandre Dumas? Weißt du das?"},
+    {you: ["Er war eine populäre englische Schriftstellerin.",
+           "Natürlich! Er war ein bekannter französischer Schriftsteller. Er hat historische und Abenteuerromane geschrieben.",
+           "Er hat viele Märchen gesammelt."], correct: 1},
+    {them: "Richtig! Und was hat Joanne Rowling geschrieben?"},
+    {you: ["Sie hat eine Fantasy-Reihe über junge Zauberer und eine Zauberschule geschrieben.",
+           "Sie hat Komödien und Tragödien geschrieben.",
+           "Sie ist ein berühmter deutscher Dichter."], correct: 0},
+    {them: "Super. Hat Shakespeare auch Romane geschrieben?"},
+    {you: ["Ja, er hat viele Krimis geschrieben.",
+           "Nein, er hat nur Märchen gesammelt.",
+           "Nein, er war ein bekannter englischer Dramatiker. Er hat Komödien und Tragödien geschrieben."], correct: 2},
+    {them: "Wer hat die Märchen „Hänsel und Gretel“ und „Rotkäppchen“ gesammelt?"},
+    {you: ["Goethe, ein berühmter deutscher Dichter.",
+           "Die Brüder Grimm. Sie sind berühmte deutsche Märchensammler.",
+           "Agatha Christie."], correct: 1},
+    {them: "Stimmt! Und was hat Goethe geschrieben?"},
+    {you: ["Gedichte, Dramen, Novellen und Romane.",
+           "Nur Krimis.",
+           "Eine Fantasy-Reihe."], correct: 0, hint: "Він писав у багатьох жанрах"},
+    {them: "Du kennst dich aber gut aus! 👏"}
+  ]});
+
+  // ===== Üb. 3 B: Welcher Titel passt? =====
+  buildQuiz('ub3-titel', [
+    {q: "Text A (Gwen und Gideon)", opts: ["Ausreißer", "Hund Müller", "Rubinrot – Liebe geht durch alle Zeiten", "Löwenzahnwein"], correct: "Rubinrot – Liebe geht durch alle Zeiten"},
+    {q: "Text B (Helmut und sein Ferienjob)", opts: ["Hund Müller", "Löwenzahnwein", "Ausreißer", "Rubinrot – Liebe geht durch alle Zeiten"], correct: "Hund Müller"},
+    {q: "Text C (die Fünf Asse)", opts: ["Löwenzahnwein", "Ausreißer", "Hund Müller", "Rubinrot – Liebe geht durch alle Zeiten"], correct: "Ausreißer"},
+    {q: "Text D (Douglas in Green Town)", opts: ["Rubinrot – Liebe geht durch alle Zeiten", "Ausreißer", "Hund Müller", "Löwenzahnwein"], correct: "Löwenzahnwein"}
+  ]);
+
+  // ===== Üb. 3 C: Richtig oder falsch? =====
+  buildQuiz('ub3-rf', [
+    {q: "Gwen hat sich lange auf eine Zeitreise vorbereitet.", opts: ["richtig", "falsch"], correct: "falsch"},
+    {q: "Helmut findet den Ferienjob zuerst langweilig.", opts: ["richtig", "falsch"], correct: "richtig"},
+    {q: "Hund Müller läuft langsamer als ein Marathonläufer.", opts: ["falsch", "richtig"], correct: "falsch"},
+    {q: "Ein Trainer lädt Jabali in ein Radteam ein.", opts: ["falsch", "richtig"], correct: "richtig"},
+    {q: "Die Freunde finden bei Jabali viel Geld.", opts: ["richtig", "falsch"], correct: "falsch"},
+    {q: "Der Opa von Douglas macht Wein aus Löwenzahn.", opts: ["falsch", "richtig"], correct: "richtig"}
+  ]);
+
+  // ===== Üb. 4 A: Lange Sätze → einfache Sätze =====
+  buildQuiz('ub4-quiz', [
+    {q: "Die Hauptfigur ist ein Hund, der immer Geld findet.",
+     opts: ["Die Hauptfigur ist ein Hund. Sie findet immer Geld.", "Die Hauptfigur ist ein Hund. Er findet immer Geld.", "Die Hauptfigur ist ein Hund. Es findet immer Geld."],
+     correct: "Die Hauptfigur ist ein Hund. Er findet immer Geld."},
+    {q: "Das ist eine Geschichte, die die Leser richtig verzaubern kann.",
+     opts: ["Das ist eine Geschichte. Sie kann die Leser richtig verzaubern.", "Das ist eine Geschichte. Er kann die Leser richtig verzaubern.", "Das ist eine Geschichte. Die Leser können sie nicht lesen."],
+     correct: "Das ist eine Geschichte. Sie kann die Leser richtig verzaubern."},
+    {q: "Die fünf Freunde, die echte Sportler sind, gehen auf die gleiche Schule.",
+     opts: ["Die fünf Freunde gehen auf die gleiche Schule. Er ist ein echter Sportler.", "Die fünf Freunde gehen auf die gleiche Schule. Es ist ein Sportler.", "Die fünf Freunde gehen auf die gleiche Schule. Sie sind echte Sportler."],
+     correct: "Die fünf Freunde gehen auf die gleiche Schule. Sie sind echte Sportler."},
+    {q: "Douglas bekommt Turnschuhe, in denen man schnell wie eine Gazelle laufen kann.",
+     opts: ["Douglas bekommt Turnschuhe. Mit ihnen kann man schnell wie eine Gazelle laufen.", "Douglas bekommt Turnschuhe. Die Gazelle bekommt auch Turnschuhe.", "Douglas bekommt Turnschuhe. Er kann nicht schnell laufen."],
+     correct: "Douglas bekommt Turnschuhe. Mit ihnen kann man schnell wie eine Gazelle laufen."},
+    {q: "Das ist ein Roman, der Kindheitserinnerungen beschreibt.",
+     opts: ["Das ist ein Roman. Sie beschreibt Kindheitserinnerungen.", "Das ist ein Roman. Er beschreibt Kindheitserinnerungen.", "Das ist ein Roman. Es beschreibt Kindheitserinnerungen."],
+     correct: "Das ist ein Roman. Er beschreibt Kindheitserinnerungen."},
+    {q: "Jabali hat ein Hobby, das viel Zeit kostet.",
+     opts: ["Jabali hat ein Hobby. Es kostet viel Zeit.", "Jabali hat ein Hobby. Er kostet viel Zeit.", "Jabali hat ein Hobby. Sie kostet viel Zeit."],
+     correct: "Jabali hat ein Hobby. Es kostet viel Zeit."}
+  ]);
+
+  // ===== Üb. 4 B: Sätze für die Nacherzählung =====
+  buildOrder('ub4-order', [
+    {words: ["in dem Buch", "geht", "es", "um", "einen Hund"], end: ".", alt: ["es geht in dem Buch um einen Hund"]},
+    {words: ["Gwen", "landet", "plötzlich", "in der Vergangenheit"], end: ".", gross: true, alt: ["plötzlich landet Gwen in der Vergangenheit"]},
+    {words: ["Jabali", "hat", "keine Zeit", "für seine Freunde"], end: ".", gross: true},
+    {words: ["jeden Sommer", "macht", "der Opa", "Wein aus Löwenzahn"], end: ".", alt: ["der Opa macht jeden Sommer Wein aus Löwenzahn"]},
+    {words: ["meiner Meinung nach", "ist", "das Buch", "sehr spannend"], end: ".", alt: ["das Buch ist meiner Meinung nach sehr spannend"]}
+  ]);
+
+  // ===== Üb. 5: Exit ticket =====
+  buildWriting('ub5-w', {
+    prompt: "Welches Buch aus Üb. 3 möchtest du lesen? Warum? (3–4 Sätze)",
+    words: "20-45",
+    must: ["Ich möchte", "denn", "Es geht um/In dem Buch geht es um"],
+    check: ["Назва книжки й жанр", "Чому саме ця книжка (denn …)"],
+    rows: 5
+  });
+
+  // Фінальна панель зі штампами
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📚','✍️','📖','💬','📝']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>

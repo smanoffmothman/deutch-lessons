@@ -1249,5 +1249,17 @@ const GLOSSARY = [
   {de: "fressen (Bücher fressen)", uk: "жерти (про тварин); жадібно ковтати (книжки)", klas: "8", modul: "C", lektion: 5},
   {de: "kauen", uk: "жувати", klas: "8", modul: "C", lektion: 5},
   {de: "entbehren", uk: "обходитися без чогось, не мати", klas: "8", modul: "C", lektion: 5},
-  {de: "lehren", uk: "навчати (когось чогось)", klas: "8", modul: "C", lektion: 5}
+  {de: "lehren", uk: "навчати (когось чогось)", klas: "8", modul: "C", lektion: 5},
+  {de: "die Abenteuergeschichte (die Abenteuergeschichten)", uk: "пригодницька історія, пригодницьке оповідання", klas: "8", modul: "C", lektion: 6},
+  {de: "die Fantasy", uk: "фентезі (жанр)", klas: "8", modul: "C", lektion: 6},
+  {de: "der historische Roman (die historischen Romane)", uk: "історичний роман", klas: "8", modul: "C", lektion: 6},
+  {de: "die Horrorgeschichte (die Horrorgeschichten)", uk: "історія жахів, страшна історія", klas: "8", modul: "C", lektion: 6},
+  {de: "die Liebesgeschichte (die Liebesgeschichten)", uk: "історія про кохання", klas: "8", modul: "C", lektion: 6},
+  {de: "die Tiergeschichte (die Tiergeschichten)", uk: "оповідання про тварин", klas: "8", modul: "C", lektion: 6},
+  {de: "der Schriftsteller / die Schriftstellerin", uk: "письменник / письменниця", klas: "8", modul: "C", lektion: 6},
+  {de: "der Dichter (die Dichter)", uk: "поет, письменник", klas: "8", modul: "C", lektion: 6},
+  {de: "die Tragödie (die Tragödien)", uk: "трагедія", klas: "8", modul: "C", lektion: 6},
+  {de: "das Märchen (die Märchen)", uk: "казка", klas: "8", modul: "C", lektion: 6},
+  {de: "die Hauptfigur (die Hauptfiguren)", uk: "головний герой, головна героїня", klas: "8", modul: "C", lektion: 6},
+  {de: "das Verbrechen (die Verbrechen)", uk: "злочин", klas: "8", modul: "C", lektion: 6}
 ];

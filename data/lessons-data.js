@@ -1160,5 +1160,17 @@ const LESSONS = [
     gram: ["deklination-nomen"],
     hook: "prognose",
     dz: "Post „Mein Bücherregal“: 1) Fotografiere oder zeichne dein Bücherregal (oder das Regal deiner Familie). 2) Schreib dazu einen Post für soziale Netzwerke (5–6 Sätze): Was steht in deinem Regal? Benutze mindestens fünf Wörter aus der Stunde im Plural (z. B. „In meinem Regal stehen drei Krimis, viele Comics und zwei Abenteuerbücher.“). Was liest du gern, was nicht so gern – und warum? 3) Wähle ein Sprichwort aus Üb. 1, schreib es unter deinen Post und erkläre in einem Satz, warum es zu dir passt. Nächstes Mal machen wir eine „Bücherregal-Galerie“: Wir raten, wem welches Regal gehört."
+    },
+  {
+    klas: "8",
+    modul: "C",
+    lektion: 6,
+    nazva: "Literarische Gattungen",
+    opys: "Літературні жанри: підбираємо назви до визначень (die Fantasy, der historische Roman, der Krimi, die Horrorgeschichte, die Tiergeschichte), з'ясовуємо, хто що написав — від Агати Крісті й братів Грімм до Ґете й Шекспіра, читаємо анотації до книжок для підлітків, добираємо назви й переказуємо тексти простими реченнями.",
+    file: "klas-8/modul-c/lektion-6.html",
+    nove: true,
+    gram: ["relativsaetze", "adjektivdeklination"],
+    hook: "fehler",
+    dz: "Bücher-Rätsel: 1) Wähle ein Buch, das du gelesen hast (oder einen Film nach einem Buch). 2) Schreib eine kurze Inhaltsangabe (5–6 einfache Sätze), aber OHNE Titel und ohne die Namen der Hauptfiguren! Benutze: „In dem Buch geht es um …“, „Die Hauptfigur ist …“, „Das ist ein/eine … (Gattung)“. 3) Schreib noch einen Satz über den Autor / die Autorin, z. B. „Der Autor ist ein bekannter ukrainischer Schriftsteller.“ Nächstes Mal lesen wir die Rätsel vor – die Klasse rät den Titel."
   }
 ];
