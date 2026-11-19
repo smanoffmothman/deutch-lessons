@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hausaufgaben: abschaffen oder behalten? · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Arbeit &amp; Schule</span>
+        <h1>Hausaufgaben: abschaffen oder behalten?</h1>
+        <p class="sub">Дослідник освіти вважає домашні завдання несправедливими, директор школи — необхідними. А на чиєму боці ти?</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Wer sagt das?</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Deine Meinung</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Hausaufgaben – ja oder nein?</h2>
+      <div class="card">
+        <p>Wie viel Zeit brauchst du pro Tag für Hausaufgaben? Hilft dir jemand dabei? Was würde sich ändern, wenn es keine Hausaufgaben mehr gäbe?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай (або обговоріть у парі): навіщо взагалі задають домашні завдання? Кому вони допомагають найбільше — а кому, можливо, навпаки шкодять? І чи змінив щось у домашніх завданнях штучний інтелект?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">In fast allen deutschen Schulen gehören Hausaufgaben zum Alltag. Doch sind sie <span class="gl" data-uk="розумний, доцільний" data-lemma="sinnvoll">sinnvoll</span> – oder sogar <span class="gl" data-key data-uk="несправедливий" data-lemma="ungerecht">ungerecht</span>? Ein Bildungsforscher und ein Schulleiter kommen zu ganz unterschiedlichen Antworten.</p>
+
+          <h3>Dagegen: Leonard Tetzlaff</h3>
+          <p>Leonard Tetzlaff forscht am Leibniz-Institut für Bildungsforschung und Bildungsinformation. Ihn stört, dass in Deutschland kaum jemand fragt, ob Hausaufgaben überhaupt etwas bringen. Studien zu ihrer <span class="gl" data-uk="дієвість, ефективність" data-lemma="die Wirkung, -en">Wirkung</span> zeigten nämlich ein viel weniger klares Bild, als viele glauben. Sein wichtigstes Argument: Hausaufgaben helfen oft den falschen Kindern. Wer zusätzliche Übung am dringendsten bräuchte, mache die Aufgaben häufig nicht – weil die Motivation fehle oder weil sie zu schwer seien. Wer sie dagegen <span class="gl" data-uk="регулярно" data-lemma="regelmäßig">regelmäßig</span> <span class="gl" data-uk="виконувати" data-lemma="erledigen">erledige</span>, verstehe den Stoff meistens auch ohne sie.</p>
+
+          <p><span class="gl" data-uk="мати користь, вигравати" data-lemma="profitieren">Profitieren</span> würden vor allem Kinder aus Familien mit hohem <span class="gl" data-uk="соціально-економічний" data-lemma="sozioökonomisch">sozioökonomischem</span> Status, denn dort könnten die Eltern bei Bedarf helfen. Für Tetzlaff sind Hausaufgaben deshalb einer der Hauptgründe dafür, dass das <span class="gl" data-key data-uk="система освіти" data-lemma="das Bildungssystem, -e">Bildungssystem</span> gerade in Deutschland so ungerecht ist. Dazu kommen die Gefühle: Wer seine Aufgaben vergessen oder wegen Stress nicht geschafft hat, <span class="gl" data-uk="соромитися" data-lemma="sich schämen">schämt sich</span> oder hat Angst. So verbinde man den Unterricht mit etwas Negativem – und das könne indirekt zu schlechteren Leistungen und mehr <span class="gl" data-uk="пропуск (занять)" data-lemma="die Fehlzeit, -en">Fehlzeiten</span> führen.</p>
+
+          <p>Ein neues Problem sieht der Forscher in KI-Sprachmodellen wie ChatGPT. Lehrkräfte <span class="gl" data-uk="створювати" data-lemma="erstellen">erstellen</span> damit Aufgaben, Schülerinnen und Schüler lösen sie damit, und am Ende korrigieren die Lehrkräfte sie wieder mit KI. Gelernt habe dabei niemand etwas. Natürlich müsse man genau hinschauen, meint Tetzlaff. Aber <span class="gl" data-uk="загалом, в цілому" data-lemma="im Großen und Ganzen">im Großen und Ganzen</span> schadeten Hausaufgaben mehr, als sie nützten – besonders jüngeren Kindern.</p>
+
+          <h3>Dafür: Stefan Düll</h3>
+          <p>Ganz anders sieht das Stefan Düll. Er ist Präsident des Deutschen Lehrerverbands und leitet eine Schule in der Nähe von Augsburg. Für ihn sind Hausaufgaben ein wichtiges pädagogisches <span class="gl" data-uk="інструмент" data-lemma="das Werkzeug, -e">Werkzeug</span>: Was im Unterricht neu war, sollen die Jugendlichen zu Hause allein <span class="gl" data-uk="застосовувати" data-lemma="anwenden (wandte an, hat angewandt)">anwenden</span>. Gerade diese <span class="gl" data-key data-uk="самостійність" data-lemma="die Selbstständigkeit">Selbstständigkeit</span> hält er für zentral. So lernten junge Menschen Schritt für Schritt, <span class="gl" data-key data-uk="брати на себе відповідальність" data-lemma="Verantwortung übernehmen">Verantwortung zu übernehmen</span>, ihren Tag zu planen und Aufgaben ohne Hilfe zu lösen.</p>
+
+          <p>Gute Hausaufgaben sollen nach Düll das Wissen <span class="gl" data-uk="поглиблювати" data-lemma="vertiefen">vertiefen</span> und <span class="gl" data-uk="відчуття успіху" data-lemma="das Erfolgserlebnis, -se">Erfolgserlebnisse</span> bringen. Und wenn ein Kind eine Aufgabe nicht schafft? Dann müsse es sich mehr <span class="gl" data-uk="докладати зусиль" data-lemma="sich anstrengen">anstrengen</span> oder mit der <span class="gl" data-key data-uk="учитель, учителька" data-lemma="die Lehrkraft, -ä-e">Lehrkraft</span> sprechen. Genau so bekomme die Lehrkraft eine wichtige <span class="gl" data-uk="зворотний зв'язок" data-lemma="die Rückmeldung, -en">Rückmeldung</span>: Sie sehe, was die Klasse noch nicht verstanden hat.</p>
+
+          <p>Auch die künstliche Intelligenz ist für Düll kein Grund, Hausaufgaben <span class="gl" data-key data-uk="скасовувати" data-lemma="abschaffen">abzuschaffen</span> – im Gegenteil. Vokabeln für eine Fremdsprache müsse man selbst lernen, das könne kein Chatbot übernehmen. Und ob ein Text von einer KI wirklich überzeugt, könne nur <span class="gl" data-uk="оцінювати" data-lemma="beurteilen">beurteilen</span>, wer selbst Übung im Schreiben hat und Informationen prüfen kann. Außerdem bräuchte mehr Übung in der Schule mehr Räume, Personal und Zeit – und davon gebe es zu wenig. Einen <span class="gl" data-uk="обов'язковий" data-lemma="verpflichtend">verpflichtenden</span> <span class="gl" data-uk="школа повного дня" data-note="кор. від Ganztagsschule / Ganztagsunterricht" data-lemma="der Ganztag">Ganztag</span> für alle lehnt er ab: Familien sollten selbst entscheiden, wie sie ihren Tag gestalten.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>In Deutschland ist Schule Sache der 16 Bundesländer. Deshalb beginnen und enden die Schuljahre zu unterschiedlichen Zeiten, und auch die Regeln für Hausaufgaben sind nicht überall gleich. Traditionell endet der Unterricht in vielen Schulen schon mittags. In einer <b>Ganztagsschule</b> bleiben die Kinder bis zum Nachmittag – mit Essen, Hausaufgabenhilfe und Freizeitangeboten.</p>
+          </aside>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Offene_Ganztagsschule_Buschfeldstra%C3%9Fe%2C_K%C3%B6ln-Holweide_-_6953.jpg/960px-Offene_Ganztagsschule_Buschfeldstra%C3%9Fe%2C_K%C3%B6ln-Holweide_-_6953.jpg" alt="Eine offene Ganztagsschule in Köln." width="960" height="511" loading="lazy">
+            <figcaption>Eine offene Ganztagsschule in Köln. Foto: Elke Wetzig, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Offene_Ganztagsschule_Buschfeldstra%C3%9Fe,_K%C3%B6ln-Holweide_-_6953.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Обери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Wer sagt das?</h2>
+      <p class="lead">Чий це аргумент — Тецлаффа чи Дюлля? Натисни картку, потім потрібний кошик.</p>
+      <div class="card" id="ub2-sort"></div>
+    </section>
+
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub3-rf"></div>
+    </section>
+
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова в резюме дебатів: натисни пропуск, потім слово. Два слова зайві.</p>
+      <div class="card" id="ub4-bank"></div>
+    </section>
+
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Deine Meinung</h2>
+      <p class="lead">Напиши відповіді німецькою. Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Wie ist es mit Hausaufgaben an deiner Schule in der Ukraine? Wie viel bekommt ihr auf, wer kontrolliert sie, und hilft euch jemand dabei? (5–7 Sätze)</label>
+          <textarea id="ub5-a" rows="6"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Schreib einen kurzen Kommentar: Sollte man Hausaufgaben abschaffen? Nenne mindestens zwei Argumente aus dem Text und ein eigenes. (8–12 Sätze)</label>
+          <textarea id="ub5-b" rows="8"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Einerseits …, andererseits …, Ein wichtiges Argument dafür/dagegen ist, dass …, Tetzlaff meint, Hausaufgaben seien …, Ich bin der Meinung, dass …, Meiner Erfahrung nach …, Zusammenfassend lässt sich sagen …</i>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>In Deutschland wird darüber gestritten, ob Hausaufgaben ungerecht sind: Kinder, deren Eltern helfen können, profitieren mehr. Befürworter sagen, dass Hausaufgaben Selbstständigkeit und Verantwortung trainieren – auch in Zeiten von KI. Schule ist in Deutschland Sache der Bundesländer; in einer Ganztagsschule bleiben die Kinder bis zum Nachmittag.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          У Німеччині сперечаються, чи не є домашні завдання несправедливими: більше користі з них мають діти, яким можуть допомогти батьки. Прихильники кажуть, що домашні завдання вчать самостійності й відповідальності — навіть у часи штучного інтелекту. Шкільна освіта в Німеччині — справа федеральних земель; у школі повного дня діти лишаються до пообіддя.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "hausaufgaben-debatte";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Worum geht es im Text?",
+     opts: ["Zwei Experten streiten, ob Hausaufgaben mehr nützen oder schaden",
+            "Eine Studie zeigt genau, wie viele Hausaufgaben Kinder brauchen",
+            "Ein neues Gesetz verbietet Hausaufgaben in allen Bundesländern"],
+     correct: "Zwei Experten streiten, ob Hausaufgaben mehr nützen oder schaden"},
+    {q: "Warum sind Hausaufgaben für Tetzlaff ungerecht?",
+     opts: ["Sie helfen vor allem Kindern, deren Eltern sie unterstützen können.",
+            "Lehrkräfte geben guten Schülern immer mehr Aufgaben auf.",
+            "Kinder auf dem Land haben weniger Zeit für Hausaufgaben."],
+     correct: "Sie helfen vor allem Kindern, deren Eltern sie unterstützen können."},
+    {q: "Warum braucht man Hausaufgaben laut Düll gerade wegen KI?",
+     opts: ["Nur wer selbst übt, kann beurteilen, ob ein KI-Text gut ist.",
+            "Die KI kann Hausaufgaben schneller korrigieren als Lehrer.",
+            "Ohne Hausaufgaben würden Schüler noch mehr Chatbots benutzen."],
+     correct: "Nur wer selbst übt, kann beurteilen, ob ein KI-Text gut ist."}
+  ]);
+  buildMatch('ub1h', [
+    ["Die falschen Kinder profitieren", "Absatz 1"],
+    ["Scham, Angst und Ungerechtigkeit", "Absatz 2"],
+    ["KI erstellt, KI löst, KI korrigiert", "Absatz 3"],
+    ["Lernen, allein zu arbeiten", "Absatz 4"],
+    ["Wenn eine Aufgabe zu schwer ist", "Absatz 5"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5", "Absatz 6"], lead: true});
+
+  buildSort('ub2-sort', {
+    buckets: ["Leonard Tetzlaff (dagegen)", "Stefan Düll (dafür)"],
+    items: [
+      {t: "Gute Schüler verstehen den Stoff auch ohne Hausaufgaben.", b: "Leonard Tetzlaff (dagegen)"},
+      {t: "Nicht gemachte Aufgaben führen zu Scham und Angst.", b: "Leonard Tetzlaff (dagegen)"},
+      {t: "Mit KI lernt am Ende niemand etwas.", b: "Leonard Tetzlaff (dagegen)"},
+      {t: "Besonders jüngeren Kindern schaden Hausaufgaben.", b: "Leonard Tetzlaff (dagegen)"},
+      {t: "Jugendliche lernen, Verantwortung zu übernehmen.", b: "Stefan Düll (dafür)"},
+      {t: "Lehrkräfte sehen, was die Klasse noch nicht verstanden hat.", b: "Stefan Düll (dafür)"},
+      {t: "Vokabeln kann kein Chatbot für dich lernen.", b: "Stefan Düll (dafür)"},
+      {t: "Für mehr Übung in der Schule fehlen Räume und Personal.", b: "Stefan Düll (dafür)"}
+    ]
+  });
+
+  buildRF('ub3-rf', [
+    {s: "Tetzlaff meint, dass in Deutschland zu wenig über den Sinn von Hausaufgaben gesprochen wird.", a: "r"},
+    {s: "Laut Tetzlaff zeigen Studien klar, dass Hausaufgaben allen Kindern helfen.", a: "f"},
+    {s: "Tetzlaff möchte Hausaufgaben durch Online-Kurse ersetzen.", a: "n"},
+    {s: "Düll leitet eine Schule in der Nähe von Augsburg.", a: "r"},
+    {s: "Düll findet, dass alle Kinder bis zum Nachmittag in der Schule bleiben sollten.", a: "f"},
+    {s: "Laut Düll sollen Hausaufgaben zu Erfolgserlebnissen führen.", a: "r"},
+    {s: "Düll gibt seinen Schülern jeden Tag eine Stunde Hausaufgaben auf.", a: "n"},
+    {s: "In ganz Deutschland gelten dieselben Regeln für Hausaufgaben.", a: "f"}
+  ]);
+
+  buildMatch('ub4', [
+    ["ungerecht", "несправедливий"],
+    ["sich schämen", "соромитися"],
+    ["die Selbstständigkeit", "самостійність"],
+    ["die Rückmeldung", "зворотний зв'язок"],
+    ["abschaffen", "скасовувати"],
+    ["verpflichtend", "обов'язковий"],
+    ["beurteilen", "оцінювати"]
+  ]);
+  buildWordBank('ub4-bank', {
+    text: "Leonard Tetzlaff findet Hausaufgaben [ungerecht], weil vor allem Kinder mit Hilfe von den Eltern davon [profitieren]. Wer seine Aufgaben nicht geschafft hat, [schämt sich] oft. Stefan Düll will Hausaufgaben nicht [abschaffen]. Für ihn trainieren sie die [Selbstständigkeit]. Wenn ein Kind eine Aufgabe nicht schafft, bekommt die Lehrkraft eine wichtige [Rückmeldung].",
+    extra: ["Werkzeug", "verpflichtend"]
+  });
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📚','✏️','🤖','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
