@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zehn Meter Kuchen · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Essen &amp; Trinken</span>
+        <h1>Zehn Meter Kuchen</h1>
+        <p class="sub">35 пекарів, 10 кілограмів борошна і світовий рекорд: що таке баумштрізель і хто такі трансильванські саксонці?</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Zutaten</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Süßes vom Markt</h2>
+      <div class="card">
+        <p>Was isst du gern auf einem Markt oder einem Fest? Kennst du einen Kuchen, den man über dem Feuer backt?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай (або обговоріть у парі): яку випічку продають у нас на ярмарках і святах? Ти колись бачив(-ла) солодкі «трубочки», які печуть просто над вогнем?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Zehn Meter lang, warm und süß: In Dinkelsbühl in Bayern haben 35 Menschen zusammen einen <span class="gl" data-key data-uk="світовий рекорд" data-lemma="der Weltrekord, -e">Weltrekord</span> gebacken.</p>
+
+          <p>Für den Rekord brauchten sie nur einfache <span class="gl" data-key data-uk="інгредієнт" data-lemma="die Zutat, -en">Zutaten</span>: Butter, Zucker, Eier, Milch, <span class="gl" data-uk="дріжджі" data-lemma="die Hefe">Hefe</span>, Salz und <span class="gl" data-uk="борошно" data-lemma="das Mehl">Mehl</span>. Vom Mehl allerdings sehr viel – ungefähr zehn Kilogramm. Am Ende war ihr <span class="gl" data-key data-uk="баумштрізель (трубчастий солодкий пиріг)" data-lemma="der Baumstriezel, -">Baumstriezel</span> zehn Meter lang. Einen längeren gibt es auf der ganzen Welt nicht.</p>
+
+          <p>Ein Baumstriezel ist ein süßer Kuchen in Form einer <span class="gl" data-uk="трубка" data-lemma="die Röhre, -n">Röhre</span>. Man <span class="gl" data-uk="намотувати" data-lemma="wickeln">wickelt</span> den <span class="gl" data-key data-uk="тісто" data-lemma="der Teig, -e">Teig</span> um eine Holzrolle und dreht ihn über heißer <span class="gl" data-uk="жар (вугілля)" data-lemma="die Glut">Glut</span>, bis er braun und <span class="gl" data-uk="хрусткий" data-lemma="knusprig">knusprig</span> ist. Oft kommt außen noch Zucker darauf. Auf Märkten und Festen ist der Kuchen sehr <span class="gl" data-uk="популярний, улюблений" data-lemma="beliebt">beliebt</span>.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/K%C3%BCrt%C5%91skal%C3%A1cs.jpg/960px-K%C3%BCrt%C5%91skal%C3%A1cs.jpg" alt="Baumstriezel über heißer Glut in Cluj-Napoca (deutsch: Klausenburg) in Siebenbürgen." width="960" height="720" loading="lazy">
+            <figcaption>Baumstriezel über heißer Glut in Cluj-Napoca (deutsch: Klausenburg) in Siebenbürgen. Foto: Cluj Napoca, <a href="https://creativecommons.org/licenses/by/2.0" target="_blank" rel="noopener">CC BY 2.0</a>, <a href="https://commons.wikimedia.org/wiki/File:K%C3%BCrt%C5%91skal%C3%A1cs.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+
+          <p>Eigentlich kommt der Baumstriezel von den Siebenbürger Sachsen. Sie sind eine deutschsprachige <span class="gl" data-key data-uk="меншина" data-lemma="die Minderheit, -en">Minderheit</span> in Siebenbürgen, einer Region in Rumänien. Die Idee für den Rekord hatte eine Gruppe aus Bayern. Sie wollte so die Kultur und die <span class="gl" data-uk="традиція" data-lemma="die Tradition, -en">Traditionen</span> der Siebenbürger Sachsen <span class="gl" data-uk="святкувати" data-lemma="feiern">feiern</span>.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Die Siebenbürger Sachsen leben schon seit dem 12. Jahrhundert in Siebenbürgen. Um 1990 sind viele von ihnen nach Deutschland gezogen. In Dinkelsbühl treffen sie sich jedes Jahr zu Pfingsten zum „Heimattag“. Auf Ungarisch heißt der Baumstriezel übrigens <i>Kürtőskalács</i>.</p>
+          </aside>
+
+          <p>Auf normalen Festen ist ein Baumstriezel natürlich viel kleiner. <span class="gl" data-uk="куштувати" data-lemma="probieren">Probieren</span> sollte man ihn aber unbedingt!</p>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">Обери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+    </section>
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Was kommt in den Teig?</h2>
+      <p class="lead">Що є в рецепті баумштрізеля з тексту, а чого там немає? Натисни картку, потім потрібний кошик.</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова: натисни пропуск, потім слово. Два слова зайві.</p>
+      <div class="card" id="ub4-bank"></div>
+    </section>
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою (4–6 речень на кожне питання). Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Welchen traditionellen Kuchen oder welches Gebäck gibt es in der Ukraine zu Festen? Was braucht man dafür, und wann isst man es?</label>
+          <textarea id="ub5-a" rows="5"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Du möchtest mit deiner Klasse einen Rekord machen. Welchen? Was braucht ihr dafür?</label>
+          <textarea id="ub5-b" rows="5"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>Bei uns backt man zu … oft …, Dafür braucht man …, Man isst es …, Wir möchten den längsten/größten … machen, Dafür brauchen wir …</i>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>Der Baumstriezel ist eine Spezialität der Siebenbürger Sachsen, einer deutschsprachigen Minderheit in Rumänien. Man backt ihn auf einer Holzrolle über heißer Glut. In Dinkelsbühl in Bayern haben 35 Menschen den längsten Baumstriezel der Welt gebacken – zehn Meter lang.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Баумштрізель — страва трансильванських саксонців, німецькомовної меншини в Румунії. Його печуть на дерев'яному валику над жаром. У баварському Дінкельсбюлі 35 людей спекли найдовший баумштрізель у світі — завдовжки десять метрів.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "baumstriezel-weltrekord";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Was haben die Menschen in Dinkelsbühl gemacht?",
+     opts: ["Sie haben den längsten Baumstriezel der Welt gebacken.",
+            "Sie haben einen neuen Kuchen erfunden.",
+            "Sie haben eine Bäckerei in Rumänien eröffnet."],
+     correct: "Sie haben den längsten Baumstriezel der Welt gebacken."},
+    {q: "Wie backt man einen Baumstriezel?",
+     opts: ["Auf einer Holzrolle über heißer Glut",
+            "In einer großen Form im Ofen",
+            "In heißem Öl in einer Pfanne"],
+     correct: "Auf einer Holzrolle über heißer Glut"},
+    {q: "Wer sind die Siebenbürger Sachsen?",
+     opts: ["Eine deutschsprachige Minderheit in Rumänien",
+            "Eine Gruppe von Bäckern aus Bayern",
+            "Die Einwohner von Dinkelsbühl"],
+     correct: "Eine deutschsprachige Minderheit in Rumänien"}
+  ]);
+
+  buildRF('ub2-rf', [
+    {s: "Für den Rekord haben 35 Menschen zusammen gebacken.", a: "r"},
+    {s: "Sie haben ungefähr hundert Kilogramm Mehl gebraucht.", a: "f"},
+    {s: "Der Baumstriezel ist auf Märkten und Festen beliebt.", a: "r"},
+    {s: "Für den Rekord haben die Bäcker zwei Tage gearbeitet.", a: "n"},
+    {s: "Siebenbürgen ist eine Region in Bayern.", a: "f"},
+    {s: "Die Idee für den Rekord hatte eine Gruppe aus Bayern.", a: "r"},
+    {s: "Auf normalen Festen sind Baumstriezel auch zehn Meter lang.", a: "f"}
+  ]);
+
+  buildSort('ub3-sort', {
+    buckets: ["im Rezept", "nicht im Rezept"],
+    items: [
+      {t: "Mehl", b: "im Rezept"},
+      {t: "Hefe", b: "im Rezept"},
+      {t: "Eier", b: "im Rezept"},
+      {t: "Milch", b: "im Rezept"},
+      {t: "Butter", b: "im Rezept"},
+      {t: "Schokolade", b: "nicht im Rezept"},
+      {t: "Äpfel", b: "nicht im Rezept"},
+      {t: "Käse", b: "nicht im Rezept"}
+    ]
+  });
+
+  buildMatch('ub4', [
+    ["die Zutat", "інгредієнт"],
+    ["das Mehl", "борошно"],
+    ["der Teig", "тісто"],
+    ["knusprig", "хрусткий"],
+    ["beliebt", "популярний, улюблений"],
+    ["die Minderheit", "меншина"]
+  ]);
+  buildWordBank('ub4-bank', {
+    text: "In Dinkelsbühl haben 35 Menschen einen [Weltrekord] gebacken. Sie brauchten viel [Mehl]. Man wickelt den [Teig] um eine Holzrolle. Über der heißen Glut wird er braun und [knusprig]. Der Baumstriezel kommt von einer deutschsprachigen [Minderheit] in Rumänien.",
+    extra: ["Röhre", "Käse"]
+  });
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🥐','🔥','🏆','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
