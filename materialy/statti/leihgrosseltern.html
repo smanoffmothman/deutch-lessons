@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eine Oma zum Ausleihen · Lesen · DeutschHeft</title>
+<link rel="stylesheet" href="../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/material-style.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../assets/site-nav.js"></script>
+<script>renderSiteNav('siteNav', { root: '../../', active: 'materialy' });</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LESEN · Gesellschaft</span>
+        <h1>Eine Oma zum Ausleihen</h1>
+        <p class="sub">Їй 71, дівчинці 8, і вони не родички — але одна для одної вже давно бабуся й онука. Як у Німеччині «позичають» бабусь і дідусів?</p>
+        <div class="mat-meta" id="matMeta"></div>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Vor dem Lesen</button>
+    <button class="tab-btn" data-tab="text">Text</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Worum geht's?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Richtig/falsch</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Wer ist das?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Wortschatz</button>
+    <button class="tab-btn" data-tab="ub5">Üb. 5 · Und bei uns?</button>
+    <button class="tab-btn" data-tab="woerter">Wörter</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Vor dem Lesen</p>
+      <h2 class="panel-title">Großeltern</h2>
+      <div class="card">
+        <p>Wie oft siehst du deine Großeltern? Was macht ihr zusammen? Was können Großeltern besser als Eltern?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Подумай (або обговоріть у парі): що робити дітям, у яких немає бабусі й дідуся поруч, — і літнім людям, у яких немає онуків? Чи можна стати «бабусею» для чужої дитини?
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Diese Wörter helfen dir</p>
+        <div class="mat-kw" id="matKeyWords"></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('text')">Zum Text</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-text">
+      <p class="section-label">Text</p>
+      <div class="card">
+        <article class="mat-text numbered" id="matText">
+          <p class="lead-in">Ingrid Putensen ist Gracias Oma – und trotzdem sind die beiden nicht miteinander <span class="gl" data-key data-uk="споріднений" data-lemma="verwandt">verwandt</span>. Wie das geht? Mit einer Idee, für die es in Deutschland viele Vereine gibt.</p>
+
+          <p>Auf dem Tisch steht ein Schokoladenkuchen, die <span class="gl" data-uk="свічка" data-lemma="die Kerze, -n">Kerzen</span> sind schon <span class="gl" data-uk="задувати" data-lemma="auspusten">ausgepustet</span>. Gracia wird heute acht Jahre alt. Ihre Oma meint, Kuchen könne man doch mit den Fingern essen. Gracia ist dagegen: An so einem besonderen Tag braucht man Gabeln! Schon läuft sie in die Küche. Ingrid Putensen, 71, sieht ihr mit einem Lächeln nach. Sie spürt Gracias <span class="gl" data-uk="радісне очікування" data-lemma="die Vorfreude">Vorfreude</span> – und freut sich selbst. Denn dass Gracia diesen Tag mit ihr feiert, ist nicht <span class="gl" data-uk="само собою зрозумілий" data-lemma="selbstverständlich">selbstverständlich</span>.</p>
+
+          <p>Die Erklärung ist einfach: Putensen hat keine <span class="gl" data-uk="онук" data-lemma="der Enkel, -">Enkel</span>, und Gracia hat keine Oma. Warum sollten beide mit dieser <span class="gl" data-uk="прогалина, порожнеча" data-lemma="die Lücke, -n">Lücke</span> leben? Das ist die Idee der <span class="gl" data-key data-uk="«позичені» дідусь і бабуся" data-lemma="die Leih-Großeltern (Pl.)">Leih-Großeltern</span>. In Deutschland gibt es viele <span class="gl" data-key data-uk="громадська організація, товариство" data-lemma="der Verein, -e">Vereine</span> und Agenturen, die Kinder ohne Großeltern und ältere Menschen ohne Enkel <span class="gl" data-uk="зводити разом, знайомити" data-lemma="zusammenbringen (brachte zusammen, hat zusammengebracht)">zusammenbringen</span>. Oft melden sich auch Großeltern, deren eigene Familie weit weg wohnt, zum Beispiel in einer anderen Stadt.</p>
+
+          <p>Putensen hat im Fernsehen davon erfahren und war sofort <span class="gl" data-uk="у захваті" data-lemma="begeistert">begeistert</span>. Als <span class="gl" data-uk="пенсійний, на пенсії" data-lemma="pensioniert">pensionierte</span> Lehrerin und Mutter einer Tochter hat sie viel Erfahrung mit Kindern. Sie meldete sich beim Hamburger Verein Jung &amp; Alt, der schon seit Jahrzehnten Projekte für mehrere Generationen organisiert. Kurz danach wurde sie die <span class="gl" data-key data-uk="«позичена» бабуся" data-lemma="die Leihoma, -s">Leihoma</span> der damals dreijährigen Gracia. Für Gracias Mutter, die aus Togo stammt, ist das eine große <span class="gl" data-key data-uk="полегшення, допомога" data-lemma="die Entlastung, -en">Entlastung</span>: Aus gesundheitlichen Gründen kann sie keine langen Ausflüge mit ihrer Tochter machen, und mit der deutschen Sprache hat sie noch Schwierigkeiten.</p>
+
+          <h3>Kekse, Märchen und Kürbissuppe</h3>
+          <p>Zweimal im Monat treffen sich die beiden. Meistens holt Putensen Gracia von der Schule ab. In ihrer Wohnung kocht sie Kaffee in einer <span class="gl" data-uk="френч-прес" data-lemma="die Stempelkanne, -n">Stempelkanne</span>, und Gracia darf das <span class="gl" data-uk="сито, фільтр" data-lemma="das Sieb, -e">Sieb</span> nach unten drücken. Dann wird genau <span class="gl" data-uk="розподіляти" data-lemma="verteilen">verteilt</span>, wer welchen Keks bekommt, und der Nachmittag geplant. Die beiden waren schon auf einem Ponyhof und im Kindertheater, sie backen Plätzchen, lesen Märchen oder spielen „Mensch ärgere dich nicht“. Manchmal darf Gracia sogar bei ihrer Oma <span class="gl" data-uk="ночувати" data-lemma="übernachten">übernachten</span>. Für Putensen ist Gracia ein echtes Enkelkind geworden – und darauf, sagt sie, sind beide <span class="gl" data-uk="гордий" data-lemma="stolz">stolz</span>. Was ihre Oma am besten kann? Kochen und backen, findet Gracia, vor allem die beste Kürbissuppe der Welt. Und Gracia? Sie kann rennen, tanzen, zeichnen, Fußball spielen und im Winter tolle Schneemänner bauen, erzählt die Oma.</p>
+
+          <aside class="lk-box">
+            <p class="lk-title">Gut zu wissen</p>
+            <p>Eine zentrale Stelle für Leih-Großeltern gibt es in Deutschland nicht. Wer eine Leihoma oder einen Leihopa sucht, findet sie am besten über das Internet: Man sucht nach „Leihoma“ oder „Leihgroßeltern“ zusammen mit dem Namen der eigenen Stadt. So findet man Vereine und Projekte in der Nähe.</p>
+          </aside>
+
+          <p>An Gracias Geburtstag <span class="gl" data-uk="прикрашати" data-lemma="verschönern">verschönern</span> die beiden den Balkon – wie jedes Jahr. Mit Gartenhandschuhen setzt Gracia lila <span class="gl" data-uk="фіалка" data-lemma="das Veilchen, -">Veilchen</span> in den <span class="gl" data-uk="балконний ящик для квітів" data-lemma="der Blumenkasten, -ä-">Blumenkasten</span> und gießt sie danach mit ihrer kleinen Gießkanne. Später spielen sie „Vier gewinnt“. Zuerst gewinnt die Oma, dann Gracia. Ein letztes <span class="gl" data-uk="вирішальна гра" data-lemma="das Entscheidungsspiel, -e">Entscheidungsspiel</span> möchte Gracia aber nicht: Bei 1:1, findet sie, haben eben beide gewonnen. Am Abend bringt Putensen sie mit dem Bus nach Hause, nur ein paar Haltestellen weiter. Zum Abschied wirft sich Gracia ihrer Oma in die Arme.</p>
+
+          <figure class="mat-fig">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Connect_Four.jpg/960px-Connect_Four.jpg" alt="Das Spiel „Vier gewinnt“." width="960" height="727" loading="lazy">
+            <figcaption>Das Spiel „Vier gewinnt“. Foto: Popperipopp, <a href="https://creativecommons.org/licenses/by/3.0" target="_blank" rel="noopener">CC BY 3.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Connect_Four.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption>
+          </figure>
+        </article>
+        <p class="mat-source" id="matSource"></p>
+      </div>
+      <div class="check-bar">
+        <button class="btn" type="button" onclick="showTab('ub1')">Zu den Aufgaben</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Worum geht es?</h2>
+      <p class="lead">а) Обери правильну відповідь.</p>
+      <div class="card" id="ub1-quiz"></div>
+      <p class="lead">б) Який заголовок пасує до якого абзацу? Номери абзаців — у тексті (кнопка «📄 Text»).</p>
+      <div class="card" id="ub1h-list"></div>
+    </section>
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Richtig, falsch oder nicht im Text?</h2>
+      <p class="lead">Прочитай твердження. Якщо в тексті про це нічого не сказано — обирай «steht nicht im Text».</p>
+      <div class="card" id="ub2-rf"></div>
+    </section>
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Oma, Gracia oder die Mutter?</h2>
+      <p class="lead">Про кого це речення? Натисни картку, потім потрібний кошик.</p>
+      <div class="card" id="ub3-sort"></div>
+    </section>
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Wortschatz</h2>
+      <p class="lead">а) Що означає слово? Обери переклад.</p>
+      <div class="card" id="ub4-list"></div>
+
+      <p class="lead">б) Встав слова в резюме тексту: натисни пропуск, потім слово. Два слова зайві.</p>
+      <div class="card" id="ub4-bank"></div>
+    </section>
+    <section class="panel" id="panel-ub5">
+      <p class="section-label">Üb. 5</p>
+      <h2 class="panel-title">Und bei uns?</h2>
+      <p class="lead">Напиши відповіді німецькою. Вставляти текст не можна — пиши сам(а).</p>
+      <div class="card">
+        <div class="qa">
+          <label for="ub5-a">1. Welche Rolle spielen Großeltern in ukrainischen Familien? Wer hilft bei der Betreuung der Kinder? Vergleiche mit der Situation im Text. (6–8 Sätze)</label>
+          <textarea id="ub5-a" rows="6"></textarea>
+        </div>
+        <div class="qa">
+          <label for="ub5-b">2. Ein Verein in deiner Stadt möchte ein Projekt wie Leih-Großeltern starten. Schreib einen kurzen Text für die Webseite des Vereins: Warum ist das eine gute Idee, und für wen? (8–10 Sätze)</label>
+          <textarea id="ub5-b" rows="7"></textarea>
+        </div>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Підказка</span>
+          Корисні звороти: <i>In vielen ukrainischen Familien …, Im Gegensatz zu …, Großeltern übernehmen oft …, Unser Projekt richtet sich an …, Davon profitieren beide Seiten, denn …, Melden Sie sich bei uns, wenn …</i>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-woerter">
+      <p class="section-label">Wörter</p>
+      <h2 class="panel-title">Wörter aus dem Text</h2>
+      <p class="lead">Усі слова з перекладом із цієї статті. ☆ — додати до «моїх слів» (зберігається в цьому браузері). «Картки» — швидка самоперевірка.</p>
+      <div class="card">
+        <div id="matWords"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Das nehme ich mit</p>
+        <p>In Deutschland bringen Vereine und Agenturen Kinder ohne Großeltern und ältere Menschen ohne Enkel zusammen: als Leih-Großeltern. Eine zentrale Organisation dafür gibt es nicht – man sucht in der eigenen Stadt. Von solchen Projekten profitieren beide Generationen und oft auch die Eltern.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          У Німеччині громадські організації та агенції знайомлять дітей без бабусь і дідусів із літніми людьми без онуків — так з'являються «позичені» дідусі й бабусі (Leih-Großeltern). Єдиної організації для цього немає — шукають у своєму місті. Від таких проєктів виграють обидва покоління, а часто й батьки.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 8px;">Lies weiter</p>
+        <div class="gram-related" id="matRelated"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../data/materials-data.js"></script>
+<script src="../../assets/lesson-interactions.js"></script>
+<script src="../../assets/material-reader.js"></script>
+<script>
+  const MAT_ID = "leihgrosseltern";
+
+  buildQuiz('ub1-quiz', [
+    {q: "Was ist die Idee der Leih-Großeltern?",
+     opts: ["Kinder ohne Großeltern und ältere Menschen ohne Enkel finden zueinander.",
+            "Großeltern dürfen ihre Enkel nur noch zweimal im Monat sehen.",
+            "Ältere Menschen arbeiten als bezahlte Babysitter in Kindergärten."],
+     correct: "Kinder ohne Großeltern und ältere Menschen ohne Enkel finden zueinander."},
+    {q: "Warum ist Ingrid Putensen für die Rolle gut geeignet?",
+     opts: ["Sie war Lehrerin und hat selbst eine Tochter.",
+            "Sie arbeitet seit Jahren in einem Kindergarten.",
+            "Sie hat schon fünf eigene Enkelkinder."],
+     correct: "Sie war Lehrerin und hat selbst eine Tochter."},
+    {q: "Warum haben am Ende „beide gewonnen“?",
+     opts: ["Beim Spiel steht es 1:1, und Gracia will kein Entscheidungsspiel.",
+            "Die Oma lässt Gracia an ihrem Geburtstag immer gewinnen.",
+            "Beide haben gleich viele Veilchen gepflanzt."],
+     correct: "Beim Spiel steht es 1:1, und Gracia will kein Entscheidungsspiel."}
+  ]);
+  buildMatch('ub1h', [
+    ["Gabeln für einen besonderen Tag", "Absatz 1"],
+    ["Eine Lücke auf beiden Seiten", "Absatz 2"],
+    ["Wie alles anfing", "Absatz 3"],
+    ["Ein ganz normaler Oma-Gracia-Tag", "Absatz 4"],
+    ["Veilchen und ein Unentschieden", "Absatz 5"]
+  ], {options: ["Absatz 1", "Absatz 2", "Absatz 3", "Absatz 4", "Absatz 5"], lead: true});
+
+  buildRF('ub2-rf', [
+    {s: "Ingrid Putensen ist Gracias Großmutter mütterlicherseits.", a: "f"},
+    {s: "Bei Leih-Großeltern melden sich auch Menschen, die eigene Enkel haben.", a: "r"},
+    {s: "Putensen hat in einer Zeitung von den Leih-Großeltern gelesen.", a: "f"},
+    {s: "Gracia war drei Jahre alt, als sie Putensen kennengelernt hat.", a: "r"},
+    {s: "Gracias Mutter arbeitet als Krankenschwester in Hamburg.", a: "n"},
+    {s: "Die beiden treffen sich jedes Wochenende.", a: "f"},
+    {s: "Der Verein Jung & Alt bezahlt die Leihomas für ihre Zeit.", a: "n"},
+    {s: "Gracia wohnt nicht weit von ihrer Leihoma entfernt.", a: "r"}
+  ]);
+
+  buildSort('ub3-sort', {
+    buckets: ["Ingrid Putensen", "Gracia", "Gracias Mutter"],
+    items: [
+      {t: "ist 71 Jahre alt", b: "Ingrid Putensen"},
+      {t: "war früher Lehrerin", b: "Ingrid Putensen"},
+      {t: "kocht die beste Kürbissuppe der Welt", b: "Ingrid Putensen"},
+      {t: "will Kuchen mit Gabeln essen", b: "Gracia"},
+      {t: "baut im Winter tolle Schneemänner", b: "Gracia"},
+      {t: "möchte kein Entscheidungsspiel", b: "Gracia"},
+      {t: "stammt aus Togo", b: "Gracias Mutter"},
+      {t: "hat noch Schwierigkeiten mit der deutschen Sprache", b: "Gracias Mutter"}
+    ]
+  });
+
+  buildMatch('ub4', [
+    ["verwandt", "споріднений"],
+    ["die Lücke", "прогалина, порожнеча"],
+    ["begeistert", "у захваті"],
+    ["die Entlastung", "полегшення, допомога"],
+    ["übernachten", "ночувати"],
+    ["selbstverständlich", "само собою зрозумілий"],
+    ["stolz", "гордий"]
+  ]);
+  buildWordBank('ub4-bank', {
+    text: "Ingrid Putensen und Gracia sind nicht [verwandt], aber sie sind Oma und Enkelin. Viele [Vereine] in Deutschland bringen Kinder und ältere Menschen zusammen. Putensen war von der Idee sofort [begeistert]. Für Gracias Mutter ist die Leihoma eine große [Entlastung]. Manchmal darf Gracia bei der Oma [übernachten]. Auf ihre besondere Beziehung sind beide [stolz].",
+    extra: ["Veilchen", "Lücke"]
+  });
+
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['👵','🎂','🌸','⭐']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+
+  initMaterialPage(MAT_ID);
+</script>
+</body>
+</html>
