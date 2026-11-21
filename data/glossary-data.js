@@ -1309,5 +1309,17 @@ const GLOSSARY = [
   {de: "Ich stimme dir (völlig) zu.", uk: "Я (цілком) з тобою згоден / згодна.", klas: "7", modul: "D", lektion: 3},
   {de: "der Wettkampf (die Wettkämpfe)", uk: "змагання", klas: "7", modul: "D", lektion: 3},
   {de: "die Meisterschaft (die Meisterschaften)", uk: "чемпіонат, першість", klas: "7", modul: "D", lektion: 3},
-  {de: "das Turnier (die Turniere)", uk: "турнір", klas: "7", modul: "D", lektion: 3}
+  {de: "das Turnier (die Turniere)", uk: "турнір", klas: "7", modul: "D", lektion: 3},
+  {de: "die Weltmeisterschaft (die Weltmeisterschaften)", uk: "чемпіонат світу", klas: "7", modul: "D", lektion: 4},
+  {de: "die Olympischen Spiele", uk: "Олімпійські ігри", klas: "7", modul: "D", lektion: 4},
+  {de: "die Leichtathletik", uk: "легка атлетика", klas: "7", modul: "D", lektion: 4},
+  {de: "die Mannschaft (die Mannschaften)", uk: "команда", klas: "7", modul: "D", lektion: 4},
+  {de: "alle vier Jahre (Die WM findet alle vier Jahre statt.)", uk: "раз на чотири роки", klas: "7", modul: "D", lektion: 4},
+  {de: "Lust haben, … zu … (Ich habe Lust, Basketball zu spielen.)", uk: "мати бажання (охоту) щось робити", klas: "7", modul: "D", lektion: 4},
+  {de: "die Idee (die Idee haben, … zu …)", uk: "ідея", klas: "7", modul: "D", lektion: 4},
+  {de: "die Möglichkeit (die Möglichkeit haben, … zu …)", uk: "можливість", klas: "7", modul: "D", lektion: 4},
+  {de: "die Hoffnung (die Hoffnung haben, … zu …)", uk: "надія", klas: "7", modul: "D", lektion: 4},
+  {de: "die Absicht (die Absicht haben, … zu …)", uk: "намір", klas: "7", modul: "D", lektion: 4},
+  {de: "der Wunsch (die Wünsche) (den Wunsch haben, … zu …)", uk: "бажання", klas: "7", modul: "D", lektion: 4},
+  {de: "anstrengend (Das Training ist anstrengend.)", uk: "виснажливий, напружений", klas: "7", modul: "D", lektion: 4}
 ];
