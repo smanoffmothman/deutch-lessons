@@ -1219,5 +1219,17 @@ const LESSONS = [
     gram: ["kausalsaetze", "verben-dass-infinitiv", "zahlwoerter", "komparation"],
     hook: "fakt",
     dz: "Umfrage und Diagramm „Unser Lieblingssport“: 1) Frag mindestens acht Personen (Mitschüler/innen, Familie, Freunde): „Welchen Sport treibst du am liebsten? Warum?“ Notiere die Antworten in einer Tabelle wie in Üb. 2 (Platz – Lieblingssport – Zahl der Personen – Warum?). 2) Zeichne dazu ein Balkendiagramm wie in Üb. 4. 3) Schreib einen Kommentar (5–6 Sätze): „Die beliebteste Sportart ist … An der zweiten / dritten Stelle ist … mit … Personen.“ Benutze mindestens zwei Sätze mit „weil“ (z. B. „Drei Personen haben Schwimmen genannt, weil sie es gesund finden.“) und einen Satz mit „Ich habe gedacht, dass …“. 4) Schreib unter das Diagramm ein Sprichwort aus Üb. 1, das zu deinen Ergebnissen passt. Nächstes Mal hängen wir die Diagramme auf und vergleichen: Ist unsere Statistik wie die Statistik in Deutschland?"
+    },
+  {
+    klas: "7",
+    modul: "D",
+    lektion: 4,
+    nazva: "Sportwettbewerbe",
+    opys: "Спортивні змагання: розпізнаємо на картинках чемпіонати й турніри (die Fußball-Weltmeisterschaft, das Schachturnier, der Schwimmwettbewerb) і їхні артиклі, вгадуємо, де звучить «Auf die Plätze, fertig, los!», з'ясовуємо, коли й як часто відбуваються змагання (alle vier Jahre, jährlich, das ganze Jahr durch), говоримо про плани з «Lust / die Idee / die Möglichkeit haben, … zu …» (teilzunehmen, mitzumachen) і слухаємо інтерв'ю для шкільної газети про спортивний гурток.",
+    file: "klas-7/modul-d/lektion-4.html",
+    nove: true,
+    gram: ["verben-dass-infinitiv", "trennbare-verben"],
+    hook: "fehler",
+    dz: "SMS-Chat „Wir machen mit!“: Schreib einen Chat (8–10 Nachrichten) zwischen dir und einem Freund / einer Freundin. Ihr wollt zusammen an einem Sportwettbewerb teilnehmen (z. B. an einem Schachturnier, an einem Schwimmwettbewerb oder am Basketballturnier der Schule). 1) Sagt, welcher Wettbewerb es ist und wann er stattfindet (z. B. „Das Turnier findet im März statt.“). 2) Benutze mindestens vier verschiedene Konstruktionen „haben + Nomen + zu + Infinitiv“ mit Lust, die Idee, die Möglichkeit, den Wunsch, die Hoffnung oder die Absicht (z. B. „Hast du Lust, mitzumachen?“, „Ich habe die Idee, jeden Tag zusammen zu trainieren.“) – mindestens einmal mit einem trennbaren Verb: teilzunehmen, mitzumachen oder vorzubereiten. 3) Am Ende wünscht ihr euch Glück: „Hals- und Beinbruch!“ Nächstes Mal lest ihr eure Chats zu zweit vor, und die Klasse rät: An welchem Wettbewerb nehmt ihr teil?"
   }
 ];
