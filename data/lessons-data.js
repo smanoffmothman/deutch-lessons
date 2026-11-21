@@ -1195,5 +1195,17 @@ const LESSONS = [
     gram: ["praep-genitiv", "komparation", "kausalsaetze", "verben-dass-infinitiv"],
     hook: "fakt",
     dz: "Online-Bewertung „Unsere Nacht in der Jugendherberge“: Stell dir vor, du hast mit deiner Klasse zwei Nächte in einer Jugendherberge verbracht – in der Herberge aus deinem Text in Üb. 4, im „Karpatenstern“ oder in der Jugendherberge „Am Wattenmeer“ auf Borkum. 1) Schreib eine Bewertung für eine Reise-Website (7–8 Sätze) im Perfekt: Wann und mit wem warst du dort? Wie waren die Zimmer und die Ausstattung? Was habt ihr in der Freizeit gemacht? 2) Nenne mindestens zwei Vorteile und einen Nachteil – mit „Zu den Vorteilen gehört …“ und „Meiner Meinung nach gibt es auch Nachteile wie …“. 3) Benutze einen Satz mit „weil“ und mindestens vier Wörter aus der Stunde (z. B. die Unterkunft, die Lage, die Ausstattung, das Freizeitangebot, günstig, im Durchschnitt). 4) Gib der Herberge 1 bis 5 Sterne (★) und schreib zum Schluss: Kannst du die Herberge empfehlen? Nächstes Mal lesen wir die Bewertungen vor und wählen zusammen die beste Jugendherberge für unsere Klassenfahrt."
+  },
+  {
+    klas: "7",
+    modul: "D",
+    lektion: 2,
+    nazva: "Wo treibt man Sport?",
+    opys: "Де займаються спортом: вчимо назви спортивних місць (das Stadion, das Schwimmbad, die Eisbahn, der Ring, der Tennisplatz, der Reitplatz), кажемо «де?» з Dativ (auf dem Sportplatz, im Schwimmbad, in der Turnhalle, draußen), питаємо «Welchen Sport kann man … treiben?», слухаємо інтерв'ю з Лаурою, Кевіном і Веронікою, розгадуємо спортивні загадки (Biathlon, Joggen, Beachvolleyball) і складаємо рейтинг за листом Луїзи.",
+    file: "klas-7/modul-d/lektion-2.html",
+    nove: true,
+    gram: ["wechselpraepositionen", "fragen"],
+    hook: "undu",
+    dz: "Sport-Rätsel für die Klasse: 1) Schreib zwei Rätsel über zwei Sportarten (je 4–5 Sätze) – wie in Üb. 4. Benutze die Satzanfänge: „Das ist ein Sommersport / Wintersport / Ballsport / Kampfsport …“, „Für diese Sportart braucht man …“, „Um Erfolg zu haben, müssen die Sportler/innen gut … können.“ 2) Sag in jedem Rätsel, WO man diesen Sport treibt – mit dem richtigen Dativ (z. B. auf dem Tennisplatz, im Ring, in der Turnhalle, auf der Eisbahn) oder mit „draußen“. 3) Schreib die Lösung nicht unter das Rätsel, sondern auf die Rückseite des Blattes. Nächstes Mal lesen wir die Rätsel vor – die Klasse rät: „Es geht um …“."
   }
 ];

@@ -1285,5 +1285,17 @@ const GLOSSARY = [
   {de: "die Ausstattung", uk: "обладнання, оснащення", klas: "9", modul: "B", lektion: 15},
   {de: "das Freizeitangebot (die Freizeitangebote)", uk: "пропозиції для дозвілля", klas: "9", modul: "B", lektion: 15},
   {de: "der Nachteil (die Nachteile)", uk: "недолік", klas: "9", modul: "B", lektion: 15},
-  {de: "ermöglichen (Das ermöglicht Jugendlichen, günstig zu reisen.)", uk: "робити можливим, давати змогу", klas: "9", modul: "B", lektion: 15}
+  {de: "ermöglichen (Das ermöglicht Jugendlichen, günstig zu reisen.)", uk: "робити можливим, давати змогу", klas: "9", modul: "B", lektion: 15},
+  {de: "der Sportplatz (die Sportplätze)", uk: "спортивний майданчик", klas: "7", modul: "D", lektion: 2},
+  {de: "das Stadion (die Stadien)", uk: "стадіон", klas: "7", modul: "D", lektion: 2},
+  {de: "das Schwimmbad (die Schwimmbäder)", uk: "басейн", klas: "7", modul: "D", lektion: 2},
+  {de: "die Eisbahn (die Eisbahnen)", uk: "ковзанка", klas: "7", modul: "D", lektion: 2},
+  {de: "der Tennisplatz (die Tennisplätze)", uk: "тенісний корт", klas: "7", modul: "D", lektion: 2},
+  {de: "das Fußballfeld (die Fußballfelder)", uk: "футбольне поле", klas: "7", modul: "D", lektion: 2},
+  {de: "der Reitplatz (die Reitplätze)", uk: "манеж, майданчик для верхової їзди", klas: "7", modul: "D", lektion: 2},
+  {de: "der Ring (die Ringe)", uk: "ринг", klas: "7", modul: "D", lektion: 2},
+  {de: "draußen", uk: "надворі, просто неба", klas: "7", modul: "D", lektion: 2},
+  {de: "das Gehirn (die Gehirne)", uk: "мозок", klas: "7", modul: "D", lektion: 2},
+  {de: "das Pferd (die Pferde)", uk: "кінь", klas: "7", modul: "D", lektion: 2},
+  {de: "die Strecke (die Strecken)", uk: "дистанція, маршрут", klas: "7", modul: "D", lektion: 2}
 ];
