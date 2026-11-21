@@ -1207,5 +1207,17 @@ const LESSONS = [
     gram: ["wechselpraepositionen", "fragen"],
     hook: "undu",
     dz: "Sport-Rätsel für die Klasse: 1) Schreib zwei Rätsel über zwei Sportarten (je 4–5 Sätze) – wie in Üb. 4. Benutze die Satzanfänge: „Das ist ein Sommersport / Wintersport / Ballsport / Kampfsport …“, „Für diese Sportart braucht man …“, „Um Erfolg zu haben, müssen die Sportler/innen gut … können.“ 2) Sag in jedem Rätsel, WO man diesen Sport treibt – mit dem richtigen Dativ (z. B. auf dem Tennisplatz, im Ring, in der Turnhalle, auf der Eisbahn) oder mit „draußen“. 3) Schreib die Lösung nicht unter das Rätsel, sondern auf die Rückseite des Blattes. Nächstes Mal lesen wir die Rätsel vor – die Klasse rät: „Es geht um …“."
+  },
+  {
+    klas: "7",
+    modul: "D",
+    lektion: 3,
+    nazva: "Beliebte Sportarten",
+    opys: "Популярні види спорту: слухаємо й повторюємо прислів'я «Sport ist Gesundheit», «Ein gesunder Geist in einem gesunden Körper», «Teilnehmen ist wichtiger als siegen», проводимо опитування «Welchen Sport treibst du am liebsten? Warum?» (weil + дієслово в кінці), висловлюємо думку з «Ich meine, dass …» й погоджуємося чи заперечуємо, коментуємо статистику з Німеччини (An der zweiten Stelle ist … mit … Prozent) і складаємо назви змагань: Schulmeisterschaft, Fußballturnier, Tanzwettbewerb.",
+    file: "klas-7/modul-d/lektion-3.html",
+    nove: true,
+    gram: ["kausalsaetze", "verben-dass-infinitiv", "zahlwoerter", "komparation"],
+    hook: "fakt",
+    dz: "Umfrage und Diagramm „Unser Lieblingssport“: 1) Frag mindestens acht Personen (Mitschüler/innen, Familie, Freunde): „Welchen Sport treibst du am liebsten? Warum?“ Notiere die Antworten in einer Tabelle wie in Üb. 2 (Platz – Lieblingssport – Zahl der Personen – Warum?). 2) Zeichne dazu ein Balkendiagramm wie in Üb. 4. 3) Schreib einen Kommentar (5–6 Sätze): „Die beliebteste Sportart ist … An der zweiten / dritten Stelle ist … mit … Personen.“ Benutze mindestens zwei Sätze mit „weil“ (z. B. „Drei Personen haben Schwimmen genannt, weil sie es gesund finden.“) und einen Satz mit „Ich habe gedacht, dass …“. 4) Schreib unter das Diagramm ein Sprichwort aus Üb. 1, das zu deinen Ergebnissen passt. Nächstes Mal hängen wir die Diagramme auf und vergleichen: Ist unsere Statistik wie die Statistik in Deutschland?"
   }
 ];

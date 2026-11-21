@@ -1297,5 +1297,17 @@ const GLOSSARY = [
   {de: "draußen", uk: "надворі, просто неба", klas: "7", modul: "D", lektion: 2},
   {de: "das Gehirn (die Gehirne)", uk: "мозок", klas: "7", modul: "D", lektion: 2},
   {de: "das Pferd (die Pferde)", uk: "кінь", klas: "7", modul: "D", lektion: 2},
-  {de: "die Strecke (die Strecken)", uk: "дистанція, маршрут", klas: "7", modul: "D", lektion: 2}
+  {de: "die Strecke (die Strecken)", uk: "дистанція, маршрут", klas: "7", modul: "D", lektion: 2},
+  {de: "die Gesundheit", uk: "здоров'я", klas: "7", modul: "D", lektion: 3},
+  {de: "der Lieblingssport", uk: "улюблений вид спорту", klas: "7", modul: "D", lektion: 3},
+  {de: "siegen (Teilnehmen ist wichtiger als siegen.)", uk: "перемагати", klas: "7", modul: "D", lektion: 3},
+  {de: "die Stelle (an der zweiten Stelle)", uk: "місце (у рейтингу) (на другому місці)", klas: "7", modul: "D", lektion: 3},
+  {de: "das Radfahren", uk: "їзда на велосипеді, велоспорт", klas: "7", modul: "D", lektion: 3},
+  {de: "das Wandern", uk: "піші походи, мандрування пішки", klas: "7", modul: "D", lektion: 3},
+  {de: "der Kraftsport", uk: "силові види спорту", klas: "7", modul: "D", lektion: 3},
+  {de: "nennen (Sieben Personen haben Fußball genannt.)", uk: "називати", klas: "7", modul: "D", lektion: 3},
+  {de: "Ich stimme dir (völlig) zu.", uk: "Я (цілком) з тобою згоден / згодна.", klas: "7", modul: "D", lektion: 3},
+  {de: "der Wettkampf (die Wettkämpfe)", uk: "змагання", klas: "7", modul: "D", lektion: 3},
+  {de: "die Meisterschaft (die Meisterschaften)", uk: "чемпіонат, першість", klas: "7", modul: "D", lektion: 3},
+  {de: "das Turnier (die Turniere)", uk: "турнір", klas: "7", modul: "D", lektion: 3}
 ];
