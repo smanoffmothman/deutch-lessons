@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 5 · Modul D · Die Olympischen Spiele</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 7'},
+    {label: 'Урок 5: Die Olympischen Spiele'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 5 · MODUL D</span>
+        <h1>Die Olympischen Spiele</h1>
+        <p class="sub">Олімпійські ігри: граємо інтерв'ю про шкільний спорт, розкладаємо види спорту на літні й зимові, впізнаємо олімпійські символи, читаємо текст про історію, програму, міста-господарі та учасників Ігор і ставимо до нього запитання.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Das Interview</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Sommer oder Winter?</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Der Text</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Fragen zum Text</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== ПАНЕЛЬ: вступ ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Die Olympischen Spiele</h2>
+      <div class="card">
+        <p>Letztes Mal haben wir über Sportwettbewerbe gesprochen: Turniere, Meisterschaften, Weltmeisterschaften. Heute geht es um den größten Wettbewerb der Welt – die <strong>Olympischen Spiele</strong>. Welche Sportarten gehören zu den Sommerspielen, welche zu den Winterspielen? Welche Symbole haben die Spiele? Wer entscheidet, wo sie stattfinden? Du liest einen Text und stellst selbst Fragen dazu.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Минулого уроку ми говорили про спортивні змагання: турніри, першості, чемпіонати світу. Сьогодні — про найбільше змагання у світі, <b>Олімпійські ігри</b>. Які види спорту належать до літніх Ігор, а які — до зимових? Які символи мають Ігри? Хто вирішує, де вони відбуваються? Ти прочитаєш текст і сам(а) поставиш до нього запитання.
+        </div>
+      </div>
+
+      <div id="hook"></div>
+
+      <div id="lz-start"></div>
+
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Schneller, höher, stärker – gemeinsam! Das ist das Olympische Motto. Los geht's!</p>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: перевірка домашнього завдання (dz уроку 7-D-4) ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: СМС-чат «Wir machen mit!» (8–10 повідомлень) — ви з другом / подругою хочете разом узяти участь у спортивному змаганні; сказати, що це за змагання і коли воно відбувається; ужити щонайменше чотири конструкції «haben + іменник + zu + інфінітив» (Lust, die Idee, die Möglichkeit, den Wunsch, die Hoffnung, die Absicht), хоча б раз із відокремлюваним дієсловом (teilzunehmen, mitzumachen, vorzubereiten), а наприкінці побажати «Hals- und Beinbruch!».
+      </div>
+
+      <div id="dz-check">
+        <div class="card" style="margin-top:18px;">
+          <p class="section-label" style="margin:0 0 6px;">Teil A · Fehlersuche im Chat</p>
+          <p class="lead">Ось повідомлення з чату Макса й Лени. У деяких є помилка — знайди її й виправ. Пам'ятай: <b>zu</b> + інфінітив у кінці, у відокремлюваних дієсловах <b>zu</b> посередині (teil<b>zu</b>nehmen), а <b>den</b> Wunsch — Akkusativ.</p>
+          <div id="hw-fix"></div>
+        </div>
+        <div class="card tinted-teal">
+          <p class="section-label" style="margin:0 0 6px;">Teil B · Lest eure Chats vor!</p>
+          <p style="margin:0;">Lest eure Chats zu zweit vor – aber sagt nicht, welcher Wettbewerb es ist! Die Klasse rät: <em>„Ich glaube, ihr nehmt am Schachturnier teil.“</em></p>
+          <div class="ua-note">
+            <span class="ua-label">🇺🇦 У класі</span>
+            Прочитайте свої чати вдвох, не називаючи змагання, — клас відгадує. Якщо працюєш удома — перевір свій чат: чи є в ньому чотири конструкції з «zu», чи стоїть інфінітив у кінці, чи є кома перед ним?
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="dz-vocab-wrap" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">Wörter-Check</p>
+        <p class="lead">Перевір слова з минулих уроків.</p>
+        <div id="dz-vocab"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: інтерв'ю про спорт у школі ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Ein Interview über Sportwettkämpfe in der Schule</h2>
+      <p class="lead">Репортерка шкільної газети бере в тебе інтерв'ю про спорт у твоїй школі. Обери правильну й доречну відповідь.</p>
+      <div class="card">
+        <div id="ub1-chat"></div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Spielt Interviews!</p>
+        <p style="margin:0 0 6px;"><b>A:</b> Habt ihr die Möglichkeit, Sport in der Schule zu treiben? – <b>B:</b> Ja, wir besuchen eine …-AG.<br><b>A:</b> Habt ihr schon einmal ein Turnier gewonnen? – <b>B:</b> Ja, wir haben … gewonnen. / Nein, leider ist es uns noch nicht gelungen, ein Turnier zu gewinnen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 У класі</span>
+          Розіграйте такі інтерв'ю в парах — тепер зі справжніми відповідями про вашу школу: яка у вас секція, проти кого ви граєте, чи вигравали ви турнір.
+        </div>
+      </div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Корисні слова</span>
+        <dl>
+          <dt>die AG (Arbeitsgemeinschaft)</dt><dd>гурток, секція (die Volleyball-AG)</dd>
+          <dt>gegen wen?</dt><dd>проти кого? (gegen die Mannschaft der Schule Nr. 5)</dd>
+          <dt>Es ist uns noch nicht gelungen, … zu …</dt><dd>Нам ще не вдалося …</dd>
+          <dt>Gern geschehen!</dt><dd>Будь ласка! (у відповідь на «Danke»)</dd>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 2: літні й зимові види спорту + символи ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Sommer oder Winter?</h2>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Teil A · Sortiere die Sportarten</p>
+        <p class="lead">До програми яких Ігор належить кожен вид спорту — літніх чи зимових?</p>
+        <div id="ub2-sort"></div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Sag es!</p>
+        <p style="margin:0;"><em>Zum Programm der Olympischen Sommerspiele gehören Badminton, Basketball, … – Zum Programm der Olympischen Winterspiele gehören Biathlon, …</em></p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Скажи вголос, які види спорту належать до програми літніх і зимових Ігор. «Zum Programm … gehören …» — «До програми … належать …».
+        </div>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Teil B · Was für Symbole sind das?</p>
+        <p class="lead">Олімпійські ігри мають свої символи. Який символ на картинці?</p>
+        <div id="ub2-pic"></div>
+      </div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Корисні слова</span>
+        <dl>
+          <dt>die Olympischen Sommerspiele / Winterspiele</dt><dd>літні / зимові Олімпійські ігри</dd>
+          <dt>die Flagge · die Hymne</dt><dd>прапор · гімн</dd>
+          <dt>das Olympische Feuer</dt><dd>олімпійський вогонь</dd>
+          <dt>der Olympische Eid</dt><dd>олімпійська клятва</dd>
+          <dt>der Langlauf · das Kanu</dt><dd>лижні перегони · каное</dd>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: текст і заголовки ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Lies den Text</h2>
+      <p class="lead">Прочитай текст і добери до кожного абзацу заголовок.</p>
+      <div class="merke">
+        <b>A</b> Gastgeberstadt &nbsp;·&nbsp; <b>B</b> Olympische Symbole &nbsp;·&nbsp; <b>C</b> Olympische Disziplinen &nbsp;·&nbsp; <b>D</b> Teilnehmer/innen der Olympischen Spiele &nbsp;·&nbsp; <b>E</b> Olympische Spiele der Moderne
+      </div>
+      <div class="mail-window">
+        <div class="mail-titlebar">Die Olympischen Spiele</div>
+        <div class="mail-body">
+          <p><b>1.</b> Die Olympischen Spiele sind das größte Sportereignis der Welt. Sie existieren seit 1896. Die ersten Olympischen Spiele der Neuzeit haben 1896 in Athen stattgefunden. Sie waren ein großer Erfolg. Die Olympischen Sommerspiele finden alle vier Jahre statt. Die Olympischen Winterspiele finden auch alle vier Jahre statt – immer zwei Jahre nach den Sommerspielen.</p>
+          <p><b>2.</b> Das Programm der Olympischen Spiele umfasst sehr viele Sportarten. Zu den Sommersportarten gehören Leichtathletik, Schwimmen, Radrennen, Kunstturnen, Fechten, Segeln, Rudern, Judo, Boxen, Tennis, Ballspiele wie Basketball, Fußball, Badminton und andere. Im Programm der Winterspiele sind Skisportarten, Eiskunstlauf, Eishockey, Eisschnelllauf und andere enthalten.</p>
+          <p><b>3.</b> Das Internationale Olympische Komitee entscheidet über den Austragungsort der Spiele. Man entscheidet nicht für ein Land, sondern für eine Stadt. Die Olympischen Spiele haben schon in vielen Großstädten auf verschiedenen Kontinenten stattgefunden. Die Gastgeber der Sommerspiele waren zum Beispiel Athen, Berlin, München, Los Angeles, London, Sydney und Peking. 2024 war Paris die Gastgeberstadt. Die Gastgeber der Winterspiele waren zum Beispiel Oslo, Innsbruck, Sapporo, Turin und Vancouver.</p>
+          <p><b>4.</b> Bei den Olympischen Spielen vertreten Sportlerinnen und Sportler ihre Länder. Sie müssen vorher eine Qualifikation schaffen. Dann entscheidet das Nationale Olympische Komitee des Landes, wer an den Spielen teilnehmen darf. Heutzutage schicken über 200 Länder mehr als 10 000 Sportlerinnen und Sportler zu den Olympischen Spielen.</p>
+          <p><b>5.</b> Die olympische Bewegung hat eigene Zeremonien und Symbole. Die bekanntesten und wichtigsten davon sind die Olympische Flagge, die Olympische Hymne, das Olympische Feuer und der Olympische Eid. Die Olympische Flagge hat fünf Ringe in den Farben Blau, Gelb, Schwarz, Grün und Rot auf weißem Feld. Das Olympische Motto lautet „Schneller, höher, stärker – gemeinsam“.</p>
+        </div>
+      </div>
+      <div class="card" id="ub3-list">
+        <div class="fill-item"><span class="num">1)</span> Abschnitt 1 – Überschrift <select class="blank inline" data-ans="E"><option value="">—</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></div>
+        <div class="fill-item"><span class="num">2)</span> Abschnitt 2 – Überschrift <select class="blank inline" data-ans="C"><option value="">—</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></div>
+        <div class="fill-item"><span class="num">3)</span> Abschnitt 3 – Überschrift <select class="blank inline" data-ans="A"><option value="">—</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></div>
+        <div class="fill-item"><span class="num">4)</span> Abschnitt 4 – Überschrift <select class="blank inline" data-ans="D"><option value="">—</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></div>
+        <div class="fill-item"><span class="num">5)</span> Abschnitt 5 – Überschrift <select class="blank inline" data-ans="B"><option value="">—</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option></select></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Корисні слова</span>
+        <dl>
+          <dt>das Sportereignis</dt><dd>спортивна подія</dd>
+          <dt>die Neuzeit · die Moderne</dt><dd>новий час, сучасність (die Spiele der Neuzeit — сучасні Олімпійські ігри)</dd>
+          <dt>umfassen · enthalten sein</dt><dd>охоплювати · містити, входити (до програми)</dd>
+          <dt>das Internationale Olympische Komitee (IOK)</dt><dd>Міжнародний олімпійський комітет (МОК)</dd>
+          <dt>der Austragungsort · die Gastgeberstadt</dt><dd>місце проведення · місто-господар</dd>
+          <dt>ein Land vertreten · eine Qualifikation schaffen</dt><dd>представляти країну · пройти відбір</dd>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4: питання до тексту ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Fragen zum Text</h2>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Teil A · Hast du alles verstanden?</p>
+        <p class="lead">Відповідай на запитання до тексту з Üb. 3.</p>
+        <div id="ub4-quiz"></div>
+      </div>
+      <div class="merke">
+        <b>W-Frage</b>: питальне слово — <b>дієслово на 2-му місці</b> — підмет — решта: <b>Wo haben</b> die ersten Spiele <b>stattgefunden</b>? · <b>Seit wann existieren</b> die Spiele?<br>
+        Питальні слова: wer? (хто?) · was? · wo? · wann? · seit wann? (відколи?) · wie oft? (як часто?) · wie viele? (скільки?) · welche? (які?)
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Teil B · Bilde Fragen</p>
+        <p class="lead">Склади запитання з карток.</p>
+        <div id="ub4-order"></div>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Teil C · Deine Fragen</p>
+        <div id="ub4-write"></div>
+        <div class="ua-note">
+          Вставляти текст у поле не можна — набирай сам(а). Літери ä ö ü ß з'являться внизу екрана, щойно ти почнеш писати.
+        </div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Fragt und antwortet!</p>
+        <p style="margin:0;">Bildet Gruppen zu je fünf Personen. Jede/r schreibt Fragen zu einem Abschnitt. Fragt und antwortet abwechselnd: <em>A: Seit wann existieren die Olympischen Spiele der Moderne? – B: Seit 1896.</em></p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 У класі</span>
+          Об'єднайтеся в групи по п'ятеро. Кожен бере один абзац і ставить до нього запитання (можна ті, що ти написав(-ла) в Teil C). Питайте й відповідайте по черзі. Якщо не знаєш відповіді: «Das habe ich nicht verstanden. Kannst du die Frage wiederholen?»
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ПРИКІНЦЕВА ПАНЕЛЬ ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div id="lz-check"></div>
+
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Olympia-Quiz für die Klasse: 1) Schreib sechs Fragen zu den Olympischen Spielen – mit verschiedenen Fragewörtern (z. B. Seit wann …? Wo …? Wer …? Wie oft …? Welche …? Wie viele …?). Zu jeder Frage gibt es drei Antworten (a, b, c), nur eine ist richtig. 2) Mindestens eine Frage ist über die Olympischen Symbole, eine über eine Gastgeberstadt und eine über die Ukraine bei den Olympischen Spielen (z. B. „In welcher Sportart hat die Ukraine eine Medaille gewonnen?“ – such die Information im Internet). 3) Benutze mindestens fünf Wörter aus der Stunde (z. B. die Gastgeberstadt, der Austragungsort, das Komitee, die Flagge, das Feuer, die Qualifikation, stattfinden). 4) Schreib die richtigen Antworten auf die Rückseite des Blattes. Nächstes Mal spielen wir das Olympia-Quiz in Gruppen – wer hat die meisten Punkte?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Олімпійська вікторина для класу: 1) Напиши шість запитань про Олімпійські ігри — з різними питальними словами (напр. Seit wann …? Wo …? Wer …? Wie oft …? Welche …? Wie viele …?). До кожного запитання — три відповіді (a, b, c), правильна лише одна. 2) Щонайменше одне запитання — про олімпійські символи, одне — про місто-господаря і одне — про Україну на Олімпійських іграх (напр. «У якому виді спорту Україна виграла медаль?» — знайди інформацію в інтернеті). 3) Використай щонайменше п'ять слів з уроку (напр. die Gastgeberstadt, der Austragungsort, das Komitee, die Flagge, das Feuer, die Qualifikation, stattfinden). 4) Правильні відповіді напиши на звороті аркуша. Наступного уроку ми зіграємо в олімпійську вікторину в групах — хто набере найбільше балів?
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Wörter zum Lernen</p>
+        <div class="chip-row" id="vocabChips"></div>
+      </div>
+
+      <div class="card" id="lessonGramWrap">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="lessonGram"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../data/glossary-data.js"></script>
+<script src="../../../data/lessons-data.js"></script>
+<script src="../../../data/grammar-data.js"></script>
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  // ===== Слова цього уроку у вкладці Fertig =====
+  const LEKTION_KLAS = "7", LEKTION_MODUL = "D", LEKTION_LEKTION = 5;
+  const LEKTION_PREV_LEKTION = 4;
+
+  // ===== Цілі уроку «Ich kann …» (Start) + самооцінка-світлофор (Fertig!) =====
+  const LERNZIELE = [
+    {de: "Ich kann sagen, welche Sportarten zu den Olympischen Sommer- und Winterspielen gehören.", uk: "Я можу сказати, які види спорту належать до літніх і зимових Олімпійських ігор."},
+    {de: "Ich kann einen Text über die Olympischen Spiele verstehen.", uk: "Я можу зрозуміти текст про Олімпійські ігри."},
+    {de: "Ich kann Fragen zu einem Text stellen und beantworten.", uk: "Я можу ставити запитання до тексту й відповідати на них."}
+  ];
+  buildLernziele('lz-start', 'lz-check', LERNZIELE);
+
+  // ===== Хук входу: prognose (7-D-1 prognose, 7-D-2 undu, 7-D-3 fakt, 7-D-4 fehler) =====
+  buildHook('hook', {type: 'prognose', pic: '🏅', q: "Worum geht es heute?",
+    words: [{w: "die Flagge", in: true}, {w: "das Feuer", in: true}, {w: "die Gastgeberstadt", in: true},
+            {w: "der Schiedsrichter"}, {w: "das Trikot"}, {w: "der Pokal"}, {w: "die Pfeife"}]});
+
+  (function renderLessonVocab(){
+    const box = document.getElementById('vocabChips');
+    if (!box || typeof GLOSSARY === 'undefined') return;
+    const words = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_LEKTION
+    );
+    if (words.length === 0){
+      box.innerHTML = '<p class="empty-note">Слова для цього уроку ще не додані в глосарій.</p>';
+      return;
+    }
+    box.innerHTML = words.map(w =>
+      '<span class="chip static">' + w.de + ' — ' + w.uk + '</span>'
+    ).join('');
+  })();
+
+  // ===== Граматика до цього уроку у вкладці Fertig (поле gram у lessons-data.js) =====
+  (function renderLessonGrammar(){
+    const wrap = document.getElementById('lessonGramWrap');
+    const box = document.getElementById('lessonGram');
+    if (!wrap || !box) return;
+    const hide = () => { wrap.style.display = 'none'; };
+    if (typeof LESSONS === 'undefined' || typeof GRAMMAR === 'undefined') return hide();
+    const me = LESSONS.find(l => l.klas === LEKTION_KLAS && l.modul === LEKTION_MODUL && l.lektion === LEKTION_LEKTION);
+    const topics = ((me && me.gram) || []).map(id => GRAMMAR.find(t => t.id === id)).filter(t => t && t.opublikovano > 0);
+    if (topics.length === 0) return hide();
+    const src = document.querySelector('script[src$="data/grammar-data.js"]').getAttribute('src');
+    const root = src.slice(0, src.length - 'data/grammar-data.js'.length);
+    box.innerHTML = topics.map(t =>
+      '<a class="gram-link" href="' + root + 'gramatyka/temy/' + t.id + '.html">'
+      + '<span class="k">' + t.uk + '</span>' + t.tema + '</a>'
+    ).join('');
+  })();
+
+  // ===== Wörter-Check у вкладці Hausaufgabe =====
+  function guessPos(de){
+    var base = (de || '').replace(/\([^)]*\)/g, '').trim();
+    if(/^(der|die|das)(\/(der|die|das))?\s/.test(base)) return 'noun';
+    if(/^sich\s/.test(base)) return 'verb';
+    if(/^am\s/.test(base)) return 'other'; // "am liebsten", "am besten" — прислівникова найвища форма, не дієслово
+    if(/\(\+(Gen|Dat|Akk)\.?\)/.test(de)) return 'prep';
+    var words = base.split(/\s+/);
+    var last = words[words.length - 1];
+    if(/(en|ern|eln)$/.test(last) && last === last.toLowerCase()) return 'verb';
+    return 'other';
+  }
+
+  (function renderDzVocabCheck(){
+    const wrap = document.getElementById('dz-vocab-wrap');
+    const box = document.getElementById('dz-vocab');
+    if (!wrap || !box || typeof GLOSSARY === 'undefined') return;
+    const same = (w, l) => w.klas === l.klas && w.modul === l.modul && w.lektion === l.lektion;
+    const prevWords = LEKTION_PREV_LEKTION ? GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_PREV_LEKTION
+    ) : [];
+    let olderWords = [];
+    if (typeof LESSONS !== 'undefined'){
+      const mine = LESSONS.filter(l => l.klas === LEKTION_KLAS);
+      const idx = mine.findIndex(l => l.modul === LEKTION_MODUL && l.lektion === LEKTION_LEKTION);
+      if (idx > 0){
+        const older = mine.slice(Math.max(0, idx - 5), idx)
+          .filter(l => !(l.modul === LEKTION_MODUL && l.lektion === LEKTION_PREV_LEKTION));
+        olderWords = GLOSSARY.filter(w => older.some(l => same(w, l)));
+      }
+    }
+    const fromPrev = shuffleArray(prevWords).slice(0, olderWords.length ? 4 : 6);
+    const pool = shuffleArray(fromPrev.concat(shuffleArray(olderWords).slice(0, 6 - fromPrev.length)));
+    if (pool.length < 3){ wrap.style.display = 'none'; return; }
+
+    const quizData = pool.map(w => {
+      const pos = guessPos(w.de);
+      let sameKind = GLOSSARY.filter(g => g.uk !== w.uk && guessPos(g.de) === pos);
+      if(sameKind.length < 2) sameKind = GLOSSARY.filter(g => g.uk !== w.uk);
+      const distractors = shuffleArray(sameKind).slice(0, 2).map(g => g.uk);
+      return { q: w.de, opts: [w.uk, ...distractors], correct: w.uk };
+    });
+    buildQuiz('dz-vocab', quizData);
+  })();
+
+  // Hausaufgabe: помилки в чаті (haben + Nomen + zu + Infinitiv)
+  buildFixError('hw-fix', [
+    {s: "Hast du Lust, am Schwimmwettbewerb teilnehmen?", wrong: 5, fix: "teilzunehmen"},
+    {s: "Der Wettbewerb findet im März statt.", ok: true},
+    {s: "Ja, ich habe der Wunsch, mitzumachen!", wrong: 3, fix: "den"},
+    {s: "Ich habe die Idee, einen Trainingsplan machen.", wrong: 6, fix: "zu machen"},
+    {s: "Wir haben die Möglichkeit, jeden Tag zusammen zu trainieren.", ok: true}
+  ]);
+
+  // Üb. 1: інтерв'ю (вправа 9 підручника) — учень відповідає репортерці
+  buildChat('ub1-chat', {
+    partner: "Reporterin",
+    steps: [
+      {them: "Hallo! Habt ihr die Möglichkeit, Sport in der Schule zu treiben?"},
+      {you: ["Ja, wir besuchen eine Volleyball-AG.", "Ja, wir besuchen ein Volleyball-AG.", "Gegen die Schule Nr. 5."], correct: 0},
+      {them: "Welchen Sport macht ihr?"},
+      {you: ["Seit drei Jahren.", "Wir spielen Volleyball und laufen.", "Ja, das Training ist okay."], correct: 1},
+      {them: "Übt ihr auch für Turniere oder Wettkämpfe?"},
+      {you: ["Ja, natürlich, wir haben die Möglichkeit, an Turnieren teilnehmen.", "Nein, wir spielen gegen die Nachbarschule.", "Ja, natürlich, wir haben die Möglichkeit, an Turnieren teilzunehmen."], correct: 2, hint: "teilnehmen — відокремлюване"},
+      {them: "Gegen wen spielt ihr da?"},
+      {you: ["Gegen die Mannschaften der Nachbarschulen.", "In der Turnhalle.", "Alle vier Jahre."], correct: 0},
+      {them: "Kommen viele Teilnehmer zu diesen Turnieren?"},
+      {you: ["An den Schulturnieren teilnehmen acht Mannschaften.", "Ja, wir haben gewonnen.", "An den Schulturnieren nehmen acht Mannschaften teil."], correct: 2},
+      {them: "Habt ihr schon einmal ein Turnier gewonnen?"},
+      {you: ["Nein, leider ist es uns noch nicht gelungen, ein Turnier zu gewinnen.", "Nein, leider ist es uns noch nicht gelungen, ein Turnier gewinnen.", "Ja, unser Training macht uns Spaß."], correct: 0},
+      {them: "Ist das Training anstrengend?"},
+      {you: ["Ja, wir besuchen eine AG.", "Ja, unser Training ist ziemlich anstrengend.", "Gegen die Schule Nr. 5."], correct: 1},
+      {them: "Besucht ihr die Sport-AG, um fit zu bleiben oder um Preise zu bekommen?"},
+      {you: ["Wir gehen zum Training, um fit bleiben.", "Wir gehen zum Training, weil fit zu bleiben.", "Wir gehen zum Training, um fit zu bleiben."], correct: 2, hint: "um … zu + інфінітив"},
+      {them: "Vielen Dank für das Interview!"},
+      {you: ["Gern geschehen!", "Hals- und Beinbruch!", "Gute Besserung!"], correct: 0},
+      {them: "Tschüss und viel Erfolg! 🏐"}
+    ]
+  });
+
+  // Üb. 2: літні / зимові види спорту (вправа 11) + символи (вправа 10)
+  buildSort('ub2-sort', {
+    buckets: ["☀️ Sommerspiele", "❄️ Winterspiele"],
+    items: [
+      {t: "Badminton", b: "☀️ Sommerspiele"},
+      {t: "Biathlon", b: "❄️ Winterspiele"},
+      {t: "Boxen", b: "☀️ Sommerspiele"},
+      {t: "Eishockey", b: "❄️ Winterspiele"},
+      {t: "Eiskunstlauf", b: "❄️ Winterspiele"},
+      {t: "Judo", b: "☀️ Sommerspiele"},
+      {t: "Kanu", b: "☀️ Sommerspiele"},
+      {t: "Langlauf", b: "❄️ Winterspiele"},
+      {t: "Rudern", b: "☀️ Sommerspiele"},
+      {t: "Eisschnelllauf", b: "❄️ Winterspiele"},
+      {t: "Segeln", b: "☀️ Sommerspiele"},
+      {t: "Snowboarden", b: "❄️ Winterspiele"},
+      {t: "Taekwondo", b: "☀️ Sommerspiele"},
+      {t: "Wasserball", b: "☀️ Sommerspiele"}
+    ]
+  });
+  buildPicture('ub2-pic', [
+    {pic: "🔥", opts: ["die Olympische Flagge", "das Olympische Feuer", "der Olympische Eid"], correct: "das Olympische Feuer"},
+    {pic: "🏳️", opts: ["die Olympische Flagge", "die Olympische Hymne", "das Olympische Feuer"], correct: "die Olympische Flagge"},
+    {pic: "🎶", opts: ["der Olympische Eid", "die Olympische Flagge", "die Olympische Hymne"], correct: "die Olympische Hymne"},
+    {pic: "✋", opts: ["die Olympische Hymne", "der Olympische Eid", "das Olympische Feuer"], correct: "der Olympische Eid"}
+  ]);
+
+  // Üb. 3: заголовки до абзаців (випадні списки)
+  wireBlanks('ub3');
+
+  // Üb. 4: розуміння тексту, W-питання, власні запитання
+  buildQuiz('ub4-quiz', [
+    {q: "Seit wann gibt es die Olympischen Spiele der Neuzeit?", opts: ["Seit 1924.", "Seit 1896.", "Seit 2020."], correct: "Seit 1896."},
+    {q: "Wie oft finden die Olympischen Sommerspiele statt?", opts: ["Alle vier Jahre.", "Jedes Jahr.", "Alle zwei Jahre."], correct: "Alle vier Jahre."},
+    {q: "Wer entscheidet über den Austragungsort der Spiele?", opts: ["Das Nationale Olympische Komitee.", "Die Sportlerinnen und Sportler.", "Das Internationale Olympische Komitee."], correct: "Das Internationale Olympische Komitee."},
+    {q: "Welche Stadt war 2024 die Gastgeberstadt?", opts: ["Athen.", "Paris.", "Oslo."], correct: "Paris."},
+    {q: "Welche Farben haben die fünf Olympischen Ringe?", opts: ["Blau, Gelb, Schwarz, Grün und Rot.", "Rot, Weiß, Blau, Gelb und Grün.", "Gold, Silber, Bronze, Weiß und Schwarz."], correct: "Blau, Gelb, Schwarz, Grün und Rot."},
+    {q: "Was müssen die Sportlerinnen und Sportler vorher schaffen?", opts: ["Einen Weltrekord.", "Einen Eid.", "Eine Qualifikation."], correct: "Eine Qualifikation."},
+    {q: "Wie lautet das Olympische Motto?", opts: ["„Teilnehmen ist wichtiger als siegen.“", "„Schneller, höher, stärker – gemeinsam.“", "„Sport ist Gesundheit.“"], correct: "„Schneller, höher, stärker – gemeinsam.“"}
+  ]);
+  buildOrder('ub4-order', [
+    {words: ["seit wann", "existieren", "die Olympischen Spiele", "der Neuzeit"], end: "?"},
+    {words: ["wo", "haben", "die ersten Olympischen Spiele", "stattgefunden"], end: "?"},
+    {words: ["wer", "entscheidet", "über den Austragungsort"], end: "?"},
+    {words: ["wie viele Länder", "schicken", "heute", "Sportler", "zu den Spielen"], end: "?",
+      alt: ["wie viele Länder schicken Sportler heute zu den Spielen"]},
+    {words: ["welche Symbole", "hat", "die olympische Bewegung"], end: "?"}
+  ]);
+  buildWriting('ub4-write', {
+    prompt: "Обери один абзац тексту й напиши до нього два власні запитання з різними питальними словами — і відповіді на них. Наприклад: Wo haben die ersten Olympischen Spiele stattgefunden? – In Athen.",
+    words: "12-50",
+    must: ["Wer/Was/Wo/Wann/Wie/Welche/Welchen/Welcher"],
+    check: ["Питальне слово на початку, дієслово — на 2-му місці", "Два різні питальні слова", "До кожного запитання є відповідь"],
+    rows: 5
+  });
+
+  // Фінальна панель зі штампами
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🏅','🔥','🏟️','📖']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>

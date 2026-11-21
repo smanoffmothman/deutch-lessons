@@ -1231,5 +1231,17 @@ const LESSONS = [
     gram: ["verben-dass-infinitiv", "trennbare-verben"],
     hook: "fehler",
     dz: "SMS-Chat „Wir machen mit!“: Schreib einen Chat (8–10 Nachrichten) zwischen dir und einem Freund / einer Freundin. Ihr wollt zusammen an einem Sportwettbewerb teilnehmen (z. B. an einem Schachturnier, an einem Schwimmwettbewerb oder am Basketballturnier der Schule). 1) Sagt, welcher Wettbewerb es ist und wann er stattfindet (z. B. „Das Turnier findet im März statt.“). 2) Benutze mindestens vier verschiedene Konstruktionen „haben + Nomen + zu + Infinitiv“ mit Lust, die Idee, die Möglichkeit, den Wunsch, die Hoffnung oder die Absicht (z. B. „Hast du Lust, mitzumachen?“, „Ich habe die Idee, jeden Tag zusammen zu trainieren.“) – mindestens einmal mit einem trennbaren Verb: teilzunehmen, mitzumachen oder vorzubereiten. 3) Am Ende wünscht ihr euch Glück: „Hals- und Beinbruch!“ Nächstes Mal lest ihr eure Chats zu zweit vor, und die Klasse rät: An welchem Wettbewerb nehmt ihr teil?"
+  },
+  {
+    klas: "7",
+    modul: "D",
+    lektion: 5,
+    nazva: "Die Olympischen Spiele",
+    opys: "Олімпійські ігри: граємо інтерв'ю про спорт у школі (Habt ihr die Möglichkeit, … zu …? Gegen wen spielt ihr?), розкладаємо види спорту на літні й зимові (Zum Programm der Olympischen Sommerspiele gehören …), впізнаємо олімпійські символи (die Flagge, die Hymne, das Feuer, der Eid), читаємо текст про історію, програму, міста-господарі й учасників Ігор, добираємо заголовки до абзаців і ставимо W-запитання до тексту.",
+    file: "klas-7/modul-d/lektion-5.html",
+    nove: true,
+    gram: ["fragen", "zahlwoerter"],
+    hook: "prognose",
+    dz: "Olympia-Quiz für die Klasse: 1) Schreib sechs Fragen zu den Olympischen Spielen – mit verschiedenen Fragewörtern (z. B. Seit wann …? Wo …? Wer …? Wie oft …? Welche …? Wie viele …?). Zu jeder Frage gibt es drei Antworten (a, b, c), nur eine ist richtig. 2) Mindestens eine Frage ist über die Olympischen Symbole, eine über eine Gastgeberstadt und eine über die Ukraine bei den Olympischen Spielen (z. B. „In welcher Sportart hat die Ukraine eine Medaille gewonnen?“ – such die Information im Internet). 3) Benutze mindestens fünf Wörter aus der Stunde (z. B. die Gastgeberstadt, der Austragungsort, das Komitee, die Flagge, das Feuer, die Qualifikation, stattfinden). 4) Schreib die richtigen Antworten auf die Rückseite des Blattes. Nächstes Mal spielen wir das Olympia-Quiz in Gruppen – wer hat die meisten Punkte?"
   }
 ];
