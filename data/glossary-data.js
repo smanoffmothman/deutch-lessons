@@ -1321,5 +1321,17 @@ const GLOSSARY = [
   {de: "die Hoffnung (die Hoffnung haben, … zu …)", uk: "надія", klas: "7", modul: "D", lektion: 4},
   {de: "die Absicht (die Absicht haben, … zu …)", uk: "намір", klas: "7", modul: "D", lektion: 4},
   {de: "der Wunsch (die Wünsche) (den Wunsch haben, … zu …)", uk: "бажання", klas: "7", modul: "D", lektion: 4},
-  {de: "anstrengend (Das Training ist anstrengend.)", uk: "виснажливий, напружений", klas: "7", modul: "D", lektion: 4}
+  {de: "anstrengend (Das Training ist anstrengend.)", uk: "виснажливий, напружений", klas: "7", modul: "D", lektion: 4},
+  {de: "die Olympischen Sommerspiele / Winterspiele", uk: "літні / зимові Олімпійські ігри", klas: "7", modul: "D", lektion: 5},
+  {de: "das Sportereignis (die Sportereignisse)", uk: "спортивна подія", klas: "7", modul: "D", lektion: 5},
+  {de: "der Austragungsort (die Austragungsorte)", uk: "місце проведення (змагань)", klas: "7", modul: "D", lektion: 5},
+  {de: "die Gastgeberstadt (die Gastgeberstädte)", uk: "місто-господар (Ігор)", klas: "7", modul: "D", lektion: 5},
+  {de: "das Komitee (das Internationale Olympische Komitee)", uk: "комітет (Міжнародний олімпійський комітет)", klas: "7", modul: "D", lektion: 5},
+  {de: "entscheiden (über den Austragungsort entscheiden)", uk: "вирішувати (про щось)", klas: "7", modul: "D", lektion: 5},
+  {de: "vertreten (er vertritt) (Die Sportler vertreten ihre Länder.)", uk: "представляти (країну)", klas: "7", modul: "D", lektion: 5},
+  {de: "die Qualifikation (eine Qualifikation schaffen)", uk: "кваліфікація, відбір (пройти відбір)", klas: "7", modul: "D", lektion: 5},
+  {de: "die Flagge (die Flaggen)", uk: "прапор", klas: "7", modul: "D", lektion: 5},
+  {de: "die Hymne (die Hymnen)", uk: "гімн", klas: "7", modul: "D", lektion: 5},
+  {de: "das Feuer (das Olympische Feuer)", uk: "вогонь (олімпійський вогонь)", klas: "7", modul: "D", lektion: 5},
+  {de: "der Eid (der Olympische Eid)", uk: "клятва (олімпійська клятва)", klas: "7", modul: "D", lektion: 5}
 ];
