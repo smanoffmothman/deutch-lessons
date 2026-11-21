@@ -1243,5 +1243,17 @@ const LESSONS = [
     gram: ["fragen", "zahlwoerter"],
     hook: "prognose",
     dz: "Olympia-Quiz für die Klasse: 1) Schreib sechs Fragen zu den Olympischen Spielen – mit verschiedenen Fragewörtern (z. B. Seit wann …? Wo …? Wer …? Wie oft …? Welche …? Wie viele …?). Zu jeder Frage gibt es drei Antworten (a, b, c), nur eine ist richtig. 2) Mindestens eine Frage ist über die Olympischen Symbole, eine über eine Gastgeberstadt und eine über die Ukraine bei den Olympischen Spielen (z. B. „In welcher Sportart hat die Ukraine eine Medaille gewonnen?“ – such die Information im Internet). 3) Benutze mindestens fünf Wörter aus der Stunde (z. B. die Gastgeberstadt, der Austragungsort, das Komitee, die Flagge, das Feuer, die Qualifikation, stattfinden). 4) Schreib die richtigen Antworten auf die Rückseite des Blattes. Nächstes Mal spielen wir das Olympia-Quiz in Gruppen – wer hat die meisten Punkte?"
+  },
+  {
+    klas: "8",
+    modul: "C",
+    lektion: 7,
+    nazva: "Bücher, die wir gern lesen",
+    opys: "Книжки, які ми читаємо залюбки: доповнюємо правило й таблицю відносних займенників (der, dessen, dem, den, deren, denen), визначаємо їхній відмінок, вставляємо займенники в речення (in der, über den, an dem), граємо «Was lesen wir gern?» (Die Bücher, deren Helden spannende Abenteuer erleben, gefallen mir) і пишемо короткий зміст улюбленої книжки.",
+    file: "klas-8/modul-c/lektion-7.html",
+    nove: true,
+    gram: ["relativsaetze"],
+    hook: "undu",
+    dz: "Literaturquiz: 1) Schreib sechs Quizfragen über Bücher, Autoren oder Buchfiguren, die unsere Klasse kennt – jede Frage mit einem Relativsatz. 2) Benutze verschiedene Relativpronomen: mindestens einmal der/die/das, einmal dessen oder deren, einmal dem, der oder denen und einmal Präposition + Relativpronomen (z. B. „Wie heißt der Junge, der in einer Zauberschule lernt?“, „Wie heißt die Schriftstellerin, deren Krimis in der ganzen Welt bekannt sind?“, „Wie heißt die Insel, auf der Robinson Crusoe viele Jahre lebt?“). 3) Unterstreiche die Relativpronomen und schreib die Antworten auf die Rückseite des Blattes. Nächstes Mal spielen wir das Literaturquiz in zwei Teams."
   }
 ];

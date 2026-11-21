@@ -1333,5 +1333,17 @@ const GLOSSARY = [
   {de: "die Flagge (die Flaggen)", uk: "прапор", klas: "7", modul: "D", lektion: 5},
   {de: "die Hymne (die Hymnen)", uk: "гімн", klas: "7", modul: "D", lektion: 5},
   {de: "das Feuer (das Olympische Feuer)", uk: "вогонь (олімпійський вогонь)", klas: "7", modul: "D", lektion: 5},
-  {de: "der Eid (der Olympische Eid)", uk: "клятва (олімпійська клятва)", klas: "7", modul: "D", lektion: 5}
+  {de: "der Eid (der Olympische Eid)", uk: "клятва (олімпійська клятва)", klas: "7", modul: "D", lektion: 5},
+  {de: "das Relativpronomen (die Relativpronomen)", uk: "відносний займенник", klas: "8", modul: "C", lektion: 7},
+  {de: "der Relativsatz (die Relativsätze)", uk: "означальне підрядне речення", klas: "8", modul: "C", lektion: 7},
+  {de: "die Handlung (die Handlungen) (Die Handlung spielt auf einer Insel.)", uk: "сюжет, дія (Дія відбувається на острові.)", klas: "8", modul: "C", lektion: 7},
+  {de: "die Erzählung (die Erzählungen)", uk: "оповідання, розповідь", klas: "8", modul: "C", lektion: 7},
+  {de: "der Abenteuerroman (die Abenteuerromane)", uk: "пригодницький роман", klas: "8", modul: "C", lektion: 7},
+  {de: "der Held / die Heldin (die Helden / die Heldinnen)", uk: "герой / героїня", klas: "8", modul: "C", lektion: 7},
+  {de: "die Hexe (die Hexen)", uk: "відьма", klas: "8", modul: "C", lektion: 7},
+  {de: "das Rätsel (die Rätsel) (ein Rätsel lösen)", uk: "загадка (розгадати загадку)", klas: "8", modul: "C", lektion: 7},
+  {de: "geheimnisvoll", uk: "таємничий", klas: "8", modul: "C", lektion: 7},
+  {de: "die Inhaltsangabe (die Inhaltsangaben)", uk: "короткий зміст, анотація", klas: "8", modul: "C", lektion: 7},
+  {de: "der Autor / die Autorin (die Autoren / die Autorinnen)", uk: "автор / авторка", klas: "8", modul: "C", lektion: 7},
+  {de: "erleben (Abenteuer erleben)", uk: "переживати, зазнавати (пригод)", klas: "8", modul: "C", lektion: 7}
 ];
