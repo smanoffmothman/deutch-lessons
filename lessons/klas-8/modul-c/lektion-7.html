@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 7 · Modul C · Bücher, die wir gern lesen</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 8'},
+    {label: 'Урок 7: Bücher, die wir gern lesen'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 7 · MODUL C</span>
+        <h1>Bücher, die wir gern lesen</h1>
+        <p class="sub">Книжки, які ми читаємо залюбки: вчимо всі відносні займенники (der, dessen, dem, den, deren, denen …), розповідаємо, які книжки нам подобаються, і пишемо короткий зміст улюбленої книжки.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Relativpronomen</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Ergänze!</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Was lesen wir gern?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Inhaltsangabe</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== ПАНЕЛЬ: вступ ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Worum geht es heute?</h2>
+      <div class="card">
+        <p>Letztes Mal haben wir schon lange Sätze mit <b>der, die, das</b> nach dem Komma gesehen: „Die Hauptfigur ist ein Hund, <b>der</b> immer Geld findet.“ Heute lernen wir diese Relativsätze richtig kennen – mit allen Relativpronomen: <b>dessen, deren, dem, denen …</b> Damit sagen wir, welche Bücher uns gefallen, und schreiben eine kurze Inhaltsangabe zu einem Buch, das wir gern gelesen haben.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Минулого разу ми вже бачили довгі речення з <b>der, die, das</b> після коми: «Головний герой — пес, <b>який</b> завжди знаходить гроші». Сьогодні знайомимося з цими означальними підрядними реченнями як слід — з усіма відносними займенниками: <b>dessen, deren, dem, denen …</b> З їхньою допомогою розповідаємо, які книжки нам подобаються, і пишемо короткий зміст книжки, яку ми охоче прочитали.
+        </div>
+      </div>
+
+      <div id="hook"></div>
+
+      <div id="lz-start"></div>
+
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Ich möchte heute über ein Abenteuerbuch schreiben! Und du? 🐶📖</p>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: перевірка домашнього завдання (dz уроку 8-C-6) ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: книжкова загадка — коротка анотація (5–6 простих речень) до прочитаної книжки чи фільму за книжкою, але без назви й без імен героїв, зі зворотами «In dem Buch geht es um …», «Die Hauptfigur ist …», «Das ist ein/eine … (жанр)» і одним реченням про автора чи авторку.
+      </div>
+
+      <div id="dz-check">
+        <div class="card" style="margin-top:18px;">
+          <p class="section-label" style="margin:0 0 6px;">Teil A · Lenas Bücher-Rätsel</p>
+          <p class="lead">Лена теж написала загадку, але зробила кілька помилок. Натисни на слово з помилкою й напиши правильну форму. Якщо речення правильне — натисни «Fehlerfrei». Потім так само перевір свою загадку: <b>um + Akkusativ</b> (um <b>einen</b> Jungen), рід жанру (<b>eine</b> Fantasy, <b>ein</b> Krimi), закінчення прикметників.</p>
+          <div id="hw-fix"></div>
+
+          <p class="lead" style="margin-top:18px;">Ну що, вгадав(-ла)? Яка це книжка?</p>
+          <div id="hw-quiz"></div>
+        </div>
+
+        <div class="card tinted-teal">
+          <p class="section-label" style="margin:0 0 6px;">Teil B · Ratet mal!</p>
+          <p style="margin:0;">Lest eure Rätsel vor. Die Klasse rät: <em>„Ich glaube, das ist ‚Der kleine Prinz‘, denn …“</em> Wer richtig geraten hat, liest das nächste Rätsel vor.</p>
+          <div class="ua-note">
+            <span class="ua-label">🇺🇦 У класі</span>
+            Читайте загадки вголос, клас угадує назву книжки. Хто вгадав — читає наступну. Якщо працюєш удома — прочитай свою загадку вголос і додай одне речення, чому ти радиш цю книжку.
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="dz-vocab-wrap" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">Wörter-Check</p>
+        <p class="lead">Перевір слова з минулих уроків.</p>
+        <div id="dz-vocab"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: Relativpronomen — Tabelle und Regel ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Relativpronomen: die Regel</h2>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Achte auf die markierten Wörter</p>
+        <p style="margin:0 0 4px;">Worum geht es im <b>Buch</b>, <b>das</b> du jetzt liest?</p>
+        <p style="margin:0 0 4px;">Ich lese gern <b>Krimis</b>, <b>deren</b> Hauptfigur eine Frau ist.</p>
+        <p style="margin:0 0 12px;">Mir gefallen die <b>Bücher</b>, <b>in denen</b> es um historische Ereignisse geht.</p>
+        <table class="gtable">
+          <tr><th></th><th>Nom.</th><th>Gen.</th><th>Dat.</th><th>Akk.</th></tr>
+          <tr><td>m</td><td>der</td><td><b>dessen</b></td><td>dem</td><td>den</td></tr>
+          <tr><td>n</td><td>das</td><td><b>dessen</b></td><td>dem</td><td>das</td></tr>
+          <tr><td>f</td><td>die</td><td><b>deren</b></td><td>der</td><td>die</td></tr>
+          <tr><td>Pl.</td><td>die</td><td><b>deren</b></td><td><b>denen</b></td><td>die</td></tr>
+        </table>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Зверни увагу</span>
+          Відносні займенники майже такі самі, як означений артикль. Нові лише чотири форми: <b>dessen</b> і <b>deren</b> (Genitiv, «чий, чия, чиї») та <b>denen</b> (Dativ множини). Після <b>dessen / deren</b> іменник стоїть БЕЗ артикля: ein Buch, <b>dessen</b> Autor … (не «dessen der Autor»).
+        </div>
+      </div>
+
+      <p class="lead" style="margin-top:20px;">A) Доповни правило. Три картки зайві.</p>
+      <div class="card" id="ub1-bank"></div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">So findest du das richtige Relativpronomen</p>
+        <p style="margin:0 0 4px;">Das ist der <b>Autor</b>, <b>den</b> ich sehr mag. &nbsp;← ich mag <b>ihn</b> (Akk.)</p>
+        <p style="margin:0 0 4px;">Das ist die <b>Autorin</b>, <b>der</b> ich einen Brief schreibe. &nbsp;← ich schreibe <b>ihr</b> (Dat.)</p>
+        <p style="margin:0;">Das ist ein <b>Roman</b>, <b>dessen</b> Handlung in Kyjiw spielt. &nbsp;← <b>seine</b> Handlung (Gen.)</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Запам'ятай</span>
+          <b>Рід і число</b> займенника — від слова, до якого він відноситься (der Autor → чоловічий рід). <b>Відмінок</b> — від ролі займенника в підрядному реченні: спитай себе, як було б в окремому реченні (ich mag <b>ihn</b> → <b>den</b>). Дієслово в підрядному реченні стоїть у кінці, перед ним кома.
+        </div>
+      </div>
+
+      <p class="lead" style="margin-top:20px;">B) Який відмінок у виділеного займенника? Розклади картки.</p>
+      <div class="card" id="ub1-sort"></div>
+    </section>
+
+    <!-- ===== Üb. 2: Ergänze passende Relativpronomen ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Ergänze passende Relativpronomen</h2>
+      <p class="lead">Впиши відносний займенник. Перше речення — приклад.</p>
+      <div class="card">
+        <p style="margin:0;"><span class="num">0)</span> Die <b>Geschichte</b>, <b>die</b> der Autor dieses Buches erzählt, finde ich spannend.</p>
+      </div>
+      <div class="card" id="ub2-list">
+        <div class="fill-item"><span class="num">1)</span> Wir haben im Unterricht eine Erzählung gelesen, <input type="text" class="blank-input inline" data-ans="deren" aria-label="Relativpronomen 1"> Autorin nicht sehr bekannt ist.</div>
+        <div class="fill-item"><span class="num">2)</span> Kannst du mir ein Buch empfehlen, <input type="text" class="blank-input inline" data-ans="das" aria-label="Relativpronomen 2a"> du vor kurzem gelesen hast und <input type="text" class="blank-input inline" data-ans="das" aria-label="Relativpronomen 2b"> dir gefallen hat?</div>
+        <div class="fill-item"><span class="num">3)</span> Ich lese gern Krimis, <input type="text" class="blank-input inline" data-ans="deren" aria-label="Relativpronomen 3a"> Hauptfigur eine Frau ist, <input type="text" class="blank-input inline" data-ans="die" aria-label="Relativpronomen 3b"> alle geheimnisvollen Rätsel leicht löst.</div>
+        <div class="fill-item"><span class="num">4)</span> Die Bibliothek, in <input type="text" class="blank-input inline" data-ans="der" aria-label="Relativpronomen 4"> ich oft Bücher ausleihe, liegt nicht weit von meinem Haus.</div>
+        <div class="fill-item"><span class="num">5)</span> Wie heißt der Autor, <input type="text" class="blank-input inline" data-ans="der" aria-label="Relativpronomen 5"> dieses Buch geschrieben hat?</div>
+        <div class="fill-item"><span class="num">6)</span> Ich möchte einen Abenteuerroman lesen, <input type="text" class="blank-input inline" data-ans="dessen" aria-label="Relativpronomen 6"> Handlung auf einer einsamen Insel spielt.</div>
+        <div class="fill-item"><span class="num">7)</span> Am Freitag findet das Literaturquiz statt, an <input type="text" class="blank-input inline" data-ans="dem" aria-label="Relativpronomen 7"> alle Interessenten teilnehmen können.</div>
+        <div class="fill-item"><span class="num">8)</span> Wie heißt der historische Roman, über <input type="text" class="blank-input inline" data-ans="den" aria-label="Relativpronomen 8"> du in der Stunde berichtet hast?</div>
+        <div class="fill-item"><span class="num">9)</span> Mir gefallen die Bücher, in <input type="text" class="blank-input inline" data-ans="denen" aria-label="Relativpronomen 9"> ich über fantastische Welten lesen kann.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub2-check">Prüfen</button>
+        <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub2-score"></span>
+      </div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Підказка</span>
+        Три кроки: 1) знайди слово перед комою (напр. das Märchen — сер. рід); 2) подумай, як було б в окремому реченні (<b>sein</b> Titel → <b>dessen</b> Titel); 3) перевір прийменник: <b>in</b> der Bibliothek (Dat.), <b>über</b> den Roman berichten (Akk.), <b>an</b> dem Quiz teilnehmen (Dat.). <b>geheimnisvoll</b> — таємничий; <b>das Rätsel lösen</b> — розгадати загадку; <b>einsam</b> — безлюдний, самотній; <b>die Handlung spielt …</b> — дія відбувається …
+      </div>
+
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Wer die Tabelle aus Üb. 1 gut kennt, findet jedes Relativpronomen! 🐶</p>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: Spiel „Was lesen wir gern?“ ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Was lesen wir gern?</h2>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Muster</p>
+        <p style="margin:0 0 4px;"><em>Ihre Autoren haben vor vielen, vielen Jahren gelebt.</em></p>
+        <p style="margin:0;">→ Die Bücher, <b>deren</b> Autoren vor vielen, vielen Jahren gelebt haben, gefallen mir (nicht).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Як це працює</span>
+          З простого речення про книжки робимо підрядне: <b>ihre</b> Autoren → <b>deren</b> Autoren, <b>die</b> Bücher erzählen → Bücher, <b>die</b> … erzählen, <b>in den</b> Büchern → Bücher, <b>in denen</b> … Дієслово переходить у кінець підрядного речення.
+        </div>
+      </div>
+
+      <p class="lead" style="margin-top:20px;">A) Обери відносний займенник.</p>
+      <div id="ub3-quiz"></div>
+
+      <p class="lead" style="margin-top:20px;">B) Склади з карток речення: які книжки тобі подобаються?</p>
+      <div class="card" id="ub3-order"></div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Spiel: Was lesen wir gern?</p>
+        <p style="margin:0;">Schreibt auf Kärtchen Sätze über verschiedene Bücher (<em>Die Bücher haben viele farbige Bilder. – Ihre Helden erleben spannende Abenteuer. …</em>) und mischt sie. Zieht die Karten der Reihe nach und sagt: <em>„Die Bücher, deren Helden spannende Abenteuer erleben, gefallen mir sehr!“</em></p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Усно</span>
+          Гра в класі: пишіть на картках речення про книжки, перемішайте, тягніть по черзі й кажіть, чи подобаються вам такі книжки, — з відносним займенником, як у зразку. Удома — витягни подумки три речення з вправи А й скажи вголос свою думку про кожне.
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4: Gattung und Inhaltsangabe ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Worum geht es im Buch?</h2>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">A) Was meinst du: Zu welchen Gattungen gehören diese Bücher?</p>
+        <p style="margin:0 0 4px;">🐆🌴🎯 <b>„Die Jagd durch den Dschungel“</b></p>
+        <p style="margin:0 0 4px;">⛵🧭🐫 <b>„Die Abenteuer des Marco Polo“</b></p>
+        <p style="margin:0 0 8px;">⚓🛡️🌊 <b>„Die Saga von den Seefahrern“</b></p>
+        <p style="margin:0;"><em>„Ich glaube, ‚Die Abenteuer des Marco Polo‘ ist ein historischer Roman, denn Marco Polo hat wirklich gelebt. Er war ein Kaufmann aus Venedig, der bis nach China gereist ist.“</em></p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Усно</span>
+          Подивись на обкладинки й назви: який це може бути жанр? Обґрунтуй думку з <b>denn</b>. Тут немає однієї правильної відповіді — книжка буває й пригодницькою, й історичною водночас. <b>die Jagd</b> — полювання, гонитва; <b>der Seefahrer</b> — мореплавець; <b>die Saga</b> — сага, давня оповідь.
+        </div>
+      </div>
+
+      <p class="lead" style="margin-top:20px;">B) Лукас написав короткий зміст книжки «Die Jagd durch den Dschungel». Обери відносні займенники.</p>
+      <div class="card" id="ub4-list">
+        <div class="fill-item"><span class="num">1)</span> Das ist ein Abenteuerroman, <select class="blank inline" data-ans="den" aria-label="Lukas 1"><option value="">—</option><option>der</option><option>den</option><option>dem</option></select> ich in den Ferien gelesen habe.</div>
+        <div class="fill-item"><span class="num">2)</span> Die Hauptfigur ist Tom, ein junger Fotograf, <select class="blank inline" data-ans="der" aria-label="Lukas 2"><option value="">—</option><option>der</option><option>den</option><option>dessen</option></select> wilde Tiere fotografieren will.</div>
+        <div class="fill-item"><span class="num">3)</span> Tom hat einen Freund, <select class="blank inline" data-ans="dessen" aria-label="Lukas 3"><option value="">—</option><option>deren</option><option>dem</option><option>dessen</option></select> Vater ein bekannter Biologe ist.</div>
+        <div class="fill-item"><span class="num">4)</span> Die Handlung spielt in Südamerika, in einem Dschungel, in <select class="blank inline" data-ans="dem" aria-label="Lukas 4"><option value="">—</option><option>dem</option><option>den</option><option>der</option></select> gefährliche Tiere leben.</div>
+        <div class="fill-item"><span class="num">5)</span> Dort treffen die Jungen Jäger, <select class="blank inline" data-ans="denen" aria-label="Lukas 5"><option value="">—</option><option>deren</option><option>denen</option><option>die</option></select> die Tiere egal sind.</div>
+        <div class="fill-item"><span class="num">6)</span> Tom und sein Freund erleben Abenteuer, <select class="blank inline" data-ans="die" aria-label="Lukas 6"><option value="">—</option><option>die</option><option>denen</option><option>das</option></select> wirklich spannend sind.</div>
+        <div class="fill-item"><span class="num">7)</span> Das ist ein Buch, <select class="blank inline" data-ans="das" aria-label="Lukas 7"><option value="">—</option><option>dem</option><option>dessen</option><option>das</option></select> ich allen empfehlen kann!</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub4-check">Prüfen</button>
+        <button class="btn secondary" id="ub4-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub4-score"></span>
+      </div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Зверни увагу</span>
+        Лукас відповідає на чотири питання: <b>Worum geht es im Buch?</b> (Про що книжка?) · <b>Wie heißt die Hauptfigur und wie ist sie?</b> (Як звати головного героя і який він?) · <b>Wo spielt die Handlung?</b> (Де відбувається дія?) · <b>Was erlebt die Hauptfigur?</b> (Що переживає головний герой?). Це план твого власного тексту в частині C. <b>der Jäger</b> — мисливець; <b>egal sein</b> — бути байдужим.
+      </div>
+
+      <p class="lead" style="margin-top:20px;">C) А тепер ти: обери книжку й напиши її короткий зміст (5–6 речень), відповідаючи на ті самі чотири питання. Використай щонайменше два означальні підрядні речення. Вставка тексту вимкнена — набирай сам(а).</p>
+      <div class="card" id="ub4-w"></div>
+    </section>
+
+    <!-- ===== ПРИКІНЦЕВА ПАНЕЛЬ ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div id="lz-check"></div>
+
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Literaturquiz: 1) Schreib sechs Quizfragen über Bücher, Autoren oder Buchfiguren, die unsere Klasse kennt – jede Frage mit einem Relativsatz. 2) Benutze verschiedene Relativpronomen: mindestens einmal der/die/das, einmal dessen oder deren, einmal dem, der oder denen und einmal Präposition + Relativpronomen (z. B. „Wie heißt der Junge, der in einer Zauberschule lernt?“, „Wie heißt die Schriftstellerin, deren Krimis in der ganzen Welt bekannt sind?“, „Wie heißt die Insel, auf der Robinson Crusoe viele Jahre lebt?“). 3) Unterstreiche die Relativpronomen und schreib die Antworten auf die Rückseite des Blattes. Nächstes Mal spielen wir das Literaturquiz in zwei Teams.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Літературна вікторина: 1) Напиши шість запитань для вікторини про книжки, авторів чи книжкових героїв, яких знає наш клас, — у кожному запитанні має бути означальне підрядне речення. 2) Використай різні відносні займенники: щонайменше один раз der/die/das, один раз dessen або deren, один раз dem, der або denen і один раз прийменник + відносний займенник (напр. «Wie heißt der Junge, der in einer Zauberschule lernt?», «Wie heißt die Schriftstellerin, deren Krimis in der ganzen Welt bekannt sind?», «Wie heißt die Insel, auf der Robinson Crusoe viele Jahre lebt?»). 3) Підкресли відносні займенники, а відповіді запиши на звороті аркуша. Наступного уроку зіграємо у вікторину двома командами.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Wörter zum Lernen</p>
+        <div class="chip-row" id="vocabChips"></div>
+      </div>
+
+      <div class="card" id="lessonGramWrap">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="lessonGram"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../data/glossary-data.js"></script>
+<script src="../../../data/lessons-data.js"></script>
+<script src="../../../data/grammar-data.js"></script>
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  const LEKTION_KLAS = "8", LEKTION_MODUL = "C", LEKTION_LEKTION = 7;
+  const LEKTION_PREV_LEKTION = 6;
+
+  // ===== Цілі уроку «Ich kann …» (Start) + самооцінка-світлофор (Fertig!) =====
+  const LERNZIELE = [
+    {de: "Ich kann das passende Relativpronomen in einen Satz einsetzen: der, dessen, dem, den, deren, denen …", uk: "Я можу вставити в речення потрібний відносний займенник: der, dessen, dem, den, deren, denen …"},
+    {de: "Ich kann mit Relativsätzen sagen, welche Bücher mir gefallen: „Mir gefallen Bücher, in denen …“", uk: "Я можу за допомогою означальних підрядних речень сказати, які книжки мені подобаються: «Mir gefallen Bücher, in denen …»"},
+    {de: "Ich kann eine kurze Inhaltsangabe zu einem Buch schreiben.", uk: "Я можу написати короткий зміст книжки."}
+  ];
+  buildLernziele('lz-start', 'lz-check', LERNZIELE);
+
+  // ===== Хук входу (тип undu — поле hook у lessons-data.js) =====
+  buildHook('hook', {type: 'undu',
+    q: "Welches Buch hast du zuletzt gern gelesen? Warum hat es dir gefallen?",
+    uk: "Яку книжку ти останнім часом прочитав(-ла) із задоволенням? Чому вона тобі сподобалась?",
+    words: "8"});
+
+  (function renderLessonVocab(){
+    const box = document.getElementById('vocabChips');
+    if (!box || typeof GLOSSARY === 'undefined') return;
+    const words = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_LEKTION
+    );
+    if (words.length === 0){
+      box.innerHTML = '<p class="empty-note">Слова для цього уроку ще не додані в глосарій.</p>';
+      return;
+    }
+    box.innerHTML = words.map(w =>
+      '<span class="chip static">' + w.de + ' — ' + w.uk + '</span>'
+    ).join('');
+  })();
+
+  // ===== Граматика до цього уроку у вкладці Fertig (поле gram у lessons-data.js) =====
+  (function renderLessonGrammar(){
+    const wrap = document.getElementById('lessonGramWrap');
+    const box = document.getElementById('lessonGram');
+    if (!wrap || !box) return;
+    const hide = () => { wrap.style.display = 'none'; };
+    if (typeof LESSONS === 'undefined' || typeof GRAMMAR === 'undefined') return hide();
+    const me = LESSONS.find(l => l.klas === LEKTION_KLAS && l.modul === LEKTION_MODUL && l.lektion === LEKTION_LEKTION);
+    const topics = ((me && me.gram) || []).map(id => GRAMMAR.find(t => t.id === id)).filter(t => t && t.opublikovano > 0);
+    if (topics.length === 0) return hide();
+    const src = document.querySelector('script[src$="data/grammar-data.js"]').getAttribute('src');
+    const root = src.slice(0, src.length - 'data/grammar-data.js'.length);
+    box.innerHTML = topics.map(t =>
+      '<a class="gram-link" href="' + root + 'gramatyka/temy/' + t.id + '.html">'
+      + '<span class="k">' + t.uk + '</span>' + t.tema + '</a>'
+    ).join('');
+  })();
+
+  // ---------- Груба евристика частини мови за виглядом "de" (для пасток у Wörter-Check) ----------
+  function guessPos(de){
+    var base = (de || '').replace(/\([^)]*\)/g, '').trim();
+    if(/^(der|die|das)(\/(der|die|das))?\s/.test(base)) return 'noun';
+    if(/^sich\s/.test(base)) return 'verb';
+    if(/^am\s/.test(base)) return 'other';
+    if(/\(\+(Gen|Dat|Akk)\.?\)/.test(de)) return 'prep';
+    var words = base.split(/\s+/);
+    var last = words[words.length - 1];
+    if(/(en|ern|eln)$/.test(last) && last === last.toLowerCase()) return 'verb';
+    return 'other';
+  }
+
+  // ===== Wörter-Check: до 4 слів попереднього уроку + слова з 2–5 уроків тому =====
+  (function renderDzVocabCheck(){
+    const wrap = document.getElementById('dz-vocab-wrap');
+    const box = document.getElementById('dz-vocab');
+    if (!wrap || !box || typeof GLOSSARY === 'undefined') return;
+    const same = (w, l) => w.klas === l.klas && w.modul === l.modul && w.lektion === l.lektion;
+    const prevWords = LEKTION_PREV_LEKTION ? GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_PREV_LEKTION
+    ) : [];
+    let olderWords = [];
+    if (typeof LESSONS !== 'undefined'){
+      const mine = LESSONS.filter(l => l.klas === LEKTION_KLAS);
+      const idx = mine.findIndex(l => l.modul === LEKTION_MODUL && l.lektion === LEKTION_LEKTION);
+      if (idx > 0){
+        const older = mine.slice(Math.max(0, idx - 5), idx)
+          .filter(l => !(l.modul === LEKTION_MODUL && l.lektion === LEKTION_PREV_LEKTION));
+        olderWords = GLOSSARY.filter(w => older.some(l => same(w, l)));
+      }
+    }
+    const fromPrev = shuffleArray(prevWords).slice(0, olderWords.length ? 4 : 6);
+    const pool = shuffleArray(fromPrev.concat(shuffleArray(olderWords).slice(0, 6 - fromPrev.length)));
+    if (pool.length < 3){ wrap.style.display = 'none'; return; }
+
+    const quizData = pool.map(w => {
+      const pos = guessPos(w.de);
+      let sameKind = GLOSSARY.filter(g => g.uk !== w.uk && guessPos(g.de) === pos);
+      if(sameKind.length < 2) sameKind = GLOSSARY.filter(g => g.uk !== w.uk);
+      const distractors = shuffleArray(sameKind).slice(0, 2).map(g => g.uk);
+      return { q: w.de, opts: [w.uk, ...distractors], correct: w.uk };
+    });
+    buildQuiz('dz-vocab', quizData);
+  })();
+
+  // ===== Hausaufgabe, Teil A: Fehler in Lenas Rätsel =====
+  buildFixError('hw-fix', [
+    {s: "In dem Buch geht es um einen Jungen.", ok: true},
+    {s: "Er wohnt bei seiner Tante und seinem Onkel, aber sie sind nicht nett zu ihm.", ok: true},
+    {s: "Mit elf Jahren erfährt er, dass er ein Zauberer ist.", ok: true},
+    {s: "Er lernt in einer Zauberschule und erlebt viel Abenteuer.", wrong: 7, fix: "viele", hint: "множина"},
+    {s: "Das ist ein Fantasy.", wrong: 2, fix: "eine", hint: "die Fantasy"},
+    {s: "Die Autorin ist eine bekannte englische Schriftsteller.", wrong: 6, fix: "Schriftstellerin"}
+  ]);
+
+  buildQuiz('hw-quiz', [
+    {q: "Welches Buch ist das?", opts: ["„Der kleine Prinz“", "„Robinson Crusoe“", "„Harry Potter und der Stein der Weisen“"], correct: "„Harry Potter und der Stein der Weisen“"}
+  ]);
+
+  // ===== Üb. 1 A: Regel ergänzen =====
+  buildWordBank('ub1-bank', {
+    text: "1) Die Relativpronomen der/das/die leiten Relativsätze ein.\n\n"
+      + "2) Die Relativsätze sind Nebensätze, die auf die Frage [welcher/welches/welche?] antworten.\n\n"
+      + "3) Die Relativsätze beziehen sich auf ein [Substantiv] im Hauptsatz und stehen meistens direkt nach ihm, z. B.: Worum geht es im Buch, das du jetzt liest?\n\n"
+      + "4) Vor den Relativpronomen können auch [Präpositionen] stehen, z. B.: Mir gefallen die Bücher, in denen es um historische Ereignisse geht.\n\n"
+      + "5) Im Relativsatz steht das konjugierte Verb [am Ende].",
+    extra: ["Konjunktionen", "auf Platz 2", "wann?"]
+  });
+
+  // ===== Üb. 1 B: Welcher Kasus? =====
+  buildSort('ub1-sort', {
+    buckets: ["Nominativ", "Genitiv", "Dativ", "Akkusativ"],
+    items: [
+      {t: "der Roman, »der« sehr spannend ist", b: "Nominativ"},
+      {t: "die Helden, »die« Abenteuer erleben", b: "Nominativ"},
+      {t: "das Buch, »dessen« Titel ich vergessen habe", b: "Genitiv"},
+      {t: "die Bücher, »deren« Helden Zauberer sind", b: "Genitiv"},
+      {t: "die Freundin, »der« ich das Buch schenke", b: "Dativ"},
+      {t: "die Leser, »denen« das Buch gefällt", b: "Dativ"},
+      {t: "der Krimi, »den« ich gerade lese", b: "Akkusativ"},
+      {t: "die Autorin, »die« ich sehr mag", b: "Akkusativ"}
+    ]
+  });
+
+  // ===== Üb. 2: Relativpronomen ergänzen =====
+  wireBlanks('ub2');
+
+  // ===== Üb. 3 A: Relativpronomen wählen =====
+  buildQuiz('ub3-quiz', [
+    {q: "Ihre Autoren haben vor vielen Jahren gelebt. → Die Bücher, … Autoren vor vielen Jahren gelebt haben, …",
+     opts: ["die", "deren", "denen"], correct: "deren"},
+    {q: "Die Bücher erzählen etwas Ungewöhnliches. → Die Bücher, … etwas Ungewöhnliches erzählen, …",
+     opts: ["deren", "denen", "die"], correct: "die"},
+    {q: "In den Büchern gibt es viele Beschreibungen von Landschaften. → Die Bücher, in … es viele Beschreibungen von Landschaften gibt, …",
+     opts: ["denen", "die", "deren"], correct: "denen"},
+    {q: "Für die Bücher interessieren sich meine Eltern. → Die Bücher, für … sich meine Eltern interessieren, …",
+     opts: ["deren", "die", "denen"], correct: "die"},
+    {q: "Ihre Helden erleben spannende Abenteuer. → Die Bücher, … Helden spannende Abenteuer erleben, …",
+     opts: ["deren", "denen", "die"], correct: "deren"},
+    {q: "Die Bücher beschreiben Zeitreisen. → Die Bücher, … Zeitreisen beschreiben, …",
+     opts: ["denen", "deren", "die"], correct: "die"}
+  ]);
+
+  // ===== Üb. 3 B: Sätze bauen =====
+  buildOrder('ub3-order', [
+    {words: ["die Bücher,", "deren", "Hauptfiguren", "Zauberer und Hexen", "sind,", "gefallen", "mir"], end: "."},
+    {words: ["die Bücher,", "die", "Sportwettkämpfe", "beschreiben,", "gefallen", "mir", "nicht"], end: "."},
+    {words: ["die Bücher,", "in denen", "es", "viele Sachinformationen", "gibt,", "finde", "ich", "interessant"], end: "."},
+    {words: ["ich", "lese", "gern", "Bücher,", "die", "viele farbige Fotos", "haben"], end: ".", alt: ["gern lese ich Bücher, die viele farbige Fotos haben"]}
+  ]);
+
+  // ===== Üb. 4 B: Lukas' Inhaltsangabe =====
+  wireBlanks('ub4');
+
+  // ===== Üb. 4 C: Exit ticket — eigene Inhaltsangabe =====
+  buildWriting('ub4-w', {
+    prompt: "Meine Inhaltsangabe: Worum geht es im Buch? Wie heißt die Hauptfigur und wie ist sie? Wo spielt die Handlung? Was erlebt die Hauptfigur? (5–6 Sätze)",
+    words: "40-90",
+    must: ["In dem Buch geht es um/Im Buch geht es um", "Die Hauptfigur", "Die Handlung spielt"],
+    check: ["Назва книжки й жанр", "Відповіді на всі чотири питання", "Щонайменше два означальні підрядні речення (der, dessen, in dem …)"],
+    rows: 7
+  });
+
+  // Фінальна панель зі штампами
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📚','🔗','📖','✍️']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
