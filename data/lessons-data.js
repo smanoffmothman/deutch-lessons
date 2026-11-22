@@ -1267,5 +1267,17 @@ const LESSONS = [
     gram: ["zahlwoerter", "komparation", "relativsaetze"],
     hook: "fakt",
     dz: "Was lesen die Ukrainer am liebsten? 1) Recherchiere im Internet (auch auf Ukrainisch): Welche Genres lesen die Menschen in der Ukraine am liebsten, und welche Bücher kaufen sie am meisten? Du kannst auch fünf Personen aus deiner Familie und deinem Freundeskreis fragen. 2) Mach (auf Papier oder digital) ein Diagramm mit mindestens fünf Genres und schreib die Quelle darunter (z. B. „Quelle: Umfrage …, 2025“ oder „Quelle: meine Umfrage“). 3) Schreib dazu eine kurze Präsentation (6–7 Sätze). Benutze „Die meisten …“, eine Bruchzahl (ein Drittel, ein Viertel, die Hälfte …), „… Prozent der Befragten …“, einen Komparativ mit „als“ und „Am wenigsten beliebt …“. 4) Zum Schluss ein Satz: „Interessant finde ich, dass …“. Nächstes Mal präsentierst du dein Diagramm, und wir vergleichen: Lesen die Ukrainer dasselbe wie unsere Klasse?"
+  },
+  {
+    klas: "8",
+    modul: "C",
+    lektion: 9,
+    nazva: "Unsere Lieblingshelden",
+    opys: "Улюблені літературні герої: утворюємо складні слова (das Kinderbuch, der Kriminalroman, die Fantasyreihe), впізнаємо відомих книжкових героїв і називаємо їхніх авторів (Pippi Langstrumpf ist die Hauptfigur des Kinderbuches, das Astrid Lindgren geschrieben hat), вчимо Genitiv імен з кількох частин (Astrid Lindgrens Bücher) і розповідаємо про свого улюбленого героя.",
+    file: "klas-8/modul-c/lektion-9.html",
+    nove: true,
+    gram: ["relativsaetze", "deklination-nomen"],
+    hook: "prognose",
+    dz: "„Wer bin ich?“ – ein Rätsel über deine Lieblingsheldin oder deinen Lieblingshelden. 1) Wähle eine Figur aus einem Buch, das du gelesen hast. 2) Schreib eine Rätselkarte in der Ich-Form (5–6 Sätze), aber nenne den Namen nicht! 3) Benutze mindestens drei Adjektive aus der Stunde (z. B. tapfer, listig, flink, klug, selbstbewusst, hilfsbereit) und eine Wendung wie „Ich kämpfe gegen das Böse“, „Ich reise durch die ganze Welt“ oder „Ich strebe nach meinem Ziel“. 4) Der letzte Satz ist ein Tipp mit einem Relativsatz: „Ich bin die Hauptfigur des Romans / der Erzählung / des Märchens, den / die / das … geschrieben hat.“ 5) Schreib den Namen der Figur auf die Rückseite der Karte. Nächstes Mal liest du dein Rätsel vor, und die Klasse rät: Wer bist du?"
   }
 ];

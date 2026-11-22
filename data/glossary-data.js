@@ -1357,5 +1357,17 @@ const GLOSSARY = [
   {de: "am wenigsten (am wenigsten beliebt)", uk: "найменше (найменш популярний)", klas: "8", modul: "C", lektion: 8},
   {de: "entsprechend (sieben und sechs Prozent entsprechend)", uk: "відповідно (сім і шість відсотків відповідно)", klas: "8", modul: "C", lektion: 8},
   {de: "vor kurzem", uk: "нещодавно", klas: "8", modul: "C", lektion: 8},
-  {de: "gruselig (Horrorgeschichten sind mir zu gruselig.)", uk: "страшний, моторошний", klas: "8", modul: "C", lektion: 8}
+  {de: "gruselig (Horrorgeschichten sind mir zu gruselig.)", uk: "страшний, моторошний", klas: "8", modul: "C", lektion: 8},
+  {de: "die literarische Figur (die literarischen Figuren)", uk: "літературний персонаж, літературний герой", klas: "8", modul: "C", lektion: 9},
+  {de: "schaffen (schuf, hat geschaffen) (eine Figur schaffen)", uk: "створювати (створити персонажа)", klas: "8", modul: "C", lektion: 9},
+  {de: "das Kinderbuch (die Kinderbücher)", uk: "дитяча книжка", klas: "8", modul: "C", lektion: 9},
+  {de: "der Kriminalroman (die Kriminalromane)", uk: "детективний роман", klas: "8", modul: "C", lektion: 9},
+  {de: "die Reihe (die Reihen) (die Fantasyreihe)", uk: "серія (книжок) (серія фентезі)", klas: "8", modul: "C", lektion: 9},
+  {de: "der Lieblingsheld / die Lieblingsheldin", uk: "улюблений герой / улюблена героїня", klas: "8", modul: "C", lektion: 9},
+  {de: "tapfer", uk: "хоробрий", klas: "8", modul: "C", lektion: 9},
+  {de: "listig", uk: "хитрий", klas: "8", modul: "C", lektion: 9},
+  {de: "flink", uk: "спритний, моторний", klas: "8", modul: "C", lektion: 9},
+  {de: "schüchtern", uk: "сором'язливий", klas: "8", modul: "C", lektion: 9},
+  {de: "selbstbewusst", uk: "впевнений у собі", klas: "8", modul: "C", lektion: 9},
+  {de: "gegen das Böse kämpfen", uk: "боротися зі злом", klas: "8", modul: "C", lektion: 9}
 ];
