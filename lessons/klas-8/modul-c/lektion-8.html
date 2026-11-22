@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 8 · Modul C · Was lesen wir am liebsten?</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 8'},
+    {label: 'Урок 8: Was lesen wir am liebsten?'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 8 · MODUL C</span>
+        <h1>Was lesen wir am liebsten?</h1>
+        <p class="sub">Читацькі смаки: читаємо діаграму про улюблені жанри, вчимо дроби (ein Drittel, ein Viertel) і відсотки, проводимо опитування в класі й коментуємо його результати.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Die Statistik</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Prozente</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Unsere Umfrage</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Kommentar</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== ПАНЕЛЬ: вступ ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Worum geht es heute?</h2>
+      <div class="card">
+        <p>Wir kennen jetzt viele literarische Gattungen: Krimis, Fantasy, historische Romane, Tiergeschichten … Aber welche Bücher lesen Jugendliche wirklich am liebsten? Heute lesen wir eine Statistik, lernen <b>ein Drittel, ein Viertel, die Hälfte</b> und machen in der Klasse eine Umfrage über unsere Lieblingsgenres. Zum Schluss kommentieren wir die Ergebnisse: „<b>Die meisten</b> Schüler lesen gern …“</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Ми вже знаємо багато літературних жанрів: детективи, фентезі, історичні романи, оповідання про тварин … Але які книжки підлітки насправді читають найохочіше? Сьогодні читаємо статистику, вчимо <b>ein Drittel, ein Viertel, die Hälfte</b> (третина, чверть, половина) і проводимо в класі опитування про улюблені жанри. Наприкінці коментуємо результати: «<b>Більшість</b> учнів охоче читає …»
+        </div>
+      </div>
+
+      <div id="hook"></div>
+
+      <div id="lz-start"></div>
+
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Am liebsten lese ich Tiergeschichten – natürlich über Hunde! Und du? 🐶📊</p>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: перевірка домашнього завдання (dz уроку 8-C-7) ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: літературна вікторина — шість запитань про книжки, авторів чи книжкових героїв, у кожному запитанні — означальне підрядне речення з різними відносними займенниками (der/die/das, dessen/deren, dem/der/denen, прийменник + займенник); займенники підкреслити, відповіді — на звороті аркуша.
+      </div>
+
+      <div id="dz-check">
+        <div class="card" style="margin-top:18px;">
+          <p class="section-label" style="margin:0 0 6px;">Teil A · Maxims Literaturquiz</p>
+          <p class="lead">Максим теж склав вікторину. Обери в кожному запитанні правильний відносний займенник. Потім так само перевір свої запитання: рід і число — від слова перед комою, відмінок — від ролі в підрядному реченні.</p>
+          <div id="hw-list">
+            <div class="fill-item"><span class="num">1)</span> Wie heißt der Junge, <select class="blank inline" data-ans="der" aria-label="Quizfrage 1"><option value="">—</option><option>den</option><option>der</option><option>dem</option></select> in einer Zauberschule lernt?</div>
+            <div class="fill-item"><span class="num">2)</span> Wie heißt die Schriftstellerin, <select class="blank inline" data-ans="deren" aria-label="Quizfrage 2"><option value="">—</option><option>deren</option><option>dessen</option><option>die</option></select> Krimis über Hercule Poirot in der ganzen Welt bekannt sind?</div>
+            <div class="fill-item"><span class="num">3)</span> Wie heißt das Mädchen, <select class="blank inline" data-ans="das" aria-label="Quizfrage 3"><option value="">—</option><option>dem</option><option>die</option><option>das</option></select> bei sieben Zwergen wohnt?</div>
+            <div class="fill-item"><span class="num">4)</span> Wie heißt der ukrainische Dichter, <select class="blank inline" data-ans="dessen" aria-label="Quizfrage 4"><option value="">—</option><option>dessen</option><option>deren</option><option>den</option></select> bekannteste Gedichtsammlung „Kobsar“ heißt?</div>
+            <div class="fill-item"><span class="num">5)</span> Wie heißen die Brüder, von <select class="blank inline" data-ans="denen" aria-label="Quizfrage 5"><option value="">—</option><option>deren</option><option>die</option><option>denen</option></select> die Märchen „Rotkäppchen“ und „Hänsel und Gretel“ stammen?</div>
+            <div class="fill-item"><span class="num">6)</span> Wie heißt der kleine Junge, <select class="blank inline" data-ans="den" aria-label="Quizfrage 6"><option value="">—</option><option>den</option><option>der</option><option>dessen</option></select> ein Pilot in der Wüste trifft?</div>
+          </div>
+          <div class="check-bar">
+            <button class="btn" id="hw-check">Prüfen</button>
+            <button class="btn secondary" id="hw-reset">Zurücksetzen</button>
+            <span class="score-pill" id="hw-score"></span>
+          </div>
+          <div class="ua-note">
+            <span class="ua-label">🇺🇦 Слова</span>
+            <b>der Zwerg</b> — гном · <b>die Gedichtsammlung</b> — збірка віршів · <b>stammen von</b> (+Dat.) — походити від · <b>die Wüste</b> — пустеля · <b>treffen</b> — зустрічати.
+          </div>
+
+          <p class="lead" style="margin-top:18px;">А тепер — відповіді. Чи знаєш ти їх?</p>
+          <div id="hw-quiz"></div>
+        </div>
+
+        <div class="card tinted-teal">
+          <p class="section-label" style="margin:0 0 6px;">Teil B · Literaturquiz in zwei Teams</p>
+          <p style="margin:0;">Team A liest eine Frage vor, Team B antwortet: <em>„Das ist … – der Junge, der in einer Zauberschule lernt!“</em> Für jede richtige Antwort gibt es einen Punkt. Welches Team gewinnt?</p>
+          <div class="ua-note">
+            <span class="ua-label">🇺🇦 У класі</span>
+            Грайте вікторину двома командами: команда А читає запитання, команда Б відповідає повним реченням з відносним займенником. За кожну правильну відповідь — бал. Удома — прочитай свої запитання вголос і дай на кожне повну відповідь, як у зразку.
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="dz-vocab-wrap" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">Wörter-Check</p>
+        <p class="lead">Перевір слова з минулих уроків.</p>
+        <div id="dz-vocab"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: Statistik — Text ergänzen ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Sieh dir die Statistik an und ergänze den Text</h2>
+      <p class="lead">Клас Луїзи провів опитування про улюблені літературні жанри. Роздивись діаграму й доповни текст назвами жанрів. Перший пропуск — приклад.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 4px;">Umfrage in Luisas Klasse:</p>
+        <p style="font-family:var(--serif); font-weight:700; font-size:19px; margin:0 0 12px;">Welche Bücher liest du am liebsten?</p>
+        <div style="display:flex; flex-wrap:wrap; gap:18px 26px; align-items:center;">
+          <svg viewBox="0 0 220 220" style="width:100%; max-width:240px; flex:none; margin:0 auto;" role="img" aria-label="Kreisdiagramm: Abenteuerromane 33 %, Fantasy 25 %, Krimis 14 %, historische Romane 11 %, Horrorgeschichten 7 %, Sportgeschichten 6 %, Tiergeschichten 4 %">
+            <g font-family="Public Sans, sans-serif" font-weight="700" font-size="13">
+              <path d="M110 110 L110.0 10.0 A100 100 0 0 1 197.6 158.2Z" fill="#1F5C56" stroke="#fff" stroke-width="2"/>
+              <path d="M110 110 L197.6 158.2 A100 100 0 0 1 61.8 197.6Z" fill="#DE9E3B" stroke="#fff" stroke-width="2"/>
+              <path d="M110 110 L61.8 197.6 A100 100 0 0 1 11.8 128.7Z" fill="#8A9A8E" stroke="#fff" stroke-width="2"/>
+              <path d="M110 110 L11.8 128.7 A100 100 0 0 1 22.4 61.8Z" fill="#E8C15A" stroke="#fff" stroke-width="2"/>
+              <path d="M110 110 L22.4 61.8 A100 100 0 0 1 51.2 29.1Z" fill="#6FA8A0" stroke="#fff" stroke-width="2"/>
+              <path d="M110 110 L51.2 29.1 A100 100 0 0 1 85.1 13.1Z" fill="#48713F" stroke="#fff" stroke-width="2"/>
+              <path d="M110 110 L85.1 13.1 A100 100 0 0 1 110.0 10.0Z" fill="#B14E3E" stroke="#fff" stroke-width="2"/>
+              <text x="160" y="88" text-anchor="middle" fill="#fff" font-size="16">33%</text>
+              <text x="124" y="172" text-anchor="middle" fill="#2B2620" font-size="16">25%</text>
+              <text x="62" y="150" text-anchor="middle" fill="#fff">14%</text>
+              <text x="50" y="104" text-anchor="middle" fill="#2B2620">11%</text>
+              <text x="52" y="64" text-anchor="middle" fill="#2B2620" font-size="11">7%</text>
+              <text x="71" y="42" text-anchor="middle" fill="#fff" font-size="10">6%</text>
+              <text x="99" y="30" text-anchor="middle" fill="#fff" font-size="9">4%</text>
+            </g>
+          </svg>
+          <ul style="list-style:none; margin:0; padding:0; flex:1; min-width:200px; font-size:14.5px; line-height:1.5;">
+            <li style="margin:0 0 6px;"><span style="display:inline-block; width:13px; height:13px; border-radius:3px; background:#1F5C56; margin-right:8px; vertical-align:-1px;"></span>Abenteuerromane – 33 %</li>
+            <li style="margin:0 0 6px;"><span style="display:inline-block; width:13px; height:13px; border-radius:3px; background:#DE9E3B; margin-right:8px; vertical-align:-1px;"></span>Fantasy – 25 %</li>
+            <li style="margin:0 0 6px;"><span style="display:inline-block; width:13px; height:13px; border-radius:3px; background:#8A9A8E; margin-right:8px; vertical-align:-1px;"></span>Krimis – 14 %</li>
+            <li style="margin:0 0 6px;"><span style="display:inline-block; width:13px; height:13px; border-radius:3px; background:#E8C15A; margin-right:8px; vertical-align:-1px;"></span>historische Romane – 11 %</li>
+            <li style="margin:0 0 6px;"><span style="display:inline-block; width:13px; height:13px; border-radius:3px; background:#6FA8A0; margin-right:8px; vertical-align:-1px;"></span>Horrorgeschichten – 7 %</li>
+            <li style="margin:0 0 6px;"><span style="display:inline-block; width:13px; height:13px; border-radius:3px; background:#48713F; margin-right:8px; vertical-align:-1px;"></span>Sportgeschichten – 6 %</li>
+            <li style="margin:0;"><span style="display:inline-block; width:13px; height:13px; border-radius:3px; background:#B14E3E; margin-right:8px; vertical-align:-1px;"></span>Tiergeschichten – 4 %</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card" id="ub1-bank"></div>
+
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Слова до тексту</span>
+        <b>vor kurzem</b> — нещодавно · <b>eine Umfrage durchführen</b> — проводити опитування · <b>ein Drittel</b> — третина · <b>ein Viertel</b> — чверть · <b>die Befragten</b> — опитані · <b>etwas weniger beliebt</b> — трохи менш популярні · <b>dann folgen …</b> — далі йдуть … · <b>entsprechend</b> — відповідно.
+      </div>
+    </section>
+
+    <!-- ===== Üb. 2: Bruchzahlen, Prozente, Komparation ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Ein Drittel, ein Viertel, die Hälfte</h2>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">So spricht man über Statistiken</p>
+        <table class="gtable">
+          <tr><th>Bruchzahl</th><th>Prozent</th><th>Beispiel</th></tr>
+          <tr><td>die Hälfte</td><td>50 %</td><td>Die Hälfte der Befragten liest gern Krimis.</td></tr>
+          <tr><td>ein Drittel</td><td>etwa 33 %</td><td>Ein Drittel der Schüler hat Abenteuerromane genannt.</td></tr>
+          <tr><td>ein Viertel</td><td>25 %</td><td>Ein Viertel der Befragten liest gern Fantasy.</td></tr>
+          <tr><td>ein Fünftel</td><td>20 %</td><td>Ein Fünftel der Klasse liest Comics.</td></tr>
+          <tr><td>drei Viertel</td><td>75 %</td><td>Drei Viertel der Jugendlichen lesen gern.</td></tr>
+        </table>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Запам'ятай</span>
+          Дроби утворюються від порядкових числівників + <b>-el</b>: dritt<b>el</b>, viert<b>el</b>, fünft<b>el</b>, zehnt<b>el</b>. Це іменники середнього роду: <b>das</b> Drittel, <b>das</b> Viertel; пишуться з великої літери. Виняток — <b>die Hälfte</b> (половина). Після дробу — Genitiv: ein Viertel <b>der</b> Befragten, die Hälfte <b>der</b> Klasse. Порівнюємо так: Krimis sind <b>beliebter als</b> historische Romane. <b>Am beliebtesten</b> sind Abenteuerromane. <b>Am wenigsten</b> beliebt sind Tiergeschichten.
+        </div>
+      </div>
+
+      <p class="lead" style="margin-top:20px;">A) Знайди пари: дріб — відсоток.</p>
+      <div class="card" id="ub2-mem"></div>
+
+      <p class="lead" style="margin-top:20px;">B) Подивись ще раз на діаграму з Üb. 1. Правильно чи ні? Обери відповідь.</p>
+      <div id="ub2-quiz"></div>
+    </section>
+
+    <!-- ===== Üb. 3: Unsere Umfrage ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Macht eine Umfrage über eure Lieblingsgenres</h2>
+
+      <p class="lead">A) Як питати про улюблений жанр? Поговори із Софією — обери доречну репліку.</p>
+      <div class="card" id="ub3-chat"></div>
+
+      <p class="lead" style="margin-top:20px;">B) Клас 8-Б уже провів опитування. Подивись на таблицю й доповни коментар. Числа впиши цифрами.</p>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Umfrage in der Klasse 8-B · 25 Befragte</p>
+        <table class="gtable">
+          <tr><th>Platz</th><th>Lieblingsgenre</th><th>Schülerzahl</th><th>Prozent</th></tr>
+          <tr><td>1.</td><td>Fantasy</td><td>8</td><td>32 %</td></tr>
+          <tr><td>2.</td><td>Krimis</td><td>6</td><td>24 %</td></tr>
+          <tr><td>3.</td><td>Abenteuerromane</td><td>5</td><td>20 %</td></tr>
+          <tr><td>4.</td><td>Comics</td><td>3</td><td>12 %</td></tr>
+          <tr><td>5.</td><td>Horrorgeschichten</td><td>2</td><td>8 %</td></tr>
+          <tr><td>6.</td><td>Tiergeschichten</td><td>1</td><td>4 %</td></tr>
+        </table>
+      </div>
+      <div class="card" id="ub3-list">
+        <div class="fill-item"><span class="num">1)</span> An unserer Umfrage haben <input type="text" class="blank-input inline" data-ans="25" data-no-umlaut aria-label="Kommentar 1"> Schüler und Schülerinnen teilgenommen.</div>
+        <div class="fill-item"><span class="num">2)</span> Die meisten Schüler/innen in unserer Klasse lesen gern <select class="blank inline" data-ans="Fantasy" aria-label="Kommentar 2"><option value="">—</option><option>Krimis</option><option>Fantasy</option><option>Comics</option></select>.</div>
+        <div class="fill-item"><span class="num">3)</span> Sehr beliebt sind auch Krimis: <input type="text" class="blank-input inline" data-ans="24" data-no-umlaut aria-label="Kommentar 3"> Prozent der Befragten lesen sie gern.</div>
+        <div class="fill-item"><span class="num">4)</span> Auf Platz drei stehen <select class="blank inline" data-ans="Abenteuerromane" aria-label="Kommentar 4"><option value="">—</option><option>Abenteuerromane</option><option>Horrorgeschichten</option><option>Comics</option></select> – das ist genau <select class="blank inline" data-ans="ein Fünftel" aria-label="Kommentar 4b"><option value="">—</option><option>ein Drittel</option><option>ein Viertel</option><option>ein Fünftel</option></select> der Klasse.</div>
+        <div class="fill-item"><span class="num">5)</span> Etwas weniger populär sind <select class="blank inline" data-ans="Comics" aria-label="Kommentar 5"><option value="">—</option><option>Tiergeschichten</option><option>Comics</option><option>Krimis</option></select>: Nur drei Personen haben dieses Genre genannt.</div>
+        <div class="fill-item"><span class="num">6)</span> Horrorgeschichten sind <select class="blank inline" data-ans="beliebter" aria-label="Kommentar 6"><option value="">—</option><option>beliebt</option><option>am beliebtesten</option><option>beliebter</option></select> als Tiergeschichten.</div>
+        <div class="fill-item"><span class="num">7)</span> <select class="blank inline" data-ans="Am wenigsten" aria-label="Kommentar 7"><option value="">—</option><option>Am wenigsten</option><option>Am meisten</option><option>Die meisten</option></select> beliebt sind Tiergeschichten: Nur <input type="text" class="blank-input inline" data-ans="4" data-no-umlaut aria-label="Kommentar 7b"> Prozent lesen sie gern.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub3-check">Prüfen</button>
+        <button class="btn secondary" id="ub3-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub3-score"></span>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Unsere Klassenumfrage</p>
+        <p style="margin:0;">Fragt einander: <em>„Was liest du am liebsten?“</em> – <em>„Am liebsten lese ich … Und was ist dein Lieblingsgenre?“</em> Schreibt die Ergebnisse an die Tafel (wie die Tabelle oben: Platz – Lieblingsgenre – Schülerzahl) und zeichnet ein Diagramm.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 У класі</span>
+          Опитайте одне одного за зразком діалогу з частини А. Запишіть результати на дошці у таблицю (місце — улюблений жанр — кількість учнів) і намалюйте діаграму. Удома — спитай трьох-чотирьох рідних чи друзів і склади таку саму табличку: вона знадобиться тобі в Üb. 4.
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4: Exit ticket — Ergebnisse kommentieren ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Kommentiere die Ergebnisse</h2>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Redemittel</p>
+        <p style="margin:0 0 4px;">Die meisten Schüler/innen in unserer Klasse lesen gern …</p>
+        <p style="margin:0 0 4px;">Sehr beliebt sind auch …: … Prozent der Befragten lesen sie gern.</p>
+        <p style="margin:0 0 4px;">Ein Drittel / Ein Viertel / Die Hälfte der Befragten hat … genannt.</p>
+        <p style="margin:0 0 4px;">Etwas weniger populär sind …</p>
+        <p style="margin:0;">… sind beliebter als … · Am wenigsten beliebt sind …</p>
+      </div>
+      <p class="lead" style="margin-top:20px;">Прокоментуй результати опитування вашого класу (або своєї таблички з рідними й друзями) у 5–6 реченнях. Використай щонайменше три звороти з картки. Вставка тексту вимкнена — набирай сам(а).</p>
+      <div class="card" id="ub4-w"></div>
+    </section>
+
+    <!-- ===== ПРИКІНЦЕВА ПАНЕЛЬ ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div id="lz-check"></div>
+
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Was lesen die Ukrainer am liebsten? 1) Recherchiere im Internet (auch auf Ukrainisch): Welche Genres lesen die Menschen in der Ukraine am liebsten, und welche Bücher kaufen sie am meisten? Du kannst auch fünf Personen aus deiner Familie und deinem Freundeskreis fragen. 2) Mach (auf Papier oder digital) ein Diagramm mit mindestens fünf Genres und schreib die Quelle darunter (z. B. „Quelle: Umfrage …, 2025“ oder „Quelle: meine Umfrage“). 3) Schreib dazu eine kurze Präsentation (6–7 Sätze). Benutze „Die meisten …“, eine Bruchzahl (ein Drittel, ein Viertel, die Hälfte …), „… Prozent der Befragten …“, einen Komparativ mit „als“ und „Am wenigsten beliebt …“. 4) Zum Schluss ein Satz: „Interessant finde ich, dass …“. Nächstes Mal präsentierst du dein Diagramm, und wir vergleichen: Lesen die Ukrainer dasselbe wie unsere Klasse?</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Що українці читають найохочіше? 1) Пошукай в інтернеті (можна й українською): які жанри люди в Україні читають найохочіше і які книжки купують найбільше? Можна також опитати п'ятьох людей із родини й друзів. 2) Зроби (на папері чи в цифровому вигляді) діаграму щонайменше з п'ятьма жанрами й підпиши під нею джерело (напр. «Quelle: Umfrage …, 2025» або «Quelle: meine Umfrage»). 3) Напиши до неї коротку презентацію (6–7 речень). Використай «Die meisten …», дріб (ein Drittel, ein Viertel, die Hälfte …), «… Prozent der Befragten …», вищий ступінь порівняння з «als» і «Am wenigsten beliebt …». 4) Наприкінці — одне речення: «Interessant finde ich, dass …». Наступного уроку ти презентуєш свою діаграму, і ми порівняємо: чи читають українці те саме, що й наш клас?
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Wörter zum Lernen</p>
+        <div class="chip-row" id="vocabChips"></div>
+      </div>
+
+      <div class="card" id="lessonGramWrap">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="lessonGram"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../data/glossary-data.js"></script>
+<script src="../../../data/lessons-data.js"></script>
+<script src="../../../data/grammar-data.js"></script>
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  const LEKTION_KLAS = "8", LEKTION_MODUL = "C", LEKTION_LEKTION = 8;
+  const LEKTION_PREV_LEKTION = 7;
+
+  // ===== Цілі уроку «Ich kann …» (Start) + самооцінка-світлофор (Fertig!) =====
+  const LERNZIELE = [
+    {de: "Ich kann eine Statistik über Lieblingsgenres lesen und Bruchzahlen wie „ein Drittel“ oder „ein Viertel“ verstehen.", uk: "Я можу прочитати статистику про улюблені жанри й розумію дроби на кшталт «ein Drittel» чи «ein Viertel»."},
+    {de: "Ich kann andere fragen, was sie am liebsten lesen, und über mein Lieblingsgenre sprechen.", uk: "Я можу спитати інших, що вони читають найохочіше, і розповісти про свій улюблений жанр."},
+    {de: "Ich kann die Ergebnisse einer Umfrage kommentieren: „Die meisten …“, „Etwas weniger populär sind …“", uk: "Я можу прокоментувати результати опитування: «Die meisten …», «Etwas weniger populär sind …»"}
+  ];
+  buildLernziele('lz-start', 'lz-check', LERNZIELE);
+
+  // ===== Хук входу (тип fakt — поле hook у lessons-data.js) =====
+  buildHook('hook', {type: 'fakt', pic: '📚',
+    q: "In welcher Stadt findet jedes Jahr im Oktober die größte Buchmesse der Welt statt?",
+    opts: ["in Leipzig", "in Frankfurt am Main", "in Berlin"], correct: "in Frankfurt am Main",
+    fakt: "Die Frankfurter Buchmesse findet jedes Jahr im Oktober statt. Sie ist die größte Buchmesse der Welt: Verlage aus über 100 Ländern zeigen dort ihre neuen Bücher. In Leipzig gibt es auch eine bekannte Buchmesse – aber im Frühling.",
+    uk: "Франкфуртський книжковий ярмарок відбувається щороку в жовтні. Це найбільший книжковий ярмарок у світі: видавництва з понад 100 країн показують там свої нові книжки. У Лейпцигу теж є відомий книжковий ярмарок — але навесні."});
+
+  (function renderLessonVocab(){
+    const box = document.getElementById('vocabChips');
+    if (!box || typeof GLOSSARY === 'undefined') return;
+    const words = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_LEKTION
+    );
+    if (words.length === 0){
+      box.innerHTML = '<p class="empty-note">Слова для цього уроку ще не додані в глосарій.</p>';
+      return;
+    }
+    box.innerHTML = words.map(w =>
+      '<span class="chip static">' + w.de + ' — ' + w.uk + '</span>'
+    ).join('');
+  })();
+
+  // ===== Граматика до цього уроку у вкладці Fertig (поле gram у lessons-data.js) =====
+  (function renderLessonGrammar(){
+    const wrap = document.getElementById('lessonGramWrap');
+    const box = document.getElementById('lessonGram');
+    if (!wrap || !box) return;
+    const hide = () => { wrap.style.display = 'none'; };
+    if (typeof LESSONS === 'undefined' || typeof GRAMMAR === 'undefined') return hide();
+    const me = LESSONS.find(l => l.klas === LEKTION_KLAS && l.modul === LEKTION_MODUL && l.lektion === LEKTION_LEKTION);
+    const topics = ((me && me.gram) || []).map(id => GRAMMAR.find(t => t.id === id)).filter(t => t && t.opublikovano > 0);
+    if (topics.length === 0) return hide();
+    const src = document.querySelector('script[src$="data/grammar-data.js"]').getAttribute('src');
+    const root = src.slice(0, src.length - 'data/grammar-data.js'.length);
+    box.innerHTML = topics.map(t =>
+      '<a class="gram-link" href="' + root + 'gramatyka/temy/' + t.id + '.html">'
+      + '<span class="k">' + t.uk + '</span>' + t.tema + '</a>'
+    ).join('');
+  })();
+
+  // ---------- Груба евристика частини мови за виглядом "de" (для пасток у Wörter-Check) ----------
+  function guessPos(de){
+    var base = (de || '').replace(/\([^)]*\)/g, '').trim();
+    if(/^(der|die|das)(\/(der|die|das))?\s/.test(base)) return 'noun';
+    if(/^sich\s/.test(base)) return 'verb';
+    if(/^am\s/.test(base)) return 'other';
+    if(/\(\+(Gen|Dat|Akk)\.?\)/.test(de)) return 'prep';
+    var words = base.split(/\s+/);
+    var last = words[words.length - 1];
+    if(/(en|ern|eln)$/.test(last) && last === last.toLowerCase()) return 'verb';
+    return 'other';
+  }
+
+  // ===== Wörter-Check: до 4 слів попереднього уроку + слова з 2–5 уроків тому =====
+  (function renderDzVocabCheck(){
+    const wrap = document.getElementById('dz-vocab-wrap');
+    const box = document.getElementById('dz-vocab');
+    if (!wrap || !box || typeof GLOSSARY === 'undefined') return;
+    const same = (w, l) => w.klas === l.klas && w.modul === l.modul && w.lektion === l.lektion;
+    const prevWords = LEKTION_PREV_LEKTION ? GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_PREV_LEKTION
+    ) : [];
+    let olderWords = [];
+    if (typeof LESSONS !== 'undefined'){
+      const mine = LESSONS.filter(l => l.klas === LEKTION_KLAS);
+      const idx = mine.findIndex(l => l.modul === LEKTION_MODUL && l.lektion === LEKTION_LEKTION);
+      if (idx > 0){
+        const older = mine.slice(Math.max(0, idx - 5), idx)
+          .filter(l => !(l.modul === LEKTION_MODUL && l.lektion === LEKTION_PREV_LEKTION));
+        olderWords = GLOSSARY.filter(w => older.some(l => same(w, l)));
+      }
+    }
+    const fromPrev = shuffleArray(prevWords).slice(0, olderWords.length ? 4 : 6);
+    const pool = shuffleArray(fromPrev.concat(shuffleArray(olderWords).slice(0, 6 - fromPrev.length)));
+    if (pool.length < 3){ wrap.style.display = 'none'; return; }
+
+    const quizData = pool.map(w => {
+      const pos = guessPos(w.de);
+      let sameKind = GLOSSARY.filter(g => g.uk !== w.uk && guessPos(g.de) === pos);
+      if(sameKind.length < 2) sameKind = GLOSSARY.filter(g => g.uk !== w.uk);
+      const distractors = shuffleArray(sameKind).slice(0, 2).map(g => g.uk);
+      return { q: w.de, opts: [w.uk, ...distractors], correct: w.uk };
+    });
+    buildQuiz('dz-vocab', quizData);
+  })();
+
+  // ===== Hausaufgabe, Teil A: Relativpronomen in Maxims Quiz =====
+  wireBlanks('hw');
+
+  buildQuiz('hw-quiz', [
+    {q: "1) Der Junge, der in einer Zauberschule lernt, heißt …", opts: ["Harry Potter", "Tom Sawyer", "Robinson Crusoe"], correct: "Harry Potter"},
+    {q: "2) Die Schriftstellerin, deren Krimis über Hercule Poirot bekannt sind, heißt …", opts: ["Joanne K. Rowling", "Agatha Christie", "Astrid Lindgren"], correct: "Agatha Christie"},
+    {q: "3) Das Mädchen, das bei sieben Zwergen wohnt, heißt …", opts: ["Rotkäppchen", "Aschenputtel", "Schneewittchen"], correct: "Schneewittchen"},
+    {q: "4) Der Dichter, dessen bekannteste Gedichtsammlung „Kobsar“ heißt, ist …", opts: ["Taras Schewtschenko", "Iwan Franko", "Lessja Ukrajinka"], correct: "Taras Schewtschenko"},
+    {q: "5) Die Brüder, von denen „Rotkäppchen“ und „Hänsel und Gretel“ stammen, heißen …", opts: ["die Brüder Klitschko", "die Brüder Grimm", "die Brüder Lumière"], correct: "die Brüder Grimm"},
+    {q: "6) Der Junge, den ein Pilot in der Wüste trifft, ist …", opts: ["Pinocchio", "Peter Pan", "der kleine Prinz"], correct: "der kleine Prinz"}
+  ]);
+
+  // ===== Üb. 1: Text zur Statistik ergänzen =====
+  buildWordBank('ub1-bank', {
+    text: "Vor kurzem hat Luisas Klasse eine Umfrage über die beliebtesten Literaturgenres durchgeführt. Die meisten Personen (ein Drittel der Schüler/innen) haben Abenteuerromane (1) genannt. Ein Viertel der Befragten lesen sehr gern [Fantasy] (2).\n\n"
+      + "Viele mögen auch [Krimis] (3), vierzehn Prozent haben dieses Genre genannt. Etwas weniger beliebt sind [historische Romane] (4) (elf Prozent mögen solche Bücher).\n\n"
+      + "Dann folgen [Horrorgeschichten] (5) und [Sportgeschichten] (6), diese Genres haben sieben und sechs Prozent der Befragten entsprechend genannt. Einige (vier Prozent) lesen auch gern [Tiergeschichten] (7).",
+    extra: ["Liebesgeschichten", "Comics"]
+  });
+
+  // ===== Üb. 2 A: Bruchzahl — Prozent =====
+  buildMemory('ub2-mem', {pairs: [
+    ["die Hälfte", "50 %"], ["ein Drittel", "≈ 33 %"], ["ein Viertel", "25 %"],
+    ["ein Fünftel", "20 %"], ["ein Zehntel", "10 %"], ["drei Viertel", "75 %"]
+  ]});
+
+  // ===== Üb. 2 B: Richtig oder falsch? (Diagramm aus Üb. 1) =====
+  buildQuiz('ub2-quiz', [
+    {q: "Ein Drittel der Befragten liest am liebsten Abenteuerromane.", opts: ["richtig", "falsch"], correct: "richtig"},
+    {q: "Fantasy hat die Hälfte der Befragten genannt.", opts: ["richtig", "falsch"], correct: "falsch"},
+    {q: "Krimis sind beliebter als historische Romane.", opts: ["richtig", "falsch"], correct: "richtig"},
+    {q: "Am wenigsten beliebt sind Sportgeschichten.", opts: ["falsch", "richtig"], correct: "falsch"},
+    {q: "Horrorgeschichten sind etwas beliebter als Sportgeschichten.", opts: ["falsch", "richtig"], correct: "richtig"},
+    {q: "Abenteuerromane und Fantasy zusammen – das ist mehr als die Hälfte der Befragten.", opts: ["richtig", "falsch"], correct: "richtig"}
+  ]);
+
+  // ===== Üb. 3 A: Dialog „Was liest du am liebsten?“ =====
+  buildChat('ub3-chat', {partner: "Sofia", steps: [
+    {them: "Hallo! Wir machen eine Umfrage über Lieblingsgenres. Was liest du am liebsten?"},
+    {you: ["Am liebsten gehe ich ins Kino.", "Am liebsten lese ich Krimis."], correct: 1, hint: "назви свій улюблений жанр"},
+    {them: "Krimis? Warum denn?"},
+    {you: ["Weil sie spannend sind und ich gern Rätsel löse.", "Weil ich Krimis gar nicht mag."], correct: 0},
+    {them: "Cool! Ich schreibe: Krimis."},
+    {you: ["Und wie alt bist du?", "Und was ist dein Lieblingsgenre?"], correct: 1, hint: "спитай Софію про її улюблений жанр"},
+    {them: "Am liebsten lese ich Fantasy. Ich mag Bücher, in denen es Zauberer und Drachen gibt!"},
+    {you: ["Fantasy ist ein Buch über Sport.", "Fantasy ist in unserer Klasse auch sehr beliebt!"], correct: 1},
+    {them: "Stimmt! Und welches Genre liest du nicht so gern?"},
+    {you: ["Horrorgeschichten lese ich nicht so gern, sie sind mir zu gruselig.", "Horrorgeschichten lese ich am liebsten nicht gern."], correct: 0}
+  ]});
+
+  // ===== Üb. 3 B: Kommentar zur Tabelle =====
+  wireBlanks('ub3');
+
+  // ===== Üb. 4: Exit ticket — Ergebnisse kommentieren =====
+  buildWriting('ub4-w', {
+    prompt: "Die Ergebnisse unserer Umfrage (5–6 Sätze)",
+    words: "35-90",
+    must: ["Die meisten", "Prozent der Befragten", "beliebter als/Am wenigsten/Etwas weniger"],
+    check: ["Названо щонайменше чотири жанри", "Є числа або дроби (ein Drittel, ein Viertel …)", "Порівняння: beliebter als / am beliebtesten / am wenigsten"],
+    rows: 7
+  });
+
+  // Фінальна панель зі штампами
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['📚','📊','🗣️','✍️']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
