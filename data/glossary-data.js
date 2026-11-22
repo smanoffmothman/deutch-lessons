@@ -1345,5 +1345,17 @@ const GLOSSARY = [
   {de: "geheimnisvoll", uk: "таємничий", klas: "8", modul: "C", lektion: 7},
   {de: "die Inhaltsangabe (die Inhaltsangaben)", uk: "короткий зміст, анотація", klas: "8", modul: "C", lektion: 7},
   {de: "der Autor / die Autorin (die Autoren / die Autorinnen)", uk: "автор / авторка", klas: "8", modul: "C", lektion: 7},
-  {de: "erleben (Abenteuer erleben)", uk: "переживати, зазнавати (пригод)", klas: "8", modul: "C", lektion: 7}
+  {de: "erleben (Abenteuer erleben)", uk: "переживати, зазнавати (пригод)", klas: "8", modul: "C", lektion: 7},
+  {de: "das Drittel (ein Drittel der Schüler)", uk: "третина (третина учнів)", klas: "8", modul: "C", lektion: 8},
+  {de: "das Viertel (ein Viertel der Befragten)", uk: "чверть (чверть опитаних)", klas: "8", modul: "C", lektion: 8},
+  {de: "das Fünftel (ein Fünftel der Klasse)", uk: "п'ята частина (п'ята частина класу)", klas: "8", modul: "C", lektion: 8},
+  {de: "das Lieblingsgenre (die Lieblingsgenres)", uk: "улюблений жанр", klas: "8", modul: "C", lektion: 8},
+  {de: "die Sportgeschichte (die Sportgeschichten)", uk: "оповідання про спорт", klas: "8", modul: "C", lektion: 8},
+  {de: "die Buchmesse (die Buchmessen)", uk: "книжковий ярмарок", klas: "8", modul: "C", lektion: 8},
+  {de: "populär (etwas weniger populär)", uk: "популярний (трохи менш популярний)", klas: "8", modul: "C", lektion: 8},
+  {de: "am beliebtesten (Am beliebtesten sind Abenteuerromane.)", uk: "найпопулярніший (Найпопулярніші — пригодницькі романи.)", klas: "8", modul: "C", lektion: 8},
+  {de: "am wenigsten (am wenigsten beliebt)", uk: "найменше (найменш популярний)", klas: "8", modul: "C", lektion: 8},
+  {de: "entsprechend (sieben und sechs Prozent entsprechend)", uk: "відповідно (сім і шість відсотків відповідно)", klas: "8", modul: "C", lektion: 8},
+  {de: "vor kurzem", uk: "нещодавно", klas: "8", modul: "C", lektion: 8},
+  {de: "gruselig (Horrorgeschichten sind mir zu gruselig.)", uk: "страшний, моторошний", klas: "8", modul: "C", lektion: 8}
 ];

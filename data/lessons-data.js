@@ -1255,5 +1255,17 @@ const LESSONS = [
     gram: ["relativsaetze"],
     hook: "undu",
     dz: "Literaturquiz: 1) Schreib sechs Quizfragen über Bücher, Autoren oder Buchfiguren, die unsere Klasse kennt – jede Frage mit einem Relativsatz. 2) Benutze verschiedene Relativpronomen: mindestens einmal der/die/das, einmal dessen oder deren, einmal dem, der oder denen und einmal Präposition + Relativpronomen (z. B. „Wie heißt der Junge, der in einer Zauberschule lernt?“, „Wie heißt die Schriftstellerin, deren Krimis in der ganzen Welt bekannt sind?“, „Wie heißt die Insel, auf der Robinson Crusoe viele Jahre lebt?“). 3) Unterstreiche die Relativpronomen und schreib die Antworten auf die Rückseite des Blattes. Nächstes Mal spielen wir das Literaturquiz in zwei Teams."
+  },
+  {
+    klas: "8",
+    modul: "C",
+    lektion: 8,
+    nazva: "Was lesen wir am liebsten?",
+    opys: "Читацькі смаки: доповнюємо текст до діаграми про улюблені жанри (ein Drittel der Schüler, ein Viertel der Befragten), вчимо дроби й відсотки, порівнюємо жанри (beliebter als, am wenigsten beliebt), розпитуємо «Was liest du am liebsten?», коментуємо результати опитування в класі й дізнаємося про найбільший книжковий ярмарок світу.",
+    file: "klas-8/modul-c/lektion-8.html",
+    nove: true,
+    gram: ["zahlwoerter", "komparation", "relativsaetze"],
+    hook: "fakt",
+    dz: "Was lesen die Ukrainer am liebsten? 1) Recherchiere im Internet (auch auf Ukrainisch): Welche Genres lesen die Menschen in der Ukraine am liebsten, und welche Bücher kaufen sie am meisten? Du kannst auch fünf Personen aus deiner Familie und deinem Freundeskreis fragen. 2) Mach (auf Papier oder digital) ein Diagramm mit mindestens fünf Genres und schreib die Quelle darunter (z. B. „Quelle: Umfrage …, 2025“ oder „Quelle: meine Umfrage“). 3) Schreib dazu eine kurze Präsentation (6–7 Sätze). Benutze „Die meisten …“, eine Bruchzahl (ein Drittel, ein Viertel, die Hälfte …), „… Prozent der Befragten …“, einen Komparativ mit „als“ und „Am wenigsten beliebt …“. 4) Zum Schluss ein Satz: „Interessant finde ich, dass …“. Nächstes Mal präsentierst du dein Diagramm, und wir vergleichen: Lesen die Ukrainer dasselbe wie unsere Klasse?"
   }
 ];
