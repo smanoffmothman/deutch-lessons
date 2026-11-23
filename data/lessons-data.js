@@ -1279,5 +1279,17 @@ const LESSONS = [
     gram: ["relativsaetze", "deklination-nomen"],
     hook: "prognose",
     dz: "„Wer bin ich?“ – ein Rätsel über deine Lieblingsheldin oder deinen Lieblingshelden. 1) Wähle eine Figur aus einem Buch, das du gelesen hast. 2) Schreib eine Rätselkarte in der Ich-Form (5–6 Sätze), aber nenne den Namen nicht! 3) Benutze mindestens drei Adjektive aus der Stunde (z. B. tapfer, listig, flink, klug, selbstbewusst, hilfsbereit) und eine Wendung wie „Ich kämpfe gegen das Böse“, „Ich reise durch die ganze Welt“ oder „Ich strebe nach meinem Ziel“. 4) Der letzte Satz ist ein Tipp mit einem Relativsatz: „Ich bin die Hauptfigur des Romans / der Erzählung / des Märchens, den / die / das … geschrieben hat.“ 5) Schreib den Namen der Figur auf die Rückseite der Karte. Nächstes Mal liest du dein Rätsel vor, und die Klasse rät: Wer bist du?"
+  },
+  {
+    klas: "9",
+    modul: "C",
+    lektion: 1,
+    nazva: "Massenmedien: Radio und Fernsehen",
+    opys: "Радіо і телебачення: слухаємо й вимовляємо назви передач і фільмів (der Spielfilm, die Talkshow, das Hörspiel) і визначаємо їхній рід за останньою частиною слова, сортуємо, що можна почути по радіо, побачити по телевізору чи знайти в обох медіа, розпитуємо одне одного (Was siehst du dir am liebsten an?) та утворюємо іменники від дієслів (senden — die Sendung, der Sender; zuschauen — der Zuschauer).",
+    file: "klas-9/modul-c/lektion-1.html",
+    nove: true,
+    gram: ["reflexive-verben"],
+    hook: "prognose",
+    dz: "Unser eigener Jugendsender: 1) Denk dir einen Namen für deinen eigenen Jugendsender aus – einen Fernsehsender oder einen Radiosender (z. B. „Jugendkanal 9“ oder „Radio Klasse“). 2) Mach ein Tagesprogramm mit mindestens sechs Sendungen und ihrer Anfangszeit. Benutze zusammengesetzte Nomen aus der Stunde (z. B. 16:00 – das Musikquiz „Hit oder Niete“, 18:30 – die Jugendserie „Klasse 9b“). Schreib zu jeder Sendung einen kurzen Satz. 3) Frag zwei Personen (Familie oder Freunde): „Was hast du lieber: das Radio oder das Fernsehen? Was siehst du dir am liebsten an?“ und notiere ihre Antworten (z. B. „Meine Oma hat das Radio lieber, weil …“). 4) Schreib zwei Sätze mit Nomen aus Üb. 4 (z. B. der Beginn, die Übertragung, die Teilnahme, die Zuschauer). Nächstes Mal stellen wir unsere Sender vor und stimmen ab: Welches Programm würde die Klasse am liebsten sehen?"
   }
 ];
