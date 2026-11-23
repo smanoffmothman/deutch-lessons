@@ -1381,5 +1381,17 @@ const GLOSSARY = [
   {de: "die Werbung", uk: "реклама", klas: "9", modul: "C", lektion: 1},
   {de: "der Sender (die Sender)", uk: "телеканал, радіостанція", klas: "9", modul: "C", lektion: 1},
   {de: "übertragen (die Übertragung)", uk: "транслювати (трансляція)", klas: "9", modul: "C", lektion: 1},
-  {de: "sich (Dat.) etwas ansehen / anhören (Was siehst du dir an?)", uk: "дивитися / слухати щось (Що ти дивишся?)", klas: "9", modul: "C", lektion: 1}
+  {de: "sich (Dat.) etwas ansehen / anhören (Was siehst du dir an?)", uk: "дивитися / слухати щось (Що ти дивишся?)", klas: "9", modul: "C", lektion: 1},
+  {de: "die Zeittafel (die Zeittafeln)", uk: "хронологічна таблиця", klas: "9", modul: "C", lektion: 2},
+  {de: "der Rundfunk", uk: "радіомовлення, радіо", klas: "9", modul: "C", lektion: 2},
+  {de: "erzeugen (erzeugte)", uk: "створювати, виробляти", klas: "9", modul: "C", lektion: 2},
+  {de: "die Welle (die Wellen)", uk: "хвиля", klas: "9", modul: "C", lektion: 2},
+  {de: "drahtlos", uk: "бездротовий", klas: "9", modul: "C", lektion: 2},
+  {de: "eröffnen (eröffnete)", uk: "(урочисто) відкривати", klas: "9", modul: "C", lektion: 2},
+  {de: "einrichten (trennbar) (richtete … ein)", uk: "засновувати, створювати (установу)", klas: "9", modul: "C", lektion: 2},
+  {de: "abhören (trennbar)", uk: "прослуховувати", klas: "9", modul: "C", lektion: 2},
+  {de: "ausländisch", uk: "іноземний, закордонний", klas: "9", modul: "C", lektion: 2},
+  {de: "das Farbfernsehen", uk: "кольорове телебачення", klas: "9", modul: "C", lektion: 2},
+  {de: "der Kabelanschluss (die Kabelanschlüsse)", uk: "підключення до кабельного телебачення", klas: "9", modul: "C", lektion: 2},
+  {de: "offiziell", uk: "офіційний, офіційно", klas: "9", modul: "C", lektion: 2}
 ];

@@ -1291,5 +1291,17 @@ const LESSONS = [
     gram: ["reflexive-verben"],
     hook: "prognose",
     dz: "Unser eigener Jugendsender: 1) Denk dir einen Namen für deinen eigenen Jugendsender aus – einen Fernsehsender oder einen Radiosender (z. B. „Jugendkanal 9“ oder „Radio Klasse“). 2) Mach ein Tagesprogramm mit mindestens sechs Sendungen und ihrer Anfangszeit. Benutze zusammengesetzte Nomen aus der Stunde (z. B. 16:00 – das Musikquiz „Hit oder Niete“, 18:30 – die Jugendserie „Klasse 9b“). Schreib zu jeder Sendung einen kurzen Satz. 3) Frag zwei Personen (Familie oder Freunde): „Was hast du lieber: das Radio oder das Fernsehen? Was siehst du dir am liebsten an?“ und notiere ihre Antworten (z. B. „Meine Oma hat das Radio lieber, weil …“). 4) Schreib zwei Sätze mit Nomen aus Üb. 4 (z. B. der Beginn, die Übertragung, die Teilnahme, die Zuschauer). Nächstes Mal stellen wir unsere Sender vor und stimmen ab: Welches Programm würde die Klasse am liebsten sehen?"
+  },
+  {
+    klas: "9",
+    modul: "C",
+    lektion: 2,
+    nazva: "Aus der Geschichte der Massenmedien",
+    opys: "З історії мас-медіа: читаємо хронологічну таблицю історії німецького радіо й телебачення (від електромагнітних хвиль 1888 року до кабельного й супутникового ТБ), утворюємо форми Präteritum слабких, сильних і відокремлюваних дієслів (gründete, übertrug, richtete … ein), складаємо речення з роком на початку й «man» (1967 eröffnete man das Farbfernsehen) і перевіряємо себе за аудіо.",
+    file: "klas-9/modul-c/lektion-2.html",
+    nove: true,
+    gram: ["tempusformen", "starke-verben"],
+    hook: "fakt",
+    dz: "Zeittafel: Die Geschichte des ukrainischen Fernsehens. 1) Recherchiere im Internet Informationen über die Geschichte des ukrainischen Fernsehens. Du kannst auf folgende Punkte eingehen: Gründung, Entwicklung, Fernsehsender, private Sender, digitales Fernsehen, aktueller Stand. 2) Mach eine Zeittafel mit mindestens sechs Ereignissen: Datum – Ereignis (wie in Üb. 1, z. B. 01.02.1939 – Versuch der ersten offiziellen Direktübertragung, ein kleines Filmstudio in Kyjiw). 3) Schreib zu jedem Ereignis einen Satz im Präteritum, mindestens dreimal mit „man“ (z. B. 1939 übertrug man in Kyjiw zum ersten Mal …). 4) Schreib zum Schluss einen kurzen Kommentar (3–4 Sätze): Wie siehst du die Zukunft des Fernsehens? Siehst du selbst noch fern, oder schaust du lieber Videos im Internet? Nächstes Mal vergleichen wir unsere Zeittafeln: Wer hat das älteste Ereignis gefunden?"
   }
 ];
