@@ -1369,5 +1369,17 @@ const GLOSSARY = [
   {de: "flink", uk: "спритний, моторний", klas: "8", modul: "C", lektion: 9},
   {de: "schüchtern", uk: "сором'язливий", klas: "8", modul: "C", lektion: 9},
   {de: "selbstbewusst", uk: "впевнений у собі", klas: "8", modul: "C", lektion: 9},
-  {de: "gegen das Böse kämpfen", uk: "боротися зі злом", klas: "8", modul: "C", lektion: 9}
+  {de: "gegen das Böse kämpfen", uk: "боротися зі злом", klas: "8", modul: "C", lektion: 9},
+  {de: "die Massenmedien (Pl.)", uk: "засоби масової інформації, мас-медіа", klas: "9", modul: "C", lektion: 1},
+  {de: "die Sendung (die Sendungen)", uk: "передача, програма (на радіо чи ТБ)", klas: "9", modul: "C", lektion: 1},
+  {de: "die Serie (die Serien)", uk: "серіал", klas: "9", modul: "C", lektion: 1},
+  {de: "der Spielfilm (die Spielfilme)", uk: "художній фільм", klas: "9", modul: "C", lektion: 1},
+  {de: "das Hörspiel (die Hörspiele)", uk: "радіовистава, аудіовистава", klas: "9", modul: "C", lektion: 1},
+  {de: "die Talkshow (die Talkshows)", uk: "ток-шоу", klas: "9", modul: "C", lektion: 1},
+  {de: "die Nachrichten (Pl.)", uk: "новини", klas: "9", modul: "C", lektion: 1},
+  {de: "der Wetterbericht (die Wetterberichte)", uk: "прогноз погоди", klas: "9", modul: "C", lektion: 1},
+  {de: "die Werbung", uk: "реклама", klas: "9", modul: "C", lektion: 1},
+  {de: "der Sender (die Sender)", uk: "телеканал, радіостанція", klas: "9", modul: "C", lektion: 1},
+  {de: "übertragen (die Übertragung)", uk: "транслювати (трансляція)", klas: "9", modul: "C", lektion: 1},
+  {de: "sich (Dat.) etwas ansehen / anhören (Was siehst du dir an?)", uk: "дивитися / слухати щось (Що ти дивишся?)", klas: "9", modul: "C", lektion: 1}
 ];
