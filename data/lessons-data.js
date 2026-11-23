@@ -1303,5 +1303,17 @@ const LESSONS = [
     gram: ["tempusformen", "starke-verben"],
     hook: "fakt",
     dz: "Zeittafel: Die Geschichte des ukrainischen Fernsehens. 1) Recherchiere im Internet Informationen über die Geschichte des ukrainischen Fernsehens. Du kannst auf folgende Punkte eingehen: Gründung, Entwicklung, Fernsehsender, private Sender, digitales Fernsehen, aktueller Stand. 2) Mach eine Zeittafel mit mindestens sechs Ereignissen: Datum – Ereignis (wie in Üb. 1, z. B. 01.02.1939 – Versuch der ersten offiziellen Direktübertragung, ein kleines Filmstudio in Kyjiw). 3) Schreib zu jedem Ereignis einen Satz im Präteritum, mindestens dreimal mit „man“ (z. B. 1939 übertrug man in Kyjiw zum ersten Mal …). 4) Schreib zum Schluss einen kurzen Kommentar (3–4 Sätze): Wie siehst du die Zukunft des Fernsehens? Siehst du selbst noch fern, oder schaust du lieber Videos im Internet? Nächstes Mal vergleichen wir unsere Zeittafeln: Wer hat das älteste Ereignis gefunden?"
+  },
+  {
+    klas: "9",
+    modul: "C",
+    lektion: 3,
+    nazva: "Was läuft im Fernsehen?",
+    opys: "Програма телепередач: читаємо телепрограму п'яти німецьких каналів і називаємо, коли й де йде передача (Die Sendung läuft um Viertel nach neun im Ersten), сортуємо види передач, слухаємо короткі розмови про улюблені передачі, пропонуємо, погоджуємося й відмовляємося, щоб разом вирішити, що подивитися, і передаємо відсотки дробами (26 % — etwas mehr als ein Viertel).",
+    file: "klas-9/modul-c/lektion-3.html",
+    nove: true,
+    gram: ["zahlwoerter"],
+    hook: "undu",
+    dz: "Was läuft heute? – Ein Chat über das Fernsehprogramm. 1) Sieh dir das Fernsehprogramm für heute an (einen ukrainischen oder einen deutschen Sender) und wähle drei Sendungen aus. 2) Schreib einen Chat (8–10 Nachrichten) mit einem Freund oder einer Freundin: Ihr wollt euch heute Abend zusammen eine Sendung anschauen. Eine Person macht einen Vorschlag, die andere lehnt ihn ab und schlägt etwas anderes vor. Benutze aus jeder Spalte von Üb. 4 mindestens zwei Ausdrücke. 3) Nenne bei jeder Sendung den Sender und die Uhrzeit wie im Alltag (z. B. „Die Serie läuft um Viertel nach acht auf …“). 4) Am Ende trefft ihr eine gemeinsame Entscheidung („Abgemacht!“). 5) Bonus: Frag fünf Personen in deiner Familie: „Welche Sendung siehst du dir am liebsten an?“ und schreib einen Satz mit einer Bruchzahl (z. B. „Zwei Fünftel meiner Familie sehen am liebsten Nachrichten.“). Nächstes Mal spielen wir eure Chats als Dialoge vor."
   }
 ];

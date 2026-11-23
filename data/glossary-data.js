@@ -1393,5 +1393,17 @@ const GLOSSARY = [
   {de: "ausländisch", uk: "іноземний, закордонний", klas: "9", modul: "C", lektion: 2},
   {de: "das Farbfernsehen", uk: "кольорове телебачення", klas: "9", modul: "C", lektion: 2},
   {de: "der Kabelanschluss (die Kabelanschlüsse)", uk: "підключення до кабельного телебачення", klas: "9", modul: "C", lektion: 2},
-  {de: "offiziell", uk: "офіційний, офіційно", klas: "9", modul: "C", lektion: 2}
+  {de: "offiziell", uk: "офіційний, офіційно", klas: "9", modul: "C", lektion: 2},
+  {de: "das Fernsehprogramm (die Fernsehprogramme)", uk: "телепрограма, програма передач", klas: "9", modul: "C", lektion: 3},
+  {de: "laufen (Was läuft heute im Fernsehen?)", uk: "іти, показуватися (про передачу)", klas: "9", modul: "C", lektion: 3},
+  {de: "die Quizsendung (die Quizsendungen)", uk: "телевікторина", klas: "9", modul: "C", lektion: 3},
+  {de: "die Krimiserie (die Krimiserien)", uk: "детективний серіал", klas: "9", modul: "C", lektion: 3},
+  {de: "der Abenteuerfilm (die Abenteuerfilme)", uk: "пригодницький фільм", klas: "9", modul: "C", lektion: 3},
+  {de: "die Animationsserie (die Animationsserien)", uk: "анімаційний серіал, мультсеріал", klas: "9", modul: "C", lektion: 3},
+  {de: "die Reportage (die Reportagen)", uk: "репортаж", klas: "9", modul: "C", lektion: 3},
+  {de: "die Wissenssendung (die Wissenssendungen)", uk: "науково-пізнавальна передача", klas: "9", modul: "C", lektion: 3},
+  {de: "eine (gemeinsame) Entscheidung treffen", uk: "ухвалити (спільне) рішення", klas: "9", modul: "C", lektion: 3},
+  {de: "Abgemacht!", uk: "Домовилися!", klas: "9", modul: "C", lektion: 3},
+  {de: "die Bruchzahl (die Bruchzahlen)", uk: "дріб, дробове число", klas: "9", modul: "C", lektion: 3},
+  {de: "das Zehntel (ein Zehntel der Zuschauer)", uk: "десята частина (десята частина глядачів)", klas: "9", modul: "C", lektion: 3}
 ];
