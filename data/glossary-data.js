@@ -1405,5 +1405,17 @@ const GLOSSARY = [
   {de: "eine (gemeinsame) Entscheidung treffen", uk: "ухвалити (спільне) рішення", klas: "9", modul: "C", lektion: 3},
   {de: "Abgemacht!", uk: "Домовилися!", klas: "9", modul: "C", lektion: 3},
   {de: "die Bruchzahl (die Bruchzahlen)", uk: "дріб, дробове число", klas: "9", modul: "C", lektion: 3},
-  {de: "das Zehntel (ein Zehntel der Zuschauer)", uk: "десята частина (десята частина глядачів)", klas: "9", modul: "C", lektion: 3}
+  {de: "das Zehntel (ein Zehntel der Zuschauer)", uk: "десята частина (десята частина глядачів)", klas: "9", modul: "C", lektion: 3},
+  {de: "der Weltmeister / die Weltmeisterin (die Weltmeister)", uk: "чемпіон / чемпіонка світу", klas: "7", modul: "D", lektion: 6},
+  {de: "der Sieger / die Siegerin (die Sieger)", uk: "переможець / переможниця", klas: "7", modul: "D", lektion: 6},
+  {de: "der Olympiasieger / die Olympiasiegerin", uk: "олімпійський чемпіон / олімпійська чемпіонка", klas: "7", modul: "D", lektion: 6},
+  {de: "die Medaille (die Medaillen) (eine Medaille bekommen)", uk: "медаль (отримати медаль)", klas: "7", modul: "D", lektion: 6},
+  {de: "die Goldmedaille / die Silbermedaille / die Bronzemedaille", uk: "золота / срібна / бронзова медаль", klas: "7", modul: "D", lektion: 6},
+  {de: "das Grand-Slam-Turnier (die Grand-Slam-Turniere)", uk: "турнір Великого шолома (теніс)", klas: "7", modul: "D", lektion: 6},
+  {de: "der Sportler / die Sportlerin (die Sportlerinnen)", uk: "спортсмен / спортсменка", klas: "7", modul: "D", lektion: 6},
+  {de: "der Athlet / die Athletin (die Athleten)", uk: "атлет / атлетка, спортсмен(-ка)", klas: "7", modul: "D", lektion: 6},
+  {de: "der Biathlet / die Biathletin", uk: "біатлоніст / біатлоністка", klas: "7", modul: "D", lektion: 6},
+  {de: "der Rennfahrer / die Rennfahrerin", uk: "автогонщик / автогонщиця", klas: "7", modul: "D", lektion: 6},
+  {de: "der Skirennläufer / die Skirennläuferin", uk: "гірськолижник / гірськолижниця", klas: "7", modul: "D", lektion: 6},
+  {de: "der Fechter / die Fechterin", uk: "фехтувальник / фехтувальниця", klas: "7", modul: "D", lektion: 6}
 ];
