@@ -1315,5 +1315,17 @@ const LESSONS = [
     gram: ["zahlwoerter"],
     hook: "undu",
     dz: "Was läuft heute? – Ein Chat über das Fernsehprogramm. 1) Sieh dir das Fernsehprogramm für heute an (einen ukrainischen oder einen deutschen Sender) und wähle drei Sendungen aus. 2) Schreib einen Chat (8–10 Nachrichten) mit einem Freund oder einer Freundin: Ihr wollt euch heute Abend zusammen eine Sendung anschauen. Eine Person macht einen Vorschlag, die andere lehnt ihn ab und schlägt etwas anderes vor. Benutze aus jeder Spalte von Üb. 4 mindestens zwei Ausdrücke. 3) Nenne bei jeder Sendung den Sender und die Uhrzeit wie im Alltag (z. B. „Die Serie läuft um Viertel nach acht auf …“). 4) Am Ende trefft ihr eine gemeinsame Entscheidung („Abgemacht!“). 5) Bonus: Frag fünf Personen in deiner Familie: „Welche Sendung siehst du dir am liebsten an?“ und schreib einen Satz mit einer Bruchzahl (z. B. „Zwei Fünftel meiner Familie sehen am liebsten Nachrichten.“). Nächstes Mal spielen wir eure Chats als Dialoge vor."
+  },
+  {
+    klas: "7",
+    modul: "D",
+    lektion: 6,
+    nazva: "Sportler und Sportlerinnen",
+    opys: "Спортсмени: слухаємо й повторюємо der Weltmeister, der Olympiasieger, die Goldmedaille, das Grand-Slam-Turnier, від виду спорту утворюємо назву спортсмена (das Biathlon → der Biathlet, das Skirennen → der Skirennläufer), робимо жіночі форми на -in (der Fechter → die Fechterin), впізнаємо всесвітньо відомих спортсменів і коментуємо таблицю олімпійських рекордсменів: Michael Phelps kommt aus den USA … Insgesamt hat er 28 Medaillen.",
+    file: "klas-7/modul-d/lektion-6.html",
+    nove: true,
+    gram: ["praep-dativ"],
+    hook: "undu",
+    dz: "Ukrainische Olympiasieger/innen – eine Medaillentabelle: 1) Such im Internet Informationen über vier ukrainische Sportler/innen, die bei den Olympischen Spielen Medaillen gewonnen haben – mindestens zwei davon sind Sportlerinnen. 2) Mach eine Tabelle wie in Üb. 5: Athlet(in) / Sportart – Zeitraum – Gold – Silber – Bronze – Insgesamt. 3) Schreib zu zwei Personen einen Kommentar nach dem Muster (z. B. „Olha Charlan kommt aus der Ukraine. Sie vertritt die Ukraine im Fechten und hat von … bis … an den Olympischen Spielen teilgenommen. Die Sportlerin hat … Goldmedaillen, … bekommen. Insgesamt hat sie … Medaillen.“). Achte auf die weibliche Form: die Fechterin, die Leichtathletin, die Olympiasiegerin. 4) Bonus: Wer ist für dich die Nummer eins? Schreib einen Satz mit „weil“. Nächstes Mal vergleichen wir unsere Tabellen: Wer hat die meisten Medaillen gefunden?"
   }
 ];
