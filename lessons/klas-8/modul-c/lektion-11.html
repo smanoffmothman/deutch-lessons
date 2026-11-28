@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 11 · Modul C · Aus dem Schaffen von Iwan Franko</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 8'},
+    {label: 'Урок 11: Aus dem Schaffen von Iwan Franko'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 11 · MODUL C</span>
+        <h1>Aus dem Schaffen von Iwan Franko</h1>
+        <p class="sub">З творчості Івана Франка: впізнаємо класиків української літератури та їхні твори, читаємо текст-загадку про життя Франка, складаємо його життєпис і розповідаємо про нього в Präteritum.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Wer ist wer?</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Ihre Werke</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Von wem ist die Rede?</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Frankos Lebenslauf</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== ПАНЕЛЬ: вступ ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Worum geht es heute?</h2>
+      <div class="card">
+        <p>Skoworoda, Kotljarewskyj, Schewtschenko, Marko Wowtschok, Lessja Ukrajinka, Franko – diese Namen kennt jede Ukrainerin und jeder Ukrainer. Heute erkennst du die großen ukrainischen Autorinnen und Autoren an kurzen Beschreibungen und ordnest ihnen ihre Werke zu. Dann liest du einen Text über einen berühmten Dichter – aber ohne seinen Namen! Rate, von wem die Rede ist. Zum Schluss ergänzt du seinen Lebenslauf und erzählst über sein Leben und Schaffen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Сковорода, Котляревський, Шевченко, Марко Вовчок, Леся Українка, Франко — ці імена знає кожна українка й кожен українець. Сьогодні ти впізнаєш великих українських письменниць і письменників за короткими описами й добереш до них їхні твори. Потім прочитаєш текст про відомого поета — але без його імені! Відгадай, про кого йдеться. Наприкінці доповниш його життєпис і розповіси про його життя й творчість.
+        </div>
+      </div>
+
+      <div id="hook"></div>
+
+      <div id="lz-start"></div>
+
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Ich hoffe, ihr könnt viele Tatsachen aus dem Leben dieser großen ukrainischen Schriftsteller/innen und Dichter/innen nennen! 🐶📖</p>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: перевірка домашнього завдання (dz уроку 8-C-10) ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: книжкова порада (Buchtipp, 6–8 речень) як допис для сайту шкільної бібліотеки — книжка української письменниці чи письменника: заголовок, автор, жанр, про що книжка (щонайменше два відносні речення), а наприкінці — «Ich empfehle das Buch allen, die …» і маленька обкладинка.
+      </div>
+
+      <div id="dz-check">
+        <div class="card" style="margin-top:18px;">
+          <p class="section-label" style="margin:0 0 6px;">Teil A · Ein Buchtipp aus unserer Klasse</p>
+          <p class="lead">Так виглядає порада однокласниці. Встав пропущені слова, а потім звір зі своїм текстом: чи є в тебе все те саме — автор і жанр, «Es geht um …», два відносні речення й порада наприкінці?</p>
+          <div id="hw-bank"></div>
+          <div class="ua-note">
+            <span class="ua-label">🇺🇦 Слова</span>
+            <b>dreimal</b> — тричі · <b>verrückt</b> — божевільний, шалений · <b>die Freundschaft</b> — дружба · <b>empfehlen</b> — радити, рекомендувати.
+          </div>
+        </div>
+
+        <div class="card tinted-mustard">
+          <p class="section-label" style="margin:0 0 6px;">Teil B · Unsere Bücherwand</p>
+          <p style="margin:0;">Hängt eure Buchtipps an die Wand. Lest die Tipps der anderen und wählt ein Buch, das ihr lesen möchtet: <em>„Ich möchte … lesen, weil …“</em></p>
+          <div class="ua-note">
+            <span class="ua-label">🇺🇦 У класі</span>
+            Розвісьте свої поради на стіні, прочитайте чужі й оберіть книжку, яку хотіли б прочитати. Удома — перевір свій текст за частиною А: чи правильні відносні займенники (das / die / dessen) і чи стоїть дієслово в кінці відносного речення?
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="dz-vocab-wrap" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">Wörter-Check</p>
+        <p class="lead">Перевір слова з минулих уроків.</p>
+        <div id="dz-vocab"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: Wer ist wer? ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Wer ist wer?</h2>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Die Autorinnen und Autoren</p>
+        <p style="margin:0;">Hryhorij Skoworoda · Iwan Franko · Iwan Kotljarewskyj · Lessja Ukrajinka · Marko Wowtschok · Taras Schewtschenko</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Запам'ятай</span>
+          <b>der</b> bekannte Dichter → <b>der</b> (хто?) · <b>dessen</b> (чий?) · <b>dem</b> (кому?) · <b>den</b> (кого?).<br>
+          <b>die</b> bekannte Dichterin → <b>die</b> (хто? кого?) · <b>deren</b> (чий?) · <b>der</b> (кому?).<br>
+          <b>der Philosoph</b> — філософ · <b>wandern</b> — мандрувати · <b>echt</b> — справжній · <b>der Männername</b> — чоловіче ім'я · <b>benannt nach</b> (+Dat.) — названий на честь · <b>der Vater der neuen ukrainischen Literatur</b> — батько нової української літератури.
+        </div>
+      </div>
+
+      <p class="lead" style="margin-top:20px;">A) Обери відносний займенник і відгадай, про кого йдеться.</p>
+      <div class="card" id="ub1-list">
+        <div class="fill-item"><span class="num">1)</span> Das ist der bekannte ukrainische Philosoph, <select class="blank inline" data-ans="der" aria-label="Satz 1 Pronomen"><option value="">—</option><option>der</option><option>dessen</option><option>den</option></select> viele Jahre zu Fuß durch die Ukraine gewandert ist. → <select class="blank inline" data-ans="Hryhorij Skoworoda" aria-label="Satz 1 Person"><option value="">—</option><option>Iwan Kotljarewskyj</option><option>Hryhorij Skoworoda</option><option>Iwan Franko</option></select></div>
+        <div class="fill-item"><span class="num">2)</span> Das ist die bekannte ukrainische Dichterin, <select class="blank inline" data-ans="deren" aria-label="Satz 2 Pronomen"><option value="">—</option><option>die</option><option>der</option><option>deren</option></select> echter Name Larissa Kossatsch war. → <select class="blank inline" data-ans="Lessja Ukrajinka" aria-label="Satz 2 Person"><option value="">—</option><option>Lessja Ukrajinka</option><option>Marko Wowtschok</option><option>Taras Schewtschenko</option></select></div>
+        <div class="fill-item"><span class="num">3)</span> Das ist der bekannte ukrainische Dichter und Maler, <select class="blank inline" data-ans="dessen" aria-label="Satz 3 Pronomen"><option value="">—</option><option>dem</option><option>dessen</option><option>der</option></select> Gedichtsammlung „Kobsar“ heißt. → <select class="blank inline" data-ans="Taras Schewtschenko" aria-label="Satz 3 Person"><option value="">—</option><option>Hryhorij Skoworoda</option><option>Iwan Franko</option><option>Taras Schewtschenko</option></select></div>
+        <div class="fill-item"><span class="num">4)</span> Das ist die bekannte ukrainische Schriftstellerin, <select class="blank inline" data-ans="die" aria-label="Satz 4 Pronomen"><option value="">—</option><option>deren</option><option>die</option><option>der</option></select> unter einem Männernamen geschrieben hat. → <select class="blank inline" data-ans="Marko Wowtschok" aria-label="Satz 4 Person"><option value="">—</option><option>Marko Wowtschok</option><option>Lessja Ukrajinka</option><option>Iwan Kotljarewskyj</option></select></div>
+        <div class="fill-item"><span class="num">5)</span> Das ist der bekannte ukrainische Schriftsteller, nach <select class="blank inline" data-ans="dem" aria-label="Satz 5 Pronomen"><option value="">—</option><option>den</option><option>dessen</option><option>dem</option></select> die Universität in Lwiw benannt ist. → <select class="blank inline" data-ans="Iwan Franko" aria-label="Satz 5 Person"><option value="">—</option><option>Taras Schewtschenko</option><option>Iwan Franko</option><option>Hryhorij Skoworoda</option></select></div>
+        <div class="fill-item"><span class="num">6)</span> Das ist der bekannte ukrainische Dichter, <select class="blank inline" data-ans="den" aria-label="Satz 6 Pronomen"><option value="">—</option><option>den</option><option>der</option><option>dem</option></select> man den „Vater der neuen ukrainischen Literatur“ nennt. → <select class="blank inline" data-ans="Iwan Kotljarewskyj" aria-label="Satz 6 Person"><option value="">—</option><option>Iwan Franko</option><option>Marko Wowtschok</option><option>Iwan Kotljarewskyj</option></select></div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub1-check">Prüfen</button>
+        <button class="btn secondary" id="ub1-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub1-score"></span>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Und was wisst ihr noch?</p>
+        <p style="margin:0;">Erzählt, was ihr noch über diese Autorinnen und Autoren wisst: <em>„Hryhorij Skoworoda ist der bekannte ukrainische Philosoph, der … . Ich habe gelesen, dass … . Habt ihr gewusst, dass …?“</em></p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 У класі</span>
+          Розкажіть, що ще знаєте про цих письменників (з уроків літератури). Удома — назви вголос кожного за зразком і додай один факт.
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 2: Was haben sie geschrieben? ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Was haben diese Autorinnen und Autoren geschrieben?</h2>
+      <p class="lead">A) Розклади твори по авторах: по два твори кожному.</p>
+      <div class="card" id="ub2-sort"></div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Слова</span>
+        <b>das Poem</b> — поема · <b>das Theaterstück</b> — п'єса · <b>die Fabel</b> — байка · <b>„Der Garten göttlicher Lieder“</b> — «Сад божественних пісень» · <b>„Charkiwer Fabeln“</b> — «Байки харківські» · <b>„Volkserzählungen“</b> — «Народні оповідання» · <b>„Auf den Flügeln der Lieder“</b> — «На крилах пісень» · <b>„Das Waldlied“</b> — «Лісова пісня».
+      </div>
+
+      <p class="lead" style="margin-top:20px;">B) Склади речення з карток: що ми дізналися?</p>
+      <div class="card" id="ub2-order"></div>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Запам'ятай</span>
+        Після <b>dass</b> дієслово йде в самий кінець: Ich habe gelesen, dass Skoworoda viele Jahre durch die Ukraine <b>gewandert ist</b>. У питанні «Habt ihr gewusst, dass …?» — так само.
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: Von wem ist hier die Rede? ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Von wem ist hier die Rede?</h2>
+      <p class="lead">Прочитай текст і відгадай, про кого йдеться.</p>
+      <div class="card">
+        <p><b>█████████</b> ist einer der bekanntesten ukrainischen Dichter und Schriftsteller, der auch als Journalist, Literaturkritiker und Übersetzer bedeutend war. Er <b>übte einen großen Einfluss</b> auf die moderne ukrainische Literatur und die Entwicklung des nationalen ukrainischen Gedankens <b>aus</b>.</p>
+        <p>Über diesen ukrainischen Prominenten ist bekannt, dass …</p>
+        <ul>
+          <li>er aus Galizien stammt, wo er am 27. August 1856 in Nahujewytschi als Sohn eines Dorfschmieds deutscher Herkunft geboren wurde.</li>
+          <li>er nach dem Schulabschluss ab 1875 Philosophie an der Universität Lwiw studierte.</li>
+          <li>1876 seine erste Geschichte und seine erste Gedichtsammlung „Balladen und Erzählungen“ erschienen.</li>
+          <li>er viele Werke, darunter die Novelle „Sachar Berkut“, verfasste.</li>
+          <li>er sich auch mit Übersetzungen aus dem Deutschen beschäftigte und unter anderem Goethes „Faust“ und Heines „Deutschland. Ein Wintermärchen“ übersetzte.</li>
+          <li>er 1892 sein Studium an der Universität Czernowitz abschloss.</li>
+          <li>er 1893 in Wien seine Doktorarbeit verteidigte, die er in deutscher Sprache verfasst hatte.</li>
+          <li>er 1896 bis 1897 an den Wahlen zum Wiener Parlament teilnahm.</li>
+          <li>man 1898 sein 25-jähriges Jubiläum als Dichter feierte.</li>
+          <li>er am 28. Mai 1916 in Lwiw starb und auf dem Lytschakiwskyj-Friedhof beerdigt wurde, wo man sein Grab auch heute sehen kann.</li>
+        </ul>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Слова</span>
+          <b>einen großen Einfluss ausüben</b> (auf + Akk.) = stark beeinflussen — мати великий вплив (на) · <b>bedeutend</b> — визначний · <b>der Gedanke</b> — думка, ідея · <b>stammen aus</b> — походити з · <b>der Dorfschmied</b> — сільський коваль · <b>deutscher Herkunft</b> — німецького походження · <b>verfassen</b> — написати (твір) · <b>übersetzen</b> — перекладати · <b>das Studium abschließen</b> — закінчити навчання · <b>die Doktorarbeit verteidigen</b> — захистити дисертацію · <b>die Wahlen</b> — вибори · <b>das Jubiläum</b> — ювілей · <b>beerdigen</b> — поховати · <b>der Friedhof</b> — кладовище · <b>das Grab</b> — могила.
+        </div>
+      </div>
+
+      <p class="lead" style="margin-top:20px;">Обери правильну відповідь.</p>
+      <div id="ub3-quiz"></div>
+
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Habt ihr schon geraten, von wem die Rede ist? Kleiner Tipp: Sein Porträt seht ihr auf dem 20-Hrywnja-Schein! 💵</p>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4: Frankos Lebenslauf ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Ergänze den Lebenslauf des Dichters</h2>
+      <p class="lead">A) Доповни життєпис Івана Франка за текстом з Üb. 3: рік або слово.</p>
+      <div class="ua-note">
+        <span class="ua-label">🇺🇦 Підказка</span>
+        У життєписі замість дієслів — іменники: geboren werden → <b>die Geburt</b> · studieren → <b>das Studium</b> · abschließen → <b>der Abschluss</b> · teilnehmen → <b>die Teilnahme</b> · sterben → <b>der Tod</b>.
+      </div>
+      <div class="card" id="ub4-tab"></div>
+
+      <p class="lead" style="margin-top:20px;">B) Розкажи про життя Франка: обери правильну форму Präteritum.</p>
+      <div class="card" id="ub4-list">
+        <div class="fill-item"><span class="num">1)</span> Iwan Franko <select class="blank inline" data-ans="wurde" aria-label="Satz 1"><option value="">—</option><option>wird</option><option>wurde</option><option>war</option></select> am 27. August 1856 in Nahujewytschi geboren.</div>
+        <div class="fill-item"><span class="num">2)</span> 1875 <select class="blank inline" data-ans="studierte" aria-label="Satz 2"><option value="">—</option><option>studierte</option><option>studiert</option><option>studierten</option></select> er Philosophie an der Universität Lwiw.</div>
+        <div class="fill-item"><span class="num">3)</span> 1876 <select class="blank inline" data-ans="erschien" aria-label="Satz 3"><option value="">—</option><option>erscheinte</option><option>erschienen</option><option>erschien</option></select> seine erste Gedichtsammlung.</div>
+        <div class="fill-item"><span class="num">4)</span> Franko <select class="blank inline" data-ans="übersetzte" aria-label="Satz 4"><option value="">—</option><option>übersetzt</option><option>übersetzte</option><option>übersetzen</option></select> Goethes „Faust“ ins Ukrainische.</div>
+        <div class="fill-item"><span class="num">5)</span> 1892 <select class="blank inline" data-ans="schloss" aria-label="Satz 5 Verb"><option value="">—</option><option>schloss</option><option>schließte</option><option>schließt</option></select> er sein Studium in Czernowitz <select class="blank inline" data-ans="ab" aria-label="Satz 5 Präfix"><option value="">—</option><option>an</option><option>aus</option><option>ab</option></select>.</div>
+        <div class="fill-item"><span class="num">6)</span> 1893 <select class="blank inline" data-ans="verteidigte" aria-label="Satz 6"><option value="">—</option><option>verteidigt</option><option>verteidigte</option><option>verteidigen</option></select> er seine Doktorarbeit in Wien.</div>
+        <div class="fill-item"><span class="num">7)</span> Von 1896 bis 1897 <select class="blank inline" data-ans="nahm" aria-label="Satz 7 Verb"><option value="">—</option><option>nahm</option><option>nehmte</option><option>nimmt</option></select> er an den Wahlen zum Wiener Parlament <select class="blank inline" data-ans="teil" aria-label="Satz 7 Präfix"><option value="">—</option><option>mit</option><option>teil</option><option>an</option></select>.</div>
+        <div class="fill-item"><span class="num">8)</span> Iwan Franko <select class="blank inline" data-ans="starb" aria-label="Satz 8"><option value="">—</option><option>stirbt</option><option>sterbte</option><option>starb</option></select> am 28. Mai 1916 in Lwiw.</div>
+      </div>
+      <div class="check-bar">
+        <button class="btn" id="ub4-check">Prüfen</button>
+        <button class="btn secondary" id="ub4-reset">Zurücksetzen</button>
+        <span class="score-pill" id="ub4-score"></span>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Erzähl von seinem Leben und Schaffen</p>
+        <p style="margin:0;">Erzähle mit Hilfe des Lebenslaufs über Iwan Franko – eine Person beginnt, die nächste macht weiter: <em>„Iwan Franko wurde 1856 in … geboren. 1875 studierte er … . 1876 erschien …“</em></p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 У класі</span>
+          Розповідайте «ланцюжком» за життєписом: кожен додає одне речення. Удома — розкажи вголос усю біографію сам(а).
+        </div>
+      </div>
+
+      <p class="lead" style="margin-top:20px;">C) Exit ticket: що тебе найбільше здивувало в житті Франка? Напиши 2–3 речення з <b>dass</b>. Вставка тексту вимкнена — набирай сам(а).</p>
+      <div class="card" id="ub4-write"></div>
+    </section>
+
+    <!-- ===== ПРИКІНЦЕВА ПАНЕЛЬ ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div id="lz-check"></div>
+
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Ein Interview mit Iwan Franko: Stell dir vor, du bist Reporterin oder Reporter unserer Schülerzeitung und kannst mit Iwan Franko sprechen. 1) Schreib ein Interview mit 6–8 Fragen und Antworten (z. B. „Herr Franko, woher stammen Sie?“ – „Ich stamme aus Galizien. Ich wurde 1856 in Nahujewytschi geboren.“). 2) Benutze Informationen aus Üb. 3 und Üb. 4: Studium, erste Werke, Übersetzungen, Doktorarbeit in Wien. 3) In seinen Antworten erzählt Franko über sein Leben – benutze mindestens vier Verben im Präteritum (z. B. studierte, erschien, übersetzte, verteidigte) und einen Relativsatz (z. B. „‚Sachar Berkut‘ ist eine Novelle, die …“). 4) Such im Internet noch eine interessante Tatsache über Franko und bau sie in das Interview ein. Nächstes Mal spielen wir eure Interviews zu zweit vor.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Інтерв'ю з Іваном Франком: уяви, що ти репортерка чи репортер нашої шкільної газети й можеш поговорити з Іваном Франком. 1) Напиши інтерв'ю з 6–8 запитань і відповідей (напр. «Herr Franko, woher stammen Sie?» — «Ich stamme aus Galizien. Ich wurde 1856 in Nahujewytschi geboren.»). 2) Використай інформацію з Üb. 3 і Üb. 4: навчання, перші твори, переклади, дисертація у Відні. 3) У відповідях Франко розповідає про своє життя — використай щонайменше чотири дієслова в Präteritum (напр. studierte, erschien, übersetzte, verteidigte) і одне відносне речення (напр. «‚Sachar Berkut‘ ist eine Novelle, die …»). 4) Знайди в інтернеті ще один цікавий факт про Франка й додай його в інтерв'ю. Наступного уроку розіграємо ваші інтерв'ю в парах.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Wörter zum Lernen</p>
+        <div class="chip-row" id="vocabChips"></div>
+      </div>
+
+      <div class="card" id="lessonGramWrap">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="lessonGram"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../data/glossary-data.js"></script>
+<script src="../../../data/lessons-data.js"></script>
+<script src="../../../data/grammar-data.js"></script>
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  const LEKTION_KLAS = "8", LEKTION_MODUL = "C", LEKTION_LEKTION = 11;
+  const LEKTION_PREV_LEKTION = 10;
+
+  // ===== Цілі уроку «Ich kann …» (Start) + самооцінка-світлофор (Fertig!) =====
+  const LERNZIELE = [
+    {de: "Ich kann bekannte ukrainische Autorinnen und Autoren mit Relativsätzen beschreiben und ihre Werke nennen.", uk: "Я можу описати відомих українських письменниць і письменників відносними реченнями й назвати їхні твори."},
+    {de: "Ich kann einen Text über das Leben von Iwan Franko verstehen und seinen Lebenslauf ergänzen.", uk: "Я можу зрозуміти текст про життя Івана Франка й доповнити його життєпис."},
+    {de: "Ich kann im Präteritum über Frankos Leben und Schaffen erzählen.", uk: "Я можу розповісти в Präteritum про життя й творчість Франка."}
+  ];
+  buildLernziele('lz-start', 'lz-check', LERNZIELE);
+
+  // ===== Хук входу (тип undu — поле hook у lessons-data.js) =====
+  buildHook('hook', {type: 'undu',
+    q: "Was weißt du schon über Iwan Franko? Hast du schon etwas von ihm gelesen?",
+    uk: "Що ти вже знаєш про Івана Франка? Ти вже читав(ла) щось із його творів?",
+    words: "10"
+  });
+
+  (function renderLessonVocab(){
+    const box = document.getElementById('vocabChips');
+    if (!box || typeof GLOSSARY === 'undefined') return;
+    const words = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_LEKTION
+    );
+    if (words.length === 0){
+      box.innerHTML = '<p class="empty-note">Слова для цього уроку ще не додані в глосарій.</p>';
+      return;
+    }
+    box.innerHTML = words.map(w =>
+      '<span class="chip static">' + w.de + ' — ' + w.uk + '</span>'
+    ).join('');
+  })();
+
+  // ===== Граматика до цього уроку у вкладці Fertig (поле gram у lessons-data.js) =====
+  (function renderLessonGrammar(){
+    const wrap = document.getElementById('lessonGramWrap');
+    const box = document.getElementById('lessonGram');
+    if (!wrap || !box) return;
+    const hide = () => { wrap.style.display = 'none'; };
+    if (typeof LESSONS === 'undefined' || typeof GRAMMAR === 'undefined') return hide();
+    const me = LESSONS.find(l => l.klas === LEKTION_KLAS && l.modul === LEKTION_MODUL && l.lektion === LEKTION_LEKTION);
+    const topics = ((me && me.gram) || []).map(id => GRAMMAR.find(t => t.id === id)).filter(t => t && t.opublikovano > 0);
+    if (topics.length === 0) return hide();
+    const src = document.querySelector('script[src$="data/grammar-data.js"]').getAttribute('src');
+    const root = src.slice(0, src.length - 'data/grammar-data.js'.length);
+    box.innerHTML = topics.map(t =>
+      '<a class="gram-link" href="' + root + 'gramatyka/temy/' + t.id + '.html">'
+      + '<span class="k">' + t.uk + '</span>' + t.tema + '</a>'
+    ).join('');
+  })();
+
+  // ---------- Груба евристика частини мови за виглядом "de" (для пасток у Wörter-Check) ----------
+  function guessPos(de){
+    var base = (de || '').replace(/\([^)]*\)/g, '').trim();
+    if(/^(der|die|das)(\/(der|die|das))?\s/.test(base)) return 'noun';
+    if(/^sich\s/.test(base)) return 'verb';
+    if(/^am\s/.test(base)) return 'other';
+    if(/\(\+(Gen|Dat|Akk)\.?\)/.test(de)) return 'prep';
+    var words = base.split(/\s+/);
+    var last = words[words.length - 1];
+    if(/(en|ern|eln)$/.test(last) && last === last.toLowerCase()) return 'verb';
+    return 'other';
+  }
+
+  // ===== Wörter-Check: до 4 слів попереднього уроку + слова з 2–5 уроків тому =====
+  (function renderDzVocabCheck(){
+    const wrap = document.getElementById('dz-vocab-wrap');
+    const box = document.getElementById('dz-vocab');
+    if (!wrap || !box || typeof GLOSSARY === 'undefined') return;
+    const same = (w, l) => w.klas === l.klas && w.modul === l.modul && w.lektion === l.lektion;
+    const prevWords = LEKTION_PREV_LEKTION ? GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_PREV_LEKTION
+    ) : [];
+    let olderWords = [];
+    if (typeof LESSONS !== 'undefined'){
+      const mine = LESSONS.filter(l => l.klas === LEKTION_KLAS);
+      const idx = mine.findIndex(l => l.modul === LEKTION_MODUL && l.lektion === LEKTION_LEKTION);
+      if (idx > 0){
+        const older = mine.slice(Math.max(0, idx - 5), idx)
+          .filter(l => !(l.modul === LEKTION_MODUL && l.lektion === LEKTION_PREV_LEKTION));
+        olderWords = GLOSSARY.filter(w => older.some(l => same(w, l)));
+      }
+    }
+    const fromPrev = shuffleArray(prevWords).slice(0, olderWords.length ? 4 : 6);
+    const pool = shuffleArray(fromPrev.concat(shuffleArray(olderWords).slice(0, 6 - fromPrev.length)));
+    if (pool.length < 3){ wrap.style.display = 'none'; return; }
+
+    const quizData = pool.map(w => {
+      const pos = guessPos(w.de);
+      let sameKind = GLOSSARY.filter(g => g.uk !== w.uk && guessPos(g.de) === pos);
+      if(sameKind.length < 2) sameKind = GLOSSARY.filter(g => g.uk !== w.uk);
+      const distractors = shuffleArray(sameKind).slice(0, 2).map(g => g.uk);
+      return { q: w.de, opts: [w.uk, ...distractors], correct: w.uk };
+    });
+    buildQuiz('dz-vocab', quizData);
+  })();
+
+  // ===== Hausaufgabe, Teil A: Buchtipp mit Lücken =====
+  buildWordBank('hw-bank', {
+    text: "📚 Buchtipp der Woche\n\nWsewolod Nestajkos Abenteuerbuch „Die Toreadore aus Wasjukiwka“ ist ein Buch, [das] ich schon dreimal gelesen habe. Die Hauptfiguren sind zwei Freunde, Jawa und Pawlusch, [die] im Dorf Wasjukiwka leben. Jawa ist ein Junge, [dessen] Ideen immer ein bisschen verrückt sind. Es [geht] um lustige Abenteuer und echte Freundschaft.\n\nIch [empfehle] das Buch allen, [denen] Bücher über Freundschaft gefallen.",
+    extra: ["deren", "den", "gibt"]
+  });
+
+  // ===== Üb. 1: Relativpronomen + Person =====
+  wireBlanks('ub1');
+
+  // ===== Üb. 2 A: Werke sortieren =====
+  buildSort('ub2-sort', {
+    buckets: ["Skoworoda", "Kotljarewskyj", "Schewtschenko", "Marko Wowtschok", "Franko", "Lessja Ukrajinka"],
+    items: [
+      {t: "„Der Garten göttlicher Lieder“ – Gedichte", b: "Skoworoda"},
+      {t: "„Charkiwer Fabeln“", b: "Skoworoda"},
+      {t: "„Enejida“ – ein Poem", b: "Kotljarewskyj"},
+      {t: "„Natalka Poltawka“ – ein Theaterstück", b: "Kotljarewskyj"},
+      {t: "„Kobsar“ – eine Gedichtsammlung", b: "Schewtschenko"},
+      {t: "„Kateryna“ – ein Poem", b: "Schewtschenko"},
+      {t: "„Volkserzählungen“", b: "Marko Wowtschok"},
+      {t: "„Institutka“ – eine Erzählung", b: "Marko Wowtschok"},
+      {t: "„Sachar Berkut“ – eine Novelle", b: "Franko"},
+      {t: "„Fuchs Mykyta“ – ein Märchen in Versen", b: "Franko"},
+      {t: "„Das Waldlied“ – ein Drama", b: "Lessja Ukrajinka"},
+      {t: "„Auf den Flügeln der Lieder“ – Gedichte", b: "Lessja Ukrajinka"}
+    ]
+  });
+
+  // ===== Üb. 2 B: dass-Sätze bauen =====
+  buildOrder('ub2-order', [
+    {words: ["Habt", "ihr", "gewusst,", "dass", "Marko Wowtschok", "eine Frau", "war"], end: "?"},
+    {words: ["Ich", "habe", "gelesen,", "dass", "Skoworoda", "viele Jahre", "durch die Ukraine", "gewandert", "ist"], end: ".",
+     alt: ["Ich habe gelesen, dass Skoworoda durch die Ukraine viele Jahre gewandert ist"]},
+    {words: ["Habt", "ihr", "gewusst,", "dass", "Lessja Ukrajinka", "das Drama", "„Das Waldlied“", "geschrieben", "hat"], end: "?"}
+  ]);
+
+  // ===== Üb. 3: Quiz zum Text =====
+  buildQuiz('ub3-quiz', [
+    {q: "Von wem ist hier die Rede?", opts: ["Taras Schewtschenko", "Iwan Kotljarewskyj", "Iwan Franko"], correct: "Iwan Franko"},
+    {q: "Wer war sein Vater?", opts: ["ein Dorfschmied deutscher Herkunft", "ein Lehrer aus Lwiw", "ein Journalist aus Wien"], correct: "ein Dorfschmied deutscher Herkunft"},
+    {q: "Was bedeutet „einen großen Einfluss ausüben“?", opts: ["viel reisen", "stark beeinflussen", "lange studieren"], correct: "stark beeinflussen"},
+    {q: "Welche Werke hat er aus dem Deutschen übersetzt?", opts: ["Schillers „Räuber“ und Goethes „Werther“", "Goethes „Faust“ und Heines „Deutschland. Ein Wintermärchen“", "die „Märchen“ der Brüder Grimm"], correct: "Goethes „Faust“ und Heines „Deutschland. Ein Wintermärchen“"},
+    {q: "In welcher Sprache hat er seine Doktorarbeit geschrieben?", opts: ["auf Polnisch", "auf Ukrainisch", "auf Deutsch"], correct: "auf Deutsch"},
+    {q: "Wo ist er begraben?", opts: ["auf dem Lytschakiwskyj-Friedhof in Lwiw", "in Wien", "in seinem Heimatdorf Nahujewytschi"], correct: "auf dem Lytschakiwskyj-Friedhof in Lwiw"}
+  ]);
+
+  // ===== Üb. 4 A: Lebenslauf =====
+  buildTable('ub4-tab', {
+    head: ["Datum", "Ereignis"],
+    rows: [
+      ["27. August 1856", "Geburt in Nahujewytschi/Galizien"],
+      ["[1875]", "[Studium] der Philosophie an der Universität Lwiw"],
+      ["[1876]", "die erste Geschichte und die erste [Gedichtsammlung] „Balladen und Erzählungen“"],
+      ["1892", "[Abschluss] des Studiums an der Universität Czernowitz"],
+      ["[1893]", "Doktorarbeit in Wien – auf [Deutsch]"],
+      ["1896–1897", "[Teilnahme] an den Wahlen zum Wiener Parlament"],
+      ["[1898]", "Feier zum 25-jährigen [Jubiläum] als Dichter"],
+      ["28. Mai 1916", "[Tod] in Lwiw"]
+    ]
+  });
+
+  // ===== Üb. 4 B: Präteritum =====
+  wireBlanks('ub4');
+
+  // ===== Üb. 4 C: Exit ticket =====
+  buildWriting('ub4-write', {
+    prompt: "Was findest du in Frankos Leben am interessantesten? (2–3 Sätze: „Ich habe gelesen, dass …“, „Interessant finde ich, dass …“)",
+    rows: 4,
+    words: 15,
+    must: ["dass"]
+  });
+
+  // Фінальна панель зі штампами
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🖋️','📚','🔍','📜']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>

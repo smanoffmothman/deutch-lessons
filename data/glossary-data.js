@@ -1465,5 +1465,16 @@ const GLOSSARY = [
   {de: "der Ritter (die Ritter)", uk: "лицар", klas: "8", modul: "C", lektion: 10},
   {de: "das Werk (die Werke)", uk: "твір", klas: "8", modul: "C", lektion: 10},
   {de: "die Gedichtsammlung (die Gedichtsammlungen)", uk: "збірка віршів", klas: "8", modul: "C", lektion: 10},
-  {de: "Worum geht es in diesem Buch? (Es geht um …)", uk: "Про що ця книжка? (Ідеться про …)", klas: "8", modul: "C", lektion: 10}
+  {de: "Worum geht es in diesem Buch? (Es geht um …)", uk: "Про що ця книжка? (Ідеться про …)", klas: "8", modul: "C", lektion: 10},
+  {de: "der Philosoph / die Philosophin", uk: "філософ / філософиня", klas: "8", modul: "C", lektion: 11},
+  {de: "der Übersetzer / die Übersetzerin", uk: "перекладач / перекладачка", klas: "8", modul: "C", lektion: 11},
+  {de: "übersetzen (übersetzte, hat übersetzt)", uk: "перекладати", klas: "8", modul: "C", lektion: 11},
+  {de: "einen großen Einfluss ausüben (auf + Akk.)", uk: "мати великий вплив (на когось / щось)", klas: "8", modul: "C", lektion: 11},
+  {de: "stammen (aus + Dat.)", uk: "походити (з)", klas: "8", modul: "C", lektion: 11},
+  {de: "verfassen (verfasste, hat verfasst)", uk: "написати, скласти (твір)", klas: "8", modul: "C", lektion: 11},
+  {de: "die Doktorarbeit (eine Doktorarbeit verteidigen)", uk: "дисертація (захистити дисертацію)", klas: "8", modul: "C", lektion: 11},
+  {de: "das Studium abschließen (schloss ab, hat abgeschlossen)", uk: "закінчити навчання (у виші)", klas: "8", modul: "C", lektion: 11},
+  {de: "das Jubiläum (die Jubiläen)", uk: "ювілей", klas: "8", modul: "C", lektion: 11},
+  {de: "der Friedhof (die Friedhöfe)", uk: "кладовище", klas: "8", modul: "C", lektion: 11},
+  {de: "das Schaffen", uk: "творчість", klas: "8", modul: "C", lektion: 11}
 ];

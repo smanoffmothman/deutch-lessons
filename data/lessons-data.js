@@ -1375,5 +1375,17 @@ const LESSONS = [
     gram: ["relativsaetze"],
     hook: "fehler",
     dz: "Buchtipp für unsere Leseecke: 1) Wähle ein Buch einer ukrainischen Schriftstellerin oder eines ukrainischen Schriftstellers, das du gelesen hast (z. B. aus dem Literaturunterricht). 2) Schreib einen Buchtipp (6–8 Sätze) als Post für die Webseite unserer Schulbibliothek. 3) Nenne den Titel, die Autorin oder den Autor und das Genre, z. B. „Iwan Frankos Märchen ‚Fuchs Mykyta‘ …“. 4) Schreib, worum es in dem Buch geht, und benutze mindestens zwei Relativsätze, z. B. „Das ist ein Abenteuerbuch, das …“ oder „Die Hauptfigur ist ein Junge, dessen …“. 5) Schreib am Ende, warum du das Buch empfiehlst („Ich empfehle das Buch allen, die …“), und mal ein kleines Cover dazu. Nächstes Mal machen wir aus euren Buchtipps eine Bücherwand in der Klasse."
+  },
+  {
+    klas: "8",
+    modul: "C",
+    lektion: 11,
+    nazva: "Aus dem Schaffen von Iwan Franko",
+    opys: "З творчості Івана Франка: впізнаємо Сковороду, Котляревського, Шевченка, Марка Вовчка, Лесю Українку й Франка за описами з відносними реченнями (… ist der bekannte ukrainische Dichter, dessen Gedichtsammlung „Kobsar“ heißt; … ist die Dichterin, deren echter Name Larissa Kossatsch war), розкладаємо їхні твори по авторах, кажемо «Habt ihr gewusst, dass …? Ich habe gelesen, dass …», читаємо текст-загадку про життя Франка (stammt aus Galizien, übte einen großen Einfluss aus, übersetzte Goethes „Faust“), доповнюємо його життєпис і розповідаємо про нього в Präteritum.",
+    file: "klas-8/modul-c/lektion-11.html",
+    nove: true,
+    gram: ["relativsaetze", "tempusformen", "nebensaetze"],
+    hook: "undu",
+    dz: "Ein Interview mit Iwan Franko: Stell dir vor, du bist Reporterin oder Reporter unserer Schülerzeitung und kannst mit Iwan Franko sprechen. 1) Schreib ein Interview mit 6–8 Fragen und Antworten (z. B. „Herr Franko, woher stammen Sie?“ – „Ich stamme aus Galizien. Ich wurde 1856 in Nahujewytschi geboren.“). 2) Benutze Informationen aus Üb. 3 und Üb. 4: Studium, erste Werke, Übersetzungen, Doktorarbeit in Wien. 3) In seinen Antworten erzählt Franko über sein Leben – benutze mindestens vier Verben im Präteritum (z. B. studierte, erschien, übersetzte, verteidigte) und einen Relativsatz (z. B. „‚Sachar Berkut‘ ist eine Novelle, die …“). 4) Such im Internet noch eine interessante Tatsache über Franko und bau sie in das Interview ein. Nächstes Mal spielen wir eure Interviews zu zweit vor."
   }
 ];
