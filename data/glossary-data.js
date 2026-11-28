@@ -1453,5 +1453,17 @@ const GLOSSARY = [
   {de: "die Regatta (an einer Regatta teilnehmen)", uk: "регата (брати участь у регаті)", klas: "7", modul: "D", lektion: 9},
   {de: "am liebsten (Am liebsten schwimmt Luisa im Schwimmbad.)", uk: "найохочіше, найбільше (люблю)", klas: "7", modul: "D", lektion: 9},
   {de: "Sport treiben (Welche Sportart treibst du?)", uk: "займатися спортом", klas: "7", modul: "D", lektion: 9},
-  {de: "Gern geschehen!", uk: "Нема за що! (відповідь на подяку)", klas: "7", modul: "D", lektion: 9}
+  {de: "Gern geschehen!", uk: "Нема за що! (відповідь на подяку)", klas: "7", modul: "D", lektion: 9},
+  {de: "der Science-Fiction-Roman (die Science-Fiction-Romane)", uk: "науково-фантастичний роман", klas: "8", modul: "C", lektion: 10},
+  {de: "die Zukunft (die ferne Zukunft)", uk: "майбутнє (далеке майбутнє)", klas: "8", modul: "C", lektion: 10},
+  {de: "das Weltall (Reisen durch das Weltall)", uk: "всесвіт, космос (подорожі космосом)", klas: "8", modul: "C", lektion: 10},
+  {de: "die Zeitreise (die Zeitreisen)", uk: "подорож у часі", klas: "8", modul: "C", lektion: 10},
+  {de: "enthalten (viele Gespräche enthalten)", uk: "містити (містити багато діалогів)", klas: "8", modul: "C", lektion: 10},
+  {de: "darstellen (trennbar) (die Zukunft darstellen)", uk: "зображати (зображати майбутнє)", klas: "8", modul: "C", lektion: 10},
+  {de: "beschreiben (Ereignisse beschreiben)", uk: "описувати (описувати події)", klas: "8", modul: "C", lektion: 10},
+  {de: "das Mittelalter", uk: "середньовіччя", klas: "8", modul: "C", lektion: 10},
+  {de: "der Ritter (die Ritter)", uk: "лицар", klas: "8", modul: "C", lektion: 10},
+  {de: "das Werk (die Werke)", uk: "твір", klas: "8", modul: "C", lektion: 10},
+  {de: "die Gedichtsammlung (die Gedichtsammlungen)", uk: "збірка віршів", klas: "8", modul: "C", lektion: 10},
+  {de: "Worum geht es in diesem Buch? (Es geht um …)", uk: "Про що ця книжка? (Ідеться про …)", klas: "8", modul: "C", lektion: 10}
 ];

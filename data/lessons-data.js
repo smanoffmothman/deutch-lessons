@@ -1363,5 +1363,17 @@ const LESSONS = [
     gram: ["satzstellung-hauptsatz", "komparation", "fragen"],
     hook: "undu",
     dz: "Interview zu Hause: 1) Mach ein Interview über Sport mit zwei Personen aus deiner Familie oder mit Freunden – wie in Üb. 4. Stell die Fragen: „Magst du …?“, „Welche Sportart hast du am liebsten?“, „Welche Sportart treibst du?“. 2) Schreib die Antworten in eine Tabelle: Name – mag … – am liebsten … – treibt … . 3) Schreib dann über jede Person 2–3 Sätze wie in Üb. 2, z. B. „Am liebsten spielt mein Bruder Fußball auf dem Sportplatz.“, „Meine Mutter mag Wintersport. Am liebsten fährt sie Ski.“. Nächstes Mal erzählen wir in der Klasse über eure Interviews."
+  },
+  {
+    klas: "8",
+    modul: "C",
+    lektion: 10,
+    nazva: "Berühmte ukrainische Schriftsteller",
+    opys: "Видатні українські письменники: поєднуємо жанри з описами у відносних реченнях (Mir gefallen historische Romane, die viele interessante Tatsachen haben; Märchen, deren Helden Feen sind), слухаємо інтерв'ю з Маркусом про його улюблені книжки, знайомимося з Тарасом Шевченком, Іваном Франком, Лесею Українкою, Михайлом Коцюбинським, Всеволодом Нестайком і Ліною Костенко (… ist der Dichter, dessen Gedichtsammlung „Kobsar“ jeder Ukrainer kennt) і беремо інтерв'ю про улюблені книжки (Wer ist der Autor des Buches? Worum geht es in diesem Buch?).",
+    file: "klas-8/modul-c/lektion-10.html",
+    nove: true,
+    gram: ["relativsaetze"],
+    hook: "fehler",
+    dz: "Buchtipp für unsere Leseecke: 1) Wähle ein Buch einer ukrainischen Schriftstellerin oder eines ukrainischen Schriftstellers, das du gelesen hast (z. B. aus dem Literaturunterricht). 2) Schreib einen Buchtipp (6–8 Sätze) als Post für die Webseite unserer Schulbibliothek. 3) Nenne den Titel, die Autorin oder den Autor und das Genre, z. B. „Iwan Frankos Märchen ‚Fuchs Mykyta‘ …“. 4) Schreib, worum es in dem Buch geht, und benutze mindestens zwei Relativsätze, z. B. „Das ist ein Abenteuerbuch, das …“ oder „Die Hauptfigur ist ein Junge, dessen …“. 5) Schreib am Ende, warum du das Buch empfiehlst („Ich empfehle das Buch allen, die …“), und mal ein kleines Cover dazu. Nächstes Mal machen wir aus euren Buchtipps eine Bücherwand in der Klasse."
   }
 ];
