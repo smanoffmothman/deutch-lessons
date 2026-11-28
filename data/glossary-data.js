@@ -1429,5 +1429,17 @@ const GLOSSARY = [
   {de: "starten (die Karriere starten, Sie hat ihre Karriere 1982 gestartet.)", uk: "починати, стартувати", klas: "7", modul: "D", lektion: 7},
   {de: "beenden (die Karriere beenden)", uk: "завершувати, закінчувати", klas: "7", modul: "D", lektion: 7},
   {de: "das Komma (18,7 – achtzehn Komma sieben)", uk: "кома (в десятковому дробі)", klas: "7", modul: "D", lektion: 7},
-  {de: "aller Zeiten (eine der erfolgreichsten Sportlerinnen aller Zeiten)", uk: "усіх часів", klas: "7", modul: "D", lektion: 7}
+  {de: "aller Zeiten (eine der erfolgreichsten Sportlerinnen aller Zeiten)", uk: "усіх часів", klas: "7", modul: "D", lektion: 7},
+  {de: "der Kampf (die Kämpfe) (47 Kämpfe, 45 Siege)", uk: "бій, поєдинок", klas: "7", modul: "D", lektion: 8},
+  {de: "die Niederlage (die Niederlagen)", uk: "поразка", klas: "7", modul: "D", lektion: 8},
+  {de: "der Profiboxer / die Profiboxerin", uk: "професійний боксер / професійна боксерка", klas: "7", modul: "D", lektion: 8},
+  {de: "das Schwergewicht (Weltmeister im Schwergewicht)", uk: "важка вага (чемпіон світу у важкій вазі)", klas: "7", modul: "D", lektion: 8},
+  {de: "der Titel (die Titel) (der Weltmeistertitel)", uk: "титул (титул чемпіона світу)", klas: "7", modul: "D", lektion: 8},
+  {de: "der Europameister / die Europameisterin", uk: "чемпіон / чемпіонка Європи", klas: "7", modul: "D", lektion: 8},
+  {de: "ehemalig (ein ehemaliger ukrainischer Boxer)", uk: "колишній", klas: "7", modul: "D", lektion: 8},
+  {de: "dreimalig (eine dreimalige Europameisterin, sechsmalig, achtmalig)", uk: "триразовий (шестиразовий, восьмиразовий)", klas: "7", modul: "D", lektion: 8},
+  {de: "ausländisch (ausländische Fußballclubs)", uk: "іноземний, закордонний", klas: "7", modul: "D", lektion: 8},
+  {de: "die Paralympischen Spiele", uk: "Паралімпійські ігри", klas: "7", modul: "D", lektion: 8},
+  {de: "der Paralympionike / die Paralympionikin (die Paralympioniken)", uk: "паралімпієць / паралімпійка", klas: "7", modul: "D", lektion: 8},
+  {de: "erringen (eine Medaille erringen, er hat … errungen)", uk: "здобувати, виборювати (медаль, перемогу)", klas: "7", modul: "D", lektion: 8}
 ];

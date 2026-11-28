@@ -1339,5 +1339,17 @@ const LESSONS = [
     gram: ["perfekt-plusquamperfekt", "zahlwoerter", "adjektivdeklination"],
     hook: "fakt",
     dz: "Rätsel „Wer bin ich?“: 1) Wähle einen bekannten ukrainischen Sportler oder eine Sportlerin. 2) Mach einen Steckbrief wie in Üb. 4: Name – Geburtsdatum – Geburtsort – Sportart – Erster Start / Erste Profisaison – Siege / Medaillen. 3) Schreib nach dem Steckbrief ein Rätsel in der Ich-Form (5–6 Sätze), aber ohne den Namen! Benutze: „Ich bin am … in … geboren.“, „Ich bin ein/e erfolgreiche/r ukrainische/r …“, „Ich habe meine Sportkarriere … gestartet.“, „Ich habe an vielen … teilgenommen.“, „Ich habe … gewonnen, darunter …“. 4) Schreib den Namen auf die Rückseite. Nächstes Mal lesen wir die Rätsel vor und raten: Wer ist das?"
+  },
+  {
+    klas: "7",
+    modul: "D",
+    lektion: 8,
+    nazva: "Sportstars aus der Ukraine",
+    opys: "Зірки спорту з України: читаємо візитівки Віталія й Володимира Кличків, Ганни Безсонової, Ольги Харлан і Андрія Шевченка, пишемо текст про спортсмена (… ist ein ehemaliger ukrainischer Boxer, eine sechsmalige Weltmeisterin, hat im Jahre 2008 bei den Olympischen Spielen in Peking eine Goldmedaille gewonnen), ставимо запитання про кар'єру (Wann hat … seine Sportkarriere gestartet? Welche Titel hat er gewonnen?) і коментуємо числа з тексту про українських паралімпійців.",
+    file: "klas-7/modul-d/lektion-8.html",
+    nove: true,
+    gram: ["adjektivdeklination", "perfekt-plusquamperfekt", "zahlwoerter", "fragen"],
+    hook: "fehler",
+    dz: "Präsentation „Erfolgreiche ukrainische Paralympioniken“: 1) Such im Internet Informationen über eine erfolgreiche ukrainische Paralympionikin oder einen erfolgreichen ukrainischen Paralympioniken (z. B. im Schwimmen, in der Leichtathletik, im Radsport oder im Biathlon). 2) Mach eine Visitenkarte wie in Üb. 1: Name – Sportart / seit … (von … bis …) – Titel – Medaillen bei den Paralympischen Spielen (wann? wo?). 3) Bereite eine Präsentation vor (4–5 Folien oder ein Poster mit Fotos). Schreib zu jeder Folie 1–2 Sätze, z. B. „… ist ein erfolgreicher ukrainischer Paralympionike / eine erfolgreiche ukrainische Paralympionikin.“, „Er/Sie hat im Jahre … bei den Paralympischen Spielen in … eine Goldmedaille gewonnen.“, „Er/Sie ist dreimalige/r …“. 4) Schreib auf die letzte Folie zwei Fragen an die Klasse wie in Üb. 3 (z. B. „Wann hat … ihre Sportkarriere gestartet?“). Nächstes Mal zeigen wir die Präsentationen und stellen einander Fragen."
   }
 ];
