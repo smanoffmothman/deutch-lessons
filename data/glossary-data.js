@@ -1441,5 +1441,17 @@ const GLOSSARY = [
   {de: "ausländisch (ausländische Fußballclubs)", uk: "іноземний, закордонний", klas: "7", modul: "D", lektion: 8},
   {de: "die Paralympischen Spiele", uk: "Паралімпійські ігри", klas: "7", modul: "D", lektion: 8},
   {de: "der Paralympionike / die Paralympionikin (die Paralympioniken)", uk: "паралімпієць / паралімпійка", klas: "7", modul: "D", lektion: 8},
-  {de: "erringen (eine Medaille erringen, er hat … errungen)", uk: "здобувати, виборювати (медаль, перемогу)", klas: "7", modul: "D", lektion: 8}
+  {de: "erringen (eine Medaille erringen, er hat … errungen)", uk: "здобувати, виборювати (медаль, перемогу)", klas: "7", modul: "D", lektion: 8},
+  {de: "der Sommersport", uk: "літні види спорту", klas: "7", modul: "D", lektion: 9},
+  {de: "der Wassersport", uk: "водні види спорту", klas: "7", modul: "D", lektion: 9},
+  {de: "segeln (Mein Vater segelt seit 20 Jahren.)", uk: "ходити під вітрилом, займатися вітрильним спортом", klas: "7", modul: "D", lektion: 9},
+  {de: "surfen (das Surfen)", uk: "займатися серфінгом (серфінг)", klas: "7", modul: "D", lektion: 9},
+  {de: "reiten (das Reiten)", uk: "їздити верхи (верхова їзда)", klas: "7", modul: "D", lektion: 9},
+  {de: "joggen (Ich jogge dreimal in der Woche.)", uk: "бігати (підтюпцем), займатися бігом", klas: "7", modul: "D", lektion: 9},
+  {de: "das Kanu (Kanu fahren)", uk: "каное (веслувати на каное)", klas: "7", modul: "D", lektion: 9},
+  {de: "der Hochsprung / der Weitsprung", uk: "стрибки у висоту / стрибки в довжину", klas: "7", modul: "D", lektion: 9},
+  {de: "die Regatta (an einer Regatta teilnehmen)", uk: "регата (брати участь у регаті)", klas: "7", modul: "D", lektion: 9},
+  {de: "am liebsten (Am liebsten schwimmt Luisa im Schwimmbad.)", uk: "найохочіше, найбільше (люблю)", klas: "7", modul: "D", lektion: 9},
+  {de: "Sport treiben (Welche Sportart treibst du?)", uk: "займатися спортом", klas: "7", modul: "D", lektion: 9},
+  {de: "Gern geschehen!", uk: "Нема за що! (відповідь на подяку)", klas: "7", modul: "D", lektion: 9}
 ];

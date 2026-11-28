@@ -1351,5 +1351,17 @@ const LESSONS = [
     gram: ["adjektivdeklination", "perfekt-plusquamperfekt", "zahlwoerter", "fragen"],
     hook: "fehler",
     dz: "Präsentation „Erfolgreiche ukrainische Paralympioniken“: 1) Such im Internet Informationen über eine erfolgreiche ukrainische Paralympionikin oder einen erfolgreichen ukrainischen Paralympioniken (z. B. im Schwimmen, in der Leichtathletik, im Radsport oder im Biathlon). 2) Mach eine Visitenkarte wie in Üb. 1: Name – Sportart / seit … (von … bis …) – Titel – Medaillen bei den Paralympischen Spielen (wann? wo?). 3) Bereite eine Präsentation vor (4–5 Folien oder ein Poster mit Fotos). Schreib zu jeder Folie 1–2 Sätze, z. B. „… ist ein erfolgreicher ukrainischer Paralympionike / eine erfolgreiche ukrainische Paralympionikin.“, „Er/Sie hat im Jahre … bei den Paralympischen Spielen in … eine Goldmedaille gewonnen.“, „Er/Sie ist dreimalige/r …“. 4) Schreib auf die letzte Folie zwei Fragen an die Klasse wie in Üb. 3 (z. B. „Wann hat … ihre Sportkarriere gestartet?“). Nächstes Mal zeigen wir die Präsentationen und stellen einander Fragen."
+  },
+  {
+    klas: "7",
+    modul: "D",
+    lektion: 9,
+    nazva: "Wir treiben Sport (Wiederholung)",
+    opys: "Повторення теми «Спорт»: групуємо види спорту (Wintersport, Kampfsport, Wassersport …), розповідаємо, хто яким спортом займається найохочіше (Am liebsten spielt Lena Tennis auf dem Tennisplatz.), слухаємо три інтерв'ю про літні види спорту й проводимо власне інтерв'ю (Welche Sportart hast du am liebsten? Welche Sportart treibst du?).",
+    file: "klas-7/modul-d/lektion-9.html",
+    nove: true,
+    gram: ["satzstellung-hauptsatz", "komparation", "fragen"],
+    hook: "undu",
+    dz: "Interview zu Hause: 1) Mach ein Interview über Sport mit zwei Personen aus deiner Familie oder mit Freunden – wie in Üb. 4. Stell die Fragen: „Magst du …?“, „Welche Sportart hast du am liebsten?“, „Welche Sportart treibst du?“. 2) Schreib die Antworten in eine Tabelle: Name – mag … – am liebsten … – treibt … . 3) Schreib dann über jede Person 2–3 Sätze wie in Üb. 2, z. B. „Am liebsten spielt mein Bruder Fußball auf dem Sportplatz.“, „Meine Mutter mag Wintersport. Am liebsten fährt sie Ski.“. Nächstes Mal erzählen wir in der Klasse über eure Interviews."
   }
 ];
