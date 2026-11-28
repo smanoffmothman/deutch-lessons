@@ -1417,5 +1417,17 @@ const GLOSSARY = [
   {de: "der Biathlet / die Biathletin", uk: "біатлоніст / біатлоністка", klas: "7", modul: "D", lektion: 6},
   {de: "der Rennfahrer / die Rennfahrerin", uk: "автогонщик / автогонщиця", klas: "7", modul: "D", lektion: 6},
   {de: "der Skirennläufer / die Skirennläuferin", uk: "гірськолижник / гірськолижниця", klas: "7", modul: "D", lektion: 6},
-  {de: "der Fechter / die Fechterin", uk: "фехтувальник / фехтувальниця", klas: "7", modul: "D", lektion: 6}
+  {de: "der Fechter / die Fechterin", uk: "фехтувальник / фехтувальниця", klas: "7", modul: "D", lektion: 6},
+  {de: "der Sieg (die Siege)", uk: "перемога", klas: "7", modul: "D", lektion: 7},
+  {de: "das Rennen (die Rennen)", uk: "перегони, гонка", klas: "7", modul: "D", lektion: 7},
+  {de: "die Sportkarriere (die Sportkarrieren)", uk: "спортивна кар'єра", klas: "7", modul: "D", lektion: 7},
+  {de: "der Rücktritt", uk: "завершення (спортивної) кар'єри; відставка", klas: "7", modul: "D", lektion: 7},
+  {de: "das Mittelfeld", uk: "півзахист, центр поля (у футболі)", klas: "7", modul: "D", lektion: 7},
+  {de: "der Kapitän / die Kapitänin", uk: "капітан / капітанка (команди)", klas: "7", modul: "D", lektion: 7},
+  {de: "die Trikotnummer (die Trikotnummern)", uk: "номер на футболці гравця", klas: "7", modul: "D", lektion: 7},
+  {de: "geboren sein (Er ist am 3. Januar 1969 geboren.)", uk: "народитися", klas: "7", modul: "D", lektion: 7},
+  {de: "starten (die Karriere starten, Sie hat ihre Karriere 1982 gestartet.)", uk: "починати, стартувати", klas: "7", modul: "D", lektion: 7},
+  {de: "beenden (die Karriere beenden)", uk: "завершувати, закінчувати", klas: "7", modul: "D", lektion: 7},
+  {de: "das Komma (18,7 – achtzehn Komma sieben)", uk: "кома (в десятковому дробі)", klas: "7", modul: "D", lektion: 7},
+  {de: "aller Zeiten (eine der erfolgreichsten Sportlerinnen aller Zeiten)", uk: "усіх часів", klas: "7", modul: "D", lektion: 7}
 ];

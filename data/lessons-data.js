@@ -1327,5 +1327,17 @@ const LESSONS = [
     gram: ["praep-dativ"],
     hook: "undu",
     dz: "Ukrainische Olympiasieger/innen – eine Medaillentabelle: 1) Such im Internet Informationen über vier ukrainische Sportler/innen, die bei den Olympischen Spielen Medaillen gewonnen haben – mindestens zwei davon sind Sportlerinnen. 2) Mach eine Tabelle wie in Üb. 5: Athlet(in) / Sportart – Zeitraum – Gold – Silber – Bronze – Insgesamt. 3) Schreib zu zwei Personen einen Kommentar nach dem Muster (z. B. „Olha Charlan kommt aus der Ukraine. Sie vertritt die Ukraine im Fechten und hat von … bis … an den Olympischen Spielen teilgenommen. Die Sportlerin hat … Goldmedaillen, … bekommen. Insgesamt hat sie … Medaillen.“). Achte auf die weibliche Form: die Fechterin, die Leichtathletin, die Olympiasiegerin. 4) Bonus: Wer ist für dich die Nummer eins? Schreib einen Satz mit „weil“. Nächstes Mal vergleichen wir unsere Tabellen: Wer hat die meisten Medaillen gefunden?"
+  },
+  {
+    klas: "7",
+    modul: "D",
+    lektion: 7,
+    nazva: "Berühmte Sportler und Sportlerinnen",
+    opys: "Видатні спортсмени: слухаємо імена німецьких зірок спорту (Michael Schumacher, Magdalena Neuner, Boris Becker, Dirk Nowitzki), кажемо, хто яким спортом займався (Er ist Rennfahrer. Er hat an vielen Rennen teilgenommen.), коментуємо статистику порядковими числівниками й десятковими дробами (An der dritten Stelle steht Boris Becker mit 15,3 Prozent – fünfzehn Komma drei), читаємо анкети Шумахера, Баллака й Штеффі Граф і розповідаємо про кар'єру: ist am … in … geboren, hat die Karriere … gestartet und … beendet.",
+    file: "klas-7/modul-d/lektion-7.html",
+    nove: true,
+    gram: ["perfekt-plusquamperfekt", "zahlwoerter", "adjektivdeklination"],
+    hook: "fakt",
+    dz: "Rätsel „Wer bin ich?“: 1) Wähle einen bekannten ukrainischen Sportler oder eine Sportlerin. 2) Mach einen Steckbrief wie in Üb. 4: Name – Geburtsdatum – Geburtsort – Sportart – Erster Start / Erste Profisaison – Siege / Medaillen. 3) Schreib nach dem Steckbrief ein Rätsel in der Ich-Form (5–6 Sätze), aber ohne den Namen! Benutze: „Ich bin am … in … geboren.“, „Ich bin ein/e erfolgreiche/r ukrainische/r …“, „Ich habe meine Sportkarriere … gestartet.“, „Ich habe an vielen … teilgenommen.“, „Ich habe … gewonnen, darunter …“. 4) Schreib den Namen auf die Rückseite. Nächstes Mal lesen wir die Rätsel vor und raten: Wer ist das?"
   }
 ];
