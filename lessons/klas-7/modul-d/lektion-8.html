@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lektion 8 · Modul D · Sportstars aus der Ukraine</title>
+<link rel="stylesheet" href="../../../assets/lesson-style.css">
+<link rel="stylesheet" href="../../../assets/site.css">
+</head>
+<body>
+
+<div id="siteNav"></div>
+<div id="crumbs"></div>
+<script src="../../../assets/site-nav.js"></script>
+<script>
+  renderSiteNav('siteNav', { root: '../../../', active: 'klasy' });
+  renderCrumbs('crumbs', [
+    {label: 'Головна', href: '../../../index.html'},
+    {label: 'Уроки', href: '../../../klasy/index.html'},
+    {label: 'Клас 7'},
+    {label: 'Урок 8: Sportstars aus der Ukraine'}
+  ]);
+</script>
+
+<div class="app">
+
+  <header class="hero">
+    <div class="hero-top">
+      <div>
+        <span class="hero-badge">LEKTION 8 · MODUL D</span>
+        <h1>Sportstars aus der Ukraine</h1>
+        <p class="sub">Зірки спорту: читаємо «візитівки» братів Кличків, Ганни Безсонової, Ольги Харлан і Андрія Шевченка, пишемо текст про спортсмена чи спортсменку, ставимо одне одному запитання про спортивну кар'єру й коментуємо числа з тексту про українських паралімпійців.</p>
+      </div>
+      <svg class="compass" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="#F5EFDE" stroke-width="2"/><path d="M32 8 L38 32 L32 56 L26 32 Z" fill="#DE9E3B"/></svg>
+    </div>
+    <div class="progress-strip">
+      <div class="progress-track"><div class="progress-plane" id="progressPlane">✈️</div></div>
+      <span class="progress-text" id="progressText">0 / 0 Aufgaben gemeistert</span>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <button class="tab-btn" data-tab="start" aria-selected="true">Start</button>
+    <button class="tab-btn" data-tab="dz">Hausaufgabe</button>
+    <button class="tab-btn" data-tab="ub1">Üb. 1 · Visitenkarten</button>
+    <button class="tab-btn" data-tab="ub2">Üb. 2 · Ein Text über Sportstars</button>
+    <button class="tab-btn" data-tab="ub3">Üb. 3 · Fragen zur Karriere</button>
+    <button class="tab-btn" data-tab="ub4">Üb. 4 · Paralympische Spiele</button>
+    <button class="tab-btn" data-tab="ende">Fertig!</button>
+  </nav>
+
+  <main>
+    <!-- ===== ПАНЕЛЬ: вступ ===== -->
+    <section class="panel active" id="panel-start">
+      <p class="section-label">Willkommen an Bord</p>
+      <h2 class="panel-title">Sportstars aus der Ukraine</h2>
+      <div class="card">
+        <p>Letztes Mal haben wir Steckbriefe von deutschen Sportstars gelesen und Rätsel „Wer bin ich?“ geschrieben. Heute geht es um <strong>Sportstars aus der Ukraine</strong>: die Brüder Klytschko, Ganna Bessonowa, Olha Charlan und Andrij Schewtschenko. Du liest ihre <strong>Visitenkarten</strong>, schreibst einen kurzen Text über einen Sportler oder eine Sportlerin und stellst <strong>Fragen zur Sportkarriere</strong>. Zum Schluss liest du einen Text über die ukrainischen <strong>Paralympioniken</strong> und kommentierst die Zahlen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Минулого уроку ми читали анкети німецьких зірок спорту й писали загадки «Хто я?». Сьогодні — <b>зірки спорту з України</b>: брати Клички, Ганна Безсонова, Ольга Харлан і Андрій Шевченко. Ти прочитаєш їхні <b>«візитівки»</b>, напишеш короткий текст про спортсмена чи спортсменку й ставитимеш <b>запитання про спортивну кар'єру</b>. Наприкінці прочитаєш текст про українських <b>паралімпійців</b> і прокоментуєш числа з нього.
+        </div>
+      </div>
+
+      <div id="hook"></div>
+
+      <div id="lz-start"></div>
+
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Heute sind unsere eigenen Stars dran – Sportler und Sportlerinnen aus der Ukraine! Los geht's!</p>
+      </div>
+    </section>
+
+    <!-- ===== ПАНЕЛЬ: перевірка домашнього завдання (dz уроку 7-D-7) ===== -->
+    <section class="panel" id="panel-dz">
+      <p class="section-label">Hausaufgabenkontrolle</p>
+      <h2 class="panel-title">Перевірка домашнього завдання</h2>
+      <div class="ua-note">
+        Минулого уроку було задано: загадка «Wer bin ich?» — обрати відомого українського спортсмена чи спортсменку, скласти анкету, як в Üb. 4 (ім'я – дата й місце народження – вид спорту – перший старт – перемоги / медалі), і за нею написати загадку від першої особи (5–6 речень) без імені: «Ich bin am … in … geboren.», «Ich habe meine Sportkarriere … gestartet.», «Ich habe an vielen … teilgenommen.», «Ich habe … gewonnen, darunter …». Ім'я — на звороті аркуша.
+      </div>
+
+      <div id="dz-check">
+        <div class="card" style="margin-top:18px;">
+          <p class="section-label" style="margin:0 0 6px;">Teil A · Wer bin ich?</p>
+          <p class="lead">Ось загадки, які написали учні з паралельного класу. Відгадай: хто це?</p>
+          <div id="hw-quiz"></div>
+        </div>
+        <div class="card">
+          <p class="section-label" style="margin:0 0 6px;">Teil B · Sätze in der Ich-Form</p>
+          <p class="lead">Склади речення із загадки про Еліну Світоліну. Пам'ятай: дієслово — на 2-му місці, <b>geboren</b> / <b>teilgenommen</b> — у кінці.</p>
+          <div id="hw-order"></div>
+        </div>
+        <div class="card tinted-teal">
+          <p class="section-label" style="margin:0 0 6px;">Teil C · Lest eure Rätsel vor!</p>
+          <p style="margin:0;">Einer liest sein Rätsel vor, die anderen raten: <em>„Bist du Serhij Bubka?“ – „Nein, ich bin kein Stabhochspringer.“ – „Bist du Jana Klotschkowa?“ – „Ja, richtig!“</em> Wer hat das schwierigste Rätsel geschrieben?</p>
+          <div class="ua-note">
+            <span class="ua-label">🇺🇦 У класі</span>
+            Один учень зачитує свою загадку, інші відгадують (питання «Bist du …?»). Чия загадка найважча? Якщо працюєш удома — перевір свою загадку: <b>ich bin</b> … geboren (не «ich habe»!), Partizip II у кінці речення, жіноча форма на <b>-in</b>.
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="dz-vocab-wrap" style="margin-top:18px;">
+        <p class="section-label" style="margin:0 0 6px;">Wörter-Check</p>
+        <p class="lead">Перевір слова з минулих уроків.</p>
+        <div id="dz-vocab"></div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 1: Visitenkarten ===== -->
+    <section class="panel" id="panel-ub1">
+      <p class="section-label">Üb. 1</p>
+      <h2 class="panel-title">Lies die Visitenkarten</h2>
+      <p class="lead">Візитівки п'ятьох відомих українських спортсменів і спортсменок. Прочитай їх уважно — вони знадобляться в усіх вправах уроку.</p>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">🥊 Witalij Klytschko</p>
+        <ul>
+          <li>Profiboxer / seit 1996</li>
+          <li>erster Weltmeistertitel / 1999</li>
+          <li>Weltmeister im Schwergewicht / 1999, 2004, 2008</li>
+          <li>47 Kämpfe / 45 Siege / 2 Niederlagen</li>
+          <li>Rücktritt 2013</li>
+        </ul>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">🥊 Wolodymyr Klytschko</p>
+        <ul>
+          <li>Olympiasieger / 1996 in Atlanta</li>
+          <li>Profiboxer / seit 1996</li>
+          <li>Weltmeister im Schwergewicht / 2000, 2006, 2008, 2011</li>
+          <li>69 Kämpfe / 64 Siege / 5 Niederlagen</li>
+          <li>Rücktritt 2017</li>
+        </ul>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">🎀 Ganna Bessonowa</p>
+        <ul>
+          <li>Gymnastin / 1999 bis 2009</li>
+          <li>Weltmeisterin / 2001, 2002, 2003, 2007</li>
+          <li>dreimalige Europameisterin / 2003</li>
+          <li>die Bronzemedaille / Olympische Spiele 2004 in Athen, 2008 in Peking</li>
+        </ul>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">🤺 Olha Charlan</p>
+        <ul>
+          <li>Fechterin / 2005 bis jetzt</li>
+          <li>sechsmalige Weltmeisterin / 2009, 2013, 2014, 2017, 2019</li>
+          <li>achtmalige Europameisterin / 2009, 2010, 2011, 2012, 2013, 2014, 2019</li>
+          <li>Olympiasiegerin / 2008 in Peking</li>
+          <li>die Silbermedaille / Olympische Spiele 2016 in Rio de Janeiro</li>
+          <li>die Bronzemedaille / Olympische Spiele 2012 in London, 2016 in Rio de Janeiro</li>
+        </ul>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">⚽ Andrij Schewtschenko</p>
+        <ul>
+          <li>Fußballspieler / 1994 bis 2012</li>
+          <li>Dynamo Kyjiw / 1994–1999, 2009–2012</li>
+          <li>ausländische Fußballclubs / 1999–2006, 2006–2009</li>
+          <li>ukrainischer Fußballspieler des Jahres / 1997, 1999, 2000, 2001, 2004, 2005</li>
+          <li>Europas Fußballspieler des Jahres / 2004</li>
+        </ul>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Корисні слова</span>
+          <dl>
+            <dt>der Profiboxer · der Kampf (die Kämpfe)</dt><dd>професійний боксер · бій, поєдинок</dd>
+            <dt>der Sieg · die Niederlage</dt><dd>перемога · поразка</dd>
+            <dt>der Weltmeistertitel · im Schwergewicht</dt><dd>титул чемпіона світу · у важкій вазі</dd>
+            <dt>der Europameister / die Europameisterin</dt><dd>чемпіон / чемпіонка Європи</dd>
+            <dt>dreimalig · sechsmalig · achtmalig</dt><dd>триразовий · шестиразовий · восьмиразовий</dd>
+            <dt>ausländische Fußballclubs · bis jetzt</dt><dd>закордонні футбольні клуби · досі</dd>
+          </dl>
+        </div>
+      </div>
+
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Teil A · Wer ist das? Was steht auf der Karte?</p>
+        <div id="ub1-quiz"></div>
+      </div>
+
+      <div class="dog-tip">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24" fill="#DE9E3B"/></svg>
+        <p class="bubble">Die Karte von Olha Charlan ist schon ein bisschen alt: 2024 in Paris hat sie noch eine Goldmedaille (mit der Mannschaft) und eine Bronzemedaille gewonnen!</p>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 2: Einen Text schreiben ===== -->
+    <section class="panel" id="panel-ub2">
+      <p class="section-label">Üb. 2</p>
+      <h2 class="panel-title">Schreib einen Text über einen Sportler / eine Sportlerin</h2>
+      <div class="merke">
+        <b>Witalij Klytschko ist ein ehemalig<u>er</u> ukrainisch<u>er</u> Boxer.</b> — <b>Olha Charlan ist eine</b> ukrainisch<u>e</u> Fechterin. — Ganna Bessonowa ist eine ehemalig<u>e</u> ukrainisch<u>e</u> Gymnastin.<br>
+        <b>ehemalig</b> = колишній (кар'єру вже завершено). Після <b>ein</b> (der-слово) — закінчення <b>-er</b>, після <b>eine</b> — <b>-e</b>.<br>
+        <b>einmal, zweimal, dreimal …</b> → <b>dreimalig</b>: eine dreimalig<u>e</u> Europameisterin, ein sechsmalig<u>er</u> Weltmeister. Er hat <b>dreimal</b> die Weltmeisterschaft gewonnen.<br>
+        Er/Sie ist Olympiasieger/in und hat <b>im Jahre</b> 2008 <b>bei den Olympischen Spielen in</b> Peking eine Goldmedaille <b>gewonnen</b>.<br>
+        Der Sportler / Die Sportlerin hat eine erfolgreiche Karriere <b>gemacht</b> und ist <b>in der ganzen Welt bekannt</b>.
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Teil A · Ergänze den Text</p>
+        <p class="lead">Доповни тексти про Ольгу Харлан і Віталія Кличка за їхніми візитівками з Üb. 1.</p>
+        <div id="ub2-list">
+          <div class="fill-item"><span class="num">1)</span> Olha Charlan ist eine <select class="blank inline" data-ans="ukrainische"><option value="">—</option><option value="ukrainischer">ukrainischer</option><option value="ukrainische">ukrainische</option><option value="ukrainisches">ukrainisches</option></select> Fechterin.</div>
+          <div class="fill-item"><span class="num">2)</span> Die Sportlerin hat eine erfolgreiche Karriere <select class="blank inline" data-ans="gemacht"><option value="">—</option><option value="gemacht">gemacht</option><option value="macht">macht</option><option value="gemachen">gemachen</option></select> und ist in der ganzen Welt <input type="text" class="blank-input inline" data-ans="bekannt">.</div>
+          <div class="fill-item"><span class="num">3)</span> Sie ist <select class="blank inline" data-ans="sechsmalige"><option value="">—</option><option value="sechsmal">sechsmal</option><option value="sechsmaliger">sechsmaliger</option><option value="sechsmalige">sechsmalige</option></select> Weltmeisterin.</div>
+          <div class="fill-item"><span class="num">4)</span> Sie hat <input type="text" class="blank-input inline" data-ans="achtmal"> die Europameisterschaften gewonnen.</div>
+          <div class="fill-item"><span class="num">5)</span> Sie ist Olympiasiegerin und hat im Jahre <input type="text" class="blank-input inline" data-ans="2008"> bei den Olympischen Spielen in <input type="text" class="blank-input inline" data-ans="Peking"> eine <select class="blank inline" data-ans="Goldmedaille"><option value="">—</option><option value="Silbermedaille">Silbermedaille</option><option value="Bronzemedaille">Bronzemedaille</option><option value="Goldmedaille">Goldmedaille</option></select> gewonnen.</div>
+          <div class="fill-item"><span class="num">6)</span> 2016 hat sie in Rio de Janeiro eine Silbermedaille und eine <select class="blank inline" data-ans="Bronzemedaille"><option value="">—</option><option value="Bronzemedaille">Bronzemedaille</option><option value="Goldmedaille">Goldmedaille</option><option value="Silbermedaille">Silbermedaille</option></select> gewonnen.</div>
+          <div class="fill-item"><span class="num">7)</span> Witalij Klytschko ist ein <select class="blank inline" data-ans="ehemaliger"><option value="">—</option><option value="ehemalige">ehemalige</option><option value="ehemaliges">ehemaliges</option><option value="ehemaliger">ehemaliger</option></select> ukrainischer Boxer. Er ist seit <input type="text" class="blank-input inline" data-ans="1996"> Profiboxer.</div>
+          <div class="fill-item"><span class="num">8)</span> Er war <select class="blank inline" data-ans="dreimal"><option value="">—</option><option value="zweimal">zweimal</option><option value="dreimal">dreimal</option><option value="viermal">viermal</option></select> Weltmeister im Schwergewicht und hat seine Karriere <input type="text" class="blank-input inline" data-ans="2013"> beendet.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub2-check">Prüfen</button>
+          <button class="btn secondary" id="ub2-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub2-score"></span>
+        </div>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Teil B · Jetzt du!</p>
+        <div id="ub2-write"></div>
+        <div class="ua-note">
+          Вставляти текст у поле не можна — набирай сам(а). Цей текст знадобиться в Üb. 3: однокласники ставитимуть тобі запитання.
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 3: Fragen stellen ===== -->
+    <section class="panel" id="panel-ub3">
+      <p class="section-label">Üb. 3</p>
+      <h2 class="panel-title">Lest eure Texte und stellt aneinander Fragen</h2>
+      <div class="merke">
+        <b>Wann</b> hat … seine/ihre Sportkarriere <b>gestartet</b>? · <b>Wann</b> hat … seine/ihre Sportkarriere <b>beendet</b>?<br>
+        <b>An welchen</b> Sportwettbewerben <b>hat</b> … <b>teilgenommen</b>? · <b>Welche Titel</b> hat er/sie <b>gewonnen</b>?<br>
+        <b>Wann</b> war … <b>am erfolgreichsten</b>?<br>
+        W-Frage: питальне слово — на 1-му місці, <b>hat</b> — на 2-му, Partizip II — у кінці.
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Teil A · Bilde Fragen</p>
+        <p class="lead">Склади запитання з карток.</p>
+        <div id="ub3-order"></div>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Teil B · Ein Interview</p>
+        <p class="lead">Ти написав(-ла) текст про Андрія Шевченка. Софія ставить тобі запитання — відповідай за візитівкою з Üb. 1.</p>
+        <div id="ub3-chat"></div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Jetzt ihr!</p>
+        <p style="margin:0;"><b>A:</b> Wann hat Ganna Bessonowa ihre Sportkarriere gestartet?<br><b>B:</b> 1999.<br><b>A:</b> Welche Titel hat sie gewonnen?<br><b>B:</b> Sie war viermal Weltmeisterin und dreimalige Europameisterin.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 У класі</span>
+          Прочитайте свої тексти з Üb. 2 в парах і поставте одне одному щонайменше три запитання з рамки вище. Удома — постав і запиши три запитання до візитівки Володимира Кличка й дай на них відповіді.
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Üb. 4: Paralympische Spiele ===== -->
+    <section class="panel" id="panel-ub4">
+      <p class="section-label">Üb. 4</p>
+      <h2 class="panel-title">Was für Zahlen sind das?</h2>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Es ist interessant zu wissen</p>
+        <p>Seit 1996 nimmt die Ukraine an den Paralympischen Spielen teil. Die ukrainische Mannschaft hat an den sieben Sommerspielen und den sieben Winterspielen teilgenommen und war sehr erfolgreich. Insgesamt haben ukrainische Paralympionikinnen und Paralympioniken 613 Medaillen gewonnen. Am erfolgreichsten war unsere Mannschaft 2016 in Rio de Janeiro (Sommerspiele), wo die Sportlerinnen und Sportler insgesamt 117 Medaillen errungen haben, darunter 41 Goldmedaillen. Am besten waren ukrainische Paralympioniken in Schwimmen, Leichtathletik und Radsport. Bei den Paralympischen Winterspielen haben ukrainische Sportlerinnen und Sportler die besten Ergebnisse 2022 in Peking erreicht (29 Medaillen).</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Корисні слова</span>
+          <dl>
+            <dt>die Paralympischen Spiele</dt><dd>Паралімпійські ігри</dd>
+            <dt>der Paralympionike / die Paralympionikin</dt><dd>паралімпієць / паралімпійка</dd>
+            <dt>erringen (hat errungen)</dt><dd>здобути (медаль, перемогу)</dd>
+            <dt>darunter · das Ergebnis</dt><dd>серед них, у тому числі · результат</dd>
+            <dt>der Radsport</dt><dd>велоспорт</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="merke">
+        <b>Jahreszahlen</b> читаємо так: 1996 — <b>neunzehnhundertsechsundneunzig</b>; 2016 — <b>zweitausendsechzehn</b>; 2022 — zweitausendzweiundzwanzig.<br>
+        Зразок коментаря: <b>7</b> → Die ukrainische Mannschaft hat <b>siebenmal</b> an den Paralympischen Sommerspielen und auch siebenmal an den Paralympischen Winterspielen teilgenommen.
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Teil A · Welche Zahl passt?</p>
+        <p class="lead">Числа з тексту: 7 · 29 · 117 · 613 · 1996 · 2016 · 2022. Обери число, яке пасує до коментаря.</p>
+        <div id="ub4-list">
+          <div class="fill-item"><span class="num">1)</span> <select class="blank inline" data-ans="1996"><option value="">—</option><option value="2016">2016</option><option value="1996">1996</option><option value="2022">2022</option><option value="613">613</option></select> — Seit diesem Jahr nimmt die Ukraine an den Paralympischen Spielen teil.</div>
+          <div class="fill-item"><span class="num">2)</span> <select class="blank inline" data-ans="613"><option value="">—</option><option value="613">613</option><option value="117">117</option><option value="29">29</option><option value="7">7</option></select> — So viele Medaillen haben ukrainische Paralympionikinnen und Paralympioniken insgesamt gewonnen.</div>
+          <div class="fill-item"><span class="num">3)</span> <select class="blank inline" data-ans="2016"><option value="">—</option><option value="1996">1996</option><option value="2022">2022</option><option value="2016">2016</option><option value="117">117</option></select> — In diesem Jahr war unsere Mannschaft am erfolgreichsten: in Rio de Janeiro.</div>
+          <div class="fill-item"><span class="num">4)</span> <select class="blank inline" data-ans="117"><option value="">—</option><option value="29">29</option><option value="117">117</option><option value="613">613</option><option value="7">7</option></select> — So viele Medaillen haben die Sportlerinnen und Sportler in Rio de Janeiro errungen.</div>
+          <div class="fill-item"><span class="num">5)</span> <select class="blank inline" data-ans="2022"><option value="">—</option><option value="2022">2022</option><option value="2016">2016</option><option value="1996">1996</option><option value="29">29</option></select> — In diesem Jahr haben sie bei den Winterspielen in Peking die besten Ergebnisse erreicht.</div>
+          <div class="fill-item"><span class="num">6)</span> <select class="blank inline" data-ans="29"><option value="">—</option><option value="117">117</option><option value="7">7</option><option value="613">613</option><option value="29">29</option></select> — So viele Medaillen hat die Mannschaft 2022 in Peking gewonnen.</div>
+        </div>
+        <div class="check-bar">
+          <button class="btn" id="ub4-check">Prüfen</button>
+          <button class="btn secondary" id="ub4-reset">Zurücksetzen</button>
+          <span class="score-pill" id="ub4-score"></span>
+        </div>
+      </div>
+      <div class="card">
+        <p class="section-label" style="margin:0 0 6px;">Teil B · Richtig oder falsch?</p>
+        <div id="ub4-quiz"></div>
+      </div>
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Jetzt ihr!</p>
+        <p style="margin:0;">Kommentiert die Zahlen der Reihe nach laut: <em>„1996 – seit neunzehnhundertsechsundneunzig nimmt die Ukraine an den Paralympischen Spielen teil.“</em></p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 У класі</span>
+          По черзі прокоментуйте вголос кожне число з тексту, як у зразку в рамці. Роки читайте повністю словами. Удома — прокоментуй уголос усі сім чисел.
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ПРИКІНЦЕВА ПАНЕЛЬ ===== -->
+    <section class="panel" id="panel-ende">
+      <h2 class="panel-title">Fertig!</h2>
+
+      <div id="lz-check"></div>
+
+      <div class="card tinted-mustard">
+        <p class="section-label" style="margin:0 0 6px;">Hausaufgabe für nächstes Mal</p>
+        <p>Präsentation „Erfolgreiche ukrainische Paralympioniken“: 1) Such im Internet Informationen über eine erfolgreiche ukrainische Paralympionikin oder einen erfolgreichen ukrainischen Paralympioniken (z. B. im Schwimmen, in der Leichtathletik, im Radsport oder im Biathlon). 2) Mach eine Visitenkarte wie in Üb. 1: Name – Sportart / seit … (von … bis …) – Titel – Medaillen bei den Paralympischen Spielen (wann? wo?). 3) Bereite eine Präsentation vor (4–5 Folien oder ein Poster mit Fotos). Schreib zu jeder Folie 1–2 Sätze, z. B. „… ist ein erfolgreicher ukrainischer Paralympionike / eine erfolgreiche ukrainische Paralympionikin.“, „Er/Sie hat im Jahre … bei den Paralympischen Spielen in … eine Goldmedaille gewonnen.“, „Er/Sie ist dreimalige/r …“. 4) Schreib auf die letzte Folie zwei Fragen an die Klasse wie in Üb. 3 (z. B. „Wann hat … ihre Sportkarriere gestartet?“). Nächstes Mal zeigen wir die Präsentationen und stellen einander Fragen.</p>
+        <div class="ua-note">
+          <span class="ua-label">🇺🇦 Українською</span>
+          Презентація «Успішні українські паралімпійці»: 1) Знайди в інтернеті інформацію про успішну українську паралімпійку чи паралімпійця (напр. у плаванні, легкій атлетиці, велоспорті чи біатлоні). 2) Склади візитівку, як в Üb. 1: ім'я – вид спорту / з … (від … до …) – титули – медалі на Паралімпійських іграх (коли? де?). 3) Підготуй презентацію (4–5 слайдів або плакат із фото). До кожного слайда напиши 1–2 речення, напр. «… ist ein erfolgreicher ukrainischer Paralympionike / eine erfolgreiche ukrainische Paralympionikin.», «Er/Sie hat im Jahre … bei den Paralympischen Spielen in … eine Goldmedaille gewonnen.», «Er/Sie ist dreimalige/r …». 4) На останньому слайді напиши два запитання до класу, як в Üb. 3 (напр. «Wann hat … ihre Sportkarriere gestartet?»). Наступного уроку покажемо презентації й поставимо одне одному запитання.
+        </div>
+      </div>
+
+      <div class="card tinted-teal">
+        <p class="section-label" style="margin:0 0 6px;">Wörter zum Lernen</p>
+        <div class="chip-row" id="vocabChips"></div>
+      </div>
+
+      <div class="card" id="lessonGramWrap">
+        <p class="section-label" style="margin:0 0 8px;">Grammatik zum Nachschlagen</p>
+        <div class="gram-related" id="lessonGram"></div>
+      </div>
+
+      <footer class="end-card">
+        <div class="stamps" id="stampRow"></div>
+        <p id="finalScoreText"></p>
+        <button class="btn" id="restart-all">Von vorn beginnen</button>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<script src="../../../data/glossary-data.js"></script>
+<script src="../../../data/lessons-data.js"></script>
+<script src="../../../data/grammar-data.js"></script>
+<script src="../../../assets/lesson-interactions.js"></script>
+<script>
+  // ===== Слова цього уроку у вкладці Fertig =====
+  const LEKTION_KLAS = "7", LEKTION_MODUL = "D", LEKTION_LEKTION = 8;
+  const LEKTION_PREV_LEKTION = 7;
+
+  // ===== Цілі уроку «Ich kann …» (Start) + самооцінка-світлофор (Fertig!) =====
+  const LERNZIELE = [
+    {de: "Ich kann nach einer Visitenkarte einen kurzen Text über einen Sportler oder eine Sportlerin schreiben.", uk: "Я можу за візитівкою написати короткий текст про спортсмена чи спортсменку."},
+    {de: "Ich kann Fragen zu einer Sportkarriere stellen und beantworten.", uk: "Я можу ставити запитання про спортивну кар'єру й відповідати на них."},
+    {de: "Ich kann Zahlen aus einem Text kommentieren: „Seit 1996 nimmt die Ukraine … teil.“", uk: "Я можу прокоментувати числа з тексту: «З 1996 року Україна бере участь …»."}
+  ];
+  buildLernziele('lz-start', 'lz-check', LERNZIELE);
+
+  // ===== Хук входу: fehler (7-D-1 prognose, 7-D-2 undu, 7-D-3 fakt, 7-D-4 fehler, 7-D-5 prognose, 7-D-6 undu, 7-D-7 fakt) =====
+  // Помилки — з минулого уроку: Perfekt (ist geboren, Partizip II).
+  buildHook('hook', {type: 'fehler', items: [
+    {s: "Steffi Graf hat am 14. Juni 1969 in Mannheim geboren.", wrong: 2, fix: "ist"},
+    {s: "Michael Schumacher hat seine Karriere 1991 gestartet.", ok: true},
+    {s: "Boris Becker hat viele Turniere gewinnt.", wrong: 5, fix: "gewonnen"}
+  ]});
+
+  (function renderLessonVocab(){
+    const box = document.getElementById('vocabChips');
+    if (!box || typeof GLOSSARY === 'undefined') return;
+    const words = GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_LEKTION
+    );
+    if (words.length === 0){
+      box.innerHTML = '<p class="empty-note">Слова для цього уроку ще не додані в глосарій.</p>';
+      return;
+    }
+    box.innerHTML = words.map(w =>
+      '<span class="chip static">' + w.de + ' — ' + w.uk + '</span>'
+    ).join('');
+  })();
+
+  // ===== Граматика до цього уроку у вкладці Fertig (поле gram у lessons-data.js) =====
+  (function renderLessonGrammar(){
+    const wrap = document.getElementById('lessonGramWrap');
+    const box = document.getElementById('lessonGram');
+    if (!wrap || !box) return;
+    const hide = () => { wrap.style.display = 'none'; };
+    if (typeof LESSONS === 'undefined' || typeof GRAMMAR === 'undefined') return hide();
+    const me = LESSONS.find(l => l.klas === LEKTION_KLAS && l.modul === LEKTION_MODUL && l.lektion === LEKTION_LEKTION);
+    const topics = ((me && me.gram) || []).map(id => GRAMMAR.find(t => t.id === id)).filter(t => t && t.opublikovano > 0);
+    if (topics.length === 0) return hide();
+    const src = document.querySelector('script[src$="data/grammar-data.js"]').getAttribute('src');
+    const root = src.slice(0, src.length - 'data/grammar-data.js'.length);
+    box.innerHTML = topics.map(t =>
+      '<a class="gram-link" href="' + root + 'gramatyka/temy/' + t.id + '.html">'
+      + '<span class="k">' + t.uk + '</span>' + t.tema + '</a>'
+    ).join('');
+  })();
+
+  // ===== Wörter-Check у вкладці Hausaufgabe =====
+  function guessPos(de){
+    var base = (de || '').replace(/\([^)]*\)/g, '').trim();
+    if(/^(der|die|das)(\/(der|die|das))?\s/.test(base)) return 'noun';
+    if(/^sich\s/.test(base)) return 'verb';
+    if(/^am\s/.test(base)) return 'other'; // "am liebsten", "am besten" — прислівникова найвища форма, не дієслово
+    if(/\(\+(Gen|Dat|Akk)\.?\)/.test(de)) return 'prep';
+    var words = base.split(/\s+/);
+    var last = words[words.length - 1];
+    if(/(en|ern|eln)$/.test(last) && last === last.toLowerCase()) return 'verb';
+    return 'other';
+  }
+
+  (function renderDzVocabCheck(){
+    const wrap = document.getElementById('dz-vocab-wrap');
+    const box = document.getElementById('dz-vocab');
+    if (!wrap || !box || typeof GLOSSARY === 'undefined') return;
+    const same = (w, l) => w.klas === l.klas && w.modul === l.modul && w.lektion === l.lektion;
+    const prevWords = LEKTION_PREV_LEKTION ? GLOSSARY.filter(w =>
+      w.klas === LEKTION_KLAS && w.modul === LEKTION_MODUL && w.lektion === LEKTION_PREV_LEKTION
+    ) : [];
+    let olderWords = [];
+    if (typeof LESSONS !== 'undefined'){
+      const mine = LESSONS.filter(l => l.klas === LEKTION_KLAS);
+      const idx = mine.findIndex(l => l.modul === LEKTION_MODUL && l.lektion === LEKTION_LEKTION);
+      if (idx > 0){
+        const older = mine.slice(Math.max(0, idx - 5), idx)
+          .filter(l => !(l.modul === LEKTION_MODUL && l.lektion === LEKTION_PREV_LEKTION));
+        olderWords = GLOSSARY.filter(w => older.some(l => same(w, l)));
+      }
+    }
+    const fromPrev = shuffleArray(prevWords).slice(0, olderWords.length ? 4 : 6);
+    const pool = shuffleArray(fromPrev.concat(shuffleArray(olderWords).slice(0, 6 - fromPrev.length)));
+    if (pool.length < 3){ wrap.style.display = 'none'; return; }
+
+    const quizData = pool.map(w => {
+      const pos = guessPos(w.de);
+      let sameKind = GLOSSARY.filter(g => g.uk !== w.uk && guessPos(g.de) === pos);
+      if(sameKind.length < 2) sameKind = GLOSSARY.filter(g => g.uk !== w.uk);
+      const distractors = shuffleArray(sameKind).slice(0, 2).map(g => g.uk);
+      return { q: w.de, opts: [w.uk, ...distractors], correct: w.uk };
+    });
+    buildQuiz('dz-vocab', quizData);
+  })();
+
+  // Hausaufgabe: загадки «Wer bin ich?»
+  buildQuiz('hw-quiz', [
+    {q: "Ich bin am 4. Dezember 1963 in Luhansk geboren. Ich bin Stabhochspringer. 1988 habe ich in Seoul eine Goldmedaille gewonnen. Ich war sechsmal Weltmeister. Wer bin ich?",
+     opts: ["Wassyl Lomatschenko", "Serhij Bubka", "Andrij Schewtschenko"], correct: "Serhij Bubka"},
+    {q: "Ich bin am 7. August 1982 in Simferopol geboren. Ich bin eine erfolgreiche ukrainische Schwimmerin. 2000 und 2004 habe ich bei den Olympischen Spielen insgesamt vier Goldmedaillen gewonnen. Wer bin ich?",
+     opts: ["Olha Charlan", "Elina Switolina", "Jana Klotschkowa"], correct: "Jana Klotschkowa"},
+    {q: "Ich bin am 12. September 1994 in Odesa geboren. Ich bin Tennisspielerin und habe an vielen Turnieren teilgenommen. 2021 habe ich in Tokio eine Bronzemedaille gewonnen. Wer bin ich?",
+     opts: ["Elina Switolina", "Ganna Bessonowa", "Jana Klotschkowa"], correct: "Elina Switolina"},
+    {q: "Ich bin am 17. Februar 1988 in Bilhorod-Dnistrowskyj geboren. Ich bin Boxer. 2008 in Peking und 2012 in London habe ich Gold gewonnen. Wer bin ich?",
+     opts: ["Witalij Klytschko", "Wassyl Lomatschenko", "Serhij Bubka"], correct: "Wassyl Lomatschenko"}
+  ]);
+  buildOrder('hw-order', [
+    {words: ["ich", "bin", "am 12. September 1994", "in Odesa", "geboren"], end: ".",
+     alt: ["Am 12. September 1994 bin ich in Odesa geboren"]},
+    {words: ["ich", "bin", "eine", "erfolgreiche", "ukrainische Tennisspielerin"], end: "."},
+    {words: ["ich", "habe", "an vielen Turnieren", "teilgenommen"], end: "."}
+  ]);
+
+  // Üb. 1: візитівки
+  buildQuiz('ub1-quiz', [
+    {q: "Wer hat 1996 in Atlanta die Goldmedaille gewonnen?", opts: ["Wolodymyr Klytschko", "Witalij Klytschko", "Andrij Schewtschenko"], correct: "Wolodymyr Klytschko"},
+    {q: "Wie viele Niederlagen hatte Witalij Klytschko?", opts: ["Fünf.", "Zwei.", "Fünfundvierzig."], correct: "Zwei."},
+    {q: "Wer war 2004 Europas Fußballspieler des Jahres?", opts: ["Wolodymyr Klytschko", "Olha Charlan", "Andrij Schewtschenko"], correct: "Andrij Schewtschenko"},
+    {q: "Welchen Sport hat Ganna Bessonowa getrieben?", opts: ["Fechten.", "Boxen.", "Gymnastik."], correct: "Gymnastik."},
+    {q: "Wo hat Olha Charlan 2008 die Goldmedaille gewonnen?", opts: ["In Peking.", "In London.", "In Rio de Janeiro."], correct: "In Peking."},
+    {q: "Wann hat Wolodymyr Klytschko seine Karriere beendet?", opts: ["2013.", "2017.", "1996."], correct: "2017."},
+    {q: "Bei welchem ukrainischen Verein hat Andrij Schewtschenko gespielt?", opts: ["Bei Dynamo Kyjiw.", "Beim FC Chelsea.", "Bei Borussia Dortmund."], correct: "Bei Dynamo Kyjiw."}
+  ]);
+
+  // Üb. 2: текст про спортсмена
+  wireBlanks('ub2');
+  buildWriting('ub2-write', {
+    prompt: "Обери Ганну Безсонову, Володимира Кличка або Андрія Шевченка й напиши про нього / неї текст за візитівкою (5–6 речень). Використай вирази з рамки: … ist ein ehemaliger ukrainischer … / eine ehemalige ukrainische … · hat eine erfolgreiche Karriere gemacht · ist in der ganzen Welt bekannt · hat …mal … gewonnen · hat im Jahre … bei den Olympischen Spielen in … eine …medaille gewonnen.",
+    words: "30-80",
+    must: ["ehemaliger/ehemalige", "bekannt", "gewonnen"],
+    check: ["ein ehemaliger (er) / eine ehemalige (sie) — правильні закінчення", "Дієслово на 2-му місці, Partizip II у кінці", "Щонайменше одне число: …mal / im Jahre …"],
+    rows: 7
+  });
+
+  // Üb. 3: запитання
+  buildOrder('ub3-order', [
+    {words: ["wann", "hat", "Olha Charlan", "ihre Sportkarriere", "gestartet"], end: "?"},
+    {words: ["an welchen Sportwettbewerben", "hat", "Andrij Schewtschenko", "teilgenommen"], end: "?"},
+    {words: ["welche Titel", "hat", "Ganna Bessonowa", "gewonnen"], end: "?"},
+    {words: ["wann", "hat", "Witalij Klytschko", "seine Sportkarriere", "beendet"], end: "?"},
+    {words: ["wann", "war", "Wolodymyr Klytschko", "am erfolgreichsten"], end: "?"}
+  ]);
+  buildChat('ub3-chat', {
+    partner: "Sofia",
+    steps: [
+      {them: "Hallo! Über wen hast du deinen Text geschrieben?"},
+      {you: ["Er ist Fußballspieler.", "Über Andrij Schewtschenko.", "Seit 1994."], correct: 1},
+      {them: "Super! Wann hat er seine Sportkarriere gestartet?"},
+      {you: ["2012.", "2004.", "1994."], correct: 2},
+      {them: "Und wann hat er sie beendet?"},
+      {you: ["Im Jahre 2012.", "Im Jahre 1999.", "Er spielt bis jetzt."], correct: 0},
+      {them: "In welchen Vereinen hat er gespielt?"},
+      {you: ["Nur bei Dynamo Kyjiw.", "Bei Dynamo Kyjiw und bei ausländischen Fußballclubs.", "Er war Profiboxer."], correct: 1},
+      {them: "Welche Titel hat er gewonnen?"},
+      {you: ["Er war sechsmal ukrainischer Fußballspieler des Jahres.", "Er ist Olympiasieger.", "Er war dreimalige Europameisterin."], correct: 0},
+      {them: "Und wann war er am erfolgreichsten?"},
+      {you: ["1994 – da hat er bei Dynamo Kyjiw angefangen.", "2004 – da war er Europas Fußballspieler des Jahres.", "2013 – da hat er seine Karriere beendet."], correct: 1},
+      {them: "Toll! Er ist wirklich in der ganzen Welt bekannt. Danke!"}
+    ]
+  });
+
+  // Üb. 4: паралімпійці
+  wireBlanks('ub4');
+  buildQuiz('ub4-quiz', [
+    {q: "Die Ukraine nimmt seit 1996 an den Paralympischen Spielen teil.", opts: ["Richtig", "Falsch"], correct: "Richtig"},
+    {q: "Die ukrainische Mannschaft hat nur an den Sommerspielen teilgenommen.", opts: ["Richtig", "Falsch"], correct: "Falsch"},
+    {q: "In Rio de Janeiro hat die Mannschaft 41 Goldmedaillen errungen.", opts: ["Falsch", "Richtig"], correct: "Richtig"},
+    {q: "Am besten waren ukrainische Paralympioniken im Fußball und im Boxen.", opts: ["Falsch", "Richtig"], correct: "Falsch"},
+    {q: "Die besten Ergebnisse bei den Winterspielen hatte die Mannschaft 2022 in Peking.", opts: ["Richtig", "Falsch"], correct: "Richtig"}
+  ]);
+
+  // Фінальна панель зі штампами
+  document.querySelector('[data-tab="ende"]').addEventListener('click', () => {
+    renderEndStamps('stampRow', 'finalScoreText', ['🥊','🤺','⚽','🏅']);
+  });
+  document.getElementById('restart-all').addEventListener('click', () => location.reload());
+</script>
+</body>
+</html>
